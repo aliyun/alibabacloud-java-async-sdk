@@ -29,6 +29,10 @@ public class CreateResourceGroupRequest extends Request {
     private String resourceType;
 
     @Body
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
+    @Body
     @NameInMap("UserVpc")
     private UserVpc userVpc;
 
@@ -38,6 +42,7 @@ public class CreateResourceGroupRequest extends Request {
         this.description = builder.description;
         this.name = builder.name;
         this.resourceType = builder.resourceType;
+        this.tag = builder.tag;
         this.userVpc = builder.userVpc;
     }
 
@@ -83,6 +88,13 @@ public class CreateResourceGroupRequest extends Request {
     }
 
     /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
      * @return userVpc
      */
     public UserVpc getUserVpc() {
@@ -94,6 +106,7 @@ public class CreateResourceGroupRequest extends Request {
         private String description; 
         private String name; 
         private String resourceType; 
+        private java.util.List < Tag> tag; 
         private UserVpc userVpc; 
 
         private Builder() {
@@ -106,6 +119,7 @@ public class CreateResourceGroupRequest extends Request {
             this.description = request.description;
             this.name = request.name;
             this.resourceType = request.resourceType;
+            this.tag = request.tag;
             this.userVpc = request.userVpc;
         } 
 
@@ -146,6 +160,15 @@ public class CreateResourceGroupRequest extends Request {
         }
 
         /**
+         * Tag.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putBodyParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
          * UserVpc.
          */
         public Builder userVpc(UserVpc userVpc) {
@@ -161,4 +184,65 @@ public class CreateResourceGroupRequest extends Request {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

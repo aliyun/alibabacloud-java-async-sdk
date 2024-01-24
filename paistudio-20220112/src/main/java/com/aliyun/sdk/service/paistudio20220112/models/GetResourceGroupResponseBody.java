@@ -21,6 +21,9 @@ public class GetResourceGroupResponseBody extends TeaModel {
     @NameInMap("CreatorID")
     private String creatorID;
 
+    @NameInMap("Description")
+    private String description;
+
     @NameInMap("GmtCreatedTime")
     private String gmtCreatedTime;
 
@@ -42,6 +45,9 @@ public class GetResourceGroupResponseBody extends TeaModel {
     @NameInMap("SupportRDMA")
     private Boolean supportRDMA;
 
+    @NameInMap("Tags")
+    private java.util.List < Tags> tags;
+
     @NameInMap("UserVpc")
     private UserVpc userVpc;
 
@@ -52,6 +58,7 @@ public class GetResourceGroupResponseBody extends TeaModel {
         this.clusterID = builder.clusterID;
         this.computingResourceProvider = builder.computingResourceProvider;
         this.creatorID = builder.creatorID;
+        this.description = builder.description;
         this.gmtCreatedTime = builder.gmtCreatedTime;
         this.gmtModifiedTime = builder.gmtModifiedTime;
         this.name = builder.name;
@@ -59,6 +66,7 @@ public class GetResourceGroupResponseBody extends TeaModel {
         this.resourceType = builder.resourceType;
         this.status = builder.status;
         this.supportRDMA = builder.supportRDMA;
+        this.tags = builder.tags;
         this.userVpc = builder.userVpc;
         this.workspaceID = builder.workspaceID;
     }
@@ -90,6 +98,13 @@ public class GetResourceGroupResponseBody extends TeaModel {
      */
     public String getCreatorID() {
         return this.creatorID;
+    }
+
+    /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
     }
 
     /**
@@ -142,6 +157,13 @@ public class GetResourceGroupResponseBody extends TeaModel {
     }
 
     /**
+     * @return tags
+     */
+    public java.util.List < Tags> getTags() {
+        return this.tags;
+    }
+
+    /**
      * @return userVpc
      */
     public UserVpc getUserVpc() {
@@ -159,6 +181,7 @@ public class GetResourceGroupResponseBody extends TeaModel {
         private String clusterID; 
         private String computingResourceProvider; 
         private String creatorID; 
+        private String description; 
         private String gmtCreatedTime; 
         private String gmtModifiedTime; 
         private String name; 
@@ -166,6 +189,7 @@ public class GetResourceGroupResponseBody extends TeaModel {
         private String resourceType; 
         private String status; 
         private Boolean supportRDMA; 
+        private java.util.List < Tags> tags; 
         private UserVpc userVpc; 
         private String workspaceID; 
 
@@ -190,6 +214,14 @@ public class GetResourceGroupResponseBody extends TeaModel {
          */
         public Builder creatorID(String creatorID) {
             this.creatorID = creatorID;
+            return this;
+        }
+
+        /**
+         * Description.
+         */
+        public Builder description(String description) {
+            this.description = description;
             return this;
         }
 
@@ -250,6 +282,14 @@ public class GetResourceGroupResponseBody extends TeaModel {
         }
 
         /**
+         * Tags.
+         */
+        public Builder tags(java.util.List < Tags> tags) {
+            this.tags = tags;
+            return this;
+        }
+
+        /**
          * UserVpc.
          */
         public Builder userVpc(UserVpc userVpc) {
@@ -271,4 +311,65 @@ public class GetResourceGroupResponseBody extends TeaModel {
 
     } 
 
+    public static class Tags extends TeaModel {
+        @NameInMap("TagKey")
+        private String tagKey;
+
+        @NameInMap("TagValue")
+        private String tagValue;
+
+        private Tags(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            /**
+             * TagKey.
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * TagValue.
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
 }

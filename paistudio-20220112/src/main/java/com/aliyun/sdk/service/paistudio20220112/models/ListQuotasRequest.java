@@ -17,6 +17,10 @@ public class ListQuotasRequest extends Request {
     private String labels;
 
     @Query
+    @NameInMap("LayoutMode")
+    private String layoutMode;
+
+    @Query
     @NameInMap("Order")
     private String order;
 
@@ -59,6 +63,7 @@ public class ListQuotasRequest extends Request {
     private ListQuotasRequest(Builder builder) {
         super(builder);
         this.labels = builder.labels;
+        this.layoutMode = builder.layoutMode;
         this.order = builder.order;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -89,6 +94,13 @@ public class ListQuotasRequest extends Request {
      */
     public String getLabels() {
         return this.labels;
+    }
+
+    /**
+     * @return layoutMode
+     */
+    public String getLayoutMode() {
+        return this.layoutMode;
     }
 
     /**
@@ -163,6 +175,7 @@ public class ListQuotasRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListQuotasRequest, Builder> {
         private String labels; 
+        private String layoutMode; 
         private String order; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -181,6 +194,7 @@ public class ListQuotasRequest extends Request {
         private Builder(ListQuotasRequest request) {
             super(request);
             this.labels = request.labels;
+            this.layoutMode = request.layoutMode;
             this.order = request.order;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
@@ -199,6 +213,15 @@ public class ListQuotasRequest extends Request {
         public Builder labels(String labels) {
             this.putQueryParameter("Labels", labels);
             this.labels = labels;
+            return this;
+        }
+
+        /**
+         * LayoutMode.
+         */
+        public Builder layoutMode(String layoutMode) {
+            this.putQueryParameter("LayoutMode", layoutMode);
+            this.layoutMode = layoutMode;
             return this;
         }
 

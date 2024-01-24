@@ -61,6 +61,10 @@ public class CreateTrainingJobRequest extends Request {
     private Scheduler scheduler;
 
     @Body
+    @NameInMap("Settings")
+    private Settings settings;
+
+    @Body
     @NameInMap("TrainingJobDescription")
     private String trainingJobDescription;
 
@@ -92,6 +96,7 @@ public class CreateTrainingJobRequest extends Request {
         this.outputChannels = builder.outputChannels;
         this.roleArn = builder.roleArn;
         this.scheduler = builder.scheduler;
+        this.settings = builder.settings;
         this.trainingJobDescription = builder.trainingJobDescription;
         this.trainingJobName = builder.trainingJobName;
         this.userVpc = builder.userVpc;
@@ -196,6 +201,13 @@ public class CreateTrainingJobRequest extends Request {
     }
 
     /**
+     * @return settings
+     */
+    public Settings getSettings() {
+        return this.settings;
+    }
+
+    /**
      * @return trainingJobDescription
      */
     public String getTrainingJobDescription() {
@@ -236,6 +248,7 @@ public class CreateTrainingJobRequest extends Request {
         private java.util.List < OutputChannels> outputChannels; 
         private String roleArn; 
         private Scheduler scheduler; 
+        private Settings settings; 
         private String trainingJobDescription; 
         private String trainingJobName; 
         private UserVpc userVpc; 
@@ -259,6 +272,7 @@ public class CreateTrainingJobRequest extends Request {
             this.outputChannels = request.outputChannels;
             this.roleArn = request.roleArn;
             this.scheduler = request.scheduler;
+            this.settings = request.settings;
             this.trainingJobDescription = request.trainingJobDescription;
             this.trainingJobName = request.trainingJobName;
             this.userVpc = request.userVpc;
@@ -370,6 +384,15 @@ public class CreateTrainingJobRequest extends Request {
         public Builder scheduler(Scheduler scheduler) {
             this.putBodyParameter("Scheduler", scheduler);
             this.scheduler = scheduler;
+            return this;
+        }
+
+        /**
+         * Settings.
+         */
+        public Builder settings(Settings settings) {
+            this.putBodyParameter("Settings", settings);
+            this.settings = settings;
             return this;
         }
 
@@ -978,6 +1001,107 @@ public class CreateTrainingJobRequest extends Request {
 
             public Scheduler build() {
                 return new Scheduler(this);
+            } 
+
+        } 
+
+    }
+    public static class Settings extends TeaModel {
+        @NameInMap("AIMasterType")
+        private String AIMasterType;
+
+        @NameInMap("EnableErrorMonitoringInAIMaster")
+        private Boolean enableErrorMonitoringInAIMaster;
+
+        @NameInMap("ErrorMonitoringArgs")
+        private String errorMonitoringArgs;
+
+        @NameInMap("Priority")
+        private Integer priority;
+
+        private Settings(Builder builder) {
+            this.AIMasterType = builder.AIMasterType;
+            this.enableErrorMonitoringInAIMaster = builder.enableErrorMonitoringInAIMaster;
+            this.errorMonitoringArgs = builder.errorMonitoringArgs;
+            this.priority = builder.priority;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Settings create() {
+            return builder().build();
+        }
+
+        /**
+         * @return AIMasterType
+         */
+        public String getAIMasterType() {
+            return this.AIMasterType;
+        }
+
+        /**
+         * @return enableErrorMonitoringInAIMaster
+         */
+        public Boolean getEnableErrorMonitoringInAIMaster() {
+            return this.enableErrorMonitoringInAIMaster;
+        }
+
+        /**
+         * @return errorMonitoringArgs
+         */
+        public String getErrorMonitoringArgs() {
+            return this.errorMonitoringArgs;
+        }
+
+        /**
+         * @return priority
+         */
+        public Integer getPriority() {
+            return this.priority;
+        }
+
+        public static final class Builder {
+            private String AIMasterType; 
+            private Boolean enableErrorMonitoringInAIMaster; 
+            private String errorMonitoringArgs; 
+            private Integer priority; 
+
+            /**
+             * AIMasterType.
+             */
+            public Builder AIMasterType(String AIMasterType) {
+                this.AIMasterType = AIMasterType;
+                return this;
+            }
+
+            /**
+             * EnableErrorMonitoringInAIMaster.
+             */
+            public Builder enableErrorMonitoringInAIMaster(Boolean enableErrorMonitoringInAIMaster) {
+                this.enableErrorMonitoringInAIMaster = enableErrorMonitoringInAIMaster;
+                return this;
+            }
+
+            /**
+             * ErrorMonitoringArgs.
+             */
+            public Builder errorMonitoringArgs(String errorMonitoringArgs) {
+                this.errorMonitoringArgs = errorMonitoringArgs;
+                return this;
+            }
+
+            /**
+             * Priority.
+             */
+            public Builder priority(Integer priority) {
+                this.priority = priority;
+                return this;
+            }
+
+            public Settings build() {
+                return new Settings(this);
             } 
 
         } 

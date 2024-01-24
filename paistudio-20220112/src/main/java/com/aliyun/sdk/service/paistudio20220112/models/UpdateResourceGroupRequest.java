@@ -17,6 +17,14 @@ public class UpdateResourceGroupRequest extends Request {
     private String resourceGroupID;
 
     @Body
+    @NameInMap("Description")
+    private String description;
+
+    @Body
+    @NameInMap("Name")
+    private String name;
+
+    @Body
     @NameInMap("Unbind")
     private Boolean unbind;
 
@@ -27,6 +35,8 @@ public class UpdateResourceGroupRequest extends Request {
     private UpdateResourceGroupRequest(Builder builder) {
         super(builder);
         this.resourceGroupID = builder.resourceGroupID;
+        this.description = builder.description;
+        this.name = builder.name;
         this.unbind = builder.unbind;
         this.userVpc = builder.userVpc;
     }
@@ -52,6 +62,20 @@ public class UpdateResourceGroupRequest extends Request {
     }
 
     /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
+     * @return name
+     */
+    public String getName() {
+        return this.name;
+    }
+
+    /**
      * @return unbind
      */
     public Boolean getUnbind() {
@@ -67,6 +91,8 @@ public class UpdateResourceGroupRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateResourceGroupRequest, Builder> {
         private String resourceGroupID; 
+        private String description; 
+        private String name; 
         private Boolean unbind; 
         private UserVpc userVpc; 
 
@@ -77,6 +103,8 @@ public class UpdateResourceGroupRequest extends Request {
         private Builder(UpdateResourceGroupRequest request) {
             super(request);
             this.resourceGroupID = request.resourceGroupID;
+            this.description = request.description;
+            this.name = request.name;
             this.unbind = request.unbind;
             this.userVpc = request.userVpc;
         } 
@@ -87,6 +115,24 @@ public class UpdateResourceGroupRequest extends Request {
         public Builder resourceGroupID(String resourceGroupID) {
             this.putPathParameter("ResourceGroupID", resourceGroupID);
             this.resourceGroupID = resourceGroupID;
+            return this;
+        }
+
+        /**
+         * Description.
+         */
+        public Builder description(String description) {
+            this.putBodyParameter("Description", description);
+            this.description = description;
+            return this;
+        }
+
+        /**
+         * Name.
+         */
+        public Builder name(String name) {
+            this.putBodyParameter("Name", name);
+            this.name = name;
             return this;
         }
 
