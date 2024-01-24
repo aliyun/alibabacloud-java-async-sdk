@@ -33,6 +33,10 @@ public class CreateAppRequest extends Request {
     private java.util.List < Network> network;
 
     @Body
+    @NameInMap("privateNetwork")
+    private java.util.List < PrivateNetwork> privateNetwork;
+
+    @Body
     @NameInMap("quotaInfo")
     private QuotaInfo quotaInfo;
 
@@ -55,6 +59,7 @@ public class CreateAppRequest extends Request {
         this.chargeType = builder.chargeType;
         this.description = builder.description;
         this.network = builder.network;
+        this.privateNetwork = builder.privateNetwork;
         this.quotaInfo = builder.quotaInfo;
         this.regionId = builder.regionId;
         this.version = builder.version;
@@ -110,6 +115,13 @@ public class CreateAppRequest extends Request {
     }
 
     /**
+     * @return privateNetwork
+     */
+    public java.util.List < PrivateNetwork> getPrivateNetwork() {
+        return this.privateNetwork;
+    }
+
+    /**
      * @return quotaInfo
      */
     public QuotaInfo getQuotaInfo() {
@@ -143,6 +155,7 @@ public class CreateAppRequest extends Request {
         private String chargeType; 
         private String description; 
         private java.util.List < Network> network; 
+        private java.util.List < PrivateNetwork> privateNetwork; 
         private QuotaInfo quotaInfo; 
         private String regionId; 
         private String version; 
@@ -159,6 +172,7 @@ public class CreateAppRequest extends Request {
             this.chargeType = request.chargeType;
             this.description = request.description;
             this.network = request.network;
+            this.privateNetwork = request.privateNetwork;
             this.quotaInfo = request.quotaInfo;
             this.regionId = request.regionId;
             this.version = request.version;
@@ -207,6 +221,15 @@ public class CreateAppRequest extends Request {
         public Builder network(java.util.List < Network> network) {
             this.putBodyParameter("network", network);
             this.network = network;
+            return this;
+        }
+
+        /**
+         * privateNetwork.
+         */
+        public Builder privateNetwork(java.util.List < PrivateNetwork> privateNetwork) {
+            this.putBodyParameter("privateNetwork", privateNetwork);
+            this.privateNetwork = privateNetwork;
             return this;
         }
 
@@ -532,6 +555,188 @@ public class CreateAppRequest extends Request {
 
             public Network build() {
                 return new Network(this);
+            } 
+
+        } 
+
+    }
+    public static class PrivateNetworkWhiteIpGroup extends TeaModel {
+        @NameInMap("groupName")
+        private String groupName;
+
+        @NameInMap("ips")
+        private java.util.List < String > ips;
+
+        private PrivateNetworkWhiteIpGroup(Builder builder) {
+            this.groupName = builder.groupName;
+            this.ips = builder.ips;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PrivateNetworkWhiteIpGroup create() {
+            return builder().build();
+        }
+
+        /**
+         * @return groupName
+         */
+        public String getGroupName() {
+            return this.groupName;
+        }
+
+        /**
+         * @return ips
+         */
+        public java.util.List < String > getIps() {
+            return this.ips;
+        }
+
+        public static final class Builder {
+            private String groupName; 
+            private java.util.List < String > ips; 
+
+            /**
+             * groupName.
+             */
+            public Builder groupName(String groupName) {
+                this.groupName = groupName;
+                return this;
+            }
+
+            /**
+             * ips.
+             */
+            public Builder ips(java.util.List < String > ips) {
+                this.ips = ips;
+                return this;
+            }
+
+            public PrivateNetworkWhiteIpGroup build() {
+                return new PrivateNetworkWhiteIpGroup(this);
+            } 
+
+        } 
+
+    }
+    public static class PrivateNetwork extends TeaModel {
+        @NameInMap("enabled")
+        private Boolean enabled;
+
+        @NameInMap("pvlEndpointId")
+        private String pvlEndpointId;
+
+        @NameInMap("type")
+        private String type;
+
+        @NameInMap("vpcId")
+        private String vpcId;
+
+        @NameInMap("whiteIpGroup")
+        private java.util.List < PrivateNetworkWhiteIpGroup> whiteIpGroup;
+
+        private PrivateNetwork(Builder builder) {
+            this.enabled = builder.enabled;
+            this.pvlEndpointId = builder.pvlEndpointId;
+            this.type = builder.type;
+            this.vpcId = builder.vpcId;
+            this.whiteIpGroup = builder.whiteIpGroup;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PrivateNetwork create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enabled
+         */
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        /**
+         * @return pvlEndpointId
+         */
+        public String getPvlEndpointId() {
+            return this.pvlEndpointId;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        /**
+         * @return vpcId
+         */
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        /**
+         * @return whiteIpGroup
+         */
+        public java.util.List < PrivateNetworkWhiteIpGroup> getWhiteIpGroup() {
+            return this.whiteIpGroup;
+        }
+
+        public static final class Builder {
+            private Boolean enabled; 
+            private String pvlEndpointId; 
+            private String type; 
+            private String vpcId; 
+            private java.util.List < PrivateNetworkWhiteIpGroup> whiteIpGroup; 
+
+            /**
+             * enabled.
+             */
+            public Builder enabled(Boolean enabled) {
+                this.enabled = enabled;
+                return this;
+            }
+
+            /**
+             * pvlEndpointId.
+             */
+            public Builder pvlEndpointId(String pvlEndpointId) {
+                this.pvlEndpointId = pvlEndpointId;
+                return this;
+            }
+
+            /**
+             * type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            /**
+             * vpcId.
+             */
+            public Builder vpcId(String vpcId) {
+                this.vpcId = vpcId;
+                return this;
+            }
+
+            /**
+             * whiteIpGroup.
+             */
+            public Builder whiteIpGroup(java.util.List < PrivateNetworkWhiteIpGroup> whiteIpGroup) {
+                this.whiteIpGroup = whiteIpGroup;
+                return this;
+            }
+
+            public PrivateNetwork build() {
+                return new PrivateNetwork(this);
             } 
 
         } 
