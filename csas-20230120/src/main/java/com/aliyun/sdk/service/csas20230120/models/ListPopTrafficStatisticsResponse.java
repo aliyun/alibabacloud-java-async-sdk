@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreateRegistrationPolicyResponse} extends {@link TeaModel}
+ * {@link ListPopTrafficStatisticsResponse} extends {@link TeaModel}
  *
- * <p>CreateRegistrationPolicyResponse</p>
+ * <p>ListPopTrafficStatisticsResponse</p>
  */
-public class CreateRegistrationPolicyResponse extends Response {
+public class ListPopTrafficStatisticsResponse extends Response {
     @NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -19,16 +19,16 @@ public class CreateRegistrationPolicyResponse extends Response {
     private Integer statusCode;
 
     @NameInMap("body")
-    private CreateRegistrationPolicyResponseBody body;
+    private ListPopTrafficStatisticsResponseBody body;
 
-    private CreateRegistrationPolicyResponse(BuilderImpl builder) {
+    private ListPopTrafficStatisticsResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static CreateRegistrationPolicyResponse create() {
+    public static ListPopTrafficStatisticsResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +54,35 @@ public class CreateRegistrationPolicyResponse extends Response {
     /**
      * @return body
      */
-    public CreateRegistrationPolicyResponseBody getBody() {
+    public ListPopTrafficStatisticsResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<CreateRegistrationPolicyResponse, Builder> {
+    public interface Builder extends Response.Builder<ListPopTrafficStatisticsResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(CreateRegistrationPolicyResponseBody body);
+        Builder body(ListPopTrafficStatisticsResponseBody body);
 
         @Override
-        CreateRegistrationPolicyResponse build();
+        ListPopTrafficStatisticsResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<CreateRegistrationPolicyResponse, Builder>
+            extends Response.BuilderImpl<ListPopTrafficStatisticsResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private CreateRegistrationPolicyResponseBody body; 
+        private ListPopTrafficStatisticsResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(CreateRegistrationPolicyResponse response) {
+        private BuilderImpl(ListPopTrafficStatisticsResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +111,14 @@ public class CreateRegistrationPolicyResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(CreateRegistrationPolicyResponseBody body) {
+        public Builder body(ListPopTrafficStatisticsResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public CreateRegistrationPolicyResponse build() {
-            return new CreateRegistrationPolicyResponse(this);
+        public ListPopTrafficStatisticsResponse build() {
+            return new ListPopTrafficStatisticsResponse(this);
         } 
 
     } 

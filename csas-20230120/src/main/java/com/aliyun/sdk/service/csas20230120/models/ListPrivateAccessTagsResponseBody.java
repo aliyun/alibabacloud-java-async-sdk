@@ -62,7 +62,7 @@ public class ListPrivateAccessTagsResponseBody extends TeaModel {
         private Integer totalNum; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class ListPrivateAccessTagsResponseBody extends TeaModel {
         }
 
         /**
-         * Tags.
+         * The internal access tags.
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.tags = tags;
@@ -78,7 +78,7 @@ public class ListPrivateAccessTagsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalNum.
+         * The total number of internal access tags.
          */
         public Builder totalNum(Integer totalNum) {
             this.totalNum = totalNum;
@@ -190,7 +190,7 @@ public class ListPrivateAccessTagsResponseBody extends TeaModel {
             private String tagType; 
 
             /**
-             * ApplicationIds.
+             * The IDs of the internal access applications.
              */
             public Builder applicationIds(java.util.List < String > applicationIds) {
                 this.applicationIds = applicationIds;
@@ -198,7 +198,7 @@ public class ListPrivateAccessTagsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the internal access tag was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -206,7 +206,7 @@ public class ListPrivateAccessTagsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the internal access tag.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -214,7 +214,7 @@ public class ListPrivateAccessTagsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the internal access tag.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -222,7 +222,7 @@ public class ListPrivateAccessTagsResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyIds.
+             * The IDs of the internal access policies.
              */
             public Builder policyIds(java.util.List < String > policyIds) {
                 this.policyIds = policyIds;
@@ -230,7 +230,7 @@ public class ListPrivateAccessTagsResponseBody extends TeaModel {
             }
 
             /**
-             * TagId.
+             * The ID of the internal access tag.
              */
             public Builder tagId(String tagId) {
                 this.tagId = tagId;
@@ -238,7 +238,11 @@ public class ListPrivateAccessTagsResponseBody extends TeaModel {
             }
 
             /**
-             * TagType.
+             * The type of the internal access tag. Valid values:
+             * <p>
+             * 
+             * *   **Default**
+             * *   **Custom**
              */
             public Builder tagType(String tagType) {
                 this.tagType = tagType;

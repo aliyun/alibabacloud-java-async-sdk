@@ -17,6 +17,10 @@ public class ListPrivateAccessPolicesRequest extends Request {
     private String applicationId;
 
     @Query
+    @NameInMap("ApplicationName")
+    private String applicationName;
+
+    @Query
     @NameInMap("CurrentPage")
     @Validation(required = true)
     private Integer currentPage;
@@ -47,12 +51,17 @@ public class ListPrivateAccessPolicesRequest extends Request {
     private String tagId;
 
     @Query
+    @NameInMap("TagName")
+    private String tagName;
+
+    @Query
     @NameInMap("UserGroupId")
     private String userGroupId;
 
     private ListPrivateAccessPolicesRequest(Builder builder) {
         super(builder);
         this.applicationId = builder.applicationId;
+        this.applicationName = builder.applicationName;
         this.currentPage = builder.currentPage;
         this.name = builder.name;
         this.pageSize = builder.pageSize;
@@ -60,6 +69,7 @@ public class ListPrivateAccessPolicesRequest extends Request {
         this.policyIds = builder.policyIds;
         this.status = builder.status;
         this.tagId = builder.tagId;
+        this.tagName = builder.tagName;
         this.userGroupId = builder.userGroupId;
     }
 
@@ -81,6 +91,13 @@ public class ListPrivateAccessPolicesRequest extends Request {
      */
     public String getApplicationId() {
         return this.applicationId;
+    }
+
+    /**
+     * @return applicationName
+     */
+    public String getApplicationName() {
+        return this.applicationName;
     }
 
     /**
@@ -133,6 +150,13 @@ public class ListPrivateAccessPolicesRequest extends Request {
     }
 
     /**
+     * @return tagName
+     */
+    public String getTagName() {
+        return this.tagName;
+    }
+
+    /**
      * @return userGroupId
      */
     public String getUserGroupId() {
@@ -141,6 +165,7 @@ public class ListPrivateAccessPolicesRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListPrivateAccessPolicesRequest, Builder> {
         private String applicationId; 
+        private String applicationName; 
         private Integer currentPage; 
         private String name; 
         private Integer pageSize; 
@@ -148,6 +173,7 @@ public class ListPrivateAccessPolicesRequest extends Request {
         private java.util.List < String > policyIds; 
         private String status; 
         private String tagId; 
+        private String tagName; 
         private String userGroupId; 
 
         private Builder() {
@@ -157,6 +183,7 @@ public class ListPrivateAccessPolicesRequest extends Request {
         private Builder(ListPrivateAccessPolicesRequest request) {
             super(request);
             this.applicationId = request.applicationId;
+            this.applicationName = request.applicationName;
             this.currentPage = request.currentPage;
             this.name = request.name;
             this.pageSize = request.pageSize;
@@ -164,6 +191,7 @@ public class ListPrivateAccessPolicesRequest extends Request {
             this.policyIds = request.policyIds;
             this.status = request.status;
             this.tagId = request.tagId;
+            this.tagName = request.tagName;
             this.userGroupId = request.userGroupId;
         } 
 
@@ -173,6 +201,15 @@ public class ListPrivateAccessPolicesRequest extends Request {
         public Builder applicationId(String applicationId) {
             this.putQueryParameter("ApplicationId", applicationId);
             this.applicationId = applicationId;
+            return this;
+        }
+
+        /**
+         * ApplicationName.
+         */
+        public Builder applicationName(String applicationName) {
+            this.putQueryParameter("ApplicationName", applicationName);
+            this.applicationName = applicationName;
             return this;
         }
 
@@ -236,6 +273,15 @@ public class ListPrivateAccessPolicesRequest extends Request {
         public Builder tagId(String tagId) {
             this.putQueryParameter("TagId", tagId);
             this.tagId = tagId;
+            return this;
+        }
+
+        /**
+         * TagName.
+         */
+        public Builder tagName(String tagName) {
+            this.putQueryParameter("TagName", tagName);
+            this.tagName = tagName;
             return this;
         }
 

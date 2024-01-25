@@ -140,7 +140,11 @@ public class ListPrivateAccessTagsRequest extends Request {
         } 
 
         /**
-         * ApplicationId.
+         * The ID of the internal access application. You can obtain the application ID by calling the following operations:
+         * <p>
+         * 
+         * *   [ListPrivateAccessApplications](~~ListPrivateAccessApplications~~): queries all internal access applications.
+         * *   [CreatePrivateAccessApplication](~~CreatePrivateAccessApplication~~): creates an internal access application.
          */
         public Builder applicationId(String applicationId) {
             this.putQueryParameter("ApplicationId", applicationId);
@@ -149,7 +153,7 @@ public class ListPrivateAccessTagsRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The page number. Valid values: 1 to 10000.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -158,7 +162,7 @@ public class ListPrivateAccessTagsRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the internal access tag. The name must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-).
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -167,7 +171,7 @@ public class ListPrivateAccessTagsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Valid values: 1 to 1000.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -176,7 +180,11 @@ public class ListPrivateAccessTagsRequest extends Request {
         }
 
         /**
-         * PolicyId.
+         * The ID of the internal access policy. You can obtain the policy ID by calling the following operations:
+         * <p>
+         * 
+         * *   [ListPrivateAccessPolices](~~ListPrivateAccessPolices~~): queries all internal access policies.
+         * *   [CreatePrivateAccessPolicy](~~CreatePrivateAccessPolicy~~): creates an internal access policy.
          */
         public Builder policyId(String policyId) {
             this.putQueryParameter("PolicyId", policyId);
@@ -185,7 +193,7 @@ public class ListPrivateAccessTagsRequest extends Request {
         }
 
         /**
-         * SimpleMode.
+         * Specifies whether to enable the simple query mode. A value of true specifies that policy IDs are not queried.
          */
         public Builder simpleMode(Boolean simpleMode) {
             this.putQueryParameter("SimpleMode", simpleMode);
@@ -194,7 +202,7 @@ public class ListPrivateAccessTagsRequest extends Request {
         }
 
         /**
-         * TagIds.
+         * The IDs of internal access tags. You can specify up to 100 tag IDs.
          */
         public Builder tagIds(java.util.List < String > tagIds) {
             this.putQueryParameter("TagIds", tagIds);

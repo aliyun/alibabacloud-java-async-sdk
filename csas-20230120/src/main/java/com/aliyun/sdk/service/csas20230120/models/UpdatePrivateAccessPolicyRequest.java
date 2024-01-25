@@ -29,6 +29,10 @@ public class UpdatePrivateAccessPolicyRequest extends Request {
     private String description;
 
     @Body
+    @NameInMap("DeviceAttributeId")
+    private String deviceAttributeId;
+
+    @Body
     @NameInMap("ModifyType")
     private String modifyType;
 
@@ -67,6 +71,7 @@ public class UpdatePrivateAccessPolicyRequest extends Request {
         this.applicationType = builder.applicationType;
         this.customUserAttributes = builder.customUserAttributes;
         this.description = builder.description;
+        this.deviceAttributeId = builder.deviceAttributeId;
         this.modifyType = builder.modifyType;
         this.policyAction = builder.policyAction;
         this.policyId = builder.policyId;
@@ -116,6 +121,13 @@ public class UpdatePrivateAccessPolicyRequest extends Request {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return deviceAttributeId
+     */
+    public String getDeviceAttributeId() {
+        return this.deviceAttributeId;
     }
 
     /**
@@ -179,6 +191,7 @@ public class UpdatePrivateAccessPolicyRequest extends Request {
         private String applicationType; 
         private java.util.List < CustomUserAttributes> customUserAttributes; 
         private String description; 
+        private String deviceAttributeId; 
         private String modifyType; 
         private String policyAction; 
         private String policyId; 
@@ -198,6 +211,7 @@ public class UpdatePrivateAccessPolicyRequest extends Request {
             this.applicationType = request.applicationType;
             this.customUserAttributes = request.customUserAttributes;
             this.description = request.description;
+            this.deviceAttributeId = request.deviceAttributeId;
             this.modifyType = request.modifyType;
             this.policyAction = request.policyAction;
             this.policyId = request.policyId;
@@ -241,6 +255,15 @@ public class UpdatePrivateAccessPolicyRequest extends Request {
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * DeviceAttributeId.
+         */
+        public Builder deviceAttributeId(String deviceAttributeId) {
+            this.putBodyParameter("DeviceAttributeId", deviceAttributeId);
+            this.deviceAttributeId = deviceAttributeId;
             return this;
         }
 

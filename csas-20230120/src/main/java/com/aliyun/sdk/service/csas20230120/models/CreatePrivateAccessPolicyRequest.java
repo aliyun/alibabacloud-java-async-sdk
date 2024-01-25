@@ -30,6 +30,10 @@ public class CreatePrivateAccessPolicyRequest extends Request {
     private String description;
 
     @Body
+    @NameInMap("DeviceAttributeId")
+    private String deviceAttributeId;
+
+    @Body
     @NameInMap("Name")
     @Validation(required = true)
     private String name;
@@ -68,6 +72,7 @@ public class CreatePrivateAccessPolicyRequest extends Request {
         this.applicationType = builder.applicationType;
         this.customUserAttributes = builder.customUserAttributes;
         this.description = builder.description;
+        this.deviceAttributeId = builder.deviceAttributeId;
         this.name = builder.name;
         this.policyAction = builder.policyAction;
         this.priority = builder.priority;
@@ -116,6 +121,13 @@ public class CreatePrivateAccessPolicyRequest extends Request {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return deviceAttributeId
+     */
+    public String getDeviceAttributeId() {
+        return this.deviceAttributeId;
     }
 
     /**
@@ -172,6 +184,7 @@ public class CreatePrivateAccessPolicyRequest extends Request {
         private String applicationType; 
         private java.util.List < CustomUserAttributes> customUserAttributes; 
         private String description; 
+        private String deviceAttributeId; 
         private String name; 
         private String policyAction; 
         private Integer priority; 
@@ -190,6 +203,7 @@ public class CreatePrivateAccessPolicyRequest extends Request {
             this.applicationType = request.applicationType;
             this.customUserAttributes = request.customUserAttributes;
             this.description = request.description;
+            this.deviceAttributeId = request.deviceAttributeId;
             this.name = request.name;
             this.policyAction = request.policyAction;
             this.priority = request.priority;
@@ -232,6 +246,15 @@ public class CreatePrivateAccessPolicyRequest extends Request {
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * DeviceAttributeId.
+         */
+        public Builder deviceAttributeId(String deviceAttributeId) {
+            this.putBodyParameter("DeviceAttributeId", deviceAttributeId);
+            this.deviceAttributeId = deviceAttributeId;
             return this;
         }
 
@@ -313,15 +336,12 @@ public class CreatePrivateAccessPolicyRequest extends Request {
         private Integer idpId;
 
         @NameInMap("Relation")
-        @Validation(required = true)
         private String relation;
 
         @NameInMap("UserGroupType")
-        @Validation(required = true)
         private String userGroupType;
 
         @NameInMap("Value")
-        @Validation(required = true)
         private String value;
 
         private CustomUserAttributes(Builder builder) {

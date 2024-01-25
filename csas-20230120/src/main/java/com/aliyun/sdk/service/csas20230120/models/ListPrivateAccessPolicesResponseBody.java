@@ -208,6 +208,9 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
         @NameInMap("Description")
         private String description;
 
+        @NameInMap("DeviceAttributeId")
+        private String deviceAttributeId;
+
         @NameInMap("Name")
         private String name;
 
@@ -238,6 +241,7 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
             this.createTime = builder.createTime;
             this.customUserAttributes = builder.customUserAttributes;
             this.description = builder.description;
+            this.deviceAttributeId = builder.deviceAttributeId;
             this.name = builder.name;
             this.policyAction = builder.policyAction;
             this.policyId = builder.policyId;
@@ -289,6 +293,13 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
          */
         public String getDescription() {
             return this.description;
+        }
+
+        /**
+         * @return deviceAttributeId
+         */
+        public String getDeviceAttributeId() {
+            return this.deviceAttributeId;
         }
 
         /**
@@ -353,6 +364,7 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
             private String createTime; 
             private java.util.List < CustomUserAttributes> customUserAttributes; 
             private String description; 
+            private String deviceAttributeId; 
             private String name; 
             private String policyAction; 
             private String policyId; 
@@ -399,6 +411,14 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * DeviceAttributeId.
+             */
+            public Builder deviceAttributeId(String deviceAttributeId) {
+                this.deviceAttributeId = deviceAttributeId;
                 return this;
             }
 
