@@ -170,7 +170,7 @@ public class ListProvisionConfigsResponseBody extends TeaModel {
             private java.util.List < TargetTrackingPolicies > targetTrackingPolicies; 
 
             /**
-             * Specifies whether to always allocate CPU to a function instance.
+             * Specifies whether to always allocate CPU resources to function instances.
              */
             public Builder alwaysAllocateCPU(Boolean alwaysAllocateCPU) {
                 this.alwaysAllocateCPU = alwaysAllocateCPU;
@@ -178,7 +178,7 @@ public class ListProvisionConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The actual number of provisioned instances.
+             * The number of current resources.
              */
             public Builder current(Long current) {
                 this.current = current;
@@ -210,7 +210,7 @@ public class ListProvisionConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The expected number of provisioned instances.
+             * The expected number of resources.
              */
             public Builder target(Long target) {
                 this.target = target;

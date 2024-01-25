@@ -50,7 +50,7 @@ public class ListLayersResponseBody extends TeaModel {
         private String nextToken; 
 
         /**
-         * The information about layers.
+         * The layers.
          */
         public Builder layers(java.util.List < Layer > layers) {
             this.layers = layers;

@@ -126,7 +126,7 @@ public class ListEventSourcesRequest extends Request {
         } 
 
         /**
-         * The name of the service.
+         * The service name.
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("serviceName", serviceName);
@@ -135,7 +135,7 @@ public class ListEventSourcesRequest extends Request {
         }
 
         /**
-         * The name of the function.
+         * The function name.
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -153,7 +153,7 @@ public class ListEventSourcesRequest extends Request {
         }
 
         /**
-         * The time when Function Compute API is called. Specify the time in the **EEE,d MMM yyyy HH:mm:ss GMT** format.
+         * The time when the function is invoked. The value is in the **EEE,d MMM yyyy HH:mm:ss GMT** format.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -162,7 +162,7 @@ public class ListEventSourcesRequest extends Request {
         }
 
         /**
-         * The trace ID of the invocation request of Function Compute.
+         * The trace ID of the request for Function Compute API.
          */
         public Builder xFcTraceId(String xFcTraceId) {
             this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);

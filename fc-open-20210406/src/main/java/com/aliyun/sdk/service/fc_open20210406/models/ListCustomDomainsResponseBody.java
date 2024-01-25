@@ -222,7 +222,7 @@ public class ListCustomDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of the HTTPS certificate.
+             * The configuration of the HTTPS certificate.
              */
             public Builder certConfig(CertConfig certConfig) {
                 this.certConfig = certConfig;
@@ -238,7 +238,7 @@ public class ListCustomDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name.
+             * The endpoint.
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -246,7 +246,7 @@ public class ListCustomDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the domain name was last modified.
+             * The last time when the domain name was updated.
              */
             public Builder lastModifiedTime(String lastModifiedTime) {
                 this.lastModifiedTime = lastModifiedTime;
@@ -254,12 +254,12 @@ public class ListCustomDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol type that is supported by the custom domain name.
+             * The protocol type that is supported by the custom domain name. Valid values:
              * <p>
              * 
              * *   **HTTP**: Only HTTP is supported.
              * *   **HTTPS**: Only HTTPS is supported.
-             * *   **HTTP,HTTPS**: HTTP and HTTPS are supported.
+             * *   **HTTP,HTTPS**: Both HTTP and HTTPS are supported.
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -267,7 +267,7 @@ public class ListCustomDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The route table that maps the paths to functions when the functions are invoked by using the custom domain name.
+             * The configuration of the route table. The route table maps paths to functions when the functions are invoked by using custom domain names.
              */
             public Builder routeConfig(RouteConfig routeConfig) {
                 this.routeConfig = routeConfig;
@@ -275,7 +275,7 @@ public class ListCustomDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The Transport Layer Security (TLS) configuration.
+             * The TLS configurations.
              */
             public Builder tlsConfig(TLSConfig tlsConfig) {
                 this.tlsConfig = tlsConfig;
@@ -283,7 +283,7 @@ public class ListCustomDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The Web Application Firewall (WAF) configuration.
+             * Web Application Firewall (WAF) configurations.
              */
             public Builder wafConfig(WAFConfig wafConfig) {
                 this.wafConfig = wafConfig;

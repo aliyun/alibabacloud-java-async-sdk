@@ -481,7 +481,7 @@ public class CreateFunctionRequest extends Request {
         }
 
         /**
-         * The port on which the HTTP server listens for the custom runtime or custom container runtime.
+         * The port on which the HTTP server listens for the custom runtime or Custom Container runtime.
          */
         public Builder caPort(Integer caPort) {
             this.putBodyParameter("caPort", caPort);
@@ -490,7 +490,7 @@ public class CreateFunctionRequest extends Request {
         }
 
         /**
-         * The code of the function. The code must be packaged into a ZIP file. Configure **code** or **customContainerConfig**.
+         * The ZIP package of function code. Set the value to **code** or **customContainerConfig**.
          */
         public Builder code(Code code) {
             this.putBodyParameter("code", code);
@@ -499,7 +499,7 @@ public class CreateFunctionRequest extends Request {
         }
 
         /**
-         * The number of vCPUs of the function. The value is a multiple of 0.05.
+         * The CPU size of the function. Unit: vCPUs. The value is a multiple of 0.05 vCPUs.
          */
         public Builder cpu(Float cpu) {
             this.putBodyParameter("cpu", cpu);
@@ -508,7 +508,7 @@ public class CreateFunctionRequest extends Request {
         }
 
         /**
-         * The configurations of the Custom Container runtime. After you configure the Custom Container runtime, Function Compute can execute the function in a container created from a custom image. Configure **code** or **customContainerConfig**.
+         * The configuration of the Custom Container runtime. After you configure the Custom Container runtime, Function Compute can run the function in a container created from a custom image. Set the value to **code** or **customContainerConfig**.
          */
         public Builder customContainerConfig(CustomContainerConfig customContainerConfig) {
             this.putBodyParameter("customContainerConfig", customContainerConfig);
@@ -517,7 +517,7 @@ public class CreateFunctionRequest extends Request {
         }
 
         /**
-         * The custom DNS configurations of the function.
+         * The custom Domain Name System (DNS) settings of the function.
          */
         public Builder customDNS(CustomDNS customDNS) {
             this.putBodyParameter("customDNS", customDNS);
@@ -526,7 +526,7 @@ public class CreateFunctionRequest extends Request {
         }
 
         /**
-         * The custom health check configuration of the function. This parameter is applicable only to custom runtimes and custom containers.
+         * The custom health check configurations of the function. This parameter is applicable only to custom runtimes and Custom Container runtimes.
          */
         public Builder customHealthCheckConfig(CustomHealthCheckConfig customHealthCheckConfig) {
             this.putBodyParameter("customHealthCheckConfig", customHealthCheckConfig);
@@ -535,7 +535,7 @@ public class CreateFunctionRequest extends Request {
         }
 
         /**
-         * The configurations of the custom runtime.
+         * The configurations of the function that runs in the custom runtime.
          */
         public Builder customRuntimeConfig(CustomRuntimeConfig customRuntimeConfig) {
             this.putBodyParameter("customRuntimeConfig", customRuntimeConfig);
@@ -553,7 +553,7 @@ public class CreateFunctionRequest extends Request {
         }
 
         /**
-         * The disk size of the function. Unit: MB. Valid values: 512 and 10240.
+         * The disk size of the function. Unit: MB. Valid values: 512 MB and 10240 MB.
          */
         public Builder diskSize(Integer diskSize) {
             this.putBodyParameter("diskSize", diskSize);
@@ -571,7 +571,7 @@ public class CreateFunctionRequest extends Request {
         }
 
         /**
-         * The name of the function. The name can contain letters, digits, underscores (\_), and hyphens (-) only. The name cannot start with a digit or a hyphen (-). The name must be 1 to 64 characters in length.
+         * The name of the function. It can contain letters, digits, underscores (\_), and hyphens (-). It cannot start with a digit or hyphen (-). It must be 1 to 64 characters in length.
          */
         public Builder functionName(String functionName) {
             this.putBodyParameter("functionName", functionName);
@@ -580,7 +580,7 @@ public class CreateFunctionRequest extends Request {
         }
 
         /**
-         * The GPU memory capacity for the function. Unit: MB. The value is a multiple of 1,024.
+         * The GPU memory size of the function. Unit: MB, which is a multiple of 1024MB.
          */
         public Builder gpuMemorySize(Integer gpuMemorySize) {
             this.putBodyParameter("gpuMemorySize", gpuMemorySize);
@@ -598,7 +598,7 @@ public class CreateFunctionRequest extends Request {
         }
 
         /**
-         * The timeout period for the execution of the Initializer hook. Unit: seconds. Default value: 3. Valid values: 1 to 300. When this period expires, the execution of the Initializer hook is terminated.
+         * The timeout period for the Initializer hook. Default value: 3. Unit: seconds. The value of this parameter ranges from 1 to 300. When this period expires, the execution of the Initializer hook is terminated.
          */
         public Builder initializationTimeout(Integer initializationTimeout) {
             this.putBodyParameter("initializationTimeout", initializationTimeout);
@@ -625,7 +625,7 @@ public class CreateFunctionRequest extends Request {
         }
 
         /**
-         * The lifecycle configurations of the instance.
+         * The lifecycle configurations of instances.
          */
         public Builder instanceLifecycleConfig(InstanceLifecycleConfig instanceLifecycleConfig) {
             this.putBodyParameter("instanceLifecycleConfig", instanceLifecycleConfig);
@@ -634,10 +634,10 @@ public class CreateFunctionRequest extends Request {
         }
 
         /**
-         * The soft concurrency of the instance. You can use this property to implement graceful scale-ups for instances. If the number of concurrent requests on an instance is greater than the soft concurrency value of the instance, an instance scale-up is triggered. For example, if your instance requires a long time to start, you can specify a suitable soft concurrency to start the instance in advance.
+         * The soft concurrency of the instance. You can use this property to implement graceful scale-ups for instances. If the number of concurrent requests on an instance is greater than the value of soft concurrency, an instance scale out is triggered. For example, if your instance requires a long time to start, you can specify a proper soft concurrency to start the instance in advance.
          * <p>
          * 
-         * The value must be less than or equal to that of the **instanceConcurrency** parameter.
+         * The value must be less than or equal to that of **instanceConcurrency**.
          */
         public Builder instanceSoftConcurrency(Integer instanceSoftConcurrency) {
             this.putBodyParameter("instanceSoftConcurrency", instanceSoftConcurrency);
@@ -651,8 +651,8 @@ public class CreateFunctionRequest extends Request {
          * 
          * *   **e1**: elastic instance
          * *   **c1**: performance instance
-         * *   **fc.gpu.tesla.1**: GPU-accelerated instance (Tesla T4)
-         * *   **fc.gpu.ampere.1**: GPU-accelerated instance (Ampere A10)
+         * *   **fc.gpu.tesla. 1** :GPU-accelerated instances (Tesla T4)
+         * *   **fc.gpu.ampere. 1** :GPU-accelerated instances (Ampere A10)
          * *   **g1**: same as **fc.gpu.tesla.1**
          * 
          * Default value: e1
@@ -664,10 +664,10 @@ public class CreateFunctionRequest extends Request {
         }
 
         /**
-         * An array that consists of the information of layers.
+         * A list of layers.
          * <p>
          * 
-         * >  If multiple layers exist, the layers are merged based on the array subscripts in descending order. The content of a layer with a smaller subscript overwrites that of a larger subscript.
+         * >  Multiple layers are merged based on the order of array subscripts. The content of a layer with a smaller subscript overwrites the file that has the same name of a layer with a larger subscript.
          */
         public Builder layers(java.util.List < String > layers) {
             this.putBodyParameter("layers", layers);
@@ -676,7 +676,7 @@ public class CreateFunctionRequest extends Request {
         }
 
         /**
-         * The memory size of the function. Unit: MB. The value must be a multiple of 64. The memory size varies based on the function instance type. For more information, see the "Instance types" section of the [Instance types and usage modes](~~179379~~) topic.
+         * The memory capacity for the function. Unit: MB. The memory capacity must be a multiple of 64 MB. The memory size varies based on the function instance type you use. For more information, see the "Instance types" section of the [Instance types and usage modes](~~179379~~) topic.
          */
         public Builder memorySize(Integer memorySize) {
             this.putBodyParameter("memorySize", memorySize);
@@ -685,7 +685,7 @@ public class CreateFunctionRequest extends Request {
         }
 
         /**
-         * The runtime of the function. Valid values: **nodejs16**, **nodejs14**, **nodejs12**, **nodejs10**, **nodejs8**, **nodejs6**, **nodejs4.4**, **python3.10**, **python3.9**, **python3**, **python2.7**, **java11**, **java8**, **go1**, **php7.2**, **dotnetcore3.1**, **dotnetcore2.1**, **custom.debian10**, **custom**, and **custom-container**. For more information, see [Supported function runtime environments](~~73338~~).
+         * The runtime of the function. Valid values: **nodejs16**, **nodejs14**, **nodejs12**, **nodejs10**, **nodejs8**, **nodejs6**, **nodejs4.4**, **python3.10**, **python3.9**, **python3**, **python2.7**, **java11**, **java8**, **go1**, **php7.2**, **dotnetcore3.1**, **dotnetcore2.1**, **custom.debian10**, **custom**, and **custom-container**. For more information, see [Runtimes that are supported by Function Compute](~~73338~~).
          */
         public Builder runtime(String runtime) {
             this.putBodyParameter("runtime", runtime);
@@ -694,7 +694,7 @@ public class CreateFunctionRequest extends Request {
         }
 
         /**
-         * The timeout period for the execution of the function. Unit: seconds. Default value: 3. Minimum value: 1. When this period is elapsed, the function execution is terminated.
+         * The timeout period for function execution. Unit: seconds. Minimum value: 1. Default value: 3. When this period is elapsed, function execution is terminated.
          */
         public Builder timeout(Integer timeout) {
             this.putBodyParameter("timeout", timeout);

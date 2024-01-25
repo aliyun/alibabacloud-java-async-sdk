@@ -348,7 +348,7 @@ public class ClaimGPUInstanceRequest extends Request {
         }
 
         /**
-         * The user role.
+         * The role of the user.
          */
         public Builder role(String role) {
             this.putBodyParameter("role", role);
@@ -357,7 +357,7 @@ public class ClaimGPUInstanceRequest extends Request {
         }
 
         /**
-         * The security group ID.
+         * The ID of the security group.
          */
         public Builder sgId(String sgId) {
             this.putBodyParameter("sgId", sgId);
@@ -375,7 +375,7 @@ public class ClaimGPUInstanceRequest extends Request {
         }
 
         /**
-         * The range of TCP ports that are open to the security group of the GPU rendering instance.
+         * The range of TCP ports that are enabled by the security group of the GPU rendering instance.
          */
         public Builder tcpPortRange(java.util.List < String > tcpPortRange) {
             this.putBodyParameter("tcpPortRange", tcpPortRange);
@@ -384,7 +384,7 @@ public class ClaimGPUInstanceRequest extends Request {
         }
 
         /**
-         * The range of UDP ports that are open to the security group of the GPU rendering instance.
+         * The range of UDP ports that are enabled by the security group of the GPU rendering instance.
          */
         public Builder udpPortRange(java.util.List < String > udpPortRange) {
             this.putBodyParameter("udpPortRange", udpPortRange);
@@ -393,7 +393,7 @@ public class ClaimGPUInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the VPC in which the instance resides.
+         * The virtual private cloud (VPC) ID.
          */
         public Builder vpcId(String vpcId) {
             this.putBodyParameter("vpcId", vpcId);
@@ -402,7 +402,7 @@ public class ClaimGPUInstanceRequest extends Request {
         }
 
         /**
-         * The vSwitch ID of the instance.
+         * The vSwitch ID.
          */
         public Builder vswId(String vswId) {
             this.putBodyParameter("vswId", vswId);

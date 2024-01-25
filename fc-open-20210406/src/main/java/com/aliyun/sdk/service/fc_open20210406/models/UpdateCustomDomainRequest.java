@@ -203,7 +203,7 @@ public class UpdateCustomDomainRequest extends Request {
         }
 
         /**
-         * The configurations of the HTTPS certificate.
+         * The configuration of the HTTPS certificate.
          */
         public Builder certConfig(CertConfig certConfig) {
             this.putBodyParameter("certConfig", certConfig);
@@ -217,7 +217,7 @@ public class UpdateCustomDomainRequest extends Request {
          * 
          * *   **HTTP**: Only HTTP is supported.
          * *   **HTTPS**: Only HTTPS is supported.
-         * *   **HTTP,HTTPS**: HTTP and HTTPS are supported.
+         * *   **HTTP,HTTPS**: Both HTTP and HTTPS are supported.
          */
         public Builder protocol(String protocol) {
             this.putBodyParameter("protocol", protocol);
@@ -226,7 +226,7 @@ public class UpdateCustomDomainRequest extends Request {
         }
 
         /**
-         * The route table that maps the paths to functions when the functions are invoked by using the custom domain name.
+         * The configuration of the route table. The route table maps paths to functions when the functions are invoked by using custom domain names.
          */
         public Builder routeConfig(RouteConfig routeConfig) {
             this.putBodyParameter("routeConfig", routeConfig);
@@ -235,7 +235,7 @@ public class UpdateCustomDomainRequest extends Request {
         }
 
         /**
-         * The Transport Layer Security (TLS) configuration.
+         * The TLS configurations.
          */
         public Builder tlsConfig(TLSConfig tlsConfig) {
             this.putBodyParameter("tlsConfig", tlsConfig);
@@ -244,7 +244,7 @@ public class UpdateCustomDomainRequest extends Request {
         }
 
         /**
-         * The Web Application Firewall (WAF) configuration.
+         * Web Application Firewall (WAF) configurations.
          */
         public Builder wafConfig(WAFConfig wafConfig) {
             this.putBodyParameter("wafConfig", wafConfig);

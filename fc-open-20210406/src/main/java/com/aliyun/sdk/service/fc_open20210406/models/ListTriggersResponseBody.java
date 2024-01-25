@@ -306,9 +306,9 @@ public class ListTriggersResponseBody extends TeaModel {
              * *   Time trigger: [TimeTriggerConfig](~~415712~~).
              * *   HTTP trigger: [HTTPTriggerConfig](~~415685~~).
              * *   Tablestore trigger: Specify the **SourceArn** parameter and leave this parameter empty.
-             * *   Alibaba Cloud CDN event trigger: [CDNEventsTriggerConfig](javascript:void\(0\)).
+             * *   Alibaba Cloud CDN event trigger: [CDNEventsTriggerConfig](~~73333~~).
              * *   MNS topic trigger: [MnsTopicTriggerConfig](~~415695~~).
-             * *   EventBridge triggers: [EventBridgeTriggerConfig](javascript:void\(0\)).
+             * *   EventBridge triggers: [EventBridgeTriggerConfig](~~333711~~).
              */
             public Builder triggerConfig(String triggerConfig) {
                 this.triggerConfig = triggerConfig;

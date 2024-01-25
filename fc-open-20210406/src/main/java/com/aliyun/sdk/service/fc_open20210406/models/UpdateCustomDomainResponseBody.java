@@ -162,7 +162,7 @@ public class UpdateCustomDomainResponseBody extends TeaModel {
         }
 
         /**
-         * The configurations of the HTTPS certificate.
+         * The configuration of the HTTPS certificate.
          */
         public Builder certConfig(CertConfig certConfig) {
             this.certConfig = certConfig;
@@ -207,7 +207,7 @@ public class UpdateCustomDomainResponseBody extends TeaModel {
         }
 
         /**
-         * The route table that maps the paths to functions when the functions are invoked by using the custom domain name.
+         * The configuration of the route table. The route table maps paths to functions when the functions are invoked by using custom domain names.
          */
         public Builder routeConfig(RouteConfig routeConfig) {
             this.routeConfig = routeConfig;
@@ -215,7 +215,7 @@ public class UpdateCustomDomainResponseBody extends TeaModel {
         }
 
         /**
-         * The Transport Layer Security (TLS) configuration.
+         * The TLS configurations.
          */
         public Builder tlsConfig(TLSConfig tlsConfig) {
             this.tlsConfig = tlsConfig;
@@ -223,7 +223,7 @@ public class UpdateCustomDomainResponseBody extends TeaModel {
         }
 
         /**
-         * The Web Application Firewall (WAF) configuration.
+         * Web Application Firewall (WAF) configurations.
          */
         public Builder wafConfig(WAFConfig wafConfig) {
             this.wafConfig = wafConfig;

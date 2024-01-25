@@ -556,14 +556,12 @@ public class GetFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * The layers (ARN V1 version).
+         * The list of layers (ARN V1).
          * <p>
          * 
-         * > Multiple layers are merged based on the order of array subscripts. The content of a layer with a smaller subscript overwrites the file that has the same name as a layer with a larger subscript.
+         * >  If multiple layers exist, the layers are merged based on the array subscripts in descending order. The content of a layer with a smaller subscript overwrites that of a larger subscript.
          * 
-         * **
-         * 
-         * **Warning** This parameter is to be deprecated. Use layersArnV2.
+         * >  This parameter is to be deprecated. Use layersArnV2.
          */
         public Builder layers(java.util.List < String > layers) {
             this.layers = layers;
@@ -571,10 +569,10 @@ public class GetFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * The list of layers (ARN V2 version).
+         * The list of layers (ARN V2).
          * <p>
          * 
-         * > Multiple layers are merged based on the order of array subscripts. The content of a layer with a smaller subscript overwrites the file that has the same name as a layer with a larger subscript.
+         * >  If multiple layers exist, the layers are merged based on the array subscripts in descending order. The content of a layer with a smaller subscript overwrites that of a larger subscript.
          */
         public Builder layersArnV2(java.util.List < String > layersArnV2) {
             this.layersArnV2 = layersArnV2;

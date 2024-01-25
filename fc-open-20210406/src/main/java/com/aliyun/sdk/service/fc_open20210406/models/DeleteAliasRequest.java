@@ -126,7 +126,7 @@ public class DeleteAliasRequest extends Request {
         } 
 
         /**
-         * The name of the service.
+         * The service name.
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("serviceName", serviceName);
@@ -135,7 +135,7 @@ public class DeleteAliasRequest extends Request {
         }
 
         /**
-         * The name of the alias.
+         * The alias.
          */
         public Builder aliasName(String aliasName) {
             this.putPathParameter("aliasName", aliasName);
@@ -144,10 +144,10 @@ public class DeleteAliasRequest extends Request {
         }
 
         /**
-         * If the ETag specified in the request matches the ETag value of the object, OSS transmits the object and returns 200 OK. If the ETag specified in the request does not match the ETag value of the object, OSS returns 412 Precondition Failed. 
+         * If the ETag specified in a request matches the ETag value of the object, OSS transmits the object and returns 200 OK. If the ETag specified in a request does not match the ETag value of the object, OSS returns 412 Precondition Failed.
          * <p>
-         * The ETag value of a resource is used to check whether the resource has changed. You can check data integrity by using the ETag value. 
-         * Default value: null
+         * 
+         * The ETag value of a resource is used to check whether the resource has changed. You can check data integrity by using the ETag value. Default value: null.
          */
         public Builder ifMatch(String ifMatch) {
             this.putHeaderParameter("If-Match", ifMatch);
@@ -165,7 +165,7 @@ public class DeleteAliasRequest extends Request {
         }
 
         /**
-         * The time when Function Compute API is called. Specify the time in the **EEE,d MMM yyyy HH:mm:ss GMT** format.
+         * The time when the function is invoked. The value is in the **EEE,d MMM yyyy HH:mm:ss GMT** format.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -174,7 +174,7 @@ public class DeleteAliasRequest extends Request {
         }
 
         /**
-         * The trace ID of the invocation request of Function Compute.
+         * The trace ID of the request for Function Compute API.
          */
         public Builder xFcTraceId(String xFcTraceId) {
             this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);

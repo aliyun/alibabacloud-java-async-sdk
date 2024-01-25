@@ -111,7 +111,7 @@ public class DeleteServiceRequest extends Request {
         } 
 
         /**
-         * The name of the service.
+         * The service name.
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("serviceName", serviceName);
@@ -120,7 +120,7 @@ public class DeleteServiceRequest extends Request {
         }
 
         /**
-         * The ETag value of the service. This value is used to ensure that the modified service is consistent with the service to be modified. The ETag value is returned in the responses of the [CreateService](~~175256~~), [UpdateService](~~188167~~), and [GetService](~~189225~~) operations.
+         * The value that is used to ensure that the modified service is consistent with the service to be modified. The value of this parameter comes from responses of the [CreateService](~~175256~~), [UpdateService](~~188167~~), and [GetService](~~189225~~) operation.
          */
         public Builder ifMatch(String ifMatch) {
             this.putHeaderParameter("If-Match", ifMatch);
@@ -138,7 +138,7 @@ public class DeleteServiceRequest extends Request {
         }
 
         /**
-         * The time when Function Compute API is called. Specify the time in the **EEE,d MMM yyyy HH:mm:ss GMT** format.
+         * The time when the Function Compute API was called. The value is in the **EEE,d MMM yyyy HH:mm:ss GMT** format.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -147,7 +147,7 @@ public class DeleteServiceRequest extends Request {
         }
 
         /**
-         * The custom request ID.
+         * The request ID.
          */
         public Builder xFcTraceId(String xFcTraceId) {
             this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);

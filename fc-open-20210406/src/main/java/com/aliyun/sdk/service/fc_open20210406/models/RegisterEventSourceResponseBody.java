@@ -58,7 +58,7 @@ public class RegisterEventSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The ARN of the event source.
+         * The Alibaba Cloud Resource Name (ARN) of the event source.
          */
         public Builder sourceArn(String sourceArn) {
             this.sourceArn = sourceArn;

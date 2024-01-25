@@ -90,7 +90,7 @@ public class ListInstancesResponseBody extends TeaModel {
             private String versionId; 
 
             /**
-             * The ID of the instance.
+             * The instance ID.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -98,7 +98,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the service to which the instance belongs. If the instance belongs to the LATEST alias, 0 is returned as the version.
+             * The version of service to which the instance belongs. If the instance belongs to the LATEST alias, 0 is returned as the version.
              */
             public Builder versionId(String versionId) {
                 this.versionId = versionId;

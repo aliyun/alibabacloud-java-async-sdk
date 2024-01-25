@@ -266,9 +266,7 @@ public class InvokeFunctionRequest extends Request {
          * *   **true**
          * *   **false**
          * 
-         * > 
-         * 
-         * *   This parameter takes effect only for asynchronous invocations. It does not take effect for synchronous invocations.
+         * > This parameter takes effect only for asynchronous invocations. It does not take effect for synchronous invocations.
          */
         public Builder xFcStatefulAsyncInvocationEnable(String xFcStatefulAsyncInvocationEnable) {
             this.putHeaderParameter("X-Fc-Stateful-Async-Invocation-Enable", xFcStatefulAsyncInvocationEnable);

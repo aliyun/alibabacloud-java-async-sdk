@@ -546,10 +546,10 @@ public class UpdateFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the information of layers.
+         * The layers.
          * <p>
          * 
-         * > Multiple layers are merged based on the order of array subscripts. The content of a layer with a smaller subscript overwrites the file that has the same name as a layer with a larger subscript.
+         * >  Multiple layers are merged based on the order of array subscripts. The content of a layer with a smaller subscript overwrites the file that has the same name of a layer with a larger subscript.
          */
         public Builder layers(java.util.List < String > layers) {
             this.layers = layers;
@@ -557,7 +557,7 @@ public class UpdateFunctionResponseBody extends TeaModel {
         }
 
         /**
-         * ARN list of layers
+         * A list of layer ARNs.
          */
         public Builder layersArnV2(java.util.List < String > layersArnV2) {
             this.layersArnV2 = layersArnV2;

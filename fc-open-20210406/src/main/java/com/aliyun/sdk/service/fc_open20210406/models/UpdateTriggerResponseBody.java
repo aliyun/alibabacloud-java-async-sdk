@@ -262,7 +262,7 @@ public class UpdateTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * status.
+         * The current state of the trigger. This parameter is valid only for EventBridge-based triggers.
          */
         public Builder status(String status) {
             this.status = status;
@@ -270,7 +270,7 @@ public class UpdateTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * targetArn.
+         * The Alibaba Cloud Resource Name (ARN) of the function associated with the trigger.
          */
         public Builder targetArn(String targetArn) {
             this.targetArn = targetArn;

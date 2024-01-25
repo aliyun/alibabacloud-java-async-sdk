@@ -64,8 +64,9 @@ public class ListServiceVersionsResponseBody extends TeaModel {
         /**
          * The order in which the returned versions are sorted. Valid values:
          * <p>
-         *   - **FORWARD**: in ascending order. 
-         *   - **BACKWARD**: in descending order. This is the default value.
+         * 
+         * *   **FORWARD**: The results are sorted in ascending order.
+         * *   **BACKWARD**: The results are sorted in descending order.
          */
         public Builder direction(String direction) {
             this.direction = direction;
@@ -73,7 +74,7 @@ public class ListServiceVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The token used to obtain more results. If the number of resources exceeds the limit, the nextToken parameter is returned. You can include the parameter in subsequent calls to obtain more results. You do not need to provide this parameter in the first call.
+         * The token required to obtain more results. If the number of layers exceeds the limit, the nextToken parameter is returned. You can include the parameter in subsequent calls to obtain more results. You do not need to provide this parameter in the first call.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -81,7 +82,7 @@ public class ListServiceVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The list of versions.
+         * The versions.
          */
         public Builder versions(java.util.List < Versions> versions) {
             this.versions = versions;
@@ -173,7 +174,7 @@ public class ListServiceVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the service version was last modified.
+             * The last time when the service version was updated.
              */
             public Builder lastModifiedTime(String lastModifiedTime) {
                 this.lastModifiedTime = lastModifiedTime;

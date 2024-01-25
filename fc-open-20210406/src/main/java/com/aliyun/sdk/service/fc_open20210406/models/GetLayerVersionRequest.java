@@ -112,7 +112,7 @@ public class GetLayerVersionRequest extends Request {
         } 
 
         /**
-         * The structure of the layer.
+         * The name of the layer.
          */
         public Builder layerName(String layerName) {
             this.putPathParameter("layerName", layerName);
@@ -121,7 +121,7 @@ public class GetLayerVersionRequest extends Request {
         }
 
         /**
-         * The type of the layer code.
+         * The layer version.
          */
         public Builder version(String version) {
             this.putPathParameter("version", version);
@@ -130,7 +130,7 @@ public class GetLayerVersionRequest extends Request {
         }
 
         /**
-         * This parameter is returned only when the information about a specific layer version is queried.
+         * The ID of your Alibaba Cloud account.
          */
         public Builder xFcAccountId(String xFcAccountId) {
             this.putHeaderParameter("X-Fc-Account-Id", xFcAccountId);
@@ -139,7 +139,7 @@ public class GetLayerVersionRequest extends Request {
         }
 
         /**
-         * The location of the layer code.
+         * The time when the function is invoked. The value is in the **EEE,d MMM yyyy HH:mm:ss GMT** format.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -148,7 +148,7 @@ public class GetLayerVersionRequest extends Request {
         }
 
         /**
-         * The structure of the layer code.
+         * The trace ID of the request for Function Compute API.
          */
         public Builder xFcTraceId(String xFcTraceId) {
             this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);

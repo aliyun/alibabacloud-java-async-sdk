@@ -154,7 +154,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * The IDs of the instance.
+         * The instance ID.
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             this.putQueryParameter("instanceIds", instanceIds);

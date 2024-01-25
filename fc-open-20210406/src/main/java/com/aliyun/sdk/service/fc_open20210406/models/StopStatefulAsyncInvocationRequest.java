@@ -159,7 +159,7 @@ public class StopStatefulAsyncInvocationRequest extends Request {
         }
 
         /**
-         * The ID of the asynchronous task.
+         * The ID of the instance that is used to run the asynchronous task.
          */
         public Builder invocationId(String invocationId) {
             this.putPathParameter("invocationId", invocationId);
@@ -177,7 +177,7 @@ public class StopStatefulAsyncInvocationRequest extends Request {
         }
 
         /**
-         * The time when Function Compute API is called. Specify the time in the **EEE,d MMM yyyy HH:mm:ss GMT** format.
+         * The time when the function is invoked. The value is in the **EEE,d MMM yyyy HH:mm:ss GMT** format.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -186,7 +186,7 @@ public class StopStatefulAsyncInvocationRequest extends Request {
         }
 
         /**
-         * The trace ID of the invocation request of Function Compute.
+         * The trace ID of the request for Function Compute API.
          */
         public Builder xFcTraceId(String xFcTraceId) {
             this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);

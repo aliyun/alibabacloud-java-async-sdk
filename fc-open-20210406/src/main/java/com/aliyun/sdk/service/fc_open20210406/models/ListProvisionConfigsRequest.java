@@ -147,7 +147,7 @@ public class ListProvisionConfigsRequest extends Request {
         }
 
         /**
-         * The time when Function Compute API is called. Specify the time in the **EEE,d MMM yyyy HH:mm:ss GMT** format.
+         * The time when the function is invoked. The value is in the **EEE,d MMM yyyy HH:mm:ss GMT** format.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);
@@ -156,7 +156,7 @@ public class ListProvisionConfigsRequest extends Request {
         }
 
         /**
-         * The trace ID of the invocation request of Function Compute.
+         * The trace ID of the request for Function Compute API.
          */
         public Builder xFcTraceId(String xFcTraceId) {
             this.putHeaderParameter("X-Fc-Trace-Id", xFcTraceId);
@@ -165,7 +165,7 @@ public class ListProvisionConfigsRequest extends Request {
         }
 
         /**
-         * The maximum number of resources to return. Default value: 20. Maximum value: 100. The number of returned resources is less than or equal to the specified number.
+         * The maximum number of results to return. Default value: 20. Maximum value: 100. The number of returned resources is less than or equal to the specified number.
          */
         public Builder limit(Long limit) {
             this.putQueryParameter("limit", limit);
@@ -174,7 +174,7 @@ public class ListProvisionConfigsRequest extends Request {
         }
 
         /**
-         * The token used to obtain more results. You do not need to provide this parameter in the first call. The tokens for subsequent queries are obtained from the returned results.
+         * The token required to obtain more results. You do not need to specify this parameter in the first call. If a NextToken value is returned by a previous call, more results are available.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);

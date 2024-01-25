@@ -121,7 +121,7 @@ public class DeleteLayerVersionRequest extends Request {
         }
 
         /**
-         * The version of the layer.
+         * The layer version.
          */
         public Builder version(String version) {
             this.putPathParameter("version", version);
@@ -139,7 +139,7 @@ public class DeleteLayerVersionRequest extends Request {
         }
 
         /**
-         * The time when Function Compute API is called. Specify the time in the **EEE,d MMM yyyy HH:mm:ss GMT** format.
+         * The time when the function is invoked. The value is in the **EEE,d MMM yyyy HH:mm:ss GMT** format.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);

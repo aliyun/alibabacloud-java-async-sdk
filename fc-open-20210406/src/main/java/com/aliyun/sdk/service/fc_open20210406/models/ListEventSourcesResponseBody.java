@@ -38,7 +38,7 @@ public class ListEventSourcesResponseBody extends TeaModel {
         private java.util.List < EventSources> eventSources; 
 
         /**
-         * The information about event sources.
+         * The event sources.
          */
         public Builder eventSources(java.util.List < EventSources> eventSources) {
             this.eventSources = eventSources;
@@ -98,7 +98,7 @@ public class ListEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The ARN of the event source.
+             * The Alibaba Cloud Resource Name (ARN) of the event source.
              */
             public Builder sourceArn(String sourceArn) {
                 this.sourceArn = sourceArn;
