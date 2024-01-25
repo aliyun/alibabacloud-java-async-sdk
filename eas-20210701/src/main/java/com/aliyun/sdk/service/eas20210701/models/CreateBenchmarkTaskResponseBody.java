@@ -74,7 +74,7 @@ public class CreateBenchmarkTaskResponseBody extends TeaModel {
         private String taskName; 
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -82,7 +82,7 @@ public class CreateBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Region.
+         * The ID of the region where the stress testing task is performed.
          */
         public Builder region(String region) {
             this.region = region;
@@ -90,7 +90,7 @@ public class CreateBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class CreateBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TaskName.
+         * The name of the stress testing task.
          */
         public Builder taskName(String taskName) {
             this.taskName = taskName;

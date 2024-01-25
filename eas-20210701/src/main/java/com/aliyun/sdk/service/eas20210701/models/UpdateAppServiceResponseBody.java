@@ -50,7 +50,7 @@ public class UpdateAppServiceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;

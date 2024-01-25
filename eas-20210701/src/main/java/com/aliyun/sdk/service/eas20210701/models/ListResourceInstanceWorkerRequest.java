@@ -113,7 +113,7 @@ public class ListResourceInstanceWorkerRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the cluster to which the resource group belongs.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -122,7 +122,7 @@ public class ListResourceInstanceWorkerRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The ID of the resource group. For more information about how to query the ID of a resource group, see [ListResources](~~412133~~).
          */
         public Builder resourceId(String resourceId) {
             this.putPathParameter("ResourceId", resourceId);
@@ -131,7 +131,7 @@ public class ListResourceInstanceWorkerRequest extends Request {
         }
 
         /**
-         * InstanceName.
+         * The name of the instance in a resource group. For more information about how to query the instance name, see [ListResourceInstances](~~412129~~).
          */
         public Builder instanceName(String instanceName) {
             this.putPathParameter("InstanceName", instanceName);
@@ -140,7 +140,7 @@ public class ListResourceInstanceWorkerRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number. Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -149,7 +149,7 @@ public class ListResourceInstanceWorkerRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Default value: 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

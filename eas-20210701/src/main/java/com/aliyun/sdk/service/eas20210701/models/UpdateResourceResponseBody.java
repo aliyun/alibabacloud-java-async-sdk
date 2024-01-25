@@ -62,7 +62,7 @@ public class UpdateResourceResponseBody extends TeaModel {
         private String resourceName; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class UpdateResourceResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceId.
+         * The ID of the resource group.
          */
         public Builder resourceId(String resourceId) {
             this.resourceId = resourceId;
@@ -78,7 +78,7 @@ public class UpdateResourceResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceName.
+         * The name of the resource group.
          */
         public Builder resourceName(String resourceName) {
             this.resourceName = resourceName;

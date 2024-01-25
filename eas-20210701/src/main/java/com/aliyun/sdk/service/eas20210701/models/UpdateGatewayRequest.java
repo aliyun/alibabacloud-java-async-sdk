@@ -126,7 +126,7 @@ public class UpdateGatewayRequest extends Request {
         } 
 
         /**
-         * GatewayId.
+         * The ID of the private gateway.
          */
         public Builder gatewayId(String gatewayId) {
             this.putPathParameter("GatewayId", gatewayId);
@@ -135,7 +135,7 @@ public class UpdateGatewayRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * The region of the private gateway.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -144,7 +144,26 @@ public class UpdateGatewayRequest extends Request {
         }
 
         /**
-         * EnableInternet.
+         * Specifies whether to enable Internet access. Default value: false.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   true
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   false
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder enableInternet(Boolean enableInternet) {
             this.putBodyParameter("EnableInternet", enableInternet);
@@ -153,7 +172,7 @@ public class UpdateGatewayRequest extends Request {
         }
 
         /**
-         * EnableIntranet.
+         * Specifies whether to enable internal network access. Default value: true.
          */
         public Builder enableIntranet(Boolean enableIntranet) {
             this.putBodyParameter("EnableIntranet", enableIntranet);
@@ -162,7 +181,7 @@ public class UpdateGatewayRequest extends Request {
         }
 
         /**
-         * InstanceType.
+         * The instance type used for the private gateway.
          */
         public Builder instanceType(String instanceType) {
             this.putBodyParameter("InstanceType", instanceType);
@@ -171,7 +190,7 @@ public class UpdateGatewayRequest extends Request {
         }
 
         /**
-         * Name.
+         * The private gateway alias.
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);

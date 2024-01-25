@@ -103,7 +103,12 @@ public class UpdateServiceSafetyLockRequest extends Request {
         }
 
         /**
-         * Lock.
+         * The lock scope. Valid values:
+         * <p>
+         * 
+         * *   all: locks all operations.
+         * *   dangerous: locks high-risk operations such as delete and stop operations.
+         * *   none: locks no operations.
          */
         public Builder lock(String lock) {
             this.putBodyParameter("Lock", lock);

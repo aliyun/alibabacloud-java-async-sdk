@@ -128,7 +128,7 @@ public class UpdateResourceDLinkRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the region to which the resource group belongs.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -137,7 +137,7 @@ public class UpdateResourceDLinkRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The ID of the resource group. For more information about how to query the ID of a resource group, see [ListResources](~~412133~~).
          */
         public Builder resourceId(String resourceId) {
             this.putPathParameter("ResourceId", resourceId);
@@ -146,7 +146,7 @@ public class UpdateResourceDLinkRequest extends Request {
         }
 
         /**
-         * DestinationCIDRs.
+         * The CIDR blocks of the clients that you want to connect to. After this parameter is specified, the CIDR blocks are added to the back-to-origin route of the server. Either this parameter or the VSwitchIdList parameter can be used to determine CIDR blocks.
          */
         public Builder destinationCIDRs(String destinationCIDRs) {
             this.putBodyParameter("DestinationCIDRs", destinationCIDRs);
@@ -155,7 +155,7 @@ public class UpdateResourceDLinkRequest extends Request {
         }
 
         /**
-         * SecurityGroupId.
+         * The ID of the security group to which the Elastic Compute Service (ECS) instance belongs.
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putBodyParameter("SecurityGroupId", securityGroupId);
@@ -164,7 +164,7 @@ public class UpdateResourceDLinkRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * The ID of the peer primary vSwitch. After this parameter is specified, an elastic network interface (ENI) is created in the VSwitch.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putBodyParameter("VSwitchId", vSwitchId);
@@ -173,7 +173,7 @@ public class UpdateResourceDLinkRequest extends Request {
         }
 
         /**
-         * VSwitchIdList.
+         * The vSwitches of the clients that you want to connect to. After this parameter is specified, the CIDR blocks of these vSwitches are added to the back-to-origin route of the server.
          */
         public Builder vSwitchIdList(java.util.List < String > vSwitchIdList) {
             this.putBodyParameter("VSwitchIdList", vSwitchIdList);

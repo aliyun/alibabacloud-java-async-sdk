@@ -54,7 +54,7 @@ public class CreateBenchmarkTaskRequest extends Request {
         } 
 
         /**
-         * body.
+         * The request body. The body includes the parameters that are set to create a stress testing task.
          */
         public Builder body(String body) {
             this.putBodyParameter("body", body);

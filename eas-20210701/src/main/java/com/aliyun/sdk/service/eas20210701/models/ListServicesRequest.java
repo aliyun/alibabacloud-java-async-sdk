@@ -41,6 +41,10 @@ public class ListServicesRequest extends Request {
     private String parentServiceUid;
 
     @Query
+    @NameInMap("QuotaId")
+    private String quotaId;
+
+    @Query
     @NameInMap("ResourceName")
     private String resourceName;
 
@@ -77,6 +81,7 @@ public class ListServicesRequest extends Request {
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.parentServiceUid = builder.parentServiceUid;
+        this.quotaId = builder.quotaId;
         this.resourceName = builder.resourceName;
         this.serviceName = builder.serviceName;
         this.serviceStatus = builder.serviceStatus;
@@ -149,6 +154,13 @@ public class ListServicesRequest extends Request {
     }
 
     /**
+     * @return quotaId
+     */
+    public String getQuotaId() {
+        return this.quotaId;
+    }
+
+    /**
      * @return resourceName
      */
     public String getResourceName() {
@@ -205,6 +217,7 @@ public class ListServicesRequest extends Request {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String parentServiceUid; 
+        private String quotaId; 
         private String resourceName; 
         private String serviceName; 
         private String serviceStatus; 
@@ -226,6 +239,7 @@ public class ListServicesRequest extends Request {
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.parentServiceUid = request.parentServiceUid;
+            this.quotaId = request.quotaId;
             this.resourceName = request.resourceName;
             this.serviceName = request.serviceName;
             this.serviceStatus = request.serviceStatus;
@@ -351,6 +365,15 @@ public class ListServicesRequest extends Request {
         public Builder parentServiceUid(String parentServiceUid) {
             this.putQueryParameter("ParentServiceUid", parentServiceUid);
             this.parentServiceUid = parentServiceUid;
+            return this;
+        }
+
+        /**
+         * QuotaId.
+         */
+        public Builder quotaId(String quotaId) {
+            this.putQueryParameter("QuotaId", quotaId);
+            this.quotaId = quotaId;
             return this;
         }
 

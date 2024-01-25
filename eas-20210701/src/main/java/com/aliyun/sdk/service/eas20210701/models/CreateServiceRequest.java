@@ -96,7 +96,26 @@ public class CreateServiceRequest extends Request {
         } 
 
         /**
-         * Develop.
+         * Specifies whether to enter development mode.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   true
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   false
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder develop(String develop) {
             this.putQueryParameter("Develop", develop);

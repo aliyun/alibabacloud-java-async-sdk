@@ -96,7 +96,7 @@ public class ListBenchmarkTaskRequest extends Request {
         } 
 
         /**
-         * Filter.
+         * The keyword used to query required stress testing tasks. If this parameter is specified, the system returns stress testing tasks based on the names of the stress testing tasks in the matched Elastic Algorithm service (EAS).
          */
         public Builder filter(String filter) {
             this.putQueryParameter("Filter", filter);
@@ -105,7 +105,7 @@ public class ListBenchmarkTaskRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number. Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -114,7 +114,7 @@ public class ListBenchmarkTaskRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Default value: 100.
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -123,7 +123,7 @@ public class ListBenchmarkTaskRequest extends Request {
         }
 
         /**
-         * ServiceName.
+         * The name of the EAS service that corresponds to the stress testing task. For more information about how to query the service name, see [ListServices](~~412109~~).
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);

@@ -99,7 +99,7 @@ public class UpdateServiceInstanceRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The region ID of the service.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -108,7 +108,7 @@ public class UpdateServiceInstanceRequest extends Request {
         }
 
         /**
-         * ServiceName.
+         * The service name.
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("ServiceName", serviceName);
@@ -117,7 +117,7 @@ public class UpdateServiceInstanceRequest extends Request {
         }
 
         /**
-         * InstanceName.
+         * The name of the service instance.
          */
         public Builder instanceName(String instanceName) {
             this.putPathParameter("InstanceName", instanceName);
@@ -126,7 +126,7 @@ public class UpdateServiceInstanceRequest extends Request {
         }
 
         /**
-         * Isolate.
+         * Specifies whether to isolate the service instance.
          */
         public Builder isolate(Boolean isolate) {
             this.putBodyParameter("Isolate", isolate);

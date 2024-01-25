@@ -110,7 +110,7 @@ public class CreateAppServiceResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * InternetEndpoint.
+         * The public endpoint of the service.
          */
         public Builder internetEndpoint(String internetEndpoint) {
             this.internetEndpoint = internetEndpoint;
@@ -118,7 +118,7 @@ public class CreateAppServiceResponseBody extends TeaModel {
         }
 
         /**
-         * IntranetEndpoint.
+         * The internal endpoint of the service.
          */
         public Builder intranetEndpoint(String intranetEndpoint) {
             this.intranetEndpoint = intranetEndpoint;
@@ -126,7 +126,7 @@ public class CreateAppServiceResponseBody extends TeaModel {
         }
 
         /**
-         * Region.
+         * The region ID of the service.
          */
         public Builder region(String region) {
             this.region = region;
@@ -134,7 +134,7 @@ public class CreateAppServiceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -142,7 +142,7 @@ public class CreateAppServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceId.
+         * The service ID.
          */
         public Builder serviceId(String serviceId) {
             this.serviceId = serviceId;
@@ -150,7 +150,7 @@ public class CreateAppServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceName.
+         * The service name.
          */
         public Builder serviceName(String serviceName) {
             this.serviceName = serviceName;
@@ -158,7 +158,7 @@ public class CreateAppServiceResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The service state.
          */
         public Builder status(String status) {
             this.status = status;

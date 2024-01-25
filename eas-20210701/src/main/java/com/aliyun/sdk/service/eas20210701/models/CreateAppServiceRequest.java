@@ -156,7 +156,7 @@ public class CreateAppServiceRequest extends Request {
         } 
 
         /**
-         * QuotaId.
+         * The quota ID.
          */
         public Builder quotaId(String quotaId) {
             this.putQueryParameter("QuotaId", quotaId);
@@ -165,7 +165,7 @@ public class CreateAppServiceRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * The workspace ID.
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);
@@ -174,7 +174,18 @@ public class CreateAppServiceRequest extends Request {
         }
 
         /**
-         * AppType.
+         * The application service type.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   LLM
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder appType(String appType) {
             this.putBodyParameter("AppType", appType);
@@ -183,7 +194,7 @@ public class CreateAppServiceRequest extends Request {
         }
 
         /**
-         * AppVersion.
+         * The application version.
          */
         public Builder appVersion(String appVersion) {
             this.putBodyParameter("AppVersion", appVersion);
@@ -192,7 +203,7 @@ public class CreateAppServiceRequest extends Request {
         }
 
         /**
-         * Config.
+         * Additional configurations that are required for the service deployment.
          */
         public Builder config(java.util.Map < String, ? > config) {
             this.putBodyParameter("Config", config);
@@ -201,7 +212,7 @@ public class CreateAppServiceRequest extends Request {
         }
 
         /**
-         * Replicas.
+         * The number of instances.
          */
         public Builder replicas(Integer replicas) {
             this.putBodyParameter("Replicas", replicas);
@@ -210,7 +221,7 @@ public class CreateAppServiceRequest extends Request {
         }
 
         /**
-         * ServiceName.
+         * The service name.
          */
         public Builder serviceName(String serviceName) {
             this.putBodyParameter("ServiceName", serviceName);
@@ -219,7 +230,7 @@ public class CreateAppServiceRequest extends Request {
         }
 
         /**
-         * ServiceSpec.
+         * The service specifications.
          */
         public Builder serviceSpec(String serviceSpec) {
             this.putBodyParameter("ServiceSpec", serviceSpec);

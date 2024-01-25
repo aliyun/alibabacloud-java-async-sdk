@@ -102,7 +102,11 @@ public class DevelopServiceRequest extends Request {
         }
 
         /**
-         * Exit.
+         * Specifies whether to exit development mode. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false (default)
          */
         public Builder exit(String exit) {
             this.putQueryParameter("Exit", exit);

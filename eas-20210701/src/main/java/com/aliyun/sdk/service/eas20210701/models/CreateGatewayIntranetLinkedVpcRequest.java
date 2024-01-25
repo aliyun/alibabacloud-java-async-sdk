@@ -98,7 +98,7 @@ public class CreateGatewayIntranetLinkedVpcRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The region ID of the private gateway.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -107,7 +107,7 @@ public class CreateGatewayIntranetLinkedVpcRequest extends Request {
         }
 
         /**
-         * GatewayId.
+         * The private gateway ID.
          */
         public Builder gatewayId(String gatewayId) {
             this.putPathParameter("GatewayId", gatewayId);
@@ -116,7 +116,7 @@ public class CreateGatewayIntranetLinkedVpcRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * The vSwitch ID.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -125,7 +125,7 @@ public class CreateGatewayIntranetLinkedVpcRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * The virtual private cloud (VPC) ID.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

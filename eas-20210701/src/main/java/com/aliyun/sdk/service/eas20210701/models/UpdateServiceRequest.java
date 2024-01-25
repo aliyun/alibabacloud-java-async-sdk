@@ -22,6 +22,10 @@ public class UpdateServiceRequest extends Request {
     @Validation(required = true)
     private String serviceName;
 
+    @Query
+    @NameInMap("UpdateType")
+    private String updateType;
+
     @Body
     @NameInMap("body")
     private String body;
@@ -30,6 +34,7 @@ public class UpdateServiceRequest extends Request {
         super(builder);
         this.clusterId = builder.clusterId;
         this.serviceName = builder.serviceName;
+        this.updateType = builder.updateType;
         this.body = builder.body;
     }
 
@@ -61,6 +66,13 @@ public class UpdateServiceRequest extends Request {
     }
 
     /**
+     * @return updateType
+     */
+    public String getUpdateType() {
+        return this.updateType;
+    }
+
+    /**
      * @return body
      */
     public String getBody() {
@@ -70,6 +82,7 @@ public class UpdateServiceRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateServiceRequest, Builder> {
         private String clusterId; 
         private String serviceName; 
+        private String updateType; 
         private String body; 
 
         private Builder() {
@@ -80,6 +93,7 @@ public class UpdateServiceRequest extends Request {
             super(request);
             this.clusterId = request.clusterId;
             this.serviceName = request.serviceName;
+            this.updateType = request.updateType;
             this.body = request.body;
         } 
 
@@ -98,6 +112,19 @@ public class UpdateServiceRequest extends Request {
         public Builder serviceName(String serviceName) {
             this.putPathParameter("ServiceName", serviceName);
             this.serviceName = serviceName;
+            return this;
+        }
+
+        /**
+         * The type of the service update. Valid values: merge and replace. By default, merge is used if you do not specify this parameter.
+         * <p>
+         * 
+         * *   merge: If the JSON string configured for the existing service is `{"a":"b"}` and the JSON string specified in the body parameter is `{"c":"d"}`, the JSON string is `{"a":"b","c":"d"}` after the service update.
+         * *   replace: If the JSON string configured for the existing service is `{"a":"b"}` and the JSON string specified in the body parameter is `{"c":"d"}`, the JSON string is `{"c":"d"}` after the service update.
+         */
+        public Builder updateType(String updateType) {
+            this.putQueryParameter("UpdateType", updateType);
+            this.updateType = updateType;
             return this;
         }
 

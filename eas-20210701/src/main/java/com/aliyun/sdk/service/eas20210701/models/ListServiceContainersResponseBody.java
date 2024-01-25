@@ -62,7 +62,7 @@ public class ListServiceContainersResponseBody extends TeaModel {
         private String serviceName; 
 
         /**
-         * Containers.
+         * The containers of the service.
          */
         public Builder containers(java.util.List < ContainerInfo > containers) {
             this.containers = containers;

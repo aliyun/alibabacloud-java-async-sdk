@@ -106,7 +106,7 @@ public class DescribeResourceDLinkResponseBody extends TeaModel {
         }
 
         /**
-         * DestinationCIDRs.
+         * The CIDR blocks of the clients that you want to connect to. The CIDR blocks are added to the back-to-origin route of the server.
          */
         public Builder destinationCIDRs(String destinationCIDRs) {
             this.destinationCIDRs = destinationCIDRs;

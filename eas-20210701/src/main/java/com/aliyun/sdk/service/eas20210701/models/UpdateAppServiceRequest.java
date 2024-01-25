@@ -44,7 +44,7 @@ public class UpdateAppServiceRequest extends Request {
 
     @Body
     @NameInMap("Replicas")
-    private String replicas;
+    private Integer replicas;
 
     @Body
     @NameInMap("ServiceSpec")
@@ -128,7 +128,7 @@ public class UpdateAppServiceRequest extends Request {
     /**
      * @return replicas
      */
-    public String getReplicas() {
+    public Integer getReplicas() {
         return this.replicas;
     }
 
@@ -147,7 +147,7 @@ public class UpdateAppServiceRequest extends Request {
         private String appType; 
         private String appVersion; 
         private java.util.Map < String, ? > config; 
-        private String replicas; 
+        private Integer replicas; 
         private String serviceSpec; 
 
         private Builder() {
@@ -186,7 +186,7 @@ public class UpdateAppServiceRequest extends Request {
         }
 
         /**
-         * QuotaId.
+         * The quota ID.
          */
         public Builder quotaId(String quotaId) {
             this.putQueryParameter("QuotaId", quotaId);
@@ -195,7 +195,7 @@ public class UpdateAppServiceRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * The workspace ID.
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);
@@ -204,7 +204,22 @@ public class UpdateAppServiceRequest extends Request {
         }
 
         /**
-         * AppType.
+         * The application type.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   LLM
+         * 
+         *     <!-- -->
+         * 
+         *     :
+         * 
+         *     <!-- -->
+         * 
+         *     the large language model (LLM) application
+         * 
+         *     <!-- -->
          */
         public Builder appType(String appType) {
             this.putBodyParameter("AppType", appType);
@@ -213,7 +228,7 @@ public class UpdateAppServiceRequest extends Request {
         }
 
         /**
-         * AppVersion.
+         * The application version.
          */
         public Builder appVersion(String appVersion) {
             this.putBodyParameter("AppVersion", appVersion);
@@ -222,7 +237,7 @@ public class UpdateAppServiceRequest extends Request {
         }
 
         /**
-         * Config.
+         * Additional configurations that are required for the service deployment.
          */
         public Builder config(java.util.Map < String, ? > config) {
             this.putBodyParameter("Config", config);
@@ -231,16 +246,16 @@ public class UpdateAppServiceRequest extends Request {
         }
 
         /**
-         * Replicas.
+         * The number of instances.
          */
-        public Builder replicas(String replicas) {
+        public Builder replicas(Integer replicas) {
             this.putBodyParameter("Replicas", replicas);
             this.replicas = replicas;
             return this;
         }
 
         /**
-         * ServiceSpec.
+         * The service specifications.
          */
         public Builder serviceSpec(String serviceSpec) {
             this.putBodyParameter("ServiceSpec", serviceSpec);

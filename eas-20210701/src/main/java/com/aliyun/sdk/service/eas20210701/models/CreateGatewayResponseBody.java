@@ -74,7 +74,7 @@ public class CreateGatewayResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ClusterId.
+         * The region ID of the private gateway.
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -82,7 +82,7 @@ public class CreateGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * GatewayId.
+         * The private gateway ID.
          */
         public Builder gatewayId(String gatewayId) {
             this.gatewayId = gatewayId;
@@ -90,7 +90,7 @@ public class CreateGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +98,7 @@ public class CreateGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

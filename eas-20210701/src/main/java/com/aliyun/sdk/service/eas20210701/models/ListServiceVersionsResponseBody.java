@@ -144,6 +144,9 @@ public class ListServiceVersionsResponseBody extends TeaModel {
         @NameInMap("Message")
         private String message;
 
+        @NameInMap("ServiceConfig")
+        private String serviceConfig;
+
         @NameInMap("ServiceRunnable")
         private String serviceRunnable;
 
@@ -152,6 +155,7 @@ public class ListServiceVersionsResponseBody extends TeaModel {
             this.imageAvailable = builder.imageAvailable;
             this.imageId = builder.imageId;
             this.message = builder.message;
+            this.serviceConfig = builder.serviceConfig;
             this.serviceRunnable = builder.serviceRunnable;
         }
 
@@ -192,6 +196,13 @@ public class ListServiceVersionsResponseBody extends TeaModel {
         }
 
         /**
+         * @return serviceConfig
+         */
+        public String getServiceConfig() {
+            return this.serviceConfig;
+        }
+
+        /**
          * @return serviceRunnable
          */
         public String getServiceRunnable() {
@@ -203,6 +214,7 @@ public class ListServiceVersionsResponseBody extends TeaModel {
             private String imageAvailable; 
             private Integer imageId; 
             private String message; 
+            private String serviceConfig; 
             private String serviceRunnable; 
 
             /**
@@ -234,6 +246,14 @@ public class ListServiceVersionsResponseBody extends TeaModel {
              */
             public Builder message(String message) {
                 this.message = message;
+                return this;
+            }
+
+            /**
+             * ServiceConfig.
+             */
+            public Builder serviceConfig(String serviceConfig) {
+                this.serviceConfig = serviceConfig;
                 return this;
             }
 

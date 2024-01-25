@@ -62,7 +62,7 @@ public class UpdateGatewayResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * GatewayId.
+         * The ID of the gateway.
          */
         public Builder gatewayId(String gatewayId) {
             this.gatewayId = gatewayId;
@@ -70,7 +70,7 @@ public class UpdateGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -78,7 +78,7 @@ public class UpdateGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

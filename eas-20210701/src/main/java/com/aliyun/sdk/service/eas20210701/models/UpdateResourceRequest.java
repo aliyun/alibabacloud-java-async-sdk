@@ -98,7 +98,7 @@ public class UpdateResourceRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the region to which the resource group belongs.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -107,7 +107,7 @@ public class UpdateResourceRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The ID of the resource group. For more information about how to query the ID of a resource group, see [ListResources](~~412133~~).
          */
         public Builder resourceId(String resourceId) {
             this.putPathParameter("ResourceId", resourceId);
@@ -116,7 +116,7 @@ public class UpdateResourceRequest extends Request {
         }
 
         /**
-         * ResourceName.
+         * The new name of the resource group after the update. The name can be up to 27 characters in length.
          */
         public Builder resourceName(String resourceName) {
             this.putBodyParameter("ResourceName", resourceName);
@@ -125,7 +125,7 @@ public class UpdateResourceRequest extends Request {
         }
 
         /**
-         * SelfManagedResourceOptions.
+         * The configurable options for self managed resource group.
          */
         public Builder selfManagedResourceOptions(SelfManagedResourceOptions selfManagedResourceOptions) {
             this.putBodyParameter("SelfManagedResourceOptions", selfManagedResourceOptions);
@@ -203,7 +203,13 @@ public class UpdateResourceRequest extends Request {
             private String value; 
 
             /**
-             * effect.
+             * The effect.
+             * <p>
+             * 
+             * Valid values:
+             * - PreferNoSchedule
+             * - NoSchedule
+             * - NoExecute
              */
             public Builder effect(String effect) {
                 this.effect = effect;
@@ -211,7 +217,7 @@ public class UpdateResourceRequest extends Request {
             }
 
             /**
-             * key.
+             * The name of the key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -219,7 +225,11 @@ public class UpdateResourceRequest extends Request {
             }
 
             /**
-             * operator.
+             * Relationship between key names and key values.
+             * <p>
+             * Valid values:
+             * - Equal
+             * - Exists
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -227,7 +237,7 @@ public class UpdateResourceRequest extends Request {
             }
 
             /**
-             * value.
+             * The name of the value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -280,7 +290,7 @@ public class UpdateResourceRequest extends Request {
             private java.util.List < NodeTolerations> nodeTolerations; 
 
             /**
-             * NodeMatchLabels.
+             * The key-value pairs for matched nodes.
              */
             public Builder nodeMatchLabels(java.util.Map < String, String > nodeMatchLabels) {
                 this.nodeMatchLabels = nodeMatchLabels;
@@ -288,7 +298,7 @@ public class UpdateResourceRequest extends Request {
             }
 
             /**
-             * NodeTolerations.
+             * Tolerations for nodes.
              */
             public Builder nodeTolerations(java.util.List < NodeTolerations> nodeTolerations) {
                 this.nodeTolerations = nodeTolerations;

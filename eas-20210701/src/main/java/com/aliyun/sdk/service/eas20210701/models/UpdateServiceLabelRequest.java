@@ -85,7 +85,7 @@ public class UpdateServiceLabelRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the region where the service is deployed.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -94,7 +94,7 @@ public class UpdateServiceLabelRequest extends Request {
         }
 
         /**
-         * ServiceName.
+         * The service name. For more information about how to query the service name, see [ListServices](~~412109~~).
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("ServiceName", serviceName);
@@ -103,7 +103,7 @@ public class UpdateServiceLabelRequest extends Request {
         }
 
         /**
-         * Labels.
+         * The custom service tags.
          */
         public Builder labels(java.util.Map < String, String > labels) {
             this.putBodyParameter("Labels", labels);

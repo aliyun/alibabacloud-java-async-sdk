@@ -68,7 +68,7 @@ public class ListGatewayIntranetLinkedVpcRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The region ID of the private gateway.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -77,7 +77,7 @@ public class ListGatewayIntranetLinkedVpcRequest extends Request {
         }
 
         /**
-         * GatewayId.
+         * The private gateway ID.
          */
         public Builder gatewayId(String gatewayId) {
             this.putPathParameter("GatewayId", gatewayId);

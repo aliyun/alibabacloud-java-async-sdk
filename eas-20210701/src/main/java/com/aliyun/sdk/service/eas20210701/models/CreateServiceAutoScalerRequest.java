@@ -147,7 +147,7 @@ public class CreateServiceAutoScalerRequest extends Request {
         }
 
         /**
-         * behavior.
+         * The Autoscaler operation.
          */
         public Builder behavior(Behavior behavior) {
             this.putBodyParameter("behavior", behavior);
@@ -156,7 +156,7 @@ public class CreateServiceAutoScalerRequest extends Request {
         }
 
         /**
-         * max.
+         * The maximum number of instances. The value must be greater than that of the min parameter.
          */
         public Builder max(Integer max) {
             this.putBodyParameter("max", max);
@@ -165,7 +165,7 @@ public class CreateServiceAutoScalerRequest extends Request {
         }
 
         /**
-         * min.
+         * The minimum number of instances. The value must be greater than 0.
          */
         public Builder min(Integer min) {
             this.putBodyParameter("min", min);
@@ -174,7 +174,7 @@ public class CreateServiceAutoScalerRequest extends Request {
         }
 
         /**
-         * scaleStrategies.
+         * The Autoscaler strategies.
          */
         public Builder scaleStrategies(java.util.List < ScaleStrategies> scaleStrategies) {
             this.putBodyParameter("scaleStrategies", scaleStrategies);
@@ -228,7 +228,7 @@ public class CreateServiceAutoScalerRequest extends Request {
             private Integer scaleUpActivationReplicas; 
 
             /**
-             * scaleDownGracePeriodSeconds.
+             * The time window that is required before the number of instances is reduced to 0. The number of instances can be reduced to 0 only if no request is available or no traffic exists in the specified time window. Default value: 600.
              */
             public Builder scaleDownGracePeriodSeconds(Integer scaleDownGracePeriodSeconds) {
                 this.scaleDownGracePeriodSeconds = scaleDownGracePeriodSeconds;
@@ -236,7 +236,7 @@ public class CreateServiceAutoScalerRequest extends Request {
             }
 
             /**
-             * scaleUpActivationReplicas.
+             * The number of instances that you want to create at a time if the number of instances is scaled out from 0. Default value: 1.
              */
             public Builder scaleUpActivationReplicas(Integer scaleUpActivationReplicas) {
                 this.scaleUpActivationReplicas = scaleUpActivationReplicas;
@@ -277,7 +277,7 @@ public class CreateServiceAutoScalerRequest extends Request {
             private Integer stabilizationWindowSeconds; 
 
             /**
-             * stabilizationWindowSeconds.
+             * The time window that is required before the scale-in operation is performed. The scale-in operation can be performed only if the specified metric drops below the specified threshold in the specified time window. Default value: 300.
              */
             public Builder stabilizationWindowSeconds(Integer stabilizationWindowSeconds) {
                 this.stabilizationWindowSeconds = stabilizationWindowSeconds;
@@ -318,7 +318,7 @@ public class CreateServiceAutoScalerRequest extends Request {
             private Integer stabilizationWindowSeconds; 
 
             /**
-             * stabilizationWindowSeconds.
+             * The time window that is required before the scale-out operation is performed. The scale-out operation can be performed only if the specified metric exceeds the specified threshold in the specified time window. Default value: 0.
              */
             public Builder stabilizationWindowSeconds(Integer stabilizationWindowSeconds) {
                 this.stabilizationWindowSeconds = stabilizationWindowSeconds;
@@ -383,7 +383,7 @@ public class CreateServiceAutoScalerRequest extends Request {
             private ScaleUp scaleUp; 
 
             /**
-             * onZero.
+             * The operation that reduces the number of instances to 0.
              */
             public Builder onZero(OnZero onZero) {
                 this.onZero = onZero;
@@ -391,7 +391,7 @@ public class CreateServiceAutoScalerRequest extends Request {
             }
 
             /**
-             * scaleDown.
+             * The scale-in operation.
              */
             public Builder scaleDown(ScaleDown scaleDown) {
                 this.scaleDown = scaleDown;
@@ -399,7 +399,7 @@ public class CreateServiceAutoScalerRequest extends Request {
             }
 
             /**
-             * scaleUp.
+             * The scale-out operation.
              */
             public Builder scaleUp(ScaleUp scaleUp) {
                 this.scaleUp = scaleUp;
@@ -466,7 +466,11 @@ public class CreateServiceAutoScalerRequest extends Request {
             private Float threshold; 
 
             /**
-             * metricName.
+             * The name of the metric for triggering auto scaling. Valid values:
+             * <p>
+             * 
+             * *   QPS: the queries per second (QPS) for an individual instance.
+             * *   CPU: the CPU utilization.
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -474,7 +478,7 @@ public class CreateServiceAutoScalerRequest extends Request {
             }
 
             /**
-             * service.
+             * The service for which the metric is specified. If you do not set this parameter, the current service is specified by default.
              */
             public Builder service(String service) {
                 this.service = service;
@@ -482,7 +486,11 @@ public class CreateServiceAutoScalerRequest extends Request {
             }
 
             /**
-             * threshold.
+             * The threshold of the metric that triggers auto scaling.
+             * <p>
+             * 
+             * *   If you set metricName to QPS, scale-out is triggered when the average QPS for a single instance is greater than this threshold.
+             * *   If you set metricName to CPU, scale-out is triggered when the average CPU utilization for a single instance is greater than this threshold.
              */
             public Builder threshold(Float threshold) {
                 this.threshold = threshold;

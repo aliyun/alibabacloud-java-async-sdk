@@ -214,7 +214,7 @@ public class DescribeServiceLogRequest extends Request {
         }
 
         /**
-         * 服务实例的容器名称。
+         * ContainerName.
          */
         public Builder containerName(String containerName) {
             this.putQueryParameter("ContainerName", containerName);

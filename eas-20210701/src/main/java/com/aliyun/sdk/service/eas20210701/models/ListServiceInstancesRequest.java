@@ -333,7 +333,28 @@ public class ListServiceInstancesRequest extends Request {
         }
 
         /**
-         * Order.
+         * The sorting order.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   asc: The instances are sorted in ascending order.
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   desc
+         * 
+         *     <!-- -->
+         * 
+         *     : The instances are sorted in descending order.
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);

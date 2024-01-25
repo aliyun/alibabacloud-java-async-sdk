@@ -279,7 +279,7 @@ public class DescribeGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * InternetAclPolicyList.
+         * The Internet access control policies.
          */
         public Builder internetAclPolicyList(java.util.List < InternetAclPolicyList> internetAclPolicyList) {
             this.internetAclPolicyList = internetAclPolicyList;
@@ -423,7 +423,7 @@ public class DescribeGatewayResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * Comment.
+             * The description.
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -431,7 +431,7 @@ public class DescribeGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * Entry.
+             * The accessible CIDR block.
              */
             public Builder entry(String entry) {
                 this.entry = entry;
@@ -439,7 +439,26 @@ public class DescribeGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * 网关现在的状态
+             * The state of the private gateway.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   Creating
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   Running
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder status(String status) {
                 this.status = status;
@@ -528,7 +547,7 @@ public class DescribeGatewayResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * Ip.
+             * The IP address.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -536,7 +555,7 @@ public class DescribeGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroupId.
+             * The ID of the security group.
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -544,7 +563,26 @@ public class DescribeGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * 网关现在的状态
+             * The state of the private gateway.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   Creating
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   Running
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder status(String status) {
                 this.status = status;
@@ -552,7 +590,7 @@ public class DescribeGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * The vSwitch ID.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -560,7 +598,7 @@ public class DescribeGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * The ID of the virtual private cloud (VPC).
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

@@ -218,7 +218,7 @@ public class DescribeResourceResponseBody extends TeaModel {
         private String updateTime; 
 
         /**
-         * ClusterId.
+         * The ID of the cluster to which the resource group belongs.
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -226,7 +226,7 @@ public class DescribeResourceResponseBody extends TeaModel {
         }
 
         /**
-         * CpuCount.
+         * The total number of CPU cores.
          */
         public Builder cpuCount(Integer cpuCount) {
             this.cpuCount = cpuCount;
@@ -234,7 +234,7 @@ public class DescribeResourceResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * The time when the resource group was created.
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -242,7 +242,7 @@ public class DescribeResourceResponseBody extends TeaModel {
         }
 
         /**
-         * ExtraData.
+         * The additional information, such as the connection status of a virtual private cloud (VPC) and the log status of Log Service.
          */
         public Builder extraData(String extraData) {
             this.extraData = extraData;
@@ -250,7 +250,7 @@ public class DescribeResourceResponseBody extends TeaModel {
         }
 
         /**
-         * GpuCount.
+         * The total number of GPUs.
          */
         public Builder gpuCount(Integer gpuCount) {
             this.gpuCount = gpuCount;
@@ -258,7 +258,7 @@ public class DescribeResourceResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceCount.
+         * The total number of instances in the resource group.
          */
         public Builder instanceCount(Integer instanceCount) {
             this.instanceCount = instanceCount;
@@ -266,7 +266,7 @@ public class DescribeResourceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -274,7 +274,7 @@ public class DescribeResourceResponseBody extends TeaModel {
         }
 
         /**
-         * OwnerUid.
+         * The ID of the resource group owner.
          */
         public Builder ownerUid(String ownerUid) {
             this.ownerUid = ownerUid;
@@ -282,7 +282,7 @@ public class DescribeResourceResponseBody extends TeaModel {
         }
 
         /**
-         * PostPaidInstanceCount.
+         * The total number of pay-as-you-go instances in the resource group.
          */
         public Builder postPaidInstanceCount(Integer postPaidInstanceCount) {
             this.postPaidInstanceCount = postPaidInstanceCount;
@@ -290,7 +290,7 @@ public class DescribeResourceResponseBody extends TeaModel {
         }
 
         /**
-         * PrePaidInstanceCount.
+         * The total number of subscription instances in the resource group.
          */
         public Builder prePaidInstanceCount(Integer prePaidInstanceCount) {
             this.prePaidInstanceCount = prePaidInstanceCount;
@@ -298,7 +298,7 @@ public class DescribeResourceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -306,7 +306,7 @@ public class DescribeResourceResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceId.
+         * The ID of the Elastic Algorithm Service (EAS) resource.
          */
         public Builder resourceId(String resourceId) {
             this.resourceId = resourceId;
@@ -314,7 +314,7 @@ public class DescribeResourceResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceName.
+         * The name of the EAS resource.
          */
         public Builder resourceName(String resourceName) {
             this.resourceName = resourceName;
@@ -322,7 +322,11 @@ public class DescribeResourceResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceType.
+         * The type of the resource. Valid values:
+         * <p>
+         * 
+         * - Dedicated
+         * - SelfManaged
          */
         public Builder resourceType(String resourceType) {
             this.resourceType = resourceType;
@@ -330,7 +334,7 @@ public class DescribeResourceResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The state of the resource group.
          */
         public Builder status(String status) {
             this.status = status;
@@ -338,7 +342,7 @@ public class DescribeResourceResponseBody extends TeaModel {
         }
 
         /**
-         * UpdateTime.
+         * The time when the resource group was last updated.
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;

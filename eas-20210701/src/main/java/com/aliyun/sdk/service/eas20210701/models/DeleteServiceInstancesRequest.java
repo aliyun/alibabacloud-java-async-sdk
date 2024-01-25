@@ -131,7 +131,7 @@ public class DeleteServiceInstancesRequest extends Request {
         }
 
         /**
-         * Container.
+         * The name of the container whose process needs to be restarted. This parameter takes effect only if the SoftRestart parameter is set to true.
          */
         public Builder container(String container) {
             this.putQueryParameter("Container", container);
@@ -149,7 +149,7 @@ public class DeleteServiceInstancesRequest extends Request {
         }
 
         /**
-         * SoftRestart.
+         * Specifies whether to restart only the container process without recreating the instance. Default value: false. Valid values: true and false.
          */
         public Builder softRestart(Boolean softRestart) {
             this.putQueryParameter("SoftRestart", softRestart);

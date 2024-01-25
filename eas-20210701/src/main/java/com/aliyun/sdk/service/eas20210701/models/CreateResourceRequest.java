@@ -153,7 +153,10 @@ public class CreateResourceRequest extends Request {
         } 
 
         /**
-         * AutoRenewal.
+         * Specifies whether to enable auto-renewal. Valid values: false (default)
+         * <p>
+         * 
+         * *   true
          */
         public Builder autoRenewal(Boolean autoRenewal) {
             this.putBodyParameter("AutoRenewal", autoRenewal);
@@ -162,7 +165,11 @@ public class CreateResourceRequest extends Request {
         }
 
         /**
-         * ChargeType.
+         * The billing method of the instance. Valid values:
+         * <p>
+         * 
+         * *   PrePaid: the subscription billing method.
+         * *   PostPaid: the pay-as-you-go billing method.
          */
         public Builder chargeType(String chargeType) {
             this.putBodyParameter("ChargeType", chargeType);
@@ -171,7 +178,7 @@ public class CreateResourceRequest extends Request {
         }
 
         /**
-         * EcsInstanceCount.
+         * The number of ECS instances.
          */
         public Builder ecsInstanceCount(Integer ecsInstanceCount) {
             this.putBodyParameter("EcsInstanceCount", ecsInstanceCount);
@@ -180,7 +187,7 @@ public class CreateResourceRequest extends Request {
         }
 
         /**
-         * EcsInstanceType.
+         * The type of the Elastic Compute Service (ECS) instance.
          */
         public Builder ecsInstanceType(String ecsInstanceType) {
             this.putBodyParameter("EcsInstanceType", ecsInstanceType);
@@ -198,7 +205,7 @@ public class CreateResourceRequest extends Request {
         }
 
         /**
-         * SelfManagedResourceOptions.
+         * 自运维资源组配置选项
          */
         public Builder selfManagedResourceOptions(SelfManagedResourceOptions selfManagedResourceOptions) {
             this.putBodyParameter("SelfManagedResourceOptions", selfManagedResourceOptions);
@@ -207,7 +214,7 @@ public class CreateResourceRequest extends Request {
         }
 
         /**
-         * SystemDiskSize.
+         * The size of the system disk. Unit: GiB. Valid values: 200 to 2000. Default value: 200.
          */
         public Builder systemDiskSize(Integer systemDiskSize) {
             this.putBodyParameter("SystemDiskSize", systemDiskSize);
@@ -216,7 +223,7 @@ public class CreateResourceRequest extends Request {
         }
 
         /**
-         * Zone.
+         * The zone to which the instance belongs.
          */
         public Builder zone(String zone) {
             this.putBodyParameter("Zone", zone);
@@ -294,7 +301,7 @@ public class CreateResourceRequest extends Request {
             private String value; 
 
             /**
-             * effect.
+             * 效果
              */
             public Builder effect(String effect) {
                 this.effect = effect;
@@ -302,7 +309,7 @@ public class CreateResourceRequest extends Request {
             }
 
             /**
-             * key.
+             * 键名
              */
             public Builder key(String key) {
                 this.key = key;
@@ -310,7 +317,7 @@ public class CreateResourceRequest extends Request {
             }
 
             /**
-             * operator.
+             * 键名和键值的关系
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -318,7 +325,7 @@ public class CreateResourceRequest extends Request {
             }
 
             /**
-             * value.
+             * 键值
              */
             public Builder value(String value) {
                 this.value = value;
@@ -395,7 +402,7 @@ public class CreateResourceRequest extends Request {
             private String roleName; 
 
             /**
-             * ExternalClusterId.
+             * 自运维集群Id
              */
             public Builder externalClusterId(String externalClusterId) {
                 this.externalClusterId = externalClusterId;
@@ -403,7 +410,7 @@ public class CreateResourceRequest extends Request {
             }
 
             /**
-             * NodeMatchLabels.
+             * 节点的标签键值对集合
              */
             public Builder nodeMatchLabels(java.util.Map < String, String > nodeMatchLabels) {
                 this.nodeMatchLabels = nodeMatchLabels;
@@ -411,7 +418,7 @@ public class CreateResourceRequest extends Request {
             }
 
             /**
-             * NodeTolerations.
+             * 节点污点的容忍度列表
              */
             public Builder nodeTolerations(java.util.List < NodeTolerations> nodeTolerations) {
                 this.nodeTolerations = nodeTolerations;
@@ -419,7 +426,7 @@ public class CreateResourceRequest extends Request {
             }
 
             /**
-             * RoleName.
+             * 授予云服务PAI-EAS相关权限的RAM角色名称
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;

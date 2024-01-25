@@ -70,7 +70,7 @@ public class DeleteBenchmarkTaskRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the region where the stress testing task is performed.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -79,7 +79,7 @@ public class DeleteBenchmarkTaskRequest extends Request {
         }
 
         /**
-         * TaskName.
+         * The name of the stress testing task. For more information about how to query the name of a stress testing task, see [ListBenchmarkTask](~~432976~~).
          */
         public Builder taskName(String taskName) {
             this.putPathParameter("TaskName", taskName);

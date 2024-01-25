@@ -70,7 +70,7 @@ public class DeleteGatewayRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The region ID of the private gateway.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -79,7 +79,7 @@ public class DeleteGatewayRequest extends Request {
         }
 
         /**
-         * GatewayId.
+         * The private gateway ID.
          */
         public Builder gatewayId(String gatewayId) {
             this.putPathParameter("GatewayId", gatewayId);

@@ -62,7 +62,7 @@ public class ListGatewayIntranetLinkedVpcResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * GatewayId.
+         * The private gateway ID.
          */
         public Builder gatewayId(String gatewayId) {
             this.gatewayId = gatewayId;
@@ -70,7 +70,7 @@ public class ListGatewayIntranetLinkedVpcResponseBody extends TeaModel {
         }
 
         /**
-         * IntranetLinkedVpcList.
+         * The internal endpoints.
          */
         public Builder intranetLinkedVpcList(java.util.List < IntranetLinkedVpcList> intranetLinkedVpcList) {
             this.intranetLinkedVpcList = intranetLinkedVpcList;
@@ -78,7 +78,7 @@ public class ListGatewayIntranetLinkedVpcResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -166,7 +166,7 @@ public class ListGatewayIntranetLinkedVpcResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * Ip.
+             * The IP address.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -174,7 +174,7 @@ public class ListGatewayIntranetLinkedVpcResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroupId.
+             * The security group ID.
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -182,7 +182,34 @@ public class ListGatewayIntranetLinkedVpcResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The state of the private gateway.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   Creating
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     The private gateway is being created.
+             * 
+             *     <!-- -->
+             * 
+             * *   Running
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     The private gateway is running.
+             * 
+             *     <!-- -->
              */
             public Builder status(String status) {
                 this.status = status;
@@ -190,7 +217,7 @@ public class ListGatewayIntranetLinkedVpcResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * The vSwitch ID.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -198,7 +225,7 @@ public class ListGatewayIntranetLinkedVpcResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * The virtual private cloud (VPC) ID.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

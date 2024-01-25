@@ -62,7 +62,7 @@ public class DeleteGatewayIntranetLinkedVpcResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * GatewayId.
+         * The private gateway ID.
          */
         public Builder gatewayId(String gatewayId) {
             this.gatewayId = gatewayId;
@@ -70,7 +70,7 @@ public class DeleteGatewayIntranetLinkedVpcResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -78,7 +78,7 @@ public class DeleteGatewayIntranetLinkedVpcResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -111,7 +111,7 @@ public class CreateGatewayRequest extends Request {
         } 
 
         /**
-         * ResourceName.
+         * The name of the resource group.
          */
         public Builder resourceName(String resourceName) {
             this.putQueryParameter("ResourceName", resourceName);
@@ -120,7 +120,26 @@ public class CreateGatewayRequest extends Request {
         }
 
         /**
-         * EnableInternet.
+         * Specifies whether to enable Internet access. Default value: false.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   true
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   false
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder enableInternet(Boolean enableInternet) {
             this.putBodyParameter("EnableInternet", enableInternet);
@@ -129,7 +148,7 @@ public class CreateGatewayRequest extends Request {
         }
 
         /**
-         * EnableIntranet.
+         * Specifies whether to enable internal network access. Default value: true.
          */
         public Builder enableIntranet(Boolean enableIntranet) {
             this.putBodyParameter("EnableIntranet", enableIntranet);
@@ -138,7 +157,7 @@ public class CreateGatewayRequest extends Request {
         }
 
         /**
-         * InstanceType.
+         * The instance type used for the private gateway.
          */
         public Builder instanceType(String instanceType) {
             this.putBodyParameter("InstanceType", instanceType);
@@ -147,7 +166,7 @@ public class CreateGatewayRequest extends Request {
         }
 
         /**
-         * Name.
+         * The private gateway alias.
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);

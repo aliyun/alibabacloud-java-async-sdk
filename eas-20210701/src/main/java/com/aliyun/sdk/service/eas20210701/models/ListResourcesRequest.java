@@ -110,7 +110,7 @@ public class ListResourcesRequest extends Request {
         } 
 
         /**
-         * PageNumber.
+         * The page number. Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -119,7 +119,7 @@ public class ListResourcesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Default value: 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -128,7 +128,7 @@ public class ListResourcesRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The ID of the resource group. You can call the [CreateResource](~~412111~~) operation to query the ID of the resource group.
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -137,7 +137,7 @@ public class ListResourcesRequest extends Request {
         }
 
         /**
-         * ResourceName.
+         * The name of the resource group. You can call the [CreateResource](~~412111~~) operation to query the name of the resource group.
          */
         public Builder resourceName(String resourceName) {
             this.putQueryParameter("ResourceName", resourceName);

@@ -86,7 +86,7 @@ public class ListResourceInstanceWorkerResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class ListResourceInstanceWorkerResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class ListResourceInstanceWorkerResponseBody extends TeaModel {
         }
 
         /**
-         * Pods.
+         * The workers.
          */
         public Builder pods(java.util.List < ResourceInstanceWorker > pods) {
             this.pods = pods;
@@ -110,7 +110,7 @@ public class ListResourceInstanceWorkerResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListResourceInstanceWorkerResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

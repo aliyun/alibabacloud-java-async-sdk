@@ -182,7 +182,7 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
         private String token; 
 
         /**
-         * AvailableAgent.
+         * The number of instances that you can test.
          */
         public Builder availableAgent(Long availableAgent) {
             this.availableAgent = availableAgent;
@@ -190,7 +190,7 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * 压测任务的状态。
+         * The ID of the operation caller.
          */
         public Builder callerUid(String callerUid) {
             this.callerUid = callerUid;
@@ -198,7 +198,7 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * 预期的压测实例个数。
+         * The number of instances that you want to test.
          */
         public Builder desiredAgent(Long desiredAgent) {
             this.desiredAgent = desiredAgent;
@@ -206,7 +206,7 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Endpoint.
+         * The endpoint of the service gateway.
          */
         public Builder endpoint(String endpoint) {
             this.endpoint = endpoint;
@@ -214,7 +214,7 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -222,7 +222,7 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * ParentUid.
+         * The ID of the Alibaba Cloud account that is used to call the operation.
          */
         public Builder parentUid(String parentUid) {
             this.parentUid = parentUid;
@@ -230,7 +230,7 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Reason.
+         * The event or reason that causes the current state of the stress testing task.
          */
         public Builder reason(String reason) {
             this.reason = reason;
@@ -238,7 +238,7 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID。
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -246,7 +246,7 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * 访问eas服务的鉴权token。
+         * The name of the service that you want to test.
          */
         public Builder serviceName(String serviceName) {
             this.serviceName = serviceName;
@@ -254,7 +254,82 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The state of the stress testing task.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   Creating
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   Starting
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   DeleteFailed
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   Running
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   Stopping
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   Error
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   Updating
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   Deleting
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   CreateFailed
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder status(String status) {
             this.status = status;
@@ -262,7 +337,7 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * 压测任务ID。
+         * The ID of the stress testing task.
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -270,7 +345,7 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * 当前压测任务状态产生的原因。
+         * The name of the stress testing task.
          */
         public Builder taskName(String taskName) {
             this.taskName = taskName;
@@ -278,7 +353,7 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * 资源拥有者的UID。
+         * The token for authentication when a stress testing task is created.
          */
         public Builder token(String token) {
             this.token = token;

@@ -84,7 +84,7 @@ public class UpdateBenchmarkTaskRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the region where the stress testing task is performed.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -93,7 +93,7 @@ public class UpdateBenchmarkTaskRequest extends Request {
         }
 
         /**
-         * TaskName.
+         * The name of the stress testing task.
          */
         public Builder taskName(String taskName) {
             this.putPathParameter("TaskName", taskName);
@@ -102,7 +102,7 @@ public class UpdateBenchmarkTaskRequest extends Request {
         }
 
         /**
-         * body.
+         * The request body. The body includes the parameters that are set to create a stress testing task.
          */
         public Builder body(String body) {
             this.putBodyParameter("body", body);
