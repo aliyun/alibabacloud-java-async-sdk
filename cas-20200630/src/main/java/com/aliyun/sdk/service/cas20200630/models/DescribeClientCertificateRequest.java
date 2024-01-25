@@ -55,7 +55,10 @@ public class DescribeClientCertificateRequest extends Request {
         } 
 
         /**
-         * The SHA-256 fingerprint of the certificate.
+         * The unique identifier of the client certificate or the server certificate that you want to query.
+         * <p>
+         * 
+         * >  You can call the [ListClientCertificate](~~330884~~) operation to query the unique identifiers of all client certificates and server certificates.
          */
         public Builder identifier(String identifier) {
             this.putQueryParameter("Identifier", identifier);

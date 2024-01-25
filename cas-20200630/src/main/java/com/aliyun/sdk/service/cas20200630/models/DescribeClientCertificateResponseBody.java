@@ -50,10 +50,7 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The unique identifier of the client certificate or the server certificate that you want to query.
-         * <p>
-         * 
-         * >  You can call the [ListClientCertificate](~~330884~~) operation to query the unique identifiers of all client certificates and server certificates.
+         * The details about the client certificate or the server certificate.
          */
         public Builder certificate(Certificate certificate) {
             this.certificate = certificate;
@@ -61,7 +58,7 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -353,62 +350,10 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
             private String x509Certificate; 
 
             /**
-             * The name of the department in the organization. The organization is associated with the intermediate certificate authority (CA) certificate from which the certificate is issued.
+             * The expiration date of the certificate. This value is a UNIX timestamp. Unit: milliseconds.
              */
             public Builder afterDate(Long afterDate) {
                 this.afterDate = afterDate;
-                return this;
-            }
-
-            /**
-             * The common name of the certificate.
-             */
-            public Builder algorithm(String algorithm) {
-                this.algorithm = algorithm;
-                return this;
-            }
-
-            /**
-             * The expiration date of the certificate. This value is a UNIX timestamp. Unit: milliseconds.
-             */
-            public Builder beforeDate(Long beforeDate) {
-                this.beforeDate = beforeDate;
-                return this;
-            }
-
-            /**
-             * The ID of the request.
-             */
-            public Builder certificateType(String certificateType) {
-                this.certificateType = certificateType;
-                return this;
-            }
-
-            /**
-             * C=CN,O=Alibaba Cloud Computing Co., Ltd.,OU=Security,L=Hangzhou,ST=Zhejiang,CN=Aliyun
-             */
-            public Builder commonName(String commonName) {
-                this.commonName = commonName;
-                return this;
-            }
-
-            /**
-             * The type of the certificate. Valid values:
-             * <p>
-             * 
-             * *   **CLIENT**: client certificate
-             * *   **SERVER**: server certificate
-             */
-            public Builder countryCode(String countryCode) {
-                this.countryCode = countryCode;
-                return this;
-            }
-
-            /**
-             * Days.
-             */
-            public Builder days(Integer days) {
-                this.days = days;
                 return this;
             }
 
@@ -420,99 +365,36 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
              * *   **ECC**: the elliptic curve cryptography (ECC) algorithm.
              * *   **SM2**: the SM2 algorithm, which is developed and approved by the State Cryptography Administration of China.
              */
-            public Builder identifier(String identifier) {
-                this.identifier = identifier;
+            public Builder algorithm(String algorithm) {
+                this.algorithm = algorithm;
                 return this;
             }
 
             /**
-             * The name of the province, municipality, or autonomous region in which the organization is located. The organization is associated with the intermediate certificate from which the certificate is issued.
+             * The issuance date of the certificate. This value is a UNIX timestamp. Unit: milliseconds.
              */
-            public Builder keySize(Integer keySize) {
-                this.keySize = keySize;
+            public Builder beforeDate(Long beforeDate) {
+                this.beforeDate = beforeDate;
                 return this;
             }
 
             /**
-             * The details about the client certificate or the server certificate.
-             */
-            public Builder locality(String locality) {
-                this.locality = locality;
-                return this;
-            }
-
-            /**
-             * WB943639
-             */
-            public Builder md5(String md5) {
-                this.md5 = md5;
-                return this;
-            }
-
-            /**
-             * The key length of the certificate.
-             */
-            public Builder organization(String organization) {
-                this.organization = organization;
-                return this;
-            }
-
-            /**
-             * The signature algorithm of the certificate.
-             */
-            public Builder organizationUnit(String organizationUnit) {
-                this.organizationUnit = organizationUnit;
-                return this;
-            }
-
-            /**
-             * All Alibaba Cloud API requests must include common request parameters.
+             * The type of the certificate. Valid values:
              * <p>
              * 
-             * For more information about sample requests, see the **"Examples"** section of this topic.
+             * *   **CLIENT**: client certificate
+             * *   **SERVER**: server certificate
              */
-            public Builder parentIdentifier(String parentIdentifier) {
-                this.parentIdentifier = parentIdentifier;
+            public Builder certificateType(String certificateType) {
+                this.certificateType = certificateType;
                 return this;
             }
 
             /**
-             * The content of the certificate.
+             * The common name of the certificate.
              */
-            public Builder sans(String sans) {
-                this.sans = sans;
-                return this;
-            }
-
-            /**
-             * The name of the city in which the organization is located. The organization is associated with the intermediate certificate from which the certificate is issued.
-             */
-            public Builder serialNumber(String serialNumber) {
-                this.serialNumber = serialNumber;
-                return this;
-            }
-
-            /**
-             * Queries the details about a client certificate or a server certificate by using the unique identifier of the certificate.
-             */
-            public Builder sha2(String sha2) {
-                this.sha2 = sha2;
-                return this;
-            }
-
-            /**
-             * The validity period of the certificate. Unit: days.
-             */
-            public Builder signAlgorithm(String signAlgorithm) {
-                this.signAlgorithm = signAlgorithm;
-                return this;
-            }
-
-            /**
-             * The serial number of the certificate.
-             */
-            public Builder state(String state) {
-                this.state = state;
+            public Builder commonName(String commonName) {
+                this.commonName = commonName;
                 return this;
             }
 
@@ -521,6 +403,134 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
              * <p>
              * 
              * For more information about country codes, see the **"Country codes"** section of the [Manage company profiles](~~198289~~) topic.
+             */
+            public Builder countryCode(String countryCode) {
+                this.countryCode = countryCode;
+                return this;
+            }
+
+            /**
+             * The validity period of the certificate. Unit: days.
+             */
+            public Builder days(Integer days) {
+                this.days = days;
+                return this;
+            }
+
+            /**
+             * The unique identifier of the certificate.
+             */
+            public Builder identifier(String identifier) {
+                this.identifier = identifier;
+                return this;
+            }
+
+            /**
+             * The key length of the certificate.
+             */
+            public Builder keySize(Integer keySize) {
+                this.keySize = keySize;
+                return this;
+            }
+
+            /**
+             * The name of the city in which the organization is located. The organization is associated with the intermediate certificate from which the certificate is issued.
+             */
+            public Builder locality(String locality) {
+                this.locality = locality;
+                return this;
+            }
+
+            /**
+             * The MD5 fingerprint of the certificate.
+             */
+            public Builder md5(String md5) {
+                this.md5 = md5;
+                return this;
+            }
+
+            /**
+             * The name of the organization. The organization is associated with the intermediate certificate from which the certificate is issued.
+             */
+            public Builder organization(String organization) {
+                this.organization = organization;
+                return this;
+            }
+
+            /**
+             * The name of the department in the organization. The organization is associated with the intermediate certificate authority (CA) certificate from which the certificate is issued.
+             */
+            public Builder organizationUnit(String organizationUnit) {
+                this.organizationUnit = organizationUnit;
+                return this;
+            }
+
+            /**
+             * The unique identifier of the intermediate certificate from which the client certificate is issued.
+             */
+            public Builder parentIdentifier(String parentIdentifier) {
+                this.parentIdentifier = parentIdentifier;
+                return this;
+            }
+
+            /**
+             * The subject alternative name (SAN) extension of the certificate. The value indicates additional information, including the additional domain names or IP addresses that are associated with the certificate.
+             * <p>
+             * 
+             * The value is a string that consists of JSON arrays. Each element in a JSON array is a JSON struct that corresponds to a SAN extension. A SAN extension struct contains the following parameters:
+             * 
+             * *   **Type**: the type of the extension. Data type: integer. Valid values:
+             * 
+             *     *   **1**: an email address
+             *     *   **2**: a domain name
+             *     *   **6**: a Uniform Resource Identifier (URI)
+             *     *   **7**: an IP address
+             * 
+             * *   **Value**: the value of the extension. Data type: string.
+             */
+            public Builder sans(String sans) {
+                this.sans = sans;
+                return this;
+            }
+
+            /**
+             * The serial number of the certificate.
+             */
+            public Builder serialNumber(String serialNumber) {
+                this.serialNumber = serialNumber;
+                return this;
+            }
+
+            /**
+             * The SHA-256 fingerprint of the certificate.
+             */
+            public Builder sha2(String sha2) {
+                this.sha2 = sha2;
+                return this;
+            }
+
+            /**
+             * The signature algorithm of the certificate.
+             */
+            public Builder signAlgorithm(String signAlgorithm) {
+                this.signAlgorithm = signAlgorithm;
+                return this;
+            }
+
+            /**
+             * The name of the province, municipality, or autonomous region in which the organization is located. The organization is associated with the intermediate certificate from which the certificate is issued.
+             */
+            public Builder state(String state) {
+                this.state = state;
+                return this;
+            }
+
+            /**
+             * The status of the certificate. Valid values:
+             * <p>
+             * 
+             * *   **ISSUE**: issued
+             * *   **REVOKE**: revoked
              */
             public Builder status(String status) {
                 this.status = status;
@@ -544,11 +554,7 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the certificate. Valid values:
-             * <p>
-             * 
-             * *   **ISSUE**: issued
-             * *   **REVOKE**: revoked
+             * The content of the certificate.
              */
             public Builder x509Certificate(String x509Certificate) {
                 this.x509Certificate = x509Certificate;

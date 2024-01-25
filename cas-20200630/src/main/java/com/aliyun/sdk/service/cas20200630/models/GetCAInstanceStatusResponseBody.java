@@ -50,7 +50,7 @@ public class GetCAInstanceStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * InstanceStatusList.
+         * The status information of the private CA instance.
          */
         public Builder instanceStatusList(java.util.List < InstanceStatusList> instanceStatusList) {
             this.instanceStatusList = instanceStatusList;
@@ -58,7 +58,7 @@ public class GetCAInstanceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -194,7 +194,10 @@ public class GetCAInstanceStatusResponseBody extends TeaModel {
             private Long useExpireTime; 
 
             /**
-             * AfterTime.
+             * The expiration date of the private CA certificate. This value is a UNIX timestamp. Unit: milliseconds.
+             * <p>
+             * 
+             * >  This parameter is returned only when the value of the **Status** parameter is **USED** or **REVOKE**. The value USED indicates that the private CA instance is enabled, and the value REVOKE indicates that the instance is revoked.
              */
             public Builder afterTime(Long afterTime) {
                 this.afterTime = afterTime;
@@ -202,7 +205,10 @@ public class GetCAInstanceStatusResponseBody extends TeaModel {
             }
 
             /**
-             * BeforeTime.
+             * The issuance date of the private CA certificate. This value is a UNIX timestamp. Unit: milliseconds.
+             * <p>
+             * 
+             * >  This parameter is returned only when the value of the **Status** parameter is **USED** or **REVOKE**. The value USED indicates that the private CA instance is enabled, and the value REVOKE indicates that the instance is revoked.
              */
             public Builder beforeTime(Long beforeTime) {
                 this.beforeTime = beforeTime;
@@ -210,7 +216,7 @@ public class GetCAInstanceStatusResponseBody extends TeaModel {
             }
 
             /**
-             * CertIssuedCount.
+             * The number of certificates that are issued by using the private CA instance.
              */
             public Builder certIssuedCount(Integer certIssuedCount) {
                 this.certIssuedCount = certIssuedCount;
@@ -218,7 +224,12 @@ public class GetCAInstanceStatusResponseBody extends TeaModel {
             }
 
             /**
-             * CertTotalCount.
+             * The number of certificates that can be issued by using the private CA instance.
+             * <p>
+             * 
+             * For a private root CA instance whose **Type** is **ROOT**, this parameter indicates the number of intermediate CA certificates that can be issued.
+             * 
+             * For a private intermediate CA instance whose **Type** is **SUB_ROOT**, this parameter indicates the total number of client certificates and server certificates that can be issued
              */
             public Builder certTotalCount(Integer certTotalCount) {
                 this.certTotalCount = certTotalCount;
@@ -226,7 +237,10 @@ public class GetCAInstanceStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Identifier.
+             * The unique identifier of the private CA certificate.
+             * <p>
+             * 
+             * >  This parameter is returned only when the value of the **Status** parameter is **USED** or **REVOKE**. The value USED indicates that the private CA instance is enabled, and the value REVOKE indicates that the instance is revoked.
              */
             public Builder identifier(String identifier) {
                 this.identifier = identifier;
@@ -234,7 +248,7 @@ public class GetCAInstanceStatusResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the private CA instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -242,7 +256,13 @@ public class GetCAInstanceStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the private CA instance. Valid values:
+             * <p>
+             * 
+             * *   **BUY**: The private CA instance is purchased but is not enabled.
+             * *   **USED**: The private CA instance is enabled.
+             * *   **REFUND**: The private CA instance is refunded.
+             * *   **REVOKE**: The private CA instance is revoked.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -250,7 +270,11 @@ public class GetCAInstanceStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the private CA instance. Valid values:
+             * <p>
+             * 
+             * *   **ROOT**: root CA instance
+             * *   **SUB_ROOT**: intermediate CA instance
              */
             public Builder type(String type) {
                 this.type = type;
@@ -258,7 +282,10 @@ public class GetCAInstanceStatusResponseBody extends TeaModel {
             }
 
             /**
-             * UseExpireTime.
+             * The expiration date of the private CA instance. This value is a UNIX timestamp. Unit: milliseconds.
+             * <p>
+             * 
+             * >  This parameter corresponds to the duration that you select when you purchase the private CA instance. The duration indicates the subscription period of the Private Certificate Authority (PCA) service.
              */
             public Builder useExpireTime(Long useExpireTime) {
                 this.useExpireTime = useExpireTime;

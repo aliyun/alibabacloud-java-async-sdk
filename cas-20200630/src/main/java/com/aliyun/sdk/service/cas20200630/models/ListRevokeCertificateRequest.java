@@ -68,7 +68,7 @@ public class ListRevokeCertificateRequest extends Request {
         } 
 
         /**
-         * The name of the department in the organization. The organization is associated with the intermediate certificate authority (CA) certificate from which the certificate is issued.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -77,7 +77,7 @@ public class ListRevokeCertificateRequest extends Request {
         }
 
         /**
-         * The signature algorithm of the certificate.
+         * The number of revoked certificates to return on each page. Default value: **20**.
          */
         public Builder showSize(Integer showSize) {
             this.putQueryParameter("ShowSize", showSize);

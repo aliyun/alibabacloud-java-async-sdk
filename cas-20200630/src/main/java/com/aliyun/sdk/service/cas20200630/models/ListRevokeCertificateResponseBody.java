@@ -98,7 +98,7 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * An array that consists of the details about the revoked client certificates or server certificates.
          */
         public Builder certificateList(java.util.List < CertificateList> certificateList) {
             this.certificateList = certificateList;
@@ -106,7 +106,7 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * Queries the details about all client certificates and server certificates that are revoked.
+         * The page number of the current page.
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -114,7 +114,7 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * PageCount.
+         * The total number of pages returned.
          */
         public Builder pageCount(Integer pageCount) {
             this.pageCount = pageCount;
@@ -122,7 +122,7 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * ShowSize.
+         * The number of revoked certificates that are returned per page.
          */
         public Builder showSize(Integer showSize) {
             this.showSize = showSize;
@@ -138,7 +138,7 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of revoked client certificates and server certificates that are returned.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -418,10 +418,47 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
             private String subjectDN; 
 
             /**
-             * The object.
+             * The expiration date of the certificate. The date is in the `yyyy-MM-ddT00:00Z` format. For example, the value `2021-12-31T00:00Z` indicates December 31, 2021.
              */
             public Builder afterDate(String afterDate) {
                 this.afterDate = afterDate;
+                return this;
+            }
+
+            /**
+             * The type of the encryption algorithm of the certificate. Valid values:
+             * <p>
+             * 
+             * *   **RSA**: the Rivest-Shamir-Adleman (RSA) algorithm.
+             * *   **ECC**: the elliptic curve cryptography (ECC) algorithm.
+             * *   **SM2**: the SM2 algorithm, which is developed and approved by the State Cryptography Administration of China.
+             */
+            public Builder algorithm(String algorithm) {
+                this.algorithm = algorithm;
+                return this;
+            }
+
+            /**
+             * The issuance date of the certificate. The date is in the `yyyy-MM-ddT00:00Z` format. For example, the value `2021-01-01T00:00Z` indicates January 1, 2021.
+             */
+            public Builder beforeDate(String beforeDate) {
+                this.beforeDate = beforeDate;
+                return this;
+            }
+
+            /**
+             * The type of the certificate.
+             */
+            public Builder certificateType(String certificateType) {
+                this.certificateType = certificateType;
+                return this;
+            }
+
+            /**
+             * The common name of the certificate.
+             */
+            public Builder commonName(String commonName) {
+                this.commonName = commonName;
                 return this;
             }
 
@@ -431,45 +468,13 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
              * 
              * For more information about country codes, see the **"Country codes"** section of the [Manage company profiles](~~198289~~) topic.
              */
-            public Builder algorithm(String algorithm) {
-                this.algorithm = algorithm;
-                return this;
-            }
-
-            /**
-             * The name of the city in which the organization is located. The organization is associated with the intermediate certificate from which the certificate is issued.
-             */
-            public Builder beforeDate(String beforeDate) {
-                this.beforeDate = beforeDate;
-                return this;
-            }
-
-            /**
-             * The number of revoked certificates that are returned per page.
-             */
-            public Builder certificateType(String certificateType) {
-                this.certificateType = certificateType;
-                return this;
-            }
-
-            /**
-             * The number of revoked certificates to return on each page. Default value: **20**.
-             */
-            public Builder commonName(String commonName) {
-                this.commonName = commonName;
-                return this;
-            }
-
-            /**
-             * The name of the province, municipality, or autonomous region in which the organization is located. The organization is associated with the intermediate certificate from which the certificate is issued.
-             */
             public Builder countryCode(String countryCode) {
                 this.countryCode = countryCode;
                 return this;
             }
 
             /**
-             * The serial number of the certificate.
+             * The unique identifier of the certificate.
              */
             public Builder identifier(String identifier) {
                 this.identifier = identifier;
@@ -485,7 +490,7 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * The issuance date of the certificate. The date is in the `yyyy-MM-ddT00:00Z` format. For example, the value `2021-01-01T00:00Z` indicates January 1, 2021.
+             * The name of the city in which the organization is located. The organization is associated with the intermediate certificate from which the certificate is issued.
              */
             public Builder locality(String locality) {
                 this.locality = locality;
@@ -493,10 +498,7 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * All Alibaba Cloud API requests must include common request parameters.
-             * <p>
-             * 
-             * For more information about sample requests, see the **"Examples"** section of this topic.
+             * The MD5 fingerprint of the certificate.
              */
             public Builder md5(String md5) {
                 this.md5 = md5;
@@ -504,10 +506,94 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * The expiration date of the certificate. The date is in the `yyyy-MM-ddT00:00Z` format. For example, the value `2021-12-31T00:00Z` indicates December 31, 2021.
+             * The name of the organization. The organization is associated with the intermediate certificate from which the certificate is issued.
              */
             public Builder organization(String organization) {
                 this.organization = organization;
+                return this;
+            }
+
+            /**
+             * The name of the department in the organization. The organization is associated with the intermediate certificate authority (CA) certificate from which the certificate is issued.
+             */
+            public Builder organizationUnit(String organizationUnit) {
+                this.organizationUnit = organizationUnit;
+                return this;
+            }
+
+            /**
+             * The identifier of the root certificate.
+             */
+            public Builder parentIdentifier(String parentIdentifier) {
+                this.parentIdentifier = parentIdentifier;
+                return this;
+            }
+
+            /**
+             * The date on which the certificate was revoked. The value is in the `yyyy-MM-ddT00:00Z` format. For example, the value `2021-09-01T00:00Z` indicates September 1, 2021.
+             */
+            public Builder revokeDate(String revokeDate) {
+                this.revokeDate = revokeDate;
+                return this;
+            }
+
+            /**
+             * The subject alternative name (SAN) extension of the certificate.
+             * <p>
+             * 
+             * The value is a string that consists of JSON arrays. Each element in a JSON array is a JSON struct that corresponds to a SAN extension. A SAN extension struct contains the following parameters:
+             * 
+             * *   **Type**: the type of the extension. Data type: integer. Valid values:
+             * 
+             *     *   **1**: an email address
+             *     *   **2**: a domain name
+             *     *   **6**: a Uniform Resource Identifier (URI)
+             *     *   **7**: an IP address
+             * 
+             * *   **Value**: the value of the extension. Data type: string.
+             */
+            public Builder sans(String sans) {
+                this.sans = sans;
+                return this;
+            }
+
+            /**
+             * The serial number of the certificate.
+             */
+            public Builder serialNumber(String serialNumber) {
+                this.serialNumber = serialNumber;
+                return this;
+            }
+
+            /**
+             * The SHA-256 fingerprint of the certificate.
+             */
+            public Builder sha2(String sha2) {
+                this.sha2 = sha2;
+                return this;
+            }
+
+            /**
+             * The signature algorithm of the certificate.
+             */
+            public Builder signAlgorithm(String signAlgorithm) {
+                this.signAlgorithm = signAlgorithm;
+                return this;
+            }
+
+            /**
+             * The name of the province, municipality, or autonomous region in which the organization is located. The organization is associated with the intermediate certificate from which the certificate is issued.
+             */
+            public Builder state(String state) {
+                this.state = state;
+                return this;
+            }
+
+            /**
+             * The status.
+             */
+            public Builder status(String status) {
+                this.status = status;
                 return this;
             }
 
@@ -521,78 +607,6 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
              * *   **L**: the city
              * *   **ST**: the province, municipality, or autonomous region
              * *   **CN**: the common name
-             */
-            public Builder organizationUnit(String organizationUnit) {
-                this.organizationUnit = organizationUnit;
-                return this;
-            }
-
-            /**
-             * The unique identifier of the certificate.
-             */
-            public Builder parentIdentifier(String parentIdentifier) {
-                this.parentIdentifier = parentIdentifier;
-                return this;
-            }
-
-            /**
-             * The page number of the current page.
-             */
-            public Builder revokeDate(String revokeDate) {
-                this.revokeDate = revokeDate;
-                return this;
-            }
-
-            /**
-             * Alibaba Cloud Computing Co., Ltd.
-             */
-            public Builder sans(String sans) {
-                this.sans = sans;
-                return this;
-            }
-
-            /**
-             * The name of the organization. The organization is associated with the intermediate certificate from which the certificate is issued.
-             */
-            public Builder serialNumber(String serialNumber) {
-                this.serialNumber = serialNumber;
-                return this;
-            }
-
-            /**
-             * The ID of the request.
-             */
-            public Builder sha2(String sha2) {
-                this.sha2 = sha2;
-                return this;
-            }
-
-            /**
-             * An array that consists of the details about the revoked client certificates or server certificates.
-             */
-            public Builder signAlgorithm(String signAlgorithm) {
-                this.signAlgorithm = signAlgorithm;
-                return this;
-            }
-
-            /**
-             * The SHA-256 fingerprint of the certificate.
-             */
-            public Builder state(String state) {
-                this.state = state;
-                return this;
-            }
-
-            /**
-             * The common name of the certificate.
-             */
-            public Builder status(String status) {
-                this.status = status;
-                return this;
-            }
-
-            /**
-             * The type of the certificate.
              */
             public Builder subjectDN(String subjectDN) {
                 this.subjectDN = subjectDN;

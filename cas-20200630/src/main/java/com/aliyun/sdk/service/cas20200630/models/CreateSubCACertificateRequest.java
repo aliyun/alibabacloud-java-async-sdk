@@ -271,7 +271,7 @@ public class CreateSubCACertificateRequest extends Request {
         }
 
         /**
-         * CrlDay.
+         * CRL validity period: 1-365 days
          */
         public Builder crlDay(Integer crlDay) {
             this.putQueryParameter("CrlDay", crlDay);
@@ -280,7 +280,11 @@ public class CreateSubCACertificateRequest extends Request {
         }
 
         /**
-         * EnableCrl.
+         * Enable Crl Service.
+         * <p>
+         * 
+         * - 0- No
+         * - 1- Yes
          */
         public Builder enableCrl(Boolean enableCrl) {
             this.putQueryParameter("EnableCrl", enableCrl);
@@ -328,7 +332,7 @@ public class CreateSubCACertificateRequest extends Request {
          * The unique identifier of the root CA certificate.
          * <p>
          * 
-         * > You can call the [DescribeCACertificateList](~~465957~~) operation to query the unique identifiers of all CA certificates.
+         * > You can call the [DescribeCACertificateList] operation to query the unique identifiers of all CA certificates.
          */
         public Builder parentIdentifier(String parentIdentifier) {
             this.putQueryParameter("ParentIdentifier", parentIdentifier);
@@ -360,7 +364,7 @@ public class CreateSubCACertificateRequest extends Request {
          * 
          * We recommend that you set this parameter to 5 to 10.
          * 
-         * > The validity period of the intermediate CA certificate cannot exceed the validity period of the root CA certificate. You can call the [DescribeCACertificate](~~465954~~) operation to query the validity period of a root CA certificate.
+         * > The validity period of the intermediate CA certificate cannot exceed the validity period of the root CA certificate. You can call the [DescribeCACertificate]operation to query the validity period of a root CA certificate.
          */
         public Builder years(Integer years) {
             this.putQueryParameter("Years", years);

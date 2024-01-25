@@ -145,7 +145,11 @@ public class CreateCustomCertificateRequest extends Request {
         }
 
         /**
-         * EnableCrl.
+         * include the CRL address.
+         * <p>
+         * 
+         * - 0- No
+         * - 1- Yes
          */
         public Builder enableCrl(Long enableCrl) {
             this.putQueryParameter("EnableCrl", enableCrl);
@@ -516,7 +520,7 @@ public class CreateCustomCertificateRequest extends Request {
             private java.util.List < SubjectAlternativeNames> subjectAlternativeNames; 
 
             /**
-             * Criticals.
+             * If it is a necessary parameter, the critical list contains the parameter name.
              */
             public Builder criticals(java.util.List < String > criticals) {
                 this.criticals = criticals;
@@ -593,7 +597,22 @@ public class CreateCustomCertificateRequest extends Request {
             private String value; 
 
             /**
-             * ObjectIdentifier.
+             * Custom attribute type as:
+             * <p>
+             * 
+             * - 2.5.4.6 : country
+             * - 2.5.4.10 : organization
+             * - 2.5.4.11 : organizational unit
+             * - 2.5.4.12 : title
+             * - 2.5.4.3 : common name
+             * - 2.5.4.9 : street
+             * - 2.5.4.5 : serial number
+             * - 2.5.4.7 : locality
+             * - 2.5.4.8 : state
+             * - 1.3.6.1.4.1.37244.1.1 : Matter Operational Certificate - Node ID
+             * - 1.3.6.1.4.1.37244.1.5 : Matter Operational Certificate - Fabric ID
+             * - 1.3.6.1.4.1.37244.2.1 : Matter Device Attestation Certificate Vender ID (VID)
+             * - 1.3.6.1.4.1.37244.2.2 : Matter Device Attestation Certificate Product ID (PID).
              */
             public Builder objectIdentifier(String objectIdentifier) {
                 this.objectIdentifier = objectIdentifier;
@@ -601,7 +620,7 @@ public class CreateCustomCertificateRequest extends Request {
             }
 
             /**
-             * The alias that meets the requirement of a specified type.
+             * Custom attribute value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -730,7 +749,7 @@ public class CreateCustomCertificateRequest extends Request {
             }
 
             /**
-             * CustomAttributes.
+             * Customize the Subject attributes of the certificate.
              */
             public Builder customAttributes(java.util.List < CustomAttributes> customAttributes) {
                 this.customAttributes = customAttributes;
@@ -835,7 +854,7 @@ public class CreateCustomCertificateRequest extends Request {
             }
 
             /**
-             * SerialNumber.
+             * The serial number MUST be a positive integer assigned by the CA to each certificate.
              */
             public Builder serialNumber(String serialNumber) {
                 this.serialNumber = serialNumber;

@@ -110,7 +110,7 @@ public class CreateClientCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * The serial number of the server certificate.
+         * The serial number of the certificate.
          */
         public Builder serialNumber(String serialNumber) {
             this.serialNumber = serialNumber;

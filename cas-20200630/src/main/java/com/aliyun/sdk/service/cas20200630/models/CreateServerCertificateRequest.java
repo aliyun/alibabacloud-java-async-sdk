@@ -267,142 +267,14 @@ public class CreateServerCertificateRequest extends Request {
         } 
 
         /**
-         * The content of the server certificate.
-         */
-        public Builder afterTime(Long afterTime) {
-            this.putQueryParameter("AfterTime", afterTime);
-            this.afterTime = afterTime;
-            return this;
-        }
-
-        /**
-         * The unique identifier of the intermediate CA certificate from which the server certificate is issued.
-         * <p>
-         * 
-         * >  You can call the [DescribeCACertificateList](~~328095~~) operation to query the unique identifier of an intermediate CA certificate.
-         */
-        public Builder algorithm(String algorithm) {
-            this.putQueryParameter("Algorithm", algorithm);
-            this.algorithm = algorithm;
-            return this;
-        }
-
-        /**
-         * Specifies whether to return the certificate. Valid values:
-         * <p>
-         * 
-         * *   **0**: does not return the certificate. This is the default value.
-         * *   **1**: returns the certificate.
-         * *   **2**: returns the certificate and the certificate chain of the certificate.
-         */
-        public Builder beforeTime(Long beforeTime) {
-            this.putQueryParameter("BeforeTime", beforeTime);
-            this.beforeTime = beforeTime;
-            return this;
-        }
-
-        /**
-         * The name of the city in which the organization is located. The value can contain letters. The default value is the name of the city in which the organization is located. The organization is associated with the intermediate CA certificate from which the certificate is issued.
-         */
-        public Builder commonName(String commonName) {
-            this.putQueryParameter("CommonName", commonName);
-            this.commonName = commonName;
-            return this;
-        }
-
-        /**
-         * The province, municipality, or autonomous region in which the organization is located. The value can contain letters. The default value is the name of the province, municipality, or autonomous region in which the organization is located. The organization is associated with the intermediate CA certificate from which the certificate is issued.
-         */
-        public Builder country(String country) {
-            this.putQueryParameter("Country", country);
-            this.country = country;
-            return this;
-        }
-
-        /**
          * The expiration time of the server certificate. This value is a UNIX timestamp. Unit: seconds.
          * <p>
          * 
          * >  The **BeforeTime** and **AfterTime** parameters must be both empty or both specified.
          */
-        public Builder days(Integer days) {
-            this.putQueryParameter("Days", days);
-            this.days = days;
-            return this;
-        }
-
-        /**
-         * Alibaba Cloud
-         */
-        public Builder domain(String domain) {
-            this.putQueryParameter("Domain", domain);
-            this.domain = domain;
-            return this;
-        }
-
-        /**
-         * EnableCrl.
-         */
-        public Builder enableCrl(Long enableCrl) {
-            this.putQueryParameter("EnableCrl", enableCrl);
-            this.enableCrl = enableCrl;
-            return this;
-        }
-
-        /**
-         * The certificate chain of the server certificate.
-         */
-        public Builder immediately(Integer immediately) {
-            this.putQueryParameter("Immediately", immediately);
-            this.immediately = immediately;
-            return this;
-        }
-
-        /**
-         * The content of the CSR file. You can generate a CSR file by using the OpenSSL tool or Keytool. For more information, see [How do I create a CSR file?](~~42218~~) You can also create a CSR file in the Certificate Management Service console. For more information, see [Create a CSR](~~313297~~).
-         */
-        public Builder locality(String locality) {
-            this.putQueryParameter("Locality", locality);
-            this.locality = locality;
-            return this;
-        }
-
-        /**
-         * The issuance time of the server certificate. This value is a UNIX timestamp. The default value is the time when you call this operation. Unit: seconds.
-         * <p>
-         * 
-         * >  The **BeforeTime** and **AfterTime** parameters must be both empty or both specified.
-         */
-        public Builder months(Integer months) {
-            this.putQueryParameter("Months", months);
-            this.months = months;
-            return this;
-        }
-
-        /**
-         * The name of the department. Default value: Aliyun CDN.
-         */
-        public Builder organization(String organization) {
-            this.putQueryParameter("Organization", organization);
-            this.organization = organization;
-            return this;
-        }
-
-        /**
-         * The name of the certificate user. The user of a server certificate is a server. We recommend that you enter the domain name or IP address of the server.
-         */
-        public Builder organizationUnit(String organizationUnit) {
-            this.putQueryParameter("OrganizationUnit", organizationUnit);
-            this.organizationUnit = organizationUnit;
-            return this;
-        }
-
-        /**
-         * The validity period of the server certificate. Unit: months.
-         */
-        public Builder parentIdentifier(String parentIdentifier) {
-            this.putQueryParameter("ParentIdentifier", parentIdentifier);
-            this.parentIdentifier = parentIdentifier;
+        public Builder afterTime(Long afterTime) {
+            this.putQueryParameter("AfterTime", afterTime);
+            this.afterTime = afterTime;
             return this;
         }
 
@@ -422,9 +294,39 @@ public class CreateServerCertificateRequest extends Request {
          * 
          * >  You can call the [DescribeCACertificate](~~328096~~) operation to query the key algorithm of an intermediate CA certificate.
          */
-        public Builder state(String state) {
-            this.putQueryParameter("State", state);
-            this.state = state;
+        public Builder algorithm(String algorithm) {
+            this.putQueryParameter("Algorithm", algorithm);
+            this.algorithm = algorithm;
+            return this;
+        }
+
+        /**
+         * The issuance time of the server certificate. This value is a UNIX timestamp. The default value is the time when you call this operation. Unit: seconds.
+         * <p>
+         * 
+         * >  The **BeforeTime** and **AfterTime** parameters must be both empty or both specified.
+         */
+        public Builder beforeTime(Long beforeTime) {
+            this.putQueryParameter("BeforeTime", beforeTime);
+            this.beforeTime = beforeTime;
+            return this;
+        }
+
+        /**
+         * The name of the certificate user. The user of a server certificate is a server. We recommend that you enter the domain name or IP address of the server.
+         */
+        public Builder commonName(String commonName) {
+            this.putQueryParameter("CommonName", commonName);
+            this.commonName = commonName;
+            return this;
+        }
+
+        /**
+         * The code of the country in which the organization is located, such as CN or US.
+         */
+        public Builder country(String country) {
+            this.putQueryParameter("Country", country);
+            this.country = country;
             return this;
         }
 
@@ -440,6 +342,111 @@ public class CreateServerCertificateRequest extends Request {
          * *   If you specify the **Days**, **BeforeTime**, and **AfterTime** parameters together, the validity period of the server certificate is determined by the value of the **Days** parameter.
          * 
          * *   The validity period of the server certificate cannot exceed the validity period of the intermediate CA certificate. You can call the [DescribeCACertificate](~~328096~~) operation to query the validity period of an intermediate CA certificate.
+         */
+        public Builder days(Integer days) {
+            this.putQueryParameter("Days", days);
+            this.days = days;
+            return this;
+        }
+
+        /**
+         * The additional domain names and additional IP addresses of the server certificate. After you add additional domain names and additional IP addresses to a certificate, you can apply the certificate to the domain names and IP addresses.
+         * <p>
+         * 
+         * Separate multiple domain names and multiple IP addresses with commas (,).
+         */
+        public Builder domain(String domain) {
+            this.putQueryParameter("Domain", domain);
+            this.domain = domain;
+            return this;
+        }
+
+        /**
+         * include the CRL address.
+         * <p>
+         * 
+         * - 0- No
+         * - 1- Yes
+         */
+        public Builder enableCrl(Long enableCrl) {
+            this.putQueryParameter("EnableCrl", enableCrl);
+            this.enableCrl = enableCrl;
+            return this;
+        }
+
+        /**
+         * Specifies whether to return the certificate. Valid values:
+         * <p>
+         * 
+         * *   **0**: does not return the certificate. This is the default value.
+         * *   **1**: returns the certificate.
+         * *   **2**: returns the certificate and the certificate chain of the certificate.
+         */
+        public Builder immediately(Integer immediately) {
+            this.putQueryParameter("Immediately", immediately);
+            this.immediately = immediately;
+            return this;
+        }
+
+        /**
+         * The name of the city in which the organization is located. The value can contain letters. The default value is the name of the city in which the organization is located. The organization is associated with the intermediate CA certificate from which the certificate is issued.
+         */
+        public Builder locality(String locality) {
+            this.putQueryParameter("Locality", locality);
+            this.locality = locality;
+            return this;
+        }
+
+        /**
+         * The validity period of the server certificate. Unit: months.
+         */
+        public Builder months(Integer months) {
+            this.putQueryParameter("Months", months);
+            this.months = months;
+            return this;
+        }
+
+        /**
+         * The name of the organization. Default value: Alibaba Inc.
+         */
+        public Builder organization(String organization) {
+            this.putQueryParameter("Organization", organization);
+            this.organization = organization;
+            return this;
+        }
+
+        /**
+         * The name of the department. Default value: Aliyun CDN.
+         */
+        public Builder organizationUnit(String organizationUnit) {
+            this.putQueryParameter("OrganizationUnit", organizationUnit);
+            this.organizationUnit = organizationUnit;
+            return this;
+        }
+
+        /**
+         * The unique identifier of the intermediate CA certificate from which the server certificate is issued.
+         * <p>
+         * 
+         * >  You can call the [DescribeCACertificateList](~~328095~~) operation to query the unique identifier of an intermediate CA certificate.
+         */
+        public Builder parentIdentifier(String parentIdentifier) {
+            this.putQueryParameter("ParentIdentifier", parentIdentifier);
+            this.parentIdentifier = parentIdentifier;
+            return this;
+        }
+
+        /**
+         * The province, municipality, or autonomous region in which the organization is located. The value can contain letters. The default value is the name of the province, municipality, or autonomous region in which the organization is located. The organization is associated with the intermediate CA certificate from which the certificate is issued.
+         */
+        public Builder state(String state) {
+            this.putQueryParameter("State", state);
+            this.state = state;
+            return this;
+        }
+
+        /**
+         * The validity period of the server certificate. Unit: years.
          */
         public Builder years(Integer years) {
             this.putQueryParameter("Years", years);

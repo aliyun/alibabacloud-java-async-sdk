@@ -447,7 +447,7 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             }
 
             /**
-             * CertIssuedCount.
+             * The number of certificates issued by private CA instances.
              */
             public Builder certIssuedCount(Long certIssuedCount) {
                 this.certIssuedCount = certIssuedCount;
@@ -455,7 +455,7 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             }
 
             /**
-             * CertRemainingCount.
+             * The remaining number of assignable certificate quotas.
              */
             public Builder certRemainingCount(Long certRemainingCount) {
                 this.certRemainingCount = certRemainingCount;
@@ -463,7 +463,7 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             }
 
             /**
-             * CertTotalCount.
+             * The total number of purchased certificate quotas.
              */
             public Builder certTotalCount(Long certTotalCount) {
                 this.certTotalCount = certTotalCount;

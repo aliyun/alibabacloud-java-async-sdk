@@ -68,7 +68,7 @@ public class GetCAInstanceStatusRequest extends Request {
         } 
 
         /**
-         * Identifier.
+         * The unique identifier of the certificate.
          */
         public Builder identifier(String identifier) {
             this.putQueryParameter("Identifier", identifier);
@@ -77,7 +77,10 @@ public class GetCAInstanceStatusRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the private CA instance.
+         * <p>
+         * 
+         * >  After you purchase a private CA instance by using the [SSL Certificates Service console](https://yundun.console.aliyun.com/?p=cas#/pca/rootlist), you can click **Details** for the private CA instance on the **Private Certificates** page to query the ID of the private CA instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

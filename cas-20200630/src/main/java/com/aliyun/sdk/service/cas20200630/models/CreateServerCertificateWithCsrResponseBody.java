@@ -86,7 +86,7 @@ public class CreateServerCertificateWithCsrResponseBody extends TeaModel {
         private String x509Certificate; 
 
         /**
-         * The serial number of the server certificate.
+         * The certificate chain of the server certificate.
          */
         public Builder certificateChain(String certificateChain) {
             this.certificateChain = certificateChain;
@@ -94,7 +94,7 @@ public class CreateServerCertificateWithCsrResponseBody extends TeaModel {
         }
 
         /**
-         * 0f29522da2dae7a1c4b6ab7132ad3c06
+         * The unique identifier of the server certificate.
          */
         public Builder identifier(String identifier) {
             this.identifier = identifier;
@@ -102,7 +102,7 @@ public class CreateServerCertificateWithCsrResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class CreateServerCertificateWithCsrResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * The serial number of the server certificate.
          */
         public Builder serialNumber(String serialNumber) {
             this.serialNumber = serialNumber;
@@ -118,7 +118,7 @@ public class CreateServerCertificateWithCsrResponseBody extends TeaModel {
         }
 
         /**
-         * The unique identifier of the server certificate.
+         * The content of the server certificate.
          */
         public Builder x509Certificate(String x509Certificate) {
             this.x509Certificate = x509Certificate;

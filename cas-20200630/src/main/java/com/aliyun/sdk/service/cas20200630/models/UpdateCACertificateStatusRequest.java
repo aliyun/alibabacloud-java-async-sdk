@@ -70,7 +70,10 @@ public class UpdateCACertificateStatusRequest extends Request {
         } 
 
         /**
-         * Identifier.
+         * The unique identifier of the CA certificate whose status you want to change.
+         * <p>
+         * 
+         * >  You can call the [DescribeCACertificateList](~~328095~~) operation to query the unique identifiers of all CA certificates.
          */
         public Builder identifier(String identifier) {
             this.putQueryParameter("Identifier", identifier);
@@ -79,7 +82,10 @@ public class UpdateCACertificateStatusRequest extends Request {
         }
 
         /**
-         * Status.
+         * The state to which you want to change the CA certificate. Set to the value to **REVOKE**. After this operation is called, the status of the CA certificate is changed to **REVOKE**.
+         * <p>
+         * 
+         * >  You can call this operation only if the status of a CA certificate is **ISSUE**. You can call the [DescribeCACertificate](~~328096~~) operation to query the status of a CA certificate.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

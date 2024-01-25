@@ -301,9 +301,9 @@ public class CreateClientCertificateRequest extends Request {
          * *   **ECC\_512**: The signature algorithm is Sha256WithECDSA.
          * *   **SM2\_256**: The signature algorithm is SM3WithSM2.
          * 
-         * The encryption algorithm of the client certificate must be the same with the encryption algorithm of the intermediate CA certificate. The key length can be different. For example, if the key algorithm of the intermediate CA certificate is RSA\_2048, the key algorithm of the client certificate must be RSA\_1024, RSA\_2048, or RSA\_4096.
+         * The encryption algorithm of the client certificate must be the same with the encryption algorithm of the intermediate certificate authority (CA) certificate. The key length can be different. For example, if the key algorithm of the intermediate CA certificate is RSA\_2048, the key algorithm of the client certificate must be RSA\_1024, RSA\_2048, or RSA\_4096.
          * 
-         * >  You can call the [DescribeCACertificate](~~328096~~) operation to query the key algorithm of an intermediate CA certificate.
+         * > You can call the [DescribeCACertificate] operation to query the key algorithm of an intermediate CA certificate.
          */
         public Builder algorithm(String algorithm) {
             this.putQueryParameter("Algorithm", algorithm);
@@ -342,7 +342,7 @@ public class CreateClientCertificateRequest extends Request {
         }
 
         /**
-         * The validity period of the client certificate. Unit: days. You must specify at least one of the **Days**, **BeforeTime**, and **AfterTime** parameters. The **BeforeTime** and **AfterTime** parameters must be both empty or both specified. The following list describes how to specify these parameters:
+         * The validity period of the client certificate. Unit: day. You must specify at least one of the **Days**, **BeforeTime**, and **AfterTime** parameters. The **BeforeTime** and **AfterTime** parameters must be both empty or both specified. The following list describes how to specify these parameters:
          * <p>
          * 
          * *   If you specify the **Days** parameter, you can specify both the **BeforeTime** and **AfterTime** parameters or leave them both empty.********
@@ -350,9 +350,9 @@ public class CreateClientCertificateRequest extends Request {
          * 
          * > 
          * 
-         * *   If you specify the **Days**, **BeforeTime**, and **AfterTime** parameters together, the validity period of the client certificate is determined by the value of the **Days** parameter.
+         * *   If you specify the **Days**, **BeforeTime**, and **AfterTime** parameters at the same time, the validity period of the client certificate is determined by the value of the **Days** parameter.
          * 
-         * *   The validity period of the client certificate cannot exceed the validity period of the intermediate CA certificate. You can call the [DescribeCACertificate](~~328096~~) operation to query the validity period of an intermediate CA certificate.
+         * *   The validity period of the client certificate cannot exceed the validity period of the intermediate CA certificate. You can call the [DescribeCACertificate](~~465954~~) operation to query the validity period of an intermediate CA certificate.
          */
         public Builder days(Integer days) {
             this.putQueryParameter("Days", days);
@@ -361,7 +361,11 @@ public class CreateClientCertificateRequest extends Request {
         }
 
         /**
-         * EnableCrl.
+         * include the CRL address.
+         * <p>
+         * 
+         * - 0- No
+         * - 1- Yes
          */
         public Builder enableCrl(Long enableCrl) {
             this.putQueryParameter("EnableCrl", enableCrl);
@@ -420,10 +424,10 @@ public class CreateClientCertificateRequest extends Request {
         }
 
         /**
-         * The unique identifier of the intermediate CA certificate from which the client certificate is issued.
+         * The unique identifier of the intermediate CA certificate from which the server certificate is issued.
          * <p>
          * 
-         * >  You can call the [DescribeCACertificateList](~~328095~~) operation to query the unique identifier of an intermediate CA certificate.
+         * > You can call the [DescribeCACertificateList] operation to query the unique identifier of an intermediate CA certificate.
          */
         public Builder parentIdentifier(String parentIdentifier) {
             this.putQueryParameter("ParentIdentifier", parentIdentifier);
