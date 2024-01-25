@@ -75,11 +75,11 @@ public class AddUserRequest extends Request {
             super();
         } 
 
-        private Builder(AddUserRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.extraParams = response.extraParams;
-            this.userId = response.userId;
+        private Builder(AddUserRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.extraParams = request.extraParams;
+            this.userId = request.userId;
         } 
 
         /**

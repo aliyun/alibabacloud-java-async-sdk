@@ -140,16 +140,16 @@ public class DescribeApDevicesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeApDevicesRequest response) {
-            super(response);
-            this.apMac = response.apMac;
-            this.beActivate = response.beActivate;
-            this.extraParams = response.extraParams;
-            this.model = response.model;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.status = response.status;
-            this.storeId = response.storeId;
+        private Builder(DescribeApDevicesRequest request) {
+            super(request);
+            this.apMac = request.apMac;
+            this.beActivate = request.beActivate;
+            this.extraParams = request.extraParams;
+            this.model = request.model;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.status = request.status;
+            this.storeId = request.storeId;
         } 
 
         /**

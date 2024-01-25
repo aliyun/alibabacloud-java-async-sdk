@@ -62,10 +62,10 @@ public class DeleteStoreRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteStoreRequest response) {
-            super(response);
-            this.extraParams = response.extraParams;
-            this.storeId = response.storeId;
+        private Builder(DeleteStoreRequest request) {
+            super(request);
+            this.extraParams = request.extraParams;
+            this.storeId = request.storeId;
         } 
 
         /**

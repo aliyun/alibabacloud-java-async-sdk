@@ -76,11 +76,11 @@ public class ActivateApDeviceRequest extends Request {
             super();
         } 
 
-        private Builder(ActivateApDeviceRequest response) {
-            super(response);
-            this.apMac = response.apMac;
-            this.extraParams = response.extraParams;
-            this.storeId = response.storeId;
+        private Builder(ActivateApDeviceRequest request) {
+            super(request);
+            this.apMac = request.apMac;
+            this.extraParams = request.extraParams;
+            this.storeId = request.storeId;
         } 
 
         /**

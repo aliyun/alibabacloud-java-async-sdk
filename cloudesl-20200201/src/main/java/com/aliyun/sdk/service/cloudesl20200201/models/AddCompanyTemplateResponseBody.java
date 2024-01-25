@@ -7,11 +7,20 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ConfirmServerLocationResponseBody} extends {@link TeaModel}
+ * {@link AddCompanyTemplateResponseBody} extends {@link TeaModel}
  *
- * <p>ConfirmServerLocationResponseBody</p>
+ * <p>AddCompanyTemplateResponseBody</p>
  */
-public class ConfirmServerLocationResponseBody extends TeaModel {
+public class AddCompanyTemplateResponseBody extends TeaModel {
+    @NameInMap("Code")
+    private String code;
+
+    @NameInMap("DynamicCode")
+    private String dynamicCode;
+
+    @NameInMap("DynamicMessage")
+    private String dynamicMessage;
+
     @NameInMap("ErrorCode")
     private String errorCode;
 
@@ -27,7 +36,10 @@ public class ConfirmServerLocationResponseBody extends TeaModel {
     @NameInMap("Success")
     private Boolean success;
 
-    private ConfirmServerLocationResponseBody(Builder builder) {
+    private AddCompanyTemplateResponseBody(Builder builder) {
+        this.code = builder.code;
+        this.dynamicCode = builder.dynamicCode;
+        this.dynamicMessage = builder.dynamicMessage;
         this.errorCode = builder.errorCode;
         this.errorMessage = builder.errorMessage;
         this.message = builder.message;
@@ -39,8 +51,29 @@ public class ConfirmServerLocationResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static ConfirmServerLocationResponseBody create() {
+    public static AddCompanyTemplateResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return code
+     */
+    public String getCode() {
+        return this.code;
+    }
+
+    /**
+     * @return dynamicCode
+     */
+    public String getDynamicCode() {
+        return this.dynamicCode;
+    }
+
+    /**
+     * @return dynamicMessage
+     */
+    public String getDynamicMessage() {
+        return this.dynamicMessage;
     }
 
     /**
@@ -79,11 +112,38 @@ public class ConfirmServerLocationResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String code; 
+        private String dynamicCode; 
+        private String dynamicMessage; 
         private String errorCode; 
         private String errorMessage; 
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        /**
+         * Code.
+         */
+        public Builder code(String code) {
+            this.code = code;
+            return this;
+        }
+
+        /**
+         * DynamicCode.
+         */
+        public Builder dynamicCode(String dynamicCode) {
+            this.dynamicCode = dynamicCode;
+            return this;
+        }
+
+        /**
+         * DynamicMessage.
+         */
+        public Builder dynamicMessage(String dynamicMessage) {
+            this.dynamicMessage = dynamicMessage;
+            return this;
+        }
 
         /**
          * ErrorCode.
@@ -125,8 +185,8 @@ public class ConfirmServerLocationResponseBody extends TeaModel {
             return this;
         }
 
-        public ConfirmServerLocationResponseBody build() {
-            return new ConfirmServerLocationResponseBody(this);
+        public AddCompanyTemplateResponseBody build() {
+            return new AddCompanyTemplateResponseBody(this);
         } 
 
     } 

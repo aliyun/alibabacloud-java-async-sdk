@@ -113,14 +113,14 @@ public class DescribeUsersRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeUsersRequest response) {
-            super(response);
-            this.extraParams = response.extraParams;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.userId = response.userId;
-            this.userName = response.userName;
-            this.userType = response.userType;
+        private Builder(DescribeUsersRequest request) {
+            super(request);
+            this.extraParams = request.extraParams;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.userId = request.userId;
+            this.userName = request.userName;
+            this.userType = request.userType;
         } 
 
         /**

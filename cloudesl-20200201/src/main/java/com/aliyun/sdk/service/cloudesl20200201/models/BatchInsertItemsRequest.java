@@ -89,12 +89,12 @@ public class BatchInsertItemsRequest extends Request {
             super();
         } 
 
-        private Builder(BatchInsertItemsRequest response) {
-            super(response);
-            this.extraParams = response.extraParams;
-            this.itemInfo = response.itemInfo;
-            this.storeId = response.storeId;
-            this.syncByItemId = response.syncByItemId;
+        private Builder(BatchInsertItemsRequest request) {
+            super(request);
+            this.extraParams = request.extraParams;
+            this.itemInfo = request.itemInfo;
+            this.storeId = request.storeId;
+            this.syncByItemId = request.syncByItemId;
         } 
 
         /**
@@ -144,6 +144,9 @@ public class BatchInsertItemsRequest extends Request {
         @NameInMap("ActionPrice")
         @Validation(required = true)
         private Integer actionPrice;
+
+        @NameInMap("BeClearance")
+        private Boolean beClearance;
 
         @NameInMap("BeMember")
         private Boolean beMember;
@@ -204,6 +207,39 @@ public class BatchInsertItemsRequest extends Request {
 
         @NameInMap("CustomizeFeatureO")
         private String customizeFeatureO;
+
+        @NameInMap("CustomizeFeatureP")
+        private String customizeFeatureP;
+
+        @NameInMap("CustomizeFeatureQ")
+        private String customizeFeatureQ;
+
+        @NameInMap("CustomizeFeatureR")
+        private String customizeFeatureR;
+
+        @NameInMap("CustomizeFeatureS")
+        private String customizeFeatureS;
+
+        @NameInMap("CustomizeFeatureT")
+        private String customizeFeatureT;
+
+        @NameInMap("CustomizeFeatureU")
+        private String customizeFeatureU;
+
+        @NameInMap("CustomizeFeatureV")
+        private String customizeFeatureV;
+
+        @NameInMap("CustomizeFeatureW")
+        private String customizeFeatureW;
+
+        @NameInMap("CustomizeFeatureX")
+        private String customizeFeatureX;
+
+        @NameInMap("CustomizeFeatureY")
+        private String customizeFeatureY;
+
+        @NameInMap("CustomizeFeatureZ")
+        private String customizeFeatureZ;
 
         @NameInMap("EnergyEfficiency")
         private String energyEfficiency;
@@ -304,6 +340,7 @@ public class BatchInsertItemsRequest extends Request {
 
         private ItemInfo(Builder builder) {
             this.actionPrice = builder.actionPrice;
+            this.beClearance = builder.beClearance;
             this.beMember = builder.beMember;
             this.bePromotion = builder.bePromotion;
             this.beSourceCode = builder.beSourceCode;
@@ -324,6 +361,17 @@ public class BatchInsertItemsRequest extends Request {
             this.customizeFeatureM = builder.customizeFeatureM;
             this.customizeFeatureN = builder.customizeFeatureN;
             this.customizeFeatureO = builder.customizeFeatureO;
+            this.customizeFeatureP = builder.customizeFeatureP;
+            this.customizeFeatureQ = builder.customizeFeatureQ;
+            this.customizeFeatureR = builder.customizeFeatureR;
+            this.customizeFeatureS = builder.customizeFeatureS;
+            this.customizeFeatureT = builder.customizeFeatureT;
+            this.customizeFeatureU = builder.customizeFeatureU;
+            this.customizeFeatureV = builder.customizeFeatureV;
+            this.customizeFeatureW = builder.customizeFeatureW;
+            this.customizeFeatureX = builder.customizeFeatureX;
+            this.customizeFeatureY = builder.customizeFeatureY;
+            this.customizeFeatureZ = builder.customizeFeatureZ;
             this.energyEfficiency = builder.energyEfficiency;
             this.forestFirstId = builder.forestFirstId;
             this.forestSecondId = builder.forestSecondId;
@@ -370,6 +418,13 @@ public class BatchInsertItemsRequest extends Request {
          */
         public Integer getActionPrice() {
             return this.actionPrice;
+        }
+
+        /**
+         * @return beClearance
+         */
+        public Boolean getBeClearance() {
+            return this.beClearance;
         }
 
         /**
@@ -510,6 +565,83 @@ public class BatchInsertItemsRequest extends Request {
          */
         public String getCustomizeFeatureO() {
             return this.customizeFeatureO;
+        }
+
+        /**
+         * @return customizeFeatureP
+         */
+        public String getCustomizeFeatureP() {
+            return this.customizeFeatureP;
+        }
+
+        /**
+         * @return customizeFeatureQ
+         */
+        public String getCustomizeFeatureQ() {
+            return this.customizeFeatureQ;
+        }
+
+        /**
+         * @return customizeFeatureR
+         */
+        public String getCustomizeFeatureR() {
+            return this.customizeFeatureR;
+        }
+
+        /**
+         * @return customizeFeatureS
+         */
+        public String getCustomizeFeatureS() {
+            return this.customizeFeatureS;
+        }
+
+        /**
+         * @return customizeFeatureT
+         */
+        public String getCustomizeFeatureT() {
+            return this.customizeFeatureT;
+        }
+
+        /**
+         * @return customizeFeatureU
+         */
+        public String getCustomizeFeatureU() {
+            return this.customizeFeatureU;
+        }
+
+        /**
+         * @return customizeFeatureV
+         */
+        public String getCustomizeFeatureV() {
+            return this.customizeFeatureV;
+        }
+
+        /**
+         * @return customizeFeatureW
+         */
+        public String getCustomizeFeatureW() {
+            return this.customizeFeatureW;
+        }
+
+        /**
+         * @return customizeFeatureX
+         */
+        public String getCustomizeFeatureX() {
+            return this.customizeFeatureX;
+        }
+
+        /**
+         * @return customizeFeatureY
+         */
+        public String getCustomizeFeatureY() {
+            return this.customizeFeatureY;
+        }
+
+        /**
+         * @return customizeFeatureZ
+         */
+        public String getCustomizeFeatureZ() {
+            return this.customizeFeatureZ;
         }
 
         /**
@@ -731,6 +863,7 @@ public class BatchInsertItemsRequest extends Request {
 
         public static final class Builder {
             private Integer actionPrice; 
+            private Boolean beClearance; 
             private Boolean beMember; 
             private Boolean bePromotion; 
             private Boolean beSourceCode; 
@@ -751,6 +884,17 @@ public class BatchInsertItemsRequest extends Request {
             private String customizeFeatureM; 
             private String customizeFeatureN; 
             private String customizeFeatureO; 
+            private String customizeFeatureP; 
+            private String customizeFeatureQ; 
+            private String customizeFeatureR; 
+            private String customizeFeatureS; 
+            private String customizeFeatureT; 
+            private String customizeFeatureU; 
+            private String customizeFeatureV; 
+            private String customizeFeatureW; 
+            private String customizeFeatureX; 
+            private String customizeFeatureY; 
+            private String customizeFeatureZ; 
             private String energyEfficiency; 
             private String forestFirstId; 
             private String forestSecondId; 
@@ -788,6 +932,14 @@ public class BatchInsertItemsRequest extends Request {
              */
             public Builder actionPrice(Integer actionPrice) {
                 this.actionPrice = actionPrice;
+                return this;
+            }
+
+            /**
+             * BeClearance.
+             */
+            public Builder beClearance(Boolean beClearance) {
+                this.beClearance = beClearance;
                 return this;
             }
 
@@ -948,6 +1100,94 @@ public class BatchInsertItemsRequest extends Request {
              */
             public Builder customizeFeatureO(String customizeFeatureO) {
                 this.customizeFeatureO = customizeFeatureO;
+                return this;
+            }
+
+            /**
+             * CustomizeFeatureP.
+             */
+            public Builder customizeFeatureP(String customizeFeatureP) {
+                this.customizeFeatureP = customizeFeatureP;
+                return this;
+            }
+
+            /**
+             * CustomizeFeatureQ.
+             */
+            public Builder customizeFeatureQ(String customizeFeatureQ) {
+                this.customizeFeatureQ = customizeFeatureQ;
+                return this;
+            }
+
+            /**
+             * CustomizeFeatureR.
+             */
+            public Builder customizeFeatureR(String customizeFeatureR) {
+                this.customizeFeatureR = customizeFeatureR;
+                return this;
+            }
+
+            /**
+             * CustomizeFeatureS.
+             */
+            public Builder customizeFeatureS(String customizeFeatureS) {
+                this.customizeFeatureS = customizeFeatureS;
+                return this;
+            }
+
+            /**
+             * CustomizeFeatureT.
+             */
+            public Builder customizeFeatureT(String customizeFeatureT) {
+                this.customizeFeatureT = customizeFeatureT;
+                return this;
+            }
+
+            /**
+             * CustomizeFeatureU.
+             */
+            public Builder customizeFeatureU(String customizeFeatureU) {
+                this.customizeFeatureU = customizeFeatureU;
+                return this;
+            }
+
+            /**
+             * CustomizeFeatureV.
+             */
+            public Builder customizeFeatureV(String customizeFeatureV) {
+                this.customizeFeatureV = customizeFeatureV;
+                return this;
+            }
+
+            /**
+             * CustomizeFeatureW.
+             */
+            public Builder customizeFeatureW(String customizeFeatureW) {
+                this.customizeFeatureW = customizeFeatureW;
+                return this;
+            }
+
+            /**
+             * CustomizeFeatureX.
+             */
+            public Builder customizeFeatureX(String customizeFeatureX) {
+                this.customizeFeatureX = customizeFeatureX;
+                return this;
+            }
+
+            /**
+             * CustomizeFeatureY.
+             */
+            public Builder customizeFeatureY(String customizeFeatureY) {
+                this.customizeFeatureY = customizeFeatureY;
+                return this;
+            }
+
+            /**
+             * CustomizeFeatureZ.
+             */
+            public Builder customizeFeatureZ(String customizeFeatureZ) {
+                this.customizeFeatureZ = customizeFeatureZ;
                 return this;
             }
 

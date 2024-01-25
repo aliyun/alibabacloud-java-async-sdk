@@ -49,6 +49,10 @@ public class DescribeEslDevicesRequest extends Request {
     @NameInMap("Type")
     private String type;
 
+    @Body
+    @NameInMap("TypeEncode")
+    private String typeEncode;
+
     private DescribeEslDevicesRequest(Builder builder) {
         super(builder);
         this.eslBarCode = builder.eslBarCode;
@@ -60,6 +64,7 @@ public class DescribeEslDevicesRequest extends Request {
         this.storeId = builder.storeId;
         this.toBatteryLevel = builder.toBatteryLevel;
         this.type = builder.type;
+        this.typeEncode = builder.typeEncode;
     }
 
     public static Builder builder() {
@@ -138,6 +143,13 @@ public class DescribeEslDevicesRequest extends Request {
         return this.type;
     }
 
+    /**
+     * @return typeEncode
+     */
+    public String getTypeEncode() {
+        return this.typeEncode;
+    }
+
     public static final class Builder extends Request.Builder<DescribeEslDevicesRequest, Builder> {
         private String eslBarCode; 
         private String eslStatus; 
@@ -148,22 +160,24 @@ public class DescribeEslDevicesRequest extends Request {
         private String storeId; 
         private Integer toBatteryLevel; 
         private String type; 
+        private String typeEncode; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeEslDevicesRequest response) {
-            super(response);
-            this.eslBarCode = response.eslBarCode;
-            this.eslStatus = response.eslStatus;
-            this.extraParams = response.extraParams;
-            this.fromBatteryLevel = response.fromBatteryLevel;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.storeId = response.storeId;
-            this.toBatteryLevel = response.toBatteryLevel;
-            this.type = response.type;
+        private Builder(DescribeEslDevicesRequest request) {
+            super(request);
+            this.eslBarCode = request.eslBarCode;
+            this.eslStatus = request.eslStatus;
+            this.extraParams = request.extraParams;
+            this.fromBatteryLevel = request.fromBatteryLevel;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.storeId = request.storeId;
+            this.toBatteryLevel = request.toBatteryLevel;
+            this.type = request.type;
+            this.typeEncode = request.typeEncode;
         } 
 
         /**
@@ -244,6 +258,15 @@ public class DescribeEslDevicesRequest extends Request {
         public Builder type(String type) {
             this.putBodyParameter("Type", type);
             this.type = type;
+            return this;
+        }
+
+        /**
+         * TypeEncode.
+         */
+        public Builder typeEncode(String typeEncode) {
+            this.putBodyParameter("TypeEncode", typeEncode);
+            this.typeEncode = typeEncode;
             return this;
         }
 

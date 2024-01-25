@@ -100,13 +100,13 @@ public class DescribeEslDeviceRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeEslDeviceRequest response) {
-            super(response);
-            this.fromDate = response.fromDate;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.storeId = response.storeId;
-            this.toDate = response.toDate;
+        private Builder(DescribeEslDeviceRequest request) {
+            super(request);
+            this.fromDate = request.fromDate;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.storeId = request.storeId;
+            this.toDate = request.toDate;
         } 
 
         /**

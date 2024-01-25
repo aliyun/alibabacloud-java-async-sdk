@@ -287,6 +287,12 @@ public class DescribeEslDevicesResponseBody extends TeaModel {
         @NameInMap("LastCommunicateTime")
         private String lastCommunicateTime;
 
+        @NameInMap("LayoutId")
+        private String layoutId;
+
+        @NameInMap("LayoutName")
+        private String layoutName;
+
         @NameInMap("Mac")
         private String mac;
 
@@ -305,18 +311,24 @@ public class DescribeEslDevicesResponseBody extends TeaModel {
         @NameInMap("Type")
         private String type;
 
+        @NameInMap("TypeEncode")
+        private String typeEncode;
+
         private EslDevices(Builder builder) {
             this.batteryLevel = builder.batteryLevel;
             this.eslBarCode = builder.eslBarCode;
             this.eslSignal = builder.eslSignal;
             this.eslStatus = builder.eslStatus;
             this.lastCommunicateTime = builder.lastCommunicateTime;
+            this.layoutId = builder.layoutId;
+            this.layoutName = builder.layoutName;
             this.mac = builder.mac;
             this.model = builder.model;
             this.screenHeight = builder.screenHeight;
             this.screenWidth = builder.screenWidth;
             this.storeId = builder.storeId;
             this.type = builder.type;
+            this.typeEncode = builder.typeEncode;
         }
 
         public static Builder builder() {
@@ -363,6 +375,20 @@ public class DescribeEslDevicesResponseBody extends TeaModel {
         }
 
         /**
+         * @return layoutId
+         */
+        public String getLayoutId() {
+            return this.layoutId;
+        }
+
+        /**
+         * @return layoutName
+         */
+        public String getLayoutName() {
+            return this.layoutName;
+        }
+
+        /**
          * @return mac
          */
         public String getMac() {
@@ -404,18 +430,28 @@ public class DescribeEslDevicesResponseBody extends TeaModel {
             return this.type;
         }
 
+        /**
+         * @return typeEncode
+         */
+        public String getTypeEncode() {
+            return this.typeEncode;
+        }
+
         public static final class Builder {
             private Integer batteryLevel; 
             private String eslBarCode; 
             private Integer eslSignal; 
             private String eslStatus; 
             private String lastCommunicateTime; 
+            private String layoutId; 
+            private String layoutName; 
             private String mac; 
             private String model; 
             private Integer screenHeight; 
             private Integer screenWidth; 
             private String storeId; 
             private String type; 
+            private String typeEncode; 
 
             /**
              * BatteryLevel.
@@ -454,6 +490,22 @@ public class DescribeEslDevicesResponseBody extends TeaModel {
              */
             public Builder lastCommunicateTime(String lastCommunicateTime) {
                 this.lastCommunicateTime = lastCommunicateTime;
+                return this;
+            }
+
+            /**
+             * LayoutId.
+             */
+            public Builder layoutId(String layoutId) {
+                this.layoutId = layoutId;
+                return this;
+            }
+
+            /**
+             * LayoutName.
+             */
+            public Builder layoutName(String layoutName) {
+                this.layoutName = layoutName;
                 return this;
             }
 
@@ -502,6 +554,14 @@ public class DescribeEslDevicesResponseBody extends TeaModel {
              */
             public Builder type(String type) {
                 this.type = type;
+                return this;
+            }
+
+            /**
+             * TypeEncode.
+             */
+            public Builder typeEncode(String typeEncode) {
+                this.typeEncode = typeEncode;
                 return this;
             }
 

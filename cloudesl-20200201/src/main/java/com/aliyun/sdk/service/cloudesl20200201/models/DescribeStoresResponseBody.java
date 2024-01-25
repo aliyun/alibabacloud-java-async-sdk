@@ -272,6 +272,16 @@ public class DescribeStoresResponseBody extends TeaModel {
     } 
 
     public static class Stores extends TeaModel {
+        @NameInMap("AutoUnbindDays")
+        private Integer autoUnbindDays;
+
+        @NameInMap("AutoUnbindOfflineEsl")
+        private Boolean autoUnbindOfflineEsl;
+
+        @NameInMap("BarCodeEncode")
+        @Validation(maximum = 1)
+        private Integer barCodeEncode;
+
         @NameInMap("GmtCreate")
         private String gmtCreate;
 
@@ -303,6 +313,9 @@ public class DescribeStoresResponseBody extends TeaModel {
         private String userStoreCode;
 
         private Stores(Builder builder) {
+            this.autoUnbindDays = builder.autoUnbindDays;
+            this.autoUnbindOfflineEsl = builder.autoUnbindOfflineEsl;
+            this.barCodeEncode = builder.barCodeEncode;
             this.gmtCreate = builder.gmtCreate;
             this.gmtModified = builder.gmtModified;
             this.level = builder.level;
@@ -321,6 +334,27 @@ public class DescribeStoresResponseBody extends TeaModel {
 
         public static Stores create() {
             return builder().build();
+        }
+
+        /**
+         * @return autoUnbindDays
+         */
+        public Integer getAutoUnbindDays() {
+            return this.autoUnbindDays;
+        }
+
+        /**
+         * @return autoUnbindOfflineEsl
+         */
+        public Boolean getAutoUnbindOfflineEsl() {
+            return this.autoUnbindOfflineEsl;
+        }
+
+        /**
+         * @return barCodeEncode
+         */
+        public Integer getBarCodeEncode() {
+            return this.barCodeEncode;
         }
 
         /**
@@ -394,6 +428,9 @@ public class DescribeStoresResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer autoUnbindDays; 
+            private Boolean autoUnbindOfflineEsl; 
+            private Integer barCodeEncode; 
             private String gmtCreate; 
             private String gmtModified; 
             private String level; 
@@ -404,6 +441,30 @@ public class DescribeStoresResponseBody extends TeaModel {
             private String templateVersion; 
             private String timeZone; 
             private String userStoreCode; 
+
+            /**
+             * AutoUnbindDays.
+             */
+            public Builder autoUnbindDays(Integer autoUnbindDays) {
+                this.autoUnbindDays = autoUnbindDays;
+                return this;
+            }
+
+            /**
+             * AutoUnbindOfflineEsl.
+             */
+            public Builder autoUnbindOfflineEsl(Boolean autoUnbindOfflineEsl) {
+                this.autoUnbindOfflineEsl = autoUnbindOfflineEsl;
+                return this;
+            }
+
+            /**
+             * BarCodeEncode.
+             */
+            public Builder barCodeEncode(Integer barCodeEncode) {
+                this.barCodeEncode = barCodeEncode;
+                return this;
+            }
 
             /**
              * GmtCreate.

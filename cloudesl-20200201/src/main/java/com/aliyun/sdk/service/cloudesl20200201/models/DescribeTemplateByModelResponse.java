@@ -7,26 +7,28 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeClientPackageResponse} extends {@link TeaModel}
+ * {@link DescribeTemplateByModelResponse} extends {@link TeaModel}
  *
- * <p>DescribeClientPackageResponse</p>
+ * <p>DescribeTemplateByModelResponse</p>
  */
-public class DescribeClientPackageResponse extends Response {
+public class DescribeTemplateByModelResponse extends Response {
     @NameInMap("headers")
-    @Validation(required = true)
     private java.util.Map < String, String > headers;
 
-    @NameInMap("body")
-    @Validation(required = true)
-    private DescribeClientPackageResponseBody body;
+    @NameInMap("statusCode")
+    private Integer statusCode;
 
-    private DescribeClientPackageResponse(BuilderImpl builder) {
+    @NameInMap("body")
+    private DescribeTemplateByModelResponseBody body;
+
+    private DescribeTemplateByModelResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DescribeClientPackageResponse create() {
+    public static DescribeTemplateByModelResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -43,36 +45,47 @@ public class DescribeClientPackageResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
-    public DescribeClientPackageResponseBody getBody() {
+    public DescribeTemplateByModelResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DescribeClientPackageResponse, Builder> {
+    public interface Builder extends Response.Builder<DescribeTemplateByModelResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(DescribeClientPackageResponseBody body);
+        Builder statusCode(Integer statusCode);
+
+        Builder body(DescribeTemplateByModelResponseBody body);
 
         @Override
-        DescribeClientPackageResponse build();
+        DescribeTemplateByModelResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DescribeClientPackageResponse, Builder>
+            extends Response.BuilderImpl<DescribeTemplateByModelResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private DescribeClientPackageResponseBody body; 
+        private Integer statusCode; 
+        private DescribeTemplateByModelResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DescribeClientPackageResponse response) {
+        private BuilderImpl(DescribeTemplateByModelResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -86,17 +99,26 @@ public class DescribeClientPackageResponse extends Response {
         }
 
         /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
+            return this;
+        }
+
+        /**
          * body.
          */
         @Override
-        public Builder body(DescribeClientPackageResponseBody body) {
+        public Builder body(DescribeTemplateByModelResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DescribeClientPackageResponse build() {
-            return new DescribeClientPackageResponse(this);
+        public DescribeTemplateByModelResponse build() {
+            return new DescribeTemplateByModelResponse(this);
         } 
 
     } 

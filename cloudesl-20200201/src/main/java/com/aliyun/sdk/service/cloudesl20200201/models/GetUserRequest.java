@@ -61,10 +61,10 @@ public class GetUserRequest extends Request {
             super();
         } 
 
-        private Builder(GetUserRequest response) {
-            super(response);
-            this.extraParams = response.extraParams;
-            this.userId = response.userId;
+        private Builder(GetUserRequest request) {
+            super(request);
+            this.extraParams = request.extraParams;
+            this.userId = request.userId;
         } 
 
         /**

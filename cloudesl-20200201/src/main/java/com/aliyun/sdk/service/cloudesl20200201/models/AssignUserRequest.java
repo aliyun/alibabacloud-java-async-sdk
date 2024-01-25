@@ -89,12 +89,12 @@ public class AssignUserRequest extends Request {
             super();
         } 
 
-        private Builder(AssignUserRequest response) {
-            super(response);
-            this.extraParams = response.extraParams;
-            this.stores = response.stores;
-            this.userId = response.userId;
-            this.userType = response.userType;
+        private Builder(AssignUserRequest request) {
+            super(request);
+            this.extraParams = request.extraParams;
+            this.stores = request.stores;
+            this.userId = request.userId;
+            this.userType = request.userType;
         } 
 
         /**

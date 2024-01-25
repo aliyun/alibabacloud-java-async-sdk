@@ -127,15 +127,15 @@ public class DescribeBindersRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeBindersRequest response) {
-            super(response);
-            this.eslBarCode = response.eslBarCode;
-            this.extraParams = response.extraParams;
-            this.itemBarCode = response.itemBarCode;
-            this.itemTitle = response.itemTitle;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.storeId = response.storeId;
+        private Builder(DescribeBindersRequest request) {
+            super(request);
+            this.eslBarCode = request.eslBarCode;
+            this.extraParams = request.extraParams;
+            this.itemBarCode = request.itemBarCode;
+            this.itemTitle = request.itemTitle;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.storeId = request.storeId;
         } 
 
         /**

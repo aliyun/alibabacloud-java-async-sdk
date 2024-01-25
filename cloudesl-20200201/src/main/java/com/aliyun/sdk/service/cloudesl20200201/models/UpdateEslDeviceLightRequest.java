@@ -130,15 +130,15 @@ public class UpdateEslDeviceLightRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateEslDeviceLightRequest response) {
-            super(response);
-            this.eslBarCode = response.eslBarCode;
-            this.extraParams = response.extraParams;
-            this.frequency = response.frequency;
-            this.itemBarCode = response.itemBarCode;
-            this.ledColor = response.ledColor;
-            this.lightUpTime = response.lightUpTime;
-            this.storeId = response.storeId;
+        private Builder(UpdateEslDeviceLightRequest request) {
+            super(request);
+            this.eslBarCode = request.eslBarCode;
+            this.extraParams = request.extraParams;
+            this.frequency = request.frequency;
+            this.itemBarCode = request.itemBarCode;
+            this.ledColor = request.ledColor;
+            this.lightUpTime = request.lightUpTime;
+            this.storeId = request.storeId;
         } 
 
         /**
