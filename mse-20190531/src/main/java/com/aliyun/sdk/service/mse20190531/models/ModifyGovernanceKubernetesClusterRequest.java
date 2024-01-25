@@ -184,7 +184,7 @@ public class ModifyGovernanceKubernetesClusterRequest extends Request {
             private String name; 
 
             /**
-             * The microservice namespace.If you do not specify this parameter, Microservice Governance is not enabled for the namespace.
+             * The microservice namespace. If you do not specify this parameter, Microservice Governance is not enabled for the namespace.
              */
             public Builder mseNamespace(String mseNamespace) {
                 this.mseNamespace = mseNamespace;

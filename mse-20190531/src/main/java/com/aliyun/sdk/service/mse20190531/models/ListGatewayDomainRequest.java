@@ -17,6 +17,10 @@ public class ListGatewayDomainRequest extends Request {
     private String acceptLanguage;
 
     @Query
+    @NameInMap("DomainName")
+    private String domainName;
+
+    @Query
     @NameInMap("GatewayUniqueId")
     private String gatewayUniqueId;
 
@@ -27,6 +31,7 @@ public class ListGatewayDomainRequest extends Request {
     private ListGatewayDomainRequest(Builder builder) {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
+        this.domainName = builder.domainName;
         this.gatewayUniqueId = builder.gatewayUniqueId;
         this.type = builder.type;
     }
@@ -52,6 +57,13 @@ public class ListGatewayDomainRequest extends Request {
     }
 
     /**
+     * @return domainName
+     */
+    public String getDomainName() {
+        return this.domainName;
+    }
+
+    /**
      * @return gatewayUniqueId
      */
     public String getGatewayUniqueId() {
@@ -67,6 +79,7 @@ public class ListGatewayDomainRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListGatewayDomainRequest, Builder> {
         private String acceptLanguage; 
+        private String domainName; 
         private String gatewayUniqueId; 
         private String type; 
 
@@ -77,6 +90,7 @@ public class ListGatewayDomainRequest extends Request {
         private Builder(ListGatewayDomainRequest request) {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
+            this.domainName = request.domainName;
             this.gatewayUniqueId = request.gatewayUniqueId;
             this.type = request.type;
         } 
@@ -91,6 +105,15 @@ public class ListGatewayDomainRequest extends Request {
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
             this.acceptLanguage = acceptLanguage;
+            return this;
+        }
+
+        /**
+         * DomainName.
+         */
+        public Builder domainName(String domainName) {
+            this.putQueryParameter("DomainName", domainName);
+            this.domainName = domainName;
             return this;
         }
 

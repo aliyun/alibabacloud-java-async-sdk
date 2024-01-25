@@ -369,7 +369,7 @@ public class ListFlowRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the application.
+             * The application name.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -455,7 +455,7 @@ public class ListFlowRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The statistical dimension. The value 1 indicates the number of accepted requests.
+             * The statistical dimension. The value 1 indicates that the number of accepted requests is used for statistics.
              */
             public Builder metricType(Integer metricType) {
                 this.metricType = metricType;
@@ -471,7 +471,7 @@ public class ListFlowRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * The ID of the region in which the instance resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -495,7 +495,7 @@ public class ListFlowRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the rule.
+             * The rule ID.
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;

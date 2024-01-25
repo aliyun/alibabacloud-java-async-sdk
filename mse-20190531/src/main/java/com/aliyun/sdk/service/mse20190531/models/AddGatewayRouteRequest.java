@@ -17,6 +17,10 @@ public class AddGatewayRouteRequest extends Request {
     private String acceptLanguage;
 
     @Query
+    @NameInMap("Description")
+    private String description;
+
+    @Query
     @NameInMap("DestinationType")
     private String destinationType;
 
@@ -83,6 +87,7 @@ public class AddGatewayRouteRequest extends Request {
     private AddGatewayRouteRequest(Builder builder) {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
+        this.description = builder.description;
         this.destinationType = builder.destinationType;
         this.directResponseJSON = builder.directResponseJSON;
         this.domainId = builder.domainId;
@@ -119,6 +124,13 @@ public class AddGatewayRouteRequest extends Request {
      */
     public String getAcceptLanguage() {
         return this.acceptLanguage;
+    }
+
+    /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
     }
 
     /**
@@ -235,6 +247,7 @@ public class AddGatewayRouteRequest extends Request {
 
     public static final class Builder extends Request.Builder<AddGatewayRouteRequest, Builder> {
         private String acceptLanguage; 
+        private String description; 
         private String destinationType; 
         private DirectResponseJSON directResponseJSON; 
         private Long domainId; 
@@ -259,6 +272,7 @@ public class AddGatewayRouteRequest extends Request {
         private Builder(AddGatewayRouteRequest request) {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
+            this.description = request.description;
             this.destinationType = request.destinationType;
             this.directResponseJSON = request.directResponseJSON;
             this.domainId = request.domainId;
@@ -287,6 +301,15 @@ public class AddGatewayRouteRequest extends Request {
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
             this.acceptLanguage = acceptLanguage;
+            return this;
+        }
+
+        /**
+         * Description.
+         */
+        public Builder description(String description) {
+            this.putQueryParameter("Description", description);
+            this.description = description;
             return this;
         }
 

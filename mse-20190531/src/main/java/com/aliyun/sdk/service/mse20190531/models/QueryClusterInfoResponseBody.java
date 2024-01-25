@@ -391,6 +391,9 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         @NameInMap("AppVersion")
         private String appVersion;
 
+        @NameInMap("CanUpdate")
+        private Boolean canUpdate;
+
         @NameInMap("ChargeType")
         private String chargeType;
 
@@ -502,6 +505,9 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         @NameInMap("VSwitchId")
         private String vSwitchId;
 
+        @NameInMap("VersionCode")
+        private String versionCode;
+
         @NameInMap("VpcId")
         private String vpcId;
 
@@ -509,6 +515,7 @@ public class QueryClusterInfoResponseBody extends TeaModel {
             this.aclEntryList = builder.aclEntryList;
             this.aclId = builder.aclId;
             this.appVersion = builder.appVersion;
+            this.canUpdate = builder.canUpdate;
             this.chargeType = builder.chargeType;
             this.clusterAliasName = builder.clusterAliasName;
             this.clusterName = builder.clusterName;
@@ -546,6 +553,7 @@ public class QueryClusterInfoResponseBody extends TeaModel {
             this.securityGroupType = builder.securityGroupType;
             this.tags = builder.tags;
             this.vSwitchId = builder.vSwitchId;
+            this.versionCode = builder.versionCode;
             this.vpcId = builder.vpcId;
         }
 
@@ -576,6 +584,13 @@ public class QueryClusterInfoResponseBody extends TeaModel {
          */
         public String getAppVersion() {
             return this.appVersion;
+        }
+
+        /**
+         * @return canUpdate
+         */
+        public Boolean getCanUpdate() {
+            return this.canUpdate;
         }
 
         /**
@@ -838,6 +853,13 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return versionCode
+         */
+        public String getVersionCode() {
+            return this.versionCode;
+        }
+
+        /**
          * @return vpcId
          */
         public String getVpcId() {
@@ -848,6 +870,7 @@ public class QueryClusterInfoResponseBody extends TeaModel {
             private String aclEntryList; 
             private String aclId; 
             private String appVersion; 
+            private Boolean canUpdate; 
             private String chargeType; 
             private String clusterAliasName; 
             private String clusterName; 
@@ -885,6 +908,7 @@ public class QueryClusterInfoResponseBody extends TeaModel {
             private String securityGroupType; 
             private java.util.Map < String, ? > tags; 
             private String vSwitchId; 
+            private String versionCode; 
             private String vpcId; 
 
             /**
@@ -908,6 +932,14 @@ public class QueryClusterInfoResponseBody extends TeaModel {
              */
             public Builder appVersion(String appVersion) {
                 this.appVersion = appVersion;
+                return this;
+            }
+
+            /**
+             * CanUpdate.
+             */
+            public Builder canUpdate(Boolean canUpdate) {
+                this.canUpdate = canUpdate;
                 return this;
             }
 
@@ -1206,6 +1238,14 @@ public class QueryClusterInfoResponseBody extends TeaModel {
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
+                return this;
+            }
+
+            /**
+             * VersionCode.
+             */
+            public Builder versionCode(String versionCode) {
+                this.versionCode = versionCode;
                 return this;
             }
 

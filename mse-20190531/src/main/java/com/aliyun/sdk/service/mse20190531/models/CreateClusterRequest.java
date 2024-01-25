@@ -369,34 +369,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The billing method.
+         * The billing method. Valid values: PREPAY and POSTPAY.
          * <p>
          * 
-         * Valid values:
-         * 
-         * *   PREPAY
-         * 
-         *     <!-- -->
-         * 
-         *     :
-         * 
-         *     <!-- -->
-         * 
-         *     the subscription billing method
-         * 
-         *     <!-- -->
-         * 
-         * *   POSTPAY
-         * 
-         *     <!-- -->
-         * 
-         *     :
-         * 
-         *     <!-- -->
-         * 
-         *     the pay-as-you-go billing method
-         * 
-         *     <!-- -->
+         * Ignore this parameter for serverless instances.
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -420,6 +396,10 @@ public class CreateClusterRequest extends Request {
          * 
          * *   `MSE_SC_1_2_60_c`: 1 vCPU and 2 GB of memory
          * *   `MSE_SC_2_4_60_c`: 2 vCPUs and 4 GB of memory
+         * 
+         * \[Serverless Edition]
+         * 
+         * Ignore this parameter or set this parameter to `MSE_SC_SERVERLESS`.
          */
         public Builder clusterSpecification(String clusterSpecification) {
             this.putQueryParameter("ClusterSpecification", clusterSpecification);
@@ -440,15 +420,20 @@ public class CreateClusterRequest extends Request {
          * The engine version of the instance. Valid values:
          * <p>
          * 
-         * \[Professional version]
+         * \[Professional Edition]
          * 
-         * *   `NACOS_2_0_0`: Nacos 2.0.0
-         * *   `ZooKeeper_3_8_0`: ZooKeeper 3.8.0
+         * *   `NACOS_2_0_0`
+         * *   `ZooKeeper_3_8_0`
          * 
          * \[Developer Edition]
          * 
-         * *   `NACOS_2_0_0`: Nacos 2.0.0
-         * *   `ZooKeeper_3_8_0`: ZooKeeper 3.8.0
+         * *   `NACOS_2_0_0`
+         * *   `ZooKeeper_3_8_0`
+         * 
+         * \[Serverless Edition]
+         * 
+         * *   `NACOS_2_0_0`
+         * *   `ZooKeeper_3_8_0`
          */
         public Builder clusterVersion(String clusterVersion) {
             this.putQueryParameter("ClusterVersion", clusterVersion);
@@ -457,11 +442,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The network connection type. Valid values:
-         * <p>
-         * 
-         * *   slb
-         * *   eni
+         * The network connection type. Valid values: `slb` or `single_eni`. For instances of the Developer Edition in some regions, only the value `single_eni` is supported.
          */
         public Builder connectionType(String connectionType) {
             this.putQueryParameter("ConnectionType", connectionType);
@@ -470,11 +451,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The type of the disk. Valid values:
-         * <p>
-         * 
-         * *   alicloud-disk-ssd
-         * *   alicloud-disk-essd-pl1
+         * This parameter is obsolete.
          */
         public Builder diskType(String diskType) {
             this.putQueryParameter("DiskType", diskType);
@@ -484,6 +461,25 @@ public class CreateClusterRequest extends Request {
 
         /**
          * Specifies whether to enable Internet access (Elastic IP Address) if ConnectionType is set to `single_eni`.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   true
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   false
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder eipEnabled(Boolean eipEnabled) {
             this.putQueryParameter("EipEnabled", eipEnabled);
@@ -497,11 +493,15 @@ public class CreateClusterRequest extends Request {
          * 
          * \[Professional Edition]
          * 
-         * *   The number of nodes in an instance is greater than or equal to 3 and must be an odd number.
+         * *   The value must be greater than or equal to 3 and must be an odd number.
          * 
          * \[Developer Edition]
          * 
-         * *   Only one node can be deployed for an instance.
+         * *   The value must be 1.
+         * 
+         * \[Serverless Edition]
+         * 
+         * Ignore this parameter.
          */
         public Builder instanceCount(Integer instanceCount) {
             this.putQueryParameter("InstanceCount", instanceCount);
@@ -510,7 +510,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The name of the MSE instance.
+         * The custom name of the instance.
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -523,7 +523,8 @@ public class CreateClusterRequest extends Request {
          * <p>
          * 
          * *   `mse_pro`: Professional Edition
-         * *   `mse_dev`: Developer Edition.
+         * *   `mse_dev`: Developer Edition
+         * *   `mse_dev`: Serverless Edition
          */
         public Builder mseVersion(String mseVersion) {
             this.putQueryParameter("MseVersion", mseVersion);
@@ -545,11 +546,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The specifications of the internal-facing SLB instance. Valid values:
-         * <p>
-         * 
-         * *   `slb.s1.small`
-         * *   `slb.s3.medium`
+         * This parameter is obsolete.
          */
         public Builder privateSlbSpecification(String privateSlbSpecification) {
             this.putQueryParameter("PrivateSlbSpecification", privateSlbSpecification);
@@ -558,9 +555,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The public bandwidth. Unit: Mbit/s. This parameter is required.\
+         * This parameter is valid only if the ConnectionType parameter is set to `slb`. The value 0 indicates that the Server Load Balancer (SLB) instance is not connected over the Internet. A value greater than 1 indicates the fixed bandwidth that is used to access the SLB instance over the Internet. Unit: Mbit/s.
          * <p>
-         * Valid values: 0 to 5000. A value of 0 indicates no access to the Internet.
+         * 
+         * Valid values: 0 to 5000.
          */
         public Builder pubNetworkFlow(String pubNetworkFlow) {
             this.putQueryParameter("PubNetworkFlow", pubNetworkFlow);
@@ -569,11 +567,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The specifications of the Internet-facing Server Load Balancer (SLB) instance. Valid values:
-         * <p>
-         * 
-         * *   `slb.s1.small`
-         * *   `slb.s3.medium`
+         * This parameter is obsolete.
          */
         public Builder pubSlbSpecification(String pubSlbSpecification) {
             this.putQueryParameter("PubSlbSpecification", pubSlbSpecification);
@@ -616,7 +610,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The type of the security group to which the instance belongs. This parameter is valid only when the ConnectionType parameter is set to `single_eni`.
+         * The type of the security group to which the instance belongs. This parameter is valid only if the ConnectionType parameter is set to `single_eni`.
          * <p>
          * 
          * Valid values:
@@ -631,7 +625,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The list of the tags that you want to add.
+         * The tags to add to the resource. You can specify up to 20 tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -703,7 +697,7 @@ public class CreateClusterRequest extends Request {
             private String value; 
 
             /**
-             * The key of a tag.
+             * The key of tag N to add to the resource.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -711,7 +705,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * The value of a tag.
+             * The value of tag N to add to the resource.
              */
             public Builder value(String value) {
                 this.value = value;

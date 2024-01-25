@@ -1579,6 +1579,9 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         @NameInMap("GroupName")
         private String groupName;
 
+        @NameInMap("HealthStatus")
+        private String healthStatus;
+
         @NameInMap("Name")
         private String name;
 
@@ -1600,12 +1603,16 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         @NameInMap("SourceType")
         private String sourceType;
 
+        @NameInMap("UnhealthyEndpoints")
+        private java.util.List < String > unhealthyEndpoints;
+
         @NameInMap("Version")
         private String version;
 
         private RouteServices(Builder builder) {
             this.agreementType = builder.agreementType;
             this.groupName = builder.groupName;
+            this.healthStatus = builder.healthStatus;
             this.name = builder.name;
             this.namespace = builder.namespace;
             this.percent = builder.percent;
@@ -1613,6 +1620,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             this.serviceName = builder.serviceName;
             this.servicePort = builder.servicePort;
             this.sourceType = builder.sourceType;
+            this.unhealthyEndpoints = builder.unhealthyEndpoints;
             this.version = builder.version;
         }
 
@@ -1636,6 +1644,13 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
          */
         public String getGroupName() {
             return this.groupName;
+        }
+
+        /**
+         * @return healthStatus
+         */
+        public String getHealthStatus() {
+            return this.healthStatus;
         }
 
         /**
@@ -1688,6 +1703,13 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return unhealthyEndpoints
+         */
+        public java.util.List < String > getUnhealthyEndpoints() {
+            return this.unhealthyEndpoints;
+        }
+
+        /**
          * @return version
          */
         public String getVersion() {
@@ -1697,6 +1719,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         public static final class Builder {
             private String agreementType; 
             private String groupName; 
+            private String healthStatus; 
             private String name; 
             private String namespace; 
             private Integer percent; 
@@ -1704,6 +1727,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             private String serviceName; 
             private Integer servicePort; 
             private String sourceType; 
+            private java.util.List < String > unhealthyEndpoints; 
             private String version; 
 
             /**
@@ -1719,6 +1743,14 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
+                return this;
+            }
+
+            /**
+             * HealthStatus.
+             */
+            public Builder healthStatus(String healthStatus) {
+                this.healthStatus = healthStatus;
                 return this;
             }
 
@@ -1775,6 +1807,14 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
+                return this;
+            }
+
+            /**
+             * UnhealthyEndpoints.
+             */
+            public Builder unhealthyEndpoints(java.util.List < String > unhealthyEndpoints) {
+                this.unhealthyEndpoints = unhealthyEndpoints;
                 return this;
             }
 
@@ -1887,6 +1927,9 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         @NameInMap("DefaultServiceName")
         private String defaultServiceName;
 
+        @NameInMap("Description")
+        private String description;
+
         @NameInMap("DestinationType")
         private String destinationType;
 
@@ -1976,6 +2019,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             this.cors = builder.cors;
             this.defaultServiceId = builder.defaultServiceId;
             this.defaultServiceName = builder.defaultServiceName;
+            this.description = builder.description;
             this.destinationType = builder.destinationType;
             this.directResponse = builder.directResponse;
             this.domainId = builder.domainId;
@@ -2040,6 +2084,13 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
          */
         public String getDefaultServiceName() {
             return this.defaultServiceName;
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
         }
 
         /**
@@ -2243,6 +2294,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             private Cors cors; 
             private Long defaultServiceId; 
             private String defaultServiceName; 
+            private String description; 
             private String destinationType; 
             private DirectResponse directResponse; 
             private Long domainId; 
@@ -2301,6 +2353,14 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
              */
             public Builder defaultServiceName(String defaultServiceName) {
                 this.defaultServiceName = defaultServiceName;
+                return this;
+            }
+
+            /**
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
                 return this;
             }
 

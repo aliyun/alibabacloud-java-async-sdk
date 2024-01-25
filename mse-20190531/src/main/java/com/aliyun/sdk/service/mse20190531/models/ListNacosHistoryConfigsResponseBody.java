@@ -234,6 +234,9 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
         @NameInMap("OpType")
         private String opType;
 
+        @NameInMap("SrcUser")
+        private String srcUser;
+
         private HistoryItems(Builder builder) {
             this.appName = builder.appName;
             this.dataId = builder.dataId;
@@ -241,6 +244,7 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
             this.id = builder.id;
             this.lastModifiedTime = builder.lastModifiedTime;
             this.opType = builder.opType;
+            this.srcUser = builder.srcUser;
         }
 
         public static Builder builder() {
@@ -293,6 +297,13 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
             return this.opType;
         }
 
+        /**
+         * @return srcUser
+         */
+        public String getSrcUser() {
+            return this.srcUser;
+        }
+
         public static final class Builder {
             private String appName; 
             private String dataId; 
@@ -300,6 +311,7 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
             private Long id; 
             private Long lastModifiedTime; 
             private String opType; 
+            private String srcUser; 
 
             /**
              * The application tag.
@@ -346,6 +358,14 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
              */
             public Builder opType(String opType) {
                 this.opType = opType;
+                return this;
+            }
+
+            /**
+             * SrcUser.
+             */
+            public Builder srcUser(String srcUser) {
+                this.srcUser = srcUser;
                 return this;
             }
 

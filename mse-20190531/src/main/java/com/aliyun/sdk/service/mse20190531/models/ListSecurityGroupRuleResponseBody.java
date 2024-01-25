@@ -106,7 +106,7 @@ public class ListSecurityGroupRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * The returned result.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -322,7 +322,7 @@ public class ListSecurityGroupRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance was created.
+             * The creation time.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -330,7 +330,7 @@ public class ListSecurityGroupRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance configuration was last modified.
+             * The last modification time.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -338,7 +338,7 @@ public class ListSecurityGroupRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The authorization record ID of the security group.
+             * The ID of the security group authorization record.
              */
             public Builder id(String id) {
                 this.id = id;

@@ -264,7 +264,7 @@ public class AddServiceSourceRequest extends Request {
         }
 
         /**
-         * ToAuthorizeSecurityGroups.
+         * The list of security groups to be authorized. You can specify security groups to allow backend services to access data sources that you create.
          */
         public Builder toAuthorizeSecurityGroups(java.util.List < ToAuthorizeSecurityGroups> toAuthorizeSecurityGroups) {
             String toAuthorizeSecurityGroupsShrink = shrink(toAuthorizeSecurityGroups, "ToAuthorizeSecurityGroups", "json");
@@ -450,7 +450,7 @@ public class AddServiceSourceRequest extends Request {
             private String securityGroupId; 
 
             /**
-             * Description.
+             * The description of the authorization record.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -458,7 +458,7 @@ public class AddServiceSourceRequest extends Request {
             }
 
             /**
-             * PortRange.
+             * The authorized port range of the security group. You can select multiple port ranges. Separate each port range with a comma (,).
              */
             public Builder portRange(String portRange) {
                 this.portRange = portRange;
@@ -466,7 +466,7 @@ public class AddServiceSourceRequest extends Request {
             }
 
             /**
-             * SecurityGroupId.
+             * The ID of the security group.
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;

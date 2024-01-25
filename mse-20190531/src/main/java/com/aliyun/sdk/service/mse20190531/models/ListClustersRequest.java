@@ -21,6 +21,10 @@ public class ListClustersRequest extends Request {
     private String clusterAliasName;
 
     @Query
+    @NameInMap("KeyId")
+    private String keyId;
+
+    @Query
     @NameInMap("PageNum")
     @Validation(required = true)
     private Integer pageNum;
@@ -51,6 +55,7 @@ public class ListClustersRequest extends Request {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
         this.clusterAliasName = builder.clusterAliasName;
+        this.keyId = builder.keyId;
         this.pageNum = builder.pageNum;
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
@@ -84,6 +89,13 @@ public class ListClustersRequest extends Request {
      */
     public String getClusterAliasName() {
         return this.clusterAliasName;
+    }
+
+    /**
+     * @return keyId
+     */
+    public String getKeyId() {
+        return this.keyId;
     }
 
     /**
@@ -131,6 +143,7 @@ public class ListClustersRequest extends Request {
     public static final class Builder extends Request.Builder<ListClustersRequest, Builder> {
         private String acceptLanguage; 
         private String clusterAliasName; 
+        private String keyId; 
         private Integer pageNum; 
         private Integer pageSize; 
         private String regionId; 
@@ -146,6 +159,7 @@ public class ListClustersRequest extends Request {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
             this.clusterAliasName = request.clusterAliasName;
+            this.keyId = request.keyId;
             this.pageNum = request.pageNum;
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
@@ -173,6 +187,15 @@ public class ListClustersRequest extends Request {
         public Builder clusterAliasName(String clusterAliasName) {
             this.putQueryParameter("ClusterAliasName", clusterAliasName);
             this.clusterAliasName = clusterAliasName;
+            return this;
+        }
+
+        /**
+         * KeyId.
+         */
+        public Builder keyId(String keyId) {
+            this.putQueryParameter("KeyId", keyId);
+            this.keyId = keyId;
             return this;
         }
 

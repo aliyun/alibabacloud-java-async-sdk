@@ -418,7 +418,7 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum response time (RT). Unit: milliseconds. If the RT of a request is greater than the value of this parameter, a slow call is counted. If you set Strategy to 0, you must specify this parameter.
+             * The maximum RT. Unit: milliseconds. If the RT of a request is greater than the value of this parameter, a slow call is counted. If you set Strategy to 0, you must specify this parameter.
              */
             public Builder maxAllowedRtMs(Integer maxAllowedRtMs) {
                 this.maxAllowedRtMs = maxAllowedRtMs;
@@ -442,7 +442,7 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The region where the cluster resides.
+             * The region in which the instance resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

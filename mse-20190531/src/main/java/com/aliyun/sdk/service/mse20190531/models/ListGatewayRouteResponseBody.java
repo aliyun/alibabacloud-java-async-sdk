@@ -1266,6 +1266,9 @@ public class ListGatewayRouteResponseBody extends TeaModel {
         @NameInMap("GroupName")
         private String groupName;
 
+        @NameInMap("HealthStatus")
+        private String healthStatus;
+
         @NameInMap("HttpDubboTranscoder")
         private HttpDubboTranscoder httpDubboTranscoder;
 
@@ -1290,12 +1293,16 @@ public class ListGatewayRouteResponseBody extends TeaModel {
         @NameInMap("SourceType")
         private String sourceType;
 
+        @NameInMap("UnhealthyEndpoints")
+        private java.util.List < String > unhealthyEndpoints;
+
         @NameInMap("Version")
         private String version;
 
         private RouteServices(Builder builder) {
             this.agreementType = builder.agreementType;
             this.groupName = builder.groupName;
+            this.healthStatus = builder.healthStatus;
             this.httpDubboTranscoder = builder.httpDubboTranscoder;
             this.name = builder.name;
             this.namespace = builder.namespace;
@@ -1304,6 +1311,7 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             this.serviceName = builder.serviceName;
             this.servicePort = builder.servicePort;
             this.sourceType = builder.sourceType;
+            this.unhealthyEndpoints = builder.unhealthyEndpoints;
             this.version = builder.version;
         }
 
@@ -1327,6 +1335,13 @@ public class ListGatewayRouteResponseBody extends TeaModel {
          */
         public String getGroupName() {
             return this.groupName;
+        }
+
+        /**
+         * @return healthStatus
+         */
+        public String getHealthStatus() {
+            return this.healthStatus;
         }
 
         /**
@@ -1386,6 +1401,13 @@ public class ListGatewayRouteResponseBody extends TeaModel {
         }
 
         /**
+         * @return unhealthyEndpoints
+         */
+        public java.util.List < String > getUnhealthyEndpoints() {
+            return this.unhealthyEndpoints;
+        }
+
+        /**
          * @return version
          */
         public String getVersion() {
@@ -1395,6 +1417,7 @@ public class ListGatewayRouteResponseBody extends TeaModel {
         public static final class Builder {
             private String agreementType; 
             private String groupName; 
+            private String healthStatus; 
             private HttpDubboTranscoder httpDubboTranscoder; 
             private String name; 
             private String namespace; 
@@ -1403,6 +1426,7 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             private String serviceName; 
             private Integer servicePort; 
             private String sourceType; 
+            private java.util.List < String > unhealthyEndpoints; 
             private String version; 
 
             /**
@@ -1418,6 +1442,14 @@ public class ListGatewayRouteResponseBody extends TeaModel {
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
+                return this;
+            }
+
+            /**
+             * HealthStatus.
+             */
+            public Builder healthStatus(String healthStatus) {
+                this.healthStatus = healthStatus;
                 return this;
             }
 
@@ -1482,6 +1514,14 @@ public class ListGatewayRouteResponseBody extends TeaModel {
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
+                return this;
+            }
+
+            /**
+             * UnhealthyEndpoints.
+             */
+            public Builder unhealthyEndpoints(java.util.List < String > unhealthyEndpoints) {
+                this.unhealthyEndpoints = unhealthyEndpoints;
                 return this;
             }
 

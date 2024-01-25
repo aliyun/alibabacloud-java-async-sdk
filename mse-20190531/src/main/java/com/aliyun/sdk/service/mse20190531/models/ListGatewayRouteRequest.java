@@ -191,6 +191,7 @@ public class ListGatewayRouteRequest extends Request {
 
     public static class FilterParams extends TeaModel {
         @NameInMap("DefaultServiceId")
+        @Deprecated
         private Long defaultServiceId;
 
         @NameInMap("DomainId")
@@ -209,6 +210,9 @@ public class ListGatewayRouteRequest extends Request {
         @NameInMap("Name")
         private String name;
 
+        @NameInMap("Path")
+        private String path;
+
         @NameInMap("RouteOrder")
         private Integer routeOrder;
 
@@ -222,6 +226,7 @@ public class ListGatewayRouteRequest extends Request {
             this.gatewayId = builder.gatewayId;
             this.gatewayUniqueId = builder.gatewayUniqueId;
             this.name = builder.name;
+            this.path = builder.path;
             this.routeOrder = builder.routeOrder;
             this.status = builder.status;
         }
@@ -277,6 +282,13 @@ public class ListGatewayRouteRequest extends Request {
         }
 
         /**
+         * @return path
+         */
+        public String getPath() {
+            return this.path;
+        }
+
+        /**
          * @return routeOrder
          */
         public Integer getRouteOrder() {
@@ -297,6 +309,7 @@ public class ListGatewayRouteRequest extends Request {
             private Long gatewayId; 
             private String gatewayUniqueId; 
             private String name; 
+            private String path; 
             private Integer routeOrder; 
             private Integer status; 
 
@@ -345,6 +358,14 @@ public class ListGatewayRouteRequest extends Request {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * Path.
+             */
+            public Builder path(String path) {
+                this.path = path;
                 return this;
             }
 

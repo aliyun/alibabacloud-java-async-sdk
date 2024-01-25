@@ -17,6 +17,10 @@ public class UpdateGatewayRouteRequest extends Request {
     private String acceptLanguage;
 
     @Query
+    @NameInMap("Description")
+    private String description;
+
+    @Query
     @NameInMap("DestinationType")
     private String destinationType;
 
@@ -54,6 +58,7 @@ public class UpdateGatewayRouteRequest extends Request {
 
     @Query
     @NameInMap("Name")
+    @Deprecated
     private String name;
 
     @Query
@@ -75,6 +80,7 @@ public class UpdateGatewayRouteRequest extends Request {
     private UpdateGatewayRouteRequest(Builder builder) {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
+        this.description = builder.description;
         this.destinationType = builder.destinationType;
         this.directResponseJSON = builder.directResponseJSON;
         this.domainIdListJSON = builder.domainIdListJSON;
@@ -109,6 +115,13 @@ public class UpdateGatewayRouteRequest extends Request {
      */
     public String getAcceptLanguage() {
         return this.acceptLanguage;
+    }
+
+    /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
     }
 
     /**
@@ -211,6 +224,7 @@ public class UpdateGatewayRouteRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateGatewayRouteRequest, Builder> {
         private String acceptLanguage; 
+        private String description; 
         private String destinationType; 
         private DirectResponseJSON directResponseJSON; 
         private String domainIdListJSON; 
@@ -233,6 +247,7 @@ public class UpdateGatewayRouteRequest extends Request {
         private Builder(UpdateGatewayRouteRequest request) {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
+            this.description = request.description;
             this.destinationType = request.destinationType;
             this.directResponseJSON = request.directResponseJSON;
             this.domainIdListJSON = request.domainIdListJSON;
@@ -259,6 +274,15 @@ public class UpdateGatewayRouteRequest extends Request {
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
             this.acceptLanguage = acceptLanguage;
+            return this;
+        }
+
+        /**
+         * Description.
+         */
+        public Builder description(String description) {
+            this.putQueryParameter("Description", description);
+            this.description = description;
             return this;
         }
 

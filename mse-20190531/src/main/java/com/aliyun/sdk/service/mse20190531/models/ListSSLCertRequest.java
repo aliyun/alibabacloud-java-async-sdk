@@ -17,12 +17,17 @@ public class ListSSLCertRequest extends Request {
     private String acceptLanguage;
 
     @Query
+    @NameInMap("CertName")
+    private String certName;
+
+    @Query
     @NameInMap("GatewayUniqueId")
     private String gatewayUniqueId;
 
     private ListSSLCertRequest(Builder builder) {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
+        this.certName = builder.certName;
         this.gatewayUniqueId = builder.gatewayUniqueId;
     }
 
@@ -47,6 +52,13 @@ public class ListSSLCertRequest extends Request {
     }
 
     /**
+     * @return certName
+     */
+    public String getCertName() {
+        return this.certName;
+    }
+
+    /**
      * @return gatewayUniqueId
      */
     public String getGatewayUniqueId() {
@@ -55,6 +67,7 @@ public class ListSSLCertRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListSSLCertRequest, Builder> {
         private String acceptLanguage; 
+        private String certName; 
         private String gatewayUniqueId; 
 
         private Builder() {
@@ -64,6 +77,7 @@ public class ListSSLCertRequest extends Request {
         private Builder(ListSSLCertRequest request) {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
+            this.certName = request.certName;
             this.gatewayUniqueId = request.gatewayUniqueId;
         } 
 
@@ -77,6 +91,15 @@ public class ListSSLCertRequest extends Request {
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
             this.acceptLanguage = acceptLanguage;
+            return this;
+        }
+
+        /**
+         * CertName.
+         */
+        public Builder certName(String certName) {
+            this.putQueryParameter("CertName", certName);
+            this.certName = certName;
             return this;
         }
 

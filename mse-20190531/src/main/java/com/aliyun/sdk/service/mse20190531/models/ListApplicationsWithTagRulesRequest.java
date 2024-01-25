@@ -43,7 +43,6 @@ public class ListApplicationsWithTagRulesRequest extends Request {
 
     @Query
     @NameInMap("Region")
-    @Validation(required = true)
     private String region;
 
     @Query
