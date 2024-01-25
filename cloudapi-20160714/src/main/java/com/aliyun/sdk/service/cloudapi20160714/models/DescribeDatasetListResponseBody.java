@@ -279,7 +279,7 @@ public class DescribeDatasetListResponseBody extends TeaModel {
             private java.util.List < Tags> tags; 
 
             /**
-             * CreatedTime.
+             * The time when the dataset was created. The time is displayed in UTC.
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -287,7 +287,7 @@ public class DescribeDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * DatasetId.
+             * The ID of the dataset.
              */
             public Builder datasetId(String datasetId) {
                 this.datasetId = datasetId;
@@ -295,7 +295,7 @@ public class DescribeDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * DatasetName.
+             * The name of the dataset.
              */
             public Builder datasetName(String datasetName) {
                 this.datasetName = datasetName;
@@ -303,7 +303,12 @@ public class DescribeDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * DatasetType.
+             * The type of the dataset. Valid values:
+             * <p>
+             * 
+             * *   JWT_BLOCKING: a JSON Web Token (JWT) blacklist
+             * *   IP_WHITELIST_CIDR: an IP address whitelist
+             * *   PARAMETER_ACCESS: a list of parameters for parameter-based access control
              */
             public Builder datasetType(String datasetType) {
                 this.datasetType = datasetType;
@@ -311,7 +316,7 @@ public class DescribeDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * The time when the dataset was last modified. The time is displayed in UTC.
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;

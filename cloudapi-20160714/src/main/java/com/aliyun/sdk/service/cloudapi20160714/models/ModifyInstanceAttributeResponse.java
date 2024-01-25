@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link AttachPluginResponse} extends {@link TeaModel}
+ * {@link ModifyInstanceAttributeResponse} extends {@link TeaModel}
  *
- * <p>AttachPluginResponse</p>
+ * <p>ModifyInstanceAttributeResponse</p>
  */
-public class AttachPluginResponse extends Response {
+public class ModifyInstanceAttributeResponse extends Response {
     @NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -19,16 +19,16 @@ public class AttachPluginResponse extends Response {
     private Integer statusCode;
 
     @NameInMap("body")
-    private AttachPluginResponseBody body;
+    private ModifyInstanceAttributeResponseBody body;
 
-    private AttachPluginResponse(BuilderImpl builder) {
+    private ModifyInstanceAttributeResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static AttachPluginResponse create() {
+    public static ModifyInstanceAttributeResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +54,35 @@ public class AttachPluginResponse extends Response {
     /**
      * @return body
      */
-    public AttachPluginResponseBody getBody() {
+    public ModifyInstanceAttributeResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<AttachPluginResponse, Builder> {
+    public interface Builder extends Response.Builder<ModifyInstanceAttributeResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(AttachPluginResponseBody body);
+        Builder body(ModifyInstanceAttributeResponseBody body);
 
         @Override
-        AttachPluginResponse build();
+        ModifyInstanceAttributeResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<AttachPluginResponse, Builder>
+            extends Response.BuilderImpl<ModifyInstanceAttributeResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private AttachPluginResponseBody body; 
+        private ModifyInstanceAttributeResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(AttachPluginResponse response) {
+        private BuilderImpl(ModifyInstanceAttributeResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +111,14 @@ public class AttachPluginResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(AttachPluginResponseBody body) {
+        public Builder body(ModifyInstanceAttributeResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public AttachPluginResponse build() {
-            return new AttachPluginResponse(this);
+        public ModifyInstanceAttributeResponse build() {
+            return new ModifyInstanceAttributeResponse(this);
         } 
 
     } 

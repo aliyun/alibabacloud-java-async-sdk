@@ -86,7 +86,7 @@ public class DescribeApisByBackendResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * ApiInfoList.
+         * The information about the returned API list.
          */
         public Builder apiInfoList(ApiInfoList apiInfoList) {
             this.apiInfoList = apiInfoList;
@@ -94,7 +94,7 @@ public class DescribeApisByBackendResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The number of the current page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeApisByBackendResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeApisByBackendResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeApisByBackendResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -230,7 +230,7 @@ public class DescribeApisByBackendResponseBody extends TeaModel {
             private String path; 
 
             /**
-             * ApiId.
+             * The ID of the API.
              */
             public Builder apiId(String apiId) {
                 this.apiId = apiId;
@@ -238,7 +238,7 @@ public class DescribeApisByBackendResponseBody extends TeaModel {
             }
 
             /**
-             * ApiName.
+             * The name of the API.
              */
             public Builder apiName(String apiName) {
                 this.apiName = apiName;
@@ -246,7 +246,7 @@ public class DescribeApisByBackendResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the API.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -254,7 +254,7 @@ public class DescribeApisByBackendResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * The ID of the API group.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -262,7 +262,7 @@ public class DescribeApisByBackendResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * The name of the API group.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -270,7 +270,7 @@ public class DescribeApisByBackendResponseBody extends TeaModel {
             }
 
             /**
-             * Method.
+             * The request method of the API.
              */
             public Builder method(String method) {
                 this.method = method;
@@ -278,7 +278,7 @@ public class DescribeApisByBackendResponseBody extends TeaModel {
             }
 
             /**
-             * Path.
+             * The request path of the API.
              */
             public Builder path(String path) {
                 this.path = path;

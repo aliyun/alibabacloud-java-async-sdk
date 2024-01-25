@@ -149,7 +149,7 @@ public class CreateModelRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The object tags that match the lifecycle rule. You can specify multiple tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -203,7 +203,7 @@ public class CreateModelRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -211,7 +211,7 @@ public class CreateModelRequest extends Request {
             }
 
             /**
-             * Value.
+             * The values of the tag.
              */
             public Builder value(String value) {
                 this.value = value;

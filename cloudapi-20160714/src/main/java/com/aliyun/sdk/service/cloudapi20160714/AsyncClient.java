@@ -407,6 +407,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DescribeAppAttributesResponse> describeAppAttributes(DescribeAppAttributesRequest request);
 
+    /**
+      * *   This operation is intended for API callers.
+      *
+     */
     CompletableFuture<DescribeAppSecurityResponse> describeAppSecurity(DescribeAppSecurityRequest request);
 
     /**
@@ -496,9 +500,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
       * *   This operation is intended for API providers.
-      * *   This operation is used to query the ACLs in a Region. Region is a system parameter.
+      * *   This operation is used to query the ACLs in a region. Region is a system parameter.
       * *   You can filter the query results by ACL ID, name, or type.
-      * *   This operation cannot be used to query specific policies. If you want to query specific policies, use the DescribeIpControlPolicyItems operation.
+      * *   This operation cannot be used to query specific policies. If you want to query specific policies, call the [DescribeIpControlPolicyItems](~~DescribeIpControlPolicyItems~~) operation.
       *
      */
     CompletableFuture<DescribeIpControlsResponse> describeIpControls(DescribeIpControlsRequest request);
@@ -665,6 +669,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyDatasetResponse> modifyDataset(ModifyDatasetRequest request);
 
     CompletableFuture<ModifyDatasetItemResponse> modifyDatasetItem(ModifyDatasetItemRequest request);
+
+    CompletableFuture<ModifyInstanceAttributeResponse> modifyInstanceAttribute(ModifyInstanceAttributeRequest request);
 
     CompletableFuture<ModifyInstanceSpecResponse> modifyInstanceSpec(ModifyInstanceSpecRequest request);
 
@@ -856,6 +862,11 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<SetTrafficControlApisResponse> setTrafficControlApis(SetTrafficControlApisRequest request);
 
+    /**
+      * * This operation is intended for API providers.
+      * * This operation is used to authorize API Gateway to access your VPC instance.
+      *
+     */
     CompletableFuture<SetVpcAccessResponse> setVpcAccess(SetVpcAccessRequest request);
 
     CompletableFuture<SetWildcardDomainPatternsResponse> setWildcardDomainPatterns(SetWildcardDomainPatternsRequest request);

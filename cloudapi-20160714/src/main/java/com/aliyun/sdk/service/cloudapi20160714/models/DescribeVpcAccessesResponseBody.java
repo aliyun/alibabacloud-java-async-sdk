@@ -86,7 +86,7 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
         private VpcAccessAttributes vpcAccessAttributes; 
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of returned entries.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -118,7 +118,7 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
         }
 
         /**
-         * VpcAccessAttributes.
+         * The information about the VPC access authorization. The information is an array consisting of VpcAccessAttribute data.
          */
         public Builder vpcAccessAttributes(VpcAccessAttributes vpcAccessAttributes) {
             this.vpcAccessAttributes = vpcAccessAttributes;
@@ -170,7 +170,7 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -178,7 +178,7 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the tag.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -368,7 +368,7 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
             private String vpcTargetHostName; 
 
             /**
-             * CreatedTime.
+             * The time when the authorization was created.
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -376,7 +376,7 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the VPC access authorization.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -384,7 +384,7 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the Elastic Compute Service (ECS) or Server Load Balancer (SLB) instance in the VPC.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -392,7 +392,7 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the authorization.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -400,7 +400,7 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The port number that corresponds to the instance.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -408,7 +408,7 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the region.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -416,7 +416,7 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The list of tags.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -424,7 +424,7 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
             }
 
             /**
-             * VpcAccessId.
+             * The ID of the VPC access authorization.
              */
             public Builder vpcAccessId(String vpcAccessId) {
                 this.vpcAccessId = vpcAccessId;
@@ -432,7 +432,7 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * The ID of the VPC.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -440,7 +440,7 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
             }
 
             /**
-             * VpcTargetHostName.
+             * The host of the backend service.
              */
             public Builder vpcTargetHostName(String vpcTargetHostName) {
                 this.vpcTargetHostName = vpcTargetHostName;

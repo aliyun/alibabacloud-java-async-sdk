@@ -1415,6 +1415,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * *   This operation is intended for API callers.
+      *
+     */
     @Override
     public CompletableFuture<DescribeAppSecurityResponse> describeAppSecurity(DescribeAppSecurityRequest request) {
         try {
@@ -1876,9 +1880,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
       * *   This operation is intended for API providers.
-      * *   This operation is used to query the ACLs in a Region. Region is a system parameter.
+      * *   This operation is used to query the ACLs in a region. Region is a system parameter.
       * *   You can filter the query results by ACL ID, name, or type.
-      * *   This operation cannot be used to query specific policies. If you want to query specific policies, use the DescribeIpControlPolicyItems operation.
+      * *   This operation cannot be used to query specific policies. If you want to query specific policies, call the [DescribeIpControlPolicyItems](~~DescribeIpControlPolicyItems~~) operation.
       *
      */
     @Override
@@ -2545,6 +2549,20 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ModifyDatasetItemResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<ModifyInstanceAttributeResponse> modifyInstanceAttribute(ModifyInstanceAttributeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyInstanceAttribute").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyInstanceAttributeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyInstanceAttributeResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -3220,6 +3238,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * * This operation is intended for API providers.
+      * * This operation is used to authorize API Gateway to access your VPC instance.
+      *
+     */
     @Override
     public CompletableFuture<SetVpcAccessResponse> setVpcAccess(SetVpcAccessRequest request) {
         try {

@@ -125,7 +125,7 @@ public class DescribeIpControlsRequest extends Request {
         } 
 
         /**
-         * IpControlId.
+         * The ID of the ACL. The ID is unique.
          */
         public Builder ipControlId(String ipControlId) {
             this.putQueryParameter("IpControlId", ipControlId);
@@ -134,7 +134,7 @@ public class DescribeIpControlsRequest extends Request {
         }
 
         /**
-         * IpControlName.
+         * The name of the ACL.
          */
         public Builder ipControlName(String ipControlName) {
             this.putQueryParameter("IpControlName", ipControlName);
@@ -143,7 +143,11 @@ public class DescribeIpControlsRequest extends Request {
         }
 
         /**
-         * The name of the ACL.
+         * The type of the ACL. Valid values:
+         * <p>
+         * 
+         * *   **ALLOW**: a whitelist
+         * *   **REFUSE**: a blacklist
          */
         public Builder ipControlType(String ipControlType) {
             this.putQueryParameter("IpControlType", ipControlType);
@@ -152,7 +156,7 @@ public class DescribeIpControlsRequest extends Request {
         }
 
         /**
-         * ACLtest
+         * The number of the page to return. Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -161,11 +165,7 @@ public class DescribeIpControlsRequest extends Request {
         }
 
         /**
-         * The type of the ACL. Valid values:
-         * <p>
-         * 
-         * *   **ALLOW**: an IP address whitelist
-         * *   **REFUSE**: an IP address blacklist
+         * The number of entries to return on each page. Maximum value: 100. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

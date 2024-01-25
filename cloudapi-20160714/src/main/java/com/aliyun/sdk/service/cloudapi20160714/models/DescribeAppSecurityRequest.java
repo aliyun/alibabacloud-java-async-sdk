@@ -83,7 +83,7 @@ public class DescribeAppSecurityRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * The ID of the app.
          */
         public Builder appId(Long appId) {
             this.putQueryParameter("AppId", appId);
@@ -101,7 +101,7 @@ public class DescribeAppSecurityRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tag of objects that match the rule. You can specify multiple tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -156,7 +156,7 @@ public class DescribeAppSecurityRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -164,7 +164,7 @@ public class DescribeAppSecurityRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the tag.
              */
             public Builder value(String value) {
                 this.value = value;

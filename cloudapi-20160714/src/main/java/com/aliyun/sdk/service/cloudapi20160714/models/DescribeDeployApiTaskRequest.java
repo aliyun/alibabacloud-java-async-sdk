@@ -69,7 +69,7 @@ public class DescribeDeployApiTaskRequest extends Request {
         } 
 
         /**
-         * OperationUid.
+         * The task ID.
          */
         public Builder operationUid(String operationUid) {
             this.putQueryParameter("OperationUid", operationUid);

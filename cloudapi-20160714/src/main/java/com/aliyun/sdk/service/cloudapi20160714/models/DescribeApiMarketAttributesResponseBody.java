@@ -74,7 +74,7 @@ public class DescribeApiMarketAttributesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ApiId.
+         * The ID of the API.
          */
         public Builder apiId(String apiId) {
             this.apiId = apiId;
@@ -82,7 +82,7 @@ public class DescribeApiMarketAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * MarketChargingMode.
+         * The billing method used by the Alibaba Cloud Marketplace.
          */
         public Builder marketChargingMode(String marketChargingMode) {
             this.marketChargingMode = marketChargingMode;
@@ -90,7 +90,7 @@ public class DescribeApiMarketAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * NeedCharging.
+         * Indicates whether fees are charged.
          */
         public Builder needCharging(String needCharging) {
             this.needCharging = needCharging;
@@ -98,7 +98,7 @@ public class DescribeApiMarketAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

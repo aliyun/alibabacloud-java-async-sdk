@@ -166,7 +166,7 @@ public class DescribeVpcAccessesRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -175,7 +175,7 @@ public class DescribeVpcAccessesRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the authorization. The name must be unique.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -184,7 +184,7 @@ public class DescribeVpcAccessesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -193,7 +193,7 @@ public class DescribeVpcAccessesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Maximum value: 100. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -202,7 +202,7 @@ public class DescribeVpcAccessesRequest extends Request {
         }
 
         /**
-         * Port.
+         * The service port.
          */
         public Builder port(String port) {
             this.putQueryParameter("Port", port);
@@ -220,7 +220,7 @@ public class DescribeVpcAccessesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tag of objects that match the rule. You can specify multiple tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -229,7 +229,7 @@ public class DescribeVpcAccessesRequest extends Request {
         }
 
         /**
-         * VpcAccessId.
+         * The ID of the VPC authorization.
          */
         public Builder vpcAccessId(String vpcAccessId) {
             this.putQueryParameter("VpcAccessId", vpcAccessId);
@@ -238,7 +238,7 @@ public class DescribeVpcAccessesRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * The ID of the VPC.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -292,7 +292,7 @@ public class DescribeVpcAccessesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -300,7 +300,7 @@ public class DescribeVpcAccessesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the tag.
              */
             public Builder value(String value) {
                 this.value = value;

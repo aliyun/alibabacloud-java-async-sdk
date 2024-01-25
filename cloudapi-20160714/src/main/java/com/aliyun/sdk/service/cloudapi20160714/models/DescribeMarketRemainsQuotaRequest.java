@@ -69,7 +69,7 @@ public class DescribeMarketRemainsQuotaRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * The custom domain name.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);

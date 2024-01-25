@@ -98,7 +98,7 @@ public class DescribeAppSecurityResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AppCode.
+         * The AppCode of the app.
          */
         public Builder appCode(String appCode) {
             this.appCode = appCode;
@@ -106,7 +106,7 @@ public class DescribeAppSecurityResponseBody extends TeaModel {
         }
 
         /**
-         * AppKey.
+         * The key of the app.
          */
         public Builder appKey(String appKey) {
             this.appKey = appKey;
@@ -114,7 +114,7 @@ public class DescribeAppSecurityResponseBody extends TeaModel {
         }
 
         /**
-         * AppSecret.
+         * The password of the app.
          */
         public Builder appSecret(String appSecret) {
             this.appSecret = appSecret;
@@ -122,7 +122,7 @@ public class DescribeAppSecurityResponseBody extends TeaModel {
         }
 
         /**
-         * CreatedTime.
+         * The creation time (UTC) of the key, which is the same as the app creation time.
          */
         public Builder createdTime(String createdTime) {
             this.createdTime = createdTime;
@@ -130,7 +130,7 @@ public class DescribeAppSecurityResponseBody extends TeaModel {
         }
 
         /**
-         * ModifiedTime.
+         * The modification time (UTC) of the key.
          */
         public Builder modifiedTime(String modifiedTime) {
             this.modifiedTime = modifiedTime;
@@ -138,7 +138,7 @@ public class DescribeAppSecurityResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

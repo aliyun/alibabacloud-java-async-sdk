@@ -50,7 +50,7 @@ public class CreateDatasetResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DatasetId.
+         * The ID of the dataset.
          */
         public Builder datasetId(String datasetId) {
             this.datasetId = datasetId;
@@ -58,7 +58,7 @@ public class CreateDatasetResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -86,7 +86,7 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Acls.
+         * The ACLs.
          */
         public Builder acls(Acls acls) {
             this.acls = acls;
@@ -94,7 +94,7 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the current page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -182,7 +182,7 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
             private String addressIPVersion; 
 
             /**
-             * AclId.
+             * The ID of the access control policy.
              */
             public Builder aclId(String aclId) {
                 this.aclId = aclId;
@@ -190,7 +190,7 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
             }
 
             /**
-             * AclName.
+             * The name of the access control policy.
              */
             public Builder aclName(String aclName) {
                 this.aclName = aclName;
@@ -198,7 +198,10 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
             }
 
             /**
-             * AddressIPVersion.
+             * 访问控制策略组的IP版本。
+             * <p>
+             * - **IPv4**。
+             * - **IPv6**。
              */
             public Builder addressIPVersion(String addressIPVersion) {
                 this.addressIPVersion = addressIPVersion;

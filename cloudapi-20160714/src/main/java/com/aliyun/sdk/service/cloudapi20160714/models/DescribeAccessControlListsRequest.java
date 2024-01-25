@@ -110,7 +110,7 @@ public class DescribeAccessControlListsRequest extends Request {
         } 
 
         /**
-         * AclName.
+         * The name of the access control policy.
          */
         public Builder aclName(String aclName) {
             this.putQueryParameter("AclName", aclName);
@@ -119,7 +119,7 @@ public class DescribeAccessControlListsRequest extends Request {
         }
 
         /**
-         * AddressIPVersion.
+         * IP版本，可以设置为**ipv4**或者**ipv6**。
          */
         public Builder addressIPVersion(String addressIPVersion) {
             this.putQueryParameter("AddressIPVersion", addressIPVersion);
@@ -128,7 +128,7 @@ public class DescribeAccessControlListsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number of the current page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -137,7 +137,7 @@ public class DescribeAccessControlListsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

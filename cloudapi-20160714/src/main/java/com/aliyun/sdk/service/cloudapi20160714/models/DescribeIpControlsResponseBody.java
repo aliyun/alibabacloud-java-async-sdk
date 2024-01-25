@@ -86,7 +86,7 @@ public class DescribeIpControlsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The number of entries returned per page.
+         * The information about the ACL. The information is an array that consists of IpControlInfo data. The information does not include specific policies.
          */
         public Builder ipControlInfos(IpControlInfos ipControlInfos) {
             this.ipControlInfos = ipControlInfos;
@@ -94,7 +94,7 @@ public class DescribeIpControlsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1. Default value: 1.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeIpControlsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeIpControlsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: 100. Default value: 10.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeIpControlsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The total number of returned entries.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -230,7 +230,7 @@ public class DescribeIpControlsResponseBody extends TeaModel {
             private String regionId; 
 
             /**
-             * The name of the ACL.
+             * The time when the ACL was created. The time is displayed in UTC.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -238,7 +238,7 @@ public class DescribeIpControlsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the ACL was modified. The time is displayed in UTC.
+             * The description of the ACL.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -246,7 +246,7 @@ public class DescribeIpControlsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of returned entries.
+             * The ID of the ACL.
              */
             public Builder ipControlId(String ipControlId) {
                 this.ipControlId = ipControlId;
@@ -254,7 +254,7 @@ public class DescribeIpControlsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the ACL.
+             * The name of the ACL.
              */
             public Builder ipControlName(String ipControlName) {
                 this.ipControlName = ipControlName;
@@ -262,7 +262,7 @@ public class DescribeIpControlsResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the ACL. The information is an array of IpControlInfo data. The information does not include specific policies.
+             * The type of the ACL.
              */
             public Builder ipControlType(String ipControlType) {
                 this.ipControlType = ipControlType;
@@ -270,7 +270,7 @@ public class DescribeIpControlsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ACL.
+             * The time when the ACL was modified. The time is displayed in UTC.
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -278,7 +278,7 @@ public class DescribeIpControlsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the ACL.
+             * The ID of the region in which the ACL is deployed.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

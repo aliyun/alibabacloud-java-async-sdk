@@ -98,7 +98,7 @@ public class CreateMonitorGroupRequest extends Request {
         } 
 
         /**
-         * Auth.
+         * The caller authentication status of the API. Valid values: **ok**: The authentication is successful. **mismatch**: The request is redirected. **servicenotfound**: A request error occurred. **Unknown**: An unknown error occurred.
          */
         public Builder auth(String auth) {
             this.putQueryParameter("Auth", auth);
@@ -107,7 +107,7 @@ public class CreateMonitorGroupRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * The ID of the API group.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -116,7 +116,7 @@ public class CreateMonitorGroupRequest extends Request {
         }
 
         /**
-         * RawMonitorGroupId.
+         * The ID of the monitoring group.
          */
         public Builder rawMonitorGroupId(Long rawMonitorGroupId) {
             this.putQueryParameter("RawMonitorGroupId", rawMonitorGroupId);

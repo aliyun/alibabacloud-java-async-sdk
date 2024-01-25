@@ -50,7 +50,7 @@ public class SetVpcAccessResponseBody extends TeaModel {
         private String vpcAccessId; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class SetVpcAccessResponseBody extends TeaModel {
         }
 
         /**
-         * VpcAccessId.
+         * The ID of the VPC access authorization.
          */
         public Builder vpcAccessId(String vpcAccessId) {
             this.vpcAccessId = vpcAccessId;

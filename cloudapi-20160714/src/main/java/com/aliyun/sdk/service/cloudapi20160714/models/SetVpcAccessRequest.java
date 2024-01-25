@@ -156,7 +156,7 @@ public class SetVpcAccessRequest extends Request {
         } 
 
         /**
-         * Description.
+         * The description of the VPC.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -165,7 +165,7 @@ public class SetVpcAccessRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of an ECS or SLB instance in the VPC.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -174,7 +174,7 @@ public class SetVpcAccessRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the authorization. The name must be unique.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -183,7 +183,7 @@ public class SetVpcAccessRequest extends Request {
         }
 
         /**
-         * Port.
+         * The port number that corresponds to the instance.
          */
         public Builder port(Integer port) {
             this.putQueryParameter("Port", port);
@@ -201,7 +201,7 @@ public class SetVpcAccessRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tag of objects that match the rule. You can specify multiple tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -210,7 +210,7 @@ public class SetVpcAccessRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * The ID of the VPC. The VPC must be an available one that belongs to the same account as the API.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -219,7 +219,7 @@ public class SetVpcAccessRequest extends Request {
         }
 
         /**
-         * VpcTargetHostName.
+         * The host of the backend service.
          */
         public Builder vpcTargetHostName(String vpcTargetHostName) {
             this.putQueryParameter("VpcTargetHostName", vpcTargetHostName);
@@ -273,7 +273,7 @@ public class SetVpcAccessRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -281,7 +281,7 @@ public class SetVpcAccessRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the tag.
              */
             public Builder value(String value) {
                 this.value = value;

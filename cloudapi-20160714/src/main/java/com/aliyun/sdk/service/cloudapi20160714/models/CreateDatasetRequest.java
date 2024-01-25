@@ -98,7 +98,7 @@ public class CreateDatasetRequest extends Request {
         } 
 
         /**
-         * DatasetName.
+         * The name of the dataset.
          */
         public Builder datasetName(String datasetName) {
             this.putQueryParameter("DatasetName", datasetName);
@@ -107,7 +107,12 @@ public class CreateDatasetRequest extends Request {
         }
 
         /**
-         * DatasetType.
+         * The type of the dataset. Valid values:
+         * <p>
+         * 
+         * * JWT_BLOCKING: a JSON Web Token (JWT) blacklist
+         * * IP_WHITELIST_CIDR : an IP address whitelist
+         * * PARAMETER_ACCESS : parameter-based access control
          */
         public Builder datasetType(String datasetType) {
             this.putQueryParameter("DatasetType", datasetType);
@@ -125,7 +130,7 @@ public class CreateDatasetRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tag of objects that match the rule. You can specify multiple tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -179,7 +184,7 @@ public class CreateDatasetRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -187,7 +192,7 @@ public class CreateDatasetRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the tag.
              */
             public Builder value(String value) {
                 this.value = value;

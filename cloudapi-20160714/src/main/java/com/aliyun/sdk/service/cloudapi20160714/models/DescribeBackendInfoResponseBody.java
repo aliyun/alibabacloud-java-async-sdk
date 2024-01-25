@@ -292,6 +292,87 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         } 
 
     }
+    public static class ZookeeperConfig extends TeaModel {
+        @NameInMap("ConnectString")
+        private String connectString;
+
+        @NameInMap("Namespace")
+        private String namespace;
+
+        @NameInMap("ServiceName")
+        private String serviceName;
+
+        private ZookeeperConfig(Builder builder) {
+            this.connectString = builder.connectString;
+            this.namespace = builder.namespace;
+            this.serviceName = builder.serviceName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ZookeeperConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return connectString
+         */
+        public String getConnectString() {
+            return this.connectString;
+        }
+
+        /**
+         * @return namespace
+         */
+        public String getNamespace() {
+            return this.namespace;
+        }
+
+        /**
+         * @return serviceName
+         */
+        public String getServiceName() {
+            return this.serviceName;
+        }
+
+        public static final class Builder {
+            private String connectString; 
+            private String namespace; 
+            private String serviceName; 
+
+            /**
+             * ConnectString.
+             */
+            public Builder connectString(String connectString) {
+                this.connectString = connectString;
+                return this;
+            }
+
+            /**
+             * The ID of the namespace where the microservice that is registered with Nacos resides.
+             */
+            public Builder namespace(String namespace) {
+                this.namespace = namespace;
+                return this;
+            }
+
+            /**
+             * The microservice name.
+             */
+            public Builder serviceName(String serviceName) {
+                this.serviceName = serviceName;
+                return this;
+            }
+
+            public ZookeeperConfig build() {
+                return new ZookeeperConfig(this);
+            } 
+
+        } 
+
+    }
     public static class DiscoveryConfig extends TeaModel {
         @NameInMap("NacosConfig")
         private NacosConfig nacosConfig;
@@ -299,9 +380,13 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         @NameInMap("RcType")
         private String rcType;
 
+        @NameInMap("ZookeeperConfig")
+        private ZookeeperConfig zookeeperConfig;
+
         private DiscoveryConfig(Builder builder) {
             this.nacosConfig = builder.nacosConfig;
             this.rcType = builder.rcType;
+            this.zookeeperConfig = builder.zookeeperConfig;
         }
 
         public static Builder builder() {
@@ -326,9 +411,17 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             return this.rcType;
         }
 
+        /**
+         * @return zookeeperConfig
+         */
+        public ZookeeperConfig getZookeeperConfig() {
+            return this.zookeeperConfig;
+        }
+
         public static final class Builder {
             private NacosConfig nacosConfig; 
             private String rcType; 
+            private ZookeeperConfig zookeeperConfig; 
 
             /**
              * The Nacos configurations.
@@ -343,6 +436,14 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
              */
             public Builder rcType(String rcType) {
                 this.rcType = rcType;
+                return this;
+            }
+
+            /**
+             * ZookeeperConfig.
+             */
+            public Builder zookeeperConfig(ZookeeperConfig zookeeperConfig) {
+                this.zookeeperConfig = zookeeperConfig;
                 return this;
             }
 

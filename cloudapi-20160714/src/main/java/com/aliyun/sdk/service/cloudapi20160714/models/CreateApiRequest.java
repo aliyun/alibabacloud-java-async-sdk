@@ -691,7 +691,7 @@ public class CreateApiRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The list of tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -767,7 +767,7 @@ public class CreateApiRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -775,7 +775,7 @@ public class CreateApiRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the tag.
              */
             public Builder value(String value) {
                 this.value = value;

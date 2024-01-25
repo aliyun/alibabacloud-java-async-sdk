@@ -183,12 +183,14 @@ public class ImportOASRequest extends Request {
         } 
 
         /**
-         * API安全认证类型，目前可以取值：
+         * The security authentication method of the API. Valid values:
          * <p>
          * 
-         * - **APP**：只允许已授权的APP调用
-         * - **ANONYMOUS**：允许匿名调用，设置为允许匿名调用需要注意：
-         *      - 任何能够获取该API服务信息的人，都将能够调用该API。网关不会对调用者做身份认证，也无法设置按用户的流量控制，若开放该API请设置好按API的流量控制。
+         * *   **APP: Only authorized applications can call the API.**
+         * 
+         * *   **ANONYMOUS: The API can be anonymously called. In this mode, you must take note of the following rules:**
+         * 
+         *     *   All users who have obtained the API service information can call this API. API Gateway does not authenticate callers and cannot set user-specific throttling policies. If you make this API public, set API-specific throttling policies.
          */
         public Builder authType(String authType) {
             this.putQueryParameter("AuthType", authType);
@@ -197,7 +199,7 @@ public class ImportOASRequest extends Request {
         }
 
         /**
-         * BackendName.
+         * The name of the backend service.
          */
         public Builder backendName(String backendName) {
             this.putQueryParameter("BackendName", backendName);
@@ -206,7 +208,7 @@ public class ImportOASRequest extends Request {
         }
 
         /**
-         * Data.
+         * The OAS-compliant text file or OSS object URL.
          */
         public Builder data(String data) {
             this.putBodyParameter("Data", data);
@@ -215,7 +217,7 @@ public class ImportOASRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * The ID of the API group.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -224,7 +226,7 @@ public class ImportOASRequest extends Request {
         }
 
         /**
-         * IgnoreWarning.
+         * Specifies whether to ignore alerts.
          */
         public Builder ignoreWarning(Boolean ignoreWarning) {
             this.putQueryParameter("IgnoreWarning", ignoreWarning);
@@ -233,7 +235,7 @@ public class ImportOASRequest extends Request {
         }
 
         /**
-         * OASVersion.
+         * The OAS version.
          */
         public Builder OASVersion(String OASVersion) {
             this.putQueryParameter("OASVersion", OASVersion);
@@ -242,7 +244,10 @@ public class ImportOASRequest extends Request {
         }
 
         /**
-         * Overwrite.
+         * Specifies whether to overwrite an existing API.
+         * <p>
+         * 
+         * If an existing API has the same HTTP request type and backend request path as the API to be imported, the existing API is overwritten.
          */
         public Builder overwrite(Boolean overwrite) {
             this.putQueryParameter("Overwrite", overwrite);
@@ -251,7 +256,11 @@ public class ImportOASRequest extends Request {
         }
 
         /**
-         * RequestMode.
+         * The request mode. Valid values:
+         * <p>
+         * 
+         * *   MAPPING: Parameters are mapped. Unknown parameters are filtered out.
+         * *   PASSTHROUGH: Parameters are passed through.
          */
         public Builder requestMode(String requestMode) {
             this.putQueryParameter("RequestMode", requestMode);
@@ -269,7 +278,7 @@ public class ImportOASRequest extends Request {
         }
 
         /**
-         * SkipDryRun.
+         * Specifies whether to directly import the API without performing a precheck.
          */
         public Builder skipDryRun(Boolean skipDryRun) {
             this.putQueryParameter("SkipDryRun", skipDryRun);
