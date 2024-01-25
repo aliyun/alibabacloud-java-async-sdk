@@ -140,16 +140,16 @@ public class DescribeVaultsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeVaultsRequest response) {
-            super(response);
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.resourceGroupId = response.resourceGroupId;
-            this.status = response.status;
-            this.tag = response.tag;
-            this.vaultId = response.vaultId;
-            this.vaultRegionId = response.vaultRegionId;
-            this.vaultType = response.vaultType;
+        private Builder(DescribeVaultsRequest request) {
+            super(request);
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.resourceGroupId = request.resourceGroupId;
+            this.status = request.status;
+            this.tag = request.tag;
+            this.vaultId = request.vaultId;
+            this.vaultRegionId = request.vaultRegionId;
+            this.vaultType = request.vaultType;
         } 
 
         /**

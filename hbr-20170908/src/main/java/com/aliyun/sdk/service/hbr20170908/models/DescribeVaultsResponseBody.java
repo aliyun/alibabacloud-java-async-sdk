@@ -472,87 +472,6 @@ public class DescribeVaultsResponseBody extends TeaModel {
         } 
 
     }
-    public static class Endpoint extends TeaModel {
-        @NameInMap("Classic")
-        private String classic;
-
-        @NameInMap("Pub")
-        private String pub;
-
-        @NameInMap("Vpc")
-        private String vpc;
-
-        private Endpoint(Builder builder) {
-            this.classic = builder.classic;
-            this.pub = builder.pub;
-            this.vpc = builder.vpc;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static Endpoint create() {
-            return builder().build();
-        }
-
-        /**
-         * @return classic
-         */
-        public String getClassic() {
-            return this.classic;
-        }
-
-        /**
-         * @return pub
-         */
-        public String getPub() {
-            return this.pub;
-        }
-
-        /**
-         * @return vpc
-         */
-        public String getVpc() {
-            return this.vpc;
-        }
-
-        public static final class Builder {
-            private String classic; 
-            private String pub; 
-            private String vpc; 
-
-            /**
-             * Classic.
-             */
-            public Builder classic(String classic) {
-                this.classic = classic;
-                return this;
-            }
-
-            /**
-             * Pub.
-             */
-            public Builder pub(String pub) {
-                this.pub = pub;
-                return this;
-            }
-
-            /**
-             * Vpc.
-             */
-            public Builder vpc(String vpc) {
-                this.vpc = vpc;
-                return this;
-            }
-
-            public Endpoint build() {
-                return new Endpoint(this);
-            } 
-
-        } 
-
-    }
     public static class ReplicationProgress extends TeaModel {
         @NameInMap("HistoricalReplicationProgress")
         private Integer historicalReplicationProgress;
@@ -859,6 +778,12 @@ public class DescribeVaultsResponseBody extends TeaModel {
 
     }
     public static class Vault extends TeaModel {
+        @NameInMap("ArchiveBytesDone")
+        private Long archiveBytesDone;
+
+        @NameInMap("ArchiveStorageSize")
+        private Long archiveStorageSize;
+
         @NameInMap("BackupPlanStatistics")
         private BackupPlanStatistics backupPlanStatistics;
 
@@ -870,6 +795,9 @@ public class DescribeVaultsResponseBody extends TeaModel {
 
         @NameInMap("ChargeType")
         private String chargeType;
+
+        @NameInMap("ChargedStorageSize")
+        private Long chargedStorageSize;
 
         @NameInMap("CompressionAlgorithm")
         private String compressionAlgorithm;
@@ -886,9 +814,6 @@ public class DescribeVaultsResponseBody extends TeaModel {
         @NameInMap("EncryptType")
         private String encryptType;
 
-        @NameInMap("Endpoint")
-        private Endpoint endpoint;
-
         @NameInMap("IndexAvailable")
         private Boolean indexAvailable;
 
@@ -897,6 +822,9 @@ public class DescribeVaultsResponseBody extends TeaModel {
 
         @NameInMap("IndexUpdateTime")
         private Long indexUpdateTime;
+
+        @NameInMap("KmsKeyId")
+        private String kmsKeyId;
 
         @NameInMap("LatestReplicationTime")
         private Long latestReplicationTime;
@@ -912,6 +840,9 @@ public class DescribeVaultsResponseBody extends TeaModel {
 
         @NameInMap("ReplicationSourceRegionId")
         private String replicationSourceRegionId;
+
+        @NameInMap("ReplicationSourceVault")
+        private Boolean replicationSourceVault;
 
         @NameInMap("ReplicationSourceVaultId")
         private String replicationSourceVaultId;
@@ -968,24 +899,28 @@ public class DescribeVaultsResponseBody extends TeaModel {
         private Boolean wormEnabled;
 
         private Vault(Builder builder) {
+            this.archiveBytesDone = builder.archiveBytesDone;
+            this.archiveStorageSize = builder.archiveStorageSize;
             this.backupPlanStatistics = builder.backupPlanStatistics;
             this.bucketName = builder.bucketName;
             this.bytesDone = builder.bytesDone;
             this.chargeType = builder.chargeType;
+            this.chargedStorageSize = builder.chargedStorageSize;
             this.compressionAlgorithm = builder.compressionAlgorithm;
             this.createdTime = builder.createdTime;
             this.dedup = builder.dedup;
             this.description = builder.description;
             this.encryptType = builder.encryptType;
-            this.endpoint = builder.endpoint;
             this.indexAvailable = builder.indexAvailable;
             this.indexLevel = builder.indexLevel;
             this.indexUpdateTime = builder.indexUpdateTime;
+            this.kmsKeyId = builder.kmsKeyId;
             this.latestReplicationTime = builder.latestReplicationTime;
             this.redundancyType = builder.redundancyType;
             this.replication = builder.replication;
             this.replicationProgress = builder.replicationProgress;
             this.replicationSourceRegionId = builder.replicationSourceRegionId;
+            this.replicationSourceVault = builder.replicationSourceVault;
             this.replicationSourceVaultId = builder.replicationSourceVaultId;
             this.resourceGroupId = builder.resourceGroupId;
             this.retention = builder.retention;
@@ -1015,6 +950,20 @@ public class DescribeVaultsResponseBody extends TeaModel {
         }
 
         /**
+         * @return archiveBytesDone
+         */
+        public Long getArchiveBytesDone() {
+            return this.archiveBytesDone;
+        }
+
+        /**
+         * @return archiveStorageSize
+         */
+        public Long getArchiveStorageSize() {
+            return this.archiveStorageSize;
+        }
+
+        /**
          * @return backupPlanStatistics
          */
         public BackupPlanStatistics getBackupPlanStatistics() {
@@ -1040,6 +989,13 @@ public class DescribeVaultsResponseBody extends TeaModel {
          */
         public String getChargeType() {
             return this.chargeType;
+        }
+
+        /**
+         * @return chargedStorageSize
+         */
+        public Long getChargedStorageSize() {
+            return this.chargedStorageSize;
         }
 
         /**
@@ -1078,13 +1034,6 @@ public class DescribeVaultsResponseBody extends TeaModel {
         }
 
         /**
-         * @return endpoint
-         */
-        public Endpoint getEndpoint() {
-            return this.endpoint;
-        }
-
-        /**
          * @return indexAvailable
          */
         public Boolean getIndexAvailable() {
@@ -1103,6 +1052,13 @@ public class DescribeVaultsResponseBody extends TeaModel {
          */
         public Long getIndexUpdateTime() {
             return this.indexUpdateTime;
+        }
+
+        /**
+         * @return kmsKeyId
+         */
+        public String getKmsKeyId() {
+            return this.kmsKeyId;
         }
 
         /**
@@ -1138,6 +1094,13 @@ public class DescribeVaultsResponseBody extends TeaModel {
          */
         public String getReplicationSourceRegionId() {
             return this.replicationSourceRegionId;
+        }
+
+        /**
+         * @return replicationSourceVault
+         */
+        public Boolean getReplicationSourceVault() {
+            return this.replicationSourceVault;
         }
 
         /**
@@ -1267,24 +1230,28 @@ public class DescribeVaultsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Long archiveBytesDone; 
+            private Long archiveStorageSize; 
             private BackupPlanStatistics backupPlanStatistics; 
             private String bucketName; 
             private Long bytesDone; 
             private String chargeType; 
+            private Long chargedStorageSize; 
             private String compressionAlgorithm; 
             private Long createdTime; 
             private Boolean dedup; 
             private String description; 
             private String encryptType; 
-            private Endpoint endpoint; 
             private Boolean indexAvailable; 
             private String indexLevel; 
             private Long indexUpdateTime; 
+            private String kmsKeyId; 
             private Long latestReplicationTime; 
             private String redundancyType; 
             private Boolean replication; 
             private ReplicationProgress replicationProgress; 
             private String replicationSourceRegionId; 
+            private Boolean replicationSourceVault; 
             private String replicationSourceVaultId; 
             private String resourceGroupId; 
             private Long retention; 
@@ -1303,6 +1270,22 @@ public class DescribeVaultsResponseBody extends TeaModel {
             private String vaultStorageClass; 
             private String vaultType; 
             private Boolean wormEnabled; 
+
+            /**
+             * ArchiveBytesDone.
+             */
+            public Builder archiveBytesDone(Long archiveBytesDone) {
+                this.archiveBytesDone = archiveBytesDone;
+                return this;
+            }
+
+            /**
+             * ArchiveStorageSize.
+             */
+            public Builder archiveStorageSize(Long archiveStorageSize) {
+                this.archiveStorageSize = archiveStorageSize;
+                return this;
+            }
 
             /**
              * BackupPlanStatistics.
@@ -1333,6 +1316,14 @@ public class DescribeVaultsResponseBody extends TeaModel {
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
+                return this;
+            }
+
+            /**
+             * ChargedStorageSize.
+             */
+            public Builder chargedStorageSize(Long chargedStorageSize) {
+                this.chargedStorageSize = chargedStorageSize;
                 return this;
             }
 
@@ -1377,14 +1368,6 @@ public class DescribeVaultsResponseBody extends TeaModel {
             }
 
             /**
-             * Endpoint.
-             */
-            public Builder endpoint(Endpoint endpoint) {
-                this.endpoint = endpoint;
-                return this;
-            }
-
-            /**
              * IndexAvailable.
              */
             public Builder indexAvailable(Boolean indexAvailable) {
@@ -1405,6 +1388,14 @@ public class DescribeVaultsResponseBody extends TeaModel {
              */
             public Builder indexUpdateTime(Long indexUpdateTime) {
                 this.indexUpdateTime = indexUpdateTime;
+                return this;
+            }
+
+            /**
+             * KmsKeyId.
+             */
+            public Builder kmsKeyId(String kmsKeyId) {
+                this.kmsKeyId = kmsKeyId;
                 return this;
             }
 
@@ -1445,6 +1436,14 @@ public class DescribeVaultsResponseBody extends TeaModel {
              */
             public Builder replicationSourceRegionId(String replicationSourceRegionId) {
                 this.replicationSourceRegionId = replicationSourceRegionId;
+                return this;
+            }
+
+            /**
+             * ReplicationSourceVault.
+             */
+            public Builder replicationSourceVault(Boolean replicationSourceVault) {
+                this.replicationSourceVault = replicationSourceVault;
                 return this;
             }
 

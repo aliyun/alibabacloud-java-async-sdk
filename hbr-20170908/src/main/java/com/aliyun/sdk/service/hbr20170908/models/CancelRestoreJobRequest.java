@@ -63,14 +63,14 @@ public class CancelRestoreJobRequest extends Request {
             super();
         } 
 
-        private Builder(CancelRestoreJobRequest response) {
-            super(response);
-            this.restoreId = response.restoreId;
-            this.vaultId = response.vaultId;
+        private Builder(CancelRestoreJobRequest request) {
+            super(request);
+            this.restoreId = request.restoreId;
+            this.vaultId = request.vaultId;
         } 
 
         /**
-         * RestoreId.
+         * The ID of the restore job.
          */
         public Builder restoreId(String restoreId) {
             this.putQueryParameter("RestoreId", restoreId);
@@ -79,7 +79,7 @@ public class CancelRestoreJobRequest extends Request {
         }
 
         /**
-         * VaultId.
+         * The ID of the backup vault.
          */
         public Builder vaultId(String vaultId) {
             this.putQueryParameter("VaultId", vaultId);

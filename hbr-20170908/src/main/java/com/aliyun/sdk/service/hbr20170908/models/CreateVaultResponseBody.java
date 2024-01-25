@@ -98,7 +98,7 @@ public class CreateVaultResponseBody extends TeaModel {
         private String vaultId; 
 
         /**
-         * Code.
+         * The HTTP status code. The status code 200 indicates that the call is successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class CreateVaultResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message that is returned. If the call is successful, "successful" is returned. If the call fails, an error message is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -114,7 +114,7 @@ public class CreateVaultResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,11 @@ public class CreateVaultResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the call is successful. Valid values:
+         * <p>
+         * 
+         * *   true: The call is successful.
+         * *   false: The call fails.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,7 +134,7 @@ public class CreateVaultResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * The ID of the initialization task used to initialize the backup vault. You can call the DescribeTask operation to query the status of an initialization task.
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -138,7 +142,7 @@ public class CreateVaultResponseBody extends TeaModel {
         }
 
         /**
-         * VaultId.
+         * The ID of the backup vault.
          */
         public Builder vaultId(String vaultId) {
             this.vaultId = vaultId;

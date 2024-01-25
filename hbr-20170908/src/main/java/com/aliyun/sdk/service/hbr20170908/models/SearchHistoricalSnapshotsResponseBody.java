@@ -122,7 +122,7 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Code.
+         * The HTTP status code. The status code 200 indicates that the call is successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -130,7 +130,7 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * Limit.
+         * The number of historical backup snapshots that are displayed on the current page.
          */
         public Builder limit(Integer limit) {
             this.limit = limit;
@@ -138,7 +138,7 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message that is returned. If the call is successful, "successful" is returned. If the call fails, an error message is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -146,7 +146,7 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The token that is required to obtain the next page of backup snapshots.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -154,7 +154,7 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -162,7 +162,7 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * Snapshots.
+         * The historical backup snapshots.
          */
         public Builder snapshots(Snapshots snapshots) {
             this.snapshots = snapshots;
@@ -170,7 +170,11 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the call is successful. Valid values:
+         * <p>
+         * 
+         * *   true: The call is successful.
+         * *   false: The call fails.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -178,7 +182,7 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of returned backup snapshots that meet the specified conditions.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -239,6 +243,9 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
         @NameInMap("ActualItems")
         private Long actualItems;
 
+        @NameInMap("ArchiveTime")
+        private Long archiveTime;
+
         @NameInMap("BackupType")
         private String backupType;
 
@@ -266,11 +273,23 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
         @NameInMap("ErrorFile")
         private String errorFile;
 
+        @NameInMap("Exclude")
+        private String exclude;
+
+        @NameInMap("ExpireTime")
+        private Long expireTime;
+
         @NameInMap("FileSystemId")
         private String fileSystemId;
 
+        @NameInMap("Include")
+        private String include;
+
         @NameInMap("InstanceId")
         private String instanceId;
+
+        @NameInMap("InstanceName")
+        private String instanceName;
 
         @NameInMap("ItemsDone")
         private Long itemsDone;
@@ -293,6 +312,12 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
         @NameInMap("Prefix")
         private String prefix;
 
+        @NameInMap("RangeEnd")
+        private Long rangeEnd;
+
+        @NameInMap("RangeStart")
+        private Long rangeStart;
+
         @NameInMap("Retention")
         private Long retention;
 
@@ -301,6 +326,12 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
 
         @NameInMap("SnapshotId")
         private String snapshotId;
+
+        @NameInMap("SourceParentSnapshotHash")
+        private String sourceParentSnapshotHash;
+
+        @NameInMap("SourceSnapshotHash")
+        private String sourceSnapshotHash;
 
         @NameInMap("SourceType")
         private String sourceType;
@@ -311,8 +342,17 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
         @NameInMap("Status")
         private String status;
 
+        @NameInMap("StorageClass")
+        private String storageClass;
+
+        @NameInMap("TableName")
+        private String tableName;
+
         @NameInMap("UpdatedTime")
         private Long updatedTime;
+
+        @NameInMap("UseCommonNas")
+        private Boolean useCommonNas;
 
         @NameInMap("VaultId")
         private String vaultId;
@@ -320,6 +360,7 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
         private Snapshot(Builder builder) {
             this.actualBytes = builder.actualBytes;
             this.actualItems = builder.actualItems;
+            this.archiveTime = builder.archiveTime;
             this.backupType = builder.backupType;
             this.bucket = builder.bucket;
             this.bytesDone = builder.bytesDone;
@@ -329,8 +370,12 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
             this.createTime = builder.createTime;
             this.createdTime = builder.createdTime;
             this.errorFile = builder.errorFile;
+            this.exclude = builder.exclude;
+            this.expireTime = builder.expireTime;
             this.fileSystemId = builder.fileSystemId;
+            this.include = builder.include;
             this.instanceId = builder.instanceId;
+            this.instanceName = builder.instanceName;
             this.itemsDone = builder.itemsDone;
             this.itemsTotal = builder.itemsTotal;
             this.jobId = builder.jobId;
@@ -338,13 +383,20 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
             this.path = builder.path;
             this.paths = builder.paths;
             this.prefix = builder.prefix;
+            this.rangeEnd = builder.rangeEnd;
+            this.rangeStart = builder.rangeStart;
             this.retention = builder.retention;
             this.snapshotHash = builder.snapshotHash;
             this.snapshotId = builder.snapshotId;
+            this.sourceParentSnapshotHash = builder.sourceParentSnapshotHash;
+            this.sourceSnapshotHash = builder.sourceSnapshotHash;
             this.sourceType = builder.sourceType;
             this.startTime = builder.startTime;
             this.status = builder.status;
+            this.storageClass = builder.storageClass;
+            this.tableName = builder.tableName;
             this.updatedTime = builder.updatedTime;
+            this.useCommonNas = builder.useCommonNas;
             this.vaultId = builder.vaultId;
         }
 
@@ -368,6 +420,13 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
          */
         public Long getActualItems() {
             return this.actualItems;
+        }
+
+        /**
+         * @return archiveTime
+         */
+        public Long getArchiveTime() {
+            return this.archiveTime;
         }
 
         /**
@@ -434,6 +493,20 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
         }
 
         /**
+         * @return exclude
+         */
+        public String getExclude() {
+            return this.exclude;
+        }
+
+        /**
+         * @return expireTime
+         */
+        public Long getExpireTime() {
+            return this.expireTime;
+        }
+
+        /**
          * @return fileSystemId
          */
         public String getFileSystemId() {
@@ -441,10 +514,24 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
         }
 
         /**
+         * @return include
+         */
+        public String getInclude() {
+            return this.include;
+        }
+
+        /**
          * @return instanceId
          */
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        /**
+         * @return instanceName
+         */
+        public String getInstanceName() {
+            return this.instanceName;
         }
 
         /**
@@ -497,6 +584,20 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
         }
 
         /**
+         * @return rangeEnd
+         */
+        public Long getRangeEnd() {
+            return this.rangeEnd;
+        }
+
+        /**
+         * @return rangeStart
+         */
+        public Long getRangeStart() {
+            return this.rangeStart;
+        }
+
+        /**
          * @return retention
          */
         public Long getRetention() {
@@ -515,6 +616,20 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
          */
         public String getSnapshotId() {
             return this.snapshotId;
+        }
+
+        /**
+         * @return sourceParentSnapshotHash
+         */
+        public String getSourceParentSnapshotHash() {
+            return this.sourceParentSnapshotHash;
+        }
+
+        /**
+         * @return sourceSnapshotHash
+         */
+        public String getSourceSnapshotHash() {
+            return this.sourceSnapshotHash;
         }
 
         /**
@@ -539,10 +654,31 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
         }
 
         /**
+         * @return storageClass
+         */
+        public String getStorageClass() {
+            return this.storageClass;
+        }
+
+        /**
+         * @return tableName
+         */
+        public String getTableName() {
+            return this.tableName;
+        }
+
+        /**
          * @return updatedTime
          */
         public Long getUpdatedTime() {
             return this.updatedTime;
+        }
+
+        /**
+         * @return useCommonNas
+         */
+        public Boolean getUseCommonNas() {
+            return this.useCommonNas;
         }
 
         /**
@@ -555,6 +691,7 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
         public static final class Builder {
             private Long actualBytes; 
             private Long actualItems; 
+            private Long archiveTime; 
             private String backupType; 
             private String bucket; 
             private Long bytesDone; 
@@ -564,8 +701,12 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
             private Long createTime; 
             private Long createdTime; 
             private String errorFile; 
+            private String exclude; 
+            private Long expireTime; 
             private String fileSystemId; 
+            private String include; 
             private String instanceId; 
+            private String instanceName; 
             private Long itemsDone; 
             private Long itemsTotal; 
             private String jobId; 
@@ -573,17 +714,24 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
             private String path; 
             private Paths paths; 
             private String prefix; 
+            private Long rangeEnd; 
+            private Long rangeStart; 
             private Long retention; 
             private String snapshotHash; 
             private String snapshotId; 
+            private String sourceParentSnapshotHash; 
+            private String sourceSnapshotHash; 
             private String sourceType; 
             private Long startTime; 
             private String status; 
+            private String storageClass; 
+            private String tableName; 
             private Long updatedTime; 
+            private Boolean useCommonNas; 
             private String vaultId; 
 
             /**
-             * ActualBytes.
+             * The actual data amount of backup snapshots after duplicates are removed. Unit: bytes.
              */
             public Builder actualBytes(Long actualBytes) {
                 this.actualBytes = actualBytes;
@@ -591,7 +739,10 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * ActualItems.
+             * The actual number of backup snapshots.
+             * <p>
+             * 
+             * >  This parameter is available only for file backup.
              */
             public Builder actualItems(Long actualItems) {
                 this.actualItems = actualItems;
@@ -599,7 +750,15 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupType.
+             * ArchiveTime.
+             */
+            public Builder archiveTime(Long archiveTime) {
+                this.archiveTime = archiveTime;
+                return this;
+            }
+
+            /**
+             * The backup type. Valid value: **COMPLETE**, which indicates full backup.
              */
             public Builder backupType(String backupType) {
                 this.backupType = backupType;
@@ -607,7 +766,7 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * Bucket.
+             * This parameter is returned only if the **SourceType** parameter is set to **OSS**. This parameter indicates the name of the OSS bucket.
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -615,7 +774,7 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * BytesDone.
+             * The actual amount of data that is generated by incremental backups. Unit: bytes.
              */
             public Builder bytesDone(Long bytesDone) {
                 this.bytesDone = bytesDone;
@@ -623,7 +782,7 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * BytesTotal.
+             * The total amount of data. Unit: bytes.
              */
             public Builder bytesTotal(Long bytesTotal) {
                 this.bytesTotal = bytesTotal;
@@ -631,7 +790,7 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * ClientId.
+             * This parameter is returned only if the **SourceType** parameter is set to **ECS_FILE**. This parameter indicates the ID of the HBR client.
              */
             public Builder clientId(String clientId) {
                 this.clientId = clientId;
@@ -639,7 +798,7 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * CompleteTime.
+             * The time when the backup snapshot was completed. The value is a UNIX timestamp. Unit: seconds.
              */
             public Builder completeTime(Long completeTime) {
                 this.completeTime = completeTime;
@@ -647,7 +806,7 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * This parameter is returned only if the **SourceType** parameter is set to **NAS**. This parameter indicates the time when the file system was created. The value is a UNIX timestamp. Unit: seconds.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -655,7 +814,7 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedTime.
+             * The time when the backup snapshot was created. The value is a UNIX timestamp. Unit: seconds.
              */
             public Builder createdTime(Long createdTime) {
                 this.createdTime = createdTime;
@@ -663,7 +822,7 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorFile.
+             * The files that record the information about backup failures, including the information about partially completed backups.
              */
             public Builder errorFile(String errorFile) {
                 this.errorFile = errorFile;
@@ -671,7 +830,23 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * FileSystemId.
+             * Exclude.
+             */
+            public Builder exclude(String exclude) {
+                this.exclude = exclude;
+                return this;
+            }
+
+            /**
+             * The time when the snapshot expired. The value is a UNIX timestamp. Unit: seconds.
+             */
+            public Builder expireTime(Long expireTime) {
+                this.expireTime = expireTime;
+                return this;
+            }
+
+            /**
+             * This parameter is returned only if the **SourceType** parameter is set to **NAS**. This parameter indicates the ID of the NAS file system.
              */
             public Builder fileSystemId(String fileSystemId) {
                 this.fileSystemId = fileSystemId;
@@ -679,7 +854,15 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * Include.
+             */
+            public Builder include(String include) {
+                this.include = include;
+                return this;
+            }
+
+            /**
+             * This parameter is valid only if the **SourceType** parameter is set to **ECS_FILE**. This parameter indicates the ID of the ECS instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -687,7 +870,18 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * ItemsDone.
+             * The name of the Tablestore instance.
+             */
+            public Builder instanceName(String instanceName) {
+                this.instanceName = instanceName;
+                return this;
+            }
+
+            /**
+             * The number of objects that are backed up.
+             * <p>
+             * 
+             * >  This parameter is available only for file backup.
              */
             public Builder itemsDone(Long itemsDone) {
                 this.itemsDone = itemsDone;
@@ -695,7 +889,10 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * ItemsTotal.
+             * The total number of objects in the data source.
+             * <p>
+             * 
+             * >  This parameter is available only for file backup.
              */
             public Builder itemsTotal(Long itemsTotal) {
                 this.itemsTotal = itemsTotal;
@@ -703,7 +900,7 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * The ID of the backup job.
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -711,7 +908,7 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * ParentSnapshotHash.
+             * The hash value of the parent backup snapshot.
              */
             public Builder parentSnapshotHash(String parentSnapshotHash) {
                 this.parentSnapshotHash = parentSnapshotHash;
@@ -719,7 +916,7 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * Path.
+             * This parameter is returned only if the **SourceType** parameter is set to **ECS_FILE**. This parameter indicates the path to the files that are backed up.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -727,7 +924,7 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * Paths.
+             * The source paths.
              */
             public Builder paths(Paths paths) {
                 this.paths = paths;
@@ -735,7 +932,7 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * Prefix.
+             * This parameter is returned only if the **SourceType** parameter is set to **OSS**. This parameter indicates the prefix of objects that are backed up.
              */
             public Builder prefix(String prefix) {
                 this.prefix = prefix;
@@ -743,7 +940,23 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * Retention.
+             * The time when the backup job ended. The value is a UNIX timestamp. Unit: milliseconds.
+             */
+            public Builder rangeEnd(Long rangeEnd) {
+                this.rangeEnd = rangeEnd;
+                return this;
+            }
+
+            /**
+             * The time when the backup job started. The value is a UNIX timestamp. Unit: milliseconds.
+             */
+            public Builder rangeStart(Long rangeStart) {
+                this.rangeStart = rangeStart;
+                return this;
+            }
+
+            /**
+             * The retention period of the backup snapshot. Unit: days.
              */
             public Builder retention(Long retention) {
                 this.retention = retention;
@@ -751,7 +964,7 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * SnapshotHash.
+             * The hash value of the backup snapshot.
              */
             public Builder snapshotHash(String snapshotHash) {
                 this.snapshotHash = snapshotHash;
@@ -759,7 +972,7 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * SnapshotId.
+             * The ID of the backup snapshot.
              */
             public Builder snapshotId(String snapshotId) {
                 this.snapshotId = snapshotId;
@@ -767,7 +980,28 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceType.
+             * SourceParentSnapshotHash.
+             */
+            public Builder sourceParentSnapshotHash(String sourceParentSnapshotHash) {
+                this.sourceParentSnapshotHash = sourceParentSnapshotHash;
+                return this;
+            }
+
+            /**
+             * SourceSnapshotHash.
+             */
+            public Builder sourceSnapshotHash(String sourceSnapshotHash) {
+                this.sourceSnapshotHash = sourceSnapshotHash;
+                return this;
+            }
+
+            /**
+             * The type of the data source. Valid values:
+             * <p>
+             * 
+             * *   **ECS_FILE**: backup snapshots for ECS files
+             * *   **OSS**: backup snapshots for OSS buckets
+             * *   **NAS**: backup snapshots for NAS file systems
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -775,7 +1009,7 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The time when the backup snapshot started. The value is a UNIX timestamp. Unit: seconds.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -783,7 +1017,12 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the backup job. Valid values:
+             * <p>
+             * 
+             * *   **COMPLETE**: The backup job is completed.
+             * *   **PARTIAL_COMPLETE**: The backup job is partially completed.
+             * *   **FAILED**: The backup job has failed.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -791,7 +1030,23 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedTime.
+             * StorageClass.
+             */
+            public Builder storageClass(String storageClass) {
+                this.storageClass = storageClass;
+                return this;
+            }
+
+            /**
+             * The name of a table in the Tablestore instance.
+             */
+            public Builder tableName(String tableName) {
+                this.tableName = tableName;
+                return this;
+            }
+
+            /**
+             * The time when the backup snapshot was updated. The value is a UNIX timestamp. Unit: seconds.
              */
             public Builder updatedTime(Long updatedTime) {
                 this.updatedTime = updatedTime;
@@ -799,7 +1054,15 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * VaultId.
+             * UseCommonNas.
+             */
+            public Builder useCommonNas(Boolean useCommonNas) {
+                this.useCommonNas = useCommonNas;
+                return this;
+            }
+
+            /**
+             * The ID of the backup vault that stores the backup snapshot.
              */
             public Builder vaultId(String vaultId) {
                 this.vaultId = vaultId;

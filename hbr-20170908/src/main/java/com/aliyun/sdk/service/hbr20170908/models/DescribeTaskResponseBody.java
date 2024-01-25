@@ -158,7 +158,7 @@ public class DescribeTaskResponseBody extends TeaModel {
         private Long updatedTime; 
 
         /**
-         * Code.
+         * HttpCode
          */
         public Builder code(String code) {
             this.code = code;
@@ -166,7 +166,7 @@ public class DescribeTaskResponseBody extends TeaModel {
         }
 
         /**
-         * CompletedTime.
+         * The time when the job was completed. This value is a UNIX timestamp. Unit: seconds.
          */
         public Builder completedTime(Long completedTime) {
             this.completedTime = completedTime;
@@ -174,7 +174,7 @@ public class DescribeTaskResponseBody extends TeaModel {
         }
 
         /**
-         * CreatedTime.
+         * The time when the job was created. This value is a UNIX timestamp. Unit: seconds.
          */
         public Builder createdTime(Long createdTime) {
             this.createdTime = createdTime;
@@ -182,7 +182,13 @@ public class DescribeTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * The status of the job. Valid values:
+         * <p>
+         * 
+         * *   **created**: The job is created.
+         * *   **expired**: The job expires.
+         * *   **completed**: The job is completed.
+         * *   **cancelled**: The job is canceled.
          */
         public Builder description(String description) {
             this.description = description;
@@ -190,7 +196,7 @@ public class DescribeTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message that is returned. If the call is successful, "successful" is returned. If the call fails, an error message is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -198,7 +204,7 @@ public class DescribeTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * The name of the job.
          */
         public Builder name(String name) {
             this.name = name;
@@ -206,7 +212,7 @@ public class DescribeTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Progress.
+         * The progress of the job. Valid values: 0 to 100. Unit: percentage (%). If the job fails, the value -1 is returned.
          */
         public Builder progress(Integer progress) {
             this.progress = progress;
@@ -214,7 +220,7 @@ public class DescribeTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -222,7 +228,7 @@ public class DescribeTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The result of the job.
          */
         public Builder result(String result) {
             this.result = result;
@@ -230,7 +236,11 @@ public class DescribeTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the call is successful.
+         * <p>
+         * 
+         * *   true: The call is successful.
+         * *   false: The call fails.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -238,7 +248,7 @@ public class DescribeTaskResponseBody extends TeaModel {
         }
 
         /**
-         * UpdatedTime.
+         * The time when the job was updated. This value is a UNIX timestamp. Unit: seconds.
          */
         public Builder updatedTime(Long updatedTime) {
             this.updatedTime = updatedTime;

@@ -86,7 +86,7 @@ public class CreateBackupPlanResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code. The status code 200 indicates that the request is successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class CreateBackupPlanResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message that is returned. If the request is successful, a value of successful is returned. If the request fails, an error message is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -102,7 +102,7 @@ public class CreateBackupPlanResponseBody extends TeaModel {
         }
 
         /**
-         * PlanId.
+         * The ID of the backup schedule.
          */
         public Builder planId(String planId) {
             this.planId = planId;
@@ -110,7 +110,7 @@ public class CreateBackupPlanResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class CreateBackupPlanResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
+         * <p>
+         * 
+         * *   true: The request is successful.
+         * *   false: The request fails.
          */
         public Builder success(Boolean success) {
             this.success = success;

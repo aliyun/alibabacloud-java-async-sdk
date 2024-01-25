@@ -122,7 +122,7 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * Clients.
+         * The HBR clients.
          */
         public Builder clients(java.util.List < Clients> clients) {
             this.clients = clients;
@@ -130,7 +130,7 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * The HTTP status code. The status code 200 indicates that the call is successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -138,7 +138,7 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message that is returned. If the call is successful, "successful" is returned. If the call fails, an error message is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -146,7 +146,7 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page. Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -154,7 +154,7 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned on each page. Valid values: 1 to 99. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -162,7 +162,7 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +170,11 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the call is successful. Valid values:
+         * <p>
+         * 
+         * *   true: The call is successful.
+         * *   false: The call fails.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -178,7 +182,7 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of returned HBR clients that meet the specified conditions.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -192,6 +196,9 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
     } 
 
     public static class Settings extends TeaModel {
+        @NameInMap("AlertOnPartialComplete")
+        private Boolean alertOnPartialComplete;
+
         @NameInMap("DataNetworkType")
         private String dataNetworkType;
 
@@ -200,6 +207,9 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
 
         @NameInMap("MaxCpuCore")
         private String maxCpuCore;
+
+        @NameInMap("MaxMemory")
+        private Long maxMemory;
 
         @NameInMap("MaxWorker")
         private String maxWorker;
@@ -220,9 +230,11 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
         private String useHttps;
 
         private Settings(Builder builder) {
+            this.alertOnPartialComplete = builder.alertOnPartialComplete;
             this.dataNetworkType = builder.dataNetworkType;
             this.dataProxySetting = builder.dataProxySetting;
             this.maxCpuCore = builder.maxCpuCore;
+            this.maxMemory = builder.maxMemory;
             this.maxWorker = builder.maxWorker;
             this.proxyHost = builder.proxyHost;
             this.proxyPassword = builder.proxyPassword;
@@ -237,6 +249,13 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
 
         public static Settings create() {
             return builder().build();
+        }
+
+        /**
+         * @return alertOnPartialComplete
+         */
+        public Boolean getAlertOnPartialComplete() {
+            return this.alertOnPartialComplete;
         }
 
         /**
@@ -258,6 +277,13 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
          */
         public String getMaxCpuCore() {
             return this.maxCpuCore;
+        }
+
+        /**
+         * @return maxMemory
+         */
+        public Long getMaxMemory() {
+            return this.maxMemory;
         }
 
         /**
@@ -303,9 +329,11 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean alertOnPartialComplete; 
             private String dataNetworkType; 
             private String dataProxySetting; 
             private String maxCpuCore; 
+            private Long maxMemory; 
             private String maxWorker; 
             private String proxyHost; 
             private String proxyPassword; 
@@ -314,7 +342,20 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
             private String useHttps; 
 
             /**
-             * DataNetworkType.
+             * AlertOnPartialComplete.
+             */
+            public Builder alertOnPartialComplete(Boolean alertOnPartialComplete) {
+                this.alertOnPartialComplete = alertOnPartialComplete;
+                return this;
+            }
+
+            /**
+             * The type of the endpoint on the data plane. Valid values:
+             * <p>
+             * 
+             * *   **PUBLIC**: Internet
+             * *   **VPC**: virtual private cloud (VPC)
+             * *   **CLASSIC**: classic network
              */
             public Builder dataNetworkType(String dataNetworkType) {
                 this.dataNetworkType = dataNetworkType;
@@ -322,7 +363,12 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
             }
 
             /**
-             * DataProxySetting.
+             * The proxy configuration on the data plane. Valid values:
+             * <p>
+             * 
+             * *   **DISABLE**: The proxy is not used.
+             * *   \*\*USE_CONTROL_PROXY \*\* (default value): The configuration is the same as that on the control plane.
+             * *   **CUSTOM**: The configuration is customized (HTTP).
              */
             public Builder dataProxySetting(String dataProxySetting) {
                 this.dataProxySetting = dataProxySetting;
@@ -330,7 +376,7 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
             }
 
             /**
-             * MaxCpuCore.
+             * The number of CPU cores used by a single backup job. The value 0 indicates that the number is unlimited.
              */
             public Builder maxCpuCore(String maxCpuCore) {
                 this.maxCpuCore = maxCpuCore;
@@ -338,7 +384,15 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
             }
 
             /**
-             * MaxWorker.
+             * MaxMemory.
+             */
+            public Builder maxMemory(Long maxMemory) {
+                this.maxMemory = maxMemory;
+                return this;
+            }
+
+            /**
+             * The number of concurrent backup jobs. The value 0 indicates that the number is unlimited.
              */
             public Builder maxWorker(String maxWorker) {
                 this.maxWorker = maxWorker;
@@ -346,7 +400,7 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
             }
 
             /**
-             * ProxyHost.
+             * The custom host IP address of the proxy server on the data plane.
              */
             public Builder proxyHost(String proxyHost) {
                 this.proxyHost = proxyHost;
@@ -354,7 +408,7 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
             }
 
             /**
-             * ProxyPassword.
+             * The custom password of the proxy server on the data plane.
              */
             public Builder proxyPassword(String proxyPassword) {
                 this.proxyPassword = proxyPassword;
@@ -362,7 +416,7 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
             }
 
             /**
-             * ProxyPort.
+             * The custom host port of the proxy server on the data plane.
              */
             public Builder proxyPort(Integer proxyPort) {
                 this.proxyPort = proxyPort;
@@ -370,7 +424,7 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
             }
 
             /**
-             * ProxyUser.
+             * The custom username of the proxy server on the data plane.
              */
             public Builder proxyUser(String proxyUser) {
                 this.proxyUser = proxyUser;
@@ -378,7 +432,11 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
             }
 
             /**
-             * UseHttps.
+             * Indicates whether data on the data plane is transmitted over HTTPS. Valid values:
+             * <p>
+             * 
+             * *   true: Data is transmitted over HTTPS.
+             * *   false: Data is transmitted over HTTP.
              */
             public Builder useHttps(String useHttps) {
                 this.useHttps = useHttps;
@@ -431,7 +489,12 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The tag key of the backup vault. Valid values of N: 1 to 20.
+             * <p>
+             * 
+             * *   The tag key cannot start with `aliyun` or `acs:`.
+             * *   The tag key cannot contain `http://` or `https://`.
+             * *   The tag key cannot be an empty string.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -439,7 +502,12 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The tag value of the backup vault. Valid values of N: 1 to 20.
+             * <p>
+             * 
+             * *   The tag value cannot start with `aliyun` or `acs:`.
+             * *   The tag value cannot contain `http://` or `https://`.
+             * *   The tag value cannot be an empty string.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -696,7 +764,11 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * Appliance.
+             * Indicates whether the HBR client is installed on an all-in-one PC that integrates hardware and monitoring program. Valid values:
+             * <p>
+             * 
+             * *   true: The HBR client is installed on an all-in-one PC that integrates hardware and monitoring program.
+             * *   false: The HBR client is not installed on an all-in-one PC that integrates hardware and monitoring program.
              */
             public Builder appliance(Boolean appliance) {
                 this.appliance = appliance;
@@ -704,7 +776,11 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
             }
 
             /**
-             * ArchType.
+             * This parameter is valid only if the **ClientType** parameter is set to **ECS_CLIENT**. This parameter indicates the system architecture where the HBR client resides. Valid values:
+             * <p>
+             * 
+             * *   **amd64**
+             * *   **386**
              */
             public Builder archType(String archType) {
                 this.archType = archType;
@@ -712,7 +788,11 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupStatus.
+             * The protection status of the HBR client. Valid values:
+             * <p>
+             * 
+             * *   **UNPROTECTED**: The HBR client is not protected.
+             * *   **PROTECTED**: The HBR client is protected.
              */
             public Builder backupStatus(String backupStatus) {
                 this.backupStatus = backupStatus;
@@ -720,7 +800,7 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
             }
 
             /**
-             * ClientId.
+             * The ID of the HBR client.
              */
             public Builder clientId(String clientId) {
                 this.clientId = clientId;
@@ -728,7 +808,7 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
             }
 
             /**
-             * ClientType.
+             * The type of the HBR client. Valid value: **ECS_CLIENT**, which indicates an HBR client for ECS file backup.
              */
             public Builder clientType(String clientType) {
                 this.clientType = clientType;
@@ -736,7 +816,7 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
             }
 
             /**
-             * ClientVersion.
+             * The version number of the HBR client.
              */
             public Builder clientVersion(String clientVersion) {
                 this.clientVersion = clientVersion;
@@ -744,7 +824,7 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedTime.
+             * The time when the HBR client was created. The value is a UNIX timestamp. Unit: seconds.
              */
             public Builder createdTime(Long createdTime) {
                 this.createdTime = createdTime;
@@ -752,7 +832,7 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
             }
 
             /**
-             * Hostname.
+             * The hostname of the HBR client.
              */
             public Builder hostname(String hostname) {
                 this.hostname = hostname;
@@ -760,7 +840,11 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance.
+             * <p>
+             * 
+             * *   If the HBR client is used to back up ECS files, this parameter indicates the ID of an ECS instance.
+             * *   If the HBR client is used to back up on-premises files, this parameter indicates the hardware fingerprint that is generated based on the system information.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -768,7 +852,7 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * This parameter is valid only if the **ClientType** parameter is set to **ECS_CLIENT**. This parameter indicates the name of the ECS instance.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -776,7 +860,7 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
             }
 
             /**
-             * LastHeartBeatTime.
+             * The last heartbeat time of the HBR client. The value is a UNIX timestamp. Unit: seconds.
              */
             public Builder lastHeartBeatTime(Long lastHeartBeatTime) {
                 this.lastHeartBeatTime = lastHeartBeatTime;
@@ -784,7 +868,7 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
             }
 
             /**
-             * MaxClientVersion.
+             * The latest version number of the HBR client.
              */
             public Builder maxClientVersion(String maxClientVersion) {
                 this.maxClientVersion = maxClientVersion;
@@ -792,7 +876,11 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
             }
 
             /**
-             * OsType.
+             * This parameter is valid only if the **ClientType** parameter is set to **ECS_CLIENT**. This parameter indicates the operating system type of the HBR client. Valid values:
+             * <p>
+             * 
+             * *   **windows**
+             * *   **linux**
              */
             public Builder osType(String osType) {
                 this.osType = osType;
@@ -800,7 +888,7 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
             }
 
             /**
-             * PrivateIpV4.
+             * This parameter is valid only if the **ClientType** parameter is set to **ECS_CLIENT**. This parameter indicates the internal IP address of the ECS instance.
              */
             public Builder privateIpV4(String privateIpV4) {
                 this.privateIpV4 = privateIpV4;
@@ -808,7 +896,7 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
             }
 
             /**
-             * Settings.
+             * The configuration information of the HBR client.
              */
             public Builder settings(Settings settings) {
                 this.settings = settings;
@@ -816,7 +904,21 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the HBR client. Valid values:
+             * <p>
+             * 
+             * *   **REGISTERED**: The HBR client is registered.
+             * *   **ACTIVATED**: The HBR client is enabled.
+             * *   **DEACTIVATED**: The HBR client fails to be enabled.
+             * *   **INSTALLING**: The HBR client is being installed.
+             * *   **INSTALL_FAILED**: The HBR client fails to be installed.
+             * *   **NOT_INSTALLED**: The HBR client is not installed.
+             * *   **UPGRADING**: The HBR client is being upgraded.
+             * *   **UPGRADE_FAILED**: The HBR client fails to be upgraded.
+             * *   **UNINSTALLING**: The HBR client is being uninstalled.
+             * *   **UNINSTALL_FAILED**: The HBR client fails to be uninstalled.
+             * *   **STOPPED**: The HBR client is out of service.
+             * *   **UNKNOWN**: The HBR client is disconnected.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -824,7 +926,7 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tag information.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -832,7 +934,7 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedTime.
+             * The time when the HBR client was updated. The value is a UNIX timestamp. Unit: seconds.
              */
             public Builder updatedTime(Long updatedTime) {
                 this.updatedTime = updatedTime;
@@ -840,7 +942,7 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * This parameter is valid only if the **ClientType** parameter is set to **ECS_CLIENT**. This parameter indicates the zone of the HBR client.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

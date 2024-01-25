@@ -14,16 +14,32 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DescribeBackupClientsRequest extends Request {
     @Body
     @NameInMap("ClientIds")
-    private java.util.Map < String, ? > clientIds;
+    private java.util.List < String > clientIds;
 
     @Query
     @NameInMap("ClientType")
     @Validation(required = true)
     private String clientType;
 
+    @Query
+    @NameInMap("ClusterId")
+    private String clusterId;
+
+    @Query
+    @NameInMap("CrossAccountRoleName")
+    private String crossAccountRoleName;
+
+    @Query
+    @NameInMap("CrossAccountType")
+    private String crossAccountType;
+
+    @Query
+    @NameInMap("CrossAccountUserId")
+    private Long crossAccountUserId;
+
     @Body
     @NameInMap("InstanceIds")
-    private java.util.Map < String, ? > instanceIds;
+    private java.util.List < String > instanceIds;
 
     @Query
     @NameInMap("PageNumber")
@@ -42,6 +58,10 @@ public class DescribeBackupClientsRequest extends Request {
         super(builder);
         this.clientIds = builder.clientIds;
         this.clientType = builder.clientType;
+        this.clusterId = builder.clusterId;
+        this.crossAccountRoleName = builder.crossAccountRoleName;
+        this.crossAccountType = builder.crossAccountType;
+        this.crossAccountUserId = builder.crossAccountUserId;
         this.instanceIds = builder.instanceIds;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -64,7 +84,7 @@ public class DescribeBackupClientsRequest extends Request {
     /**
      * @return clientIds
      */
-    public java.util.Map < String, ? > getClientIds() {
+    public java.util.List < String > getClientIds() {
         return this.clientIds;
     }
 
@@ -76,9 +96,37 @@ public class DescribeBackupClientsRequest extends Request {
     }
 
     /**
+     * @return clusterId
+     */
+    public String getClusterId() {
+        return this.clusterId;
+    }
+
+    /**
+     * @return crossAccountRoleName
+     */
+    public String getCrossAccountRoleName() {
+        return this.crossAccountRoleName;
+    }
+
+    /**
+     * @return crossAccountType
+     */
+    public String getCrossAccountType() {
+        return this.crossAccountType;
+    }
+
+    /**
+     * @return crossAccountUserId
+     */
+    public Long getCrossAccountUserId() {
+        return this.crossAccountUserId;
+    }
+
+    /**
      * @return instanceIds
      */
-    public java.util.Map < String, ? > getInstanceIds() {
+    public java.util.List < String > getInstanceIds() {
         return this.instanceIds;
     }
 
@@ -104,9 +152,13 @@ public class DescribeBackupClientsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeBackupClientsRequest, Builder> {
-        private java.util.Map < String, ? > clientIds; 
+        private java.util.List < String > clientIds; 
         private String clientType; 
-        private java.util.Map < String, ? > instanceIds; 
+        private String clusterId; 
+        private String crossAccountRoleName; 
+        private String crossAccountType; 
+        private Long crossAccountUserId; 
+        private java.util.List < String > instanceIds; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private java.util.List < Tag> tag; 
@@ -115,27 +167,36 @@ public class DescribeBackupClientsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeBackupClientsRequest response) {
-            super(response);
-            this.clientIds = response.clientIds;
-            this.clientType = response.clientType;
-            this.instanceIds = response.instanceIds;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.tag = response.tag;
+        private Builder(DescribeBackupClientsRequest request) {
+            super(request);
+            this.clientIds = request.clientIds;
+            this.clientType = request.clientType;
+            this.clusterId = request.clusterId;
+            this.crossAccountRoleName = request.crossAccountRoleName;
+            this.crossAccountType = request.crossAccountType;
+            this.crossAccountUserId = request.crossAccountUserId;
+            this.instanceIds = request.instanceIds;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.tag = request.tag;
         } 
 
         /**
-         * ClientIds.
+         * The IDs of HBR clients.
          */
-        public Builder clientIds(java.util.Map < String, ? > clientIds) {
-            this.putBodyParameter("ClientIds", clientIds);
+        public Builder clientIds(java.util.List < String > clientIds) {
+            String clientIdsShrink = shrink(clientIds, "ClientIds", "json");
+            this.putBodyParameter("ClientIds", clientIdsShrink);
             this.clientIds = clientIds;
             return this;
         }
 
         /**
-         * ClientType.
+         * The type of the HBR client. Valid values:
+         * <p>
+         * 
+         * *   **ECS_CLIENT**: HBR client for Elastic Compute Service (ECS) file backup
+         * *   **CONTAINER_CLIENT**: HBR client for container backup
          */
         public Builder clientType(String clientType) {
             this.putQueryParameter("ClientType", clientType);
@@ -144,16 +205,57 @@ public class DescribeBackupClientsRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * The ID of the cluster for the backup.
          */
-        public Builder instanceIds(java.util.Map < String, ? > instanceIds) {
-            this.putBodyParameter("InstanceIds", instanceIds);
+        public Builder clusterId(String clusterId) {
+            this.putQueryParameter("ClusterId", clusterId);
+            this.clusterId = clusterId;
+            return this;
+        }
+
+        /**
+         * The name of the RAM role that is created within the source Alibaba Cloud account and assigned to the current Alibaba Cloud account to authorize the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.
+         */
+        public Builder crossAccountRoleName(String crossAccountRoleName) {
+            this.putQueryParameter("CrossAccountRoleName", crossAccountRoleName);
+            this.crossAccountRoleName = crossAccountRoleName;
+            return this;
+        }
+
+        /**
+         * Specifies whether data is backed up within the same Alibaba Cloud account or across Alibaba Cloud accounts. Valid values:
+         * <p>
+         * 
+         * *   SELF_ACCOUNT: Data is backed up within the same Alibaba Cloud account.
+         * *   CROSS_ACCOUNT: Data is backed up across Alibaba Cloud accounts.
+         */
+        public Builder crossAccountType(String crossAccountType) {
+            this.putQueryParameter("CrossAccountType", crossAccountType);
+            this.crossAccountType = crossAccountType;
+            return this;
+        }
+
+        /**
+         * The ID of the source Alibaba Cloud account that authorizes the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.
+         */
+        public Builder crossAccountUserId(Long crossAccountUserId) {
+            this.putQueryParameter("CrossAccountUserId", crossAccountUserId);
+            this.crossAccountUserId = crossAccountUserId;
+            return this;
+        }
+
+        /**
+         * The IDs of ECS instances.
+         */
+        public Builder instanceIds(java.util.List < String > instanceIds) {
+            String instanceIdsShrink = shrink(instanceIds, "InstanceIds", "json");
+            this.putBodyParameter("InstanceIds", instanceIdsShrink);
             this.instanceIds = instanceIds;
             return this;
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -162,7 +264,7 @@ public class DescribeBackupClientsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Valid values: 1 to 99. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -171,7 +273,7 @@ public class DescribeBackupClientsRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putBodyParameter("Tag", tag);
@@ -225,7 +327,12 @@ public class DescribeBackupClientsRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The tag key of the backup vault. Valid values of N: 1 to 20.
+             * <p>
+             * 
+             * *   The tag key cannot start with `aliyun` or `acs:`.
+             * *   The tag key cannot contain `http://` or `https://`.
+             * *   The tag key cannot be an empty string.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -233,7 +340,12 @@ public class DescribeBackupClientsRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag value of the backup vault. Valid values of N: 1 to 20.
+             * <p>
+             * 
+             * *   The tag value cannot start with `aliyun` or `acs:`.
+             * *   The tag value cannot contain `http://` or `https://`.
+             * *   The tag value cannot be an empty string.
              */
             public Builder value(String value) {
                 this.value = value;

@@ -61,14 +61,14 @@ public class DescribeVaultReplicationRegionsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeVaultReplicationRegionsRequest response) {
-            super(response);
-            this.token = response.token;
-            this.vaultId = response.vaultId;
+        private Builder(DescribeVaultReplicationRegionsRequest request) {
+            super(request);
+            this.token = request.token;
+            this.vaultId = request.vaultId;
         } 
 
         /**
-         * Token.
+         * The access token.
          */
         public Builder token(String token) {
             this.putQueryParameter("Token", token);
@@ -77,7 +77,7 @@ public class DescribeVaultReplicationRegionsRequest extends Request {
         }
 
         /**
-         * VaultId.
+         * The ID of the backup vault.
          */
         public Builder vaultId(String vaultId) {
             this.putQueryParameter("VaultId", vaultId);

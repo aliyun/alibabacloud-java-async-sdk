@@ -86,7 +86,7 @@ public class DescribeRecoverableOtsInstancesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code. The status code 200 indicates that the call is successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class DescribeRecoverableOtsInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message that is returned. If the call is successful, "successful" is returned. If the call fails, an error message is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -102,7 +102,7 @@ public class DescribeRecoverableOtsInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * OtsInstances.
+         * The list of Tablestore instances that can be restored and the tables in the instances.
          */
         public Builder otsInstances(java.util.List < OtsInstances> otsInstances) {
             this.otsInstances = otsInstances;
@@ -110,7 +110,7 @@ public class DescribeRecoverableOtsInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class DescribeRecoverableOtsInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the call is successful.
+         * <p>
+         * 
+         * *   true: The call is successful.
+         * *   false: The call fails.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -170,7 +174,7 @@ public class DescribeRecoverableOtsInstancesResponseBody extends TeaModel {
             private java.util.List < String > tableNames; 
 
             /**
-             * InstanceName.
+             * The name of the Tablestore instance that can be restored.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -178,7 +182,7 @@ public class DescribeRecoverableOtsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * TableNames.
+             * The names of the tables in the Tablestore instance.
              */
             public Builder tableNames(java.util.List < String > tableNames) {
                 this.tableNames = tableNames;

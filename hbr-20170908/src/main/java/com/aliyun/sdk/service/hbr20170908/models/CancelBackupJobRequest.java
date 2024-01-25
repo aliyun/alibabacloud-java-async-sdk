@@ -62,14 +62,14 @@ public class CancelBackupJobRequest extends Request {
             super();
         } 
 
-        private Builder(CancelBackupJobRequest response) {
-            super(response);
-            this.jobId = response.jobId;
-            this.vaultId = response.vaultId;
+        private Builder(CancelBackupJobRequest request) {
+            super(request);
+            this.jobId = request.jobId;
+            this.vaultId = request.vaultId;
         } 
 
         /**
-         * JobId.
+         * The ID of the backup job.
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -78,7 +78,7 @@ public class CancelBackupJobRequest extends Request {
         }
 
         /**
-         * VaultId.
+         * The ID of the backup vault.
          */
         public Builder vaultId(String vaultId) {
             this.putQueryParameter("VaultId", vaultId);

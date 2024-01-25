@@ -98,7 +98,7 @@ public class InstallBackupClientsResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * Code.
+         * The HTTP status code. The status code 200 indicates that the call is successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class InstallBackupClientsResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceStatuses.
+         * The status of the ECS instance.
          */
         public Builder instanceStatuses(java.util.List < InstanceStatuses> instanceStatuses) {
             this.instanceStatuses = instanceStatuses;
@@ -114,7 +114,7 @@ public class InstallBackupClientsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message that is returned. If the call is successful, "successful" is returned. If the call fails, an error message is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -122,7 +122,7 @@ public class InstallBackupClientsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,11 @@ public class InstallBackupClientsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the call is successful. Valid values:
+         * <p>
+         * 
+         * *   true: The call is successful.
+         * *   false: The call fails.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,7 +142,7 @@ public class InstallBackupClientsResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * The ID of the asynchronous job. You can call the DescribeTask operation to query the execution result of an asynchronous job.
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -202,7 +206,13 @@ public class InstallBackupClientsResponseBody extends TeaModel {
             private Boolean validInstance; 
 
             /**
-             * ErrorCode.
+             * The error code that is returned. Valid values:
+             * <p>
+             * 
+             * *   If the value is empty, the call is successful.
+             * *   **InstanceNotExists**: The ECS instance does not exist.
+             * *   **InstanceNotRunning**: The ECS instance is not running.
+             * *   **CloudAssistNotRunningOnInstance**: Cloud Assistant is unavailable.
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -210,7 +220,7 @@ public class InstallBackupClientsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the ECS instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -218,7 +228,11 @@ public class InstallBackupClientsResponseBody extends TeaModel {
             }
 
             /**
-             * ValidInstance.
+             * Indicates whether an HBR client can be installed on the ECS instance. Valid values:
+             * <p>
+             * 
+             * *   true: An HBR client can be installed on the ECS instance.
+             * *   false: An HBR client cannot be installed on the ECS instance.
              */
             public Builder validInstance(Boolean validInstance) {
                 this.validInstance = validInstance;

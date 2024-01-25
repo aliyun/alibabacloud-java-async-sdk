@@ -49,13 +49,13 @@ public class DeleteBackupClientRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteBackupClientRequest response) {
-            super(response);
-            this.clientId = response.clientId;
+        private Builder(DeleteBackupClientRequest request) {
+            super(request);
+            this.clientId = request.clientId;
         } 
 
         /**
-         * ClientId.
+         * The ID of the backup client.
          */
         public Builder clientId(String clientId) {
             this.putQueryParameter("ClientId", clientId);

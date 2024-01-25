@@ -98,7 +98,7 @@ public class CreateReplicationVaultResponseBody extends TeaModel {
         private String vaultId; 
 
         /**
-         * Code.
+         * The HTTP status code. The status code 200 indicates that the request was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class CreateReplicationVaultResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message that is returned. If the request was successful, "successful" is returned. If the request failed, an error message is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -114,7 +114,7 @@ public class CreateReplicationVaultResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,11 @@ public class CreateReplicationVaultResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true: The request was successful.
+         * *   false: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,7 +134,10 @@ public class CreateReplicationVaultResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * The ID of the initialization task used to initialize the backup vault.
+         * <p>
+         * 
+         * You can call the DescribeTask operation to query the status of an initialization task.
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -138,7 +145,7 @@ public class CreateReplicationVaultResponseBody extends TeaModel {
         }
 
         /**
-         * VaultId.
+         * The ID of the backup vault.
          */
         public Builder vaultId(String vaultId) {
             this.vaultId = vaultId;

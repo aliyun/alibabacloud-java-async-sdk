@@ -130,19 +130,19 @@ public class CreateReplicationVaultRequest extends Request {
             super();
         } 
 
-        private Builder(CreateReplicationVaultRequest response) {
-            super(response);
-            this.description = response.description;
-            this.redundancyType = response.redundancyType;
-            this.replicationSourceRegionId = response.replicationSourceRegionId;
-            this.replicationSourceVaultId = response.replicationSourceVaultId;
-            this.vaultName = response.vaultName;
-            this.vaultRegionId = response.vaultRegionId;
-            this.vaultStorageClass = response.vaultStorageClass;
+        private Builder(CreateReplicationVaultRequest request) {
+            super(request);
+            this.description = request.description;
+            this.redundancyType = request.redundancyType;
+            this.replicationSourceRegionId = request.replicationSourceRegionId;
+            this.replicationSourceVaultId = request.replicationSourceVaultId;
+            this.vaultName = request.vaultName;
+            this.vaultRegionId = request.vaultRegionId;
+            this.vaultStorageClass = request.vaultStorageClass;
         } 
 
         /**
-         * Description.
+         * The description of the backup vault. The description must be 0 to 255 characters in length.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -151,7 +151,11 @@ public class CreateReplicationVaultRequest extends Request {
         }
 
         /**
-         * RedundancyType.
+         * The data redundancy type of the backup vault. Valid values:
+         * <p>
+         * 
+         * - LRS: Locally redundant storage (LRS) is enabled for the backup vault. HBR stores the copies of each object on multiple devices of different facilities in the same zone. This way, HBR ensures data durability and availability even if hardware failures occur.
+         * - ZRS: Zone-redundant storage (ZRS) is enabled for the backup vault. HBR uses the multi-zone mechanism to distribute data across three zones within the same region. If a zone becomes unavailable, the data can still be accessed.
          */
         public Builder redundancyType(String redundancyType) {
             this.putQueryParameter("RedundancyType", redundancyType);
@@ -160,7 +164,7 @@ public class CreateReplicationVaultRequest extends Request {
         }
 
         /**
-         * ReplicationSourceRegionId.
+         * The ID of the region where the source vault resides.
          */
         public Builder replicationSourceRegionId(String replicationSourceRegionId) {
             this.putQueryParameter("ReplicationSourceRegionId", replicationSourceRegionId);
@@ -169,7 +173,7 @@ public class CreateReplicationVaultRequest extends Request {
         }
 
         /**
-         * ReplicationSourceVaultId.
+         * The ID of the source vault.
          */
         public Builder replicationSourceVaultId(String replicationSourceVaultId) {
             this.putQueryParameter("ReplicationSourceVaultId", replicationSourceVaultId);
@@ -178,7 +182,7 @@ public class CreateReplicationVaultRequest extends Request {
         }
 
         /**
-         * VaultName.
+         * The name of the backup vault. The name must be 1 to 64 characters in length.
          */
         public Builder vaultName(String vaultName) {
             this.putQueryParameter("VaultName", vaultName);
@@ -187,7 +191,7 @@ public class CreateReplicationVaultRequest extends Request {
         }
 
         /**
-         * VaultRegionId.
+         * The ID of the region where the backup vault resides.
          */
         public Builder vaultRegionId(String vaultRegionId) {
             this.putQueryParameter("VaultRegionId", vaultRegionId);
@@ -196,7 +200,7 @@ public class CreateReplicationVaultRequest extends Request {
         }
 
         /**
-         * VaultStorageClass.
+         * The storage type of the backup vault. Valid value: **STANDARD**. The value indicates standard storage.
          */
         public Builder vaultStorageClass(String vaultStorageClass) {
             this.putQueryParameter("VaultStorageClass", vaultStorageClass);

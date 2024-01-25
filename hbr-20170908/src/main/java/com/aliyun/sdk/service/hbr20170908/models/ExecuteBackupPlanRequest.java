@@ -88,16 +88,16 @@ public class ExecuteBackupPlanRequest extends Request {
             super();
         } 
 
-        private Builder(ExecuteBackupPlanRequest response) {
-            super(response);
-            this.planId = response.planId;
-            this.ruleId = response.ruleId;
-            this.sourceType = response.sourceType;
-            this.vaultId = response.vaultId;
+        private Builder(ExecuteBackupPlanRequest request) {
+            super(request);
+            this.planId = request.planId;
+            this.ruleId = request.ruleId;
+            this.sourceType = request.sourceType;
+            this.vaultId = request.vaultId;
         } 
 
         /**
-         * PlanId.
+         * The ID of the backup plan.
          */
         public Builder planId(String planId) {
             this.putQueryParameter("PlanId", planId);
@@ -106,7 +106,7 @@ public class ExecuteBackupPlanRequest extends Request {
         }
 
         /**
-         * RuleId.
+         * The ID of the backup rule.
          */
         public Builder ruleId(String ruleId) {
             this.putQueryParameter("RuleId", ruleId);
@@ -115,7 +115,12 @@ public class ExecuteBackupPlanRequest extends Request {
         }
 
         /**
-         * SourceType.
+         * The type of the data source. Valid values:
+         * <p>
+         * 
+         * *   **ECS_FILE**: Elastic Compute Service (ECS) files
+         * *   **OSS**: Object Storage Service (OSS) buckets
+         * *   **NAS**: Apsara File Storage NAS file systems
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);
@@ -124,7 +129,7 @@ public class ExecuteBackupPlanRequest extends Request {
         }
 
         /**
-         * VaultId.
+         * The ID of the backup vault.
          */
         public Builder vaultId(String vaultId) {
             this.putQueryParameter("VaultId", vaultId);

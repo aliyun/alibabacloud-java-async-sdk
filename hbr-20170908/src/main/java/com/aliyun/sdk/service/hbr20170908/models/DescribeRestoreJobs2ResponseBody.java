@@ -122,7 +122,7 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Code.
+         * The response status code. The status code 200 indicates that the request was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -130,7 +130,7 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The response message. If the request was successful, "successful" is returned. If the request failed, an error message is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +138,7 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number. Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -146,7 +146,7 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Valid values: 1 to 99. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -154,7 +154,7 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -162,7 +162,7 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
         }
 
         /**
-         * RestoreJobs.
+         * The details about the restore jobs.
          */
         public Builder restoreJobs(RestoreJobs restoreJobs) {
             this.restoreJobs = restoreJobs;
@@ -170,7 +170,11 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -178,7 +182,7 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -191,6 +195,188 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
 
     } 
 
+    public static class OtsDetail extends TeaModel {
+        @NameInMap("BatchChannelCount")
+        private Integer batchChannelCount;
+
+        @NameInMap("OverwriteExisting")
+        private Boolean overwriteExisting;
+
+        private OtsDetail(Builder builder) {
+            this.batchChannelCount = builder.batchChannelCount;
+            this.overwriteExisting = builder.overwriteExisting;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static OtsDetail create() {
+            return builder().build();
+        }
+
+        /**
+         * @return batchChannelCount
+         */
+        public Integer getBatchChannelCount() {
+            return this.batchChannelCount;
+        }
+
+        /**
+         * @return overwriteExisting
+         */
+        public Boolean getOverwriteExisting() {
+            return this.overwriteExisting;
+        }
+
+        public static final class Builder {
+            private Integer batchChannelCount; 
+            private Boolean overwriteExisting; 
+
+            /**
+             * The number of channels processed by each Tablestore restore job.
+             */
+            public Builder batchChannelCount(Integer batchChannelCount) {
+                this.batchChannelCount = batchChannelCount;
+                return this;
+            }
+
+            /**
+             * Indicates whether the existing Tablestore restore job was overwritten.
+             */
+            public Builder overwriteExisting(Boolean overwriteExisting) {
+                this.overwriteExisting = overwriteExisting;
+                return this;
+            }
+
+            public OtsDetail build() {
+                return new OtsDetail(this);
+            } 
+
+        } 
+
+    }
+    public static class Report extends TeaModel {
+        @NameInMap("FailedFiles")
+        private String failedFiles;
+
+        @NameInMap("ReportTaskStatus")
+        private String reportTaskStatus;
+
+        @NameInMap("SkippedFiles")
+        private String skippedFiles;
+
+        @NameInMap("SuccessFiles")
+        private String successFiles;
+
+        @NameInMap("TotalFiles")
+        private String totalFiles;
+
+        private Report(Builder builder) {
+            this.failedFiles = builder.failedFiles;
+            this.reportTaskStatus = builder.reportTaskStatus;
+            this.skippedFiles = builder.skippedFiles;
+            this.successFiles = builder.successFiles;
+            this.totalFiles = builder.totalFiles;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Report create() {
+            return builder().build();
+        }
+
+        /**
+         * @return failedFiles
+         */
+        public String getFailedFiles() {
+            return this.failedFiles;
+        }
+
+        /**
+         * @return reportTaskStatus
+         */
+        public String getReportTaskStatus() {
+            return this.reportTaskStatus;
+        }
+
+        /**
+         * @return skippedFiles
+         */
+        public String getSkippedFiles() {
+            return this.skippedFiles;
+        }
+
+        /**
+         * @return successFiles
+         */
+        public String getSuccessFiles() {
+            return this.successFiles;
+        }
+
+        /**
+         * @return totalFiles
+         */
+        public String getTotalFiles() {
+            return this.totalFiles;
+        }
+
+        public static final class Builder {
+            private String failedFiles; 
+            private String reportTaskStatus; 
+            private String skippedFiles; 
+            private String successFiles; 
+            private String totalFiles; 
+
+            /**
+             * FailedFiles.
+             */
+            public Builder failedFiles(String failedFiles) {
+                this.failedFiles = failedFiles;
+                return this;
+            }
+
+            /**
+             * ReportTaskStatus.
+             */
+            public Builder reportTaskStatus(String reportTaskStatus) {
+                this.reportTaskStatus = reportTaskStatus;
+                return this;
+            }
+
+            /**
+             * SkippedFiles.
+             */
+            public Builder skippedFiles(String skippedFiles) {
+                this.skippedFiles = skippedFiles;
+                return this;
+            }
+
+            /**
+             * SuccessFiles.
+             */
+            public Builder successFiles(String successFiles) {
+                this.successFiles = successFiles;
+                return this;
+            }
+
+            /**
+             * TotalFiles.
+             */
+            public Builder totalFiles(String totalFiles) {
+                this.totalFiles = totalFiles;
+                return this;
+            }
+
+            public Report build() {
+                return new Report(this);
+            } 
+
+        } 
+
+    }
     public static class RestoreJob extends TeaModel {
         @NameInMap("ActualBytes")
         private Long actualBytes;
@@ -213,6 +399,15 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
         @NameInMap("CreatedTime")
         private Long createdTime;
 
+        @NameInMap("CrossAccountRoleName")
+        private String crossAccountRoleName;
+
+        @NameInMap("CrossAccountType")
+        private String crossAccountType;
+
+        @NameInMap("CrossAccountUserId")
+        private Long crossAccountUserId;
+
         @NameInMap("ErrorFile")
         private String errorFile;
 
@@ -225,6 +420,9 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
         @NameInMap("ExpireTime")
         private Long expireTime;
 
+        @NameInMap("FailbackDetail")
+        private String failbackDetail;
+
         @NameInMap("Include")
         private String include;
 
@@ -234,14 +432,26 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
         @NameInMap("ItemsTotal")
         private Long itemsTotal;
 
+        @NameInMap("MeteringBytesDone")
+        private Long meteringBytesDone;
+
+        @NameInMap("MeteringBytesTotal")
+        private Long meteringBytesTotal;
+
         @NameInMap("Options")
         private String options;
+
+        @NameInMap("OtsDetail")
+        private OtsDetail otsDetail;
 
         @NameInMap("ParentId")
         private String parentId;
 
         @NameInMap("Progress")
         private Integer progress;
+
+        @NameInMap("Report")
+        private Report report;
 
         @NameInMap("RestoreId")
         private String restoreId;
@@ -266,6 +476,9 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
 
         @NameInMap("Status")
         private String status;
+
+        @NameInMap("StorageClass")
+        private String storageClass;
 
         @NameInMap("TargetBucket")
         private String targetBucket;
@@ -317,16 +530,24 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
             this.clusterId = builder.clusterId;
             this.completeTime = builder.completeTime;
             this.createdTime = builder.createdTime;
+            this.crossAccountRoleName = builder.crossAccountRoleName;
+            this.crossAccountType = builder.crossAccountType;
+            this.crossAccountUserId = builder.crossAccountUserId;
             this.errorFile = builder.errorFile;
             this.errorMessage = builder.errorMessage;
             this.exclude = builder.exclude;
             this.expireTime = builder.expireTime;
+            this.failbackDetail = builder.failbackDetail;
             this.include = builder.include;
             this.itemsDone = builder.itemsDone;
             this.itemsTotal = builder.itemsTotal;
+            this.meteringBytesDone = builder.meteringBytesDone;
+            this.meteringBytesTotal = builder.meteringBytesTotal;
             this.options = builder.options;
+            this.otsDetail = builder.otsDetail;
             this.parentId = builder.parentId;
             this.progress = builder.progress;
+            this.report = builder.report;
             this.restoreId = builder.restoreId;
             this.restoreType = builder.restoreType;
             this.snapshotHash = builder.snapshotHash;
@@ -335,6 +556,7 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
             this.speed = builder.speed;
             this.startTime = builder.startTime;
             this.status = builder.status;
+            this.storageClass = builder.storageClass;
             this.targetBucket = builder.targetBucket;
             this.targetClientId = builder.targetClientId;
             this.targetCreateTime = builder.targetCreateTime;
@@ -409,6 +631,27 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
         }
 
         /**
+         * @return crossAccountRoleName
+         */
+        public String getCrossAccountRoleName() {
+            return this.crossAccountRoleName;
+        }
+
+        /**
+         * @return crossAccountType
+         */
+        public String getCrossAccountType() {
+            return this.crossAccountType;
+        }
+
+        /**
+         * @return crossAccountUserId
+         */
+        public Long getCrossAccountUserId() {
+            return this.crossAccountUserId;
+        }
+
+        /**
          * @return errorFile
          */
         public String getErrorFile() {
@@ -437,6 +680,13 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
         }
 
         /**
+         * @return failbackDetail
+         */
+        public String getFailbackDetail() {
+            return this.failbackDetail;
+        }
+
+        /**
          * @return include
          */
         public String getInclude() {
@@ -458,10 +708,31 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
         }
 
         /**
+         * @return meteringBytesDone
+         */
+        public Long getMeteringBytesDone() {
+            return this.meteringBytesDone;
+        }
+
+        /**
+         * @return meteringBytesTotal
+         */
+        public Long getMeteringBytesTotal() {
+            return this.meteringBytesTotal;
+        }
+
+        /**
          * @return options
          */
         public String getOptions() {
             return this.options;
+        }
+
+        /**
+         * @return otsDetail
+         */
+        public OtsDetail getOtsDetail() {
+            return this.otsDetail;
         }
 
         /**
@@ -476,6 +747,13 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
          */
         public Integer getProgress() {
             return this.progress;
+        }
+
+        /**
+         * @return report
+         */
+        public Report getReport() {
+            return this.report;
         }
 
         /**
@@ -532,6 +810,13 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
          */
         public String getStatus() {
             return this.status;
+        }
+
+        /**
+         * @return storageClass
+         */
+        public String getStorageClass() {
+            return this.storageClass;
         }
 
         /**
@@ -640,16 +925,24 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
             private String clusterId; 
             private Long completeTime; 
             private Long createdTime; 
+            private String crossAccountRoleName; 
+            private String crossAccountType; 
+            private Long crossAccountUserId; 
             private String errorFile; 
             private String errorMessage; 
             private String exclude; 
             private Long expireTime; 
+            private String failbackDetail; 
             private String include; 
             private Long itemsDone; 
             private Long itemsTotal; 
+            private Long meteringBytesDone; 
+            private Long meteringBytesTotal; 
             private String options; 
+            private OtsDetail otsDetail; 
             private String parentId; 
             private Integer progress; 
+            private Report report; 
             private String restoreId; 
             private String restoreType; 
             private String snapshotHash; 
@@ -658,6 +951,7 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
             private Long speed; 
             private Long startTime; 
             private String status; 
+            private String storageClass; 
             private String targetBucket; 
             private String targetClientId; 
             private Long targetCreateTime; 
@@ -674,7 +968,7 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
             private String vaultId; 
 
             /**
-             * ActualBytes.
+             * The actual amount of data that is restored after duplicates are removed. Unit: bytes.
              */
             public Builder actualBytes(Long actualBytes) {
                 this.actualBytes = actualBytes;
@@ -682,7 +976,7 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * ActualItems.
+             * This parameter is valid only if the **SourceType** parameter is set to **ECS_FILE**. This parameter indicates the actual number of objects that are restored by the restore job.
              */
             public Builder actualItems(Long actualItems) {
                 this.actualItems = actualItems;
@@ -690,7 +984,7 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * BytesDone.
+             * The amount of data that was restored. Unit: bytes.
              */
             public Builder bytesDone(Long bytesDone) {
                 this.bytesDone = bytesDone;
@@ -698,7 +992,7 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * BytesTotal.
+             * The total amount of data that is backed up from the data source. Unit: bytes.
              */
             public Builder bytesTotal(Long bytesTotal) {
                 this.bytesTotal = bytesTotal;
@@ -706,7 +1000,7 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterId.
+             * The ID of the client group used for restoration.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -714,7 +1008,7 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * CompleteTime.
+             * The time when the restore job was completed. The value is a UNIX timestamp. Unit: seconds.
              */
             public Builder completeTime(Long completeTime) {
                 this.completeTime = completeTime;
@@ -722,7 +1016,7 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedTime.
+             * The time when the restore job was created. The value is a UNIX timestamp. Unit: seconds.
              */
             public Builder createdTime(Long createdTime) {
                 this.createdTime = createdTime;
@@ -730,7 +1024,35 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorFile.
+             * The name of the RAM role that is created within the source Alibaba Cloud account and assigned to the current Alibaba Cloud account to authorize the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.
+             */
+            public Builder crossAccountRoleName(String crossAccountRoleName) {
+                this.crossAccountRoleName = crossAccountRoleName;
+                return this;
+            }
+
+            /**
+             * Indicates whether data is backed up within the same Alibaba Cloud account or across Alibaba Cloud accounts. Valid values:
+             * <p>
+             * 
+             * *   SELF_ACCOUNT: Data is backed up within the same Alibaba Cloud account.
+             * *   CROSS_ACCOUNT: Data is backed up across Alibaba Cloud accounts.
+             */
+            public Builder crossAccountType(String crossAccountType) {
+                this.crossAccountType = crossAccountType;
+                return this;
+            }
+
+            /**
+             * The ID of the source Alibaba Cloud account that authorizes the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.
+             */
+            public Builder crossAccountUserId(Long crossAccountUserId) {
+                this.crossAccountUserId = crossAccountUserId;
+                return this;
+            }
+
+            /**
+             * The list of the files that failed to be restored.
              */
             public Builder errorFile(String errorFile) {
                 this.errorFile = errorFile;
@@ -738,7 +1060,7 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * The error message that is returned for the restore job.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -746,7 +1068,7 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * Exclude.
+             * This parameter is returned only if the **SourceType** parameter is set to **ECS_FILE**. This parameter indicates the paths to the files that are excluded from the restore job. The value can be 1 to 255 characters in length.
              */
             public Builder exclude(String exclude) {
                 this.exclude = exclude;
@@ -754,7 +1076,7 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * The time when the restore job expires.
              */
             public Builder expireTime(Long expireTime) {
                 this.expireTime = expireTime;
@@ -762,7 +1084,15 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * Include.
+             * FailbackDetail.
+             */
+            public Builder failbackDetail(String failbackDetail) {
+                this.failbackDetail = failbackDetail;
+                return this;
+            }
+
+            /**
+             * The paths to the files that are included in the restore job.
              */
             public Builder include(String include) {
                 this.include = include;
@@ -770,7 +1100,7 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * ItemsDone.
+             * This parameter is valid only if the **SourceType** parameter is set to **ECS_FILE**. This parameter indicates the number of restored objects.
              */
             public Builder itemsDone(Long itemsDone) {
                 this.itemsDone = itemsDone;
@@ -778,7 +1108,7 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * ItemsTotal.
+             * This parameter is valid only if the **SourceType** parameter is set to **ECS_FILE**. This parameter indicates the total number of objects in the data source.
              */
             public Builder itemsTotal(Long itemsTotal) {
                 this.itemsTotal = itemsTotal;
@@ -786,7 +1116,28 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * Options.
+             * MeteringBytesDone.
+             */
+            public Builder meteringBytesDone(Long meteringBytesDone) {
+                this.meteringBytesDone = meteringBytesDone;
+                return this;
+            }
+
+            /**
+             * MeteringBytesTotal.
+             */
+            public Builder meteringBytesTotal(Long meteringBytesTotal) {
+                this.meteringBytesTotal = meteringBytesTotal;
+                return this;
+            }
+
+            /**
+             * This parameter is returned only if the **SourceType** parameter is set to **ECS_FILE**. This parameter indicates whether Windows Volume Shadow Copy Service (VSS) is used to define a restoration path.
+             * <p>
+             * 
+             * *   This parameter is available only for Windows ECS instances.
+             * *   If data changes occur in the backup source, the source data must be the same as the data to be backed up before you can set this parameter to `["UseVSS":true]`.
+             * *   If you use VSS, you cannot restore data from multiple directories.
              */
             public Builder options(String options) {
                 this.options = options;
@@ -794,7 +1145,15 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * ParentId.
+             * The details about the Tablestore instance.
+             */
+            public Builder otsDetail(OtsDetail otsDetail) {
+                this.otsDetail = otsDetail;
+                return this;
+            }
+
+            /**
+             * The ID of the parent job.
              */
             public Builder parentId(String parentId) {
                 this.parentId = parentId;
@@ -802,7 +1161,7 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * Progress.
+             * The progress of the restore job. For example, 10000 indicates that the progress is 100%.
              */
             public Builder progress(Integer progress) {
                 this.progress = progress;
@@ -810,7 +1169,15 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * RestoreId.
+             * Report.
+             */
+            public Builder report(Report report) {
+                this.report = report;
+                return this;
+            }
+
+            /**
+             * The ID of the restore job.
              */
             public Builder restoreId(String restoreId) {
                 this.restoreId = restoreId;
@@ -818,7 +1185,7 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * RestoreType.
+             * The type of the restore job.
              */
             public Builder restoreType(String restoreType) {
                 this.restoreType = restoreType;
@@ -826,7 +1193,7 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * SnapshotHash.
+             * The hash value of the backup snapshot.
              */
             public Builder snapshotHash(String snapshotHash) {
                 this.snapshotHash = snapshotHash;
@@ -834,7 +1201,7 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * SnapshotId.
+             * The ID of the snapshot used for restoration.
              */
             public Builder snapshotId(String snapshotId) {
                 this.snapshotId = snapshotId;
@@ -842,7 +1209,14 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * SourceType.
+             * The type of the data source. Valid values:
+             * <p>
+             * 
+             * *   **ECS_FILE**: ECS files
+             * *   **OSS**: OSS buckets
+             * *   **NAS**: NAS file systems
+             * *   **OTS_TABLE**: Tablestore instances
+             * *   **UDM_ECS**: ECS instances
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -850,7 +1224,7 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * Speed.
+             * The average speed at which data is backed up. Unit: KB/s.
              */
             public Builder speed(Long speed) {
                 this.speed = speed;
@@ -858,7 +1232,7 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The time when the restore job starts. The value is a UNIX timestamp. Unit: seconds.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -866,7 +1240,12 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the restore job. Valid values:
+             * <p>
+             * 
+             * *   **COMPLETE**: The restore job is completed.
+             * *   **PARTIAL_COMPLETE**: The restore job is partially completed.
+             * *   **FAILED**: The restore job has failed.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -874,7 +1253,15 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * TargetBucket.
+             * StorageClass.
+             */
+            public Builder storageClass(String storageClass) {
+                this.storageClass = storageClass;
+                return this;
+            }
+
+            /**
+             * The name of the destination OSS bucket. This parameter is returned only for OSS buckets.
              */
             public Builder targetBucket(String targetBucket) {
                 this.targetBucket = targetBucket;
@@ -882,7 +1269,7 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * TargetClientId.
+             * The ID of the destination client.
              */
             public Builder targetClientId(String targetClientId) {
                 this.targetClientId = targetClientId;
@@ -890,7 +1277,7 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * TargetCreateTime.
+             * This parameter is returned only for NAS file systems. This parameter indicates the time when the file system was created.
              */
             public Builder targetCreateTime(Long targetCreateTime) {
                 this.targetCreateTime = targetCreateTime;
@@ -898,7 +1285,7 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * TargetDataSourceId.
+             * The ID of the destination data source.
              */
             public Builder targetDataSourceId(String targetDataSourceId) {
                 this.targetDataSourceId = targetDataSourceId;
@@ -906,7 +1293,7 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * TargetFileSystemId.
+             * The ID of the destination NAS file system. This parameter is returned only for NAS file systems.
              */
             public Builder targetFileSystemId(String targetFileSystemId) {
                 this.targetFileSystemId = targetFileSystemId;
@@ -914,7 +1301,7 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * TargetInstanceId.
+             * The ID of the destination instance for the restore job.
              */
             public Builder targetInstanceId(String targetInstanceId) {
                 this.targetInstanceId = targetInstanceId;
@@ -922,7 +1309,7 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * TargetInstanceName.
+             * The name of the destination Tablestore instance.
              */
             public Builder targetInstanceName(String targetInstanceName) {
                 this.targetInstanceName = targetInstanceName;
@@ -930,7 +1317,7 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * TargetPath.
+             * The destination file path of the restore job.
              */
             public Builder targetPath(String targetPath) {
                 this.targetPath = targetPath;
@@ -938,7 +1325,7 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * TargetPrefix.
+             * The prefix of the objects that are restored. This parameter is returned only for OSS buckets.
              */
             public Builder targetPrefix(String targetPrefix) {
                 this.targetPrefix = targetPrefix;
@@ -946,7 +1333,7 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * TargetTableName.
+             * The name of the destination table in the Tablestore instance.
              */
             public Builder targetTableName(String targetTableName) {
                 this.targetTableName = targetTableName;
@@ -954,7 +1341,7 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * TargetTime.
+             * The time when the Tablestore instance was backed up. The value is a UNIX timestamp. Unit: seconds.
              */
             public Builder targetTime(Long targetTime) {
                 this.targetTime = targetTime;
@@ -962,7 +1349,7 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * UdmDetail.
+             * The details about ECS instance backup.
              */
             public Builder udmDetail(String udmDetail) {
                 this.udmDetail = udmDetail;
@@ -970,7 +1357,7 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedTime.
+             * The time when the restore job was updated. The value is a UNIX timestamp. Unit: seconds.
              */
             public Builder updatedTime(Long updatedTime) {
                 this.updatedTime = updatedTime;
@@ -978,7 +1365,7 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * VaultId.
+             * The ID of the backup vault.
              */
             public Builder vaultId(String vaultId) {
                 this.vaultId = vaultId;

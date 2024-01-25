@@ -88,12 +88,12 @@ public class UpdateVaultRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateVaultRequest response) {
-            super(response);
-            this.description = response.description;
-            this.resourceGroupId = response.resourceGroupId;
-            this.vaultId = response.vaultId;
-            this.vaultName = response.vaultName;
+        private Builder(UpdateVaultRequest request) {
+            super(request);
+            this.description = request.description;
+            this.resourceGroupId = request.resourceGroupId;
+            this.vaultId = request.vaultId;
+            this.vaultName = request.vaultName;
         } 
 
         /**

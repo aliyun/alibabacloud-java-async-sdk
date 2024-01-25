@@ -74,15 +74,15 @@ public class DescribeTaskRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeTaskRequest response) {
-            super(response);
-            this.resourceGroupId = response.resourceGroupId;
-            this.taskId = response.taskId;
-            this.token = response.token;
+        private Builder(DescribeTaskRequest request) {
+            super(request);
+            this.resourceGroupId = request.resourceGroupId;
+            this.taskId = request.taskId;
+            this.token = request.token;
         } 
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -91,7 +91,7 @@ public class DescribeTaskRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * The ID of the job.
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -100,7 +100,7 @@ public class DescribeTaskRequest extends Request {
         }
 
         /**
-         * Token.
+         * The access token.
          */
         public Builder token(String token) {
             this.putQueryParameter("Token", token);

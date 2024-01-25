@@ -27,7 +27,6 @@ public class DescribeBackupPlansRequest extends Request {
 
     @Query
     @NameInMap("SourceType")
-    @Validation(required = true)
     private String sourceType;
 
     private DescribeBackupPlansRequest(Builder builder) {
@@ -89,16 +88,16 @@ public class DescribeBackupPlansRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeBackupPlansRequest response) {
-            super(response);
-            this.filters = response.filters;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.sourceType = response.sourceType;
+        private Builder(DescribeBackupPlansRequest request) {
+            super(request);
+            this.filters = request.filters;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.sourceType = request.sourceType;
         } 
 
         /**
-         * Filters.
+         * The filter.
          */
         public Builder filters(java.util.List < Filters> filters) {
             this.putQueryParameter("Filters", filters);
@@ -107,7 +106,7 @@ public class DescribeBackupPlansRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -116,7 +115,7 @@ public class DescribeBackupPlansRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Valid values: 1 to 99. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -125,7 +124,14 @@ public class DescribeBackupPlansRequest extends Request {
         }
 
         /**
-         * SourceType.
+         * The type of the data source. Valid values:
+         * <p>
+         * 
+         * *   **ECS_FILE**: Elastic Compute Service (ECS) files
+         * *   **OSS**: Object Storage Service (OSS) buckets
+         * *   **NAS**: Apsara File Storage NAS file systems
+         * *   **OTS**: Tablestore instances
+         * *   **UDM_ECS**: ECS instances
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);
@@ -179,7 +185,16 @@ public class DescribeBackupPlansRequest extends Request {
             private java.util.List < String > values; 
 
             /**
-             * Key.
+             * The keys in the filter. Valid values:
+             * <p>
+             * 
+             * *   **regionId**: the ID of a region
+             * *   **planId**: the ID of a backup plan
+             * *   **sourceType**: the type of a data source
+             * *   **vaultId**: the ID of a backup vault
+             * *   **instanceName**: the name of an instance
+             * *   **instanceId**: the ID of an instance
+             * *   **planName**: the name of a backup plan
              */
             public Builder key(String key) {
                 this.key = key;
@@ -187,7 +202,7 @@ public class DescribeBackupPlansRequest extends Request {
             }
 
             /**
-             * Values.
+             * The values that you want to match in the filter.
              */
             public Builder values(java.util.List < String > values) {
                 this.values = values;

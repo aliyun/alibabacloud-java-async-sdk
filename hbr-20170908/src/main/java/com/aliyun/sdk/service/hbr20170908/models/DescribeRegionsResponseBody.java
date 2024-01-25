@@ -86,7 +86,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code. The status code 200 indicates that the call is successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message that is returned. If the call is successful, "successful" is returned. If the call fails, an error message is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -102,7 +102,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * Regions.
+         * The list of regions.
          */
         public Builder regions(Regions regions) {
             this.regions = regions;
@@ -110,7 +110,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the call is successful.
+         * <p>
+         * 
+         * *   true: The call is successful.
+         * *   false: The call fails.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -182,7 +186,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             private Integer vaultCount; 
 
             /**
-             * LocalName.
+             * The name of the region.
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -190,7 +194,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the region.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -198,7 +202,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * VaultCount.
+             * The number of repositories in the region.
              */
             public Builder vaultCount(Integer vaultCount) {
                 this.vaultCount = vaultCount;

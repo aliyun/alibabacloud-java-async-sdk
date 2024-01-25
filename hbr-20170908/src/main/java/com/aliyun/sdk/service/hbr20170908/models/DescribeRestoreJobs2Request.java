@@ -88,16 +88,16 @@ public class DescribeRestoreJobs2Request extends Request {
             super();
         } 
 
-        private Builder(DescribeRestoreJobs2Request response) {
-            super(response);
-            this.filters = response.filters;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.restoreType = response.restoreType;
+        private Builder(DescribeRestoreJobs2Request request) {
+            super(request);
+            this.filters = request.filters;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.restoreType = request.restoreType;
         } 
 
         /**
-         * Filters.
+         * The keys in the filter.
          */
         public Builder filters(java.util.List < Filters> filters) {
             this.putQueryParameter("Filters", filters);
@@ -106,7 +106,7 @@ public class DescribeRestoreJobs2Request extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number. Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -115,7 +115,7 @@ public class DescribeRestoreJobs2Request extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Valid values: 1 to 99. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -124,7 +124,14 @@ public class DescribeRestoreJobs2Request extends Request {
         }
 
         /**
-         * RestoreType.
+         * The type of the data source. Valid values:
+         * <p>
+         * 
+         * *   **ECS_FILE**: Elastic Compute Service (ECS) files
+         * *   **OSS**: Object Storage Service (OSS) buckets
+         * *   **NAS**: Apsara File Storage NAS file systems
+         * *   **OTS_TABLE**: Tablestore instances
+         * *   **UDM_ECS_ROLLBACK**: ECS instances
          */
         public Builder restoreType(String restoreType) {
             this.putQueryParameter("RestoreType", restoreType);
@@ -190,7 +197,18 @@ public class DescribeRestoreJobs2Request extends Request {
             private java.util.List < String > values; 
 
             /**
-             * Key.
+             * The key in the filter. Valid values:
+             * <p>
+             * 
+             * *   **RegionId**: the region ID
+             * *   **PlanId**: the ID of a backup plan
+             * *   **JobId**: the ID of a backup job
+             * *   **VaultId**: the ID of a backup vault
+             * *   **InstanceId**: the ID of an ECS instance
+             * *   **Bucket**: the name of an OSS bucket
+             * *   **FileSystemId**: the ID of a file system
+             * *   **Status**: the status of a backup job
+             * *   **CompleteTime**: the end time of a backup job
              */
             public Builder key(String key) {
                 this.key = key;
@@ -198,7 +216,19 @@ public class DescribeRestoreJobs2Request extends Request {
             }
 
             /**
-             * Operator.
+             * The matching method. Default value: IN. This parameter specifies the operator that you want to use to match a key and a value in the filter. Valid values:
+             * <p>
+             * 
+             * *   **EQUAL**: equal to
+             * *   **NOT_EQUAL**: not equal to
+             * *   **GREATER_THAN**: greater than
+             * *   **GREATER_THAN_OR_EQUAL**: greater than or equal to
+             * *   **LESS_THAN**: less than
+             * *   **LESS_THAN_OR_EQUAL**: less than or equal to
+             * *   **BETWEEN**: specifies a JSON array as a range. The results must fall within the range in the `[Minimum value,Maximum value]` format.
+             * *   **IN**: specifies an array as a collection. The results must fall within the collection.
+             * 
+             * > If you specify the **CompleteTime** parameter as a key to query backup jobs, you cannot use the IN operator to perform a match.
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -206,7 +236,7 @@ public class DescribeRestoreJobs2Request extends Request {
             }
 
             /**
-             * Values.
+             * The values that you want to match in the filter.
              */
             public Builder values(java.util.List < String > values) {
                 this.values = values;

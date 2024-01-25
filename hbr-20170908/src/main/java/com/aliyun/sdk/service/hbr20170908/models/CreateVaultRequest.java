@@ -13,32 +13,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateVaultRequest extends Request {
     @Query
-    @NameInMap("BucketName")
-    private String bucketName;
-
-    @Query
-    @NameInMap("CompressionAlgorithm")
-    private String compressionAlgorithm;
-
-    @Query
     @NameInMap("Description")
     private String description;
 
     @Query
-    @NameInMap("Endpoint")
-    private String endpoint;
+    @NameInMap("EncryptType")
+    private String encryptType;
 
     @Query
-    @NameInMap("RedundancyType")
-    private String redundancyType;
-
-    @Query
-    @NameInMap("VaultAccessKeyId")
-    private String vaultAccessKeyId;
-
-    @Query
-    @NameInMap("VaultAccessKeySecret")
-    private String vaultAccessKeySecret;
+    @NameInMap("KmsKeyId")
+    private String kmsKeyId;
 
     @Query
     @NameInMap("VaultName")
@@ -60,13 +44,9 @@ public class CreateVaultRequest extends Request {
 
     private CreateVaultRequest(Builder builder) {
         super(builder);
-        this.bucketName = builder.bucketName;
-        this.compressionAlgorithm = builder.compressionAlgorithm;
         this.description = builder.description;
-        this.endpoint = builder.endpoint;
-        this.redundancyType = builder.redundancyType;
-        this.vaultAccessKeyId = builder.vaultAccessKeyId;
-        this.vaultAccessKeySecret = builder.vaultAccessKeySecret;
+        this.encryptType = builder.encryptType;
+        this.kmsKeyId = builder.kmsKeyId;
         this.vaultName = builder.vaultName;
         this.vaultRegionId = builder.vaultRegionId;
         this.vaultStorageClass = builder.vaultStorageClass;
@@ -87,20 +67,6 @@ public class CreateVaultRequest extends Request {
     }
 
     /**
-     * @return bucketName
-     */
-    public String getBucketName() {
-        return this.bucketName;
-    }
-
-    /**
-     * @return compressionAlgorithm
-     */
-    public String getCompressionAlgorithm() {
-        return this.compressionAlgorithm;
-    }
-
-    /**
      * @return description
      */
     public String getDescription() {
@@ -108,31 +74,17 @@ public class CreateVaultRequest extends Request {
     }
 
     /**
-     * @return endpoint
+     * @return encryptType
      */
-    public String getEndpoint() {
-        return this.endpoint;
+    public String getEncryptType() {
+        return this.encryptType;
     }
 
     /**
-     * @return redundancyType
+     * @return kmsKeyId
      */
-    public String getRedundancyType() {
-        return this.redundancyType;
-    }
-
-    /**
-     * @return vaultAccessKeyId
-     */
-    public String getVaultAccessKeyId() {
-        return this.vaultAccessKeyId;
-    }
-
-    /**
-     * @return vaultAccessKeySecret
-     */
-    public String getVaultAccessKeySecret() {
-        return this.vaultAccessKeySecret;
+    public String getKmsKeyId() {
+        return this.kmsKeyId;
     }
 
     /**
@@ -164,13 +116,9 @@ public class CreateVaultRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateVaultRequest, Builder> {
-        private String bucketName; 
-        private String compressionAlgorithm; 
         private String description; 
-        private String endpoint; 
-        private String redundancyType; 
-        private String vaultAccessKeyId; 
-        private String vaultAccessKeySecret; 
+        private String encryptType; 
+        private String kmsKeyId; 
         private String vaultName; 
         private String vaultRegionId; 
         private String vaultStorageClass; 
@@ -180,41 +128,19 @@ public class CreateVaultRequest extends Request {
             super();
         } 
 
-        private Builder(CreateVaultRequest response) {
-            super(response);
-            this.bucketName = response.bucketName;
-            this.compressionAlgorithm = response.compressionAlgorithm;
-            this.description = response.description;
-            this.endpoint = response.endpoint;
-            this.redundancyType = response.redundancyType;
-            this.vaultAccessKeyId = response.vaultAccessKeyId;
-            this.vaultAccessKeySecret = response.vaultAccessKeySecret;
-            this.vaultName = response.vaultName;
-            this.vaultRegionId = response.vaultRegionId;
-            this.vaultStorageClass = response.vaultStorageClass;
-            this.vaultType = response.vaultType;
+        private Builder(CreateVaultRequest request) {
+            super(request);
+            this.description = request.description;
+            this.encryptType = request.encryptType;
+            this.kmsKeyId = request.kmsKeyId;
+            this.vaultName = request.vaultName;
+            this.vaultRegionId = request.vaultRegionId;
+            this.vaultStorageClass = request.vaultStorageClass;
+            this.vaultType = request.vaultType;
         } 
 
         /**
-         * BucketName.
-         */
-        public Builder bucketName(String bucketName) {
-            this.putQueryParameter("BucketName", bucketName);
-            this.bucketName = bucketName;
-            return this;
-        }
-
-        /**
-         * CompressionAlgorithm.
-         */
-        public Builder compressionAlgorithm(String compressionAlgorithm) {
-            this.putQueryParameter("CompressionAlgorithm", compressionAlgorithm);
-            this.compressionAlgorithm = compressionAlgorithm;
-            return this;
-        }
-
-        /**
-         * Description.
+         * The description of the backup vault. The description must be 0 to 255 characters in length.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -223,43 +149,29 @@ public class CreateVaultRequest extends Request {
         }
 
         /**
-         * Endpoint.
+         * The method that is used to encrypt the source data. This parameter is valid only if you set the VaultType parameter to STANDARD or OTS_BACKUP. Valid values:
+         * <p>
+         * 
+         * *   **HBR_PRIVATE**: The source data is encrypted by using the built-in encryption method of Hybrid Backup Recovery (HBR).
+         * *   **KMS**: The source data is encrypted by using Key Management Service (KMS).
          */
-        public Builder endpoint(String endpoint) {
-            this.putQueryParameter("Endpoint", endpoint);
-            this.endpoint = endpoint;
+        public Builder encryptType(String encryptType) {
+            this.putQueryParameter("EncryptType", encryptType);
+            this.encryptType = encryptType;
             return this;
         }
 
         /**
-         * RedundancyType.
+         * The customer master key (CMK) created in KMS or the alias of the key. This parameter is required only if you set the EncryptType parameter to KMS.
          */
-        public Builder redundancyType(String redundancyType) {
-            this.putQueryParameter("RedundancyType", redundancyType);
-            this.redundancyType = redundancyType;
+        public Builder kmsKeyId(String kmsKeyId) {
+            this.putQueryParameter("KmsKeyId", kmsKeyId);
+            this.kmsKeyId = kmsKeyId;
             return this;
         }
 
         /**
-         * VaultAccessKeyId.
-         */
-        public Builder vaultAccessKeyId(String vaultAccessKeyId) {
-            this.putQueryParameter("VaultAccessKeyId", vaultAccessKeyId);
-            this.vaultAccessKeyId = vaultAccessKeyId;
-            return this;
-        }
-
-        /**
-         * VaultAccessKeySecret.
-         */
-        public Builder vaultAccessKeySecret(String vaultAccessKeySecret) {
-            this.putQueryParameter("VaultAccessKeySecret", vaultAccessKeySecret);
-            this.vaultAccessKeySecret = vaultAccessKeySecret;
-            return this;
-        }
-
-        /**
-         * VaultName.
+         * The name of the backup vault. The name must be 1 to 64 characters in length.
          */
         public Builder vaultName(String vaultName) {
             this.putQueryParameter("VaultName", vaultName);
@@ -268,7 +180,7 @@ public class CreateVaultRequest extends Request {
         }
 
         /**
-         * VaultRegionId.
+         * The ID of the region where the backup vault resides.
          */
         public Builder vaultRegionId(String vaultRegionId) {
             this.putQueryParameter("VaultRegionId", vaultRegionId);
@@ -277,7 +189,7 @@ public class CreateVaultRequest extends Request {
         }
 
         /**
-         * VaultStorageClass.
+         * The storage type of the backup vault. Valid value: **STANDARD**, which indicates standard storage.
          */
         public Builder vaultStorageClass(String vaultStorageClass) {
             this.putQueryParameter("VaultStorageClass", vaultStorageClass);
@@ -286,7 +198,11 @@ public class CreateVaultRequest extends Request {
         }
 
         /**
-         * VaultType.
+         * The type of the backup vault. Valid value
+         * <p>
+         * 
+         * *   **STANDARD**: standard backup vault
+         * *   **OTS_BACKUP**: backup vault for Tablestore
          */
         public Builder vaultType(String vaultType) {
             this.putQueryParameter("VaultType", vaultType);

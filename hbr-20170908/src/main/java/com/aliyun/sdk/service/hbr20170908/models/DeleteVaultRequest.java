@@ -74,15 +74,15 @@ public class DeleteVaultRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteVaultRequest response) {
-            super(response);
-            this.resourceGroupId = response.resourceGroupId;
-            this.token = response.token;
-            this.vaultId = response.vaultId;
+        private Builder(DeleteVaultRequest request) {
+            super(request);
+            this.resourceGroupId = request.resourceGroupId;
+            this.token = request.token;
+            this.vaultId = request.vaultId;
         } 
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -91,7 +91,7 @@ public class DeleteVaultRequest extends Request {
         }
 
         /**
-         * Token.
+         * The token.
          */
         public Builder token(String token) {
             this.putQueryParameter("Token", token);
@@ -100,7 +100,7 @@ public class DeleteVaultRequest extends Request {
         }
 
         /**
-         * VaultId.
+         * The ID of the backup vault.
          */
         public Builder vaultId(String vaultId) {
             this.putQueryParameter("VaultId", vaultId);

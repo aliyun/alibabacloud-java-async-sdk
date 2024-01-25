@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UpdateClientSettingsRequest extends Request {
     @Query
+    @NameInMap("AlertOnPartialComplete")
+    private Boolean alertOnPartialComplete;
+
+    @Query
     @NameInMap("ClientId")
     @Validation(required = true)
     private String clientId;
@@ -29,6 +33,11 @@ public class UpdateClientSettingsRequest extends Request {
     @NameInMap("MaxCpuCore")
     @Validation(maximum = 999)
     private Integer maxCpuCore;
+
+    @Query
+    @NameInMap("MaxMemory")
+    @Validation(maximum = 1099511627776D)
+    private Long maxMemory;
 
     @Query
     @NameInMap("MaxWorker")
@@ -66,10 +75,12 @@ public class UpdateClientSettingsRequest extends Request {
 
     private UpdateClientSettingsRequest(Builder builder) {
         super(builder);
+        this.alertOnPartialComplete = builder.alertOnPartialComplete;
         this.clientId = builder.clientId;
         this.dataNetworkType = builder.dataNetworkType;
         this.dataProxySetting = builder.dataProxySetting;
         this.maxCpuCore = builder.maxCpuCore;
+        this.maxMemory = builder.maxMemory;
         this.maxWorker = builder.maxWorker;
         this.proxyHost = builder.proxyHost;
         this.proxyPassword = builder.proxyPassword;
@@ -91,6 +102,13 @@ public class UpdateClientSettingsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return alertOnPartialComplete
+     */
+    public Boolean getAlertOnPartialComplete() {
+        return this.alertOnPartialComplete;
     }
 
     /**
@@ -119,6 +137,13 @@ public class UpdateClientSettingsRequest extends Request {
      */
     public Integer getMaxCpuCore() {
         return this.maxCpuCore;
+    }
+
+    /**
+     * @return maxMemory
+     */
+    public Long getMaxMemory() {
+        return this.maxMemory;
     }
 
     /**
@@ -178,10 +203,12 @@ public class UpdateClientSettingsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateClientSettingsRequest, Builder> {
+        private Boolean alertOnPartialComplete; 
         private String clientId; 
         private String dataNetworkType; 
         private String dataProxySetting; 
         private Integer maxCpuCore; 
+        private Long maxMemory; 
         private Integer maxWorker; 
         private String proxyHost; 
         private String proxyPassword; 
@@ -195,24 +222,35 @@ public class UpdateClientSettingsRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateClientSettingsRequest response) {
-            super(response);
-            this.clientId = response.clientId;
-            this.dataNetworkType = response.dataNetworkType;
-            this.dataProxySetting = response.dataProxySetting;
-            this.maxCpuCore = response.maxCpuCore;
-            this.maxWorker = response.maxWorker;
-            this.proxyHost = response.proxyHost;
-            this.proxyPassword = response.proxyPassword;
-            this.proxyPort = response.proxyPort;
-            this.proxyUser = response.proxyUser;
-            this.resourceGroupId = response.resourceGroupId;
-            this.useHttps = response.useHttps;
-            this.vaultId = response.vaultId;
+        private Builder(UpdateClientSettingsRequest request) {
+            super(request);
+            this.alertOnPartialComplete = request.alertOnPartialComplete;
+            this.clientId = request.clientId;
+            this.dataNetworkType = request.dataNetworkType;
+            this.dataProxySetting = request.dataProxySetting;
+            this.maxCpuCore = request.maxCpuCore;
+            this.maxMemory = request.maxMemory;
+            this.maxWorker = request.maxWorker;
+            this.proxyHost = request.proxyHost;
+            this.proxyPassword = request.proxyPassword;
+            this.proxyPort = request.proxyPort;
+            this.proxyUser = request.proxyUser;
+            this.resourceGroupId = request.resourceGroupId;
+            this.useHttps = request.useHttps;
+            this.vaultId = request.vaultId;
         } 
 
         /**
-         * ClientId.
+         * Specifies whether to generate alert for partially completed jobs. This parameter is valid only for on-premises file backup and ECS file backup.
+         */
+        public Builder alertOnPartialComplete(Boolean alertOnPartialComplete) {
+            this.putQueryParameter("AlertOnPartialComplete", alertOnPartialComplete);
+            this.alertOnPartialComplete = alertOnPartialComplete;
+            return this;
+        }
+
+        /**
+         * The ID of the HBR client.
          */
         public Builder clientId(String clientId) {
             this.putQueryParameter("ClientId", clientId);
@@ -221,7 +259,12 @@ public class UpdateClientSettingsRequest extends Request {
         }
 
         /**
-         * DataNetworkType.
+         * The type of the endpoint on the data plane. Valid values:
+         * <p>
+         * 
+         * *   **PUBLIC**: Internet
+         * *   **VPC**: virtual private cloud (VPC)
+         * *   **CLASSIC**: classic network
          */
         public Builder dataNetworkType(String dataNetworkType) {
             this.putQueryParameter("DataNetworkType", dataNetworkType);
@@ -230,7 +273,12 @@ public class UpdateClientSettingsRequest extends Request {
         }
 
         /**
-         * DataProxySetting.
+         * The proxy configuration on the data plane. Valid values:
+         * <p>
+         * 
+         * *   **DISABLE**: No proxy is used.
+         * *   **USE_CONTROL_PROXY** (default): The configuration is the same as that on the control plane.
+         * *   **CUSTOM**: The configuration is customized (HTTP).
          */
         public Builder dataProxySetting(String dataProxySetting) {
             this.putQueryParameter("DataProxySetting", dataProxySetting);
@@ -239,7 +287,7 @@ public class UpdateClientSettingsRequest extends Request {
         }
 
         /**
-         * MaxCpuCore.
+         * The number of CPU cores used by a single backup job. The value 0 indicates that the number is unlimited.
          */
         public Builder maxCpuCore(Integer maxCpuCore) {
             this.putQueryParameter("MaxCpuCore", maxCpuCore);
@@ -248,7 +296,16 @@ public class UpdateClientSettingsRequest extends Request {
         }
 
         /**
-         * MaxWorker.
+         * The maximum memory that can be used by the client. Unit: bytes. Only V2.13.0 and later are supported.
+         */
+        public Builder maxMemory(Long maxMemory) {
+            this.putQueryParameter("MaxMemory", maxMemory);
+            this.maxMemory = maxMemory;
+            return this;
+        }
+
+        /**
+         * The number of concurrent backup jobs. The value 0 indicates that the number is unlimited.
          */
         public Builder maxWorker(Integer maxWorker) {
             this.putQueryParameter("MaxWorker", maxWorker);
@@ -257,7 +314,7 @@ public class UpdateClientSettingsRequest extends Request {
         }
 
         /**
-         * ProxyHost.
+         * The custom host IP address of the proxy server on the data plane.
          */
         public Builder proxyHost(String proxyHost) {
             this.putQueryParameter("ProxyHost", proxyHost);
@@ -266,7 +323,7 @@ public class UpdateClientSettingsRequest extends Request {
         }
 
         /**
-         * ProxyPassword.
+         * The custom password of the proxy server on the data plane.
          */
         public Builder proxyPassword(String proxyPassword) {
             this.putQueryParameter("ProxyPassword", proxyPassword);
@@ -275,7 +332,7 @@ public class UpdateClientSettingsRequest extends Request {
         }
 
         /**
-         * ProxyPort.
+         * The custom host port of the proxy server on the data plane.
          */
         public Builder proxyPort(Integer proxyPort) {
             this.putQueryParameter("ProxyPort", proxyPort);
@@ -284,7 +341,7 @@ public class UpdateClientSettingsRequest extends Request {
         }
 
         /**
-         * ProxyUser.
+         * The custom username of the proxy server on the data plane.
          */
         public Builder proxyUser(String proxyUser) {
             this.putQueryParameter("ProxyUser", proxyUser);
@@ -293,7 +350,7 @@ public class UpdateClientSettingsRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -302,7 +359,11 @@ public class UpdateClientSettingsRequest extends Request {
         }
 
         /**
-         * UseHttps.
+         * Specifies whether to transmit the data on the data plane over HTTPS. Valid values:
+         * <p>
+         * 
+         * *   true: Data is transmitted over HTTPS.
+         * *   false: Data is transmitted over HTTP.
          */
         public Builder useHttps(Boolean useHttps) {
             this.putQueryParameter("UseHttps", useHttps);
@@ -311,7 +372,7 @@ public class UpdateClientSettingsRequest extends Request {
         }
 
         /**
-         * VaultId.
+         * The ID of the backup vault. This parameter is required for the old HBR client.
          */
         public Builder vaultId(String vaultId) {
             this.putQueryParameter("VaultId", vaultId);

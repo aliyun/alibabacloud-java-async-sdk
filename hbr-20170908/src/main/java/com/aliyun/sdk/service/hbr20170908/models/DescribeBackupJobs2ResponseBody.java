@@ -122,7 +122,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * BackupJobs.
+         * The backup jobs that meet the specified conditions.
          */
         public Builder backupJobs(BackupJobs backupJobs) {
             this.backupJobs = backupJobs;
@@ -130,7 +130,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * The HTTP status code. The status code 200 indicates that the call is successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -138,7 +138,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message that is returned. If the call is successful, "successful" is returned. If the call fails, an error message is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -146,7 +146,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page. Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -154,7 +154,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned on each page. Valid values: 1 to 99. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -162,7 +162,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +170,11 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the call is successful. Valid values:
+         * <p>
+         * 
+         * *   true: The call is successful.
+         * *   false: The call fails.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -178,7 +182,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of returned backup jobs that meet the specified conditions.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -191,6 +195,248 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
 
     } 
 
+    public static class DiskNativeSnapshotIdList extends TeaModel {
+        @NameInMap("DiskNativeSnapshotId")
+        private java.util.List < String > diskNativeSnapshotId;
+
+        private DiskNativeSnapshotIdList(Builder builder) {
+            this.diskNativeSnapshotId = builder.diskNativeSnapshotId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DiskNativeSnapshotIdList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return diskNativeSnapshotId
+         */
+        public java.util.List < String > getDiskNativeSnapshotId() {
+            return this.diskNativeSnapshotId;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > diskNativeSnapshotId; 
+
+            /**
+             * DiskNativeSnapshotId.
+             */
+            public Builder diskNativeSnapshotId(java.util.List < String > diskNativeSnapshotId) {
+                this.diskNativeSnapshotId = diskNativeSnapshotId;
+                return this;
+            }
+
+            public DiskNativeSnapshotIdList build() {
+                return new DiskNativeSnapshotIdList(this);
+            } 
+
+        } 
+
+    }
+    public static class Detail extends TeaModel {
+        @NameInMap("DestinationNativeSnapshotErrorMessage")
+        private String destinationNativeSnapshotErrorMessage;
+
+        @NameInMap("DestinationNativeSnapshotId")
+        private String destinationNativeSnapshotId;
+
+        @NameInMap("DestinationNativeSnapshotProgress")
+        private Integer destinationNativeSnapshotProgress;
+
+        @NameInMap("DestinationNativeSnapshotStatus")
+        private String destinationNativeSnapshotStatus;
+
+        @NameInMap("DestinationRetention")
+        private Long destinationRetention;
+
+        @NameInMap("DestinationSnapshotId")
+        private String destinationSnapshotId;
+
+        @NameInMap("DiskNativeSnapshotIdList")
+        private DiskNativeSnapshotIdList diskNativeSnapshotIdList;
+
+        @NameInMap("DoCopy")
+        private Boolean doCopy;
+
+        @NameInMap("NativeSnapshotId")
+        private String nativeSnapshotId;
+
+        private Detail(Builder builder) {
+            this.destinationNativeSnapshotErrorMessage = builder.destinationNativeSnapshotErrorMessage;
+            this.destinationNativeSnapshotId = builder.destinationNativeSnapshotId;
+            this.destinationNativeSnapshotProgress = builder.destinationNativeSnapshotProgress;
+            this.destinationNativeSnapshotStatus = builder.destinationNativeSnapshotStatus;
+            this.destinationRetention = builder.destinationRetention;
+            this.destinationSnapshotId = builder.destinationSnapshotId;
+            this.diskNativeSnapshotIdList = builder.diskNativeSnapshotIdList;
+            this.doCopy = builder.doCopy;
+            this.nativeSnapshotId = builder.nativeSnapshotId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Detail create() {
+            return builder().build();
+        }
+
+        /**
+         * @return destinationNativeSnapshotErrorMessage
+         */
+        public String getDestinationNativeSnapshotErrorMessage() {
+            return this.destinationNativeSnapshotErrorMessage;
+        }
+
+        /**
+         * @return destinationNativeSnapshotId
+         */
+        public String getDestinationNativeSnapshotId() {
+            return this.destinationNativeSnapshotId;
+        }
+
+        /**
+         * @return destinationNativeSnapshotProgress
+         */
+        public Integer getDestinationNativeSnapshotProgress() {
+            return this.destinationNativeSnapshotProgress;
+        }
+
+        /**
+         * @return destinationNativeSnapshotStatus
+         */
+        public String getDestinationNativeSnapshotStatus() {
+            return this.destinationNativeSnapshotStatus;
+        }
+
+        /**
+         * @return destinationRetention
+         */
+        public Long getDestinationRetention() {
+            return this.destinationRetention;
+        }
+
+        /**
+         * @return destinationSnapshotId
+         */
+        public String getDestinationSnapshotId() {
+            return this.destinationSnapshotId;
+        }
+
+        /**
+         * @return diskNativeSnapshotIdList
+         */
+        public DiskNativeSnapshotIdList getDiskNativeSnapshotIdList() {
+            return this.diskNativeSnapshotIdList;
+        }
+
+        /**
+         * @return doCopy
+         */
+        public Boolean getDoCopy() {
+            return this.doCopy;
+        }
+
+        /**
+         * @return nativeSnapshotId
+         */
+        public String getNativeSnapshotId() {
+            return this.nativeSnapshotId;
+        }
+
+        public static final class Builder {
+            private String destinationNativeSnapshotErrorMessage; 
+            private String destinationNativeSnapshotId; 
+            private Integer destinationNativeSnapshotProgress; 
+            private String destinationNativeSnapshotStatus; 
+            private Long destinationRetention; 
+            private String destinationSnapshotId; 
+            private DiskNativeSnapshotIdList diskNativeSnapshotIdList; 
+            private Boolean doCopy; 
+            private String nativeSnapshotId; 
+
+            /**
+             * The information about the remote replication failure.
+             */
+            public Builder destinationNativeSnapshotErrorMessage(String destinationNativeSnapshotErrorMessage) {
+                this.destinationNativeSnapshotErrorMessage = destinationNativeSnapshotErrorMessage;
+                return this;
+            }
+
+            /**
+             * The ID of the remote replication snapshot.
+             */
+            public Builder destinationNativeSnapshotId(String destinationNativeSnapshotId) {
+                this.destinationNativeSnapshotId = destinationNativeSnapshotId;
+                return this;
+            }
+
+            /**
+             * The progress of the remote replication.
+             */
+            public Builder destinationNativeSnapshotProgress(Integer destinationNativeSnapshotProgress) {
+                this.destinationNativeSnapshotProgress = destinationNativeSnapshotProgress;
+                return this;
+            }
+
+            /**
+             * The state of the remote replication.
+             */
+            public Builder destinationNativeSnapshotStatus(String destinationNativeSnapshotStatus) {
+                this.destinationNativeSnapshotStatus = destinationNativeSnapshotStatus;
+                return this;
+            }
+
+            /**
+             * The retention period of the remote replication backup.
+             */
+            public Builder destinationRetention(Long destinationRetention) {
+                this.destinationRetention = destinationRetention;
+                return this;
+            }
+
+            /**
+             * The ID of the remote replication backup.
+             */
+            public Builder destinationSnapshotId(String destinationSnapshotId) {
+                this.destinationSnapshotId = destinationSnapshotId;
+                return this;
+            }
+
+            /**
+             * The mapping between snapshots and disks.
+             */
+            public Builder diskNativeSnapshotIdList(DiskNativeSnapshotIdList diskNativeSnapshotIdList) {
+                this.diskNativeSnapshotIdList = diskNativeSnapshotIdList;
+                return this;
+            }
+
+            /**
+             * Indicates whether remote replication is enabled.
+             */
+            public Builder doCopy(Boolean doCopy) {
+                this.doCopy = doCopy;
+                return this;
+            }
+
+            /**
+             * The ID of the backup snapshot.
+             */
+            public Builder nativeSnapshotId(String nativeSnapshotId) {
+                this.nativeSnapshotId = nativeSnapshotId;
+                return this;
+            }
+
+            public Detail build() {
+                return new Detail(this);
+            } 
+
+        } 
+
+    }
     public static class TableNames extends TeaModel {
         @NameInMap("TableName")
         private java.util.List < String > tableName;
@@ -259,7 +505,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             private TableNames tableNames; 
 
             /**
-             * TableNames.
+             * The names of the tables in the Tablestore instance.
              */
             public Builder tableNames(TableNames tableNames) {
                 this.tableNames = tableNames;
@@ -318,6 +564,9 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
         @NameInMap("ActualBytes")
         private Long actualBytes;
 
+        @NameInMap("ActualFiles")
+        private Long actualFiles;
+
         @NameInMap("ActualItems")
         private Long actualItems;
 
@@ -333,6 +582,9 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
         @NameInMap("BytesTotal")
         private Long bytesTotal;
 
+        @NameInMap("ChangeListPath")
+        private String changeListPath;
+
         @NameInMap("ClientId")
         private String clientId;
 
@@ -345,6 +597,27 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
         @NameInMap("CreatedTime")
         private Long createdTime;
 
+        @NameInMap("CrossAccountRoleName")
+        private String crossAccountRoleName;
+
+        @NameInMap("CrossAccountType")
+        private String crossAccountType;
+
+        @NameInMap("CrossAccountUserId")
+        private Long crossAccountUserId;
+
+        @NameInMap("DestDataSourceDetail")
+        private String destDataSourceDetail;
+
+        @NameInMap("DestDataSourceId")
+        private String destDataSourceId;
+
+        @NameInMap("DestSourceType")
+        private String destSourceType;
+
+        @NameInMap("Detail")
+        private Detail detail;
+
         @NameInMap("ErrorMessage")
         private String errorMessage;
 
@@ -353,6 +626,15 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
 
         @NameInMap("FileSystemId")
         private String fileSystemId;
+
+        @NameInMap("FilesDone")
+        private Long filesDone;
+
+        @NameInMap("FilesTotal")
+        private Long filesTotal;
+
+        @NameInMap("Identifier")
+        private String identifier;
 
         @NameInMap("Include")
         private String include;
@@ -419,18 +701,30 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
 
         private BackupJob(Builder builder) {
             this.actualBytes = builder.actualBytes;
+            this.actualFiles = builder.actualFiles;
             this.actualItems = builder.actualItems;
             this.backupType = builder.backupType;
             this.bucket = builder.bucket;
             this.bytesDone = builder.bytesDone;
             this.bytesTotal = builder.bytesTotal;
+            this.changeListPath = builder.changeListPath;
             this.clientId = builder.clientId;
             this.completeTime = builder.completeTime;
             this.createTime = builder.createTime;
             this.createdTime = builder.createdTime;
+            this.crossAccountRoleName = builder.crossAccountRoleName;
+            this.crossAccountType = builder.crossAccountType;
+            this.crossAccountUserId = builder.crossAccountUserId;
+            this.destDataSourceDetail = builder.destDataSourceDetail;
+            this.destDataSourceId = builder.destDataSourceId;
+            this.destSourceType = builder.destSourceType;
+            this.detail = builder.detail;
             this.errorMessage = builder.errorMessage;
             this.exclude = builder.exclude;
             this.fileSystemId = builder.fileSystemId;
+            this.filesDone = builder.filesDone;
+            this.filesTotal = builder.filesTotal;
+            this.identifier = builder.identifier;
             this.include = builder.include;
             this.instanceId = builder.instanceId;
             this.instanceName = builder.instanceName;
@@ -470,6 +764,13 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
         }
 
         /**
+         * @return actualFiles
+         */
+        public Long getActualFiles() {
+            return this.actualFiles;
+        }
+
+        /**
          * @return actualItems
          */
         public Long getActualItems() {
@@ -505,6 +806,13 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
         }
 
         /**
+         * @return changeListPath
+         */
+        public String getChangeListPath() {
+            return this.changeListPath;
+        }
+
+        /**
          * @return clientId
          */
         public String getClientId() {
@@ -533,6 +841,55 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
         }
 
         /**
+         * @return crossAccountRoleName
+         */
+        public String getCrossAccountRoleName() {
+            return this.crossAccountRoleName;
+        }
+
+        /**
+         * @return crossAccountType
+         */
+        public String getCrossAccountType() {
+            return this.crossAccountType;
+        }
+
+        /**
+         * @return crossAccountUserId
+         */
+        public Long getCrossAccountUserId() {
+            return this.crossAccountUserId;
+        }
+
+        /**
+         * @return destDataSourceDetail
+         */
+        public String getDestDataSourceDetail() {
+            return this.destDataSourceDetail;
+        }
+
+        /**
+         * @return destDataSourceId
+         */
+        public String getDestDataSourceId() {
+            return this.destDataSourceId;
+        }
+
+        /**
+         * @return destSourceType
+         */
+        public String getDestSourceType() {
+            return this.destSourceType;
+        }
+
+        /**
+         * @return detail
+         */
+        public Detail getDetail() {
+            return this.detail;
+        }
+
+        /**
          * @return errorMessage
          */
         public String getErrorMessage() {
@@ -551,6 +908,27 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
          */
         public String getFileSystemId() {
             return this.fileSystemId;
+        }
+
+        /**
+         * @return filesDone
+         */
+        public Long getFilesDone() {
+            return this.filesDone;
+        }
+
+        /**
+         * @return filesTotal
+         */
+        public Long getFilesTotal() {
+            return this.filesTotal;
+        }
+
+        /**
+         * @return identifier
+         */
+        public String getIdentifier() {
+            return this.identifier;
         }
 
         /**
@@ -702,18 +1080,30 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long actualBytes; 
+            private Long actualFiles; 
             private Long actualItems; 
             private String backupType; 
             private String bucket; 
             private Long bytesDone; 
             private Long bytesTotal; 
+            private String changeListPath; 
             private String clientId; 
             private Long completeTime; 
             private Long createTime; 
             private Long createdTime; 
+            private String crossAccountRoleName; 
+            private String crossAccountType; 
+            private Long crossAccountUserId; 
+            private String destDataSourceDetail; 
+            private String destDataSourceId; 
+            private String destSourceType; 
+            private Detail detail; 
             private String errorMessage; 
             private String exclude; 
             private String fileSystemId; 
+            private Long filesDone; 
+            private Long filesTotal; 
+            private String identifier; 
             private String include; 
             private String instanceId; 
             private String instanceName; 
@@ -737,7 +1127,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             private String vaultId; 
 
             /**
-             * ActualBytes.
+             * The actual amount of data that is backed up after the system removes duplicate files. Unit: bytes.
              */
             public Builder actualBytes(Long actualBytes) {
                 this.actualBytes = actualBytes;
@@ -745,7 +1135,15 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * ActualItems.
+             * The number of files that are actually processed.
+             */
+            public Builder actualFiles(Long actualFiles) {
+                this.actualFiles = actualFiles;
+                return this;
+            }
+
+            /**
+             * The actual number of objects that are backed up by the backup job. This parameter is returned only if the value of **SourceType** is **ECS_FILE**.
              */
             public Builder actualItems(Long actualItems) {
                 this.actualItems = actualItems;
@@ -753,7 +1151,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * BackupType.
+             * The backup type. Only **COMPLETE** may be returned, which indicates full backup.
              */
             public Builder backupType(String backupType) {
                 this.backupType = backupType;
@@ -761,7 +1159,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * Bucket.
+             * The name of the OSS bucket that is backed up. This parameter is returned only if the value of **SourceType** is **OSS**.
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -769,7 +1167,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * BytesDone.
+             * The actual amount of data that is generated by incremental backups. Unit: bytes.
              */
             public Builder bytesDone(Long bytesDone) {
                 this.bytesDone = bytesDone;
@@ -777,7 +1175,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * BytesTotal.
+             * The total amount of data that is backed up from the data source. Unit: bytes.
              */
             public Builder bytesTotal(Long bytesTotal) {
                 this.bytesTotal = bytesTotal;
@@ -785,7 +1183,15 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * ClientId.
+             * The configurations of the incremental file synchronization. This parameter is returned only for data synchronization.
+             */
+            public Builder changeListPath(String changeListPath) {
+                this.changeListPath = changeListPath;
+                return this;
+            }
+
+            /**
+             * The ID of the backup client. This parameter is returned only if the value of **SourceType** is **ECS_FILE**.
              */
             public Builder clientId(String clientId) {
                 this.clientId = clientId;
@@ -793,7 +1199,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * CompleteTime.
+             * The time when the backup job was complete. This value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder completeTime(Long completeTime) {
                 this.completeTime = completeTime;
@@ -801,7 +1207,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the file system was created. This parameter is returned only if the value of **SourceType** is **NAS**. This value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -809,7 +1215,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedTime.
+             * The time when the backup job was created. This value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder createdTime(Long createdTime) {
                 this.createdTime = createdTime;
@@ -817,7 +1223,67 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * The name of the Resource Access Management (RAM) role that is created within the source Alibaba Cloud account and assigned to the current Alibaba Cloud account to authorize the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.
+             */
+            public Builder crossAccountRoleName(String crossAccountRoleName) {
+                this.crossAccountRoleName = crossAccountRoleName;
+                return this;
+            }
+
+            /**
+             * The backup type. Valid values:
+             * <p>
+             * 
+             * *   SELF_ACCOUNT: Data is backed up within the same Alibaba Cloud account.
+             * *   CROSS_ACCOUNT: Data is backed up across Alibaba Cloud accounts.
+             */
+            public Builder crossAccountType(String crossAccountType) {
+                this.crossAccountType = crossAccountType;
+                return this;
+            }
+
+            /**
+             * The ID of the source Alibaba Cloud account that authorizes the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.
+             */
+            public Builder crossAccountUserId(Long crossAccountUserId) {
+                this.crossAccountUserId = crossAccountUserId;
+                return this;
+            }
+
+            /**
+             * The data source details at the destination. This parameter is returned only for data synchronization.
+             */
+            public Builder destDataSourceDetail(String destDataSourceDetail) {
+                this.destDataSourceDetail = destDataSourceDetail;
+                return this;
+            }
+
+            /**
+             * The data source ID at the destination. This parameter is returned only for data synchronization.
+             */
+            public Builder destDataSourceId(String destDataSourceId) {
+                this.destDataSourceId = destDataSourceId;
+                return this;
+            }
+
+            /**
+             * The data source type at the destination. This parameter is returned only for data synchronization.
+             */
+            public Builder destSourceType(String destSourceType) {
+                this.destSourceType = destSourceType;
+                return this;
+            }
+
+            /**
+             * The details of the ECS instance backup job.
+             */
+            public Builder detail(Detail detail) {
+                this.detail = detail;
+                return this;
+            }
+
+            /**
+             * The error message that is returned for the backup job.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -825,7 +1291,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * Exclude.
+             * The paths to the files that are excluded from the backup job. This parameter is returned only if the value of **SourceType** is **ECS_FILE**. The value can be up to 255 characters in length.
              */
             public Builder exclude(String exclude) {
                 this.exclude = exclude;
@@ -833,7 +1299,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * FileSystemId.
+             * The ID of the NAS file system. This parameter is returned only if the value of **SourceType** is **NAS**.
              */
             public Builder fileSystemId(String fileSystemId) {
                 this.fileSystemId = fileSystemId;
@@ -841,7 +1307,31 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * Include.
+             * The number of files that have been processed.
+             */
+            public Builder filesDone(Long filesDone) {
+                this.filesDone = filesDone;
+                return this;
+            }
+
+            /**
+             * The total number of files to be processed.
+             */
+            public Builder filesTotal(Long filesTotal) {
+                this.filesTotal = filesTotal;
+                return this;
+            }
+
+            /**
+             * The identifier of the cluster that is backed up in the container backup job. This parameter is returned only if the value of SourceType is CONTAINER. If the cluster is a Container Service for Kubernetes (ACK) cluster, the value of this parameter is the ACK cluster ID.
+             */
+            public Builder identifier(String identifier) {
+                this.identifier = identifier;
+                return this;
+            }
+
+            /**
+             * The paths to the files that are included in the backup job.
              */
             public Builder include(String include) {
                 this.include = include;
@@ -849,7 +1339,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the ECS instance. This parameter is returned only if the value of **SourceType** is **NAS**.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -857,7 +1347,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * The name of the Tablestore instance.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -865,7 +1355,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * ItemsDone.
+             * The number of objects that are backed up. This parameter is returned only if the value of **SourceType** is **ECS_FILE**.
              */
             public Builder itemsDone(Long itemsDone) {
                 this.itemsDone = itemsDone;
@@ -873,7 +1363,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * ItemsTotal.
+             * The total number of objects in the data source. This parameter is returned only if the value of **SourceType** is **ECS_FILE**.
              */
             public Builder itemsTotal(Long itemsTotal) {
                 this.itemsTotal = itemsTotal;
@@ -881,7 +1371,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * The ID of the backup job.
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -889,7 +1379,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * JobName.
+             * The name of the backup job.
              */
             public Builder jobName(String jobName) {
                 this.jobName = jobName;
@@ -897,7 +1387,12 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * Options.
+             * Indicates whether Windows Volume Shadow Copy Service (VSS) is used to define a source path. This parameter is returned only if the value of **SourceType** is **ECS_FILE**.
+             * <p>
+             * 
+             * *   This parameter is available only for Windows ECS instances.
+             * *   A value of `["UseVSS":true]` indicates that the consistency between the source data and backup data is ensured while data changes occur in the source data.
+             * *   If VSS is used, multiple directories cannot be backed up at a time.
              */
             public Builder options(String options) {
                 this.options = options;
@@ -905,7 +1400,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * OtsDetail.
+             * The details of the Tablestore instance.
              */
             public Builder otsDetail(OtsDetail otsDetail) {
                 this.otsDetail = otsDetail;
@@ -913,7 +1408,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * Paths.
+             * The source paths.
              */
             public Builder paths(Paths paths) {
                 this.paths = paths;
@@ -921,7 +1416,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * PlanId.
+             * The ID of the backup plan.
              */
             public Builder planId(String planId) {
                 this.planId = planId;
@@ -929,7 +1424,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * Prefix.
+             * The prefix of objects that are backed up. This parameter is returned only if the value of **SourceType** is **OSS**.
              */
             public Builder prefix(String prefix) {
                 this.prefix = prefix;
@@ -937,7 +1432,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * Progress.
+             * The backup progress. Valid values: 0 to 10000. For example, a value of 10000 indicates that the progress is 100%.
              */
             public Builder progress(Integer progress) {
                 this.progress = progress;
@@ -945,7 +1440,12 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * SourceType.
+             * The type of the data source. Valid values:
+             * <p>
+             * 
+             * *   **ECS_FILE**: ECS file.
+             * *   **OSS**: OSS bucket.
+             * *   **NAS**: NAS file system.
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -953,7 +1453,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * Speed.
+             * The average speed at which data is backed up. Unit: KB/s.
              */
             public Builder speed(Long speed) {
                 this.speed = speed;
@@ -961,7 +1461,12 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * SpeedLimit.
+             * The throttling rules. This parameter is returned only if the value of **SourceType** is **ECS_FILE**. Format: `{start}:{end}:{bandwidth}`. Multiple throttling rules are separated by vertical bars (`|`). The time ranges of the throttling rules cannot overlap.
+             * <p>
+             * 
+             * *   **start**: the start hour.
+             * *   **end**: the end hour
+             * *   **bandwidth**: the bandwidth. Unit: KB/s.
              */
             public Builder speedLimit(String speedLimit) {
                 this.speedLimit = speedLimit;
@@ -969,7 +1474,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The time when the backup job started. This value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -977,7 +1482,12 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The state of the backup job. Valid values:
+             * <p>
+             * 
+             * *   **COMPLETE**
+             * *   **PARTIAL_COMPLETE**
+             * *   **FAILED**
              */
             public Builder status(String status) {
                 this.status = status;
@@ -985,7 +1495,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * The name of the table in the Tablestore instance.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -993,7 +1503,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedTime.
+             * The time when the backup job was last updated. This value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder updatedTime(Long updatedTime) {
                 this.updatedTime = updatedTime;
@@ -1001,7 +1511,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * VaultId.
+             * The ID of the backup vault.
              */
             public Builder vaultId(String vaultId) {
                 this.vaultId = vaultId;

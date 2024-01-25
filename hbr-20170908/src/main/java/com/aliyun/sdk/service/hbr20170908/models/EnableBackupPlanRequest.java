@@ -75,15 +75,15 @@ public class EnableBackupPlanRequest extends Request {
             super();
         } 
 
-        private Builder(EnableBackupPlanRequest response) {
-            super(response);
-            this.planId = response.planId;
-            this.sourceType = response.sourceType;
-            this.vaultId = response.vaultId;
+        private Builder(EnableBackupPlanRequest request) {
+            super(request);
+            this.planId = request.planId;
+            this.sourceType = request.sourceType;
+            this.vaultId = request.vaultId;
         } 
 
         /**
-         * PlanId.
+         * The ID of the backup schedule.
          */
         public Builder planId(String planId) {
             this.putQueryParameter("PlanId", planId);
@@ -92,7 +92,12 @@ public class EnableBackupPlanRequest extends Request {
         }
 
         /**
-         * SourceType.
+         * The type of the data source. Valid values:
+         * <p>
+         * 
+         * *   **ECS_FILE**: The system backs up data from Elastic Compute Service (ECS) instances.
+         * *   **OSS**: The system backs up data from Object Storage Service (OSS) buckets.
+         * *   **NAS**: The system backs up data from Apsara File Storage NAS file systems.
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);
@@ -101,7 +106,7 @@ public class EnableBackupPlanRequest extends Request {
         }
 
         /**
-         * VaultId.
+         * The ID of the backup vault.
          */
         public Builder vaultId(String vaultId) {
             this.putQueryParameter("VaultId", vaultId);

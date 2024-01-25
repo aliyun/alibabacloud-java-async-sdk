@@ -127,19 +127,19 @@ public class DeleteSnapshotRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteSnapshotRequest response) {
-            super(response);
-            this.clientId = response.clientId;
-            this.force = response.force;
-            this.instanceId = response.instanceId;
-            this.snapshotId = response.snapshotId;
-            this.sourceType = response.sourceType;
-            this.token = response.token;
-            this.vaultId = response.vaultId;
+        private Builder(DeleteSnapshotRequest request) {
+            super(request);
+            this.clientId = request.clientId;
+            this.force = request.force;
+            this.instanceId = request.instanceId;
+            this.snapshotId = request.snapshotId;
+            this.sourceType = request.sourceType;
+            this.token = request.token;
+            this.vaultId = request.vaultId;
         } 
 
         /**
-         * ClientId.
+         * The ID of the backup client. If you delete a backup file for Elastic Compute Service (ECS) instances, you must set one of the **InstanceId** and ClientId parameters.
          */
         public Builder clientId(String clientId) {
             this.putQueryParameter("ClientId", clientId);
@@ -148,7 +148,11 @@ public class DeleteSnapshotRequest extends Request {
         }
 
         /**
-         * Force.
+         * Specifies whether to forcibly delete the most recent backup file. Valid values:
+         * <p>
+         * 
+         * *   true: The system forcibly deletes the last backup file.
+         * *   false: The system does not forcibly delete the last backup file. Default value: false.
          */
         public Builder force(Boolean force) {
             this.putQueryParameter("Force", force);
@@ -157,7 +161,7 @@ public class DeleteSnapshotRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the ECS instance. If you delete a backup file for Elastic Compute Service (ECS) instances, you must set one of the **ClientId** and InstanceId parameters.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -166,7 +170,7 @@ public class DeleteSnapshotRequest extends Request {
         }
 
         /**
-         * SnapshotId.
+         * The ID of the backup file.
          */
         public Builder snapshotId(String snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);
@@ -175,7 +179,12 @@ public class DeleteSnapshotRequest extends Request {
         }
 
         /**
-         * SourceType.
+         * The type of the backup source. Valid values:
+         * <p>
+         * 
+         * *   **ECS_FILE**: indicates backup files for ECS instances.
+         * *   **OSS**: indicates backup files for Object Storage Service (OSS) buckets.
+         * *   **NAS**: indicates the backup files for Apsara File Storage NAS file systems.
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);
@@ -184,7 +193,7 @@ public class DeleteSnapshotRequest extends Request {
         }
 
         /**
-         * Token.
+         * The token.
          */
         public Builder token(String token) {
             this.putQueryParameter("Token", token);
@@ -193,7 +202,7 @@ public class DeleteSnapshotRequest extends Request {
         }
 
         /**
-         * VaultId.
+         * The ID of the backup vault.
          */
         public Builder vaultId(String vaultId) {
             this.putQueryParameter("VaultId", vaultId);

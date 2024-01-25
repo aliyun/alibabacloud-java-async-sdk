@@ -86,7 +86,7 @@ public class GenerateRamPolicyResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code. The status code 200 indicates that the call is successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class GenerateRamPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message that is returned. If the call is successful, "successful" is returned. If the call fails, an error message is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -102,7 +102,7 @@ public class GenerateRamPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * PolicyDocument.
+         * The content of the policy.
          */
         public Builder policyDocument(String policyDocument) {
             this.policyDocument = policyDocument;
@@ -110,7 +110,7 @@ public class GenerateRamPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class GenerateRamPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the call is successful.
+         * <p>
+         * 
+         * *   true: The call is successful.
+         * *   false: The call fails.
          */
         public Builder success(Boolean success) {
             this.success = success;

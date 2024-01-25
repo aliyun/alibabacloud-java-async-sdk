@@ -110,7 +110,7 @@ public class DescribeOtsTableSnapshotsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code. The status code 200 indicates that the request was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +118,7 @@ public class DescribeOtsTableSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * Limit.
+         * The number of backup snapshots that are displayed on the current page.
          */
         public Builder limit(Integer limit) {
             this.limit = limit;
@@ -126,7 +126,7 @@ public class DescribeOtsTableSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message. If the request was successful, "successful" is returned. If the request failed, an error message is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -134,7 +134,7 @@ public class DescribeOtsTableSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The token that is required to obtain the next page of backup snapshots.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -142,7 +142,7 @@ public class DescribeOtsTableSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +150,7 @@ public class DescribeOtsTableSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * Snapshots.
+         * The backup snapshots.
          */
         public Builder snapshots(java.util.List < Snapshots> snapshots) {
             this.snapshots = snapshots;
@@ -158,7 +158,11 @@ public class DescribeOtsTableSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -426,7 +430,7 @@ public class DescribeOtsTableSnapshotsResponseBody extends TeaModel {
             private String vaultId; 
 
             /**
-             * ActualBytes.
+             * The actual data amount of backup snapshots after duplicates are removed. Unit: bytes.
              */
             public Builder actualBytes(String actualBytes) {
                 this.actualBytes = actualBytes;
@@ -434,7 +438,7 @@ public class DescribeOtsTableSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupType.
+             * The backup type. Valid value: **COMPLETE**, which indicates full backup.
              */
             public Builder backupType(String backupType) {
                 this.backupType = backupType;
@@ -442,7 +446,7 @@ public class DescribeOtsTableSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * BytesTotal.
+             * The total amount of data. Unit: bytes.
              */
             public Builder bytesTotal(Long bytesTotal) {
                 this.bytesTotal = bytesTotal;
@@ -450,7 +454,7 @@ public class DescribeOtsTableSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * CompleteTime.
+             * The time when the backup snapshot was completed. The value is a UNIX timestamp. Unit: seconds.
              */
             public Builder completeTime(Long completeTime) {
                 this.completeTime = completeTime;
@@ -458,7 +462,7 @@ public class DescribeOtsTableSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the Tablestore instance was created. The value is a UNIX timestamp. Unit: seconds.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -466,7 +470,7 @@ public class DescribeOtsTableSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedTime.
+             * The time when the backup snapshot was created. The value is a UNIX timestamp. Unit: seconds.
              */
             public Builder createdTime(Long createdTime) {
                 this.createdTime = createdTime;
@@ -474,7 +478,7 @@ public class DescribeOtsTableSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * The name of the Tablestore instance.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -482,7 +486,7 @@ public class DescribeOtsTableSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * The ID of the backup job.
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -490,7 +494,7 @@ public class DescribeOtsTableSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * ParentSnapshotHash.
+             * The hash value of the parent backup snapshot.
              */
             public Builder parentSnapshotHash(String parentSnapshotHash) {
                 this.parentSnapshotHash = parentSnapshotHash;
@@ -498,7 +502,7 @@ public class DescribeOtsTableSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * RangeEnd.
+             * The time when the backup job ended. The value is a UNIX timestamp. Unit: milliseconds.
              */
             public Builder rangeEnd(Long rangeEnd) {
                 this.rangeEnd = rangeEnd;
@@ -506,7 +510,7 @@ public class DescribeOtsTableSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * RangeStart.
+             * The time when the backup job started. The value is a UNIX timestamp. Unit: milliseconds.
              */
             public Builder rangeStart(Long rangeStart) {
                 this.rangeStart = rangeStart;
@@ -514,7 +518,7 @@ public class DescribeOtsTableSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * Retention.
+             * The retention period of the backup snapshot. Unit: days.
              */
             public Builder retention(Long retention) {
                 this.retention = retention;
@@ -522,7 +526,7 @@ public class DescribeOtsTableSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * SnapshotHash.
+             * The hash value of the backup snapshot.
              */
             public Builder snapshotHash(String snapshotHash) {
                 this.snapshotHash = snapshotHash;
@@ -530,7 +534,7 @@ public class DescribeOtsTableSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * SnapshotId.
+             * The ID of the backup snapshot.
              */
             public Builder snapshotId(String snapshotId) {
                 this.snapshotId = snapshotId;
@@ -538,7 +542,13 @@ public class DescribeOtsTableSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceType.
+             * The type of the data source. Valid values:
+             * <p>
+             * 
+             * *   **ECS_FILE**: backup snapshots for Elastic Compute Service (ECS) files
+             * *   **OSS**: backup snapshots for Object Storage Service (OSS) buckets
+             * *   **NAS**: backup snapshots for Apsara File Storage NAS file systems
+             * *   **OTS_TABLE**: backup snapshots for Tablestore instances
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -546,7 +556,7 @@ public class DescribeOtsTableSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The time when the backup snapshot started. The value is a UNIX timestamp. Unit: seconds.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -554,7 +564,12 @@ public class DescribeOtsTableSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the backup job. Valid values:
+             * <p>
+             * 
+             * *   **COMPLETE**: The backup job is completed.
+             * *   **PARTIAL_COMPLETE**: The backup job is partially completed.
+             * *   **FAILED**: The backup job has failed.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -562,7 +577,7 @@ public class DescribeOtsTableSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * The name of the table in the Tablestore instance.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -570,7 +585,7 @@ public class DescribeOtsTableSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedTime.
+             * The time when the backup snapshot was updated. The value is a UNIX timestamp. Unit: seconds.
              */
             public Builder updatedTime(Long updatedTime) {
                 this.updatedTime = updatedTime;
@@ -578,7 +593,7 @@ public class DescribeOtsTableSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * VaultId.
+             * The ID of the backup vault that stores the backup snapshot.
              */
             public Builder vaultId(String vaultId) {
                 this.vaultId = vaultId;

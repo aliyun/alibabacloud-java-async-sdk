@@ -74,7 +74,7 @@ public class DeleteVaultResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code. The status code 200 indicates that the request is successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class DeleteVaultResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message that is returned. If the request is successful, a value of successful is returned. If the request fails, an error message is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +90,7 @@ public class DeleteVaultResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,11 @@ public class DeleteVaultResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * *   true: The request is successful.
+         * *   false: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;

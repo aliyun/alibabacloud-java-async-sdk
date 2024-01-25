@@ -49,16 +49,17 @@ public class DeleteBackupClientResourceRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteBackupClientResourceRequest response) {
-            super(response);
-            this.clientIds = response.clientIds;
+        private Builder(DeleteBackupClientResourceRequest request) {
+            super(request);
+            this.clientIds = request.clientIds;
         } 
 
         /**
-         * ClientIds.
+         * The IDs of HBR clients. The value can be a JSON array that consists of up to 100 client IDs. Separate the IDs with commas (,).
          */
         public Builder clientIds(java.util.Map < String, ? > clientIds) {
-            this.putQueryParameter("ClientIds", clientIds);
+            String clientIdsShrink = shrink(clientIds, "ClientIds", "json");
+            this.putQueryParameter("ClientIds", clientIdsShrink);
             this.clientIds = clientIds;
             return this;
         }

@@ -48,13 +48,13 @@ public class DescribeRegionsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeRegionsRequest response) {
-            super(response);
-            this.needVaultCount = response.needVaultCount;
+        private Builder(DescribeRegionsRequest request) {
+            super(request);
+            this.needVaultCount = request.needVaultCount;
         } 
 
         /**
-         * NeedVaultCount.
+         * Specifies whether to return detailed information. Default value: false.
          */
         public Builder needVaultCount(Boolean needVaultCount) {
             this.putQueryParameter("NeedVaultCount", needVaultCount);
