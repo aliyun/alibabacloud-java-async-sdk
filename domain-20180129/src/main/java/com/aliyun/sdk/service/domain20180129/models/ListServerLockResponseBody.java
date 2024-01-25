@@ -122,7 +122,7 @@ public class ListServerLockResponseBody extends TeaModel {
         private Integer totalPageNum; 
 
         /**
-         * CurrentPageNum.
+         * The page number.
          */
         public Builder currentPageNum(Integer currentPageNum) {
             this.currentPageNum = currentPageNum;
@@ -130,7 +130,7 @@ public class ListServerLockResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The response parameters.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -138,7 +138,7 @@ public class ListServerLockResponseBody extends TeaModel {
         }
 
         /**
-         * NextPage.
+         * Indicates whether the current page is followed by a page.
          */
         public Builder nextPage(Boolean nextPage) {
             this.nextPage = nextPage;
@@ -146,7 +146,7 @@ public class ListServerLockResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -154,7 +154,7 @@ public class ListServerLockResponseBody extends TeaModel {
         }
 
         /**
-         * PrePage.
+         * Indicates whether the current page is preceded by a page.
          */
         public Builder prePage(Boolean prePage) {
             this.prePage = prePage;
@@ -162,7 +162,7 @@ public class ListServerLockResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +170,7 @@ public class ListServerLockResponseBody extends TeaModel {
         }
 
         /**
-         * TotalItemNum.
+         * The total number of entries returned.
          */
         public Builder totalItemNum(Integer totalItemNum) {
             this.totalItemNum = totalItemNum;
@@ -178,7 +178,7 @@ public class ListServerLockResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPageNum.
+         * The total number of pages returned.
          */
         public Builder totalPageNum(Integer totalPageNum) {
             this.totalPageNum = totalPageNum;
@@ -326,7 +326,7 @@ public class ListServerLockResponseBody extends TeaModel {
             private String userId; 
 
             /**
-             * DomainInstanceId.
+             * The instance ID of the domain name.
              */
             public Builder domainInstanceId(String domainInstanceId) {
                 this.domainInstanceId = domainInstanceId;
@@ -334,7 +334,7 @@ public class ListServerLockResponseBody extends TeaModel {
             }
 
             /**
-             * DomainName.
+             * The domain name that has valid registry lock information.
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -342,7 +342,7 @@ public class ListServerLockResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireDate.
+             * The expiration time.
              */
             public Builder expireDate(String expireDate) {
                 this.expireDate = expireDate;
@@ -350,7 +350,7 @@ public class ListServerLockResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The creation time.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -358,7 +358,7 @@ public class ListServerLockResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The time when the domain name was last modified.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -366,7 +366,7 @@ public class ListServerLockResponseBody extends TeaModel {
             }
 
             /**
-             * LockInstanceId.
+             * The instance ID of the domain name for which the registry lock is enabled.
              */
             public Builder lockInstanceId(String lockInstanceId) {
                 this.lockInstanceId = lockInstanceId;
@@ -374,7 +374,7 @@ public class ListServerLockResponseBody extends TeaModel {
             }
 
             /**
-             * LockProductId.
+             * The ID of the product to which the domain name with the registry lock enabled belongs.
              */
             public Builder lockProductId(String lockProductId) {
                 this.lockProductId = lockProductId;
@@ -382,7 +382,7 @@ public class ListServerLockResponseBody extends TeaModel {
             }
 
             /**
-             * ServerLockStatus.
+             * The status of the registry lock.
              */
             public Builder serverLockStatus(String serverLockStatus) {
                 this.serverLockStatus = serverLockStatus;
@@ -390,7 +390,7 @@ public class ListServerLockResponseBody extends TeaModel {
             }
 
             /**
-             * StartDate.
+             * The start time.
              */
             public Builder startDate(String startDate) {
                 this.startDate = startDate;
@@ -398,7 +398,7 @@ public class ListServerLockResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * The user ID.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
