@@ -16,7 +16,7 @@ public class FaceLivenessRequest extends Request {
     @NameInMap("Crop")
     private String crop;
 
-    @Query
+    @Body
     @NameInMap("FacePictureBase64")
     private String facePictureBase64;
 
@@ -164,7 +164,7 @@ public class FaceLivenessRequest extends Request {
          * FacePictureBase64.
          */
         public Builder facePictureBase64(String facePictureBase64) {
-            this.putQueryParameter("FacePictureBase64", facePictureBase64);
+            this.putBodyParameter("FacePictureBase64", facePictureBase64);
             this.facePictureBase64 = facePictureBase64;
             return this;
         }
