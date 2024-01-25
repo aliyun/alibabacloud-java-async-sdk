@@ -58,7 +58,7 @@ public class UntagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful. Valid values:
+         * Indicates whether the operation is successful. Valid values:
          * <p>
          * 
          * **true**
