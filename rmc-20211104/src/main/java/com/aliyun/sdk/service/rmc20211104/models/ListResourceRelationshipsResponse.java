@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link SearchResourcesResponse} extends {@link TeaModel}
+ * {@link ListResourceRelationshipsResponse} extends {@link TeaModel}
  *
- * <p>SearchResourcesResponse</p>
+ * <p>ListResourceRelationshipsResponse</p>
  */
-public class SearchResourcesResponse extends Response {
+public class ListResourceRelationshipsResponse extends Response {
     @NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -19,16 +19,16 @@ public class SearchResourcesResponse extends Response {
     private Integer statusCode;
 
     @NameInMap("body")
-    private SearchResourcesResponseBody body;
+    private ListResourceRelationshipsResponseBody body;
 
-    private SearchResourcesResponse(BuilderImpl builder) {
+    private ListResourceRelationshipsResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static SearchResourcesResponse create() {
+    public static ListResourceRelationshipsResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +54,35 @@ public class SearchResourcesResponse extends Response {
     /**
      * @return body
      */
-    public SearchResourcesResponseBody getBody() {
+    public ListResourceRelationshipsResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<SearchResourcesResponse, Builder> {
+    public interface Builder extends Response.Builder<ListResourceRelationshipsResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(SearchResourcesResponseBody body);
+        Builder body(ListResourceRelationshipsResponseBody body);
 
         @Override
-        SearchResourcesResponse build();
+        ListResourceRelationshipsResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<SearchResourcesResponse, Builder>
+            extends Response.BuilderImpl<ListResourceRelationshipsResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private SearchResourcesResponseBody body; 
+        private ListResourceRelationshipsResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(SearchResourcesResponse response) {
+        private BuilderImpl(ListResourceRelationshipsResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +111,14 @@ public class SearchResourcesResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(SearchResourcesResponseBody body) {
+        public Builder body(ListResourceRelationshipsResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public SearchResourcesResponse build() {
-            return new SearchResourcesResponse(this);
+        public ListResourceRelationshipsResponse build() {
+            return new ListResourceRelationshipsResponse(this);
         } 
 
     } 
