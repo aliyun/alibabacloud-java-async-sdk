@@ -13,15 +13,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateHoneypotResponse extends Response {
     @NameInMap("headers")
-    @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     private Integer statusCode;
 
     @NameInMap("body")
-    @Validation(required = true)
     private CreateHoneypotResponseBody body;
 
     private CreateHoneypotResponse(BuilderImpl builder) {

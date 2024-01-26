@@ -13,15 +13,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyStartVulScanResponse extends Response {
     @NameInMap("headers")
-    @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     private Integer statusCode;
 
     @NameInMap("body")
-    @Validation(required = true)
     private ModifyStartVulScanResponseBody body;
 
     private ModifyStartVulScanResponse(BuilderImpl builder) {

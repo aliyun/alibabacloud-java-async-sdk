@@ -288,7 +288,8 @@ public class ExportWarningRequest extends Request {
         /**
          * The ID of the server group.
          * <p>
-         * > You can call the[DescribeAllGroups](~~130972~~)operation to query the IDs of server groups.
+         * 
+         * >  You can call the [DescribeAllGroups](~~DescribeAllGroups~~) operation to query the IDs of server groups.
          */
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);

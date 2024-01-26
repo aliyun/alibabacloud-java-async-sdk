@@ -260,6 +260,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteVpcHoneyPotResponse> deleteVpcHoneyPot(DeleteVpcHoneyPotRequest request);
 
+    CompletableFuture<DeleteVulAutoRepairConfigResponse> deleteVulAutoRepairConfig(DeleteVulAutoRepairConfigRequest request);
+
     CompletableFuture<DeleteVulWhitelistResponse> deleteVulWhitelist(DeleteVulWhitelistRequest request);
 
     CompletableFuture<DescribeAccessKeyLeakDetailResponse> describeAccessKeyLeakDetail(DescribeAccessKeyLeakDetailRequest request);
