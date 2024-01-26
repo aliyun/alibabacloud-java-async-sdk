@@ -209,6 +209,9 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
         @NameInMap("start_time")
         private String startTime;
 
+        @NameInMap("ticket_entrance")
+        private String ticketEntrance;
+
         @NameInMap("ticket_no")
         private String ticketNo;
 
@@ -247,6 +250,7 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
             this.outTicketStatus = builder.outTicketStatus;
             this.segmentIndex = builder.segmentIndex;
             this.startTime = builder.startTime;
+            this.ticketEntrance = builder.ticketEntrance;
             this.ticketNo = builder.ticketNo;
             this.ticketStatus = builder.ticketStatus;
             this.toCityName = builder.toCityName;
@@ -397,6 +401,13 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
         }
 
         /**
+         * @return ticketEntrance
+         */
+        public String getTicketEntrance() {
+            return this.ticketEntrance;
+        }
+
+        /**
          * @return ticketNo
          */
         public String getTicketNo() {
@@ -458,6 +469,7 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
             private String outTicketStatus; 
             private Integer segmentIndex; 
             private String startTime; 
+            private String ticketEntrance; 
             private String ticketNo; 
             private Integer ticketStatus; 
             private String toCityName; 
@@ -614,6 +626,14 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
+                return this;
+            }
+
+            /**
+             * ticket_entrance.
+             */
+            public Builder ticketEntrance(String ticketEntrance) {
+                this.ticketEntrance = ticketEntrance;
                 return this;
             }
 
@@ -1760,6 +1780,9 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
         @NameInMap("start_time")
         private String startTime;
 
+        @NameInMap("ticket_entrance")
+        private String ticketEntrance;
+
         @NameInMap("ticket_no")
         private String ticketNo;
 
@@ -1793,6 +1816,7 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
             this.segmentIndex = builder.segmentIndex;
             this.serviceFee = builder.serviceFee;
             this.startTime = builder.startTime;
+            this.ticketEntrance = builder.ticketEntrance;
             this.ticketNo = builder.ticketNo;
             this.ticketPrice = builder.ticketPrice;
             this.ticketStatus = builder.ticketStatus;
@@ -1908,6 +1932,13 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
         }
 
         /**
+         * @return ticketEntrance
+         */
+        public String getTicketEntrance() {
+            return this.ticketEntrance;
+        }
+
+        /**
          * @return ticketNo
          */
         public String getTicketNo() {
@@ -1964,6 +1995,7 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
             private Integer segmentIndex; 
             private Double serviceFee; 
             private String startTime; 
+            private String ticketEntrance; 
             private String ticketNo; 
             private Double ticketPrice; 
             private Integer ticketStatus; 
@@ -2080,6 +2112,14 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
+                return this;
+            }
+
+            /**
+             * ticket_entrance.
+             */
+            public Builder ticketEntrance(String ticketEntrance) {
+                this.ticketEntrance = ticketEntrance;
                 return this;
             }
 

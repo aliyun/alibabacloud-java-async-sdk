@@ -152,6 +152,9 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
     } 
 
     public static class Items extends TeaModel {
+        @NameInMap("apply_id")
+        private String applyId;
+
         @NameInMap("arr_station")
         private String arrStation;
 
@@ -216,6 +219,7 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
         private String trainNo;
 
         private Items(Builder builder) {
+            this.applyId = builder.applyId;
             this.arrStation = builder.arrStation;
             this.billDate = builder.billDate;
             this.coachName = builder.coachName;
@@ -245,6 +249,13 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
 
         public static Items create() {
             return builder().build();
+        }
+
+        /**
+         * @return applyId
+         */
+        public String getApplyId() {
+            return this.applyId;
         }
 
         /**
@@ -395,6 +406,7 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String applyId; 
             private String arrStation; 
             private String billDate; 
             private String coachName; 
@@ -416,6 +428,14 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
             private String taxRate; 
             private String ticketNo; 
             private String trainNo; 
+
+            /**
+             * apply_id.
+             */
+            public Builder applyId(String applyId) {
+                this.applyId = applyId;
+                return this;
+            }
 
             /**
              * arr_station.

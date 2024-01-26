@@ -416,6 +416,9 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
         @NameInMap("agent_code")
         private String agentCode;
 
+        @NameInMap("apply_id")
+        private String applyId;
+
         @NameInMap("bill_date")
         private String billDate;
 
@@ -487,6 +490,7 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
 
         private Items(Builder builder) {
             this.agentCode = builder.agentCode;
+            this.applyId = builder.applyId;
             this.billDate = builder.billDate;
             this.build = builder.build;
             this.costCenter = builder.costCenter;
@@ -525,6 +529,13 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
          */
         public String getAgentCode() {
             return this.agentCode;
+        }
+
+        /**
+         * @return applyId
+         */
+        public String getApplyId() {
+            return this.applyId;
         }
 
         /**
@@ -690,6 +701,7 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
 
         public static final class Builder {
             private String agentCode; 
+            private String applyId; 
             private String billDate; 
             private String build; 
             private String costCenter; 
@@ -719,6 +731,14 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
              */
             public Builder agentCode(String agentCode) {
                 this.agentCode = agentCode;
+                return this;
+            }
+
+            /**
+             * apply_id.
+             */
+            public Builder applyId(String applyId) {
+                this.applyId = applyId;
                 return this;
             }
 

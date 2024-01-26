@@ -14,7 +14,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class IeHotelBillSettlementQueryRequest extends Request {
     @Query
     @NameInMap("category")
-    @Validation(required = true)
     private Integer category;
 
     @Query

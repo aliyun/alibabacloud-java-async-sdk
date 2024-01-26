@@ -155,6 +155,12 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         @NameInMap("apply_id")
         private String applyId;
 
+        @NameInMap("arr_airport")
+        private String arrAirport;
+
+        @NameInMap("arr_city")
+        private String arrCity;
+
         @NameInMap("arr_time")
         private String arrTime;
 
@@ -179,8 +185,17 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         @NameInMap("change_type")
         private Integer changeType;
 
+        @NameInMap("dep_airport")
+        private String depAirport;
+
+        @NameInMap("dep_city")
+        private String depCity;
+
         @NameInMap("dep_time")
         private String depTime;
+
+        @NameInMap("discount")
+        private String discount;
 
         @NameInMap("gmt_create")
         private String gmtCreate;
@@ -193,6 +208,9 @@ public class FlightOrderQueryResponseBody extends TeaModel {
 
         @NameInMap("out_apply_id")
         private String outApplyId;
+
+        @NameInMap("stop_city")
+        private String stopCity;
 
         @NameInMap("ticket_no")
         private String ticketNo;
@@ -208,6 +226,8 @@ public class FlightOrderQueryResponseBody extends TeaModel {
 
         private FlightChangeTicketInfoList(Builder builder) {
             this.applyId = builder.applyId;
+            this.arrAirport = builder.arrAirport;
+            this.arrCity = builder.arrCity;
             this.arrTime = builder.arrTime;
             this.changeCabin = builder.changeCabin;
             this.changeCabinLevel = builder.changeCabinLevel;
@@ -216,11 +236,15 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             this.changeOrderId = builder.changeOrderId;
             this.changeReason = builder.changeReason;
             this.changeType = builder.changeType;
+            this.depAirport = builder.depAirport;
+            this.depCity = builder.depCity;
             this.depTime = builder.depTime;
+            this.discount = builder.discount;
             this.gmtCreate = builder.gmtCreate;
             this.gmtModify = builder.gmtModify;
             this.originTicketNo = builder.originTicketNo;
             this.outApplyId = builder.outApplyId;
+            this.stopCity = builder.stopCity;
             this.ticketNo = builder.ticketNo;
             this.ticketStatus = builder.ticketStatus;
             this.ticketStatusCode = builder.ticketStatusCode;
@@ -240,6 +264,20 @@ public class FlightOrderQueryResponseBody extends TeaModel {
          */
         public String getApplyId() {
             return this.applyId;
+        }
+
+        /**
+         * @return arrAirport
+         */
+        public String getArrAirport() {
+            return this.arrAirport;
+        }
+
+        /**
+         * @return arrCity
+         */
+        public String getArrCity() {
+            return this.arrCity;
         }
 
         /**
@@ -299,10 +337,31 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return depAirport
+         */
+        public String getDepAirport() {
+            return this.depAirport;
+        }
+
+        /**
+         * @return depCity
+         */
+        public String getDepCity() {
+            return this.depCity;
+        }
+
+        /**
          * @return depTime
          */
         public String getDepTime() {
             return this.depTime;
+        }
+
+        /**
+         * @return discount
+         */
+        public String getDiscount() {
+            return this.discount;
         }
 
         /**
@@ -331,6 +390,13 @@ public class FlightOrderQueryResponseBody extends TeaModel {
          */
         public String getOutApplyId() {
             return this.outApplyId;
+        }
+
+        /**
+         * @return stopCity
+         */
+        public String getStopCity() {
+            return this.stopCity;
         }
 
         /**
@@ -363,6 +429,8 @@ public class FlightOrderQueryResponseBody extends TeaModel {
 
         public static final class Builder {
             private String applyId; 
+            private String arrAirport; 
+            private String arrCity; 
             private String arrTime; 
             private String changeCabin; 
             private String changeCabinLevel; 
@@ -371,11 +439,15 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             private Long changeOrderId; 
             private String changeReason; 
             private Integer changeType; 
+            private String depAirport; 
+            private String depCity; 
             private String depTime; 
+            private String discount; 
             private String gmtCreate; 
             private String gmtModify; 
             private String originTicketNo; 
             private String outApplyId; 
+            private String stopCity; 
             private String ticketNo; 
             private String ticketStatus; 
             private Integer ticketStatusCode; 
@@ -386,6 +458,22 @@ public class FlightOrderQueryResponseBody extends TeaModel {
              */
             public Builder applyId(String applyId) {
                 this.applyId = applyId;
+                return this;
+            }
+
+            /**
+             * arr_airport.
+             */
+            public Builder arrAirport(String arrAirport) {
+                this.arrAirport = arrAirport;
+                return this;
+            }
+
+            /**
+             * arr_city.
+             */
+            public Builder arrCity(String arrCity) {
+                this.arrCity = arrCity;
                 return this;
             }
 
@@ -454,10 +542,34 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             }
 
             /**
+             * dep_airport.
+             */
+            public Builder depAirport(String depAirport) {
+                this.depAirport = depAirport;
+                return this;
+            }
+
+            /**
+             * dep_city.
+             */
+            public Builder depCity(String depCity) {
+                this.depCity = depCity;
+                return this;
+            }
+
+            /**
              * dep_time.
              */
             public Builder depTime(String depTime) {
                 this.depTime = depTime;
+                return this;
+            }
+
+            /**
+             * discount.
+             */
+            public Builder discount(String discount) {
+                this.discount = discount;
                 return this;
             }
 
@@ -490,6 +602,14 @@ public class FlightOrderQueryResponseBody extends TeaModel {
              */
             public Builder outApplyId(String outApplyId) {
                 this.outApplyId = outApplyId;
+                return this;
+            }
+
+            /**
+             * stop_city.
+             */
+            public Builder stopCity(String stopCity) {
+                this.stopCity = stopCity;
                 return this;
             }
 
@@ -917,6 +1037,21 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         @NameInMap("apply_id")
         private String applyId;
 
+        @NameInMap("arr_airport")
+        private String arrAirport;
+
+        @NameInMap("arr_city")
+        private String arrCity;
+
+        @NameInMap("dep_airport")
+        private String depAirport;
+
+        @NameInMap("dep_city")
+        private String depCity;
+
+        @NameInMap("flight_no")
+        private String flightNo;
+
         @NameInMap("gmt_create")
         private String gmtCreate;
 
@@ -943,6 +1078,11 @@ public class FlightOrderQueryResponseBody extends TeaModel {
 
         private FlightRefundTicketInfoList(Builder builder) {
             this.applyId = builder.applyId;
+            this.arrAirport = builder.arrAirport;
+            this.arrCity = builder.arrCity;
+            this.depAirport = builder.depAirport;
+            this.depCity = builder.depCity;
+            this.flightNo = builder.flightNo;
             this.gmtCreate = builder.gmtCreate;
             this.gmtModify = builder.gmtModify;
             this.outApplyId = builder.outApplyId;
@@ -966,6 +1106,41 @@ public class FlightOrderQueryResponseBody extends TeaModel {
          */
         public String getApplyId() {
             return this.applyId;
+        }
+
+        /**
+         * @return arrAirport
+         */
+        public String getArrAirport() {
+            return this.arrAirport;
+        }
+
+        /**
+         * @return arrCity
+         */
+        public String getArrCity() {
+            return this.arrCity;
+        }
+
+        /**
+         * @return depAirport
+         */
+        public String getDepAirport() {
+            return this.depAirport;
+        }
+
+        /**
+         * @return depCity
+         */
+        public String getDepCity() {
+            return this.depCity;
+        }
+
+        /**
+         * @return flightNo
+         */
+        public String getFlightNo() {
+            return this.flightNo;
         }
 
         /**
@@ -1026,6 +1201,11 @@ public class FlightOrderQueryResponseBody extends TeaModel {
 
         public static final class Builder {
             private String applyId; 
+            private String arrAirport; 
+            private String arrCity; 
+            private String depAirport; 
+            private String depCity; 
+            private String flightNo; 
             private String gmtCreate; 
             private String gmtModify; 
             private String outApplyId; 
@@ -1040,6 +1220,46 @@ public class FlightOrderQueryResponseBody extends TeaModel {
              */
             public Builder applyId(String applyId) {
                 this.applyId = applyId;
+                return this;
+            }
+
+            /**
+             * arr_airport.
+             */
+            public Builder arrAirport(String arrAirport) {
+                this.arrAirport = arrAirport;
+                return this;
+            }
+
+            /**
+             * arr_city.
+             */
+            public Builder arrCity(String arrCity) {
+                this.arrCity = arrCity;
+                return this;
+            }
+
+            /**
+             * dep_airport.
+             */
+            public Builder depAirport(String depAirport) {
+                this.depAirport = depAirport;
+                return this;
+            }
+
+            /**
+             * dep_city.
+             */
+            public Builder depCity(String depCity) {
+                this.depCity = depCity;
+                return this;
+            }
+
+            /**
+             * flight_no.
+             */
+            public Builder flightNo(String flightNo) {
+                this.flightNo = flightNo;
                 return this;
             }
 

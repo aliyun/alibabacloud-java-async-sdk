@@ -882,8 +882,12 @@ public class ApplyModifyRequest extends Request {
         @NameInMap("user_name")
         private String userName;
 
+        @NameInMap("user_name_en")
+        private String userNameEn;
+
         private ExternalTravelerList(Builder builder) {
             this.userName = builder.userName;
+            this.userNameEn = builder.userNameEn;
         }
 
         public static Builder builder() {
@@ -901,14 +905,30 @@ public class ApplyModifyRequest extends Request {
             return this.userName;
         }
 
+        /**
+         * @return userNameEn
+         */
+        public String getUserNameEn() {
+            return this.userNameEn;
+        }
+
         public static final class Builder {
             private String userName; 
+            private String userNameEn; 
 
             /**
              * user_name.
              */
             public Builder userName(String userName) {
                 this.userName = userName;
+                return this;
+            }
+
+            /**
+             * user_name_en.
+             */
+            public Builder userNameEn(String userNameEn) {
+                this.userNameEn = userNameEn;
                 return this;
             }
 
