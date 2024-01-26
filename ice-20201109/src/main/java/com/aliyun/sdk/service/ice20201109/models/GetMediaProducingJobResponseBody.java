@@ -108,6 +108,9 @@ public class GetMediaProducingJobResponseBody extends TeaModel {
         @NameInMap("Status")
         private String status;
 
+        @NameInMap("SubJobMaterials")
+        private String subJobMaterials;
+
         @NameInMap("TemplateId")
         private String templateId;
 
@@ -133,6 +136,7 @@ public class GetMediaProducingJobResponseBody extends TeaModel {
             this.modifiedTime = builder.modifiedTime;
             this.projectId = builder.projectId;
             this.status = builder.status;
+            this.subJobMaterials = builder.subJobMaterials;
             this.templateId = builder.templateId;
             this.timeline = builder.timeline;
             this.userData = builder.userData;
@@ -232,6 +236,13 @@ public class GetMediaProducingJobResponseBody extends TeaModel {
         }
 
         /**
+         * @return subJobMaterials
+         */
+        public String getSubJobMaterials() {
+            return this.subJobMaterials;
+        }
+
+        /**
          * @return templateId
          */
         public String getTemplateId() {
@@ -272,6 +283,7 @@ public class GetMediaProducingJobResponseBody extends TeaModel {
             private String modifiedTime; 
             private String projectId; 
             private String status; 
+            private String subJobMaterials; 
             private String templateId; 
             private String timeline; 
             private String userData; 
@@ -370,6 +382,14 @@ public class GetMediaProducingJobResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * SubJobMaterials.
+             */
+            public Builder subJobMaterials(String subJobMaterials) {
+                this.subJobMaterials = subJobMaterials;
                 return this;
             }
 

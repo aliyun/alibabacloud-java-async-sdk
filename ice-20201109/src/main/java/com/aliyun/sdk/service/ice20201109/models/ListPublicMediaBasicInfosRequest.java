@@ -17,6 +17,10 @@ public class ListPublicMediaBasicInfosRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("BusinessType")
+    private String businessType;
+
+    @Query
     @NameInMap("IncludeFileBasicInfo")
     private Boolean includeFileBasicInfo;
 
@@ -46,6 +50,7 @@ public class ListPublicMediaBasicInfosRequest extends Request {
     private ListPublicMediaBasicInfosRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.businessType = builder.businessType;
         this.includeFileBasicInfo = builder.includeFileBasicInfo;
         this.maxResults = builder.maxResults;
         this.mediaTagId = builder.mediaTagId;
@@ -72,6 +77,13 @@ public class ListPublicMediaBasicInfosRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return businessType
+     */
+    public String getBusinessType() {
+        return this.businessType;
     }
 
     /**
@@ -118,6 +130,7 @@ public class ListPublicMediaBasicInfosRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListPublicMediaBasicInfosRequest, Builder> {
         private String regionId; 
+        private String businessType; 
         private Boolean includeFileBasicInfo; 
         private Integer maxResults; 
         private String mediaTagId; 
@@ -132,6 +145,7 @@ public class ListPublicMediaBasicInfosRequest extends Request {
         private Builder(ListPublicMediaBasicInfosRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.businessType = request.businessType;
             this.includeFileBasicInfo = request.includeFileBasicInfo;
             this.maxResults = request.maxResults;
             this.mediaTagId = request.mediaTagId;
@@ -146,6 +160,15 @@ public class ListPublicMediaBasicInfosRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * BusinessType.
+         */
+        public Builder businessType(String businessType) {
+            this.putQueryParameter("BusinessType", businessType);
+            this.businessType = businessType;
             return this;
         }
 
