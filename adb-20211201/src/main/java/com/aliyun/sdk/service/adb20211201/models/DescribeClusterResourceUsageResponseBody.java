@@ -62,7 +62,7 @@ public class DescribeClusterResourceUsageResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The HTTP status code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -70,7 +70,7 @@ public class DescribeClusterResourceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The queried resource usage.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -78,7 +78,7 @@ public class DescribeClusterResourceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,12 @@ public class DescribeClusterResourceUsageResponseBody extends TeaModel {
             private java.util.List < String > values; 
 
             /**
-             * Name.
+             * The resource usage metric. Valid values:
+             * <p>
+             * 
+             * *   `TotalAcuNumber`: the total number of ACUs.
+             * *   `ReservedAcuNumber`: the number of ACUs for the reserved resources.
+             * *   `ReservedAcuUsageNumber`: the number of ACUs for the reserved resources that are used.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -138,7 +143,7 @@ public class DescribeClusterResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * Values.
+             * The values of the metric at specific points in time.
              */
             public Builder values(java.util.List < String > values) {
                 this.values = values;
@@ -215,7 +220,7 @@ public class DescribeClusterResourceUsageResponseBody extends TeaModel {
             private String startTime; 
 
             /**
-             * AcuInfo.
+             * The AnalyticDB compute unit (ACU) usage of the cluster.
              */
             public Builder acuInfo(java.util.List < AcuInfo> acuInfo) {
                 this.acuInfo = acuInfo;
@@ -223,7 +228,7 @@ public class DescribeClusterResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * DBClusterId.
+             * The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -231,7 +236,7 @@ public class DescribeClusterResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The end time of the query. The time follows the ISO 8601 standard in the *yyyy-MM-ddTHH:mm:ssZ* format. The time is displayed in UTC.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -239,7 +244,7 @@ public class DescribeClusterResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The start time of the query. The time follows the ISO 8601 standard in the *yyyy-MM-ddTHH:mm:ssZ* format. The time is displayed in UTC.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;

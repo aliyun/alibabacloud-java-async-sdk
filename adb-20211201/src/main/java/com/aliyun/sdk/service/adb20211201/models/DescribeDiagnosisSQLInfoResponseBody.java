@@ -62,7 +62,7 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
         private java.util.List < StageInfos> stageInfos; 
 
         /**
-         * DiagnosisSQLInfo.
+         * The queried execution information, including the SQL statement, statistics, execution plan, and operator information.
          */
         public Builder diagnosisSQLInfo(String diagnosisSQLInfo) {
             this.diagnosisSQLInfo = diagnosisSQLInfo;
@@ -70,7 +70,7 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
         }
 
         /**
-         * StageInfos.
+         * The queried execution information by stage.
          */
         public Builder stageInfos(java.util.List < StageInfos> stageInfos) {
             this.stageInfos = stageInfos;
@@ -214,7 +214,7 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * InputDataSize.
+             * The total amount of input data in the stage. Unit: bytes.
              */
             public Builder inputDataSize(Long inputDataSize) {
                 this.inputDataSize = inputDataSize;
@@ -222,7 +222,7 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
             }
 
             /**
-             * InputRows.
+             * The total number of input rows in the stage.
              */
             public Builder inputRows(Long inputRows) {
                 this.inputRows = inputRows;
@@ -230,7 +230,7 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
             }
 
             /**
-             * OperatorCost.
+             * The total amount of time consumed by all operators in the stage. Unit: milliseconds.
              */
             public Builder operatorCost(Long operatorCost) {
                 this.operatorCost = operatorCost;
@@ -238,7 +238,7 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
             }
 
             /**
-             * OutputDataSize.
+             * The total amount of output data in the stage. Unit: bytes.
              */
             public Builder outputDataSize(Long outputDataSize) {
                 this.outputDataSize = outputDataSize;
@@ -246,7 +246,7 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
             }
 
             /**
-             * OutputRows.
+             * The total number of output rows in the stage.
              */
             public Builder outputRows(Long outputRows) {
                 this.outputRows = outputRows;
@@ -254,7 +254,7 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
             }
 
             /**
-             * PeakMemory.
+             * The total peak memory of the stage. Unit: bytes.
              */
             public Builder peakMemory(Long peakMemory) {
                 this.peakMemory = peakMemory;
@@ -262,7 +262,7 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Progress.
+             * The execution progress of the stage.
              */
             public Builder progress(Double progress) {
                 this.progress = progress;
@@ -270,7 +270,7 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
             }
 
             /**
-             * StageID。
+             * The stage ID.
              */
             public Builder stageId(String stageId) {
                 this.stageId = stageId;
@@ -278,7 +278,7 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * The state of the stage.
              */
             public Builder state(String state) {
                 this.state = state;

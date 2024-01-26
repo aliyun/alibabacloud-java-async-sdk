@@ -74,11 +74,11 @@ public class DescribeAdbMySqlSchemasResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The message returned for the operation. Valid values:
+         * The returned message.
          * <p>
          * 
-         * *   **Success** is returned if the operation is successful.
-         * *   An error message is returned if the operation fails.
+         * *   If the request was successful, a **success** message is returned.
+         * *   If the request failed, an error message is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -86,7 +86,7 @@ public class DescribeAdbMySqlSchemasResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -94,7 +94,7 @@ public class DescribeAdbMySqlSchemasResponseBody extends TeaModel {
         }
 
         /**
-         * The names of databases.
+         * The queried databases.
          */
         public Builder schemas(java.util.List < String > schemas) {
             this.schemas = schemas;
@@ -102,11 +102,11 @@ public class DescribeAdbMySqlSchemasResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the operation is successful. Valid values:
+         * Indicates whether the request was successful. Valid values:
          * <p>
          * 
-         * *   **true**: The operation is successful.
-         * *   **false**: The operation fails.
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -55,7 +55,7 @@ public class GetSparkConfigLogPathRequest extends Request {
         } 
 
         /**
-         * The database ID.
+         * The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putBodyParameter("DBClusterId", DBClusterId);

@@ -58,7 +58,7 @@ public class CreateSparkTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -101,8 +101,8 @@ public class CreateSparkTemplateResponseBody extends TeaModel {
              * Indicates whether the application template is created. Valid values:
              * <p>
              * 
-             * *   **true**: The application template is created.
-             * *   **false**: The application fails to be created.
+             * *   **True**
+             * *   **False**
              */
             public Builder succeeded(Boolean succeeded) {
                 this.succeeded = succeeded;

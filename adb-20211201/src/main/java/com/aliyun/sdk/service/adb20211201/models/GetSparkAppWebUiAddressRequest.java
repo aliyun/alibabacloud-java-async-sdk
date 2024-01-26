@@ -69,7 +69,10 @@ public class GetSparkAppWebUiAddressRequest extends Request {
         } 
 
         /**
-         * The ID of the Spark application.
+         * The Spark application ID.
+         * <p>
+         * 
+         * >  You can call the [ListSparkApps](~~455888~~) operation to query Spark application IDs.
          */
         public Builder appId(String appId) {
             this.putBodyParameter("AppId", appId);
@@ -78,7 +81,10 @@ public class GetSparkAppWebUiAddressRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * The cluster ID.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBClusters](~~129857~~) operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);

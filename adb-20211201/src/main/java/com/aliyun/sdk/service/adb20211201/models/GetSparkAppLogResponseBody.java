@@ -78,12 +78,16 @@ public class GetSparkAppLogResponseBody extends TeaModel {
         @NameInMap("LogContent")
         private String logContent;
 
+        @NameInMap("LogSize")
+        private Integer logSize;
+
         @NameInMap("Message")
         private String message;
 
         private Data(Builder builder) {
             this.DBClusterId = builder.DBClusterId;
             this.logContent = builder.logContent;
+            this.logSize = builder.logSize;
             this.message = builder.message;
         }
 
@@ -110,6 +114,13 @@ public class GetSparkAppLogResponseBody extends TeaModel {
         }
 
         /**
+         * @return logSize
+         */
+        public Integer getLogSize() {
+            return this.logSize;
+        }
+
+        /**
          * @return message
          */
         public String getMessage() {
@@ -119,6 +130,7 @@ public class GetSparkAppLogResponseBody extends TeaModel {
         public static final class Builder {
             private String DBClusterId; 
             private String logContent; 
+            private Integer logSize; 
             private String message; 
 
             /**
@@ -134,6 +146,14 @@ public class GetSparkAppLogResponseBody extends TeaModel {
              */
             public Builder logContent(String logContent) {
                 this.logContent = logContent;
+                return this;
+            }
+
+            /**
+             * LogSize.
+             */
+            public Builder logSize(Integer logSize) {
+                this.logSize = logSize;
                 return this;
             }
 

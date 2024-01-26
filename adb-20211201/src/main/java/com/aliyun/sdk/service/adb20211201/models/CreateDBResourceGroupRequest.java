@@ -26,6 +26,10 @@ public class CreateDBResourceGroupRequest extends Request {
     private String DBClusterId;
 
     @Query
+    @NameInMap("EnableSpot")
+    private Boolean enableSpot;
+
+    @Query
     @NameInMap("GroupName")
     @Validation(required = true)
     private String groupName;
@@ -60,6 +64,7 @@ public class CreateDBResourceGroupRequest extends Request {
         this.clusterMode = builder.clusterMode;
         this.clusterSizeResource = builder.clusterSizeResource;
         this.DBClusterId = builder.DBClusterId;
+        this.enableSpot = builder.enableSpot;
         this.groupName = builder.groupName;
         this.groupType = builder.groupType;
         this.maxClusterCount = builder.maxClusterCount;
@@ -101,6 +106,13 @@ public class CreateDBResourceGroupRequest extends Request {
      */
     public String getDBClusterId() {
         return this.DBClusterId;
+    }
+
+    /**
+     * @return enableSpot
+     */
+    public Boolean getEnableSpot() {
+        return this.enableSpot;
     }
 
     /**
@@ -156,6 +168,7 @@ public class CreateDBResourceGroupRequest extends Request {
         private String clusterMode; 
         private String clusterSizeResource; 
         private String DBClusterId; 
+        private Boolean enableSpot; 
         private String groupName; 
         private String groupType; 
         private Integer maxClusterCount; 
@@ -173,6 +186,7 @@ public class CreateDBResourceGroupRequest extends Request {
             this.clusterMode = request.clusterMode;
             this.clusterSizeResource = request.clusterSizeResource;
             this.DBClusterId = request.DBClusterId;
+            this.enableSpot = request.enableSpot;
             this.groupName = request.groupName;
             this.groupType = request.groupType;
             this.maxClusterCount = request.maxClusterCount;
@@ -206,6 +220,15 @@ public class CreateDBResourceGroupRequest extends Request {
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
             this.DBClusterId = DBClusterId;
+            return this;
+        }
+
+        /**
+         * EnableSpot.
+         */
+        public Builder enableSpot(Boolean enableSpot) {
+            this.putQueryParameter("EnableSpot", enableSpot);
+            this.enableSpot = enableSpot;
             return this;
         }
 
@@ -283,7 +306,10 @@ public class CreateDBResourceGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the cluster.
+         * <p>
+         * 
+         * >  You can call the [DescribeRegions](~~612393~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -86,7 +86,7 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
         private Worker worker; 
 
         /**
-         * CS.
+         * The access nodes of the queried cluster.
          */
         public Builder cs(Cs cs) {
             this.cs = cs;
@@ -94,7 +94,7 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Executor.
+         * The compute node groups of the queried cluster.
          */
         public Builder executor(Executor executor) {
             this.executor = executor;
@@ -102,7 +102,14 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceStatus.
+         * The health state of the cluster. Valid values:
+         * <p>
+         * 
+         * *   **RISK**
+         * *   **NORMAL**
+         * *   **UNAVAILABLE**
+         * 
+         * >  When the states of the access nodes, compute node groups, and storage node groups of a cluster are all **NORMAL** and a connection to the cluster is established, the state of the cluster is **NORMAL**. When the state of the access nodes, compute node groups, or storage node groups of the cluster is **RISK**, the state of the cluster is **RISK**. When the state of the access nodes, compute node groups, or storage node groups of the cluster is **UNAVAILABLE**, the state of the cluster is **UNAVAILABLE**.
          */
         public Builder instanceStatus(String instanceStatus) {
             this.instanceStatus = instanceStatus;
@@ -110,7 +117,7 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +125,7 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Worker.
+         * The storage node groups of the queried cluster.
          */
         public Builder worker(Worker worker) {
             this.worker = worker;
@@ -206,7 +213,7 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
             private Long unavailableCount; 
 
             /**
-             * ActiveCount.
+             * The number of healthy access nodes.
              */
             public Builder activeCount(Long activeCount) {
                 this.activeCount = activeCount;
@@ -214,7 +221,7 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ExpectedCount.
+             * The total number of access nodes.
              */
             public Builder expectedCount(Long expectedCount) {
                 this.expectedCount = expectedCount;
@@ -222,7 +229,7 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * RiskCount.
+             * The number of risky nodes.
              */
             public Builder riskCount(Long riskCount) {
                 this.riskCount = riskCount;
@@ -230,7 +237,12 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The health state of access nodes. Valid values:
+             * <p>
+             * 
+             * *   **RISK**
+             * *   **NORMAL**
+             * *   **UNAVAILABLE**
              */
             public Builder status(String status) {
                 this.status = status;
@@ -238,7 +250,7 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * UnavailableCount.
+             * The number of unavailable access nodes.
              */
             public Builder unavailableCount(Long unavailableCount) {
                 this.unavailableCount = unavailableCount;
@@ -327,7 +339,7 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
             private Long unavailableCount; 
 
             /**
-             * ActiveCount.
+             * The number of healthy access nodes.
              */
             public Builder activeCount(Long activeCount) {
                 this.activeCount = activeCount;
@@ -335,7 +347,7 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ExpectedCount.
+             * The total number of compute nodes.
              */
             public Builder expectedCount(Long expectedCount) {
                 this.expectedCount = expectedCount;
@@ -343,7 +355,7 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * RiskCount.
+             * The number of risky nodes.
              */
             public Builder riskCount(Long riskCount) {
                 this.riskCount = riskCount;
@@ -351,7 +363,12 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The health state of compute node groups. Valid values:
+             * <p>
+             * 
+             * *   **RISK**
+             * *   **NORMAL**
+             * *   **UNAVAILABLE**
              */
             public Builder status(String status) {
                 this.status = status;
@@ -359,7 +376,7 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * UnavailableCount.
+             * The number of unavailable access nodes.
              */
             public Builder unavailableCount(Long unavailableCount) {
                 this.unavailableCount = unavailableCount;
@@ -448,7 +465,7 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
             private Long unavailableCount; 
 
             /**
-             * ActiveCount.
+             * The number of healthy storage node groups.
              */
             public Builder activeCount(Long activeCount) {
                 this.activeCount = activeCount;
@@ -456,7 +473,7 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ExpectedCount.
+             * The total number of storage node groups.
              */
             public Builder expectedCount(Long expectedCount) {
                 this.expectedCount = expectedCount;
@@ -464,7 +481,7 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * RiskCount.
+             * The number of risky storage node groups.
              */
             public Builder riskCount(Long riskCount) {
                 this.riskCount = riskCount;
@@ -472,7 +489,12 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The health state of storage node groups. Valid values:
+             * <p>
+             * 
+             * *   **RISK**
+             * *   **NORMAL**
+             * *   **UNAVAILABLE**
              */
             public Builder status(String status) {
                 this.status = status;
@@ -480,7 +502,7 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * UnavailableCount.
+             * The number of unavailable storage node groups.
              */
             public Builder unavailableCount(Long unavailableCount) {
                 this.unavailableCount = unavailableCount;

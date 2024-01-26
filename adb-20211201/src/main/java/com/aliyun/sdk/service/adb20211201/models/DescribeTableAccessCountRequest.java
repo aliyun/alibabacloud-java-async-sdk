@@ -140,7 +140,10 @@ public class DescribeTableAccessCountRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBClusters](~~454250~~) operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -149,7 +152,21 @@ public class DescribeTableAccessCountRequest extends Request {
         }
 
         /**
-         * Order.
+         * The order by which to sort query results. Specify the parameter value in the JSON string format. Example: `[{"Field":"TableSchema","Type":"Asc"}]`. Fields in the request parameter:
+         * <p>
+         * 
+         * *   `Field` specifies the field by which to sort the query results. Valid values:
+         * 
+         *     *   `TableSchema`: the name of the database to which the table belongs.
+         *     *   `TableName`: the name of the table.
+         *     *   `AccessCount`: the number of accesses to the table.
+         * 
+         * *   `Type` specifies the sorting order. Valid values:
+         * 
+         *     *   `Asc`: ascending order.
+         *     *   `Desc`: descending order.
+         * 
+         * >  If you do not specify this parameter, query results are sorted in ascending order based on the database and the table.
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -158,7 +175,7 @@ public class DescribeTableAccessCountRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number. Pages start from 1. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -167,7 +184,13 @@ public class DescribeTableAccessCountRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Valid values:
+         * <p>
+         * 
+         * *   **10** (default)
+         * *   **30**
+         * *   **50**
+         * *   **100**
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -176,7 +199,7 @@ public class DescribeTableAccessCountRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the cluster.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -185,7 +208,10 @@ public class DescribeTableAccessCountRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <p>
+         * 
+         * >  Only data within the last 30 days can be queried.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -194,7 +220,10 @@ public class DescribeTableAccessCountRequest extends Request {
         }
 
         /**
-         * TableName.
+         * The name of the table.
+         * <p>
+         * 
+         * >  If you leave this parameter empty, the number of accesses to all tables in the cluster on a date is returned.
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);

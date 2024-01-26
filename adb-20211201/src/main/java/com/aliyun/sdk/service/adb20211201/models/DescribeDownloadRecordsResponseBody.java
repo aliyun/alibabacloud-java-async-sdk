@@ -50,7 +50,7 @@ public class DescribeDownloadRecordsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Records.
+         * The queried download tasks.
          */
         public Builder records(java.util.List < Records> records) {
             this.records = records;
@@ -58,7 +58,7 @@ public class DescribeDownloadRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +146,7 @@ public class DescribeDownloadRecordsResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * DownloadId.
+             * The download task ID.
              */
             public Builder downloadId(Long downloadId) {
                 this.downloadId = downloadId;
@@ -154,7 +154,7 @@ public class DescribeDownloadRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ExceptionMsg.
+             * The error message returned if the download task failed.
              */
             public Builder exceptionMsg(String exceptionMsg) {
                 this.exceptionMsg = exceptionMsg;
@@ -162,7 +162,7 @@ public class DescribeDownloadRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * FileName.
+             * The name of the downloaded file.
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -170,7 +170,12 @@ public class DescribeDownloadRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The state of the download task. Valid values:
+             * <p>
+             * 
+             * *   **running**
+             * *   **finished**
+             * *   **failed**
              */
             public Builder status(String status) {
                 this.status = status;
@@ -178,7 +183,7 @@ public class DescribeDownloadRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * The download URL of the file.
              */
             public Builder url(String url) {
                 this.url = url;

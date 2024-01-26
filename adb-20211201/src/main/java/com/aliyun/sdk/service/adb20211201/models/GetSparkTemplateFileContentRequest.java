@@ -79,10 +79,10 @@ public class GetSparkTemplateFileContentRequest extends Request {
         }
 
         /**
-         * The ID of the application template.
+         * The application template ID.
          * <p>
          * 
-         * >  You can call the [GetSparkTemplateFullTree](~~456205~~) operation to query the template ID.
+         * >  You can call the [GetSparkTemplateFullTree](~~456205~~) operation to query the application template ID.
          */
         public Builder id(Long id) {
             this.putBodyParameter("Id", id);

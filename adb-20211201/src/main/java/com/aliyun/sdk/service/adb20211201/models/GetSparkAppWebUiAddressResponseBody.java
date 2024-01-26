@@ -50,7 +50,7 @@ public class GetSparkAppWebUiAddressResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The data returned.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class GetSparkAppWebUiAddressResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,7 +134,7 @@ public class GetSparkAppWebUiAddressResponseBody extends TeaModel {
             private String webUiAddress; 
 
             /**
-             * The ID of the Spark application.
+             * The Spark application ID.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -142,7 +142,7 @@ public class GetSparkAppWebUiAddressResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Database.
+             * The database ID.
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -150,7 +150,7 @@ public class GetSparkAppWebUiAddressResponseBody extends TeaModel {
             }
 
             /**
-             * The expiration time. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+             * The expiration time. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder expirationTimeInMillis(Long expirationTimeInMillis) {
                 this.expirationTimeInMillis = expirationTimeInMillis;

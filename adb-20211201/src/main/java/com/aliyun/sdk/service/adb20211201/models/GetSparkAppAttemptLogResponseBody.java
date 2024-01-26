@@ -81,6 +81,9 @@ public class GetSparkAppAttemptLogResponseBody extends TeaModel {
         @NameInMap("LogContent")
         private String logContent;
 
+        @NameInMap("LogSize")
+        private Integer logSize;
+
         @NameInMap("Message")
         private String message;
 
@@ -88,6 +91,7 @@ public class GetSparkAppAttemptLogResponseBody extends TeaModel {
             this.appId = builder.appId;
             this.DBClusterId = builder.DBClusterId;
             this.logContent = builder.logContent;
+            this.logSize = builder.logSize;
             this.message = builder.message;
         }
 
@@ -121,6 +125,13 @@ public class GetSparkAppAttemptLogResponseBody extends TeaModel {
         }
 
         /**
+         * @return logSize
+         */
+        public Integer getLogSize() {
+            return this.logSize;
+        }
+
+        /**
          * @return message
          */
         public String getMessage() {
@@ -131,6 +142,7 @@ public class GetSparkAppAttemptLogResponseBody extends TeaModel {
             private String appId; 
             private String DBClusterId; 
             private String logContent; 
+            private Integer logSize; 
             private String message; 
 
             /**
@@ -154,6 +166,14 @@ public class GetSparkAppAttemptLogResponseBody extends TeaModel {
              */
             public Builder logContent(String logContent) {
                 this.logContent = logContent;
+                return this;
+            }
+
+            /**
+             * LogSize.
+             */
+            public Builder logSize(Integer logSize) {
+                this.logSize = logSize;
                 return this;
             }
 

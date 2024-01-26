@@ -110,7 +110,7 @@ public class PreloadSparkAppMetricsResponseBody extends TeaModel {
             private Long totalReadFileSizeInByte; 
 
             /**
-             * The number of scanned rows.
+             * The number of rows scanned.
              */
             public Builder outputRowsCount(Long outputRowsCount) {
                 this.outputRowsCount = outputRowsCount;
@@ -118,7 +118,7 @@ public class PreloadSparkAppMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of scanned bytes.
+             * The size of the scanned data. Unit: bytes.
              */
             public Builder totalReadFileSizeInByte(Long totalReadFileSizeInByte) {
                 this.totalReadFileSizeInByte = totalReadFileSizeInByte;
@@ -223,7 +223,7 @@ public class PreloadSparkAppMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * The path of the event log.
+             * The event log path.
              */
             public Builder eventLogPath(String eventLogPath) {
                 this.eventLogPath = eventLogPath;

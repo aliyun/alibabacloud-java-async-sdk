@@ -86,7 +86,7 @@ public class DescribeElasticPlanJobsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Details of the scaling plan jobs.
+         * The queried scaling plan jobs.
          */
         public Builder jobs(java.util.List < Jobs> jobs) {
             this.jobs = jobs;
@@ -94,7 +94,7 @@ public class DescribeElasticPlanJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeElasticPlanJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of scaling plan jobs returned per page.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeElasticPlanJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -281,8 +281,10 @@ public class DescribeElasticPlanJobsResponseBody extends TeaModel {
              * The amount of elastic resources.
              * <p>
              * 
-             * > *   If the Type parameter is set to EXECUTOR, ElasticAcu indicates the amount of elastic resources in the current resource group.
-             * > *   If the Type parameter is set to WORKER, ElasticAcu indicates the total amount of elastic storage resources in the current cluster.
+             * > 
+             * 
+             * *   If Type is set to EXECUTOR, ElasticAcu indicates the amount of elastic resources in the current resource group.
+             * *   If Type is set to WORKER, ElasticAcu indicates the total amount of elastic storage resources in the current cluster.
              */
             public Builder elasticAcu(String elasticAcu) {
                 this.elasticAcu = elasticAcu;
@@ -298,10 +300,10 @@ public class DescribeElasticPlanJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the scaling plan job was complete.
+             * The end time of the scaling plan job.
              * <p>
              * 
-             * >  The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.
+             * >  The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -309,11 +311,13 @@ public class DescribeElasticPlanJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of instances.
+             * The number of compute nodes or storage replica sets.
              * <p>
              * 
-             * > *   If the Type parameter is set to EXECUTOR, InstanceSize indicates the number of compute nodes.
-             * > *   If the Type parameter is set to EXECUTOR, InstanceSize indicates the number of replica sets at the storage layer in the cluster.
+             * > 
+             * 
+             * *   If Type is set to EXECUTOR, InstanceSize indicates the number of compute nodes in the cluster.
+             * *   If Type is set to EXECUTOR, InstanceSize indicates the number of storage replica sets in the cluster.
              */
             public Builder instanceSize(Integer instanceSize) {
                 this.instanceSize = instanceSize;
@@ -324,8 +328,10 @@ public class DescribeElasticPlanJobsResponseBody extends TeaModel {
              * The amount of reserved resources.
              * <p>
              * 
-             * > *   If the Type parameter is set to EXECUTOR, ReserveAcu indicates the amount of reserved resources in the current resource group.
-             * > *   If the Type parameter is set to WORKER, ReserveAcu indicates the total amount of reserved storage resources in the current cluster.
+             * > 
+             * 
+             * *   If Type is set to EXECUTOR, ReserveAcu indicates the amount of reserved resources in the current resource group.
+             * *   If Type is set to WORKER, ReserveAcu indicates the total amount of reserved storage resources in the current cluster.
              */
             public Builder reserveAcu(String reserveAcu) {
                 this.reserveAcu = reserveAcu;
@@ -341,10 +347,10 @@ public class DescribeElasticPlanJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the scaling plan job was enabled.
+             * The start time of the scaling plan job.
              * <p>
              * 
-             * >  The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.
+             * >  The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -352,14 +358,12 @@ public class DescribeElasticPlanJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the scaling plan job.
+             * The state of the scaling plan job. Valid values:
              * <p>
              * 
-             * Valid values:
-             * 
-             * *   RUNNING: The job is running.
-             * *   SUCCESSFUL: The job is successfully run.
-             * *   FAILED: The job fails.
+             * *   RUNNING
+             * *   SUCCESSFUL
+             * *   FAILED
              */
             public Builder status(String status) {
                 this.status = status;
@@ -367,7 +371,7 @@ public class DescribeElasticPlanJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of elastic resources after scaling.
+             * The desired specifications of elastic resources after scaling.
              */
             public Builder targetSize(String targetSize) {
                 this.targetSize = targetSize;
@@ -378,8 +382,10 @@ public class DescribeElasticPlanJobsResponseBody extends TeaModel {
              * The total amount of resources.
              * <p>
              * 
-             * > *   If the Type parameter is set to EXECUTOR, TotalAcu indicates the total amount of computing resources in the current resource group.
-             * > *   If the Type parameter is set to WORKER, TotalAcu indicates the total amount of storage resources in the cluster.
+             * > 
+             * 
+             * *   If Type is set to EXECUTOR, TotalAcu indicates the total amount of computing resources in the current resource group.
+             * *   If Type is set to WORKER, TotalAcu indicates the total amount of storage resources in the cluster.
              */
             public Builder totalAcu(String totalAcu) {
                 this.totalAcu = totalAcu;
@@ -387,13 +393,11 @@ public class DescribeElasticPlanJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the scaling plan job.
+             * The type of the scaling plan job. Valid values:
              * <p>
              * 
-             * Valid values:
-             * 
-             * *   EXECUTOR: interactive resource groups, which fall into the computing resource category.
-             * *   WORKER: EIUs.
+             * *   EXECUTOR: the interactive resource group type, which indicates the computing resource type.
+             * *   WORKER: the EIU type.
              */
             public Builder type(String type) {
                 this.type = type;

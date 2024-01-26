@@ -55,20 +55,20 @@ public class GetSparkTemplateFolderTreeResponseBody extends TeaModel {
          * 
          * *   **Uid**: the UID of the Alibaba Cloud account.
          * 
-         * *   **Type**: the type of the application template. Valid values: **FOLDER**: directory.
+         * *   **Type**: the application template type. Valid values: **FOLDER**
          * 
          * *   **Parent**: indicates whether a child directory exists. Valid values:
          * 
-         *     *   **0**: No child directory exists.
-         *     *   **-1**: A child directory exists.
+         *     *   **0**: no.
+         *     *   **-1**: yes.
          * 
          * *   **Children**: the child directory.
          * 
-         * *   **LastModified**: the time when applications in the directory are last modified. The time is displayed in the UNIX timestamp format. Unit: seconds.
+         * *   **LastModified**: the time when applications in the directory are last modified. This value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.
          * 
          * *   **Name**: the name of the directory.
          * 
-         * *   **Id**: the ID of the directory.
+         * *   **Id**: the directory ID.
          */
         public Builder data(String data) {
             this.data = data;
@@ -76,7 +76,7 @@ public class GetSparkTemplateFolderTreeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

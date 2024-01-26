@@ -86,7 +86,7 @@ public class DescribeApsResourceGroupsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The queried resource groups.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -94,7 +94,7 @@ public class DescribeApsResourceGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Long httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -102,7 +102,11 @@ public class DescribeApsResourceGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
+         * <p>
+         * 
+         * *   If the request was successful, a success message is returned.
+         * *   If the request failed, an error message is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +114,7 @@ public class DescribeApsResourceGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +122,11 @@ public class DescribeApsResourceGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -230,7 +238,11 @@ public class DescribeApsResourceGroupsResponseBody extends TeaModel {
             private Integer minComputeResource; 
 
             /**
-             * Available.
+             * Indicates whether the resource group is available. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder available(Boolean available) {
                 this.available = available;
@@ -246,7 +258,7 @@ public class DescribeApsResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * The name of the resource group.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -254,7 +266,13 @@ public class DescribeApsResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * GroupType.
+             * The type of the resource group. Valid values:
+             * <p>
+             * 
+             * *   **Interactive**
+             * *   **Job**
+             * 
+             * >  For more information about resource groups, see [Resource groups](~~428610~~).
              */
             public Builder groupType(String groupType) {
                 this.groupType = groupType;
@@ -262,7 +280,7 @@ public class DescribeApsResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * LeftComputeResource.
+             * The amount of remaining computing resources. Unit: ACUs.
              */
             public Builder leftComputeResource(Integer leftComputeResource) {
                 this.leftComputeResource = leftComputeResource;
@@ -270,7 +288,11 @@ public class DescribeApsResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * MaxComputeResource.
+             * The maximum amount of reserved computing resources. Unit: ACUs.
+             * <p>
+             * 
+             * *   If the value of GroupType is **Interactive**, the amount of reserved computing resources that are not allocated in the cluster is returned in increments of 16 ACUs.
+             * *   If the value of GroupType is **Job**, the amount of reserved computing resources that are not allocated in the cluster is returned in increments of 8 ACUs.
              */
             public Builder maxComputeResource(Integer maxComputeResource) {
                 this.maxComputeResource = maxComputeResource;
@@ -278,7 +300,11 @@ public class DescribeApsResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * MinComputeResource.
+             * The minimum amount of reserved computing resources. Unit: ACUs.
+             * <p>
+             * 
+             * *   If the value of GroupType is **Interactive**, 16 is returned.
+             * *   If the value of GroupType is **Job**, 0 is returned.
              */
             public Builder minComputeResource(Integer minComputeResource) {
                 this.minComputeResource = minComputeResource;
@@ -331,7 +357,7 @@ public class DescribeApsResourceGroupsResponseBody extends TeaModel {
             private Long step; 
 
             /**
-             * ResourceGroups.
+             * The queried resource groups.
              */
             public Builder resourceGroups(java.util.List < ResourceGroups> resourceGroups) {
                 this.resourceGroups = resourceGroups;
@@ -339,7 +365,11 @@ public class DescribeApsResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Step.
+             * The step size of resources. Unit: AnalyticDB compute units (ACUs).
+             * <p>
+             * 
+             * *   If the value of GroupType is **Interactive**, 16 is returned.
+             * *   If the value of GroupType is **Job**, 8 is returned.
              */
             public Builder step(Long step) {
                 this.step = step;

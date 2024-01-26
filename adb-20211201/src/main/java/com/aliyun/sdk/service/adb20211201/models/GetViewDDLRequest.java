@@ -98,7 +98,7 @@ public class GetViewDDLRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * The cluster ID.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -107,7 +107,7 @@ public class GetViewDDLRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the cluster resides.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

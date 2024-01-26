@@ -146,7 +146,7 @@ public class KillSparkAppResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * The ID of the Spark application.
+             * The Spark application ID.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -154,7 +154,7 @@ public class KillSparkAppResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Spark application.
+             * The name of the application.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -162,7 +162,7 @@ public class KillSparkAppResponseBody extends TeaModel {
             }
 
             /**
-             * The database ID.
+             * The cluster ID.
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -170,7 +170,7 @@ public class KillSparkAppResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned if the request failed.
+             * The error message returned.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -178,14 +178,20 @@ public class KillSparkAppResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the Spark application. Valid values:
+             * The execution state of the Spark application. Valid values:
              * <p>
              * 
-             * *   **waiting**
-             * *   **running**
-             * *   **finished**
-             * *   **failed**
-             * *   **closed**
+             * *   **SUBMITTED**
+             * *   **STARTING**
+             * *   **RUNNING**
+             * *   **FAILING**
+             * *   **FAILED**
+             * *   **KILLING**
+             * *   **KILLED**
+             * *   **SUCCEEDING**
+             * *   **COMPLETED**
+             * *   **FATAL**
+             * *   **UNKNOWN**
              */
             public Builder state(String state) {
                 this.state = state;

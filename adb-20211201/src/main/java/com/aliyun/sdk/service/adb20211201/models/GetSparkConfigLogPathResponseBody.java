@@ -50,7 +50,7 @@ public class GetSparkConfigLogPathResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned data.
+         * The queried Spark log configuration.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -146,7 +146,7 @@ public class GetSparkConfigLogPathResponseBody extends TeaModel {
             private String recordedLogPath; 
 
             /**
-             * The recommended default log path.
+             * The default log path.
              */
             public Builder defaultLogPath(String defaultLogPath) {
                 this.defaultLogPath = defaultLogPath;
@@ -162,7 +162,7 @@ public class GetSparkConfigLogPathResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the configuration was last modified.
+             * The last modification time.
              */
             public Builder modifiedTimestamp(String modifiedTimestamp) {
                 this.modifiedTimestamp = modifiedTimestamp;
@@ -170,7 +170,7 @@ public class GetSparkConfigLogPathResponseBody extends TeaModel {
             }
 
             /**
-             * The modifier ID.
+             * The account ID of the modifier.
              */
             public Builder modifiedUid(String modifiedUid) {
                 this.modifiedUid = modifiedUid;
@@ -178,7 +178,7 @@ public class GetSparkConfigLogPathResponseBody extends TeaModel {
             }
 
             /**
-             * The log path.
+             * The recorded log path.
              */
             public Builder recordedLogPath(String recordedLogPath) {
                 this.recordedLogPath = recordedLogPath;

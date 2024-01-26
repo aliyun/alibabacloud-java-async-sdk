@@ -69,7 +69,10 @@ public class CreateOssSubDirectoryRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBClusters](~~612397~~) operation to query the information about all AnalyticDB for MySQL clusters within a region, including cluster IDs.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putBodyParameter("DBClusterId", DBClusterId);
@@ -78,7 +81,7 @@ public class CreateOssSubDirectoryRequest extends Request {
         }
 
         /**
-         * Path.
+         * The OSS path where you want to create a subdirectory.
          */
         public Builder path(String path) {
             this.putBodyParameter("Path", path);

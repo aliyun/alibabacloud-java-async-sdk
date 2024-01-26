@@ -136,10 +136,10 @@ public class DescribePatternPerformanceRequest extends Request {
         }
 
         /**
-         * The ID of the SQL pattern.
+         * The SQL pattern ID.
          * <p>
          * 
-         * > You can call the [DescribeSQLPatterns](~~321868~~) operation to query the information about all SQL patterns in an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster within a period of time, including SQL pattern IDs.
+         * >  You can call the [DescribeSQLPatterns](~~321868~~) operation to query the information about all SQL patterns in an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster within a period of time, including SQL pattern IDs.
          */
         public Builder patternId(String patternId) {
             this.putQueryParameter("PatternId", patternId);

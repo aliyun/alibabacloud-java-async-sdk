@@ -62,7 +62,7 @@ public class DescribeClusterResourceDetailResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The HTTP status code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -70,7 +70,7 @@ public class DescribeClusterResourceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The information about the cluster resource usage.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -78,7 +78,7 @@ public class DescribeClusterResourceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,6 +98,9 @@ public class DescribeClusterResourceDetailResponseBody extends TeaModel {
 
         @NameInMap("ClusterSizeResource")
         private String clusterSizeResource;
+
+        @NameInMap("EnableSpot")
+        private Boolean enableSpot;
 
         @NameInMap("MaxClusterCount")
         private Integer maxClusterCount;
@@ -132,6 +135,7 @@ public class DescribeClusterResourceDetailResponseBody extends TeaModel {
         private ResourceGroupList(Builder builder) {
             this.clusterMode = builder.clusterMode;
             this.clusterSizeResource = builder.clusterSizeResource;
+            this.enableSpot = builder.enableSpot;
             this.maxClusterCount = builder.maxClusterCount;
             this.maxComputeResource = builder.maxComputeResource;
             this.minClusterCount = builder.minClusterCount;
@@ -164,6 +168,13 @@ public class DescribeClusterResourceDetailResponseBody extends TeaModel {
          */
         public String getClusterSizeResource() {
             return this.clusterSizeResource;
+        }
+
+        /**
+         * @return enableSpot
+         */
+        public Boolean getEnableSpot() {
+            return this.enableSpot;
         }
 
         /**
@@ -239,6 +250,7 @@ public class DescribeClusterResourceDetailResponseBody extends TeaModel {
         public static final class Builder {
             private String clusterMode; 
             private String clusterSizeResource; 
+            private Boolean enableSpot; 
             private Integer maxClusterCount; 
             private String maxComputeResource; 
             private Integer minClusterCount; 
@@ -251,7 +263,7 @@ public class DescribeClusterResourceDetailResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * ClusterMode.
+             * A reserved parameter.
              */
             public Builder clusterMode(String clusterMode) {
                 this.clusterMode = clusterMode;
@@ -259,7 +271,7 @@ public class DescribeClusterResourceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterSizeResource.
+             * A reserved parameter.
              */
             public Builder clusterSizeResource(String clusterSizeResource) {
                 this.clusterSizeResource = clusterSizeResource;
@@ -267,7 +279,15 @@ public class DescribeClusterResourceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * MaxClusterCount.
+             * EnableSpot.
+             */
+            public Builder enableSpot(Boolean enableSpot) {
+                this.enableSpot = enableSpot;
+                return this;
+            }
+
+            /**
+             * A reserved parameter.
              */
             public Builder maxClusterCount(Integer maxClusterCount) {
                 this.maxClusterCount = maxClusterCount;
@@ -275,7 +295,7 @@ public class DescribeClusterResourceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * MaxComputeResource.
+             * The maximum amount of reserved computing resources. Unit: ACUs.
              */
             public Builder maxComputeResource(String maxComputeResource) {
                 this.maxComputeResource = maxComputeResource;
@@ -283,7 +303,7 @@ public class DescribeClusterResourceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * MinClusterCount.
+             * A reserved parameter.
              */
             public Builder minClusterCount(Integer minClusterCount) {
                 this.minClusterCount = minClusterCount;
@@ -291,7 +311,7 @@ public class DescribeClusterResourceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * MinComputeResource.
+             * The minimum amount of reserved computing resources. Unit: ACUs.
              */
             public Builder minComputeResource(String minComputeResource) {
                 this.minComputeResource = minComputeResource;
@@ -299,7 +319,7 @@ public class DescribeClusterResourceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PoolId.
+             * The resource group ID.
              */
             public Builder poolId(Long poolId) {
                 this.poolId = poolId;
@@ -307,7 +327,7 @@ public class DescribeClusterResourceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PoolName.
+             * The name of the resource group.
              */
             public Builder poolName(String poolName) {
                 this.poolName = poolName;
@@ -315,7 +335,7 @@ public class DescribeClusterResourceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PoolType.
+             * The type of the resource group.
              */
             public Builder poolType(String poolType) {
                 this.poolType = poolType;
@@ -323,7 +343,7 @@ public class DescribeClusterResourceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PoolUsers.
+             * The user of the resource group.
              */
             public Builder poolUsers(String poolUsers) {
                 this.poolUsers = poolUsers;
@@ -331,7 +351,7 @@ public class DescribeClusterResourceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RunningClusterCount.
+             * A reserved parameter.
              */
             public Builder runningClusterCount(Integer runningClusterCount) {
                 this.runningClusterCount = runningClusterCount;
@@ -339,7 +359,12 @@ public class DescribeClusterResourceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The state of the resource group. Valid values:
+             * <p>
+             * 
+             * *   **running**
+             * *   **deleting**
+             * *   **scaling**
              */
             public Builder status(String status) {
                 this.status = status;
@@ -428,7 +453,7 @@ public class DescribeClusterResourceDetailResponseBody extends TeaModel {
             private String storageResource; 
 
             /**
-             * ComputeResource.
+             * The amount of reserved computing resources. Unit: AnalyticDB compute units (ACUs). Valid values: 0 to 4096. The value must be in increments of 16 ACUs. Each ACU is equivalent to 1 core and 4 GB memory.
              */
             public Builder computeResource(String computeResource) {
                 this.computeResource = computeResource;
@@ -436,7 +461,7 @@ public class DescribeClusterResourceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DBClusterId.
+             * The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -444,7 +469,7 @@ public class DescribeClusterResourceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * FreeComputeResource.
+             * The amount of idle reserved computing resources. Unit: ACUs. Valid values: 0 to 4096. The value must be in increments of 16 ACUs. Each ACU is equivalent to 1 core and 4 GB memory.
              */
             public Builder freeComputeResource(String freeComputeResource) {
                 this.freeComputeResource = freeComputeResource;
@@ -452,7 +477,7 @@ public class DescribeClusterResourceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupList.
+             * The resource groups.
              */
             public Builder resourceGroupList(java.util.List < ResourceGroupList> resourceGroupList) {
                 this.resourceGroupList = resourceGroupList;
@@ -460,7 +485,7 @@ public class DescribeClusterResourceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * StorageResource.
+             * The amount of reserved storage resources. Unit: ACUs. Valid values: 0 to 2064. The value must be in increments of 24 ACUs. Each ACU is equivalent to 1 core and 4 GB memory.
              */
             public Builder storageResource(String storageResource) {
                 this.storageResource = storageResource;

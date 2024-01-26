@@ -86,7 +86,7 @@ public class CreateOssSubDirectoryResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -94,7 +94,7 @@ public class CreateOssSubDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The response code. The status code 200 indicates that the request was successful.
          */
         public Builder httpStatusCode(Long httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -102,7 +102,11 @@ public class CreateOssSubDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
+         * <p>
+         * 
+         * *   If the request was successful, a **success** message is returned.
+         * *   If the request failed, an error message is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +114,7 @@ public class CreateOssSubDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +122,11 @@ public class CreateOssSubDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -194,7 +202,7 @@ public class CreateOssSubDirectoryResponseBody extends TeaModel {
             private Long serverCRC; 
 
             /**
-             * ClientCRC.
+             * The cyclic redundancy check (CRC) value on the client.
              */
             public Builder clientCRC(Long clientCRC) {
                 this.clientCRC = clientCRC;
@@ -202,7 +210,7 @@ public class CreateOssSubDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * ETag.
+             * The tag of the OSS path.
              */
             public Builder eTag(String eTag) {
                 this.eTag = eTag;
@@ -210,7 +218,7 @@ public class CreateOssSubDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * RequestId.
+             * The request ID.
              */
             public Builder requestId(String requestId) {
                 this.requestId = requestId;
@@ -218,7 +226,7 @@ public class CreateOssSubDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * ServerCRC.
+             * The CRC-64 value on the OSS bucket.
              */
             public Builder serverCRC(Long serverCRC) {
                 this.serverCRC = serverCRC;

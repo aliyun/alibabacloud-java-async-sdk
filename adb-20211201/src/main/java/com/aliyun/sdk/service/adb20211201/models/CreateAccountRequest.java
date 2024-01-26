@@ -114,7 +114,7 @@ public class CreateAccountRequest extends Request {
         } 
 
         /**
-         * The description of the database account.
+         * The description of the account.
          * <p>
          * 
          * *   The description cannot start with `http://` or `https://`.

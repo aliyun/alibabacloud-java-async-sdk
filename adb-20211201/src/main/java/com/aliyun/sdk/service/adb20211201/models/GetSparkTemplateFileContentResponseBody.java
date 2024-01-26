@@ -50,7 +50,7 @@ public class GetSparkTemplateFileContentResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The data returned.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class GetSparkTemplateFileContentResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,12 +146,12 @@ public class GetSparkTemplateFileContentResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The type of the application. Valid values:
+             * The application type. Valid values:
              * <p>
              * 
-             * *   **SQL**: SQL application
-             * *   **STREAMING**: streaming application
-             * *   **BATCH**: batch application
+             * *   **SQL**
+             * *   **STREAMING**
+             * *   **BATCH**
              */
             public Builder appType(String appType) {
                 this.appType = appType;
@@ -159,7 +159,7 @@ public class GetSparkTemplateFileContentResponseBody extends TeaModel {
             }
 
             /**
-             * The content of the template.
+             * The content of the application template.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -167,7 +167,7 @@ public class GetSparkTemplateFileContentResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the application template.
+             * The application template ID.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -183,7 +183,7 @@ public class GetSparkTemplateFileContentResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the file. Valid values:
+             * The file type. Valid values:
              * <p>
              * 
              * *   **folder**

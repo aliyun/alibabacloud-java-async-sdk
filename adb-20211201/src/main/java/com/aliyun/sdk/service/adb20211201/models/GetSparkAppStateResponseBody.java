@@ -50,7 +50,7 @@ public class GetSparkAppStateResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The data returned.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class GetSparkAppStateResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +146,7 @@ public class GetSparkAppStateResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * The ID of the application.
+             * The Spark application ID.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -162,7 +162,7 @@ public class GetSparkAppStateResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Database.
+             * The database ID.
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -170,7 +170,7 @@ public class GetSparkAppStateResponseBody extends TeaModel {
             }
 
             /**
-             * The alert message returned for the operation, such as task execution failure or insufficient resources. Null is returned if no alert occurs.
+             * The alert message returned for the operation, such as task execution failure or insufficient resources. If no alert occurs, null is returned.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -181,17 +181,17 @@ public class GetSparkAppStateResponseBody extends TeaModel {
              * The execution state of the application. Valid values:
              * <p>
              * 
-             * *   **SUBMITTED**: The application is submitted.
-             * *   **STARTING**: The application task is starting.
-             * *   **RUNNING**: The application task is being executed.
-             * *   **FAILING**: The application task failed, and the environment is being cleared.
-             * *   **FAILED**: The application task failed.
-             * *   **KILLING**: The application task is terminated, and the environment is being cleared.
-             * *   **KILLED**: The application task is terminated.
-             * *   **SUCCEEDING**: The application task is completed, and the environment is being cleared.
-             * *   **COMPLETED**: The application task is completed.
-             * *   **FATAL**: An unexpected failure occurred.
-             * *   **UNKNOWN**: An unknown error occurred.
+             * *   **SUBMITTED**
+             * *   **STARTING**
+             * *   **RUNNING**
+             * *   **FAILING**
+             * *   **FAILED**
+             * *   **KILLING**
+             * *   **KILLED**
+             * *   **SUCCEEDING**
+             * *   **COMPLETED**
+             * *   **FATAL**
+             * *   **UNKNOWN**
              */
             public Builder state(String state) {
                 this.state = state;

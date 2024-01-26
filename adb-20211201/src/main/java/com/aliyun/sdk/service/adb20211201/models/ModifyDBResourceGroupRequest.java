@@ -26,6 +26,10 @@ public class ModifyDBResourceGroupRequest extends Request {
     private String DBClusterId;
 
     @Query
+    @NameInMap("EnableSpot")
+    private Boolean enableSpot;
+
+    @Query
     @NameInMap("GroupName")
     @Validation(required = true)
     private String groupName;
@@ -60,6 +64,7 @@ public class ModifyDBResourceGroupRequest extends Request {
         this.clusterMode = builder.clusterMode;
         this.clusterSizeResource = builder.clusterSizeResource;
         this.DBClusterId = builder.DBClusterId;
+        this.enableSpot = builder.enableSpot;
         this.groupName = builder.groupName;
         this.groupType = builder.groupType;
         this.maxClusterCount = builder.maxClusterCount;
@@ -101,6 +106,13 @@ public class ModifyDBResourceGroupRequest extends Request {
      */
     public String getDBClusterId() {
         return this.DBClusterId;
+    }
+
+    /**
+     * @return enableSpot
+     */
+    public Boolean getEnableSpot() {
+        return this.enableSpot;
     }
 
     /**
@@ -156,6 +168,7 @@ public class ModifyDBResourceGroupRequest extends Request {
         private String clusterMode; 
         private String clusterSizeResource; 
         private String DBClusterId; 
+        private Boolean enableSpot; 
         private String groupName; 
         private String groupType; 
         private Integer maxClusterCount; 
@@ -173,6 +186,7 @@ public class ModifyDBResourceGroupRequest extends Request {
             this.clusterMode = request.clusterMode;
             this.clusterSizeResource = request.clusterSizeResource;
             this.DBClusterId = request.DBClusterId;
+            this.enableSpot = request.enableSpot;
             this.groupName = request.groupName;
             this.groupType = request.groupType;
             this.maxClusterCount = request.maxClusterCount;
@@ -183,7 +197,7 @@ public class ModifyDBResourceGroupRequest extends Request {
         } 
 
         /**
-         * ClusterMode.
+         * A reserved parameter.
          */
         public Builder clusterMode(String clusterMode) {
             this.putQueryParameter("ClusterMode", clusterMode);
@@ -192,7 +206,7 @@ public class ModifyDBResourceGroupRequest extends Request {
         }
 
         /**
-         * ClusterSizeResource.
+         * A reserved parameter.
          */
         public Builder clusterSizeResource(String clusterSizeResource) {
             this.putQueryParameter("ClusterSizeResource", clusterSizeResource);
@@ -206,6 +220,15 @@ public class ModifyDBResourceGroupRequest extends Request {
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
             this.DBClusterId = DBClusterId;
+            return this;
+        }
+
+        /**
+         * EnableSpot.
+         */
+        public Builder enableSpot(Boolean enableSpot) {
+            this.putQueryParameter("EnableSpot", enableSpot);
+            this.enableSpot = enableSpot;
             return this;
         }
 
@@ -237,7 +260,7 @@ public class ModifyDBResourceGroupRequest extends Request {
         }
 
         /**
-         * MaxClusterCount.
+         * A reserved parameter.
          */
         public Builder maxClusterCount(Integer maxClusterCount) {
             this.putQueryParameter("MaxClusterCount", maxClusterCount);
@@ -259,7 +282,7 @@ public class ModifyDBResourceGroupRequest extends Request {
         }
 
         /**
-         * MinClusterCount.
+         * A reserved parameter.
          */
         public Builder minClusterCount(Integer minClusterCount) {
             this.putQueryParameter("MinClusterCount", minClusterCount);
@@ -268,10 +291,10 @@ public class ModifyDBResourceGroupRequest extends Request {
         }
 
         /**
-         * The minimum amount of reserved computing resources. Unit: AnalyticDB compute unit (ACU).
+         * The minimum amount of reserved computing resources. Unit: AnalyticDB compute units (ACUs).
          * <p>
          * 
-         * *   If GroupType is set to Interactive, set the value to 16ACU.
+         * *   If the GroupType parameter is set to Interactive, set the value to 16ACU.
          * *   If GroupType is set to Job, set the value to 0ACU.
          */
         public Builder minComputeResource(String minComputeResource) {
@@ -281,7 +304,10 @@ public class ModifyDBResourceGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the cluster.
+         * <p>
+         * 
+         * >  You can call the [DescribeRegions](~~454314~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

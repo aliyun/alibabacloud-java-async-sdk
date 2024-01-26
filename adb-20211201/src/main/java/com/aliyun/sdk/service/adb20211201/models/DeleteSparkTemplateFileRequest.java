@@ -82,7 +82,7 @@ public class DeleteSparkTemplateFileRequest extends Request {
          * The ID of the template file to be deleted.
          * <p>
          * 
-         * >  You can call the [GetSparkTemplateFullTree](~~456205#doc-api-adb-GetSparkTemplateFullTree~~) operation to query the IDs of all existing template files.
+         * >  You can call the [GetSparkTemplateFullTree](~~456205~~) operation to query all template file IDs.
          */
         public Builder id(Long id) {
             this.putBodyParameter("Id", id);

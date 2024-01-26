@@ -216,7 +216,7 @@ public class DescribeSQLPatternsRequest extends Request {
         }
 
         /**
-         * The order by which to sort query results. Specify the parameter value in the JSON string format. Example: `[{"Field":"AverageQueryTime","Type":"Asc"}]`. Parameters:
+         * The order by which to sort query results. Specify the parameter value in the JSON string format. Example: `[{"Field":"AverageQueryTime","Type":"Asc"}]`.
          * <p>
          * 
          * *   `Field` specifies the field by which to sort the query results. Valid values:
@@ -281,11 +281,8 @@ public class DescribeSQLPatternsRequest extends Request {
          * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-ddTHH:mm:ssZ* format. The time must be in UTC.
          * <p>
          * 
-         * > 
-         * 
-         * *   Only data within the last 14 days can be queried.
-         * 
-         * *   The maximum time range that can be specified is 24 hours.
+         * > *   Only data within the last 14 days can be queried.
+         * > * The maximum time range that can be specified is 24 hours.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

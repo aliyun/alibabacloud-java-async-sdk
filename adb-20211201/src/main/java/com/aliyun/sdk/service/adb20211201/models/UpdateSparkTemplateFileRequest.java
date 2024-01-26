@@ -101,7 +101,7 @@ public class UpdateSparkTemplateFileRequest extends Request {
          * The template data to be updated.
          * <p>
          * 
-         * >  If you do not specify this parameter, the application template is not updated. For more information about how to configure an application template, see [Configure a Spark application](~~452402~~).
+         * >  If you do not specify this parameter, the application template is not updated. For information about how to configure a Spark application template, see [Configure a Spark application](~~452402~~).
          */
         public Builder content(String content) {
             this.putBodyParameter("Content", content);
@@ -119,10 +119,10 @@ public class UpdateSparkTemplateFileRequest extends Request {
         }
 
         /**
-         * The ID of the application template.
+         * The application template ID.
          * <p>
          * 
-         * >  You can call the [GetSparkTemplateFullTree](~~456205~~) operation to query the template ID.
+         * >  You can call the [GetSparkTemplateFullTree](~~456205~~) operation to query the application template ID.
          */
         public Builder id(Long id) {
             this.putBodyParameter("Id", id);

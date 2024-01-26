@@ -141,10 +141,10 @@ public class DescribeElasticPlanJobsRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * The cluster ID.
          * <p>
          * 
-         * >  You can call the [DescribeDBClusters](~~129857~~) operation to query the ID of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         * >  You can call the [DescribeDBClusters](~~129857~~) operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -156,8 +156,11 @@ public class DescribeElasticPlanJobsRequest extends Request {
          * The name of the scaling plan.
          * <p>
          * 
-         * > *   If you do not specify this parameter, all scaling plans of the cluster are queried.
-         * > *   You can call the [DescribeElasticPlans](~~601334~~) operation to query the name of a scaling plan.
+         * > 
+         * 
+         * *   If you do not specify this parameter, all scaling plans of the cluster are queried.
+         * 
+         * *   You can call the [DescribeElasticPlans](~~601334~~) operation to query the names of scaling plans.
          */
         public Builder elasticPlanName(String elasticPlanName) {
             this.putQueryParameter("ElasticPlanName", elasticPlanName);
@@ -166,7 +169,7 @@ public class DescribeElasticPlanJobsRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -175,7 +178,7 @@ public class DescribeElasticPlanJobsRequest extends Request {
         }
 
         /**
-         * The number of scaling plan jobs to return per page.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -187,8 +190,11 @@ public class DescribeElasticPlanJobsRequest extends Request {
          * The name of the resource group.
          * <p>
          * 
-         * > *   If you do not specify this parameter, the scaling plans of all resource groups are queried, including interactive resource groups and elastic I/O units (EIUs).
-         * > *   You can call the [DescribeDBResourceGroup](~~459446~~) operation to query the name of a resource group within a specific cluster.
+         * > 
+         * 
+         * *   If you do not specify this parameter, the scaling plans of all resource groups are queried, including the interactive resource group and elastic I/O unit (EIU) types.
+         * 
+         * *   You can call the [DescribeDBResourceGroup](~~459446~~) operation to query the resource group name for a cluster.
          */
         public Builder resourceGroupName(String resourceGroupName) {
             this.putQueryParameter("ResourceGroupName", resourceGroupName);
@@ -197,10 +203,7 @@ public class DescribeElasticPlanJobsRequest extends Request {
         }
 
         /**
-         * The time to enable the scaling plan job.
-         * <p>
-         * 
-         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time must be in UTC.
+         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -209,18 +212,14 @@ public class DescribeElasticPlanJobsRequest extends Request {
         }
 
         /**
-         * The state of the scaling plan job.
+         * The state of the scaling plan job. Valid values:
          * <p>
          * 
-         * Valid values:
+         * *   RUNNING
+         * *   SUCCESSFUL
+         * *   FAILED
          * 
-         * *   RUNNING: The job is running.
-         * 
-         * *   SUCCESSFUL: The job is successfully run.
-         * 
-         * *   FAILED: The job fails.
-         * 
-         * > If you do not specify this parameter, scaling plan jobs in all states are queried.
+         * >  If you do not specify this parameter, the scaling plans in all states are queried.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

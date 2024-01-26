@@ -62,7 +62,7 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The HTTP status code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -70,7 +70,7 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The queried resource usage.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -78,7 +78,7 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -142,7 +142,7 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
             private Float totalAcuNumber; 
 
             /**
-             * ElasticAcuNumber.
+             * The number of ACUs for the elastic resources.
              */
             public Builder elasticAcuNumber(Float elasticAcuNumber) {
                 this.elasticAcuNumber = elasticAcuNumber;
@@ -150,7 +150,7 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * ReservedAcuNumber.
+             * The number of ACUs for the reserved resources.
              */
             public Builder reservedAcuNumber(Float reservedAcuNumber) {
                 this.reservedAcuNumber = reservedAcuNumber;
@@ -158,7 +158,7 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * TotalAcuNumber.
+             * The total number of ACUs.
              */
             public Builder totalAcuNumber(Float totalAcuNumber) {
                 this.totalAcuNumber = totalAcuNumber;
@@ -247,7 +247,7 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
             private String resourceGroupName; 
 
             /**
-             * AcuUsageDetail.
+             * The ACU usage.
              */
             public Builder acuUsageDetail(AcuUsageDetail acuUsageDetail) {
                 this.acuUsageDetail = acuUsageDetail;
@@ -255,7 +255,7 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * JobEndTime.
+             * The end time of the job. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder jobEndTime(String jobEndTime) {
                 this.jobEndTime = jobEndTime;
@@ -263,7 +263,7 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * The job ID.
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -271,7 +271,7 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * JobStartTime.
+             * The start time of the job. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder jobStartTime(String jobStartTime) {
                 this.jobStartTime = jobStartTime;
@@ -279,7 +279,7 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupName.
+             * The name of the job resource group.
              */
             public Builder resourceGroupName(String resourceGroupName) {
                 this.resourceGroupName = resourceGroupName;
@@ -356,7 +356,7 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
             private String startTime; 
 
             /**
-             * DBClusterId.
+             * The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -364,7 +364,7 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The end time of the query. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -372,7 +372,7 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * JobAcuUsage.
+             * The AnalyticDB compute unit (ACU) usage of the job resource group.
              */
             public Builder jobAcuUsage(java.util.List < JobAcuUsage> jobAcuUsage) {
                 this.jobAcuUsage = jobAcuUsage;
@@ -380,7 +380,7 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The start time of the query. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;

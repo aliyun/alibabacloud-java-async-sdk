@@ -50,7 +50,7 @@ public class GetViewDDLResponseBody extends TeaModel {
         private String SQL; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class GetViewDDLResponseBody extends TeaModel {
         }
 
         /**
-         * Details of the SQL statement.
+         * The SQL statement.
          */
         public Builder SQL(String SQL) {
             this.SQL = SQL;

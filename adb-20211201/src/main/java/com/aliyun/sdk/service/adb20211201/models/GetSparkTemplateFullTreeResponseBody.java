@@ -50,34 +50,34 @@ public class GetSparkTemplateFullTreeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The directory structure of the application template. Fields in the response parameter:
+         * The directory structure of Spark applications. Fields in the response parameter:
          * <p>
          * 
          * *   **Uid**: the UID of the Alibaba Cloud account.
          * 
-         * *   **Type**: the type of the application template. Valid values:
+         * *   **Type**: the application template type. Valid values:
          * 
-         *     *   **FOLDER**: directory
-         *     *   **FILE**: application
+         *     *   **FOLDER**
+         *     *   **FILE**
          * 
-         * *   **Parent**: the parent directory. Valid values:
+         * *   **Parent**: indicates whether a child directory exists. Valid values:
          * 
-         *     *   **0**: No child directory exists.
-         *     *   **-1**: A child directory exists.
+         *     *   **0**: no.
+         *     *   **-1**: yes.
          * 
          * *   **Children**: the child directory.
          * 
-         * *   **LastModified**: the time when the application is last modified. The time is displayed in the UNIX timestamp format. Unit: seconds.
+         * *   **LastModified**: the time when applications are last modified. This value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.
          * 
          * *   **AppType**: the application type. Valid values:
          * 
-         *     *   **SQL**: SQL application
-         *     *   **STREAMING**: streaming application
-         *     *   **BATCH**: batch application
+         *     *   **SQL**
+         *     *   **STREAMING**
+         *     *   **BATCH**
          * 
          * *   **Name**: the name of the directory or application.
          * 
-         * *   **Id**: the ID of the directory or application.
+         * *   **Id**: the directory ID or application ID.
          */
         public Builder data(String data) {
             this.data = data;
@@ -85,7 +85,7 @@ public class GetSparkTemplateFullTreeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

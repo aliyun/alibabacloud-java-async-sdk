@@ -86,7 +86,7 @@ public class DescribeTableAccessCountResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Items.
+         * The queried tables.
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -94,7 +94,7 @@ public class DescribeTableAccessCountResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeTableAccessCountResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeTableAccessCountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeTableAccessCountResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -206,7 +206,7 @@ public class DescribeTableAccessCountResponseBody extends TeaModel {
             private String tableSchema; 
 
             /**
-             * AccessCount.
+             * The number of accesses to the table.
              */
             public Builder accessCount(String accessCount) {
                 this.accessCount = accessCount;
@@ -214,7 +214,7 @@ public class DescribeTableAccessCountResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * The ID of the cluster to which the table belongs.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -222,7 +222,7 @@ public class DescribeTableAccessCountResponseBody extends TeaModel {
             }
 
             /**
-             * ReportDate.
+             * The date when the table was accessed.
              */
             public Builder reportDate(String reportDate) {
                 this.reportDate = reportDate;
@@ -230,7 +230,7 @@ public class DescribeTableAccessCountResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * The name of the table.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -238,7 +238,7 @@ public class DescribeTableAccessCountResponseBody extends TeaModel {
             }
 
             /**
-             * TableSchema.
+             * The database to which the table belongs.
              */
             public Builder tableSchema(String tableSchema) {
                 this.tableSchema = tableSchema;

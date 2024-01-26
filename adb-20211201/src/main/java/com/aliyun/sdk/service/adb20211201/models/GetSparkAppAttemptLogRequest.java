@@ -22,10 +22,20 @@ public class GetSparkAppAttemptLogRequest extends Request {
     @Validation(maximum = 500)
     private Long logLength;
 
+    @Query
+    @NameInMap("PageNumber")
+    private Integer pageNumber;
+
+    @Query
+    @NameInMap("PageSize")
+    private String pageSize;
+
     private GetSparkAppAttemptLogRequest(Builder builder) {
         super(builder);
         this.attemptId = builder.attemptId;
         this.logLength = builder.logLength;
+        this.pageNumber = builder.pageNumber;
+        this.pageSize = builder.pageSize;
     }
 
     public static Builder builder() {
@@ -55,9 +65,25 @@ public class GetSparkAppAttemptLogRequest extends Request {
         return this.logLength;
     }
 
+    /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public String getPageSize() {
+        return this.pageSize;
+    }
+
     public static final class Builder extends Request.Builder<GetSparkAppAttemptLogRequest, Builder> {
         private String attemptId; 
         private Long logLength; 
+        private Integer pageNumber; 
+        private String pageSize; 
 
         private Builder() {
             super();
@@ -67,6 +93,8 @@ public class GetSparkAppAttemptLogRequest extends Request {
             super(request);
             this.attemptId = request.attemptId;
             this.logLength = request.logLength;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
 
         /**
@@ -87,6 +115,24 @@ public class GetSparkAppAttemptLogRequest extends Request {
         public Builder logLength(Long logLength) {
             this.putBodyParameter("LogLength", logLength);
             this.logLength = logLength;
+            return this;
+        }
+
+        /**
+         * PageNumber.
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.putQueryParameter("PageNumber", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * PageSize.
+         */
+        public Builder pageSize(String pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
             return this;
         }
 

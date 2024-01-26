@@ -19,12 +19,10 @@ public class DescribeDiagnosisSQLInfoRequest extends Request {
 
     @Query
     @NameInMap("Lang")
-    @Validation(required = true)
     private String lang;
 
     @Query
     @NameInMap("ProcessId")
-    @Validation(required = true)
     private String processId;
 
     @Query
@@ -142,7 +140,10 @@ public class DescribeDiagnosisSQLInfoRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The cluster ID.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBClusters](~~129857~~) operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -151,7 +152,13 @@ public class DescribeDiagnosisSQLInfoRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of file titles and error messages. Valid values:
+         * <p>
+         * 
+         * *   **zh**: simplified Chinese.
+         * *   **en**: English.
+         * *   **ja**: Japanese.
+         * *   **zh-tw**: traditional Chinese.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -160,7 +167,10 @@ public class DescribeDiagnosisSQLInfoRequest extends Request {
         }
 
         /**
-         * ProcessId.
+         * The query ID.
+         * <p>
+         * 
+         * >  You can call the [DescribeDiagnosisRecords](~~308207~~) operation to query the diagnostic information about SQL statements for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster, including the query ID.
          */
         public Builder processId(String processId) {
             this.putQueryParameter("ProcessId", processId);
@@ -169,7 +179,10 @@ public class DescribeDiagnosisSQLInfoRequest extends Request {
         }
 
         /**
-         * ProcessRcHost.
+         * The IP address and port number of the AnalyticDB for MySQL frontend node on which the SQL statement is executed.
+         * <p>
+         * 
+         * >  You can call the [DescribeDiagnosisRecords](~~308207~~) operation to query the diagnostic information about SQL statements for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster, including the IP address and port number of the frontend node.
          */
         public Builder processRcHost(String processRcHost) {
             this.putQueryParameter("ProcessRcHost", processRcHost);
@@ -178,7 +191,10 @@ public class DescribeDiagnosisSQLInfoRequest extends Request {
         }
 
         /**
-         * ProcessStartTime.
+         * The execution start time of the SQL statement. Set the time to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * <p>
+         * 
+         * >  You can call the [DescribeDiagnosisRecords](~~308207~~) operation to query the diagnostic information about SQL statements for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster, including the execution start time of the SQL statement.
          */
         public Builder processStartTime(Long processStartTime) {
             this.putQueryParameter("ProcessStartTime", processStartTime);
@@ -187,7 +203,14 @@ public class DescribeDiagnosisSQLInfoRequest extends Request {
         }
 
         /**
-         * ProcessState.
+         * The state of the SQL statement. Valid values:
+         * <p>
+         * 
+         * *   **running**
+         * *   **finished**
+         * *   **failed**
+         * 
+         * >  You can call the [DescribeDiagnosisRecords](~~308207~~) operation to query the diagnostic information about SQL statements for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster, including the status of the SQL statement.
          */
         public Builder processState(String processState) {
             this.putQueryParameter("ProcessState", processState);
@@ -196,7 +219,10 @@ public class DescribeDiagnosisSQLInfoRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the cluster.
+         * <p>
+         * 
+         * >  You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

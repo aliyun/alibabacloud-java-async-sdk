@@ -135,10 +135,10 @@ public class ModifyElasticPlanRequest extends Request {
         }
 
         /**
-         * The ID of the cluster.
+         * The cluster ID.
          * <p>
          * 
-         * >  You can call the [DescribeDBClusters](~~129857~~) operation to query the ID of an AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.
+         * >  You can call the [DescribeDBClusters](~~129857~~) operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -150,7 +150,7 @@ public class ModifyElasticPlanRequest extends Request {
          * The name of the scaling plan.
          * <p>
          * 
-         * >  You can call the [DescribeElasticPlans](~~601334~~) operation to query the name of a scaling plan of a specific cluster.
+         * >  You can call the [DescribeElasticPlans](~~601334~~) operation to query the names of scaling plans.
          */
         public Builder elasticPlanName(String elasticPlanName) {
             this.putQueryParameter("ElasticPlanName", elasticPlanName);
@@ -159,7 +159,7 @@ public class ModifyElasticPlanRequest extends Request {
         }
 
         /**
-         * The time to end the scaling plan.
+         * The end time of the scaling plan.
          * <p>
          * 
          * >  Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
@@ -171,7 +171,7 @@ public class ModifyElasticPlanRequest extends Request {
         }
 
         /**
-         * The time to start the scaling plan.
+         * The start time of the scaling plan.
          * <p>
          * 
          * >  Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
@@ -183,11 +183,14 @@ public class ModifyElasticPlanRequest extends Request {
         }
 
         /**
-         * The amount of elastic resources after scaling.
+         * The desired specifications of elastic resources after scaling.
          * <p>
          * 
-         * > *   This parameter is not required only if the resource group uses **EIUs** and **Proportional Default Scaling for EIUs** is enabled.
-         * > *   You can call the [DescribeElasticPlanSpecifications](~~601278~~) operation to query the specifications that are supported for scaling plans.
+         * > 
+         * 
+         * *   If the scaling plan uses **EIUs** and **Default Proportional Scaling for EIUs** is enabled, you do not need to specify this parameter. In other cases, you must specify this parameter.
+         * 
+         * *   You can call the [DescribeElasticPlanSpecifications](~~601278~~) operation to query the specifications that are supported for scaling plans.
          */
         public Builder targetSize(String targetSize) {
             this.putQueryParameter("TargetSize", targetSize);

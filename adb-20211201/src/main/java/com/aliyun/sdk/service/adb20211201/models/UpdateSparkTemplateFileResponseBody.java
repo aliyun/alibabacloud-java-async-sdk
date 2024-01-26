@@ -58,7 +58,7 @@ public class UpdateSparkTemplateFileResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -101,8 +101,8 @@ public class UpdateSparkTemplateFileResponseBody extends TeaModel {
              * Indicates whether the application template is updated.
              * <p>
              * 
-             * *   **true**: The application template is updated.
-             * *   **false**: The application template fails to be updated.
+             * *   **True**
+             * *   **False**
              */
             public Builder succeeded(Boolean succeeded) {
                 this.succeeded = succeeded;

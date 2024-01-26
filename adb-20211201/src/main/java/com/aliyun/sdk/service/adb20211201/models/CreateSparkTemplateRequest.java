@@ -114,14 +114,14 @@ public class CreateSparkTemplateRequest extends Request {
         } 
 
         /**
-         * The type of the application. Valid values:
+         * The application type. Valid values:
          * <p>
          * 
-         * *   **SQL**: SQL application
-         * *   **STREAMING**: streaming application
-         * *   **BATCH**: batch application
+         * *   **SQL**
+         * *   **STREAMING**
+         * *   **BATCH**
          * 
-         * >  This parameter is not required if the application template is of the folder type.
+         * >  You do not need to specify this parameter when Type is set to folder.
          */
         public Builder appType(String appType) {
             this.putBodyParameter("AppType", appType);
@@ -149,6 +149,9 @@ public class CreateSparkTemplateRequest extends Request {
 
         /**
          * The ID of the directory to which the application template belongs.
+         * <p>
+         * 
+         * >  You can call the [GetSparkTemplateFolderTree](~~456218~~) operation to query the directory ID.
          */
         public Builder parentId(Long parentId) {
             this.putBodyParameter("ParentId", parentId);
@@ -160,8 +163,8 @@ public class CreateSparkTemplateRequest extends Request {
          * The type of the application template. Valid values:
          * <p>
          * 
-         * *   **folder**: directory
-         * *   **file**: application
+         * *   **folder**: directory.
+         * *   **file**: application.
          */
         public Builder type(String type) {
             this.putBodyParameter("Type", type);

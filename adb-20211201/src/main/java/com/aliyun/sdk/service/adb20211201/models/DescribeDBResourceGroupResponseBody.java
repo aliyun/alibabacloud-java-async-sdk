@@ -50,7 +50,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The queried resource groups.
+         * The queried resource group.
          */
         public Builder groupsInfo(java.util.List < GroupsInfo> groupsInfo) {
             this.groupsInfo = groupsInfo;
@@ -83,6 +83,9 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
 
         @NameInMap("ElasticMinComputeResource")
         private String elasticMinComputeResource;
+
+        @NameInMap("EnableSpot")
+        private String enableSpot;
 
         @NameInMap("GroupName")
         private String groupName;
@@ -119,6 +122,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             this.clusterSizeResource = builder.clusterSizeResource;
             this.createTime = builder.createTime;
             this.elasticMinComputeResource = builder.elasticMinComputeResource;
+            this.enableSpot = builder.enableSpot;
             this.groupName = builder.groupName;
             this.groupType = builder.groupType;
             this.groupUsers = builder.groupUsers;
@@ -165,6 +169,13 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
          */
         public String getElasticMinComputeResource() {
             return this.elasticMinComputeResource;
+        }
+
+        /**
+         * @return enableSpot
+         */
+        public String getEnableSpot() {
+            return this.enableSpot;
         }
 
         /**
@@ -242,6 +253,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             private String clusterSizeResource; 
             private String createTime; 
             private String elasticMinComputeResource; 
+            private String enableSpot; 
             private String groupName; 
             private String groupType; 
             private String groupUsers; 
@@ -254,7 +266,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * ClusterMode.
+             * A reserved parameter.
              */
             public Builder clusterMode(String clusterMode) {
                 this.clusterMode = clusterMode;
@@ -262,7 +274,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterSizeResource.
+             * A reserved parameter.
              */
             public Builder clusterSizeResource(String clusterSizeResource) {
                 this.clusterSizeResource = clusterSizeResource;
@@ -278,10 +290,18 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of minimum elastic computing resources. Unit: ACU.
+             * The minimum amount of elastic computing resources. Unit: ACUs.
              */
             public Builder elasticMinComputeResource(String elasticMinComputeResource) {
                 this.elasticMinComputeResource = elasticMinComputeResource;
+                return this;
+            }
+
+            /**
+             * EnableSpot.
+             */
+            public Builder enableSpot(String enableSpot) {
+                this.enableSpot = enableSpot;
                 return this;
             }
 
@@ -300,7 +320,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
              * *   **Interactive**
              * *   **Job**
              * 
-             * > For information about resource groups of Data Lakehouse Edition, see [Resource groups](~~428610~~).
+             * >  For more information about resource groups, see [Resource groups](~~428610~~).
              */
             public Builder groupType(String groupType) {
                 this.groupType = groupType;
@@ -316,7 +336,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * MaxClusterCount.
+             * A reserved parameter.
              */
             public Builder maxClusterCount(Integer maxClusterCount) {
                 this.maxClusterCount = maxClusterCount;
@@ -324,7 +344,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum amount of reserved computing resources. Unit: ACU.
+             * The maximum amount of reserved computing resources. Unit: ACUs.
              */
             public Builder maxComputeResource(String maxComputeResource) {
                 this.maxComputeResource = maxComputeResource;
@@ -332,7 +352,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * MinClusterCount.
+             * A reserved parameter.
              */
             public Builder minClusterCount(Integer minClusterCount) {
                 this.minClusterCount = minClusterCount;
@@ -340,7 +360,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum amount of reserved computing resources. Unit: AnalyticDB compute unit (ACU).
+             * The minimum amount of reserved computing resources. Unit: AnalyticDB compute units (ACUs).
              */
             public Builder minComputeResource(String minComputeResource) {
                 this.minComputeResource = minComputeResource;
@@ -348,7 +368,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * RunningClusterCount.
+             * A reserved parameter.
              */
             public Builder runningClusterCount(Integer runningClusterCount) {
                 this.runningClusterCount = runningClusterCount;
@@ -359,9 +379,9 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
              * The state of the resource group. Valid values:
              * <p>
              * 
-             * *   **creating**
-             * *   **ok**
-             * *   **pendingdelete**
+             * *   **creating**: The resource group is being created.
+             * *   **ok**: The resource group is created.
+             * *   **pendingdelete**: The resource group is pending to be deleted.
              */
             public Builder status(String status) {
                 this.status = status;

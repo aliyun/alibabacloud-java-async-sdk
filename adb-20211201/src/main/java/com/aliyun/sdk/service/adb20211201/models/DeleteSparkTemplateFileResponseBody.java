@@ -58,7 +58,7 @@ public class DeleteSparkTemplateFileResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -101,8 +101,8 @@ public class DeleteSparkTemplateFileResponseBody extends TeaModel {
              * Indicates whether the template file is deleted. Valid values:
              * <p>
              * 
-             * *   **true**: The template file is deleted.
-             * *   **false**: The template file fails to be deleted.
+             * *   **true**
+             * *   **false**
              */
             public Builder succeeded(Boolean succeeded) {
                 this.succeeded = succeeded;

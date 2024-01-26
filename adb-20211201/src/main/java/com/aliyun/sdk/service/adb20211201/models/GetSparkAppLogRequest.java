@@ -26,11 +26,21 @@ public class GetSparkAppLogRequest extends Request {
     @Validation(maximum = 500)
     private Long logLength;
 
+    @Query
+    @NameInMap("PageNumber")
+    private Integer pageNumber;
+
+    @Query
+    @NameInMap("PageSize")
+    private Integer pageSize;
+
     private GetSparkAppLogRequest(Builder builder) {
         super(builder);
         this.appId = builder.appId;
         this.DBClusterId = builder.DBClusterId;
         this.logLength = builder.logLength;
+        this.pageNumber = builder.pageNumber;
+        this.pageSize = builder.pageSize;
     }
 
     public static Builder builder() {
@@ -67,10 +77,26 @@ public class GetSparkAppLogRequest extends Request {
         return this.logLength;
     }
 
+    /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
     public static final class Builder extends Request.Builder<GetSparkAppLogRequest, Builder> {
         private String appId; 
         private String DBClusterId; 
         private Long logLength; 
+        private Integer pageNumber; 
+        private Integer pageSize; 
 
         private Builder() {
             super();
@@ -81,6 +107,8 @@ public class GetSparkAppLogRequest extends Request {
             this.appId = request.appId;
             this.DBClusterId = request.DBClusterId;
             this.logLength = request.logLength;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
 
         /**
@@ -96,7 +124,10 @@ public class GetSparkAppLogRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * The cluster ID.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBClusters](~~454250~~) operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -110,6 +141,24 @@ public class GetSparkAppLogRequest extends Request {
         public Builder logLength(Long logLength) {
             this.putBodyParameter("LogLength", logLength);
             this.logLength = logLength;
+            return this;
+        }
+
+        /**
+         * PageNumber.
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.putQueryParameter("PageNumber", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * PageSize.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
             return this;
         }
 
