@@ -137,6 +137,14 @@ public class CreatePolicyGroupRequest extends Request {
     private String recordingStartTime;
 
     @Query
+    @NameInMap("RecordingUserNotify")
+    private String recordingUserNotify;
+
+    @Query
+    @NameInMap("RecordingUserNotifyMessage")
+    private String recordingUserNotifyMessage;
+
+    @Query
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
@@ -174,6 +182,10 @@ public class CreatePolicyGroupRequest extends Request {
     private String watermark;
 
     @Query
+    @NameInMap("WatermarkAntiCam")
+    private String watermarkAntiCam;
+
+    @Query
     @NameInMap("WatermarkColor")
     private Integer watermarkColor;
 
@@ -188,6 +200,10 @@ public class CreatePolicyGroupRequest extends Request {
     @Query
     @NameInMap("WatermarkFontStyle")
     private String watermarkFontStyle;
+
+    @Query
+    @NameInMap("WatermarkPower")
+    private String watermarkPower;
 
     @Query
     @NameInMap("WatermarkRowAmount")
@@ -242,6 +258,8 @@ public class CreatePolicyGroupRequest extends Request {
         this.recordingExpires = builder.recordingExpires;
         this.recordingFps = builder.recordingFps;
         this.recordingStartTime = builder.recordingStartTime;
+        this.recordingUserNotify = builder.recordingUserNotify;
+        this.recordingUserNotifyMessage = builder.recordingUserNotifyMessage;
         this.regionId = builder.regionId;
         this.remoteCoordinate = builder.remoteCoordinate;
         this.scope = builder.scope;
@@ -251,10 +269,12 @@ public class CreatePolicyGroupRequest extends Request {
         this.videoRedirect = builder.videoRedirect;
         this.visualQuality = builder.visualQuality;
         this.watermark = builder.watermark;
+        this.watermarkAntiCam = builder.watermarkAntiCam;
         this.watermarkColor = builder.watermarkColor;
         this.watermarkDegree = builder.watermarkDegree;
         this.watermarkFontSize = builder.watermarkFontSize;
         this.watermarkFontStyle = builder.watermarkFontStyle;
+        this.watermarkPower = builder.watermarkPower;
         this.watermarkRowAmount = builder.watermarkRowAmount;
         this.watermarkSecurity = builder.watermarkSecurity;
         this.watermarkTransparency = builder.watermarkTransparency;
@@ -493,6 +513,20 @@ public class CreatePolicyGroupRequest extends Request {
     }
 
     /**
+     * @return recordingUserNotify
+     */
+    public String getRecordingUserNotify() {
+        return this.recordingUserNotify;
+    }
+
+    /**
+     * @return recordingUserNotifyMessage
+     */
+    public String getRecordingUserNotifyMessage() {
+        return this.recordingUserNotifyMessage;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -556,6 +590,13 @@ public class CreatePolicyGroupRequest extends Request {
     }
 
     /**
+     * @return watermarkAntiCam
+     */
+    public String getWatermarkAntiCam() {
+        return this.watermarkAntiCam;
+    }
+
+    /**
      * @return watermarkColor
      */
     public Integer getWatermarkColor() {
@@ -581,6 +622,13 @@ public class CreatePolicyGroupRequest extends Request {
      */
     public String getWatermarkFontStyle() {
         return this.watermarkFontStyle;
+    }
+
+    /**
+     * @return watermarkPower
+     */
+    public String getWatermarkPower() {
+        return this.watermarkPower;
     }
 
     /**
@@ -650,6 +698,8 @@ public class CreatePolicyGroupRequest extends Request {
         private Long recordingExpires; 
         private Long recordingFps; 
         private String recordingStartTime; 
+        private String recordingUserNotify; 
+        private String recordingUserNotifyMessage; 
         private String regionId; 
         private String remoteCoordinate; 
         private String scope; 
@@ -659,10 +709,12 @@ public class CreatePolicyGroupRequest extends Request {
         private String videoRedirect; 
         private String visualQuality; 
         private String watermark; 
+        private String watermarkAntiCam; 
         private Integer watermarkColor; 
         private Double watermarkDegree; 
         private Integer watermarkFontSize; 
         private String watermarkFontStyle; 
+        private String watermarkPower; 
         private Integer watermarkRowAmount; 
         private String watermarkSecurity; 
         private String watermarkTransparency; 
@@ -706,6 +758,8 @@ public class CreatePolicyGroupRequest extends Request {
             this.recordingExpires = request.recordingExpires;
             this.recordingFps = request.recordingFps;
             this.recordingStartTime = request.recordingStartTime;
+            this.recordingUserNotify = request.recordingUserNotify;
+            this.recordingUserNotifyMessage = request.recordingUserNotifyMessage;
             this.regionId = request.regionId;
             this.remoteCoordinate = request.remoteCoordinate;
             this.scope = request.scope;
@@ -715,10 +769,12 @@ public class CreatePolicyGroupRequest extends Request {
             this.videoRedirect = request.videoRedirect;
             this.visualQuality = request.visualQuality;
             this.watermark = request.watermark;
+            this.watermarkAntiCam = request.watermarkAntiCam;
             this.watermarkColor = request.watermarkColor;
             this.watermarkDegree = request.watermarkDegree;
             this.watermarkFontSize = request.watermarkFontSize;
             this.watermarkFontStyle = request.watermarkFontStyle;
+            this.watermarkPower = request.watermarkPower;
             this.watermarkRowAmount = request.watermarkRowAmount;
             this.watermarkSecurity = request.watermarkSecurity;
             this.watermarkTransparency = request.watermarkTransparency;
@@ -1315,6 +1371,24 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
+         * RecordingUserNotify.
+         */
+        public Builder recordingUserNotify(String recordingUserNotify) {
+            this.putQueryParameter("RecordingUserNotify", recordingUserNotify);
+            this.recordingUserNotify = recordingUserNotify;
+            return this;
+        }
+
+        /**
+         * RecordingUserNotifyMessage.
+         */
+        public Builder recordingUserNotifyMessage(String recordingUserNotifyMessage) {
+            this.putQueryParameter("RecordingUserNotifyMessage", recordingUserNotifyMessage);
+            this.recordingUserNotifyMessage = recordingUserNotifyMessage;
+            return this;
+        }
+
+        /**
          * The ID of the region.
          */
         public Builder regionId(String regionId) {
@@ -1329,17 +1403,7 @@ public class CreatePolicyGroupRequest extends Request {
          * 
          * Valid values:
          * 
-         * *   \-
-         * 
-         *     <!-- -->
-         * 
-         *     optionalControl
-         * 
-         *     <!-- -->
-         * 
-         *     : By default, this feature is disabled. You can enable it by applying permissions.
-         * 
-         *     <!-- -->
+         * *    optionalControl: By default, this feature is disabled. You can enable it by applying permissions.
          * 
          * *   fullControl: The permission is granted.
          * 
@@ -1508,6 +1572,15 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
+         * WatermarkAntiCam.
+         */
+        public Builder watermarkAntiCam(String watermarkAntiCam) {
+            this.putQueryParameter("WatermarkAntiCam", watermarkAntiCam);
+            this.watermarkAntiCam = watermarkAntiCam;
+            return this;
+        }
+
+        /**
          * The font color of the watermark. Valid values: 0 to 16777215.
          */
         public Builder watermarkColor(Integer watermarkColor) {
@@ -1544,6 +1617,15 @@ public class CreatePolicyGroupRequest extends Request {
         public Builder watermarkFontStyle(String watermarkFontStyle) {
             this.putQueryParameter("WatermarkFontStyle", watermarkFontStyle);
             this.watermarkFontStyle = watermarkFontStyle;
+            return this;
+        }
+
+        /**
+         * WatermarkPower.
+         */
+        public Builder watermarkPower(String watermarkPower) {
+            this.putQueryParameter("WatermarkPower", watermarkPower);
+            this.watermarkPower = watermarkPower;
             return this;
         }
 

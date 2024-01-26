@@ -1094,6 +1094,12 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @NameInMap("RecordingStartTime")
         private String recordingStartTime;
 
+        @NameInMap("RecordingUserNotify")
+        private String recordingUserNotify;
+
+        @NameInMap("RecordingUserNotifyMessage")
+        private String recordingUserNotifyMessage;
+
         @NameInMap("RemoteCoordinate")
         private String remoteCoordinate;
 
@@ -1118,6 +1124,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @NameInMap("Watermark")
         private String watermark;
 
+        @NameInMap("WatermarkAntiCam")
+        private String watermarkAntiCam;
+
         @NameInMap("WatermarkColor")
         private Integer watermarkColor;
 
@@ -1132,6 +1141,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
 
         @NameInMap("WatermarkFontStyle")
         private String watermarkFontStyle;
+
+        @NameInMap("WatermarkPower")
+        private String watermarkPower;
 
         @NameInMap("WatermarkRowAmount")
         private Integer watermarkRowAmount;
@@ -1197,6 +1209,8 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             this.recordingExpires = builder.recordingExpires;
             this.recordingFps = builder.recordingFps;
             this.recordingStartTime = builder.recordingStartTime;
+            this.recordingUserNotify = builder.recordingUserNotify;
+            this.recordingUserNotifyMessage = builder.recordingUserNotifyMessage;
             this.remoteCoordinate = builder.remoteCoordinate;
             this.scope = builder.scope;
             this.scopeValue = builder.scopeValue;
@@ -1205,11 +1219,13 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             this.videoRedirect = builder.videoRedirect;
             this.visualQuality = builder.visualQuality;
             this.watermark = builder.watermark;
+            this.watermarkAntiCam = builder.watermarkAntiCam;
             this.watermarkColor = builder.watermarkColor;
             this.watermarkCustomText = builder.watermarkCustomText;
             this.watermarkDegree = builder.watermarkDegree;
             this.watermarkFontSize = builder.watermarkFontSize;
             this.watermarkFontStyle = builder.watermarkFontStyle;
+            this.watermarkPower = builder.watermarkPower;
             this.watermarkRowAmount = builder.watermarkRowAmount;
             this.watermarkSecurity = builder.watermarkSecurity;
             this.watermarkTransparency = builder.watermarkTransparency;
@@ -1562,6 +1578,20 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return recordingUserNotify
+         */
+        public String getRecordingUserNotify() {
+            return this.recordingUserNotify;
+        }
+
+        /**
+         * @return recordingUserNotifyMessage
+         */
+        public String getRecordingUserNotifyMessage() {
+            return this.recordingUserNotifyMessage;
+        }
+
+        /**
          * @return remoteCoordinate
          */
         public String getRemoteCoordinate() {
@@ -1618,6 +1648,13 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return watermarkAntiCam
+         */
+        public String getWatermarkAntiCam() {
+            return this.watermarkAntiCam;
+        }
+
+        /**
          * @return watermarkColor
          */
         public Integer getWatermarkColor() {
@@ -1650,6 +1687,13 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
          */
         public String getWatermarkFontStyle() {
             return this.watermarkFontStyle;
+        }
+
+        /**
+         * @return watermarkPower
+         */
+        public String getWatermarkPower() {
+            return this.watermarkPower;
         }
 
         /**
@@ -1736,6 +1780,8 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             private Long recordingExpires; 
             private Long recordingFps; 
             private String recordingStartTime; 
+            private String recordingUserNotify; 
+            private String recordingUserNotifyMessage; 
             private String remoteCoordinate; 
             private String scope; 
             private java.util.List < String > scopeValue; 
@@ -1744,11 +1790,13 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             private String videoRedirect; 
             private String visualQuality; 
             private String watermark; 
+            private String watermarkAntiCam; 
             private Integer watermarkColor; 
             private String watermarkCustomText; 
             private Double watermarkDegree; 
             private Integer watermarkFontSize; 
             private String watermarkFontStyle; 
+            private String watermarkPower; 
             private Integer watermarkRowAmount; 
             private String watermarkSecurity; 
             private String watermarkTransparency; 
@@ -2449,6 +2497,22 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
+             * RecordingUserNotify.
+             */
+            public Builder recordingUserNotify(String recordingUserNotify) {
+                this.recordingUserNotify = recordingUserNotify;
+                return this;
+            }
+
+            /**
+             * RecordingUserNotifyMessage.
+             */
+            public Builder recordingUserNotifyMessage(String recordingUserNotifyMessage) {
+                this.recordingUserNotifyMessage = recordingUserNotifyMessage;
+                return this;
+            }
+
+            /**
              * The permissions on the keyboard and mouse to control the cloud desktop during remote assistance. Valid values:
              * <p>
              * 
@@ -2611,6 +2675,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
+             * WatermarkAntiCam.
+             */
+            public Builder watermarkAntiCam(String watermarkAntiCam) {
+                this.watermarkAntiCam = watermarkAntiCam;
+                return this;
+            }
+
+            /**
              * The font color of the watermark. Valid values: 0 to 16777215.
              */
             public Builder watermarkColor(Integer watermarkColor) {
@@ -2651,6 +2723,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
              */
             public Builder watermarkFontStyle(String watermarkFontStyle) {
                 this.watermarkFontStyle = watermarkFontStyle;
+                return this;
+            }
+
+            /**
+             * WatermarkPower.
+             */
+            public Builder watermarkPower(String watermarkPower) {
+                this.watermarkPower = watermarkPower;
                 return this;
             }
 

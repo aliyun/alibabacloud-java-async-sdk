@@ -925,7 +925,6 @@ public final class DefaultAsyncClient implements AsyncClient {
       * Before you delete a workspace, make sure that the following requirements are met:
       * *   All cloud desktops in the workspace are released.
       * *   The data that you want to retain is backed up.
-      * **
       * **Warning** After you delete a workspace, the resources and data of the workspace cannot be recovered. Exercise with caution.
       *
      */
