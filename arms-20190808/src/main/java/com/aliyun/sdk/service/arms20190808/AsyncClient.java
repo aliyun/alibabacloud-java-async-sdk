@@ -348,6 +348,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListEnvServiceMonitorsResponse> listEnvServiceMonitors(ListEnvServiceMonitorsRequest request);
 
+    CompletableFuture<ListEnvironmentDashboardsResponse> listEnvironmentDashboards(ListEnvironmentDashboardsRequest request);
+
     CompletableFuture<ListEnvironmentFeaturesResponse> listEnvironmentFeatures(ListEnvironmentFeaturesRequest request);
 
     CompletableFuture<ListEnvironmentsResponse> listEnvironments(ListEnvironmentsRequest request);

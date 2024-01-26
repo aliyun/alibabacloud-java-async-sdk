@@ -248,7 +248,7 @@ public class CreatePrometheusInstanceRequest extends Request {
          * - aliyun-cs: Prometheus Instance for Container Service
          * - cloud-product: Prometheus for cloud monitor
          * - cloud-monitor: Prometheus for enterprise cloud monitor
-         * - flink: Prometheus for FLink
+         * - flink: Prometheus for Flink
          */
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("ClusterType", clusterType);

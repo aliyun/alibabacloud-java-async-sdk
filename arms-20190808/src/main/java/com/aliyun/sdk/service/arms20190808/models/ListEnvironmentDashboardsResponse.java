@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link InstallManagedPrometheusResponse} extends {@link TeaModel}
+ * {@link ListEnvironmentDashboardsResponse} extends {@link TeaModel}
  *
- * <p>InstallManagedPrometheusResponse</p>
+ * <p>ListEnvironmentDashboardsResponse</p>
  */
-public class InstallManagedPrometheusResponse extends Response {
+public class ListEnvironmentDashboardsResponse extends Response {
     @NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -19,16 +19,16 @@ public class InstallManagedPrometheusResponse extends Response {
     private Integer statusCode;
 
     @NameInMap("body")
-    private InstallManagedPrometheusResponseBody body;
+    private ListEnvironmentDashboardsResponseBody body;
 
-    private InstallManagedPrometheusResponse(BuilderImpl builder) {
+    private ListEnvironmentDashboardsResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static InstallManagedPrometheusResponse create() {
+    public static ListEnvironmentDashboardsResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +54,35 @@ public class InstallManagedPrometheusResponse extends Response {
     /**
      * @return body
      */
-    public InstallManagedPrometheusResponseBody getBody() {
+    public ListEnvironmentDashboardsResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<InstallManagedPrometheusResponse, Builder> {
+    public interface Builder extends Response.Builder<ListEnvironmentDashboardsResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(InstallManagedPrometheusResponseBody body);
+        Builder body(ListEnvironmentDashboardsResponseBody body);
 
         @Override
-        InstallManagedPrometheusResponse build();
+        ListEnvironmentDashboardsResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<InstallManagedPrometheusResponse, Builder>
+            extends Response.BuilderImpl<ListEnvironmentDashboardsResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private InstallManagedPrometheusResponseBody body; 
+        private ListEnvironmentDashboardsResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(InstallManagedPrometheusResponse response) {
+        private BuilderImpl(ListEnvironmentDashboardsResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +111,14 @@ public class InstallManagedPrometheusResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(InstallManagedPrometheusResponseBody body) {
+        public Builder body(ListEnvironmentDashboardsResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public InstallManagedPrometheusResponse build() {
-            return new InstallManagedPrometheusResponse(this);
+        public ListEnvironmentDashboardsResponse build() {
+            return new ListEnvironmentDashboardsResponse(this);
         } 
 
     } 
