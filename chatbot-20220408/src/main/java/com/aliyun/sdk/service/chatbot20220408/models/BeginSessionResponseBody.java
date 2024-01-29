@@ -12,6 +12,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BeginSessionResponseBody</p>
  */
 public class BeginSessionResponseBody extends TeaModel {
+    @NameInMap("AsrMaxEndSilence")
+    private Integer asrMaxEndSilence;
+
+    @NameInMap("Interruptible")
+    private Boolean interruptible;
+
     @NameInMap("RequestId")
     private String requestId;
 
@@ -22,6 +28,8 @@ public class BeginSessionResponseBody extends TeaModel {
     private String welcomeMessage;
 
     private BeginSessionResponseBody(Builder builder) {
+        this.asrMaxEndSilence = builder.asrMaxEndSilence;
+        this.interruptible = builder.interruptible;
         this.requestId = builder.requestId;
         this.silenceReplyTimeout = builder.silenceReplyTimeout;
         this.welcomeMessage = builder.welcomeMessage;
@@ -33,6 +41,20 @@ public class BeginSessionResponseBody extends TeaModel {
 
     public static BeginSessionResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return asrMaxEndSilence
+     */
+    public Integer getAsrMaxEndSilence() {
+        return this.asrMaxEndSilence;
+    }
+
+    /**
+     * @return interruptible
+     */
+    public Boolean getInterruptible() {
+        return this.interruptible;
     }
 
     /**
@@ -57,9 +79,27 @@ public class BeginSessionResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private Integer asrMaxEndSilence; 
+        private Boolean interruptible; 
         private String requestId; 
         private Integer silenceReplyTimeout; 
         private String welcomeMessage; 
+
+        /**
+         * AsrMaxEndSilence.
+         */
+        public Builder asrMaxEndSilence(Integer asrMaxEndSilence) {
+            this.asrMaxEndSilence = asrMaxEndSilence;
+            return this;
+        }
+
+        /**
+         * Interruptible.
+         */
+        public Builder interruptible(Boolean interruptible) {
+            this.interruptible = interruptible;
+            return this;
+        }
 
         /**
          * RequestId.

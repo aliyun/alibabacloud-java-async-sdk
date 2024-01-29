@@ -1,3 +1,6 @@
+2024-01-29 Version: 1.0.13
+- Generated java-async 2022-04-08 for Chatbot.
+
 2023-12-07 Version: 1.0.12
 - Generated java-async 2022-04-08 for Chatbot.
 
