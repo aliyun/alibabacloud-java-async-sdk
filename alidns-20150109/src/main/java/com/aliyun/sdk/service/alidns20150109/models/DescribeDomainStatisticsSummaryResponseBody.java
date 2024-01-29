@@ -161,10 +161,14 @@ public class DescribeDomainStatisticsSummaryResponseBody extends TeaModel {
         @NameInMap("DomainType")
         private String domainType;
 
+        @NameInMap("resolveAnalysisStatus")
+        private String resolveAnalysisStatus;
+
         private Statistic(Builder builder) {
             this.count = builder.count;
             this.domainName = builder.domainName;
             this.domainType = builder.domainType;
+            this.resolveAnalysisStatus = builder.resolveAnalysisStatus;
         }
 
         public static Builder builder() {
@@ -196,10 +200,18 @@ public class DescribeDomainStatisticsSummaryResponseBody extends TeaModel {
             return this.domainType;
         }
 
+        /**
+         * @return resolveAnalysisStatus
+         */
+        public String getResolveAnalysisStatus() {
+            return this.resolveAnalysisStatus;
+        }
+
         public static final class Builder {
             private Long count; 
             private String domainName; 
             private String domainType; 
+            private String resolveAnalysisStatus; 
 
             /**
              * The number of queries.
@@ -222,6 +234,14 @@ public class DescribeDomainStatisticsSummaryResponseBody extends TeaModel {
              */
             public Builder domainType(String domainType) {
                 this.domainType = domainType;
+                return this;
+            }
+
+            /**
+             * resolveAnalysisStatus.
+             */
+            public Builder resolveAnalysisStatus(String resolveAnalysisStatus) {
+                this.resolveAnalysisStatus = resolveAnalysisStatus;
                 return this;
             }
 

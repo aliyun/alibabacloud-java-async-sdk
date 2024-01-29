@@ -75,11 +75,15 @@ public class DescribeDomainStatisticsResponseBody extends TeaModel {
         @NameInMap("Count")
         private Long count;
 
+        @NameInMap("DomainName")
+        private String domainName;
+
         @NameInMap("Timestamp")
         private Long timestamp;
 
         private Statistic(Builder builder) {
             this.count = builder.count;
+            this.domainName = builder.domainName;
             this.timestamp = builder.timestamp;
         }
 
@@ -99,6 +103,13 @@ public class DescribeDomainStatisticsResponseBody extends TeaModel {
         }
 
         /**
+         * @return domainName
+         */
+        public String getDomainName() {
+            return this.domainName;
+        }
+
+        /**
          * @return timestamp
          */
         public Long getTimestamp() {
@@ -107,6 +118,7 @@ public class DescribeDomainStatisticsResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long count; 
+            private String domainName; 
             private Long timestamp; 
 
             /**
@@ -114,6 +126,14 @@ public class DescribeDomainStatisticsResponseBody extends TeaModel {
              */
             public Builder count(Long count) {
                 this.count = count;
+                return this;
+            }
+
+            /**
+             * DomainName.
+             */
+            public Builder domainName(String domainName) {
+                this.domainName = domainName;
                 return this;
             }
 

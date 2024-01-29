@@ -153,7 +153,10 @@ public class DescribeDnsProductInstancesRequest extends Request {
         } 
 
         /**
-         * Direction.
+         * The Sorting direction. Values:
+         * <p>
+         * * **DESC**: Descending (if not specified, the default is descending order)
+         * * **ASC**: Ascending
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);
@@ -162,7 +165,11 @@ public class DescribeDnsProductInstancesRequest extends Request {
         }
 
         /**
-         * DomainType.
+         * The type of the domain name. Valid values:
+         * <p>
+         * 
+         * *   PUBLIC (default): hosted public domain name
+         * *   CACHE: cached public domain name
          */
         public Builder domainType(String domainType) {
             this.putQueryParameter("DomainType", domainType);
@@ -171,7 +178,11 @@ public class DescribeDnsProductInstancesRequest extends Request {
         }
 
         /**
-         * The version code of the Alibaba Cloud DNS instance.
+         * The language of the content within the request and response. Valid values:
+         * <p>
+         * 
+         * *   **zh** : Chinese
+         * *   **en** (default) : English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -180,7 +191,10 @@ public class DescribeDnsProductInstancesRequest extends Request {
         }
 
         /**
-         * OrderBy.
+         * The Sorting parameter. Values:
+         * <p>
+         * * createDate: Sort by creation time (if not specified, the default is to sort by creation time)
+         * * expireDate: Sort by expiration time
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -189,7 +203,7 @@ public class DescribeDnsProductInstancesRequest extends Request {
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of the page to return. Pages start from page **1**. Default value: **1**.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -198,7 +212,7 @@ public class DescribeDnsProductInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The number of entries to return on each page. Maximum value: **100**. Default value: **20**.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -207,7 +221,7 @@ public class DescribeDnsProductInstancesRequest extends Request {
         }
 
         /**
-         * The total number of domain names.
+         * The IP address of the client.
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);
@@ -216,7 +230,7 @@ public class DescribeDnsProductInstancesRequest extends Request {
         }
 
         /**
-         * The page number of the returned page.
+         * The version code of the Alibaba Cloud DNS instance.
          */
         public Builder versionCode(String versionCode) {
             this.putQueryParameter("VersionCode", versionCode);

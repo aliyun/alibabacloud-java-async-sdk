@@ -14,7 +14,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DescribeDomainStatisticsRequest extends Request {
     @Query
     @NameInMap("DomainName")
-    @Validation(required = true)
     private String domainName;
 
     @Query

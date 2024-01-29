@@ -62,7 +62,7 @@ public class AddCustomLineResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * LineCode.
+         * The code of the custom line.
          */
         public Builder lineCode(String lineCode) {
             this.lineCode = lineCode;
@@ -70,7 +70,7 @@ public class AddCustomLineResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The unique ID of the custom line.
          */
         public Builder lineId(Long lineId) {
             this.lineId = lineId;
@@ -78,7 +78,7 @@ public class AddCustomLineResponseBody extends TeaModel {
         }
 
         /**
-         * The code of the custom line.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

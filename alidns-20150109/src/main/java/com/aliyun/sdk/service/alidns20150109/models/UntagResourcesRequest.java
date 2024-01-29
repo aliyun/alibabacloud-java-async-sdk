@@ -112,7 +112,7 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * All.
+         * Specifies whether to remove all tags. Default value: false. This parameter is valid only when TagKey is left empty. Valid values: true and false.
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -121,7 +121,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -130,7 +130,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The language in which you want the values of some response parameters to be returned. These response parameters support multiple languages.
+         * The resource ID.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -139,7 +139,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * Resource Type
+         * The resource type.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -148,11 +148,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * Specifies whether to remove all tags from the specified resource. Default value: false. This parameter takes effect only when the TagKey.N parameter is not specified. Valid values:
-         * <p>
-         * 
-         * *   true
-         * *   false
+         * The tags added to the resource.
          */
         public Builder tagKey(java.util.List < String > tagKey) {
             this.putQueryParameter("TagKey", tagKey);

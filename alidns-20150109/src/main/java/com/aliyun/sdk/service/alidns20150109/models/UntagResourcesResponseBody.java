@@ -38,7 +38,7 @@ public class UntagResourcesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * "dns-example.com","dns-test.com"
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
