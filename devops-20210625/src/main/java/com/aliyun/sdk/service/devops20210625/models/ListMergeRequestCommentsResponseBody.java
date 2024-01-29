@@ -141,6 +141,9 @@ public class ListMergeRequestCommentsResponseBody extends TeaModel {
         @NameInMap("email")
         private String email;
 
+        @NameInMap("id")
+        private Long id;
+
         @NameInMap("name")
         private String name;
 
@@ -154,6 +157,7 @@ public class ListMergeRequestCommentsResponseBody extends TeaModel {
             this.aliyunPk = builder.aliyunPk;
             this.avatarUrl = builder.avatarUrl;
             this.email = builder.email;
+            this.id = builder.id;
             this.name = builder.name;
             this.state = builder.state;
             this.username = builder.username;
@@ -189,6 +193,13 @@ public class ListMergeRequestCommentsResponseBody extends TeaModel {
         }
 
         /**
+         * @return id
+         */
+        public Long getId() {
+            return this.id;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
@@ -213,6 +224,7 @@ public class ListMergeRequestCommentsResponseBody extends TeaModel {
             private String aliyunPk; 
             private String avatarUrl; 
             private String email; 
+            private Long id; 
             private String name; 
             private String state; 
             private String username; 
@@ -238,6 +250,14 @@ public class ListMergeRequestCommentsResponseBody extends TeaModel {
              */
             public Builder email(String email) {
                 this.email = email;
+                return this;
+            }
+
+            /**
+             * id.
+             */
+            public Builder id(Long id) {
+                this.id = id;
                 return this;
             }
 
@@ -282,6 +302,9 @@ public class ListMergeRequestCommentsResponseBody extends TeaModel {
         @NameInMap("email")
         private String email;
 
+        @NameInMap("id")
+        private Long id;
+
         @NameInMap("name")
         private String name;
 
@@ -295,6 +318,7 @@ public class ListMergeRequestCommentsResponseBody extends TeaModel {
             this.aliyunPk = builder.aliyunPk;
             this.avatarUrl = builder.avatarUrl;
             this.email = builder.email;
+            this.id = builder.id;
             this.name = builder.name;
             this.state = builder.state;
             this.username = builder.username;
@@ -330,6 +354,13 @@ public class ListMergeRequestCommentsResponseBody extends TeaModel {
         }
 
         /**
+         * @return id
+         */
+        public Long getId() {
+            return this.id;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
@@ -354,6 +385,7 @@ public class ListMergeRequestCommentsResponseBody extends TeaModel {
             private String aliyunPk; 
             private String avatarUrl; 
             private String email; 
+            private Long id; 
             private String name; 
             private String state; 
             private String username; 
@@ -379,6 +411,14 @@ public class ListMergeRequestCommentsResponseBody extends TeaModel {
              */
             public Builder email(String email) {
                 this.email = email;
+                return this;
+            }
+
+            /**
+             * id.
+             */
+            public Builder id(Long id) {
+                this.id = id;
                 return this;
             }
 
@@ -423,6 +463,9 @@ public class ListMergeRequestCommentsResponseBody extends TeaModel {
         @NameInMap("email")
         private String email;
 
+        @NameInMap("id")
+        private Long id;
+
         @NameInMap("name")
         private String name;
 
@@ -436,6 +479,7 @@ public class ListMergeRequestCommentsResponseBody extends TeaModel {
             this.aliyunPk = builder.aliyunPk;
             this.avatarUrl = builder.avatarUrl;
             this.email = builder.email;
+            this.id = builder.id;
             this.name = builder.name;
             this.state = builder.state;
             this.username = builder.username;
@@ -471,6 +515,13 @@ public class ListMergeRequestCommentsResponseBody extends TeaModel {
         }
 
         /**
+         * @return id
+         */
+        public Long getId() {
+            return this.id;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
@@ -495,6 +546,7 @@ public class ListMergeRequestCommentsResponseBody extends TeaModel {
             private String aliyunPk; 
             private String avatarUrl; 
             private String email; 
+            private Long id; 
             private String name; 
             private String state; 
             private String username; 
@@ -520,6 +572,14 @@ public class ListMergeRequestCommentsResponseBody extends TeaModel {
              */
             public Builder email(String email) {
                 this.email = email;
+                return this;
+            }
+
+            /**
+             * id.
+             */
+            public Builder id(Long id) {
+                this.id = id;
                 return this;
             }
 

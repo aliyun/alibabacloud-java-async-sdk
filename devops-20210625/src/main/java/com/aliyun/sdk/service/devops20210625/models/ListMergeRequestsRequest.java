@@ -21,6 +21,14 @@ public class ListMergeRequestsRequest extends Request {
     private String authorIds;
 
     @Query
+    @NameInMap("createdAfter")
+    private String createdAfter;
+
+    @Query
+    @NameInMap("createdBefore")
+    private String createdBefore;
+
+    @Query
     @NameInMap("filter")
     private String filter;
 
@@ -73,6 +81,8 @@ public class ListMergeRequestsRequest extends Request {
         super(builder);
         this.accessToken = builder.accessToken;
         this.authorIds = builder.authorIds;
+        this.createdAfter = builder.createdAfter;
+        this.createdBefore = builder.createdBefore;
         this.filter = builder.filter;
         this.groupIds = builder.groupIds;
         this.labelIds = builder.labelIds;
@@ -112,6 +122,20 @@ public class ListMergeRequestsRequest extends Request {
      */
     public String getAuthorIds() {
         return this.authorIds;
+    }
+
+    /**
+     * @return createdAfter
+     */
+    public String getCreatedAfter() {
+        return this.createdAfter;
+    }
+
+    /**
+     * @return createdBefore
+     */
+    public String getCreatedBefore() {
+        return this.createdBefore;
     }
 
     /**
@@ -201,6 +225,8 @@ public class ListMergeRequestsRequest extends Request {
     public static final class Builder extends Request.Builder<ListMergeRequestsRequest, Builder> {
         private String accessToken; 
         private String authorIds; 
+        private String createdAfter; 
+        private String createdBefore; 
         private String filter; 
         private String groupIds; 
         private String labelIds; 
@@ -222,6 +248,8 @@ public class ListMergeRequestsRequest extends Request {
             super(request);
             this.accessToken = request.accessToken;
             this.authorIds = request.authorIds;
+            this.createdAfter = request.createdAfter;
+            this.createdBefore = request.createdBefore;
             this.filter = request.filter;
             this.groupIds = request.groupIds;
             this.labelIds = request.labelIds;
@@ -251,6 +279,24 @@ public class ListMergeRequestsRequest extends Request {
         public Builder authorIds(String authorIds) {
             this.putQueryParameter("authorIds", authorIds);
             this.authorIds = authorIds;
+            return this;
+        }
+
+        /**
+         * createdAfter.
+         */
+        public Builder createdAfter(String createdAfter) {
+            this.putQueryParameter("createdAfter", createdAfter);
+            this.createdAfter = createdAfter;
+            return this;
+        }
+
+        /**
+         * createdBefore.
+         */
+        public Builder createdBefore(String createdBefore) {
+            this.putQueryParameter("createdBefore", createdBefore);
+            this.createdBefore = createdBefore;
             return this;
         }
 

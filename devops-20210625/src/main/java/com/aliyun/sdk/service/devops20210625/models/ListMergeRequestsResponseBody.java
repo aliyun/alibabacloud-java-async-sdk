@@ -400,11 +400,20 @@ public class ListMergeRequestsResponseBody extends TeaModel {
         @NameInMap("email")
         private String email;
 
+        @NameInMap("hasCommented")
+        private Boolean hasCommented;
+
+        @NameInMap("hasReviewed")
+        private Boolean hasReviewed;
+
         @NameInMap("id")
         private Long id;
 
         @NameInMap("name")
         private String name;
+
+        @NameInMap("reviewOpinionStatus")
+        private String reviewOpinionStatus;
 
         @NameInMap("reviewTime")
         private String reviewTime;
@@ -421,8 +430,11 @@ public class ListMergeRequestsResponseBody extends TeaModel {
         private Reviewers(Builder builder) {
             this.avatarUrl = builder.avatarUrl;
             this.email = builder.email;
+            this.hasCommented = builder.hasCommented;
+            this.hasReviewed = builder.hasReviewed;
             this.id = builder.id;
             this.name = builder.name;
+            this.reviewOpinionStatus = builder.reviewOpinionStatus;
             this.reviewTime = builder.reviewTime;
             this.state = builder.state;
             this.status = builder.status;
@@ -452,6 +464,20 @@ public class ListMergeRequestsResponseBody extends TeaModel {
         }
 
         /**
+         * @return hasCommented
+         */
+        public Boolean getHasCommented() {
+            return this.hasCommented;
+        }
+
+        /**
+         * @return hasReviewed
+         */
+        public Boolean getHasReviewed() {
+            return this.hasReviewed;
+        }
+
+        /**
          * @return id
          */
         public Long getId() {
@@ -463,6 +489,13 @@ public class ListMergeRequestsResponseBody extends TeaModel {
          */
         public String getName() {
             return this.name;
+        }
+
+        /**
+         * @return reviewOpinionStatus
+         */
+        public String getReviewOpinionStatus() {
+            return this.reviewOpinionStatus;
         }
 
         /**
@@ -496,8 +529,11 @@ public class ListMergeRequestsResponseBody extends TeaModel {
         public static final class Builder {
             private String avatarUrl; 
             private String email; 
+            private Boolean hasCommented; 
+            private Boolean hasReviewed; 
             private Long id; 
             private String name; 
+            private String reviewOpinionStatus; 
             private String reviewTime; 
             private String state; 
             private String status; 
@@ -520,6 +556,22 @@ public class ListMergeRequestsResponseBody extends TeaModel {
             }
 
             /**
+             * hasCommented.
+             */
+            public Builder hasCommented(Boolean hasCommented) {
+                this.hasCommented = hasCommented;
+                return this;
+            }
+
+            /**
+             * hasReviewed.
+             */
+            public Builder hasReviewed(Boolean hasReviewed) {
+                this.hasReviewed = hasReviewed;
+                return this;
+            }
+
+            /**
              * id.
              */
             public Builder id(Long id) {
@@ -532,6 +584,14 @@ public class ListMergeRequestsResponseBody extends TeaModel {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * reviewOpinionStatus.
+             */
+            public Builder reviewOpinionStatus(String reviewOpinionStatus) {
+                this.reviewOpinionStatus = reviewOpinionStatus;
                 return this;
             }
 
@@ -743,6 +803,9 @@ public class ListMergeRequestsResponseBody extends TeaModel {
         @NameInMap("localId")
         private Long localId;
 
+        @NameInMap("mergedRevision")
+        private String mergedRevision;
+
         @NameInMap("mrBizId")
         private String mrBizId;
 
@@ -813,6 +876,7 @@ public class ListMergeRequestsResponseBody extends TeaModel {
             this.iid = builder.iid;
             this.labels = builder.labels;
             this.localId = builder.localId;
+            this.mergedRevision = builder.mergedRevision;
             this.mrBizId = builder.mrBizId;
             this.nameWithNamespace = builder.nameWithNamespace;
             this.newMergeRequestIdentifier = builder.newMergeRequestIdentifier;
@@ -904,6 +968,13 @@ public class ListMergeRequestsResponseBody extends TeaModel {
          */
         public Long getLocalId() {
             return this.localId;
+        }
+
+        /**
+         * @return mergedRevision
+         */
+        public String getMergedRevision() {
+            return this.mergedRevision;
         }
 
         /**
@@ -1056,6 +1127,7 @@ public class ListMergeRequestsResponseBody extends TeaModel {
             private Long iid; 
             private java.util.List < Labels> labels; 
             private Long localId; 
+            private String mergedRevision; 
             private String mrBizId; 
             private String nameWithNamespace; 
             private Boolean newMergeRequestIdentifier; 
@@ -1146,6 +1218,14 @@ public class ListMergeRequestsResponseBody extends TeaModel {
              */
             public Builder localId(Long localId) {
                 this.localId = localId;
+                return this;
+            }
+
+            /**
+             * mergedRevision.
+             */
+            public Builder mergedRevision(String mergedRevision) {
+                this.mergedRevision = mergedRevision;
                 return this;
             }
 
