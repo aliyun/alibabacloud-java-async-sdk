@@ -209,7 +209,7 @@ public class ListAggregateDiscoveredResourcesRequest extends Request {
         }
 
         /**
-         * ResourceAccountId.
+         * The ID of the Alibaba Cloud account to which the resources in the account group belong.
          */
         public Builder resourceAccountId(Long resourceAccountId) {
             this.putQueryParameter("ResourceAccountId", resourceAccountId);

@@ -96,6 +96,9 @@ public class ListAggregatorsResponseBody extends TeaModel {
         @NameInMap("Description")
         private String description;
 
+        @NameInMap("FolderId")
+        private String folderId;
+
         private Aggregators(Builder builder) {
             this.accountId = builder.accountId;
             this.aggregatorAccountCount = builder.aggregatorAccountCount;
@@ -105,6 +108,7 @@ public class ListAggregatorsResponseBody extends TeaModel {
             this.aggregatorStatus = builder.aggregatorStatus;
             this.aggregatorType = builder.aggregatorType;
             this.description = builder.description;
+            this.folderId = builder.folderId;
         }
 
         public static Builder builder() {
@@ -171,6 +175,13 @@ public class ListAggregatorsResponseBody extends TeaModel {
             return this.description;
         }
 
+        /**
+         * @return folderId
+         */
+        public String getFolderId() {
+            return this.folderId;
+        }
+
         public static final class Builder {
             private Long accountId; 
             private Long aggregatorAccountCount; 
@@ -180,6 +191,7 @@ public class ListAggregatorsResponseBody extends TeaModel {
             private Integer aggregatorStatus; 
             private String aggregatorType; 
             private String description; 
+            private String folderId; 
 
             /**
              * The ID of the management account used to create the account group.
@@ -250,6 +262,14 @@ public class ListAggregatorsResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * FolderId.
+             */
+            public Builder folderId(String folderId) {
+                this.folderId = folderId;
                 return this;
             }
 

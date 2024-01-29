@@ -238,9 +238,6 @@ public class GetAggregateResourceConfigurationTimelineRequest extends Request {
 
         /**
          * The ID of the Alibaba Cloud account to which the resource in the account group belongs.
-         * <p>
-         * 
-         * > You can use either the ResourceAccountId or ResourceOwnerId parameter. We recommend that you use the ResourceAccountId parameter.
          */
         public Builder resourceAccountId(Long resourceAccountId) {
             this.putQueryParameter("ResourceAccountId", resourceAccountId);

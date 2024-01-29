@@ -104,10 +104,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateConfigDeliveryChannelResponse> createConfigDeliveryChannel(CreateConfigDeliveryChannelRequest request);
 
     /**
-      * ### Limits
-      * You can use an ordinary account to create up to 200 rules.
-      * ### Usage notes
-      * This topic provides an example on how to create a managed rule named required-tags. The returned result indicates that the rule is created and the ID of the rule is `cr-5772ba41209e007b****`.
+      * ## Limits
+      * You can use a common account to create up to 200 rules.
       *
      */
     CompletableFuture<CreateConfigRuleResponse> createConfigRule(CreateConfigRuleRequest request);

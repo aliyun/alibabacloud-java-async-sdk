@@ -141,8 +141,8 @@ public class GetCompliancePackResponseBody extends TeaModel {
              * Indicates whether the input parameter is required. Valid values:
              * <p>
              * 
-             * *   true: The input parameter is required.
-             * *   false: The input parameter is optional.
+             * *   true
+             * *   false
              */
             public Builder required(Boolean required) {
                 this.required = required;
@@ -279,7 +279,7 @@ public class GetCompliancePackResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the rule.
+             * The rule description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -303,7 +303,7 @@ public class GetCompliancePackResponseBody extends TeaModel {
             }
 
             /**
-             * The risk level of the resources that are not compliant with the rule. Valid values:
+             * The risk level of the resources that do not comply with the rule. Valid values:
              * <p>
              * 
              * *   1: high
@@ -474,6 +474,9 @@ public class GetCompliancePackResponseBody extends TeaModel {
         @NameInMap("Status")
         private String status;
 
+        @NameInMap("TemplateContent")
+        private String templateContent;
+
         private CompliancePack(Builder builder) {
             this.accountId = builder.accountId;
             this.compliancePackId = builder.compliancePackId;
@@ -485,6 +488,7 @@ public class GetCompliancePackResponseBody extends TeaModel {
             this.riskLevel = builder.riskLevel;
             this.scope = builder.scope;
             this.status = builder.status;
+            this.templateContent = builder.templateContent;
         }
 
         public static Builder builder() {
@@ -565,6 +569,13 @@ public class GetCompliancePackResponseBody extends TeaModel {
             return this.status;
         }
 
+        /**
+         * @return templateContent
+         */
+        public String getTemplateContent() {
+            return this.templateContent;
+        }
+
         public static final class Builder {
             private Long accountId; 
             private String compliancePackId; 
@@ -576,6 +587,7 @@ public class GetCompliancePackResponseBody extends TeaModel {
             private Integer riskLevel; 
             private Scope scope; 
             private String status; 
+            private String templateContent; 
 
             /**
              * The ID of the Alibaba Cloud account to which the compliance package belongs.
@@ -663,6 +675,14 @@ public class GetCompliancePackResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * TemplateContent.
+             */
+            public Builder templateContent(String templateContent) {
+                this.templateContent = templateContent;
                 return this;
             }
 

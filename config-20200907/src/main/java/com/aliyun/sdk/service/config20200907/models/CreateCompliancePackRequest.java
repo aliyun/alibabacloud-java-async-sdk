@@ -27,7 +27,6 @@ public class CreateCompliancePackRequest extends Request {
 
     @Body
     @NameInMap("ConfigRules")
-    @Validation(required = true)
     private java.util.List < ConfigRules> configRules;
 
     @Body
@@ -53,7 +52,7 @@ public class CreateCompliancePackRequest extends Request {
 
     @Body
     @NameInMap("RiskLevel")
-    @Validation(required = true, maximum = 3, minimum = 1)
+    @Validation(maximum = 3, minimum = 1)
     private Integer riskLevel;
 
     @Body
@@ -63,6 +62,11 @@ public class CreateCompliancePackRequest extends Request {
     @Body
     @NameInMap("TagValueScope")
     private String tagValueScope;
+
+    @Body
+    @NameInMap("TemplateContent")
+    @Validation(maxLength = 1024000)
+    private String templateContent;
 
     private CreateCompliancePackRequest(Builder builder) {
         super(builder);
@@ -78,6 +82,7 @@ public class CreateCompliancePackRequest extends Request {
         this.riskLevel = builder.riskLevel;
         this.tagKeyScope = builder.tagKeyScope;
         this.tagValueScope = builder.tagValueScope;
+        this.templateContent = builder.templateContent;
     }
 
     public static Builder builder() {
@@ -177,6 +182,13 @@ public class CreateCompliancePackRequest extends Request {
         return this.tagValueScope;
     }
 
+    /**
+     * @return templateContent
+     */
+    public String getTemplateContent() {
+        return this.templateContent;
+    }
+
     public static final class Builder extends Request.Builder<CreateCompliancePackRequest, Builder> {
         private String clientToken; 
         private String compliancePackName; 
@@ -190,6 +202,7 @@ public class CreateCompliancePackRequest extends Request {
         private Integer riskLevel; 
         private String tagKeyScope; 
         private String tagValueScope; 
+        private String templateContent; 
 
         private Builder() {
             super();
@@ -209,6 +222,7 @@ public class CreateCompliancePackRequest extends Request {
             this.riskLevel = request.riskLevel;
             this.tagKeyScope = request.tagKeyScope;
             this.tagValueScope = request.tagValueScope;
+            this.templateContent = request.templateContent;
         } 
 
         /**
@@ -332,6 +346,15 @@ public class CreateCompliancePackRequest extends Request {
         public Builder tagValueScope(String tagValueScope) {
             this.putBodyParameter("TagValueScope", tagValueScope);
             this.tagValueScope = tagValueScope;
+            return this;
+        }
+
+        /**
+         * TemplateContent.
+         */
+        public Builder templateContent(String templateContent) {
+            this.putBodyParameter("TemplateContent", templateContent);
+            this.templateContent = templateContent;
             return this;
         }
 

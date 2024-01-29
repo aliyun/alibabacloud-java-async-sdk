@@ -653,7 +653,7 @@ public class ListConfigRulesResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * The types of resources evaluated by the rule. Separate multiple resource types with commas (,).
+             * The rule list.
              */
             public Builder configRuleList(java.util.List < ConfigRuleList> configRuleList) {
                 this.configRuleList = configRuleList;

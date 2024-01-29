@@ -34,6 +34,10 @@ public class CreateAggregatorRequest extends Request {
     @Validation(required = true)
     private String description;
 
+    @Body
+    @NameInMap("FolderId")
+    private String folderId;
+
     private CreateAggregatorRequest(Builder builder) {
         super(builder);
         this.aggregatorAccounts = builder.aggregatorAccounts;
@@ -41,6 +45,7 @@ public class CreateAggregatorRequest extends Request {
         this.aggregatorType = builder.aggregatorType;
         this.clientToken = builder.clientToken;
         this.description = builder.description;
+        this.folderId = builder.folderId;
     }
 
     public static Builder builder() {
@@ -91,12 +96,20 @@ public class CreateAggregatorRequest extends Request {
         return this.description;
     }
 
+    /**
+     * @return folderId
+     */
+    public String getFolderId() {
+        return this.folderId;
+    }
+
     public static final class Builder extends Request.Builder<CreateAggregatorRequest, Builder> {
         private java.util.List < AggregatorAccounts> aggregatorAccounts; 
         private String aggregatorName; 
         private String aggregatorType; 
         private String clientToken; 
         private String description; 
+        private String folderId; 
 
         private Builder() {
             super();
@@ -109,6 +122,7 @@ public class CreateAggregatorRequest extends Request {
             this.aggregatorType = request.aggregatorType;
             this.clientToken = request.clientToken;
             this.description = request.description;
+            this.folderId = request.folderId;
         } 
 
         /**
@@ -158,6 +172,15 @@ public class CreateAggregatorRequest extends Request {
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * FolderId.
+         */
+        public Builder folderId(String folderId) {
+            this.putBodyParameter("FolderId", folderId);
+            this.folderId = folderId;
             return this;
         }
 

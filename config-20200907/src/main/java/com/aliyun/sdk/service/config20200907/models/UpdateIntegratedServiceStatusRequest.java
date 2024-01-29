@@ -84,7 +84,11 @@ public class UpdateIntegratedServiceStatusRequest extends Request {
         } 
 
         /**
-         * IntegratedTypes.
+         * The types of the integrated events. Separate multiple event types with commas (,). Valid values:
+         * <p>
+         * 
+         * *   ConfigurationItemChangeNotification: resource change event
+         * *   NonCompliantNotification: non-compliance event
          */
         public Builder integratedTypes(String integratedTypes) {
             this.putBodyParameter("IntegratedTypes", integratedTypes);

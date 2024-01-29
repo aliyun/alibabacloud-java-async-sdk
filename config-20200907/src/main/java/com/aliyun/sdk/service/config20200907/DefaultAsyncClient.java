@@ -308,10 +308,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ### Limits
-      * You can use an ordinary account to create up to 200 rules.
-      * ### Usage notes
-      * This topic provides an example on how to create a managed rule named required-tags. The returned result indicates that the rule is created and the ID of the rule is `cr-5772ba41209e007b****`.
+      * ## Limits
+      * You can use a common account to create up to 200 rules.
       *
      */
     @Override
@@ -1116,7 +1114,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<GetAggregatorResponse> getAggregator(GetAggregatorRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetAggregator").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetAggregator").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetAggregatorResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {

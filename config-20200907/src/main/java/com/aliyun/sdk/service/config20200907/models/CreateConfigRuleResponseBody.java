@@ -50,7 +50,7 @@ public class CreateConfigRuleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The rule ID.
+         * The ID of the rule.
          */
         public Builder configRuleId(String configRuleId) {
             this.configRuleId = configRuleId;
@@ -58,7 +58,7 @@ public class CreateConfigRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

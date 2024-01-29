@@ -74,7 +74,11 @@ public class GetIntegratedServiceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * IntegratedTypes.
+         * The types of the integrated events. Separate multiple event types with commas (,). Valid values:
+         * <p>
+         * 
+         * *   ConfigurationItemChangeNotification: resource change event
+         * *   NonCompliantNotification: non-compliance event
          */
         public Builder integratedTypes(String integratedTypes) {
             this.integratedTypes = integratedTypes;
