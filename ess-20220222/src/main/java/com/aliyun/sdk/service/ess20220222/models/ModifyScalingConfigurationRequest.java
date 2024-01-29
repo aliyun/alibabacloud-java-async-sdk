@@ -37,6 +37,10 @@ public class ModifyScalingConfigurationRequest extends Request {
     private String creditSpecification;
 
     @Query
+    @NameInMap("CustomPriorities")
+    private java.util.List < CustomPriorities> customPriorities;
+
+    @Query
     @NameInMap("DataDisks")
     private java.util.List < DataDisks> dataDisks;
 
@@ -221,6 +225,7 @@ public class ModifyScalingConfigurationRequest extends Request {
         this.affinity = builder.affinity;
         this.cpu = builder.cpu;
         this.creditSpecification = builder.creditSpecification;
+        this.customPriorities = builder.customPriorities;
         this.dataDisks = builder.dataDisks;
         this.dedicatedHostId = builder.dedicatedHostId;
         this.deletionProtection = builder.deletionProtection;
@@ -320,6 +325,13 @@ public class ModifyScalingConfigurationRequest extends Request {
      */
     public String getCreditSpecification() {
         return this.creditSpecification;
+    }
+
+    /**
+     * @return customPriorities
+     */
+    public java.util.List < CustomPriorities> getCustomPriorities() {
+        return this.customPriorities;
     }
 
     /**
@@ -637,6 +649,7 @@ public class ModifyScalingConfigurationRequest extends Request {
         private String affinity; 
         private Integer cpu; 
         private String creditSpecification; 
+        private java.util.List < CustomPriorities> customPriorities; 
         private java.util.List < DataDisks> dataDisks; 
         private String dedicatedHostId; 
         private Boolean deletionProtection; 
@@ -694,6 +707,7 @@ public class ModifyScalingConfigurationRequest extends Request {
             this.affinity = request.affinity;
             this.cpu = request.cpu;
             this.creditSpecification = request.creditSpecification;
+            this.customPriorities = request.customPriorities;
             this.dataDisks = request.dataDisks;
             this.dedicatedHostId = request.dedicatedHostId;
             this.deletionProtection = request.deletionProtection;
@@ -804,6 +818,15 @@ public class ModifyScalingConfigurationRequest extends Request {
         public Builder creditSpecification(String creditSpecification) {
             this.putQueryParameter("CreditSpecification", creditSpecification);
             this.creditSpecification = creditSpecification;
+            return this;
+        }
+
+        /**
+         * CustomPriorities.
+         */
+        public Builder customPriorities(java.util.List < CustomPriorities> customPriorities) {
+            this.putQueryParameter("CustomPriorities", customPriorities);
+            this.customPriorities = customPriorities;
             return this;
         }
 
@@ -1670,6 +1693,67 @@ public class ModifyScalingConfigurationRequest extends Request {
 
             public SystemDisk build() {
                 return new SystemDisk(this);
+            } 
+
+        } 
+
+    }
+    public static class CustomPriorities extends TeaModel {
+        @NameInMap("InstanceType")
+        private String instanceType;
+
+        @NameInMap("VswitchId")
+        private String vswitchId;
+
+        private CustomPriorities(Builder builder) {
+            this.instanceType = builder.instanceType;
+            this.vswitchId = builder.vswitchId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CustomPriorities create() {
+            return builder().build();
+        }
+
+        /**
+         * @return instanceType
+         */
+        public String getInstanceType() {
+            return this.instanceType;
+        }
+
+        /**
+         * @return vswitchId
+         */
+        public String getVswitchId() {
+            return this.vswitchId;
+        }
+
+        public static final class Builder {
+            private String instanceType; 
+            private String vswitchId; 
+
+            /**
+             * InstanceType.
+             */
+            public Builder instanceType(String instanceType) {
+                this.instanceType = instanceType;
+                return this;
+            }
+
+            /**
+             * VswitchId.
+             */
+            public Builder vswitchId(String vswitchId) {
+                this.vswitchId = vswitchId;
+                return this;
+            }
+
+            public CustomPriorities build() {
+                return new CustomPriorities(this);
             } 
 
         } 

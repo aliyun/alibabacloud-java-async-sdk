@@ -131,6 +131,67 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
 
     } 
 
+    public static class CustomPriorities extends TeaModel {
+        @NameInMap("InstanceType")
+        private String instanceType;
+
+        @NameInMap("VswitchId")
+        private String vswitchId;
+
+        private CustomPriorities(Builder builder) {
+            this.instanceType = builder.instanceType;
+            this.vswitchId = builder.vswitchId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CustomPriorities create() {
+            return builder().build();
+        }
+
+        /**
+         * @return instanceType
+         */
+        public String getInstanceType() {
+            return this.instanceType;
+        }
+
+        /**
+         * @return vswitchId
+         */
+        public String getVswitchId() {
+            return this.vswitchId;
+        }
+
+        public static final class Builder {
+            private String instanceType; 
+            private String vswitchId; 
+
+            /**
+             * InstanceType.
+             */
+            public Builder instanceType(String instanceType) {
+                this.instanceType = instanceType;
+                return this;
+            }
+
+            /**
+             * VswitchId.
+             */
+            public Builder vswitchId(String vswitchId) {
+                this.vswitchId = vswitchId;
+                return this;
+            }
+
+            public CustomPriorities build() {
+                return new CustomPriorities(this);
+            } 
+
+        } 
+
+    }
     public static class DataDisks extends TeaModel {
         @NameInMap("AutoSnapshotPolicyId")
         private String autoSnapshotPolicyId;
@@ -838,6 +899,9 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         @NameInMap("CreditSpecification")
         private String creditSpecification;
 
+        @NameInMap("CustomPriorities")
+        private java.util.List < CustomPriorities> customPriorities;
+
         @NameInMap("DataDisks")
         private java.util.List < DataDisks> dataDisks;
 
@@ -1026,6 +1090,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             this.cpu = builder.cpu;
             this.creationTime = builder.creationTime;
             this.creditSpecification = builder.creditSpecification;
+            this.customPriorities = builder.customPriorities;
             this.dataDisks = builder.dataDisks;
             this.dedicatedHostId = builder.dedicatedHostId;
             this.deletionProtection = builder.deletionProtection;
@@ -1123,6 +1188,13 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
          */
         public String getCreditSpecification() {
             return this.creditSpecification;
+        }
+
+        /**
+         * @return customPriorities
+         */
+        public java.util.List < CustomPriorities> getCustomPriorities() {
+            return this.customPriorities;
         }
 
         /**
@@ -1557,6 +1629,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             private Integer cpu; 
             private String creationTime; 
             private String creditSpecification; 
+            private java.util.List < CustomPriorities> customPriorities; 
             private java.util.List < DataDisks> dataDisks; 
             private String dedicatedHostId; 
             private Boolean deletionProtection; 
@@ -1661,6 +1734,14 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
              */
             public Builder creditSpecification(String creditSpecification) {
                 this.creditSpecification = creditSpecification;
+                return this;
+            }
+
+            /**
+             * CustomPriorities.
+             */
+            public Builder customPriorities(java.util.List < CustomPriorities> customPriorities) {
+                this.customPriorities = customPriorities;
                 return this;
             }
 
