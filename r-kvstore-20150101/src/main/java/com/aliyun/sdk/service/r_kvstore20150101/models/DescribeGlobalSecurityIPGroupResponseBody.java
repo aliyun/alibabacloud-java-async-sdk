@@ -50,7 +50,7 @@ public class DescribeGlobalSecurityIPGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 1
+         * The information about the IP whitelist template.
          */
         public Builder globalSecurityIPGroup(java.util.List < GlobalSecurityIPGroup> globalSecurityIPGroup) {
             this.globalSecurityIPGroup = globalSecurityIPGroup;
@@ -146,7 +146,7 @@ public class DescribeGlobalSecurityIPGroupResponseBody extends TeaModel {
             private String regionId; 
 
             /**
-             * The instance IDs.
+             * The IDs of the instances that are associated with the IP whitelist template.
              */
             public Builder DBInstances(java.util.List < String > DBInstances) {
                 this.DBInstances = DBInstances;
@@ -154,10 +154,10 @@ public class DescribeGlobalSecurityIPGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address in the whitelist template.
+             * The IP address in the IP whitelist template.
              * <p>
              * 
-             * >  Multiple IP addresses are separated by commas (,). You can create up to 1,000 IP addresses or CIDR blocks for all IP whitelists.
+             * >  Multiple IP addresses are separated by commas (,).
              */
             public Builder gIpList(String gIpList) {
                 this.gIpList = gIpList;
@@ -165,12 +165,7 @@ public class DescribeGlobalSecurityIPGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the IP whitelist template. The name must meet the following requirements:
-             * <p>
-             * 
-             * *   The name can contain lowercase letters, digits, and underscores (\_).
-             * *   The name must start with a letter and end with a letter or digit.
-             * *   The name must be 2 to 120 characters in length.
+             * The name of the IP whitelist template.
              */
             public Builder globalIgName(String globalIgName) {
                 this.globalIgName = globalIgName;

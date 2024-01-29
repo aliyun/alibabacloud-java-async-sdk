@@ -148,7 +148,7 @@ public class UnlockDBInstanceWriteRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

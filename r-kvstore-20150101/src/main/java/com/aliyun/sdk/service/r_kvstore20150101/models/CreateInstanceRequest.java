@@ -761,7 +761,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * ClusterBackupId.
+         * Backup files ID of cluster instance.
          */
         public Builder clusterBackupId(String clusterBackupId) {
             this.putQueryParameter("ClusterBackupId", clusterBackupId);

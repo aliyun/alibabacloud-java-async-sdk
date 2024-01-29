@@ -92,6 +92,11 @@ public class ModifyInstanceSpecRequest extends Request {
     private Integer shardCount;
 
     @Query
+    @NameInMap("SlaveReadOnlyCount")
+    @Validation(maximum = 9)
+    private Integer slaveReadOnlyCount;
+
+    @Query
     @NameInMap("SourceBiz")
     private String sourceBiz;
 
@@ -116,6 +121,7 @@ public class ModifyInstanceSpecRequest extends Request {
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityToken = builder.securityToken;
         this.shardCount = builder.shardCount;
+        this.slaveReadOnlyCount = builder.slaveReadOnlyCount;
         this.sourceBiz = builder.sourceBiz;
     }
 
@@ -266,6 +272,13 @@ public class ModifyInstanceSpecRequest extends Request {
     }
 
     /**
+     * @return slaveReadOnlyCount
+     */
+    public Integer getSlaveReadOnlyCount() {
+        return this.slaveReadOnlyCount;
+    }
+
+    /**
      * @return sourceBiz
      */
     public String getSourceBiz() {
@@ -292,6 +305,7 @@ public class ModifyInstanceSpecRequest extends Request {
         private Long resourceOwnerId; 
         private String securityToken; 
         private Integer shardCount; 
+        private Integer slaveReadOnlyCount; 
         private String sourceBiz; 
 
         private Builder() {
@@ -319,6 +333,7 @@ public class ModifyInstanceSpecRequest extends Request {
             this.resourceOwnerId = request.resourceOwnerId;
             this.securityToken = request.securityToken;
             this.shardCount = request.shardCount;
+            this.slaveReadOnlyCount = request.slaveReadOnlyCount;
             this.sourceBiz = request.sourceBiz;
         } 
 
@@ -516,6 +531,15 @@ public class ModifyInstanceSpecRequest extends Request {
         public Builder shardCount(Integer shardCount) {
             this.putQueryParameter("ShardCount", shardCount);
             this.shardCount = shardCount;
+            return this;
+        }
+
+        /**
+         * SlaveReadOnlyCount.
+         */
+        public Builder slaveReadOnlyCount(Integer slaveReadOnlyCount) {
+            this.putQueryParameter("SlaveReadOnlyCount", slaveReadOnlyCount);
+            this.slaveReadOnlyCount = slaveReadOnlyCount;
             return this;
         }
 

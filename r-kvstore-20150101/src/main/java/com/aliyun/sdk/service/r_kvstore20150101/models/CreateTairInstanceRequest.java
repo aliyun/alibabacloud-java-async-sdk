@@ -152,6 +152,10 @@ public class CreateTairInstanceRequest extends Request {
     private String shardType;
 
     @Query
+    @NameInMap("SlaveReadOnlyCount")
+    private Integer slaveReadOnlyCount;
+
+    @Query
     @NameInMap("SrcDBInstanceId")
     private String srcDBInstanceId;
 
@@ -216,6 +220,7 @@ public class CreateTairInstanceRequest extends Request {
         this.securityToken = builder.securityToken;
         this.shardCount = builder.shardCount;
         this.shardType = builder.shardType;
+        this.slaveReadOnlyCount = builder.slaveReadOnlyCount;
         this.srcDBInstanceId = builder.srcDBInstanceId;
         this.storage = builder.storage;
         this.storageType = builder.storageType;
@@ -470,6 +475,13 @@ public class CreateTairInstanceRequest extends Request {
     }
 
     /**
+     * @return slaveReadOnlyCount
+     */
+    public Integer getSlaveReadOnlyCount() {
+        return this.slaveReadOnlyCount;
+    }
+
+    /**
      * @return srcDBInstanceId
      */
     public String getSrcDBInstanceId() {
@@ -552,6 +564,7 @@ public class CreateTairInstanceRequest extends Request {
         private String securityToken; 
         private Integer shardCount; 
         private String shardType; 
+        private Integer slaveReadOnlyCount; 
         private String srcDBInstanceId; 
         private Integer storage; 
         private String storageType; 
@@ -599,6 +612,7 @@ public class CreateTairInstanceRequest extends Request {
             this.securityToken = request.securityToken;
             this.shardCount = request.shardCount;
             this.shardType = request.shardType;
+            this.slaveReadOnlyCount = request.slaveReadOnlyCount;
             this.srcDBInstanceId = request.srcDBInstanceId;
             this.storage = request.storage;
             this.storageType = request.storageType;
@@ -699,7 +713,7 @@ public class CreateTairInstanceRequest extends Request {
         }
 
         /**
-         * ClusterBackupId.
+         * 集群备份集ID。
          */
         public Builder clusterBackupId(String clusterBackupId) {
             this.putQueryParameter("ClusterBackupId", clusterBackupId);
@@ -816,7 +830,7 @@ public class CreateTairInstanceRequest extends Request {
         }
 
         /**
-         * 参数模板ID，根据新创建的参数模板参数创建实例，不可重复。
+         * The ID of the parameter template. The instance is created based on the parameters in the parameter template. The ID must be unique.
          */
         public Builder paramGroupId(String paramGroupId) {
             this.putQueryParameter("ParamGroupId", paramGroupId);
@@ -968,6 +982,15 @@ public class CreateTairInstanceRequest extends Request {
         public Builder shardType(String shardType) {
             this.putQueryParameter("ShardType", shardType);
             this.shardType = shardType;
+            return this;
+        }
+
+        /**
+         * SlaveReadOnlyCount.
+         */
+        public Builder slaveReadOnlyCount(Integer slaveReadOnlyCount) {
+            this.putQueryParameter("SlaveReadOnlyCount", slaveReadOnlyCount);
+            this.slaveReadOnlyCount = slaveReadOnlyCount;
             return this;
         }
 

@@ -62,7 +62,7 @@ public class UnlockDBInstanceWriteResponseBody extends TeaModel {
         private Long taskId; 
 
         /**
-         * DBInstanceName.
+         * The name of the instance.
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.DBInstanceName = DBInstanceName;
@@ -70,7 +70,7 @@ public class UnlockDBInstanceWriteResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class UnlockDBInstanceWriteResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * The task ID.
          */
         public Builder taskId(Long taskId) {
             this.taskId = taskId;

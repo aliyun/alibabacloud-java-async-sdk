@@ -1,3 +1,6 @@
+2024-01-29 Version: 1.0.10
+- Generated java-async 2015-01-01 for R-kvstore.
+
 2024-01-22 Version: 1.0.9
 - Generated java-async 2015-01-01 for R-kvstore.
 
