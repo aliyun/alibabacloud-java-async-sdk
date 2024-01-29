@@ -18,6 +18,12 @@ public class GetDatasourceResponseBody extends TeaModel {
     @NameInMap("DatasourceId")
     private String datasourceId;
 
+    @NameInMap("GmtCreateTime")
+    private String gmtCreateTime;
+
+    @NameInMap("GmtModifiedTime")
+    private String gmtModifiedTime;
+
     @NameInMap("Name")
     private String name;
 
@@ -36,6 +42,8 @@ public class GetDatasourceResponseBody extends TeaModel {
     private GetDatasourceResponseBody(Builder builder) {
         this.config = builder.config;
         this.datasourceId = builder.datasourceId;
+        this.gmtCreateTime = builder.gmtCreateTime;
+        this.gmtModifiedTime = builder.gmtModifiedTime;
         this.name = builder.name;
         this.requestId = builder.requestId;
         this.type = builder.type;
@@ -63,6 +71,20 @@ public class GetDatasourceResponseBody extends TeaModel {
      */
     public String getDatasourceId() {
         return this.datasourceId;
+    }
+
+    /**
+     * @return gmtCreateTime
+     */
+    public String getGmtCreateTime() {
+        return this.gmtCreateTime;
+    }
+
+    /**
+     * @return gmtModifiedTime
+     */
+    public String getGmtModifiedTime() {
+        return this.gmtModifiedTime;
     }
 
     /**
@@ -103,6 +125,8 @@ public class GetDatasourceResponseBody extends TeaModel {
     public static final class Builder {
         private String config; 
         private String datasourceId; 
+        private String gmtCreateTime; 
+        private String gmtModifiedTime; 
         private String name; 
         private String requestId; 
         private String type; 
@@ -122,6 +146,22 @@ public class GetDatasourceResponseBody extends TeaModel {
          */
         public Builder datasourceId(String datasourceId) {
             this.datasourceId = datasourceId;
+            return this;
+        }
+
+        /**
+         * GmtCreateTime.
+         */
+        public Builder gmtCreateTime(String gmtCreateTime) {
+            this.gmtCreateTime = gmtCreateTime;
+            return this;
+        }
+
+        /**
+         * GmtModifiedTime.
+         */
+        public Builder gmtModifiedTime(String gmtModifiedTime) {
+            this.gmtModifiedTime = gmtModifiedTime;
             return this;
         }
 

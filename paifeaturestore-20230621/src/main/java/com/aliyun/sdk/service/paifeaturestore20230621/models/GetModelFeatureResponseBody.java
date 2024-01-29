@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetModelFeatureResponseBody</p>
  */
 public class GetModelFeatureResponseBody extends TeaModel {
+    @NameInMap("ExportTrainingSetTableScript")
+    private String exportTrainingSetTableScript;
+
     @NameInMap("Features")
     private java.util.List < Features> features;
 
@@ -52,6 +55,7 @@ public class GetModelFeatureResponseBody extends TeaModel {
     private String trainingSetTable;
 
     private GetModelFeatureResponseBody(Builder builder) {
+        this.exportTrainingSetTableScript = builder.exportTrainingSetTableScript;
         this.features = builder.features;
         this.gmtCreateTime = builder.gmtCreateTime;
         this.gmtModifiedTime = builder.gmtModifiedTime;
@@ -73,6 +77,13 @@ public class GetModelFeatureResponseBody extends TeaModel {
 
     public static GetModelFeatureResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return exportTrainingSetTableScript
+     */
+    public String getExportTrainingSetTableScript() {
+        return this.exportTrainingSetTableScript;
     }
 
     /**
@@ -167,6 +178,7 @@ public class GetModelFeatureResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String exportTrainingSetTableScript; 
         private java.util.List < Features> features; 
         private String gmtCreateTime; 
         private String gmtModifiedTime; 
@@ -180,6 +192,14 @@ public class GetModelFeatureResponseBody extends TeaModel {
         private String requestId; 
         private String trainingSetFGTable; 
         private String trainingSetTable; 
+
+        /**
+         * ExportTrainingSetTableScript.
+         */
+        public Builder exportTrainingSetTableScript(String exportTrainingSetTableScript) {
+            this.exportTrainingSetTableScript = exportTrainingSetTableScript;
+            return this;
+        }
 
         /**
          * Features.

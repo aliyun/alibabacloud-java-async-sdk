@@ -51,6 +51,9 @@ public class GetFeatureViewResponseBody extends TeaModel {
     @NameInMap("ProjectName")
     private String projectName;
 
+    @NameInMap("PublishTableScript")
+    private String publishTableScript;
+
     @NameInMap("RegisterDatasourceId")
     private String registerDatasourceId;
 
@@ -92,6 +95,7 @@ public class GetFeatureViewResponseBody extends TeaModel {
         this.owner = builder.owner;
         this.projectId = builder.projectId;
         this.projectName = builder.projectName;
+        this.publishTableScript = builder.publishTableScript;
         this.registerDatasourceId = builder.registerDatasourceId;
         this.registerDatasourceName = builder.registerDatasourceName;
         this.registerTable = builder.registerTable;
@@ -203,6 +207,13 @@ public class GetFeatureViewResponseBody extends TeaModel {
     }
 
     /**
+     * @return publishTableScript
+     */
+    public String getPublishTableScript() {
+        return this.publishTableScript;
+    }
+
+    /**
      * @return registerDatasourceId
      */
     public String getRegisterDatasourceId() {
@@ -279,6 +290,7 @@ public class GetFeatureViewResponseBody extends TeaModel {
         private String owner; 
         private String projectId; 
         private String projectName; 
+        private String publishTableScript; 
         private String registerDatasourceId; 
         private String registerDatasourceName; 
         private String registerTable; 
@@ -390,6 +402,14 @@ public class GetFeatureViewResponseBody extends TeaModel {
          */
         public Builder projectName(String projectName) {
             this.projectName = projectName;
+            return this;
+        }
+
+        /**
+         * PublishTableScript.
+         */
+        public Builder publishTableScript(String publishTableScript) {
+            this.publishTableScript = publishTableScript;
             return this;
         }
 
