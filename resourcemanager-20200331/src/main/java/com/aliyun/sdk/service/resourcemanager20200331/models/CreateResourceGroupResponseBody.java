@@ -50,7 +50,7 @@ public class CreateResourceGroupResponseBody extends TeaModel {
         private ResourceGroup resourceGroup; 
 
         /**
-         * The information of the resource group.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class CreateResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The display name of the resource group.
+         * The information of the resource group.
          */
         public Builder resourceGroup(ResourceGroup resourceGroup) {
             this.resourceGroup = resourceGroup;
@@ -110,7 +110,7 @@ public class CreateResourceGroupResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The ID of the Alibaba Cloud account to which the resource group belongs.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -118,7 +118,11 @@ public class CreateResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * The status of the resource group. Valid values:
+             * <p>
+             * 
+             * *   Creating: The resource group is being created.
+             * *   OK: The resource group is created.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -272,7 +276,7 @@ public class CreateResourceGroupResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The unique identifier of the resource group.
+             * The ID of the Alibaba Cloud account to which the resource group belongs.
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -280,7 +284,7 @@ public class CreateResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * The time when the resource group was created. The time is displayed in UTC.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -288,11 +292,7 @@ public class CreateResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the resource group. Valid values:
-             * <p>
-             * 
-             * *   Creating: The resource group is being created.
-             * *   OK: The resource group is created.
+             * The display name of the resource group.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -300,7 +300,7 @@ public class CreateResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the resource group.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -308,10 +308,18 @@ public class CreateResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the resource group was created. The time is displayed in UTC.
+             * The unique identifier of the resource group.
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * The status of the resource group in all regions.
+             */
+            public Builder regionStatuses(RegionStatuses regionStatuses) {
+                this.regionStatuses = regionStatuses;
                 return this;
             }
 
@@ -321,14 +329,6 @@ public class CreateResourceGroupResponseBody extends TeaModel {
              * 
              * *   Creating: The resource group is being created.
              * *   OK: The resource group is created.
-             */
-            public Builder regionStatuses(RegionStatuses regionStatuses) {
-                this.regionStatuses = regionStatuses;
-                return this;
-            }
-
-            /**
-             * The status of the resource group in all regions.
              */
             public Builder status(String status) {
                 this.status = status;
