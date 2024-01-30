@@ -257,7 +257,7 @@ public class GetServiceDetailRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The region ID of the service.
          */
         public Builder region(String region) {
             this.putQueryParameter("region", region);

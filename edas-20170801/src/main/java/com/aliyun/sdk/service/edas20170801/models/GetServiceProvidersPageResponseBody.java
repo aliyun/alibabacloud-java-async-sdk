@@ -82,7 +82,7 @@ public class GetServiceProvidersPageResponseBody extends TeaModel {
         }
 
         /**
-         * The data that is returned.
+         * The data structure.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -186,7 +186,7 @@ public class GetServiceProvidersPageResponseBody extends TeaModel {
             private String timeout; 
 
             /**
-             * Iannotations.
+             * The remarks of the service provider.
              */
             public Builder iannotations(String iannotations) {
                 this.iannotations = iannotations;

@@ -74,7 +74,7 @@ public class ListApplicationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The applications that are queried.
+         * The information about applications.
          */
         public Builder applicationList(ApplicationList applicationList) {
             this.applicationList = applicationList;
@@ -366,7 +366,7 @@ public class ListApplicationResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * The application ID.
+             * The ID of the application.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -396,7 +396,7 @@ public class ListApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The cluster ID.
+             * The ID of the cluster.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -465,7 +465,7 @@ public class ListApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * NamespaceId.
+             * The ID of the microservices namespace.
              */
             public Builder namespaceId(String namespaceId) {
                 this.namespaceId = namespaceId;
@@ -481,7 +481,7 @@ public class ListApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * The region ID of the application.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

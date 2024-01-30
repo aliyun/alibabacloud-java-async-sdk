@@ -67,6 +67,10 @@ public class InsertK8sApplicationRequest extends Request {
     private String customAffinity;
 
     @Query
+    @NameInMap("CustomAgentVersion")
+    private String customAgentVersion;
+
+    @Query
     @NameInMap("CustomTolerations")
     private String customTolerations;
 
@@ -109,6 +113,10 @@ public class InsertK8sApplicationRequest extends Request {
     @Query
     @NameInMap("Envs")
     private String envs;
+
+    @Query
+    @NameInMap("FeatureConfig")
+    private String featureConfig;
 
     @Query
     @NameInMap("ImagePlatforms")
@@ -361,6 +369,7 @@ public class InsertK8sApplicationRequest extends Request {
         this.containerRegistryId = builder.containerRegistryId;
         this.csClusterId = builder.csClusterId;
         this.customAffinity = builder.customAffinity;
+        this.customAgentVersion = builder.customAgentVersion;
         this.customTolerations = builder.customTolerations;
         this.deployAcrossNodes = builder.deployAcrossNodes;
         this.deployAcrossZones = builder.deployAcrossZones;
@@ -372,6 +381,7 @@ public class InsertK8sApplicationRequest extends Request {
         this.enableLosslessRule = builder.enableLosslessRule;
         this.envFroms = builder.envFroms;
         this.envs = builder.envs;
+        this.featureConfig = builder.featureConfig;
         this.imagePlatforms = builder.imagePlatforms;
         this.imageUrl = builder.imageUrl;
         this.initContainers = builder.initContainers;
@@ -538,6 +548,13 @@ public class InsertK8sApplicationRequest extends Request {
     }
 
     /**
+     * @return customAgentVersion
+     */
+    public String getCustomAgentVersion() {
+        return this.customAgentVersion;
+    }
+
+    /**
      * @return customTolerations
      */
     public String getCustomTolerations() {
@@ -612,6 +629,13 @@ public class InsertK8sApplicationRequest extends Request {
      */
     public String getEnvs() {
         return this.envs;
+    }
+
+    /**
+     * @return featureConfig
+     */
+    public String getFeatureConfig() {
+        return this.featureConfig;
     }
 
     /**
@@ -1041,6 +1065,7 @@ public class InsertK8sApplicationRequest extends Request {
         private String containerRegistryId; 
         private String csClusterId; 
         private String customAffinity; 
+        private String customAgentVersion; 
         private String customTolerations; 
         private String deployAcrossNodes; 
         private String deployAcrossZones; 
@@ -1052,6 +1077,7 @@ public class InsertK8sApplicationRequest extends Request {
         private Boolean enableLosslessRule; 
         private String envFroms; 
         private String envs; 
+        private String featureConfig; 
         private String imagePlatforms; 
         private String imageUrl; 
         private String initContainers; 
@@ -1131,6 +1157,7 @@ public class InsertK8sApplicationRequest extends Request {
             this.containerRegistryId = request.containerRegistryId;
             this.csClusterId = request.csClusterId;
             this.customAffinity = request.customAffinity;
+            this.customAgentVersion = request.customAgentVersion;
             this.customTolerations = request.customTolerations;
             this.deployAcrossNodes = request.deployAcrossNodes;
             this.deployAcrossZones = request.deployAcrossZones;
@@ -1142,6 +1169,7 @@ public class InsertK8sApplicationRequest extends Request {
             this.enableLosslessRule = request.enableLosslessRule;
             this.envFroms = request.envFroms;
             this.envs = request.envs;
+            this.featureConfig = request.featureConfig;
             this.imagePlatforms = request.imagePlatforms;
             this.imageUrl = request.imageUrl;
             this.initContainers = request.initContainers;
@@ -1326,6 +1354,15 @@ public class InsertK8sApplicationRequest extends Request {
         }
 
         /**
+         * CustomAgentVersion.
+         */
+        public Builder customAgentVersion(String customAgentVersion) {
+            this.putQueryParameter("CustomAgentVersion", customAgentVersion);
+            this.customAgentVersion = customAgentVersion;
+            return this;
+        }
+
+        /**
          * The custom tolerances.
          */
         public Builder customTolerations(String customTolerations) {
@@ -1465,6 +1502,15 @@ public class InsertK8sApplicationRequest extends Request {
         public Builder envs(String envs) {
             this.putQueryParameter("Envs", envs);
             this.envs = envs;
+            return this;
+        }
+
+        /**
+         * FeatureConfig.
+         */
+        public Builder featureConfig(String featureConfig) {
+            this.putQueryParameter("FeatureConfig", featureConfig);
+            this.featureConfig = featureConfig;
             return this;
         }
 

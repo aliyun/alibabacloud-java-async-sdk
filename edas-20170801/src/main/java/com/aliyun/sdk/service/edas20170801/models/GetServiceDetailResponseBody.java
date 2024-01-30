@@ -74,7 +74,7 @@ public class GetServiceDetailResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code that is returned.
+         * The HTTP status code returned.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class GetServiceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The data that is returned.
+         * The data structure.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -98,7 +98,7 @@ public class GetServiceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * Indicates whether the call was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -158,7 +158,7 @@ public class GetServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type.
+             * The type of the response.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -339,7 +339,7 @@ public class GetServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name.
+             * The name of the service.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -355,7 +355,7 @@ public class GetServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The definition of the parameter.
+             * The parameter definitions.
              */
             public Builder parameterDefinitions(String parameterDefinitions) {
                 this.parameterDefinitions = parameterDefinitions;
@@ -363,7 +363,7 @@ public class GetServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the parameters.
+             * The parameter details.
              */
             public Builder parameterDetails(String parameterDetails) {
                 this.parameterDetails = parameterDetails;
@@ -371,7 +371,7 @@ public class GetServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the parameter.
+             * The parameter names.
              */
             public Builder parameterNames(String parameterNames) {
                 this.parameterNames = parameterNames;
@@ -379,7 +379,7 @@ public class GetServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The data type of the parameter.
+             * The parameter types.
              */
             public Builder parameterTypes(String parameterTypes) {
                 this.parameterTypes = parameterTypes;
@@ -387,7 +387,7 @@ public class GetServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The method path.
+             * The method paths.
              */
             public Builder paths(String paths) {
                 this.paths = paths;
@@ -395,7 +395,7 @@ public class GetServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The request method.
+             * The request methods.
              */
             public Builder requestMethods(String requestMethods) {
                 this.requestMethods = requestMethods;
@@ -411,7 +411,7 @@ public class GetServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the response.
+             * The response details.
              */
             public Builder returnDetails(String returnDetails) {
                 this.returnDetails = returnDetails;
@@ -419,7 +419,7 @@ public class GetServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The data format of the response.
+             * The type of the response.
              */
             public Builder returnType(String returnType) {
                 this.returnType = returnType;
@@ -584,7 +584,7 @@ public class GetServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The group to which the service belongs.
+             * The group.
              */
             public Builder group(String group) {
                 this.group = group;

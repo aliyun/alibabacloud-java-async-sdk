@@ -161,7 +161,7 @@ public class CreateApplicationScalingRuleRequest extends Request {
         }
 
         /**
-         * 配置自定义弹性行为，具体数据结构参考样例。
+         * Configure custom elastic behavior, refer to the example for specific data structure.
          */
         public Builder scalingBehaviour(String scalingBehaviour) {
             this.putQueryParameter("ScalingBehaviour", scalingBehaviour);

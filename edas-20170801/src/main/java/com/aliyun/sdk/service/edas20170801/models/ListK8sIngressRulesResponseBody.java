@@ -82,7 +82,7 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The data that is returned.
+         * The response data.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -150,7 +150,7 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
             private String servicePort; 
 
             /**
-             * The name of the backend service.
+             * The name of the backend Service.
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -158,7 +158,7 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The port of the backend service.
+             * The port of the backend Service.
              */
             public Builder servicePort(String servicePort) {
                 this.servicePort = servicePort;
@@ -287,7 +287,7 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration of the backend service.
+             * The configurations of the backend Service.
              */
             public Builder backend(Backend backend) {
                 this.backend = backend;
@@ -295,7 +295,7 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The collection rate that is set based on the trace query feature. You can add a TraceID to a gateway to use the trace query feature of EDAS.
+             * The collection rate that is set based on the trace query feature. You can add a trace ID to a gateway to use the trace query feature of EDAS.
              */
             public Builder collectRate(Integer collectRate) {
                 this.collectRate = collectRate;
@@ -311,7 +311,12 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
             }
 
             /**
-             * PathType.
+             * The path type that determines how a path is matched.
+             * <p>
+             * 
+             * *   ImplementationSpecific (default)
+             * *   Exact
+             * *   Prefix
              */
             public Builder pathType(String pathType) {
                 this.pathType = pathType;
@@ -319,13 +324,13 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the Ingress. Valid values:
+             * The state of the Ingress. Valid values:
              * <p>
              * 
-             * *   **Normal**: The Ingress works properly.
-             * *   **ServiceNotFound**: The backend service does not exist.
-             * *   **InvalidServicePort**: The service port is invalid.
-             * *   **NotManagedService**: The service is not managed by EDAS.
+             * *   **Normal**: The Ingress works as expected.
+             * *   **ServiceNotFound**: The backend Service does not exist.
+             * *   **InvalidServicePort**: The Service port is invalid.
+             * *   **NotManagedService**: The Service is not managed by EDAS.
              * *   **Unknown**: An unknown error occurred.
              */
             public Builder status(String status) {
@@ -406,8 +411,8 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
              * Indicates whether TLS is enabled. Valid values:
              * <p>
              * 
-             * *   true: TLS is enabled.
-             * *   false: TLS is disabled.
+             * *   true
+             * *   false
              */
             public Builder enableTls(Boolean enableTls) {
                 this.enableTls = enableTls;
@@ -423,7 +428,7 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The list of paths to be accessed.
+             * The paths to be accessed.
              */
             public Builder paths(java.util.List < Paths> paths) {
                 this.paths = paths;
@@ -431,7 +436,7 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Secret that stores the information about the Transport Layer Security (TLS) certificate.
+             * The name of the Secret that stores the Transport Layer Security (TLS) certificate.
              */
             public Builder secretName(String secretName) {
                 this.secretName = secretName;
@@ -640,7 +645,7 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
             private Boolean sslRedirect; 
 
             /**
-             * The ID of the Application Load Balancer (ALB) instance.
+             * The ID of the ALB instance.
              */
             public Builder albId(String albId) {
                 this.albId = albId;
@@ -680,7 +685,7 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the Ingress. Valid values:
+             * The Ingress type. Valid values:
              * <p>
              * 
              * *   **NginxIngress**: NGINX Ingress controller
@@ -694,7 +699,7 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The labels.
+             * The tags.
              */
             public Builder labels(String labels) {
                 this.labels = labels;
@@ -702,7 +707,7 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Microservices Engine (MSE) gateway.
+             * The ID of the MSE gateway.
              */
             public Builder mseGatewayId(String mseGatewayId) {
                 this.mseGatewayId = mseGatewayId;
@@ -718,7 +723,7 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Ingress.
+             * The Ingress name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -750,7 +755,7 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The list of routing rules.
+             * The routing rules.
              */
             public Builder rules(java.util.List < Rules> rules) {
                 this.rules = rules;
@@ -758,11 +763,11 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether SSL redirect is enabled. Valid values:
+             * Indicates whether SSL redirection is enabled. Valid values:
              * <p>
              * 
-             * *   true: SSL redirect is enabled.
-             * *   false: SSL redirect is disabled.
+             * *   true
+             * *   false
              */
             public Builder sslRedirect(Boolean sslRedirect) {
                 this.sslRedirect = sslRedirect;
@@ -839,7 +844,7 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
             private String regionId; 
 
             /**
-             * The ID of the Kubernetes cluster.
+             * The cluster ID.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -847,7 +852,7 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Kubernetes cluster.
+             * The cluster name.
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -863,7 +868,7 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region where the cluster resides.
+             * The ID of the Alibaba Cloud region.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
