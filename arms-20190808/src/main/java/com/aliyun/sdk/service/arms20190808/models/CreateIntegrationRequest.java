@@ -34,6 +34,10 @@ public class CreateIntegrationRequest extends Request {
     @NameInMap("RecoverTime")
     private Long recoverTime;
 
+    @Query
+    @NameInMap("RegionId")
+    private String regionId;
+
     private CreateIntegrationRequest(Builder builder) {
         super(builder);
         this.autoRecover = builder.autoRecover;
@@ -41,6 +45,7 @@ public class CreateIntegrationRequest extends Request {
         this.integrationName = builder.integrationName;
         this.integrationProductType = builder.integrationProductType;
         this.recoverTime = builder.recoverTime;
+        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -91,12 +96,20 @@ public class CreateIntegrationRequest extends Request {
         return this.recoverTime;
     }
 
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public static final class Builder extends Request.Builder<CreateIntegrationRequest, Builder> {
         private Boolean autoRecover; 
         private String description; 
         private String integrationName; 
         private String integrationProductType; 
         private Long recoverTime; 
+        private String regionId; 
 
         private Builder() {
             super();
@@ -109,6 +122,7 @@ public class CreateIntegrationRequest extends Request {
             this.integrationName = request.integrationName;
             this.integrationProductType = request.integrationProductType;
             this.recoverTime = request.recoverTime;
+            this.regionId = request.regionId;
         } 
 
         /**
@@ -153,6 +167,15 @@ public class CreateIntegrationRequest extends Request {
         public Builder recoverTime(Long recoverTime) {
             this.putBodyParameter("RecoverTime", recoverTime);
             this.recoverTime = recoverTime;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 

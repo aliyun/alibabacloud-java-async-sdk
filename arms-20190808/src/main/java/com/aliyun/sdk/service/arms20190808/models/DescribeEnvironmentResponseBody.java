@@ -218,6 +218,9 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
         @NameInMap("GrafanaFolderUrl")
         private String grafanaFolderUrl;
 
+        @NameInMap("ManagedType")
+        private String managedType;
+
         @NameInMap("PrometheusInstanceId")
         private String prometheusInstanceId;
 
@@ -255,6 +258,7 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
             this.grafanaFolderTitle = builder.grafanaFolderTitle;
             this.grafanaFolderUid = builder.grafanaFolderUid;
             this.grafanaFolderUrl = builder.grafanaFolderUrl;
+            this.managedType = builder.managedType;
             this.prometheusInstanceId = builder.prometheusInstanceId;
             this.prometheusInstanceName = builder.prometheusInstanceName;
             this.regionId = builder.regionId;
@@ -378,6 +382,13 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
         }
 
         /**
+         * @return managedType
+         */
+        public String getManagedType() {
+            return this.managedType;
+        }
+
+        /**
          * @return prometheusInstanceId
          */
         public String getPrometheusInstanceId() {
@@ -442,6 +453,7 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
             private String grafanaFolderTitle; 
             private String grafanaFolderUid; 
             private String grafanaFolderUrl; 
+            private String managedType; 
             private String prometheusInstanceId; 
             private String prometheusInstanceName; 
             private String regionId; 
@@ -576,6 +588,14 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
              */
             public Builder grafanaFolderUrl(String grafanaFolderUrl) {
                 this.grafanaFolderUrl = grafanaFolderUrl;
+                return this;
+            }
+
+            /**
+             * ManagedType.
+             */
+            public Builder managedType(String managedType) {
+                this.managedType = managedType;
                 return this;
             }
 

@@ -22,6 +22,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AddGrafanaResponse> addGrafana(AddGrafanaRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<AddIntegrationResponse> addIntegration(AddIntegrationRequest request);
 
     CompletableFuture<AddPrometheusGlobalViewResponse> addPrometheusGlobalView(AddPrometheusGlobalViewRequest request);
@@ -164,6 +168,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteIMRobotResponse> deleteIMRobot(DeleteIMRobotRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<DeleteIntegrationResponse> deleteIntegration(DeleteIntegrationRequest request);
 
     CompletableFuture<DeleteIntegrationsResponse> deleteIntegrations(DeleteIntegrationsRequest request);
@@ -244,6 +252,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetGrafanaWorkspaceResponse> getGrafanaWorkspace(GetGrafanaWorkspaceRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<GetIntegrationStateResponse> getIntegrationState(GetIntegrationStateRequest request);
 
     CompletableFuture<GetManagedPrometheusStatusResponse> getManagedPrometheusStatus(GetManagedPrometheusStatusRequest request);

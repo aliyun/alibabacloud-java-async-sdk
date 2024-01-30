@@ -101,6 +101,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * @deprecated
+      *
+     */
     @Override
     public CompletableFuture<AddIntegrationResponse> addIntegration(AddIntegrationRequest request) {
         try {
@@ -999,6 +1003,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * @deprecated
+      *
+     */
     @Override
     public CompletableFuture<DeleteIntegrationResponse> deleteIntegration(DeleteIntegrationRequest request) {
         try {
@@ -1559,6 +1567,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * @deprecated
+      *
+     */
     @Override
     public CompletableFuture<GetIntegrationStateResponse> getIntegrationState(GetIntegrationStateRequest request) {
         try {

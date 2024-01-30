@@ -17,6 +17,10 @@ public class ListEnvironmentsRequest extends Request {
     private String addonName;
 
     @Query
+    @NameInMap("BindResourceId")
+    private String bindResourceId;
+
+    @Query
     @NameInMap("EnvironmentType")
     private String environmentType;
 
@@ -35,6 +39,7 @@ public class ListEnvironmentsRequest extends Request {
     private ListEnvironmentsRequest(Builder builder) {
         super(builder);
         this.addonName = builder.addonName;
+        this.bindResourceId = builder.bindResourceId;
         this.environmentType = builder.environmentType;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
@@ -59,6 +64,13 @@ public class ListEnvironmentsRequest extends Request {
      */
     public String getAddonName() {
         return this.addonName;
+    }
+
+    /**
+     * @return bindResourceId
+     */
+    public String getBindResourceId() {
+        return this.bindResourceId;
     }
 
     /**
@@ -91,6 +103,7 @@ public class ListEnvironmentsRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListEnvironmentsRequest, Builder> {
         private String addonName; 
+        private String bindResourceId; 
         private String environmentType; 
         private String regionId; 
         private String resourceGroupId; 
@@ -103,6 +116,7 @@ public class ListEnvironmentsRequest extends Request {
         private Builder(ListEnvironmentsRequest request) {
             super(request);
             this.addonName = request.addonName;
+            this.bindResourceId = request.bindResourceId;
             this.environmentType = request.environmentType;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
@@ -115,6 +129,15 @@ public class ListEnvironmentsRequest extends Request {
         public Builder addonName(String addonName) {
             this.putQueryParameter("AddonName", addonName);
             this.addonName = addonName;
+            return this;
+        }
+
+        /**
+         * BindResourceId.
+         */
+        public Builder bindResourceId(String bindResourceId) {
+            this.putQueryParameter("BindResourceId", bindResourceId);
+            this.bindResourceId = bindResourceId;
             return this;
         }
 
