@@ -36,8 +36,16 @@ public class ListApplicationRequest extends Request {
     private String resourceGroupId;
 
     @Body
+    @NameInMap("ResourceId")
+    private String resourceId;
+
+    @Body
     @NameInMap("Status")
     private String status;
+
+    @Body
+    @NameInMap("TemplateId")
+    private String templateId;
 
     private ListApplicationRequest(Builder builder) {
         super(builder);
@@ -46,7 +54,9 @@ public class ListApplicationRequest extends Request {
         this.nextToken = builder.nextToken;
         this.orderType = builder.orderType;
         this.resourceGroupId = builder.resourceGroupId;
+        this.resourceId = builder.resourceId;
         this.status = builder.status;
+        this.templateId = builder.templateId;
     }
 
     public static Builder builder() {
@@ -98,10 +108,24 @@ public class ListApplicationRequest extends Request {
     }
 
     /**
+     * @return resourceId
+     */
+    public String getResourceId() {
+        return this.resourceId;
+    }
+
+    /**
      * @return status
      */
     public String getStatus() {
         return this.status;
+    }
+
+    /**
+     * @return templateId
+     */
+    public String getTemplateId() {
+        return this.templateId;
     }
 
     public static final class Builder extends Request.Builder<ListApplicationRequest, Builder> {
@@ -110,7 +134,9 @@ public class ListApplicationRequest extends Request {
         private Integer nextToken; 
         private Long orderType; 
         private String resourceGroupId; 
+        private String resourceId; 
         private String status; 
+        private String templateId; 
 
         private Builder() {
             super();
@@ -123,7 +149,9 @@ public class ListApplicationRequest extends Request {
             this.nextToken = request.nextToken;
             this.orderType = request.orderType;
             this.resourceGroupId = request.resourceGroupId;
+            this.resourceId = request.resourceId;
             this.status = request.status;
+            this.templateId = request.templateId;
         } 
 
         /**
@@ -172,11 +200,29 @@ public class ListApplicationRequest extends Request {
         }
 
         /**
+         * ResourceId.
+         */
+        public Builder resourceId(String resourceId) {
+            this.putBodyParameter("ResourceId", resourceId);
+            this.resourceId = resourceId;
+            return this;
+        }
+
+        /**
          * The status of the applications to be returned.
          */
         public Builder status(String status) {
             this.putBodyParameter("Status", status);
             this.status = status;
+            return this;
+        }
+
+        /**
+         * TemplateId.
+         */
+        public Builder templateId(String templateId) {
+            this.putBodyParameter("TemplateId", templateId);
+            this.templateId = templateId;
             return this;
         }
 

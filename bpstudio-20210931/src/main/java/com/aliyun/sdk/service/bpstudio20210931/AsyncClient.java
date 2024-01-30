@@ -18,6 +18,10 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
+    CompletableFuture<AppFailBackResponse> appFailBack(AppFailBackRequest request);
+
+    CompletableFuture<AppFailOverResponse> appFailOver(AppFailOverRequest request);
+
     CompletableFuture<ChangeResourceGroupResponse> changeResourceGroup(ChangeResourceGroupRequest request);
 
     CompletableFuture<CreateApplicationResponse> createApplication(CreateApplicationRequest request);
@@ -36,6 +40,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetExecuteOperationResultResponse> getExecuteOperationResult(GetExecuteOperationResultRequest request);
 
+    CompletableFuture<GetFoTaskStatusResponse> getFoTaskStatus(GetFoTaskStatusRequest request);
+
+    CompletableFuture<GetPotentialFailZonesResponse> getPotentialFailZones(GetPotentialFailZonesRequest request);
+
     CompletableFuture<GetTemplateResponse> getTemplate(GetTemplateRequest request);
 
     /**
@@ -44,6 +52,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<GetTokenResponse> getToken(GetTokenRequest request);
+
+    CompletableFuture<InitAppFailOverResponse> initAppFailOver(InitAppFailOverRequest request);
 
     CompletableFuture<ListApplicationResponse> listApplication(ListApplicationRequest request);
 

@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ValuateTemplateResponse} extends {@link TeaModel}
+ * {@link AppFailOverResponse} extends {@link TeaModel}
  *
- * <p>ValuateTemplateResponse</p>
+ * <p>AppFailOverResponse</p>
  */
-public class ValuateTemplateResponse extends Response {
+public class AppFailOverResponse extends Response {
     @NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -19,16 +19,16 @@ public class ValuateTemplateResponse extends Response {
     private Integer statusCode;
 
     @NameInMap("body")
-    private ValuateTemplateResponseBody body;
+    private AppFailOverResponseBody body;
 
-    private ValuateTemplateResponse(BuilderImpl builder) {
+    private AppFailOverResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static ValuateTemplateResponse create() {
+    public static AppFailOverResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +54,35 @@ public class ValuateTemplateResponse extends Response {
     /**
      * @return body
      */
-    public ValuateTemplateResponseBody getBody() {
+    public AppFailOverResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<ValuateTemplateResponse, Builder> {
+    public interface Builder extends Response.Builder<AppFailOverResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(ValuateTemplateResponseBody body);
+        Builder body(AppFailOverResponseBody body);
 
         @Override
-        ValuateTemplateResponse build();
+        AppFailOverResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<ValuateTemplateResponse, Builder>
+            extends Response.BuilderImpl<AppFailOverResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private ValuateTemplateResponseBody body; 
+        private AppFailOverResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(ValuateTemplateResponse response) {
+        private BuilderImpl(AppFailOverResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +111,14 @@ public class ValuateTemplateResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(ValuateTemplateResponseBody body) {
+        public Builder body(AppFailOverResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public ValuateTemplateResponse build() {
-            return new ValuateTemplateResponse(this);
+        public AppFailOverResponse build() {
+            return new AppFailOverResponse(this);
         } 
 
     } 

@@ -13,7 +13,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListFoCreatedAppsResponseBody extends TeaModel {
     @NameInMap("Code")
-    private Integer code;
+    private String code;
 
     @NameInMap("Data")
     private java.util.List < Data> data;
@@ -42,7 +42,7 @@ public class ListFoCreatedAppsResponseBody extends TeaModel {
     /**
      * @return code
      */
-    public Integer getCode() {
+    public String getCode() {
         return this.code;
     }
 
@@ -68,7 +68,7 @@ public class ListFoCreatedAppsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private Integer code; 
+        private String code; 
         private java.util.List < Data> data; 
         private String message; 
         private String requestId; 
@@ -76,7 +76,7 @@ public class ListFoCreatedAppsResponseBody extends TeaModel {
         /**
          * Code.
          */
-        public Builder code(Integer code) {
+        public Builder code(String code) {
             this.code = code;
             return this;
         }
@@ -112,8 +112,8 @@ public class ListFoCreatedAppsResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("AppId")
-        private String appId;
+        @NameInMap("ApplicationId")
+        private String applicationId;
 
         @NameInMap("ReportUrl")
         private String reportUrl;
@@ -125,7 +125,7 @@ public class ListFoCreatedAppsResponseBody extends TeaModel {
         private String title;
 
         private Data(Builder builder) {
-            this.appId = builder.appId;
+            this.applicationId = builder.applicationId;
             this.reportUrl = builder.reportUrl;
             this.status = builder.status;
             this.title = builder.title;
@@ -140,10 +140,10 @@ public class ListFoCreatedAppsResponseBody extends TeaModel {
         }
 
         /**
-         * @return appId
+         * @return applicationId
          */
-        public String getAppId() {
-            return this.appId;
+        public String getApplicationId() {
+            return this.applicationId;
         }
 
         /**
@@ -168,16 +168,16 @@ public class ListFoCreatedAppsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private String appId; 
+            private String applicationId; 
             private String reportUrl; 
             private String status; 
             private String title; 
 
             /**
-             * AppId.
+             * ApplicationId.
              */
-            public Builder appId(String appId) {
-                this.appId = appId;
+            public Builder applicationId(String applicationId) {
+                this.applicationId = applicationId;
                 return this;
             }
 
