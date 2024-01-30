@@ -41,7 +41,7 @@ public class ListStackOperationRisksRequest extends Request {
     @NameInMap("StackId")
     private String stackId;
 
-    @Query
+    @Body
     @NameInMap("TemplateBody")
     private String templateBody;
 
@@ -277,13 +277,10 @@ public class ListStackOperationRisksRequest extends Request {
         }
 
         /**
-         * The template body. The template body must be 1 to 524,288 bytes in length. If the length of the template body exceeds the upper limit, we recommend that you add parameters to the HTTP POST request body to prevent request failures caused by excessively long URLs.
-         * <p>
-         * 
-         * > You must specify one of TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.
+         * TemplateBody.
          */
         public Builder templateBody(String templateBody) {
-            this.putQueryParameter("TemplateBody", templateBody);
+            this.putBodyParameter("TemplateBody", templateBody);
             this.templateBody = templateBody;
             return this;
         }

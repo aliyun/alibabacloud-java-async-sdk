@@ -25,7 +25,7 @@ public class GetServiceProvisionsRequest extends Request {
     @NameInMap("Services")
     private java.util.List < Services> services;
 
-    @Query
+    @Body
     @NameInMap("TemplateBody")
     private String templateBody;
 
@@ -166,13 +166,10 @@ public class GetServiceProvisionsRequest extends Request {
         }
 
         /**
-         * The structure that contains the template body. The template body must be 1 to 524,288 bytes in length. If the length of the template body exceeds the upper limit, we recommend that you add parameters to the HTTP POST request body to prevent request failures caused by excessively long URLs.
-         * <p>
-         * 
-         * You must and can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and Services.
+         * TemplateBody.
          */
         public Builder templateBody(String templateBody) {
-            this.putQueryParameter("TemplateBody", templateBody);
+            this.putBodyParameter("TemplateBody", templateBody);
             this.templateBody = templateBody;
             return this;
         }

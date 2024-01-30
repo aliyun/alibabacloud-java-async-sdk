@@ -16,7 +16,7 @@ public class UpdateTemplateRequest extends Request {
     @NameInMap("Description")
     private String description;
 
-    @Query
+    @Body
     @NameInMap("TemplateBody")
     private String templateBody;
 
@@ -120,15 +120,10 @@ public class UpdateTemplateRequest extends Request {
         }
 
         /**
-         * The structure that contains the template body. The template body must be 1 to 524,288 bytes in length.
-         * <p>
-         * 
-         * If the length of the template body is longer than required, we recommend that you add parameters to the HTTP POST request body to avoid request failures due to excessive length of URLs.
-         * 
-         * You can specify only one of the TemplateBody and TemplateURL parameters.
+         * TemplateBody.
          */
         public Builder templateBody(String templateBody) {
-            this.putQueryParameter("TemplateBody", templateBody);
+            this.putBodyParameter("TemplateBody", templateBody);
             this.templateBody = templateBody;
             return this;
         }
