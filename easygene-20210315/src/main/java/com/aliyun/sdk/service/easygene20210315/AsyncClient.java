@@ -38,6 +38,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteAppResponse> deleteApp(DeleteAppRequest request);
 
+    CompletableFuture<DeleteEntityResponse> deleteEntity(DeleteEntityRequest request);
+
     CompletableFuture<DeleteEntityItemsResponse> deleteEntityItems(DeleteEntityItemsRequest request);
 
     CompletableFuture<DeleteRunResponse> deleteRun(DeleteRunRequest request);
