@@ -57,6 +57,10 @@ public class CreateBackupPlanRequest extends Request {
     @NameInMap("Detail")
     private java.util.Map < String, ? > detail;
 
+    @Query
+    @NameInMap("Disabled")
+    private Boolean disabled;
+
     @Body
     @NameInMap("Exclude")
     private String exclude;
@@ -145,6 +149,7 @@ public class CreateBackupPlanRequest extends Request {
         this.destDataSourceId = builder.destDataSourceId;
         this.destSourceType = builder.destSourceType;
         this.detail = builder.detail;
+        this.disabled = builder.disabled;
         this.exclude = builder.exclude;
         this.fileSystemId = builder.fileSystemId;
         this.include = builder.include;
@@ -253,6 +258,13 @@ public class CreateBackupPlanRequest extends Request {
      */
     public java.util.Map < String, ? > getDetail() {
         return this.detail;
+    }
+
+    /**
+     * @return disabled
+     */
+    public Boolean getDisabled() {
+        return this.disabled;
     }
 
     /**
@@ -393,6 +405,7 @@ public class CreateBackupPlanRequest extends Request {
         private String destDataSourceId; 
         private String destSourceType; 
         private java.util.Map < String, ? > detail; 
+        private Boolean disabled; 
         private String exclude; 
         private String fileSystemId; 
         private String include; 
@@ -429,6 +442,7 @@ public class CreateBackupPlanRequest extends Request {
             this.destDataSourceId = request.destDataSourceId;
             this.destSourceType = request.destSourceType;
             this.detail = request.detail;
+            this.disabled = request.disabled;
             this.exclude = request.exclude;
             this.fileSystemId = request.fileSystemId;
             this.include = request.include;
@@ -557,6 +571,15 @@ public class CreateBackupPlanRequest extends Request {
             String detailShrink = shrink(detail, "Detail", "json");
             this.putQueryParameter("Detail", detailShrink);
             this.detail = detail;
+            return this;
+        }
+
+        /**
+         * Disabled.
+         */
+        public Builder disabled(Boolean disabled) {
+            this.putQueryParameter("Disabled", disabled);
+            this.disabled = disabled;
             return this;
         }
 

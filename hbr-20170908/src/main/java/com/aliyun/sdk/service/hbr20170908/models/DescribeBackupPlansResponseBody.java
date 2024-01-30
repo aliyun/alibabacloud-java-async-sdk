@@ -860,6 +860,9 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
         @NameInMap("KeepLatestSnapshots")
         private Long keepLatestSnapshots;
 
+        @NameInMap("LatestExecuteJobId")
+        private String latestExecuteJobId;
+
         @NameInMap("Options")
         private String options;
 
@@ -930,6 +933,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             this.instanceId = builder.instanceId;
             this.instanceName = builder.instanceName;
             this.keepLatestSnapshots = builder.keepLatestSnapshots;
+            this.latestExecuteJobId = builder.latestExecuteJobId;
             this.options = builder.options;
             this.otsDetail = builder.otsDetail;
             this.paths = builder.paths;
@@ -1124,6 +1128,13 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
         }
 
         /**
+         * @return latestExecuteJobId
+         */
+        public String getLatestExecuteJobId() {
+            return this.latestExecuteJobId;
+        }
+
+        /**
          * @return options
          */
         public String getOptions() {
@@ -1253,6 +1264,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             private String instanceId; 
             private String instanceName; 
             private Long keepLatestSnapshots; 
+            private String latestExecuteJobId; 
             private String options; 
             private OtsDetail otsDetail; 
             private Paths paths; 
@@ -1470,6 +1482,14 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
              */
             public Builder keepLatestSnapshots(Long keepLatestSnapshots) {
                 this.keepLatestSnapshots = keepLatestSnapshots;
+                return this;
+            }
+
+            /**
+             * LatestExecuteJobId.
+             */
+            public Builder latestExecuteJobId(String latestExecuteJobId) {
+                this.latestExecuteJobId = latestExecuteJobId;
                 return this;
             }
 

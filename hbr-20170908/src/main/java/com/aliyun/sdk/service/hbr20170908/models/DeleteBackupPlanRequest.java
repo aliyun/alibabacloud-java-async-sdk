@@ -18,6 +18,10 @@ public class DeleteBackupPlanRequest extends Request {
     private String planId;
 
     @Query
+    @NameInMap("RequireNoRunningJobs")
+    private Boolean requireNoRunningJobs;
+
+    @Query
     @NameInMap("SourceType")
     private String sourceType;
 
@@ -28,6 +32,7 @@ public class DeleteBackupPlanRequest extends Request {
     private DeleteBackupPlanRequest(Builder builder) {
         super(builder);
         this.planId = builder.planId;
+        this.requireNoRunningJobs = builder.requireNoRunningJobs;
         this.sourceType = builder.sourceType;
         this.vaultId = builder.vaultId;
     }
@@ -53,6 +58,13 @@ public class DeleteBackupPlanRequest extends Request {
     }
 
     /**
+     * @return requireNoRunningJobs
+     */
+    public Boolean getRequireNoRunningJobs() {
+        return this.requireNoRunningJobs;
+    }
+
+    /**
      * @return sourceType
      */
     public String getSourceType() {
@@ -68,6 +80,7 @@ public class DeleteBackupPlanRequest extends Request {
 
     public static final class Builder extends Request.Builder<DeleteBackupPlanRequest, Builder> {
         private String planId; 
+        private Boolean requireNoRunningJobs; 
         private String sourceType; 
         private String vaultId; 
 
@@ -78,6 +91,7 @@ public class DeleteBackupPlanRequest extends Request {
         private Builder(DeleteBackupPlanRequest request) {
             super(request);
             this.planId = request.planId;
+            this.requireNoRunningJobs = request.requireNoRunningJobs;
             this.sourceType = request.sourceType;
             this.vaultId = request.vaultId;
         } 
@@ -88,6 +102,15 @@ public class DeleteBackupPlanRequest extends Request {
         public Builder planId(String planId) {
             this.putQueryParameter("PlanId", planId);
             this.planId = planId;
+            return this;
+        }
+
+        /**
+         * RequireNoRunningJobs.
+         */
+        public Builder requireNoRunningJobs(Boolean requireNoRunningJobs) {
+            this.putQueryParameter("RequireNoRunningJobs", requireNoRunningJobs);
+            this.requireNoRunningJobs = requireNoRunningJobs;
             return this;
         }
 

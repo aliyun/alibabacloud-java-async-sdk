@@ -18,6 +18,7 @@ public class DescribeVaultReplicationRegionsRequest extends Request {
 
     @Query
     @NameInMap("VaultId")
+    @Deprecated
     private String vaultId;
 
     private DescribeVaultReplicationRegionsRequest(Builder builder) {
