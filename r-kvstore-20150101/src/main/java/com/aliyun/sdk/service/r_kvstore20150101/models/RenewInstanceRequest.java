@@ -21,6 +21,10 @@ public class RenewInstanceRequest extends Request {
     private Boolean autoPay;
 
     @Query
+    @NameInMap("AutoRenew")
+    private Boolean autoRenew;
+
+    @Query
     @NameInMap("BusinessInfo")
     private String businessInfo;
 
@@ -78,6 +82,7 @@ public class RenewInstanceRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.autoPay = builder.autoPay;
+        this.autoRenew = builder.autoRenew;
         this.businessInfo = builder.businessInfo;
         this.capacity = builder.capacity;
         this.clientToken = builder.clientToken;
@@ -118,6 +123,13 @@ public class RenewInstanceRequest extends Request {
      */
     public Boolean getAutoPay() {
         return this.autoPay;
+    }
+
+    /**
+     * @return autoRenew
+     */
+    public Boolean getAutoRenew() {
+        return this.autoRenew;
     }
 
     /**
@@ -214,6 +226,7 @@ public class RenewInstanceRequest extends Request {
     public static final class Builder extends Request.Builder<RenewInstanceRequest, Builder> {
         private String regionId; 
         private Boolean autoPay; 
+        private Boolean autoRenew; 
         private String businessInfo; 
         private String capacity; 
         private String clientToken; 
@@ -236,6 +249,7 @@ public class RenewInstanceRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.autoPay = request.autoPay;
+            this.autoRenew = request.autoRenew;
             this.businessInfo = request.businessInfo;
             this.capacity = request.capacity;
             this.clientToken = request.clientToken;
@@ -272,6 +286,15 @@ public class RenewInstanceRequest extends Request {
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
             this.autoPay = autoPay;
+            return this;
+        }
+
+        /**
+         * AutoRenew.
+         */
+        public Builder autoRenew(Boolean autoRenew) {
+            this.putQueryParameter("AutoRenew", autoRenew);
+            this.autoRenew = autoRenew;
             return this;
         }
 

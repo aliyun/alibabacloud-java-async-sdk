@@ -17,6 +17,11 @@ public class ModifyBackupPolicyRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("BackupRetentionPeriod")
+    @Validation(maximum = 730, minimum = 7)
+    private Integer backupRetentionPeriod;
+
+    @Query
     @NameInMap("EnableBackupLog")
     private Integer enableBackupLog;
 
@@ -58,6 +63,7 @@ public class ModifyBackupPolicyRequest extends Request {
     private ModifyBackupPolicyRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.backupRetentionPeriod = builder.backupRetentionPeriod;
         this.enableBackupLog = builder.enableBackupLog;
         this.instanceId = builder.instanceId;
         this.ownerAccount = builder.ownerAccount;
@@ -87,6 +93,13 @@ public class ModifyBackupPolicyRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return backupRetentionPeriod
+     */
+    public Integer getBackupRetentionPeriod() {
+        return this.backupRetentionPeriod;
     }
 
     /**
@@ -154,6 +167,7 @@ public class ModifyBackupPolicyRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyBackupPolicyRequest, Builder> {
         private String regionId; 
+        private Integer backupRetentionPeriod; 
         private Integer enableBackupLog; 
         private String instanceId; 
         private String ownerAccount; 
@@ -171,6 +185,7 @@ public class ModifyBackupPolicyRequest extends Request {
         private Builder(ModifyBackupPolicyRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.backupRetentionPeriod = request.backupRetentionPeriod;
             this.enableBackupLog = request.enableBackupLog;
             this.instanceId = request.instanceId;
             this.ownerAccount = request.ownerAccount;
@@ -188,6 +203,15 @@ public class ModifyBackupPolicyRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * BackupRetentionPeriod.
+         */
+        public Builder backupRetentionPeriod(Integer backupRetentionPeriod) {
+            this.putQueryParameter("BackupRetentionPeriod", backupRetentionPeriod);
+            this.backupRetentionPeriod = backupRetentionPeriod;
             return this;
         }
 
