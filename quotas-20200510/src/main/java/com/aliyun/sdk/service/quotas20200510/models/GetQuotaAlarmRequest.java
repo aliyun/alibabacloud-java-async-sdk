@@ -54,7 +54,10 @@ public class GetQuotaAlarmRequest extends Request {
         } 
 
         /**
-         * The ID of the request.
+         * The ID of the quota alert.
+         * <p>
+         * 
+         * For more information about how to query the ID of a quota alert, see [ListQuotaAlarms](~~184348~~).
          */
         public Builder alarmId(String alarmId) {
             this.putBodyParameter("AlarmId", alarmId);

@@ -174,7 +174,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For more information about common request parameters, see [Common parameters](~~171299~~).
+      * In this example, the operation is called to query the details of a quota alert whose ID is `78d7e436-4b25-4897-84b5-d7b656bb****`. The details of the alert are returned. The query result includes the alert ID, alert name, alert contact, and the time when the quota alert was created.
       *
      */
     @Override
