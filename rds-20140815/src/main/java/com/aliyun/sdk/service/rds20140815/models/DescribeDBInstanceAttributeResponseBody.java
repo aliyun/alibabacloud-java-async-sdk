@@ -2155,6 +2155,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * 
              * *   **Postpaid**: pay-as-you-go
              * *   **Prepaid**: subscription
+             * *   **SERVERLESS**: Serverless
              */
             public Builder payType(String payType) {
                 this.payType = payType;

@@ -48,6 +48,9 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     @NameInMap("EnableIncrementDataBackup")
     private Boolean enableIncrementDataBackup;
 
+    @NameInMap("EnablePitrProtection")
+    private Boolean enablePitrProtection;
+
     @NameInMap("HighSpaceUsageProtection")
     private String highSpaceUsageProtection;
 
@@ -65,6 +68,9 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
 
     @NameInMap("LogBackupRetentionPeriod")
     private Integer logBackupRetentionPeriod;
+
+    @NameInMap("PitrRetentionPeriod")
+    private Integer pitrRetentionPeriod;
 
     @NameInMap("PreferredBackupPeriod")
     private String preferredBackupPeriod;
@@ -103,12 +109,14 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         this.compressType = builder.compressType;
         this.enableBackupLog = builder.enableBackupLog;
         this.enableIncrementDataBackup = builder.enableIncrementDataBackup;
+        this.enablePitrProtection = builder.enablePitrProtection;
         this.highSpaceUsageProtection = builder.highSpaceUsageProtection;
         this.localLogRetentionHours = builder.localLogRetentionHours;
         this.localLogRetentionSpace = builder.localLogRetentionSpace;
         this.logBackupFrequency = builder.logBackupFrequency;
         this.logBackupLocalRetentionNumber = builder.logBackupLocalRetentionNumber;
         this.logBackupRetentionPeriod = builder.logBackupRetentionPeriod;
+        this.pitrRetentionPeriod = builder.pitrRetentionPeriod;
         this.preferredBackupPeriod = builder.preferredBackupPeriod;
         this.preferredBackupTime = builder.preferredBackupTime;
         this.preferredNextBackupTime = builder.preferredNextBackupTime;
@@ -212,6 +220,13 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     }
 
     /**
+     * @return enablePitrProtection
+     */
+    public Boolean getEnablePitrProtection() {
+        return this.enablePitrProtection;
+    }
+
+    /**
      * @return highSpaceUsageProtection
      */
     public String getHighSpaceUsageProtection() {
@@ -251,6 +266,13 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
      */
     public Integer getLogBackupRetentionPeriod() {
         return this.logBackupRetentionPeriod;
+    }
+
+    /**
+     * @return pitrRetentionPeriod
+     */
+    public Integer getPitrRetentionPeriod() {
+        return this.pitrRetentionPeriod;
     }
 
     /**
@@ -322,12 +344,14 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         private String compressType; 
         private String enableBackupLog; 
         private Boolean enableIncrementDataBackup; 
+        private Boolean enablePitrProtection; 
         private String highSpaceUsageProtection; 
         private Integer localLogRetentionHours; 
         private String localLogRetentionSpace; 
         private String logBackupFrequency; 
         private Integer logBackupLocalRetentionNumber; 
         private Integer logBackupRetentionPeriod; 
+        private Integer pitrRetentionPeriod; 
         private String preferredBackupPeriod; 
         private String preferredBackupTime; 
         private String preferredNextBackupTime; 
@@ -475,6 +499,14 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
+         * EnablePitrProtection.
+         */
+        public Builder enablePitrProtection(Boolean enablePitrProtection) {
+            this.enablePitrProtection = enablePitrProtection;
+            return this;
+        }
+
+        /**
          * Indicates whether the log backup deletion feature is enabled. If the disk usage exceeds 80% or the remaining disk space is less than 5 GB on the instance, this feature deletes binary log files. Valid values:
          * <p>
          * 
@@ -529,6 +561,14 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
          */
         public Builder logBackupRetentionPeriod(Integer logBackupRetentionPeriod) {
             this.logBackupRetentionPeriod = logBackupRetentionPeriod;
+            return this;
+        }
+
+        /**
+         * PitrRetentionPeriod.
+         */
+        public Builder pitrRetentionPeriod(Integer pitrRetentionPeriod) {
+            this.pitrRetentionPeriod = pitrRetentionPeriod;
             return this;
         }
 
