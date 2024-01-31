@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetInstanceSecurityGroupsResponse} extends {@link TeaModel}
+ * {@link GetClientSourceIpResponse} extends {@link TeaModel}
  *
- * <p>GetInstanceSecurityGroupsResponse</p>
+ * <p>GetClientSourceIpResponse</p>
  */
-public class GetInstanceSecurityGroupsResponse extends Response {
+public class GetClientSourceIpResponse extends Response {
     @NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -19,16 +19,16 @@ public class GetInstanceSecurityGroupsResponse extends Response {
     private Integer statusCode;
 
     @NameInMap("body")
-    private GetInstanceSecurityGroupsResponseBody body;
+    private GetClientSourceIpResponseBody body;
 
-    private GetInstanceSecurityGroupsResponse(BuilderImpl builder) {
+    private GetClientSourceIpResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static GetInstanceSecurityGroupsResponse create() {
+    public static GetClientSourceIpResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +54,35 @@ public class GetInstanceSecurityGroupsResponse extends Response {
     /**
      * @return body
      */
-    public GetInstanceSecurityGroupsResponseBody getBody() {
+    public GetClientSourceIpResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<GetInstanceSecurityGroupsResponse, Builder> {
+    public interface Builder extends Response.Builder<GetClientSourceIpResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(GetInstanceSecurityGroupsResponseBody body);
+        Builder body(GetClientSourceIpResponseBody body);
 
         @Override
-        GetInstanceSecurityGroupsResponse build();
+        GetClientSourceIpResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<GetInstanceSecurityGroupsResponse, Builder>
+            extends Response.BuilderImpl<GetClientSourceIpResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private GetInstanceSecurityGroupsResponseBody body; 
+        private GetClientSourceIpResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(GetInstanceSecurityGroupsResponse response) {
+        private BuilderImpl(GetClientSourceIpResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +111,14 @@ public class GetInstanceSecurityGroupsResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(GetInstanceSecurityGroupsResponseBody body) {
+        public Builder body(GetClientSourceIpResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public GetInstanceSecurityGroupsResponse build() {
-            return new GetInstanceSecurityGroupsResponse(this);
+        public GetClientSourceIpResponse build() {
+            return new GetClientSourceIpResponse(this);
         } 
 
     } 

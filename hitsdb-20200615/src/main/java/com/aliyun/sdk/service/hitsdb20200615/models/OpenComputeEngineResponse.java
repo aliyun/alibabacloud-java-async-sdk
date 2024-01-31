@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetInstanceSecurityGroupsResponse} extends {@link TeaModel}
+ * {@link OpenComputeEngineResponse} extends {@link TeaModel}
  *
- * <p>GetInstanceSecurityGroupsResponse</p>
+ * <p>OpenComputeEngineResponse</p>
  */
-public class GetInstanceSecurityGroupsResponse extends Response {
+public class OpenComputeEngineResponse extends Response {
     @NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -19,16 +19,16 @@ public class GetInstanceSecurityGroupsResponse extends Response {
     private Integer statusCode;
 
     @NameInMap("body")
-    private GetInstanceSecurityGroupsResponseBody body;
+    private OpenComputeEngineResponseBody body;
 
-    private GetInstanceSecurityGroupsResponse(BuilderImpl builder) {
+    private OpenComputeEngineResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static GetInstanceSecurityGroupsResponse create() {
+    public static OpenComputeEngineResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +54,35 @@ public class GetInstanceSecurityGroupsResponse extends Response {
     /**
      * @return body
      */
-    public GetInstanceSecurityGroupsResponseBody getBody() {
+    public OpenComputeEngineResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<GetInstanceSecurityGroupsResponse, Builder> {
+    public interface Builder extends Response.Builder<OpenComputeEngineResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(GetInstanceSecurityGroupsResponseBody body);
+        Builder body(OpenComputeEngineResponseBody body);
 
         @Override
-        GetInstanceSecurityGroupsResponse build();
+        OpenComputeEngineResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<GetInstanceSecurityGroupsResponse, Builder>
+            extends Response.BuilderImpl<OpenComputeEngineResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private GetInstanceSecurityGroupsResponseBody body; 
+        private OpenComputeEngineResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(GetInstanceSecurityGroupsResponse response) {
+        private BuilderImpl(OpenComputeEngineResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +111,14 @@ public class GetInstanceSecurityGroupsResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(GetInstanceSecurityGroupsResponseBody body) {
+        public Builder body(OpenComputeEngineResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public GetInstanceSecurityGroupsResponse build() {
-            return new GetInstanceSecurityGroupsResponse(this);
+        public OpenComputeEngineResponse build() {
+            return new OpenComputeEngineResponse(this);
         } 
 
     } 

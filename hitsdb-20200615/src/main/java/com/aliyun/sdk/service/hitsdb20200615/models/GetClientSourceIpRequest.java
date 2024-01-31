@@ -7,20 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link SwitchLSQLV3MySQLServiceRequest} extends {@link RequestModel}
+ * {@link GetClientSourceIpRequest} extends {@link RequestModel}
  *
- * <p>SwitchLSQLV3MySQLServiceRequest</p>
+ * <p>GetClientSourceIpRequest</p>
  */
-public class SwitchLSQLV3MySQLServiceRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
-    @Query
-    @NameInMap("ActionType")
-    @Validation(required = true)
-    private Integer actionType;
-
+public class GetClientSourceIpRequest extends Request {
     @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
@@ -36,6 +27,10 @@ public class SwitchLSQLV3MySQLServiceRequest extends Request {
     private Long ownerId;
 
     @Query
+    @NameInMap("RegionId")
+    private String regionId;
+
+    @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -48,13 +43,12 @@ public class SwitchLSQLV3MySQLServiceRequest extends Request {
     @NameInMap("SecurityToken")
     private String securityToken;
 
-    private SwitchLSQLV3MySQLServiceRequest(Builder builder) {
+    private GetClientSourceIpRequest(Builder builder) {
         super(builder);
-        this.regionId = builder.regionId;
-        this.actionType = builder.actionType;
         this.instanceId = builder.instanceId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityToken = builder.securityToken;
@@ -64,27 +58,13 @@ public class SwitchLSQLV3MySQLServiceRequest extends Request {
         return new Builder();
     }
 
-    public static SwitchLSQLV3MySQLServiceRequest create() {
+    public static GetClientSourceIpRequest create() {
         return builder().build();
     }
 
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
-     * @return actionType
-     */
-    public Integer getActionType() {
-        return this.actionType;
     }
 
     /**
@@ -109,6 +89,13 @@ public class SwitchLSQLV3MySQLServiceRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -129,12 +116,11 @@ public class SwitchLSQLV3MySQLServiceRequest extends Request {
         return this.securityToken;
     }
 
-    public static final class Builder extends Request.Builder<SwitchLSQLV3MySQLServiceRequest, Builder> {
-        private String regionId; 
-        private Integer actionType; 
+    public static final class Builder extends Request.Builder<GetClientSourceIpRequest, Builder> {
         private String instanceId; 
         private String ownerAccount; 
         private Long ownerId; 
+        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String securityToken; 
@@ -143,42 +129,19 @@ public class SwitchLSQLV3MySQLServiceRequest extends Request {
             super();
         } 
 
-        private Builder(SwitchLSQLV3MySQLServiceRequest request) {
+        private Builder(GetClientSourceIpRequest request) {
             super(request);
-            this.regionId = request.regionId;
-            this.actionType = request.actionType;
             this.instanceId = request.instanceId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.securityToken = request.securityToken;
         } 
 
         /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The type of the operation. Valid value:
-         * <p>
-         * 
-         * *   1: enables the MySQL compatibility feature.
-         * *   0: disables the MySQL compatibility feature.
-         */
-        public Builder actionType(Integer actionType) {
-            this.putQueryParameter("ActionType", actionType);
-            this.actionType = actionType;
-            return this;
-        }
-
-        /**
-         * The cluster ID.
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -201,6 +164,15 @@ public class SwitchLSQLV3MySQLServiceRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 
@@ -232,8 +204,8 @@ public class SwitchLSQLV3MySQLServiceRequest extends Request {
         }
 
         @Override
-        public SwitchLSQLV3MySQLServiceRequest build() {
-            return new SwitchLSQLV3MySQLServiceRequest(this);
+        public GetClientSourceIpRequest build() {
+            return new GetClientSourceIpRequest(this);
         } 
 
     } 

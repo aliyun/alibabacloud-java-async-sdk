@@ -7,24 +7,27 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link SwitchLSQLV3MySQLServiceRequest} extends {@link RequestModel}
+ * {@link OpenComputeEngineRequest} extends {@link RequestModel}
  *
- * <p>SwitchLSQLV3MySQLServiceRequest</p>
+ * <p>OpenComputeEngineRequest</p>
  */
-public class SwitchLSQLV3MySQLServiceRequest extends Request {
+public class OpenComputeEngineRequest extends Request {
     @Host
     @NameInMap("RegionId")
     private String regionId;
 
     @Query
-    @NameInMap("ActionType")
-    @Validation(required = true)
-    private Integer actionType;
+    @NameInMap("CpuLimit")
+    private String cpuLimit;
 
     @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
     private String instanceId;
+
+    @Query
+    @NameInMap("MemoryLimit")
+    private String memoryLimit;
 
     @Query
     @NameInMap("OwnerAccount")
@@ -48,11 +51,12 @@ public class SwitchLSQLV3MySQLServiceRequest extends Request {
     @NameInMap("SecurityToken")
     private String securityToken;
 
-    private SwitchLSQLV3MySQLServiceRequest(Builder builder) {
+    private OpenComputeEngineRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
-        this.actionType = builder.actionType;
+        this.cpuLimit = builder.cpuLimit;
         this.instanceId = builder.instanceId;
+        this.memoryLimit = builder.memoryLimit;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -64,7 +68,7 @@ public class SwitchLSQLV3MySQLServiceRequest extends Request {
         return new Builder();
     }
 
-    public static SwitchLSQLV3MySQLServiceRequest create() {
+    public static OpenComputeEngineRequest create() {
         return builder().build();
     }
 
@@ -81,10 +85,10 @@ public class SwitchLSQLV3MySQLServiceRequest extends Request {
     }
 
     /**
-     * @return actionType
+     * @return cpuLimit
      */
-    public Integer getActionType() {
-        return this.actionType;
+    public String getCpuLimit() {
+        return this.cpuLimit;
     }
 
     /**
@@ -92,6 +96,13 @@ public class SwitchLSQLV3MySQLServiceRequest extends Request {
      */
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    /**
+     * @return memoryLimit
+     */
+    public String getMemoryLimit() {
+        return this.memoryLimit;
     }
 
     /**
@@ -129,10 +140,11 @@ public class SwitchLSQLV3MySQLServiceRequest extends Request {
         return this.securityToken;
     }
 
-    public static final class Builder extends Request.Builder<SwitchLSQLV3MySQLServiceRequest, Builder> {
+    public static final class Builder extends Request.Builder<OpenComputeEngineRequest, Builder> {
         private String regionId; 
-        private Integer actionType; 
+        private String cpuLimit; 
         private String instanceId; 
+        private String memoryLimit; 
         private String ownerAccount; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
@@ -143,11 +155,12 @@ public class SwitchLSQLV3MySQLServiceRequest extends Request {
             super();
         } 
 
-        private Builder(SwitchLSQLV3MySQLServiceRequest request) {
+        private Builder(OpenComputeEngineRequest request) {
             super(request);
             this.regionId = request.regionId;
-            this.actionType = request.actionType;
+            this.cpuLimit = request.cpuLimit;
             this.instanceId = request.instanceId;
+            this.memoryLimit = request.memoryLimit;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
@@ -165,24 +178,29 @@ public class SwitchLSQLV3MySQLServiceRequest extends Request {
         }
 
         /**
-         * The type of the operation. Valid value:
-         * <p>
-         * 
-         * *   1: enables the MySQL compatibility feature.
-         * *   0: disables the MySQL compatibility feature.
+         * CpuLimit.
          */
-        public Builder actionType(Integer actionType) {
-            this.putQueryParameter("ActionType", actionType);
-            this.actionType = actionType;
+        public Builder cpuLimit(String cpuLimit) {
+            this.putQueryParameter("CpuLimit", cpuLimit);
+            this.cpuLimit = cpuLimit;
             return this;
         }
 
         /**
-         * The cluster ID.
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * MemoryLimit.
+         */
+        public Builder memoryLimit(String memoryLimit) {
+            this.putQueryParameter("MemoryLimit", memoryLimit);
+            this.memoryLimit = memoryLimit;
             return this;
         }
 
@@ -232,8 +250,8 @@ public class SwitchLSQLV3MySQLServiceRequest extends Request {
         }
 
         @Override
-        public SwitchLSQLV3MySQLServiceRequest build() {
-            return new SwitchLSQLV3MySQLServiceRequest(this);
+        public OpenComputeEngineRequest build() {
+            return new OpenComputeEngineRequest(this);
         } 
 
     } 

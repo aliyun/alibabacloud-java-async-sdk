@@ -7,15 +7,19 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link SwitchLSQLV3MySQLServiceResponseBody} extends {@link TeaModel}
+ * {@link GetClientSourceIpResponseBody} extends {@link TeaModel}
  *
- * <p>SwitchLSQLV3MySQLServiceResponseBody</p>
+ * <p>GetClientSourceIpResponseBody</p>
  */
-public class SwitchLSQLV3MySQLServiceResponseBody extends TeaModel {
+public class GetClientSourceIpResponseBody extends TeaModel {
+    @NameInMap("ClientIp")
+    private String clientIp;
+
     @NameInMap("RequestId")
     private String requestId;
 
-    private SwitchLSQLV3MySQLServiceResponseBody(Builder builder) {
+    private GetClientSourceIpResponseBody(Builder builder) {
+        this.clientIp = builder.clientIp;
         this.requestId = builder.requestId;
     }
 
@@ -23,8 +27,15 @@ public class SwitchLSQLV3MySQLServiceResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static SwitchLSQLV3MySQLServiceResponseBody create() {
+    public static GetClientSourceIpResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return clientIp
+     */
+    public String getClientIp() {
+        return this.clientIp;
     }
 
     /**
@@ -35,18 +46,27 @@ public class SwitchLSQLV3MySQLServiceResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String clientIp; 
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * ClientIp.
+         */
+        public Builder clientIp(String clientIp) {
+            this.clientIp = clientIp;
+            return this;
+        }
+
+        /**
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public SwitchLSQLV3MySQLServiceResponseBody build() {
-            return new SwitchLSQLV3MySQLServiceResponseBody(this);
+        public GetClientSourceIpResponseBody build() {
+            return new GetClientSourceIpResponseBody(this);
         } 
 
     } 

@@ -7,15 +7,15 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link SwitchLSQLV3MySQLServiceResponseBody} extends {@link TeaModel}
+ * {@link OpenComputeEngineResponseBody} extends {@link TeaModel}
  *
- * <p>SwitchLSQLV3MySQLServiceResponseBody</p>
+ * <p>OpenComputeEngineResponseBody</p>
  */
-public class SwitchLSQLV3MySQLServiceResponseBody extends TeaModel {
+public class OpenComputeEngineResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
-    private SwitchLSQLV3MySQLServiceResponseBody(Builder builder) {
+    private OpenComputeEngineResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -23,7 +23,7 @@ public class SwitchLSQLV3MySQLServiceResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static SwitchLSQLV3MySQLServiceResponseBody create() {
+    public static OpenComputeEngineResponseBody create() {
         return builder().build();
     }
 
@@ -38,15 +38,15 @@ public class SwitchLSQLV3MySQLServiceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public SwitchLSQLV3MySQLServiceResponseBody build() {
-            return new SwitchLSQLV3MySQLServiceResponseBody(this);
+        public OpenComputeEngineResponseBody build() {
+            return new OpenComputeEngineResponseBody(this);
         } 
 
     } 

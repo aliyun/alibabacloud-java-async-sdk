@@ -32,6 +32,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request);
 
+    CompletableFuture<GetClientSourceIpResponse> getClientSourceIp(GetClientSourceIpRequest request);
+
     CompletableFuture<GetEngineDefaultAuthResponse> getEngineDefaultAuth(GetEngineDefaultAuthRequest request);
 
     CompletableFuture<GetInstanceIpWhiteListResponse> getInstanceIpWhiteList(GetInstanceIpWhiteListRequest request);
@@ -61,6 +63,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<ModifyInstancePayTypeResponse> modifyInstancePayType(ModifyInstancePayTypeRequest request);
 
+    CompletableFuture<OpenComputeEngineResponse> openComputeEngine(OpenComputeEngineRequest request);
+
     CompletableFuture<ReleaseLindormInstanceResponse> releaseLindormInstance(ReleaseLindormInstanceRequest request);
 
     /**
@@ -72,6 +76,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<RestartLdpsComputeGroupResponse> restartLdpsComputeGroup(RestartLdpsComputeGroupRequest request);
 
+    /**
+      * Prerequisites
+      * *   The LindormTable version of your instance is 2.6.0 or later.
+      * *   The LindormTable of your instance supports LindormSQL V3. The value of the EnableLsqlVersionV3 parameter in the response of the GetLindormInstance operation is true for Lindorm instances purchased after Oct 24, 2023, which indicates that LindormSQL is supported by these instances by default. If you want to enable LindormSQL for instances purchased before Oct 24, 2023, contact the on-duty technical support.
+      * You can enable the MySQL compatibility feature for a Lindorm instance only when the instance meets the preceding requirements.
+      *
+     */
     CompletableFuture<SwitchLSQLV3MySQLServiceResponse> switchLSQLV3MySQLService(SwitchLSQLV3MySQLServiceRequest request);
 
     CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
