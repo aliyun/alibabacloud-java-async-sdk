@@ -2472,6 +2472,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
       * You can call this operation to update the number or specifications of nodes in a pay-as-you-go MSE instance. You are charged when you add nodes or upgrade node specifications. For more information, see \\[Pricing] (`~~1806469~~`).
       *
+     * @tags cluster
      */
     @Override
     public CompletableFuture<UpdateClusterSpecResponse> updateClusterSpec(UpdateClusterSpecRequest request) {

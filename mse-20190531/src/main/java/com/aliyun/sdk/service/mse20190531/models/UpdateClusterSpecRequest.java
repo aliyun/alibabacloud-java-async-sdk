@@ -17,6 +17,10 @@ public class UpdateClusterSpecRequest extends Request {
     private String acceptLanguage;
 
     @Query
+    @NameInMap("AutoPay")
+    private Boolean autoPay;
+
+    @Query
     @NameInMap("ClusterId")
     private String clusterId;
 
@@ -37,14 +41,20 @@ public class UpdateClusterSpecRequest extends Request {
     @NameInMap("MseVersion")
     private String mseVersion;
 
+    @Query
+    @NameInMap("PubNetworkFlow")
+    private Integer pubNetworkFlow;
+
     private UpdateClusterSpecRequest(Builder builder) {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
+        this.autoPay = builder.autoPay;
         this.clusterId = builder.clusterId;
         this.clusterSpecification = builder.clusterSpecification;
         this.instanceCount = builder.instanceCount;
         this.instanceId = builder.instanceId;
         this.mseVersion = builder.mseVersion;
+        this.pubNetworkFlow = builder.pubNetworkFlow;
     }
 
     public static Builder builder() {
@@ -65,6 +75,13 @@ public class UpdateClusterSpecRequest extends Request {
      */
     public String getAcceptLanguage() {
         return this.acceptLanguage;
+    }
+
+    /**
+     * @return autoPay
+     */
+    public Boolean getAutoPay() {
+        return this.autoPay;
     }
 
     /**
@@ -102,13 +119,22 @@ public class UpdateClusterSpecRequest extends Request {
         return this.mseVersion;
     }
 
+    /**
+     * @return pubNetworkFlow
+     */
+    public Integer getPubNetworkFlow() {
+        return this.pubNetworkFlow;
+    }
+
     public static final class Builder extends Request.Builder<UpdateClusterSpecRequest, Builder> {
         private String acceptLanguage; 
+        private Boolean autoPay; 
         private String clusterId; 
         private String clusterSpecification; 
         private Integer instanceCount; 
         private String instanceId; 
         private String mseVersion; 
+        private Integer pubNetworkFlow; 
 
         private Builder() {
             super();
@@ -117,11 +143,13 @@ public class UpdateClusterSpecRequest extends Request {
         private Builder(UpdateClusterSpecRequest request) {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
+            this.autoPay = request.autoPay;
             this.clusterId = request.clusterId;
             this.clusterSpecification = request.clusterSpecification;
             this.instanceCount = request.instanceCount;
             this.instanceId = request.instanceId;
             this.mseVersion = request.mseVersion;
+            this.pubNetworkFlow = request.pubNetworkFlow;
         } 
 
         /**
@@ -134,6 +162,15 @@ public class UpdateClusterSpecRequest extends Request {
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
             this.acceptLanguage = acceptLanguage;
+            return this;
+        }
+
+        /**
+         * AutoPay.
+         */
+        public Builder autoPay(Boolean autoPay) {
+            this.putQueryParameter("AutoPay", autoPay);
+            this.autoPay = autoPay;
             return this;
         }
 
@@ -179,6 +216,15 @@ public class UpdateClusterSpecRequest extends Request {
         public Builder mseVersion(String mseVersion) {
             this.putQueryParameter("MseVersion", mseVersion);
             this.mseVersion = mseVersion;
+            return this;
+        }
+
+        /**
+         * PubNetworkFlow.
+         */
+        public Builder pubNetworkFlow(Integer pubNetworkFlow) {
+            this.putQueryParameter("PubNetworkFlow", pubNetworkFlow);
+            this.pubNetworkFlow = pubNetworkFlow;
             return this;
         }
 

@@ -483,6 +483,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
       * You can call this operation to update the number or specifications of nodes in a pay-as-you-go MSE instance. You are charged when you add nodes or upgrade node specifications. For more information, see \\[Pricing] (`~~1806469~~`).
       *
+     * @tags cluster
      */
     CompletableFuture<UpdateClusterSpecResponse> updateClusterSpec(UpdateClusterSpecRequest request);
 
