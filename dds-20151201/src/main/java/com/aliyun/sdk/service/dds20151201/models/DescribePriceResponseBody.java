@@ -476,8 +476,14 @@ public class DescribePriceResponseBody extends TeaModel {
         @NameInMap("DiscountAmount")
         private String discountAmount;
 
+        @NameInMap("OptionalPromotions")
+        private String optionalPromotions;
+
         @NameInMap("OriginalAmount")
         private String originalAmount;
+
+        @NameInMap("PromDetailList")
+        private String promDetailList;
 
         @NameInMap("RuleIds")
         private RuleIds ruleIds;
@@ -492,7 +498,9 @@ public class DescribePriceResponseBody extends TeaModel {
             this.coupons = builder.coupons;
             this.currency = builder.currency;
             this.discountAmount = builder.discountAmount;
+            this.optionalPromotions = builder.optionalPromotions;
             this.originalAmount = builder.originalAmount;
+            this.promDetailList = builder.promDetailList;
             this.ruleIds = builder.ruleIds;
             this.showDiscountInfo = builder.showDiscountInfo;
             this.tradeAmount = builder.tradeAmount;
@@ -528,10 +536,24 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
+         * @return optionalPromotions
+         */
+        public String getOptionalPromotions() {
+            return this.optionalPromotions;
+        }
+
+        /**
          * @return originalAmount
          */
         public String getOriginalAmount() {
             return this.originalAmount;
+        }
+
+        /**
+         * @return promDetailList
+         */
+        public String getPromDetailList() {
+            return this.promDetailList;
         }
 
         /**
@@ -559,7 +581,9 @@ public class DescribePriceResponseBody extends TeaModel {
             private Coupons coupons; 
             private String currency; 
             private String discountAmount; 
+            private String optionalPromotions; 
             private String originalAmount; 
+            private String promDetailList; 
             private RuleIds ruleIds; 
             private Boolean showDiscountInfo; 
             private String tradeAmount; 
@@ -589,10 +613,26 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
+             * OptionalPromotions.
+             */
+            public Builder optionalPromotions(String optionalPromotions) {
+                this.optionalPromotions = optionalPromotions;
+                return this;
+            }
+
+            /**
              * The original price of the order.
              */
             public Builder originalAmount(String originalAmount) {
                 this.originalAmount = originalAmount;
+                return this;
+            }
+
+            /**
+             * PromDetailList.
+             */
+            public Builder promDetailList(String promDetailList) {
+                this.promDetailList = promDetailList;
                 return this;
             }
 
