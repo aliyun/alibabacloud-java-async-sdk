@@ -32,6 +32,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateBranchResponse> createBranch(CreateBranchRequest request);
 
+    CompletableFuture<CreateCheckRunResponse> createCheckRun(CreateCheckRunRequest request);
+
     CompletableFuture<CreateCommitStatusResponse> createCommitStatus(CreateCommitStatusRequest request);
 
     CompletableFuture<CreateDeployKeyResponse> createDeployKey(CreateDeployKeyRequest request);
@@ -154,6 +156,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetBranchInfoResponse> getBranchInfo(GetBranchInfoRequest request);
 
+    CompletableFuture<GetCheckRunResponse> getCheckRun(GetCheckRunRequest request);
+
     CompletableFuture<GetCodeupOrganizationResponse> getCodeupOrganization(GetCodeupOrganizationRequest request);
 
     CompletableFuture<GetCompareDetailResponse> getCompareDetail(GetCompareDetailRequest request);
@@ -241,6 +245,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListApplicationMembersResponse> listApplicationMembers(ListApplicationMembersRequest request);
 
     CompletableFuture<ListApplicationsResponse> listApplications(ListApplicationsRequest request);
+
+    CompletableFuture<ListCheckRunsResponse> listCheckRuns(ListCheckRunsRequest request);
 
     CompletableFuture<ListCommitStatusesResponse> listCommitStatuses(ListCommitStatusesRequest request);
 
@@ -393,6 +399,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateAppMemberResponse> updateAppMember(UpdateAppMemberRequest request);
 
     CompletableFuture<UpdateApplicationResponse> updateApplication(UpdateApplicationRequest request);
+
+    CompletableFuture<UpdateCheckRunResponse> updateCheckRun(UpdateCheckRunRequest request);
 
     CompletableFuture<UpdateFileResponse> updateFile(UpdateFileRequest request);
 
