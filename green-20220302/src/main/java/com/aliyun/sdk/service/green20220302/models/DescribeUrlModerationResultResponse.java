@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeFileModerationResultResponse} extends {@link TeaModel}
+ * {@link DescribeUrlModerationResultResponse} extends {@link TeaModel}
  *
- * <p>DescribeFileModerationResultResponse</p>
+ * <p>DescribeUrlModerationResultResponse</p>
  */
-public class DescribeFileModerationResultResponse extends Response {
+public class DescribeUrlModerationResultResponse extends Response {
     @NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -19,16 +19,16 @@ public class DescribeFileModerationResultResponse extends Response {
     private Integer statusCode;
 
     @NameInMap("body")
-    private DescribeFileModerationResultResponseBody body;
+    private DescribeUrlModerationResultResponseBody body;
 
-    private DescribeFileModerationResultResponse(BuilderImpl builder) {
+    private DescribeUrlModerationResultResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DescribeFileModerationResultResponse create() {
+    public static DescribeUrlModerationResultResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +54,35 @@ public class DescribeFileModerationResultResponse extends Response {
     /**
      * @return body
      */
-    public DescribeFileModerationResultResponseBody getBody() {
+    public DescribeUrlModerationResultResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DescribeFileModerationResultResponse, Builder> {
+    public interface Builder extends Response.Builder<DescribeUrlModerationResultResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DescribeFileModerationResultResponseBody body);
+        Builder body(DescribeUrlModerationResultResponseBody body);
 
         @Override
-        DescribeFileModerationResultResponse build();
+        DescribeUrlModerationResultResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DescribeFileModerationResultResponse, Builder>
+            extends Response.BuilderImpl<DescribeUrlModerationResultResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private DescribeFileModerationResultResponseBody body; 
+        private DescribeUrlModerationResultResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DescribeFileModerationResultResponse response) {
+        private BuilderImpl(DescribeUrlModerationResultResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +111,14 @@ public class DescribeFileModerationResultResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DescribeFileModerationResultResponseBody body) {
+        public Builder body(DescribeUrlModerationResultResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DescribeFileModerationResultResponse build() {
-            return new DescribeFileModerationResultResponse(this);
+        public DescribeUrlModerationResultResponse build() {
+            return new DescribeUrlModerationResultResponse(this);
         } 
 
     } 

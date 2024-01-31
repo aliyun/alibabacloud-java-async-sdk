@@ -26,6 +26,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeUploadTokenResponse> describeUploadToken(DescribeUploadTokenRequest request);
 
+    CompletableFuture<DescribeUrlModerationResultResponse> describeUrlModerationResult(DescribeUrlModerationResultRequest request);
+
     CompletableFuture<FileModerationResponse> fileModeration(FileModerationRequest request);
 
     CompletableFuture<ImageAsyncModerationResponse> imageAsyncModeration(ImageAsyncModerationRequest request);
@@ -35,6 +37,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<TextModerationResponse> textModeration(TextModerationRequest request);
 
     CompletableFuture<TextModerationPlusResponse> textModerationPlus(TextModerationPlusRequest request);
+
+    CompletableFuture<UrlAsyncModerationResponse> urlAsyncModeration(UrlAsyncModerationRequest request);
 
     CompletableFuture<VideoModerationResponse> videoModeration(VideoModerationRequest request);
 
