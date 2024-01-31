@@ -1,3 +1,6 @@
+2024-01-31 Version: 2.2.40
+- Generated java-async 2018-12-03 for Sas.
+
 2024-01-26 Version: 2.2.39
 - Generated java-async 2018-12-03 for Sas.
 

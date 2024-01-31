@@ -104,8 +104,20 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
         @NameInMap("IntranetIp")
         private String intranetIp;
 
+        @NameInMap("MeasureSpace")
+        private Long measureSpace;
+
         @NameInMap("Progress")
         private Integer progress;
+
+        @NameInMap("ProgressByProject")
+        private String progressByProject;
+
+        @NameInMap("ReportDownloadUrl")
+        private String reportDownloadUrl;
+
+        @NameInMap("ReportStatus")
+        private String reportStatus;
 
         @NameInMap("Result")
         private String result;
@@ -136,7 +148,11 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
             this.instanceName = builder.instanceName;
             this.internetIp = builder.internetIp;
             this.intranetIp = builder.intranetIp;
+            this.measureSpace = builder.measureSpace;
             this.progress = builder.progress;
+            this.progressByProject = builder.progressByProject;
+            this.reportDownloadUrl = builder.reportDownloadUrl;
+            this.reportStatus = builder.reportStatus;
             this.result = builder.result;
             this.startTime = builder.startTime;
             this.status = builder.status;
@@ -184,10 +200,38 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
         }
 
         /**
+         * @return measureSpace
+         */
+        public Long getMeasureSpace() {
+            return this.measureSpace;
+        }
+
+        /**
          * @return progress
          */
         public Integer getProgress() {
             return this.progress;
+        }
+
+        /**
+         * @return progressByProject
+         */
+        public String getProgressByProject() {
+            return this.progressByProject;
+        }
+
+        /**
+         * @return reportDownloadUrl
+         */
+        public String getReportDownloadUrl() {
+            return this.reportDownloadUrl;
+        }
+
+        /**
+         * @return reportStatus
+         */
+        public String getReportStatus() {
+            return this.reportStatus;
         }
 
         /**
@@ -251,7 +295,11 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
             private String instanceName; 
             private String internetIp; 
             private String intranetIp; 
+            private Long measureSpace; 
             private Integer progress; 
+            private String progressByProject; 
+            private String reportDownloadUrl; 
+            private String reportStatus; 
             private String result; 
             private Long startTime; 
             private Integer status; 
@@ -294,10 +342,42 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
             }
 
             /**
+             * MeasureSpace.
+             */
+            public Builder measureSpace(Long measureSpace) {
+                this.measureSpace = measureSpace;
+                return this;
+            }
+
+            /**
              * The progress of the task.
              */
             public Builder progress(Integer progress) {
                 this.progress = progress;
+                return this;
+            }
+
+            /**
+             * ProgressByProject.
+             */
+            public Builder progressByProject(String progressByProject) {
+                this.progressByProject = progressByProject;
+                return this;
+            }
+
+            /**
+             * ReportDownloadUrl.
+             */
+            public Builder reportDownloadUrl(String reportDownloadUrl) {
+                this.reportDownloadUrl = reportDownloadUrl;
+                return this;
+            }
+
+            /**
+             * ReportStatus.
+             */
+            public Builder reportStatus(String reportStatus) {
+                this.reportStatus = reportStatus;
                 return this;
             }
 
