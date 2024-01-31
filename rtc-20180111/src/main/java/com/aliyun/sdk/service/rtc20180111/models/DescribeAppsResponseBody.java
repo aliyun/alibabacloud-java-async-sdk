@@ -168,14 +168,14 @@ public class DescribeAppsResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Region")
-        private String region;
-
         @NameInMap("ServiceAreas")
         private ServiceAreas serviceAreas;
 
         @NameInMap("Status")
         private Integer status;
+
+        @NameInMap("Version")
+        private String version;
 
         private App(Builder builder) {
             this.appId = builder.appId;
@@ -183,9 +183,9 @@ public class DescribeAppsResponseBody extends TeaModel {
             this.appType = builder.appType;
             this.billType = builder.billType;
             this.createTime = builder.createTime;
-            this.region = builder.region;
             this.serviceAreas = builder.serviceAreas;
             this.status = builder.status;
+            this.version = builder.version;
         }
 
         public static Builder builder() {
@@ -232,13 +232,6 @@ public class DescribeAppsResponseBody extends TeaModel {
         }
 
         /**
-         * @return region
-         */
-        public String getRegion() {
-            return this.region;
-        }
-
-        /**
          * @return serviceAreas
          */
         public ServiceAreas getServiceAreas() {
@@ -252,15 +245,22 @@ public class DescribeAppsResponseBody extends TeaModel {
             return this.status;
         }
 
+        /**
+         * @return version
+         */
+        public String getVersion() {
+            return this.version;
+        }
+
         public static final class Builder {
             private String appId; 
             private String appName; 
             private String appType; 
             private String billType; 
             private String createTime; 
-            private String region; 
             private ServiceAreas serviceAreas; 
             private Integer status; 
+            private String version; 
 
             /**
              * AppId.
@@ -303,14 +303,6 @@ public class DescribeAppsResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
-             */
-            public Builder region(String region) {
-                this.region = region;
-                return this;
-            }
-
-            /**
              * ServiceAreas.
              */
             public Builder serviceAreas(ServiceAreas serviceAreas) {
@@ -323,6 +315,14 @@ public class DescribeAppsResponseBody extends TeaModel {
              */
             public Builder status(Integer status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * Version.
+             */
+            public Builder version(String version) {
+                this.version = version;
                 return this;
             }
 
