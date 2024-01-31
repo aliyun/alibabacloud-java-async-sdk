@@ -34,6 +34,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateModelFeatureResponse> createModelFeature(CreateModelFeatureRequest request);
 
+    CompletableFuture<CreateModelFeatureTrainingSetFGTableResponse> createModelFeatureTrainingSetFGTable(CreateModelFeatureTrainingSetFGTableRequest request);
+
     CompletableFuture<CreateProjectResponse> createProject(CreateProjectRequest request);
 
     CompletableFuture<CreateServiceIdentityRoleResponse> createServiceIdentityRole(CreateServiceIdentityRoleRequest request);
@@ -50,6 +52,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteProjectResponse> deleteProject(DeleteProjectRequest request);
 
+    CompletableFuture<ExportModelFeatureTrainingSetFGTableResponse> exportModelFeatureTrainingSetFGTable(ExportModelFeatureTrainingSetFGTableRequest request);
+
     CompletableFuture<ExportModelFeatureTrainingSetTableResponse> exportModelFeatureTrainingSetTable(ExportModelFeatureTrainingSetTableRequest request);
 
     CompletableFuture<GetDatasourceResponse> getDatasource(GetDatasourceRequest request);
@@ -65,6 +69,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetLabelTableResponse> getLabelTable(GetLabelTableRequest request);
 
     CompletableFuture<GetModelFeatureResponse> getModelFeature(GetModelFeatureRequest request);
+
+    CompletableFuture<GetModelFeatureFGFeatureResponse> getModelFeatureFGFeature(GetModelFeatureFGFeatureRequest request);
+
+    CompletableFuture<GetModelFeatureFGInfoResponse> getModelFeatureFGInfo(GetModelFeatureFGInfoRequest request);
 
     CompletableFuture<GetProjectResponse> getProject(GetProjectRequest request);
 
@@ -96,6 +104,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListLabelTablesResponse> listLabelTables(ListLabelTablesRequest request);
 
+    CompletableFuture<ListModelFeatureAvailableFeaturesResponse> listModelFeatureAvailableFeatures(ListModelFeatureAvailableFeaturesRequest request);
+
     CompletableFuture<ListModelFeaturesResponse> listModelFeatures(ListModelFeaturesRequest request);
 
     CompletableFuture<ListProjectFeatureViewOwnersResponse> listProjectFeatureViewOwners(ListProjectFeatureViewOwnersRequest request);
@@ -117,6 +127,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateLabelTableResponse> updateLabelTable(UpdateLabelTableRequest request);
 
     CompletableFuture<UpdateModelFeatureResponse> updateModelFeature(UpdateModelFeatureRequest request);
+
+    CompletableFuture<UpdateModelFeatureFGFeatureResponse> updateModelFeatureFGFeature(UpdateModelFeatureFGFeatureRequest request);
+
+    CompletableFuture<UpdateModelFeatureFGInfoResponse> updateModelFeatureFGInfo(UpdateModelFeatureFGInfoRequest request);
 
     CompletableFuture<UpdateProjectResponse> updateProject(UpdateProjectRequest request);
 

@@ -152,6 +152,20 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
+    public CompletableFuture<CreateModelFeatureTrainingSetFGTableResponse> createModelFeatureTrainingSetFGTable(CreateModelFeatureTrainingSetFGTableRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateModelFeatureTrainingSetFGTable").setMethod(HttpMethod.POST).setPathRegex("/api/v1/instances/{InstanceId}/modelfeatures/{ModelFeatureId}/trainingsetfgtable").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateModelFeatureTrainingSetFGTableResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateModelFeatureTrainingSetFGTableResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
     public CompletableFuture<CreateProjectResponse> createProject(CreateProjectRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -264,6 +278,20 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
+    public CompletableFuture<ExportModelFeatureTrainingSetFGTableResponse> exportModelFeatureTrainingSetFGTable(ExportModelFeatureTrainingSetFGTableRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ExportModelFeatureTrainingSetFGTable").setMethod(HttpMethod.POST).setPathRegex("/api/v1/instances/{InstanceId}/modelfeatures/{ModelFeatureId}/action/exporttrainingsetfgtable").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ExportModelFeatureTrainingSetFGTableResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ExportModelFeatureTrainingSetFGTableResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
     public CompletableFuture<ExportModelFeatureTrainingSetTableResponse> exportModelFeatureTrainingSetTable(ExportModelFeatureTrainingSetTableRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -370,6 +398,34 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetModelFeatureResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<GetModelFeatureFGFeatureResponse> getModelFeatureFGFeature(GetModelFeatureFGFeatureRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetModelFeatureFGFeature").setMethod(HttpMethod.GET).setPathRegex("/api/v1/instances/{InstanceId}/modelfeatures/{ModelFeatureId}/fgfeature").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetModelFeatureFGFeatureResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetModelFeatureFGFeatureResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<GetModelFeatureFGInfoResponse> getModelFeatureFGInfo(GetModelFeatureFGInfoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetModelFeatureFGInfo").setMethod(HttpMethod.GET).setPathRegex("/api/v1/instances/{InstanceId}/modelfeatures/{ModelFeatureId}/fginfo").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetModelFeatureFGInfoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetModelFeatureFGInfoResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -586,6 +642,20 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
+    public CompletableFuture<ListModelFeatureAvailableFeaturesResponse> listModelFeatureAvailableFeatures(ListModelFeatureAvailableFeaturesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListModelFeatureAvailableFeatures").setMethod(HttpMethod.GET).setPathRegex("/api/v1/instances/{InstanceId}/modelfeatures/{ModelFeatureId}/availablefeatures").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListModelFeatureAvailableFeaturesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListModelFeatureAvailableFeaturesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
     public CompletableFuture<ListModelFeaturesResponse> listModelFeatures(ListModelFeaturesRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -734,6 +804,34 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateModelFeatureResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<UpdateModelFeatureFGFeatureResponse> updateModelFeatureFGFeature(UpdateModelFeatureFGFeatureRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateModelFeatureFGFeature").setMethod(HttpMethod.PUT).setPathRegex("/api/v1/instances/{InstanceId}/modelfeatures/{ModelFeatureId}/fgfeature").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateModelFeatureFGFeatureResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateModelFeatureFGFeatureResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<UpdateModelFeatureFGInfoResponse> updateModelFeatureFGInfo(UpdateModelFeatureFGInfoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateModelFeatureFGInfo").setMethod(HttpMethod.PUT).setPathRegex("/api/v1/instances/{InstanceId}/modelfeatures/{ModelFeatureId}/fginfo").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateModelFeatureFGInfoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateModelFeatureFGInfoResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
