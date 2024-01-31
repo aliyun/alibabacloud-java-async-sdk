@@ -15,11 +15,15 @@ public class ModifyClusterNodePoolResponseBody extends TeaModel {
     @NameInMap("nodepool_id")
     private String nodepoolId;
 
+    @NameInMap("request_id")
+    private String requestId;
+
     @NameInMap("task_id")
     private String taskId;
 
     private ModifyClusterNodePoolResponseBody(Builder builder) {
         this.nodepoolId = builder.nodepoolId;
+        this.requestId = builder.requestId;
         this.taskId = builder.taskId;
     }
 
@@ -39,6 +43,13 @@ public class ModifyClusterNodePoolResponseBody extends TeaModel {
     }
 
     /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    /**
      * @return taskId
      */
     public String getTaskId() {
@@ -47,6 +58,7 @@ public class ModifyClusterNodePoolResponseBody extends TeaModel {
 
     public static final class Builder {
         private String nodepoolId; 
+        private String requestId; 
         private String taskId; 
 
         /**
@@ -54,6 +66,14 @@ public class ModifyClusterNodePoolResponseBody extends TeaModel {
          */
         public Builder nodepoolId(String nodepoolId) {
             this.nodepoolId = nodepoolId;
+            return this;
+        }
+
+        /**
+         * request_id.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 

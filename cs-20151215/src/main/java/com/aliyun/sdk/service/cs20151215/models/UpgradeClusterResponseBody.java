@@ -7,13 +7,13 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreateClusterNodePoolResponseBody} extends {@link TeaModel}
+ * {@link UpgradeClusterResponseBody} extends {@link TeaModel}
  *
- * <p>CreateClusterNodePoolResponseBody</p>
+ * <p>UpgradeClusterResponseBody</p>
  */
-public class CreateClusterNodePoolResponseBody extends TeaModel {
-    @NameInMap("nodepool_id")
-    private String nodepoolId;
+public class UpgradeClusterResponseBody extends TeaModel {
+    @NameInMap("cluster_id")
+    private String clusterId;
 
     @NameInMap("request_id")
     private String requestId;
@@ -21,8 +21,8 @@ public class CreateClusterNodePoolResponseBody extends TeaModel {
     @NameInMap("task_id")
     private String taskId;
 
-    private CreateClusterNodePoolResponseBody(Builder builder) {
-        this.nodepoolId = builder.nodepoolId;
+    private UpgradeClusterResponseBody(Builder builder) {
+        this.clusterId = builder.clusterId;
         this.requestId = builder.requestId;
         this.taskId = builder.taskId;
     }
@@ -31,15 +31,15 @@ public class CreateClusterNodePoolResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static CreateClusterNodePoolResponseBody create() {
+    public static UpgradeClusterResponseBody create() {
         return builder().build();
     }
 
     /**
-     * @return nodepoolId
+     * @return clusterId
      */
-    public String getNodepoolId() {
-        return this.nodepoolId;
+    public String getClusterId() {
+        return this.clusterId;
     }
 
     /**
@@ -57,15 +57,15 @@ public class CreateClusterNodePoolResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String nodepoolId; 
+        private String clusterId; 
         private String requestId; 
         private String taskId; 
 
         /**
-         * The node pool ID.
+         * cluster_id.
          */
-        public Builder nodepoolId(String nodepoolId) {
-            this.nodepoolId = nodepoolId;
+        public Builder clusterId(String clusterId) {
+            this.clusterId = clusterId;
             return this;
         }
 
@@ -78,15 +78,15 @@ public class CreateClusterNodePoolResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the task.
+         * task_id.
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
             return this;
         }
 
-        public CreateClusterNodePoolResponseBody build() {
-            return new CreateClusterNodePoolResponseBody(this);
+        public UpgradeClusterResponseBody build() {
+            return new UpgradeClusterResponseBody(this);
         } 
 
     } 

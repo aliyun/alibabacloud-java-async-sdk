@@ -13,15 +13,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyNodePoolNodeConfigResponse extends Response {
     @NameInMap("headers")
-    @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     private Integer statusCode;
 
     @NameInMap("body")
-    @Validation(required = true)
     private ModifyNodePoolNodeConfigResponseBody body;
 
     private ModifyNodePoolNodeConfigResponse(BuilderImpl builder) {

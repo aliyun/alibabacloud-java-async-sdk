@@ -280,15 +280,18 @@ public class ModifyClusterNodePoolRequest extends Request {
 
     public static class AutoScaling extends TeaModel {
         @NameInMap("eip_bandwidth")
+        @Deprecated
         private Long eipBandwidth;
 
         @NameInMap("eip_internet_charge_type")
+        @Deprecated
         private String eipInternetChargeType;
 
         @NameInMap("enable")
         private Boolean enable;
 
         @NameInMap("is_bond_eip")
+        @Deprecated
         private Boolean isBondEip;
 
         @NameInMap("max_instances")
@@ -298,6 +301,7 @@ public class ModifyClusterNodePoolRequest extends Request {
         private Long minInstances;
 
         @NameInMap("type")
+        @Deprecated
         private String type;
 
         private AutoScaling(Builder builder) {
@@ -484,6 +488,9 @@ public class ModifyClusterNodePoolRequest extends Request {
         @NameInMap("taints")
         private java.util.List < Taint > taints;
 
+        @NameInMap("unschedulable")
+        private Boolean unschedulable;
+
         @NameInMap("user_data")
         private String userData;
 
@@ -494,6 +501,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             this.runtime = builder.runtime;
             this.runtimeVersion = builder.runtimeVersion;
             this.taints = builder.taints;
+            this.unschedulable = builder.unschedulable;
             this.userData = builder.userData;
         }
 
@@ -548,6 +556,13 @@ public class ModifyClusterNodePoolRequest extends Request {
         }
 
         /**
+         * @return unschedulable
+         */
+        public Boolean getUnschedulable() {
+            return this.unschedulable;
+        }
+
+        /**
          * @return userData
          */
         public String getUserData() {
@@ -561,6 +576,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             private String runtime; 
             private String runtimeVersion; 
             private java.util.List < Taint > taints; 
+            private Boolean unschedulable; 
             private String userData; 
 
             /**
@@ -624,6 +640,14 @@ public class ModifyClusterNodePoolRequest extends Request {
              */
             public Builder taints(java.util.List < Taint > taints) {
                 this.taints = taints;
+                return this;
+            }
+
+            /**
+             * unschedulable.
+             */
+            public Builder unschedulable(Boolean unschedulable) {
+                this.unschedulable = unschedulable;
                 return this;
             }
 
@@ -799,6 +823,7 @@ public class ModifyClusterNodePoolRequest extends Request {
     }
     public static class UpgradeConfig extends TeaModel {
         @NameInMap("auto_upgrade")
+        @Deprecated
         private Boolean autoUpgrade;
 
         @NameInMap("max_unavailable")

@@ -1353,7 +1353,7 @@ public class CreateClusterRequest extends Request {
          * 
          * **Event center**: optional. By default, the event center feature is enabled.
          * 
-         * You can use Kubernetes event centers to store and query events, and configure alert rules. You can use the Logstores that are associated with Kubernetes event centers for free within 90 days. For more information, see [Create and use an event center](https://help.aliyun.com/document_detail/150476.html#task-2389213).
+         * You can use Kubernetes event centers to store and query events, and configure alert rules. You can use the Logstores that are associated with Kubernetes event centers for free within 90 days. For more information, see [Create and use an event center](~~150476~~).
          * 
          * Enable the ack-node-problem-detector component in the following format: \[{"name":"ack-node-problem-detector","config":"{"sls_project_name":"your_sls_project_name"}"}].
          */
@@ -2110,7 +2110,7 @@ public class CreateClusterRequest extends Request {
          * The container runtime. The default container runtime is Docker. containerd and Sandboxed-Container are also supported.
          * <p>
          * 
-         * For more information about how to select a proper container runtime, see [Comparison of Docker, containerd, and Sandboxed-Container](https://help.aliyun.com/document_detail/160313.html).
+         * For more information about how to select a proper container runtime, see [Comparison of Docker, containerd, and Sandboxed-Container](~~160313~~).
          */
         public Builder runtime(Runtime runtime) {
             this.putBodyParameter("runtime", runtime);

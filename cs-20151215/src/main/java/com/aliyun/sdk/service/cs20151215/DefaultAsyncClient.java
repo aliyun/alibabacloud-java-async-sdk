@@ -98,6 +98,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * @deprecated
+      *
+     */
     @Override
     public CompletableFuture<CancelClusterUpgradeResponse> cancelClusterUpgrade(CancelClusterUpgradeRequest request) {
         try {
@@ -201,9 +205,9 @@ public final class DefaultAsyncClient implements AsyncClient {
       * *   [Create an ACK managed cluster](~~90776~~)
       * *   [Create an ACK dedicated cluster](~~197620~~)
       * *   [Create an ACK Serverless cluster](~~144246~~)
-      * *   [Create an ACK Edge cluster](128204)
+      * *   [Create an ACK Edge cluster](~~128204~~)
       * *   [Create an ACK Basic cluster that supports sandboxed containers](~~196321~~)
-      * *   [Create an ACK Pro cluster that supports sandboxed containers](140623)
+      * *   [Create an ACK Pro cluster that supports sandboxed containers](~~140623~~)
       *
      */
     @Override
@@ -425,7 +429,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<DeleteTriggerResponse> deleteTrigger(DeleteTriggerRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteTrigger").setMethod(HttpMethod.DELETE).setPathRegex("/clusters/[cluster_id]/triggers/[Id]").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteTrigger").setMethod(HttpMethod.DELETE).setPathRegex("/clusters/{cluster_id}/triggers/{Id}").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteTriggerResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -477,6 +481,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * @deprecated
+      *
+     */
     @Override
     public CompletableFuture<DescribeAddonsResponse> describeAddons(DescribeAddonsRequest request) {
         try {
@@ -491,6 +499,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * @deprecated
+      *
+     */
     @Override
     public CompletableFuture<DescribeClusterAddonInstanceResponse> describeClusterAddonInstance(DescribeClusterAddonInstanceRequest request) {
         try {
@@ -505,6 +517,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * @deprecated
+      *
+     */
     @Override
     public CompletableFuture<DescribeClusterAddonMetadataResponse> describeClusterAddonMetadata(DescribeClusterAddonMetadataRequest request) {
         try {
@@ -537,6 +553,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * @deprecated
+      *
+     */
     @Override
     public CompletableFuture<DescribeClusterAddonsUpgradeStatusResponse> describeClusterAddonsUpgradeStatus(DescribeClusterAddonsUpgradeStatusRequest request) {
         try {
@@ -551,6 +571,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * @deprecated
+      *
+     */
     @Override
     public CompletableFuture<DescribeClusterAddonsVersionResponse> describeClusterAddonsVersion(DescribeClusterAddonsVersionRequest request) {
         try {
@@ -1429,6 +1453,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * @deprecated
+      *
+     */
     @Override
     public CompletableFuture<PauseClusterUpgradeResponse> pauseClusterUpgrade(PauseClusterUpgradeRequest request) {
         try {
@@ -1570,6 +1598,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * @deprecated
+      *
+     */
     @Override
     public CompletableFuture<ResumeUpgradeClusterResponse> resumeUpgradeCluster(ResumeUpgradeClusterRequest request) {
         try {
@@ -1827,7 +1859,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<UpgradeClusterResponse> upgradeCluster(UpgradeClusterRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpgradeCluster").setMethod(HttpMethod.POST).setPathRegex("/api/v2/clusters/{ClusterId}/upgrade").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpgradeCluster").setMethod(HttpMethod.POST).setPathRegex("/api/v2/clusters/{ClusterId}/upgrade").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpgradeClusterResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {

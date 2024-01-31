@@ -36,6 +36,7 @@ public class RemoveNodePoolNodesRequest extends Request {
 
     @Query
     @NameInMap("nodes")
+    @Deprecated
     private java.util.List < String > nodes;
 
     @Query

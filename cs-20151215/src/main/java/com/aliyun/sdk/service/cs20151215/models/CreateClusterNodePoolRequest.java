@@ -23,10 +23,12 @@ public class CreateClusterNodePoolRequest extends Request {
 
     @Body
     @NameInMap("count")
+    @Deprecated
     private Long count;
 
     @Body
     @NameInMap("interconnect_config")
+    @Deprecated
     private InterconnectConfig interconnectConfig;
 
     @Body
@@ -43,6 +45,7 @@ public class CreateClusterNodePoolRequest extends Request {
 
     @Body
     @NameInMap("max_nodes")
+    @Deprecated
     private Long maxNodes;
 
     @Body
@@ -336,15 +339,18 @@ public class CreateClusterNodePoolRequest extends Request {
 
     public static class AutoScaling extends TeaModel {
         @NameInMap("eip_bandwidth")
+        @Deprecated
         private Long eipBandwidth;
 
         @NameInMap("eip_internet_charge_type")
+        @Deprecated
         private String eipInternetChargeType;
 
         @NameInMap("enable")
         private Boolean enable;
 
         @NameInMap("is_bond_eip")
+        @Deprecated
         private Boolean isBondEip;
 
         @NameInMap("max_instances")
@@ -1028,6 +1034,7 @@ public class CreateClusterNodePoolRequest extends Request {
     }
     public static class UpgradeConfig extends TeaModel {
         @NameInMap("auto_upgrade")
+        @Deprecated
         private Boolean autoUpgrade;
 
         @NameInMap("max_unavailable")
@@ -1723,6 +1730,7 @@ public class CreateClusterNodePoolRequest extends Request {
         private String scalingPolicy;
 
         @NameInMap("security_group_id")
+        @Deprecated
         private String securityGroupId;
 
         @NameInMap("security_group_ids")

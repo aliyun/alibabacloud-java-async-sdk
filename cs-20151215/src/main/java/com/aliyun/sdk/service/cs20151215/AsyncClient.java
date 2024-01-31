@@ -22,6 +22,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AttachInstancesToNodePoolResponse> attachInstancesToNodePool(AttachInstancesToNodePoolRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<CancelClusterUpgradeResponse> cancelClusterUpgrade(CancelClusterUpgradeRequest request);
 
     CompletableFuture<CancelComponentUpgradeResponse> cancelComponentUpgrade(CancelComponentUpgradeRequest request);
@@ -41,9 +45,9 @@ public interface AsyncClient extends SdkAutoCloseable {
       * *   [Create an ACK managed cluster](~~90776~~)
       * *   [Create an ACK dedicated cluster](~~197620~~)
       * *   [Create an ACK Serverless cluster](~~144246~~)
-      * *   [Create an ACK Edge cluster](128204)
+      * *   [Create an ACK Edge cluster](~~128204~~)
       * *   [Create an ACK Basic cluster that supports sandboxed containers](~~196321~~)
-      * *   [Create an ACK Pro cluster that supports sandboxed containers](140623)
+      * *   [Create an ACK Pro cluster that supports sandboxed containers](~~140623~~)
       *
      */
     CompletableFuture<CreateClusterResponse> createCluster(CreateClusterRequest request);
@@ -89,10 +93,22 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeAddonResponse> describeAddon(DescribeAddonRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<DescribeAddonsResponse> describeAddons(DescribeAddonsRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<DescribeClusterAddonInstanceResponse> describeClusterAddonInstance(DescribeClusterAddonInstanceRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<DescribeClusterAddonMetadataResponse> describeClusterAddonMetadata(DescribeClusterAddonMetadataRequest request);
 
     /**
@@ -101,8 +117,16 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DescribeClusterAddonUpgradeStatusResponse> describeClusterAddonUpgradeStatus(DescribeClusterAddonUpgradeStatusRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<DescribeClusterAddonsUpgradeStatusResponse> describeClusterAddonsUpgradeStatus(DescribeClusterAddonsUpgradeStatusRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<DescribeClusterAddonsVersionResponse> describeClusterAddonsVersion(DescribeClusterAddonsVersionRequest request);
 
     CompletableFuture<DescribeClusterAttachScriptsResponse> describeClusterAttachScripts(DescribeClusterAttachScriptsRequest request);
@@ -273,6 +297,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<OpenAckServiceResponse> openAckService(OpenAckServiceRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<PauseClusterUpgradeResponse> pauseClusterUpgrade(PauseClusterUpgradeRequest request);
 
     CompletableFuture<PauseComponentUpgradeResponse> pauseComponentUpgrade(PauseComponentUpgradeRequest request);
@@ -306,6 +334,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ResumeTaskResponse> resumeTask(ResumeTaskRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<ResumeUpgradeClusterResponse> resumeUpgradeCluster(ResumeUpgradeClusterRequest request);
 
     CompletableFuture<RunClusterCheckResponse> runClusterCheck(RunClusterCheckRequest request);
