@@ -847,6 +847,9 @@ public class DescribeVaultsResponseBody extends TeaModel {
         @NameInMap("ReplicationSourceVaultId")
         private String replicationSourceVaultId;
 
+        @NameInMap("ReplicationTargetRegionId")
+        private String replicationTargetRegionId;
+
         @NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
@@ -922,6 +925,7 @@ public class DescribeVaultsResponseBody extends TeaModel {
             this.replicationSourceRegionId = builder.replicationSourceRegionId;
             this.replicationSourceVault = builder.replicationSourceVault;
             this.replicationSourceVaultId = builder.replicationSourceVaultId;
+            this.replicationTargetRegionId = builder.replicationTargetRegionId;
             this.resourceGroupId = builder.resourceGroupId;
             this.retention = builder.retention;
             this.searchEnabled = builder.searchEnabled;
@@ -1111,6 +1115,13 @@ public class DescribeVaultsResponseBody extends TeaModel {
         }
 
         /**
+         * @return replicationTargetRegionId
+         */
+        public String getReplicationTargetRegionId() {
+            return this.replicationTargetRegionId;
+        }
+
+        /**
          * @return resourceGroupId
          */
         public String getResourceGroupId() {
@@ -1253,6 +1264,7 @@ public class DescribeVaultsResponseBody extends TeaModel {
             private String replicationSourceRegionId; 
             private Boolean replicationSourceVault; 
             private String replicationSourceVaultId; 
+            private String replicationTargetRegionId; 
             private String resourceGroupId; 
             private Long retention; 
             private Boolean searchEnabled; 
@@ -1452,6 +1464,14 @@ public class DescribeVaultsResponseBody extends TeaModel {
              */
             public Builder replicationSourceVaultId(String replicationSourceVaultId) {
                 this.replicationSourceVaultId = replicationSourceVaultId;
+                return this;
+            }
+
+            /**
+             * ReplicationTargetRegionId.
+             */
+            public Builder replicationTargetRegionId(String replicationTargetRegionId) {
+                this.replicationTargetRegionId = replicationTargetRegionId;
                 return this;
             }
 
