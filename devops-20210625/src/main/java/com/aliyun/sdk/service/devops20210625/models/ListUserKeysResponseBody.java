@@ -153,8 +153,8 @@ public class ListUserKeysResponseBody extends TeaModel {
         @NameInMap("publicKey")
         private String publicKey;
 
-        @NameInMap("tittle")
-        private String tittle;
+        @NameInMap("title")
+        private String title;
 
         private Result(Builder builder) {
             this.createdAt = builder.createdAt;
@@ -164,7 +164,7 @@ public class ListUserKeysResponseBody extends TeaModel {
             this.keyScope = builder.keyScope;
             this.lastUsedTime = builder.lastUsedTime;
             this.publicKey = builder.publicKey;
-            this.tittle = builder.tittle;
+            this.title = builder.title;
         }
 
         public static Builder builder() {
@@ -225,10 +225,10 @@ public class ListUserKeysResponseBody extends TeaModel {
         }
 
         /**
-         * @return tittle
+         * @return title
          */
-        public String getTittle() {
-            return this.tittle;
+        public String getTitle() {
+            return this.title;
         }
 
         public static final class Builder {
@@ -239,7 +239,7 @@ public class ListUserKeysResponseBody extends TeaModel {
             private String keyScope; 
             private String lastUsedTime; 
             private String publicKey; 
-            private String tittle; 
+            private String title; 
 
             /**
              * createdAt.
@@ -298,10 +298,10 @@ public class ListUserKeysResponseBody extends TeaModel {
             }
 
             /**
-             * tittle.
+             * title.
              */
-            public Builder tittle(String tittle) {
-                this.tittle = tittle;
+            public Builder title(String title) {
+                this.title = title;
                 return this;
             }
 
