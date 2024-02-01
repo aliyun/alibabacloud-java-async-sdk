@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateServiceInstanceRequest extends Request {
     @Query
+    @NameInMap("BusinessInfo")
+    private BusinessInfo businessInfo;
+
+    @Query
     @NameInMap("ClientToken")
     private String clientToken;
 
@@ -88,6 +92,7 @@ public class CreateServiceInstanceRequest extends Request {
 
     private CreateServiceInstanceRequest(Builder builder) {
         super(builder);
+        this.businessInfo = builder.businessInfo;
         this.clientToken = builder.clientToken;
         this.commodity = builder.commodity;
         this.contactGroup = builder.contactGroup;
@@ -119,6 +124,13 @@ public class CreateServiceInstanceRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return businessInfo
+     */
+    public BusinessInfo getBusinessInfo() {
+        return this.businessInfo;
     }
 
     /**
@@ -248,6 +260,7 @@ public class CreateServiceInstanceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateServiceInstanceRequest, Builder> {
+        private BusinessInfo businessInfo; 
         private String clientToken; 
         private Commodity commodity; 
         private String contactGroup; 
@@ -273,6 +286,7 @@ public class CreateServiceInstanceRequest extends Request {
 
         private Builder(CreateServiceInstanceRequest request) {
             super(request);
+            this.businessInfo = request.businessInfo;
             this.clientToken = request.clientToken;
             this.commodity = request.commodity;
             this.contactGroup = request.contactGroup;
@@ -292,6 +306,16 @@ public class CreateServiceInstanceRequest extends Request {
             this.templateName = request.templateName;
             this.trialType = request.trialType;
         } 
+
+        /**
+         * BusinessInfo.
+         */
+        public Builder businessInfo(BusinessInfo businessInfo) {
+            String businessInfoShrink = shrink(businessInfo, "BusinessInfo", "json");
+            this.putQueryParameter("BusinessInfo", businessInfoShrink);
+            this.businessInfo = businessInfo;
+            return this;
+        }
 
         /**
          * ClientToken.
@@ -473,6 +497,47 @@ public class CreateServiceInstanceRequest extends Request {
 
     } 
 
+    public static class BusinessInfo extends TeaModel {
+        @NameInMap("OrderParams")
+        private java.util.Map < String, String > orderParams;
+
+        private BusinessInfo(Builder builder) {
+            this.orderParams = builder.orderParams;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BusinessInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return orderParams
+         */
+        public java.util.Map < String, String > getOrderParams() {
+            return this.orderParams;
+        }
+
+        public static final class Builder {
+            private java.util.Map < String, String > orderParams; 
+
+            /**
+             * OrderParams.
+             */
+            public Builder orderParams(java.util.Map < String, String > orderParams) {
+                this.orderParams = orderParams;
+                return this;
+            }
+
+            public BusinessInfo build() {
+                return new BusinessInfo(this);
+            } 
+
+        } 
+
+    }
     public static class Commodity extends TeaModel {
         @NameInMap("PayPeriod")
         private Long payPeriod;
