@@ -13,15 +13,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class QueryDevicePictureLifeCycleResponse extends Response {
     @NameInMap("headers")
-    @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     private Integer statusCode;
 
     @NameInMap("body")
-    @Validation(required = true)
     private QueryDevicePictureLifeCycleResponseBody body;
 
     private QueryDevicePictureLifeCycleResponse(BuilderImpl builder) {

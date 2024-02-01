@@ -62,6 +62,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateRtmpDeviceResponse> createRtmpDevice(CreateRtmpDeviceRequest request);
 
+    CompletableFuture<CreateStreamPushJobResponse> createStreamPushJob(CreateStreamPushJobRequest request);
+
+    CompletableFuture<CreateStreamSnapshotJobResponse> createStreamSnapshotJob(CreateStreamSnapshotJobRequest request);
+
     CompletableFuture<CreateTimeTemplateResponse> createTimeTemplate(CreateTimeTemplateRequest request);
 
     CompletableFuture<DeleteEventRecordPlanResponse> deleteEventRecordPlan(DeleteEventRecordPlanRequest request);
@@ -93,6 +97,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteRtmpDeviceResponse> deleteRtmpDevice(DeleteRtmpDeviceRequest request);
 
     CompletableFuture<DeleteRtmpKeyResponse> deleteRtmpKey(DeleteRtmpKeyRequest request);
+
+    CompletableFuture<DeleteStreamPushJobResponse> deleteStreamPushJob(DeleteStreamPushJobRequest request);
+
+    CompletableFuture<DeleteStreamSnapshotJobResponse> deleteStreamSnapshotJob(DeleteStreamSnapshotJobRequest request);
 
     CompletableFuture<DeleteTimeTemplateResponse> deleteTimeTemplate(DeleteTimeTemplateRequest request);
 
@@ -199,6 +207,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryRecordUrlByTimeResponse> queryRecordUrlByTime(QueryRecordUrlByTimeRequest request);
 
     CompletableFuture<QueryRtmpKeyResponse> queryRtmpKey(QueryRtmpKeyRequest request);
+
+    CompletableFuture<QueryStreamPushJobResponse> queryStreamPushJob(QueryStreamPushJobRequest request);
+
+    CompletableFuture<QueryStreamPushJobListResponse> queryStreamPushJobList(QueryStreamPushJobListRequest request);
+
+    CompletableFuture<QueryStreamSnapshotJobResponse> queryStreamSnapshotJob(QueryStreamSnapshotJobRequest request);
 
     CompletableFuture<QueryTimeTemplateResponse> queryTimeTemplate(QueryTimeTemplateRequest request);
 
