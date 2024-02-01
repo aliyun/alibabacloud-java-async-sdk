@@ -315,6 +315,9 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
         @NameInMap("ProductType")
         private String productType;
 
+        @NameInMap("QosId")
+        private String qosId;
+
         @NameInMap("RedundantPhysicalConnectionId")
         private String redundantPhysicalConnectionId;
 
@@ -377,6 +380,7 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
             this.portNumber = builder.portNumber;
             this.portType = builder.portType;
             this.productType = builder.productType;
+            this.qosId = builder.qosId;
             this.redundantPhysicalConnectionId = builder.redundantPhysicalConnectionId;
             this.reservationActiveTime = builder.reservationActiveTime;
             this.reservationInternetChargeType = builder.reservationInternetChargeType;
@@ -575,6 +579,13 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
         }
 
         /**
+         * @return qosId
+         */
+        public String getQosId() {
+            return this.qosId;
+        }
+
+        /**
          * @return redundantPhysicalConnectionId
          */
         public String getRedundantPhysicalConnectionId() {
@@ -684,6 +695,7 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
             private String portNumber; 
             private String portType; 
             private String productType; 
+            private String qosId; 
             private String redundantPhysicalConnectionId; 
             private String reservationActiveTime; 
             private String reservationInternetChargeType; 
@@ -948,6 +960,14 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
              */
             public Builder productType(String productType) {
                 this.productType = productType;
+                return this;
+            }
+
+            /**
+             * QosId.
+             */
+            public Builder qosId(String qosId) {
+                this.qosId = qosId;
                 return this;
             }
 

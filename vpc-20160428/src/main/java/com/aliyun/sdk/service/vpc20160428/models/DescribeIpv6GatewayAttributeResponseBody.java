@@ -231,7 +231,10 @@ public class DescribeIpv6GatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * GatewayRouteTableId.
+         * The ID of the gateway route table associated with the IPv6 gateway.
+         * <p>
+         * 
+         * >  This parameter is available only when the IPv6 gateway is associated with a gateway route table.
          */
         public Builder gatewayRouteTableId(String gatewayRouteTableId) {
             this.gatewayRouteTableId = gatewayRouteTableId;

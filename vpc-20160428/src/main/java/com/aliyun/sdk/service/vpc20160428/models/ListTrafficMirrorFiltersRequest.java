@@ -278,7 +278,7 @@ public class ListTrafficMirrorFiltersRequest extends Request {
         }
 
         /**
-         * Tags.
+         * The tag list.
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -287,7 +287,7 @@ public class ListTrafficMirrorFiltersRequest extends Request {
         }
 
         /**
-         * TrafficMirrorFilterIds.
+         * The ID of the traffic mirror filter. The maximum value of **N** is **100**, which specifies that you can query up to 100 filters at a time.
          */
         public Builder trafficMirrorFilterIds(java.util.List < String > trafficMirrorFilterIds) {
             this.putQueryParameter("TrafficMirrorFilterIds", trafficMirrorFilterIds);
@@ -350,10 +350,10 @@ public class ListTrafficMirrorFiltersRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N to add to the resource. You can specify at most 20 tag keys. The tag key cannot be an empty string.
+             * The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.
              * <p>
              * 
-             * The tag key can be at most 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
+             * The tag key can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -361,10 +361,10 @@ public class ListTrafficMirrorFiltersRequest extends Request {
             }
 
             /**
-             * The value of tag N to add to the resource. You can specify at most 20 tag values. The tag value can be an empty string.
+             * The tag value. You can specify at most 20 tag values. The tag value can be an empty string.
              * <p>
              * 
-             * The tag value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. The tag value cannot contain `http://` or `https://`.
+             * The tag value can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

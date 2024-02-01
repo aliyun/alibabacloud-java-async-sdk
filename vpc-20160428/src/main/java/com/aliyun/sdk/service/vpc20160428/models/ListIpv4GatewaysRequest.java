@@ -309,7 +309,7 @@ public class ListIpv4GatewaysRequest extends Request {
         }
 
         /**
-         * Tags.
+         * The tags of the resource.
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putQueryParameter("Tags", tags);

@@ -202,7 +202,7 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -224,7 +224,7 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
         }
 
         /**
-         * Tags.
+         * The tag list.
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.tags = tags;
@@ -450,7 +450,7 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -458,7 +458,7 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;

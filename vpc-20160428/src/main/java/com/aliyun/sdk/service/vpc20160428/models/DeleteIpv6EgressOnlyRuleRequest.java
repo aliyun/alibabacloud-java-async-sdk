@@ -181,7 +181,7 @@ public class DeleteIpv6EgressOnlyRuleRequest extends Request {
         }
 
         /**
-         * The ID of the IPv6 gateway.
+         * The region ID of the IPv6 gateway. You can call the [DescribeRegions](~~448570~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -209,7 +209,7 @@ public class CreateTrafficMirrorFilterRulesRequest extends Request {
         }
 
         /**
-         * EgressRules.
+         * The list of outbound rules.
          */
         public Builder egressRules(java.util.List < EgressRules> egressRules) {
             this.putQueryParameter("EgressRules", egressRules);
@@ -218,7 +218,7 @@ public class CreateTrafficMirrorFilterRulesRequest extends Request {
         }
 
         /**
-         * IngressRules.
+         * The list of inbound rules.
          */
         public Builder ingressRules(java.util.List < IngressRules> ingressRules) {
             this.putQueryParameter("IngressRules", ingressRules);

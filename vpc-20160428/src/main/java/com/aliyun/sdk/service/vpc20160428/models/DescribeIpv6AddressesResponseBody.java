@@ -86,7 +86,7 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The details about the IPv6 addresses.
+         * The details of the IPv6 address.
          */
         public Builder ipv6Addresses(Ipv6Addresses ipv6Addresses) {
             this.ipv6Addresses = ipv6Addresses;
@@ -266,7 +266,7 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             private String reservationOrderType; 
 
             /**
-             * The exclusive Internet bandwidth of the IPv6 address. Unit: Mbit/s.
+             * The dedicated Internet bandwidth of the IPv6 address. Unit: Mbit/s.
              */
             public Builder bandwidth(Integer bandwidth) {
                 this.bandwidth = bandwidth;
@@ -287,11 +287,11 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether renewal data is included.
+             * Indicates whether renewal data is included. Valid values:
              * <p>
              * 
              * *   **false**
-             * *   **true** This parameter returns **true** only if **IncludeReservationData** is set to **true** and some orders have not taken effect.
+             * *   **true** **true** is returned only when **IncludeReservationData** is set to **true** and some orders have not taken effect.
              */
             public Builder hasReservationData(Boolean hasReservationData) {
                 this.hasReservationData = hasReservationData;
@@ -299,7 +299,7 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method of the Internet bandwidth of the IPv6 address.
+             * The billing method of the Internet bandwidth of the IPv6 address. Valid values:
              * <p>
              * 
              * Only **PostPaid** may be returned, which indicates the pay-as-you-go billing method.
@@ -313,7 +313,7 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
              * The billing method of the Internet bandwidth of the IPv6 address. Valid values:
              * <p>
              * 
-             * *   **PayByTraffic**: pay-by-data-transfer
+             * *   **PayByTraffic**
              * *   **PayByBandwidth**: pay-by-bandwidth
              */
             public Builder internetChargeType(String internetChargeType) {
@@ -322,7 +322,7 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID of the Internet bandwidth of the IPv6 address.
+             * The Internet bandwidth ID of the IPv6 address.
              */
             public Builder ipv6InternetBandwidthId(String ipv6InternetBandwidthId) {
                 this.ipv6InternetBandwidthId = ipv6InternetBandwidthId;
@@ -330,7 +330,7 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the renewal took effect. The time is displayed in the `YYYY-MM-DDThh:mm:ssZ` format.
+             * The time when the renewal took effect. The time follows the ISO 8601 standard in the `YYYY-MM-DDThh:mm:ssZ` format.
              */
             public Builder reservationActiveTime(String reservationActiveTime) {
                 this.reservationActiveTime = reservationActiveTime;
@@ -349,7 +349,7 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
              * The metering method that is used after the renewal takes effect.
              * <p>
              * 
-             * *   **PayByTraffic**: pay-by-data-transfer
+             * *   **PayByTraffic**
              * *   **PayByBandwidth**: pay-by-bandwidth
              */
             public Builder reservationInternetChargeType(String reservationInternetChargeType) {
@@ -411,7 +411,10 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N. You can specify at most 20 tag keys. The tag key cannot be an empty string.
+             * <p>
+             * 
+             * The tag key can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -419,7 +422,12 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of tag N.
+             * <p>
+             * 
+             * The tag value can be up to 128 characters in length. It can be an empty string. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
+             * 
+             * Each tag key corresponds to one tag value. You can specify at most 20 tag values at a time.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -701,7 +709,7 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance that is assigned the IPv6 address.
+             * The ID of the instance associated with the IPv6 address.
              */
             public Builder associatedInstanceId(String associatedInstanceId) {
                 this.associatedInstanceId = associatedInstanceId;
@@ -709,7 +717,7 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the instance that is assigned the IPv6 address.
+             * The type of instance associated with the IPv6 address.
              */
             public Builder associatedInstanceType(String associatedInstanceType) {
                 this.associatedInstanceType = associatedInstanceType;
@@ -717,7 +725,7 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The IPv6 address of the instance.
+             * The IPv6 address.
              */
             public Builder ipv6Address(String ipv6Address) {
                 this.ipv6Address = ipv6Address;
@@ -725,7 +733,7 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             }
 
             /**
-             * Ipv6AddressDescription.
+             * The description of the IPv6 address.
              */
             public Builder ipv6AddressDescription(String ipv6AddressDescription) {
                 this.ipv6AddressDescription = ipv6AddressDescription;
@@ -757,7 +765,7 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the Internet bandwidth of the IPv6 address.
+             * The Internet bandwidth of the IPv6 address.
              */
             public Builder ipv6InternetBandwidth(Ipv6InternetBandwidth ipv6InternetBandwidth) {
                 this.ipv6InternetBandwidth = ipv6InternetBandwidth;
@@ -765,7 +773,7 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The service provider of the IPv6 address. Valid values:
+             * The ISP of the IPv6 address.
              * <p>
              * 
              * *   **BGP** (default)
@@ -779,7 +787,7 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of communication supported by the IPv6 address. Valid values:
+             * The type of connection supported by the IPv6 address. Valid values:
              * <p>
              * 
              * *   **Private**
@@ -791,12 +799,7 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum bandwidth value of the IPv6 address.
-             * <p>
-             * 
-             * *   If the IPv6 address is associated with an EIP bandwidth plan, the value of **RealBandwidth** is the maximum bandwidth value of the EIP bandwidth plan.
-             * *   If the IPv6 address is not associated with an EIP bandwidth plan, the value of **RealBandwidth** is the maximum bandwidth value of the Internet bandwidth of the IPv6 address.
-             * *   If the IPv6 address is not associated with an EIP bandwidth plan or an Internet bandwidth plan, the values of **RealBandwidth** and **Bandwidth** are both 0.
+             * The peak bandwidth of the IPv6 address.
              */
             public Builder realBandwidth(Integer realBandwidth) {
                 this.realBandwidth = realBandwidth;
@@ -804,7 +807,7 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group to which the IPv6 gateway belongs.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -812,7 +815,7 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the IPv6 address. Valid values:
+             * The status of the IPv6 address.
              * <p>
              * 
              * *   **Pending**
@@ -824,7 +827,7 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tag list.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -881,7 +884,7 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             private java.util.List < Ipv6Address> ipv6Address; 
 
             /**
-             * The IPv6 address of the instance.
+             * The IPv6 address.
              */
             public Builder ipv6Address(java.util.List < Ipv6Address> ipv6Address) {
                 this.ipv6Address = ipv6Address;

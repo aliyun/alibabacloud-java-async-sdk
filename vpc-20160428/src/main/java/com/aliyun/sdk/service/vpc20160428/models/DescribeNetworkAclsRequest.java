@@ -237,12 +237,12 @@ public class DescribeNetworkAclsRequest extends Request {
         } 
 
         /**
-         * The client token that you want to use to ensure the idempotence of the request.
+         * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * You can use the client to generate the value, but you must make sure that the value is unique among different requests. ClientToken can contain only ASCII characters.
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
          * 
-         * >  If you do not set this parameter, the system sets **ClientToken** to the value of **RequestId**. The value of **RequestId** for each API request may be different.
+         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -290,7 +290,7 @@ public class DescribeNetworkAclsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * The page number. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -299,7 +299,7 @@ public class DescribeNetworkAclsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
+         * The number of entries per page. Maximum value: **50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -350,7 +350,7 @@ public class DescribeNetworkAclsRequest extends Request {
          * The type of the associated instance. Set the value to **VSwitch**.
          * <p>
          * 
-         * This parameter is valid only if **ResourceType** and **ResourceId** are both set.
+         * This parameter is valid only if **ResourceType** and **ResourceId** are both specified.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -359,7 +359,7 @@ public class DescribeNetworkAclsRequest extends Request {
         }
 
         /**
-         * Tags.
+         * The tag list.
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -368,7 +368,7 @@ public class DescribeNetworkAclsRequest extends Request {
         }
 
         /**
-         * The ID of the virtual private cloud (VPC) to which the network ACL belongs.
+         * The ID of the VPC to which the network ACL belongs.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -422,10 +422,10 @@ public class DescribeNetworkAclsRequest extends Request {
             private String value; 
 
             /**
-             * The tag key. You can specify at most 20 tag keys. It cannot be an empty string.
+             * The key of tag N to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.
              * <p>
              * 
-             * The key cannot exceed 64 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.
+             * The tag key can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -433,10 +433,10 @@ public class DescribeNetworkAclsRequest extends Request {
             }
 
             /**
-             * The tag value. You can specify at most 20 tag values. It can be an empty string.
+             * The value of tag N to add to the resource. You can specify at most 20 tag values. The tag value can be an empty string.
              * <p>
              * 
-             * The tag value cannot exceed 128 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter but cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
+             * The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.
              */
             public Builder value(String value) {
                 this.value = value;

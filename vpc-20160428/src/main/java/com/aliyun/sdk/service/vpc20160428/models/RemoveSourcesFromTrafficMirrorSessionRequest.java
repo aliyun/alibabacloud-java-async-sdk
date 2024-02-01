@@ -250,7 +250,7 @@ public class RemoveSourcesFromTrafficMirrorSessionRequest extends Request {
         }
 
         /**
-         * TrafficMirrorSourceIds.
+         * The ID of the traffic mirror source to be deleted. Maximum value of N: 10.
          */
         public Builder trafficMirrorSourceIds(java.util.List < String > trafficMirrorSourceIds) {
             this.putQueryParameter("TrafficMirrorSourceIds", trafficMirrorSourceIds);

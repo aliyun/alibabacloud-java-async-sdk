@@ -86,7 +86,7 @@ public class DescribeVpcsResponseBody extends TeaModel {
         private Vpcs vpcs; 
 
         /**
-         * The number of the returned page.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class DescribeVpcsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class DescribeVpcsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeVpcsResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the VPCs.
+         * The details about the VPC.
          */
         public Builder vpcs(Vpcs vpcs) {
             this.vpcs = vpcs;
@@ -181,12 +181,12 @@ public class DescribeVpcsResponseBody extends TeaModel {
              * The type of IPv6 CIDR block. Valid values:
              * <p>
              * 
-             * - **BGP**: an IPv6 CIDR block provided by Alibaba Cloud over Border Gateway Protocol (BGP)
-             * - **ChinaMobile**: an IPv6 CIDR block provided by China Mobile (single ISP)
-             * - **ChinaUnicom**: an IPv6 CIDR block provided by China Unicom (single ISP)
-             * - **ChinaTelecom**: an IPv6 CIDR block provided by China Telecom (single ISP)
+             * *   **BGP**
+             * *   **ChinaMobile**
+             * *   **ChinaUnicom**
+             * *   **ChinaTelecom**
              * 
-             * >  If your Alibaba Cloud account is allowed to activate single-ISP bandwidth, valid values are: **ChinaTelecom**, **ChinaUnicom**, and **ChinaMobile**.
+             * >  If your Alibaba Cloud account is allowed to activate single-ISP bandwidth, you can set this parameter to **ChinaTelecom**, **ChinaUnicom**, or **ChinaMobile**.
              */
             public Builder ipv6Isp(String ipv6Isp) {
                 this.ipv6Isp = ipv6Isp;
@@ -403,7 +403,7 @@ public class DescribeVpcsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The key of the tag that is added to the VPC.
+             * The key of tag N.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -411,7 +411,7 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag that is added to the VPC.
+             * The value of tag N.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -827,10 +827,7 @@ public class DescribeVpcsResponseBody extends TeaModel {
             private String vpcName; 
 
             /**
-             * The status of the Cloud Enterprise Network (CEN) instance to which the VPC is attached.
-             * <p>
-             * 
-             * **Attached** is returned only if the VPC is attached to a CEN instance.
+             * The status of the Cloud Enterprise Network (CEN) instance to which the VPC is attached. **Attached** is returned only if the VPC is attached to a CEN instance.
              */
             public Builder cenStatus(String cenStatus) {
                 this.cenStatus = cenStatus;
@@ -873,10 +870,10 @@ public class DescribeVpcsResponseBody extends TeaModel {
              * The status of the DHCP options set. Valid values:
              * <p>
              * 
-             * *   **Available**: available
-             * *   **InUse**: in use
-             * *   **Deleted**: deleted
-             * *   **Pending**: being configured
+             * *   **Available**
+             * *   **InUse**
+             * *   **Deleted**
+             * *   **Pending**
              */
             public Builder dhcpOptionsSetStatus(String dhcpOptionsSetStatus) {
                 this.dhcpOptionsSetStatus = dhcpOptionsSetStatus;
@@ -892,7 +889,7 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * The IPv6 CIDR blocks of the VPC.
+             * The IPv6 CIDR block of the VPC.
              */
             public Builder ipv6CidrBlocks(Ipv6CidrBlocks ipv6CidrBlocks) {
                 this.ipv6CidrBlocks = ipv6CidrBlocks;
@@ -903,8 +900,8 @@ public class DescribeVpcsResponseBody extends TeaModel {
              * Indicates whether the VPC is the default VPC in the region. Valid values:
              * <p>
              * 
-             * *   **true**: yes
-             * *   **false**: no
+             * *   **true**
+             * *   **false**
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -912,7 +909,7 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the NAT gateways.
+             * The ID of the Internet NAT gateway.
              */
             public Builder natGatewayIds(NatGatewayIds natGatewayIds) {
                 this.natGatewayIds = natGatewayIds;
@@ -944,7 +941,7 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the route tables.
+             * The information about the route table.
              */
             public Builder routerTableIds(RouterTableIds routerTableIds) {
                 this.routerTableIds = routerTableIds;
@@ -952,7 +949,7 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * The secondary CIDR blocks of the VPC.
+             * The information about the secondary CIDR block.
              */
             public Builder secondaryCidrBlocks(SecondaryCidrBlocks secondaryCidrBlocks) {
                 this.secondaryCidrBlocks = secondaryCidrBlocks;
@@ -963,8 +960,8 @@ public class DescribeVpcsResponseBody extends TeaModel {
              * The status of the VPC. Valid values:
              * <p>
              * 
-             * *   **Pending**: being configured
-             * *   **Available**: available
+             * *   **Pending**
+             * *   **Available**
              */
             public Builder status(String status) {
                 this.status = status;
@@ -996,10 +993,10 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * The vSwitches in the VPC. 
+             * The vSwitches in the VPC.
              * <p>
              * 
-             * You can query up to 300 vSwitches in the VPC. The information about the latest vSwitches is returned. If you want to query the information about all vSwitches in a VPC, call the [DescribeVSwitches](/help/en/virtual-private-cloud/latest/describevswitches) operation.
+             * You can query up to 300 vSwitches in the VPC. The information about the latest vSwitches is returned. If you want to query the information about all vSwitches in a VPC, call the [DescribeVSwitches](~~35748~~) operation.
              */
             public Builder vSwitchIds(VSwitchIds vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
@@ -1007,7 +1004,7 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC.
+             * The VPC ID.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

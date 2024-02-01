@@ -142,7 +142,7 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
         }
 
         /**
-         * The details about the filters.
+         * The information about the filters.
          */
         public Builder trafficMirrorFilters(java.util.List < TrafficMirrorFilters> trafficMirrorFilters) {
             this.trafficMirrorFilters = trafficMirrorFilters;
@@ -716,7 +716,7 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The key of tag N.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -724,7 +724,7 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
             }
 
             /**
-             * The value of tag N.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -869,7 +869,7 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
             }
 
             /**
-             * The details about the outbound rules.
+             * The information about the outbound rules.
              */
             public Builder egressRules(java.util.List < EgressRules> egressRules) {
                 this.egressRules = egressRules;
@@ -877,7 +877,7 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
             }
 
             /**
-             * The details about the inbound rules.
+             * The information about the inbound rules.
              */
             public Builder ingressRules(java.util.List < IngressRules> ingressRules) {
                 this.ingressRules = ingressRules;
@@ -885,7 +885,7 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * The ID of the resource group to which the traffic mirror session belongs.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -893,7 +893,7 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
             }
 
             /**
-             * The list of tags.
+             * The tag list.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -909,7 +909,7 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the traffic mirror filter.
+             * The ID of the filter.
              */
             public Builder trafficMirrorFilterId(String trafficMirrorFilterId) {
                 this.trafficMirrorFilterId = trafficMirrorFilterId;
@@ -917,7 +917,7 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the filter.
+             * The filter name.
              */
             public Builder trafficMirrorFilterName(String trafficMirrorFilterName) {
                 this.trafficMirrorFilterName = trafficMirrorFilterName;

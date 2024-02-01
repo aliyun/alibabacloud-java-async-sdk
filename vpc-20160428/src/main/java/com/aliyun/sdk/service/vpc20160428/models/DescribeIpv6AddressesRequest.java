@@ -317,10 +317,10 @@ public class DescribeIpv6AddressesRequest extends Request {
         }
 
         /**
-         * The type of the instance that is assigned the IPv6 address.
+         * The type of instance associated with the IPv6 address. Valid values:
          * <p>
          * 
-         * Set the value to **EcsInstance**, which specifies an Elastic Compute Service (ECS) instance in a virtual private cloud (VPC). This is the default value.
+         * **EcsInstance**: Elastic Compute Service (ECS) instance in a virtual private cloud (VPC).
          */
         public Builder associatedInstanceType(String associatedInstanceType) {
             this.putQueryParameter("AssociatedInstanceType", associatedInstanceType);
@@ -439,7 +439,7 @@ public class DescribeIpv6AddressesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the IPv6 gateway belongs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -466,7 +466,7 @@ public class DescribeIpv6AddressesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tag list.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -538,7 +538,10 @@ public class DescribeIpv6AddressesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N. You can specify at most 20 tag keys. The tag key cannot be an empty string.
+             * <p>
+             * 
+             * The tag key can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -546,7 +549,12 @@ public class DescribeIpv6AddressesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of tag N.
+             * <p>
+             * 
+             * The tag value can be up to 128 characters in length. It can be an empty string. It cannot start with aliyun or acs:, and cannot contain http:// or https://.
+             * 
+             * Each tag key corresponds to one tag value. You can specify at most 20 tag values at a time.
              */
             public Builder value(String value) {
                 this.value = value;

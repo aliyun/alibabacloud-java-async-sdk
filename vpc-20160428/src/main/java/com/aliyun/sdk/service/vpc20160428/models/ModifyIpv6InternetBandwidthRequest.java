@@ -168,7 +168,11 @@ public class ModifyIpv6InternetBandwidthRequest extends Request {
         } 
 
         /**
-         * The Internet bandwidth for the IPv6 CIDR block. Unit: Mbit/s. Valid values: **1** to **5000**.
+         * The Internet bandwidth value of the IPv6 address. Unit: Mbit/s.
+         * <p>
+         * 
+         * *   If the billing method is pay-by-data-transfer, valid values are **1** to **1000**.
+         * *   If the billing method is pay-by-bandwidth, valid values are **1** to **2000**.
          */
         public Builder bandwidth(Long bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -203,10 +207,7 @@ public class ModifyIpv6InternetBandwidthRequest extends Request {
         }
 
         /**
-         * The ID of the Internet bandwidth that you purchased for the IPv6 CIDR block.
-         * <p>
-         * 
-         * >  You must specify one of **Ipv6AddressId** and **Ipv6InternetBandwidthId**.
+         * The instance ID of the Internet bandwidth of the IPv6 address.
          */
         public Builder ipv6InternetBandwidthId(String ipv6InternetBandwidthId) {
             this.putQueryParameter("Ipv6InternetBandwidthId", ipv6InternetBandwidthId);

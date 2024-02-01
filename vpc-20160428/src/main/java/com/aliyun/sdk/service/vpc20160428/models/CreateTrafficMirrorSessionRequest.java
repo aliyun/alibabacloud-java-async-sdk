@@ -370,7 +370,10 @@ public class CreateTrafficMirrorSessionRequest extends Request {
         }
 
         /**
-         * The maximum transmission unit (MTU). Default value: **1500**.
+         * The maximum transmission unit.
+         * <p>
+         * 
+         * Valid values: **64 to 9600**. Default value: **1500**.
          */
         public Builder packetLength(Integer packetLength) {
             this.putQueryParameter("PacketLength", packetLength);
@@ -427,7 +430,7 @@ public class CreateTrafficMirrorSessionRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tag of the resource.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -469,7 +472,7 @@ public class CreateTrafficMirrorSessionRequest extends Request {
         }
 
         /**
-         * TrafficMirrorSourceIds.
+         * The ID of the traffic mirror source. You can specify only an elastic network interface (ENI) as the traffic mirror source. The default value of **N** is **1**, which indicates that you can add only one traffic mirror source to a traffic mirror session.
          */
         public Builder trafficMirrorSourceIds(java.util.List < String > trafficMirrorSourceIds) {
             this.putQueryParameter("TrafficMirrorSourceIds", trafficMirrorSourceIds);
@@ -557,10 +560,10 @@ public class CreateTrafficMirrorSessionRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag. You can specify up to 20 tag keys. The tag key cannot be an empty string.
+             * The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.
              * <p>
              * 
-             * The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.
+             * The tag key can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -568,7 +571,10 @@ public class CreateTrafficMirrorSessionRequest extends Request {
             }
 
             /**
-             * The tag value. The format of Tag.N.Value when you call the operation. Valid values of N: 1 to 20. It cannot be an empty string. It can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain http:// or https://.
+             * The tag value. You can specify at most 20 tag values. The tag value can be an empty string.
+             * <p>
+             * 
+             * The tag value can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

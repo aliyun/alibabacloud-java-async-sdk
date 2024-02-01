@@ -295,7 +295,7 @@ public class CreateRouteTableRequest extends Request {
         }
 
         /**
-         * The tags.
+         * The tags of the resource.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -370,10 +370,10 @@ public class CreateRouteTableRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.
+             * The tag key. You can specify up to 20 tag keys. The tag key cannot be an empty string.
              * <p>
              * 
-             * The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`.
+             * The tag key can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -384,7 +384,7 @@ public class CreateRouteTableRequest extends Request {
              * The tag value. You can specify at most 20 tag values. The tag value can be an empty string.
              * <p>
              * 
-             * The tag value can be up to 128 characters in length, and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.
+             * The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.
              */
             public Builder value(String value) {
                 this.value = value;

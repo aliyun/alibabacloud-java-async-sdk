@@ -261,10 +261,10 @@ public class DescribeVpcsRequest extends Request {
         }
 
         /**
-         * Specifies whether to check the request without performing the operation. Valid values:
+         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
          * <p>
          * 
-         * *   **true**: checks the request but does not query VPCs. The system checks whether your AccessKey pair is valid, whether the Resource Access Management (RAM) user is authorized, and whether the required parameters are set. If the request fails to pass the check, an error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.
+         * *   **true**: performs only a dry run. The system prechecks whether your AccessKey pair is valid, whether the RAM user is authorized, and whether the required parameters are specified. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
          * *   **false** (default): sends the request. If the request passes the check, a 2xx HTTP status code is returned and VPCs are queried.
          */
         public Builder dryRun(Boolean dryRun) {
@@ -277,8 +277,8 @@ public class DescribeVpcsRequest extends Request {
          * Specifies whether to query the default VPC in the specified region. Valid values:
          * <p>
          * 
-         * *   **true** (default): yes
-         * *   **false**: no
+         * *   **true** (default)
+         * *   **false**
          */
         public Builder isDefault(Boolean isDefault) {
             this.putQueryParameter("IsDefault", isDefault);
@@ -314,7 +314,7 @@ public class DescribeVpcsRequest extends Request {
         }
 
         /**
-         * The number of entries to return per page. Maximum value: **50**. Default value: **10**.
+         * The number of entries per page. Maximum value: **50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -362,7 +362,7 @@ public class DescribeVpcsRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags of the resource.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -371,7 +371,7 @@ public class DescribeVpcsRequest extends Request {
         }
 
         /**
-         * The ID of the VPC.
+         * The VPC ID.
          * <p>
          * 
          * You can specify up to 20 VPC IDs. Separate multiple IDs with commas (,).
@@ -446,7 +446,10 @@ public class DescribeVpcsRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N to add to the resource. You can specify at most 20 tag keys. The tag key cannot be an empty string.
+             * <p>
+             * 
+             * The tag key can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -454,7 +457,10 @@ public class DescribeVpcsRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of tag N to add to the resource. You can specify at most 20 tag values. The tag value can be an empty string.
+             * <p>
+             * 
+             * The tag value can be up to 128 characters in length, and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.
              */
             public Builder value(String value) {
                 this.value = value;

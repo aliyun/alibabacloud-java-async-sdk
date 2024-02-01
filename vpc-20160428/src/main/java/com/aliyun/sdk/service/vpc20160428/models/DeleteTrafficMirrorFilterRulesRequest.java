@@ -250,7 +250,7 @@ public class DeleteTrafficMirrorFilterRulesRequest extends Request {
         }
 
         /**
-         * TrafficMirrorFilterRuleIds.
+         * The ID of the inbound or outbound rule.
          */
         public Builder trafficMirrorFilterRuleIds(java.util.List < String > trafficMirrorFilterRuleIds) {
             this.putQueryParameter("TrafficMirrorFilterRuleIds", trafficMirrorFilterRuleIds);
