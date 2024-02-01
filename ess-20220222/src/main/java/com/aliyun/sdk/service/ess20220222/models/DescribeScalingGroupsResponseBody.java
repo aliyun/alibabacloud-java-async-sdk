@@ -727,6 +727,9 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
         @NameInMap("HealthCheckType")
         private String healthCheckType;
 
+        @NameInMap("HealthCheckTypes")
+        private java.util.List < String > healthCheckTypes;
+
         @NameInMap("InitCapacity")
         private Integer initCapacity;
 
@@ -870,6 +873,7 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
             this.groupDeletionProtection = builder.groupDeletionProtection;
             this.groupType = builder.groupType;
             this.healthCheckType = builder.healthCheckType;
+            this.healthCheckTypes = builder.healthCheckTypes;
             this.initCapacity = builder.initCapacity;
             this.isElasticStrengthInAlarm = builder.isElasticStrengthInAlarm;
             this.launchTemplateId = builder.launchTemplateId;
@@ -1032,6 +1036,13 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
          */
         public String getHealthCheckType() {
             return this.healthCheckType;
+        }
+
+        /**
+         * @return healthCheckTypes
+         */
+        public java.util.List < String > getHealthCheckTypes() {
+            return this.healthCheckTypes;
         }
 
         /**
@@ -1345,6 +1356,7 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
             private Boolean groupDeletionProtection; 
             private String groupType; 
             private String healthCheckType; 
+            private java.util.List < String > healthCheckTypes; 
             private Integer initCapacity; 
             private Boolean isElasticStrengthInAlarm; 
             private String launchTemplateId; 
@@ -1513,6 +1525,14 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
              */
             public Builder healthCheckType(String healthCheckType) {
                 this.healthCheckType = healthCheckType;
+                return this;
+            }
+
+            /**
+             * HealthCheckTypes.
+             */
+            public Builder healthCheckTypes(java.util.List < String > healthCheckTypes) {
+                this.healthCheckTypes = healthCheckTypes;
                 return this;
             }
 

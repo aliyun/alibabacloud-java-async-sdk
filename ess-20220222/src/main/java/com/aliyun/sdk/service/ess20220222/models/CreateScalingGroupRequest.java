@@ -65,6 +65,10 @@ public class CreateScalingGroupRequest extends Request {
     private String healthCheckType;
 
     @Query
+    @NameInMap("HealthCheckTypes")
+    private java.util.List < String > healthCheckTypes;
+
+    @Query
     @NameInMap("InstanceId")
     private String instanceId;
 
@@ -202,6 +206,7 @@ public class CreateScalingGroupRequest extends Request {
         this.groupDeletionProtection = builder.groupDeletionProtection;
         this.groupType = builder.groupType;
         this.healthCheckType = builder.healthCheckType;
+        this.healthCheckTypes = builder.healthCheckTypes;
         this.instanceId = builder.instanceId;
         this.launchTemplateId = builder.launchTemplateId;
         this.launchTemplateOverrides = builder.launchTemplateOverrides;
@@ -336,6 +341,13 @@ public class CreateScalingGroupRequest extends Request {
      */
     public String getHealthCheckType() {
         return this.healthCheckType;
+    }
+
+    /**
+     * @return healthCheckTypes
+     */
+    public java.util.List < String > getHealthCheckTypes() {
+        return this.healthCheckTypes;
     }
 
     /**
@@ -562,6 +574,7 @@ public class CreateScalingGroupRequest extends Request {
         private Boolean groupDeletionProtection; 
         private String groupType; 
         private String healthCheckType; 
+        private java.util.List < String > healthCheckTypes; 
         private String instanceId; 
         private String launchTemplateId; 
         private java.util.List < LaunchTemplateOverrides> launchTemplateOverrides; 
@@ -612,6 +625,7 @@ public class CreateScalingGroupRequest extends Request {
             this.groupDeletionProtection = request.groupDeletionProtection;
             this.groupType = request.groupType;
             this.healthCheckType = request.healthCheckType;
+            this.healthCheckTypes = request.healthCheckTypes;
             this.instanceId = request.instanceId;
             this.launchTemplateId = request.launchTemplateId;
             this.launchTemplateOverrides = request.launchTemplateOverrides;
@@ -802,6 +816,15 @@ public class CreateScalingGroupRequest extends Request {
         public Builder healthCheckType(String healthCheckType) {
             this.putQueryParameter("HealthCheckType", healthCheckType);
             this.healthCheckType = healthCheckType;
+            return this;
+        }
+
+        /**
+         * HealthCheckTypes.
+         */
+        public Builder healthCheckTypes(java.util.List < String > healthCheckTypes) {
+            this.putQueryParameter("HealthCheckTypes", healthCheckTypes);
+            this.healthCheckTypes = healthCheckTypes;
             return this;
         }
 
