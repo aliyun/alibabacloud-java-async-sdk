@@ -68,6 +68,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<GetQuotaApplicationResponse> getQuotaApplication(GetQuotaApplicationRequest request);
 
+    CompletableFuture<GetQuotaApplicationApprovalResponse> getQuotaApplicationApproval(GetQuotaApplicationApprovalRequest request);
+
     CompletableFuture<GetQuotaTemplateServiceStatusResponse> getQuotaTemplateServiceStatus(GetQuotaTemplateServiceStatusRequest request);
 
     CompletableFuture<ListAlarmHistoriesResponse> listAlarmHistories(ListAlarmHistoriesRequest request);
@@ -122,6 +124,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyQuotaTemplateServiceStatusResponse> modifyQuotaTemplateServiceStatus(ModifyQuotaTemplateServiceStatusRequest request);
 
     CompletableFuture<ModifyTemplateQuotaItemResponse> modifyTemplateQuotaItem(ModifyTemplateQuotaItemRequest request);
+
+    CompletableFuture<RemindQuotaApplicationApprovalResponse> remindQuotaApplicationApproval(RemindQuotaApplicationApprovalRequest request);
 
     /**
       * In this example, the operation is called to modify the information about a quota alert whose ID is `a2efa7fc-832f-47bb-8054-39e28012****` and whose name is `rules`. The alert threshold is changed from `150` to `160`.

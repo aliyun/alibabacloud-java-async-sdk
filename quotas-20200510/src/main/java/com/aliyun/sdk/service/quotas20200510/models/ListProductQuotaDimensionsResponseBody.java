@@ -131,7 +131,71 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
 
     } 
 
+    public static class DependentDimensions extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private DependentDimensions(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DependentDimensions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public DependentDimensions build() {
+                return new DependentDimensions(this);
+            } 
+
+        } 
+
+    }
     public static class DimensionValueDetail extends TeaModel {
+        @NameInMap("DependentDimensions")
+        private java.util.List < DependentDimensions> dependentDimensions;
+
         @NameInMap("Name")
         private String name;
 
@@ -139,6 +203,7 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
         private String value;
 
         private DimensionValueDetail(Builder builder) {
+            this.dependentDimensions = builder.dependentDimensions;
             this.name = builder.name;
             this.value = builder.value;
         }
@@ -149,6 +214,13 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
 
         public static DimensionValueDetail create() {
             return builder().build();
+        }
+
+        /**
+         * @return dependentDimensions
+         */
+        public java.util.List < DependentDimensions> getDependentDimensions() {
+            return this.dependentDimensions;
         }
 
         /**
@@ -166,8 +238,17 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List < DependentDimensions> dependentDimensions; 
             private String name; 
             private String value; 
+
+            /**
+             * DependentDimensions.
+             */
+            public Builder dependentDimensions(java.util.List < DependentDimensions> dependentDimensions) {
+                this.dependentDimensions = dependentDimensions;
+                return this;
+            }
 
             /**
              * The name of the quota dimension.
