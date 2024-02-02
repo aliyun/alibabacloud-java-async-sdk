@@ -182,10 +182,14 @@ public class ListProjectFeatureViewsResponseBody extends TeaModel {
         @NameInMap("Name")
         private String name;
 
+        @NameInMap("Type")
+        private String type;
+
         private FeatureViews(Builder builder) {
             this.featureViewId = builder.featureViewId;
             this.features = builder.features;
             this.name = builder.name;
+            this.type = builder.type;
         }
 
         public static Builder builder() {
@@ -217,10 +221,18 @@ public class ListProjectFeatureViewsResponseBody extends TeaModel {
             return this.name;
         }
 
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
         public static final class Builder {
             private String featureViewId; 
             private java.util.List < Features> features; 
             private String name; 
+            private String type; 
 
             /**
              * FeatureViewId.
@@ -243,6 +255,14 @@ public class ListProjectFeatureViewsResponseBody extends TeaModel {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
                 return this;
             }
 
