@@ -7,31 +7,28 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link StopDiskMonitorResponse} extends {@link TeaModel}
+ * {@link QueryDedicatedBlockStorageClusterInventoryDataResponse} extends {@link TeaModel}
  *
- * <p>StopDiskMonitorResponse</p>
+ * <p>QueryDedicatedBlockStorageClusterInventoryDataResponse</p>
  */
-public class StopDiskMonitorResponse extends Response {
+public class QueryDedicatedBlockStorageClusterInventoryDataResponse extends Response {
     @NameInMap("headers")
-    @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     private Integer statusCode;
 
     @NameInMap("body")
-    @Validation(required = true)
-    private StopDiskMonitorResponseBody body;
+    private QueryDedicatedBlockStorageClusterInventoryDataResponseBody body;
 
-    private StopDiskMonitorResponse(BuilderImpl builder) {
+    private QueryDedicatedBlockStorageClusterInventoryDataResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static StopDiskMonitorResponse create() {
+    public static QueryDedicatedBlockStorageClusterInventoryDataResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -57,35 +54,35 @@ public class StopDiskMonitorResponse extends Response {
     /**
      * @return body
      */
-    public StopDiskMonitorResponseBody getBody() {
+    public QueryDedicatedBlockStorageClusterInventoryDataResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<StopDiskMonitorResponse, Builder> {
+    public interface Builder extends Response.Builder<QueryDedicatedBlockStorageClusterInventoryDataResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(StopDiskMonitorResponseBody body);
+        Builder body(QueryDedicatedBlockStorageClusterInventoryDataResponseBody body);
 
         @Override
-        StopDiskMonitorResponse build();
+        QueryDedicatedBlockStorageClusterInventoryDataResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<StopDiskMonitorResponse, Builder>
+            extends Response.BuilderImpl<QueryDedicatedBlockStorageClusterInventoryDataResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private StopDiskMonitorResponseBody body; 
+        private QueryDedicatedBlockStorageClusterInventoryDataResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(StopDiskMonitorResponse response) {
+        private BuilderImpl(QueryDedicatedBlockStorageClusterInventoryDataResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -114,14 +111,14 @@ public class StopDiskMonitorResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(StopDiskMonitorResponseBody body) {
+        public Builder body(QueryDedicatedBlockStorageClusterInventoryDataResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public StopDiskMonitorResponse build() {
-            return new StopDiskMonitorResponse(this);
+        public QueryDedicatedBlockStorageClusterInventoryDataResponse build() {
+            return new QueryDedicatedBlockStorageClusterInventoryDataResponse(this);
         } 
 
     } 

@@ -98,7 +98,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The query token returned in this call.
+         * A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -122,7 +122,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The list of policies.
+         * The returned enterprise-level snapshot policies.
          */
         public Builder policies(java.util.List < Policies> policies) {
             this.policies = policies;
@@ -130,7 +130,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -190,7 +190,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             private Integer retainDays; 
 
             /**
-             * The region ID of the destination. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+             * The ID of the destination region.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -198,7 +198,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Number of days to retain the destination snapshot. The range of values is greater than 1.
+             * The retention period of snapshot copies in the destination region. Unit: day.
              */
             public Builder retainDays(Integer retainDays) {
                 this.retainDays = retainDays;
@@ -251,12 +251,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             private java.util.List < Regions> regions; 
 
             /**
-             * Whether cross-region replication is enabled. The range of values:
-             * <p>
-             * 
-             * - true
-             * 
-             * - false
+             * Indicates whether the cross-region replication feature is enabled.
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -264,7 +259,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Destination region information.
+             * The destination regions that store snapshot copies.
              */
             public Builder regions(java.util.List < Regions> regions) {
                 this.regions = regions;
@@ -329,7 +324,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             private String timeUnit; 
 
             /**
-             * Maximum number of retained snapshots.
+             * The maximum number of snapshots that can be retained.
              */
             public Builder number(Integer number) {
                 this.number = number;
@@ -337,7 +332,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The time interval , valid value greater than 1.
+             * The value of the retention period of snapshots.
              */
             public Builder timeInterval(Integer timeInterval) {
                 this.timeInterval = timeInterval;
@@ -345,12 +340,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of time, valid values:
-             * <p>
-             * 
-             * - DAYS
-             * 
-             * - WEEKS
+             * The unit of the retention period of snapshots.
              */
             public Builder timeUnit(String timeUnit) {
                 this.timeUnit = timeUnit;
@@ -391,10 +381,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             private String cronExpression; 
 
             /**
-             * The time when the policy will to be scheduled. Valid values: Set the parameter in a cron expression.
-             * <p>
-             * 
-             * For example, you can use 0 0 4 1/1 * ? to specify 04:00:00 (UTC+8) on the first day of each month.
+             * The cron expression of the enterprise-level snapshot policy.
              */
             public Builder cronExpression(String cronExpression) {
                 this.cronExpression = cronExpression;
@@ -459,11 +446,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             private String timeUnit; 
 
             /**
-             * The periodic unit for specially retained snapshots. If configured to WEEKS, it provides special retention for the first snapshot of each week. The retention period is determined by TimeUnit and TimeInterval. The range of values are:
-             * <p>
-             * - WEEKS
-             * - MONTHS
-             * - YEARS
+             * The unit of the special retention period.
              */
             public Builder specialPeriodUnit(String specialPeriodUnit) {
                 this.specialPeriodUnit = specialPeriodUnit;
@@ -471,7 +454,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Retention Time Value. The range of values is greater than 1.
+             * The value of the retention period.
              */
             public Builder timeInterval(Integer timeInterval) {
                 this.timeInterval = timeInterval;
@@ -479,12 +462,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Retention time unit for special snapshots. The range of values:
-             * <p>
-             * 
-             * - DAYS
-             * 
-             * - WEEKS
+             * The unit of the retention period.
              */
             public Builder timeUnit(String timeUnit) {
                 this.timeUnit = timeUnit;
@@ -537,11 +515,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             private java.util.List < Rules> rules; 
 
             /**
-             * Indicates whether the special retention is enabled.
-             * <p>
-             * 
-             * *   true: enable
-             * *   false: disable
+             * Indicates whether the special retention period is enabled.
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -590,12 +564,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             private Boolean enableImmediateAccess; 
 
             /**
-             * Whether to enable the rapid availability of snapshots. The range of values:
-             * <p>
-             * 
-             * - true
-             * 
-             * - false
+             * Indicates whether the instant access feature is enabled.
              */
             public Builder enableImmediateAccess(Boolean enableImmediateAccess) {
                 this.enableImmediateAccess = enableImmediateAccess;
@@ -648,7 +617,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The key of a tag.
+             * The key of the tag of the enterprise-level snapshot policy.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -656,7 +625,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The value of a tag.
+             * The value of the tag of the enterprise-level snapshot policy.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -877,7 +846,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             private String targetType; 
 
             /**
-             * Creation Time.
+             * The time when the enterprise-level snapshot policy was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -885,7 +854,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Snapshot replication destination information.
+             * The replication rule of snapshots in the enterprise-level snapshot policy.
              */
             public Builder crossRegionCopyInfo(CrossRegionCopyInfo crossRegionCopyInfo) {
                 this.crossRegionCopyInfo = crossRegionCopyInfo;
@@ -893,7 +862,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the policy.
+             * The description of the enterprise-level snapshot policy.
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -901,7 +870,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * DiskIds.
+             * The list of disks.
              */
             public Builder diskIds(java.util.List < String > diskIds) {
                 this.diskIds = diskIds;
@@ -909,11 +878,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether it is an ECS snapshot policy，The range of values:
-             * <p>
-             * 
-             * - true
-             * - false
+             * Indicates whether snapshots are managed.
              */
             public Builder managedForEcs(Boolean managedForEcs) {
                 this.managedForEcs = managedForEcs;
@@ -921,7 +886,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the policy.
+             * The name of the enterprise-level snapshot policy.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -929,7 +894,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The id of the policy.
+             * The ID of the enterprise-level snapshot policy.
              */
             public Builder policyId(String policyId) {
                 this.policyId = policyId;
@@ -937,7 +902,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The resource group
+             * the resource group
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -945,7 +910,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The snapshot retention rule.
+             * The retention rule of the enterprise-level snapshot policy.
              */
             public Builder retainRule(RetainRule retainRule) {
                 this.retainRule = retainRule;
@@ -953,7 +918,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The rule for scheduling.
+             * The scheduling rule of the enterprise-level snapshot policy.
              */
             public Builder schedule(Schedule schedule) {
                 this.schedule = schedule;
@@ -961,7 +926,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The special snapshot retention rules.
+             * The special retention rules of the enterprise-level snapshot policy.
              */
             public Builder specialRetainRules(SpecialRetainRules specialRetainRules) {
                 this.specialRetainRules = specialRetainRules;
@@ -969,12 +934,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the policy. Valid values:
-             * <p>
-             * 
-             * - ENABLED: Enable policy execution.
-             * 
-             * - DISABLED: Disable policy execution.
+             * The status of the enterprise-level snapshot policy.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -982,7 +942,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Advanced snapshot features.
+             * The storage rule of snapshots in the enterprise-level snapshot policy.
              */
             public Builder storageRule(StorageRule storageRule) {
                 this.storageRule = storageRule;
@@ -990,7 +950,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The list of tags.
+             * the pair tags
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -998,7 +958,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Number of bound targets.
+             * The number of objects that are associated with the enterprise-level snapshot policy.
              */
             public Builder targetCount(Integer targetCount) {
                 this.targetCount = targetCount;
@@ -1006,7 +966,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The target type.
+             * The type of the enterprise-level snapshot policy.
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;

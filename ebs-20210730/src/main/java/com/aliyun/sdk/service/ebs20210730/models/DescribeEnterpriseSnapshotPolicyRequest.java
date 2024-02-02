@@ -181,10 +181,7 @@ public class DescribeEnterpriseSnapshotPolicyRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests.
-         * <p>
-         * 
-         * The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How do I ensure idempotence ](~~25693~~).
+         * The client token that is used to ensure the idempotence of the request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -193,7 +190,7 @@ public class DescribeEnterpriseSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * DiskIds.
+         * The list of disks.
          */
         public Builder diskIds(java.util.List < String > diskIds) {
             this.putQueryParameter("DiskIds", diskIds);
@@ -202,12 +199,7 @@ public class DescribeEnterpriseSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to be returned. You can use this parameter together with NextToken.
-         * <p>
-         * 
-         * Valid values: 1 to 500.
-         * 
-         * Default value: 10.
+         * The maximum number of entries per page.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -216,11 +208,7 @@ public class DescribeEnterpriseSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * The token that is used for the next query. Valid values:
-         * <p>
-         * 
-         * *   If the value of **NextToken** is not returned, it indicates that no next query is to be sent.
-         * *   If a value of **NextToken** is returned, the value is the token that is used for the subsequent query.
+         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -229,7 +217,7 @@ public class DescribeEnterpriseSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -238,7 +226,7 @@ public class DescribeEnterpriseSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -247,7 +235,7 @@ public class DescribeEnterpriseSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * The list of policies.
+         * The IDs of enterprise-level snapshot policies.
          */
         public Builder policyIds(java.util.List < String > policyIds) {
             this.putQueryParameter("PolicyIds", policyIds);
@@ -256,7 +244,7 @@ public class DescribeEnterpriseSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * The region ID . You can call the [DescribeRegions](~~354276~~) operation to query the most recent list of regions in which snapshot policy is supported.
+         * The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -265,7 +253,7 @@ public class DescribeEnterpriseSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the policy belongs.
+         * The ID of the resource group to which the enterprise-level snapshot policy belongs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -274,7 +262,7 @@ public class DescribeEnterpriseSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * The list of tags.
+         * The tags of the enterprise-level snapshot policies. Valid values of N: 1 to 20.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -330,7 +318,7 @@ public class DescribeEnterpriseSnapshotPolicyRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag.
+             * The key of tag N of the enterprise-level snapshot policy.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -338,7 +326,7 @@ public class DescribeEnterpriseSnapshotPolicyRequest extends Request {
             }
 
             /**
-             * The value of the tag.
+             * The value of tag N of the enterprise-level snapshot policy.
              */
             public Builder value(String value) {
                 this.value = value;

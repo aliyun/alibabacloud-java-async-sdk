@@ -123,7 +123,7 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * The ID of the new resource group. You can view the available resource groups in the Resource Management console. For more information, see [View basic information of a resource group](https://help.aliyun.com/document_detail/151181.htm?spm=a2c4g.11186623.0.0.15ef75c87zvMhL).
+         * The ID of the new resource group. You can view the available resource groups in the Resource Management console. For more information, see [View basic information of a resource group](~~151181~~).
          */
         public Builder newResourceGroupId(String newResourceGroupId) {
             this.putQueryParameter("NewResourceGroupId", newResourceGroupId);
