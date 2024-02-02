@@ -20,7 +20,7 @@ public class DocOcrRequest extends Request {
     @NameInMap("IdFaceQuality")
     private String idFaceQuality;
 
-    @Query
+    @Body
     @NameInMap("IdOcrPictureBase64")
     private String idOcrPictureBase64;
 
@@ -187,7 +187,7 @@ public class DocOcrRequest extends Request {
          * IdOcrPictureBase64.
          */
         public Builder idOcrPictureBase64(String idOcrPictureBase64) {
-            this.putQueryParameter("IdOcrPictureBase64", idOcrPictureBase64);
+            this.putBodyParameter("IdOcrPictureBase64", idOcrPictureBase64);
             this.idOcrPictureBase64 = idOcrPictureBase64;
             return this;
         }

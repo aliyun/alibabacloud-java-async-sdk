@@ -16,7 +16,7 @@ public class FaceCompareRequest extends Request {
     @NameInMap("MerchantBizId")
     private String merchantBizId;
 
-    @Query
+    @Body
     @NameInMap("SourceFacePicture")
     private String sourceFacePicture;
 
@@ -24,7 +24,7 @@ public class FaceCompareRequest extends Request {
     @NameInMap("SourceFacePictureUrl")
     private String sourceFacePictureUrl;
 
-    @Query
+    @Body
     @NameInMap("TargetFacePicture")
     private String targetFacePicture;
 
@@ -122,7 +122,7 @@ public class FaceCompareRequest extends Request {
          * SourceFacePicture.
          */
         public Builder sourceFacePicture(String sourceFacePicture) {
-            this.putQueryParameter("SourceFacePicture", sourceFacePicture);
+            this.putBodyParameter("SourceFacePicture", sourceFacePicture);
             this.sourceFacePicture = sourceFacePicture;
             return this;
         }
@@ -140,7 +140,7 @@ public class FaceCompareRequest extends Request {
          * TargetFacePicture.
          */
         public Builder targetFacePicture(String targetFacePicture) {
-            this.putQueryParameter("TargetFacePicture", targetFacePicture);
+            this.putBodyParameter("TargetFacePicture", targetFacePicture);
             this.targetFacePicture = targetFacePicture;
             return this;
         }

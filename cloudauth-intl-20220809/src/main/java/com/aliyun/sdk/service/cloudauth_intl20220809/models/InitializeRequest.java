@@ -36,7 +36,7 @@ public class InitializeRequest extends Request {
     @NameInMap("DocType")
     private String docType;
 
-    @Query
+    @Body
     @NameInMap("FacePictureBase64")
     private String facePictureBase64;
 
@@ -105,6 +105,10 @@ public class InitializeRequest extends Request {
     private String sceneCode;
 
     @Query
+    @NameInMap("SecurityLevel")
+    private String securityLevel;
+
+    @Query
     @NameInMap("ServiceLevel")
     private String serviceLevel;
 
@@ -133,6 +137,7 @@ public class InitializeRequest extends Request {
         this.productFlow = builder.productFlow;
         this.returnUrl = builder.returnUrl;
         this.sceneCode = builder.sceneCode;
+        this.securityLevel = builder.securityLevel;
         this.serviceLevel = builder.serviceLevel;
     }
 
@@ -311,6 +316,13 @@ public class InitializeRequest extends Request {
     }
 
     /**
+     * @return securityLevel
+     */
+    public String getSecurityLevel() {
+        return this.securityLevel;
+    }
+
+    /**
      * @return serviceLevel
      */
     public String getServiceLevel() {
@@ -341,6 +353,7 @@ public class InitializeRequest extends Request {
         private String productFlow; 
         private String returnUrl; 
         private String sceneCode; 
+        private String securityLevel; 
         private String serviceLevel; 
 
         private Builder() {
@@ -372,6 +385,7 @@ public class InitializeRequest extends Request {
             this.productFlow = request.productFlow;
             this.returnUrl = request.returnUrl;
             this.sceneCode = request.sceneCode;
+            this.securityLevel = request.securityLevel;
             this.serviceLevel = request.serviceLevel;
         } 
 
@@ -433,7 +447,7 @@ public class InitializeRequest extends Request {
          * FacePictureBase64.
          */
         public Builder facePictureBase64(String facePictureBase64) {
-            this.putQueryParameter("FacePictureBase64", facePictureBase64);
+            this.putBodyParameter("FacePictureBase64", facePictureBase64);
             this.facePictureBase64 = facePictureBase64;
             return this;
         }
@@ -579,6 +593,15 @@ public class InitializeRequest extends Request {
         public Builder sceneCode(String sceneCode) {
             this.putQueryParameter("SceneCode", sceneCode);
             this.sceneCode = sceneCode;
+            return this;
+        }
+
+        /**
+         * SecurityLevel.
+         */
+        public Builder securityLevel(String securityLevel) {
+            this.putQueryParameter("SecurityLevel", securityLevel);
+            this.securityLevel = securityLevel;
             return this;
         }
 

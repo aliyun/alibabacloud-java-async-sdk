@@ -32,7 +32,7 @@ public class EkycVerifyRequest extends Request {
     @NameInMap("DocType")
     private String docType;
 
-    @Query
+    @Body
     @NameInMap("FacePictureBase64")
     private String facePictureBase64;
 
@@ -40,7 +40,7 @@ public class EkycVerifyRequest extends Request {
     @NameInMap("FacePictureUrl")
     private String facePictureUrl;
 
-    @Query
+    @Body
     @NameInMap("IdOcrPictureBase64")
     private String idOcrPictureBase64;
 
@@ -256,7 +256,7 @@ public class EkycVerifyRequest extends Request {
          * FacePictureBase64.
          */
         public Builder facePictureBase64(String facePictureBase64) {
-            this.putQueryParameter("FacePictureBase64", facePictureBase64);
+            this.putBodyParameter("FacePictureBase64", facePictureBase64);
             this.facePictureBase64 = facePictureBase64;
             return this;
         }
@@ -274,7 +274,7 @@ public class EkycVerifyRequest extends Request {
          * IdOcrPictureBase64.
          */
         public Builder idOcrPictureBase64(String idOcrPictureBase64) {
-            this.putQueryParameter("IdOcrPictureBase64", idOcrPictureBase64);
+            this.putBodyParameter("IdOcrPictureBase64", idOcrPictureBase64);
             this.idOcrPictureBase64 = idOcrPictureBase64;
             return this;
         }
