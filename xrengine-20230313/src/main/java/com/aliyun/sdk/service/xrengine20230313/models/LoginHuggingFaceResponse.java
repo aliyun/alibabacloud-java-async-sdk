@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link PopCreateFeatureToAvatarProjectResponse} extends {@link TeaModel}
+ * {@link LoginHuggingFaceResponse} extends {@link TeaModel}
  *
- * <p>PopCreateFeatureToAvatarProjectResponse</p>
+ * <p>LoginHuggingFaceResponse</p>
  */
-public class PopCreateFeatureToAvatarProjectResponse extends Response {
+public class LoginHuggingFaceResponse extends Response {
     @NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -19,16 +19,16 @@ public class PopCreateFeatureToAvatarProjectResponse extends Response {
     private Integer statusCode;
 
     @NameInMap("body")
-    private PopCreateFeatureToAvatarProjectResponseBody body;
+    private LoginHuggingFaceResponseBody body;
 
-    private PopCreateFeatureToAvatarProjectResponse(BuilderImpl builder) {
+    private LoginHuggingFaceResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static PopCreateFeatureToAvatarProjectResponse create() {
+    public static LoginHuggingFaceResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +54,35 @@ public class PopCreateFeatureToAvatarProjectResponse extends Response {
     /**
      * @return body
      */
-    public PopCreateFeatureToAvatarProjectResponseBody getBody() {
+    public LoginHuggingFaceResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<PopCreateFeatureToAvatarProjectResponse, Builder> {
+    public interface Builder extends Response.Builder<LoginHuggingFaceResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(PopCreateFeatureToAvatarProjectResponseBody body);
+        Builder body(LoginHuggingFaceResponseBody body);
 
         @Override
-        PopCreateFeatureToAvatarProjectResponse build();
+        LoginHuggingFaceResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<PopCreateFeatureToAvatarProjectResponse, Builder>
+            extends Response.BuilderImpl<LoginHuggingFaceResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private PopCreateFeatureToAvatarProjectResponseBody body; 
+        private LoginHuggingFaceResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(PopCreateFeatureToAvatarProjectResponse response) {
+        private BuilderImpl(LoginHuggingFaceResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +111,14 @@ public class PopCreateFeatureToAvatarProjectResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(PopCreateFeatureToAvatarProjectResponseBody body) {
+        public Builder body(LoginHuggingFaceResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public PopCreateFeatureToAvatarProjectResponse build() {
-            return new PopCreateFeatureToAvatarProjectResponse(this);
+        public LoginHuggingFaceResponse build() {
+            return new LoginHuggingFaceResponse(this);
         } 
 
     } 

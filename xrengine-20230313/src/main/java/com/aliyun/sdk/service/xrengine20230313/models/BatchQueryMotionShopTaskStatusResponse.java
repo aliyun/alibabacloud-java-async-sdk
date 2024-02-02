@@ -13,15 +13,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class BatchQueryMotionShopTaskStatusResponse extends Response {
     @NameInMap("headers")
-    @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     private Integer statusCode;
 
     @NameInMap("body")
-    @Validation(required = true)
     private BatchQueryMotionShopTaskStatusResponseBody body;
 
     private BatchQueryMotionShopTaskStatusResponse(BuilderImpl builder) {

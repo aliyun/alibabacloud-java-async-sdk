@@ -48,6 +48,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<LocateResponse> locate(LocateRequest request);
 
+    CompletableFuture<LoginHuggingFaceResponse> loginHuggingFace(LoginHuggingFaceRequest request);
+
     CompletableFuture<LoginModelScopeResponse> loginModelScope(LoginModelScopeRequest request);
 
     CompletableFuture<MotionShopVideoDetectResponse> motionShopVideoDetect(MotionShopVideoDetectRequest request);
