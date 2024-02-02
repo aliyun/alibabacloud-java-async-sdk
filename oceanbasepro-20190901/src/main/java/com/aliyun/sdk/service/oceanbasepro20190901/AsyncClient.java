@@ -61,7 +61,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteDatabasesResponse> deleteDatabases(DeleteDatabasesRequest request);
 
     /**
-      * Alibaba Cloud provides SDKs in different languages to help you quickly integrate Alibaba Cloud products and services by using APIs. We recommend that you use an SDK to call APIs. In this way, you do not need to sign for verification.
+      * Before you call this operation, ensure that the following requirements are met:
+      * - The cluster is in the Running state.
+      * - The cluster is a primary cluster and the billing method is pay-as-you-go.
       *
      */
     CompletableFuture<DeleteInstancesResponse> deleteInstances(DeleteInstancesRequest request);
@@ -155,6 +157,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeSQLPlansResponse> describeSQLPlans(DescribeSQLPlansRequest request);
 
     CompletableFuture<DescribeSQLSamplesResponse> describeSQLSamples(DescribeSQLSamplesRequest request);
+
+    CompletableFuture<DescribeSampleSqlRawTextsResponse> describeSampleSqlRawTexts(DescribeSampleSqlRawTextsRequest request);
 
     CompletableFuture<DescribeSecurityIpGroupsResponse> describeSecurityIpGroups(DescribeSecurityIpGroupsRequest request);
 

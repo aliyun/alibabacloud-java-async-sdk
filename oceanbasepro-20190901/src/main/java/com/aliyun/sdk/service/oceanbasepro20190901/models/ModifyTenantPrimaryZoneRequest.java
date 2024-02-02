@@ -14,7 +14,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ModifyTenantPrimaryZoneRequest extends Request {
     @Host
     @NameInMap("RegionId")
-    @Validation(required = true)
     private String regionId;
 
     @Body
@@ -51,6 +50,10 @@ public class ModifyTenantPrimaryZoneRequest extends Request {
     @NameInMap("UserVSwitchId")
     private String userVSwitchId;
 
+    @Body
+    @NameInMap("VpcId")
+    private String vpcId;
+
     private ModifyTenantPrimaryZoneRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -62,6 +65,7 @@ public class ModifyTenantPrimaryZoneRequest extends Request {
         this.tenantId = builder.tenantId;
         this.userDirectVSwitchId = builder.userDirectVSwitchId;
         this.userVSwitchId = builder.userVSwitchId;
+        this.vpcId = builder.vpcId;
     }
 
     public static Builder builder() {
@@ -140,6 +144,13 @@ public class ModifyTenantPrimaryZoneRequest extends Request {
         return this.userVSwitchId;
     }
 
+    /**
+     * @return vpcId
+     */
+    public String getVpcId() {
+        return this.vpcId;
+    }
+
     public static final class Builder extends Request.Builder<ModifyTenantPrimaryZoneRequest, Builder> {
         private String regionId; 
         private String instanceId; 
@@ -150,6 +161,7 @@ public class ModifyTenantPrimaryZoneRequest extends Request {
         private String tenantId; 
         private String userDirectVSwitchId; 
         private String userVSwitchId; 
+        private String vpcId; 
 
         private Builder() {
             super();
@@ -166,6 +178,7 @@ public class ModifyTenantPrimaryZoneRequest extends Request {
             this.tenantId = request.tenantId;
             this.userDirectVSwitchId = request.userDirectVSwitchId;
             this.userVSwitchId = request.userVSwitchId;
+            this.vpcId = request.vpcId;
         } 
 
         /**
@@ -255,6 +268,15 @@ public class ModifyTenantPrimaryZoneRequest extends Request {
         public Builder userVSwitchId(String userVSwitchId) {
             this.putBodyParameter("UserVSwitchId", userVSwitchId);
             this.userVSwitchId = userVSwitchId;
+            return this;
+        }
+
+        /**
+         * VpcId.
+         */
+        public Builder vpcId(String vpcId) {
+            this.putBodyParameter("VpcId", vpcId);
+            this.vpcId = vpcId;
             return this;
         }
 

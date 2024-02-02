@@ -50,7 +50,7 @@ public class CreateInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 实例ID
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class CreateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Response parameters
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,7 +134,11 @@ public class CreateInstanceResponseBody extends TeaModel {
             private String resourceGroupId; 
 
             /**
-             * DryRunResult.
+             * The result of the dry-run request.
+             * <p>
+             * 
+             * If the DryRun parameter is set to true and the dry run succeeds, the DryRunResult parameter returns true. Otherwise, an error code is returned.
+             * If the DryRun parameter is set to false, no dry run is performed and the DryRunResult parameter returns false.
              */
             public Builder dryRunResult(Boolean dryRunResult) {
                 this.dryRunResult = dryRunResult;
@@ -142,7 +146,7 @@ public class CreateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 订单ID。该参数只有创建包年包月ECS实例（请求参数InstanceChargeType=PrePaid）时有返回值。
+             * Instance ID.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -150,7 +154,9 @@ public class CreateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 资源组ID
+             * Order ID. The ID of the order that you have placed.
+             * <p>
+             * This parameter returns a value after you create a pre-paid or post-paid cluster.
              */
             public Builder orderId(String orderId) {
                 this.orderId = orderId;
@@ -158,7 +164,7 @@ public class CreateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * Resource group ID.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;

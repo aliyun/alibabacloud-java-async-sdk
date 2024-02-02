@@ -113,6 +113,9 @@ public class DescribeTenantsResponseBody extends TeaModel {
         @NameInMap("Description")
         private String description;
 
+        @NameInMap("EnableReadOnlyReplica")
+        private Boolean enableReadOnlyReplica;
+
         @NameInMap("Mem")
         private Integer mem;
 
@@ -154,6 +157,7 @@ public class DescribeTenantsResponseBody extends TeaModel {
             this.deployMode = builder.deployMode;
             this.deployType = builder.deployType;
             this.description = builder.description;
+            this.enableReadOnlyReplica = builder.enableReadOnlyReplica;
             this.mem = builder.mem;
             this.primaryZone = builder.primaryZone;
             this.status = builder.status;
@@ -222,6 +226,13 @@ public class DescribeTenantsResponseBody extends TeaModel {
          */
         public String getDescription() {
             return this.description;
+        }
+
+        /**
+         * @return enableReadOnlyReplica
+         */
+        public Boolean getEnableReadOnlyReplica() {
+            return this.enableReadOnlyReplica;
         }
 
         /**
@@ -309,6 +320,7 @@ public class DescribeTenantsResponseBody extends TeaModel {
             private String deployMode; 
             private String deployType; 
             private String description; 
+            private Boolean enableReadOnlyReplica; 
             private Integer mem; 
             private String primaryZone; 
             private String status; 
@@ -376,6 +388,14 @@ public class DescribeTenantsResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * EnableReadOnlyReplica.
+             */
+            public Builder enableReadOnlyReplica(Boolean enableReadOnlyReplica) {
+                this.enableReadOnlyReplica = enableReadOnlyReplica;
                 return this;
             }
 

@@ -50,7 +50,7 @@ public class DescribeTenantSecurityConfigsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Configs.
+         * The list of parameters.
          */
         public Builder configs(Configs configs) {
             this.configs = configs;
@@ -58,7 +58,7 @@ public class DescribeTenantSecurityConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +146,7 @@ public class DescribeTenantSecurityConfigsResponseBody extends TeaModel {
             private String riskDescription; 
 
             /**
-             * ConfigDescription.
+             * The name of the check item.
              */
             public Builder configDescription(String configDescription) {
                 this.configDescription = configDescription;
@@ -154,7 +154,7 @@ public class DescribeTenantSecurityConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * ConfigGroup.
+             * The group of the risk.
              */
             public Builder configGroup(String configGroup) {
                 this.configGroup = configGroup;
@@ -162,7 +162,7 @@ public class DescribeTenantSecurityConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * ConfigName.
+             * The name of the risk.
              */
             public Builder configName(String configName) {
                 this.configName = configName;
@@ -170,7 +170,7 @@ public class DescribeTenantSecurityConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Risk.
+             * Indicates whether the risk causes security issues.
              */
             public Builder risk(Boolean risk) {
                 this.risk = risk;
@@ -178,7 +178,7 @@ public class DescribeTenantSecurityConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * RiskDescription.
+             * The description of the risk.
              */
             public Builder riskDescription(String riskDescription) {
                 this.riskDescription = riskDescription;
@@ -255,7 +255,7 @@ public class DescribeTenantSecurityConfigsResponseBody extends TeaModel {
             private String tenantName; 
 
             /**
-             * RiskCount.
+             * The number of detected tenant security risks.
              */
             public Builder riskCount(Integer riskCount) {
                 this.riskCount = riskCount;
@@ -263,7 +263,7 @@ public class DescribeTenantSecurityConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityConfigs.
+             * The list of risks.
              */
             public Builder securityConfigs(java.util.List < SecurityConfigs> securityConfigs) {
                 this.securityConfigs = securityConfigs;
@@ -271,7 +271,7 @@ public class DescribeTenantSecurityConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * TenantId.
+             * The ID of the tenant.
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;
@@ -279,7 +279,7 @@ public class DescribeTenantSecurityConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * TenantName.
+             * The name of the tenant.
              */
             public Builder tenantName(String tenantName) {
                 this.tenantName = tenantName;
@@ -380,7 +380,7 @@ public class DescribeTenantSecurityConfigsResponseBody extends TeaModel {
             private Integer totalRiskCount; 
 
             /**
-             * CheckId.
+             * The unique identifier of the check.
              */
             public Builder checkId(String checkId) {
                 this.checkId = checkId;
@@ -388,7 +388,7 @@ public class DescribeTenantSecurityConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * CheckTime.
+             * The time when the check was performed.
              */
             public Builder checkTime(String checkTime) {
                 this.checkTime = checkTime;
@@ -396,7 +396,7 @@ public class DescribeTenantSecurityConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the OceanBase cluster.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -404,7 +404,7 @@ public class DescribeTenantSecurityConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * TenantSecurityConfigs.
+             * The check result.
              */
             public Builder tenantSecurityConfigs(java.util.List < TenantSecurityConfigs> tenantSecurityConfigs) {
                 this.tenantSecurityConfigs = tenantSecurityConfigs;
@@ -412,7 +412,7 @@ public class DescribeTenantSecurityConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCheckCount.
+             * The total number of security check items.
              */
             public Builder totalCheckCount(Integer totalCheckCount) {
                 this.totalCheckCount = totalCheckCount;
@@ -420,7 +420,7 @@ public class DescribeTenantSecurityConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalRiskCount.
+             * The total number of detected security risks.
              */
             public Builder totalRiskCount(Integer totalRiskCount) {
                 this.totalRiskCount = totalRiskCount;

@@ -14,7 +14,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DescribeAvailableMemResourceRequest extends Request {
     @Host
     @NameInMap("RegionId")
-    @Validation(required = true)
     private String regionId;
 
     @Body
@@ -123,7 +122,7 @@ public class DescribeAvailableMemResourceRequest extends Request {
         }
 
         /**
-         * The available memory size.
+         * The number of CPU cores.
          */
         public Builder cpuNum(Long cpuNum) {
             this.putBodyParameter("CpuNum", cpuNum);
@@ -132,7 +131,7 @@ public class DescribeAvailableMemResourceRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The ID of the OceanBase cluster.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -150,7 +149,9 @@ public class DescribeAvailableMemResourceRequest extends Request {
         }
 
         /**
-         * The number of resource units in the tenant.
+         * The number of resource distribution nodes in the tenant.   
+         * <p>
+         * The number is determined by the deployment mode of the cluster. If the cluster is deployed in 2-2-2 mode, the maximum number of resource distribution nodes is 2.
          */
         public Builder unitNum(Long unitNum) {
             this.putBodyParameter("UnitNum", unitNum);

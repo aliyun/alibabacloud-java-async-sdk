@@ -50,7 +50,7 @@ public class ModifyInstanceNodeNumResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The return result of the request.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class ModifyInstanceNodeNumResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,10 @@ public class ModifyInstanceNodeNumResponseBody extends TeaModel {
             private String orderId; 
 
             /**
-             * DryRunResult.
+             * The result of the dry-run request.
+             * <p>
+             * - If the DryRun parameter is set to true and the dry run succeeds, the DryRunResult parameter returns true. Otherwise, an error code is returned.
+             * - If the DryRun parameter is set to false, no dry run is performed and the DryRunResult parameter returns false.
              */
             public Builder dryRunResult(Boolean dryRunResult) {
                 this.dryRunResult = dryRunResult;
@@ -118,7 +121,7 @@ public class ModifyInstanceNodeNumResponseBody extends TeaModel {
             }
 
             /**
-             * OrderId.
+             * The ID of the order.
              */
             public Builder orderId(String orderId) {
                 this.orderId = orderId;

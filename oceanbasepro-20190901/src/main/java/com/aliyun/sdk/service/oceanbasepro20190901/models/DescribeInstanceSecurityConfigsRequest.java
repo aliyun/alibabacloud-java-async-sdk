@@ -14,7 +14,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DescribeInstanceSecurityConfigsRequest extends Request {
     @Host
     @NameInMap("RegionId")
-    @Validation(required = true)
     private String regionId;
 
     @Body
@@ -93,7 +92,7 @@ public class DescribeInstanceSecurityConfigsRequest extends Request {
         }
 
         /**
-         * CheckId.
+         * The unique identifier of the check.
          */
         public Builder checkId(String checkId) {
             this.putBodyParameter("CheckId", checkId);
@@ -102,7 +101,7 @@ public class DescribeInstanceSecurityConfigsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the OceanBase cluster.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);

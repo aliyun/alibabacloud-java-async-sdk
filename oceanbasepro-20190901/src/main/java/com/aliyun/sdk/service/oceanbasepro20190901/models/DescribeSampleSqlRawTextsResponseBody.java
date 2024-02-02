@@ -7,18 +7,18 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DeleteInstancesResponseBody} extends {@link TeaModel}
+ * {@link DescribeSampleSqlRawTextsResponseBody} extends {@link TeaModel}
  *
- * <p>DeleteInstancesResponseBody</p>
+ * <p>DescribeSampleSqlRawTextsResponseBody</p>
  */
-public class DeleteInstancesResponseBody extends TeaModel {
+public class DescribeSampleSqlRawTextsResponseBody extends TeaModel {
     @NameInMap("Data")
     private Data data;
 
     @NameInMap("RequestId")
     private String requestId;
 
-    private DeleteInstancesResponseBody(Builder builder) {
+    private DescribeSampleSqlRawTextsResponseBody(Builder builder) {
         this.data = builder.data;
         this.requestId = builder.requestId;
     }
@@ -27,7 +27,7 @@ public class DeleteInstancesResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static DeleteInstancesResponseBody create() {
+    public static DescribeSampleSqlRawTextsResponseBody create() {
         return builder().build();
     }
 
@@ -50,7 +50,7 @@ public class DeleteInstancesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned data.
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,25 +58,25 @@ public class DeleteInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public DeleteInstancesResponseBody build() {
-            return new DeleteInstancesResponseBody(this);
+        public DescribeSampleSqlRawTextsResponseBody build() {
+            return new DescribeSampleSqlRawTextsResponseBody(this);
         } 
 
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("DryRunResult")
-        private Boolean dryRunResult;
+        @NameInMap("SqlText")
+        private java.util.List < String > sqlText;
 
         private Data(Builder builder) {
-            this.dryRunResult = builder.dryRunResult;
+            this.sqlText = builder.sqlText;
         }
 
         public static Builder builder() {
@@ -88,23 +88,20 @@ public class DeleteInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * @return dryRunResult
+         * @return sqlText
          */
-        public Boolean getDryRunResult() {
-            return this.dryRunResult;
+        public java.util.List < String > getSqlText() {
+            return this.sqlText;
         }
 
         public static final class Builder {
-            private Boolean dryRunResult; 
+            private java.util.List < String > sqlText; 
 
             /**
-             * The result of the dry-run request.
-             * <p>
-             * - If the DryRun parameter is set to true and the dry run succeeds, the DryRunResult parameter returns true. Otherwise, an error code is returned.
-             * - If the DryRun parameter is set to false, no dry run is performed and the DryRunResult parameter returns false.
+             * SqlText.
              */
-            public Builder dryRunResult(Boolean dryRunResult) {
-                this.dryRunResult = dryRunResult;
+            public Builder sqlText(java.util.List < String > sqlText) {
+                this.sqlText = sqlText;
                 return this;
             }
 

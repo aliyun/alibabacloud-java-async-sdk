@@ -1737,6 +1737,9 @@ public class DescribeTenantResponseBody extends TeaModel {
         @NameInMap("EnableParallelQuery")
         private Boolean enableParallelQuery;
 
+        @NameInMap("EnableReadOnlyReplica")
+        private Boolean enableReadOnlyReplica;
+
         @NameInMap("EnableReadWriteSplit")
         private Boolean enableReadWriteSplit;
 
@@ -1806,6 +1809,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             this.enableClogService = builder.enableClogService;
             this.enableInternetAddressService = builder.enableInternetAddressService;
             this.enableParallelQuery = builder.enableParallelQuery;
+            this.enableReadOnlyReplica = builder.enableReadOnlyReplica;
             this.enableReadWriteSplit = builder.enableReadWriteSplit;
             this.instanceType = builder.instanceType;
             this.masterIntranetAddressZone = builder.masterIntranetAddressZone;
@@ -1930,6 +1934,13 @@ public class DescribeTenantResponseBody extends TeaModel {
          */
         public Boolean getEnableParallelQuery() {
             return this.enableParallelQuery;
+        }
+
+        /**
+         * @return enableReadOnlyReplica
+         */
+        public Boolean getEnableReadOnlyReplica() {
+            return this.enableReadOnlyReplica;
         }
 
         /**
@@ -2073,6 +2084,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             private Boolean enableClogService; 
             private Boolean enableInternetAddressService; 
             private Boolean enableParallelQuery; 
+            private Boolean enableReadOnlyReplica; 
             private Boolean enableReadWriteSplit; 
             private String instanceType; 
             private String masterIntranetAddressZone; 
@@ -2201,6 +2213,14 @@ public class DescribeTenantResponseBody extends TeaModel {
              */
             public Builder enableParallelQuery(Boolean enableParallelQuery) {
                 this.enableParallelQuery = enableParallelQuery;
+                return this;
+            }
+
+            /**
+             * EnableReadOnlyReplica.
+             */
+            public Builder enableReadOnlyReplica(Boolean enableReadOnlyReplica) {
+                this.enableReadOnlyReplica = enableReadOnlyReplica;
                 return this;
             }
 

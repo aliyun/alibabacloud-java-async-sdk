@@ -50,7 +50,7 @@ public class ModifyTenantResourceResponseBody extends TeaModel {
         private String tenantId; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ModifyTenantResourceResponseBody extends TeaModel {
         }
 
         /**
-         * TenantId.
+         * The ID of the tenant.
          */
         public Builder tenantId(String tenantId) {
             this.tenantId = tenantId;

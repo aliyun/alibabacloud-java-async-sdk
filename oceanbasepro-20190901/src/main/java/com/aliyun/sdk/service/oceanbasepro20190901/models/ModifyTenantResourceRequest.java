@@ -14,7 +14,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ModifyTenantResourceRequest extends Request {
     @Host
     @NameInMap("RegionId")
-    @Validation(required = true)
     private String regionId;
 
     @Body
@@ -152,7 +151,7 @@ public class ModifyTenantResourceRequest extends Request {
         }
 
         /**
-         * The memory size of the tenant, in GB.
+         * The information about the CPU resources of the tenant.
          */
         public Builder cpu(Integer cpu) {
             this.putBodyParameter("Cpu", cpu);
@@ -161,9 +160,7 @@ public class ModifyTenantResourceRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform.   
-         * <p>
-         * Set the value to **ModifyTenantResource**.
+         * The ID of the OceanBase cluster.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -172,7 +169,7 @@ public class ModifyTenantResourceRequest extends Request {
         }
 
         /**
-         * LogDisk.
+         * The size of the log disk allocated to the tenant, in GB.
          */
         public Builder logDisk(Long logDisk) {
             this.putBodyParameter("LogDisk", logDisk);
@@ -181,7 +178,7 @@ public class ModifyTenantResourceRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
+         * The memory size of the tenant, in GB.
          */
         public Builder memory(Integer memory) {
             this.putBodyParameter("Memory", memory);
@@ -190,7 +187,7 @@ public class ModifyTenantResourceRequest extends Request {
         }
 
         /**
-         * ReadOnlyZoneList.
+         * Specifies to create a read-only zone. Separate the names of multiple zones with commas (,).
          */
         public Builder readOnlyZoneList(String readOnlyZoneList) {
             this.putBodyParameter("ReadOnlyZoneList", readOnlyZoneList);
@@ -199,7 +196,7 @@ public class ModifyTenantResourceRequest extends Request {
         }
 
         /**
-         * The information about the CPU resources of the tenant.
+         * The ID of the tenant.
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);

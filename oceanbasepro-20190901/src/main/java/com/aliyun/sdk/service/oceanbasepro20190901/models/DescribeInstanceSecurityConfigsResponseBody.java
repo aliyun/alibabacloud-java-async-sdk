@@ -50,7 +50,7 @@ public class DescribeInstanceSecurityConfigsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * InstanceSecurityConfigs.
+         * The return result of the request.
          */
         public Builder instanceSecurityConfigs(InstanceSecurityConfigs instanceSecurityConfigs) {
             this.instanceSecurityConfigs = instanceSecurityConfigs;
@@ -58,7 +58,7 @@ public class DescribeInstanceSecurityConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +146,7 @@ public class DescribeInstanceSecurityConfigsResponseBody extends TeaModel {
             private String riskDescription; 
 
             /**
-             * ConfigDescription.
+             * The name of the check item.
              */
             public Builder configDescription(String configDescription) {
                 this.configDescription = configDescription;
@@ -154,7 +154,7 @@ public class DescribeInstanceSecurityConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * ConfigGroup.
+             * The group of the check.
              */
             public Builder configGroup(String configGroup) {
                 this.configGroup = configGroup;
@@ -162,7 +162,7 @@ public class DescribeInstanceSecurityConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * ConfigName.
+             * The name of the specific check item.
              */
             public Builder configName(String configName) {
                 this.configName = configName;
@@ -170,7 +170,7 @@ public class DescribeInstanceSecurityConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Risk.
+             * Specifies whether a risk is detected.
              */
             public Builder risk(Boolean risk) {
                 this.risk = risk;
@@ -178,7 +178,7 @@ public class DescribeInstanceSecurityConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * RiskDescription.
+             * Security recommendations.
              */
             public Builder riskDescription(String riskDescription) {
                 this.riskDescription = riskDescription;
@@ -279,7 +279,7 @@ public class DescribeInstanceSecurityConfigsResponseBody extends TeaModel {
             private Integer totalRiskCount; 
 
             /**
-             * CheckId.
+             * The unique identifier of the check.
              */
             public Builder checkId(String checkId) {
                 this.checkId = checkId;
@@ -287,7 +287,7 @@ public class DescribeInstanceSecurityConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * CheckTime.
+             * The time when the check was performed.
              */
             public Builder checkTime(String checkTime) {
                 this.checkTime = checkTime;
@@ -295,7 +295,7 @@ public class DescribeInstanceSecurityConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the OceanBase cluster.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -303,7 +303,7 @@ public class DescribeInstanceSecurityConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityConfigs.
+             * The list of check items.
              */
             public Builder securityConfigs(java.util.List < SecurityConfigs> securityConfigs) {
                 this.securityConfigs = securityConfigs;
@@ -311,7 +311,7 @@ public class DescribeInstanceSecurityConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCheckCount.
+             * The total number of security check items for the cluster.
              */
             public Builder totalCheckCount(Integer totalCheckCount) {
                 this.totalCheckCount = totalCheckCount;
@@ -319,7 +319,7 @@ public class DescribeInstanceSecurityConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalRiskCount.
+             * The total number of detected cluster security risks.
              */
             public Builder totalRiskCount(Integer totalRiskCount) {
                 this.totalRiskCount = totalRiskCount;

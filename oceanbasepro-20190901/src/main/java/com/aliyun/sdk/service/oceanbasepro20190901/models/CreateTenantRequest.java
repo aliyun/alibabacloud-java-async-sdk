@@ -14,7 +14,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class CreateTenantRequest extends Request {
     @Host
     @NameInMap("RegionId")
-    @Validation(required = true)
     private String regionId;
 
     @Body
@@ -311,7 +310,7 @@ public class CreateTenantRequest extends Request {
         }
 
         /**
-         * LogDisk.
+         * The size of the log disk allocated to the tenant, in GB.
          */
         public Builder logDisk(Long logDisk) {
             this.putBodyParameter("LogDisk", logDisk);
@@ -343,7 +342,9 @@ public class CreateTenantRequest extends Request {
         }
 
         /**
-         * ReadOnlyZoneList.
+         * Specifies to create a read-only zone. Separate the names of multiple zones with commas (,).
+         * <p>
+         * ><notice><br>At present, this parameter is unavailable.></notice>
          */
         public Builder readOnlyZoneList(String readOnlyZoneList) {
             this.putBodyParameter("ReadOnlyZoneList", readOnlyZoneList);

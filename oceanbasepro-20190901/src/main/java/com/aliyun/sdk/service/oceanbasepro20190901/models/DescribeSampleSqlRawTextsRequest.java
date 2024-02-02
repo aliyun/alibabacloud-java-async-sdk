@@ -7,26 +7,19 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeOasSQLHistoryListRequest} extends {@link RequestModel}
+ * {@link DescribeSampleSqlRawTextsRequest} extends {@link RequestModel}
  *
- * <p>DescribeOasSQLHistoryListRequest</p>
+ * <p>DescribeSampleSqlRawTextsRequest</p>
  */
-public class DescribeOasSQLHistoryListRequest extends Request {
+public class DescribeSampleSqlRawTextsRequest extends Request {
     @Host
     @NameInMap("RegionId")
     private String regionId;
 
     @Body
-    @NameInMap("AcceptLanguage")
-    private String acceptLanguage;
-
-    @Body
     @NameInMap("DbName")
+    @Validation(required = true)
     private String dbName;
-
-    @Body
-    @NameInMap("DynamicSql")
-    private Boolean dynamicSql;
 
     @Body
     @NameInMap("EndTime")
@@ -35,12 +28,11 @@ public class DescribeOasSQLHistoryListRequest extends Request {
 
     @Body
     @NameInMap("InstanceId")
-    @Validation(required = true)
     private String instanceId;
 
     @Body
-    @NameInMap("NodeIp")
-    private String nodeIp;
+    @NameInMap("Limit")
+    private String limit;
 
     @Body
     @NameInMap("SqlId")
@@ -54,28 +46,30 @@ public class DescribeOasSQLHistoryListRequest extends Request {
 
     @Body
     @NameInMap("TenantId")
-    @Validation(required = true)
     private String tenantId;
 
-    private DescribeOasSQLHistoryListRequest(Builder builder) {
+    @Body
+    @NameInMap("TraceId")
+    private String traceId;
+
+    private DescribeSampleSqlRawTextsRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
-        this.acceptLanguage = builder.acceptLanguage;
         this.dbName = builder.dbName;
-        this.dynamicSql = builder.dynamicSql;
         this.endTime = builder.endTime;
         this.instanceId = builder.instanceId;
-        this.nodeIp = builder.nodeIp;
+        this.limit = builder.limit;
         this.sqlId = builder.sqlId;
         this.startTime = builder.startTime;
         this.tenantId = builder.tenantId;
+        this.traceId = builder.traceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DescribeOasSQLHistoryListRequest create() {
+    public static DescribeSampleSqlRawTextsRequest create() {
         return builder().build();
     }
 
@@ -92,24 +86,10 @@ public class DescribeOasSQLHistoryListRequest extends Request {
     }
 
     /**
-     * @return acceptLanguage
-     */
-    public String getAcceptLanguage() {
-        return this.acceptLanguage;
-    }
-
-    /**
      * @return dbName
      */
     public String getDbName() {
         return this.dbName;
-    }
-
-    /**
-     * @return dynamicSql
-     */
-    public Boolean getDynamicSql() {
-        return this.dynamicSql;
     }
 
     /**
@@ -127,10 +107,10 @@ public class DescribeOasSQLHistoryListRequest extends Request {
     }
 
     /**
-     * @return nodeIp
+     * @return limit
      */
-    public String getNodeIp() {
-        return this.nodeIp;
+    public String getLimit() {
+        return this.limit;
     }
 
     /**
@@ -154,34 +134,39 @@ public class DescribeOasSQLHistoryListRequest extends Request {
         return this.tenantId;
     }
 
-    public static final class Builder extends Request.Builder<DescribeOasSQLHistoryListRequest, Builder> {
+    /**
+     * @return traceId
+     */
+    public String getTraceId() {
+        return this.traceId;
+    }
+
+    public static final class Builder extends Request.Builder<DescribeSampleSqlRawTextsRequest, Builder> {
         private String regionId; 
-        private String acceptLanguage; 
         private String dbName; 
-        private Boolean dynamicSql; 
         private String endTime; 
         private String instanceId; 
-        private String nodeIp; 
+        private String limit; 
         private String sqlId; 
         private String startTime; 
         private String tenantId; 
+        private String traceId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeOasSQLHistoryListRequest request) {
+        private Builder(DescribeSampleSqlRawTextsRequest request) {
             super(request);
             this.regionId = request.regionId;
-            this.acceptLanguage = request.acceptLanguage;
             this.dbName = request.dbName;
-            this.dynamicSql = request.dynamicSql;
             this.endTime = request.endTime;
             this.instanceId = request.instanceId;
-            this.nodeIp = request.nodeIp;
+            this.limit = request.limit;
             this.sqlId = request.sqlId;
             this.startTime = request.startTime;
             this.tenantId = request.tenantId;
+            this.traceId = request.traceId;
         } 
 
         /**
@@ -194,19 +179,7 @@ public class DescribeOasSQLHistoryListRequest extends Request {
         }
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * - zh: Chinese
-         * - en: English
-         */
-        public Builder acceptLanguage(String acceptLanguage) {
-            this.putBodyParameter("AcceptLanguage", acceptLanguage);
-            this.acceptLanguage = acceptLanguage;
-            return this;
-        }
-
-        /**
-         * The name of the database.
+         * DbName.
          */
         public Builder dbName(String dbName) {
             this.putBodyParameter("DbName", dbName);
@@ -215,18 +188,7 @@ public class DescribeOasSQLHistoryListRequest extends Request {
         }
 
         /**
-         * DynamicSql.
-         */
-        public Builder dynamicSql(Boolean dynamicSql) {
-            this.putBodyParameter("DynamicSql", dynamicSql);
-            this.dynamicSql = dynamicSql;
-            return this;
-        }
-
-        /**
-         * The end time of querying the execution history of the SQL statement.   
-         * <p>
-         * The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.
+         * EndTime.
          */
         public Builder endTime(String endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -235,7 +197,7 @@ public class DescribeOasSQLHistoryListRequest extends Request {
         }
 
         /**
-         * The ID of the OceanBase cluster.
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -244,16 +206,16 @@ public class DescribeOasSQLHistoryListRequest extends Request {
         }
 
         /**
-         * The IP address of the node.
+         * Limit.
          */
-        public Builder nodeIp(String nodeIp) {
-            this.putBodyParameter("NodeIp", nodeIp);
-            this.nodeIp = nodeIp;
+        public Builder limit(String limit) {
+            this.putBodyParameter("Limit", limit);
+            this.limit = limit;
             return this;
         }
 
         /**
-         * SQL ID.
+         * SQL ID。
          */
         public Builder sqlId(String sqlId) {
             this.putBodyParameter("SqlId", sqlId);
@@ -262,9 +224,7 @@ public class DescribeOasSQLHistoryListRequest extends Request {
         }
 
         /**
-         * The start time of querying the execution history of the SQL statement.   
-         * <p>
-         * The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.
+         * StartTime.
          */
         public Builder startTime(String startTime) {
             this.putBodyParameter("StartTime", startTime);
@@ -273,7 +233,7 @@ public class DescribeOasSQLHistoryListRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
+         * TenantId.
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);
@@ -281,9 +241,18 @@ public class DescribeOasSQLHistoryListRequest extends Request {
             return this;
         }
 
+        /**
+         * TraceId.
+         */
+        public Builder traceId(String traceId) {
+            this.putBodyParameter("TraceId", traceId);
+            this.traceId = traceId;
+            return this;
+        }
+
         @Override
-        public DescribeOasSQLHistoryListRequest build() {
-            return new DescribeOasSQLHistoryListRequest(this);
+        public DescribeSampleSqlRawTextsRequest build() {
+            return new DescribeSampleSqlRawTextsRequest(this);
         } 
 
     } 

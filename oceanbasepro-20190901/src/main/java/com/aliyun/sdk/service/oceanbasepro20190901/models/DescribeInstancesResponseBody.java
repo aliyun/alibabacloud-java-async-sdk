@@ -107,6 +107,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("UpperMergeThreshold")
         private Long upperMergeThreshold;
 
+        @NameInMap("UpperScaleStrategy")
+        private String upperScaleStrategy;
+
         @NameInMap("UpperThreshold")
         private Long upperThreshold;
 
@@ -119,6 +122,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             this.scaleStepInMerge = builder.scaleStepInMerge;
             this.scaleStepInNormal = builder.scaleStepInNormal;
             this.upperMergeThreshold = builder.upperMergeThreshold;
+            this.upperScaleStrategy = builder.upperScaleStrategy;
             this.upperThreshold = builder.upperThreshold;
             this.upperbound = builder.upperbound;
         }
@@ -167,6 +171,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return upperScaleStrategy
+         */
+        public String getUpperScaleStrategy() {
+            return this.upperScaleStrategy;
+        }
+
+        /**
          * @return upperThreshold
          */
         public Long getUpperThreshold() {
@@ -186,6 +197,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private Long scaleStepInMerge; 
             private Long scaleStepInNormal; 
             private Long upperMergeThreshold; 
+            private String upperScaleStrategy; 
             private Long upperThreshold; 
             private Long upperbound; 
 
@@ -226,6 +238,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
              */
             public Builder upperMergeThreshold(Long upperMergeThreshold) {
                 this.upperMergeThreshold = upperMergeThreshold;
+                return this;
+            }
+
+            /**
+             * UpperScaleStrategy.
+             */
+            public Builder upperScaleStrategy(String upperScaleStrategy) {
+                this.upperScaleStrategy = upperScaleStrategy;
                 return this;
             }
 
@@ -812,6 +832,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("DiskType")
         private String diskType;
 
+        @NameInMap("EnableReadOnlyReplicaManagement")
+        private Boolean enableReadOnlyReplicaManagement;
+
         @NameInMap("EnableUpgradeNodes")
         private Boolean enableUpgradeNodes;
 
@@ -880,6 +903,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             this.deployType = builder.deployType;
             this.diskSize = builder.diskSize;
             this.diskType = builder.diskType;
+            this.enableReadOnlyReplicaManagement = builder.enableReadOnlyReplicaManagement;
             this.enableUpgradeNodes = builder.enableUpgradeNodes;
             this.expireSeconds = builder.expireSeconds;
             this.expireTime = builder.expireTime;
@@ -977,6 +1001,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
          */
         public String getDiskType() {
             return this.diskType;
+        }
+
+        /**
+         * @return enableReadOnlyReplicaManagement
+         */
+        public Boolean getEnableReadOnlyReplicaManagement() {
+            return this.enableReadOnlyReplicaManagement;
         }
 
         /**
@@ -1123,6 +1154,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String deployType; 
             private String diskSize; 
             private String diskType; 
+            private Boolean enableReadOnlyReplicaManagement; 
             private Boolean enableUpgradeNodes; 
             private Integer expireSeconds; 
             private String expireTime; 
@@ -1224,6 +1256,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
+                return this;
+            }
+
+            /**
+             * EnableReadOnlyReplicaManagement.
+             */
+            public Builder enableReadOnlyReplicaManagement(Boolean enableReadOnlyReplicaManagement) {
+                this.enableReadOnlyReplicaManagement = enableReadOnlyReplicaManagement;
                 return this;
             }
 

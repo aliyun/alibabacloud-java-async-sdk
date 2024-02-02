@@ -14,7 +14,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class CreateInstanceRequest extends Request {
     @Host
     @NameInMap("RegionId")
-    @Validation(required = true)
     private String regionId;
 
     @Body
@@ -374,7 +373,11 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The return result of the request.
+         * The type of the storage disk where the cluster is deployed. This parameter takes effect only for Standard Cluster Edition (Cloud Disk).
+         * <p>
+         * Valid values:
+         * - cloud_essd_pl1: ESSD PL1.
+         * - cloud_essd_pl0: ESSD PL0. Default value: cloud_essd_pl1.
          */
         public Builder diskType(String diskType) {
             this.putBodyParameter("DiskType", diskType);
@@ -383,7 +386,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to perform only a dry run for the request. Default value: false. Valid values:
+         * <p>
+         * - true: Only a dry-run request is sent and the instance is not created. If the dry run succeeds, DryRunResult=true is returned. If the dry run fails, an error code is returned.
+         * - false: The actual request is sent and no dry run is performed. The instance is created if the requirements are met. By default, the DryRunResult parameter returns false if you set DryRun to false.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putBodyParameter("DryRun", dryRun);
@@ -419,7 +425,11 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * IsolationOptimization.
+         * Specifies whether to enable the control group feature.
+         * <p>
+         * Valid values:
+         * - true
+         * - false
          */
         public Builder isolationOptimization(String isolationOptimization) {
             this.putBodyParameter("IsolationOptimization", isolationOptimization);
@@ -463,7 +473,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * PrimaryInstance.
+         * Primary instance ID.
          */
         public Builder primaryInstance(String primaryInstance) {
             this.putBodyParameter("PrimaryInstance", primaryInstance);
@@ -472,7 +482,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * PrimaryRegion.
+         * Primary instance region.
          */
         public Builder primaryRegion(String primaryRegion) {
             this.putBodyParameter("PrimaryRegion", primaryRegion);
@@ -481,7 +491,16 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * ReplicaMode.
+         * The number of full-featured replicas.
+         * <p>
+         * - 3F: three full-featured replicas.
+         * - 2F1L: two full-featured replicas and one log replica.
+         * - 2F1A: two full-featured replicas and one arbitration service.
+         * - ApsaraDB for OceanBase earlier than V4.1 supports 3F and 2F1L.
+         * - ApsaraDB for OceanBase V4.1 or later supports 3F and 2F1A.
+         * - An ApsaraDB for OceanBase instance deployed across three zones supports only 3F.
+         * - An ApsaraDB for OceanBase instance deployed across two zones supports 2F1A or 2F1L, depending on the version.
+         * - An ApsaraDB for OceanBase instance deployed in a single zone supports 3F, 2F1A, or 2F1L, depending on the version.
          */
         public Builder replicaMode(String replicaMode) {
             this.putBodyParameter("ReplicaMode", replicaMode);

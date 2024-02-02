@@ -93,6 +93,9 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
         @NameInMap("AvgCpuTime")
         private Double avgCpuTime;
 
+        @NameInMap("AvgDbTime")
+        private Double avgDbTime;
+
         @NameInMap("AvgDecodeTime")
         private Double avgDecodeTime;
 
@@ -252,6 +255,9 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
         @NameInMap("StrongConsistencyPercentage")
         private Double strongConsistencyPercentage;
 
+        @NameInMap("SumDbTime")
+        private Double sumDbTime;
+
         @NameInMap("SumElapsedTime")
         private Double sumElapsedTime;
 
@@ -281,6 +287,7 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             this.avgBloomFilterCacheHit = builder.avgBloomFilterCacheHit;
             this.avgConcurrencyWaitTime = builder.avgConcurrencyWaitTime;
             this.avgCpuTime = builder.avgCpuTime;
+            this.avgDbTime = builder.avgDbTime;
             this.avgDecodeTime = builder.avgDecodeTime;
             this.avgDiskReads = builder.avgDiskReads;
             this.avgElapsedTime = builder.avgElapsedTime;
@@ -334,6 +341,7 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             this.SQLId = builder.SQLId;
             this.server = builder.server;
             this.strongConsistencyPercentage = builder.strongConsistencyPercentage;
+            this.sumDbTime = builder.sumDbTime;
             this.sumElapsedTime = builder.sumElapsedTime;
             this.sumLogicalReads = builder.sumLogicalReads;
             this.sumWaitTime = builder.sumWaitTime;
@@ -398,6 +406,13 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
          */
         public Double getAvgCpuTime() {
             return this.avgCpuTime;
+        }
+
+        /**
+         * @return avgDbTime
+         */
+        public Double getAvgDbTime() {
+            return this.avgDbTime;
         }
 
         /**
@@ -772,6 +787,13 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
         }
 
         /**
+         * @return sumDbTime
+         */
+        public Double getSumDbTime() {
+            return this.sumDbTime;
+        }
+
+        /**
          * @return sumElapsedTime
          */
         public Double getSumElapsedTime() {
@@ -828,6 +850,7 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             private Long avgBloomFilterCacheHit; 
             private Double avgConcurrencyWaitTime; 
             private Double avgCpuTime; 
+            private Double avgDbTime; 
             private Double avgDecodeTime; 
             private Long avgDiskReads; 
             private Double avgElapsedTime; 
@@ -881,6 +904,7 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             private String SQLId; 
             private String server; 
             private Double strongConsistencyPercentage; 
+            private Double sumDbTime; 
             private Double sumElapsedTime; 
             private Double sumLogicalReads; 
             private Double sumWaitTime; 
@@ -942,6 +966,14 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
              */
             public Builder avgCpuTime(Double avgCpuTime) {
                 this.avgCpuTime = avgCpuTime;
+                return this;
+            }
+
+            /**
+             * AvgDbTime.
+             */
+            public Builder avgDbTime(Double avgDbTime) {
+                this.avgDbTime = avgDbTime;
                 return this;
             }
 
@@ -1366,6 +1398,14 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
              */
             public Builder strongConsistencyPercentage(Double strongConsistencyPercentage) {
                 this.strongConsistencyPercentage = strongConsistencyPercentage;
+                return this;
+            }
+
+            /**
+             * SumDbTime.
+             */
+            public Builder sumDbTime(Double sumDbTime) {
+                this.sumDbTime = sumDbTime;
                 return this;
             }
 

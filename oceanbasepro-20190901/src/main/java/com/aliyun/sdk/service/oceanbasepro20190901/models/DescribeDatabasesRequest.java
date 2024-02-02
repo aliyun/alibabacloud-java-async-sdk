@@ -161,7 +161,9 @@ public class DescribeDatabasesRequest extends Request {
         }
 
         /**
-         * It is an Alibaba Cloud asset management and configuration tool, with which you can manage multiple Alibaba Cloud products and services by using commands. It is easy to use and a good helper in migration to cloud.
+         * The name of the database.    
+         * <p>
+         * You cannot use reserved keywords, such as test and mysql.
          */
         public Builder databaseName(String databaseName) {
             this.putBodyParameter("DatabaseName", databaseName);
@@ -170,7 +172,7 @@ public class DescribeDatabasesRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * Instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -179,7 +181,10 @@ public class DescribeDatabasesRequest extends Request {
         }
 
         /**
-         * The return result of the request.
+         * The number of the page returned.  
+         * <p>
+         * - Start value: 1   
+         * - Default value: 1
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -188,7 +193,10 @@ public class DescribeDatabasesRequest extends Request {
         }
 
         /**
-         * Alibaba Cloud provides SDKs in different languages to help you quickly integrate Alibaba Cloud products and services by using APIs. We recommend that you use an SDK to call APIs. In this way, you do not need to sign for verification.
+         * The number of rows returned on each page.  
+         * <p>
+         * - Maximum value: 100.  
+         * - Default value: 10
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -197,7 +205,7 @@ public class DescribeDatabasesRequest extends Request {
         }
 
         /**
-         * The information about the database tables.
+         * The search keyword.
          */
         public Builder searchKey(String searchKey) {
             this.putBodyParameter("SearchKey", searchKey);
@@ -206,7 +214,7 @@ public class DescribeDatabasesRequest extends Request {
         }
 
         /**
-         * The request ID.
+         * The ID of the tenant.
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);
@@ -215,13 +223,9 @@ public class DescribeDatabasesRequest extends Request {
         }
 
         /**
-         * The role of the account.    
+         * Specifies whether to return the information of tables in the database.   
          * <p>
-         * In MySQL mode, a role is a database-level role. Valid values:  
-         * - ReadWrite: a role that has the read and write privileges, namely ALL PRIVILEGES.  
-         * - ReadOnly: a role that has only the read-only privilege SELECT.   
-         * - DDL: a role that has the DDL privileges such as CREATE, DROP, ALTER, SHOW VIEW, and CREATE VIEW.   
-         * - DML: a role that has the DML privileges such as SELECT, INSERT, UPDATE, DELETE, and SHOW VIEW.
+         * Default value: false.
          */
         public Builder withTables(Boolean withTables) {
             this.putBodyParameter("WithTables", withTables);

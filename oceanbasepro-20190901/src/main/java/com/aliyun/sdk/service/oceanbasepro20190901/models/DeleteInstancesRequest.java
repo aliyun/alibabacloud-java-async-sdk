@@ -106,7 +106,13 @@ public class DeleteInstancesRequest extends Request {
         }
 
         /**
-         * BackupRetainMode.
+         * The backup retention strategy for cluster deletion. Valid values:  
+         * <p>
+         * - receive_all: retains all backup sets.   
+         * - delete_all: deletes all backup sets.   
+         * - receive_last: retains the last backup set.    
+         * 
+         * > <br>Default value: delete_all.
          */
         public Builder backupRetainMode(String backupRetainMode) {
             this.putBodyParameter("BackupRetainMode", backupRetainMode);
@@ -115,7 +121,10 @@ public class DeleteInstancesRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to perform only a dry run for the request. Default value: false. Valid values:
+         * <p>
+         * - true: Only a dry-run request is sent and the instance is not deleted. If the dry run succeeds, DryRunResult=true is returned. If the dry run fails, an error code is returned.
+         * - false: The actual request is sent and no dry run is performed. The instance is deleted if the requirements are met. By default, false is returned for the parameter DryRunResult if you set DryRun to false.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putBodyParameter("DryRun", dryRun);
@@ -124,7 +133,9 @@ public class DeleteInstancesRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * The ID of the cluster to be deleted.   
+         * <p>
+         * The value is a string in the JSON format.
          */
         public Builder instanceIds(String instanceIds) {
             this.putBodyParameter("InstanceIds", instanceIds);

@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DeleteOmsOpenAPIProjectResponse} extends {@link TeaModel}
+ * {@link DescribeSampleSqlRawTextsResponse} extends {@link TeaModel}
  *
- * <p>DeleteOmsOpenAPIProjectResponse</p>
+ * <p>DescribeSampleSqlRawTextsResponse</p>
  */
-public class DeleteOmsOpenAPIProjectResponse extends Response {
+public class DescribeSampleSqlRawTextsResponse extends Response {
     @NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -19,16 +19,16 @@ public class DeleteOmsOpenAPIProjectResponse extends Response {
     private Integer statusCode;
 
     @NameInMap("body")
-    private DeleteOmsOpenAPIProjectResponseBody body;
+    private DescribeSampleSqlRawTextsResponseBody body;
 
-    private DeleteOmsOpenAPIProjectResponse(BuilderImpl builder) {
+    private DescribeSampleSqlRawTextsResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DeleteOmsOpenAPIProjectResponse create() {
+    public static DescribeSampleSqlRawTextsResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +54,35 @@ public class DeleteOmsOpenAPIProjectResponse extends Response {
     /**
      * @return body
      */
-    public DeleteOmsOpenAPIProjectResponseBody getBody() {
+    public DescribeSampleSqlRawTextsResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DeleteOmsOpenAPIProjectResponse, Builder> {
+    public interface Builder extends Response.Builder<DescribeSampleSqlRawTextsResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DeleteOmsOpenAPIProjectResponseBody body);
+        Builder body(DescribeSampleSqlRawTextsResponseBody body);
 
         @Override
-        DeleteOmsOpenAPIProjectResponse build();
+        DescribeSampleSqlRawTextsResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DeleteOmsOpenAPIProjectResponse, Builder>
+            extends Response.BuilderImpl<DescribeSampleSqlRawTextsResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private DeleteOmsOpenAPIProjectResponseBody body; 
+        private DescribeSampleSqlRawTextsResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DeleteOmsOpenAPIProjectResponse response) {
+        private BuilderImpl(DescribeSampleSqlRawTextsResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +111,14 @@ public class DeleteOmsOpenAPIProjectResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DeleteOmsOpenAPIProjectResponseBody body) {
+        public Builder body(DescribeSampleSqlRawTextsResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DeleteOmsOpenAPIProjectResponse build() {
-            return new DeleteOmsOpenAPIProjectResponse(this);
+        public DescribeSampleSqlRawTextsResponse build() {
+            return new DescribeSampleSqlRawTextsResponse(this);
         } 
 
     } 

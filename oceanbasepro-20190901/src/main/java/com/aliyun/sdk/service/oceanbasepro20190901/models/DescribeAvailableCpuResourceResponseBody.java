@@ -72,18 +72,26 @@ public class DescribeAvailableCpuResourceResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
+        @NameInMap("Comment")
+        private String comment;
+
         @NameInMap("MaxCpu")
         private Long maxCpu;
 
         @NameInMap("MinCpu")
         private Long minCpu;
 
+        @NameInMap("ReviewCode")
+        private String reviewCode;
+
         @NameInMap("UnitNum")
         private Long unitNum;
 
         private Data(Builder builder) {
+            this.comment = builder.comment;
             this.maxCpu = builder.maxCpu;
             this.minCpu = builder.minCpu;
+            this.reviewCode = builder.reviewCode;
             this.unitNum = builder.unitNum;
         }
 
@@ -93,6 +101,13 @@ public class DescribeAvailableCpuResourceResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return comment
+         */
+        public String getComment() {
+            return this.comment;
         }
 
         /**
@@ -110,6 +125,13 @@ public class DescribeAvailableCpuResourceResponseBody extends TeaModel {
         }
 
         /**
+         * @return reviewCode
+         */
+        public String getReviewCode() {
+            return this.reviewCode;
+        }
+
+        /**
          * @return unitNum
          */
         public Long getUnitNum() {
@@ -117,9 +139,19 @@ public class DescribeAvailableCpuResourceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String comment; 
             private Long maxCpu; 
             private Long minCpu; 
+            private String reviewCode; 
             private Long unitNum; 
+
+            /**
+             * Comment.
+             */
+            public Builder comment(String comment) {
+                this.comment = comment;
+                return this;
+            }
 
             /**
              * MaxCpu.
@@ -134,6 +166,14 @@ public class DescribeAvailableCpuResourceResponseBody extends TeaModel {
              */
             public Builder minCpu(Long minCpu) {
                 this.minCpu = minCpu;
+                return this;
+            }
+
+            /**
+             * ReviewCode.
+             */
+            public Builder reviewCode(String reviewCode) {
+                this.reviewCode = reviewCode;
                 return this;
             }
 
