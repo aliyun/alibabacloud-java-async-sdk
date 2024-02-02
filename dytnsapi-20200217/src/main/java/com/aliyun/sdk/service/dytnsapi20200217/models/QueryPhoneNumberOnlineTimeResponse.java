@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link QueryTagListPageResponse} extends {@link TeaModel}
+ * {@link QueryPhoneNumberOnlineTimeResponse} extends {@link TeaModel}
  *
- * <p>QueryTagListPageResponse</p>
+ * <p>QueryPhoneNumberOnlineTimeResponse</p>
  */
-public class QueryTagListPageResponse extends Response {
+public class QueryPhoneNumberOnlineTimeResponse extends Response {
     @NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -19,16 +19,16 @@ public class QueryTagListPageResponse extends Response {
     private Integer statusCode;
 
     @NameInMap("body")
-    private QueryTagListPageResponseBody body;
+    private QueryPhoneNumberOnlineTimeResponseBody body;
 
-    private QueryTagListPageResponse(BuilderImpl builder) {
+    private QueryPhoneNumberOnlineTimeResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static QueryTagListPageResponse create() {
+    public static QueryPhoneNumberOnlineTimeResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +54,35 @@ public class QueryTagListPageResponse extends Response {
     /**
      * @return body
      */
-    public QueryTagListPageResponseBody getBody() {
+    public QueryPhoneNumberOnlineTimeResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<QueryTagListPageResponse, Builder> {
+    public interface Builder extends Response.Builder<QueryPhoneNumberOnlineTimeResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(QueryTagListPageResponseBody body);
+        Builder body(QueryPhoneNumberOnlineTimeResponseBody body);
 
         @Override
-        QueryTagListPageResponse build();
+        QueryPhoneNumberOnlineTimeResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<QueryTagListPageResponse, Builder>
+            extends Response.BuilderImpl<QueryPhoneNumberOnlineTimeResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private QueryTagListPageResponseBody body; 
+        private QueryPhoneNumberOnlineTimeResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(QueryTagListPageResponse response) {
+        private BuilderImpl(QueryPhoneNumberOnlineTimeResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +111,14 @@ public class QueryTagListPageResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(QueryTagListPageResponseBody body) {
+        public Builder body(QueryPhoneNumberOnlineTimeResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public QueryTagListPageResponse build() {
-            return new QueryTagListPageResponse(this);
+        public QueryPhoneNumberOnlineTimeResponse build() {
+            return new QueryPhoneNumberOnlineTimeResponse(this);
         } 
 
     } 

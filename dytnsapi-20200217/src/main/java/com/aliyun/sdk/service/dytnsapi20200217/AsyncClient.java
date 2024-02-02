@@ -192,6 +192,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<QueryAvailableAuthCodeResponse> queryAvailableAuthCode(QueryAvailableAuthCodeRequest request);
 
+    CompletableFuture<QueryPhoneNumberOnlineTimeResponse> queryPhoneNumberOnlineTime(QueryPhoneNumberOnlineTimeRequest request);
+
     CompletableFuture<QueryTagApplyRuleResponse> queryTagApplyRule(QueryTagApplyRuleRequest request);
 
     CompletableFuture<QueryTagInfoBySelectionResponse> queryTagInfoBySelection(QueryTagInfoBySelectionRequest request);
