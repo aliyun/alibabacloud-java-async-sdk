@@ -155,7 +155,7 @@ public class ModifyInstanceChargeTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The charged amount.
+             * The cost value.
              */
             public Builder fee(String fee) {
                 this.fee = fee;

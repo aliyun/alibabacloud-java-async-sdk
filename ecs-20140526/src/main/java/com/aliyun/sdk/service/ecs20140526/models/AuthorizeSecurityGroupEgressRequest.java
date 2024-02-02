@@ -22,42 +22,52 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
 
     @Query
     @NameInMap("Description")
+    @Deprecated
     private String description;
 
     @Query
     @NameInMap("DestCidrIp")
+    @Deprecated
     private String destCidrIp;
 
     @Query
     @NameInMap("DestGroupId")
+    @Deprecated
     private String destGroupId;
 
     @Query
     @NameInMap("DestGroupOwnerAccount")
+    @Deprecated
     private String destGroupOwnerAccount;
 
     @Query
     @NameInMap("DestGroupOwnerId")
+    @Deprecated
     private Long destGroupOwnerId;
 
     @Query
     @NameInMap("DestPrefixListId")
+    @Deprecated
     private String destPrefixListId;
 
     @Query
     @NameInMap("IpProtocol")
+    @Deprecated
     private String ipProtocol;
 
     @Query
     @NameInMap("Ipv6DestCidrIp")
+    @Deprecated
     private String ipv6DestCidrIp;
 
     @Query
     @NameInMap("Ipv6SourceCidrIp")
+    @Deprecated
     private String ipv6SourceCidrIp;
 
     @Query
     @NameInMap("NicType")
+    @Deprecated
     private String nicType;
 
     @Query
@@ -74,14 +84,17 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
 
     @Query
     @NameInMap("Policy")
+    @Deprecated
     private String policy;
 
     @Query
     @NameInMap("PortRange")
+    @Deprecated
     private String portRange;
 
     @Query
     @NameInMap("Priority")
+    @Deprecated
     private String priority;
 
     @Query
@@ -104,10 +117,12 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
 
     @Query
     @NameInMap("SourceCidrIp")
+    @Deprecated
     private String sourceCidrIp;
 
     @Query
     @NameInMap("SourcePortRange")
+    @Deprecated
     private String sourcePortRange;
 
     private AuthorizeSecurityGroupEgressRequest(Builder builder) {

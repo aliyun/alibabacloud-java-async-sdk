@@ -81,7 +81,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * Details of the snapshot-consistent groups.
+         * The snapshot-consistent groups.
          */
         public Builder snapshotGroups(SnapshotGroups snapshotGroups) {
             this.snapshotGroups = snapshotGroups;
@@ -133,7 +133,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key of each snapshot in the snapshot-consistent group. The default values of Key and Value contain the details of the instance to which the snapshot belongs.
+             * The tag key of the snapshot. The default values of Key and Value contain snapshot source information.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -141,7 +141,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value of each snapshot in the snapshot- consistent group. The default values of Key and Value contain the details of the instance to which the snapshot belongs.
+             * The tag value of the snapshot. The default values of Key and Value contain snapshot source information.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -307,7 +307,11 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             private Tags tags; 
 
             /**
-             * Available.
+             * Indicates whether the snapshot can be used to create or roll back disks. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder available(Boolean available) {
                 this.available = available;
@@ -319,7 +323,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
              * <p>
              * 
              * *   true: The instant access feature was enabled. This feature can be enabled only for enhanced SSDs (ESSDs).
-             * *   false: The instant access feature was disabled. The snapshot is a normal snapshot for which the instant access feature was disabled.
+             * *   false: The instant access feature was disabled. The snapshot is a normal snapshot for which the instant access feature is disabled.
              */
             public Builder instantAccess(Boolean instantAccess) {
                 this.instantAccess = instantAccess;
@@ -327,7 +331,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The retention period of the instant access feature. After the retention period ends, the snapshot is automatically released.
+             * The validity period of the instant access feature. When the period expires, the instant access snapshot is automatically released.
              */
             public Builder instantAccessRetentionDays(Integer instantAccessRetentionDays) {
                 this.instantAccessRetentionDays = instantAccessRetentionDays;
@@ -371,7 +375,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the snapshots in the snapshot-consistent group. The default value contains the details of the instance to which the snapshot belongs.
+             * The tags of the snapshot. The default values contain snapshot source information.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -679,7 +683,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance to which the snapshot-consistent group belongs. This parameter has a value only when all disk snapshots in the snapshot-consistent group belong to the same instance. If disk snapshots in the snapshot-consistent group belong to different instances, you can use parameters starting with `Snapshots.Snapshot.Tags.` in the response to view the ID of the instance to which each snapshot in the snapshot-consistent group belongs.
+             * The ID of the instance to which the snapshot-consistent group belongs. This parameter has a value only when all snapshots in the snapshot-consistent group belong to the same instance. If snapshots in the snapshot-consistent group belong to different instances, you can check the response parameters that start with `Snapshots.Snapshot.Tags.` for the ID of the instance to which each snapshot in the snapshot-consistent group belongs.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -695,7 +699,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * > This parameter is unavailable.
+             * >  This parameter is not publicly available.
              */
             public Builder progressStatus(String progressStatus) {
                 this.progressStatus = progressStatus;
@@ -719,7 +723,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Details of the snapshots in the snapshot-consistent group.
+             * The snapshots in the snapshot-consistent group.
              */
             public Builder snapshots(Snapshots snapshots) {
                 this.snapshots = snapshots;
@@ -730,9 +734,9 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
              * The state of the snapshot-consistent group. Valid values:
              * <p>
              * 
-             * *   progressing: The snapshot-consistent group is being created.
-             * *   accomplished: The snapshot-consistent group is created.
-             * *   failed: The snapshot-consistent group fails to be created.
+             * *   progressing: The snapshot-consistent group was being created.
+             * *   accomplished: The snapshot-consistent group was created.
+             * *   failed: The snapshot-consistent group failed to be created.
              */
             public Builder status(String status) {
                 this.status = status;

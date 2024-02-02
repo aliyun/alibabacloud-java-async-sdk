@@ -33,6 +33,14 @@ public class DescribeManagedInstancesRequest extends Request {
     private String instanceName;
 
     @Query
+    @NameInMap("MaxResults")
+    private Integer maxResults;
+
+    @Query
+    @NameInMap("NextToken")
+    private String nextToken;
+
+    @Query
     @NameInMap("OsType")
     private String osType;
 
@@ -58,6 +66,10 @@ public class DescribeManagedInstancesRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -76,12 +88,15 @@ public class DescribeManagedInstancesRequest extends Request {
         this.instanceId = builder.instanceId;
         this.instanceIp = builder.instanceIp;
         this.instanceName = builder.instanceName;
+        this.maxResults = builder.maxResults;
+        this.nextToken = builder.nextToken;
         this.osType = builder.osType;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.tag = builder.tag;
@@ -136,6 +151,20 @@ public class DescribeManagedInstancesRequest extends Request {
     }
 
     /**
+     * @return maxResults
+     */
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
      * @return osType
      */
     public String getOsType() {
@@ -178,6 +207,13 @@ public class DescribeManagedInstancesRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -204,12 +240,15 @@ public class DescribeManagedInstancesRequest extends Request {
         private java.util.List < String > instanceId; 
         private String instanceIp; 
         private String instanceName; 
+        private Integer maxResults; 
+        private String nextToken; 
         private String osType; 
         private String ownerAccount; 
         private Long ownerId; 
         private Long pageNumber; 
         private Long pageSize; 
         private String regionId; 
+        private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private java.util.List < Tag> tag; 
@@ -225,12 +264,15 @@ public class DescribeManagedInstancesRequest extends Request {
             this.instanceId = request.instanceId;
             this.instanceIp = request.instanceIp;
             this.instanceName = request.instanceName;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
             this.osType = request.osType;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.tag = request.tag;
@@ -278,6 +320,29 @@ public class DescribeManagedInstancesRequest extends Request {
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
             this.instanceName = instanceName;
+            return this;
+        }
+
+        /**
+         * The maximum number of entries per page.
+         * <p>
+         * 
+         * Valid values: 1 to 50.
+         * 
+         * Default value: 10.
+         */
+        public Builder maxResults(Integer maxResults) {
+            this.putQueryParameter("MaxResults", maxResults);
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.putQueryParameter("NextToken", nextToken);
+            this.nextToken = nextToken;
             return this;
         }
 
@@ -349,6 +414,15 @@ public class DescribeManagedInstancesRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The ID of the resource group to which the managed instance belongs.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

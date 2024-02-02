@@ -17,6 +17,10 @@ public class DescribeKeyPairsRequest extends Request {
     private String sourceRegionId;
 
     @Query
+    @NameInMap("IncludePublicKey")
+    private Boolean includePublicKey;
+
+    @Query
     @NameInMap("KeyPairFingerPrint")
     private String keyPairFingerPrint;
 
@@ -61,6 +65,7 @@ public class DescribeKeyPairsRequest extends Request {
     private DescribeKeyPairsRequest(Builder builder) {
         super(builder);
         this.sourceRegionId = builder.sourceRegionId;
+        this.includePublicKey = builder.includePublicKey;
         this.keyPairFingerPrint = builder.keyPairFingerPrint;
         this.keyPairName = builder.keyPairName;
         this.ownerId = builder.ownerId;
@@ -91,6 +96,13 @@ public class DescribeKeyPairsRequest extends Request {
      */
     public String getSourceRegionId() {
         return this.sourceRegionId;
+    }
+
+    /**
+     * @return includePublicKey
+     */
+    public Boolean getIncludePublicKey() {
+        return this.includePublicKey;
     }
 
     /**
@@ -165,6 +177,7 @@ public class DescribeKeyPairsRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeKeyPairsRequest, Builder> {
         private String sourceRegionId; 
+        private Boolean includePublicKey; 
         private String keyPairFingerPrint; 
         private String keyPairName; 
         private Long ownerId; 
@@ -183,6 +196,7 @@ public class DescribeKeyPairsRequest extends Request {
         private Builder(DescribeKeyPairsRequest request) {
             super(request);
             this.sourceRegionId = request.sourceRegionId;
+            this.includePublicKey = request.includePublicKey;
             this.keyPairFingerPrint = request.keyPairFingerPrint;
             this.keyPairName = request.keyPairName;
             this.ownerId = request.ownerId;
@@ -205,7 +219,16 @@ public class DescribeKeyPairsRequest extends Request {
         }
 
         /**
-         * Details about the key pairs.
+         * IncludePublicKey.
+         */
+        public Builder includePublicKey(Boolean includePublicKey) {
+            this.putQueryParameter("IncludePublicKey", includePublicKey);
+            this.includePublicKey = includePublicKey;
+            return this;
+        }
+
+        /**
+         * The fingerprint of the key pair. The message-digest algorithm 5 (MD5) is used based on the public key fingerprint format defined in RFC 4716. For more information, see [RFC 4716](https://tools.ietf.org/html/rfc4716).
          */
         public Builder keyPairFingerPrint(String keyPairFingerPrint) {
             this.putQueryParameter("KeyPairFingerPrint", keyPairFingerPrint);
@@ -214,7 +237,13 @@ public class DescribeKeyPairsRequest extends Request {
         }
 
         /**
-         * The value of tag N of the key pair. Valid values of N: 1 to 20.
+         * The name of the key pair. You can use the asterisk (\*) symbol as a wildcard in regular expressions to perform a fuzzy search for key pairs. Sample patterns:
+         * <p>
+         * 
+         * *   `*SshKey`: queries key pairs whose names end with SshKey, including the key pair named SshKey.
+         * *   `SshKey*`: queries key pairs whose names start with SshKey, including the key pair named SshKey.
+         * *   `*SshKey*`: queries key pairs whose names include SshKey, including the key pair named SshKey.
+         * *   `SshKey`: queries the key pair named SshKey.
          */
         public Builder keyPairName(String keyPairName) {
             this.putQueryParameter("KeyPairName", keyPairName);
@@ -232,7 +261,10 @@ public class DescribeKeyPairsRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **DescribeKeyPairs**.
+         * The number of the page to return. Pages start from page 1.
+         * <p>
+         * 
+         * Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -253,7 +285,7 @@ public class DescribeKeyPairsRequest extends Request {
         }
 
         /**
-         * The fingerprint of the key pair. The message-digest algorithm 5 (MD5) is used based on the public key fingerprint format defined in RFC 4716. For more information, see [RFC 4716](https://tools.ietf.org/html/rfc4716).
+         * The region ID of the key pair. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -262,7 +294,10 @@ public class DescribeKeyPairsRequest extends Request {
         }
 
         /**
-         * The tag key of the key pair.
+         * The ID of the resource group. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.
+         * <p>
+         * 
+         * >  Resources in the default resource group are displayed in the response regardless of how this parameter is set.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -289,7 +324,7 @@ public class DescribeKeyPairsRequest extends Request {
         }
 
         /**
-         * The fingerprint of the key pair.
+         * The tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -343,10 +378,10 @@ public class DescribeKeyPairsRequest extends Request {
             private String value; 
 
             /**
-             * The ID of the resource group. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.
+             * The key of tag N of the key pair. Valid values of N: 1 to 20.
              * <p>
              * 
-             * >  Resources in the default resource group are displayed in the response regardless of how this parameter is set.
+             * If a single tag is specified to query resources, up to 1,000 resources that are bound with this tag can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that are bound with all these tags can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -354,7 +389,7 @@ public class DescribeKeyPairsRequest extends Request {
             }
 
             /**
-             * The region ID of the key pair. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+             * The value of tag N of the key pair. Valid values of N: 1 to 20.
              */
             public Builder value(String value) {
                 this.value = value;

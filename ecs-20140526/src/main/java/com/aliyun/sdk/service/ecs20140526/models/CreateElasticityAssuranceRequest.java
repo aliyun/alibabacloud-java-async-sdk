@@ -304,7 +304,7 @@ public class CreateElasticityAssuranceRequest extends Request {
         }
 
         /**
-         * The total number of times that the elasticity assurance can be applied. Set the value to Unlimited. This value indicates that the elasticity assurance can be applied an unlimited number of times within its effective period.
+         * The total number of times that the elasticity assurance can be applied. Set the value to Unlimited. This value indicates that the elasticity assurance can be applied an unlimited number of times within its effective duration.
          * <p>
          * 
          * Default value: Unlimited.
@@ -316,7 +316,7 @@ public class CreateElasticityAssuranceRequest extends Request {
         }
 
         /**
-         * The client token that you want to use to ensure the idempotency of the request. You can use the client to generate the token, but make sure that the token is unique among requests. The `token` can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * The client token that you want to use to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The `token` can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -325,7 +325,7 @@ public class CreateElasticityAssuranceRequest extends Request {
         }
 
         /**
-         * The description of the elasticity assurance. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
+         * The description of the elasticity assurance. The description must be 2 to 256 characters in length. It cannot start with `http://` or `https://`.
          * <p>
          * 
          * This parameter is empty by default.
@@ -337,7 +337,7 @@ public class CreateElasticityAssuranceRequest extends Request {
         }
 
         /**
-         * The total number of instances for which the capacity of an instance type is reserved.
+         * The total number of instances for which to reserve capacity of an instance type.
          * <p>
          * 
          * Valid values: 1 to 1000.
@@ -358,7 +358,7 @@ public class CreateElasticityAssuranceRequest extends Request {
         }
 
         /**
-         * The instance types. Currently, an elasticity assurance can be created to reserve the capacity of a single instance type.
+         * The instance type. An elasticity assurance can be created to reserve the capacity of a single instance type.
          */
         public Builder instanceType(java.util.List < String > instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -385,11 +385,11 @@ public class CreateElasticityAssuranceRequest extends Request {
         }
 
         /**
-         * The effective period of the elasticity assurance. The unit of the effective period is determined by the `PeriodUnit` value. Valid values:
+         * The term of the elasticity assurance. The unit of the term is determined by the `PeriodUnit` value. Valid values:
          * <p>
          * 
-         * *   When the `PeriodUnit` parameter is set to `Month`, the valid values are 1, 2, 3, 4, 5, 6, 7, 8, and 9.
-         * *   When the `PeriodUnit` parameter is set to `Year`, the valid values are 1, 2, 3, 4, and 5.
+         * *   When `PeriodUnit` is set to `Month`, the valid values are 1, 2, 3, 4, 5, 6, 7, 8, and 9.
+         * *   When `PeriodUnit` is set to `Year`, the valid values are 1, 2, 3, 4, and 5.
          * 
          * Default value: 1.
          */
@@ -400,7 +400,7 @@ public class CreateElasticityAssuranceRequest extends Request {
         }
 
         /**
-         * The unit of the effective period of the elasticity assurance. Valid values:
+         * The unit of the term of the elasticity assurance. Valid values:
          * <p>
          * 
          * *   Month
@@ -424,7 +424,7 @@ public class CreateElasticityAssuranceRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the elasticity assurance is assigned.
+         * The ID of the resource group to which to assign the elasticity assurance.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -469,7 +469,7 @@ public class CreateElasticityAssuranceRequest extends Request {
         }
 
         /**
-         * The zone IDs of the elasticity assurances. Currently, an elasticity assurance can be used to reserve resources within a single zone.
+         * The ID of the zone in which to create the elasticity assurance. An elasticity assurance can be used to reserve resources within a single zone.
          */
         public Builder zoneId(java.util.List < String > zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -523,11 +523,11 @@ public class CreateElasticityAssuranceRequest extends Request {
             private String name; 
 
             /**
-             * The type of the private pool with which the elasticity assurance is associated. Valid values:
+             * The type of the private pool with which you want to associate the elasticity assurance. Valid values:
              * <p>
              * 
-             * *   Open: open private pool
-             * *   Target: specified private pool
+             * *   Open: open private pool.
+             * *   Target: specified private pool.
              * 
              * Default value: Open.
              */
@@ -537,7 +537,7 @@ public class CreateElasticityAssuranceRequest extends Request {
             }
 
             /**
-             * The name of the elasticity assurance. The name must be 2 to 128 characters in length and can contain letters, digits, underscores (\_), and hyphens (-). It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+             * The name of the elasticity assurance. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
              */
             public Builder name(String name) {
                 this.name = name;
@@ -590,7 +590,7 @@ public class CreateElasticityAssuranceRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N to add to the elasticity assurance. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.
+             * The key of tag N to add to the elasticity assurance. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -598,7 +598,7 @@ public class CreateElasticityAssuranceRequest extends Request {
             }
 
             /**
-             * The value of tag N to add to the elasticity assurance. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `acs:`.
+             * The value of tag N to add to the elasticity assurance. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with `acs:`. The tag value cannot contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

@@ -642,8 +642,8 @@ public class DescribeInstanceTypesRequest extends Request {
          * The CPU architecture. Valid values:
          * <p>
          * 
-         * *   X86
-         * *   ARM
+         * *   X86: x86
+         * *   ARM: ARM
          */
         public Builder cpuArchitecture(String cpuArchitecture) {
             this.putQueryParameter("CpuArchitecture", cpuArchitecture);
@@ -655,7 +655,7 @@ public class DescribeInstanceTypesRequest extends Request {
          * The GPU model.
          * <p>
          * 
-         * > Fuzzy match is supported. For example, if an instance type provides NVIDIA V100 GPUs and you set this parameter to NVIDIA, information about the instance type is queried.
+         * >  Fuzzy match is supported. For example, if an instance type provides NVIDIA V100 GPUs and you set this parameter to NVIDIA, information about the instance type is queried.
          */
         public Builder GPUSpec(String GPUSpec) {
             this.putQueryParameter("GPUSpec", GPUSpec);
@@ -682,6 +682,8 @@ public class DescribeInstanceTypesRequest extends Request {
          * *   Compute-optimized with NPU: NPU-accelerated compute-optimized instance type
          * *   ECS Bare Metal: ECS Bare Metal Instance type
          * *   Super Computing Cluster: Super Computing Cluster (SCC) instance type
+         * - High Performance Compute.
+         * - Cloud Physical Server.
          */
         public Builder instanceCategory(String instanceCategory) {
             this.putQueryParameter("InstanceCategory", instanceCategory);
@@ -716,7 +718,7 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * Instance type N. Valid values of N: 1 to 10. If this parameter is empty, information about all instance types is queried.
+         * Instance type N. Valid values of N: 1 to 10. If this parameter is left empty, information about all instance types is queried.
          */
         public Builder instanceTypes(java.util.List < String > instanceTypes) {
             this.putQueryParameter("InstanceTypes", instanceTypes);
@@ -753,7 +755,7 @@ public class DescribeInstanceTypesRequest extends Request {
          * The maximum number of vCPUs. The value must be a positive integer.
          * <p>
          * 
-         * > If an instance type has more vCPUs than the specified value, information about the instance type is not queried.
+         * >  If an instance type has more vCPUs than the specified value, information about the instance type is not queried.
          */
         public Builder maximumCpuCoreCount(Integer maximumCpuCoreCount) {
             this.putQueryParameter("MaximumCpuCoreCount", maximumCpuCoreCount);
@@ -765,7 +767,7 @@ public class DescribeInstanceTypesRequest extends Request {
          * The maximum clock speed.
          * <p>
          * 
-         * > If an instance type uses processors that have a higher clock speed than the specified value, information about the instance type is not queried.
+         * >  If an instance type uses processors that have a higher clock speed than the specified value, information about the instance type is not queried.
          */
         public Builder maximumCpuSpeedFrequency(Float maximumCpuSpeedFrequency) {
             this.putQueryParameter("MaximumCpuSpeedFrequency", maximumCpuSpeedFrequency);
@@ -777,7 +779,7 @@ public class DescribeInstanceTypesRequest extends Request {
          * The maximum turbo frequency.
          * <p>
          * 
-         * > If an instance type uses processors that deliver a higher turbo frequency than the specified value, information about the instance type is not queried.
+         * >  If an instance type uses processors that deliver a higher turbo frequency than the specified value, information about the instance type is not queried.
          */
         public Builder maximumCpuTurboFrequency(Float maximumCpuTurboFrequency) {
             this.putQueryParameter("MaximumCpuTurboFrequency", maximumCpuTurboFrequency);
@@ -789,7 +791,7 @@ public class DescribeInstanceTypesRequest extends Request {
          * The maximum number of GPUs. The value must be a positive integer.
          * <p>
          * 
-         * > If an instance type provides more GPUs than the specified value, information about the instance type is not queried.
+         * >  If an instance type provides more GPUs than the specified value, information about the instance type is not queried.
          */
         public Builder maximumGPUAmount(Integer maximumGPUAmount) {
             this.putQueryParameter("MaximumGPUAmount", maximumGPUAmount);
@@ -801,7 +803,7 @@ public class DescribeInstanceTypesRequest extends Request {
          * The maximum memory size. Unit: GiB.
          * <p>
          * 
-         * > If the memory size of an instance type is larger than the specified value, information about the instance type is not queried.
+         * >  If the memory size of an instance type is larger than the specified value, information about the instance type is not queried.
          */
         public Builder maximumMemorySize(Float maximumMemorySize) {
             this.putQueryParameter("MaximumMemorySize", maximumMemorySize);
@@ -810,10 +812,10 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * The minimum baseline CPU performance (overall baseline performance of all vCPUs) per t5 or t6 burstable instance.
+         * The minimum baseline CPU performance (overall baseline performance of all vCPUs) of a t5 or t6 burstable instance.
          * <p>
          * 
-         * > If a t5 or t6 instance type provides baseline CPU performance that is lower than the specified value, information about the instance type is not queried.
+         * >  If a t5 or t6 instance type provides baseline CPU performance lower than the specified value, information about the instance type is not queried.
          */
         public Builder minimumBaselineCredit(Integer minimumBaselineCredit) {
             this.putQueryParameter("MinimumBaselineCredit", minimumBaselineCredit);
@@ -825,7 +827,7 @@ public class DescribeInstanceTypesRequest extends Request {
          * The minimum number of vCPUs. The value must be a positive integer.
          * <p>
          * 
-         * > If an instance type has fewer vCPUs than the specified value, information about the instance type is not queried.
+         * >  If an instance type has fewer vCPUs than the specified value, information about the instance type is not queried.
          */
         public Builder minimumCpuCoreCount(Integer minimumCpuCoreCount) {
             this.putQueryParameter("MinimumCpuCoreCount", minimumCpuCoreCount);
@@ -837,7 +839,7 @@ public class DescribeInstanceTypesRequest extends Request {
          * The minimum clock speed.
          * <p>
          * 
-         * > If an instance type uses processors that have a lower clock speed than the specified value, information about the instance type is not queried.
+         * >  If an instance type uses processors that have a lower clock speed than the specified value, information about the instance type is not queried.
          */
         public Builder minimumCpuSpeedFrequency(Float minimumCpuSpeedFrequency) {
             this.putQueryParameter("MinimumCpuSpeedFrequency", minimumCpuSpeedFrequency);
@@ -849,7 +851,7 @@ public class DescribeInstanceTypesRequest extends Request {
          * The minimum turbo frequency.
          * <p>
          * 
-         * > If an instance type uses processors that deliver a lower turbo frequency than the specified value, information about the instance type is not queried.
+         * >  If an instance type uses processors that deliver a lower turbo frequency than the specified value, information about the instance type is not queried.
          */
         public Builder minimumCpuTurboFrequency(Float minimumCpuTurboFrequency) {
             this.putQueryParameter("MinimumCpuTurboFrequency", minimumCpuTurboFrequency);
@@ -858,10 +860,10 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * The minimum number of cloud disks.
+         * The minimum number of cloud disks per instance.
          * <p>
          * 
-         * > If an instance type supports fewer cloud disks than the specified value, information about the instance type is not queried.
+         * >  If an instance type supports fewer cloud disks than the specified value, information about the instance type is not queried.
          */
         public Builder minimumDiskQuantity(Integer minimumDiskQuantity) {
             this.putQueryParameter("MinimumDiskQuantity", minimumDiskQuantity);
@@ -873,7 +875,7 @@ public class DescribeInstanceTypesRequest extends Request {
          * The minimum number of IPv6 addresses per ENI.
          * <p>
          * 
-         * > If an instance type supports fewer IPv6 addresses per ENI than the specified value, information about the instance type is not queried.
+         * >  If an instance type supports fewer IPv6 addresses per ENI than the specified value, information about the instance type is not queried.
          */
         public Builder minimumEniIpv6AddressQuantity(Integer minimumEniIpv6AddressQuantity) {
             this.putQueryParameter("MinimumEniIpv6AddressQuantity", minimumEniIpv6AddressQuantity);
@@ -885,7 +887,7 @@ public class DescribeInstanceTypesRequest extends Request {
          * The minimum number of IPv4 addresses per ENI.
          * <p>
          * 
-         * > If an instance type supports fewer IPv4 addresses per ENI than the specified value, information about the instance type is not queried.
+         * >  If an instance type supports fewer IPv4 addresses per ENI than the specified value, information about the instance type is not queried.
          */
         public Builder minimumEniPrivateIpAddressQuantity(Integer minimumEniPrivateIpAddressQuantity) {
             this.putQueryParameter("MinimumEniPrivateIpAddressQuantity", minimumEniPrivateIpAddressQuantity);
@@ -894,10 +896,10 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * The minimum number of elastic network interfaces (ENIs).
+         * The minimum number of elastic network interfaces (ENIs) per instance.
          * <p>
          * 
-         * > If an instance type supports fewer ENIs than the specified value, information about the instance type is not queried.
+         * >  If an instance type supports fewer ENIs than the specified value, information about the instance type is not queried.
          */
         public Builder minimumEniQuantity(Integer minimumEniQuantity) {
             this.putQueryParameter("MinimumEniQuantity", minimumEniQuantity);
@@ -906,10 +908,10 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * The minimum number of ERIs.
+         * The minimum number of ERIs per instance.
          * <p>
          * 
-         * > If an instance type supports fewer ERIs than the specified value, information about the instance type is not queried.
+         * >  If an instance type supports fewer ERIs than the specified value, information about the instance type is not queried.
          */
         public Builder minimumEriQuantity(Integer minimumEriQuantity) {
             this.putQueryParameter("MinimumEriQuantity", minimumEriQuantity);
@@ -921,7 +923,7 @@ public class DescribeInstanceTypesRequest extends Request {
          * The minimum number of GPUs. The value must be a positive integer.
          * <p>
          * 
-         * > If an instance type provides fewer GPUs than the specified value, information about the instance type is not queried.
+         * >  If an instance type provides fewer GPUs than the specified value, information about the instance type is not queried.
          */
         public Builder minimumGPUAmount(Integer minimumGPUAmount) {
             this.putQueryParameter("MinimumGPUAmount", minimumGPUAmount);
@@ -930,10 +932,10 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * The minimum initial CPU credits per t5 or t6 burstable instance.
+         * The minimum initial CPU credits of a t5 or t6 burstable instance.
          * <p>
          * 
-         * > If a t5 or t6 instance type provides less initial vCPU credits than the specified value, information about the instance type is not queried.
+         * >  If a t5 or t6 instance type provides less initial vCPU credits than the specified value, information about the instance type is not queried.
          */
         public Builder minimumInitialCredit(Integer minimumInitialCredit) {
             this.putQueryParameter("MinimumInitialCredit", minimumInitialCredit);
@@ -945,7 +947,7 @@ public class DescribeInstanceTypesRequest extends Request {
          * The minimum inbound internal bandwidth. Unit: Kbit/s.
          * <p>
          * 
-         * > If an instance type provides an inbound internal bandwidth that is lower than the specified value, information about the instance type is not queried.
+         * >  If an instance type provides an inbound internal bandwidth that is lower than the specified value, information about the instance type is not queried.
          */
         public Builder minimumInstanceBandwidthRx(Integer minimumInstanceBandwidthRx) {
             this.putQueryParameter("MinimumInstanceBandwidthRx", minimumInstanceBandwidthRx);
@@ -957,7 +959,7 @@ public class DescribeInstanceTypesRequest extends Request {
          * The minimum outbound internal bandwidth. Unit: Kbit/s.
          * <p>
          * 
-         * > If an instance type provides an outbound internal bandwidth that is lower than the specified value, information about the instance type is not queried.
+         * >  If an instance type provides an outbound internal bandwidth that is lower than the specified value, information about the instance type is not queried.
          */
         public Builder minimumInstanceBandwidthTx(Integer minimumInstanceBandwidthTx) {
             this.putQueryParameter("MinimumInstanceBandwidthTx", minimumInstanceBandwidthTx);
@@ -969,7 +971,7 @@ public class DescribeInstanceTypesRequest extends Request {
          * The minimum inbound packet forwarding rate over the internal network. Unit: pps.
          * <p>
          * 
-         * > If an instance type provides an inbound packet forwarding rate over the internal network that is lower than the specified value, information about the instance type is not queried.
+         * >  If an instance type provides an inbound packet forwarding rate over the internal network that is lower than the specified value, information about the instance type is not queried.
          */
         public Builder minimumInstancePpsRx(Long minimumInstancePpsRx) {
             this.putQueryParameter("MinimumInstancePpsRx", minimumInstancePpsRx);
@@ -981,7 +983,7 @@ public class DescribeInstanceTypesRequest extends Request {
          * The minimum outbound packet forwarding rate over the internal network. Unit: pps.
          * <p>
          * 
-         * > If an instance type provides an outbound packet forwarding rate over the internal network that is lower than the specified value, information about the instance type is not queried.
+         * >  If an instance type provides an outbound packet forwarding rate over the internal network that is lower than the specified value, information about the instance type is not queried.
          */
         public Builder minimumInstancePpsTx(Long minimumInstancePpsTx) {
             this.putQueryParameter("MinimumInstancePpsTx", minimumInstancePpsTx);
@@ -990,10 +992,10 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * The minimum number of local disks.
+         * The minimum number of local disks per instance.
          * <p>
          * 
-         * > If an instance type supports fewer local disks than the specified value, information about the instance type is not queried.
+         * >  If an instance type supports fewer local disks than the specified value, information about the instance type is not queried.
          */
         public Builder minimumLocalStorageAmount(Integer minimumLocalStorageAmount) {
             this.putQueryParameter("MinimumLocalStorageAmount", minimumLocalStorageAmount);
@@ -1002,7 +1004,7 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * The capacity of each local disk. Unit: GiB.
+         * The capacity of each local disk attached per instance. Unit: GiB.
          */
         public Builder minimumLocalStorageCapacity(Long minimumLocalStorageCapacity) {
             this.putQueryParameter("MinimumLocalStorageCapacity", minimumLocalStorageCapacity);
@@ -1014,7 +1016,7 @@ public class DescribeInstanceTypesRequest extends Request {
          * The minimum memory size. Unit: GiB.
          * <p>
          * 
-         * > If the memory size of an instance type is smaller than the specified value, information about the instance type is not queried.
+         * >  If the memory size of an instance type is smaller than the specified value, information about the instance type is not queried.
          */
         public Builder minimumMemorySize(Float minimumMemorySize) {
             this.putQueryParameter("MinimumMemorySize", minimumMemorySize);
@@ -1026,7 +1028,7 @@ public class DescribeInstanceTypesRequest extends Request {
          * The minimum default number of queues per primary network interface controller (NIC).
          * <p>
          * 
-         * > If an instance type supports fewer queues per primary NIC than the specified value, information about the instance type is not queried.
+         * >  If an instance type supports fewer queues per primary NIC than the specified value, information about the instance type is not queried.
          */
         public Builder minimumPrimaryEniQueueNumber(Integer minimumPrimaryEniQueueNumber) {
             this.putQueryParameter("MinimumPrimaryEniQueueNumber", minimumPrimaryEniQueueNumber);
@@ -1038,7 +1040,7 @@ public class DescribeInstanceTypesRequest extends Request {
          * The minimum number of queue pair (QP) queues per elastic RDMA interface (ERI).
          * <p>
          * 
-         * > If an instance type supports fewer QP queues per ERI than the specified value, information about the instance type is not queried.
+         * >  If an instance type supports fewer QP queues per ERI than the specified value, information about the instance type is not queried.
          */
         public Builder minimumQueuePairNumber(Integer minimumQueuePairNumber) {
             this.putQueryParameter("MinimumQueuePairNumber", minimumQueuePairNumber);
@@ -1050,7 +1052,7 @@ public class DescribeInstanceTypesRequest extends Request {
          * The minimum default number of queues per secondary NIC.
          * <p>
          * 
-         * > If an instance type supports fewer queues per secondary NIC than the specified value, information about the instance type is not queried.
+         * >  If an instance type supports fewer queues per secondary NIC than the specified value, information about the instance type is not queried.
          */
         public Builder minimumSecondaryEniQueueNumber(Integer minimumSecondaryEniQueueNumber) {
             this.putQueryParameter("MinimumSecondaryEniQueueNumber", minimumSecondaryEniQueueNumber);
@@ -1059,7 +1061,7 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * The query token. Set the value to the NextToken value returned in the previous call to the DescribeInstanceTypes operation. Leave this parameter empty the first time you call this operation.
+         * The query token. Set the value to the NextToken value returned in the previous call to the DescribeInstanceTypes operation. You do not need to specify this parameter for the first request.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -1071,8 +1073,8 @@ public class DescribeInstanceTypesRequest extends Request {
          * Specifies whether cloud disks can be attached by using the NVMe protocol. Valid values:
          * <p>
          * 
-         * *   required: Cloud disks can be attached by using the NVMe protocol.
-         * *   unsupported: Cloud disk cannot be attached by using the NVMe protocol.
+         * *   required: The cloud disk can be attached by using the NVMe protocol.
+         * *   unsupported: The cloud disk cannot be attached by using the NVMe protocol.
          */
         public Builder nvmeSupport(String nvmeSupport) {
             this.putQueryParameter("NvmeSupport", nvmeSupport);
@@ -1102,7 +1104,7 @@ public class DescribeInstanceTypesRequest extends Request {
          * The CPU model.
          * <p>
          * 
-         * > Fuzzy match is supported. For example, if an instance type uses Intel Xeon (Ice Lake) Platinum 8369B processors and you set this parameter to Intel, information about the instance type is queried.
+         * >  Fuzzy match is supported. For example, if an instance type uses Intel Xeon (Ice Lake) Platinum 8369B processors and you set this parameter to Intel, information about the instance type is queried.
          */
         public Builder physicalProcessorModel(String physicalProcessorModel) {
             this.putQueryParameter("PhysicalProcessorModel", physicalProcessorModel);

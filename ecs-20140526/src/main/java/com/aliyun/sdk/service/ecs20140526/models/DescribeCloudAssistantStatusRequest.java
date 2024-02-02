@@ -21,6 +21,14 @@ public class DescribeCloudAssistantStatusRequest extends Request {
     private java.util.List < String > instanceId;
 
     @Query
+    @NameInMap("MaxResults")
+    private Integer maxResults;
+
+    @Query
+    @NameInMap("NextToken")
+    private String nextToken;
+
+    @Query
     @NameInMap("OSType")
     private String OSType;
 
@@ -57,6 +65,8 @@ public class DescribeCloudAssistantStatusRequest extends Request {
         super(builder);
         this.sourceRegionId = builder.sourceRegionId;
         this.instanceId = builder.instanceId;
+        this.maxResults = builder.maxResults;
+        this.nextToken = builder.nextToken;
         this.OSType = builder.OSType;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -92,6 +102,20 @@ public class DescribeCloudAssistantStatusRequest extends Request {
      */
     public java.util.List < String > getInstanceId() {
         return this.instanceId;
+    }
+
+    /**
+     * @return maxResults
+     */
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     /**
@@ -153,6 +177,8 @@ public class DescribeCloudAssistantStatusRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeCloudAssistantStatusRequest, Builder> {
         private String sourceRegionId; 
         private java.util.List < String > instanceId; 
+        private Integer maxResults; 
+        private String nextToken; 
         private String OSType; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -170,6 +196,8 @@ public class DescribeCloudAssistantStatusRequest extends Request {
             super(request);
             this.sourceRegionId = request.sourceRegionId;
             this.instanceId = request.instanceId;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
             this.OSType = request.OSType;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -190,11 +218,34 @@ public class DescribeCloudAssistantStatusRequest extends Request {
         }
 
         /**
-         * The IDs of instances.
+         * The instance ID.
          */
         public Builder instanceId(java.util.List < String > instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * The maximum number of entries per page. If you specify InstanceId, this parameter does not take effect. 
+         * <p>
+         * 
+         * Valid values: 1 to 50. 
+         * 
+         * Default value: 10.
+         */
+        public Builder maxResults(Integer maxResults) {
+            this.putQueryParameter("MaxResults", maxResults);
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.putQueryParameter("NextToken", nextToken);
+            this.nextToken = nextToken;
             return this;
         }
 
@@ -204,6 +255,7 @@ public class DescribeCloudAssistantStatusRequest extends Request {
          * 
          * *   Windows
          * *   Linux
+         * *   FreeBSD
          */
         public Builder OSType(String OSType) {
             this.putQueryParameter("OSType", OSType);
@@ -256,7 +308,7 @@ public class DescribeCloudAssistantStatusRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * The region ID of the instance. You can call [DescribeRegions](~~25609~~) to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

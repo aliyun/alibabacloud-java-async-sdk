@@ -86,7 +86,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Details about the full status information of instances.
+         * The full status information of the instances.
          */
         public Builder instanceFullStatusSet(InstanceFullStatusSet instanceFullStatusSet) {
             this.instanceFullStatusSet = instanceFullStatusSet;
@@ -94,7 +94,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -231,7 +231,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The code of the event state.
+             * The code of the system event state.
              */
             public Builder code(Integer code) {
                 this.code = code;
@@ -239,7 +239,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the event state.
+             * The name of the system event state.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -292,7 +292,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The code of the event type.
+             * The code of the system event type.
              */
             public Builder code(Integer code) {
                 this.code = code;
@@ -300,7 +300,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the event type.
+             * The name of the system event type.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -389,7 +389,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             private String releaseTime; 
 
             /**
-             * The time when the disk was created. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * The time when the cloud disk or local disk was created. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -397,17 +397,17 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The category of the disk. Valid values:
+             * The category of the cloud disk or local disk. Valid values:
              * <p>
              * 
-             * *   cloud: basic disk
-             * *   cloud_efficiency: ultra disk
-             * *   cloud_ssd: standard SSD
-             * *   cloud_essd: enhanced SSD (ESSD)
-             * *   local_ssd_pro: I/O-intensive local disk
-             * *   local_hdd_pro: throughput-intensive local disk
-             * *   ephemeral: retired local disk
-             * *   ephemeral_ssd: retired local SSD
+             * *   cloud: basic disk.
+             * *   cloud_efficiency: ultra disk.
+             * *   cloud_ssd: standard SSD.
+             * *   cloud_essd: enhanced SSD (ESSD).
+             * *   local_ssd_pro: I/O-intensive local disk.
+             * *   local_hdd_pro: throughput-intensive local disk.
+             * *   ephemeral: retired local disk.
+             * *   ephemeral_ssd: retired local SSD.
              */
             public Builder deviceCategory(String deviceCategory) {
                 this.deviceCategory = deviceCategory;
@@ -415,7 +415,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the disk. Unit: GiB.
+             * The size of the cloud disk or local disk. Unit: GiB.
              */
             public Builder deviceSize(String deviceSize) {
                 this.deviceSize = deviceSize;
@@ -423,11 +423,11 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the disk. Valid values:
+             * The type of the cloud disk or local disk. Valid values:
              * <p>
              * 
-             * *   system: system disk
-             * *   data: data disk
+             * *   system: system disk.
+             * *   data: data disk.
              */
             public Builder deviceType(String deviceType) {
                 this.deviceType = deviceType;
@@ -435,7 +435,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the disk was released. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * The time when the cloud disk or local disk was released. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder releaseTime(String releaseTime) {
                 this.releaseTime = releaseTime;
@@ -557,7 +557,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Details about the inactive cloud disks or local disks that have been released and must be cleared.
+             * The inactive cloud disks or local disks that have been released and must be cleared.
              */
             public Builder inactiveDisks(InactiveDisks inactiveDisks) {
                 this.inactiveDisks = inactiveDisks;
@@ -682,7 +682,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             private String reason; 
 
             /**
-             * The state of the event.
+             * The state of the system event.
              */
             public Builder eventCycleStatus(EventCycleStatus eventCycleStatus) {
                 this.eventCycleStatus = eventCycleStatus;
@@ -690,7 +690,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the event.
+             * The ID of the system event.
              */
             public Builder eventId(String eventId) {
                 this.eventId = eventId;
@@ -698,7 +698,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the event was published. The time is displayed in UTC.
+             * The time when the system event was published. The time is displayed in UTC.
              */
             public Builder eventPublishTime(String eventPublishTime) {
                 this.eventPublishTime = eventPublishTime;
@@ -706,7 +706,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the event.
+             * The type of the system event.
              */
             public Builder eventType(EventType eventType) {
                 this.eventType = eventType;
@@ -722,7 +722,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The impact level of the event.
+             * The impact level of the system event.
              */
             public Builder impactLevel(String impactLevel) {
                 this.impactLevel = impactLevel;
@@ -730,7 +730,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The scheduled time when to execute the O\&M task related to the event. The time is displayed in UTC.
+             * The scheduled O\&M time of the system event. The time is displayed in UTC.
              */
             public Builder notBefore(String notBefore) {
                 this.notBefore = notBefore;
@@ -738,7 +738,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The reason why the event was scheduled.
+             * The reason why the system event was scheduled.
              */
             public Builder reason(String reason) {
                 this.reason = reason;

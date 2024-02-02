@@ -50,10 +50,12 @@ public class DescribeNetworkInterfacesRequest extends Request {
 
     @Query
     @NameInMap("PageNumber")
+    @Deprecated
     private Integer pageNumber;
 
     @Query
     @NameInMap("PageSize")
+    @Deprecated
     private Integer pageSize;
 
     @Query
@@ -467,14 +469,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
-         * <p>
-         * 
-         * Pages start from page 1.
-         * 
-         * Default value: 1.
-         * 
-         * > This parameter will be removed in the future. We recommend that you use the NextToken and MaxResults parameters to perform a paged query.
+         * >This parameter is no longer used. We recommend that you specify the MaxResults or NextToken parameter for a paged query.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -483,14 +478,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
-         * 
-         * Maximum value: 1000.
-         * 
-         * Default value: 10.
-         * 
-         * > This parameter will be removed in the future. We recommend that you use the NextToken and MaxResults parameters for a paged query.
+         * >This parameter is no longer used. We recommend that you specify the MaxResults or NextToken parameter for a paged query.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

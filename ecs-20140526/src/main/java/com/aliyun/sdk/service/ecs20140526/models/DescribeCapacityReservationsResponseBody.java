@@ -131,7 +131,135 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
 
     } 
 
+    public static class CapacityReservationUsage extends TeaModel {
+        @NameInMap("AccountId")
+        private String accountId;
+
+        @NameInMap("ServiceName")
+        private String serviceName;
+
+        @NameInMap("UsedAmount")
+        private Integer usedAmount;
+
+        private CapacityReservationUsage(Builder builder) {
+            this.accountId = builder.accountId;
+            this.serviceName = builder.serviceName;
+            this.usedAmount = builder.usedAmount;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CapacityReservationUsage create() {
+            return builder().build();
+        }
+
+        /**
+         * @return accountId
+         */
+        public String getAccountId() {
+            return this.accountId;
+        }
+
+        /**
+         * @return serviceName
+         */
+        public String getServiceName() {
+            return this.serviceName;
+        }
+
+        /**
+         * @return usedAmount
+         */
+        public Integer getUsedAmount() {
+            return this.usedAmount;
+        }
+
+        public static final class Builder {
+            private String accountId; 
+            private String serviceName; 
+            private Integer usedAmount; 
+
+            /**
+             * AccountId.
+             */
+            public Builder accountId(String accountId) {
+                this.accountId = accountId;
+                return this;
+            }
+
+            /**
+             * ServiceName.
+             */
+            public Builder serviceName(String serviceName) {
+                this.serviceName = serviceName;
+                return this;
+            }
+
+            /**
+             * UsedAmount.
+             */
+            public Builder usedAmount(Integer usedAmount) {
+                this.usedAmount = usedAmount;
+                return this;
+            }
+
+            public CapacityReservationUsage build() {
+                return new CapacityReservationUsage(this);
+            } 
+
+        } 
+
+    }
+    public static class CapacityReservationUsages extends TeaModel {
+        @NameInMap("CapacityReservationUsage")
+        private java.util.List < CapacityReservationUsage> capacityReservationUsage;
+
+        private CapacityReservationUsages(Builder builder) {
+            this.capacityReservationUsage = builder.capacityReservationUsage;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CapacityReservationUsages create() {
+            return builder().build();
+        }
+
+        /**
+         * @return capacityReservationUsage
+         */
+        public java.util.List < CapacityReservationUsage> getCapacityReservationUsage() {
+            return this.capacityReservationUsage;
+        }
+
+        public static final class Builder {
+            private java.util.List < CapacityReservationUsage> capacityReservationUsage; 
+
+            /**
+             * CapacityReservationUsage.
+             */
+            public Builder capacityReservationUsage(java.util.List < CapacityReservationUsage> capacityReservationUsage) {
+                this.capacityReservationUsage = capacityReservationUsage;
+                return this;
+            }
+
+            public CapacityReservationUsages build() {
+                return new CapacityReservationUsages(this);
+            } 
+
+        } 
+
+    }
     public static class AllocatedResource extends TeaModel {
+        @NameInMap("AvailableAmount")
+        private Integer availableAmount;
+
+        @NameInMap("CapacityReservationUsages")
+        private CapacityReservationUsages capacityReservationUsages;
+
         @NameInMap("InstanceType")
         private String instanceType;
 
@@ -145,6 +273,8 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
         private String zoneId;
 
         private AllocatedResource(Builder builder) {
+            this.availableAmount = builder.availableAmount;
+            this.capacityReservationUsages = builder.capacityReservationUsages;
             this.instanceType = builder.instanceType;
             this.totalAmount = builder.totalAmount;
             this.usedAmount = builder.usedAmount;
@@ -157,6 +287,20 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
 
         public static AllocatedResource create() {
             return builder().build();
+        }
+
+        /**
+         * @return availableAmount
+         */
+        public Integer getAvailableAmount() {
+            return this.availableAmount;
+        }
+
+        /**
+         * @return capacityReservationUsages
+         */
+        public CapacityReservationUsages getCapacityReservationUsages() {
+            return this.capacityReservationUsages;
         }
 
         /**
@@ -188,10 +332,28 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer availableAmount; 
+            private CapacityReservationUsages capacityReservationUsages; 
             private String instanceType; 
             private Integer totalAmount; 
             private Integer usedAmount; 
             private String zoneId; 
+
+            /**
+             * AvailableAmount.
+             */
+            public Builder availableAmount(Integer availableAmount) {
+                this.availableAmount = availableAmount;
+                return this;
+            }
+
+            /**
+             * CapacityReservationUsages.
+             */
+            public Builder capacityReservationUsages(CapacityReservationUsages capacityReservationUsages) {
+                this.capacityReservationUsages = capacityReservationUsages;
+                return this;
+            }
 
             /**
              * The instance type.
@@ -379,6 +541,9 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
         @NameInMap("AllocatedResources")
         private AllocatedResources allocatedResources;
 
+        @NameInMap("CapacityReservationOwnerId")
+        private String capacityReservationOwnerId;
+
         @NameInMap("Description")
         private String description;
 
@@ -432,6 +597,7 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
 
         private CapacityReservationItem(Builder builder) {
             this.allocatedResources = builder.allocatedResources;
+            this.capacityReservationOwnerId = builder.capacityReservationOwnerId;
             this.description = builder.description;
             this.endTime = builder.endTime;
             this.endTimeType = builder.endTimeType;
@@ -464,6 +630,13 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
          */
         public AllocatedResources getAllocatedResources() {
             return this.allocatedResources;
+        }
+
+        /**
+         * @return capacityReservationOwnerId
+         */
+        public String getCapacityReservationOwnerId() {
+            return this.capacityReservationOwnerId;
         }
 
         /**
@@ -587,6 +760,7 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
 
         public static final class Builder {
             private AllocatedResources allocatedResources; 
+            private String capacityReservationOwnerId; 
             private String description; 
             private String endTime; 
             private String endTimeType; 
@@ -610,6 +784,14 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
              */
             public Builder allocatedResources(AllocatedResources allocatedResources) {
                 this.allocatedResources = allocatedResources;
+                return this;
+            }
+
+            /**
+             * CapacityReservationOwnerId.
+             */
+            public Builder capacityReservationOwnerId(String capacityReservationOwnerId) {
+                this.capacityReservationOwnerId = capacityReservationOwnerId;
                 return this;
             }
 

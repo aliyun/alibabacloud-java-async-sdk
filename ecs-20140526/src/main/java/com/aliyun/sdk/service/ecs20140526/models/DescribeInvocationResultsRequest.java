@@ -41,6 +41,14 @@ public class DescribeInvocationResultsRequest extends Request {
     private String invokeRecordStatus;
 
     @Query
+    @NameInMap("MaxResults")
+    private Integer maxResults;
+
+    @Query
+    @NameInMap("NextToken")
+    private String nextToken;
+
+    @Query
     @NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -86,6 +94,8 @@ public class DescribeInvocationResultsRequest extends Request {
         this.instanceId = builder.instanceId;
         this.invokeId = builder.invokeId;
         this.invokeRecordStatus = builder.invokeRecordStatus;
+        this.maxResults = builder.maxResults;
+        this.nextToken = builder.nextToken;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
@@ -160,6 +170,20 @@ public class DescribeInvocationResultsRequest extends Request {
     }
 
     /**
+     * @return maxResults
+     */
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
      * @return ownerAccount
      */
     public String getOwnerAccount() {
@@ -230,6 +254,8 @@ public class DescribeInvocationResultsRequest extends Request {
         private String instanceId; 
         private String invokeId; 
         private String invokeRecordStatus; 
+        private Integer maxResults; 
+        private String nextToken; 
         private String ownerAccount; 
         private Long ownerId; 
         private Long pageNumber; 
@@ -253,6 +279,8 @@ public class DescribeInvocationResultsRequest extends Request {
             this.instanceId = request.instanceId;
             this.invokeId = request.invokeId;
             this.invokeRecordStatus = request.invokeRecordStatus;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
@@ -274,7 +302,7 @@ public class DescribeInvocationResultsRequest extends Request {
         }
 
         /**
-         * The execution results.
+         * The ID of the command.
          */
         public Builder commandId(String commandId) {
             this.putQueryParameter("CommandId", commandId);
@@ -283,12 +311,13 @@ public class DescribeInvocationResultsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The encoding method of the `Output` response parameter. Valid values:
          * <p>
          * 
-         * Maximum value: 50.
+         * *   PlainText: returns the original command content and command output.
+         * *   Base64: returns the Base64-encoded command content and command output.
          * 
-         * Default value: 10.
+         * Default value: Base64.
          */
         public Builder contentEncoding(String contentEncoding) {
             this.putQueryParameter("ContentEncoding", contentEncoding);
@@ -297,7 +326,13 @@ public class DescribeInvocationResultsRequest extends Request {
         }
 
         /**
-         * The information about the tag.
+         * Specifies whether to return the results of historical scheduled executions. Valid values:
+         * <p>
+         * 
+         * *   true: returns the results of historical scheduled executions. When this parameter is set to true, the `InvokeId` parameter must be set to the ID of a scheduled command task.
+         * *   false: does not return the results of historical scheduled executions.
+         * 
+         * Default value: false.
          */
         public Builder includeHistory(Boolean includeHistory) {
             this.putQueryParameter("IncludeHistory", includeHistory);
@@ -306,7 +341,7 @@ public class DescribeInvocationResultsRequest extends Request {
         }
 
         /**
-         * The page number of the returned page.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -315,7 +350,7 @@ public class DescribeInvocationResultsRequest extends Request {
         }
 
         /**
-         * The ID of the command execution.
+         * The ID of the command task. You can call the [DescribeInvocations](~~64840~~) operation to query the IDs of all command tasks.
          */
         public Builder invokeId(String invokeId) {
             this.putQueryParameter("InvokeId", invokeId);
@@ -324,16 +359,42 @@ public class DescribeInvocationResultsRequest extends Request {
         }
 
         /**
-         * The page number of the page to return.
+         * The execution state of the command task. Valid values:
          * <p>
          * 
-         * Pages start from page 1.
+         * *   Running
+         * *   Finished
+         * *   Failed
+         * *   Stopped
          * 
-         * Default value: 1.
+         * > To ensure compatibility, we recommend that you use `InvocationStatus` instead of InvokeRecordStatus.
          */
         public Builder invokeRecordStatus(String invokeRecordStatus) {
             this.putQueryParameter("InvokeRecordStatus", invokeRecordStatus);
             this.invokeRecordStatus = invokeRecordStatus;
+            return this;
+        }
+
+        /**
+         * The maximum number of entries per page. 
+         * <p>
+         * 
+         * Valid values: 1 to 50. 
+         * 
+         * Default value: 10.
+         */
+        public Builder maxResults(Integer maxResults) {
+            this.putQueryParameter("MaxResults", maxResults);
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.putQueryParameter("NextToken", nextToken);
+            this.nextToken = nextToken;
             return this;
         }
 
@@ -356,7 +417,12 @@ public class DescribeInvocationResultsRequest extends Request {
         }
 
         /**
-         * The ID of the command.
+         * The page number.
+         * <p>
+         * 
+         * Pages start from page 1.
+         * 
+         * Default value: 1.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -365,7 +431,12 @@ public class DescribeInvocationResultsRequest extends Request {
         }
 
         /**
-         * The ID of the container.
+         * The number of entries per page.
+         * <p>
+         * 
+         * Valid values: 1 to 50.
+         * 
+         * Default value: 10.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -374,7 +445,7 @@ public class DescribeInvocationResultsRequest extends Request {
         }
 
         /**
-         * The number of entries returned per page.
+         * The region ID of the command. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -383,7 +454,7 @@ public class DescribeInvocationResultsRequest extends Request {
         }
 
         /**
-         * The name of the user who ran the command on the instance.
+         * The ID of the resource group. After you set this parameter, command execution results in the specified resource group are queried.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -410,26 +481,7 @@ public class DescribeInvocationResultsRequest extends Request {
         }
 
         /**
-         * The error code returned when the command cannot be sent or run. Valid values:
-         * <p>
-         * 
-         * *   If this parameter is empty, the command is run normally.
-         * *   InstanceNotExists: The specified instance does not exist is released.
-         * *   InstanceReleased: The instance was released while the command was being run on the instance.
-         * *   InstanceNotRunning: The instance is not in the Running state while the command is being run.
-         * *   CommandNotApplicable: The command is not applicable to the specified instance.
-         * *   AccountNotExists: The specified account does not exist.
-         * *   DirectoryNotExists: The specified directory does not exist.
-         * *   BadCronExpression: The cron expression used to specify the execution time is invalid.
-         * *   ClientNotRunning: The Cloud Assistant client is not running.
-         * *   ClientNotResponse: The Cloud Assistant client is not responding.
-         * *   ClientIsUpgrading: The Cloud Assistant client is being upgraded.
-         * *   ClientNeedUpgrade: The Cloud Assistant client needs to be upgraded.
-         * *   DeliveryTimeout: The request to send the command timed out.
-         * *   ExecutionTimeout: The command execution timed out.
-         * *   ExecutionException: An exception occurred while the command was being run.
-         * *   ExecutionInterrupted: The execution was interrupted.
-         * *   ExitCodeNonzero: The command execution is complete, but the exit code is not 0.
+         * The tags of the command task.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -483,7 +535,12 @@ public class DescribeInvocationResultsRequest extends Request {
             private String value; 
 
             /**
-             * The ID of the instance
+             * The key of tag N of the command task. Valid values of N: 1 to 20. The tag key cannot be an empty string.
+             * <p>
+             * 
+             * If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.
+             * 
+             * The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -491,7 +548,10 @@ public class DescribeInvocationResultsRequest extends Request {
             }
 
             /**
-             * The execution state of the command.
+             * The value of tag N of the command task. Valid values of N: 1 to 20. The tag value can be an empty string.
+             * <p>
+             * 
+             * The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

@@ -238,7 +238,7 @@ public class DescribeSnapshotGroupsRequest extends Request {
         } 
 
         /**
-         * This parameter is unavailable.
+         * This parameter is not publicly available.
          */
         public Builder additionalAttributes(java.util.List < String > additionalAttributes) {
             this.putQueryParameter("AdditionalAttributes", additionalAttributes);
@@ -256,10 +256,10 @@ public class DescribeSnapshotGroupsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The number of entries per page.
          * <p>
          * 
-         * Maximum value: 100.
+         * Valid values: 1 to 100.
          * 
          * Default value: 10.
          */

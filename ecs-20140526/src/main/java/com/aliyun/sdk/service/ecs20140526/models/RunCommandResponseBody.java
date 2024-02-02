@@ -78,7 +78,7 @@ public class RunCommandResponseBody extends TeaModel {
         }
 
         /**
-         * 58928
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

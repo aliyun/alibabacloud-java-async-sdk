@@ -576,6 +576,9 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
         @NameInMap("RegionId")
         private String regionId;
 
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
         @NameInMap("SpotOptions")
         private SpotOptions spotOptions;
 
@@ -612,6 +615,7 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             this.maxSpotPrice = builder.maxSpotPrice;
             this.payAsYouGoOptions = builder.payAsYouGoOptions;
             this.regionId = builder.regionId;
+            this.resourceGroupId = builder.resourceGroupId;
             this.spotOptions = builder.spotOptions;
             this.state = builder.state;
             this.status = builder.status;
@@ -708,6 +712,13 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return spotOptions
          */
         public SpotOptions getSpotOptions() {
@@ -775,6 +786,7 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             private Float maxSpotPrice; 
             private PayAsYouGoOptions payAsYouGoOptions; 
             private String regionId; 
+            private String resourceGroupId; 
             private SpotOptions spotOptions; 
             private String state; 
             private String status; 
@@ -882,6 +894,14 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 

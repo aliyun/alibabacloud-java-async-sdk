@@ -49,6 +49,14 @@ public class DescribeInvocationsRequest extends Request {
     private String invokeStatus;
 
     @Query
+    @NameInMap("MaxResults")
+    private Integer maxResults;
+
+    @Query
+    @NameInMap("NextToken")
+    private String nextToken;
+
+    @Query
     @NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -104,6 +112,8 @@ public class DescribeInvocationsRequest extends Request {
         this.instanceId = builder.instanceId;
         this.invokeId = builder.invokeId;
         this.invokeStatus = builder.invokeStatus;
+        this.maxResults = builder.maxResults;
+        this.nextToken = builder.nextToken;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
@@ -194,6 +204,20 @@ public class DescribeInvocationsRequest extends Request {
     }
 
     /**
+     * @return maxResults
+     */
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
      * @return ownerAccount
      */
     public String getOwnerAccount() {
@@ -280,6 +304,8 @@ public class DescribeInvocationsRequest extends Request {
         private String instanceId; 
         private String invokeId; 
         private String invokeStatus; 
+        private Integer maxResults; 
+        private String nextToken; 
         private String ownerAccount; 
         private Long ownerId; 
         private Long pageNumber; 
@@ -307,6 +333,8 @@ public class DescribeInvocationsRequest extends Request {
             this.instanceId = request.instanceId;
             this.invokeId = request.invokeId;
             this.invokeStatus = request.invokeStatus;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
@@ -433,6 +461,29 @@ public class DescribeInvocationsRequest extends Request {
         public Builder invokeStatus(String invokeStatus) {
             this.putQueryParameter("InvokeStatus", invokeStatus);
             this.invokeStatus = invokeStatus;
+            return this;
+        }
+
+        /**
+         * The maximum number of entries per page. 
+         * <p>
+         * 
+         * Valid values: 1 to 50. 
+         * 
+         * Default value: 10.
+         */
+        public Builder maxResults(Integer maxResults) {
+            this.putQueryParameter("MaxResults", maxResults);
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.putQueryParameter("NextToken", nextToken);
+            this.nextToken = nextToken;
             return this;
         }
 

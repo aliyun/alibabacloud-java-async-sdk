@@ -425,18 +425,18 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The type of the snapshot. Valid values:
+         * The category of the snapshot. Valid values:
          * <p>
          * 
          * *   Standard: normal snapshot
          * *   Flash: local snapshot
          * 
-         * The local snapshot feature is replaced by the instant access feature. When you configure this parameter, take note of the following items:
+         * The local snapshot feature is replaced by the instant access feature. When you specify this parameter, take note of the following items:
          * 
          * *   If you have used local snapshots before December 14, 2020, you can use this parameter.
          * *   If you have not used local snapshots before December 14, 2020, you cannot use this parameter.
          * 
-         * > This parameter will be deprecated in the future. We recommend that you use other parameters to ensure future compatibility.
+         * >  This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -494,7 +494,7 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The maximum number of entries per page. Maximum value: 1 to 100.
+         * The maximum number of entries per page. Valid values: 1 to 100.
          * <p>
          * 
          * Default value: 10.
@@ -533,7 +533,7 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page 1.
+         * The page number. Page starts from page 1.
          * <p>
          * 
          * Default value: 1.
@@ -640,10 +640,10 @@ public class DescribeSnapshotsRequest extends Request {
          * The type of the source disk. Valid values:
          * <p>
          * 
-         * *   System: system disk
+         * *   system: system disk
          * *   data: data disk
          * 
-         * > The value of this parameter is case-insensitive.
+         * >  The value of this parameter is not case-sensitive.
          */
         public Builder sourceDiskType(String sourceDiskType) {
             this.putQueryParameter("SourceDiskType", sourceDiskType);
@@ -667,7 +667,7 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The tags.
+         * The tags of the snapshot.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -797,10 +797,10 @@ public class DescribeSnapshotsRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N to add to the snapshot. Valid values of N: 1 to 20.
+             * The key of tag N of the snapshot. Valid values of N: 1 to 20
              * <p>
              * 
-             * Up to 1,000 resources that match the tags specified can be returned in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.
+             * If a single tag is specified to query resources, up to 1,000 resources that have this tag added are returned. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added are returned. To query more than 1,000 resources with the specified tags, call the [ListTagResources](~~110425~~) operation.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -808,7 +808,7 @@ public class DescribeSnapshotsRequest extends Request {
             }
 
             /**
-             * The value of tag N to add to the snapshot. Valid values of N: 1 to 20.
+             * The value of tag N of the snapshot. Valid values of N: 1 to 20.
              */
             public Builder value(String value) {
                 this.value = value;

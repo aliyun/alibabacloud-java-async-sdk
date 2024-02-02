@@ -70,7 +70,7 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Details about the instances created by the auto provisioning group. The values of the parameters in this array are returned only when the AutoProvisioningGroupType parameter is set to `instant`.
+         * The instances created by the auto provisioning group. The values of parameters in this array are returned only when AutoProvisioningGroupType is set to `instant`.
          */
         public Builder launchResults(LaunchResults launchResults) {
             this.launchResults = launchResults;
@@ -78,7 +78,7 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -255,7 +255,7 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of created instances.
+             * The IDs of instances created.
              */
             public Builder instanceIds(InstanceIds instanceIds) {
                 this.instanceIds = instanceIds;
@@ -263,7 +263,7 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The instance type.
+             * The instance type of the instance.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;

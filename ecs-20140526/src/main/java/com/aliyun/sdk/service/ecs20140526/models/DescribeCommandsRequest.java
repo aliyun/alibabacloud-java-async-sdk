@@ -33,8 +33,16 @@ public class DescribeCommandsRequest extends Request {
     private Boolean latest;
 
     @Query
+    @NameInMap("MaxResults")
+    private Integer maxResults;
+
+    @Query
     @NameInMap("Name")
     private String name;
+
+    @Query
+    @NameInMap("NextToken")
+    private String nextToken;
 
     @Query
     @NameInMap("OwnerAccount")
@@ -88,7 +96,9 @@ public class DescribeCommandsRequest extends Request {
         this.contentEncoding = builder.contentEncoding;
         this.description = builder.description;
         this.latest = builder.latest;
+        this.maxResults = builder.maxResults;
         this.name = builder.name;
+        this.nextToken = builder.nextToken;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
@@ -151,10 +161,24 @@ public class DescribeCommandsRequest extends Request {
     }
 
     /**
+     * @return maxResults
+     */
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
      * @return name
      */
     public String getName() {
         return this.name;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     /**
@@ -240,7 +264,9 @@ public class DescribeCommandsRequest extends Request {
         private String contentEncoding; 
         private String description; 
         private Boolean latest; 
+        private Integer maxResults; 
         private String name; 
+        private String nextToken; 
         private String ownerAccount; 
         private Long ownerId; 
         private Long pageNumber; 
@@ -264,7 +290,9 @@ public class DescribeCommandsRequest extends Request {
             this.contentEncoding = request.contentEncoding;
             this.description = request.description;
             this.latest = request.latest;
+            this.maxResults = request.maxResults;
             this.name = request.name;
+            this.nextToken = request.nextToken;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
@@ -288,7 +316,7 @@ public class DescribeCommandsRequest extends Request {
         }
 
         /**
-         * The command ID.
+         * The ID of the command.
          */
         public Builder commandId(String commandId) {
             this.putQueryParameter("CommandId", commandId);
@@ -297,7 +325,7 @@ public class DescribeCommandsRequest extends Request {
         }
 
         /**
-         * The encoding mode of the `CommandContent` and `Output` response parameters. Valid values:
+         * The encoding mode of the `CommandContent` and `Output` values in the response. Valid values:
          * <p>
          * 
          * *   PlainText: returns the original command content and command output.
@@ -312,7 +340,7 @@ public class DescribeCommandsRequest extends Request {
         }
 
         /**
-         * > This parameter is deprecated and does not take effect.
+         * The description of the common command. This parameter takes effect and fuzzy search is supported by default only when `Provider` is specified.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -321,7 +349,7 @@ public class DescribeCommandsRequest extends Request {
         }
 
         /**
-         * Specifies whether to query only the latest version of common commands if common commands are queried. This parameter does not affect the query for private commands. Valid values:
+         * Specifies whether to query only the latest version of common commands when common commands are queried. This parameter does not affect the query for private commands.
          * <p>
          * 
          * *   true: queries only the latest version of common commands.
@@ -336,11 +364,34 @@ public class DescribeCommandsRequest extends Request {
         }
 
         /**
-         * The command name. Partial command names are not supported.
+         * The maximum number of entries per page. 
+         * <p>
+         * 
+         * Valid values: 1 to 50. 
+         * 
+         * Default value: 10.
+         */
+        public Builder maxResults(Integer maxResults) {
+            this.putQueryParameter("MaxResults", maxResults);
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * The name of the command. If you specify `Provider`, fuzzy search is supported by default.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
             this.name = name;
+            return this;
+        }
+
+        /**
+         * The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.putQueryParameter("NextToken", nextToken);
+            this.nextToken = nextToken;
             return this;
         }
 
@@ -419,7 +470,7 @@ public class DescribeCommandsRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the command belongs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -446,7 +497,7 @@ public class DescribeCommandsRequest extends Request {
         }
 
         /**
-         * The tags of the command.
+         * The list of tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -455,12 +506,12 @@ public class DescribeCommandsRequest extends Request {
         }
 
         /**
-         * The command type. Valid values:
+         * The type of the command. Valid values:
          * <p>
          * 
-         * *   RunBatScript: batch command, applicable to Windows instances.
-         * *   RunPowerShellScript: PowerShell command, applicable to Windows instances.
-         * *   RunShellScript: shell command, applicable to Linux instances.
+         * *   RunBatScript: batch command, applicable to Windows instances
+         * *   RunPowerShellScript: PowerShell command, applicable to Windows instances
+         * *   RunShellScript: shell command, applicable to Linux instances
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -517,7 +568,7 @@ public class DescribeCommandsRequest extends Request {
              * The key of tag N of the command. Valid values of N: 1 to 20. The tag key cannot be an empty string.
              * <p>
              * 
-             * If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.
+             * If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags, call the [ListTagResources](~~110425~~) operation.
              * 
              * The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
              */
@@ -530,7 +581,7 @@ public class DescribeCommandsRequest extends Request {
              * The value of tag N of the command. Valid values of N: 1 to 20. The tag value can be an empty string.
              * <p>
              * 
-             * The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`.
+             * It can be up to 128 characters in length and cannot contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

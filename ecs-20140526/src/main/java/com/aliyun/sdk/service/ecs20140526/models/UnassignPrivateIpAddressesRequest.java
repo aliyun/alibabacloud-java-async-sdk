@@ -177,7 +177,7 @@ public class UnassignPrivateIpAddressesRequest extends Request {
         }
 
         /**
-         * > This parameter is in invitational preview and is unavailable for general users.
+         * IPv4 prefix N. Valid values of N: 1 to 10.
          */
         public Builder ipv4Prefix(java.util.List < String > ipv4Prefix) {
             this.putQueryParameter("Ipv4Prefix", ipv4Prefix);
@@ -186,7 +186,7 @@ public class UnassignPrivateIpAddressesRequest extends Request {
         }
 
         /**
-         * The secondary private IP addresses to unassign.
+         * The ID of the ENI.
          */
         public Builder networkInterfaceId(String networkInterfaceId) {
             this.putQueryParameter("NetworkInterfaceId", networkInterfaceId);
@@ -213,7 +213,7 @@ public class UnassignPrivateIpAddressesRequest extends Request {
         }
 
         /**
-         * Secondary private IP address N to unassign Valid values of N: 1 to 10.
+         * Secondary private IP address N to unassign. Valid values of N: 1 to 32.
          */
         public Builder privateIpAddress(java.util.List < String > privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);
@@ -222,7 +222,7 @@ public class UnassignPrivateIpAddressesRequest extends Request {
         }
 
         /**
-         * The ID of the ENI.
+         * The region ID of the ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

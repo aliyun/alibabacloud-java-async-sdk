@@ -15,6 +15,9 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
     @NameInMap("InstanceCloudAssistantStatusSet")
     private InstanceCloudAssistantStatusSet instanceCloudAssistantStatusSet;
 
+    @NameInMap("NextToken")
+    private String nextToken;
+
     @NameInMap("PageNumber")
     private Long pageNumber;
 
@@ -29,6 +32,7 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
 
     private DescribeCloudAssistantStatusResponseBody(Builder builder) {
         this.instanceCloudAssistantStatusSet = builder.instanceCloudAssistantStatusSet;
+        this.nextToken = builder.nextToken;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
@@ -48,6 +52,13 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
      */
     public InstanceCloudAssistantStatusSet getInstanceCloudAssistantStatusSet() {
         return this.instanceCloudAssistantStatusSet;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     /**
@@ -80,16 +91,25 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
 
     public static final class Builder {
         private InstanceCloudAssistantStatusSet instanceCloudAssistantStatusSet; 
+        private String nextToken; 
         private Long pageNumber; 
         private Long pageSize; 
         private String requestId; 
         private Long totalCount; 
 
         /**
-         * The installation states of Cloud Assistant Agent on the instances.
+         * Details about the installation status of Cloud Assistant Agent on the instances.
          */
         public Builder instanceCloudAssistantStatusSet(InstanceCloudAssistantStatusSet instanceCloudAssistantStatusSet) {
             this.instanceCloudAssistantStatusSet = instanceCloudAssistantStatusSet;
+            return this;
+        }
+
+        /**
+         * A pagination token. It can be used in the next request to retrieve a new page of results.
+         */
+        public Builder nextToken(String nextToken) {
+            this.nextToken = nextToken;
             return this;
         }
 
@@ -118,7 +138,7 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of queried instances.
+         * The total number of instances.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -254,7 +274,7 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
             private Boolean supportSessionManager; 
 
             /**
-             * The number of tasks that Cloud Assistant was running on the instance.
+             * The number of tasks that were being run by Cloud Assistant on the instance.
              */
             public Builder activeTaskCount(Long activeTaskCount) {
                 this.activeTaskCount = activeTaskCount;
@@ -265,8 +285,8 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
              * Indicates whether Cloud Assistant is running on the instance. Valid values:
              * <p>
              * 
-             * *   true: Heartbeats are detected within 1 minute.
-             * *   false: No heartbeats are detected within 1 minute.
+             * *   true: Heartbeats are detected within 2 minutes.
+             * *   false: Heartbeats are not detected within 2 minutes.
              */
             public Builder cloudAssistantStatus(String cloudAssistantStatus) {
                 this.cloudAssistantStatus = cloudAssistantStatus;
@@ -274,7 +294,7 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The version number of Cloud Assistant Agent. If Cloud Assistant Agent is not installed or is not running, this parameter is left empty.
+             * The version number of Cloud Assistant Agent. This parameter is empty if Cloud Assistant Agent is not installed or is not running on the instance.
              */
             public Builder cloudAssistantVersion(String cloudAssistantVersion) {
                 this.cloudAssistantVersion = cloudAssistantVersion;
@@ -282,7 +302,7 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * The instance ID.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -290,7 +310,7 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The number of tasks that Cloud Assistant completed on the instance.
+             * The number of tasks that were completed by Cloud Assistant on the instance.
              */
             public Builder invocationCount(Long invocationCount) {
                 this.invocationCount = invocationCount;
@@ -298,7 +318,7 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The last heartbeat time of Cloud Assistant. The value is updated once every minute.
+             * The last heartbeat time of Cloud Assistant. The value is updated every minute on average. The interval can be 55, 60, or 65 seconds.
              */
             public Builder lastHeartbeatTime(String lastHeartbeatTime) {
                 this.lastHeartbeatTime = lastHeartbeatTime;
@@ -319,6 +339,7 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
              * 
              * *   Windows
              * *   Linux
+             * *   FreeBSD
              */
             public Builder OSType(String OSType) {
                 this.OSType = OSType;
@@ -326,7 +347,13 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether Cloud Assistant supports Session Manager on the instance. If Cloud Assistant does not support Session Manager, the Cloud Assistant running on the instance may be of an early version or Session Manager may not be supported in the specified region.
+             * Indicates whether Cloud Assistant supports Session Manager on the instance. If Session Manager is not supported, the version of Cloud Assistant is outdated. Update Cloud Assistant Agent to the latest version.
+             * <p>
+             * 
+             * To support Session Manager, the Cloud Assistant version must be no earlier than the following ones:
+             * 
+             * *   Linux: 2.2.3.189
+             * *   Windows: 2.1.3.189
              */
             public Builder supportSessionManager(Boolean supportSessionManager) {
                 this.supportSessionManager = supportSessionManager;

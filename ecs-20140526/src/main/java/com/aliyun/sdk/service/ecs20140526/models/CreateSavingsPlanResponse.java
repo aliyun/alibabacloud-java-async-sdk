@@ -7,31 +7,28 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeInstanceVncPasswdResponse} extends {@link TeaModel}
+ * {@link CreateSavingsPlanResponse} extends {@link TeaModel}
  *
- * <p>DescribeInstanceVncPasswdResponse</p>
+ * <p>CreateSavingsPlanResponse</p>
  */
-public class DescribeInstanceVncPasswdResponse extends Response {
+public class CreateSavingsPlanResponse extends Response {
     @NameInMap("headers")
-    @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     private Integer statusCode;
 
     @NameInMap("body")
-    @Validation(required = true)
-    private DescribeInstanceVncPasswdResponseBody body;
+    private CreateSavingsPlanResponseBody body;
 
-    private DescribeInstanceVncPasswdResponse(BuilderImpl builder) {
+    private CreateSavingsPlanResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DescribeInstanceVncPasswdResponse create() {
+    public static CreateSavingsPlanResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -57,35 +54,35 @@ public class DescribeInstanceVncPasswdResponse extends Response {
     /**
      * @return body
      */
-    public DescribeInstanceVncPasswdResponseBody getBody() {
+    public CreateSavingsPlanResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DescribeInstanceVncPasswdResponse, Builder> {
+    public interface Builder extends Response.Builder<CreateSavingsPlanResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DescribeInstanceVncPasswdResponseBody body);
+        Builder body(CreateSavingsPlanResponseBody body);
 
         @Override
-        DescribeInstanceVncPasswdResponse build();
+        CreateSavingsPlanResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DescribeInstanceVncPasswdResponse, Builder>
+            extends Response.BuilderImpl<CreateSavingsPlanResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private DescribeInstanceVncPasswdResponseBody body; 
+        private CreateSavingsPlanResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DescribeInstanceVncPasswdResponse response) {
+        private BuilderImpl(CreateSavingsPlanResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -114,14 +111,14 @@ public class DescribeInstanceVncPasswdResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DescribeInstanceVncPasswdResponseBody body) {
+        public Builder body(CreateSavingsPlanResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DescribeInstanceVncPasswdResponse build() {
-            return new DescribeInstanceVncPasswdResponse(this);
+        public CreateSavingsPlanResponse build() {
+            return new CreateSavingsPlanResponse(this);
         } 
 
     } 

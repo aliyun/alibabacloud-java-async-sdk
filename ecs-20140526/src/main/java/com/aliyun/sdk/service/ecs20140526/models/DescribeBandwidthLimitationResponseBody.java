@@ -50,7 +50,7 @@ public class DescribeBandwidthLimitationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The maximum public bandwidth.
+         * Details about the maximum public bandwidth.
          */
         public Builder bandwidths(Bandwidths bandwidths) {
             this.bandwidths = bandwidths;
@@ -58,7 +58,7 @@ public class DescribeBandwidthLimitationResponseBody extends TeaModel {
         }
 
         /**
-         * Details about the maximum public bandwidth.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,7 +134,11 @@ public class DescribeBandwidthLimitationResponseBody extends TeaModel {
             private String unit; 
 
             /**
-             * The minimum public bandwidth.
+             * The billing method for network usage. Valid values:
+             * <p>
+             * 
+             * *   PayByBandwidth: pay-by-bandwidth
+             * *   PayByTraffic: pay-by-traffic
              */
             public Builder internetChargeType(String internetChargeType) {
                 this.internetChargeType = internetChargeType;
@@ -142,7 +146,7 @@ public class DescribeBandwidthLimitationResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the public bandwidth.
+             * The maximum public bandwidth.
              */
             public Builder max(Integer max) {
                 this.max = max;
@@ -150,7 +154,7 @@ public class DescribeBandwidthLimitationResponseBody extends TeaModel {
             }
 
             /**
-             * DescribeBandwidthLimitation
+             * The minimum public bandwidth.
              */
             public Builder min(Integer min) {
                 this.min = min;
@@ -158,7 +162,7 @@ public class DescribeBandwidthLimitationResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the public bandwidth.
              */
             public Builder unit(String unit) {
                 this.unit = unit;

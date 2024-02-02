@@ -281,6 +281,9 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
         @NameInMap("TimePoints")
         private String timePoints;
 
+        @NameInMap("Type")
+        private String type;
+
         @NameInMap("VolumeNums")
         private Integer volumeNums;
 
@@ -299,6 +302,7 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
             this.tags = builder.tags;
             this.targetCopyRegions = builder.targetCopyRegions;
             this.timePoints = builder.timePoints;
+            this.type = builder.type;
             this.volumeNums = builder.volumeNums;
         }
 
@@ -409,6 +413,13 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
         }
 
         /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        /**
          * @return volumeNums
          */
         public Integer getVolumeNums() {
@@ -430,6 +441,7 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
             private Tags tags; 
             private String targetCopyRegions; 
             private String timePoints; 
+            private String type; 
             private Integer volumeNums; 
 
             /**
@@ -549,6 +561,14 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
              */
             public Builder timePoints(String timePoints) {
                 this.timePoints = timePoints;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
                 return this;
             }
 

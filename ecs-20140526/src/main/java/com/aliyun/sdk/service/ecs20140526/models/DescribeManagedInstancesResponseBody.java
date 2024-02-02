@@ -15,6 +15,9 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
     @NameInMap("Instances")
     private java.util.List < Instances> instances;
 
+    @NameInMap("NextToken")
+    private String nextToken;
+
     @NameInMap("PageNumber")
     private Long pageNumber;
 
@@ -29,6 +32,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
 
     private DescribeManagedInstancesResponseBody(Builder builder) {
         this.instances = builder.instances;
+        this.nextToken = builder.nextToken;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
@@ -48,6 +52,13 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
      */
     public java.util.List < Instances> getInstances() {
         return this.instances;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     /**
@@ -80,6 +91,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
 
     public static final class Builder {
         private java.util.List < Instances> instances; 
+        private String nextToken; 
         private Long pageNumber; 
         private Long pageSize; 
         private String requestId; 
@@ -90,6 +102,14 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
          */
         public Builder instances(java.util.List < Instances> instances) {
             this.instances = instances;
+            return this;
+        }
+
+        /**
+         * The query token returned in the call.
+         */
+        public Builder nextToken(String nextToken) {
+            this.nextToken = nextToken;
             return this;
         }
 
@@ -243,6 +263,9 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
         @NameInMap("RegistrationTime")
         private String registrationTime;
 
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
         @NameInMap("Tags")
         private java.util.List < Tags> tags;
 
@@ -261,6 +284,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
             this.osType = builder.osType;
             this.osVersion = builder.osVersion;
             this.registrationTime = builder.registrationTime;
+            this.resourceGroupId = builder.resourceGroupId;
             this.tags = builder.tags;
         }
 
@@ -371,6 +395,13 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return tags
          */
         public java.util.List < Tags> getTags() {
@@ -392,6 +423,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
             private String osType; 
             private String osVersion; 
             private String registrationTime; 
+            private String resourceGroupId; 
             private java.util.List < Tags> tags; 
 
             /**
@@ -507,6 +539,14 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
              */
             public Builder registrationTime(String registrationTime) {
                 this.registrationTime = registrationTime;
+                return this;
+            }
+
+            /**
+             * The ID of the resource group to which the managed instance belongs.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 

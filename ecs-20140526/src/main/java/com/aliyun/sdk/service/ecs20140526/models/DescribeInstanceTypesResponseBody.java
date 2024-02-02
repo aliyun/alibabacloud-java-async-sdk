@@ -118,7 +118,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             private Integer networkCardIndex; 
 
             /**
-             * The index of the NIC.
+             * The index of the network card.
              */
             public Builder networkCardIndex(Integer networkCardIndex) {
                 this.networkCardIndex = networkCardIndex;
@@ -644,7 +644,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             private Integer totalEniQueueQuantity; 
 
             /**
-             * The baseline CPU performance (overall baseline performance of all vCPUs) per t5 or t6 burstable instance.
+             * The baseline vCPU computing performance (overall computing performance of all vCPUs) of the t5 or t6 burstable instance.
              */
             public Builder baselineCredit(Integer baselineCredit) {
                 this.baselineCredit = baselineCredit;
@@ -655,8 +655,8 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
              * The CPU architecture. Valid values:
              * <p>
              * 
-             * *   X86
-             * *   ARM
+             * *   X86: x86
+             * *   ARM: ARM
              */
             public Builder cpuArchitecture(String cpuArchitecture) {
                 this.cpuArchitecture = cpuArchitecture;
@@ -688,7 +688,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of cloud disks.
+             * The maximum number of cloud disks per instance.
              */
             public Builder diskQuantity(Integer diskQuantity) {
                 this.diskQuantity = diskQuantity;
@@ -723,7 +723,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
              * The maximum number of NICs, including the primary NIC, ENIs, and trunk NICs.
              * <p>
              * 
-             * > This parameter is in invitational preview and is unavailable to general users.
+             * >  This parameter is in invitational preview and unavailable for general users.
              */
             public Builder eniTotalQuantity(Integer eniTotalQuantity) {
                 this.eniTotalQuantity = eniTotalQuantity;
@@ -734,7 +734,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
              * Indicates whether NICs on instances of the instance type support trunking.
              * <p>
              * 
-             * > This parameter is in invitational preview and is unavailable to general users.
+             * >  This parameter is in invitational preview and unavailable for general users.
              */
             public Builder eniTrunkSupported(Boolean eniTrunkSupported) {
                 this.eniTrunkSupported = eniTrunkSupported;
@@ -745,7 +745,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
              * The number of ERIs.
              * <p>
              * 
-             * > This parameter is in invitational preview and is unavailable to general users.
+             * >  This parameter is in invitational preview and unavailable for general users.
              */
             public Builder eriQuantity(Integer eriQuantity) {
                 this.eriQuantity = eriQuantity;
@@ -777,7 +777,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The initial vCPU credits per t5 or t6 burstable instance.
+             * The initial vCPU credits of a t5 or t6 burstable instance.
              */
             public Builder initialCredit(Integer initialCredit) {
                 this.initialCredit = initialCredit;
@@ -819,6 +819,8 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
              * *   Compute-optimized with NPU: NPU-accelerated compute-optimized instance type
              * *   ECS Bare Metal: ECS Bare Metal Instance type
              * *   Super Computing Cluster: SCC instance type
+             * - High Performance Compute.
+             * - Cloud Physical Server.
              */
             public Builder instanceCategory(String instanceCategory) {
                 this.instanceCategory = instanceCategory;
@@ -831,7 +833,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
              * 
              * *   EntryLevel: entry level (shared).
              * *   EnterpriseLevel: enterprise level.
-             * *   CreditEntryLevel: credit-based entry level. For more information, see [Overview](~~59977~~).
+             * *   CreditEntryLevel: credit-based entry level. For more information about instance families of this level, see [Overview](~~59977~~).
              */
             public Builder instanceFamilyLevel(String instanceFamilyLevel) {
                 this.instanceFamilyLevel = instanceFamilyLevel;
@@ -839,7 +841,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The inbound packet forwarding rate over the internal network. Unit: pps.
+             * The inbound packet forwarding rate of the internal network. Unit: pps.
              */
             public Builder instancePpsRx(Long instancePpsRx) {
                 this.instancePpsRx = instancePpsRx;
@@ -871,7 +873,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of local disks.
+             * The number of local disks per instance.
              */
             public Builder localStorageAmount(Integer localStorageAmount) {
                 this.localStorageAmount = localStorageAmount;
@@ -899,7 +901,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of queues per ENI (including primary ENI and secondary ENI).
+             * The maximum number of queues per ENI (including primary and secondary ENIs).
              */
             public Builder maximumQueueNumberPerEni(Integer maximumQueueNumberPerEni) {
                 this.maximumQueueNumberPerEni = maximumQueueNumberPerEni;
@@ -915,7 +917,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of NICs.
+             * The maximum number of network cards that the instance type supports.
              */
             public Builder networkCardQuantity(Integer networkCardQuantity) {
                 this.networkCardQuantity = networkCardQuantity;
@@ -923,7 +925,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * Details about NICs.
+             * Details about the network cards.
              */
             public Builder networkCards(NetworkCards networkCards) {
                 this.networkCards = networkCards;
@@ -943,11 +945,11 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether cloud disks can be attached by using the NVMe protocol. Valid values:
+             * Indicates whether the cloud disk can be attached by using the NVMe protocol. Valid values:
              * <p>
              * 
-             * *   required: Cloud disks can be attached by using the NVMe protocol.
-             * *   unsupported: Cloud disk cannot be attached by using the NVMe protocol.
+             * *   required: The cloud disk can be attached by using the NVMe protocol.
+             * *   unsupported: The cloud disk cannot be attached by using the NVMe protocol.
              */
             public Builder nvmeSupport(String nvmeSupport) {
                 this.nvmeSupport = nvmeSupport;
@@ -979,7 +981,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The default number of queues per secondary ENI.
+             * The default number of queues supported by the secondary ENI.
              */
             public Builder secondaryEniQueueNumber(Integer secondaryEniQueueNumber) {
                 this.secondaryEniQueueNumber = secondaryEniQueueNumber;

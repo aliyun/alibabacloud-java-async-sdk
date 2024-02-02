@@ -112,6 +112,10 @@ public class CreateNetworkInterfaceRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
+    @NameInMap("RxQueueSize")
+    private Integer rxQueueSize;
+
+    @Query
     @NameInMap("SecondaryPrivateIpAddressCount")
     private Integer secondaryPrivateIpAddressCount;
 
@@ -126,6 +130,10 @@ public class CreateNetworkInterfaceRequest extends Request {
     @Query
     @NameInMap("Tag")
     private java.util.List < Tag> tag;
+
+    @Query
+    @NameInMap("TxQueueSize")
+    private Integer txQueueSize;
 
     @Query
     @NameInMap("VSwitchId")
@@ -162,10 +170,12 @@ public class CreateNetworkInterfaceRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.rxQueueSize = builder.rxQueueSize;
         this.secondaryPrivateIpAddressCount = builder.secondaryPrivateIpAddressCount;
         this.securityGroupId = builder.securityGroupId;
         this.securityGroupIds = builder.securityGroupIds;
         this.tag = builder.tag;
+        this.txQueueSize = builder.txQueueSize;
         this.vSwitchId = builder.vSwitchId;
         this.visible = builder.visible;
     }
@@ -352,6 +362,13 @@ public class CreateNetworkInterfaceRequest extends Request {
     }
 
     /**
+     * @return rxQueueSize
+     */
+    public Integer getRxQueueSize() {
+        return this.rxQueueSize;
+    }
+
+    /**
      * @return secondaryPrivateIpAddressCount
      */
     public Integer getSecondaryPrivateIpAddressCount() {
@@ -377,6 +394,13 @@ public class CreateNetworkInterfaceRequest extends Request {
      */
     public java.util.List < Tag> getTag() {
         return this.tag;
+    }
+
+    /**
+     * @return txQueueSize
+     */
+    public Integer getTxQueueSize() {
+        return this.txQueueSize;
     }
 
     /**
@@ -418,10 +442,12 @@ public class CreateNetworkInterfaceRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private Integer rxQueueSize; 
         private Integer secondaryPrivateIpAddressCount; 
         private String securityGroupId; 
         private java.util.List < String > securityGroupIds; 
         private java.util.List < Tag> tag; 
+        private Integer txQueueSize; 
         private String vSwitchId; 
         private Boolean visible; 
 
@@ -455,10 +481,12 @@ public class CreateNetworkInterfaceRequest extends Request {
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.rxQueueSize = request.rxQueueSize;
             this.secondaryPrivateIpAddressCount = request.secondaryPrivateIpAddressCount;
             this.securityGroupId = request.securityGroupId;
             this.securityGroupIds = request.securityGroupIds;
             this.tag = request.tag;
+            this.txQueueSize = request.txQueueSize;
             this.vSwitchId = request.vSwitchId;
             this.visible = request.visible;
         } 
@@ -491,7 +519,11 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * DeleteOnRelease.
+         * Specifies whether to retain the ENI when the associated instance is released. Valid values:
+         * <p>
+         * 
+         * - true
+         * - false
          */
         public Builder deleteOnRelease(Boolean deleteOnRelease) {
             this.putQueryParameter("DeleteOnRelease", deleteOnRelease);
@@ -713,7 +745,18 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
+         * RxQueueSize.
+         */
+        public Builder rxQueueSize(Integer rxQueueSize) {
+            this.putQueryParameter("RxQueueSize", rxQueueSize);
+            this.rxQueueSize = rxQueueSize;
+            return this;
+        }
+
+        /**
          * The number of private IP addresses to be automatically created by ECS.
+         * <p>
+         * Valid values: 1 to 49.
          */
         public Builder secondaryPrivateIpAddressCount(Integer secondaryPrivateIpAddressCount) {
             this.putQueryParameter("SecondaryPrivateIpAddressCount", secondaryPrivateIpAddressCount);
@@ -753,6 +796,15 @@ public class CreateNetworkInterfaceRequest extends Request {
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
+            return this;
+        }
+
+        /**
+         * TxQueueSize.
+         */
+        public Builder txQueueSize(Integer txQueueSize) {
+            this.putQueryParameter("TxQueueSize", txQueueSize);
+            this.txQueueSize = txQueueSize;
             return this;
         }
 

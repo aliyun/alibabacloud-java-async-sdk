@@ -21,8 +21,16 @@ public class ListPluginStatusRequest extends Request {
     private java.util.List < String > instanceId;
 
     @Query
+    @NameInMap("MaxResults")
+    private Integer maxResults;
+
+    @Query
     @NameInMap("Name")
     private String name;
+
+    @Query
+    @NameInMap("NextToken")
+    private String nextToken;
 
     @Query
     @NameInMap("OwnerAccount")
@@ -57,7 +65,9 @@ public class ListPluginStatusRequest extends Request {
         super(builder);
         this.sourceRegionId = builder.sourceRegionId;
         this.instanceId = builder.instanceId;
+        this.maxResults = builder.maxResults;
         this.name = builder.name;
+        this.nextToken = builder.nextToken;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
@@ -95,10 +105,24 @@ public class ListPluginStatusRequest extends Request {
     }
 
     /**
+     * @return maxResults
+     */
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
      * @return name
      */
     public String getName() {
         return this.name;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     /**
@@ -153,7 +177,9 @@ public class ListPluginStatusRequest extends Request {
     public static final class Builder extends Request.Builder<ListPluginStatusRequest, Builder> {
         private String sourceRegionId; 
         private java.util.List < String > instanceId; 
+        private Integer maxResults; 
         private String name; 
+        private String nextToken; 
         private String ownerAccount; 
         private Long ownerId; 
         private Long pageNumber; 
@@ -170,7 +196,9 @@ public class ListPluginStatusRequest extends Request {
             super(request);
             this.sourceRegionId = request.sourceRegionId;
             this.instanceId = request.instanceId;
+            this.maxResults = request.maxResults;
             this.name = request.name;
+            this.nextToken = request.nextToken;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
@@ -190,7 +218,7 @@ public class ListPluginStatusRequest extends Request {
         }
 
         /**
-         * The instance IDs. You can specify up to 50 instance IDs in a request. Valid values of N: 1 to 50.
+         * The ID of the instance.
          */
         public Builder instanceId(java.util.List < String > instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -199,20 +227,43 @@ public class ListPluginStatusRequest extends Request {
         }
 
         /**
+         * The maximum number of entries per page. 
+         * <p>
+         * 
+         * Valid values: 1 to 50. 
+         * 
+         * Default value: 10.
+         */
+        public Builder maxResults(Integer maxResults) {
+            this.putQueryParameter("MaxResults", maxResults);
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
          * The name of the Cloud Assistant plug-in. The name supports all character sets and must be 1 to 255 characters in length.
          * <p>
          * 
-         * *   If this parameter is not specified, the states of all Cloud Assistant plug-ins that are installed on the specified ECS instances are queried.
+         * *   If this parameter is not specified, the status of all Cloud Assistant plug-ins that are installed on the specified instances are queried.
          * 
          *     **
          * 
-         *     **Note**If this parameter is not specified, only a single instance ID can be specified.
+         *     **Note** If this parameter is not specified, only a single instance ID can be specified.
          * 
-         * *   If this parameter is specified, the state of the specified Cloud Assistant plug-in is queried.
+         * *   If this parameter is specified, the status of the specified Cloud Assistant plug-in is queried.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
             this.name = name;
+            return this;
+        }
+
+        /**
+         * The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.putQueryParameter("NextToken", nextToken);
+            this.nextToken = nextToken;
             return this;
         }
 
@@ -235,7 +286,7 @@ public class ListPluginStatusRequest extends Request {
         }
 
         /**
-         * The page number of the returned page.
+         * The page number.
          * <p>
          * 
          * *   Pages start from page 1.
@@ -248,7 +299,7 @@ public class ListPluginStatusRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The number of entries per page.
          * <p>
          * 
          * *   Valid values: 1 to 50.
@@ -261,7 +312,7 @@ public class ListPluginStatusRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

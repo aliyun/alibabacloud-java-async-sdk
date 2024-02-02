@@ -149,10 +149,7 @@ public class DeregisterManagedInstanceRequest extends Request {
         }
 
         /**
-         * The region ID. The following regions are supported: China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Hangzhou), China (Shanghai), China (Shenzhen), China (Heyuan), and China (Hong Kong).
-         * <p>
-         * 
-         * You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * The managed instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -179,7 +176,10 @@ public class DeregisterManagedInstanceRequest extends Request {
         }
 
         /**
-         * $.parameters[1].schema.enumValueTitles
+         * The region ID of the managed instance. Supported regions: China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Ulanqab), China (Hangzhou), China (Shanghai), China (Shenzhen), China (Heyuan), China (Guangzhou), China (Chengdu), China (Hong Kong), Singapore, Japan (Tokyo), US (Silicon Valley), and US (Virginia).
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -15,6 +15,9 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
     @NameInMap("Invocations")
     private Invocations invocations;
 
+    @NameInMap("NextToken")
+    private String nextToken;
+
     @NameInMap("PageNumber")
     private Long pageNumber;
 
@@ -29,6 +32,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
 
     private DescribeSendFileResultsResponseBody(Builder builder) {
         this.invocations = builder.invocations;
+        this.nextToken = builder.nextToken;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
@@ -48,6 +52,13 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
      */
     public Invocations getInvocations() {
         return this.invocations;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     /**
@@ -80,6 +91,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
 
     public static final class Builder {
         private Invocations invocations; 
+        private String nextToken; 
         private Long pageNumber; 
         private Long pageSize; 
         private String requestId; 
@@ -90,6 +102,14 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
          */
         public Builder invocations(Invocations invocations) {
             this.invocations = invocations;
+            return this;
+        }
+
+        /**
+         * A pagination token. It can be used in the next request to retrieve a new page of results.
+         */
+        public Builder nextToken(String nextToken) {
+            this.nextToken = nextToken;
             return this;
         }
 

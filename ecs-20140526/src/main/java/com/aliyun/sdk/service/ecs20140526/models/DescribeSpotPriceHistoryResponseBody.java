@@ -74,7 +74,7 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
         private SpotPrices spotPrices; 
 
         /**
-         * The ID of the request.
+         * The instance type of the preemptible instance.
          */
         public Builder currency(String currency) {
             this.currency = currency;
@@ -82,12 +82,7 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * The currency unit of the price.
-         * <p>
-         * 
-         * Alibaba Cloud China site (aliyun.com): CNY.
-         * 
-         * Alibaba Cloud International site (alibabacloud.com): USD.
+         * The network type of the preemptible instance.
          */
         public Builder nextOffset(Integer nextOffset) {
             this.nextOffset = nextOffset;
@@ -95,10 +90,7 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * The line from which the next query starts.
-         * <p>
-         * 
-         * Default value: 0.
+         * The instance type of the preemptible instance.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -106,7 +98,7 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * The start line of the next page. It is the value of the `Offset` request parameter.
+         * The zone ID of the preemptible instance.
          */
         public Builder spotPrices(SpotPrices spotPrices) {
             this.spotPrices = spotPrices;
@@ -218,7 +210,7 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * InstanceType.
+             * The instance type of the preemptible instance.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -234,7 +226,7 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The time that corresponds to the queried spot price. The time is in the `yyyy-MM-ddTHH:mm:ssZ` format.
+             * Queries the price history of a preemptible instance within the last 30 days.
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -242,7 +234,7 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * OriginPrice.
+             * The price for a pay-as-you-go instance that has the same configuration as the specified preemptible instance.
              */
             public Builder originPrice(Float originPrice) {
                 this.originPrice = originPrice;
@@ -250,7 +242,7 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The zone ID of the preemptible instance.
+             * The price for a pay-as-you-go instance that has the same configurations as the preemptible instance.
              */
             public Builder spotPrice(Float spotPrice) {
                 this.spotPrice = spotPrice;
@@ -258,7 +250,12 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The spot price (market price) of the preemptible instance.
+             * The currency unit of the price.
+             * <p>
+             * 
+             * Alibaba Cloud China site (aliyun.com): CNY.
+             * 
+             * Alibaba Cloud International site (alibabacloud.com): USD.
              */
             public Builder timestamp(String timestamp) {
                 this.timestamp = timestamp;
@@ -266,7 +263,7 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the preemptible instance is I/O optimized.
+             * The ID of the request.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

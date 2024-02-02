@@ -732,7 +732,11 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         }
 
         /**
-         * CreditSpecification.
+         * The performance mode of the burstable instance. Valid values:
+         * <p>
+         * 
+         * *   Standard: the standard mode. For more information, see the "Standard mode" section in [Burstable instances](~~59977~~).
+         * *   Unlimited: the unlimited mode. For more information, see the "Unlimited mode" section in [Burstable instances](~~59977~~).
          */
         public Builder creditSpecification(String creditSpecification) {
             this.putQueryParameter("CreditSpecification", creditSpecification);
@@ -1380,7 +1384,8 @@ public class CreateLaunchTemplateVersionRequest extends Request {
              * 
              * *   cloud: basic disk
              * *   cloud_efficiency: ultra disk
-             * *   cloud_ssd: standard SSD.
+             * *   cloud_ssd: standard SSD
+             * *   cloud_auto: ESSD AutoPL disk
              * *   cloud_essd: enhanced SSD (ESSD). You can use the `SystemDisk.PerformanceLevel` parameter to set the performance level of the ESSD to use as the system disk.
              * 
              * For non-I/O optimized instances of a retired instance type, the default value is cloud. For other types of instances, the default value is cloud_efficiency.
@@ -1675,7 +1680,8 @@ public class CreateLaunchTemplateVersionRequest extends Request {
              * 
              * *   cloud: basic disk
              * *   cloud_efficiency: ultra disk
-             * *   cloud_ssd: standard SSD.
+             * *   cloud_ssd: standard SSD
+             * *   cloud_auto: ESSD AutoPL disk
              * *   cloud_essd: ESSD
              * 
              * For I/O optimized instances, the default value is cloud_efficiency. For non-I/O optimized instances, the default value is cloud.

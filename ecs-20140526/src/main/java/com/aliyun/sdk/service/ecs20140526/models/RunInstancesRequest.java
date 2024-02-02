@@ -1496,7 +1496,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * 镜像相关属性信息。
+         * The image-related attribute parameters.
          */
         public Builder imageOptions(ImageOptions imageOptions) {
             this.putQueryParameter("ImageOptions", imageOptions);
@@ -1724,7 +1724,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * 网络相关属性参数。
+         * The network-related attribute parameters.
          */
         public Builder networkOptions(NetworkOptions networkOptions) {
             this.putQueryParameter("NetworkOptions", networkOptions);
@@ -2086,10 +2086,14 @@ public class RunInstancesRequest extends Request {
         @NameInMap("ThreadsPerCore")
         private Integer threadsPerCore;
 
+        @NameInMap("TopologyType")
+        private String topologyType;
+
         private CpuOptions(Builder builder) {
             this.core = builder.core;
             this.numa = builder.numa;
             this.threadsPerCore = builder.threadsPerCore;
+            this.topologyType = builder.topologyType;
         }
 
         public static Builder builder() {
@@ -2121,10 +2125,18 @@ public class RunInstancesRequest extends Request {
             return this.threadsPerCore;
         }
 
+        /**
+         * @return topologyType
+         */
+        public String getTopologyType() {
+            return this.topologyType;
+        }
+
         public static final class Builder {
             private Integer core; 
             private String numa; 
             private Integer threadsPerCore; 
+            private String topologyType; 
 
             /**
              * The number of CPU cores. This parameter cannot be specified but only uses its default value.
@@ -2156,6 +2168,23 @@ public class RunInstancesRequest extends Request {
              */
             public Builder threadsPerCore(Integer threadsPerCore) {
                 this.threadsPerCore = threadsPerCore;
+                return this;
+            }
+
+            /**
+             * The CPU topology type of the instance. Valid values:
+             * <p>
+             * 
+             * - ContinuousCoreToHTMapping: The Hyper-Threading (HT) technology allows continuous threads to run on the same core in the CPU topology of the instance.
+             * 
+             * - DiscreteCoreToHTMapping: The HT technology allows discrete threads to run on the same core in the CPU topology of the instance.
+             * 
+             * This parameter is empty by default.
+             * 
+             * >This parameter is supported only for specific instance families. For more information about the supported instance families, see [View and modify the CPU topology](~~2636059~~).
+             */
+            public Builder topologyType(String topologyType) {
+                this.topologyType = topologyType;
                 return this;
             }
 
@@ -2712,7 +2741,7 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The ID of the dedicated block storage cluster. If you want to use disks in a dedicated block storage cluster as system disks when you create instances, you must specify this parameter. For more information about dedicated block storage clusters, see [What is Dedicated Block Storage Cluster?](~~208883~~)
+             * The ID of the dedicated block storage cluster. If you want to use disks in a dedicated block storage cluster as system disks when you create instances, you must specify this parameter.
              */
             public Builder storageClusterId(String storageClusterId) {
                 this.storageClusterId = storageClusterId;
@@ -3214,12 +3243,12 @@ public class RunInstancesRequest extends Request {
             private Boolean loginAsNonRoot; 
 
             /**
-             * 使用该镜像的实例是否支持使用ecs-user用户登录。可能值：
+             * Specifies whether the instance that uses the image support logons from the ecs-user user. Valid values:
              * <p>
              * 
-             * - true：是
+             * - true
              * 
-             * - false：否
+             * - false
              */
             public Builder loginAsNonRoot(Boolean loginAsNonRoot) {
                 this.loginAsNonRoot = loginAsNonRoot;
@@ -3270,11 +3299,17 @@ public class RunInstancesRequest extends Request {
         @NameInMap("QueuePairNumber")
         private Long queuePairNumber;
 
+        @NameInMap("RxQueueSize")
+        private Integer rxQueueSize;
+
         @NameInMap("SecurityGroupId")
         private String securityGroupId;
 
         @NameInMap("SecurityGroupIds")
         private java.util.List < String > securityGroupIds;
+
+        @NameInMap("TxQueueSize")
+        private Integer txQueueSize;
 
         @NameInMap("VSwitchId")
         private String vSwitchId;
@@ -3292,8 +3327,10 @@ public class RunInstancesRequest extends Request {
             this.primaryIpAddress = builder.primaryIpAddress;
             this.queueNumber = builder.queueNumber;
             this.queuePairNumber = builder.queuePairNumber;
+            this.rxQueueSize = builder.rxQueueSize;
             this.securityGroupId = builder.securityGroupId;
             this.securityGroupIds = builder.securityGroupIds;
+            this.txQueueSize = builder.txQueueSize;
             this.vSwitchId = builder.vSwitchId;
         }
 
@@ -3390,6 +3427,13 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
+         * @return rxQueueSize
+         */
+        public Integer getRxQueueSize() {
+            return this.rxQueueSize;
+        }
+
+        /**
          * @return securityGroupId
          */
         public String getSecurityGroupId() {
@@ -3401,6 +3445,13 @@ public class RunInstancesRequest extends Request {
          */
         public java.util.List < String > getSecurityGroupIds() {
             return this.securityGroupIds;
+        }
+
+        /**
+         * @return txQueueSize
+         */
+        public Integer getTxQueueSize() {
+            return this.txQueueSize;
         }
 
         /**
@@ -3423,12 +3474,24 @@ public class RunInstancesRequest extends Request {
             private String primaryIpAddress; 
             private Integer queueNumber; 
             private Long queuePairNumber; 
+            private Integer rxQueueSize; 
             private String securityGroupId; 
             private java.util.List < String > securityGroupIds; 
+            private Integer txQueueSize; 
             private String vSwitchId; 
 
             /**
-             * DeleteOnRelease.
+             * Specifies whether to release ENI N when the instance is released. Valid values:
+             * <p>
+             * 
+             * - true
+             * 
+             * - false
+             * 
+             * Default value: true.
+             * 
+             * > Note This parameter takes effect only for secondary ENIs.
+             * Example: true.
              */
             public Builder deleteOnRelease(Boolean deleteOnRelease) {
                 this.deleteOnRelease = deleteOnRelease;
@@ -3497,13 +3560,13 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * 网卡指定的物理网卡索引。
+             * The network interface controller (NIC) index specified for an ENI. 
              * <p>
              * 
-             * 您需要注意：
-             * - 只有特定实例规格支持指定物理网卡索引。
-             * - NetworkInterface.N.InstanceType取值为Primary时，对于支持物理网卡的实例规格，如果设置此参数，只能设置为0。
-             * - NetworkInterface.N.InstanceType取值为Secondary或者空值，对于支持物理网卡的实例规格，此参数可以依据实例规格设置。更多信息，请参见[实例规格族](~~25378~~)。
+             * Take note of the following items:
+             * - You can specify NIC indexes only for instances of specific instance types. 
+             * - If NetworkInterface.N.InstanceType is set to Primary, set this parameter to 0 for the instance that supports NICs. 
+             * - If NetworkInterface.N.InstanceType is set to Secondary or left empty, specify this parameter based on the instance type of the instance that supports NICs. For more information, see [Overview of instance families](~~25378~~).
              */
             public Builder networkCardIndex(Integer networkCardIndex) {
                 this.networkCardIndex = networkCardIndex;
@@ -3511,7 +3574,11 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * NetworkInterfaceId.
+             * The ID of ENI N.
+             * <p>
+             * 
+             * > Note This parameter takes effect only for secondary ENIs.
+             * Example: eni-bp1gn106np8jhxhj****.
              */
             public Builder networkInterfaceId(String networkInterfaceId) {
                 this.networkInterfaceId = networkInterfaceId;
@@ -3596,6 +3663,14 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
+             * RxQueueSize.
+             */
+            public Builder rxQueueSize(Integer rxQueueSize) {
+                this.rxQueueSize = rxQueueSize;
+                return this;
+            }
+
+            /**
              * The ID of the security group to which to assign secondary ENI N.
              * <p>
              * 
@@ -3624,6 +3699,14 @@ public class RunInstancesRequest extends Request {
              */
             public Builder securityGroupIds(java.util.List < String > securityGroupIds) {
                 this.securityGroupIds = securityGroupIds;
+                return this;
+            }
+
+            /**
+             * TxQueueSize.
+             */
+            public Builder txQueueSize(Integer txQueueSize) {
+                this.txQueueSize = txQueueSize;
                 return this;
             }
 
@@ -3676,16 +3759,16 @@ public class RunInstancesRequest extends Request {
             private Boolean enableJumboFrame; 
 
             /**
-             * 实例是否开启Jumbo frame特性。参数取值范围：
+             * Specifies whether to enable the Jumbo Frame feature for the instance. Valid values:
              * <p>
              * 
-             * - false：不开启Jumbo frame, 该实例下的所有网卡（包括主网卡及辅助网卡）MTU取值为1500。
+             * - false: does not enable the Jumbo Frame feature for the instance. The maximum transmission unit (MTU) values of all primary and secondary elastic network interfaces (ENIs) on the instance are set to 1500. 
              * 
-             * - true：开启Jumbo frame, 该实例下的所有网卡（包括主网卡及辅助网卡）的MTU取值为8500。
+             * - true: enables the Jumbo Frame feature for the instance. The MTU values of all primary and secondary ENIs on the instance are set to 8500. 
              * 
-             * 默认值：true。
+             * Default value: true. 
              * 
-             * >只有八代以上部分实例规格支持开启Jumbo frame特性，更多信息，请参见[ECS实例MTU](~~200512~~)。
+             * > Only instances of some 8th-generation or later instance types support the Jumbo Frame feature. For more information, see [MTUs](~~200512~~).
              */
             public Builder enableJumboFrame(Boolean enableJumboFrame) {
                 this.enableJumboFrame = enableJumboFrame;

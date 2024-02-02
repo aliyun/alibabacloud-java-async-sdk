@@ -70,7 +70,7 @@ public class CreateLaunchTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * LaunchTemplateVersionNumber.
+         * The version number of the launch template.
          */
         public Builder launchTemplateVersionNumber(Long launchTemplateVersionNumber) {
             this.launchTemplateVersionNumber = launchTemplateVersionNumber;

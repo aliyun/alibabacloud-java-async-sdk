@@ -40,7 +40,6 @@ public class DeleteAutoProvisioningGroupRequest extends Request {
 
     @Query
     @NameInMap("TerminateInstances")
-    @Validation(required = true)
     private Boolean terminateInstances;
 
     private DeleteAutoProvisioningGroupRequest(Builder builder) {

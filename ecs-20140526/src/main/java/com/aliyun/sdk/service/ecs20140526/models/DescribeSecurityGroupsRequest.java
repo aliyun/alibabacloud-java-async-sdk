@@ -92,6 +92,10 @@ public class DescribeSecurityGroupsRequest extends Request {
     private String securityGroupType;
 
     @Query
+    @NameInMap("ServiceManaged")
+    private Boolean serviceManaged;
+
+    @Query
     @NameInMap("Tag")
     private java.util.List < Tag> tag;
 
@@ -120,6 +124,7 @@ public class DescribeSecurityGroupsRequest extends Request {
         this.securityGroupIds = builder.securityGroupIds;
         this.securityGroupName = builder.securityGroupName;
         this.securityGroupType = builder.securityGroupType;
+        this.serviceManaged = builder.serviceManaged;
         this.tag = builder.tag;
         this.vpcId = builder.vpcId;
     }
@@ -271,6 +276,13 @@ public class DescribeSecurityGroupsRequest extends Request {
     }
 
     /**
+     * @return serviceManaged
+     */
+    public Boolean getServiceManaged() {
+        return this.serviceManaged;
+    }
+
+    /**
      * @return tag
      */
     public java.util.List < Tag> getTag() {
@@ -304,6 +316,7 @@ public class DescribeSecurityGroupsRequest extends Request {
         private String securityGroupIds; 
         private String securityGroupName; 
         private String securityGroupType; 
+        private Boolean serviceManaged; 
         private java.util.List < Tag> tag; 
         private String vpcId; 
 
@@ -332,6 +345,7 @@ public class DescribeSecurityGroupsRequest extends Request {
             this.securityGroupIds = request.securityGroupIds;
             this.securityGroupName = request.securityGroupName;
             this.securityGroupType = request.securityGroupType;
+            this.serviceManaged = request.serviceManaged;
             this.tag = request.tag;
             this.vpcId = request.vpcId;
         } 
@@ -542,6 +556,15 @@ public class DescribeSecurityGroupsRequest extends Request {
         public Builder securityGroupType(String securityGroupType) {
             this.putQueryParameter("SecurityGroupType", securityGroupType);
             this.securityGroupType = securityGroupType;
+            return this;
+        }
+
+        /**
+         * ServiceManaged.
+         */
+        public Builder serviceManaged(Boolean serviceManaged) {
+            this.putQueryParameter("ServiceManaged", serviceManaged);
+            this.serviceManaged = serviceManaged;
             return this;
         }
 

@@ -22,26 +22,32 @@ public class RevokeSecurityGroupRequest extends Request {
 
     @Query
     @NameInMap("Description")
+    @Deprecated
     private String description;
 
     @Query
     @NameInMap("DestCidrIp")
+    @Deprecated
     private String destCidrIp;
 
     @Query
     @NameInMap("IpProtocol")
+    @Deprecated
     private String ipProtocol;
 
     @Query
     @NameInMap("Ipv6DestCidrIp")
+    @Deprecated
     private String ipv6DestCidrIp;
 
     @Query
     @NameInMap("Ipv6SourceCidrIp")
+    @Deprecated
     private String ipv6SourceCidrIp;
 
     @Query
     @NameInMap("NicType")
+    @Deprecated
     private String nicType;
 
     @Query
@@ -58,14 +64,17 @@ public class RevokeSecurityGroupRequest extends Request {
 
     @Query
     @NameInMap("Policy")
+    @Deprecated
     private String policy;
 
     @Query
     @NameInMap("PortRange")
+    @Deprecated
     private String portRange;
 
     @Query
     @NameInMap("Priority")
+    @Deprecated
     private String priority;
 
     @Query
@@ -92,26 +101,32 @@ public class RevokeSecurityGroupRequest extends Request {
 
     @Query
     @NameInMap("SourceCidrIp")
+    @Deprecated
     private String sourceCidrIp;
 
     @Query
     @NameInMap("SourceGroupId")
+    @Deprecated
     private String sourceGroupId;
 
     @Query
     @NameInMap("SourceGroupOwnerAccount")
+    @Deprecated
     private String sourceGroupOwnerAccount;
 
     @Query
     @NameInMap("SourceGroupOwnerId")
+    @Deprecated
     private Long sourceGroupOwnerId;
 
     @Query
     @NameInMap("SourcePortRange")
+    @Deprecated
     private String sourcePortRange;
 
     @Query
     @NameInMap("SourcePrefixListId")
+    @Deprecated
     private String sourcePrefixListId;
 
     private RevokeSecurityGroupRequest(Builder builder) {

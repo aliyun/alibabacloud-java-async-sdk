@@ -7,31 +7,28 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ImportSnapshotResponse} extends {@link TeaModel}
+ * {@link ModifyInvocationAttributeResponse} extends {@link TeaModel}
  *
- * <p>ImportSnapshotResponse</p>
+ * <p>ModifyInvocationAttributeResponse</p>
  */
-public class ImportSnapshotResponse extends Response {
+public class ModifyInvocationAttributeResponse extends Response {
     @NameInMap("headers")
-    @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     private Integer statusCode;
 
     @NameInMap("body")
-    @Validation(required = true)
-    private ImportSnapshotResponseBody body;
+    private ModifyInvocationAttributeResponseBody body;
 
-    private ImportSnapshotResponse(BuilderImpl builder) {
+    private ModifyInvocationAttributeResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static ImportSnapshotResponse create() {
+    public static ModifyInvocationAttributeResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -57,35 +54,35 @@ public class ImportSnapshotResponse extends Response {
     /**
      * @return body
      */
-    public ImportSnapshotResponseBody getBody() {
+    public ModifyInvocationAttributeResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<ImportSnapshotResponse, Builder> {
+    public interface Builder extends Response.Builder<ModifyInvocationAttributeResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(ImportSnapshotResponseBody body);
+        Builder body(ModifyInvocationAttributeResponseBody body);
 
         @Override
-        ImportSnapshotResponse build();
+        ModifyInvocationAttributeResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<ImportSnapshotResponse, Builder>
+            extends Response.BuilderImpl<ModifyInvocationAttributeResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private ImportSnapshotResponseBody body; 
+        private ModifyInvocationAttributeResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(ImportSnapshotResponse response) {
+        private BuilderImpl(ModifyInvocationAttributeResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -114,14 +111,14 @@ public class ImportSnapshotResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(ImportSnapshotResponseBody body) {
+        public Builder body(ModifyInvocationAttributeResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public ImportSnapshotResponse build() {
-            return new ImportSnapshotResponse(this);
+        public ModifyInvocationAttributeResponse build() {
+            return new ModifyInvocationAttributeResponse(this);
         } 
 
     } 

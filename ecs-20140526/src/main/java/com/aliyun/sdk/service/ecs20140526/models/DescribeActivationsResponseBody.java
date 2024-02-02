@@ -15,6 +15,9 @@ public class DescribeActivationsResponseBody extends TeaModel {
     @NameInMap("ActivationList")
     private java.util.List < ActivationList> activationList;
 
+    @NameInMap("NextToken")
+    private String nextToken;
+
     @NameInMap("PageNumber")
     private Long pageNumber;
 
@@ -29,6 +32,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
 
     private DescribeActivationsResponseBody(Builder builder) {
         this.activationList = builder.activationList;
+        this.nextToken = builder.nextToken;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
@@ -48,6 +52,13 @@ public class DescribeActivationsResponseBody extends TeaModel {
      */
     public java.util.List < ActivationList> getActivationList() {
         return this.activationList;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     /**
@@ -80,6 +91,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
 
     public static final class Builder {
         private java.util.List < ActivationList> activationList; 
+        private String nextToken; 
         private Long pageNumber; 
         private Long pageSize; 
         private String requestId; 
@@ -90,6 +102,14 @@ public class DescribeActivationsResponseBody extends TeaModel {
          */
         public Builder activationList(java.util.List < ActivationList> activationList) {
             this.activationList = activationList;
+            return this;
+        }
+
+        /**
+         * A pagination token. It can be used in the next request to retrieve a new page of results.
+         */
+        public Builder nextToken(String nextToken) {
+            this.nextToken = nextToken;
             return this;
         }
 
@@ -423,7 +443,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group to which the activation code belongs.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;

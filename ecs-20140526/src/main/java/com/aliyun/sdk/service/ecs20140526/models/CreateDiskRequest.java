@@ -482,7 +482,7 @@ public class CreateDiskRequest extends Request {
          * The description of the disk. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
          * <p>
          * 
-         * This parameter is left empty by default.
+         * This parameter is empty by default.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -494,10 +494,10 @@ public class CreateDiskRequest extends Request {
          * The category of the disk. Valid values:
          * <p>
          * 
-         * *   cloud: basic disk
-         * *   cloud_efficiency: ultra disk
-         * *   cloud_ssd: standard SSD
-         * *   cloud_essd: ESSD
+         * *   cloud: basic disk.
+         * *   cloud_efficiency: ultra disk.
+         * *   cloud_ssd: standard SSD.
+         * *   cloud_essd: ESSD.
          * 
          * Default value: cloud.
          */
@@ -508,10 +508,10 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * The disk name. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+         * The name of the disk. The name must be 2 to 128 characters in length. It must start with a letter but cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
          * <p>
          * 
-         * This parameter is left empty by default.
+         * This parameter is empty by default.
          */
         public Builder diskName(String diskName) {
             this.putQueryParameter("DiskName", diskName);
@@ -550,7 +550,7 @@ public class CreateDiskRequest extends Request {
          * *   After you specify the instance ID, ResourceGroupId, Tag.N.Key, Tag.N.Value, ClientToken, and KMSKeyId are ignored.
          * *   You cannot specify ZoneId and InstanceId at the same time.
          * 
-         * This parameter is empty by default. This indicates that a pay-as-you-go disk is created. The RegionId and ZoneId parameters specify where the disk resides.
+         * This parameter is empty by default. This indicates that a pay-as-you-go disk is created. RegionId and ZoneId specify where the disk resides.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -670,23 +670,23 @@ public class CreateDiskRequest extends Request {
          * The size of the disk. Unit: GiB. This parameter is required. Valid values:
          * <p>
          * 
-         * *   Valid values when DiskCategory is set to cloud: 5 to 2,000
+         * *   Valid values when DiskCategory is set to cloud: 5 to 2,000.
          * 
-         * *   Valid values when DiskCategory is set to cloud_efficiency: 20 to 32,768
+         * *   Valid values when DiskCategory is set to cloud_efficiency: 20 to 32,768.
          * 
-         * *   Valid values when DiskCategory is set to cloud_ssd: 20 to 32,768
+         * *   Valid values when DiskCategory is set to cloud_ssd: 20 to 32,768.
          * 
          * *   Valid values when DiskCategory is set to cloud_essd: depends on the `PerformanceLevel` value.
          * 
-         *     *   Valid values when PerformanceLevel is set to PL0: 40 to 32,768
-         *     *   Valid values when PerformanceLevel is set to PL1: 20 to 32,768
-         *     *   Valid values when PerformanceLevel is set to PL2: 461 to 32,768
-         *     *   Valid values when PerformanceLevel is set to PL3: 1,261 to 32,768
+         *     *   Valid values when PerformanceLevel is set to PL0: 40 to 32,768.
+         *     *   Valid values when PerformanceLevel is set to PL1: 20 to 32,768.
+         *     *   Valid values when PerformanceLevel is set to PL2: 461 to 32,768.
+         *     *   Valid values when PerformanceLevel is set to PL3: 1,261 to 32,768.
          * 
-         * If the `SnapshotId` parameter is specified, the following limits apply to the `SnapshotId` and `Size` parameters:
+         * If `SnapshotId` is specified, the following limits apply to `SnapshotId` and `Size`:
          * 
-         * *   If the size of the snapshot specified by the `SnapshotId` parameter is greater than the specified `Size` value, the size of the created disk is equal to the specified snapshot size.
-         * *   If the size of the snapshot specified by the `SnapshotId` parameter is smaller than the specified `Size` value, the size of the created disk is equal to the specified `Size` value.
+         * *   If the size of the snapshot specified by `SnapshotId` is greater than the specified `Size` value, the size of the created disk is equal to the specified snapshot size.
+         * *   If the size of the snapshot specified by `SnapshotId` is smaller than the specified `Size` value, the size of the created disk is equal to the specified `Size` value.
          */
         public Builder size(Integer size) {
             this.putQueryParameter("Size", size);
@@ -695,13 +695,13 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * The ID of the snapshot that you want to use to create the disk. Snapshots that were created on or before July 15, 2013 cannot be used to create disks.
+         * The ID of the snapshot used to create the disk. Snapshots that were created on or before July 15, 2013 cannot be used to create disks.
          * <p>
          * 
-         * The following limits apply to the `SnapshotId` and `Size` parameters:
+         * The following limits apply to `SnapshotId` and `Size`:
          * 
-         * *   If the size of the snapshot specified by the `SnapshotId` parameter is greater than the specified `Size` value, the size of the created disk is equal to the specified snapshot size.
-         * *   If the size of the snapshot specified by the `SnapshotId` parameter is smaller than the specified `Size` value, the size of the created disk is equal to the specified `Size` value.
+         * *   If the size of the snapshot specified by `SnapshotId` is greater than the specified `Size` value, the size of the created disk is equal to the specified snapshot size.
+         * *   If the size of the snapshot specified by `SnapshotId` is smaller than the specified `Size` value, the size of the created disk is equal to the specified `Size` value.
          */
         public Builder snapshotId(String snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);
@@ -710,10 +710,10 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * The ID of the dedicated block storage cluster. To create a disk in a specific dedicated block storage cluster, specify this parameter. For more information about dedicated block storage clusters, see [What is Dedicated Block Storage Cluster?](~~208883~~)
+         * The ID of the dedicated block storage cluster. To create a disk in a specific dedicated block storage cluster, specify this parameter.
          * <p>
          * 
-         * > You cannot specify storage set-related parameters (`StorageSetId` and `StorageSetPartitionNumber`) and the dedicated block storage cluster-related parameter (`StorageClusterId`) at the same time.
+         * > You cannot specify storage set-related parameters (`StorageSetId` and `StorageSetPartitionNumber`) and the dedicated block storage cluster-related parameter (`StorageClusterId`) at the same time. Otherwise, the operation cannot be called.
          */
         public Builder storageClusterId(String storageClusterId) {
             this.putQueryParameter("StorageClusterId", storageClusterId);
@@ -725,7 +725,7 @@ public class CreateDiskRequest extends Request {
          * The ID of the storage set.
          * <p>
          * 
-         * > You cannot specify storage set-related parameters (`StorageSetId` and `StorageSetPartitionNumber`) and the dedicated block storage cluster-related parameter (`StorageClusterId`) at the same time.
+         * > You cannot specify storage set-related parameters (`StorageSetId` and `StorageSetPartitionNumber`) and the dedicated block storage cluster-related parameter (`StorageClusterId`) at the same time. Otherwise, the operation cannot be called.
          */
         public Builder storageSetId(String storageSetId) {
             this.putQueryParameter("StorageSetId", storageSetId);
@@ -734,7 +734,7 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * The number of partitions in the storage set. The value must be greater than or equal to 2 but cannot exceed the quota obtained by calling the [DescribeAccountAttributes](~~73772~~) operation.
+         * The number of partitions in the storage set. The value must be greater than or equal to 2 but cannot exceed the quota obtained by calling the [DescribeAccountAttributes](~~73772~~)operation.
          * <p>
          * 
          * Default value: 2.
@@ -758,7 +758,7 @@ public class CreateDiskRequest extends Request {
          * The ID of the zone in which to create the pay-as-you-go disk.
          * <p>
          * 
-         * *   If you do not specify InstanceId, you must specify ZoneId.
+         * *   If InstanceId is not specified, ZoneId is required.
          * *   You cannot specify ZoneId and InstanceId at the same time.
          */
         public Builder zoneId(String zoneId) {

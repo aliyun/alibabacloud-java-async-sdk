@@ -15,11 +15,15 @@ public class DeleteLaunchTemplateResponseBody extends TeaModel {
     @NameInMap("LaunchTemplateId")
     private String launchTemplateId;
 
+    @NameInMap("LaunchTemplateVersionNumbers")
+    private LaunchTemplateVersionNumbers launchTemplateVersionNumbers;
+
     @NameInMap("RequestId")
     private String requestId;
 
     private DeleteLaunchTemplateResponseBody(Builder builder) {
         this.launchTemplateId = builder.launchTemplateId;
+        this.launchTemplateVersionNumbers = builder.launchTemplateVersionNumbers;
         this.requestId = builder.requestId;
     }
 
@@ -39,6 +43,13 @@ public class DeleteLaunchTemplateResponseBody extends TeaModel {
     }
 
     /**
+     * @return launchTemplateVersionNumbers
+     */
+    public LaunchTemplateVersionNumbers getLaunchTemplateVersionNumbers() {
+        return this.launchTemplateVersionNumbers;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -47,6 +58,7 @@ public class DeleteLaunchTemplateResponseBody extends TeaModel {
 
     public static final class Builder {
         private String launchTemplateId; 
+        private LaunchTemplateVersionNumbers launchTemplateVersionNumbers; 
         private String requestId; 
 
         /**
@@ -57,6 +69,14 @@ public class DeleteLaunchTemplateResponseBody extends TeaModel {
          */
         public Builder launchTemplateId(String launchTemplateId) {
             this.launchTemplateId = launchTemplateId;
+            return this;
+        }
+
+        /**
+         * LaunchTemplateVersionNumbers.
+         */
+        public Builder launchTemplateVersionNumbers(LaunchTemplateVersionNumbers launchTemplateVersionNumbers) {
+            this.launchTemplateVersionNumbers = launchTemplateVersionNumbers;
             return this;
         }
 
@@ -74,4 +94,45 @@ public class DeleteLaunchTemplateResponseBody extends TeaModel {
 
     } 
 
+    public static class LaunchTemplateVersionNumbers extends TeaModel {
+        @NameInMap("versionNumbers")
+        private java.util.List < Long > versionNumbers;
+
+        private LaunchTemplateVersionNumbers(Builder builder) {
+            this.versionNumbers = builder.versionNumbers;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static LaunchTemplateVersionNumbers create() {
+            return builder().build();
+        }
+
+        /**
+         * @return versionNumbers
+         */
+        public java.util.List < Long > getVersionNumbers() {
+            return this.versionNumbers;
+        }
+
+        public static final class Builder {
+            private java.util.List < Long > versionNumbers; 
+
+            /**
+             * versionNumbers.
+             */
+            public Builder versionNumbers(java.util.List < Long > versionNumbers) {
+                this.versionNumbers = versionNumbers;
+                return this;
+            }
+
+            public LaunchTemplateVersionNumbers build() {
+                return new LaunchTemplateVersionNumbers(this);
+            } 
+
+        } 
+
+    }
 }

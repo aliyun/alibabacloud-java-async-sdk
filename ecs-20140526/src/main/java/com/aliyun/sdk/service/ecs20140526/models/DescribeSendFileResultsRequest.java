@@ -29,8 +29,16 @@ public class DescribeSendFileResultsRequest extends Request {
     private String invokeId;
 
     @Query
+    @NameInMap("MaxResults")
+    private Integer maxResults;
+
+    @Query
     @NameInMap("Name")
     private String name;
+
+    @Query
+    @NameInMap("NextToken")
+    private String nextToken;
 
     @Query
     @NameInMap("OwnerAccount")
@@ -75,7 +83,9 @@ public class DescribeSendFileResultsRequest extends Request {
         this.instanceId = builder.instanceId;
         this.invocationStatus = builder.invocationStatus;
         this.invokeId = builder.invokeId;
+        this.maxResults = builder.maxResults;
         this.name = builder.name;
+        this.nextToken = builder.nextToken;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
@@ -129,10 +139,24 @@ public class DescribeSendFileResultsRequest extends Request {
     }
 
     /**
+     * @return maxResults
+     */
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
      * @return name
      */
     public String getName() {
         return this.name;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     /**
@@ -203,7 +227,9 @@ public class DescribeSendFileResultsRequest extends Request {
         private String instanceId; 
         private String invocationStatus; 
         private String invokeId; 
+        private Integer maxResults; 
         private String name; 
+        private String nextToken; 
         private String ownerAccount; 
         private Long ownerId; 
         private Long pageNumber; 
@@ -224,7 +250,9 @@ public class DescribeSendFileResultsRequest extends Request {
             this.instanceId = request.instanceId;
             this.invocationStatus = request.invocationStatus;
             this.invokeId = request.invokeId;
+            this.maxResults = request.maxResults;
             this.name = request.name;
+            this.nextToken = request.nextToken;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
@@ -286,11 +314,34 @@ public class DescribeSendFileResultsRequest extends Request {
         }
 
         /**
+         * The maximum number of entries per page. 
+         * <p>
+         * 
+         * Valid values: 1 to 50. 
+         * 
+         * Default value: 10.
+         */
+        public Builder maxResults(Integer maxResults) {
+            this.putQueryParameter("MaxResults", maxResults);
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
          * The name of the file whose sending records you want to query.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
             this.name = name;
+            return this;
+        }
+
+        /**
+         * The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.putQueryParameter("NextToken", nextToken);
+            this.nextToken = nextToken;
             return this;
         }
 

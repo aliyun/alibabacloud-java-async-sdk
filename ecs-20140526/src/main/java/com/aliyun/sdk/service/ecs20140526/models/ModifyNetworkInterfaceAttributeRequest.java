@@ -59,8 +59,16 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
+    @NameInMap("RxQueueSize")
+    private Integer rxQueueSize;
+
+    @Query
     @NameInMap("SecurityGroupId")
     private java.util.List < String > securityGroupId;
+
+    @Query
+    @NameInMap("TxQueueSize")
+    private Integer txQueueSize;
 
     private ModifyNetworkInterfaceAttributeRequest(Builder builder) {
         super(builder);
@@ -75,7 +83,9 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.rxQueueSize = builder.rxQueueSize;
         this.securityGroupId = builder.securityGroupId;
+        this.txQueueSize = builder.txQueueSize;
     }
 
     public static Builder builder() {
@@ -169,10 +179,24 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
     }
 
     /**
+     * @return rxQueueSize
+     */
+    public Integer getRxQueueSize() {
+        return this.rxQueueSize;
+    }
+
+    /**
      * @return securityGroupId
      */
     public java.util.List < String > getSecurityGroupId() {
         return this.securityGroupId;
+    }
+
+    /**
+     * @return txQueueSize
+     */
+    public Integer getTxQueueSize() {
+        return this.txQueueSize;
     }
 
     public static final class Builder extends Request.Builder<ModifyNetworkInterfaceAttributeRequest, Builder> {
@@ -187,7 +211,9 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private Integer rxQueueSize; 
         private java.util.List < String > securityGroupId; 
+        private Integer txQueueSize; 
 
         private Builder() {
             super();
@@ -206,7 +232,9 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.rxQueueSize = request.rxQueueSize;
             this.securityGroupId = request.securityGroupId;
+            this.txQueueSize = request.txQueueSize;
         } 
 
         /**
@@ -219,7 +247,11 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * DeleteOnRelease.
+         * Specifies whether to retain the ENI when the associated instance is released. Valid values:
+         * <p>
+         * 
+         * - true
+         * - false
          */
         public Builder deleteOnRelease(Boolean deleteOnRelease) {
             this.putQueryParameter("DeleteOnRelease", deleteOnRelease);
@@ -320,6 +352,15 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
         }
 
         /**
+         * RxQueueSize.
+         */
+        public Builder rxQueueSize(Integer rxQueueSize) {
+            this.putQueryParameter("RxQueueSize", rxQueueSize);
+            this.rxQueueSize = rxQueueSize;
+            return this;
+        }
+
+        /**
          * The ID of security group N to which the secondary ENI finally belongs. If a security group to which the ENI has belonged is in the ID list, that security group is removed from the list. Valid values of N: 1, 2, 3, 4, and 5.
          * <p>
          * 
@@ -328,6 +369,15 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
         public Builder securityGroupId(java.util.List < String > securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
             this.securityGroupId = securityGroupId;
+            return this;
+        }
+
+        /**
+         * TxQueueSize.
+         */
+        public Builder txQueueSize(Integer txQueueSize) {
+            this.putQueryParameter("TxQueueSize", txQueueSize);
+            this.txQueueSize = txQueueSize;
             return this;
         }
 

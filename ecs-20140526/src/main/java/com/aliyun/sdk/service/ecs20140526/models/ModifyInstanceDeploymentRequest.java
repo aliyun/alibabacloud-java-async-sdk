@@ -319,9 +319,9 @@ public class ModifyInstanceDeploymentRequest extends Request {
          * When you migrate an instance from a shared host to a dedicated host or between dedicated hosts, take note of the following items:
          * 
          * *   To migrate the instance to a specific dedicated host, specify this parameter.
-         * *   To migrate the instance to a dedicated host that the system automatically selects, leave this parameter empty and set `Tenancy` to host.
+         * *   To migrate the instance to a system-selected dedicated host, leave this parameter empty and set `Tenancy` to host.
          * 
-         * For information about the automatic deployment feature, see [Features of dedicated hosts](~~118938~~).
+         * For information about the automatic deployment feature, see [Functions and features](~~118938~~).
          */
         public Builder dedicatedHostId(String dedicatedHostId) {
             this.putQueryParameter("DedicatedHostId", dedicatedHostId);
@@ -330,10 +330,10 @@ public class ModifyInstanceDeploymentRequest extends Request {
         }
 
         /**
-         * The number of the deployment set group in which to deploy the instance in the destination deployment set. This parameter takes effect only when the destination deployment set uses the high availability group strategy (AvailabilityGroup). Valid values: 1 to 7.
+         * The number of the deployment set group in which to deploy the instance in the destination deployment set. This parameter is valid only when the destination deployment set uses the high availability group strategy (AvailabilityGroup). Valid values: 1 to 7.
          * <p>
          * 
-         * > If you call this operation to deploy an instance to a deployment set that uses the high availability group strategy (`AvailablilityGroup`) and leave this parameter empty, the system evenly distributes instances among the deployment set groups in the deployment set. If you specify the current deployment set of the instance as the destination deployment set in the request, the system evenly distributes instances again among the deployment set groups in the deployment set.
+         * > If you call this operation to deploy an instance to a deployment set that uses the high availability group strategy (`AvailablilityGroup`) and leave this parameter empty, the system evenly distributes instances among the deployment set groups in the deployment set. If you call this operation to change the deployment set of an instance and specify the current deployment set of the instance as the destination deployment set, the system evenly distributes instances again among the deployment set groups in the deployment set.
          */
         public Builder deploymentSetGroupNo(Integer deploymentSetGroupNo) {
             this.putQueryParameter("DeploymentSetGroupNo", deploymentSetGroupNo);
@@ -359,7 +359,7 @@ public class ModifyInstanceDeploymentRequest extends Request {
          * Specifies whether to forcefully change the host of the instance when the deployment set of the instance is changed. Valid values:
          * <p>
          * 
-         * *   true: forcefully changes the host of the instance when the deployment set of the instance is changed. Hosts can be forcefully changed only for instances in the Running or Stopped state. The instances that are in the Stopped state do not include pay-as-you-go instances that are stopped in economical mode.
+         * *   true: forcefully changes the host of the instance when the deployment set of the instance is changed. Hosts can be forcefully changed only for instances in the Running (Running) or Stopped (Stopped) state. The instances that are in the Stopped (Stopped) state do not include pay-as-you-go instances that are stopped in economical mode.
          * 
          *     **
          * 
@@ -376,7 +376,7 @@ public class ModifyInstanceDeploymentRequest extends Request {
         }
 
         /**
-         * The ID of the instance
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -390,7 +390,7 @@ public class ModifyInstanceDeploymentRequest extends Request {
          * 
          * You can change the instance type of an instance when you migrate the instance to a dedicated host. The new instance type must match the type of the specified dedicated host. For more information, see [Dedicated host types](~~68564~~).
          * 
-         * *   If you specify this parameter, you must also specify the `DedicatedHostId` parameter.
+         * *   If you specify this parameter, you must also specify `DedicatedHostId`.
          * *   You cannot change the instance type of an instance if you use the automatic deployment feature to migrate the instance.
          */
         public Builder instanceType(String instanceType) {
@@ -404,7 +404,7 @@ public class ModifyInstanceDeploymentRequest extends Request {
          * <p>
          * 
          * *   reboot: stops the instance before it is migrated.
-         * *   live: migrates the instance without stopping it. If you set the MigrationType parameter to live, you must specify the DedicatedHostId parameter. In this case, you cannot change the instance type of the instance when the instance is migrated.
+         * *   live: migrates the instance without stopping it. If you set MigrationType to live, you must specify DedicatedHostId. In this case, you cannot change the instance type of the instance when the instance is migrated.
          * 
          * Default value: reboot.
          */
@@ -433,7 +433,7 @@ public class ModifyInstanceDeploymentRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
+         * The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -450,7 +450,7 @@ public class ModifyInstanceDeploymentRequest extends Request {
          * 
          * Default value: false.
          * 
-         * > If you set this parameter to true, you must specify the InstanceId and DeploymentSetId parameters and make sure that the specified instance belongs to the specified deployment set.
+         * > If you set this parameter to true, you must specify InstanceId and DeploymentSetId and make sure that the specified instance belongs to the specified deployment set.
          */
         public Builder removeFromDeploymentSet(Boolean removeFromDeploymentSet) {
             this.putQueryParameter("RemoveFromDeploymentSet", removeFromDeploymentSet);
@@ -477,7 +477,7 @@ public class ModifyInstanceDeploymentRequest extends Request {
         }
 
         /**
-         * Specifies whether to deploy the instance on a dedicated host. Set the value to host.
+         * Specifies whether to deploy the instance on a dedicated host. Set the value to host, which indicates that the instance is deployed on a dedicated host.
          */
         public Builder tenancy(String tenancy) {
             this.putQueryParameter("Tenancy", tenancy);

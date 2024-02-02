@@ -164,10 +164,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("ThreadsPerCore")
         private Integer threadsPerCore;
 
+        @NameInMap("TopologyType")
+        private String topologyType;
+
         private CpuOptions(Builder builder) {
             this.coreCount = builder.coreCount;
             this.numa = builder.numa;
             this.threadsPerCore = builder.threadsPerCore;
+            this.topologyType = builder.topologyType;
         }
 
         public static Builder builder() {
@@ -199,10 +203,18 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.threadsPerCore;
         }
 
+        /**
+         * @return topologyType
+         */
+        public String getTopologyType() {
+            return this.topologyType;
+        }
+
         public static final class Builder {
             private Integer coreCount; 
             private String numa; 
             private Integer threadsPerCore; 
+            private String topologyType; 
 
             /**
              * The number of physical CPU cores.
@@ -225,6 +237,19 @@ public class DescribeInstancesResponseBody extends TeaModel {
              */
             public Builder threadsPerCore(Integer threadsPerCore) {
                 this.threadsPerCore = threadsPerCore;
+                return this;
+            }
+
+            /**
+             * The CPU topology type of the instance. Valid values:
+             * <p>
+             * 
+             * - ContinuousCoreToHTMapping: Hyper-Threading (HT) continuous mode
+             * 
+             * - DiscreteCoreToHTMapping: HT discrete mode
+             */
+            public Builder topologyType(String topologyType) {
+                this.topologyType = topologyType;
                 return this;
             }
 
@@ -2007,6 +2032,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("SpotDuration")
         private Integer spotDuration;
 
+        @NameInMap("SpotInterruptionBehavior")
+        private String spotInterruptionBehavior;
+
         @NameInMap("SpotPriceLimit")
         private Float spotPriceLimit;
 
@@ -2089,6 +2117,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             this.securityGroupIds = builder.securityGroupIds;
             this.serialNumber = builder.serialNumber;
             this.spotDuration = builder.spotDuration;
+            this.spotInterruptionBehavior = builder.spotInterruptionBehavior;
             this.spotPriceLimit = builder.spotPriceLimit;
             this.spotStrategy = builder.spotStrategy;
             this.startTime = builder.startTime;
@@ -2487,6 +2516,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return spotInterruptionBehavior
+         */
+        public String getSpotInterruptionBehavior() {
+            return this.spotInterruptionBehavior;
+        }
+
+        /**
          * @return spotPriceLimit
          */
         public Float getSpotPriceLimit() {
@@ -2604,6 +2640,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private SecurityGroupIds securityGroupIds; 
             private String serialNumber; 
             private Integer spotDuration; 
+            private String spotInterruptionBehavior; 
             private Float spotPriceLimit; 
             private String spotStrategy; 
             private String startTime; 
@@ -3078,6 +3115,19 @@ public class DescribeInstancesResponseBody extends TeaModel {
              */
             public Builder spotDuration(Integer spotDuration) {
                 this.spotDuration = spotDuration;
+                return this;
+            }
+
+            /**
+             * The interruption mode of the preemptible instance when the system initiates a preemptible instance interruption operation. Valid values:
+             * <p>
+             * 
+             * - Terminate: releases the instance. 
+             * 
+             * - Stop: stops the instance in economical mode.
+             */
+            public Builder spotInterruptionBehavior(String spotInterruptionBehavior) {
+                this.spotInterruptionBehavior = spotInterruptionBehavior;
                 return this;
             }
 

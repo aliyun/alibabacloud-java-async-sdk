@@ -303,7 +303,7 @@ public class DescribeDedicatedHostsRequest extends Request {
         }
 
         /**
-         * The ID of the dedicated host cluster to which the dedicated host belongs.
+         * The ID of the dedicated host cluster.
          */
         public Builder dedicatedHostClusterId(String dedicatedHostClusterId) {
             this.putQueryParameter("DedicatedHostClusterId", dedicatedHostClusterId);
@@ -330,7 +330,7 @@ public class DescribeDedicatedHostsRequest extends Request {
         }
 
         /**
-         * The dedicated host type. You can call the [DescribeDedicatedHostTypes](~~134240~~) operation to obtain the most recent list of dedicated host types.
+         * The dedicated host type. You can call the [DescribeDedicatedHostTypes](~~134240~~) operation to query the most recent list of dedicated host types.
          */
         public Builder dedicatedHostType(String dedicatedHostType) {
             this.putQueryParameter("DedicatedHostType", dedicatedHostType);
@@ -342,8 +342,8 @@ public class DescribeDedicatedHostsRequest extends Request {
          * The reason why the dedicated host is locked. Valid values:
          * <p>
          * 
-         * *   financial
-         * *   security
+         * *   financial: The dedicated host is locked due to overdue payments.
+         * *   security: The dedicated host is locked due to security reasons.
          */
         public Builder lockReason(String lockReason) {
             this.putQueryParameter("LockReason", lockReason);
@@ -408,7 +408,7 @@ public class DescribeDedicatedHostsRequest extends Request {
          * The ID of the resource group to which the dedicated host belongs. When this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.
          * <p>
          * 
-         * >  Resources in the default resource group are displayed in the response regardless of how this parameter is set.
+         * > Resources in the default resource group are displayed in the response regardless of how this parameter is set.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -435,11 +435,7 @@ public class DescribeDedicatedHostsRequest extends Request {
         }
 
         /**
-         * Specifies whether to display socket information. Valid values:
-         * <p>
-         * 
-         * *   true
-         * *   false
+         * Whether to display socket capacity information
          */
         public Builder socketDetails(String socketDetails) {
             this.putQueryParameter("SocketDetails", socketDetails);
@@ -466,7 +462,7 @@ public class DescribeDedicatedHostsRequest extends Request {
         }
 
         /**
-         * The key of tag N of the dedicated host. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+         * The tags of the dedicated host.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -529,7 +525,7 @@ public class DescribeDedicatedHostsRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N of the dedicated host. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             * The key of tag N of the dedicated host. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -537,7 +533,7 @@ public class DescribeDedicatedHostsRequest extends Request {
             }
 
             /**
-             * The value of tag N of the dedicated host. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             * The value of tag N to add to the dedicated host. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

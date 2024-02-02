@@ -177,7 +177,12 @@ public class DescribeNetworkInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * The attributes of the ENI.
+         * The attribute of the ENI. Valid values:
+         * <p>
+         * 
+         * attachment: attachment information about the ENI 
+         * 
+         * >This parameter is in invitational preview and is not publicly available.
          */
         public Builder attribute(String attribute) {
             this.putQueryParameter("Attribute", attribute);
@@ -240,7 +245,7 @@ public class DescribeNetworkInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * > This parameter is unavailable.
+         * >  This parameter is unavailable.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -294,7 +299,7 @@ public class DescribeNetworkInterfaceAttributeRequest extends Request {
             private String value; 
 
             /**
-             * > This parameter is unavailable.
+             * >  This parameter is unavailable.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -302,7 +307,7 @@ public class DescribeNetworkInterfaceAttributeRequest extends Request {
             }
 
             /**
-             * > This parameter is unavailable.
+             * >  This parameter is unavailable.
              */
             public Builder value(String value) {
                 this.value = value;

@@ -189,7 +189,6 @@ public class CreateSimulatedSystemEventsRequest extends Request {
          * *   SystemMaintenance.Redeploy: The instance is redeployed due to system maintenance.
          * *   SystemFailure.Redeploy: The instance is redeployed due to a system error.
          * *   SystemFailure.Stop: The instance is stopped due to a system error.
-         * *
          */
         public Builder eventType(String eventType) {
             this.putQueryParameter("EventType", eventType);

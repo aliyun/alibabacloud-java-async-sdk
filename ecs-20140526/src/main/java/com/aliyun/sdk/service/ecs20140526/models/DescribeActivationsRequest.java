@@ -25,6 +25,14 @@ public class DescribeActivationsRequest extends Request {
     private String instanceName;
 
     @Query
+    @NameInMap("MaxResults")
+    private Integer maxResults;
+
+    @Query
+    @NameInMap("NextToken")
+    private String nextToken;
+
+    @Query
     @NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -66,6 +74,8 @@ public class DescribeActivationsRequest extends Request {
         this.sourceRegionId = builder.sourceRegionId;
         this.activationId = builder.activationId;
         this.instanceName = builder.instanceName;
+        this.maxResults = builder.maxResults;
+        this.nextToken = builder.nextToken;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
@@ -109,6 +119,20 @@ public class DescribeActivationsRequest extends Request {
      */
     public String getInstanceName() {
         return this.instanceName;
+    }
+
+    /**
+     * @return maxResults
+     */
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     /**
@@ -178,6 +202,8 @@ public class DescribeActivationsRequest extends Request {
         private String sourceRegionId; 
         private String activationId; 
         private String instanceName; 
+        private Integer maxResults; 
+        private String nextToken; 
         private String ownerAccount; 
         private Long ownerId; 
         private Long pageNumber; 
@@ -197,6 +223,8 @@ public class DescribeActivationsRequest extends Request {
             this.sourceRegionId = request.sourceRegionId;
             this.activationId = request.activationId;
             this.instanceName = request.instanceName;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
@@ -232,6 +260,29 @@ public class DescribeActivationsRequest extends Request {
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
             this.instanceName = instanceName;
+            return this;
+        }
+
+        /**
+         * The maximum number of entries per page.
+         * <p>
+         * 
+         * Valid values: 1 to 50.
+         * 
+         * Default value: 10.
+         */
+        public Builder maxResults(Integer maxResults) {
+            this.putQueryParameter("MaxResults", maxResults);
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.putQueryParameter("NextToken", nextToken);
+            this.nextToken = nextToken;
             return this;
         }
 
@@ -294,7 +345,7 @@ public class DescribeActivationsRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the activation code belongs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

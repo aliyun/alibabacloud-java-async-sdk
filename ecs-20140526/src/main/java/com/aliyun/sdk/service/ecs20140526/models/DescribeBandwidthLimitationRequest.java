@@ -205,20 +205,26 @@ public class DescribeBandwidthLimitationRequest extends Request {
         }
 
         /**
-         * The preemption policy for the preemptible or pay-as-you-go instance. Valid values:
+         * The billing method of the instance. For more information, see [Billing overview](~~25398~~). Valid values:
          * <p>
          * 
-         * *   NoSpot: The instance is a regular pay-as-you-go instance.
-         * *   SpotWithPriceLimit: The instance is a preemptible instance with user-defined maximum hourly prices.
-         * *   SpotAsPriceGo: The system automatically offers a bid, which is not higher than the pay-as-you-go price for the same instance type.
+         * *   PrePaid: subscription
+         * *   PostPaid: pay-as-you-go
          * 
-         * Default value: NoSpot.
-         * 
-         * >  This parameter takes effect only when the InstanceChargeType parameter is set to PostPaid.
+         * Default value: PostPaid.
          */
         public Builder instanceChargeType(String instanceChargeType) {
             this.putQueryParameter("InstanceChargeType", instanceChargeType);
             this.instanceChargeType = instanceChargeType;
+            return this;
+        }
+
+        /**
+         * The instance type. For information about the values, see [Instance families](~~25378~~).
+         */
+        public Builder instanceType(String instanceType) {
+            this.putQueryParameter("InstanceType", instanceType);
+            this.instanceType = instanceType;
             return this;
         }
 
@@ -231,15 +237,6 @@ public class DescribeBandwidthLimitationRequest extends Request {
          * *   Create: creates an ECS instance.
          * 
          * Default value: Create.
-         */
-        public Builder instanceType(String instanceType) {
-            this.putQueryParameter("InstanceType", instanceType);
-            this.instanceType = instanceType;
-            return this;
-        }
-
-        /**
-         * 473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E
          */
         public Builder operationType(String operationType) {
             this.putQueryParameter("OperationType", operationType);
@@ -266,7 +263,7 @@ public class DescribeBandwidthLimitationRequest extends Request {
         }
 
         /**
-         * PrePaid
+         * The ID of the region. You can call the [DescribeRegions](~~DescribeRegions~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -275,7 +272,10 @@ public class DescribeBandwidthLimitationRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The ID of the resource.
+         * <p>
+         * 
+         * >  This parameter is required when the OperationType parameter is set to Upgrade or Downgrade.
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -302,10 +302,16 @@ public class DescribeBandwidthLimitationRequest extends Request {
         }
 
         /**
-         * The ID of the resource.
+         * The bidding policy for the pay-as-you-go instance. Valid values:
          * <p>
          * 
-         * >  This parameter is required when the OperationType parameter is set to Upgrade or Downgrade.
+         * *   NoSpot: The instance is a regular pay-as-you-go instance.
+         * *   SpotWithPriceLimit: The instance is a preemptible instance with user-defined maximum hourly prices.
+         * *   SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is automatically used as the bid price. The market price can be up to the pay-as-you-go price.
+         * 
+         * Default value: NoSpot.
+         * 
+         * >  The SpotStrategy parameter takes effect only when the InstanceChargeType parameter is set to PostPaid.
          */
         public Builder spotStrategy(String spotStrategy) {
             this.putQueryParameter("SpotStrategy", spotStrategy);

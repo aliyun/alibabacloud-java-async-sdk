@@ -712,6 +712,12 @@ public class DescribeDisksResponseBody extends TeaModel {
         @NameInMap("Throughput")
         private Integer throughput;
 
+        @NameInMap("ThroughputRead")
+        private Integer throughputRead;
+
+        @NameInMap("ThroughputWrite")
+        private Integer throughputWrite;
+
         @NameInMap("Type")
         private String type;
 
@@ -763,6 +769,8 @@ public class DescribeDisksResponseBody extends TeaModel {
             this.storageSetPartitionNumber = builder.storageSetPartitionNumber;
             this.tags = builder.tags;
             this.throughput = builder.throughput;
+            this.throughputRead = builder.throughputRead;
+            this.throughputWrite = builder.throughputWrite;
             this.type = builder.type;
             this.zoneId = builder.zoneId;
         }
@@ -1084,6 +1092,20 @@ public class DescribeDisksResponseBody extends TeaModel {
         }
 
         /**
+         * @return throughputRead
+         */
+        public Integer getThroughputRead() {
+            return this.throughputRead;
+        }
+
+        /**
+         * @return throughputWrite
+         */
+        public Integer getThroughputWrite() {
+            return this.throughputWrite;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
@@ -1142,6 +1164,8 @@ public class DescribeDisksResponseBody extends TeaModel {
             private Integer storageSetPartitionNumber; 
             private Tags tags; 
             private Integer throughput; 
+            private Integer throughputRead; 
+            private Integer throughputWrite; 
             private String type; 
             private String zoneId; 
 
@@ -1545,6 +1569,22 @@ public class DescribeDisksResponseBody extends TeaModel {
              */
             public Builder throughput(Integer throughput) {
                 this.throughput = throughput;
+                return this;
+            }
+
+            /**
+             * ThroughputRead.
+             */
+            public Builder throughputRead(Integer throughputRead) {
+                this.throughputRead = throughputRead;
+                return this;
+            }
+
+            /**
+             * ThroughputWrite.
+             */
+            public Builder throughputWrite(Integer throughputWrite) {
+                this.throughputWrite = throughputWrite;
                 return this;
             }
 
