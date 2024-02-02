@@ -182,6 +182,9 @@ public class MuteCallResponseBody extends TeaModel {
         @NameInMap("ReleaseReason")
         private String releaseReason;
 
+        @NameInMap("SkillGroupId")
+        private String skillGroupId;
+
         @NameInMap("Timestamp")
         private Long timestamp;
 
@@ -202,6 +205,7 @@ public class MuteCallResponseBody extends TeaModel {
             this.originator = builder.originator;
             this.releaseInitiator = builder.releaseInitiator;
             this.releaseReason = builder.releaseReason;
+            this.skillGroupId = builder.skillGroupId;
             this.timestamp = builder.timestamp;
             this.userExtension = builder.userExtension;
             this.userId = builder.userId;
@@ -286,6 +290,13 @@ public class MuteCallResponseBody extends TeaModel {
         }
 
         /**
+         * @return skillGroupId
+         */
+        public String getSkillGroupId() {
+            return this.skillGroupId;
+        }
+
+        /**
          * @return timestamp
          */
         public Long getTimestamp() {
@@ -317,6 +328,7 @@ public class MuteCallResponseBody extends TeaModel {
             private String originator; 
             private String releaseInitiator; 
             private String releaseReason; 
+            private String skillGroupId; 
             private Long timestamp; 
             private String userExtension; 
             private String userId; 
@@ -398,6 +410,14 @@ public class MuteCallResponseBody extends TeaModel {
              */
             public Builder releaseReason(String releaseReason) {
                 this.releaseReason = releaseReason;
+                return this;
+            }
+
+            /**
+             * SkillGroupId.
+             */
+            public Builder skillGroupId(String skillGroupId) {
+                this.skillGroupId = skillGroupId;
                 return this;
             }
 

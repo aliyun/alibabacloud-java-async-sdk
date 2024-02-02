@@ -1,3 +1,6 @@
+2024-02-02 Version: 1.0.10
+- Generated java-async 2020-07-01 for CCC.
+
 2023-12-22 Version: 1.0.9
 - Generated java-async 2020-07-01 for CCC.
 

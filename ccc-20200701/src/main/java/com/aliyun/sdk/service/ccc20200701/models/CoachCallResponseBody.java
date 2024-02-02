@@ -587,9 +587,6 @@ public class CoachCallResponseBody extends TeaModel {
         @NameInMap("SignedSkillGroupIdList")
         private java.util.List < String > signedSkillGroupIdList;
 
-        @NameInMap("Uri")
-        private String uri;
-
         @NameInMap("UserId")
         private String userId;
 
@@ -611,7 +608,6 @@ public class CoachCallResponseBody extends TeaModel {
             this.outboundScenario = builder.outboundScenario;
             this.reserved = builder.reserved;
             this.signedSkillGroupIdList = builder.signedSkillGroupIdList;
-            this.uri = builder.uri;
             this.userId = builder.userId;
             this.userState = builder.userState;
             this.workMode = builder.workMode;
@@ -703,13 +699,6 @@ public class CoachCallResponseBody extends TeaModel {
         }
 
         /**
-         * @return uri
-         */
-        public String getUri() {
-            return this.uri;
-        }
-
-        /**
          * @return userId
          */
         public String getUserId() {
@@ -742,7 +731,6 @@ public class CoachCallResponseBody extends TeaModel {
             private Boolean outboundScenario; 
             private Long reserved; 
             private java.util.List < String > signedSkillGroupIdList; 
-            private String uri; 
             private String userId; 
             private String userState; 
             private String workMode; 
@@ -832,14 +820,6 @@ public class CoachCallResponseBody extends TeaModel {
              */
             public Builder signedSkillGroupIdList(java.util.List < String > signedSkillGroupIdList) {
                 this.signedSkillGroupIdList = signedSkillGroupIdList;
-                return this;
-            }
-
-            /**
-             * Uri.
-             */
-            public Builder uri(String uri) {
-                this.uri = uri;
                 return this;
             }
 

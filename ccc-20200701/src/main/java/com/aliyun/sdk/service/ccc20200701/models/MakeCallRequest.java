@@ -35,6 +35,10 @@ public class MakeCallRequest extends Request {
     private String maskedCallee;
 
     @Query
+    @NameInMap("MediaType")
+    private String mediaType;
+
+    @Query
     @NameInMap("Tags")
     private String tags;
 
@@ -54,6 +58,7 @@ public class MakeCallRequest extends Request {
         this.deviceId = builder.deviceId;
         this.instanceId = builder.instanceId;
         this.maskedCallee = builder.maskedCallee;
+        this.mediaType = builder.mediaType;
         this.tags = builder.tags;
         this.timeoutSeconds = builder.timeoutSeconds;
         this.userId = builder.userId;
@@ -108,6 +113,13 @@ public class MakeCallRequest extends Request {
     }
 
     /**
+     * @return mediaType
+     */
+    public String getMediaType() {
+        return this.mediaType;
+    }
+
+    /**
      * @return tags
      */
     public String getTags() {
@@ -134,6 +146,7 @@ public class MakeCallRequest extends Request {
         private String deviceId; 
         private String instanceId; 
         private String maskedCallee; 
+        private String mediaType; 
         private String tags; 
         private Integer timeoutSeconds; 
         private String userId; 
@@ -149,6 +162,7 @@ public class MakeCallRequest extends Request {
             this.deviceId = request.deviceId;
             this.instanceId = request.instanceId;
             this.maskedCallee = request.maskedCallee;
+            this.mediaType = request.mediaType;
             this.tags = request.tags;
             this.timeoutSeconds = request.timeoutSeconds;
             this.userId = request.userId;
@@ -196,6 +210,15 @@ public class MakeCallRequest extends Request {
         public Builder maskedCallee(String maskedCallee) {
             this.putQueryParameter("MaskedCallee", maskedCallee);
             this.maskedCallee = maskedCallee;
+            return this;
+        }
+
+        /**
+         * MediaType.
+         */
+        public Builder mediaType(String mediaType) {
+            this.putQueryParameter("MediaType", mediaType);
+            this.mediaType = mediaType;
             return this;
         }
 

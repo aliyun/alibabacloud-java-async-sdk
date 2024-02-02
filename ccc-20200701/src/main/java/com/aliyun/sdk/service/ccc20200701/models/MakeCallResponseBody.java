@@ -170,6 +170,9 @@ public class MakeCallResponseBody extends TeaModel {
         @NameInMap("JobId")
         private String jobId;
 
+        @NameInMap("MediaType")
+        private String mediaType;
+
         @NameInMap("Originator")
         private String originator;
 
@@ -195,6 +198,7 @@ public class MakeCallResponseBody extends TeaModel {
             this.channelState = builder.channelState;
             this.destination = builder.destination;
             this.jobId = builder.jobId;
+            this.mediaType = builder.mediaType;
             this.originator = builder.originator;
             this.releaseInitiator = builder.releaseInitiator;
             this.releaseReason = builder.releaseReason;
@@ -254,6 +258,13 @@ public class MakeCallResponseBody extends TeaModel {
         }
 
         /**
+         * @return mediaType
+         */
+        public String getMediaType() {
+            return this.mediaType;
+        }
+
+        /**
          * @return originator
          */
         public String getOriginator() {
@@ -302,6 +313,7 @@ public class MakeCallResponseBody extends TeaModel {
             private String channelState; 
             private String destination; 
             private String jobId; 
+            private String mediaType; 
             private String originator; 
             private String releaseInitiator; 
             private String releaseReason; 
@@ -354,6 +366,14 @@ public class MakeCallResponseBody extends TeaModel {
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
+                return this;
+            }
+
+            /**
+             * MediaType.
+             */
+            public Builder mediaType(String mediaType) {
+                this.mediaType = mediaType;
                 return this;
             }
 
