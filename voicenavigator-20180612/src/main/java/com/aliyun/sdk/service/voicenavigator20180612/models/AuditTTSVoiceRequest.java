@@ -13,9 +13,29 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class AuditTTSVoiceRequest extends Request {
     @Query
+    @NameInMap("AccessKey")
+    private String accessKey;
+
+    @Query
+    @NameInMap("AppKey")
+    private String appKey;
+
+    @Query
+    @NameInMap("Engine")
+    private String engine;
+
+    @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
     private String instanceId;
+
+    @Query
+    @NameInMap("PitchRate")
+    private String pitchRate;
+
+    @Query
+    @NameInMap("SecretKey")
+    private String secretKey;
 
     @Query
     @NameInMap("SpeechRate")
@@ -39,7 +59,12 @@ public class AuditTTSVoiceRequest extends Request {
 
     private AuditTTSVoiceRequest(Builder builder) {
         super(builder);
+        this.accessKey = builder.accessKey;
+        this.appKey = builder.appKey;
+        this.engine = builder.engine;
         this.instanceId = builder.instanceId;
+        this.pitchRate = builder.pitchRate;
+        this.secretKey = builder.secretKey;
         this.speechRate = builder.speechRate;
         this.text = builder.text;
         this.voice = builder.voice;
@@ -60,10 +85,45 @@ public class AuditTTSVoiceRequest extends Request {
     }
 
     /**
+     * @return accessKey
+     */
+    public String getAccessKey() {
+        return this.accessKey;
+    }
+
+    /**
+     * @return appKey
+     */
+    public String getAppKey() {
+        return this.appKey;
+    }
+
+    /**
+     * @return engine
+     */
+    public String getEngine() {
+        return this.engine;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    /**
+     * @return pitchRate
+     */
+    public String getPitchRate() {
+        return this.pitchRate;
+    }
+
+    /**
+     * @return secretKey
+     */
+    public String getSecretKey() {
+        return this.secretKey;
     }
 
     /**
@@ -95,7 +155,12 @@ public class AuditTTSVoiceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AuditTTSVoiceRequest, Builder> {
+        private String accessKey; 
+        private String appKey; 
+        private String engine; 
         private String instanceId; 
+        private String pitchRate; 
+        private String secretKey; 
         private String speechRate; 
         private String text; 
         private String voice; 
@@ -107,7 +172,12 @@ public class AuditTTSVoiceRequest extends Request {
 
         private Builder(AuditTTSVoiceRequest request) {
             super(request);
+            this.accessKey = request.accessKey;
+            this.appKey = request.appKey;
+            this.engine = request.engine;
             this.instanceId = request.instanceId;
+            this.pitchRate = request.pitchRate;
+            this.secretKey = request.secretKey;
             this.speechRate = request.speechRate;
             this.text = request.text;
             this.voice = request.voice;
@@ -115,11 +185,56 @@ public class AuditTTSVoiceRequest extends Request {
         } 
 
         /**
+         * AccessKey.
+         */
+        public Builder accessKey(String accessKey) {
+            this.putQueryParameter("AccessKey", accessKey);
+            this.accessKey = accessKey;
+            return this;
+        }
+
+        /**
+         * AppKey.
+         */
+        public Builder appKey(String appKey) {
+            this.putQueryParameter("AppKey", appKey);
+            this.appKey = appKey;
+            return this;
+        }
+
+        /**
+         * Engine.
+         */
+        public Builder engine(String engine) {
+            this.putQueryParameter("Engine", engine);
+            this.engine = engine;
+            return this;
+        }
+
+        /**
          * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * PitchRate.
+         */
+        public Builder pitchRate(String pitchRate) {
+            this.putQueryParameter("PitchRate", pitchRate);
+            this.pitchRate = pitchRate;
+            return this;
+        }
+
+        /**
+         * SecretKey.
+         */
+        public Builder secretKey(String secretKey) {
+            this.putQueryParameter("SecretKey", secretKey);
+            this.secretKey = secretKey;
             return this;
         }
 

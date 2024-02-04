@@ -15,8 +15,17 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
     @NameInMap("AppKey")
     private String appKey;
 
+    @NameInMap("Engine")
+    private String engine;
+
+    @NameInMap("EngineXunfei")
+    private String engineXunfei;
+
     @NameInMap("NlsServiceType")
     private String nlsServiceType;
+
+    @NameInMap("PitchRate")
+    private Integer pitchRate;
 
     @NameInMap("RequestId")
     private String requestId;
@@ -32,7 +41,10 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
 
     private DescribeTTSConfigResponseBody(Builder builder) {
         this.appKey = builder.appKey;
+        this.engine = builder.engine;
+        this.engineXunfei = builder.engineXunfei;
         this.nlsServiceType = builder.nlsServiceType;
+        this.pitchRate = builder.pitchRate;
         this.requestId = builder.requestId;
         this.speechRate = builder.speechRate;
         this.voice = builder.voice;
@@ -55,10 +67,31 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
     }
 
     /**
+     * @return engine
+     */
+    public String getEngine() {
+        return this.engine;
+    }
+
+    /**
+     * @return engineXunfei
+     */
+    public String getEngineXunfei() {
+        return this.engineXunfei;
+    }
+
+    /**
      * @return nlsServiceType
      */
     public String getNlsServiceType() {
         return this.nlsServiceType;
+    }
+
+    /**
+     * @return pitchRate
+     */
+    public Integer getPitchRate() {
+        return this.pitchRate;
     }
 
     /**
@@ -91,7 +124,10 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
 
     public static final class Builder {
         private String appKey; 
+        private String engine; 
+        private String engineXunfei; 
         private String nlsServiceType; 
+        private Integer pitchRate; 
         private String requestId; 
         private Integer speechRate; 
         private String voice; 
@@ -106,10 +142,34 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
         }
 
         /**
+         * Engine.
+         */
+        public Builder engine(String engine) {
+            this.engine = engine;
+            return this;
+        }
+
+        /**
+         * EngineXunfei.
+         */
+        public Builder engineXunfei(String engineXunfei) {
+            this.engineXunfei = engineXunfei;
+            return this;
+        }
+
+        /**
          * NlsServiceType.
          */
         public Builder nlsServiceType(String nlsServiceType) {
             this.nlsServiceType = nlsServiceType;
+            return this;
+        }
+
+        /**
+         * PitchRate.
+         */
+        public Builder pitchRate(Integer pitchRate) {
+            this.pitchRate = pitchRate;
             return this;
         }
 

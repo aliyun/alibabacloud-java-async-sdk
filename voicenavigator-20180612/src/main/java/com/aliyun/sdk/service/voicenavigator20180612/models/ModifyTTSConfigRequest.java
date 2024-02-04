@@ -17,6 +17,14 @@ public class ModifyTTSConfigRequest extends Request {
     private String appKey;
 
     @Query
+    @NameInMap("Engine")
+    private String engine;
+
+    @Query
+    @NameInMap("EngineXunfei")
+    private String engineXunfei;
+
+    @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
     private String instanceId;
@@ -40,6 +48,8 @@ public class ModifyTTSConfigRequest extends Request {
     private ModifyTTSConfigRequest(Builder builder) {
         super(builder);
         this.appKey = builder.appKey;
+        this.engine = builder.engine;
+        this.engineXunfei = builder.engineXunfei;
         this.instanceId = builder.instanceId;
         this.nlsServiceType = builder.nlsServiceType;
         this.speechRate = builder.speechRate;
@@ -65,6 +75,20 @@ public class ModifyTTSConfigRequest extends Request {
      */
     public String getAppKey() {
         return this.appKey;
+    }
+
+    /**
+     * @return engine
+     */
+    public String getEngine() {
+        return this.engine;
+    }
+
+    /**
+     * @return engineXunfei
+     */
+    public String getEngineXunfei() {
+        return this.engineXunfei;
     }
 
     /**
@@ -104,6 +128,8 @@ public class ModifyTTSConfigRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyTTSConfigRequest, Builder> {
         private String appKey; 
+        private String engine; 
+        private String engineXunfei; 
         private String instanceId; 
         private String nlsServiceType; 
         private String speechRate; 
@@ -117,6 +143,8 @@ public class ModifyTTSConfigRequest extends Request {
         private Builder(ModifyTTSConfigRequest request) {
             super(request);
             this.appKey = request.appKey;
+            this.engine = request.engine;
+            this.engineXunfei = request.engineXunfei;
             this.instanceId = request.instanceId;
             this.nlsServiceType = request.nlsServiceType;
             this.speechRate = request.speechRate;
@@ -130,6 +158,24 @@ public class ModifyTTSConfigRequest extends Request {
         public Builder appKey(String appKey) {
             this.putQueryParameter("AppKey", appKey);
             this.appKey = appKey;
+            return this;
+        }
+
+        /**
+         * Engine.
+         */
+        public Builder engine(String engine) {
+            this.putQueryParameter("Engine", engine);
+            this.engine = engine;
+            return this;
+        }
+
+        /**
+         * EngineXunfei.
+         */
+        public Builder engineXunfei(String engineXunfei) {
+            this.putQueryParameter("EngineXunfei", engineXunfei);
+            this.engineXunfei = engineXunfei;
             return this;
         }
 
