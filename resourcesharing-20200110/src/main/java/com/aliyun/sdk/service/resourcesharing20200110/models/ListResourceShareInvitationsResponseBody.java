@@ -95,6 +95,15 @@ public class ListResourceShareInvitationsResponseBody extends TeaModel {
         @NameInMap("AssociateType")
         private String associateType;
 
+        @NameInMap("FailureDescription")
+        private String failureDescription;
+
+        @NameInMap("FailureReason")
+        private String failureReason;
+
+        @NameInMap("OperationType")
+        private String operationType;
+
         @NameInMap("ResourceId")
         private String resourceId;
 
@@ -109,6 +118,9 @@ public class ListResourceShareInvitationsResponseBody extends TeaModel {
 
         private InvitationFailedDetails(Builder builder) {
             this.associateType = builder.associateType;
+            this.failureDescription = builder.failureDescription;
+            this.failureReason = builder.failureReason;
+            this.operationType = builder.operationType;
             this.resourceId = builder.resourceId;
             this.resourceType = builder.resourceType;
             this.status = builder.status;
@@ -128,6 +140,27 @@ public class ListResourceShareInvitationsResponseBody extends TeaModel {
          */
         public String getAssociateType() {
             return this.associateType;
+        }
+
+        /**
+         * @return failureDescription
+         */
+        public String getFailureDescription() {
+            return this.failureDescription;
+        }
+
+        /**
+         * @return failureReason
+         */
+        public String getFailureReason() {
+            return this.failureReason;
+        }
+
+        /**
+         * @return operationType
+         */
+        public String getOperationType() {
+            return this.operationType;
         }
 
         /**
@@ -160,6 +193,9 @@ public class ListResourceShareInvitationsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String associateType; 
+            private String failureDescription; 
+            private String failureReason; 
+            private String operationType; 
             private String resourceId; 
             private String resourceType; 
             private String status; 
@@ -174,6 +210,30 @@ public class ListResourceShareInvitationsResponseBody extends TeaModel {
              */
             public Builder associateType(String associateType) {
                 this.associateType = associateType;
+                return this;
+            }
+
+            /**
+             * FailureDescription.
+             */
+            public Builder failureDescription(String failureDescription) {
+                this.failureDescription = failureDescription;
+                return this;
+            }
+
+            /**
+             * FailureReason.
+             */
+            public Builder failureReason(String failureReason) {
+                this.failureReason = failureReason;
+                return this;
+            }
+
+            /**
+             * OperationType.
+             */
+            public Builder operationType(String operationType) {
+                this.operationType = operationType;
                 return this;
             }
 

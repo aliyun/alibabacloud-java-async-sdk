@@ -101,6 +101,15 @@ public class ListResourceShareAssociationsResponseBody extends TeaModel {
         @NameInMap("EntityType")
         private String entityType;
 
+        @NameInMap("FailureDescription")
+        private String failureDescription;
+
+        @NameInMap("FailureReason")
+        private String failureReason;
+
+        @NameInMap("OperationType")
+        private String operationType;
+
         @NameInMap("Status")
         private String status;
 
@@ -111,6 +120,9 @@ public class ListResourceShareAssociationsResponseBody extends TeaModel {
             this.associateType = builder.associateType;
             this.entityId = builder.entityId;
             this.entityType = builder.entityType;
+            this.failureDescription = builder.failureDescription;
+            this.failureReason = builder.failureReason;
+            this.operationType = builder.operationType;
             this.status = builder.status;
             this.statusMessage = builder.statusMessage;
         }
@@ -145,6 +157,27 @@ public class ListResourceShareAssociationsResponseBody extends TeaModel {
         }
 
         /**
+         * @return failureDescription
+         */
+        public String getFailureDescription() {
+            return this.failureDescription;
+        }
+
+        /**
+         * @return failureReason
+         */
+        public String getFailureReason() {
+            return this.failureReason;
+        }
+
+        /**
+         * @return operationType
+         */
+        public String getOperationType() {
+            return this.operationType;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -162,6 +195,9 @@ public class ListResourceShareAssociationsResponseBody extends TeaModel {
             private String associateType; 
             private String entityId; 
             private String entityType; 
+            private String failureDescription; 
+            private String failureReason; 
+            private String operationType; 
             private String status; 
             private String statusMessage; 
 
@@ -186,6 +222,30 @@ public class ListResourceShareAssociationsResponseBody extends TeaModel {
              */
             public Builder entityType(String entityType) {
                 this.entityType = entityType;
+                return this;
+            }
+
+            /**
+             * FailureDescription.
+             */
+            public Builder failureDescription(String failureDescription) {
+                this.failureDescription = failureDescription;
+                return this;
+            }
+
+            /**
+             * FailureReason.
+             */
+            public Builder failureReason(String failureReason) {
+                this.failureReason = failureReason;
+                return this;
+            }
+
+            /**
+             * OperationType.
+             */
+            public Builder operationType(String operationType) {
+                this.operationType = operationType;
                 return this;
             }
 
