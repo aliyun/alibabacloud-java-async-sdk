@@ -875,7 +875,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * AppointmentRestartTime.
+             * The scheduled restart time. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in Coordinated Universal Time (UTC).
              */
             public Builder appointmentRestartTime(String appointmentRestartTime) {
                 this.appointmentRestartTime = appointmentRestartTime;
@@ -1113,7 +1113,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * ExtStorageSize.
+             * The extended storage space. Unit: GB.
              */
             public Builder extStorageSize(Integer extStorageSize) {
                 this.extStorageSize = extStorageSize;
@@ -1121,7 +1121,13 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * ExtStorageType.
+             * The extended storage type. Valid values:
+             * <p>
+             * 
+             * *   **CloudESSD**: The cluster uses an enhanced SSD (ESSD) of performance level (PL) 1.
+             * *   **CloudESSD_PL2**: The cluster uses an ESSD of PL 2.
+             * *   **CloudESSD_PL3**: The cluster uses an ESSD of PL 3.
+             * *   **CloudEfficiency**: The cluster uses an ultra disk.
              */
             public Builder extStorageType(String extStorageType) {
                 this.extStorageType = extStorageType;
@@ -1238,7 +1244,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The resource group ID.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -1372,7 +1378,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * ZookeeperClass.
+             * The ZooKeeper specifications.
              */
             public Builder zookeeperClass(String zookeeperClass) {
                 this.zookeeperClass = zookeeperClass;

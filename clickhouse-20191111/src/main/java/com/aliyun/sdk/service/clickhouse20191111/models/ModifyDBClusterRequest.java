@@ -19,7 +19,6 @@ public class ModifyDBClusterRequest extends Request {
 
     @Query
     @NameInMap("DBClusterId")
-    @Validation(required = true)
     private String DBClusterId;
 
     @Query
@@ -31,6 +30,10 @@ public class ModifyDBClusterRequest extends Request {
     @NameInMap("DBNodeStorage")
     @Validation(required = true)
     private String DBNodeStorage;
+
+    @Query
+    @NameInMap("DbNodeStorageType")
+    private String dbNodeStorageType;
 
     @Query
     @NameInMap("OwnerAccount")
@@ -59,6 +62,7 @@ public class ModifyDBClusterRequest extends Request {
         this.DBClusterId = builder.DBClusterId;
         this.DBNodeGroupCount = builder.DBNodeGroupCount;
         this.DBNodeStorage = builder.DBNodeStorage;
+        this.dbNodeStorageType = builder.dbNodeStorageType;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
@@ -108,6 +112,13 @@ public class ModifyDBClusterRequest extends Request {
     }
 
     /**
+     * @return dbNodeStorageType
+     */
+    public String getDbNodeStorageType() {
+        return this.dbNodeStorageType;
+    }
+
+    /**
      * @return ownerAccount
      */
     public String getOwnerAccount() {
@@ -147,6 +158,7 @@ public class ModifyDBClusterRequest extends Request {
         private String DBClusterId; 
         private String DBNodeGroupCount; 
         private String DBNodeStorage; 
+        private String dbNodeStorageType; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
@@ -163,6 +175,7 @@ public class ModifyDBClusterRequest extends Request {
             this.DBClusterId = request.DBClusterId;
             this.DBNodeGroupCount = request.DBNodeGroupCount;
             this.DBNodeStorage = request.DBNodeStorage;
+            this.dbNodeStorageType = request.dbNodeStorageType;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
@@ -231,6 +244,15 @@ public class ModifyDBClusterRequest extends Request {
         public Builder DBNodeStorage(String DBNodeStorage) {
             this.putQueryParameter("DBNodeStorage", DBNodeStorage);
             this.DBNodeStorage = DBNodeStorage;
+            return this;
+        }
+
+        /**
+         * DbNodeStorageType.
+         */
+        public Builder dbNodeStorageType(String dbNodeStorageType) {
+            this.putQueryParameter("DbNodeStorageType", dbNodeStorageType);
+            this.dbNodeStorageType = dbNodeStorageType;
             return this;
         }
 

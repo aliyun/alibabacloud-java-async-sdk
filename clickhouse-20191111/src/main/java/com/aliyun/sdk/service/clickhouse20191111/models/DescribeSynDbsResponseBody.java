@@ -86,7 +86,7 @@ public class DescribeSynDbsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class DescribeSynDbsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -118,7 +118,7 @@ public class DescribeSynDbsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -218,9 +218,9 @@ public class DescribeSynDbsResponseBody extends TeaModel {
             private Boolean synStatus; 
 
             /**
-             * *   When the value **true** is returned for the **SynStatus** parameter, the system does not return the ErrorMsg parameter.
+             * *   If the value **true** is returned for the **SynStatus** parameter, this parameter is not returned.
              * <p>
-             * *   When the value **false** is returned for the **SynStatus** parameter, the system returns for the ErrorMsg parameter the cause why the data synchronization failed.
+             * *   If the value **false** is returned for the **SynStatus** parameter, the system returns the ErrorMsg parameter that provides the cause why the data synchronization failed.
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -236,7 +236,7 @@ public class DescribeSynDbsResponseBody extends TeaModel {
             }
 
             /**
-             * The account that is used to log on to the ApsaraDB RDS for MySQL database.
+             * The database account that is used to log on to the ApsaraDB RDS for MySQL instance.
              */
             public Builder rdsUserName(String rdsUserName) {
                 this.rdsUserName = rdsUserName;

@@ -724,7 +724,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * VSwitchBak.
+         * 备专有网络交换机
          */
         public Builder vSwitchBak(String vSwitchBak) {
             this.putQueryParameter("VSwitchBak", vSwitchBak);
@@ -733,7 +733,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * VSwitchBak2.
+         * 备专有网络交换机2
          */
         public Builder vSwitchBak2(String vSwitchBak2) {
             this.putQueryParameter("VSwitchBak2", vSwitchBak2);

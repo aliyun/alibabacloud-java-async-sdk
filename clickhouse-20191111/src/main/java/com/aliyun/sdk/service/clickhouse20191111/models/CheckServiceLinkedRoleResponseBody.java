@@ -50,7 +50,7 @@ public class CheckServiceLinkedRoleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * HasServiceLinkedRole.
+         * The role.
          */
         public Builder hasServiceLinkedRole(Boolean hasServiceLinkedRole) {
             this.hasServiceLinkedRole = hasServiceLinkedRole;
@@ -58,7 +58,7 @@ public class CheckServiceLinkedRoleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
