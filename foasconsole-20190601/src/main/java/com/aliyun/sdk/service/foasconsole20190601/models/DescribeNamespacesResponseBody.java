@@ -381,6 +381,9 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         @NameInMap("GmtModified")
         private Long gmtModified;
 
+        @NameInMap("Ha")
+        private Boolean ha;
+
         @NameInMap("Namespace")
         private String namespace;
 
@@ -399,6 +402,7 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         private Namespaces(Builder builder) {
             this.gmtCreate = builder.gmtCreate;
             this.gmtModified = builder.gmtModified;
+            this.ha = builder.ha;
             this.namespace = builder.namespace;
             this.resourceSpec = builder.resourceSpec;
             this.resourceUsed = builder.resourceUsed;
@@ -426,6 +430,13 @@ public class DescribeNamespacesResponseBody extends TeaModel {
          */
         public Long getGmtModified() {
             return this.gmtModified;
+        }
+
+        /**
+         * @return ha
+         */
+        public Boolean getHa() {
+            return this.ha;
         }
 
         /**
@@ -466,6 +477,7 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         public static final class Builder {
             private Long gmtCreate; 
             private Long gmtModified; 
+            private Boolean ha; 
             private String namespace; 
             private ResourceSpec resourceSpec; 
             private ResourceUsed resourceUsed; 
@@ -485,6 +497,14 @@ public class DescribeNamespacesResponseBody extends TeaModel {
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
+                return this;
+            }
+
+            /**
+             * Ha.
+             */
+            public Builder ha(Boolean ha) {
+                this.ha = ha;
                 return this;
             }
 

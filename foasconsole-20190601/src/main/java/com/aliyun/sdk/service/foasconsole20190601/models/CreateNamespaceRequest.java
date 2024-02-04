@@ -132,6 +132,9 @@ public class CreateNamespaceRequest extends Request {
 
     }
     public static class CreateNamespaceRequestCreateNamespaceRequest extends TeaModel {
+        @NameInMap("Ha")
+        private Boolean ha;
+
         @NameInMap("InstanceId")
         @Validation(required = true)
         private String instanceId;
@@ -148,6 +151,7 @@ public class CreateNamespaceRequest extends Request {
         private ResourceSpec resourceSpec;
 
         private CreateNamespaceRequestCreateNamespaceRequest(Builder builder) {
+            this.ha = builder.ha;
             this.instanceId = builder.instanceId;
             this.namespace = builder.namespace;
             this.region = builder.region;
@@ -160,6 +164,13 @@ public class CreateNamespaceRequest extends Request {
 
         public static CreateNamespaceRequestCreateNamespaceRequest create() {
             return builder().build();
+        }
+
+        /**
+         * @return ha
+         */
+        public Boolean getHa() {
+            return this.ha;
         }
 
         /**
@@ -191,10 +202,19 @@ public class CreateNamespaceRequest extends Request {
         }
 
         public static final class Builder {
+            private Boolean ha; 
             private String instanceId; 
             private String namespace; 
             private String region; 
             private ResourceSpec resourceSpec; 
+
+            /**
+             * Ha.
+             */
+            public Builder ha(Boolean ha) {
+                this.ha = ha;
+                return this;
+            }
 
             /**
              * InstanceId.

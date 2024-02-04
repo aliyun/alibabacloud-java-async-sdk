@@ -132,6 +132,9 @@ public class DescribeNamespacesRequest extends Request {
 
     }
     public static class DescribeNamespacesRequestDescribeNamespacesRequest extends TeaModel {
+        @NameInMap("Ha")
+        private Boolean ha;
+
         @NameInMap("InstanceId")
         @Validation(required = true)
         private String instanceId;
@@ -153,6 +156,7 @@ public class DescribeNamespacesRequest extends Request {
         private java.util.List < Tags> tags;
 
         private DescribeNamespacesRequestDescribeNamespacesRequest(Builder builder) {
+            this.ha = builder.ha;
             this.instanceId = builder.instanceId;
             this.namespace = builder.namespace;
             this.pageIndex = builder.pageIndex;
@@ -167,6 +171,13 @@ public class DescribeNamespacesRequest extends Request {
 
         public static DescribeNamespacesRequestDescribeNamespacesRequest create() {
             return builder().build();
+        }
+
+        /**
+         * @return ha
+         */
+        public Boolean getHa() {
+            return this.ha;
         }
 
         /**
@@ -212,12 +223,21 @@ public class DescribeNamespacesRequest extends Request {
         }
 
         public static final class Builder {
+            private Boolean ha; 
             private String instanceId; 
             private String namespace; 
             private Integer pageIndex; 
             private Integer pageSize; 
             private String region; 
             private java.util.List < Tags> tags; 
+
+            /**
+             * Ha.
+             */
+            public Builder ha(Boolean ha) {
+                this.ha = ha;
+                return this;
+            }
 
             /**
              * InstanceId.

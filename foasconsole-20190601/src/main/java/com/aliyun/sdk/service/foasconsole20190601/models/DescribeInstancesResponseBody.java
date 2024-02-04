@@ -171,6 +171,67 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     } 
 
+    public static class HaResourceSpec extends TeaModel {
+        @NameInMap("Cpu")
+        private Integer cpu;
+
+        @NameInMap("MemoryGB")
+        private Integer memoryGB;
+
+        private HaResourceSpec(Builder builder) {
+            this.cpu = builder.cpu;
+            this.memoryGB = builder.memoryGB;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static HaResourceSpec create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cpu
+         */
+        public Integer getCpu() {
+            return this.cpu;
+        }
+
+        /**
+         * @return memoryGB
+         */
+        public Integer getMemoryGB() {
+            return this.memoryGB;
+        }
+
+        public static final class Builder {
+            private Integer cpu; 
+            private Integer memoryGB; 
+
+            /**
+             * Cpu.
+             */
+            public Builder cpu(Integer cpu) {
+                this.cpu = cpu;
+                return this;
+            }
+
+            /**
+             * MemoryGB.
+             */
+            public Builder memoryGB(Integer memoryGB) {
+                this.memoryGB = memoryGB;
+                return this;
+            }
+
+            public HaResourceSpec build() {
+                return new HaResourceSpec(this);
+            } 
+
+        } 
+
+    }
     public static class HostAliases extends TeaModel {
         @NameInMap("HostNames")
         @Validation(required = true)
@@ -451,6 +512,18 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("ClusterStatus")
         private String clusterStatus;
 
+        @NameInMap("Ha")
+        private Boolean ha;
+
+        @NameInMap("HaResourceSpec")
+        private HaResourceSpec haResourceSpec;
+
+        @NameInMap("HaVSwitchIds")
+        private java.util.List < String > haVSwitchIds;
+
+        @NameInMap("HaZoneId")
+        private String haZoneId;
+
         @NameInMap("HostAliases")
         @Validation(required = true)
         private java.util.List < HostAliases> hostAliases;
@@ -460,6 +533,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
         @NameInMap("InstanceName")
         private String instanceName;
+
+        @NameInMap("MonitorType")
+        private String monitorType;
 
         @NameInMap("OrderState")
         private String orderState;
@@ -505,9 +581,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
             this.askClusterId = builder.askClusterId;
             this.chargeType = builder.chargeType;
             this.clusterStatus = builder.clusterStatus;
+            this.ha = builder.ha;
+            this.haResourceSpec = builder.haResourceSpec;
+            this.haVSwitchIds = builder.haVSwitchIds;
+            this.haZoneId = builder.haZoneId;
             this.hostAliases = builder.hostAliases;
             this.instanceId = builder.instanceId;
             this.instanceName = builder.instanceName;
+            this.monitorType = builder.monitorType;
             this.orderState = builder.orderState;
             this.region = builder.region;
             this.resourceCreateTime = builder.resourceCreateTime;
@@ -560,6 +641,34 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return ha
+         */
+        public Boolean getHa() {
+            return this.ha;
+        }
+
+        /**
+         * @return haResourceSpec
+         */
+        public HaResourceSpec getHaResourceSpec() {
+            return this.haResourceSpec;
+        }
+
+        /**
+         * @return haVSwitchIds
+         */
+        public java.util.List < String > getHaVSwitchIds() {
+            return this.haVSwitchIds;
+        }
+
+        /**
+         * @return haZoneId
+         */
+        public String getHaZoneId() {
+            return this.haZoneId;
+        }
+
+        /**
          * @return hostAliases
          */
         public java.util.List < HostAliases> getHostAliases() {
@@ -578,6 +687,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
          */
         public String getInstanceName() {
             return this.instanceName;
+        }
+
+        /**
+         * @return monitorType
+         */
+        public String getMonitorType() {
+            return this.monitorType;
         }
 
         /**
@@ -676,9 +792,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String askClusterId; 
             private String chargeType; 
             private String clusterStatus; 
+            private Boolean ha; 
+            private HaResourceSpec haResourceSpec; 
+            private java.util.List < String > haVSwitchIds; 
+            private String haZoneId; 
             private java.util.List < HostAliases> hostAliases; 
             private String instanceId; 
             private String instanceName; 
+            private String monitorType; 
             private String orderState; 
             private String region; 
             private Long resourceCreateTime; 
@@ -726,6 +847,38 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
+             * Ha.
+             */
+            public Builder ha(Boolean ha) {
+                this.ha = ha;
+                return this;
+            }
+
+            /**
+             * HaResourceSpec.
+             */
+            public Builder haResourceSpec(HaResourceSpec haResourceSpec) {
+                this.haResourceSpec = haResourceSpec;
+                return this;
+            }
+
+            /**
+             * HaVSwitchIds.
+             */
+            public Builder haVSwitchIds(java.util.List < String > haVSwitchIds) {
+                this.haVSwitchIds = haVSwitchIds;
+                return this;
+            }
+
+            /**
+             * HaZoneId.
+             */
+            public Builder haZoneId(String haZoneId) {
+                this.haZoneId = haZoneId;
+                return this;
+            }
+
+            /**
              * HostAliases.
              */
             public Builder hostAliases(java.util.List < HostAliases> hostAliases) {
@@ -746,6 +899,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
+                return this;
+            }
+
+            /**
+             * MonitorType.
+             */
+            public Builder monitorType(String monitorType) {
+                this.monitorType = monitorType;
                 return this;
             }
 

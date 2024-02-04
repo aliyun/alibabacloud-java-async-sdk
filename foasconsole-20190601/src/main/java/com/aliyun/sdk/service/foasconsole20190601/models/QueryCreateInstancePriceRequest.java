@@ -70,6 +70,67 @@ public class QueryCreateInstancePriceRequest extends Request {
 
     } 
 
+    public static class HaResourceSpec extends TeaModel {
+        @NameInMap("Cpu")
+        private Integer cpu;
+
+        @NameInMap("MemoryGB")
+        private Integer memoryGB;
+
+        private HaResourceSpec(Builder builder) {
+            this.cpu = builder.cpu;
+            this.memoryGB = builder.memoryGB;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static HaResourceSpec create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cpu
+         */
+        public Integer getCpu() {
+            return this.cpu;
+        }
+
+        /**
+         * @return memoryGB
+         */
+        public Integer getMemoryGB() {
+            return this.memoryGB;
+        }
+
+        public static final class Builder {
+            private Integer cpu; 
+            private Integer memoryGB; 
+
+            /**
+             * Cpu.
+             */
+            public Builder cpu(Integer cpu) {
+                this.cpu = cpu;
+                return this;
+            }
+
+            /**
+             * MemoryGB.
+             */
+            public Builder memoryGB(Integer memoryGB) {
+                this.memoryGB = memoryGB;
+                return this;
+            }
+
+            public HaResourceSpec build() {
+                return new HaResourceSpec(this);
+            } 
+
+        } 
+
+    }
     public static class ResourceSpec extends TeaModel {
         @NameInMap("Cpu")
         private Integer cpu;
@@ -230,6 +291,12 @@ public class QueryCreateInstancePriceRequest extends Request {
         @NameInMap("Extra")
         private String extra;
 
+        @NameInMap("Ha")
+        private Boolean ha;
+
+        @NameInMap("HaResourceSpec")
+        private HaResourceSpec haResourceSpec;
+
         @NameInMap("InstanceName")
         private String instanceName;
 
@@ -267,6 +334,8 @@ public class QueryCreateInstancePriceRequest extends Request {
             this.chargeType = builder.chargeType;
             this.duration = builder.duration;
             this.extra = builder.extra;
+            this.ha = builder.ha;
+            this.haResourceSpec = builder.haResourceSpec;
             this.instanceName = builder.instanceName;
             this.pricingCycle = builder.pricingCycle;
             this.promotionCode = builder.promotionCode;
@@ -320,6 +389,20 @@ public class QueryCreateInstancePriceRequest extends Request {
          */
         public String getExtra() {
             return this.extra;
+        }
+
+        /**
+         * @return ha
+         */
+        public Boolean getHa() {
+            return this.ha;
+        }
+
+        /**
+         * @return haResourceSpec
+         */
+        public HaResourceSpec getHaResourceSpec() {
+            return this.haResourceSpec;
         }
 
         /**
@@ -398,6 +481,8 @@ public class QueryCreateInstancePriceRequest extends Request {
             private String chargeType; 
             private Integer duration; 
             private String extra; 
+            private Boolean ha; 
+            private HaResourceSpec haResourceSpec; 
             private String instanceName; 
             private String pricingCycle; 
             private String promotionCode; 
@@ -446,6 +531,22 @@ public class QueryCreateInstancePriceRequest extends Request {
              */
             public Builder extra(String extra) {
                 this.extra = extra;
+                return this;
+            }
+
+            /**
+             * Ha.
+             */
+            public Builder ha(Boolean ha) {
+                this.ha = ha;
+                return this;
+            }
+
+            /**
+             * HaResourceSpec.
+             */
+            public Builder haResourceSpec(HaResourceSpec haResourceSpec) {
+                this.haResourceSpec = haResourceSpec;
                 return this;
             }
 
