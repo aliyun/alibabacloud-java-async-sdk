@@ -50,7 +50,7 @@ public class CreateListenerRequest extends Request {
 
     @Body
     @NameInMap("IdleTimeout")
-    @Validation(maximum = 900, minimum = 1)
+    @Validation(maximum = 3600, minimum = 1)
     private Integer idleTimeout;
 
     @Body

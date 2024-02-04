@@ -669,6 +669,15 @@ public class CreateLoadBalancerRequest extends Request {
         @NameInMap("AllocationId")
         private String allocationId;
 
+        @NameInMap("Ipv4LocalAddresses")
+        private java.util.List < String > ipv4LocalAddresses;
+
+        @NameInMap("Ipv6Address")
+        private String ipv6Address;
+
+        @NameInMap("Ipv6LocalAddresses")
+        private java.util.List < String > ipv6LocalAddresses;
+
         @NameInMap("PrivateIPv4Address")
         private String privateIPv4Address;
 
@@ -682,6 +691,9 @@ public class CreateLoadBalancerRequest extends Request {
 
         private ZoneMappings(Builder builder) {
             this.allocationId = builder.allocationId;
+            this.ipv4LocalAddresses = builder.ipv4LocalAddresses;
+            this.ipv6Address = builder.ipv6Address;
+            this.ipv6LocalAddresses = builder.ipv6LocalAddresses;
             this.privateIPv4Address = builder.privateIPv4Address;
             this.vSwitchId = builder.vSwitchId;
             this.zoneId = builder.zoneId;
@@ -700,6 +712,27 @@ public class CreateLoadBalancerRequest extends Request {
          */
         public String getAllocationId() {
             return this.allocationId;
+        }
+
+        /**
+         * @return ipv4LocalAddresses
+         */
+        public java.util.List < String > getIpv4LocalAddresses() {
+            return this.ipv4LocalAddresses;
+        }
+
+        /**
+         * @return ipv6Address
+         */
+        public String getIpv6Address() {
+            return this.ipv6Address;
+        }
+
+        /**
+         * @return ipv6LocalAddresses
+         */
+        public java.util.List < String > getIpv6LocalAddresses() {
+            return this.ipv6LocalAddresses;
         }
 
         /**
@@ -725,6 +758,9 @@ public class CreateLoadBalancerRequest extends Request {
 
         public static final class Builder {
             private String allocationId; 
+            private java.util.List < String > ipv4LocalAddresses; 
+            private String ipv6Address; 
+            private java.util.List < String > ipv6LocalAddresses; 
             private String privateIPv4Address; 
             private String vSwitchId; 
             private String zoneId; 
@@ -734,6 +770,30 @@ public class CreateLoadBalancerRequest extends Request {
              */
             public Builder allocationId(String allocationId) {
                 this.allocationId = allocationId;
+                return this;
+            }
+
+            /**
+             * Ipv4LocalAddresses.
+             */
+            public Builder ipv4LocalAddresses(java.util.List < String > ipv4LocalAddresses) {
+                this.ipv4LocalAddresses = ipv4LocalAddresses;
+                return this;
+            }
+
+            /**
+             * Ipv6Address.
+             */
+            public Builder ipv6Address(String ipv6Address) {
+                this.ipv6Address = ipv6Address;
+                return this;
+            }
+
+            /**
+             * Ipv6LocalAddresses.
+             */
+            public Builder ipv6LocalAddresses(java.util.List < String > ipv6LocalAddresses) {
+                this.ipv6LocalAddresses = ipv6LocalAddresses;
                 return this;
             }
 
