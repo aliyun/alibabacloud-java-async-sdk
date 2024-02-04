@@ -855,6 +855,9 @@ public class HotelOrderQueryResponseBody extends TeaModel {
 
     }
     public static class PassengerList extends TeaModel {
+        @NameInMap("apply_id")
+        private String applyId;
+
         @NameInMap("cost_center_id")
         private Long costCenterId;
 
@@ -864,6 +867,9 @@ public class HotelOrderQueryResponseBody extends TeaModel {
         @NameInMap("cost_center_number")
         private String costCenterNumber;
 
+        @NameInMap("itinerary_id")
+        private String itineraryId;
+
         @NameInMap("project_code")
         private String projectCode;
 
@@ -872,6 +878,9 @@ public class HotelOrderQueryResponseBody extends TeaModel {
 
         @NameInMap("project_title")
         private String projectTitle;
+
+        @NameInMap("thirdpart_apply_id")
+        private String thirdpartApplyId;
 
         @NameInMap("thirdpart_cost_center_id")
         private String thirdpartCostCenterId;
@@ -889,12 +898,15 @@ public class HotelOrderQueryResponseBody extends TeaModel {
         private Integer userType;
 
         private PassengerList(Builder builder) {
+            this.applyId = builder.applyId;
             this.costCenterId = builder.costCenterId;
             this.costCenterName = builder.costCenterName;
             this.costCenterNumber = builder.costCenterNumber;
+            this.itineraryId = builder.itineraryId;
             this.projectCode = builder.projectCode;
             this.projectId = builder.projectId;
             this.projectTitle = builder.projectTitle;
+            this.thirdpartApplyId = builder.thirdpartApplyId;
             this.thirdpartCostCenterId = builder.thirdpartCostCenterId;
             this.thirdpartProjectId = builder.thirdpartProjectId;
             this.userId = builder.userId;
@@ -908,6 +920,13 @@ public class HotelOrderQueryResponseBody extends TeaModel {
 
         public static PassengerList create() {
             return builder().build();
+        }
+
+        /**
+         * @return applyId
+         */
+        public String getApplyId() {
+            return this.applyId;
         }
 
         /**
@@ -932,6 +951,13 @@ public class HotelOrderQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return itineraryId
+         */
+        public String getItineraryId() {
+            return this.itineraryId;
+        }
+
+        /**
          * @return projectCode
          */
         public String getProjectCode() {
@@ -950,6 +976,13 @@ public class HotelOrderQueryResponseBody extends TeaModel {
          */
         public String getProjectTitle() {
             return this.projectTitle;
+        }
+
+        /**
+         * @return thirdpartApplyId
+         */
+        public String getThirdpartApplyId() {
+            return this.thirdpartApplyId;
         }
 
         /**
@@ -988,17 +1021,28 @@ public class HotelOrderQueryResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String applyId; 
             private Long costCenterId; 
             private String costCenterName; 
             private String costCenterNumber; 
+            private String itineraryId; 
             private String projectCode; 
             private Long projectId; 
             private String projectTitle; 
+            private String thirdpartApplyId; 
             private String thirdpartCostCenterId; 
             private String thirdpartProjectId; 
             private String userId; 
             private String userName; 
             private Integer userType; 
+
+            /**
+             * apply_id.
+             */
+            public Builder applyId(String applyId) {
+                this.applyId = applyId;
+                return this;
+            }
 
             /**
              * cost_center_id.
@@ -1025,6 +1069,14 @@ public class HotelOrderQueryResponseBody extends TeaModel {
             }
 
             /**
+             * itinerary_id.
+             */
+            public Builder itineraryId(String itineraryId) {
+                this.itineraryId = itineraryId;
+                return this;
+            }
+
+            /**
              * project_code.
              */
             public Builder projectCode(String projectCode) {
@@ -1045,6 +1097,14 @@ public class HotelOrderQueryResponseBody extends TeaModel {
              */
             public Builder projectTitle(String projectTitle) {
                 this.projectTitle = projectTitle;
+                return this;
+            }
+
+            /**
+             * thirdpart_apply_id.
+             */
+            public Builder thirdpartApplyId(String thirdpartApplyId) {
+                this.thirdpartApplyId = thirdpartApplyId;
                 return this;
             }
 
