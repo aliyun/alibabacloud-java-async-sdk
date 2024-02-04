@@ -287,7 +287,11 @@ public class ModifyDBClusterServerlessConfRequest extends Request {
         }
 
         /**
-         * FromTimeService.
+         * Specifies an immediate or scheduled task to modify parameters and restart the cluster. Valid values:
+         * <p>
+         * 
+         * *   false: scheduled task
+         * *   true: immediate task
          */
         public Builder fromTimeService(Boolean fromTimeService) {
             this.putQueryParameter("FromTimeService", fromTimeService);
@@ -314,7 +318,10 @@ public class ModifyDBClusterServerlessConfRequest extends Request {
         }
 
         /**
-         * PlannedEndTime.
+         * The latest start time for upgrading the specifications within the scheduled time period. Specify the time in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.
+         * <p>
+         * > * The value of this parameter must be at least 30 minutes later than the value of PlannedStartTime.
+         * >*   If you specify PlannedStartTime but do not specify PlannedEndTime, the latest start time of the task is set to a value that is calculated by using the following formula: `PlannedEndTime value + 30 minutes`. For example, if you set PlannedStartTime to `2021-01-14T09:00:00Z` and you do not specify PlannedEndTime, the latest start time of the task is set to `2021-01-14T09:30:00Z`.
          */
         public Builder plannedEndTime(String plannedEndTime) {
             this.putQueryParameter("PlannedEndTime", plannedEndTime);
@@ -323,7 +330,11 @@ public class ModifyDBClusterServerlessConfRequest extends Request {
         }
 
         /**
-         * PlannedStartTime.
+         * The earliest start time of the scheduled task for adding the read-only node. The scheduled task specifies that the task is run in the required period. Specify the time in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.
+         * <p>
+         * 
+         * > *   The earliest start time of the scheduled task can be a point in time within the next 24 hours. For example, if the current time is `2021-01-14T09:00:00Z`, you can specify a point in time between `2021-01-14T09:00:00Z` and `2021-01-15T09:00:00Z`.
+         * >*   If you leave this parameter empty, the task for adding the read-only node is immediately run by default.
          */
         public Builder plannedStartTime(String plannedStartTime) {
             this.putQueryParameter("PlannedStartTime", plannedStartTime);
@@ -350,7 +361,7 @@ public class ModifyDBClusterServerlessConfRequest extends Request {
         }
 
         /**
-         * ScaleApRoNumMax.
+         * The maximum number of stable AP read-only nodes. Valid values: 0 to 7.
          */
         public Builder scaleApRoNumMax(String scaleApRoNumMax) {
             this.putQueryParameter("ScaleApRoNumMax", scaleApRoNumMax);
@@ -359,7 +370,7 @@ public class ModifyDBClusterServerlessConfRequest extends Request {
         }
 
         /**
-         * ScaleApRoNumMin.
+         * The minimum number of stable AP read-only nodes. Valid values: 0 to 7.
          */
         public Builder scaleApRoNumMin(String scaleApRoNumMin) {
             this.putQueryParameter("ScaleApRoNumMin", scaleApRoNumMin);

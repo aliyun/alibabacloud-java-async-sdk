@@ -18,6 +18,10 @@ public class DescribeDBProxyPerformanceRequest extends Request {
     private String DBClusterId;
 
     @Query
+    @NameInMap("DBEndpointId")
+    private String DBEndpointId;
+
+    @Query
     @NameInMap("EndTime")
     @Validation(required = true)
     private String endTime;
@@ -35,6 +39,7 @@ public class DescribeDBProxyPerformanceRequest extends Request {
     private DescribeDBProxyPerformanceRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
+        this.DBEndpointId = builder.DBEndpointId;
         this.endTime = builder.endTime;
         this.key = builder.key;
         this.startTime = builder.startTime;
@@ -61,6 +66,13 @@ public class DescribeDBProxyPerformanceRequest extends Request {
     }
 
     /**
+     * @return DBEndpointId
+     */
+    public String getDBEndpointId() {
+        return this.DBEndpointId;
+    }
+
+    /**
      * @return endTime
      */
     public String getEndTime() {
@@ -83,6 +95,7 @@ public class DescribeDBProxyPerformanceRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeDBProxyPerformanceRequest, Builder> {
         private String DBClusterId; 
+        private String DBEndpointId; 
         private String endTime; 
         private String key; 
         private String startTime; 
@@ -94,6 +107,7 @@ public class DescribeDBProxyPerformanceRequest extends Request {
         private Builder(DescribeDBProxyPerformanceRequest request) {
             super(request);
             this.DBClusterId = request.DBClusterId;
+            this.DBEndpointId = request.DBEndpointId;
             this.endTime = request.endTime;
             this.key = request.key;
             this.startTime = request.startTime;
@@ -105,6 +119,15 @@ public class DescribeDBProxyPerformanceRequest extends Request {
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
             this.DBClusterId = DBClusterId;
+            return this;
+        }
+
+        /**
+         * The ID of the endpoint.
+         */
+        public Builder DBEndpointId(String DBEndpointId) {
+            this.putQueryParameter("DBEndpointId", DBEndpointId);
+            this.DBEndpointId = DBEndpointId;
             return this;
         }
 

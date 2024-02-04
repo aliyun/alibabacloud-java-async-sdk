@@ -70,7 +70,7 @@ public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
         }
 
         /**
-         * KeyList.
+         * Cluster key list.
          */
         public Builder keyList(java.util.List < String > keyList) {
             this.keyList = keyList;

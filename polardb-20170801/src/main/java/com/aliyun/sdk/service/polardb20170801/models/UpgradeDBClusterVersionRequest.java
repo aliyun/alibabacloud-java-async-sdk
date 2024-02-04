@@ -209,7 +209,7 @@ public class UpgradeDBClusterVersionRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The ID of cluster.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -218,7 +218,13 @@ public class UpgradeDBClusterVersionRequest extends Request {
         }
 
         /**
-         * FromTimeService.
+         * Specifies whether to immediately run the task to modify parameters and restart the cluster. Valid values: 
+         * <p>
+         * 
+         * - false: runs the task on schedule. 
+         * - true: runs the task immediately. Default value: false.
+         * 
+         * > No need to use this parameter when calling this interface
          */
         public Builder fromTimeService(Boolean fromTimeService) {
             this.putQueryParameter("FromTimeService", fromTimeService);
@@ -248,11 +254,8 @@ public class UpgradeDBClusterVersionRequest extends Request {
          * The latest start time to run the task that updates the kernel version of the cluster. Specify the time in the `YYYY-MM-DDThh:mm:ssZ` format. The time must be in UTC.
          * <p>
          * 
-         * > 
-         * 
-         * *   The value of this parameter must be at least 30 minutes later than the value of PlannedStartTime.
-         * 
-         * *   If you specify `PlannedStartTime` but do not specify PlannedEndTime, the latest start time of the task is `PlannedEndTime + 30 minutes`. For example, if you set `PlannedStartTime` to `2021-01-14T09:00:00Z` and do not specify PlannedEndTime, the latest start time of the task is set to `2021-01-14T09:30:00Z`.
+         * > *   The value of this parameter must be at least 30 minutes later than the value of PlannedStartTime.
+         * >*   If you specify `PlannedStartTime` but do not specify PlannedEndTime, the latest start time of the task is `PlannedEndTime + 30 minutes`. For example, if you set `PlannedStartTime` to `2021-01-14T09:00:00Z` and do not specify PlannedEndTime, the latest start time of the task is set to `2021-01-14T09:30:00Z`.
          */
         public Builder plannedEndTime(String plannedEndTime) {
             this.putQueryParameter("PlannedEndTime", plannedEndTime);
@@ -264,11 +267,8 @@ public class UpgradeDBClusterVersionRequest extends Request {
          * The earliest start time to run the task that updates the kernel version of the cluster. Specify the time in the `YYYY-MM-DDThh:mm:ssZ` format. The time must be in UTC.
          * <p>
          * 
-         * > 
-         * 
-         * *   The earliest start time of the task can be a point in time within the next 24 hours. For example, if the current time is `2021-01-14T09:00:00Z`, you can specify a point in time between `2021-01-14T09:00:00Z` and `2021-01-15T09:00:00Z`.
-         * 
-         * *   If you do not specify this parameter, the kernel update task runs immediately after you submit the request.
+         * > *   The earliest start time of the task can be a point in time within the next 24 hours. For example, if the current time is `2021-01-14T09:00:00Z`, you can specify a point in time between `2021-01-14T09:00:00Z` and `2021-01-15T09:00:00Z`.
+         * >*   If you do not specify this parameter, the kernel update task runs immediately after you submit the request.
          */
         public Builder plannedStartTime(String plannedStartTime) {
             this.putQueryParameter("PlannedStartTime", plannedStartTime);
@@ -295,7 +295,7 @@ public class UpgradeDBClusterVersionRequest extends Request {
         }
 
         /**
-         * 目标版本的VersionCode，参数取值可从[DescribeDBClusterVersion](~~2319145~~)接口获取。
+         * The code of the version to which you want to upgrade the cluster. You can call the [DescribeDBClusterVersion](~~2319145~~) operation to query the version code.
          */
         public Builder targetDBRevisionVersionCode(String targetDBRevisionVersionCode) {
             this.putQueryParameter("TargetDBRevisionVersionCode", targetDBRevisionVersionCode);
@@ -304,7 +304,9 @@ public class UpgradeDBClusterVersionRequest extends Request {
         }
 
         /**
-         * UpgradeLabel.
+         * Kernel version upgrade label. The value is fixed as INNOVATE.
+         * <p>
+         * > this parameter is passed in, UpgradePolicy must pass COLD.
          */
         public Builder upgradeLabel(String upgradeLabel) {
             this.putQueryParameter("UpgradeLabel", upgradeLabel);
@@ -313,7 +315,11 @@ public class UpgradeDBClusterVersionRequest extends Request {
         }
 
         /**
-         * UpgradePolicy.
+         * Kernel version upgrade strategy. Value:
+         * <p>
+         * 
+         * - HOT: Hot Upgrade
+         * - COLD: Cold upgrade. Currently, only PolarDB MySQL version 8.0 cluster version supports this upgrade method.
          */
         public Builder upgradePolicy(String upgradePolicy) {
             this.putQueryParameter("UpgradePolicy", upgradePolicy);
@@ -322,7 +328,12 @@ public class UpgradeDBClusterVersionRequest extends Request {
         }
 
         /**
-         * UpgradeType.
+         * There is no need to use this parameter to upgrade the type when calling this interface. Value:
+         * <p>
+         * 
+         * - PROXY: Upgrade database proxy only (Proxy)
+         * - DB: Upgrade kernel engine only
+         * - ALL (default): Upgrade both database proxy and kernel engine simultaneously
          */
         public Builder upgradeType(String upgradeType) {
             this.putQueryParameter("UpgradeType", upgradeType);

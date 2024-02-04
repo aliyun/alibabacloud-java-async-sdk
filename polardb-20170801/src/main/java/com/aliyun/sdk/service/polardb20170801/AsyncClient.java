@@ -508,15 +508,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);
 
     /**
-      * > You can upgrade only the revision version of a PolarDB for MySQL cluster. For example, you can upgrade the version 8.0.1.1.3 of a PolarDB for MySQL cluster to the version 8.0.1.1.4.
-      *
-     */
-    CompletableFuture<UpgradeDBClusterMinorVersionResponse> upgradeDBClusterMinorVersion(UpgradeDBClusterMinorVersionRequest request);
-
-    /**
-      * > 
-      * *   You can update only the revision version of a PolarDB for MySQL cluster, for example, from 8.0.1.1.3 to 8.0.1.1.4.
-      * *   You can use only your Alibaba Cloud account to create scheduled tasks that update the kernel version of a PolarDB for MySQL cluster. RAM users are not authorized to update the kernel version of a PolarDB for MySQL cluster.
+      * > *  You can update only the revision version of a PolarDB for MySQL cluster, for example, from 8.0.1.1.3 to 8.0.1.1.4.
+      * >*   You can use only your Alibaba Cloud account to create scheduled tasks that update the kernel version of a PolarDB for MySQL cluster. RAM users are not authorized to update the kernel version of a PolarDB for MySQL cluster.
       *
      */
     CompletableFuture<UpgradeDBClusterVersionResponse> upgradeDBClusterVersion(UpgradeDBClusterVersionRequest request);
