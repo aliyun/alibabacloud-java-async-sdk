@@ -70,6 +70,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateScheduleConferenceResponse> createScheduleConference(CreateScheduleConferenceRequest request);
 
+    CompletableFuture<CreateSearchDomeResponse> createSearchDome(CreateSearchDomeRequest request);
+
+    CompletableFuture<CreateSearchKeywordResponse> createSearchKeyword(CreateSearchKeywordRequest request);
+
     CompletableFuture<CreateSheetResponse> createSheet(CreateSheetRequest request);
 
     CompletableFuture<CreateSubscribedCalendarResponse> createSubscribedCalendar(CreateSubscribedCalendarRequest request);
@@ -124,6 +128,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetCorpTasksResponse> getCorpTasks(GetCorpTasksRequest request);
 
+    CompletableFuture<GetDocContentResponse> getDocContent(GetDocContentRequest request);
+
     CompletableFuture<GetEventResponse> getEvent(GetEventRequest request);
 
     CompletableFuture<GetFieldDefByUuidResponse> getFieldDefByUuid(GetFieldDefByUuidRequest request);
@@ -141,6 +147,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetInstancesResponse> getInstances(GetInstancesRequest request);
 
     CompletableFuture<GetInstancesByIdListResponse> getInstancesByIdList(GetInstancesByIdListRequest request);
+
+    CompletableFuture<GetLiveReplayUrlResponse> getLiveReplayUrl(GetLiveReplayUrlRequest request);
 
     CompletableFuture<GetMeCorpSubmissionResponse> getMeCorpSubmission(GetMeCorpSubmissionRequest request);
 
