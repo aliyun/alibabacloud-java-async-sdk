@@ -1,0 +1,37 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.ehpc20230701;
+
+import com.aliyun.core.utils.SdkAutoCloseable;
+import com.aliyun.sdk.service.ehpc20230701.models.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+
+import java.util.concurrent.CompletableFuture;
+
+public interface AsyncClient extends SdkAutoCloseable {
+
+    static DefaultAsyncClientBuilder builder() {
+        return new DefaultAsyncClientBuilder();
+    }
+
+    static AsyncClient create() {
+        return builder().build();
+    }
+
+    CompletableFuture<AddImageResponse> addImage(AddImageRequest request);
+
+    CompletableFuture<CreateJobResponse> createJob(CreateJobRequest request);
+
+    CompletableFuture<DeleteJobsResponse> deleteJobs(DeleteJobsRequest request);
+
+    CompletableFuture<GetImageResponse> getImage(GetImageRequest request);
+
+    CompletableFuture<GetJobResponse> getJob(GetJobRequest request);
+
+    CompletableFuture<ListImagesResponse> listImages(ListImagesRequest request);
+
+    CompletableFuture<ListJobsResponse> listJobs(ListJobsRequest request);
+
+    CompletableFuture<RemoveImageResponse> removeImage(RemoveImageRequest request);
+
+}
