@@ -38,6 +38,10 @@ public class UpgradeClusterNodepoolRequest extends Request {
     @NameInMap("runtime_version")
     private String runtimeVersion;
 
+    @Body
+    @NameInMap("use_replace")
+    private Boolean useReplace;
+
     private UpgradeClusterNodepoolRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
@@ -46,6 +50,7 @@ public class UpgradeClusterNodepoolRequest extends Request {
         this.kubernetesVersion = builder.kubernetesVersion;
         this.runtimeType = builder.runtimeType;
         this.runtimeVersion = builder.runtimeVersion;
+        this.useReplace = builder.useReplace;
     }
 
     public static Builder builder() {
@@ -103,6 +108,13 @@ public class UpgradeClusterNodepoolRequest extends Request {
         return this.runtimeVersion;
     }
 
+    /**
+     * @return useReplace
+     */
+    public Boolean getUseReplace() {
+        return this.useReplace;
+    }
+
     public static final class Builder extends Request.Builder<UpgradeClusterNodepoolRequest, Builder> {
         private String clusterId; 
         private String nodepoolId; 
@@ -110,6 +122,7 @@ public class UpgradeClusterNodepoolRequest extends Request {
         private String kubernetesVersion; 
         private String runtimeType; 
         private String runtimeVersion; 
+        private Boolean useReplace; 
 
         private Builder() {
             super();
@@ -123,6 +136,7 @@ public class UpgradeClusterNodepoolRequest extends Request {
             this.kubernetesVersion = request.kubernetesVersion;
             this.runtimeType = request.runtimeType;
             this.runtimeVersion = request.runtimeVersion;
+            this.useReplace = request.useReplace;
         } 
 
         /**
@@ -176,6 +190,15 @@ public class UpgradeClusterNodepoolRequest extends Request {
         public Builder runtimeVersion(String runtimeVersion) {
             this.putBodyParameter("runtime_version", runtimeVersion);
             this.runtimeVersion = runtimeVersion;
+            return this;
+        }
+
+        /**
+         * use_replace.
+         */
+        public Builder useReplace(Boolean useReplace) {
+            this.putBodyParameter("use_replace", useReplace);
+            this.useReplace = useReplace;
             return this;
         }
 
