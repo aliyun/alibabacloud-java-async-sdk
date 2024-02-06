@@ -55,7 +55,7 @@ public class DescribeNetworkAttributeRequest extends Request {
         } 
 
         /**
-         * NetworkId.
+         * The ID of the network.
          */
         public Builder networkId(String networkId) {
             this.putQueryParameter("NetworkId", networkId);

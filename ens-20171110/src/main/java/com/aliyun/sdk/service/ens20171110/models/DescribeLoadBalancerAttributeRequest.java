@@ -55,7 +55,7 @@ public class DescribeLoadBalancerAttributeRequest extends Request {
         } 
 
         /**
-         * LoadBalancerId.
+         * The ID of the ELB instance.
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);

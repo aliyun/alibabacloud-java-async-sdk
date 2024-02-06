@@ -85,7 +85,7 @@ public class ModifyForwardEntryRequest extends Request {
         } 
 
         /**
-         * ForwardEntryId.
+         * The ID of the DNAT entry.
          */
         public Builder forwardEntryId(String forwardEntryId) {
             this.putQueryParameter("ForwardEntryId", forwardEntryId);
@@ -94,7 +94,7 @@ public class ModifyForwardEntryRequest extends Request {
         }
 
         /**
-         * ForwardEntryName.
+         * The name of the DNAT entry. The name must be 2 to 128 characters in length. It cannot start with `http://` or `https://`.
          */
         public Builder forwardEntryName(String forwardEntryName) {
             this.putQueryParameter("ForwardEntryName", forwardEntryName);
@@ -103,7 +103,7 @@ public class ModifyForwardEntryRequest extends Request {
         }
 
         /**
-         * HealthCheckPort.
+         * The probe port. The port must be within the internal port range. By default, this parameter is left empty.
          */
         public Builder healthCheckPort(Integer healthCheckPort) {
             this.putQueryParameter("HealthCheckPort", healthCheckPort);

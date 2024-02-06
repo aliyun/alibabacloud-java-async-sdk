@@ -62,7 +62,7 @@ public class DescribeEnsNetSaleDistrictResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The returned service code. A value of 0 indicates that the operation was successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -70,7 +70,7 @@ public class DescribeEnsNetSaleDistrictResponseBody extends TeaModel {
         }
 
         /**
-         * EnsNetDistricts.
+         * The information about the ISPs in the area.
          */
         public Builder ensNetDistricts(EnsNetDistricts ensNetDistricts) {
             this.ensNetDistricts = ensNetDistricts;
@@ -78,7 +78,7 @@ public class DescribeEnsNetSaleDistrictResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -190,7 +190,7 @@ public class DescribeEnsNetSaleDistrictResponseBody extends TeaModel {
             private String netDistrictName; 
 
             /**
-             * EnsRegionIdCount.
+             * The information about the ISP.
              */
             public Builder ensRegionIdCount(String ensRegionIdCount) {
                 this.ensRegionIdCount = ensRegionIdCount;
@@ -198,7 +198,7 @@ public class DescribeEnsNetSaleDistrictResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceCount.
+             * The information about the instance.
              */
             public Builder instanceCount(String instanceCount) {
                 this.instanceCount = instanceCount;
@@ -206,7 +206,7 @@ public class DescribeEnsNetSaleDistrictResponseBody extends TeaModel {
             }
 
             /**
-             * NetDistrictCode.
+             * The region code.
              */
             public Builder netDistrictCode(String netDistrictCode) {
                 this.netDistrictCode = netDistrictCode;
@@ -214,7 +214,7 @@ public class DescribeEnsNetSaleDistrictResponseBody extends TeaModel {
             }
 
             /**
-             * NetDistrictEnName.
+             * The name of the region.
              */
             public Builder netDistrictEnName(String netDistrictEnName) {
                 this.netDistrictEnName = netDistrictEnName;
@@ -222,7 +222,7 @@ public class DescribeEnsNetSaleDistrictResponseBody extends TeaModel {
             }
 
             /**
-             * NetDistrictFatherCode.
+             * The parent code of the region.
              */
             public Builder netDistrictFatherCode(String netDistrictFatherCode) {
                 this.netDistrictFatherCode = netDistrictFatherCode;
@@ -230,7 +230,12 @@ public class DescribeEnsNetSaleDistrictResponseBody extends TeaModel {
             }
 
             /**
-             * NetDistrictLevel.
+             * The region level. Valid values:
+             * <p>
+             * 
+             * *   **Big**: area
+             * *   **Middle**: province
+             * *   **Small**: city
              */
             public Builder netDistrictLevel(String netDistrictLevel) {
                 this.netDistrictLevel = netDistrictLevel;
@@ -238,7 +243,7 @@ public class DescribeEnsNetSaleDistrictResponseBody extends TeaModel {
             }
 
             /**
-             * NetDistrictName.
+             * The Chinese name of the region.
              */
             public Builder netDistrictName(String netDistrictName) {
                 this.netDistrictName = netDistrictName;

@@ -74,7 +74,7 @@ public class DescribeDataDownloadURLResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The HTTP status code.
          */
         public Builder code(Long code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class DescribeDataDownloadURLResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The download URLs of data files.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +90,7 @@ public class DescribeDataDownloadURLResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The response message. Success is returned for a successful request.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +98,7 @@ public class DescribeDataDownloadURLResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +150,7 @@ public class DescribeDataDownloadURLResponseBody extends TeaModel {
             private String regionId; 
 
             /**
-             * Host.
+             * The host address of the file server.
              */
             public Builder host(String host) {
                 this.host = host;
@@ -158,7 +158,7 @@ public class DescribeDataDownloadURLResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the Edge Node Service (ENS) node.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -223,7 +223,7 @@ public class DescribeDataDownloadURLResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * ExpireTime.
+             * The time when the data file expires. The time is displayed in UTC.
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -231,7 +231,7 @@ public class DescribeDataDownloadURLResponseBody extends TeaModel {
             }
 
             /**
-             * ServerList.
+             * The file servers.
              */
             public Builder serverList(java.util.List < ServerList> serverList) {
                 this.serverList = serverList;
@@ -239,7 +239,7 @@ public class DescribeDataDownloadURLResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * The download URL of the data file.
              */
             public Builder url(String url) {
                 this.url = url;

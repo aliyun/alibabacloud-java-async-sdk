@@ -183,7 +183,7 @@ public class RescaleDeviceServiceRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * The ID of the application.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -192,7 +192,7 @@ public class RescaleDeviceServiceRequest extends Request {
         }
 
         /**
-         * ImageId.
+         * The ID of the image.
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -201,7 +201,11 @@ public class RescaleDeviceServiceRequest extends Request {
         }
 
         /**
-         * IpType.
+         * The type of the network. The value must be of the enumerated data type. Valid values:
+         * <p>
+         * 
+         * *   **1** (default): Internet
+         * *   **2**: internal network
          */
         public Builder ipType(Integer ipType) {
             this.putQueryParameter("IpType", ipType);
@@ -210,7 +214,7 @@ public class RescaleDeviceServiceRequest extends Request {
         }
 
         /**
-         * RescaleLevel.
+         * The region level of the scale-out. Set the value to RegionId. RegionId specifies that resource scale-out is performed based on the ID of the edge node.
          */
         public Builder rescaleLevel(String rescaleLevel) {
             this.putQueryParameter("RescaleLevel", rescaleLevel);
@@ -219,7 +223,7 @@ public class RescaleDeviceServiceRequest extends Request {
         }
 
         /**
-         * RescaleType.
+         * The scaling operation. Set the value to Add to add new resources.
          */
         public Builder rescaleType(String rescaleType) {
             this.putQueryParameter("RescaleType", rescaleType);
@@ -228,7 +232,7 @@ public class RescaleDeviceServiceRequest extends Request {
         }
 
         /**
-         * ResourceInfo.
+         * The information about the resource specification template. The value must be a JSON string.
          */
         public Builder resourceInfo(String resourceInfo) {
             this.putBodyParameter("ResourceInfo", resourceInfo);
@@ -237,7 +241,7 @@ public class RescaleDeviceServiceRequest extends Request {
         }
 
         /**
-         * ResourceSelector.
+         * The required resources. The value must be a JSON string.
          */
         public Builder resourceSelector(String resourceSelector) {
             this.putBodyParameter("ResourceSelector", resourceSelector);
@@ -246,7 +250,7 @@ public class RescaleDeviceServiceRequest extends Request {
         }
 
         /**
-         * ResourceSpec.
+         * The resource specification.
          */
         public Builder resourceSpec(String resourceSpec) {
             this.putQueryParameter("ResourceSpec", resourceSpec);
@@ -255,7 +259,7 @@ public class RescaleDeviceServiceRequest extends Request {
         }
 
         /**
-         * ServiceId.
+         * The ID of the service.
          */
         public Builder serviceId(String serviceId) {
             this.putQueryParameter("ServiceId", serviceId);
@@ -264,7 +268,7 @@ public class RescaleDeviceServiceRequest extends Request {
         }
 
         /**
-         * Timeout.
+         * The timeout period for asynchronous scale-out. Unit: seconds. Default value: 300.
          */
         public Builder timeout(Long timeout) {
             this.putQueryParameter("Timeout", timeout);

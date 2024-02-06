@@ -100,7 +100,12 @@ public class CreateNetworkRequest extends Request {
         } 
 
         /**
-         * CidrBlock.
+         * The CIDR block of the network. You can use one of the following CIDR blocks or their subnets as the CIDR block of the network:
+         * <p>
+         * 
+         * *   10.0.0.0/8 (default)
+         * *   172.16.0.0/12
+         * *   192.168.0.0/16
          */
         public Builder cidrBlock(String cidrBlock) {
             this.putQueryParameter("CidrBlock", cidrBlock);
@@ -109,7 +114,10 @@ public class CreateNetworkRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the network.
+         * <p>
+         * 
+         * The description must be 2 to 256 characters in length. It must start with a letter but cannot start with http:// or https://.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -118,7 +126,7 @@ public class CreateNetworkRequest extends Request {
         }
 
         /**
-         * EnsRegionId.
+         * The ID of the edge node.
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -127,7 +135,12 @@ public class CreateNetworkRequest extends Request {
         }
 
         /**
-         * NetworkName.
+         * The name of the network. The name must meet the following requirements:
+         * <p>
+         * 
+         * *   The name must be 2 to 128 characters in length.
+         * *   The name must start with a letter but cannot start with http:// or https://.
+         * *   The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
          */
         public Builder networkName(String networkName) {
             this.putQueryParameter("NetworkName", networkName);

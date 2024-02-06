@@ -55,7 +55,7 @@ public class DeleteDiskRequest extends Request {
         } 
 
         /**
-         * DiskId.
+         * The ID of the disk.
          */
         public Builder diskId(String diskId) {
             this.putQueryParameter("DiskId", diskId);

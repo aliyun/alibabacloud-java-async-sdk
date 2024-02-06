@@ -50,7 +50,7 @@ public class CreateEnsServiceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The service code. 0 is returned for a successful request. An error code is returned for a failed request.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -58,7 +58,7 @@ public class CreateEnsServiceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

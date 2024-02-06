@@ -68,7 +68,7 @@ public class DescribeEnsResourceUsageRequest extends Request {
         } 
 
         /**
-         * ExpiredEndTime.
+         * The end of the time range to query. Format: yyyy-MM-dd or yyyy-MM-dd HH:mm:ss.
          */
         public Builder expiredEndTime(String expiredEndTime) {
             this.putQueryParameter("ExpiredEndTime", expiredEndTime);
@@ -77,7 +77,7 @@ public class DescribeEnsResourceUsageRequest extends Request {
         }
 
         /**
-         * ExpiredStartTime.
+         * The beginning of the time range to query. Format: yyyy-MM-dd or yyyy-MM-dd HH:mm:ss.
          */
         public Builder expiredStartTime(String expiredStartTime) {
             this.putQueryParameter("ExpiredStartTime", expiredStartTime);

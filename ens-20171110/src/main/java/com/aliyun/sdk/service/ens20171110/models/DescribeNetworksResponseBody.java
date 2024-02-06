@@ -86,7 +86,7 @@ public class DescribeNetworksResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Networks.
+         * The list of networks.
          */
         public Builder networks(Networks networks) {
             this.networks = networks;
@@ -94,7 +94,7 @@ public class DescribeNetworksResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeNetworksResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeNetworksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeNetworksResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries in the list.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -307,7 +307,7 @@ public class DescribeNetworksResponseBody extends TeaModel {
             private VSwitchIds vSwitchIds; 
 
             /**
-             * CidrBlock.
+             * The IPv4 CIDR block of the network.
              */
             public Builder cidrBlock(String cidrBlock) {
                 this.cidrBlock = cidrBlock;
@@ -315,7 +315,7 @@ public class DescribeNetworksResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedTime.
+             * The timestamp when the instance was created. Unit: milliseconds.
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -323,7 +323,7 @@ public class DescribeNetworksResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the network.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -331,7 +331,7 @@ public class DescribeNetworksResponseBody extends TeaModel {
             }
 
             /**
-             * EnsRegionId.
+             * The ID of the edge node.
              */
             public Builder ensRegionId(String ensRegionId) {
                 this.ensRegionId = ensRegionId;
@@ -339,7 +339,7 @@ public class DescribeNetworksResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkAclId.
+             * The ID of the network access control list (ACL).
              */
             public Builder networkAclId(String networkAclId) {
                 this.networkAclId = networkAclId;
@@ -347,7 +347,7 @@ public class DescribeNetworksResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkId.
+             * The ID of the network.
              */
             public Builder networkId(String networkId) {
                 this.networkId = networkId;
@@ -355,7 +355,7 @@ public class DescribeNetworksResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkName.
+             * The name of the network.
              */
             public Builder networkName(String networkName) {
                 this.networkName = networkName;
@@ -363,7 +363,7 @@ public class DescribeNetworksResponseBody extends TeaModel {
             }
 
             /**
-             * RouterTableId.
+             * The route table ID.
              */
             public Builder routerTableId(String routerTableId) {
                 this.routerTableId = routerTableId;
@@ -371,7 +371,11 @@ public class DescribeNetworksResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the network. Valid values:
+             * <p>
+             * 
+             * *   Pending
+             * *   Available
              */
             public Builder status(String status) {
                 this.status = status;
@@ -379,7 +383,7 @@ public class DescribeNetworksResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchIds.
+             * The list of vSwitches in the network.
              */
             public Builder vSwitchIds(VSwitchIds vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;

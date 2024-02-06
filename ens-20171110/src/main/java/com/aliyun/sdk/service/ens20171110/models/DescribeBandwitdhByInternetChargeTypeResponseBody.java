@@ -74,7 +74,7 @@ public class DescribeBandwitdhByInternetChargeTypeResponseBody extends TeaModel 
         private String timeStamp; 
 
         /**
-         * BandwidthValue.
+         * The bandwidth. Unit: bit/s.
          */
         public Builder bandwidthValue(Long bandwidthValue) {
             this.bandwidthValue = bandwidthValue;
@@ -82,7 +82,15 @@ public class DescribeBandwitdhByInternetChargeTypeResponseBody extends TeaModel 
         }
 
         /**
-         * InternetChargeType.
+         * The metering method. Valid values:
+         * <p>
+         * 
+         * *   BandwidthByDay: Pay by daily peak bandwidth
+         * *   95BandwidthByMonth: Pay by monthly 95th percentile bandwidth
+         * *   PayByBandwidth4thMonth: Pay by monthly fourth peak bandwidth
+         * *   PayByBandwidth: Pay by fixed bandwidth
+         * 
+         * You can specify only one metering method for network usage and cannot overwrite the existing metering method.
          */
         public Builder internetChargeType(String internetChargeType) {
             this.internetChargeType = internetChargeType;
@@ -90,7 +98,7 @@ public class DescribeBandwitdhByInternetChargeTypeResponseBody extends TeaModel 
         }
 
         /**
-         * RequestId.
+         * The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use the ID to troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +106,7 @@ public class DescribeBandwitdhByInternetChargeTypeResponseBody extends TeaModel 
         }
 
         /**
-         * TimeStamp.
+         * The timestamp. The time follows the ISO 8601 standard. The time is displayed in UTC. Example: 2016-10-20T04:00:00Z.
          */
         public Builder timeStamp(String timeStamp) {
             this.timeStamp = timeStamp;

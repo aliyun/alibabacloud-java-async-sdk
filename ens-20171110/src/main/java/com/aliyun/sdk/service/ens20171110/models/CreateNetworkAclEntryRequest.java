@@ -175,7 +175,7 @@ public class CreateNetworkAclEntryRequest extends Request {
         } 
 
         /**
-         * CidrBlock.
+         * The source CIDR block.
          */
         public Builder cidrBlock(String cidrBlock) {
             this.putQueryParameter("CidrBlock", cidrBlock);
@@ -184,7 +184,10 @@ public class CreateNetworkAclEntryRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the network ACL.
+         * <p>
+         * 
+         * The description must be 1 to 256 characters in length and cannot start with http:// or https://.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -193,7 +196,11 @@ public class CreateNetworkAclEntryRequest extends Request {
         }
 
         /**
-         * Direction.
+         * Specifies whether the ACL rule controls inbound or outbound access requests. Valid values:
+         * <p>
+         * 
+         * *   **ingress**
+         * *   **egress**
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);
@@ -202,7 +209,10 @@ public class CreateNetworkAclEntryRequest extends Request {
         }
 
         /**
-         * NetworkAclEntryName.
+         * The name of the rule.
+         * <p>
+         * 
+         * The name must be 1 to 128 characters in length and cannot start with http:// or https://.
          */
         public Builder networkAclEntryName(String networkAclEntryName) {
             this.putQueryParameter("NetworkAclEntryName", networkAclEntryName);
@@ -211,7 +221,7 @@ public class CreateNetworkAclEntryRequest extends Request {
         }
 
         /**
-         * NetworkAclId.
+         * The ID of the network ACL.
          */
         public Builder networkAclId(String networkAclId) {
             this.putQueryParameter("NetworkAclId", networkAclId);
@@ -220,7 +230,11 @@ public class CreateNetworkAclEntryRequest extends Request {
         }
 
         /**
-         * Policy.
+         * The action that is performed on network traffic that matches the rule. Valid values:
+         * <p>
+         * 
+         * *   **accept**: allows network traffic.
+         * *   **drop**: blocks network traffic.
          */
         public Builder policy(String policy) {
             this.putQueryParameter("Policy", policy);
@@ -229,7 +243,11 @@ public class CreateNetworkAclEntryRequest extends Request {
         }
 
         /**
-         * PortRange.
+         * The port range.
+         * <p>
+         * 
+         * *   If you set **Protocol** to **all** or **icmp**, set this parameter to -1/-1, which specifies all ports.
+         * *   If you set **Protocol** to **tcp** or **udp**, the port can be **1 to 65535**. You can set this parameter to **1/200** or **80/80**, which specifies ports 1 to 200 or port 80.
          */
         public Builder portRange(String portRange) {
             this.putQueryParameter("PortRange", portRange);
@@ -238,7 +256,7 @@ public class CreateNetworkAclEntryRequest extends Request {
         }
 
         /**
-         * Priority.
+         * The priority of the rule. Valid values: **1 to 100**. Default value: **1**.
          */
         public Builder priority(Integer priority) {
             this.putQueryParameter("Priority", priority);
@@ -247,7 +265,13 @@ public class CreateNetworkAclEntryRequest extends Request {
         }
 
         /**
-         * Protocol.
+         * The protocol. Valid values:
+         * <p>
+         * 
+         * *   **icmp**: ICMP
+         * *   **tcp**: TCP
+         * *   **udp**: UDP
+         * *   **all**: all protocols
          */
         public Builder protocol(String protocol) {
             this.putQueryParameter("Protocol", protocol);

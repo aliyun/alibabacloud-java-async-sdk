@@ -82,7 +82,7 @@ public class ResetAICInstanceRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The ID of the AIC instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -91,7 +91,7 @@ public class ResetAICInstanceRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * The IDs of the AIC instance groups.
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             String instanceIdsShrink = shrink(instanceIds, "InstanceIds", "json");
@@ -101,7 +101,7 @@ public class ResetAICInstanceRequest extends Request {
         }
 
         /**
-         * ServerId.
+         * The ID of the server.
          */
         public Builder serverId(String serverId) {
             this.putQueryParameter("ServerId", serverId);

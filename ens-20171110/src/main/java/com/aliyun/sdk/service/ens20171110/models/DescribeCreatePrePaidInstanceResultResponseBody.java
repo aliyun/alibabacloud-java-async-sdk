@@ -50,7 +50,7 @@ public class DescribeCreatePrePaidInstanceResultResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * InstanceCreateResult.
+         * Returned results of creating an instance.
          */
         public Builder instanceCreateResult(InstanceCreateResult instanceCreateResult) {
             this.instanceCreateResult = instanceCreateResult;
@@ -58,7 +58,7 @@ public class DescribeCreatePrePaidInstanceResultResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,13 @@ public class DescribeCreatePrePaidInstanceResultResponseBody extends TeaModel {
             private String instanceId; 
 
             /**
-             * InstanceCreateStatus.
+             * The status of the instance creation.
+             * <p>
+             * 
+             * *   Accepted
+             * *   Creating
+             * *   Failed
+             * *   Successed
              */
             public Builder instanceCreateStatus(String instanceCreateStatus) {
                 this.instanceCreateStatus = instanceCreateStatus;
@@ -118,7 +124,7 @@ public class DescribeCreatePrePaidInstanceResultResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;

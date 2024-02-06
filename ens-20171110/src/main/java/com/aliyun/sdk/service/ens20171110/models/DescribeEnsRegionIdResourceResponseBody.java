@@ -86,7 +86,7 @@ public class DescribeEnsRegionIdResourceResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * EnsRegionIdResources.
+         * The returned data. For more information, see EnsRegionIdResources in sample JSON responses.
          */
         public Builder ensRegionIdResources(EnsRegionIdResources ensRegionIdResources) {
             this.ensRegionIdResources = ensRegionIdResources;
@@ -94,7 +94,7 @@ public class DescribeEnsRegionIdResourceResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeEnsRegionIdResourceResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeEnsRegionIdResourceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeEnsRegionIdResourceResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of queried nodes.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -254,7 +254,7 @@ public class DescribeEnsRegionIdResourceResponseBody extends TeaModel {
             private Integer vCpu; 
 
             /**
-             * Area.
+             * The region. Set the value to West.
              */
             public Builder area(String area) {
                 this.area = area;
@@ -262,7 +262,7 @@ public class DescribeEnsRegionIdResourceResponseBody extends TeaModel {
             }
 
             /**
-             * AreaCode.
+             * The code of the region.
              */
             public Builder areaCode(String areaCode) {
                 this.areaCode = areaCode;
@@ -270,7 +270,7 @@ public class DescribeEnsRegionIdResourceResponseBody extends TeaModel {
             }
 
             /**
-             * BizDate.
+             * The date when the transaction was processed.
              */
             public Builder bizDate(String bizDate) {
                 this.bizDate = bizDate;
@@ -278,7 +278,7 @@ public class DescribeEnsRegionIdResourceResponseBody extends TeaModel {
             }
 
             /**
-             * EnsRegionId.
+             * The ID of the node.
              */
             public Builder ensRegionId(String ensRegionId) {
                 this.ensRegionId = ensRegionId;
@@ -286,7 +286,7 @@ public class DescribeEnsRegionIdResourceResponseBody extends TeaModel {
             }
 
             /**
-             * EnsRegionIdName.
+             * The name of the node.
              */
             public Builder ensRegionIdName(String ensRegionIdName) {
                 this.ensRegionIdName = ensRegionIdName;
@@ -294,7 +294,7 @@ public class DescribeEnsRegionIdResourceResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceCount.
+             * The number of instances.
              */
             public Builder instanceCount(Integer instanceCount) {
                 this.instanceCount = instanceCount;
@@ -302,7 +302,7 @@ public class DescribeEnsRegionIdResourceResponseBody extends TeaModel {
             }
 
             /**
-             * InternetBandwidth.
+             * The public bandwidth of the instance. Unit: Bits/s.
              */
             public Builder internetBandwidth(Long internetBandwidth) {
                 this.internetBandwidth = internetBandwidth;
@@ -310,7 +310,13 @@ public class DescribeEnsRegionIdResourceResponseBody extends TeaModel {
             }
 
             /**
-             * Isp.
+             * The ISP. Valid values:
+             * <p>
+             * 
+             * *   cmcc: China Mobile
+             * *   unicom: China Unicom
+             * *   telecom: China Telecom
+             * *   multiCarrier: multi-line ISP
              */
             public Builder isp(String isp) {
                 this.isp = isp;
@@ -318,7 +324,7 @@ public class DescribeEnsRegionIdResourceResponseBody extends TeaModel {
             }
 
             /**
-             * VCpu.
+             * The number of vCPUs.
              */
             public Builder vCpu(Integer vCpu) {
                 this.vCpu = vCpu;

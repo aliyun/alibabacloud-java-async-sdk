@@ -70,7 +70,7 @@ public class RestartDeviceInstanceRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * The ID of the application. To obtain the application ID, call the ListApplications operation. For more information, see the API documentation of ListApplications.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -79,7 +79,7 @@ public class RestartDeviceInstanceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

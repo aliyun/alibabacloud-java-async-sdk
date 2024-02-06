@@ -84,7 +84,7 @@ public class DistApplicationDataRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * The ID of the application. To obtain the application ID, call the ListApplications operation.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -93,7 +93,7 @@ public class DistApplicationDataRequest extends Request {
         }
 
         /**
-         * Data.
+         * The list of data files that you want to distribute. The value must be a JSON string.
          */
         public Builder data(String data) {
             this.putQueryParameter("Data", data);
@@ -102,7 +102,7 @@ public class DistApplicationDataRequest extends Request {
         }
 
         /**
-         * DistStrategy.
+         * The canary release policy. The value must be a JSON string. You can specify multiple distribution policies. By default, all data files are distributed.
          */
         public Builder distStrategy(String distStrategy) {
             this.putQueryParameter("DistStrategy", distStrategy);

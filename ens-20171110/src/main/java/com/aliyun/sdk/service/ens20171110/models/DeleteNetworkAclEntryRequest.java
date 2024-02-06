@@ -54,7 +54,7 @@ public class DeleteNetworkAclEntryRequest extends Request {
         } 
 
         /**
-         * NetworkAclEntryId.
+         * The ID of the network ACL for which you want to delete a rule.
          */
         public Builder networkAclEntryId(String networkAclEntryId) {
             this.putQueryParameter("NetworkAclEntryId", networkAclEntryId);

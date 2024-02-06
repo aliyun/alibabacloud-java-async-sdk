@@ -138,7 +138,7 @@ public class DescribeImagesRequest extends Request {
         } 
 
         /**
-         * EnsRegionId.
+         * The ID of the Edge Node Service (ENS) node.
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -147,7 +147,10 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * ImageId.
+         * The ID of the image. You can specify only one image ID.
+         * <p>
+         * 
+         * Custom images and public images are supported.
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -156,7 +159,10 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * ImageName.
+         * The name of the custom image. The name must be 2 to 128 characters in length The name must start with a letter and cannot start with `acs:` or `aliyun`. The name cannot contain `http://` or `https://`. The name can contain letters, digits, periods (.), colons (:), underscores (\_), and hyphens (-).
+         * <p>
+         * 
+         * By default, this parameter is left empty, which indicates that the original name is retained.
          */
         public Builder imageName(String imageName) {
             this.putQueryParameter("ImageName", imageName);
@@ -165,7 +171,10 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number. Pages start from page **1**.
+         * <p>
+         * 
+         * Default value: **1**.
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -174,7 +183,10 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Maximum value: **50**.
+         * <p>
+         * 
+         * Default value: **10**.
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -183,7 +195,7 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * SnapshotId.
+         * The ID of the snapshot.
          */
         public Builder snapshotId(String snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);
@@ -192,7 +204,7 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * Status.
+         * This parameter is unavailable.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

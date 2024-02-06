@@ -69,7 +69,11 @@ public class RebootInstanceRequest extends Request {
         } 
 
         /**
-         * ForceStop.
+         * Indicates whether to stop the instance forcibly before you reboot it. Default value: false. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder forceStop(String forceStop) {
             this.putQueryParameter("ForceStop", forceStop);
@@ -78,7 +82,7 @@ public class RebootInstanceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance that you want to reboot. You can specify only one instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

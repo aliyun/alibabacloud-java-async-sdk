@@ -50,7 +50,7 @@ public class ModifyInstanceAutoRenewAttributeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The returned service code. 0 indicates that the request was successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -58,7 +58,7 @@ public class ModifyInstanceAutoRenewAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

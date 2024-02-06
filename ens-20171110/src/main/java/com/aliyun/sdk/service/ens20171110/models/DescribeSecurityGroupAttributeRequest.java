@@ -55,7 +55,7 @@ public class DescribeSecurityGroupAttributeRequest extends Request {
         } 
 
         /**
-         * SecurityGroupId.
+         * The ID of the security group.
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);

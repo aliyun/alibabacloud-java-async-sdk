@@ -98,7 +98,7 @@ public class GetOssUsageDataRequest extends Request {
         } 
 
         /**
-         * Bucket.
+         * The name of the logical Object Storage Service (OSS) bucket.
          */
         public Builder bucket(String bucket) {
             this.putQueryParameter("Bucket", bucket);
@@ -107,7 +107,7 @@ public class GetOssUsageDataRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. The time is in UTC. Format: 2010-01-21T09:50:23Z.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -116,7 +116,10 @@ public class GetOssUsageDataRequest extends Request {
         }
 
         /**
-         * Period.
+         * The aggregation granularity. Unit: minutes.
+         * <p>
+         * 
+         * Default value: 5. Valid values: 5 to 1440.
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -125,7 +128,7 @@ public class GetOssUsageDataRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. The time is in UTC. Format: 2010-01-21T09:50:23Z.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

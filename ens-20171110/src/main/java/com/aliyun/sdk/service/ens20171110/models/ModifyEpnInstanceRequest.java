@@ -97,7 +97,7 @@ public class ModifyEpnInstanceRequest extends Request {
         } 
 
         /**
-         * EPNInstanceId.
+         * The ID of the EPN instance.
          */
         public Builder EPNInstanceId(String EPNInstanceId) {
             this.putQueryParameter("EPNInstanceId", EPNInstanceId);
@@ -106,7 +106,7 @@ public class ModifyEpnInstanceRequest extends Request {
         }
 
         /**
-         * EPNInstanceName.
+         * The name of the EPN instance.
          */
         public Builder EPNInstanceName(String EPNInstanceName) {
             this.putQueryParameter("EPNInstanceName", EPNInstanceName);
@@ -115,7 +115,7 @@ public class ModifyEpnInstanceRequest extends Request {
         }
 
         /**
-         * InternetMaxBandwidthOut.
+         * The maximum outbound public bandwidth. Unit: Mbit/s. Valid values: 1 Mbit/s to 100 Mbit/s.
          */
         public Builder internetMaxBandwidthOut(Integer internetMaxBandwidthOut) {
             this.putQueryParameter("InternetMaxBandwidthOut", internetMaxBandwidthOut);
@@ -124,7 +124,14 @@ public class ModifyEpnInstanceRequest extends Request {
         }
 
         /**
-         * NetworkingModel.
+         * The networking mode. Valid values:
+         * <p>
+         * 
+         * *   **SpeedUp**: Intelligent acceleration network (Internet).
+         * *   **Connection**: Internal network.
+         * *   **SpeedUpAndConnection**: Intelligent acceleration network and internal network.
+         * 
+         * >  The internal network supports only **Connection** and **SpeedUpAndConnection**.
          */
         public Builder networkingModel(String networkingModel) {
             this.putQueryParameter("NetworkingModel", networkingModel);

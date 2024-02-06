@@ -85,7 +85,10 @@ public class ModifyNetworkAttributeRequest extends Request {
         } 
 
         /**
-         * Description.
+         * The description of the network.
+         * <p>
+         * 
+         * The description must be 2 to 256 characters in length. It must start with a letter but cannot start with http:// or https://.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -94,7 +97,7 @@ public class ModifyNetworkAttributeRequest extends Request {
         }
 
         /**
-         * NetworkId.
+         * The ID of the network.
          */
         public Builder networkId(String networkId) {
             this.putQueryParameter("NetworkId", networkId);
@@ -103,7 +106,12 @@ public class ModifyNetworkAttributeRequest extends Request {
         }
 
         /**
-         * NetworkName.
+         * The name of the network. The name must meet the following requirements:
+         * <p>
+         * 
+         * *   The name must be 2 to 128 characters in length.
+         * *   The name must start with a letter but cannot start with http:// or https://.
+         * *   The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
          */
         public Builder networkName(String networkName) {
             this.putQueryParameter("NetworkName", networkName);

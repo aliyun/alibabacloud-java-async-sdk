@@ -70,7 +70,7 @@ public class AttachEnsInstancesRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The ID of the instance. You can specify only one instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -79,7 +79,7 @@ public class AttachEnsInstancesRequest extends Request {
         }
 
         /**
-         * Scripts.
+         * The command that you want to execute on the instance. The command must be encoded in Base64 or UTF-8.
          */
         public Builder scripts(String scripts) {
             this.putQueryParameter("Scripts", scripts);

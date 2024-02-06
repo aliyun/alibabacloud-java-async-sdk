@@ -85,7 +85,7 @@ public class DeleteDeviceInternetPortRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The ID of the instance. You can specify the ID of the server or container.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -94,7 +94,11 @@ public class DeleteDeviceInternetPortRequest extends Request {
         }
 
         /**
-         * NatType.
+         * The type of the NAT gateway. The value must be of the enumerated data type. Valid values:
+         * <p>
+         * 
+         * *   SNAT
+         * *   DNAT
          */
         public Builder natType(String natType) {
             this.putQueryParameter("NatType", natType);
@@ -103,7 +107,7 @@ public class DeleteDeviceInternetPortRequest extends Request {
         }
 
         /**
-         * RuleId.
+         * The ID of the rule.
          */
         public Builder ruleId(String ruleId) {
             this.putQueryParameter("RuleId", ruleId);

@@ -97,7 +97,7 @@ public class DescribeApplicationRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * The ID of the application. You can call the ListApplications operation to obtain the application ID.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -106,7 +106,7 @@ public class DescribeApplicationRequest extends Request {
         }
 
         /**
-         * AppVersions.
+         * The version number of the application. Separate multiple version numbers with commas (,). If you want to query data of all versions of applications, specify All for this parameter. By default, only data of applications in the stable versions are queried.
          */
         public Builder appVersions(String appVersions) {
             this.putQueryParameter("AppVersions", appVersions);
@@ -115,7 +115,16 @@ public class DescribeApplicationRequest extends Request {
         }
 
         /**
-         * Level.
+         * The region level by which edge resources of the application are collected. The value must be of the enumerated data type. Valid values:
+         * <p>
+         * 
+         * *   National: Chinese mainland
+         * *   Big: area
+         * *   Middle: province
+         * *   Small: city
+         * *   RegionId: edge node
+         * 
+         * Default value: National.
          */
         public Builder level(String level) {
             this.putQueryParameter("Level", level);
@@ -124,7 +133,7 @@ public class DescribeApplicationRequest extends Request {
         }
 
         /**
-         * OutDetailStatParams.
+         * Specifies whether to return other information about the application, such as statistics on resource instances and pods. The value must be a JSON string. By default, all information is returned.
          */
         public Builder outDetailStatParams(String outDetailStatParams) {
             this.putQueryParameter("OutDetailStatParams", outDetailStatParams);

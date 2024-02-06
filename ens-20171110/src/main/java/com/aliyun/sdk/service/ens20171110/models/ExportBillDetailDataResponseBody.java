@@ -50,7 +50,7 @@ public class ExportBillDetailDataResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * FilePath.
+         * The download path of the exported file.
          */
         public Builder filePath(String filePath) {
             this.filePath = filePath;
@@ -58,7 +58,7 @@ public class ExportBillDetailDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use the ID to troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

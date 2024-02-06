@@ -55,7 +55,7 @@ public class DeleteForwardEntryRequest extends Request {
         } 
 
         /**
-         * ForwardEntryId.
+         * The ID of the DNAT entry that you want to delete.
          */
         public Builder forwardEntryId(String forwardEntryId) {
             this.putQueryParameter("ForwardEntryId", forwardEntryId);

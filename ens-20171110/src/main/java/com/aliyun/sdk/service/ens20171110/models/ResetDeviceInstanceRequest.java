@@ -85,7 +85,7 @@ public class ResetDeviceInstanceRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * The ID of the application. To obtain the application ID, call the ListApplications operation. For more information, see the API documentation of ListApplications.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -94,7 +94,7 @@ public class ResetDeviceInstanceRequest extends Request {
         }
 
         /**
-         * ImageId.
+         * The ID of the image.
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -103,7 +103,7 @@ public class ResetDeviceInstanceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

@@ -69,7 +69,7 @@ public class DeleteApplicationRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * The ID of the application. To obtain the application ID, call the ListApplication operation.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -78,7 +78,7 @@ public class DeleteApplicationRequest extends Request {
         }
 
         /**
-         * Timeout.
+         * The timeout period for the asynchronous release. Unit: seconds. Default value: 300.
          */
         public Builder timeout(Integer timeout) {
             this.putQueryParameter("Timeout", timeout);

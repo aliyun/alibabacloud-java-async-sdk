@@ -218,7 +218,7 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
         private Integer unhealthyThreshold; 
 
         /**
-         * BackendServerPort.
+         * The backend port that is used by the ELB instance. Valid values: **1** to **65535**.
          */
         public Builder backendServerPort(Integer backendServerPort) {
             this.backendServerPort = backendServerPort;
@@ -226,7 +226,12 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
         }
 
         /**
-         * Bandwidth.
+         * The maximum bandwidth of the elastic IP address (EIP).
+         * <p>
+         * 
+         * *   Default value: 5.
+         * *   Valid values: **5** to **10000**.
+         * *   Unit: Mbit/s.
          */
         public Builder bandwidth(Integer bandwidth) {
             this.bandwidth = bandwidth;
@@ -234,7 +239,7 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
         }
 
         /**
-         * Description.
+         * The description of the listener.
          */
         public Builder description(String description) {
             this.description = description;
@@ -242,7 +247,11 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
         }
 
         /**
-         * EipTransmit.
+         * Indicates whether EIP pass-through is enabled. Valid values:
+         * <p>
+         * 
+         * *   **on**
+         * *   **off** (default)
          */
         public Builder eipTransmit(String eipTransmit) {
             this.eipTransmit = eipTransmit;
@@ -250,7 +259,11 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
         }
 
         /**
-         * HealthCheck.
+         * Specifies whether to enable the health check feature. Valid values:
+         * <p>
+         * 
+         * *   **on**
+         * *   **off**
          */
         public Builder healthCheck(String healthCheck) {
             this.healthCheck = healthCheck;
@@ -258,7 +271,7 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
         }
 
         /**
-         * HealthCheckConnectPort.
+         * The port that is used for health checks. Valid values: **1** to **65535**. If you leave this parameter empty, the port specified by BackendServerPort is used for health checks.
          */
         public Builder healthCheckConnectPort(Integer healthCheckConnectPort) {
             this.healthCheckConnectPort = healthCheckConnectPort;
@@ -266,7 +279,18 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
         }
 
         /**
-         * HealthCheckConnectTimeout.
+         * The timeout period of a health check response. If a backend server does not respond within the specified timeout period, the server fails to pass the health check.
+         * <p>
+         * 
+         * *   Default value: 5.
+         * *   Valid values: **1** to **300**.
+         * *   Unit: seconds.
+         * 
+         * > 
+         * 
+         * *   This parameter takes effect only if you set HealthCheck to on.
+         * 
+         * *   If the value of the HealthCheckConnectTimeout parameter is smaller than that of the HealthCheckInterval parameter, the timeout period specified by the HealthCheckConnectTimeout parameter becomes invalid and the value of the HealthCheckInterval parameter is used as the timeout period.
          */
         public Builder healthCheckConnectTimeout(Integer healthCheckConnectTimeout) {
             this.healthCheckConnectTimeout = healthCheckConnectTimeout;
@@ -274,7 +298,7 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
         }
 
         /**
-         * HealthCheckExp.
+         * The response string for UDP listener health checks. The string can be up to 64 characters in length and can contain only letters and digits.
          */
         public Builder healthCheckExp(String healthCheckExp) {
             this.healthCheckExp = healthCheckExp;
@@ -282,7 +306,10 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
         }
 
         /**
-         * HealthCheckInterval.
+         * The interval at which health checks are performed. Valid values: **1** to **50**. Unit: seconds.
+         * <p>
+         * 
+         * >  This parameter takes effect only if you set HealthCheck to on.
          */
         public Builder healthCheckInterval(Integer healthCheckInterval) {
             this.healthCheckInterval = healthCheckInterval;
@@ -290,7 +317,7 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
         }
 
         /**
-         * HealthCheckReq.
+         * The request string for UDP listener health checks. The string can be up to 64 characters in length and can contain only letters and digits.
          */
         public Builder healthCheckReq(String healthCheckReq) {
             this.healthCheckReq = healthCheckReq;
@@ -298,7 +325,10 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
         }
 
         /**
-         * HealthyThreshold.
+         * The number of consecutive successful health checks that must occur before an unhealthy and inaccessible backend server is declared healthy and accessible. Valid values: **2** to **10**.
+         * <p>
+         * 
+         * >  This parameter takes effect only if you set HealthCheck to on.
          */
         public Builder healthyThreshold(Integer healthyThreshold) {
             this.healthyThreshold = healthyThreshold;
@@ -306,7 +336,7 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
         }
 
         /**
-         * ListenerPort.
+         * The frontend port that is used by the ELB instance.
          */
         public Builder listenerPort(Integer listenerPort) {
             this.listenerPort = listenerPort;
@@ -314,7 +344,7 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -322,7 +352,15 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
         }
 
         /**
-         * Scheduler.
+         * The routing algorithm. Valid values:
+         * <p>
+         * 
+         * *   **wrr**: Backend servers with higher weights receive more requests than those with lower weights.
+         * *   **wlc**: Requests are distributed based on the weight and load of each backend server. The load refers to the number of connections to a backend server. If two backend servers have the same weight, the backend server that has fewer connections receives more requests.
+         * *   **rr**: Requests are distributed to backend servers in sequence.
+         * *   **sch**: consistent hashing that is based on source IP addresses. Requests from the same source IP address are distributed to the same backend server.
+         * *   **qch**: consistent hashing that is based on QUIC connection IDs. Requests that contain the same QUIC connection ID are distributed to the same backend server.
+         * *   **iqch**: consistent hashing that is based on specific three bytes of the iQUIC CIDs. Requests whose second to fourth bytes are the same are distributed to the same backend server.
          */
         public Builder scheduler(String scheduler) {
             this.scheduler = scheduler;
@@ -330,7 +368,14 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
         }
 
         /**
-         * Status.
+         * The status of the listener. Valid values:
+         * <p>
+         * 
+         * *   **Running**
+         * *   **Stopped**
+         * *   **Starting**
+         * *   **Configuring**
+         * *   **Stopping**
          */
         public Builder status(String status) {
             this.status = status;
@@ -338,7 +383,10 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
         }
 
         /**
-         * UnhealthyThreshold.
+         * The number of consecutive failed health checks that must occur before a healthy and accessible backend server is declared unhealthy and inaccessible. Valid values: **2** to **10**.
+         * <p>
+         * 
+         * >  This parameter takes effect only if you set HealthCheck to on.
          */
         public Builder unhealthyThreshold(Integer unhealthyThreshold) {
             this.unhealthyThreshold = unhealthyThreshold;

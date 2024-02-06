@@ -21,16 +21,10 @@ public class DescribeEipAddressesRequest extends Request {
     @Validation(required = true)
     private String ensRegionId;
 
-    @Query
-    @NameInMap("Version")
-    @Validation(required = true)
-    private String version;
-
     private DescribeEipAddressesRequest(Builder builder) {
         super(builder);
         this.eips = builder.eips;
         this.ensRegionId = builder.ensRegionId;
-        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -60,17 +54,9 @@ public class DescribeEipAddressesRequest extends Request {
         return this.ensRegionId;
     }
 
-    /**
-     * @return version
-     */
-    public String getVersion() {
-        return this.version;
-    }
-
     public static final class Builder extends Request.Builder<DescribeEipAddressesRequest, Builder> {
         private String eips; 
         private String ensRegionId; 
-        private String version; 
 
         private Builder() {
             super();
@@ -80,11 +66,10 @@ public class DescribeEipAddressesRequest extends Request {
             super(request);
             this.eips = request.eips;
             this.ensRegionId = request.ensRegionId;
-            this.version = request.version;
         } 
 
         /**
-         * Eips.
+         * The information about the EIPs.
          */
         public Builder eips(String eips) {
             this.putQueryParameter("Eips", eips);
@@ -93,20 +78,11 @@ public class DescribeEipAddressesRequest extends Request {
         }
 
         /**
-         * EnsRegionId.
+         * The ID of the Edge Node Service (ENS) node.
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
             this.ensRegionId = ensRegionId;
-            return this;
-        }
-
-        /**
-         * Version.
-         */
-        public Builder version(String version) {
-            this.putQueryParameter("Version", version);
-            this.version = version;
             return this;
         }
 

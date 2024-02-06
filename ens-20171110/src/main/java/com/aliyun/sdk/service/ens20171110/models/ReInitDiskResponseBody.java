@@ -50,7 +50,7 @@ public class ReInitDiskResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The returned service code. A value of 0 indicates that the operation was successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -58,7 +58,7 @@ public class ReInitDiskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

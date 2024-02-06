@@ -70,7 +70,7 @@ public class DeleteFileSystemRequest extends Request {
         } 
 
         /**
-         * EnsRegionId.
+         * The ID of the node.
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -79,7 +79,7 @@ public class DeleteFileSystemRequest extends Request {
         }
 
         /**
-         * FileSystemId.
+         * The ID of the file system that you want to delete.
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);

@@ -55,7 +55,7 @@ public class DeleteSnatEntryRequest extends Request {
         } 
 
         /**
-         * SnatEntryId.
+         * The ID of the SNAT entry that you want to delete.
          */
         public Builder snatEntryId(String snatEntryId) {
             this.putQueryParameter("SnatEntryId", snatEntryId);

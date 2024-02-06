@@ -85,7 +85,10 @@ public class ModifyVSwitchAttributeRequest extends Request {
         } 
 
         /**
-         * Description.
+         * The description of the vSwitch.
+         * <p>
+         * 
+         * The description must be 2 to 256 characters in length. It must start with a letter but cannot start with http:// or https://.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -94,7 +97,7 @@ public class ModifyVSwitchAttributeRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * The ID of the vSwitch.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -103,7 +106,12 @@ public class ModifyVSwitchAttributeRequest extends Request {
         }
 
         /**
-         * VSwitchName.
+         * The name of the vSwitch.
+         * <p>
+         * 
+         * *   The name must be 2 to 128 characters in length.
+         * *   The name must start with a letter but cannot start with http:// or https://.
+         * *   The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
          */
         public Builder vSwitchName(String vSwitchName) {
             this.putQueryParameter("VSwitchName", vSwitchName);

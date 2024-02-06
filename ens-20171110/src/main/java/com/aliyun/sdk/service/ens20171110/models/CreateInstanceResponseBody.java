@@ -62,7 +62,10 @@ public class CreateInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The return code. A value of 0 indicates that the request is successful.
+         * <p>
+         * 
+         * >  If you call this operation by using SDKs, the return value is of the integer type. If you call this operation by using common methods or HTTP requests, the return value is of the string type.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -70,7 +73,7 @@ public class CreateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceIds.
+         * The IDs of instances.
          */
         public Builder instanceIds(InstanceIds instanceIds) {
             this.instanceIds = instanceIds;
@@ -78,7 +81,7 @@ public class CreateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

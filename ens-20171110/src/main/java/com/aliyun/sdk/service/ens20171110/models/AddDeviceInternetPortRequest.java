@@ -128,7 +128,13 @@ public class AddDeviceInternetPortRequest extends Request {
         } 
 
         /**
-         * ISP.
+         * The Internet service provider (ISP). If you leave this parameter empty, the system automatically allows a random ISP. Valid values:
+         * <p>
+         * 
+         * *   telecom: China Telecom
+         * *   cmcc: China Mobile
+         * *   unicom: China Unicom
+         * *   cbn: China Broadcasting Network (CBN)
          */
         public Builder ISP(String ISP) {
             this.putQueryParameter("ISP", ISP);
@@ -137,7 +143,7 @@ public class AddDeviceInternetPortRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance. You can specify the ID of the server or container.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -146,7 +152,7 @@ public class AddDeviceInternetPortRequest extends Request {
         }
 
         /**
-         * InternalIp.
+         * The internal IP address of the instance.
          */
         public Builder internalIp(String internalIp) {
             this.putQueryParameter("InternalIp", internalIp);
@@ -155,7 +161,7 @@ public class AddDeviceInternetPortRequest extends Request {
         }
 
         /**
-         * InternalPort.
+         * The internal port number. Specify this parameter in the following format: first port/last port. Separate multiple port number groups with commas (,). Example: 1026/2001,2005/2005. This parameter is required if you set NatType to DNAT. If you set NatType to SNAT, the value of this parameter is invalid.
          */
         public Builder internalPort(String internalPort) {
             this.putQueryParameter("InternalPort", internalPort);
@@ -164,7 +170,11 @@ public class AddDeviceInternetPortRequest extends Request {
         }
 
         /**
-         * NatType.
+         * The type of the NAT gateway. The value of this parameter is of the enumerated data type. Valid values:
+         * <p>
+         * 
+         * *   SNAT
+         * *   DNAT
          */
         public Builder natType(String natType) {
             this.putQueryParameter("NatType", natType);
@@ -173,7 +183,7 @@ public class AddDeviceInternetPortRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the Edge Node Service (ENS) node.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -70,7 +70,7 @@ public class DeleteSnatIpForSnatEntryRequest extends Request {
         } 
 
         /**
-         * SnatEntryId.
+         * The ID of the SNAT entry.
          */
         public Builder snatEntryId(String snatEntryId) {
             this.putQueryParameter("SnatEntryId", snatEntryId);
@@ -79,7 +79,7 @@ public class DeleteSnatIpForSnatEntryRequest extends Request {
         }
 
         /**
-         * SnatIp.
+         * The EIP that you want to delete from the SNAT entry.
          */
         public Builder snatIp(String snatIp) {
             this.putQueryParameter("SnatIp", snatIp);

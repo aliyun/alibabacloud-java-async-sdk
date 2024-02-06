@@ -12,14 +12,8 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceTypesRequest</p>
  */
 public class DescribeInstanceTypesRequest extends Request {
-    @Query
-    @NameInMap("Version")
-    @Validation(required = true)
-    private String version;
-
     private DescribeInstanceTypesRequest(Builder builder) {
         super(builder);
-        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -35,15 +29,7 @@ public class DescribeInstanceTypesRequest extends Request {
         return new Builder(this);
     }
 
-    /**
-     * @return version
-     */
-    public String getVersion() {
-        return this.version;
-    }
-
     public static final class Builder extends Request.Builder<DescribeInstanceTypesRequest, Builder> {
-        private String version; 
 
         private Builder() {
             super();
@@ -51,17 +37,7 @@ public class DescribeInstanceTypesRequest extends Request {
 
         private Builder(DescribeInstanceTypesRequest request) {
             super(request);
-            this.version = request.version;
         } 
-
-        /**
-         * Version.
-         */
-        public Builder version(String version) {
-            this.putQueryParameter("Version", version);
-            this.version = version;
-            return this;
-        }
 
         @Override
         public DescribeInstanceTypesRequest build() {

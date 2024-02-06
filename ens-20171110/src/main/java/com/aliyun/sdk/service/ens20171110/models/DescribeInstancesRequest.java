@@ -77,6 +77,10 @@ public class DescribeInstancesRequest extends Request {
     private String status;
 
     @Query
+    @NameInMap("Tags")
+    private java.util.List < Tags> tags;
+
+    @Query
     @NameInMap("VSwitchId")
     private String vSwitchId;
 
@@ -98,6 +102,7 @@ public class DescribeInstancesRequest extends Request {
         this.searchKey = builder.searchKey;
         this.securityGroupId = builder.securityGroupId;
         this.status = builder.status;
+        this.tags = builder.tags;
         this.vSwitchId = builder.vSwitchId;
     }
 
@@ -227,6 +232,13 @@ public class DescribeInstancesRequest extends Request {
     }
 
     /**
+     * @return tags
+     */
+    public java.util.List < Tags> getTags() {
+        return this.tags;
+    }
+
+    /**
      * @return vSwitchId
      */
     public String getVSwitchId() {
@@ -250,6 +262,7 @@ public class DescribeInstancesRequest extends Request {
         private String searchKey; 
         private String securityGroupId; 
         private String status; 
+        private java.util.List < Tags> tags; 
         private String vSwitchId; 
 
         private Builder() {
@@ -274,11 +287,12 @@ public class DescribeInstancesRequest extends Request {
             this.searchKey = request.searchKey;
             this.securityGroupId = request.securityGroupId;
             this.status = request.status;
+            this.tags = request.tags;
             this.vSwitchId = request.vSwitchId;
         } 
 
         /**
-         * EnsRegionId.
+         * The region ID.
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -287,7 +301,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * EnsRegionIds.
+         * The IDs of the regions. The value is a JSON array that consists of up to 100 IDs. Separate multiple IDs with commas (,).
          */
         public Builder ensRegionIds(String ensRegionIds) {
             this.putQueryParameter("EnsRegionIds", ensRegionIds);
@@ -296,7 +310,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * EnsServiceId.
+         * The ID of the edge service. You can use the ID to query information about the instances that are created in the edge service.
          */
         public Builder ensServiceId(String ensServiceId) {
             this.putQueryParameter("EnsServiceId", ensServiceId);
@@ -305,7 +319,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * ImageId.
+         * The ID of the image.
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -314,7 +328,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -323,7 +337,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * The IDs of the instances. The value is a JSON array that consists of up to 100 IDs. Separate IDs with commas (,).
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -332,7 +346,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * InstanceName.
+         * The name of the instance.
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -341,7 +355,13 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * InstanceResourceType.
+         * The condition that you want to use to filter instances by category. Valid values:
+         * <p>
+         * 
+         * *   EnsInstance: ENS instances that you purchase.
+         * *   EnsService: ENS instances that belong to edge services.
+         * *   BuildMachine: ENS instances that are configured with image builders.
+         * *   EnsPostPaidInstance: Pay-as-you-go ENS instances that you purchase.
          */
         public Builder instanceResourceType(String instanceResourceType) {
             this.putQueryParameter("InstanceResourceType", instanceResourceType);
@@ -350,7 +370,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * IntranetIp.
+         * The internal IP address of the instance.
          */
         public Builder intranetIp(String intranetIp) {
             this.putQueryParameter("IntranetIp", intranetIp);
@@ -359,7 +379,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * NetworkId.
+         * The ID of the network.
          */
         public Builder networkId(String networkId) {
             this.putQueryParameter("NetworkId", networkId);
@@ -368,7 +388,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * OrderByParams.
+         * The method that you want to use to sort instances. The value of this parameter is in the JSON format.
+         * <p>
+         * 
+         * You can sort instances by name, expiration time, node ID, or creation time. You can specify one or more methods.
          */
         public Builder orderByParams(String orderByParams) {
             this.putQueryParameter("OrderByParams", orderByParams);
@@ -377,7 +400,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Pages start from page **1**.
+         * <p>
+         * 
+         * Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -386,7 +412,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. The maximum value is **100**.
+         * <p>
+         * 
+         * Default value: **10**.
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -395,7 +424,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * SearchKey.
+         * The keyword that you use to query the logs of the service. You can specify the values of parameters such as **ip**, **InstanceName**, and **InstanceId** as the keyword.
          */
         public Builder searchKey(String searchKey) {
             this.putQueryParameter("SearchKey", searchKey);
@@ -404,7 +433,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * SecurityGroupId.
+         * The ID of the security group.
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -413,7 +442,12 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the instance. Valid values:
+         * <p>
+         * 
+         * *   Running
+         * *   Stopped
+         * *   Expired
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -422,7 +456,17 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * Tags.
+         */
+        public Builder tags(java.util.List < Tags> tags) {
+            String tagsShrink = shrink(tags, "Tags", "json");
+            this.putQueryParameter("Tags", tagsShrink);
+            this.tags = tags;
+            return this;
+        }
+
+        /**
+         * The ID of the vSwitch.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -437,4 +481,65 @@ public class DescribeInstancesRequest extends Request {
 
     } 
 
+    public static class Tags extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * 实例的标签键。N的取值范围为1~20。
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * 实例的标签值。N的取值范围：1~20。
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
 }

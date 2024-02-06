@@ -113,7 +113,7 @@ public class ExportImageRequest extends Request {
         } 
 
         /**
-         * ImageId.
+         * The ID of the image.
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -122,7 +122,7 @@ public class ExportImageRequest extends Request {
         }
 
         /**
-         * OSSBucket.
+         * The OSS bucket to which you want to export the image.
          */
         public Builder OSSBucket(String OSSBucket) {
             this.putQueryParameter("OSSBucket", OSSBucket);
@@ -131,7 +131,7 @@ public class ExportImageRequest extends Request {
         }
 
         /**
-         * OSSPrefix.
+         * The prefix of the object as which you want to store the image in the OSS bucket. The prefix must be 1 to 30 characters in length and can contain digits and letters.
          */
         public Builder OSSPrefix(String OSSPrefix) {
             this.putQueryParameter("OSSPrefix", OSSPrefix);
@@ -140,7 +140,12 @@ public class ExportImageRequest extends Request {
         }
 
         /**
-         * OSSRegionId.
+         * The ID of the region.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   cn-beijing
          */
         public Builder OSSRegionId(String OSSRegionId) {
             this.putQueryParameter("OSSRegionId", OSSRegionId);
@@ -149,7 +154,7 @@ public class ExportImageRequest extends Request {
         }
 
         /**
-         * RoleName.
+         * The name of the Resource Access Management (RAM) role.
          */
         public Builder roleName(String roleName) {
             this.putQueryParameter("RoleName", roleName);

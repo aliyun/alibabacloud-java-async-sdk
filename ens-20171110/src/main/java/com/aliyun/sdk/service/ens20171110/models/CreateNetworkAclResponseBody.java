@@ -50,7 +50,7 @@ public class CreateNetworkAclResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * NetworkAclId.
+         * The ID of the network ACL.
          */
         public Builder networkAclId(String networkAclId) {
             this.networkAclId = networkAclId;
@@ -58,7 +58,7 @@ public class CreateNetworkAclResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

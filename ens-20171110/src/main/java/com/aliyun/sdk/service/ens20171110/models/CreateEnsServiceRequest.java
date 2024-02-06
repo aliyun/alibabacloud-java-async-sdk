@@ -22,16 +22,10 @@ public class CreateEnsServiceRequest extends Request {
     @Validation(required = true)
     private String orderType;
 
-    @Query
-    @NameInMap("Version")
-    @Validation(required = true)
-    private String version;
-
     private CreateEnsServiceRequest(Builder builder) {
         super(builder);
         this.ensServiceId = builder.ensServiceId;
         this.orderType = builder.orderType;
-        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -61,17 +55,9 @@ public class CreateEnsServiceRequest extends Request {
         return this.orderType;
     }
 
-    /**
-     * @return version
-     */
-    public String getVersion() {
-        return this.version;
-    }
-
     public static final class Builder extends Request.Builder<CreateEnsServiceRequest, Builder> {
         private String ensServiceId; 
         private String orderType; 
-        private String version; 
 
         private Builder() {
             super();
@@ -81,11 +67,10 @@ public class CreateEnsServiceRequest extends Request {
             super(request);
             this.ensServiceId = request.ensServiceId;
             this.orderType = request.orderType;
-            this.version = request.version;
         } 
 
         /**
-         * EnsServiceId.
+         * The ID of the resource that you want to obtain. You can specify only one ID in a request.
          */
         public Builder ensServiceId(String ensServiceId) {
             this.putQueryParameter("EnsServiceId", ensServiceId);
@@ -94,20 +79,15 @@ public class CreateEnsServiceRequest extends Request {
         }
 
         /**
-         * OrderType.
+         * The operation to perform after you preview the created edge service. Valid values:
+         * <p>
+         * 
+         * *   **Buy**: create
+         * *   **Upgrade**: change
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
             this.orderType = orderType;
-            return this;
-        }
-
-        /**
-         * Version.
-         */
-        public Builder version(String version) {
-            this.putQueryParameter("Version", version);
-            this.version = version;
             return this;
         }
 

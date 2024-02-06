@@ -86,7 +86,7 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * KeyPairs.
+         * Details about the key pairs.
          */
         public Builder keyPairs(KeyPairs keyPairs) {
             this.keyPairs = keyPairs;
@@ -94,7 +94,7 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of key pairs.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -138,12 +138,16 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
         @NameInMap("KeyPairFingerPrint")
         private String keyPairFingerPrint;
 
+        @NameInMap("KeyPairId")
+        private String keyPairId;
+
         @NameInMap("KeyPairName")
         private String keyPairName;
 
         private KeyPair(Builder builder) {
             this.creationTime = builder.creationTime;
             this.keyPairFingerPrint = builder.keyPairFingerPrint;
+            this.keyPairId = builder.keyPairId;
             this.keyPairName = builder.keyPairName;
         }
 
@@ -170,6 +174,13 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
         }
 
         /**
+         * @return keyPairId
+         */
+        public String getKeyPairId() {
+            return this.keyPairId;
+        }
+
+        /**
          * @return keyPairName
          */
         public String getKeyPairName() {
@@ -179,10 +190,11 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
         public static final class Builder {
             private String creationTime; 
             private String keyPairFingerPrint; 
+            private String keyPairId; 
             private String keyPairName; 
 
             /**
-             * CreationTime.
+             * The time when the key pair was created. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -190,7 +202,7 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
             }
 
             /**
-             * KeyPairFingerPrint.
+             * The fingerprint of the key pair.
              */
             public Builder keyPairFingerPrint(String keyPairFingerPrint) {
                 this.keyPairFingerPrint = keyPairFingerPrint;
@@ -198,7 +210,15 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
             }
 
             /**
-             * KeyPairName.
+             * KeyPairId.
+             */
+            public Builder keyPairId(String keyPairId) {
+                this.keyPairId = keyPairId;
+                return this;
+            }
+
+            /**
+             * The name of the SSH key pair.
              */
             public Builder keyPairName(String keyPairName) {
                 this.keyPairName = keyPairName;

@@ -111,7 +111,7 @@ public class ModifyInstanceAttributeRequest extends Request {
         } 
 
         /**
-         * HostName.
+         * The hostname of the Elastic Compute Service (ECS) instance. The value can be 2 to 64 characters in length. You can use periods (.) to separate the value into multiple segments. Each segment can contain letters, digits, hyphens (-), and periods. Consecutive periods or hyphens are not allowed. The name cannot start or end with a period (.) or a hyphen (-).
          */
         public Builder hostName(String hostName) {
             this.putQueryParameter("HostName", hostName);
@@ -120,7 +120,7 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance for which you want to modify attributes. You can specify only one ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -129,7 +129,10 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * InstanceName.
+         * The name of the instance.
+         * <p>
+         * 
+         * The name must be 2 to 128 characters in length. It must start with a letter but cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -138,7 +141,7 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * Password.
+         * The password of the instance.
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -147,7 +150,10 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * UserData.
+         * The user data of the instance. User data must be encoded in Base64.
+         * <p>
+         * 
+         * The size of your UserData cannot exceed 16 KB. We recommend that you do not pass in confidential information such as passwords and private keys in the plaintext format. If you must pass in confidential information, we recommend that you encrypt and Base64-encode the information before you pass it in. Then you can decode and decrypt the information in the same way within the instance.
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);

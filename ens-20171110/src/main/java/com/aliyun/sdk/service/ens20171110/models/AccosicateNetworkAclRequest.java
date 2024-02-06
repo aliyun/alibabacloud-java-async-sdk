@@ -70,7 +70,7 @@ public class AccosicateNetworkAclRequest extends Request {
         } 
 
         /**
-         * NetworkAclId.
+         * The ID of the network ACL.
          */
         public Builder networkAclId(String networkAclId) {
             this.putQueryParameter("NetworkAclId", networkAclId);
@@ -79,7 +79,7 @@ public class AccosicateNetworkAclRequest extends Request {
         }
 
         /**
-         * Resource.
+         * The information about the resources with which you want to associate the network ACL.
          */
         public Builder resource(java.util.List < Resource> resource) {
             this.putQueryParameter("Resource", resource);
@@ -135,7 +135,7 @@ public class AccosicateNetworkAclRequest extends Request {
             private String resourceType; 
 
             /**
-             * ResourceId.
+             * The ID of the resource with which you want to associate the network ACL.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -143,7 +143,10 @@ public class AccosicateNetworkAclRequest extends Request {
             }
 
             /**
-             * ResourceType.
+             * The type of resource with which you want to associate the network ACL. Set the value to **Network**.
+             * <p>
+             * 
+             * ****
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;

@@ -55,7 +55,7 @@ public class StartInstanceRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The ID of the instance. You can start only one instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

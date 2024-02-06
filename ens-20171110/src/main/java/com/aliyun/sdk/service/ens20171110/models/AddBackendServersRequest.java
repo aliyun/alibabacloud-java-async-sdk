@@ -70,7 +70,10 @@ public class AddBackendServersRequest extends Request {
         } 
 
         /**
-         * BackendServers.
+         * The list of backend servers that you want to add. You can add at most 20 backend servers.
+         * <p>
+         * 
+         * >  Only ENS instances that are in the running state can be attached to the ELB instance as backend servers.
          */
         public Builder backendServers(java.util.List < BackendServers> backendServers) {
             String backendServersShrink = shrink(backendServers, "BackendServers", "json");
@@ -80,7 +83,7 @@ public class AddBackendServersRequest extends Request {
         }
 
         /**
-         * LoadBalancerId.
+         * The frontend port that is used by the Edge Load Balance (ELB) instance. Valid values: **1** to **65535**.
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
@@ -173,7 +176,7 @@ public class AddBackendServersRequest extends Request {
             private Integer weight; 
 
             /**
-             * Ip.
+             * The IP address of the backend server.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -181,7 +184,7 @@ public class AddBackendServersRequest extends Request {
             }
 
             /**
-             * Port.
+             * The backend port that is used by the ELB instance.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -189,7 +192,7 @@ public class AddBackendServersRequest extends Request {
             }
 
             /**
-             * ServerId.
+             * The ID of the ENS instance.
              */
             public Builder serverId(String serverId) {
                 this.serverId = serverId;
@@ -197,7 +200,11 @@ public class AddBackendServersRequest extends Request {
             }
 
             /**
-             * Type.
+             * The type of the backend server. Valid values:
+             * <p>
+             * 
+             * *   **ens**: ENS instance.
+             * *   **eni**: ENI.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -205,7 +212,10 @@ public class AddBackendServersRequest extends Request {
             }
 
             /**
-             * Weight.
+             * The weight of the backend server. Default value: 100. Valid values: **0** to **100**.
+             * <p>
+             * 
+             * >  The value 0 indicates that requests are not forwarded to the backend server.
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;

@@ -17,15 +17,9 @@ public class DeleteVSwitchRequest extends Request {
     @Validation(required = true)
     private String vSwitchId;
 
-    @Query
-    @NameInMap("Version")
-    @Validation(required = true)
-    private String version;
-
     private DeleteVSwitchRequest(Builder builder) {
         super(builder);
         this.vSwitchId = builder.vSwitchId;
-        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -48,16 +42,8 @@ public class DeleteVSwitchRequest extends Request {
         return this.vSwitchId;
     }
 
-    /**
-     * @return version
-     */
-    public String getVersion() {
-        return this.version;
-    }
-
     public static final class Builder extends Request.Builder<DeleteVSwitchRequest, Builder> {
         private String vSwitchId; 
-        private String version; 
 
         private Builder() {
             super();
@@ -66,24 +52,14 @@ public class DeleteVSwitchRequest extends Request {
         private Builder(DeleteVSwitchRequest request) {
             super(request);
             this.vSwitchId = request.vSwitchId;
-            this.version = request.version;
         } 
 
         /**
-         * VSwitchId.
+         * The ID of the vSwitch.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
             this.vSwitchId = vSwitchId;
-            return this;
-        }
-
-        /**
-         * Version.
-         */
-        public Builder version(String version) {
-            this.putQueryParameter("Version", version);
-            this.version = version;
             return this;
         }
 

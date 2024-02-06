@@ -114,7 +114,7 @@ public class CreateEpnInstanceRequest extends Request {
         } 
 
         /**
-         * EPNInstanceName.
+         * The name of the EPN instance.
          */
         public Builder EPNInstanceName(String EPNInstanceName) {
             this.putQueryParameter("EPNInstanceName", EPNInstanceName);
@@ -123,7 +123,7 @@ public class CreateEpnInstanceRequest extends Request {
         }
 
         /**
-         * EPNInstanceType.
+         * The type of the EPN instance. Set the value to **EdgeToEdge**.
          */
         public Builder EPNInstanceType(String EPNInstanceType) {
             this.putQueryParameter("EPNInstanceType", EPNInstanceType);
@@ -132,7 +132,15 @@ public class CreateEpnInstanceRequest extends Request {
         }
 
         /**
-         * InternetChargeType.
+         * The billing method for network usage. Valid values:
+         * <p>
+         * 
+         * *   **BandwidthByDay**: Pay by daily peak bandwidth.
+         * *   **95BandwidthByMonth**: Pay by monthly 95th percentile bandwidth.
+         * *   **PayByBandwidth4thMonth**: Pay by monthly fourth peak bandwidth.
+         * *   **PayByBandwidth**: Pay by fixed bandwidth.
+         * 
+         * You can specify only one metering method for network usage and cannot overwrite the existing metering method.
          */
         public Builder internetChargeType(String internetChargeType) {
             this.putQueryParameter("InternetChargeType", internetChargeType);
@@ -141,7 +149,7 @@ public class CreateEpnInstanceRequest extends Request {
         }
 
         /**
-         * InternetMaxBandwidthOut.
+         * The maximum outbound public bandwidth. Unit: Mbit/s. Valid values: 1 to 100.
          */
         public Builder internetMaxBandwidthOut(Integer internetMaxBandwidthOut) {
             this.putQueryParameter("InternetMaxBandwidthOut", internetMaxBandwidthOut);
@@ -150,7 +158,12 @@ public class CreateEpnInstanceRequest extends Request {
         }
 
         /**
-         * NetworkingModel.
+         * The networking mode. Valid values:
+         * <p>
+         * 
+         * *   **SpeedUp**: intelligent acceleration network (Internet)
+         * *   **Connection**: internal network
+         * *   **SpeedUpAndConnection**: intelligent acceleration network and internal network
          */
         public Builder networkingModel(String networkingModel) {
             this.putQueryParameter("NetworkingModel", networkingModel);

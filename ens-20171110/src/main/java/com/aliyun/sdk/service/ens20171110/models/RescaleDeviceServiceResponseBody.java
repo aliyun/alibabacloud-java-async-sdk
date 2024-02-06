@@ -74,7 +74,7 @@ public class RescaleDeviceServiceResponseBody extends TeaModel {
         private java.util.List < ResourceDetailInfos> resourceDetailInfos; 
 
         /**
-         * DeviceIds.
+         * The IDs of the devices.
          */
         public Builder deviceIds(java.util.List < String > deviceIds) {
             this.deviceIds = deviceIds;
@@ -82,7 +82,7 @@ public class RescaleDeviceServiceResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * The ID of the order.
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -90,7 +90,7 @@ public class RescaleDeviceServiceResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class RescaleDeviceServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceDetailInfos.
+         * The key properties of the device.
          */
         public Builder resourceDetailInfos(java.util.List < ResourceDetailInfos> resourceDetailInfos) {
             this.resourceDetailInfos = resourceDetailInfos;
@@ -222,7 +222,7 @@ public class RescaleDeviceServiceResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * ID.
+             * The ID of the device.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -230,7 +230,7 @@ public class RescaleDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * IP.
+             * The IP address of the device.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -238,7 +238,7 @@ public class RescaleDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * ISP.
+             * The Internet service provider (ISP) to which the device belongs.
              */
             public Builder ISP(String ISP) {
                 this.ISP = ISP;
@@ -246,7 +246,7 @@ public class RescaleDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * Mac.
+             * The media access control (MAC) address of the device.
              */
             public Builder mac(String mac) {
                 this.mac = mac;
@@ -254,7 +254,7 @@ public class RescaleDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * RegionID.
+             * The ID of the edge node to which the device belongs.
              */
             public Builder regionID(String regionID) {
                 this.regionID = regionID;
@@ -262,7 +262,7 @@ public class RescaleDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * Server.
+             * The name of the server on which the device is deployed.
              */
             public Builder server(String server) {
                 this.server = server;
@@ -270,7 +270,7 @@ public class RescaleDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the device.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -278,7 +278,7 @@ public class RescaleDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the instance.
              */
             public Builder type(String type) {
                 this.type = type;

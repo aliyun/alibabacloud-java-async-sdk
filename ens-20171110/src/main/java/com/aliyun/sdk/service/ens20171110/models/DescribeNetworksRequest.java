@@ -110,7 +110,7 @@ public class DescribeNetworksRequest extends Request {
         } 
 
         /**
-         * EnsRegionId.
+         * The ID of the edge node.
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -119,7 +119,7 @@ public class DescribeNetworksRequest extends Request {
         }
 
         /**
-         * NetworkId.
+         * The ID of the network.
          */
         public Builder networkId(String networkId) {
             this.putQueryParameter("NetworkId", networkId);
@@ -128,7 +128,7 @@ public class DescribeNetworksRequest extends Request {
         }
 
         /**
-         * NetworkName.
+         * The name of the network.
          */
         public Builder networkName(String networkName) {
             this.putQueryParameter("NetworkName", networkName);
@@ -137,7 +137,7 @@ public class DescribeNetworksRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -146,7 +146,7 @@ public class DescribeNetworksRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Valid values: **1 to 50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

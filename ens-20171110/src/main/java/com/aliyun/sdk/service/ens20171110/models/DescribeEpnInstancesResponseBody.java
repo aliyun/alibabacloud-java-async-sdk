@@ -86,7 +86,7 @@ public class DescribeEpnInstancesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * EPNInstances.
+         * Details of EPN instances.
          */
         public Builder EPNInstances(EPNInstances EPNInstances) {
             this.EPNInstances = EPNInstances;
@@ -94,7 +94,7 @@ public class DescribeEpnInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeEpnInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeEpnInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeEpnInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of pages returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -266,7 +266,7 @@ public class DescribeEpnInstancesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * CreationTime.
+             * The time when the instance was created. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -274,7 +274,7 @@ public class DescribeEpnInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * EPNInstanceId.
+             * The ID of the EPN instance.
              */
             public Builder EPNInstanceId(String EPNInstanceId) {
                 this.EPNInstanceId = EPNInstanceId;
@@ -282,7 +282,7 @@ public class DescribeEpnInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * EPNInstanceName.
+             * The name of the EPN instance.
              */
             public Builder EPNInstanceName(String EPNInstanceName) {
                 this.EPNInstanceName = EPNInstanceName;
@@ -290,7 +290,7 @@ public class DescribeEpnInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * EPNInstanceType.
+             * Set the value to EdgeToEdge.
              */
             public Builder EPNInstanceType(String EPNInstanceType) {
                 this.EPNInstanceType = EPNInstanceType;
@@ -298,7 +298,7 @@ public class DescribeEpnInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The end of the time range during which the data was queried. The time is displayed in UTC.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -306,7 +306,7 @@ public class DescribeEpnInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InternetMaxBandwidthOut.
+             * The inbound bandwidth. Unit: Mbit/s.
              */
             public Builder internetMaxBandwidthOut(Integer internetMaxBandwidthOut) {
                 this.internetMaxBandwidthOut = internetMaxBandwidthOut;
@@ -314,7 +314,7 @@ public class DescribeEpnInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * The time when the instance was last modified. The time is displayed in UTC.
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -322,7 +322,12 @@ public class DescribeEpnInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkingModel.
+             * The networking mode. Valid values:
+             * <p>
+             * 
+             * *   SpeedUp: intelligent acceleration network (Internet)
+             * *   Connection: internal network
+             * *   SpeedUpAndConnection: intelligent acceleration network and internal network
              */
             public Builder networkingModel(String networkingModel) {
                 this.networkingModel = networkingModel;
@@ -330,7 +335,7 @@ public class DescribeEpnInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The beginning of the time range during which the data was queried. The time is displayed in UTC.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -338,7 +343,12 @@ public class DescribeEpnInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the instance. Valid values:
+             * <p>
+             * 
+             * *   Running
+             * *   Excuting
+             * *   Stopped
              */
             public Builder status(String status) {
                 this.status = status;

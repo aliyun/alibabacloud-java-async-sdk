@@ -70,7 +70,7 @@ public class UnassociateNetworkAclRequest extends Request {
         } 
 
         /**
-         * NetworkAclId.
+         * The ID of the network ACL that you want to disassociate from a resource.
          */
         public Builder networkAclId(String networkAclId) {
             this.putQueryParameter("NetworkAclId", networkAclId);
@@ -79,7 +79,7 @@ public class UnassociateNetworkAclRequest extends Request {
         }
 
         /**
-         * Resource.
+         * The information about the associated resource.
          */
         public Builder resource(java.util.List < Resource> resource) {
             this.putQueryParameter("Resource", resource);
@@ -135,7 +135,7 @@ public class UnassociateNetworkAclRequest extends Request {
             private String resourceType; 
 
             /**
-             * ResourceId.
+             * The ID of the resource from which you want to disassociate the network ACL.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -143,7 +143,7 @@ public class UnassociateNetworkAclRequest extends Request {
             }
 
             /**
-             * ResourceType.
+             * The type of the resource from which you want to disassociate the network ACL. Set the value to **Network**.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;

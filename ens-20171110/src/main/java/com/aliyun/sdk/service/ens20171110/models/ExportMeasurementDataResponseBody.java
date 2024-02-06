@@ -50,7 +50,7 @@ public class ExportMeasurementDataResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * FilePath.
+         * The download path of the exported file.
          */
         public Builder filePath(String filePath) {
             this.filePath = filePath;
@@ -58,7 +58,7 @@ public class ExportMeasurementDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

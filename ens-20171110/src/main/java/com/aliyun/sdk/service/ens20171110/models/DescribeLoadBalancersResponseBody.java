@@ -86,7 +86,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * LoadBalancers.
+         * The returned ELB instances.
          */
         public Builder loadBalancers(LoadBalancers loadBalancers) {
             this.loadBalancers = loadBalancers;
@@ -94,7 +94,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Default value: 10. Valid values: **10** to **100**.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -266,7 +266,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             private String vSwitchId; 
 
             /**
-             * Address.
+             * The IP address that the ELB instance uses to provide services.
              */
             public Builder address(String address) {
                 this.address = address;
@@ -274,7 +274,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * AddressIPVersion.
+             * The version of the IP address. Valid values: ipv4 and ipv6.
              */
             public Builder addressIPVersion(String addressIPVersion) {
                 this.addressIPVersion = addressIPVersion;
@@ -282,7 +282,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the ELB instance was created. The time is displayed in UTC.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -290,7 +290,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * EnsRegionId.
+             * The ID of the ENS node.
              */
             public Builder ensRegionId(String ensRegionId) {
                 this.ensRegionId = ensRegionId;
@@ -298,7 +298,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * LoadBalancerId.
+             * The ID of the ELB instance.
              */
             public Builder loadBalancerId(String loadBalancerId) {
                 this.loadBalancerId = loadBalancerId;
@@ -306,7 +306,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * LoadBalancerName.
+             * The name of the ELB instance.
              */
             public Builder loadBalancerName(String loadBalancerName) {
                 this.loadBalancerName = loadBalancerName;
@@ -314,7 +314,11 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * LoadBalancerStatus.
+             * The status of the ELB instance. Valid values:
+             * <p>
+             * 
+             * *   **Active** (default): The listener for the instance can forward the received traffic based on the rule.
+             * *   **InActive**: The listener for the instance does not forward the received traffic.
              */
             public Builder loadBalancerStatus(String loadBalancerStatus) {
                 this.loadBalancerStatus = loadBalancerStatus;
@@ -322,7 +326,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkId.
+             * The ID of the network.
              */
             public Builder networkId(String networkId) {
                 this.networkId = networkId;
@@ -330,7 +334,11 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * PayType.
+             * The billing method. Valid values:
+             * <p>
+             * 
+             * *   **PrePaid**: subscription.
+             * *   **PostPaid**: pay-as-you-go. Only this billing method is supported.
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -338,7 +346,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * The ID of the vSwitch.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;

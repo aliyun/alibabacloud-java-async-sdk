@@ -50,7 +50,7 @@ public class DescribeApplicationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Application.
+         * The returned application information.
          */
         public Builder application(String application) {
             this.application = application;
@@ -58,7 +58,7 @@ public class DescribeApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

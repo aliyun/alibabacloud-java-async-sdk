@@ -21,16 +21,10 @@ public class DescribeEnsNetDistrictRequest extends Request {
     @Validation(required = true)
     private String netLevelCode;
 
-    @Query
-    @NameInMap("Version")
-    @Validation(required = true)
-    private String version;
-
     private DescribeEnsNetDistrictRequest(Builder builder) {
         super(builder);
         this.netDistrictCode = builder.netDistrictCode;
         this.netLevelCode = builder.netLevelCode;
-        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -60,17 +54,9 @@ public class DescribeEnsNetDistrictRequest extends Request {
         return this.netLevelCode;
     }
 
-    /**
-     * @return version
-     */
-    public String getVersion() {
-        return this.version;
-    }
-
     public static final class Builder extends Request.Builder<DescribeEnsNetDistrictRequest, Builder> {
         private String netDistrictCode; 
         private String netLevelCode; 
-        private String version; 
 
         private Builder() {
             super();
@@ -80,11 +66,15 @@ public class DescribeEnsNetDistrictRequest extends Request {
             super(request);
             this.netDistrictCode = request.netDistrictCode;
             this.netLevelCode = request.netLevelCode;
-            this.version = request.version;
         } 
 
         /**
-         * NetDistrictCode.
+         * The code of the region.
+         * <p>
+         * 
+         * If you do not specify this parameter, only nodes in the regions of the level that is specified by the NetLevelCode parameter are queried.
+         * 
+         * If you specify this parameter, only nodes in the regions of the level that is specified by this parameter are queried.
          */
         public Builder netDistrictCode(String netDistrictCode) {
             this.putQueryParameter("NetDistrictCode", netDistrictCode);
@@ -93,20 +83,16 @@ public class DescribeEnsNetDistrictRequest extends Request {
         }
 
         /**
-         * NetLevelCode.
+         * The level of the region.
+         * <p>
+         * 
+         * *   **Big**: area
+         * *   **Middle**: province
+         * *   **Small**: city
          */
         public Builder netLevelCode(String netLevelCode) {
             this.putQueryParameter("NetLevelCode", netLevelCode);
             this.netLevelCode = netLevelCode;
-            return this;
-        }
-
-        /**
-         * Version.
-         */
-        public Builder version(String version) {
-            this.putQueryParameter("Version", version);
-            this.version = version;
             return this;
         }
 

@@ -84,7 +84,7 @@ public class UpgradeAICInstanceImageRequest extends Request {
         } 
 
         /**
-         * ImageId.
+         * The ID of the AIC image.
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -93,7 +93,7 @@ public class UpgradeAICInstanceImageRequest extends Request {
         }
 
         /**
-         * ServerIds.
+         * The IDs of the servers.
          */
         public Builder serverIds(java.util.List < String > serverIds) {
             String serverIdsShrink = shrink(serverIds, "ServerIds", "json");
@@ -103,7 +103,7 @@ public class UpgradeAICInstanceImageRequest extends Request {
         }
 
         /**
-         * Timeout.
+         * The timeout period of the update. Unit: seconds.
          */
         public Builder timeout(Integer timeout) {
             this.putQueryParameter("Timeout", timeout);

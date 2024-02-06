@@ -55,7 +55,7 @@ public class CreateFileSystemRequest extends Request {
         } 
 
         /**
-         * OrderDetails.
+         * The information about the orders.
          */
         public Builder orderDetails(java.util.List < OrderDetails> orderDetails) {
             String orderDetailsShrink = shrink(orderDetails, "OrderDetails", "json");
@@ -190,7 +190,11 @@ public class CreateFileSystemRequest extends Request {
             private String storgeType; 
 
             /**
-             * ChargeType.
+             * The billing method of the NAS file system. Valid values:
+             * <p>
+             * 
+             * *   PrePaid: subscription. This billing method is not supported.
+             * *   PostPaid: pay-as-you-go.
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -198,7 +202,7 @@ public class CreateFileSystemRequest extends Request {
             }
 
             /**
-             * EnsRegionId.
+             * The ID of the node.
              */
             public Builder ensRegionId(String ensRegionId) {
                 this.ensRegionId = ensRegionId;
@@ -206,7 +210,7 @@ public class CreateFileSystemRequest extends Request {
             }
 
             /**
-             * FileSystemName.
+             * The name of the file system.
              */
             public Builder fileSystemName(String fileSystemName) {
                 this.fileSystemName = fileSystemName;
@@ -214,7 +218,7 @@ public class CreateFileSystemRequest extends Request {
             }
 
             /**
-             * MountTargetDomain.
+             * The name of the mount target.
              */
             public Builder mountTargetDomain(String mountTargetDomain) {
                 this.mountTargetDomain = mountTargetDomain;
@@ -222,7 +226,7 @@ public class CreateFileSystemRequest extends Request {
             }
 
             /**
-             * NetworkId.
+             * The ID of the VPC.
              */
             public Builder networkId(String networkId) {
                 this.networkId = networkId;
@@ -230,7 +234,7 @@ public class CreateFileSystemRequest extends Request {
             }
 
             /**
-             * BUY。
+             * The type of the order.
              */
             public Builder orderType(String orderType) {
                 this.orderType = orderType;
@@ -238,7 +242,7 @@ public class CreateFileSystemRequest extends Request {
             }
 
             /**
-             * ProtocolType.
+             * The storage protocol. Valid values: nsf and smb.
              */
             public Builder protocolType(String protocolType) {
                 this.protocolType = protocolType;
@@ -246,7 +250,7 @@ public class CreateFileSystemRequest extends Request {
             }
 
             /**
-             * StorgeType.
+             * The type of the storage. Set the value to capacity.
              */
             public Builder storgeType(String storgeType) {
                 this.storgeType = storgeType;

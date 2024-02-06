@@ -18,6 +18,14 @@ public class CreateDiskRequest extends Request {
     private String category;
 
     @Query
+    @NameInMap("DiskName")
+    private String diskName;
+
+    @Query
+    @NameInMap("Encrypted")
+    private Boolean encrypted;
+
+    @Query
     @NameInMap("EnsRegionId")
     @Validation(required = true)
     private String ensRegionId;
@@ -26,6 +34,10 @@ public class CreateDiskRequest extends Request {
     @NameInMap("InstanceChargeType")
     @Validation(required = true)
     private String instanceChargeType;
+
+    @Query
+    @NameInMap("KMSKeyId")
+    private String KMSKeyId;
 
     @Query
     @NameInMap("Size")
@@ -38,8 +50,11 @@ public class CreateDiskRequest extends Request {
     private CreateDiskRequest(Builder builder) {
         super(builder);
         this.category = builder.category;
+        this.diskName = builder.diskName;
+        this.encrypted = builder.encrypted;
         this.ensRegionId = builder.ensRegionId;
         this.instanceChargeType = builder.instanceChargeType;
+        this.KMSKeyId = builder.KMSKeyId;
         this.size = builder.size;
         this.snapshotId = builder.snapshotId;
     }
@@ -65,6 +80,20 @@ public class CreateDiskRequest extends Request {
     }
 
     /**
+     * @return diskName
+     */
+    public String getDiskName() {
+        return this.diskName;
+    }
+
+    /**
+     * @return encrypted
+     */
+    public Boolean getEncrypted() {
+        return this.encrypted;
+    }
+
+    /**
      * @return ensRegionId
      */
     public String getEnsRegionId() {
@@ -76,6 +105,13 @@ public class CreateDiskRequest extends Request {
      */
     public String getInstanceChargeType() {
         return this.instanceChargeType;
+    }
+
+    /**
+     * @return KMSKeyId
+     */
+    public String getKMSKeyId() {
+        return this.KMSKeyId;
     }
 
     /**
@@ -94,8 +130,11 @@ public class CreateDiskRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateDiskRequest, Builder> {
         private String category; 
+        private String diskName; 
+        private Boolean encrypted; 
         private String ensRegionId; 
         private String instanceChargeType; 
+        private String KMSKeyId; 
         private String size; 
         private String snapshotId; 
 
@@ -106,14 +145,23 @@ public class CreateDiskRequest extends Request {
         private Builder(CreateDiskRequest request) {
             super(request);
             this.category = request.category;
+            this.diskName = request.diskName;
+            this.encrypted = request.encrypted;
             this.ensRegionId = request.ensRegionId;
             this.instanceChargeType = request.instanceChargeType;
+            this.KMSKeyId = request.KMSKeyId;
             this.size = request.size;
             this.snapshotId = request.snapshotId;
         } 
 
         /**
-         * Category.
+         * The category of the disk. Valid values:
+         * <p>
+         * 
+         * *   cloud_efficiency: ultra disk.
+         * *   cloud_ssd: all-flash disk.
+         * *   local_hdd: local HDD.
+         * *   local_ssd: local SSD.
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -122,7 +170,29 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * EnsRegionId.
+         * The name of the disk.
+         */
+        public Builder diskName(String diskName) {
+            this.putQueryParameter("DiskName", diskName);
+            this.diskName = diskName;
+            return this;
+        }
+
+        /**
+         * Specifies whether to encrypt the new system disk. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false** (default): no
+         */
+        public Builder encrypted(Boolean encrypted) {
+            this.putQueryParameter("Encrypted", encrypted);
+            this.encrypted = encrypted;
+            return this;
+        }
+
+        /**
+         * The ID of the edge node.
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -131,7 +201,11 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * InstanceChargeType.
+         * The billing method of the instance. Valid values:
+         * <p>
+         * 
+         * *   PrePaid: subscription.
+         * *   PostPaid: pay-as-you-go.
          */
         public Builder instanceChargeType(String instanceChargeType) {
             this.putQueryParameter("InstanceChargeType", instanceChargeType);
@@ -140,7 +214,19 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * Size.
+         * The ID of the Key Management Service (KMS) key that is used by the cloud disk.
+         * <p>
+         * 
+         * >  If you set the **Encrypted** parameter to **true**, the default service key is used when the **KMSKeyId** parameter is empty.
+         */
+        public Builder KMSKeyId(String KMSKeyId) {
+            this.putQueryParameter("KMSKeyId", KMSKeyId);
+            this.KMSKeyId = KMSKeyId;
+            return this;
+        }
+
+        /**
+         * The size of the disk. Unit: GiB.
          */
         public Builder size(String size) {
             this.putQueryParameter("Size", size);
@@ -149,7 +235,13 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * SnapshotId.
+         * The ID of the snapshot that you want to use to create the disk.
+         * <p>
+         * 
+         * The following limits apply to the **SnapshotId** and **Size** parameters:
+         * 
+         * *   If the size of the snapshot specified by **SnapshotId** is greater than the specified **Size** value, the size of the created disk is equal to the specified snapshot size.
+         * *   If the size of the snapshot specified by **SnapshotId** is smaller than the specified **Size** value, the size of the created disk is equal to the specified **Size** value.
          */
         public Builder snapshotId(String snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);

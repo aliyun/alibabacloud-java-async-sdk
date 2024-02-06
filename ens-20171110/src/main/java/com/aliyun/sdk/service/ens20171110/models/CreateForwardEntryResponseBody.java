@@ -50,7 +50,7 @@ public class CreateForwardEntryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ForwardEntryId.
+         * The ID of the DNAT entry.
          */
         public Builder forwardEntryId(String forwardEntryId) {
             this.forwardEntryId = forwardEntryId;
@@ -58,7 +58,7 @@ public class CreateForwardEntryResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

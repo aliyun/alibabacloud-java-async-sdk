@@ -50,7 +50,7 @@ public class CreateEnsRouteEntryResponseBody extends TeaModel {
         private String routeEntryId; 
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class CreateEnsRouteEntryResponseBody extends TeaModel {
         }
 
         /**
-         * RouteEntryId.
+         * The ID of the route.
          */
         public Builder routeEntryId(String routeEntryId) {
             this.routeEntryId = routeEntryId;

@@ -55,7 +55,7 @@ public class ReleaseInstanceRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The ID of the EIP.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

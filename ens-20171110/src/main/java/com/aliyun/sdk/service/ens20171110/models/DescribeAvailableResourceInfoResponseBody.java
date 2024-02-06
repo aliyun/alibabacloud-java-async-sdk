@@ -62,7 +62,7 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
         private SupportResources supportResources; 
 
         /**
-         * Images.
+         * The information about the image.
          */
         public Builder images(Images images) {
             this.images = images;
@@ -70,7 +70,7 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
         }
 
         /**
-         * SupportResources.
+         * The specifications of resources that you can purchase.
          */
         public Builder supportResources(SupportResources supportResources) {
             this.supportResources = supportResources;
@@ -142,7 +142,7 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
             private Integer imageSize; 
 
             /**
-             * ImageId.
+             * The ID of the image.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -150,7 +150,7 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ImageName.
+             * The name of the image.
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -158,7 +158,7 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ImageSize.
+             * The size of the image. Unit: GB.
              */
             public Builder imageSize(Integer imageSize) {
                 this.imageSize = imageSize;
@@ -305,6 +305,9 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
         @NameInMap("EnsRegionId")
         private String ensRegionId;
 
+        @NameInMap("Isp")
+        private String isp;
+
         @NameInMap("Name")
         private String name;
 
@@ -315,6 +318,7 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
             this.area = builder.area;
             this.enName = builder.enName;
             this.ensRegionId = builder.ensRegionId;
+            this.isp = builder.isp;
             this.name = builder.name;
             this.province = builder.province;
         }
@@ -349,6 +353,13 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return isp
+         */
+        public String getIsp() {
+            return this.isp;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
@@ -366,11 +377,12 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
             private String area; 
             private String enName; 
             private String ensRegionId; 
+            private String isp; 
             private String name; 
             private String province; 
 
             /**
-             * Area.
+             * The region.
              */
             public Builder area(String area) {
                 this.area = area;
@@ -378,7 +390,7 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * EnName.
+             * The name. This parameter is empty by default.
              */
             public Builder enName(String enName) {
                 this.enName = enName;
@@ -386,7 +398,7 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * EnsRegionId.
+             * The ID of the edge node.
              */
             public Builder ensRegionId(String ensRegionId) {
                 this.ensRegionId = ensRegionId;
@@ -394,7 +406,15 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The information about the Internet service provider (ISP).
+             */
+            public Builder isp(String isp) {
+                this.isp = isp;
+                return this;
+            }
+
+            /**
+             * The name of the edge node.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -402,7 +422,7 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Province.
+             * The province.
              */
             public Builder province(String province) {
                 this.province = province;
@@ -443,7 +463,7 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
             private java.util.List < EnsRegionId> ensRegionId; 
 
             /**
-             * EnsRegionId.
+             * The ID of the edge node.
              */
             public Builder ensRegionId(java.util.List < EnsRegionId> ensRegionId) {
                 this.ensRegionId = ensRegionId;
@@ -498,6 +518,47 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
         } 
 
     }
+    public static class Isp extends TeaModel {
+        @NameInMap("Isp")
+        private java.util.List < String > isp;
+
+        private Isp(Builder builder) {
+            this.isp = builder.isp;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Isp create() {
+            return builder().build();
+        }
+
+        /**
+         * @return isp
+         */
+        public java.util.List < String > getIsp() {
+            return this.isp;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > isp; 
+
+            /**
+             * The information about the Internet service provider (ISP).
+             */
+            public Builder isp(java.util.List < String > isp) {
+                this.isp = isp;
+                return this;
+            }
+
+            public Isp build() {
+                return new Isp(this);
+            } 
+
+        } 
+
+    }
     public static class SupportResource extends TeaModel {
         @NameInMap("BandwidthTypes")
         private BandwidthTypes bandwidthTypes;
@@ -517,6 +578,9 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
         @NameInMap("InstanceSpeces")
         private InstanceSpeces instanceSpeces;
 
+        @NameInMap("Isp")
+        private Isp isp;
+
         @NameInMap("SystemDiskMaxSize")
         private Integer systemDiskMaxSize;
 
@@ -530,6 +594,7 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
             this.ensRegionIds = builder.ensRegionIds;
             this.ensRegionIdsExtends = builder.ensRegionIdsExtends;
             this.instanceSpeces = builder.instanceSpeces;
+            this.isp = builder.isp;
             this.systemDiskMaxSize = builder.systemDiskMaxSize;
             this.systemDiskMinSize = builder.systemDiskMinSize;
         }
@@ -585,6 +650,13 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return isp
+         */
+        public Isp getIsp() {
+            return this.isp;
+        }
+
+        /**
          * @return systemDiskMaxSize
          */
         public Integer getSystemDiskMaxSize() {
@@ -605,6 +677,7 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
             private EnsRegionIds ensRegionIds; 
             private EnsRegionIdsExtends ensRegionIdsExtends; 
             private InstanceSpeces instanceSpeces; 
+            private Isp isp; 
             private Integer systemDiskMaxSize; 
             private Integer systemDiskMinSize; 
 
@@ -617,7 +690,7 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DataDiskMaxSize.
+             * The maximum capacity of a data disk. Unit: GB.
              */
             public Builder dataDiskMaxSize(Integer dataDiskMaxSize) {
                 this.dataDiskMaxSize = dataDiskMaxSize;
@@ -625,7 +698,7 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DataDiskMinSize.
+             * The minimum data disk size. Unit: GiB.
              */
             public Builder dataDiskMinSize(Integer dataDiskMinSize) {
                 this.dataDiskMinSize = dataDiskMinSize;
@@ -641,7 +714,7 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * EnsRegionIdsExtends.
+             * The supplementary information about the edge nodes.
              */
             public Builder ensRegionIdsExtends(EnsRegionIdsExtends ensRegionIdsExtends) {
                 this.ensRegionIdsExtends = ensRegionIdsExtends;
@@ -657,7 +730,15 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * SystemDiskMaxSize.
+             * The information about the Internet service provider (ISP).
+             */
+            public Builder isp(Isp isp) {
+                this.isp = isp;
+                return this;
+            }
+
+            /**
+             * The maximum size of the system disk. Unit: GiB.
              */
             public Builder systemDiskMaxSize(Integer systemDiskMaxSize) {
                 this.systemDiskMaxSize = systemDiskMaxSize;
@@ -665,7 +746,7 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * SystemDiskMinSize.
+             * The minimum capacity of a system disk. Unit: GB.
              */
             public Builder systemDiskMinSize(Integer systemDiskMinSize) {
                 this.systemDiskMinSize = systemDiskMinSize;

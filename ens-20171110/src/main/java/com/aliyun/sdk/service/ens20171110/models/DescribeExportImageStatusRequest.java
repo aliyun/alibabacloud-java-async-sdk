@@ -17,15 +17,9 @@ public class DescribeExportImageStatusRequest extends Request {
     @Validation(required = true)
     private String imageId;
 
-    @Query
-    @NameInMap("Version")
-    @Validation(required = true)
-    private String version;
-
     private DescribeExportImageStatusRequest(Builder builder) {
         super(builder);
         this.imageId = builder.imageId;
-        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -48,16 +42,8 @@ public class DescribeExportImageStatusRequest extends Request {
         return this.imageId;
     }
 
-    /**
-     * @return version
-     */
-    public String getVersion() {
-        return this.version;
-    }
-
     public static final class Builder extends Request.Builder<DescribeExportImageStatusRequest, Builder> {
         private String imageId; 
-        private String version; 
 
         private Builder() {
             super();
@@ -66,24 +52,14 @@ public class DescribeExportImageStatusRequest extends Request {
         private Builder(DescribeExportImageStatusRequest request) {
             super(request);
             this.imageId = request.imageId;
-            this.version = request.version;
         } 
 
         /**
-         * ImageId.
+         * The ID of the image.
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
             this.imageId = imageId;
-            return this;
-        }
-
-        /**
-         * Version.
-         */
-        public Builder version(String version) {
-            this.putQueryParameter("Version", version);
-            this.version = version;
             return this;
         }
 

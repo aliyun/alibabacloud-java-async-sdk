@@ -50,7 +50,7 @@ public class DescribeEpnBandWidthDataResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * MonitorData.
+         * The monitoring data of the instance.
          */
         public Builder monitorData(MonitorData monitorData) {
             this.monitorData = monitorData;
@@ -58,7 +58,7 @@ public class DescribeEpnBandWidthDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +146,7 @@ public class DescribeEpnBandWidthDataResponseBody extends TeaModel {
             private Long upBandWidth; 
 
             /**
-             * DownBandWidth.
+             * The outbound bandwidth. Unit: bit/s.
              */
             public Builder downBandWidth(Long downBandWidth) {
                 this.downBandWidth = downBandWidth;
@@ -154,7 +154,7 @@ public class DescribeEpnBandWidthDataResponseBody extends TeaModel {
             }
 
             /**
-             * InternetRX.
+             * The Internet traffic to the instance. Unit: bytes.
              */
             public Builder internetRX(Long internetRX) {
                 this.internetRX = internetRX;
@@ -162,7 +162,7 @@ public class DescribeEpnBandWidthDataResponseBody extends TeaModel {
             }
 
             /**
-             * InternetTX.
+             * The Internet traffic from the instance. Unit: bytes.
              */
             public Builder internetTX(Long internetTX) {
                 this.internetTX = internetTX;
@@ -170,7 +170,7 @@ public class DescribeEpnBandWidthDataResponseBody extends TeaModel {
             }
 
             /**
-             * TimeStamp.
+             * The timestamp when the monitoring data was queried. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -178,7 +178,7 @@ public class DescribeEpnBandWidthDataResponseBody extends TeaModel {
             }
 
             /**
-             * UpBandWidth.
+             * The inbound bandwidth. Unit: bit/s.
              */
             public Builder upBandWidth(Long upBandWidth) {
                 this.upBandWidth = upBandWidth;
@@ -243,7 +243,7 @@ public class DescribeEpnBandWidthDataResponseBody extends TeaModel {
             private Long maxUpBandWidth; 
 
             /**
-             * BandWidthMonitorData.
+             * The bandwidth data.
              */
             public Builder bandWidthMonitorData(java.util.List < BandWidthMonitorData> bandWidthMonitorData) {
                 this.bandWidthMonitorData = bandWidthMonitorData;
@@ -251,7 +251,7 @@ public class DescribeEpnBandWidthDataResponseBody extends TeaModel {
             }
 
             /**
-             * MaxDownBandWidth.
+             * The maximum outbound bandwidth within the queried time range. Unit: bit/s.
              */
             public Builder maxDownBandWidth(Long maxDownBandWidth) {
                 this.maxDownBandWidth = maxDownBandWidth;
@@ -259,7 +259,7 @@ public class DescribeEpnBandWidthDataResponseBody extends TeaModel {
             }
 
             /**
-             * MaxUpBandWidth.
+             * The maximum inbound bandwidth within the queried time range. Unit: bit/s.
              */
             public Builder maxUpBandWidth(Long maxUpBandWidth) {
                 this.maxUpBandWidth = maxUpBandWidth;

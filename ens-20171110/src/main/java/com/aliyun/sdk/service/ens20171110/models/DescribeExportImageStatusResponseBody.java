@@ -50,7 +50,13 @@ public class DescribeExportImageStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ImageExportStatus.
+         * The export status of the image. Valid values:
+         * <p>
+         * 
+         * *   Exporting
+         * *   Exported
+         * *   ExportError
+         * *   Unexported
          */
         public Builder imageExportStatus(String imageExportStatus) {
             this.imageExportStatus = imageExportStatus;
@@ -58,7 +64,7 @@ public class DescribeExportImageStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

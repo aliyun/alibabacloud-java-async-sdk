@@ -84,7 +84,7 @@ public class DescribeServcieScheduleRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * The ID of the application.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -93,7 +93,7 @@ public class DescribeServcieScheduleRequest extends Request {
         }
 
         /**
-         * PodConfigName.
+         * This parameter does not take effect.
          */
         public Builder podConfigName(String podConfigName) {
             this.putQueryParameter("PodConfigName", podConfigName);
@@ -102,7 +102,7 @@ public class DescribeServcieScheduleRequest extends Request {
         }
 
         /**
-         * Uuid.
+         * The UUID of the device.
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

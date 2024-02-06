@@ -68,7 +68,7 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The ID of the instance that you want to upgrade or downgrade.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -77,7 +77,7 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
         }
 
         /**
-         * InstanceType.
+         * The updated configuration.
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);

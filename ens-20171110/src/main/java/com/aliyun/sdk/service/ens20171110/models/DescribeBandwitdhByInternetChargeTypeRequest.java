@@ -30,18 +30,12 @@ public class DescribeBandwitdhByInternetChargeTypeRequest extends Request {
     @Validation(required = true)
     private String startTime;
 
-    @Query
-    @NameInMap("Version")
-    @Validation(required = true)
-    private String version;
-
     private DescribeBandwitdhByInternetChargeTypeRequest(Builder builder) {
         super(builder);
         this.endTime = builder.endTime;
         this.ensRegionId = builder.ensRegionId;
         this.isp = builder.isp;
         this.startTime = builder.startTime;
-        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -85,19 +79,11 @@ public class DescribeBandwitdhByInternetChargeTypeRequest extends Request {
         return this.startTime;
     }
 
-    /**
-     * @return version
-     */
-    public String getVersion() {
-        return this.version;
-    }
-
     public static final class Builder extends Request.Builder<DescribeBandwitdhByInternetChargeTypeRequest, Builder> {
         private String endTime; 
         private String ensRegionId; 
         private String isp; 
         private String startTime; 
-        private String version; 
 
         private Builder() {
             super();
@@ -109,11 +95,14 @@ public class DescribeBandwitdhByInternetChargeTypeRequest extends Request {
             this.ensRegionId = request.ensRegionId;
             this.isp = request.isp;
             this.startTime = request.startTime;
-            this.version = request.version;
         } 
 
         /**
-         * EndTime.
+         * The end of the time range to query.
+         * <p>
+         * 
+         * *   Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * *   If the value of the seconds place is not 00, the start time is automatically set to the next minute.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -122,7 +111,7 @@ public class DescribeBandwitdhByInternetChargeTypeRequest extends Request {
         }
 
         /**
-         * EnsRegionId.
+         * The region ID of the instance.
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -131,7 +120,13 @@ public class DescribeBandwitdhByInternetChargeTypeRequest extends Request {
         }
 
         /**
-         * Isp.
+         * The Internet service provider (ISP). Valid values:
+         * <p>
+         * 
+         * *   cmcc: China Mobile
+         * *   telecom: China Telecom
+         * *   unicom: China Unicom
+         * *   multiCarrier: multi-line ISP
          */
         public Builder isp(String isp) {
             this.putQueryParameter("Isp", isp);
@@ -140,20 +135,15 @@ public class DescribeBandwitdhByInternetChargeTypeRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query.
+         * <p>
+         * 
+         * *   Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * *   If the value of the seconds place is not 00, the start time is automatically set to the next minute.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
             this.startTime = startTime;
-            return this;
-        }
-
-        /**
-         * Version.
-         */
-        public Builder version(String version) {
-            this.putQueryParameter("Version", version);
-            this.version = version;
             return this;
         }
 

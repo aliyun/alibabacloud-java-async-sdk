@@ -84,7 +84,7 @@ public class UpgradeApplicationRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * The ID of the application.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -93,7 +93,13 @@ public class UpgradeApplicationRequest extends Request {
         }
 
         /**
-         * Template.
+         * The information template for phased update. The value must be a JSON string and contain the following information:
+         * <p>
+         * 
+         * *   Version range that you want to update
+         * *   Configuration information of the target version
+         * *   Canary release policy for resources
+         * *   Intelligent upgrade policy that contains information such as the time window and resource usage limit
          */
         public Builder template(String template) {
             this.putQueryParameter("Template", template);
@@ -102,7 +108,7 @@ public class UpgradeApplicationRequest extends Request {
         }
 
         /**
-         * Timeout.
+         * The timeout period for asynchronous upgrade. Unit: seconds. Default value: 300.
          */
         public Builder timeout(Integer timeout) {
             this.putQueryParameter("Timeout", timeout);

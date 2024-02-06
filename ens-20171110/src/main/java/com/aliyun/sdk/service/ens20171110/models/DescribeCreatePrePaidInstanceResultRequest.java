@@ -17,15 +17,9 @@ public class DescribeCreatePrePaidInstanceResultRequest extends Request {
     @Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("Version")
-    @Validation(required = true)
-    private String version;
-
     private DescribeCreatePrePaidInstanceResultRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
-        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -48,16 +42,8 @@ public class DescribeCreatePrePaidInstanceResultRequest extends Request {
         return this.instanceId;
     }
 
-    /**
-     * @return version
-     */
-    public String getVersion() {
-        return this.version;
-    }
-
     public static final class Builder extends Request.Builder<DescribeCreatePrePaidInstanceResultRequest, Builder> {
         private String instanceId; 
-        private String version; 
 
         private Builder() {
             super();
@@ -66,24 +52,14 @@ public class DescribeCreatePrePaidInstanceResultRequest extends Request {
         private Builder(DescribeCreatePrePaidInstanceResultRequest request) {
             super(request);
             this.instanceId = request.instanceId;
-            this.version = request.version;
         } 
 
         /**
-         * InstanceId.
+         * The ID of the instance. You can call the CreateIntance operation to create an instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * Version.
-         */
-        public Builder version(String version) {
-            this.putQueryParameter("Version", version);
-            this.version = version;
             return this;
         }
 

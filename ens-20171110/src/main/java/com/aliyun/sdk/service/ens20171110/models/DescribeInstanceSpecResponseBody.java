@@ -110,7 +110,7 @@ public class DescribeInstanceSpecResponseBody extends TeaModel {
         private Integer systemDiskMaxSize; 
 
         /**
-         * BandwidthLimit.
+         * The bandwidth limit for a single instance. Unit: Mbit/s.
          */
         public Builder bandwidthLimit(Integer bandwidthLimit) {
             this.bandwidthLimit = bandwidthLimit;
@@ -118,7 +118,7 @@ public class DescribeInstanceSpecResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * The returned service code. A value of 0 indicates that the operation was successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -126,7 +126,7 @@ public class DescribeInstanceSpecResponseBody extends TeaModel {
         }
 
         /**
-         * DataDiskMaxSize.
+         * The maximum capacity of a data disk. Unit: GB.
          */
         public Builder dataDiskMaxSize(Integer dataDiskMaxSize) {
             this.dataDiskMaxSize = dataDiskMaxSize;
@@ -134,7 +134,7 @@ public class DescribeInstanceSpecResponseBody extends TeaModel {
         }
 
         /**
-         * DataDiskMinSize.
+         * The minimum capacity of a data disk. Unit: GB.
          */
         public Builder dataDiskMinSize(Integer dataDiskMinSize) {
             this.dataDiskMinSize = dataDiskMinSize;
@@ -142,7 +142,7 @@ public class DescribeInstanceSpecResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceSpecs.
+         * The information about instance specifications.
          */
         public Builder instanceSpecs(InstanceSpecs instanceSpecs) {
             this.instanceSpecs = instanceSpecs;
@@ -150,7 +150,7 @@ public class DescribeInstanceSpecResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,7 @@ public class DescribeInstanceSpecResponseBody extends TeaModel {
         }
 
         /**
-         * SystemDiskMaxSize.
+         * The maximum capacity of the system disk. Unit: GiB.
          */
         public Builder systemDiskMaxSize(Integer systemDiskMaxSize) {
             this.systemDiskMaxSize = systemDiskMaxSize;
@@ -234,7 +234,7 @@ public class DescribeInstanceSpecResponseBody extends TeaModel {
             private String memory; 
 
             /**
-             * Core.
+             * The number of CPU cores.
              */
             public Builder core(String core) {
                 this.core = core;
@@ -242,7 +242,7 @@ public class DescribeInstanceSpecResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * The display name of the instance type.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -250,7 +250,7 @@ public class DescribeInstanceSpecResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * The type of the instance.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -258,7 +258,7 @@ public class DescribeInstanceSpecResponseBody extends TeaModel {
             }
 
             /**
-             * Memory.
+             * The memory size. Unit: MB.
              */
             public Builder memory(String memory) {
                 this.memory = memory;

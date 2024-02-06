@@ -50,7 +50,7 @@ public class CreateMountTargetResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,13 @@ public class CreateMountTargetResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The state of the mount target. Valid values:
+         * <p>
+         * 
+         * *   active
+         * *   inactive
+         * *   pending
+         * *   deleting
          */
         public Builder status(String status) {
             this.status = status;

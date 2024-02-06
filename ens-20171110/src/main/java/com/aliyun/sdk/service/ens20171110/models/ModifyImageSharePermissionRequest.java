@@ -83,7 +83,7 @@ public class ModifyImageSharePermissionRequest extends Request {
         } 
 
         /**
-         * AddAccounts.
+         * The ID of the Alibaba Cloud account with which you want to share the image. You can specify multiple Alibaba Cloud IDs. Separate multiple IDs with commas (,).
          */
         public Builder addAccounts(String addAccounts) {
             this.putQueryParameter("AddAccounts", addAccounts);
@@ -92,7 +92,7 @@ public class ModifyImageSharePermissionRequest extends Request {
         }
 
         /**
-         * ImageId.
+         * The ID of the image. You can specify only one image ID. Custom images and public images are supported.
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -101,7 +101,7 @@ public class ModifyImageSharePermissionRequest extends Request {
         }
 
         /**
-         * RemoveAccounts.
+         * The ID of the Alibaba Cloud account from which you want to unshare the image. You can specify only one Alibaba Cloud account ID.
          */
         public Builder removeAccounts(String removeAccounts) {
             this.putQueryParameter("RemoveAccounts", removeAccounts);

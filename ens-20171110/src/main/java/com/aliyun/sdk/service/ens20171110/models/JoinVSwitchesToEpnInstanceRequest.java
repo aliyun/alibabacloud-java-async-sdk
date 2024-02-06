@@ -70,7 +70,7 @@ public class JoinVSwitchesToEpnInstanceRequest extends Request {
         } 
 
         /**
-         * EPNInstanceId.
+         * The ID of the edge network instance.
          */
         public Builder EPNInstanceId(String EPNInstanceId) {
             this.putQueryParameter("EPNInstanceId", EPNInstanceId);
@@ -79,7 +79,7 @@ public class JoinVSwitchesToEpnInstanceRequest extends Request {
         }
 
         /**
-         * VSwitchesInfo.
+         * The information about the internal networking to which you want to add the edge network instance.
          */
         public Builder vSwitchesInfo(String vSwitchesInfo) {
             this.putQueryParameter("VSwitchesInfo", vSwitchesInfo);

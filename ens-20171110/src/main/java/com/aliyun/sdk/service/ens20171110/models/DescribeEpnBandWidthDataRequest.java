@@ -47,11 +47,6 @@ public class DescribeEpnBandWidthDataRequest extends Request {
     @Validation(required = true)
     private String startTime;
 
-    @Query
-    @NameInMap("Version")
-    @Validation(required = true)
-    private String version;
-
     private DescribeEpnBandWidthDataRequest(Builder builder) {
         super(builder);
         this.EPNInstanceId = builder.EPNInstanceId;
@@ -62,7 +57,6 @@ public class DescribeEpnBandWidthDataRequest extends Request {
         this.networkingModel = builder.networkingModel;
         this.period = builder.period;
         this.startTime = builder.startTime;
-        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -134,13 +128,6 @@ public class DescribeEpnBandWidthDataRequest extends Request {
         return this.startTime;
     }
 
-    /**
-     * @return version
-     */
-    public String getVersion() {
-        return this.version;
-    }
-
     public static final class Builder extends Request.Builder<DescribeEpnBandWidthDataRequest, Builder> {
         private String EPNInstanceId; 
         private String endTime; 
@@ -150,7 +137,6 @@ public class DescribeEpnBandWidthDataRequest extends Request {
         private String networkingModel; 
         private String period; 
         private String startTime; 
-        private String version; 
 
         private Builder() {
             super();
@@ -166,11 +152,10 @@ public class DescribeEpnBandWidthDataRequest extends Request {
             this.networkingModel = request.networkingModel;
             this.period = request.period;
             this.startTime = request.startTime;
-            this.version = request.version;
         } 
 
         /**
-         * EPNInstanceId.
+         * The ID of the EPN instance.
          */
         public Builder EPNInstanceId(String EPNInstanceId) {
             this.putQueryParameter("EPNInstanceId", EPNInstanceId);
@@ -179,7 +164,11 @@ public class DescribeEpnBandWidthDataRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query.
+         * <p>
+         * 
+         * *   Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * *   If the value of the seconds place is not 00, the start time is automatically set to the next minute.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -188,7 +177,7 @@ public class DescribeEpnBandWidthDataRequest extends Request {
         }
 
         /**
-         * EnsRegionId.
+         * The ID of the Edge Node Service (ENS) node.
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -197,7 +186,7 @@ public class DescribeEpnBandWidthDataRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -206,7 +195,13 @@ public class DescribeEpnBandWidthDataRequest extends Request {
         }
 
         /**
-         * Isp.
+         * The Internet service provider (ISP). Valid values:
+         * <p>
+         * 
+         * *   cmcc: China Mobile
+         * *   telecom: China Telecom
+         * *   unicom: China Unicom
+         * *   multiCarrier: multi-line ISP
          */
         public Builder isp(String isp) {
             this.putQueryParameter("Isp", isp);
@@ -215,7 +210,12 @@ public class DescribeEpnBandWidthDataRequest extends Request {
         }
 
         /**
-         * NetworkingModel.
+         * The networking mode. Valid values:
+         * <p>
+         * 
+         * *   **SpeedUp**: intelligent acceleration network (Internet)
+         * *   **Connection**: internal network
+         * *   **SpeedUpAndConnection**: intelligent acceleration network and internal network
          */
         public Builder networkingModel(String networkingModel) {
             this.putQueryParameter("NetworkingModel", networkingModel);
@@ -224,7 +224,7 @@ public class DescribeEpnBandWidthDataRequest extends Request {
         }
 
         /**
-         * Period.
+         * The precision of the monitoring data that you want to obtain. Valid values: 300, 1200, 3600, and 14400. Default value: 300. Unit: seconds.
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -233,20 +233,15 @@ public class DescribeEpnBandWidthDataRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query.
+         * <p>
+         * 
+         * *   Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * *   If the value of the seconds place is not 00, the start time is automatically set to the next minute.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
             this.startTime = startTime;
-            return this;
-        }
-
-        /**
-         * Version.
-         */
-        public Builder version(String version) {
-            this.putQueryParameter("Version", version);
-            this.version = version;
             return this;
         }
 

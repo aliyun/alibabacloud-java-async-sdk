@@ -70,7 +70,7 @@ public class ModifyLoadBalancerAttributeRequest extends Request {
         } 
 
         /**
-         * LoadBalancerId.
+         * The ID of the ELB instance.
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
@@ -79,7 +79,10 @@ public class ModifyLoadBalancerAttributeRequest extends Request {
         }
 
         /**
-         * LoadBalancerName.
+         * The name of the ELB instance. The name must be **2** to **128** characters in length.
+         * <p>
+         * 
+         * >  The value cannot start with `http://` or `https://`.
          */
         public Builder loadBalancerName(String loadBalancerName) {
             this.putQueryParameter("LoadBalancerName", loadBalancerName);

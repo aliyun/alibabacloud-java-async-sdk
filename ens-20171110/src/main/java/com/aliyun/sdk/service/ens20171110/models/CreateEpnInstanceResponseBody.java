@@ -50,7 +50,7 @@ public class CreateEpnInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * EPNInstanceId.
+         * The ID of the EPN instance.
          */
         public Builder EPNInstanceId(String EPNInstanceId) {
             this.EPNInstanceId = EPNInstanceId;
@@ -58,7 +58,7 @@ public class CreateEpnInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

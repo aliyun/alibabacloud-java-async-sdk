@@ -50,7 +50,7 @@ public class DescribePriceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PriceInfo.
+         * The price information.
          */
         public Builder priceInfo(PriceInfo priceInfo) {
             this.priceInfo = priceInfo;
@@ -58,7 +58,7 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,7 +134,11 @@ public class DescribePriceResponseBody extends TeaModel {
             private Float tradePrice; 
 
             /**
-             * Currency.
+             * The type of currency.
+             * <p>
+             * 
+             * *   USD: US dollar
+             * *   JPY: Japanese Yen
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -142,7 +146,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * DiscountPrice.
+             * The discount.
              */
             public Builder discountPrice(Float discountPrice) {
                 this.discountPrice = discountPrice;
@@ -150,7 +154,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * OriginalPrice.
+             * The original price.
              */
             public Builder originalPrice(Float originalPrice) {
                 this.originalPrice = originalPrice;
@@ -158,7 +162,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * TradePrice.
+             * The final price.
              */
             public Builder tradePrice(Float tradePrice) {
                 this.tradePrice = tradePrice;
@@ -199,7 +203,7 @@ public class DescribePriceResponseBody extends TeaModel {
             private Price price; 
 
             /**
-             * Price.
+             * The price.
              */
             public Builder price(Price price) {
                 this.price = price;

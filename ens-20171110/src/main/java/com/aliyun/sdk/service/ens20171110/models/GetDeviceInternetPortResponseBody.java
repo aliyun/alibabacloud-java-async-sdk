@@ -62,7 +62,7 @@ public class GetDeviceInternetPortResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * InstanceId.
+         * The ID of the instance. The value is the ID of the server or container.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -70,7 +70,7 @@ public class GetDeviceInternetPortResponseBody extends TeaModel {
         }
 
         /**
-         * NetworkInfo.
+         * The network mapping information about the instance.
          */
         public Builder networkInfo(java.util.List < NetworkInfo> networkInfo) {
             this.networkInfo = networkInfo;
@@ -78,7 +78,7 @@ public class GetDeviceInternetPortResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -178,7 +178,7 @@ public class GetDeviceInternetPortResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * ExternalIp.
+             * The public IP address.
              */
             public Builder externalIp(String externalIp) {
                 this.externalIp = externalIp;
@@ -186,7 +186,7 @@ public class GetDeviceInternetPortResponseBody extends TeaModel {
             }
 
             /**
-             * ExternalPort.
+             * The external port number.
              */
             public Builder externalPort(String externalPort) {
                 this.externalPort = externalPort;
@@ -194,7 +194,7 @@ public class GetDeviceInternetPortResponseBody extends TeaModel {
             }
 
             /**
-             * ISP.
+             * The Internet service provider (ISP).
              */
             public Builder ISP(String ISP) {
                 this.ISP = ISP;
@@ -202,7 +202,7 @@ public class GetDeviceInternetPortResponseBody extends TeaModel {
             }
 
             /**
-             * InternalIp.
+             * The internal IP address.
              */
             public Builder internalIp(String internalIp) {
                 this.internalIp = internalIp;
@@ -210,7 +210,7 @@ public class GetDeviceInternetPortResponseBody extends TeaModel {
             }
 
             /**
-             * InternalPort.
+             * The internal port number.
              */
             public Builder internalPort(String internalPort) {
                 this.internalPort = internalPort;
@@ -218,7 +218,7 @@ public class GetDeviceInternetPortResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the external port.
              */
             public Builder status(String status) {
                 this.status = status;

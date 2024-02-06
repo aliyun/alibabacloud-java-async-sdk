@@ -50,7 +50,7 @@ public class ResizeDiskResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * OrderId.
+         * The order ID.
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -58,7 +58,7 @@ public class ResizeDiskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -62,7 +62,7 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The returned service code. A value of 0 indicates that the operation was successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -70,7 +70,7 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceRenewAttributes.
+         * The renewal status of the instance.
          */
         public Builder instanceRenewAttributes(InstanceRenewAttributes instanceRenewAttributes) {
             this.instanceRenewAttributes = instanceRenewAttributes;
@@ -78,7 +78,7 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -142,7 +142,11 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
             private String instanceId; 
 
             /**
-             * AutoRenewal.
+             * The renewal type of the instance.
+             * <p>
+             * 
+             * *   **true**: enables auto-renewal.
+             * *   **false**: disables auto-renewal.
              */
             public Builder autoRenewal(Boolean autoRenewal) {
                 this.autoRenewal = autoRenewal;
@@ -150,7 +154,7 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * The unit of the auto-renewal period.
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -158,7 +162,7 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;

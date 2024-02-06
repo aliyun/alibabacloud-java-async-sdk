@@ -86,7 +86,7 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * ForwardTableEntries.
+         * Details of DNAT entries.
          */
         public Builder forwardTableEntries(java.util.List < ForwardTableEntries> forwardTableEntries) {
             this.forwardTableEntries = forwardTableEntries;
@@ -94,7 +94,7 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -290,7 +290,7 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * ExternalIp.
+             * The EIP in the DNAT entry. The public IP address is used to access the Internet.
              */
             public Builder externalIp(String externalIp) {
                 this.externalIp = externalIp;
@@ -298,7 +298,7 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * ExternalPort.
+             * The external port or port range that is used in port forwarding.
              */
             public Builder externalPort(String externalPort) {
                 this.externalPort = externalPort;
@@ -306,7 +306,7 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * ForwardEntryId.
+             * The ID of the DNAT entry.
              */
             public Builder forwardEntryId(String forwardEntryId) {
                 this.forwardEntryId = forwardEntryId;
@@ -314,7 +314,7 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * ForwardEntryName.
+             * The name of the DNAT entry.
              */
             public Builder forwardEntryName(String forwardEntryName) {
                 this.forwardEntryName = forwardEntryName;
@@ -322,7 +322,7 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * HealthCheckPort.
+             * The probe port of DNAT.
              */
             public Builder healthCheckPort(String healthCheckPort) {
                 this.healthCheckPort = healthCheckPort;
@@ -330,7 +330,7 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * InternalIp.
+             * The private IP address of the instance that uses the DNAT entry for Internet communication.
              */
             public Builder internalIp(String internalIp) {
                 this.internalIp = internalIp;
@@ -338,7 +338,7 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * InternalPort.
+             * The internal port or port range that is used for port forwarding.
              */
             public Builder internalPort(String internalPort) {
                 this.internalPort = internalPort;
@@ -346,7 +346,12 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * IpProtocol.
+             * The protocol. Valid values:
+             * <p>
+             * 
+             * *   **TCP**: forwards TCP packets.
+             * *   **UDP**: forwards UDP packets.
+             * *   **Any**: forwards all packets.
              */
             public Builder ipProtocol(String ipProtocol) {
                 this.ipProtocol = ipProtocol;
@@ -354,7 +359,7 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * NatGatewayId.
+             * The ID of the NAT gateway.
              */
             public Builder natGatewayId(String natGatewayId) {
                 this.natGatewayId = natGatewayId;
@@ -362,7 +367,7 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * StandbyExternalIp.
+             * The secondary EIP that is used to access the Internet.
              */
             public Builder standbyExternalIp(String standbyExternalIp) {
                 this.standbyExternalIp = standbyExternalIp;
@@ -370,7 +375,13 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * StandbyStatus.
+             * The status of the secondary EIP. Valid values:
+             * <p>
+             * 
+             * *   Running
+             * *   Stopping
+             * *   Stopped
+             * *   Starting
              */
             public Builder standbyStatus(String standbyStatus) {
                 this.standbyStatus = standbyStatus;
@@ -378,7 +389,12 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the DNAT entry. Valid values:
+             * <p>
+             * 
+             * *   Pending: The DNAT entry is being created or modified.
+             * *   Available: The DNAT entry is available.
+             * *   Deleting: The DNAT entry is being deleted.
              */
             public Builder status(String status) {
                 this.status = status;

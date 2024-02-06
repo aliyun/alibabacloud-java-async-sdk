@@ -55,7 +55,7 @@ public class RecoverAICInstanceRequest extends Request {
         } 
 
         /**
-         * ServerId.
+         * The ID of the server.
          */
         public Builder serverId(String serverId) {
             this.putQueryParameter("ServerId", serverId);

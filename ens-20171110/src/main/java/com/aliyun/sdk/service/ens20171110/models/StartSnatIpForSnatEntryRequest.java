@@ -70,7 +70,7 @@ public class StartSnatIpForSnatEntryRequest extends Request {
         } 
 
         /**
-         * SnatEntryId.
+         * The ID of the SNAT entry.
          */
         public Builder snatEntryId(String snatEntryId) {
             this.putQueryParameter("SnatEntryId", snatEntryId);
@@ -79,7 +79,7 @@ public class StartSnatIpForSnatEntryRequest extends Request {
         }
 
         /**
-         * SnatIp.
+         * The EIP specified in the SNAT entry.
          */
         public Builder snatIp(String snatIp) {
             this.putQueryParameter("SnatIp", snatIp);

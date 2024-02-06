@@ -28,18 +28,12 @@ public class DescribeInstanceMonitorDataRequest extends Request {
     @NameInMap("StartTime")
     private String startTime;
 
-    @Query
-    @NameInMap("Version")
-    @Validation(required = true)
-    private String version;
-
     private DescribeInstanceMonitorDataRequest(Builder builder) {
         super(builder);
         this.endTime = builder.endTime;
         this.instanceId = builder.instanceId;
         this.period = builder.period;
         this.startTime = builder.startTime;
-        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -83,19 +77,11 @@ public class DescribeInstanceMonitorDataRequest extends Request {
         return this.startTime;
     }
 
-    /**
-     * @return version
-     */
-    public String getVersion() {
-        return this.version;
-    }
-
     public static final class Builder extends Request.Builder<DescribeInstanceMonitorDataRequest, Builder> {
         private String endTime; 
         private String instanceId; 
         private String period; 
         private String startTime; 
-        private String version; 
 
         private Builder() {
             super();
@@ -107,11 +93,13 @@ public class DescribeInstanceMonitorDataRequest extends Request {
             this.instanceId = request.instanceId;
             this.period = request.period;
             this.startTime = request.startTime;
-            this.version = request.version;
         } 
 
         /**
-         * EndTime.
+         * The end of the time range to query.
+         * <p>
+         * 
+         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of the seconds place is not 00, the start time is automatically set to the next minute.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -120,7 +108,7 @@ public class DescribeInstanceMonitorDataRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance. You can specify only one instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -129,7 +117,7 @@ public class DescribeInstanceMonitorDataRequest extends Request {
         }
 
         /**
-         * Period.
+         * The precision of the monitoring data that you want to obtain. Valid values: 60, 300, 1200, 3600, and 14400. Default value: 60. Unit: seconds.
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -138,20 +126,14 @@ public class DescribeInstanceMonitorDataRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query.
+         * <p>
+         * 
+         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of the seconds place is not 00, the start time is automatically set to the next minute.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
             this.startTime = startTime;
-            return this;
-        }
-
-        /**
-         * Version.
-         */
-        public Builder version(String version) {
-            this.putQueryParameter("Version", version);
-            this.version = version;
             return this;
         }
 

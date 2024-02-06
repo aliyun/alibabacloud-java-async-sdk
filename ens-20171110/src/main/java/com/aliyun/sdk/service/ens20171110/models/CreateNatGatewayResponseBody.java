@@ -50,7 +50,7 @@ public class CreateNatGatewayResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * NatGatewayId.
+         * The ID of the NAT gateway.
          */
         public Builder natGatewayId(String natGatewayId) {
             this.natGatewayId = natGatewayId;
@@ -58,7 +58,7 @@ public class CreateNatGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

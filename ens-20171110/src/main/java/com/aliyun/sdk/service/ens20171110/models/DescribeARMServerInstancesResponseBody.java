@@ -86,7 +86,7 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Servers.
+         * The information about the servers and the AIC instances.
          */
         public Builder servers(java.util.List < Servers> servers) {
             this.servers = servers;
@@ -118,7 +118,7 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -182,7 +182,7 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             private String vSwitchId; 
 
             /**
-             * IpAddress.
+             * The IP address of the AIC instance.
              */
             public Builder ipAddress(String ipAddress) {
                 this.ipAddress = ipAddress;
@@ -190,7 +190,7 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkId.
+             * The network ID of the AIC instance.
              */
             public Builder networkId(String networkId) {
                 this.networkId = networkId;
@@ -198,7 +198,7 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * The vSwitch ID of the AIC instance.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -207,6 +207,72 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
 
             public NetworkAttributes build() {
                 return new NetworkAttributes(this);
+            } 
+
+        } 
+
+    }
+    public static class SdgDeployInfo extends TeaModel {
+        @NameInMap("SDGId")
+        private String SDGId;
+
+        @NameInMap("Status")
+        private String status;
+
+        private SdgDeployInfo(Builder builder) {
+            this.SDGId = builder.SDGId;
+            this.status = builder.status;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SdgDeployInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return SDGId
+         */
+        public String getSDGId() {
+            return this.SDGId;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        public static final class Builder {
+            private String SDGId; 
+            private String status; 
+
+            /**
+             * The ID of the SDG.
+             */
+            public Builder SDGId(String SDGId) {
+                this.SDGId = SDGId;
+                return this;
+            }
+
+            /**
+             * The deployment status of the SDG. Valid values:
+             * <p>
+             * 
+             * *   **sdg_deploying**
+             * *   **failed**
+             * *   **success**
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            public SdgDeployInfo build() {
+                return new SdgDeployInfo(this);
             } 
 
         } 
@@ -234,6 +300,9 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
         @NameInMap("Resolution")
         private String resolution;
 
+        @NameInMap("SdgDeployInfo")
+        private SdgDeployInfo sdgDeployInfo;
+
         @NameInMap("Spec")
         private String spec;
 
@@ -251,6 +320,7 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             this.name = builder.name;
             this.networkAttributes = builder.networkAttributes;
             this.resolution = builder.resolution;
+            this.sdgDeployInfo = builder.sdgDeployInfo;
             this.spec = builder.spec;
             this.state = builder.state;
             this.status = builder.status;
@@ -314,6 +384,13 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return sdgDeployInfo
+         */
+        public SdgDeployInfo getSdgDeployInfo() {
+            return this.sdgDeployInfo;
+        }
+
+        /**
          * @return spec
          */
         public String getSpec() {
@@ -342,12 +419,13 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             private String name; 
             private NetworkAttributes networkAttributes; 
             private String resolution; 
+            private SdgDeployInfo sdgDeployInfo; 
             private String spec; 
             private String state; 
             private String status; 
 
             /**
-             * Frequency.
+             * The refresh rate of the AIC instance. Unit: Hz.
              */
             public Builder frequency(Long frequency) {
                 this.frequency = frequency;
@@ -355,7 +433,7 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageId.
+             * The ID of the AIC image.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -363,7 +441,7 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the AIC instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -371,7 +449,7 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * LatestAction.
+             * The operation that was most recently performed.
              */
             public Builder latestAction(String latestAction) {
                 this.latestAction = latestAction;
@@ -379,7 +457,7 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the container.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -387,7 +465,7 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkAttributes.
+             * The network attributes of the AIC instance.
              */
             public Builder networkAttributes(NetworkAttributes networkAttributes) {
                 this.networkAttributes = networkAttributes;
@@ -395,7 +473,7 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Resolution.
+             * The resolution of the AIC instance.
              */
             public Builder resolution(String resolution) {
                 this.resolution = resolution;
@@ -403,7 +481,15 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Spec.
+             * The information about the shared data group (SDG) that is deployed on the AIC instance.
+             */
+            public Builder sdgDeployInfo(SdgDeployInfo sdgDeployInfo) {
+                this.sdgDeployInfo = sdgDeployInfo;
+                return this;
+            }
+
+            /**
+             * The specification of the AIC instance.
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -411,7 +497,15 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * The operation status of the AIC instance. Valid values:
+             * <p>
+             * 
+             * *   **success**
+             * *   **failed**
+             * *   **creating**
+             * *   **releasing**
+             * *   **rebooting**
+             * *   **reseting**
              */
             public Builder state(String state) {
                 this.state = state;
@@ -419,7 +513,12 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The running status of the AIC instance. Valid values:
+             * <p>
+             * 
+             * *   **running**
+             * *   **pending**
+             * *   **terminating**
              */
             public Builder status(String status) {
                 this.status = status;
@@ -592,7 +691,7 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * AICInstances.
+             * The information about the AIC instances.
              */
             public Builder AICInstances(java.util.List < AICInstances> AICInstances) {
                 this.AICInstances = AICInstances;
@@ -600,7 +699,7 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * The time when the instance was created.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -608,7 +707,7 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * EnsRegionId.
+             * The ID of the ENS node.
              */
             public Builder ensRegionId(String ensRegionId) {
                 this.ensRegionId = ensRegionId;
@@ -616,7 +715,7 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ExpiredTime.
+             * The time when the instance expires.
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -624,7 +723,7 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * LatestAction.
+             * The operation that was most recently performed.
              */
             public Builder latestAction(String latestAction) {
                 this.latestAction = latestAction;
@@ -632,7 +731,7 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the server.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -640,7 +739,7 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Namespace.
+             * The namespace of the cluster to which the server belongs.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -648,7 +747,7 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PayType.
+             * The billing method.
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -656,7 +755,7 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ServerId.
+             * The ID of the server.
              */
             public Builder serverId(String serverId) {
                 this.serverId = serverId;
@@ -664,7 +763,7 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * SpecName.
+             * The server specification.
              */
             public Builder specName(String specName) {
                 this.specName = specName;
@@ -672,7 +771,15 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * The operation status of the server. Valid values:
+             * <p>
+             * 
+             * *   **success**
+             * *   **failed**
+             * *   **creating**
+             * *   **releasing**
+             * *   **rebooting**
+             * *   **upgrading**
              */
             public Builder state(String state) {
                 this.state = state;
@@ -680,7 +787,13 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The running status of the server. Valid values:
+             * <p>
+             * 
+             * *   **running**
+             * *   **stopping**
+             * *   **down**
+             * *   **starting**
              */
             public Builder status(String status) {
                 this.status = status;

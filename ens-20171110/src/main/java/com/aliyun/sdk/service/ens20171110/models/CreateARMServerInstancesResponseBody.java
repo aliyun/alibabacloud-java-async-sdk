@@ -62,7 +62,7 @@ public class CreateARMServerInstancesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * InstanceIds.
+         * The IDs of instances.
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             this.instanceIds = instanceIds;
@@ -70,7 +70,7 @@ public class CreateARMServerInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * The ID of the order.
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -78,7 +78,7 @@ public class CreateARMServerInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

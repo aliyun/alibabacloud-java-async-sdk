@@ -18,6 +18,10 @@ public class CreateEipInstanceRequest extends Request {
     private Long bandwidth;
 
     @Query
+    @NameInMap("Description")
+    private String description;
+
+    @Query
     @NameInMap("EnsRegionId")
     @Validation(required = true)
     private String ensRegionId;
@@ -43,6 +47,7 @@ public class CreateEipInstanceRequest extends Request {
     private CreateEipInstanceRequest(Builder builder) {
         super(builder);
         this.bandwidth = builder.bandwidth;
+        this.description = builder.description;
         this.ensRegionId = builder.ensRegionId;
         this.instanceChargeType = builder.instanceChargeType;
         this.internetChargeType = builder.internetChargeType;
@@ -68,6 +73,13 @@ public class CreateEipInstanceRequest extends Request {
      */
     public Long getBandwidth() {
         return this.bandwidth;
+    }
+
+    /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
     }
 
     /**
@@ -107,6 +119,7 @@ public class CreateEipInstanceRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateEipInstanceRequest, Builder> {
         private Long bandwidth; 
+        private String description; 
         private String ensRegionId; 
         private String instanceChargeType; 
         private String internetChargeType; 
@@ -120,6 +133,7 @@ public class CreateEipInstanceRequest extends Request {
         private Builder(CreateEipInstanceRequest request) {
             super(request);
             this.bandwidth = request.bandwidth;
+            this.description = request.description;
             this.ensRegionId = request.ensRegionId;
             this.instanceChargeType = request.instanceChargeType;
             this.internetChargeType = request.internetChargeType;
@@ -128,7 +142,7 @@ public class CreateEipInstanceRequest extends Request {
         } 
 
         /**
-         * Bandwidth.
+         * The peak bandwidth of the EIP. Default value: 5. Valid values: 5 to 10000. Unit: Mbit/s.
          */
         public Builder bandwidth(Long bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -137,7 +151,16 @@ public class CreateEipInstanceRequest extends Request {
         }
 
         /**
-         * EnsRegionId.
+         * The description of the EIP.
+         */
+        public Builder description(String description) {
+            this.putQueryParameter("Description", description);
+            this.description = description;
+            return this;
+        }
+
+        /**
+         * The ID of the Edge Node Service (ENS) node.
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -146,7 +169,7 @@ public class CreateEipInstanceRequest extends Request {
         }
 
         /**
-         * InstanceChargeType.
+         * The billing method of the EIP. Set the value to **PostPaid**.
          */
         public Builder instanceChargeType(String instanceChargeType) {
             this.putQueryParameter("InstanceChargeType", instanceChargeType);
@@ -155,7 +178,7 @@ public class CreateEipInstanceRequest extends Request {
         }
 
         /**
-         * InternetChargeType.
+         * The metering method of the EIP. Set the value to **95BandwidthByMonth**.
          */
         public Builder internetChargeType(String internetChargeType) {
             this.putQueryParameter("InternetChargeType", internetChargeType);
@@ -164,7 +187,12 @@ public class CreateEipInstanceRequest extends Request {
         }
 
         /**
-         * Isp.
+         * The Internet service provider. Valid values:
+         * <p>
+         * 
+         * *   **cmcc**: China Mobile
+         * *   **unicom**: China Unicom
+         * *   **telecom**: China Telecom
          */
         public Builder isp(String isp) {
             this.putQueryParameter("Isp", isp);
@@ -173,7 +201,7 @@ public class CreateEipInstanceRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the EIP.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

@@ -25,10 +25,6 @@ public class DescribeARMServerInstancesRequest extends Request {
     private java.util.List < String > ensRegionIds;
 
     @Query
-    @NameInMap("LatestAction")
-    private String latestAction;
-
-    @Query
     @NameInMap("MaxDate")
     private String maxDate;
 
@@ -74,7 +70,6 @@ public class DescribeARMServerInstancesRequest extends Request {
         this.AICSpecs = builder.AICSpecs;
         this.describeAICInstances = builder.describeAICInstances;
         this.ensRegionIds = builder.ensRegionIds;
-        this.latestAction = builder.latestAction;
         this.maxDate = builder.maxDate;
         this.minDate = builder.minDate;
         this.name = builder.name;
@@ -119,13 +114,6 @@ public class DescribeARMServerInstancesRequest extends Request {
      */
     public java.util.List < String > getEnsRegionIds() {
         return this.ensRegionIds;
-    }
-
-    /**
-     * @return latestAction
-     */
-    public String getLatestAction() {
-        return this.latestAction;
     }
 
     /**
@@ -202,7 +190,6 @@ public class DescribeARMServerInstancesRequest extends Request {
         private java.util.List < String > AICSpecs; 
         private Boolean describeAICInstances; 
         private java.util.List < String > ensRegionIds; 
-        private String latestAction; 
         private String maxDate; 
         private String minDate; 
         private String name; 
@@ -223,7 +210,6 @@ public class DescribeARMServerInstancesRequest extends Request {
             this.AICSpecs = request.AICSpecs;
             this.describeAICInstances = request.describeAICInstances;
             this.ensRegionIds = request.ensRegionIds;
-            this.latestAction = request.latestAction;
             this.maxDate = request.maxDate;
             this.minDate = request.minDate;
             this.name = request.name;
@@ -237,7 +223,7 @@ public class DescribeARMServerInstancesRequest extends Request {
         } 
 
         /**
-         * AICSpecs.
+         * The container specifications.
          */
         public Builder AICSpecs(java.util.List < String > AICSpecs) {
             String AICSpecsShrink = shrink(AICSpecs, "AICSpecs", "json");
@@ -247,7 +233,11 @@ public class DescribeARMServerInstancesRequest extends Request {
         }
 
         /**
-         * DescribeAICInstances.
+         * Spcifies whether the result contains the container information. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder describeAICInstances(Boolean describeAICInstances) {
             this.putQueryParameter("DescribeAICInstances", describeAICInstances);
@@ -256,7 +246,7 @@ public class DescribeARMServerInstancesRequest extends Request {
         }
 
         /**
-         * EnsRegionIds.
+         * The IDs of the Edge Node Service (ENS) nodes.
          */
         public Builder ensRegionIds(java.util.List < String > ensRegionIds) {
             String ensRegionIdsShrink = shrink(ensRegionIds, "EnsRegionIds", "json");
@@ -266,16 +256,7 @@ public class DescribeARMServerInstancesRequest extends Request {
         }
 
         /**
-         * LatestAction.
-         */
-        public Builder latestAction(String latestAction) {
-            this.putQueryParameter("LatestAction", latestAction);
-            this.latestAction = latestAction;
-            return this;
-        }
-
-        /**
-         * MaxDate.
+         * The end of the time range to query. Specify the time in the 2006-01-02 format. By default, the time range to query is not restricted.
          */
         public Builder maxDate(String maxDate) {
             this.putQueryParameter("MaxDate", maxDate);
@@ -284,7 +265,7 @@ public class DescribeARMServerInstancesRequest extends Request {
         }
 
         /**
-         * MinDate.
+         * The beginning of the time range to query. Specify the time in the 2006-01-02 format. By default, the time range to query is not restricted.
          */
         public Builder minDate(String minDate) {
             this.putQueryParameter("MinDate", minDate);
@@ -293,7 +274,7 @@ public class DescribeARMServerInstancesRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the server.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -302,7 +283,7 @@ public class DescribeARMServerInstancesRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The namespace.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -311,7 +292,10 @@ public class DescribeARMServerInstancesRequest extends Request {
         }
 
         /**
-         * OrderByParams.
+         * The sorting order of the results to return. Valid values: ServerIdSort, ServerNameSort, ExpireTimeSort, CreationTimeSort, and EnsRegionIdSort.
+         * <p>
+         * 
+         * asc: ascending order. desc: descending order.
          */
         public Builder orderByParams(String orderByParams) {
             this.putQueryParameter("OrderByParams", orderByParams);
@@ -320,7 +304,10 @@ public class DescribeARMServerInstancesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number. Pages start from page **1**.
+         * <p>
+         * 
+         * Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -329,7 +316,10 @@ public class DescribeARMServerInstancesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. The maximum value is **100**.
+         * <p>
+         * 
+         * Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -338,7 +328,7 @@ public class DescribeARMServerInstancesRequest extends Request {
         }
 
         /**
-         * ServerIds.
+         * The IDs of the ARM servers.
          */
         public Builder serverIds(java.util.List < String > serverIds) {
             String serverIdsShrink = shrink(serverIds, "ServerIds", "json");
@@ -348,7 +338,7 @@ public class DescribeARMServerInstancesRequest extends Request {
         }
 
         /**
-         * ServerSpecs.
+         * The server specifications.
          */
         public Builder serverSpecs(java.util.List < String > serverSpecs) {
             String serverSpecsShrink = shrink(serverSpecs, "ServerSpecs", "json");
@@ -358,7 +348,7 @@ public class DescribeARMServerInstancesRequest extends Request {
         }
 
         /**
-         * States.
+         * The operation statuses.
          */
         public Builder states(java.util.List < String > states) {
             String statesShrink = shrink(states, "States", "json");

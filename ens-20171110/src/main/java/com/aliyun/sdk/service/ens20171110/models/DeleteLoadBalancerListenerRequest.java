@@ -84,7 +84,7 @@ public class DeleteLoadBalancerListenerRequest extends Request {
         } 
 
         /**
-         * ListenerPort.
+         * The frontend port that is used by the Edge Load Balance (ELB) instance. Valid values: **1** to **65535**.
          */
         public Builder listenerPort(Integer listenerPort) {
             this.putQueryParameter("ListenerPort", listenerPort);
@@ -93,7 +93,17 @@ public class DeleteLoadBalancerListenerRequest extends Request {
         }
 
         /**
-         * ListenerProtocol.
+         * The frontend protocol that is used by the ELB instance.
+         * <p>
+         * 
+         * >  This parameter is required if the same port is used by listeners that use different protocols.
+         * 
+         * Valid values:
+         * 
+         * *   tcp
+         * *   udp
+         * *   http
+         * *   https
          */
         public Builder listenerProtocol(String listenerProtocol) {
             this.putQueryParameter("ListenerProtocol", listenerProtocol);
@@ -102,7 +112,7 @@ public class DeleteLoadBalancerListenerRequest extends Request {
         }
 
         /**
-         * LoadBalancerId.
+         * The ID of the ELB instance.
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);

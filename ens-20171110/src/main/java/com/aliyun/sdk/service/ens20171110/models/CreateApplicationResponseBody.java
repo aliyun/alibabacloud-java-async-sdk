@@ -50,7 +50,7 @@ public class CreateApplicationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AppId.
+         * The ID of the application. This is the unique identifier of the edge application.
          */
         public Builder appId(String appId) {
             this.appId = appId;
@@ -58,7 +58,7 @@ public class CreateApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

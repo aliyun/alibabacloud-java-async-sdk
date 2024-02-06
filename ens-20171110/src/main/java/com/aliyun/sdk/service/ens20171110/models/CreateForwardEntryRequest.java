@@ -173,7 +173,7 @@ public class CreateForwardEntryRequest extends Request {
         } 
 
         /**
-         * ExternalIp.
+         * The elastic IP address (EIP) that is used to access the Internet.
          */
         public Builder externalIp(String externalIp) {
             this.putQueryParameter("ExternalIp", externalIp);
@@ -182,7 +182,12 @@ public class CreateForwardEntryRequest extends Request {
         }
 
         /**
-         * ExternalPort.
+         * The external port or port range that is used for port forwarding.
+         * <p>
+         * 
+         * *   Valid values: 1 to 65535.
+         * *   To specify a port range, separate the first port and the last port with a forward slash (/), such as 10/20.
+         * *   If you set ExternalPort to a port range, you must also set InternalPort to a port range, and the number of ports specified must be the same for both parameters. For example, if you set ExternalPort to 10/20, you can set InternalPort to 80/90.
          */
         public Builder externalPort(String externalPort) {
             this.putQueryParameter("ExternalPort", externalPort);
@@ -191,7 +196,7 @@ public class CreateForwardEntryRequest extends Request {
         }
 
         /**
-         * ForwardEntryName.
+         * The name of the DNAT entry. The name must be 2 to 128 characters in length. The name cannot start with `http://` or `https://`.
          */
         public Builder forwardEntryName(String forwardEntryName) {
             this.putQueryParameter("ForwardEntryName", forwardEntryName);
@@ -200,7 +205,7 @@ public class CreateForwardEntryRequest extends Request {
         }
 
         /**
-         * HealthCheckPort.
+         * The probe port. The port must be within the internal port range. By default, this parameter is left empty.
          */
         public Builder healthCheckPort(Integer healthCheckPort) {
             this.putQueryParameter("HealthCheckPort", healthCheckPort);
@@ -209,7 +214,7 @@ public class CreateForwardEntryRequest extends Request {
         }
 
         /**
-         * InternalIp.
+         * The private IP address of the instance that uses the DNAT entry for Internet communication.
          */
         public Builder internalIp(String internalIp) {
             this.putQueryParameter("InternalIp", internalIp);
@@ -218,7 +223,11 @@ public class CreateForwardEntryRequest extends Request {
         }
 
         /**
-         * InternalPort.
+         * The internal port or port range that is used for port forwarding.
+         * <p>
+         * 
+         * *   Valid values: 1 to 65535.
+         * *   To specify a port range, separate the first port and the last port with a forward slash (/), such as 10/20.
          */
         public Builder internalPort(String internalPort) {
             this.putQueryParameter("InternalPort", internalPort);
@@ -227,7 +236,12 @@ public class CreateForwardEntryRequest extends Request {
         }
 
         /**
-         * IpProtocol.
+         * The protocol. Valid values:
+         * <p>
+         * 
+         * *   **TCP**: forwards TCP packets.
+         * *   **UDP**: forwards UDP packets.
+         * *   **Any** (default): forwards all packets.
          */
         public Builder ipProtocol(String ipProtocol) {
             this.putQueryParameter("IpProtocol", ipProtocol);
@@ -236,7 +250,7 @@ public class CreateForwardEntryRequest extends Request {
         }
 
         /**
-         * NatGatewayId.
+         * The ID of the Network Address Translation (NAT) gateway.
          */
         public Builder natGatewayId(String natGatewayId) {
             this.putQueryParameter("NatGatewayId", natGatewayId);
@@ -245,7 +259,7 @@ public class CreateForwardEntryRequest extends Request {
         }
 
         /**
-         * StandbyExternalIp.
+         * The secondary EIP that is used to access the Internet. You need to select a secondary EIP that is bound to NAT. After the DNAT entry is created, the secondary EIP takes effect.
          */
         public Builder standbyExternalIp(String standbyExternalIp) {
             this.putQueryParameter("StandbyExternalIp", standbyExternalIp);

@@ -98,7 +98,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Code.
+         * The returned service code. 0 indicates that the request was successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Instances.
+         * The returned instance information. It is an array that consists of InstanceAttributesType data.
          */
         public Builder instances(Instances instances) {
             this.instances = instances;
@@ -114,7 +114,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +122,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +130,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -160,6 +160,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
         @NameInMap("DiskName")
         private String diskName;
+
+        @NameInMap("DiskSize")
+        private Integer diskSize;
 
         @NameInMap("Size")
         private Integer size;
@@ -183,6 +186,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             this.category = builder.category;
             this.diskId = builder.diskId;
             this.diskName = builder.diskName;
+            this.diskSize = builder.diskSize;
             this.size = builder.size;
             this.deviceType = builder.deviceType;
             this.diskType = builder.diskType;
@@ -218,6 +222,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
          */
         public String getDiskName() {
             return this.diskName;
+        }
+
+        /**
+         * @return diskSize
+         */
+        public Integer getDiskSize() {
+            return this.diskSize;
         }
 
         /**
@@ -266,6 +277,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String category; 
             private String diskId; 
             private String diskName; 
+            private Integer diskSize; 
             private Integer size; 
             private String deviceType; 
             private String diskType; 
@@ -274,7 +286,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * Category.
+             * The category of the cloud disk or local disk. Valid values:
+             * <p>
+             * 
+             * *   **file**: local disk.
+             * *   **pangu**: ultra disk.
+             * *   **local_hdd**: local HDD.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -282,7 +299,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DiskId.
+             * The ID of the disk.
              */
             public Builder diskId(String diskId) {
                 this.diskId = diskId;
@@ -290,7 +307,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DiskName.
+             * The name of the disk.
              */
             public Builder diskName(String diskName) {
                 this.diskName = diskName;
@@ -298,7 +315,15 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * DiskSize.
+             */
+            public Builder diskSize(Integer diskSize) {
+                this.diskSize = diskSize;
+                return this;
+            }
+
+            /**
+             * The size of the disk. Unit: MiB.
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -306,7 +331,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * device_type.
+             * The extended field of the disk category. Valid values:
+             * <p>
+             * 
+             * *   **file**: local disk.
+             * *   **pangu**: ultra disk.
+             * *   **local_hdd**: local HDD.
              */
             public Builder deviceType(String deviceType) {
                 this.deviceType = deviceType;
@@ -314,7 +344,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * disk_type.
+             * The type of the cloud disk or local disk. Valid values:
+             * <p>
+             * 
+             * **system**: system disk. **data**: data disk.
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -322,7 +355,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * The name of the disk.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -330,7 +363,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * storage.
+             * The size of the disk. Unit: MiB.
              */
             public Builder storage(Integer storage) {
                 this.storage = storage;
@@ -338,7 +371,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * UUID。
+             * The UUID of the disk.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -526,7 +559,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String vSwitchId; 
 
             /**
-             * NetworkId.
+             * The ID of the network.
              */
             public Builder networkId(String networkId) {
                 this.networkId = networkId;
@@ -534,7 +567,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PrivateIpAddress.
+             * Details of the private IP addresses.
              */
             public Builder privateIpAddress(PrivateIpAddress privateIpAddress) {
                 this.privateIpAddress = privateIpAddress;
@@ -542,7 +575,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * The ID of the vSwitch.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -607,7 +640,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String isp; 
 
             /**
-             * GateWay.
+             * The gateway.
              */
             public Builder gateWay(String gateWay) {
                 this.gateWay = gateWay;
@@ -615,7 +648,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Ip.
+             * The IP address.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -623,7 +656,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Isp.
+             * The ISP.
              */
             public Builder isp(String isp) {
                 this.isp = isp;
@@ -664,7 +697,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private java.util.List < PrivateIpAddressesPrivateIpAddress> privateIpAddress; 
 
             /**
-             * PrivateIpAddress.
+             * Details of the private IP addresses.
              */
             public Builder privateIpAddress(java.util.List < PrivateIpAddressesPrivateIpAddress> privateIpAddress) {
                 this.privateIpAddress = privateIpAddress;
@@ -770,7 +803,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String isp; 
 
             /**
-             * GateWay.
+             * The gateway.
              */
             public Builder gateWay(String gateWay) {
                 this.gateWay = gateWay;
@@ -778,7 +811,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Ip.
+             * The IP address.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -786,7 +819,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Isp.
+             * The Internet service provider (ISP).
              */
             public Builder isp(String isp) {
                 this.isp = isp;
@@ -1005,7 +1038,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * Category.
+             * The category of the cloud disk or local disk. Valid values:
+             * <p>
+             * 
+             * *   **file**: local disk.
+             * *   **pangu**: ultra disk.
+             * *   **local_hdd**: local HDD.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -1013,7 +1051,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DiskId.
+             * The ID of the disk.
              */
             public Builder diskId(String diskId) {
                 this.diskId = diskId;
@@ -1021,7 +1059,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DiskName.
+             * The name of the disk.
              */
             public Builder diskName(String diskName) {
                 this.diskName = diskName;
@@ -1029,7 +1067,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * The size of the disk. Unit: MiB.
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -1037,7 +1075,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * device_type.
+             * The extended field of the disk category. Valid values:
+             * <p>
+             * 
+             * *   **file**: local disk.
+             * *   **pangu**: ultra disk.
+             * *   **local_hdd**: local HDD.
              */
             public Builder deviceType(String deviceType) {
                 this.deviceType = deviceType;
@@ -1045,7 +1088,11 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * disk_type.
+             * The type of the cloud disk or local disk. Valid values:
+             * <p>
+             * 
+             * *   **system**: system disk.
+             * *   **data**: data disk.
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -1053,7 +1100,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * The name of the disk.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1061,7 +1108,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * storage.
+             * The size of the disk. Unit: MiB.
              */
             public Builder storage(Integer storage) {
                 this.storage = storage;
@@ -1069,7 +1116,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * UUID。
+             * The UUID of the disk.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -1078,6 +1125,108 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
             public SystemDisk build() {
                 return new SystemDisk(this);
+            } 
+
+        } 
+
+    }
+    public static class Tags extends TeaModel {
+        @NameInMap("TagKey")
+        private String tagKey;
+
+        @NameInMap("TagValue")
+        private String tagValue;
+
+        private Tags(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            /**
+             * TagKey.
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * TagValue.
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
+    public static class InstanceTags extends TeaModel {
+        @NameInMap("Tags")
+        private java.util.List < Tags> tags;
+
+        private InstanceTags(Builder builder) {
+            this.tags = builder.tags;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static InstanceTags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tags
+         */
+        public java.util.List < Tags> getTags() {
+            return this.tags;
+        }
+
+        public static final class Builder {
+            private java.util.List < Tags> tags; 
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List < Tags> tags) {
+                this.tags = tags;
+                return this;
+            }
+
+            public InstanceTags build() {
+                return new InstanceTags(this);
             } 
 
         } 
@@ -1159,6 +1308,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("SystemDisk")
         private SystemDisk systemDisk;
 
+        @NameInMap("Tags")
+        private InstanceTags tags;
+
         private Instance(Builder builder) {
             this.cpu = builder.cpu;
             this.creationTime = builder.creationTime;
@@ -1185,6 +1337,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             this.specName = builder.specName;
             this.status = builder.status;
             this.systemDisk = builder.systemDisk;
+            this.tags = builder.tags;
         }
 
         public static Builder builder() {
@@ -1370,6 +1523,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.systemDisk;
         }
 
+        /**
+         * @return tags
+         */
+        public InstanceTags getTags() {
+            return this.tags;
+        }
+
         public static final class Builder {
             private String cpu; 
             private String creationTime; 
@@ -1396,9 +1556,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String specName; 
             private String status; 
             private SystemDisk systemDisk; 
+            private InstanceTags tags; 
 
             /**
-             * Cpu.
+             * The number of vCPUs.
              */
             public Builder cpu(String cpu) {
                 this.cpu = cpu;
@@ -1406,7 +1567,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * The time when the instance was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -1414,7 +1575,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DataDisk.
+             * Details of the data disk.
              */
             public Builder dataDisk(InstanceDataDisk dataDisk) {
                 this.dataDisk = dataDisk;
@@ -1422,7 +1583,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Disk.
+             * The total size of the disk. Unit: MiB.
              */
             public Builder disk(Integer disk) {
                 this.disk = disk;
@@ -1430,7 +1591,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * EnsRegionId.
+             * The region ID of the instance.
              */
             public Builder ensRegionId(String ensRegionId) {
                 this.ensRegionId = ensRegionId;
@@ -1438,7 +1599,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ExpiredTime.
+             * The expiration time. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -1446,7 +1607,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * HostName.
+             * The hostname of the instance.
+             * <p>
+             * 
+             * *   The hostname cannot start or end with a period (.) or hyphen (-). It cannot contain consecutive periods (.) or hyphens (-).
+             * *   For a Windows instance, the hostname must be 2 to 15 characters in length and can contain letters, digits, and hyphens (-). The hostname cannot contain periods (.) or contain only digits.
+             * *   For an instance that runs another operating system such as Linux, the hostname must be 2 to 64 characters in length. You can use periods (.) to separate the hostname into multiple segments. Each segment can contain letters, digits, and hyphens (-).
              */
             public Builder hostName(String hostName) {
                 this.hostName = hostName;
@@ -1454,7 +1620,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageId.
+             * The ID of the image.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -1462,7 +1628,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InnerIpAddress.
+             * The private IP addresses of the instances.
              */
             public Builder innerIpAddress(InnerIpAddress innerIpAddress) {
                 this.innerIpAddress = innerIpAddress;
@@ -1470,7 +1636,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -1478,7 +1644,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * The name of the instance.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -1486,7 +1652,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceResourceType.
+             * The type of the instance. Valid values:
+             * <p>
+             * 
+             * *   EnsInstance: ENS instances that you purchase.
+             * *   EnsService: ENS instances that belong to edge services.
+             * *   BuildMachine: ENS instances that are configured with image builders.
+             * *   EnsPostPaidInstance: pay-as-you-go ENS instances that you purchase.
              */
             public Builder instanceResourceType(String instanceResourceType) {
                 this.instanceResourceType = instanceResourceType;
@@ -1494,7 +1666,16 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceTypeFamily.
+             * The instance family. Valid values:
+             * <p>
+             * 
+             * *   x86\_vm: x86-based computing instance.
+             * *   x86\_pm: x86-based physical machine.
+             * *   x86\_bmi: x86-based bare metal instance.
+             * *   x86\_bm: bare metal instance with the SmartNIC.
+             * *   pc_bmi: heterogeneous bare metal instance.
+             * *   pc_vm: heterogeneous virtual machine.
+             * *   arm_bmi: Arm-based computing instance.
              */
             public Builder instanceTypeFamily(String instanceTypeFamily) {
                 this.instanceTypeFamily = instanceTypeFamily;
@@ -1502,7 +1683,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InternetMaxBandwidthIn.
+             * The maximum outbound bandwidth. Unit: Mbit/s.
              */
             public Builder internetMaxBandwidthIn(Integer internetMaxBandwidthIn) {
                 this.internetMaxBandwidthIn = internetMaxBandwidthIn;
@@ -1510,7 +1691,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InternetMaxBandwidthOut.
+             * The minimum inbound bandwidth. Unit: Mbit/s.
              */
             public Builder internetMaxBandwidthOut(Integer internetMaxBandwidthOut) {
                 this.internetMaxBandwidthOut = internetMaxBandwidthOut;
@@ -1518,7 +1699,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Memory.
+             * The memory size. Unit: MB.
              */
             public Builder memory(Integer memory) {
                 this.memory = memory;
@@ -1526,7 +1707,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Schema of Response
+             * The returned information about the network.
              */
             public Builder networkAttributes(NetworkAttributes networkAttributes) {
                 this.networkAttributes = networkAttributes;
@@ -1534,7 +1715,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * OSName.
+             * The name of the image.
              */
             public Builder OSName(String OSName) {
                 this.OSName = OSName;
@@ -1542,7 +1723,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PrivateIpAddresses.
+             * Details of the private IP addresses.
              */
             public Builder privateIpAddresses(PrivateIpAddresses privateIpAddresses) {
                 this.privateIpAddresses = privateIpAddresses;
@@ -1550,7 +1731,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PublicIpAddress.
+             * The public IP addresses of the instances.
              */
             public Builder publicIpAddress(PublicIpAddress publicIpAddress) {
                 this.publicIpAddress = publicIpAddress;
@@ -1558,7 +1739,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PublicIpAddresses.
+             * Details of the public IP addresses.
              */
             public Builder publicIpAddresses(PublicIpAddresses publicIpAddresses) {
                 this.publicIpAddresses = publicIpAddresses;
@@ -1566,7 +1747,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroupIds.
+             * The IDs of the security groups.
              */
             public Builder securityGroupIds(SecurityGroupIds securityGroupIds) {
                 this.securityGroupIds = securityGroupIds;
@@ -1574,7 +1755,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * SpecName.
+             * The code of the instance type.
              */
             public Builder specName(String specName) {
                 this.specName = specName;
@@ -1582,7 +1763,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status. Valid values:
+             * <p>
+             * 
+             * *   Running
+             * *   Expired
+             * *   Stopped
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1590,10 +1776,18 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Schema of Response
+             * The returned information about the disk.
              */
             public Builder systemDisk(SystemDisk systemDisk) {
                 this.systemDisk = systemDisk;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(InstanceTags tags) {
+                this.tags = tags;
                 return this;
             }
 

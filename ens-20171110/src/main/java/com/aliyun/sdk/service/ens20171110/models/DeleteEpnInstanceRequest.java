@@ -55,7 +55,7 @@ public class DeleteEpnInstanceRequest extends Request {
         } 
 
         /**
-         * EPNInstanceId.
+         * The ID of the EPN instance.
          */
         public Builder EPNInstanceId(String EPNInstanceId) {
             this.putQueryParameter("EPNInstanceId", EPNInstanceId);

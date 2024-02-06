@@ -20,16 +20,10 @@ public class CreateSecurityGroupRequest extends Request {
     @NameInMap("SecurityGroupName")
     private String securityGroupName;
 
-    @Query
-    @NameInMap("Version")
-    @Validation(required = true)
-    private String version;
-
     private CreateSecurityGroupRequest(Builder builder) {
         super(builder);
         this.description = builder.description;
         this.securityGroupName = builder.securityGroupName;
-        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -59,17 +53,9 @@ public class CreateSecurityGroupRequest extends Request {
         return this.securityGroupName;
     }
 
-    /**
-     * @return version
-     */
-    public String getVersion() {
-        return this.version;
-    }
-
     public static final class Builder extends Request.Builder<CreateSecurityGroupRequest, Builder> {
         private String description; 
         private String securityGroupName; 
-        private String version; 
 
         private Builder() {
             super();
@@ -79,11 +65,10 @@ public class CreateSecurityGroupRequest extends Request {
             super(request);
             this.description = request.description;
             this.securityGroupName = request.securityGroupName;
-            this.version = request.version;
         } 
 
         /**
-         * Description.
+         * The description of the security group. The description must be 2 to 256 characters in length. It must start with a letter but cannot start with http:// or https://.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -92,20 +77,11 @@ public class CreateSecurityGroupRequest extends Request {
         }
 
         /**
-         * SecurityGroupName.
+         * The name of the security group. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-). By default, this parameter is empty.
          */
         public Builder securityGroupName(String securityGroupName) {
             this.putQueryParameter("SecurityGroupName", securityGroupName);
             this.securityGroupName = securityGroupName;
-            return this;
-        }
-
-        /**
-         * Version.
-         */
-        public Builder version(String version) {
-            this.putQueryParameter("Version", version);
-            this.version = version;
             return this;
         }
 

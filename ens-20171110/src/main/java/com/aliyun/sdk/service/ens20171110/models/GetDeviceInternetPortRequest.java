@@ -84,7 +84,7 @@ public class GetDeviceInternetPortRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The ID of the instance. You can specify the ID of the server or container. You can specify only one ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -93,7 +93,11 @@ public class GetDeviceInternetPortRequest extends Request {
         }
 
         /**
-         * NatType.
+         * The type of the NAT gateway. The value must be of the enumerated data type. Valid values:
+         * <p>
+         * 
+         * *   SNAT
+         * *   DNAT
          */
         public Builder natType(String natType) {
             this.putQueryParameter("NatType", natType);
@@ -102,7 +106,7 @@ public class GetDeviceInternetPortRequest extends Request {
         }
 
         /**
-         * RuleId.
+         * The ID of the rule. If you leave this parameter empty, all rules are queried.
          */
         public Builder ruleId(String ruleId) {
             this.putQueryParameter("RuleId", ruleId);

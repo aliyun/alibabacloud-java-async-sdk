@@ -86,7 +86,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         private VSwitches vSwitches; 
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries in the list.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -118,7 +118,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         }
 
         /**
-         * VSwitches.
+         * The information about the vSwitches. For more information, see the array of vSwitches in the response examples in the JSON format.
          */
         public Builder vSwitches(VSwitches vSwitches) {
             this.vSwitches = vSwitches;
@@ -254,7 +254,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             private String vSwitchName; 
 
             /**
-             * CidrBlock.
+             * The IPv4 CIDR block of the vSwitch.
              */
             public Builder cidrBlock(String cidrBlock) {
                 this.cidrBlock = cidrBlock;
@@ -262,7 +262,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedTime.
+             * The time when the vSwitch was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -270,7 +270,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the vSwitch.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -278,7 +278,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * EnsRegionId.
+             * The ID of the edge node.
              */
             public Builder ensRegionId(String ensRegionId) {
                 this.ensRegionId = ensRegionId;
@@ -286,7 +286,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * FreeIpCount.
+             * The number of available IP addresses.
              */
             public Builder freeIpCount(Long freeIpCount) {
                 this.freeIpCount = freeIpCount;
@@ -294,7 +294,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkId.
+             * The ID of the network.
              */
             public Builder networkId(String networkId) {
                 this.networkId = networkId;
@@ -302,7 +302,11 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the vSwitch. Valid values:
+             * <p>
+             * 
+             * *   Pending
+             * *   Available
              */
             public Builder status(String status) {
                 this.status = status;
@@ -310,7 +314,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * The ID of the vSwitch.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -318,7 +322,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchName.
+             * The name of the vSwitch.
              */
             public Builder vSwitchName(String vSwitchName) {
                 this.vSwitchName = vSwitchName;

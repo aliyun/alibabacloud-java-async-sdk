@@ -70,7 +70,7 @@ public class SetLoadBalancerStatusRequest extends Request {
         } 
 
         /**
-         * LoadBalancerId.
+         * The ID of the ELB instance.
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
@@ -79,7 +79,11 @@ public class SetLoadBalancerStatusRequest extends Request {
         }
 
         /**
-         * LoadBalancerStatus.
+         * The status of the ELB instance. Valid values:
+         * <p>
+         * 
+         * *   **Active** (default): The listener for the instance can forward the received traffic based on the rule.
+         * *   **InActive**: The listener for the instance does not forward the received traffic.
          */
         public Builder loadBalancerStatus(String loadBalancerStatus) {
             this.putQueryParameter("LoadBalancerStatus", loadBalancerStatus);

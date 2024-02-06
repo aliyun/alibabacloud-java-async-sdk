@@ -124,7 +124,7 @@ public class DescribeDeviceServiceRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * The ID of the application.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -133,7 +133,7 @@ public class DescribeDeviceServiceRequest extends Request {
         }
 
         /**
-         * EnsRegionId.
+         * This parameter does not take effect.
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -142,7 +142,7 @@ public class DescribeDeviceServiceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -151,7 +151,7 @@ public class DescribeDeviceServiceRequest extends Request {
         }
 
         /**
-         * OrderId.
+         * The ID of the order.
          */
         public Builder orderId(String orderId) {
             this.putQueryParameter("OrderId", orderId);
@@ -160,7 +160,7 @@ public class DescribeDeviceServiceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the Edge Node Service (ENS) node.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

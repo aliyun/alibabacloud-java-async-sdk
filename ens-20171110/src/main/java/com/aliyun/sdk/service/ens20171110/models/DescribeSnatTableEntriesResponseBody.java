@@ -86,7 +86,7 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * SnatTableEntries.
+         * Details of SNAT entries.
          */
         public Builder snatTableEntries(java.util.List < SnatTableEntries> snatTableEntries) {
             this.snatTableEntries = snatTableEntries;
@@ -118,7 +118,7 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The number of SNAT entries that are returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -242,7 +242,7 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * NatGatewayId.
+             * The ID of the NAT gateway.
              */
             public Builder natGatewayId(String natGatewayId) {
                 this.natGatewayId = natGatewayId;
@@ -250,7 +250,7 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * SnatEntryId.
+             * The ID of the SNAT entry.
              */
             public Builder snatEntryId(String snatEntryId) {
                 this.snatEntryId = snatEntryId;
@@ -258,7 +258,7 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * SnatEntryName.
+             * The name of the SNAT entry.
              */
             public Builder snatEntryName(String snatEntryName) {
                 this.snatEntryName = snatEntryName;
@@ -266,7 +266,7 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * SnatIp.
+             * The EIP specified in the SNAT entry.
              */
             public Builder snatIp(String snatIp) {
                 this.snatIp = snatIp;
@@ -274,7 +274,7 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * SourceCIDR.
+             * The source CIDR block specified in the SNAT entry.
              */
             public Builder sourceCIDR(String sourceCIDR) {
                 this.sourceCIDR = sourceCIDR;
@@ -282,7 +282,7 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * StandbySnatIp.
+             * The secondary EIP. Multiple EIPs are separated by commas (,).
              */
             public Builder standbySnatIp(String standbySnatIp) {
                 this.standbySnatIp = standbySnatIp;
@@ -290,7 +290,13 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * StandbyStatus.
+             * The status of the secondary EIP. Valid values:
+             * <p>
+             * 
+             * *   Running
+             * *   Stopping
+             * *   Stopped
+             * *   Starting
              */
             public Builder standbyStatus(String standbyStatus) {
                 this.standbyStatus = standbyStatus;
@@ -298,7 +304,12 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the SNAT entry. Valid values:
+             * <p>
+             * 
+             * *   Pending: The SNAT entry is being created or modified.
+             * *   Available: The SNAT entry is available.
+             * *   Deleting: The SNAT entry is being deleted.
              */
             public Builder status(String status) {
                 this.status = status;

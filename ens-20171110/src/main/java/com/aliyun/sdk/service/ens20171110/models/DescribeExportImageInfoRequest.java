@@ -97,7 +97,7 @@ public class DescribeExportImageInfoRequest extends Request {
         } 
 
         /**
-         * ImageId.
+         * The ID of the image.
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -106,7 +106,7 @@ public class DescribeExportImageInfoRequest extends Request {
         }
 
         /**
-         * ImageName.
+         * The name of the image.
          */
         public Builder imageName(String imageName) {
             this.putQueryParameter("ImageName", imageName);
@@ -115,7 +115,7 @@ public class DescribeExportImageInfoRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number. Pages start from page **1**. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -124,7 +124,7 @@ public class DescribeExportImageInfoRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Maximum value: **50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

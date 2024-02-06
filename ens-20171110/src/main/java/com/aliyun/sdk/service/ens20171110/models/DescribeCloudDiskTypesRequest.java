@@ -54,7 +54,7 @@ public class DescribeCloudDiskTypesRequest extends Request {
         } 
 
         /**
-         * A short description of struct
+         * The ID of the edge node.
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);

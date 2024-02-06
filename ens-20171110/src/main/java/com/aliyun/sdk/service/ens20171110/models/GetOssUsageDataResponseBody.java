@@ -50,7 +50,7 @@ public class GetOssUsageDataResponseBody extends TeaModel {
         private java.util.List < UsageList> usageList; 
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class GetOssUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * UsageList.
+         * The array of usage data.
          */
         public Builder usageList(java.util.List < UsageList> usageList) {
             this.usageList = usageList;
@@ -170,7 +170,7 @@ public class GetOssUsageDataResponseBody extends TeaModel {
             private Long wanTxBw; 
 
             /**
-             * LanRxBw.
+             * The inbound bandwidth over the intranet. Unit: bit/s.
              */
             public Builder lanRxBw(Long lanRxBw) {
                 this.lanRxBw = lanRxBw;
@@ -178,7 +178,7 @@ public class GetOssUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * LanTxBw.
+             * The outbound bandwidth over the intranet. Unit: bit/s.
              */
             public Builder lanTxBw(Long lanTxBw) {
                 this.lanTxBw = lanTxBw;
@@ -186,7 +186,7 @@ public class GetOssUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * Point.
+             * The number of time point within a day.
              */
             public Builder point(Long point) {
                 this.point = point;
@@ -194,7 +194,7 @@ public class GetOssUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * PointTs.
+             * The point in time, in UTC. Format: 2010-01-21T09:50:23Z.
              */
             public Builder pointTs(String pointTs) {
                 this.pointTs = pointTs;
@@ -202,7 +202,7 @@ public class GetOssUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * StorageUsageByte.
+             * The storage usage. Unit: bytes.
              */
             public Builder storageUsageByte(Long storageUsageByte) {
                 this.storageUsageByte = storageUsageByte;
@@ -210,7 +210,7 @@ public class GetOssUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * WanRxBw.
+             * The outbound bandwidth over the intranet. Unit: bit/s.
              */
             public Builder wanRxBw(Long wanRxBw) {
                 this.wanRxBw = wanRxBw;
@@ -218,7 +218,7 @@ public class GetOssUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * WanTxBw.
+             * The outbound bandwidth over the Internet. Unit: bit/s.
              */
             public Builder wanTxBw(Long wanTxBw) {
                 this.wanTxBw = wanTxBw;

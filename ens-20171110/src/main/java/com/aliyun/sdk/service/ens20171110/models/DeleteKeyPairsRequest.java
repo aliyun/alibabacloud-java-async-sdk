@@ -13,19 +13,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DeleteKeyPairsRequest extends Request {
     @Query
-    @NameInMap("KeyPairName")
-    @Validation(required = true)
-    private String keyPairName;
+    @NameInMap("KeyPairId")
+    private String keyPairId;
 
     @Query
-    @NameInMap("Version")
-    @Validation(required = true)
-    private String version;
+    @NameInMap("KeyPairName")
+    private String keyPairName;
 
     private DeleteKeyPairsRequest(Builder builder) {
         super(builder);
+        this.keyPairId = builder.keyPairId;
         this.keyPairName = builder.keyPairName;
-        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -42,22 +40,22 @@ public class DeleteKeyPairsRequest extends Request {
     }
 
     /**
+     * @return keyPairId
+     */
+    public String getKeyPairId() {
+        return this.keyPairId;
+    }
+
+    /**
      * @return keyPairName
      */
     public String getKeyPairName() {
         return this.keyPairName;
     }
 
-    /**
-     * @return version
-     */
-    public String getVersion() {
-        return this.version;
-    }
-
     public static final class Builder extends Request.Builder<DeleteKeyPairsRequest, Builder> {
+        private String keyPairId; 
         private String keyPairName; 
-        private String version; 
 
         private Builder() {
             super();
@@ -65,25 +63,32 @@ public class DeleteKeyPairsRequest extends Request {
 
         private Builder(DeleteKeyPairsRequest request) {
             super(request);
+            this.keyPairId = request.keyPairId;
             this.keyPairName = request.keyPairName;
-            this.version = request.version;
         } 
 
         /**
-         * KeyPairName.
+         * KeyPairId.
          */
-        public Builder keyPairName(String keyPairName) {
-            this.putQueryParameter("KeyPairName", keyPairName);
-            this.keyPairName = keyPairName;
+        public Builder keyPairId(String keyPairId) {
+            this.putQueryParameter("KeyPairId", keyPairId);
+            this.keyPairId = keyPairId;
             return this;
         }
 
         /**
-         * Version.
+         * The key pair name. The name must conform to the following naming conventions:
+         * <p>
+         * 
+         * *   The name must be 2 to 128 characters in length, and can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+         * *   It can contain letters, digits, colons (:), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.
+         * *   It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+         * 
+         * Before you delete a key pair, you can call the DescribeKeyPairs operation to query existing key pairs.
          */
-        public Builder version(String version) {
-            this.putQueryParameter("Version", version);
-            this.version = version;
+        public Builder keyPairName(String keyPairName) {
+            this.putQueryParameter("KeyPairName", keyPairName);
+            this.keyPairName = keyPairName;
             return this;
         }
 

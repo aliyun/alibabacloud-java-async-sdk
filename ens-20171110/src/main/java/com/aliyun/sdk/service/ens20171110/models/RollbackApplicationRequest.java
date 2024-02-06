@@ -98,7 +98,7 @@ public class RollbackApplicationRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * The ID of the application.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -107,7 +107,7 @@ public class RollbackApplicationRequest extends Request {
         }
 
         /**
-         * FromAppVersion.
+         * The current version number.
          */
         public Builder fromAppVersion(String fromAppVersion) {
             this.putQueryParameter("FromAppVersion", fromAppVersion);
@@ -116,7 +116,7 @@ public class RollbackApplicationRequest extends Request {
         }
 
         /**
-         * Timeout.
+         * The timeout period of the asynchronous rollback operation. Unit: seconds. Default value: 300.
          */
         public Builder timeout(Integer timeout) {
             this.putQueryParameter("Timeout", timeout);
@@ -125,7 +125,7 @@ public class RollbackApplicationRequest extends Request {
         }
 
         /**
-         * ToAppVersion.
+         * The target version number. By default, the system automatically rolls back the container version to the previous version.
          */
         public Builder toAppVersion(String toAppVersion) {
             this.putQueryParameter("ToAppVersion", toAppVersion);

@@ -13,16 +13,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeExportImageStatusResponse extends Response {
     @NameInMap("headers")
-    @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    private Integer statusCode;
+
     @NameInMap("body")
-    @Validation(required = true)
     private DescribeExportImageStatusResponseBody body;
 
     private DescribeExportImageStatusResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +45,13 @@ public class DescribeExportImageStatusResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public DescribeExportImageStatusResponseBody getBody() {
@@ -52,6 +61,8 @@ public class DescribeExportImageStatusResponse extends Response {
     public interface Builder extends Response.Builder<DescribeExportImageStatusResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(DescribeExportImageStatusResponseBody body);
 
@@ -64,6 +75,7 @@ public class DescribeExportImageStatusResponse extends Response {
             extends Response.BuilderImpl<DescribeExportImageStatusResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private DescribeExportImageStatusResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +85,7 @@ public class DescribeExportImageStatusResponse extends Response {
         private BuilderImpl(DescribeExportImageStatusResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +95,15 @@ public class DescribeExportImageStatusResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

@@ -7,26 +7,28 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeRegionBandwidthQuotaResponse} extends {@link TeaModel}
+ * {@link CreateSnapshotResponse} extends {@link TeaModel}
  *
- * <p>DescribeRegionBandwidthQuotaResponse</p>
+ * <p>CreateSnapshotResponse</p>
  */
-public class DescribeRegionBandwidthQuotaResponse extends Response {
+public class CreateSnapshotResponse extends Response {
     @NameInMap("headers")
-    @Validation(required = true)
     private java.util.Map < String, String > headers;
 
-    @NameInMap("body")
-    @Validation(required = true)
-    private DescribeRegionBandwidthQuotaResponseBody body;
+    @NameInMap("statusCode")
+    private Integer statusCode;
 
-    private DescribeRegionBandwidthQuotaResponse(BuilderImpl builder) {
+    @NameInMap("body")
+    private CreateSnapshotResponseBody body;
+
+    private CreateSnapshotResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DescribeRegionBandwidthQuotaResponse create() {
+    public static CreateSnapshotResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -43,36 +45,47 @@ public class DescribeRegionBandwidthQuotaResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
-    public DescribeRegionBandwidthQuotaResponseBody getBody() {
+    public CreateSnapshotResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DescribeRegionBandwidthQuotaResponse, Builder> {
+    public interface Builder extends Response.Builder<CreateSnapshotResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(DescribeRegionBandwidthQuotaResponseBody body);
+        Builder statusCode(Integer statusCode);
+
+        Builder body(CreateSnapshotResponseBody body);
 
         @Override
-        DescribeRegionBandwidthQuotaResponse build();
+        CreateSnapshotResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DescribeRegionBandwidthQuotaResponse, Builder>
+            extends Response.BuilderImpl<CreateSnapshotResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private DescribeRegionBandwidthQuotaResponseBody body; 
+        private Integer statusCode; 
+        private CreateSnapshotResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DescribeRegionBandwidthQuotaResponse response) {
+        private BuilderImpl(CreateSnapshotResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -86,17 +99,26 @@ public class DescribeRegionBandwidthQuotaResponse extends Response {
         }
 
         /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
+            return this;
+        }
+
+        /**
          * body.
          */
         @Override
-        public Builder body(DescribeRegionBandwidthQuotaResponseBody body) {
+        public Builder body(CreateSnapshotResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DescribeRegionBandwidthQuotaResponse build() {
-            return new DescribeRegionBandwidthQuotaResponse(this);
+        public CreateSnapshotResponse build() {
+            return new CreateSnapshotResponse(this);
         } 
 
     } 

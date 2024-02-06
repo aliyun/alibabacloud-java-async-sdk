@@ -70,7 +70,7 @@ public class UnassignPrivateIpAddressesRequest extends Request {
         } 
 
         /**
-         * NetworkInterfaceId.
+         * The ID of the ENI.
          */
         public Builder networkInterfaceId(String networkInterfaceId) {
             this.putQueryParameter("NetworkInterfaceId", networkInterfaceId);
@@ -79,7 +79,7 @@ public class UnassignPrivateIpAddressesRequest extends Request {
         }
 
         /**
-         * PrivateIpAddress.
+         * The secondary private IP addresses that you want to unassign.
          */
         public Builder privateIpAddress(java.util.List < String > privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);

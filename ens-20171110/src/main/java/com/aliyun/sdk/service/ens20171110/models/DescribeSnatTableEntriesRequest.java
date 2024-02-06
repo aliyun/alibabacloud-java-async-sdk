@@ -140,7 +140,7 @@ public class DescribeSnatTableEntriesRequest extends Request {
         } 
 
         /**
-         * NatGatewayId.
+         * The ID of the Network Address Translation (NAT) gateway.
          */
         public Builder natGatewayId(String natGatewayId) {
             this.putQueryParameter("NatGatewayId", natGatewayId);
@@ -149,7 +149,10 @@ public class DescribeSnatTableEntriesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number. Pages start from page **1**.
+         * <p>
+         * 
+         * Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -158,7 +161,10 @@ public class DescribeSnatTableEntriesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. The maximum value is **100**.
+         * <p>
+         * 
+         * Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -167,7 +173,7 @@ public class DescribeSnatTableEntriesRequest extends Request {
         }
 
         /**
-         * SnatEntryId.
+         * The ID of the SNAT entry.
          */
         public Builder snatEntryId(String snatEntryId) {
             this.putQueryParameter("SnatEntryId", snatEntryId);
@@ -176,7 +182,7 @@ public class DescribeSnatTableEntriesRequest extends Request {
         }
 
         /**
-         * SnatEntryName.
+         * The name of the SNAT entry.
          */
         public Builder snatEntryName(String snatEntryName) {
             this.putQueryParameter("SnatEntryName", snatEntryName);
@@ -185,7 +191,7 @@ public class DescribeSnatTableEntriesRequest extends Request {
         }
 
         /**
-         * SnatIp.
+         * The elastic IP address (EIP) specified in the SNAT entry.
          */
         public Builder snatIp(String snatIp) {
             this.putQueryParameter("SnatIp", snatIp);
@@ -194,7 +200,7 @@ public class DescribeSnatTableEntriesRequest extends Request {
         }
 
         /**
-         * SourceCIDR.
+         * The source CIDR block specified in the SNAT entry.
          */
         public Builder sourceCIDR(String sourceCIDR) {
             this.putQueryParameter("SourceCIDR", sourceCIDR);

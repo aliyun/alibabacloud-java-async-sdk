@@ -50,7 +50,7 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * MeasurementDatas.
+         * The metering data returned.
          */
         public Builder measurementDatas(MeasurementDatas measurementDatas) {
             this.measurementDatas = measurementDatas;
@@ -58,7 +58,7 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
             private Integer costVal; 
 
             /**
-             * CostCode.
+             * The code of the bandwidth plan.
              */
             public Builder costCode(String costCode) {
                 this.costCode = costCode;
@@ -130,7 +130,7 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
             }
 
             /**
-             * CostName.
+             * The name of the bandwidth plan.
              */
             public Builder costName(String costName) {
                 this.costName = costName;
@@ -138,7 +138,7 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
             }
 
             /**
-             * CostVal.
+             * The bandwidth consumption. Unit: bit/second.
              */
             public Builder costVal(Integer costVal) {
                 this.costVal = costVal;
@@ -244,7 +244,7 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
             private Integer vcpu; 
 
             /**
-             * Memory.
+             * The memory size. Unit: GB.
              */
             public Builder memory(Integer memory) {
                 this.memory = memory;
@@ -252,7 +252,7 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
             }
 
             /**
-             * Storage.
+             * The storage capacity. Unit: GB.
              */
             public Builder storage(Integer storage) {
                 this.storage = storage;
@@ -260,7 +260,7 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
             }
 
             /**
-             * Vcpu.
+             * The number of vCPUs.
              */
             public Builder vcpu(Integer vcpu) {
                 this.vcpu = vcpu;
@@ -337,7 +337,7 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
             private String resourceType; 
 
             /**
-             * CostCode.
+             * The code of the resource.
              */
             public Builder costCode(String costCode) {
                 this.costCode = costCode;
@@ -345,7 +345,7 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
             }
 
             /**
-             * CostName.
+             * The name of the resource.
              */
             public Builder costName(String costName) {
                 this.costName = costName;
@@ -353,7 +353,12 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
             }
 
             /**
-             * CostVal.
+             * The consumption of the resource.
+             * <p>
+             * 
+             * *   Memory unit: GB.
+             * *   CPU unit: vCPU.
+             * *   Storage unit: GB.
              */
             public Builder costVal(Integer costVal) {
                 this.costVal = costVal;
@@ -361,7 +366,7 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * The type of the resource.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -515,7 +520,7 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
             private ResourceFeeDataDetails resourceFeeDataDetails; 
 
             /**
-             * BandWidthFeeDatas.
+             * The bandwidth data returned.
              */
             public Builder bandWidthFeeDatas(BandWidthFeeDatas bandWidthFeeDatas) {
                 this.bandWidthFeeDatas = bandWidthFeeDatas;
@@ -523,7 +528,11 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
             }
 
             /**
-             * ChargeModel.
+             * The metering method. Valid values:
+             * <p>
+             * 
+             * *   ChargeByUnified: unified metering.
+             * *   ChargeByGrade: differential metering.
              */
             public Builder chargeModel(String chargeModel) {
                 this.chargeModel = chargeModel;
@@ -531,7 +540,7 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
             }
 
             /**
-             * CostCycle.
+             * The metering cycle.
              */
             public Builder costCycle(String costCycle) {
                 this.costCycle = costCycle;
@@ -539,7 +548,7 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
             }
 
             /**
-             * CostEndTime.
+             * The end time of the metering cycle.
              */
             public Builder costEndTime(String costEndTime) {
                 this.costEndTime = costEndTime;
@@ -547,7 +556,7 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
             }
 
             /**
-             * CostStartTime.
+             * The start time of the metering cycle.
              */
             public Builder costStartTime(String costStartTime) {
                 this.costStartTime = costStartTime;
@@ -555,7 +564,7 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceFeeData.
+             * The information about computing resources.
              */
             public Builder resourceFeeData(ResourceFeeData resourceFeeData) {
                 this.resourceFeeData = resourceFeeData;
@@ -563,7 +572,7 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceFeeDataDetails.
+             * Details of the computing resources.
              */
             public Builder resourceFeeDataDetails(ResourceFeeDataDetails resourceFeeDataDetails) {
                 this.resourceFeeDataDetails = resourceFeeDataDetails;

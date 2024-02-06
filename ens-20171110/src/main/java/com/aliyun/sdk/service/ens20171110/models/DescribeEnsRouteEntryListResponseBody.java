@@ -86,7 +86,7 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
         }
 
         /**
-         * RouteEntrys.
+         * The information about the route.
          */
         public Builder routeEntrys(java.util.List < RouteEntrys> routeEntrys) {
             this.routeEntrys = routeEntrys;
@@ -118,7 +118,7 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The number of returned entries.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -170,7 +170,7 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
             private String nextHopType; 
 
             /**
-             * NextHopId.
+             * The ID of the next hop.
              */
             public Builder nextHopId(String nextHopId) {
                 this.nextHopId = nextHopId;
@@ -178,7 +178,7 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
             }
 
             /**
-             * NextHopType.
+             * The type of the next hop. Valid values:
              */
             public Builder nextHopType(String nextHopType) {
                 this.nextHopType = nextHopType;
@@ -303,7 +303,7 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Description.
+             * Enter a description for the route.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -311,7 +311,7 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
             }
 
             /**
-             * DestinationCidrBlock.
+             * The destination CIDR block of the route.
              */
             public Builder destinationCidrBlock(String destinationCidrBlock) {
                 this.destinationCidrBlock = destinationCidrBlock;
@@ -319,7 +319,7 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
             }
 
             /**
-             * NextHops.
+             * The information about the next hop.
              */
             public Builder nextHops(java.util.List < NextHops> nextHops) {
                 this.nextHops = nextHops;
@@ -327,7 +327,7 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
             }
 
             /**
-             * RouteEntryId.
+             * The ID of the route.
              */
             public Builder routeEntryId(String routeEntryId) {
                 this.routeEntryId = routeEntryId;
@@ -335,7 +335,7 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
             }
 
             /**
-             * RouteEntryName.
+             * The name of the route.
              */
             public Builder routeEntryName(String routeEntryName) {
                 this.routeEntryName = routeEntryName;
@@ -343,7 +343,7 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
             }
 
             /**
-             * RouteTableId.
+             * The ID of the route table.
              */
             public Builder routeTableId(String routeTableId) {
                 this.routeTableId = routeTableId;
@@ -351,7 +351,7 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the route entry. Valid values:
              */
             public Builder status(String status) {
                 this.status = status;
@@ -359,7 +359,7 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the route entry.
              */
             public Builder type(String type) {
                 this.type = type;

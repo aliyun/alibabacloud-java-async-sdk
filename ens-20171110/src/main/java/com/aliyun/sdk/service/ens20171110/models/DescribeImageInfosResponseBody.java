@@ -62,7 +62,7 @@ public class DescribeImageInfosResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The HTTP status code that is returned.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -70,7 +70,7 @@ public class DescribeImageInfosResponseBody extends TeaModel {
         }
 
         /**
-         * Images.
+         * The information about images.
          */
         public Builder images(Images images) {
             this.images = images;
@@ -78,7 +78,7 @@ public class DescribeImageInfosResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -190,7 +190,13 @@ public class DescribeImageInfosResponseBody extends TeaModel {
             private String OSType; 
 
             /**
-             * ComputeType.
+             * The computing type of the image. Valid values:
+             * <p>
+             * 
+             * *   ens_vm: x86 computing.
+             * *   arm_vm: ARM computing.
+             * *   bare_metal: x86 bare machine.
+             * *   pcfarm: heterogeneous computing.
              */
             public Builder computeType(String computeType) {
                 this.computeType = computeType;
@@ -198,7 +204,7 @@ public class DescribeImageInfosResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the image.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -206,7 +212,7 @@ public class DescribeImageInfosResponseBody extends TeaModel {
             }
 
             /**
-             * ImageId.
+             * The ID of the image.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -214,7 +220,7 @@ public class DescribeImageInfosResponseBody extends TeaModel {
             }
 
             /**
-             * ImageSize.
+             * The size of the image. Unit: GiB.
              */
             public Builder imageSize(String imageSize) {
                 this.imageSize = imageSize;
@@ -222,7 +228,7 @@ public class DescribeImageInfosResponseBody extends TeaModel {
             }
 
             /**
-             * ImageVersion.
+             * The version of the image.
              */
             public Builder imageVersion(String imageVersion) {
                 this.imageVersion = imageVersion;
@@ -230,7 +236,7 @@ public class DescribeImageInfosResponseBody extends TeaModel {
             }
 
             /**
-             * OSName.
+             * The type of the image. Valid values: **centos**, **debian**, **ubuntu**, and **windows**.
              */
             public Builder OSName(String OSName) {
                 this.OSName = OSName;
@@ -238,7 +244,7 @@ public class DescribeImageInfosResponseBody extends TeaModel {
             }
 
             /**
-             * OSType.
+             * The type of the operating system.
              */
             public Builder OSType(String OSType) {
                 this.OSType = OSType;

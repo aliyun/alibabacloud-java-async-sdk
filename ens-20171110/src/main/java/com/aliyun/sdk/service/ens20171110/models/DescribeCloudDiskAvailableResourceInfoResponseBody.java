@@ -50,7 +50,7 @@ public class DescribeCloudDiskAvailableResourceInfoResponseBody extends TeaModel
         private SupportResources supportResources; 
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeCloudDiskAvailableResourceInfoResponseBody extends TeaModel
         }
 
         /**
-         * SupportResources.
+         * The specifications of resources that you can purchase.
          */
         public Builder supportResources(SupportResources supportResources) {
             this.supportResources = supportResources;
@@ -170,7 +170,7 @@ public class DescribeCloudDiskAvailableResourceInfoResponseBody extends TeaModel
             private String ensRegionName; 
 
             /**
-             * CanBuyCount.
+             * The number of disks that you can purchase.
              */
             public Builder canBuyCount(Long canBuyCount) {
                 this.canBuyCount = canBuyCount;
@@ -178,7 +178,13 @@ public class DescribeCloudDiskAvailableResourceInfoResponseBody extends TeaModel
             }
 
             /**
-             * Category.
+             * The type of the disk.
+             * <p>
+             * 
+             * *   cloud_efficiency: ultra disk.
+             * *   cloud_ssd: all-flash disk.
+             * *   local_hdd: local HDD.
+             * *   local_ssd: local SSD.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -186,7 +192,7 @@ public class DescribeCloudDiskAvailableResourceInfoResponseBody extends TeaModel
             }
 
             /**
-             * DefaultDiskSize.
+             * The default size of the disk. Unit: GiB.
              */
             public Builder defaultDiskSize(Long defaultDiskSize) {
                 this.defaultDiskSize = defaultDiskSize;
@@ -194,7 +200,7 @@ public class DescribeCloudDiskAvailableResourceInfoResponseBody extends TeaModel
             }
 
             /**
-             * DiskMaxSize.
+             * The maximum size of the disk. Unit: GiB.
              */
             public Builder diskMaxSize(Long diskMaxSize) {
                 this.diskMaxSize = diskMaxSize;
@@ -202,7 +208,7 @@ public class DescribeCloudDiskAvailableResourceInfoResponseBody extends TeaModel
             }
 
             /**
-             * DiskMinSize.
+             * The minimum size of the disk size. Unit: GiB.
              */
             public Builder diskMinSize(Long diskMinSize) {
                 this.diskMinSize = diskMinSize;
@@ -210,7 +216,7 @@ public class DescribeCloudDiskAvailableResourceInfoResponseBody extends TeaModel
             }
 
             /**
-             * EnsRegionId.
+             * The ID of the edge node.
              */
             public Builder ensRegionId(String ensRegionId) {
                 this.ensRegionId = ensRegionId;
@@ -218,7 +224,7 @@ public class DescribeCloudDiskAvailableResourceInfoResponseBody extends TeaModel
             }
 
             /**
-             * EnsRegionName.
+             * The name of the task node.
              */
             public Builder ensRegionName(String ensRegionName) {
                 this.ensRegionName = ensRegionName;

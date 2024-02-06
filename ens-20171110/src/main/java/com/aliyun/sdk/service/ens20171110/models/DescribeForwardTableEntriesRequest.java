@@ -153,7 +153,7 @@ public class DescribeForwardTableEntriesRequest extends Request {
         } 
 
         /**
-         * ExternalIp.
+         * The EIP in the DNAT entry. The public IP address is used to access the Internet.
          */
         public Builder externalIp(String externalIp) {
             this.putQueryParameter("ExternalIp", externalIp);
@@ -162,7 +162,7 @@ public class DescribeForwardTableEntriesRequest extends Request {
         }
 
         /**
-         * ForwardEntryId.
+         * The ID of the DNAT entry.
          */
         public Builder forwardEntryId(String forwardEntryId) {
             this.putQueryParameter("ForwardEntryId", forwardEntryId);
@@ -171,7 +171,7 @@ public class DescribeForwardTableEntriesRequest extends Request {
         }
 
         /**
-         * ForwardEntryName.
+         * The name of the DNAT entry.
          */
         public Builder forwardEntryName(String forwardEntryName) {
             this.putQueryParameter("ForwardEntryName", forwardEntryName);
@@ -180,7 +180,7 @@ public class DescribeForwardTableEntriesRequest extends Request {
         }
 
         /**
-         * InternalIp.
+         * The private IP address of the instance that uses the DNAT entry for Internet communication.
          */
         public Builder internalIp(String internalIp) {
             this.putQueryParameter("InternalIp", internalIp);
@@ -189,7 +189,12 @@ public class DescribeForwardTableEntriesRequest extends Request {
         }
 
         /**
-         * IpProtocol.
+         * The protocol. Valid values:
+         * <p>
+         * 
+         * *   **TCP**: forwards TCP packets.
+         * *   **UDP**: forwards UDP packets.
+         * *   **Any**: forwards all packets.
          */
         public Builder ipProtocol(String ipProtocol) {
             this.putQueryParameter("IpProtocol", ipProtocol);
@@ -198,7 +203,7 @@ public class DescribeForwardTableEntriesRequest extends Request {
         }
 
         /**
-         * NatGatewayId.
+         * The ID of the NAT gateway.
          */
         public Builder natGatewayId(String natGatewayId) {
             this.putQueryParameter("NatGatewayId", natGatewayId);
@@ -207,7 +212,10 @@ public class DescribeForwardTableEntriesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number. Pages start from page **1**.
+         * <p>
+         * 
+         * Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -216,7 +224,10 @@ public class DescribeForwardTableEntriesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Maximum value: **100**.
+         * <p>
+         * 
+         * Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

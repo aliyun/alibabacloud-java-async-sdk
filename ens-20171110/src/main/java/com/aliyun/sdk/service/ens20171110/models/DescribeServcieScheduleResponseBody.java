@@ -122,7 +122,7 @@ public class DescribeServcieScheduleResponseBody extends TeaModel {
         private String tcpPorts; 
 
         /**
-         * Index.
+         * The index number of the scheduled virtual device (pod).
          */
         public Builder index(Integer index) {
             this.index = index;
@@ -130,7 +130,7 @@ public class DescribeServcieScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * The ID of the scheduled instance.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -138,7 +138,7 @@ public class DescribeServcieScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceIp.
+         * The IP address of the scheduled instance.
          */
         public Builder instanceIp(String instanceIp) {
             this.instanceIp = instanceIp;
@@ -146,7 +146,7 @@ public class DescribeServcieScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * InstancePort.
+         * The start port of the scheduled instance.
          */
         public Builder instancePort(Integer instancePort) {
             this.instancePort = instancePort;
@@ -154,7 +154,7 @@ public class DescribeServcieScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * PodAbstractInfo.
+         * The summary information about the scheduled virtual device.
          */
         public Builder podAbstractInfo(PodAbstractInfo podAbstractInfo) {
             this.podAbstractInfo = podAbstractInfo;
@@ -162,7 +162,7 @@ public class DescribeServcieScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +170,7 @@ public class DescribeServcieScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestRepeated.
+         * Indicates whether the request is repeated.
          */
         public Builder requestRepeated(Boolean requestRepeated) {
             this.requestRepeated = requestRepeated;
@@ -178,7 +178,7 @@ public class DescribeServcieScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * TcpPorts.
+         * The TCP port range of the scheduled instance or container. The value is in the ${from}-$-{to} format. Example: 80-88.
          */
         public Builder tcpPorts(String tcpPorts) {
             this.tcpPorts = tcpPorts;
@@ -230,7 +230,7 @@ public class DescribeServcieScheduleResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * ContainerId.
+             * The ID of the container.
              */
             public Builder containerId(String containerId) {
                 this.containerId = containerId;
@@ -238,7 +238,7 @@ public class DescribeServcieScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the container.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -380,7 +380,7 @@ public class DescribeServcieScheduleResponseBody extends TeaModel {
             private Boolean status; 
 
             /**
-             * ContainerService.
+             * The name of the container service.
              */
             public Builder containerService(Boolean containerService) {
                 this.containerService = containerService;
@@ -388,7 +388,7 @@ public class DescribeServcieScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * ContainerStatuses.
+             * The information about the container.
              */
             public Builder containerStatuses(ContainerStatuses containerStatuses) {
                 this.containerStatuses = containerStatuses;
@@ -396,7 +396,7 @@ public class DescribeServcieScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the pod.
              */
             public Builder name(Boolean name) {
                 this.name = name;
@@ -404,7 +404,7 @@ public class DescribeServcieScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * Namespace.
+             * The name of the namespace.
              */
             public Builder namespace(Boolean namespace) {
                 this.namespace = namespace;
@@ -412,7 +412,7 @@ public class DescribeServcieScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceScope.
+             * The pod scope.
              */
             public Builder resourceScope(Boolean resourceScope) {
                 this.resourceScope = resourceScope;
@@ -420,7 +420,7 @@ public class DescribeServcieScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the pod.
              */
             public Builder status(Boolean status) {
                 this.status = status;

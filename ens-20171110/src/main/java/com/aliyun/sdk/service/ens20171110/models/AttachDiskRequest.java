@@ -84,7 +84,12 @@ public class AttachDiskRequest extends Request {
         } 
 
         /**
-         * DeleteWithInstance.
+         * Specifies whether the disk to be attached is released with the instance. Valid values:
+         * <p>
+         * 
+         * *   true: The disk will be released when the ECS instance is released.
+         * *   false: The disk will be retained when the ECS instance is released.
+         * *   If you leave this parameter empty, the default value is used.
          */
         public Builder deleteWithInstance(String deleteWithInstance) {
             this.putQueryParameter("DeleteWithInstance", deleteWithInstance);
@@ -93,7 +98,7 @@ public class AttachDiskRequest extends Request {
         }
 
         /**
-         * DiskId.
+         * The ID of the disk to be attached. The cloud disk and the instance must belong to the same zone.
          */
         public Builder diskId(String diskId) {
             this.putQueryParameter("DiskId", diskId);
@@ -102,7 +107,7 @@ public class AttachDiskRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

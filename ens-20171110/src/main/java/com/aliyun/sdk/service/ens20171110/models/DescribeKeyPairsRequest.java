@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeKeyPairsRequest extends Request {
     @Query
+    @NameInMap("KeyPairId")
+    private String keyPairId;
+
+    @Query
     @NameInMap("KeyPairName")
     private String keyPairName;
 
@@ -24,17 +28,12 @@ public class DescribeKeyPairsRequest extends Request {
     @NameInMap("PageSize")
     private String pageSize;
 
-    @Query
-    @NameInMap("Version")
-    @Validation(required = true)
-    private String version;
-
     private DescribeKeyPairsRequest(Builder builder) {
         super(builder);
+        this.keyPairId = builder.keyPairId;
         this.keyPairName = builder.keyPairName;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
-        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -48,6 +47,13 @@ public class DescribeKeyPairsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return keyPairId
+     */
+    public String getKeyPairId() {
+        return this.keyPairId;
     }
 
     /**
@@ -71,18 +77,11 @@ public class DescribeKeyPairsRequest extends Request {
         return this.pageSize;
     }
 
-    /**
-     * @return version
-     */
-    public String getVersion() {
-        return this.version;
-    }
-
     public static final class Builder extends Request.Builder<DescribeKeyPairsRequest, Builder> {
+        private String keyPairId; 
         private String keyPairName; 
         private String pageNumber; 
         private String pageSize; 
-        private String version; 
 
         private Builder() {
             super();
@@ -90,14 +89,31 @@ public class DescribeKeyPairsRequest extends Request {
 
         private Builder(DescribeKeyPairsRequest request) {
             super(request);
+            this.keyPairId = request.keyPairId;
             this.keyPairName = request.keyPairName;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
-            this.version = request.version;
         } 
 
         /**
-         * KeyPairName.
+         * KeyPairId.
+         */
+        public Builder keyPairId(String keyPairId) {
+            this.putQueryParameter("KeyPairId", keyPairId);
+            this.keyPairId = keyPairId;
+            return this;
+        }
+
+        /**
+         * The name of the key pair. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with `http://` or `https://`. The name can contain the following characters:
+         * <p>
+         * 
+         * *   Digits
+         * *   :
+         * *   \_
+         * *   *
+         * 
+         * You can specify only one name. By default, all key pairs are queried.
          */
         public Builder keyPairName(String keyPairName) {
             this.putQueryParameter("KeyPairName", keyPairName);
@@ -106,7 +122,7 @@ public class DescribeKeyPairsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page. Valid values: integers that are greater than 0. Default value: 1.
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -115,20 +131,11 @@ public class DescribeKeyPairsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Valid values: integers that are greater than 0. Default value: 10.
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * Version.
-         */
-        public Builder version(String version) {
-            this.putQueryParameter("Version", version);
-            this.version = version;
             return this;
         }
 

@@ -74,7 +74,7 @@ public class CreateFileSystemResponseBody extends TeaModel {
         private java.util.List < String > unAllocationId; 
 
         /**
-         * AllocationId.
+         * The information about the file system that was created.
          */
         public Builder allocationId(java.util.List < String > allocationId) {
             this.allocationId = allocationId;
@@ -82,7 +82,11 @@ public class CreateFileSystemResponseBody extends TeaModel {
         }
 
         /**
-         * BizStatusCode.
+         * The status code for successful operations. Valid values:
+         * <p>
+         * 
+         * *   PartSuccess: The operation is partially successful.
+         * *   AllSuccess: The operation is successful.
          */
         public Builder bizStatusCode(String bizStatusCode) {
             this.bizStatusCode = bizStatusCode;
@@ -90,7 +94,7 @@ public class CreateFileSystemResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +102,7 @@ public class CreateFileSystemResponseBody extends TeaModel {
         }
 
         /**
-         * UnAllocationId.
+         * The information about the file system that failed to be created.
          */
         public Builder unAllocationId(java.util.List < String > unAllocationId) {
             this.unAllocationId = unAllocationId;

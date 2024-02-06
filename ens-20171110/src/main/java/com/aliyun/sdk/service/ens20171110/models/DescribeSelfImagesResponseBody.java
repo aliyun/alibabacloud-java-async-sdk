@@ -62,7 +62,7 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The HTTP status code that is returned.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -70,7 +70,7 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
         }
 
         /**
-         * Images.
+         * The image information.
          */
         public Builder images(Images images) {
             this.images = images;
@@ -78,7 +78,7 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -250,7 +250,11 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * Architecture.
+             * The image architecture. Valid values:
+             * <p>
+             * 
+             * *   i386
+             * *   x86\_64
              */
             public Builder architecture(String architecture) {
                 this.architecture = architecture;
@@ -258,7 +262,7 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
             }
 
             /**
-             * ComputeType.
+             * Computing type. ens_vm/ens: x86 computing. bare_metal: x86 bare machine or x86 bare metal. arm_vm: ARM computing. arm_bare_metal: ARM bare machine or ARM bare metal. pcfarm: heterogeneous computing.
              */
             public Builder computeType(String computeType) {
                 this.computeType = computeType;
@@ -266,7 +270,7 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * The image creation time. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -274,7 +278,7 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageId.
+             * The ID of the image.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -282,7 +286,7 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageName.
+             * The name of the image.
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -290,7 +294,11 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageOwnerAlias.
+             * The source of the image. Valid values:
+             * <p>
+             * 
+             * *   **system**: public images
+             * *   **self**: your custom images
              */
             public Builder imageOwnerAlias(String imageOwnerAlias) {
                 this.imageOwnerAlias = imageOwnerAlias;
@@ -298,7 +306,7 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageSize.
+             * The size of the image. Unit: GiB.
              */
             public Builder imageSize(String imageSize) {
                 this.imageSize = imageSize;
@@ -306,7 +314,7 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The instance ID.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -314,7 +322,7 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
             }
 
             /**
-             * OsVersion.
+             * The operating system version.
              */
             public Builder osVersion(String osVersion) {
                 this.osVersion = osVersion;
@@ -322,7 +330,15 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Platform.
+             * The platform.
+             * <p>
+             * 
+             * *   centos
+             * *   ubuntu
+             * *   alios
+             * *   debian
+             * *   rhel
+             * *   windows
              */
             public Builder platform(String platform) {
                 this.platform = platform;
@@ -330,7 +346,7 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
             }
 
             /**
-             * SnapshotId.
+             * The ID of the snapshot.
              */
             public Builder snapshotId(String snapshotId) {
                 this.snapshotId = snapshotId;
@@ -338,7 +354,17 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The state of the image.
+             * <p>
+             * 
+             * *   Creating.
+             * *   Packing.
+             * *   Uploading.
+             * *   Pack_failed.
+             * *   Upload_failed.
+             * *   Available: Only images in the Available state can be used and operated.
+             * *   Unavailable.
+             * *   Copying.
              */
             public Builder status(String status) {
                 this.status = status;

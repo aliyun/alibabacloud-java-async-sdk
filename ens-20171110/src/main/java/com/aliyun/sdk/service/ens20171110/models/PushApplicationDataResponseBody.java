@@ -50,7 +50,7 @@ public class PushApplicationDataResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PushResults.
+         * The push results of data files.
          */
         public Builder pushResults(PushResults pushResults) {
             this.pushResults = pushResults;
@@ -58,7 +58,7 @@ public class PushApplicationDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,7 +134,7 @@ public class PushApplicationDataResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * Name.
+             * The name of the data file.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -142,7 +142,13 @@ public class PushApplicationDataResponseBody extends TeaModel {
             }
 
             /**
-             * ResultCode.
+             * The push result. The value is of the enumeration type. Valid values:
+             * <p>
+             * 
+             * *   0: The push operation is successful.
+             * *   100: The push operation has been performed and the file is pushed.
+             * *   200: The push operation has been performed and the file is being pushed to specific file servers.
+             * *   300: The push operation failed. You must trigger the push operation again. The ResultDescrip parameter indicates the error description.
              */
             public Builder resultCode(Integer resultCode) {
                 this.resultCode = resultCode;
@@ -150,7 +156,7 @@ public class PushApplicationDataResponseBody extends TeaModel {
             }
 
             /**
-             * ResultDescrip.
+             * The description of the push status.
              */
             public Builder resultDescrip(String resultDescrip) {
                 this.resultDescrip = resultDescrip;
@@ -158,7 +164,7 @@ public class PushApplicationDataResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * The version number of the data file.
              */
             public Builder version(String version) {
                 this.version = version;

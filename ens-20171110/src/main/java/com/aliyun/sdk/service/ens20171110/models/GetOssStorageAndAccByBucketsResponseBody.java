@@ -50,7 +50,7 @@ public class GetOssStorageAndAccByBucketsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * BucketList.
+         * The information about the bucket.
          */
         public Builder bucketList(java.util.List < BucketList> bucketList) {
             this.bucketList = bucketList;
@@ -58,7 +58,7 @@ public class GetOssStorageAndAccByBucketsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class GetOssStorageAndAccByBucketsResponseBody extends TeaModel {
             private Long storageUsageByte; 
 
             /**
-             * Acc.
+             * The number of visits.
              */
             public Builder acc(Long acc) {
                 this.acc = acc;
@@ -130,7 +130,7 @@ public class GetOssStorageAndAccByBucketsResponseBody extends TeaModel {
             }
 
             /**
-             * Bucket.
+             * The bucket name.
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -138,7 +138,7 @@ public class GetOssStorageAndAccByBucketsResponseBody extends TeaModel {
             }
 
             /**
-             * StorageUsageByte.
+             * The storage usage of the cluster, in bytes.
              */
             public Builder storageUsageByte(Long storageUsageByte) {
                 this.storageUsageByte = storageUsageByte;

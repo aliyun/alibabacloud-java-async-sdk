@@ -74,7 +74,7 @@ public class DistApplicationDataResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DistInstanceIds.
+         * The list of ENS instance IDs.
          */
         public Builder distInstanceIds(DistInstanceIds distInstanceIds) {
             this.distInstanceIds = distInstanceIds;
@@ -82,7 +82,7 @@ public class DistApplicationDataResponseBody extends TeaModel {
         }
 
         /**
-         * DistInstanceTotalCount.
+         * The total number of ENS instance IDs.
          */
         public Builder distInstanceTotalCount(Integer distInstanceTotalCount) {
             this.distInstanceTotalCount = distInstanceTotalCount;
@@ -90,7 +90,7 @@ public class DistApplicationDataResponseBody extends TeaModel {
         }
 
         /**
-         * DistResults.
+         * The distribution result of the data file.
          */
         public Builder distResults(DistResults distResults) {
             this.distResults = distResults;
@@ -98,7 +98,7 @@ public class DistApplicationDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -215,7 +215,7 @@ public class DistApplicationDataResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * Name.
+             * The name of the data file.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -223,7 +223,7 @@ public class DistApplicationDataResponseBody extends TeaModel {
             }
 
             /**
-             * ResultCode.
+             * The error code. The value is of the enumerated data type.
              */
             public Builder resultCode(Integer resultCode) {
                 this.resultCode = resultCode;
@@ -231,7 +231,7 @@ public class DistApplicationDataResponseBody extends TeaModel {
             }
 
             /**
-             * ResultDescrip.
+             * The description of the distribution result.
              */
             public Builder resultDescrip(String resultDescrip) {
                 this.resultDescrip = resultDescrip;
@@ -239,7 +239,7 @@ public class DistApplicationDataResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * The version number of the data file.
              */
             public Builder version(String version) {
                 this.version = version;

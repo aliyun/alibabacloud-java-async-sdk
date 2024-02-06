@@ -62,7 +62,7 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The returned service code. A value of 0 indicates that the operation was successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -70,7 +70,7 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
         }
 
         /**
-         * MonitorData.
+         * The set of InstanceMonitorDataType data.
          */
         public Builder monitorData(MonitorData monitorData) {
             this.monitorData = monitorData;
@@ -78,7 +78,7 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -142,7 +142,7 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
             private String memory; 
 
             /**
-             * CPU.
+             * The vCPU usage of the instance, which is raw data. For example, a value of 0.02 indicates that the usage is 2%.
              */
             public Builder CPU(String CPU) {
                 this.CPU = CPU;
@@ -150,7 +150,7 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -158,7 +158,7 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * Memory.
+             * This parameter is not yet supported.
              */
             public Builder memory(String memory) {
                 this.memory = memory;

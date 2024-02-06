@@ -86,7 +86,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * SecurityGroups.
+         * Details about security groups.
          */
         public Builder securityGroups(SecurityGroups securityGroups) {
             this.securityGroups = securityGroups;
@@ -118,7 +118,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of returned pages.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -206,7 +206,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             private String securityGroupName; 
 
             /**
-             * CreationTime.
+             * The time when the security group was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mmZ format. The time is displayed in UTC. The format is yyyy-MM-ddThh:mmZ.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -214,7 +214,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the security group.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -222,7 +222,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceCount.
+             * The number of associated instances.
              */
             public Builder instanceCount(Integer instanceCount) {
                 this.instanceCount = instanceCount;
@@ -230,7 +230,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroupId.
+             * The ID of the security group.
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -238,7 +238,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroupName.
+             * The name of the security group.
              */
             public Builder securityGroupName(String securityGroupName) {
                 this.securityGroupName = securityGroupName;

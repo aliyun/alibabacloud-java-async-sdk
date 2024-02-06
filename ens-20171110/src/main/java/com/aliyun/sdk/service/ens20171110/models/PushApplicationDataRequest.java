@@ -98,7 +98,7 @@ public class PushApplicationDataRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * The ID of the application.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -107,7 +107,7 @@ public class PushApplicationDataRequest extends Request {
         }
 
         /**
-         * Data.
+         * The data files that you want to push. The value must be a JSON string.
          */
         public Builder data(String data) {
             this.putQueryParameter("Data", data);
@@ -116,7 +116,7 @@ public class PushApplicationDataRequest extends Request {
         }
 
         /**
-         * PushStrategy.
+         * The push policy in the canary release environment. The value must be a JSON string. You can specify multiple push policies. By default, all data files are pushed.
          */
         public Builder pushStrategy(String pushStrategy) {
             this.putQueryParameter("PushStrategy", pushStrategy);
@@ -125,7 +125,7 @@ public class PushApplicationDataRequest extends Request {
         }
 
         /**
-         * Timeout.
+         * This parameter does not take effect.
          */
         public Builder timeout(Integer timeout) {
             this.putQueryParameter("Timeout", timeout);

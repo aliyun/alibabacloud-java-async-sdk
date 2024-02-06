@@ -129,7 +129,7 @@ public class CreateLoadBalancerRequest extends Request {
         } 
 
         /**
-         * EnsRegionId.
+         * The ID of the Edge Node Service (ENS) node.
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -138,7 +138,10 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * LoadBalancerName.
+         * The name of the ELB instance. The name must be 1 to 80 characters in length. If you leave this parameter empty, the system randomly allocates a name as the value of this parameter.
+         * <p>
+         * 
+         * >  The value cannot start with `http://` or `https://`.
          */
         public Builder loadBalancerName(String loadBalancerName) {
             this.putQueryParameter("LoadBalancerName", loadBalancerName);
@@ -147,7 +150,7 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * LoadBalancerSpec.
+         * The specification of the ELB instance.
          */
         public Builder loadBalancerSpec(String loadBalancerSpec) {
             this.putQueryParameter("LoadBalancerSpec", loadBalancerSpec);
@@ -156,7 +159,7 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * NetworkId.
+         * The network ID of the created ELB instance.
          */
         public Builder networkId(String networkId) {
             this.putQueryParameter("NetworkId", networkId);
@@ -165,7 +168,7 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * PayType.
+         * The billing method of the instance. Valid value: PostPaid. PostPaid specifies the pay-as-you-go billing method.
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -174,7 +177,7 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * The ID of the vSwitch to which the internal-facing ELB instance belongs.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);

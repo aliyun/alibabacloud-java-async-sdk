@@ -62,7 +62,7 @@ public class DescribeUserBandWidthDataResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The returned service code. 0 indicates that the request was successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -70,7 +70,7 @@ public class DescribeUserBandWidthDataResponseBody extends TeaModel {
         }
 
         /**
-         * MonitorData.
+         * The monitoring data.
          */
         public Builder monitorData(MonitorData monitorData) {
             this.monitorData = monitorData;
@@ -78,7 +78,7 @@ public class DescribeUserBandWidthDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -166,7 +166,7 @@ public class DescribeUserBandWidthDataResponseBody extends TeaModel {
             private Long upBandWidth; 
 
             /**
-             * DownBandWidth.
+             * The outbound bandwidth. Unit: bit/s.
              */
             public Builder downBandWidth(Long downBandWidth) {
                 this.downBandWidth = downBandWidth;
@@ -174,7 +174,7 @@ public class DescribeUserBandWidthDataResponseBody extends TeaModel {
             }
 
             /**
-             * InternetRX.
+             * The Internet traffic to the instance. Unit: bytes.
              */
             public Builder internetRX(Long internetRX) {
                 this.internetRX = internetRX;
@@ -182,7 +182,7 @@ public class DescribeUserBandWidthDataResponseBody extends TeaModel {
             }
 
             /**
-             * InternetTX.
+             * The Internet traffic from the instance. Unit: bytes.
              */
             public Builder internetTX(Long internetTX) {
                 this.internetTX = internetTX;
@@ -190,7 +190,7 @@ public class DescribeUserBandWidthDataResponseBody extends TeaModel {
             }
 
             /**
-             * TimeStamp.
+             * The timestamp when the monitoring data was queried. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -198,7 +198,7 @@ public class DescribeUserBandWidthDataResponseBody extends TeaModel {
             }
 
             /**
-             * UpBandWidth.
+             * The inbound bandwidth. Unit: bit/s.
              */
             public Builder upBandWidth(Long upBandWidth) {
                 this.upBandWidth = upBandWidth;
@@ -263,7 +263,7 @@ public class DescribeUserBandWidthDataResponseBody extends TeaModel {
             private String maxUpBandWidth; 
 
             /**
-             * BandWidthMonitorData.
+             * The bandwidth data.
              */
             public Builder bandWidthMonitorData(java.util.List < BandWidthMonitorData> bandWidthMonitorData) {
                 this.bandWidthMonitorData = bandWidthMonitorData;
@@ -271,7 +271,7 @@ public class DescribeUserBandWidthDataResponseBody extends TeaModel {
             }
 
             /**
-             * MaxDownBandWidth.
+             * The maximum outbound bandwidth within the queried time range. Unit: bit/s.
              */
             public Builder maxDownBandWidth(String maxDownBandWidth) {
                 this.maxDownBandWidth = maxDownBandWidth;
@@ -279,7 +279,7 @@ public class DescribeUserBandWidthDataResponseBody extends TeaModel {
             }
 
             /**
-             * MaxUpBandWidth.
+             * The maximum inbound bandwidth within the queried time range. Unit: bit/s.
              */
             public Builder maxUpBandWidth(String maxUpBandWidth) {
                 this.maxUpBandWidth = maxUpBandWidth;

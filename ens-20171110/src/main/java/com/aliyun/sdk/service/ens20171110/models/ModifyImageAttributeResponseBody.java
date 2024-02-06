@@ -50,7 +50,7 @@ public class ModifyImageAttributeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The service code. 0 is returned for a successful request. An error code is returned for a failed request.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -58,7 +58,7 @@ public class ModifyImageAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

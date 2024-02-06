@@ -86,7 +86,7 @@ public class DescribeBandWithdChargeTypeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * BandWithTypeInfo.
+         * The information about the metering method.
          */
         public Builder bandWithTypeInfo(String bandWithTypeInfo) {
             this.bandWithTypeInfo = bandWithTypeInfo;
@@ -94,7 +94,11 @@ public class DescribeBandWithdChargeTypeResponseBody extends TeaModel {
         }
 
         /**
-         * ChargeContractType.
+         * The metering type.
+         * <p>
+         * 
+         * *   ChargeByUnified: unified metering.
+         * *   ChargeByGrade: differential metering.
          */
         public Builder chargeContractType(String chargeContractType) {
             this.chargeContractType = chargeContractType;
@@ -102,7 +106,7 @@ public class DescribeBandWithdChargeTypeResponseBody extends TeaModel {
         }
 
         /**
-         * ChargeCycleInfo.
+         * The metering cycle. Currently, this parameter is empty in the response.
          */
         public Builder chargeCycleInfo(String chargeCycleInfo) {
             this.chargeCycleInfo = chargeCycleInfo;
@@ -110,7 +114,7 @@ public class DescribeBandWithdChargeTypeResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * The returned service code. A value of 0 indicates that the operation was successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -118,7 +122,7 @@ public class DescribeBandWithdChargeTypeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

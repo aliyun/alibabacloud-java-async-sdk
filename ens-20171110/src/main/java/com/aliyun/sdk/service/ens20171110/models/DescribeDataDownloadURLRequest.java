@@ -113,7 +113,7 @@ public class DescribeDataDownloadURLRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * The ID of the application.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -122,7 +122,7 @@ public class DescribeDataDownloadURLRequest extends Request {
         }
 
         /**
-         * DataName.
+         * The name of the data file.
          */
         public Builder dataName(String dataName) {
             this.putQueryParameter("DataName", dataName);
@@ -131,7 +131,7 @@ public class DescribeDataDownloadURLRequest extends Request {
         }
 
         /**
-         * DataVersion.
+         * The version number of the data file.
          */
         public Builder dataVersion(String dataVersion) {
             this.putQueryParameter("DataVersion", dataVersion);
@@ -140,7 +140,7 @@ public class DescribeDataDownloadURLRequest extends Request {
         }
 
         /**
-         * ExpireTimeout.
+         * This parameter is reserved.
          */
         public Builder expireTimeout(Long expireTimeout) {
             this.putQueryParameter("ExpireTimeout", expireTimeout);
@@ -149,7 +149,7 @@ public class DescribeDataDownloadURLRequest extends Request {
         }
 
         /**
-         * ServerFilterStrategy.
+         * The condition that you want to use to filter file servers. You can specify multiple canary release policies. By default, all resources are queried.
          */
         public Builder serverFilterStrategy(String serverFilterStrategy) {
             this.putQueryParameter("ServerFilterStrategy", serverFilterStrategy);

@@ -86,7 +86,7 @@ public class DescribeAICImagesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Images.
+         * The information about the images.
          */
         public Builder images(java.util.List < Images> images) {
             this.images = images;
@@ -94,7 +94,7 @@ public class DescribeAICImagesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,10 @@ public class DescribeAICImagesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
+         * <p>
+         * 
+         * Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +113,7 @@ public class DescribeAICImagesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +121,7 @@ public class DescribeAICImagesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -218,7 +221,7 @@ public class DescribeAICImagesResponseBody extends TeaModel {
             private String user; 
 
             /**
-             * CreationTime.
+             * The time when the image was created.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -226,7 +229,7 @@ public class DescribeAICImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the image.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -234,7 +237,7 @@ public class DescribeAICImagesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageId.
+             * The image ID of the AIC instance.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -242,7 +245,7 @@ public class DescribeAICImagesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageUrl.
+             * The URL of the AIC image repository.
              */
             public Builder imageUrl(String imageUrl) {
                 this.imageUrl = imageUrl;
@@ -250,7 +253,7 @@ public class DescribeAICImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the image. **Available** is returned for this parameter. Available indicates that the image is available.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -258,7 +261,7 @@ public class DescribeAICImagesResponseBody extends TeaModel {
             }
 
             /**
-             * User.
+             * The username of the image repository.
              */
             public Builder user(String user) {
                 this.user = user;

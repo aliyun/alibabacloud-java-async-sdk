@@ -54,7 +54,7 @@ public class GetOssStorageAndAccByBucketsRequest extends Request {
         } 
 
         /**
-         * BucketList.
+         * The information about the bucket.
          */
         public Builder bucketList(String bucketList) {
             this.putQueryParameter("BucketList", bucketList);

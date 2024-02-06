@@ -127,7 +127,7 @@ public class RescaleApplicationRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * The ID of the application. You can query the application ID by calling the ListApplications operation.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -136,7 +136,12 @@ public class RescaleApplicationRequest extends Request {
         }
 
         /**
-         * RescaleLevel.
+         * The level of resource scaling. The value must be of the enumerated data type. Valid values:
+         * <p>
+         * 
+         * *   AreaIspCode (default): scales resources based on the Internet service provider (ISP).
+         * *   RegionId: scales resources based on the edge node.
+         * *   InstanceId: scales resources based on the instance ID. Resource scale-out specifies resource hosting and scale-in specifies resource release.
          */
         public Builder rescaleLevel(String rescaleLevel) {
             this.putQueryParameter("RescaleLevel", rescaleLevel);
@@ -145,7 +150,11 @@ public class RescaleApplicationRequest extends Request {
         }
 
         /**
-         * RescaleType.
+         * The scaling operation. The value must be of the enumerated data type. Valid values:
+         * <p>
+         * 
+         * *   Add: adds new resources.
+         * *   Del: releases resources.
          */
         public Builder rescaleType(String rescaleType) {
             this.putQueryParameter("RescaleType", rescaleType);
@@ -154,7 +163,7 @@ public class RescaleApplicationRequest extends Request {
         }
 
         /**
-         * ResourceSelector.
+         * The required resources. The value must be a JSON string.
          */
         public Builder resourceSelector(String resourceSelector) {
             this.putQueryParameter("ResourceSelector", resourceSelector);
@@ -163,7 +172,7 @@ public class RescaleApplicationRequest extends Request {
         }
 
         /**
-         * Timeout.
+         * The timeout period for asynchronous scaling. Unit: seconds. Default value: 300.
          */
         public Builder timeout(Integer timeout) {
             this.putQueryParameter("Timeout", timeout);
@@ -172,7 +181,7 @@ public class RescaleApplicationRequest extends Request {
         }
 
         /**
-         * ToAppVersion.
+         * The version number of the application deployment package. By default, the stable version number is used. This parameter takes effect only when you perform resource scale-out.
          */
         public Builder toAppVersion(String toAppVersion) {
             this.putQueryParameter("ToAppVersion", toAppVersion);

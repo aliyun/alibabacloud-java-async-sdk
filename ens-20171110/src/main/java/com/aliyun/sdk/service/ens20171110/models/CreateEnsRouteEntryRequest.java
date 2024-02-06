@@ -129,7 +129,7 @@ public class CreateEnsRouteEntryRequest extends Request {
         } 
 
         /**
-         * Description.
+         * The description of the custom route entry.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -138,7 +138,12 @@ public class CreateEnsRouteEntryRequest extends Request {
         }
 
         /**
-         * DestinationCidrBlock.
+         * The destination CIDR block of the custom route entry. Make sure that the destination CIDR block meets the following requirements:
+         * <p>
+         * 
+         * *   The destination CIDR block is not 100.64.0.0/10 or a subset of 100.64.0.0/10.
+         * *   The destination CIDR block of the custom route entry is different from the destination CIDR blocks of other route entries in the same route table.
+         * *   0.0.0.0/0 indicates the default CIDR block.
          */
         public Builder destinationCidrBlock(String destinationCidrBlock) {
             this.putQueryParameter("DestinationCidrBlock", destinationCidrBlock);
@@ -147,7 +152,7 @@ public class CreateEnsRouteEntryRequest extends Request {
         }
 
         /**
-         * NextHopId.
+         * The ID of the next hop of the custom route entry.
          */
         public Builder nextHopId(String nextHopId) {
             this.putQueryParameter("NextHopId", nextHopId);
@@ -156,7 +161,10 @@ public class CreateEnsRouteEntryRequest extends Request {
         }
 
         /**
-         * NextHopType.
+         * The type of next hop of the custom route entry. Valid values:
+         * <p>
+         * 
+         * *   Instance (default): an ENS instance.
          */
         public Builder nextHopType(String nextHopType) {
             this.putQueryParameter("NextHopType", nextHopType);
@@ -165,7 +173,7 @@ public class CreateEnsRouteEntryRequest extends Request {
         }
 
         /**
-         * RouteEntryName.
+         * The name of the custom route entry that you want to add. The name must be 1 to 128 characters in length. It cannot start with http:// or https://.
          */
         public Builder routeEntryName(String routeEntryName) {
             this.putQueryParameter("RouteEntryName", routeEntryName);
@@ -174,7 +182,7 @@ public class CreateEnsRouteEntryRequest extends Request {
         }
 
         /**
-         * RouteTableId.
+         * The ID of the route table to which you want to add a custom route entry.
          */
         public Builder routeTableId(String routeTableId) {
             this.putQueryParameter("RouteTableId", routeTableId);

@@ -62,7 +62,7 @@ public class DescribeEnsNetLevelResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The returned service code. A value of 0 indicates that the operation was successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -70,7 +70,7 @@ public class DescribeEnsNetLevelResponseBody extends TeaModel {
         }
 
         /**
-         * EnsNetLevels.
+         * The network levels.
          */
         public Builder ensNetLevels(EnsNetLevels ensNetLevels) {
             this.ensNetLevels = ensNetLevels;
@@ -78,7 +78,7 @@ public class DescribeEnsNetLevelResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,12 @@ public class DescribeEnsNetLevelResponseBody extends TeaModel {
             private String ensNetLevelCode; 
 
             /**
-             * EnsNetLevelCode.
+             * The network level. Valid values:
+             * <p>
+             * 
+             * *   Big: greater area.
+             * *   Middle: province.
+             * *   Small: city.
              */
             public Builder ensNetLevelCode(String ensNetLevelCode) {
                 this.ensNetLevelCode = ensNetLevelCode;

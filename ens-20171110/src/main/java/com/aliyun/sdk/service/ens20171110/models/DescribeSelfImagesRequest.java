@@ -110,7 +110,7 @@ public class DescribeSelfImagesRequest extends Request {
         } 
 
         /**
-         * ImageId.
+         * The ID of the image. Fuzzy search is supported.
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -119,7 +119,7 @@ public class DescribeSelfImagesRequest extends Request {
         }
 
         /**
-         * ImageName.
+         * The name of the image. Fuzzy search is supported.
          */
         public Builder imageName(String imageName) {
             this.putQueryParameter("ImageName", imageName);
@@ -128,7 +128,7 @@ public class DescribeSelfImagesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number to return. Pages start from page **1**. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -137,7 +137,10 @@ public class DescribeSelfImagesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
+         * <p>
+         * 
+         * Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -146,7 +149,7 @@ public class DescribeSelfImagesRequest extends Request {
         }
 
         /**
-         * SnapshotId.
+         * The ID of the snapshot.
          */
         public Builder snapshotId(String snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);

@@ -85,7 +85,7 @@ public class ModifyFileSystemRequest extends Request {
         } 
 
         /**
-         * Description.
+         * The description of the file system.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -94,7 +94,7 @@ public class ModifyFileSystemRequest extends Request {
         }
 
         /**
-         * EnsRegionId.
+         * The ID of the region.
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -103,7 +103,7 @@ public class ModifyFileSystemRequest extends Request {
         }
 
         /**
-         * FileSystemId.
+         * The ID of the file system.
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);

@@ -29,18 +29,12 @@ public class DescribeSecurityGroupsRequest extends Request {
     @NameInMap("SecurityGroupName")
     private String securityGroupName;
 
-    @Query
-    @NameInMap("Version")
-    @Validation(required = true)
-    private String version;
-
     private DescribeSecurityGroupsRequest(Builder builder) {
         super(builder);
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.securityGroupId = builder.securityGroupId;
         this.securityGroupName = builder.securityGroupName;
-        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -84,19 +78,11 @@ public class DescribeSecurityGroupsRequest extends Request {
         return this.securityGroupName;
     }
 
-    /**
-     * @return version
-     */
-    public String getVersion() {
-        return this.version;
-    }
-
     public static final class Builder extends Request.Builder<DescribeSecurityGroupsRequest, Builder> {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String securityGroupId; 
         private String securityGroupName; 
-        private String version; 
 
         private Builder() {
             super();
@@ -108,11 +94,14 @@ public class DescribeSecurityGroupsRequest extends Request {
             this.pageSize = request.pageSize;
             this.securityGroupId = request.securityGroupId;
             this.securityGroupName = request.securityGroupName;
-            this.version = request.version;
         } 
 
         /**
-         * PageNumber.
+         * The page number.
+         * <p>
+         * 
+         * *   Pages start from page 1.
+         * *   Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -121,7 +110,11 @@ public class DescribeSecurityGroupsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
+         * <p>
+         * 
+         * *   Maximum value: 50.
+         * *   Default value: 10
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -130,7 +123,7 @@ public class DescribeSecurityGroupsRequest extends Request {
         }
 
         /**
-         * SecurityGroupId.
+         * The ID of the security group.
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -139,20 +132,11 @@ public class DescribeSecurityGroupsRequest extends Request {
         }
 
         /**
-         * SecurityGroupName.
+         * The name of the security group.
          */
         public Builder securityGroupName(String securityGroupName) {
             this.putQueryParameter("SecurityGroupName", securityGroupName);
             this.securityGroupName = securityGroupName;
-            return this;
-        }
-
-        /**
-         * Version.
-         */
-        public Builder version(String version) {
-            this.putQueryParameter("Version", version);
-            this.version = version;
             return this;
         }
 

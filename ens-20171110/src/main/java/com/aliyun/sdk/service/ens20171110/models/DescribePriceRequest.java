@@ -189,7 +189,7 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * DataDisks.
+         * If you leave DataDisk.1.Size empty, the value that you specified for this parameter is used.
          */
         public Builder dataDisks(java.util.List < DataDisks> dataDisks) {
             String dataDisksShrink = shrink(dataDisks, "DataDisks", "json");
@@ -199,7 +199,7 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * EnsRegionId.
+         * The ID of the ENS node.
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -208,7 +208,7 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * InstanceType.
+         * The type of the instance.
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -217,7 +217,13 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * InternetChargeType.
+         * The bandwidth metering method of the instance. Valid values:
+         * <p>
+         * 
+         * *   BandwidthByDay: Pay by daily peak bandwidth
+         * *   95BandwidthByMonth: Pay by monthly 95th percentile bandwidth
+         * *   PayByBandwidth4thMonth: Pay by monthly fourth peak bandwidth
+         * *   PayByBandwidth: Pay by fixed bandwidth
          */
         public Builder internetChargeType(String internetChargeType) {
             this.putQueryParameter("InternetChargeType", internetChargeType);
@@ -226,7 +232,12 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * Period.
+         * The subscription duration of the instance.
+         * <p>
+         * 
+         * *   If you leave the PeriodUnit parameter empty, the instance is purchased on a monthly basis. Valid values: Day and Month.
+         * *   If you set PeriodUnit to Day, you can set Period only to 3.
+         * *   If you set PeriodUnit to Month, you can set Period to a number from 1 to 9, or set Period to 12.
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -235,7 +246,11 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * PeriodUnit.
+         * The billing cycle of the ENS instance. Valid values:
+         * <p>
+         * 
+         * *   Month (default):
+         * *   Day
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -244,7 +259,7 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * Quantity.
+         * The number of instances.
          */
         public Builder quantity(Integer quantity) {
             this.putQueryParameter("Quantity", quantity);
@@ -286,7 +301,7 @@ public class DescribePriceRequest extends Request {
             private Integer size; 
 
             /**
-             * Size.
+             * The size of the data disk. Unit: GB. If you specify this parameter, this parameter takes precedence over the Size property in DataDisks.
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -328,7 +343,7 @@ public class DescribePriceRequest extends Request {
             private Integer size; 
 
             /**
-             * Size.
+             * The size of the system disk. Unit: GB.
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -381,7 +396,7 @@ public class DescribePriceRequest extends Request {
             private Long size; 
 
             /**
-             * Category.
+             * The category of the disk.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -389,7 +404,7 @@ public class DescribePriceRequest extends Request {
             }
 
             /**
-             * Size.
+             * The size of the data disk. Unit: GB.
              */
             public Builder size(Long size) {
                 this.size = size;

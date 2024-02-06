@@ -41,11 +41,6 @@ public class DescribeVSwitchesRequest extends Request {
     @NameInMap("VSwitchName")
     private String vSwitchName;
 
-    @Query
-    @NameInMap("Version")
-    @Validation(required = true)
-    private String version;
-
     private DescribeVSwitchesRequest(Builder builder) {
         super(builder);
         this.ensRegionId = builder.ensRegionId;
@@ -55,7 +50,6 @@ public class DescribeVSwitchesRequest extends Request {
         this.pageSize = builder.pageSize;
         this.vSwitchId = builder.vSwitchId;
         this.vSwitchName = builder.vSwitchName;
-        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -120,13 +114,6 @@ public class DescribeVSwitchesRequest extends Request {
         return this.vSwitchName;
     }
 
-    /**
-     * @return version
-     */
-    public String getVersion() {
-        return this.version;
-    }
-
     public static final class Builder extends Request.Builder<DescribeVSwitchesRequest, Builder> {
         private String ensRegionId; 
         private String networkId; 
@@ -135,7 +122,6 @@ public class DescribeVSwitchesRequest extends Request {
         private Integer pageSize; 
         private String vSwitchId; 
         private String vSwitchName; 
-        private String version; 
 
         private Builder() {
             super();
@@ -150,11 +136,10 @@ public class DescribeVSwitchesRequest extends Request {
             this.pageSize = request.pageSize;
             this.vSwitchId = request.vSwitchId;
             this.vSwitchName = request.vSwitchName;
-            this.version = request.version;
         } 
 
         /**
-         * EnsRegionId.
+         * The ID of the edge node.
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -163,7 +148,7 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * NetworkId.
+         * The ID of the VPC to which the vSwitches belong.
          */
         public Builder networkId(String networkId) {
             this.putQueryParameter("NetworkId", networkId);
@@ -172,7 +157,10 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * OrderByParams.
+         * The order in which you want to sort the returned data. Example: {"EnsRegionId":"desc"}.
+         * <p>
+         * 
+         * By default, the nodes are sorted by IDs in descending order.
          */
         public Builder orderByParams(String orderByParams) {
             this.putQueryParameter("OrderByParams", orderByParams);
@@ -181,7 +169,7 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -190,7 +178,7 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Valid values: **1 to 50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -199,7 +187,7 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * The ID of the vSwitch.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -208,20 +196,11 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * VSwitchName.
+         * The name of the vSwitch.
          */
         public Builder vSwitchName(String vSwitchName) {
             this.putQueryParameter("VSwitchName", vSwitchName);
             this.vSwitchName = vSwitchName;
-            return this;
-        }
-
-        /**
-         * Version.
-         */
-        public Builder version(String version) {
-            this.putQueryParameter("Version", version);
-            this.version = version;
             return this;
         }
 

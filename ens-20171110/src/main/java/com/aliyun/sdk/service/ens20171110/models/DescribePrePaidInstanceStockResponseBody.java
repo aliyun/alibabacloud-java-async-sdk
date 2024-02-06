@@ -134,7 +134,7 @@ public class DescribePrePaidInstanceStockResponseBody extends TeaModel {
         private Integer systemDiskSize; 
 
         /**
-         * AvaliableCount.
+         * The number of resources that you can purchase.
          */
         public Builder avaliableCount(Integer avaliableCount) {
             this.avaliableCount = avaliableCount;
@@ -142,7 +142,7 @@ public class DescribePrePaidInstanceStockResponseBody extends TeaModel {
         }
 
         /**
-         * Cores.
+         * The number of vCPUs.
          */
         public Builder cores(Integer cores) {
             this.cores = cores;
@@ -150,7 +150,7 @@ public class DescribePrePaidInstanceStockResponseBody extends TeaModel {
         }
 
         /**
-         * DataDiskSize.
+         * The size of the data disk.
          */
         public Builder dataDiskSize(Integer dataDiskSize) {
             this.dataDiskSize = dataDiskSize;
@@ -158,7 +158,7 @@ public class DescribePrePaidInstanceStockResponseBody extends TeaModel {
         }
 
         /**
-         * EnsRegionId.
+         * The ID of the node.
          */
         public Builder ensRegionId(String ensRegionId) {
             this.ensRegionId = ensRegionId;
@@ -166,7 +166,7 @@ public class DescribePrePaidInstanceStockResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceSpec.
+         * The instance type.
          */
         public Builder instanceSpec(String instanceSpec) {
             this.instanceSpec = instanceSpec;
@@ -174,7 +174,7 @@ public class DescribePrePaidInstanceStockResponseBody extends TeaModel {
         }
 
         /**
-         * Memory.
+         * The memory size. Unit: GB.
          */
         public Builder memory(Integer memory) {
             this.memory = memory;
@@ -182,7 +182,7 @@ public class DescribePrePaidInstanceStockResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -190,7 +190,7 @@ public class DescribePrePaidInstanceStockResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGap.
+         * The reasons for resource scarcity
          */
         public Builder resourceGap(String resourceGap) {
             this.resourceGap = resourceGap;
@@ -198,7 +198,7 @@ public class DescribePrePaidInstanceStockResponseBody extends TeaModel {
         }
 
         /**
-         * SystemDiskSize.
+         * The size of the system disk. Unit: GB.
          */
         public Builder systemDiskSize(Integer systemDiskSize) {
             this.systemDiskSize = systemDiskSize;

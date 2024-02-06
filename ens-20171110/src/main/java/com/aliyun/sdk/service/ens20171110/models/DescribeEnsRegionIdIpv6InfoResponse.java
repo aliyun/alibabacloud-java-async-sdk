@@ -13,16 +13,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeEnsRegionIdIpv6InfoResponse extends Response {
     @NameInMap("headers")
-    @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    private Integer statusCode;
+
     @NameInMap("body")
-    @Validation(required = true)
     private DescribeEnsRegionIdIpv6InfoResponseBody body;
 
     private DescribeEnsRegionIdIpv6InfoResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +45,13 @@ public class DescribeEnsRegionIdIpv6InfoResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public DescribeEnsRegionIdIpv6InfoResponseBody getBody() {
@@ -52,6 +61,8 @@ public class DescribeEnsRegionIdIpv6InfoResponse extends Response {
     public interface Builder extends Response.Builder<DescribeEnsRegionIdIpv6InfoResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(DescribeEnsRegionIdIpv6InfoResponseBody body);
 
@@ -64,6 +75,7 @@ public class DescribeEnsRegionIdIpv6InfoResponse extends Response {
             extends Response.BuilderImpl<DescribeEnsRegionIdIpv6InfoResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private DescribeEnsRegionIdIpv6InfoResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +85,7 @@ public class DescribeEnsRegionIdIpv6InfoResponse extends Response {
         private BuilderImpl(DescribeEnsRegionIdIpv6InfoResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +95,15 @@ public class DescribeEnsRegionIdIpv6InfoResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

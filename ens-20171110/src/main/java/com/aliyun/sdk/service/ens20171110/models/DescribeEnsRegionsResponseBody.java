@@ -62,7 +62,7 @@ public class DescribeEnsRegionsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The service code. 0 is returned for a successful request. An error code is returned for a failed request.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -70,7 +70,7 @@ public class DescribeEnsRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * EnsRegions.
+         * The information about the regions.
          */
         public Builder ensRegions(EnsRegions ensRegions) {
             this.ensRegions = ensRegions;
@@ -78,7 +78,7 @@ public class DescribeEnsRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -166,7 +166,7 @@ public class DescribeEnsRegionsResponseBody extends TeaModel {
             private String province; 
 
             /**
-             * Area.
+             * The code of the region.
              */
             public Builder area(String area) {
                 this.area = area;
@@ -174,7 +174,7 @@ public class DescribeEnsRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * EnName.
+             * The name of the node.
              */
             public Builder enName(String enName) {
                 this.enName = enName;
@@ -182,7 +182,7 @@ public class DescribeEnsRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * EnsRegionId.
+             * The ID of the node.
              */
             public Builder ensRegionId(String ensRegionId) {
                 this.ensRegionId = ensRegionId;
@@ -190,7 +190,7 @@ public class DescribeEnsRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the node.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -198,7 +198,7 @@ public class DescribeEnsRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * Province.
+             * The province where the node is deployed.
              */
             public Builder province(String province) {
                 this.province = province;
@@ -239,7 +239,7 @@ public class DescribeEnsRegionsResponseBody extends TeaModel {
             private java.util.List < EnsRegionsEnsRegions> ensRegions; 
 
             /**
-             * EnsRegions.
+             * The information about the regions.
              */
             public Builder ensRegions(java.util.List < EnsRegionsEnsRegions> ensRegions) {
                 this.ensRegions = ensRegions;

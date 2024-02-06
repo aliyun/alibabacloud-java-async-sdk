@@ -98,7 +98,7 @@ public class DescribeImagesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Code.
+         * The returned service code. 0 indicates that the request was successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class DescribeImagesResponseBody extends TeaModel {
         }
 
         /**
-         * Images.
+         * The information about images.
          */
         public Builder images(Images images) {
             this.images = images;
@@ -114,7 +114,7 @@ public class DescribeImagesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +122,7 @@ public class DescribeImagesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +130,7 @@ public class DescribeImagesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class DescribeImagesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of images.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -262,7 +262,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             private String snapshotId; 
 
             /**
-             * Architecture.
+             * The architecture of the image. Example: **x86\_64**.
              */
             public Builder architecture(String architecture) {
                 this.architecture = architecture;
@@ -270,7 +270,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * The time when the image was created. The time follows the ISO 8601 standard.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -278,7 +278,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageId.
+             * The ID of the image.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -286,7 +286,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageName.
+             * The name of the image.
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -294,7 +294,12 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageOwnerAlias.
+             * The source of the image. Valid values:
+             * <p>
+             * 
+             * *   system: Alibaba Cloud public images
+             * *   self: your custom images
+             * *   others: shared images from other Alibaba Cloud accounts, or community images published by other Alibaba Cloud accounts
              */
             public Builder imageOwnerAlias(String imageOwnerAlias) {
                 this.imageOwnerAlias = imageOwnerAlias;
@@ -302,7 +307,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageSize.
+             * The size of the image. Unit: GiB.
              */
             public Builder imageSize(String imageSize) {
                 this.imageSize = imageSize;
@@ -310,7 +315,11 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Platform.
+             * The operating system type of the image. Valid values:
+             * <p>
+             * 
+             * *   Linux
+             * *   Windows
              */
             public Builder platform(String platform) {
                 this.platform = platform;
@@ -318,7 +327,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * SnapshotId.
+             * The ID of the snapshot.
              */
             public Builder snapshotId(String snapshotId) {
                 this.snapshotId = snapshotId;

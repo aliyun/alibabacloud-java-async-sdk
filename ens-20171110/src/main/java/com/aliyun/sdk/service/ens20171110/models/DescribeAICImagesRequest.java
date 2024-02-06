@@ -166,7 +166,7 @@ public class DescribeAICImagesRequest extends Request {
         } 
 
         /**
-         * Description.
+         * The description of the image.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -175,7 +175,7 @@ public class DescribeAICImagesRequest extends Request {
         }
 
         /**
-         * ImageId.
+         * The image ID of the AIC instance.
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -184,7 +184,11 @@ public class DescribeAICImagesRequest extends Request {
         }
 
         /**
-         * ImageType.
+         * The type of the image. Valid values:
+         * <p>
+         * 
+         * *   **public**: public image
+         * *   **private**: custom image
          */
         public Builder imageType(String imageType) {
             this.putQueryParameter("ImageType", imageType);
@@ -193,7 +197,7 @@ public class DescribeAICImagesRequest extends Request {
         }
 
         /**
-         * ImageUrl.
+         * The URL of the AIC image repository.
          */
         public Builder imageUrl(String imageUrl) {
             this.putQueryParameter("ImageUrl", imageUrl);
@@ -202,7 +206,7 @@ public class DescribeAICImagesRequest extends Request {
         }
 
         /**
-         * MaxDate.
+         * The end of the time range to query. Specify the time in the 2006-01-02 format. By default, the time range to query is not restricted.
          */
         public Builder maxDate(String maxDate) {
             this.putQueryParameter("MaxDate", maxDate);
@@ -211,7 +215,7 @@ public class DescribeAICImagesRequest extends Request {
         }
 
         /**
-         * MinDate.
+         * The beginning of the time range to query. Specify the time in the 2006-01-02 format. By default, the time range to query is not restricted.
          */
         public Builder minDate(String minDate) {
             this.putQueryParameter("MinDate", minDate);
@@ -220,7 +224,7 @@ public class DescribeAICImagesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number. Pages start from page **1**. Default value: **1**.
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -229,7 +233,7 @@ public class DescribeAICImagesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. The maximum value is **100**. Default value: **10**.
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -238,7 +242,12 @@ public class DescribeAICImagesRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the image. Valid values:
+         * <p>
+         * 
+         * *   **verifying**
+         * *   **disable**
+         * *   **available**
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

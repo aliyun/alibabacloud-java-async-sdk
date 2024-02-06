@@ -113,7 +113,7 @@ public class DescribeMountTargetsRequest extends Request {
         } 
 
         /**
-         * EnsRegionId.
+         * The ID of the region.
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -122,7 +122,7 @@ public class DescribeMountTargetsRequest extends Request {
         }
 
         /**
-         * FileSystemId.
+         * The ID of the file system.
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -131,7 +131,7 @@ public class DescribeMountTargetsRequest extends Request {
         }
 
         /**
-         * MountTargetName.
+         * The name of the mount target.
          */
         public Builder mountTargetName(String mountTargetName) {
             this.putQueryParameter("MountTargetName", mountTargetName);
@@ -140,7 +140,7 @@ public class DescribeMountTargetsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number. Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -149,7 +149,7 @@ public class DescribeMountTargetsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. The maximum value is 100. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

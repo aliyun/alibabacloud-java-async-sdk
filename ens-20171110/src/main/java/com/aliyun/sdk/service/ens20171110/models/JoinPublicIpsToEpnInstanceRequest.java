@@ -70,7 +70,7 @@ public class JoinPublicIpsToEpnInstanceRequest extends Request {
         } 
 
         /**
-         * EPNInstanceId.
+         * The ID of the EPN instance.
          */
         public Builder EPNInstanceId(String EPNInstanceId) {
             this.putQueryParameter("EPNInstanceId", EPNInstanceId);
@@ -79,7 +79,7 @@ public class JoinPublicIpsToEpnInstanceRequest extends Request {
         }
 
         /**
-         * InstanceInfos.
+         * The information about the public IP address that you want to add to the EPN instance.
          */
         public Builder instanceInfos(String instanceInfos) {
             this.putQueryParameter("InstanceInfos", instanceInfos);

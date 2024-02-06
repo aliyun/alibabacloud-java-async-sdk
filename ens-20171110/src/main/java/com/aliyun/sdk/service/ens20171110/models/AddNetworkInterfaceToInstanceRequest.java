@@ -84,7 +84,7 @@ public class AddNetworkInterfaceToInstanceRequest extends Request {
         } 
 
         /**
-         * AutoStart.
+         * Specifies whether to specify the instance.
          */
         public Builder autoStart(Boolean autoStart) {
             this.putQueryParameter("AutoStart", autoStart);
@@ -93,7 +93,7 @@ public class AddNetworkInterfaceToInstanceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -102,7 +102,7 @@ public class AddNetworkInterfaceToInstanceRequest extends Request {
         }
 
         /**
-         * Networks.
+         * The network. The value is a JSON string. Only IPv6 is supported. Sample code of an IPv6 network: \[{ "ipType": "public", "ipAddressType": "ipv6" }]
          */
         public Builder networks(String networks) {
             this.putQueryParameter("Networks", networks);

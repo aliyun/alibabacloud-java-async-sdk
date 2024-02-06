@@ -55,7 +55,10 @@ public class DeleteImageRequest extends Request {
         } 
 
         /**
-         * ImageId.
+         * The ID of the image. You can specify only one image ID.
+         * <p>
+         * 
+         * You can delete only custom images that you created.
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);

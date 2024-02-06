@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class RenewARMServerInstanceRequest extends Request {
     @Query
+    @NameInMap("AutoRenew")
+    private Boolean autoRenew;
+
+    @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
     private String instanceId;
@@ -29,6 +33,7 @@ public class RenewARMServerInstanceRequest extends Request {
 
     private RenewARMServerInstanceRequest(Builder builder) {
         super(builder);
+        this.autoRenew = builder.autoRenew;
         this.instanceId = builder.instanceId;
         this.period = builder.period;
         this.periodUnit = builder.periodUnit;
@@ -45,6 +50,13 @@ public class RenewARMServerInstanceRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return autoRenew
+     */
+    public Boolean getAutoRenew() {
+        return this.autoRenew;
     }
 
     /**
@@ -69,6 +81,7 @@ public class RenewARMServerInstanceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<RenewARMServerInstanceRequest, Builder> {
+        private Boolean autoRenew; 
         private String instanceId; 
         private Integer period; 
         private String periodUnit; 
@@ -79,13 +92,23 @@ public class RenewARMServerInstanceRequest extends Request {
 
         private Builder(RenewARMServerInstanceRequest request) {
             super(request);
+            this.autoRenew = request.autoRenew;
             this.instanceId = request.instanceId;
             this.period = request.period;
             this.periodUnit = request.periodUnit;
         } 
 
         /**
-         * InstanceId.
+         * AutoRenew.
+         */
+        public Builder autoRenew(Boolean autoRenew) {
+            this.putQueryParameter("AutoRenew", autoRenew);
+            this.autoRenew = autoRenew;
+            return this;
+        }
+
+        /**
+         * The ID of the instance that you want to renew.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -94,7 +117,7 @@ public class RenewARMServerInstanceRequest extends Request {
         }
 
         /**
-         * Period.
+         * The renewal period. By default, instances are renewed on a monthly basis. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, and 12.
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -103,7 +126,11 @@ public class RenewARMServerInstanceRequest extends Request {
         }
 
         /**
-         * PeriodUnit.
+         * The unit of the renewal period. Valid values:
+         * <p>
+         * 
+         * *   Month (default)
+         * *   Year
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);

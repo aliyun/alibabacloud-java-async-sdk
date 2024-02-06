@@ -153,7 +153,7 @@ public class DescribeDataPushResultRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * The ID of the application.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -162,7 +162,7 @@ public class DescribeDataPushResultRequest extends Request {
         }
 
         /**
-         * DataNames.
+         * The name of the data file. Separate multiple names with commas (,). By default, all data files are queried.
          */
         public Builder dataNames(String dataNames) {
             this.putQueryParameter("DataNames", dataNames);
@@ -171,7 +171,7 @@ public class DescribeDataPushResultRequest extends Request {
         }
 
         /**
-         * DataVersions.
+         * The version number of the data file. Separate multiple numbers with commas (,). By default, all versions of data files are queried.
          */
         public Builder dataVersions(String dataVersions) {
             this.putQueryParameter("DataVersions", dataVersions);
@@ -180,7 +180,7 @@ public class DescribeDataPushResultRequest extends Request {
         }
 
         /**
-         * MaxDate.
+         * The end of the time range to query. Specify the time in the 2006-01-02 format. By default, the time range to query is not restricted.
          */
         public Builder maxDate(String maxDate) {
             this.putQueryParameter("MaxDate", maxDate);
@@ -189,7 +189,7 @@ public class DescribeDataPushResultRequest extends Request {
         }
 
         /**
-         * MinDate.
+         * The beginning of the time range to query. Specify the time in the 2006-01-02 format. By default, the time range to query is not restricted.
          */
         public Builder minDate(String minDate) {
             this.putQueryParameter("MinDate", minDate);
@@ -198,7 +198,7 @@ public class DescribeDataPushResultRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number. Pages start from page 1. This parameter is optional if you want to return the push status of all data files.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -207,7 +207,7 @@ public class DescribeDataPushResultRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. This parameter is optional if you want to return the push status of all data files.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -216,7 +216,7 @@ public class DescribeDataPushResultRequest extends Request {
         }
 
         /**
-         * RegionIds.
+         * The IDs of ENS nodes. Separate multiple IDs with commas (,). By default, all ENS nodes are queried.
          */
         public Builder regionIds(String regionIds) {
             this.putQueryParameter("RegionIds", regionIds);

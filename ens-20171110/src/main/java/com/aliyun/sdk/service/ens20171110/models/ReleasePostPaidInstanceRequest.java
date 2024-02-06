@@ -55,7 +55,7 @@ public class ReleasePostPaidInstanceRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The ID of the instance to be deleted. You can specify only one instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

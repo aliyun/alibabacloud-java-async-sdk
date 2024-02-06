@@ -68,7 +68,14 @@ public class DescribeApplicationResourceSummaryRequest extends Request {
         } 
 
         /**
-         * Level.
+         * The region level. The value must be of the enumerated data type. Valid values:
+         * <p>
+         * 
+         * *   **National** (default): Chinese mainland
+         * *   **Big**: area
+         * *   **Middle**: province
+         * *   **Small**: city
+         * *   **RegionId**: edge node
          */
         public Builder level(String level) {
             this.putQueryParameter("Level", level);
@@ -77,7 +84,12 @@ public class DescribeApplicationResourceSummaryRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The resource type.
+         * <p>
+         * 
+         * Valid value:
+         * 
+         * *   Ens
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

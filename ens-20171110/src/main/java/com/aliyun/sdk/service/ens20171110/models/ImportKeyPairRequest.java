@@ -22,16 +22,10 @@ public class ImportKeyPairRequest extends Request {
     @Validation(required = true)
     private String publicKeyBody;
 
-    @Query
-    @NameInMap("Version")
-    @Validation(required = true)
-    private String version;
-
     private ImportKeyPairRequest(Builder builder) {
         super(builder);
         this.keyPairName = builder.keyPairName;
         this.publicKeyBody = builder.publicKeyBody;
-        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -61,17 +55,9 @@ public class ImportKeyPairRequest extends Request {
         return this.publicKeyBody;
     }
 
-    /**
-     * @return version
-     */
-    public String getVersion() {
-        return this.version;
-    }
-
     public static final class Builder extends Request.Builder<ImportKeyPairRequest, Builder> {
         private String keyPairName; 
         private String publicKeyBody; 
-        private String version; 
 
         private Builder() {
             super();
@@ -81,11 +67,17 @@ public class ImportKeyPairRequest extends Request {
             super(request);
             this.keyPairName = request.keyPairName;
             this.publicKeyBody = request.publicKeyBody;
-            this.version = request.version;
         } 
 
         /**
-         * KeyPairName.
+         * The name of the key pair. The name must conform to the following naming conventions:
+         * <p>
+         * 
+         * *   The name must be 2 to 128 characters in length.
+         * *   The name must start with a letter but cannot start with `http://` or `https://`.
+         * *   The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+         * 
+         * You can specify the name of only one key pair.
          */
         public Builder keyPairName(String keyPairName) {
             this.putQueryParameter("KeyPairName", keyPairName);
@@ -94,20 +86,11 @@ public class ImportKeyPairRequest extends Request {
         }
 
         /**
-         * PublicKeyBody.
+         * The public key of the key pair. You can specify only one public key.
          */
         public Builder publicKeyBody(String publicKeyBody) {
             this.putQueryParameter("PublicKeyBody", publicKeyBody);
             this.publicKeyBody = publicKeyBody;
-            return this;
-        }
-
-        /**
-         * Version.
-         */
-        public Builder version(String version) {
-            this.putQueryParameter("Version", version);
-            this.version = version;
             return this;
         }
 

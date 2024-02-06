@@ -22,16 +22,10 @@ public class ReInitDiskRequest extends Request {
     @Validation(required = true)
     private String imageId;
 
-    @Query
-    @NameInMap("Version")
-    @Validation(required = true)
-    private String version;
-
     private ReInitDiskRequest(Builder builder) {
         super(builder);
         this.diskId = builder.diskId;
         this.imageId = builder.imageId;
-        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -61,17 +55,9 @@ public class ReInitDiskRequest extends Request {
         return this.imageId;
     }
 
-    /**
-     * @return version
-     */
-    public String getVersion() {
-        return this.version;
-    }
-
     public static final class Builder extends Request.Builder<ReInitDiskRequest, Builder> {
         private String diskId; 
         private String imageId; 
-        private String version; 
 
         private Builder() {
             super();
@@ -81,11 +67,10 @@ public class ReInitDiskRequest extends Request {
             super(request);
             this.diskId = request.diskId;
             this.imageId = request.imageId;
-            this.version = request.version;
         } 
 
         /**
-         * DiskId.
+         * The ID of the disk to be initialized. You can initialize only one disk at a time.
          */
         public Builder diskId(String diskId) {
             this.putQueryParameter("DiskId", diskId);
@@ -94,20 +79,11 @@ public class ReInitDiskRequest extends Request {
         }
 
         /**
-         * ImageId.
+         * The ID of the image to use to create the instance.
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
             this.imageId = imageId;
-            return this;
-        }
-
-        /**
-         * 2017-11-10
-         */
-        public Builder version(String version) {
-            this.putQueryParameter("Version", version);
-            this.version = version;
             return this;
         }
 

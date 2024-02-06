@@ -21,16 +21,10 @@ public class StopInstanceRequest extends Request {
     @Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("Version")
-    @Validation(required = true)
-    private String version;
-
     private StopInstanceRequest(Builder builder) {
         super(builder);
         this.forceStop = builder.forceStop;
         this.instanceId = builder.instanceId;
-        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -60,17 +54,9 @@ public class StopInstanceRequest extends Request {
         return this.instanceId;
     }
 
-    /**
-     * @return version
-     */
-    public String getVersion() {
-        return this.version;
-    }
-
     public static final class Builder extends Request.Builder<StopInstanceRequest, Builder> {
         private String forceStop; 
         private String instanceId; 
-        private String version; 
 
         private Builder() {
             super();
@@ -80,11 +66,14 @@ public class StopInstanceRequest extends Request {
             super(request);
             this.forceStop = request.forceStop;
             this.instanceId = request.instanceId;
-            this.version = request.version;
         } 
 
         /**
-         * ForceStop.
+         * Specifies whether to forcibly stop the servers.
+         * <p>
+         * 
+         * *   **true**: forcibly stops the instance.
+         * *   **false**: normally stops the servers. This is the default value.
          */
         public Builder forceStop(String forceStop) {
             this.putQueryParameter("ForceStop", forceStop);
@@ -93,20 +82,11 @@ public class StopInstanceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance that you want to stop. You can specify only one instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * Version.
-         */
-        public Builder version(String version) {
-            this.putQueryParameter("Version", version);
-            this.version = version;
             return this;
         }
 

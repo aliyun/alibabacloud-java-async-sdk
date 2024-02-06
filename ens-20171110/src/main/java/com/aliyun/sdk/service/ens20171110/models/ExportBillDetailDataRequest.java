@@ -70,7 +70,7 @@ public class ExportBillDetailDataRequest extends Request {
         } 
 
         /**
-         * EndDate.
+         * The end of the time range to query. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -79,7 +79,7 @@ public class ExportBillDetailDataRequest extends Request {
         }
 
         /**
-         * StartDate.
+         * The beginning of the time range to query. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          */
         public Builder startDate(String startDate) {
             this.putQueryParameter("StartDate", startDate);

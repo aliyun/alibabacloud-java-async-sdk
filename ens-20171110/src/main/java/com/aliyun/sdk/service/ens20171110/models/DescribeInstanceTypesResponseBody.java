@@ -62,7 +62,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The status code. If the request is successful, 0 is returned. If the request fails, a non-zero error code is returned.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -70,7 +70,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceTypes.
+         * Details about the instance types.
          */
         public Builder instanceTypes(InstanceTypes instanceTypes) {
             this.instanceTypes = instanceTypes;
@@ -78,7 +78,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +154,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             private Integer memorySize; 
 
             /**
-             * CpuCoreCount.
+             * The number of vCPUs.
              */
             public Builder cpuCoreCount(Integer cpuCoreCount) {
                 this.cpuCoreCount = cpuCoreCount;
@@ -162,7 +162,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceTypeId.
+             * This parameter is unavailable.
              */
             public Builder instanceTypeId(String instanceTypeId) {
                 this.instanceTypeId = instanceTypeId;
@@ -170,7 +170,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceTypeName.
+             * The name of the instance type.
              */
             public Builder instanceTypeName(String instanceTypeName) {
                 this.instanceTypeName = instanceTypeName;
@@ -178,7 +178,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * MemorySize.
+             * The memory size. Unit: MB.
              */
             public Builder memorySize(Integer memorySize) {
                 this.memorySize = memorySize;

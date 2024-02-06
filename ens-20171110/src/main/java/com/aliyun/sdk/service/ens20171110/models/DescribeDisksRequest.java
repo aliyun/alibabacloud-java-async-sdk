@@ -250,7 +250,13 @@ public class DescribeDisksRequest extends Request {
         } 
 
         /**
-         * Category.
+         * The category of the disk.
+         * <p>
+         * 
+         * *   cloud_efficiency: ultra disk.
+         * *   cloud_ssd: all-flash disk.
+         * *   local_hdd: local HDD.
+         * *   local_ssd: local SSD.
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -259,7 +265,11 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * DiskChargeType.
+         * The billing method.
+         * <p>
+         * 
+         * *   prePay: subscription.
+         * *   postpay: pay-as-you-go.
          */
         public Builder diskChargeType(String diskChargeType) {
             this.putQueryParameter("DiskChargeType", diskChargeType);
@@ -268,7 +278,7 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * DiskId.
+         * The ID of the disk.
          */
         public Builder diskId(String diskId) {
             this.putQueryParameter("DiskId", diskId);
@@ -277,7 +287,7 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * DiskIds.
+         * The ID of the disk.
          */
         public Builder diskIds(String diskIds) {
             this.putQueryParameter("DiskIds", diskIds);
@@ -286,7 +296,7 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * DiskName.
+         * The name of the disk.
          */
         public Builder diskName(String diskName) {
             this.putQueryParameter("DiskName", diskName);
@@ -295,7 +305,12 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * DiskType.
+         * The purchase method of the disk. Valid values:
+         * <p>
+         * 
+         * *   ServiceDisk: The disk is purchased when ENS is activated.
+         * *   ResoureDisk: The disk is purchased when the instance is created.
+         * *   PostPayDisk: The disk is separately purchased.
          */
         public Builder diskType(String diskType) {
             this.putQueryParameter("DiskType", diskType);
@@ -304,7 +319,7 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * EnsRegionId.
+         * The ID of the edge node.
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -313,7 +328,7 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * EnsRegionIds.
+         * The node information.
          */
         public Builder ensRegionIds(String ensRegionIds) {
             this.putQueryParameter("EnsRegionIds", ensRegionIds);
@@ -322,7 +337,7 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The instance to which the disk is attached.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -331,7 +346,7 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * OrderByParams.
+         * The order in which you want to sort the returned data. Example: {"EnsRegionId":"desc"}. By default, the nodes are sorted by IDs in descending order.
          */
         public Builder orderByParams(String orderByParams) {
             this.putQueryParameter("OrderByParams", orderByParams);
@@ -340,7 +355,10 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Pages start from page **1**.
+         * <p>
+         * 
+         * Default value: **1**.
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -349,7 +367,10 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Maximum value: **50**.
+         * <p>
+         * 
+         * Default value: **10**.
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -358,7 +379,7 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * SnapshotId.
+         * The ID of the snapshot.
          */
         public Builder snapshotId(String snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);
@@ -367,7 +388,18 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the disk. Valid values:
+         * <p>
+         * 
+         * *   In-use: The disk is in use.
+         * *   Available: The disk can be attached.
+         * *   Attaching: The disk is being attached.
+         * *   Detaching: The disk is being detached.
+         * *   Creating: The image is being created.
+         * *   ReIniting: The disk is being reset.
+         * *   Deleting: The disk is being released.
+         * *   Deleted: The disk is released.
+         * *   Expiring: The disk is about to expire.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -376,7 +408,11 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type of the disk. Valid values:
+         * <p>
+         * 
+         * *   system: system disk.
+         * *   data: data disk.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

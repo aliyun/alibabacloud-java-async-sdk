@@ -86,7 +86,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * FileSystems.
+         * The information about the file systems.
          */
         public Builder fileSystems(java.util.List < FileSystems> fileSystems) {
             this.fileSystems = fileSystems;
@@ -94,7 +94,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -194,7 +194,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * MountTargetDomain.
+             * The path of the mount target.
              */
             public Builder mountTargetDomain(String mountTargetDomain) {
                 this.mountTargetDomain = mountTargetDomain;
@@ -202,7 +202,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * MountTargetName.
+             * The name of the mount target.
              */
             public Builder mountTargetName(String mountTargetName) {
                 this.mountTargetName = mountTargetName;
@@ -210,7 +210,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * NetWorkId.
+             * The ID of the network.
              */
             public Builder netWorkId(String netWorkId) {
                 this.netWorkId = netWorkId;
@@ -218,7 +218,13 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the mount target. Valid values:
+             * <p>
+             * 
+             * *   active: The mount target is available.
+             * *   inactive: The mount target is unavailable.
+             * *   pending: The task is running.
+             * *   deleting: The mount target is being deleted.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -379,7 +385,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             private String storageType; 
 
             /**
-             * Capacity.
+             * The capacity of the file system. Unit: MiB.
              */
             public Builder capacity(Long capacity) {
                 this.capacity = capacity;
@@ -387,7 +393,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * The time when the file system was created.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -395,7 +401,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * EnsRegionId.
+             * The ID of the region.
              */
             public Builder ensRegionId(String ensRegionId) {
                 this.ensRegionId = ensRegionId;
@@ -403,7 +409,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * FileSystemId.
+             * The ID of the file system.
              */
             public Builder fileSystemId(String fileSystemId) {
                 this.fileSystemId = fileSystemId;
@@ -411,7 +417,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * FileSystemName.
+             * The name of the file system.
              */
             public Builder fileSystemName(String fileSystemName) {
                 this.fileSystemName = fileSystemName;
@@ -419,7 +425,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * MeteredSize.
+             * The storage usage of the file system. The value of this parameter is the maximum storage usage of the file system over the last hour. Unit: bytes.
              */
             public Builder meteredSize(Long meteredSize) {
                 this.meteredSize = meteredSize;
@@ -427,7 +433,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * MountTargets.
+             * The information about mount targets.
              */
             public Builder mountTargets(java.util.List < MountTargets> mountTargets) {
                 this.mountTargets = mountTargets;
@@ -435,7 +441,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * PayType.
+             * The billing method. PostPaid is returned. PostPaid indicates the pay-as-you-go billing method.
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -443,7 +449,11 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * ProtocolType.
+             * The protocol type of the file system. Valid values:
+             * <p>
+             * 
+             * *   NFS: Network File System (NFS)
+             * *   SMB: Server Message Block (SMB)
              */
             public Builder protocolType(String protocolType) {
                 this.protocolType = protocolType;
@@ -451,7 +461,15 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the file system. Valid values:
+             * <p>
+             * 
+             * *   pending: The file system is being created or modified.
+             * *   running: The file system is available. Before you create a mount target for the file system, make sure that the file system is in the running state.
+             * *   stopped: The file system is unavailable.
+             * *   extending: The file system is being scaled out.
+             * *   stopping: The file system is being disabled.
+             * *   deleting: The file system is being deleted.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -459,7 +477,11 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * StorageType.
+             * The storage type. Valid values:
+             * <p>
+             * 
+             * *   capacity: Capacity NAS file systems
+             * *   performance: Performance NAS file systems
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;

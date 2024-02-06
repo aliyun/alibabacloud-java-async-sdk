@@ -167,7 +167,7 @@ public class DescribeEnsEipAddressesRequest extends Request {
         } 
 
         /**
-         * AllocationId.
+         * The ID of the EIP that you want to query. You can specify up to 50 EIP IDs. Separate multiple IDs with commas (,).
          */
         public Builder allocationId(String allocationId) {
             this.putQueryParameter("AllocationId", allocationId);
@@ -176,7 +176,7 @@ public class DescribeEnsEipAddressesRequest extends Request {
         }
 
         /**
-         * AssociatedInstanceId.
+         * The ID of the instance with which you want to associate the EIP.
          */
         public Builder associatedInstanceId(String associatedInstanceId) {
             this.putQueryParameter("AssociatedInstanceId", associatedInstanceId);
@@ -185,7 +185,11 @@ public class DescribeEnsEipAddressesRequest extends Request {
         }
 
         /**
-         * AssociatedInstanceType.
+         * The type of the instance with which you want to associate the EIP. Valid values:
+         * <p>
+         * 
+         * *   **EnsInstance**: ENS instance in a VPC
+         * *   **SlbInstance**: Edge Load Balancer (ELB) instance
          */
         public Builder associatedInstanceType(String associatedInstanceType) {
             this.putQueryParameter("AssociatedInstanceType", associatedInstanceType);
@@ -194,7 +198,7 @@ public class DescribeEnsEipAddressesRequest extends Request {
         }
 
         /**
-         * EipAddress.
+         * The EIP that you want to query. You can specify up to 50 EIPs. Separate multiple EIPs with commas (,).
          */
         public Builder eipAddress(String eipAddress) {
             this.putQueryParameter("EipAddress", eipAddress);
@@ -203,7 +207,7 @@ public class DescribeEnsEipAddressesRequest extends Request {
         }
 
         /**
-         * EipName.
+         * The name of the EIP.
          */
         public Builder eipName(String eipName) {
             this.putQueryParameter("EipName", eipName);
@@ -212,7 +216,7 @@ public class DescribeEnsEipAddressesRequest extends Request {
         }
 
         /**
-         * EnsRegionId.
+         * The ID of the Edge Node Service (ENS) node.
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -221,7 +225,7 @@ public class DescribeEnsEipAddressesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -230,7 +234,7 @@ public class DescribeEnsEipAddressesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Maximum value: 100. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -239,7 +243,11 @@ public class DescribeEnsEipAddressesRequest extends Request {
         }
 
         /**
-         * Standby.
+         * Specifies whether the EIP is a secondary EIP. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder standby(String standby) {
             this.putQueryParameter("Standby", standby);

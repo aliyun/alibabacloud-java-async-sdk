@@ -50,7 +50,7 @@ public class CreateNetworkResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * NetworkId.
+         * The ID of the network.
          */
         public Builder networkId(String networkId) {
             this.networkId = networkId;
@@ -58,7 +58,7 @@ public class CreateNetworkResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

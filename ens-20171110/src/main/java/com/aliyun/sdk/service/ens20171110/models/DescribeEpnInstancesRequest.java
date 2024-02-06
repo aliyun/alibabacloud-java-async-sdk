@@ -96,7 +96,7 @@ public class DescribeEpnInstancesRequest extends Request {
         } 
 
         /**
-         * EPNInstanceId.
+         * The version number.
          */
         public Builder EPNInstanceId(String EPNInstanceId) {
             this.putQueryParameter("EPNInstanceId", EPNInstanceId);
@@ -105,7 +105,7 @@ public class DescribeEpnInstancesRequest extends Request {
         }
 
         /**
-         * EPNInstanceName.
+         * The name of the EPN instance.
          */
         public Builder EPNInstanceName(String EPNInstanceName) {
             this.putQueryParameter("EPNInstanceName", EPNInstanceName);
@@ -114,7 +114,7 @@ public class DescribeEpnInstancesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -123,7 +123,7 @@ public class DescribeEpnInstancesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Valid values: **1 to 50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

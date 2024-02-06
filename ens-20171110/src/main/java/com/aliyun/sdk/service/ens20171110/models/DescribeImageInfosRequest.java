@@ -54,7 +54,11 @@ public class DescribeImageInfosRequest extends Request {
         } 
 
         /**
-         * OsType.
+         * The operating system (OS). You can specify only one OS in a request. If you do not specify a value for this parameter, images for all supported OSs are queried. Valid values:
+         * <p>
+         * 
+         * *   linux
+         * *   windows
          */
         public Builder osType(String osType) {
             this.putQueryParameter("OsType", osType);

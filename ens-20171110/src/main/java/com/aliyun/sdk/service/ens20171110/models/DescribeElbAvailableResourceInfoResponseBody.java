@@ -50,7 +50,7 @@ public class DescribeElbAvailableResourceInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ElbAvailableResourceInfo.
+         * The information about resources.
          */
         public Builder elbAvailableResourceInfo(java.util.List < ElbAvailableResourceInfo> elbAvailableResourceInfo) {
             this.elbAvailableResourceInfo = elbAvailableResourceInfo;
@@ -58,7 +58,7 @@ public class DescribeElbAvailableResourceInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use the ID to troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +170,7 @@ public class DescribeElbAvailableResourceInfoResponseBody extends TeaModel {
             private String province; 
 
             /**
-             * Area.
+             * The ID of the region.
              */
             public Builder area(String area) {
                 this.area = area;
@@ -178,7 +178,7 @@ public class DescribeElbAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CanBuyCount.
+             * The number of resources that you can purchase.
              */
             public Builder canBuyCount(String canBuyCount) {
                 this.canBuyCount = canBuyCount;
@@ -186,7 +186,7 @@ public class DescribeElbAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * EnName.
+             * The name of the node.
              */
             public Builder enName(String enName) {
                 this.enName = enName;
@@ -194,7 +194,7 @@ public class DescribeElbAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * EnsRegionId.
+             * The ID of the Edge Node Service (ENS) node.
              */
             public Builder ensRegionId(String ensRegionId) {
                 this.ensRegionId = ensRegionId;
@@ -202,7 +202,7 @@ public class DescribeElbAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * LoadBalancerSpec.
+             * The specifications of the ELB instances.
              */
             public Builder loadBalancerSpec(java.util.List < String > loadBalancerSpec) {
                 this.loadBalancerSpec = loadBalancerSpec;
@@ -210,7 +210,7 @@ public class DescribeElbAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The Chinese name of the node.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -218,7 +218,7 @@ public class DescribeElbAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Province.
+             * The province where the node is deployed.
              */
             public Builder province(String province) {
                 this.province = province;

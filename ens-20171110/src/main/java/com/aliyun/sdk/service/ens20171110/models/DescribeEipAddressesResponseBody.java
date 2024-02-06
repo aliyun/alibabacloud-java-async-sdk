@@ -50,7 +50,7 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * EipAddresses.
+         * Details of the EIPs.
          */
         public Builder eipAddresses(EipAddresses eipAddresses) {
             this.eipAddresses = eipAddresses;
@@ -58,7 +58,7 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             private String instanceIdInternetIp; 
 
             /**
-             * Eip.
+             * The information about an EIP.
              */
             public Builder eip(String eip) {
                 this.eip = eip;
@@ -118,7 +118,7 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceIdInternetIp.
+             * The public IP address of the ENS instance.
              */
             public Builder instanceIdInternetIp(String instanceIdInternetIp) {
                 this.instanceIdInternetIp = instanceIdInternetIp;

@@ -98,7 +98,7 @@ public class DescribeImageSharePermissionRequest extends Request {
         } 
 
         /**
-         * AliyunId.
+         * The ID of the Alibaba Cloud account.
          */
         public Builder aliyunId(Long aliyunId) {
             this.putQueryParameter("AliyunId", aliyunId);
@@ -107,7 +107,7 @@ public class DescribeImageSharePermissionRequest extends Request {
         }
 
         /**
-         * ImageId.
+         * The ID of the image.
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -116,7 +116,10 @@ public class DescribeImageSharePermissionRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number. Pages start from page **1**.
+         * <p>
+         * 
+         * Default value: **1**.
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -125,7 +128,10 @@ public class DescribeImageSharePermissionRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Maximum value: **100**.
+         * <p>
+         * 
+         * Default value: **10**.
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);

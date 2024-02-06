@@ -170,7 +170,7 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
         private VSwitchIds vSwitchIds; 
 
         /**
-         * CidrBlock.
+         * The IPv4 CIDR block of the network.
          */
         public Builder cidrBlock(String cidrBlock) {
             this.cidrBlock = cidrBlock;
@@ -178,7 +178,7 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * CloudResources.
+         * The list of resources in the network.
          */
         public Builder cloudResources(CloudResources cloudResources) {
             this.cloudResources = cloudResources;
@@ -186,7 +186,7 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * CreatedTime.
+         * The time when the network was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.
          */
         public Builder createdTime(String createdTime) {
             this.createdTime = createdTime;
@@ -194,7 +194,7 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * The description of the network.
          */
         public Builder description(String description) {
             this.description = description;
@@ -202,7 +202,7 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * EnsRegionId.
+         * The ID of the edge node.
          */
         public Builder ensRegionId(String ensRegionId) {
             this.ensRegionId = ensRegionId;
@@ -210,7 +210,7 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * NetworkAclId.
+         * The ID of the network access control list (ACL).
          */
         public Builder networkAclId(String networkAclId) {
             this.networkAclId = networkAclId;
@@ -218,7 +218,7 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * NetworkId.
+         * The ID of the network.
          */
         public Builder networkId(String networkId) {
             this.networkId = networkId;
@@ -226,7 +226,7 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * NetworkName.
+         * The name of the network.
          */
         public Builder networkName(String networkName) {
             this.networkName = networkName;
@@ -234,7 +234,7 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -242,7 +242,7 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * RouterTableId.
+         * The ID of the route table.
          */
         public Builder routerTableId(String routerTableId) {
             this.routerTableId = routerTableId;
@@ -250,7 +250,11 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The status of the network. Valid values:
+         * <p>
+         * 
+         * *   Pending
+         * *   Available
          */
         public Builder status(String status) {
             this.status = status;
@@ -258,7 +262,7 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * VSwitchIds.
+         * The list of vSwitches in the network.
          */
         public Builder vSwitchIds(VSwitchIds vSwitchIds) {
             this.vSwitchIds = vSwitchIds;
@@ -310,7 +314,7 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
             private String resourceType; 
 
             /**
-             * ResourceCount.
+             * The number of resources in the network.
              */
             public Builder resourceCount(Integer resourceCount) {
                 this.resourceCount = resourceCount;
@@ -318,7 +322,7 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * The resource type. VSwitch.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;

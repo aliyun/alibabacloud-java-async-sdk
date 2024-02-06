@@ -55,7 +55,7 @@ public class UnAssociateEnsEipAddressRequest extends Request {
         } 
 
         /**
-         * AllocationId.
+         * The ID of the EIP.
          */
         public Builder allocationId(String allocationId) {
             this.putQueryParameter("AllocationId", allocationId);

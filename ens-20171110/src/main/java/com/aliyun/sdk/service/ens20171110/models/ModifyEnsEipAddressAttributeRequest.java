@@ -100,7 +100,7 @@ public class ModifyEnsEipAddressAttributeRequest extends Request {
         } 
 
         /**
-         * AllocationId.
+         * The ID of the EIP.
          */
         public Builder allocationId(String allocationId) {
             this.putQueryParameter("AllocationId", allocationId);
@@ -109,7 +109,7 @@ public class ModifyEnsEipAddressAttributeRequest extends Request {
         }
 
         /**
-         * Bandwidth.
+         * The peak bandwidth of the EIP. Default value: 5. Valid values: **5** to **10000**. Unit: Mbit/s.
          */
         public Builder bandwidth(Integer bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -118,7 +118,7 @@ public class ModifyEnsEipAddressAttributeRequest extends Request {
         }
 
         /**
-         * Description.
+         * The new description of the EIP. The description must be 2 to 256 characters in length and cannot start with http:// or https://.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -127,7 +127,7 @@ public class ModifyEnsEipAddressAttributeRequest extends Request {
         }
 
         /**
-         * Name.
+         * The new name of the EIP. The name must be 2 to 128 characters in length and cannot start with http:// or https://.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

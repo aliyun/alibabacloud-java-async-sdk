@@ -50,7 +50,7 @@ public class DescribeEnsRegionIdIpv6InfoResponseBody extends TeaModel {
         private SupportIpv6Info supportIpv6Info; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeEnsRegionIdIpv6InfoResponseBody extends TeaModel {
         }
 
         /**
-         * SupportIpv6Info.
+         * IPv6 support information.
          */
         public Builder supportIpv6Info(SupportIpv6Info supportIpv6Info) {
             this.supportIpv6Info = supportIpv6Info;
@@ -110,7 +110,7 @@ public class DescribeEnsRegionIdIpv6InfoResponseBody extends TeaModel {
             private Boolean supportIpv6; 
 
             /**
-             * EnsRegionId.
+             * The ID of the node.
              */
             public Builder ensRegionId(String ensRegionId) {
                 this.ensRegionId = ensRegionId;
@@ -118,7 +118,11 @@ public class DescribeEnsRegionIdIpv6InfoResponseBody extends TeaModel {
             }
 
             /**
-             * SupportIpv6.
+             * Specifies whether IPv6 is supported. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder supportIpv6(Boolean supportIpv6) {
                 this.supportIpv6 = supportIpv6;

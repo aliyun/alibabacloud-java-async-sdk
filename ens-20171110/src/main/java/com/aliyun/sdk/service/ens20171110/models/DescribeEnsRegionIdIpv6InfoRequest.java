@@ -17,15 +17,9 @@ public class DescribeEnsRegionIdIpv6InfoRequest extends Request {
     @Validation(required = true)
     private String ensRegionId;
 
-    @Query
-    @NameInMap("Version")
-    @Validation(required = true)
-    private String version;
-
     private DescribeEnsRegionIdIpv6InfoRequest(Builder builder) {
         super(builder);
         this.ensRegionId = builder.ensRegionId;
-        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -48,16 +42,8 @@ public class DescribeEnsRegionIdIpv6InfoRequest extends Request {
         return this.ensRegionId;
     }
 
-    /**
-     * @return version
-     */
-    public String getVersion() {
-        return this.version;
-    }
-
     public static final class Builder extends Request.Builder<DescribeEnsRegionIdIpv6InfoRequest, Builder> {
         private String ensRegionId; 
-        private String version; 
 
         private Builder() {
             super();
@@ -66,24 +52,14 @@ public class DescribeEnsRegionIdIpv6InfoRequest extends Request {
         private Builder(DescribeEnsRegionIdIpv6InfoRequest request) {
             super(request);
             this.ensRegionId = request.ensRegionId;
-            this.version = request.version;
         } 
 
         /**
-         * EnsRegionId.
+         * The ID of the node. You can specify only one node ID in a call.
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
             this.ensRegionId = ensRegionId;
-            return this;
-        }
-
-        /**
-         * Version.
-         */
-        public Builder version(String version) {
-            this.putQueryParameter("Version", version);
-            this.version = version;
             return this;
         }
 

@@ -110,7 +110,7 @@ public class DescribeNetworkAclsRequest extends Request {
         } 
 
         /**
-         * NetworkAclId.
+         * The ID of the network ACL.
          */
         public Builder networkAclId(String networkAclId) {
             this.putQueryParameter("NetworkAclId", networkAclId);
@@ -119,7 +119,10 @@ public class DescribeNetworkAclsRequest extends Request {
         }
 
         /**
-         * NetworkAclName.
+         * The name of the network ACL.
+         * <p>
+         * 
+         * The name must be 1 to 128 characters in length. The name cannot start with \*\*http:// **or** https://\*\*.
          */
         public Builder networkAclName(String networkAclName) {
             this.putQueryParameter("NetworkAclName", networkAclName);
@@ -128,7 +131,7 @@ public class DescribeNetworkAclsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number. Pages start from page **1**. Default value: **1**.
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -137,7 +140,7 @@ public class DescribeNetworkAclsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Maximum value: **50**. Default value: **10**.
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -146,7 +149,7 @@ public class DescribeNetworkAclsRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The ID of the associated instance.
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);

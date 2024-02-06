@@ -127,7 +127,11 @@ public class DescribeUserBandWidthDataRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * The end of the time range to query.
+         * <p>
+         * 
+         * *   Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * *   If the value of the seconds place is not 00, the start time is automatically set to the next minute.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -136,7 +140,7 @@ public class DescribeUserBandWidthDataRequest extends Request {
         }
 
         /**
-         * EnsRegionId.
+         * The ID of the node. You can specify only one node ID. By default, all nodes are queried.
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -145,7 +149,7 @@ public class DescribeUserBandWidthDataRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance for which you want to query the data. You can specify only one instance ID. By default, all instances are queried.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -154,7 +158,13 @@ public class DescribeUserBandWidthDataRequest extends Request {
         }
 
         /**
-         * Isp.
+         * The Internet service provider (ISP). Valid values:
+         * <p>
+         * 
+         * *   cmcc: China Mobile
+         * *   telecom: China Telecom
+         * *   unicom: China Unicom
+         * *   multiCarrier: multi-line ISP
          */
         public Builder isp(String isp) {
             this.putQueryParameter("Isp", isp);
@@ -163,7 +173,7 @@ public class DescribeUserBandWidthDataRequest extends Request {
         }
 
         /**
-         * Period.
+         * The precision of the monitoring data that you want to obtain. Valid values: 300, 1200, 3600, and 14400. Default value: 300. Unit: seconds.
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -172,7 +182,11 @@ public class DescribeUserBandWidthDataRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query.
+         * <p>
+         * 
+         * *   Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * *   If the value of the seconds place is not 00, the start time is automatically set to the next minute.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

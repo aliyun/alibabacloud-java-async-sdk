@@ -86,7 +86,7 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * DistResults.
+         * The distribution status of data files on edge instances.
          */
         public Builder distResults(DistResults distResults) {
             this.distResults = distResults;
@@ -94,7 +94,7 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -194,7 +194,7 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * InstanceId.
+             * The ID of the instance
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -202,7 +202,7 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The start time of the distribution. The time is displayed in UTC.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -210,7 +210,7 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
             }
 
             /**
-             * StatusDescrip.
+             * The description of the distribution status.
              */
             public Builder statusDescrip(String statusDescrip) {
                 this.statusDescrip = statusDescrip;
@@ -218,7 +218,7 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The time when the distribution status was last updated. The time is displayed in UTC.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -324,7 +324,7 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * InstanceCount.
+             * The number of associated edge instances.
              */
             public Builder instanceCount(String instanceCount) {
                 this.instanceCount = instanceCount;
@@ -332,7 +332,7 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
             }
 
             /**
-             * Instances.
+             * The distribution status of the edge instance.
              */
             public Builder instances(Instances instances) {
                 this.instances = instances;
@@ -340,7 +340,14 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The distribution status. The value is of the enumeration type. Valid values:
+             * <p>
+             * 
+             * *   SUCCESS: The distribution is successful.
+             * *   FAILED: The distribution failed.
+             * *   DISTING: The data is being distributed.
+             * *   POD_RESTARTING: The idle pod is being restarted.
+             * *   DELETED: The data is cleared or removed.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -446,7 +453,7 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * Name.
+             * The name of the data file.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -454,7 +461,7 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
             }
 
             /**
-             * StatusStats.
+             * The distribution status statistics.
              */
             public Builder statusStats(StatusStats statusStats) {
                 this.statusStats = statusStats;
@@ -462,7 +469,7 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * The version number of the data file.
              */
             public Builder version(String version) {
                 this.version = version;

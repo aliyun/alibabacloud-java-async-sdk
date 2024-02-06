@@ -50,7 +50,7 @@ public class ExportImageResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ExportedImageURL.
+         * The URL that points to the exported image.
          */
         public Builder exportedImageURL(String exportedImageURL) {
             this.exportedImageURL = exportedImageURL;
@@ -58,7 +58,7 @@ public class ExportImageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

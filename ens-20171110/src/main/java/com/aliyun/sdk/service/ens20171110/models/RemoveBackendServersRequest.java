@@ -70,7 +70,10 @@ public class RemoveBackendServersRequest extends Request {
         } 
 
         /**
-         * BackendServers.
+         * The list of backend servers that you want to add. You can add at most 20 backend servers.
+         * <p>
+         * 
+         * >  Only ENS instances that are in the running state can be attached to the ELB instance as backend servers.
          */
         public Builder backendServers(java.util.List < BackendServers> backendServers) {
             String backendServersShrink = shrink(backendServers, "BackendServers", "json");
@@ -80,7 +83,7 @@ public class RemoveBackendServersRequest extends Request {
         }
 
         /**
-         * LoadBalancerId.
+         * The ID of the Edge Load Balancer (ELB) instance.
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
@@ -173,7 +176,7 @@ public class RemoveBackendServersRequest extends Request {
             private Integer weight; 
 
             /**
-             * Ip.
+             * The IP address of the backend server.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -181,7 +184,7 @@ public class RemoveBackendServersRequest extends Request {
             }
 
             /**
-             * Port.
+             * The backend port that is used by the ELB instance.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -189,7 +192,7 @@ public class RemoveBackendServersRequest extends Request {
             }
 
             /**
-             * ServerId.
+             * The ID of the instance that is used as the backend server.
              */
             public Builder serverId(String serverId) {
                 this.serverId = serverId;
@@ -197,7 +200,11 @@ public class RemoveBackendServersRequest extends Request {
             }
 
             /**
-             * Type.
+             * The type of the backend server. Valid values:
+             * <p>
+             * 
+             * *   **ens**: ENS instance.
+             * *   **eni**: ENI.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -205,7 +212,10 @@ public class RemoveBackendServersRequest extends Request {
             }
 
             /**
-             * Weight.
+             * The weight of the backend server. Default value: 100. Valid values: **0** to **100**.
+             * <p>
+             * 
+             * >  The value 0 indicates that requests are not forwarded to the backend server.
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;

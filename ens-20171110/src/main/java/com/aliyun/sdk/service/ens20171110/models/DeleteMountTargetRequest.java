@@ -85,7 +85,7 @@ public class DeleteMountTargetRequest extends Request {
         } 
 
         /**
-         * EnsRegionId.
+         * The ID of the region.
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -94,7 +94,7 @@ public class DeleteMountTargetRequest extends Request {
         }
 
         /**
-         * FileSystemId.
+         * The ID of the file system.
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -103,7 +103,7 @@ public class DeleteMountTargetRequest extends Request {
         }
 
         /**
-         * MountTargetName.
+         * The name of the mount target.
          */
         public Builder mountTargetName(String mountTargetName) {
             this.putQueryParameter("MountTargetName", mountTargetName);

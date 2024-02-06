@@ -50,7 +50,7 @@ public class DescribeRegionIspsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Isps.
+         * The list of ISPs.
          */
         public Builder isps(java.util.List < Isps> isps) {
             this.isps = isps;
@@ -58,7 +58,7 @@ public class DescribeRegionIspsResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeRegionIspsResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * Code.
+             * The code of the ISP.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -118,7 +118,7 @@ public class DescribeRegionIspsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the ISP.
              */
             public Builder name(String name) {
                 this.name = name;

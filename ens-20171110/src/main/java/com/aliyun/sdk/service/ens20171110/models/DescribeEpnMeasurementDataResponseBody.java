@@ -50,7 +50,7 @@ public class DescribeEpnMeasurementDataResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * MeasurementDatas.
+         * The metering data returned.
          */
         public Builder measurementDatas(MeasurementDatas measurementDatas) {
             this.measurementDatas = measurementDatas;
@@ -58,7 +58,7 @@ public class DescribeEpnMeasurementDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +146,7 @@ public class DescribeEpnMeasurementDataResponseBody extends TeaModel {
             private String ispLine; 
 
             /**
-             * CostCode.
+             * The code of the billable item.
              */
             public Builder costCode(String costCode) {
                 this.costCode = costCode;
@@ -154,7 +154,7 @@ public class DescribeEpnMeasurementDataResponseBody extends TeaModel {
             }
 
             /**
-             * CostName.
+             * The name of the billable item.
              */
             public Builder costName(String costName) {
                 this.costName = costName;
@@ -162,7 +162,11 @@ public class DescribeEpnMeasurementDataResponseBody extends TeaModel {
             }
 
             /**
-             * CostType.
+             * Metering method
+             * <p>
+             * 
+             * *   SpeedUp: bandwidth of intelligent acceleration
+             * *   IntranetConnection: internal bandwidth
              */
             public Builder costType(String costType) {
                 this.costType = costType;
@@ -170,7 +174,7 @@ public class DescribeEpnMeasurementDataResponseBody extends TeaModel {
             }
 
             /**
-             * CostVal.
+             * The value of the billable item.
              */
             public Builder costVal(Integer costVal) {
                 this.costVal = costVal;
@@ -178,7 +182,7 @@ public class DescribeEpnMeasurementDataResponseBody extends TeaModel {
             }
 
             /**
-             * IspLine.
+             * This parameter is unavailable.
              */
             public Builder ispLine(String ispLine) {
                 this.ispLine = ispLine;
@@ -308,7 +312,7 @@ public class DescribeEpnMeasurementDataResponseBody extends TeaModel {
             private String costStartTime; 
 
             /**
-             * BandWidthFeeDatas.
+             * The bandwidth data returned.
              */
             public Builder bandWidthFeeDatas(BandWidthFeeDatas bandWidthFeeDatas) {
                 this.bandWidthFeeDatas = bandWidthFeeDatas;
@@ -316,7 +320,11 @@ public class DescribeEpnMeasurementDataResponseBody extends TeaModel {
             }
 
             /**
-             * ChargeModel.
+             * The metering method. Valid values:
+             * <p>
+             * 
+             * *   ChargeByUnified: unified metering.
+             * *   ChargeByGrade: differential metering.
              */
             public Builder chargeModel(String chargeModel) {
                 this.chargeModel = chargeModel;
@@ -324,7 +332,7 @@ public class DescribeEpnMeasurementDataResponseBody extends TeaModel {
             }
 
             /**
-             * CostCycle.
+             * The metering cycle.
              */
             public Builder costCycle(String costCycle) {
                 this.costCycle = costCycle;
@@ -332,7 +340,7 @@ public class DescribeEpnMeasurementDataResponseBody extends TeaModel {
             }
 
             /**
-             * CostEndTime.
+             * The end time of the metering cycle.
              */
             public Builder costEndTime(String costEndTime) {
                 this.costEndTime = costEndTime;
@@ -340,7 +348,7 @@ public class DescribeEpnMeasurementDataResponseBody extends TeaModel {
             }
 
             /**
-             * CostStartTime.
+             * The start time of the metering cycle.
              */
             public Builder costStartTime(String costStartTime) {
                 this.costStartTime = costStartTime;

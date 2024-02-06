@@ -68,7 +68,10 @@ public class CreateNetworkAclRequest extends Request {
         } 
 
         /**
-         * Description.
+         * The description of the network ACL.
+         * <p>
+         * 
+         * The description must be 1 to 256 characters in length and cannot start with http:// or https://.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -77,7 +80,10 @@ public class CreateNetworkAclRequest extends Request {
         }
 
         /**
-         * NetworkAclName.
+         * Enter a name for the network ACL.
+         * <p>
+         * 
+         * The name must be 1 to 128 characters in length and cannot start with http:// or https://.
          */
         public Builder networkAclName(String networkAclName) {
             this.putQueryParameter("NetworkAclName", networkAclName);

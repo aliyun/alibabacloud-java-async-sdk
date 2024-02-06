@@ -86,7 +86,7 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * MountTargets.
+         * The information about mount targets.
          */
         public Builder mountTargets(java.util.List < MountTargets> mountTargets) {
             this.mountTargets = mountTargets;
@@ -94,7 +94,7 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of mount targets.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -218,7 +218,7 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * EnsRegionId.
+             * The ID of the region.
              */
             public Builder ensRegionId(String ensRegionId) {
                 this.ensRegionId = ensRegionId;
@@ -226,7 +226,7 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * FileSystemId.
+             * The ID of the file system.
              */
             public Builder fileSystemId(String fileSystemId) {
                 this.fileSystemId = fileSystemId;
@@ -234,7 +234,7 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * MountTargetDomain.
+             * The path of the mount target.
              */
             public Builder mountTargetDomain(String mountTargetDomain) {
                 this.mountTargetDomain = mountTargetDomain;
@@ -242,7 +242,7 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * MountTargetName.
+             * The name of the mount target.
              */
             public Builder mountTargetName(String mountTargetName) {
                 this.mountTargetName = mountTargetName;
@@ -250,7 +250,7 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * NetWorkId.
+             * The ID of the network.
              */
             public Builder netWorkId(String netWorkId) {
                 this.netWorkId = netWorkId;
@@ -258,7 +258,13 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The state of the mount target. Valid values:
+             * <p>
+             * 
+             * *   active: The mount target is available.
+             * *   inactive: The mount target is unavailable.
+             * *   pending: A task is being queued for the mount target.
+             * *   deleting: The mount target is being deleted.
              */
             public Builder status(String status) {
                 this.status = status;

@@ -54,7 +54,7 @@ public class DescribeRegionIspsRequest extends Request {
         } 
 
         /**
-         * EnsRegionId.
+         * The ID of the node. You can specify only one node ID in a call.
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);

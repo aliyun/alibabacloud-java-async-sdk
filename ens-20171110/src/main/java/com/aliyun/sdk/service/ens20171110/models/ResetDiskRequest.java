@@ -70,7 +70,7 @@ public class ResetDiskRequest extends Request {
         } 
 
         /**
-         * DiskId.
+         * The ID of the disk that you want to roll back.
          */
         public Builder diskId(String diskId) {
             this.putQueryParameter("DiskId", diskId);
@@ -79,7 +79,7 @@ public class ResetDiskRequest extends Request {
         }
 
         /**
-         * SnapshotId.
+         * The ID of the snapshot that you want to use to roll back the disk.
          */
         public Builder snapshotId(String snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);

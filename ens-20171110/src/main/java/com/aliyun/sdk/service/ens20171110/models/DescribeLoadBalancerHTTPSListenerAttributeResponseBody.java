@@ -278,7 +278,12 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
         private Integer unhealthyThreshold; 
 
         /**
-         * Bandwidth.
+         * The maximum bandwidth of the EIP.
+         * <p>
+         * 
+         * *   Default value: 5.
+         * *   Valid values: **5** to **10000**.
+         * *   Unit: Mbit/s.
          */
         public Builder bandwidth(Integer bandwidth) {
             this.bandwidth = bandwidth;
@@ -286,7 +291,7 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
         }
 
         /**
-         * Description.
+         * The description of the listener. The description must be **1** to **80** characters in length.
          */
         public Builder description(String description) {
             this.description = description;
@@ -294,7 +299,7 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
         }
 
         /**
-         * ForwardPort.
+         * The listener port that is used to redirect HTTP requests to HTTPS.
          */
         public Builder forwardPort(Integer forwardPort) {
             this.forwardPort = forwardPort;
@@ -302,7 +307,11 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
         }
 
         /**
-         * HealthCheck.
+         * Indicates whether the health check feature is enabled. Valid values:
+         * <p>
+         * 
+         * *   **on**
+         * *   **off**
          */
         public Builder healthCheck(String healthCheck) {
             this.healthCheck = healthCheck;
@@ -310,7 +319,10 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
         }
 
         /**
-         * HealthCheckConnectPort.
+         * The port that is used for health checks. Valid values: **1** to **65535**. If an empty string is returned for this parameter, the port specified by BackendServerPort is used for health checks.
+         * <p>
+         * 
+         * >  This parameter is returned only if the HealthCheck parameter is set to on.
          */
         public Builder healthCheckConnectPort(Integer healthCheckConnectPort) {
             this.healthCheckConnectPort = healthCheckConnectPort;
@@ -318,7 +330,10 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
         }
 
         /**
-         * HealthCheckDomain.
+         * The domain name that is used for health checks.
+         * <p>
+         * 
+         * >  This parameter is returned only if the HealthCheck parameter is set to on.
          */
         public Builder healthCheckDomain(String healthCheckDomain) {
             this.healthCheckDomain = healthCheckDomain;
@@ -326,7 +341,15 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
         }
 
         /**
-         * HealthCheckHttpCode.
+         * The HTTP status code for a successful health check. Valid values:
+         * <p>
+         * 
+         * *   **http\_2xx** (default)
+         * *   **http\_3xx**.
+         * *   **http\_4xx**
+         * *   **http\_5xx**
+         * 
+         * >  This parameter is returned only if the HealthCheck parameter is set to on.
          */
         public Builder healthCheckHttpCode(String healthCheckHttpCode) {
             this.healthCheckHttpCode = healthCheckHttpCode;
@@ -334,7 +357,10 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
         }
 
         /**
-         * HealthCheckInterval.
+         * The interval at which health checks are performed. Valid values: **1** to **50**. Unit: seconds.
+         * <p>
+         * 
+         * >  This parameter is returned only if the HealthCheck parameter is set to on.
          */
         public Builder healthCheckInterval(Integer healthCheckInterval) {
             this.healthCheckInterval = healthCheckInterval;
@@ -342,7 +368,13 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
         }
 
         /**
-         * HealthCheckMethod.
+         * The health check method used in HTTP health checks. Valid values:
+         * <p>
+         * 
+         * *   **head**: requests the head of the page.
+         * *   **get**: requests the specified part of the page and returns the entity body.
+         * 
+         * >  This parameter is returned only if the HealthCheck parameter is set to on.
          */
         public Builder healthCheckMethod(String healthCheckMethod) {
             this.healthCheckMethod = healthCheckMethod;
@@ -350,7 +382,18 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
         }
 
         /**
-         * HealthCheckTimeout.
+         * The timeout period of a health check response. If a backend server does not respond within the specified timeout period, the server fails to pass the health check.
+         * <p>
+         * 
+         * *   Default value: 5.
+         * *   Valid values: **1** to **300**.
+         * *   Unit: seconds.
+         * 
+         * > 
+         * 
+         * *   This parameter is returned only if the HealthCheck parameter is set to on.
+         * 
+         * *   If the value of the HealthCheckTimeout parameter is smaller than the value of the HealthCheckInterval parameter, the timeout period specified by the HealthCheckTimeout parameter becomes invalid and the value of the HealthCheckInterval parameter is used as the timeout period.
          */
         public Builder healthCheckTimeout(Integer healthCheckTimeout) {
             this.healthCheckTimeout = healthCheckTimeout;
@@ -358,7 +401,11 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
         }
 
         /**
-         * HealthCheckURI.
+         * The URI that is used for health checks. The URI must be **1** to **80** characters in length.
+         * <p>
+         * 
+         * *   The URL must start with `/` and contain characters other than `/`.
+         * *   This parameter is returned only if the HealthCheck parameter is set to on.
          */
         public Builder healthCheckURI(String healthCheckURI) {
             this.healthCheckURI = healthCheckURI;
@@ -366,7 +413,10 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
         }
 
         /**
-         * HealthyThreshold.
+         * The number of consecutive successful health checks that must occur before an unhealthy and inaccessible backend server is declared healthy and accessible. Valid values: **2** to **10**.
+         * <p>
+         * 
+         * >  This parameter is returned only if the HealthCheck parameter is set to on.
          */
         public Builder healthyThreshold(Integer healthyThreshold) {
             this.healthyThreshold = healthyThreshold;
@@ -374,7 +424,10 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
         }
 
         /**
-         * IdleTimeout.
+         * The timeout period for idle connections. Default value: 15. Valid values: **1** to **60**. Unit: seconds.
+         * <p>
+         * 
+         * >  If no request is received within the specified timeout period, ELB closes the connection. When another request is received, CLB establishes a new connection.
          */
         public Builder idleTimeout(Integer idleTimeout) {
             this.idleTimeout = idleTimeout;
@@ -382,7 +435,11 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
         }
 
         /**
-         * ListenerForward.
+         * Indicates whether HTTP-to-HTTPS redirection is enabled. Valid values:
+         * <p>
+         * 
+         * *   on
+         * *   off
          */
         public Builder listenerForward(String listenerForward) {
             this.listenerForward = listenerForward;
@@ -390,7 +447,7 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
         }
 
         /**
-         * ListenerPort.
+         * The frontend port that is used by the ELB instance. Valid values: **1** to **65535**.
          */
         public Builder listenerPort(Integer listenerPort) {
             this.listenerPort = listenerPort;
@@ -398,7 +455,7 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -406,7 +463,10 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
         }
 
         /**
-         * RequestTimeout.
+         * The timeout period of requests. Default value: 60. Valid values: **1** to **180**. Unit: seconds.
+         * <p>
+         * 
+         * >  If no response is received from the backend server within the specified timeout period, ELB returns an HTTP 504 error code to the client.
          */
         public Builder requestTimeout(Integer requestTimeout) {
             this.requestTimeout = requestTimeout;
@@ -414,7 +474,15 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
         }
 
         /**
-         * Scheduler.
+         * The routing algorithm. Valid values:
+         * <p>
+         * 
+         * *   **wrr**: Backend servers with higher weights receive more requests than those with lower weights.
+         * *   **wlc**: Requests are distributed based on the weight and load of each backend server. The load refers to the number of connections to a backend server. If two backend servers have the same weight, the backend server that has fewer connections receives more requests.
+         * *   **rr**: Requests are distributed to backend servers in sequence.
+         * *   **sch**: consistent hashing that is based on source IP addresses. Requests from the same source IP address are distributed to the same backend server.
+         * *   **qch**: consistent hashing that is based on QUIC connection IDs. Requests that contain the same QUIC connection ID are distributed to the same backend server.
+         * *   **iqch**: consistent hashing that is based on specific three bytes of the iQUIC CIDs. Requests whose second to fourth bytes are the same are distributed to the same backend server.
          */
         public Builder scheduler(String scheduler) {
             this.scheduler = scheduler;
@@ -422,7 +490,7 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
         }
 
         /**
-         * ServerCertificateId.
+         * The ID of the server certificate.
          */
         public Builder serverCertificateId(String serverCertificateId) {
             this.serverCertificateId = serverCertificateId;
@@ -430,7 +498,14 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
         }
 
         /**
-         * Status.
+         * The status of the listener. Valid values:
+         * <p>
+         * 
+         * *   **Running**
+         * *   **Stopped**
+         * *   **Starting**
+         * *   **Configuring**
+         * *   **Stopping**
          */
         public Builder status(String status) {
             this.status = status;
@@ -438,7 +513,10 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
         }
 
         /**
-         * UnhealthyThreshold.
+         * The number of consecutive failed health checks that must occur before a healthy and accessible backend server is declared unhealthy and inaccessible. Valid values: **2** to **10**.
+         * <p>
+         * 
+         * >  This parameter is returned only if the HealthCheck parameter is set to on.
          */
         public Builder unhealthyThreshold(Integer unhealthyThreshold) {
             this.unhealthyThreshold = unhealthyThreshold;

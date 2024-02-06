@@ -167,7 +167,7 @@ public class DescribeDataDistResultRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * The ID of the application.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -176,7 +176,7 @@ public class DescribeDataDistResultRequest extends Request {
         }
 
         /**
-         * DataNames.
+         * The name of the data file. Separate multiple names with commas (,). By default, all data files are queried.
          */
         public Builder dataNames(String dataNames) {
             this.putQueryParameter("DataNames", dataNames);
@@ -185,7 +185,7 @@ public class DescribeDataDistResultRequest extends Request {
         }
 
         /**
-         * DataVersions.
+         * The version number of the data file. Separate multiple numbers with commas (,). By default, all versions of data files are queried.
          */
         public Builder dataVersions(String dataVersions) {
             this.putQueryParameter("DataVersions", dataVersions);
@@ -194,7 +194,7 @@ public class DescribeDataDistResultRequest extends Request {
         }
 
         /**
-         * EnsRegionIds.
+         * The IDs of the ENS nodes.
          */
         public Builder ensRegionIds(java.util.List < String > ensRegionIds) {
             String ensRegionIdsShrink = shrink(ensRegionIds, "EnsRegionIds", "json");
@@ -204,7 +204,7 @@ public class DescribeDataDistResultRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * The IDs of ENS instances. Separate multiple IDs with commas (,). By default, all instances are queried.
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -213,7 +213,7 @@ public class DescribeDataDistResultRequest extends Request {
         }
 
         /**
-         * MaxDate.
+         * The end of the time range to query. Specify the time in the 2006-01-02 format. By default, the time range to query is not restricted.
          */
         public Builder maxDate(String maxDate) {
             this.putQueryParameter("MaxDate", maxDate);
@@ -222,7 +222,7 @@ public class DescribeDataDistResultRequest extends Request {
         }
 
         /**
-         * MinDate.
+         * The beginning of the time range to query. Specify the time in the 2006-01-02 format. By default, the time range to query is not restricted.
          */
         public Builder minDate(String minDate) {
             this.putQueryParameter("MinDate", minDate);
@@ -231,7 +231,7 @@ public class DescribeDataDistResultRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number. Pages start from page 1. This parameter is optional if you want to return the distribution status of all data files.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -240,7 +240,7 @@ public class DescribeDataDistResultRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. This parameter is optional if you want to return the distribution status of all data files.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

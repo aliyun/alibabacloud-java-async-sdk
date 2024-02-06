@@ -127,7 +127,7 @@ public class DescribeEnsRegionIdResourceRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * The end time of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -136,7 +136,13 @@ public class DescribeEnsRegionIdResourceRequest extends Request {
         }
 
         /**
-         * Isp.
+         * The Internet service provider (ISP). Valid values:
+         * <p>
+         * 
+         * *   cmcc: China Mobile
+         * *   telecom: China Telecom
+         * *   unicom: China Unicom
+         * *   multiCarrier: multi-line ISP
          */
         public Builder isp(String isp) {
             this.putQueryParameter("Isp", isp);
@@ -145,7 +151,12 @@ public class DescribeEnsRegionIdResourceRequest extends Request {
         }
 
         /**
-         * OrderByParams.
+         * The order in which the resources to return are sorted. Valid values:
+         * <p>
+         * 
+         * *   InstanceCount: desc
+         * *   Area: asc
+         * *   InternetBandwidth: asc
          */
         public Builder orderByParams(String orderByParams) {
             this.putQueryParameter("OrderByParams", orderByParams);
@@ -154,7 +165,7 @@ public class DescribeEnsRegionIdResourceRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number. Pages start from page **1**. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -163,7 +174,7 @@ public class DescribeEnsRegionIdResourceRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Maximum value: **100**. Default value: **10**.
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -172,7 +183,7 @@ public class DescribeEnsRegionIdResourceRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

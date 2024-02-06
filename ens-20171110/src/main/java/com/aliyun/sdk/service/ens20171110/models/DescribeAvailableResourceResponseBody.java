@@ -74,7 +74,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         private SupportResources supportResources; 
 
         /**
-         * Code.
+         * The returned service code. 0 indicates that the request was successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         }
 
         /**
-         * Images.
+         * The details of the images.
          */
         public Builder images(Images images) {
             this.images = images;
@@ -90,7 +90,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request. This is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         }
 
         /**
-         * SupportResources.
+         * The specifications of resources that you can purchase.
          */
         public Builder supportResources(SupportResources supportResources) {
             this.supportResources = supportResources;
@@ -150,7 +150,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             private String imageName; 
 
             /**
-             * ImageId.
+             * The ID of the image.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -158,7 +158,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * ImageName.
+             * The name of the image.
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -288,7 +288,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             private String systemDiskSize; 
 
             /**
-             * DataDiskSize.
+             * The size of the data disk. Unit: GB.
              */
             public Builder dataDiskSize(String dataDiskSize) {
                 this.dataDiskSize = dataDiskSize;
@@ -296,7 +296,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * EnsRegionId.
+             * The ID of the edge node.
              */
             public Builder ensRegionId(String ensRegionId) {
                 this.ensRegionId = ensRegionId;
@@ -304,7 +304,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceSpec.
+             * The specifications of the resource plan.
              */
             public Builder instanceSpec(String instanceSpec) {
                 this.instanceSpec = instanceSpec;
@@ -312,7 +312,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * SupportResourcesCount.
+             * The number of resources that you can purchase.
              */
             public Builder supportResourcesCount(String supportResourcesCount) {
                 this.supportResourcesCount = supportResourcesCount;
@@ -320,7 +320,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * SystemDiskSize.
+             * The size of the system disk. Unit: GiB.
              */
             public Builder systemDiskSize(String systemDiskSize) {
                 this.systemDiskSize = systemDiskSize;

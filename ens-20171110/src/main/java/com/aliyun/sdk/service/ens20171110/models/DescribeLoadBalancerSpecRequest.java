@@ -54,7 +54,7 @@ public class DescribeLoadBalancerSpecRequest extends Request {
         } 
 
         /**
-         * LoadBalancerSpec.
+         * The specifications of the ELB instance.
          */
         public Builder loadBalancerSpec(String loadBalancerSpec) {
             this.putQueryParameter("LoadBalancerSpec", loadBalancerSpec);

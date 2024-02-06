@@ -85,7 +85,7 @@ public class ModifySecurityGroupAttributeRequest extends Request {
         } 
 
         /**
-         * Description.
+         * The description of the security group.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -94,7 +94,7 @@ public class ModifySecurityGroupAttributeRequest extends Request {
         }
 
         /**
-         * SecurityGroupId.
+         * The ID of the security group.
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -103,7 +103,12 @@ public class ModifySecurityGroupAttributeRequest extends Request {
         }
 
         /**
-         * SecurityGroupName.
+         * The name of the security group. The name of a bucket must meet the following requirements:
+         * <p>
+         * 
+         * *   The name must be 2 to 128 characters in length.
+         * *   The name must start with a letter but cannot start with http:// or https://.
+         * *   The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
          */
         public Builder securityGroupName(String securityGroupName) {
             this.putQueryParameter("SecurityGroupName", securityGroupName);

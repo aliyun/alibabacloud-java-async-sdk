@@ -70,7 +70,7 @@ public class RemoveVSwitchesFromEpnInstanceRequest extends Request {
         } 
 
         /**
-         * EPNInstanceId.
+         * The ID of theEPN instance.
          */
         public Builder EPNInstanceId(String EPNInstanceId) {
             this.putQueryParameter("EPNInstanceId", EPNInstanceId);
@@ -79,7 +79,7 @@ public class RemoveVSwitchesFromEpnInstanceRequest extends Request {
         }
 
         /**
-         * VSwitchesInfo.
+         * The internal networking information that you want to delete.
          */
         public Builder vSwitchesInfo(String vSwitchesInfo) {
             this.putQueryParameter("VSwitchesInfo", vSwitchesInfo);

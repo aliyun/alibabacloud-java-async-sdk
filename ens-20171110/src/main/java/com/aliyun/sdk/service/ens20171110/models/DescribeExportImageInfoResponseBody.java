@@ -86,7 +86,7 @@ public class DescribeExportImageInfoResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Images.
+         * The returned result. For more information, see the Images parameter described in the JSON-formatted sample success response.
          */
         public Builder images(Images images) {
             this.images = images;
@@ -94,7 +94,7 @@ public class DescribeExportImageInfoResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeExportImageInfoResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeExportImageInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeExportImageInfoResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -242,7 +242,7 @@ public class DescribeExportImageInfoResponseBody extends TeaModel {
             private String platform; 
 
             /**
-             * Architecture.
+             * The architecture of the image. Example: **x86\_64**.
              */
             public Builder architecture(String architecture) {
                 this.architecture = architecture;
@@ -250,7 +250,7 @@ public class DescribeExportImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * The time when the image was created.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -258,7 +258,7 @@ public class DescribeExportImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ExportedImageURL.
+             * The URL of the exported image.
              */
             public Builder exportedImageURL(String exportedImageURL) {
                 this.exportedImageURL = exportedImageURL;
@@ -266,7 +266,13 @@ public class DescribeExportImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ImageExportStatus.
+             * The export status of the image. Valid values:
+             * <p>
+             * 
+             * *   Exporting
+             * *   Exported
+             * *   ExportError
+             * *   Unexported
              */
             public Builder imageExportStatus(String imageExportStatus) {
                 this.imageExportStatus = imageExportStatus;
@@ -274,7 +280,7 @@ public class DescribeExportImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ImageId.
+             * The ID of the image.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -282,7 +288,7 @@ public class DescribeExportImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ImageName.
+             * The name of the image.
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -290,7 +296,11 @@ public class DescribeExportImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ImageOwnerAlias.
+             * The source of the image. Valid values:
+             * <p>
+             * 
+             * *   system: public image
+             * *   self: custom image
              */
             public Builder imageOwnerAlias(String imageOwnerAlias) {
                 this.imageOwnerAlias = imageOwnerAlias;
@@ -298,7 +308,7 @@ public class DescribeExportImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Platform.
+             * The OS.
              */
             public Builder platform(String platform) {
                 this.platform = platform;

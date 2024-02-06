@@ -168,7 +168,7 @@ public class DescribeEnsRouteEntryListRequest extends Request {
         } 
 
         /**
-         * DestinationCidrBlock.
+         * The destination Classless Inter-Domain Routing (CIDR) block of the route entry.
          */
         public Builder destinationCidrBlock(String destinationCidrBlock) {
             this.putQueryParameter("DestinationCidrBlock", destinationCidrBlock);
@@ -177,7 +177,7 @@ public class DescribeEnsRouteEntryListRequest extends Request {
         }
 
         /**
-         * NextHopId.
+         * The ID of the next hop.
          */
         public Builder nextHopId(String nextHopId) {
             this.putQueryParameter("NextHopId", nextHopId);
@@ -186,7 +186,10 @@ public class DescribeEnsRouteEntryListRequest extends Request {
         }
 
         /**
-         * NextHopType.
+         * The type of next hop of the custom route entry. Valid values:
+         * <p>
+         * 
+         * *   Instance: an ENS instance.
          */
         public Builder nextHopType(String nextHopType) {
             this.putQueryParameter("NextHopType", nextHopType);
@@ -195,7 +198,7 @@ public class DescribeEnsRouteEntryListRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page. Valid values: integers that are greater than 0. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -204,7 +207,7 @@ public class DescribeEnsRouteEntryListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Default value: 10. Valid values: 10 to 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -213,7 +216,7 @@ public class DescribeEnsRouteEntryListRequest extends Request {
         }
 
         /**
-         * RouteEntryId.
+         * The ID of the route that you want to query.
          */
         public Builder routeEntryId(String routeEntryId) {
             this.putQueryParameter("RouteEntryId", routeEntryId);
@@ -222,7 +225,7 @@ public class DescribeEnsRouteEntryListRequest extends Request {
         }
 
         /**
-         * RouteEntryName.
+         * The name of the route.
          */
         public Builder routeEntryName(String routeEntryName) {
             this.putQueryParameter("RouteEntryName", routeEntryName);
@@ -231,7 +234,11 @@ public class DescribeEnsRouteEntryListRequest extends Request {
         }
 
         /**
-         * RouteEntryType.
+         * The route type. Valid values:
+         * <p>
+         * 
+         * *   Custom: custom route
+         * *   System: system route
          */
         public Builder routeEntryType(String routeEntryType) {
             this.putQueryParameter("RouteEntryType", routeEntryType);
@@ -240,7 +247,7 @@ public class DescribeEnsRouteEntryListRequest extends Request {
         }
 
         /**
-         * RouteTableId.
+         * The ID of the route table that you want to query.
          */
         public Builder routeTableId(String routeTableId) {
             this.putQueryParameter("RouteTableId", routeTableId);

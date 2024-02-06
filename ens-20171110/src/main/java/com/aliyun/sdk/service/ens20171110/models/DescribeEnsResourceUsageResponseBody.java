@@ -50,7 +50,7 @@ public class DescribeEnsResourceUsageResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * EnsResourceUsage.
+         * The resource usage data.
          */
         public Builder ensResourceUsage(java.util.List < EnsResourceUsage> ensResourceUsage) {
             this.ensResourceUsage = ensResourceUsage;
@@ -58,7 +58,7 @@ public class DescribeEnsResourceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -218,7 +218,7 @@ public class DescribeEnsResourceUsageResponseBody extends TeaModel {
             private Long storageSum; 
 
             /**
-             * ComputeResourceCount.
+             * The number of edge services. This parameter is available only when you set the ServiceType parameter to 2.
              */
             public Builder computeResourceCount(Integer computeResourceCount) {
                 this.computeResourceCount = computeResourceCount;
@@ -226,7 +226,7 @@ public class DescribeEnsResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * CpuSum.
+             * The CPU usage. Unit: cores.
              */
             public Builder cpuSum(Long cpuSum) {
                 this.cpuSum = cpuSum;
@@ -234,7 +234,7 @@ public class DescribeEnsResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * DiskCount.
+             * The number of data disks.
              */
             public Builder diskCount(Integer diskCount) {
                 this.diskCount = diskCount;
@@ -242,7 +242,7 @@ public class DescribeEnsResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * DownCount.
+             * The number of stopped VMs.
              */
             public Builder downCount(Integer downCount) {
                 this.downCount = downCount;
@@ -250,7 +250,7 @@ public class DescribeEnsResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * ExpiredCount.
+             * The number of expired VM instances.
              */
             public Builder expiredCount(Integer expiredCount) {
                 this.expiredCount = expiredCount;
@@ -258,7 +258,7 @@ public class DescribeEnsResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * ExpiringCount.
+             * The number of VM instances that are about to expire.
              */
             public Builder expiringCount(Integer expiringCount) {
                 this.expiringCount = expiringCount;
@@ -266,7 +266,7 @@ public class DescribeEnsResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * GpuSum.
+             * The number of GPUs.
              */
             public Builder gpuSum(Long gpuSum) {
                 this.gpuSum = gpuSum;
@@ -274,7 +274,7 @@ public class DescribeEnsResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceCount.
+             * The number of instances.
              */
             public Builder instanceCount(Integer instanceCount) {
                 this.instanceCount = instanceCount;
@@ -282,7 +282,7 @@ public class DescribeEnsResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * RunningCount.
+             * The number of running instances.
              */
             public Builder runningCount(Integer runningCount) {
                 this.runningCount = runningCount;
@@ -290,7 +290,12 @@ public class DescribeEnsResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceType.
+             * The type of the service. Valid values:
+             * <p>
+             * 
+             * *   1: subscription instance.
+             * *   2: edge service instance.
+             * *   3: pay-as-you-go instance.
              */
             public Builder serviceType(String serviceType) {
                 this.serviceType = serviceType;
@@ -298,7 +303,7 @@ public class DescribeEnsResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * StorageSum.
+             * The total disk size.
              */
             public Builder storageSum(Long storageSum) {
                 this.storageSum = storageSum;

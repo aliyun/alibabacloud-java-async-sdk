@@ -50,7 +50,7 @@ public class DeleteDeviceInternetPortResponseBody extends TeaModel {
         private java.util.List < String > ruleIds; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DeleteDeviceInternetPortResponseBody extends TeaModel {
         }
 
         /**
-         * RuleIds.
+         * The list of rules.
          */
         public Builder ruleIds(java.util.List < String > ruleIds) {
             this.ruleIds = ruleIds;

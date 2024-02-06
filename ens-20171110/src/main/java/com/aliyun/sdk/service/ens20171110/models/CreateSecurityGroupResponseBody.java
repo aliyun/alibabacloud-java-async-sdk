@@ -50,7 +50,7 @@ public class CreateSecurityGroupResponseBody extends TeaModel {
         private String securityGroupId; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class CreateSecurityGroupResponseBody extends TeaModel {
         }
 
         /**
-         * SecurityGroupId.
+         * The ID of the security group.
          */
         public Builder securityGroupId(String securityGroupId) {
             this.securityGroupId = securityGroupId;

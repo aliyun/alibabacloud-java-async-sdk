@@ -15,6 +15,12 @@ public class DescribeSnatAttributeResponseBody extends TeaModel {
     @NameInMap("CreationTime")
     private String creationTime;
 
+    @NameInMap("DestCIDR")
+    private String destCIDR;
+
+    @NameInMap("IdleTimeout")
+    private Integer idleTimeout;
+
     @NameInMap("NatGatewayId")
     private String natGatewayId;
 
@@ -45,8 +51,13 @@ public class DescribeSnatAttributeResponseBody extends TeaModel {
     @NameInMap("Status")
     private String status;
 
+    @NameInMap("Type")
+    private String type;
+
     private DescribeSnatAttributeResponseBody(Builder builder) {
         this.creationTime = builder.creationTime;
+        this.destCIDR = builder.destCIDR;
+        this.idleTimeout = builder.idleTimeout;
         this.natGatewayId = builder.natGatewayId;
         this.requestId = builder.requestId;
         this.snatEntryId = builder.snatEntryId;
@@ -57,6 +68,7 @@ public class DescribeSnatAttributeResponseBody extends TeaModel {
         this.standbySnatIp = builder.standbySnatIp;
         this.standbyStatus = builder.standbyStatus;
         this.status = builder.status;
+        this.type = builder.type;
     }
 
     public static Builder builder() {
@@ -72,6 +84,20 @@ public class DescribeSnatAttributeResponseBody extends TeaModel {
      */
     public String getCreationTime() {
         return this.creationTime;
+    }
+
+    /**
+     * @return destCIDR
+     */
+    public String getDestCIDR() {
+        return this.destCIDR;
+    }
+
+    /**
+     * @return idleTimeout
+     */
+    public Integer getIdleTimeout() {
+        return this.idleTimeout;
     }
 
     /**
@@ -144,8 +170,17 @@ public class DescribeSnatAttributeResponseBody extends TeaModel {
         return this.status;
     }
 
+    /**
+     * @return type
+     */
+    public String getType() {
+        return this.type;
+    }
+
     public static final class Builder {
         private String creationTime; 
+        private String destCIDR; 
+        private Integer idleTimeout; 
         private String natGatewayId; 
         private String requestId; 
         private String snatEntryId; 
@@ -156,9 +191,10 @@ public class DescribeSnatAttributeResponseBody extends TeaModel {
         private String standbySnatIp; 
         private String standbyStatus; 
         private String status; 
+        private String type; 
 
         /**
-         * CreationTime.
+         * The time when the entry was created. The time is displayed in UTC.
          */
         public Builder creationTime(String creationTime) {
             this.creationTime = creationTime;
@@ -166,7 +202,23 @@ public class DescribeSnatAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * NatGatewayId.
+         * The destination CIDR block. The rule takes effect only on requests that access the destination CIDR block.
+         */
+        public Builder destCIDR(String destCIDR) {
+            this.destCIDR = destCIDR;
+            return this;
+        }
+
+        /**
+         * Timeout period.
+         */
+        public Builder idleTimeout(Integer idleTimeout) {
+            this.idleTimeout = idleTimeout;
+            return this;
+        }
+
+        /**
+         * The ID of the Network Address Translation (NAT) gateway.
          */
         public Builder natGatewayId(String natGatewayId) {
             this.natGatewayId = natGatewayId;
@@ -174,7 +226,7 @@ public class DescribeSnatAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -182,7 +234,7 @@ public class DescribeSnatAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * SnatEntryId.
+         * The ID of the SNAT entry.
          */
         public Builder snatEntryId(String snatEntryId) {
             this.snatEntryId = snatEntryId;
@@ -190,7 +242,7 @@ public class DescribeSnatAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * SnatEntryName.
+         * The name of the SNAT entry.
          */
         public Builder snatEntryName(String snatEntryName) {
             this.snatEntryName = snatEntryName;
@@ -198,7 +250,7 @@ public class DescribeSnatAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * SnatIp.
+         * The EIP specified in the SNAT entry. Multiple EIPs are separated by commas (,).
          */
         public Builder snatIp(String snatIp) {
             this.snatIp = snatIp;
@@ -206,7 +258,7 @@ public class DescribeSnatAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * SnatIps.
+         * The information about the EIP specified in the SNAT entry.
          */
         public Builder snatIps(java.util.List < SnatIps> snatIps) {
             this.snatIps = snatIps;
@@ -214,7 +266,7 @@ public class DescribeSnatAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * SourceCIDR.
+         * The source CIDR block specified in the SNAT entry.
          */
         public Builder sourceCIDR(String sourceCIDR) {
             this.sourceCIDR = sourceCIDR;
@@ -222,7 +274,7 @@ public class DescribeSnatAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * StandbySnatIp.
+         * The secondary EIP specified in the SNAT entry. Multiple secondary EIPs are separated by commas (,).
          */
         public Builder standbySnatIp(String standbySnatIp) {
             this.standbySnatIp = standbySnatIp;
@@ -230,7 +282,13 @@ public class DescribeSnatAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * StandbyStatus.
+         * The status of the secondary EIP.
+         * <p>
+         * 
+         * *   Running
+         * *   Stopping
+         * *   Stopped
+         * *   Starting
          */
         public Builder standbyStatus(String standbyStatus) {
             this.standbyStatus = standbyStatus;
@@ -238,10 +296,28 @@ public class DescribeSnatAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The status of the SNAT entry.
+         * <p>
+         * 
+         * *   Pending: The SNAT entry is being created or modified.
+         * *   Available: The SNAT entry is available.
+         * *   Deleting: The SNAT entry is being deleted.
          */
         public Builder status(String status) {
             this.status = status;
+            return this;
+        }
+
+        /**
+         * The type of the NAT. Valid values: 
+         * <p>
+         * 
+         * - Empty: symmetric NAT.
+         * 
+         * - FullCone: full cone NAT.
+         */
+        public Builder type(String type) {
+            this.type = type;
             return this;
         }
 
@@ -302,7 +378,7 @@ public class DescribeSnatAttributeResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * CreationTime.
+             * The time when the IP address was created. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -310,7 +386,7 @@ public class DescribeSnatAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Ip.
+             * The IP address.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -318,7 +394,14 @@ public class DescribeSnatAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the IP address.
+             * <p>
+             * 
+             * *   Running
+             * *   Stopping
+             * *   Stopped
+             * *   Starting
+             * *   Releasing
              */
             public Builder status(String status) {
                 this.status = status;

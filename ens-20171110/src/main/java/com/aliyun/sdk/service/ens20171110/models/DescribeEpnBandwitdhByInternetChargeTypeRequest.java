@@ -34,11 +34,6 @@ public class DescribeEpnBandwitdhByInternetChargeTypeRequest extends Request {
     @Validation(required = true)
     private String startTime;
 
-    @Query
-    @NameInMap("Version")
-    @Validation(required = true)
-    private String version;
-
     private DescribeEpnBandwitdhByInternetChargeTypeRequest(Builder builder) {
         super(builder);
         this.endTime = builder.endTime;
@@ -46,7 +41,6 @@ public class DescribeEpnBandwitdhByInternetChargeTypeRequest extends Request {
         this.isp = builder.isp;
         this.networkingModel = builder.networkingModel;
         this.startTime = builder.startTime;
-        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -97,20 +91,12 @@ public class DescribeEpnBandwitdhByInternetChargeTypeRequest extends Request {
         return this.startTime;
     }
 
-    /**
-     * @return version
-     */
-    public String getVersion() {
-        return this.version;
-    }
-
     public static final class Builder extends Request.Builder<DescribeEpnBandwitdhByInternetChargeTypeRequest, Builder> {
         private String endTime; 
         private String ensRegionId; 
         private String isp; 
         private String networkingModel; 
         private String startTime; 
-        private String version; 
 
         private Builder() {
             super();
@@ -123,11 +109,14 @@ public class DescribeEpnBandwitdhByInternetChargeTypeRequest extends Request {
             this.isp = request.isp;
             this.networkingModel = request.networkingModel;
             this.startTime = request.startTime;
-            this.version = request.version;
         } 
 
         /**
-         * EndTime.
+         * The end of the time range to query.
+         * <p>
+         * 
+         * *   Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * *   If the value of the seconds place is not 00, the start time is automatically set to the next minute.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -136,7 +125,7 @@ public class DescribeEpnBandwitdhByInternetChargeTypeRequest extends Request {
         }
 
         /**
-         * EnsRegionId.
+         * The ID of the Edge Node Service (ENS) node.
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -145,7 +134,13 @@ public class DescribeEpnBandwitdhByInternetChargeTypeRequest extends Request {
         }
 
         /**
-         * Isp.
+         * The Internet service provider (ISP). Valid values:
+         * <p>
+         * 
+         * *   cmcc: China Mobile
+         * *   telecom: China Telecom
+         * *   unicom: China Unicom
+         * *   multiCarrier: multi-line ISP
          */
         public Builder isp(String isp) {
             this.putQueryParameter("Isp", isp);
@@ -154,7 +149,12 @@ public class DescribeEpnBandwitdhByInternetChargeTypeRequest extends Request {
         }
 
         /**
-         * NetworkingModel.
+         * The networking mode. Valid values:
+         * <p>
+         * 
+         * *   **SpeedUp**: intelligent acceleration network (Internet)
+         * *   **Connection**: internal network
+         * *   **SpeedUpAndConnection**: intelligent acceleration network and internal network
          */
         public Builder networkingModel(String networkingModel) {
             this.putQueryParameter("NetworkingModel", networkingModel);
@@ -163,20 +163,15 @@ public class DescribeEpnBandwitdhByInternetChargeTypeRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query.
+         * <p>
+         * 
+         * *   Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * *   If the value of the seconds place is not 00, the start time is automatically set to the next minute.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
             this.startTime = startTime;
-            return this;
-        }
-
-        /**
-         * Version.
-         */
-        public Builder version(String version) {
-            this.putQueryParameter("Version", version);
-            this.version = version;
             return this;
         }
 

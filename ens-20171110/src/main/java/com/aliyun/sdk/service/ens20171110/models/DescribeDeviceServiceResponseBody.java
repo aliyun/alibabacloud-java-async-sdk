@@ -86,7 +86,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
         private java.util.List < ResourceInfos> resourceInfos; 
 
         /**
-         * AppMetaData.
+         * The basic properties of the application.
          */
         public Builder appMetaData(AppMetaData appMetaData) {
             this.appMetaData = appMetaData;
@@ -94,7 +94,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
         }
 
         /**
-         * AppStatus.
+         * The status information of the application.
          */
         public Builder appStatus(AppStatus appStatus) {
             this.appStatus = appStatus;
@@ -102,7 +102,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceDetailInfos.
+         * The information about the devices.
          */
         public Builder resourceDetailInfos(java.util.List < ResourceDetailInfos> resourceDetailInfos) {
             this.resourceDetailInfos = resourceDetailInfos;
@@ -118,7 +118,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceInfos.
+         * The information about the instances.
          */
         public Builder resourceInfos(java.util.List < ResourceInfos> resourceInfos) {
             this.resourceInfos = resourceInfos;
@@ -230,7 +230,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             private String description; 
 
             /**
-             * AppId.
+             * The ID of the application.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -238,7 +238,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * The name of the application.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -246,7 +246,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * AppStableVersion.
+             * The stable version number of the application.
              */
             public Builder appStableVersion(String appStableVersion) {
                 this.appStableVersion = appStableVersion;
@@ -254,7 +254,11 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * AppType.
+             * The type of the application. The value is of the enumeration type. Valid values:
+             * <p>
+             * 
+             * *   Common
+             * *   Scheduler
              */
             public Builder appType(String appType) {
                 this.appType = appType;
@@ -262,7 +266,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterName.
+             * The name of the application cluster.
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -270,7 +274,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the application was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -278,7 +282,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the application.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -343,7 +347,21 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * Phase.
+             * The status of the application. The value is of the enumeration type. Valid values:
+             * <p>
+             * 
+             * Three intermediate states:
+             * 
+             * *   CREATING
+             * *   UPDATING
+             * *   DELETING
+             * 
+             * Four final states:
+             * 
+             * *   CREATE_FAILED
+             * *   UPDATE_FAILED
+             * *   DELETE_FAILED
+             * *   RUNNING
              */
             public Builder phase(String phase) {
                 this.phase = phase;
@@ -351,7 +369,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * StatusDescrip.
+             * The description of the application status.
              */
             public Builder statusDescrip(String statusDescrip) {
                 this.statusDescrip = statusDescrip;
@@ -359,7 +377,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The time when the status was last updated.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -508,7 +526,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * DeviceName.
+             * The name of the device.
              */
             public Builder deviceName(String deviceName) {
                 this.deviceName = deviceName;
@@ -516,7 +534,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * ID.
+             * The ID of the cloud device.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -524,7 +542,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * IP.
+             * The IP address.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -532,7 +550,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * ISP.
+             * The Internet service provider (ISP).
              */
             public Builder ISP(String ISP) {
                 this.ISP = ISP;
@@ -540,7 +558,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * ImageID.
+             * The ID of the image.
              */
             public Builder imageID(String imageID) {
                 this.imageID = imageID;
@@ -548,7 +566,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * Mac.
+             * The media access control (MAC) address of the device.
              */
             public Builder mac(String mac) {
                 this.mac = mac;
@@ -556,7 +574,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * RegionID.
+             * The ID of the ENS node.
              */
             public Builder regionID(String regionID) {
                 this.regionID = regionID;
@@ -564,7 +582,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * Server.
+             * The server name of the ENS node.
              */
             public Builder server(String server) {
                 this.server = server;
@@ -572,7 +590,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the device.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -580,7 +598,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the device.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -657,7 +675,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             private String protocol; 
 
             /**
-             * ContainerPorts.
+             * The port of the container.
              */
             public Builder containerPorts(String containerPorts) {
                 this.containerPorts = containerPorts;
@@ -665,7 +683,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * ExternalIp.
+             * The public IP address.
              */
             public Builder externalIp(String externalIp) {
                 this.externalIp = externalIp;
@@ -673,7 +691,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * HostPorts.
+             * The port range.
              */
             public Builder hostPorts(String hostPorts) {
                 this.hostPorts = hostPorts;
@@ -681,7 +699,11 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * Protocol.
+             * The protocol of the gateway. The value is of the enumeration type. Valid values:
+             * <p>
+             * 
+             * *   TCP
+             * *   UDP
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -746,7 +768,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * Name.
+             * The name of the device.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -754,7 +776,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * Network.
+             * The network information.
              */
             public Builder network(java.util.List < Network> network) {
                 this.network = network;
@@ -762,7 +784,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -803,7 +825,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             private String ip; 
 
             /**
-             * Ip.
+             * The internal IP address.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -844,7 +866,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             private String ip; 
 
             /**
-             * Ip.
+             * The public IP address.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -1017,7 +1039,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             private String regionName; 
 
             /**
-             * AppVersion.
+             * The version of the application.
              */
             public Builder appVersion(String appVersion) {
                 this.appVersion = appVersion;
@@ -1025,7 +1047,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * AreaCode.
+             * The area code.
              */
             public Builder areaCode(String areaCode) {
                 this.areaCode = areaCode;
@@ -1033,7 +1055,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * AreaName.
+             * The region name.
              */
             public Builder areaName(String areaName) {
                 this.areaName = areaName;
@@ -1041,7 +1063,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the application was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -1049,7 +1071,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceInfos.
+             * The information about the devices.
              */
             public Builder deviceInfos(java.util.List < DeviceInfos> deviceInfos) {
                 this.deviceInfos = deviceInfos;
@@ -1057,7 +1079,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -1065,7 +1087,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceStatus.
+             * The status of the instance.
              */
             public Builder instanceStatus(String instanceStatus) {
                 this.instanceStatus = instanceStatus;
@@ -1073,7 +1095,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * InternalIps.
+             * The internal IP addresses.
              */
             public Builder internalIps(java.util.List < InternalIps> internalIps) {
                 this.internalIps = internalIps;
@@ -1081,7 +1103,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * PublicIps.
+             * The public IP addresses.
              */
             public Builder publicIps(java.util.List < PublicIps> publicIps) {
                 this.publicIps = publicIps;
@@ -1089,7 +1111,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * RegionCode.
+             * The ID of the region.
              */
             public Builder regionCode(String regionCode) {
                 this.regionCode = regionCode;
@@ -1097,7 +1119,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the ENS node.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1105,7 +1127,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             }
 
             /**
-             * RegionName.
+             * The name of the region.
              */
             public Builder regionName(String regionName) {
                 this.regionName = regionName;

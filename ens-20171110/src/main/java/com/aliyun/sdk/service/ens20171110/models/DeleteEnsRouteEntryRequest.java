@@ -55,7 +55,7 @@ public class DeleteEnsRouteEntryRequest extends Request {
         } 
 
         /**
-         * RouteEntryId.
+         * The ID of the route that you want to delete.
          */
         public Builder routeEntryId(String routeEntryId) {
             this.putQueryParameter("RouteEntryId", routeEntryId);

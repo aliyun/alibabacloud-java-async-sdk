@@ -69,7 +69,13 @@ public class CreateApplicationRequest extends Request {
         } 
 
         /**
-         * Template.
+         * The edge application template. The value must be a JSON string that contains the following information:
+         * <p>
+         * 
+         * *   Basic information such as the name of the application
+         * *   Information such as resource specifications and network security configurations
+         * *   Service specifications
+         * *   Required resources
          */
         public Builder template(String template) {
             this.putQueryParameter("Template", template);
@@ -78,7 +84,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * Timeout.
+         * The timeout period for asynchronous processing. Unit: seconds. Default value: 1800.
          */
         public Builder timeout(Integer timeout) {
             this.putQueryParameter("Timeout", timeout);

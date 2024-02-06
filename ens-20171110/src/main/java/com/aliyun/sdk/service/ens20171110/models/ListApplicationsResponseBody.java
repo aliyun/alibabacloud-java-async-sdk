@@ -86,7 +86,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Applications.
+         * Details about applications.
          */
         public Builder applications(Applications applications) {
             this.applications = applications;
@@ -94,7 +94,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -170,7 +170,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             private String appInfo; 
 
             /**
-             * AppId.
+             * The ID of the application.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -178,7 +178,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * AppInfo.
+             * The information about the application, such as the resource specification, parameter configuration, and resources.
              */
             public Builder appInfo(String appInfo) {
                 this.appInfo = appInfo;
@@ -272,7 +272,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             private String clusterName; 
 
             /**
-             * AppList.
+             * Details about the application.
              */
             public Builder appList(AppList appList) {
                 this.appList = appList;
@@ -280,7 +280,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterName.
+             * The name of the cluster.
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;

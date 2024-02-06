@@ -170,7 +170,7 @@ public class RunServiceScheduleRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * The ID of the application.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -179,7 +179,7 @@ public class RunServiceScheduleRequest extends Request {
         }
 
         /**
-         * ClientIp.
+         * The IP address of the client.
          */
         public Builder clientIp(String clientIp) {
             this.putQueryParameter("ClientIp", clientIp);
@@ -188,7 +188,7 @@ public class RunServiceScheduleRequest extends Request {
         }
 
         /**
-         * Directorys.
+         * The directory to which the data file is mounted. The value must be a full path and cannot be \"/../\". Example: \["/data/app01", "/data/user"]. Specify the relative path of the virtual device for this parameter. For example, specify /data for this parameter when the actual path of the virtual device is /data/{input path}.
          */
         public Builder directorys(String directorys) {
             this.putQueryParameter("Directorys", directorys);
@@ -197,7 +197,7 @@ public class RunServiceScheduleRequest extends Request {
         }
 
         /**
-         * PodConfigName.
+         * The parameter does not take effect.
          */
         public Builder podConfigName(String podConfigName) {
             this.putQueryParameter("PodConfigName", podConfigName);
@@ -206,7 +206,7 @@ public class RunServiceScheduleRequest extends Request {
         }
 
         /**
-         * PreLockedTimeout.
+         * The maximum duration for locking an idle device. Unit: seconds. This parameter takes effect only if you set ServiceAction to PreSchedule. Default value: 300.
          */
         public Builder preLockedTimeout(Integer preLockedTimeout) {
             this.putQueryParameter("PreLockedTimeout", preLockedTimeout);
@@ -215,7 +215,7 @@ public class RunServiceScheduleRequest extends Request {
         }
 
         /**
-         * ScheduleStrategy.
+         * The scheduling policy of the device. The value must be a JSON string.
          */
         public Builder scheduleStrategy(String scheduleStrategy) {
             this.putQueryParameter("ScheduleStrategy", scheduleStrategy);
@@ -224,7 +224,21 @@ public class RunServiceScheduleRequest extends Request {
         }
 
         /**
-         * ServiceAction.
+         * The scheduling operation. The value must be of the enumeration type. Valid values:
+         * <p>
+         * 
+         * Container scenario:
+         * 
+         * *   Start: selects and activates an idle cloud device.
+         * *   Stop: stops and releases the cloud device.
+         * *   Console: performs the scheduling operation when the device is in the scheduling state.
+         * 
+         * Bare metal instance or virtual machine scenario:
+         * 
+         * *   PreSchedule: locks a virtual machine instance for scheduling.
+         * *   Confirm: confirms the scheduling operation.
+         * *   Cancel: cancels the scheduling operation.
+         * *   Console: performs the scheduling operation when the device is in the scheduling state.
          */
         public Builder serviceAction(String serviceAction) {
             this.putQueryParameter("ServiceAction", serviceAction);
@@ -233,7 +247,7 @@ public class RunServiceScheduleRequest extends Request {
         }
 
         /**
-         * ServiceCommands.
+         * The service commands. The value must be a JSON string.
          */
         public Builder serviceCommands(String serviceCommands) {
             this.putQueryParameter("ServiceCommands", serviceCommands);
@@ -242,7 +256,7 @@ public class RunServiceScheduleRequest extends Request {
         }
 
         /**
-         * Uuid.
+         * The UUID of the device.
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

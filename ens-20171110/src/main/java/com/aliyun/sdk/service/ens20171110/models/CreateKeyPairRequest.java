@@ -17,15 +17,9 @@ public class CreateKeyPairRequest extends Request {
     @Validation(required = true)
     private String keyPairName;
 
-    @Query
-    @NameInMap("Version")
-    @Validation(required = true)
-    private String version;
-
     private CreateKeyPairRequest(Builder builder) {
         super(builder);
         this.keyPairName = builder.keyPairName;
-        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -48,16 +42,8 @@ public class CreateKeyPairRequest extends Request {
         return this.keyPairName;
     }
 
-    /**
-     * @return version
-     */
-    public String getVersion() {
-        return this.version;
-    }
-
     public static final class Builder extends Request.Builder<CreateKeyPairRequest, Builder> {
         private String keyPairName; 
-        private String version; 
 
         private Builder() {
             super();
@@ -66,24 +52,18 @@ public class CreateKeyPairRequest extends Request {
         private Builder(CreateKeyPairRequest request) {
             super(request);
             this.keyPairName = request.keyPairName;
-            this.version = request.version;
         } 
 
         /**
-         * KeyPairName.
+         * The name of the key pair. The name must conform to the following naming conventions:
+         * <p>
+         * 
+         * *   The name must be 2 to 128 characters in length, and can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+         * *   It must start with a letter but cannot start with `http://` or `https://`.
          */
         public Builder keyPairName(String keyPairName) {
             this.putQueryParameter("KeyPairName", keyPairName);
             this.keyPairName = keyPairName;
-            return this;
-        }
-
-        /**
-         * Version.
-         */
-        public Builder version(String version) {
-            this.putQueryParameter("Version", version);
-            this.version = version;
             return this;
         }
 

@@ -138,7 +138,7 @@ public class DescribeNatGatewaysRequest extends Request {
         } 
 
         /**
-         * EnsRegionId.
+         * The ID of the Edge Node Service (ENS) node.
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -147,7 +147,7 @@ public class DescribeNatGatewaysRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the NAT gateway.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -156,7 +156,7 @@ public class DescribeNatGatewaysRequest extends Request {
         }
 
         /**
-         * NatGatewayId.
+         * The ID of the NAT gateway.
          */
         public Builder natGatewayId(String natGatewayId) {
             this.putQueryParameter("NatGatewayId", natGatewayId);
@@ -165,7 +165,7 @@ public class DescribeNatGatewaysRequest extends Request {
         }
 
         /**
-         * NetworkId.
+         * The ID of the network.
          */
         public Builder networkId(String networkId) {
             this.putQueryParameter("NetworkId", networkId);
@@ -174,7 +174,10 @@ public class DescribeNatGatewaysRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number. Pages start from page **1**.
+         * <p>
+         * 
+         * Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -183,7 +186,10 @@ public class DescribeNatGatewaysRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. The maximum value is **100**.
+         * <p>
+         * 
+         * Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -192,7 +198,7 @@ public class DescribeNatGatewaysRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * The ID of the vSwitch.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);

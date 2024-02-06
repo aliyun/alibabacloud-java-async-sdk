@@ -50,7 +50,10 @@ public class AddBackendServersResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * BackendServers.
+         * The list of backend servers that you want to add. You can add at most 20 backend servers.
+         * <p>
+         * 
+         * >  Only ENS instances that are in the running state can be attached to the ELB instance as backend servers.
          */
         public Builder backendServers(BackendServers backendServers) {
             this.backendServers = backendServers;
@@ -58,7 +61,7 @@ public class AddBackendServersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +149,7 @@ public class AddBackendServersResponseBody extends TeaModel {
             private Integer weight; 
 
             /**
-             * Ip.
+             * The IP address of the backend server.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -154,7 +157,7 @@ public class AddBackendServersResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The backend port that is used by the ELB instance.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -162,7 +165,7 @@ public class AddBackendServersResponseBody extends TeaModel {
             }
 
             /**
-             * ServerId.
+             * The ID of the instance that is used as the backend server.
              */
             public Builder serverId(String serverId) {
                 this.serverId = serverId;
@@ -170,7 +173,11 @@ public class AddBackendServersResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the backend server. Valid values:
+             * <p>
+             * 
+             * *   **ens**: ENS instance.
+             * *   **eni**: ENI.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -178,7 +185,10 @@ public class AddBackendServersResponseBody extends TeaModel {
             }
 
             /**
-             * Weight.
+             * The weight of the backend server. Default value: 100. Valid values: **0** to **100**.
+             * <p>
+             * 
+             * >  The value 0 indicates that requests are not forwarded to the backend server.
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;

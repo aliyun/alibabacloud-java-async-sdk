@@ -86,7 +86,7 @@ public class DescribeLoadBalancerSpecResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * LoadBalancerSpecs.
+         * The specifications. Valid values:
          */
         public Builder loadBalancerSpecs(java.util.List < LoadBalancerSpecs> loadBalancerSpecs) {
             this.loadBalancerSpecs = loadBalancerSpecs;
@@ -94,7 +94,7 @@ public class DescribeLoadBalancerSpecResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeLoadBalancerSpecResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Maximum value: 100. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeLoadBalancerSpecResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeLoadBalancerSpecResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -170,7 +170,7 @@ public class DescribeLoadBalancerSpecResponseBody extends TeaModel {
             private String loadBalancerSpec; 
 
             /**
-             * DisplayName.
+             * The display name of the instance type.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -178,7 +178,7 @@ public class DescribeLoadBalancerSpecResponseBody extends TeaModel {
             }
 
             /**
-             * LoadBalancerSpec.
+             * The specifications of the ELB instance.
              */
             public Builder loadBalancerSpec(String loadBalancerSpec) {
                 this.loadBalancerSpec = loadBalancerSpec;

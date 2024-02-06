@@ -50,7 +50,7 @@ public class DescribeApplicationResourceSummaryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ApplicationResource.
+         * The statistical information about the resource quota and usage in different regions.
          */
         public Builder applicationResource(String applicationResource) {
             this.applicationResource = applicationResource;
@@ -58,7 +58,7 @@ public class DescribeApplicationResourceSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

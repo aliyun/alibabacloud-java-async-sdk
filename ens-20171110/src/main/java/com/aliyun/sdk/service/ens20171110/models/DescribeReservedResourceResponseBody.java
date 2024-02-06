@@ -74,7 +74,7 @@ public class DescribeReservedResourceResponseBody extends TeaModel {
         private SupportResources supportResources; 
 
         /**
-         * Code.
+         * The returned service code. 0 indicates that the request was successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class DescribeReservedResourceResponseBody extends TeaModel {
         }
 
         /**
-         * Images.
+         * The information about the image.
          */
         public Builder images(Images images) {
             this.images = images;
@@ -90,7 +90,7 @@ public class DescribeReservedResourceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class DescribeReservedResourceResponseBody extends TeaModel {
         }
 
         /**
-         * SupportResources.
+         * The resources.
          */
         public Builder supportResources(SupportResources supportResources) {
             this.supportResources = supportResources;
@@ -150,7 +150,7 @@ public class DescribeReservedResourceResponseBody extends TeaModel {
             private String imageName; 
 
             /**
-             * ImageId.
+             * The ID of the image.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -158,7 +158,7 @@ public class DescribeReservedResourceResponseBody extends TeaModel {
             }
 
             /**
-             * ImageName.
+             * The name of the image.
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -370,7 +370,7 @@ public class DescribeReservedResourceResponseBody extends TeaModel {
             private SystemDiskSizes systemDiskSizes; 
 
             /**
-             * DataDiskSizes.
+             * The sizes of data disks.
              */
             public Builder dataDiskSizes(DataDiskSizes dataDiskSizes) {
                 this.dataDiskSizes = dataDiskSizes;
@@ -378,7 +378,7 @@ public class DescribeReservedResourceResponseBody extends TeaModel {
             }
 
             /**
-             * EnsRegionId.
+             * The ID of the node.
              */
             public Builder ensRegionId(String ensRegionId) {
                 this.ensRegionId = ensRegionId;
@@ -386,7 +386,7 @@ public class DescribeReservedResourceResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceSpec.
+             * The specifications of instances.
              */
             public Builder instanceSpec(String instanceSpec) {
                 this.instanceSpec = instanceSpec;
@@ -394,7 +394,7 @@ public class DescribeReservedResourceResponseBody extends TeaModel {
             }
 
             /**
-             * SupportResourcesCount.
+             * The number of resources that you can purchase.
              */
             public Builder supportResourcesCount(String supportResourcesCount) {
                 this.supportResourcesCount = supportResourcesCount;
@@ -402,7 +402,7 @@ public class DescribeReservedResourceResponseBody extends TeaModel {
             }
 
             /**
-             * SystemDiskSizes.
+             * The sizes of system disks.
              */
             public Builder systemDiskSizes(SystemDiskSizes systemDiskSizes) {
                 this.systemDiskSizes = systemDiskSizes;

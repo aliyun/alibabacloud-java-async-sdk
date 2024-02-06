@@ -70,7 +70,7 @@ public class ResizeDiskRequest extends Request {
         } 
 
         /**
-         * DiskId.
+         * The ID of the disk that you want to resize.
          */
         public Builder diskId(String diskId) {
             this.putQueryParameter("DiskId", diskId);
@@ -79,7 +79,7 @@ public class ResizeDiskRequest extends Request {
         }
 
         /**
-         * NewSize.
+         * The size of the disk that you want to resize. Unit: GiB.
          */
         public Builder newSize(String newSize) {
             this.putQueryParameter("NewSize", newSize);

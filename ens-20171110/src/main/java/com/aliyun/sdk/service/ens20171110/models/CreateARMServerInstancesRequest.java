@@ -22,6 +22,10 @@ public class CreateARMServerInstancesRequest extends Request {
     private Boolean autoRenew;
 
     @Query
+    @NameInMap("AutoUseCoupon")
+    private Boolean autoUseCoupon;
+
+    @Query
     @NameInMap("EnsRegionId")
     @Validation(required = true)
     private String ensRegionId;
@@ -65,6 +69,7 @@ public class CreateARMServerInstancesRequest extends Request {
 
     @Query
     @NameInMap("Resolution")
+    @Validation(required = true)
     private String resolution;
 
     @Query
@@ -81,6 +86,7 @@ public class CreateARMServerInstancesRequest extends Request {
         super(builder);
         this.amount = builder.amount;
         this.autoRenew = builder.autoRenew;
+        this.autoUseCoupon = builder.autoUseCoupon;
         this.ensRegionId = builder.ensRegionId;
         this.frequency = builder.frequency;
         this.imageId = builder.imageId;
@@ -120,6 +126,13 @@ public class CreateARMServerInstancesRequest extends Request {
      */
     public Boolean getAutoRenew() {
         return this.autoRenew;
+    }
+
+    /**
+     * @return autoUseCoupon
+     */
+    public Boolean getAutoUseCoupon() {
+        return this.autoUseCoupon;
     }
 
     /**
@@ -209,6 +222,7 @@ public class CreateARMServerInstancesRequest extends Request {
     public static final class Builder extends Request.Builder<CreateARMServerInstancesRequest, Builder> {
         private Integer amount; 
         private Boolean autoRenew; 
+        private Boolean autoUseCoupon; 
         private String ensRegionId; 
         private Integer frequency; 
         private String imageId; 
@@ -230,6 +244,7 @@ public class CreateARMServerInstancesRequest extends Request {
             super(request);
             this.amount = request.amount;
             this.autoRenew = request.autoRenew;
+            this.autoUseCoupon = request.autoUseCoupon;
             this.ensRegionId = request.ensRegionId;
             this.frequency = request.frequency;
             this.imageId = request.imageId;
@@ -245,7 +260,7 @@ public class CreateARMServerInstancesRequest extends Request {
         } 
 
         /**
-         * Amount.
+         * The number of instances to create. Valid values: **1** to **100**.
          */
         public Builder amount(Integer amount) {
             this.putQueryParameter("Amount", amount);
@@ -254,7 +269,11 @@ public class CreateARMServerInstancesRequest extends Request {
         }
 
         /**
-         * AutoRenew.
+         * Specifies whether to enable auto-renewal for the subscription. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false (default)
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -263,7 +282,16 @@ public class CreateARMServerInstancesRequest extends Request {
         }
 
         /**
-         * EnsRegionId.
+         * Specifies whether to use coupons. Valid values: true and false Default value: true.
+         */
+        public Builder autoUseCoupon(Boolean autoUseCoupon) {
+            this.putQueryParameter("AutoUseCoupon", autoUseCoupon);
+            this.autoUseCoupon = autoUseCoupon;
+            return this;
+        }
+
+        /**
+         * The ID of the Edge Node Service (ENS) node.
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -272,7 +300,7 @@ public class CreateARMServerInstancesRequest extends Request {
         }
 
         /**
-         * Frequency.
+         * The refresh rate. Unit: Hz. Valid values: 30 and 60.
          */
         public Builder frequency(Integer frequency) {
             this.putQueryParameter("Frequency", frequency);
@@ -281,7 +309,7 @@ public class CreateARMServerInstancesRequest extends Request {
         }
 
         /**
-         * ImageId.
+         * The ID of the image.
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -290,7 +318,30 @@ public class CreateARMServerInstancesRequest extends Request {
         }
 
         /**
-         * InstanceType.
+         * The specification of the Android in Container (AIC) instance. Valid values:
+         * <p>
+         * 
+         * *   aic.cf53r.c1.np
+         * *   aic.cf53r.c2.np
+         * *   aic.cf53r.c3.np
+         * *   aic.cf53r.c4.np
+         * *   aic.cf53r.c5.np
+         * *   aic.cf53r.c6.np
+         * *   aic.cf53r.c7.np
+         * *   aic.cf53r.c8.np
+         * *   ens.a6c2
+         * *   aic.cf52m1r.c1.np
+         * *   aic.cf52m1r.c2.np
+         * *   aic.cf52m1r.c3.np
+         * *   aic.cf52m1r.c4.np
+         * *   aic.cf52m1r.c5.np
+         * *   aic.cf53r.c6
+         * *   aic.cf52m1r.c6
+         * *   aic.cf53r.c7
+         * *   aic.cf52r.c1.np
+         * *   aic.cf52r.c2.np
+         * *   aic.cf52r.c3.np
+         * *   aic.cf52r.c4.np
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -299,7 +350,7 @@ public class CreateARMServerInstancesRequest extends Request {
         }
 
         /**
-         * KeyPairName.
+         * The name of the key pair.
          */
         public Builder keyPairName(String keyPairName) {
             this.putQueryParameter("KeyPairName", keyPairName);
@@ -308,7 +359,7 @@ public class CreateARMServerInstancesRequest extends Request {
         }
 
         /**
-         * NameSpace.
+         * The name of the namespace.
          */
         public Builder nameSpace(String nameSpace) {
             this.putQueryParameter("NameSpace", nameSpace);
@@ -317,7 +368,10 @@ public class CreateARMServerInstancesRequest extends Request {
         }
 
         /**
-         * PayType.
+         * The billing method. Set the value to **PrePaid**. PrePaid specifies the subscription billing method.
+         * <p>
+         * 
+         * >  Only PrePaid is supported.
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -326,7 +380,12 @@ public class CreateARMServerInstancesRequest extends Request {
         }
 
         /**
-         * Period.
+         * The subscription duration of the instance.
+         * <p>
+         * 
+         * *   If you leave PeriodUnit empty, the instance is purchased on a monthly basis. Valid values: Day and Month.
+         * *   If you set PeriodUnit to Day, you can set Period only to 3.
+         * *   If you set PeriodUnit to Month, you can set Period to a value within the range of \[1,9], or set the value to 12.
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -335,7 +394,12 @@ public class CreateARMServerInstancesRequest extends Request {
         }
 
         /**
-         * PeriodUnit.
+         * The unit of the subscription duration.
+         * <p>
+         * 
+         * *   If you leave PeriodUnit empty, the instance is purchased on a monthly basis. Valid values: Day and Month.
+         * *   If you set PeriodUnit to Day, you can set Period only to 3.
+         * *   If you set PeriodUnit to Month, you can set Period to a value within the range of \[1,9], or set the value to 12.
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -344,7 +408,28 @@ public class CreateARMServerInstancesRequest extends Request {
         }
 
         /**
-         * Resolution.
+         * The resolution. Valid values:
+         * <p>
+         * 
+         * *   1920\*1080
+         * *   1080\*1920
+         * *   1280\*720
+         * *   720\*1280
+         * *   2400\*1080
+         * *   1920\*864
+         * *   1080\*2400
+         * *   864\*1920
+         * 
+         * <!---->
+         * 
+         * *   1920\*1080
+         * *   1080\*1920
+         * *   1280\*720
+         * *   720\*1280
+         * *   2400\*1080
+         * *   1920\*864
+         * *   1080\*2400
+         * *   864\*1920
          */
         public Builder resolution(String resolution) {
             this.putQueryParameter("Resolution", resolution);
@@ -353,7 +438,7 @@ public class CreateARMServerInstancesRequest extends Request {
         }
 
         /**
-         * ServerName.
+         * The name of the service.
          */
         public Builder serverName(String serverName) {
             this.putQueryParameter("ServerName", serverName);
@@ -362,7 +447,14 @@ public class CreateARMServerInstancesRequest extends Request {
         }
 
         /**
-         * ServerType.
+         * The specification of the ARM server. Valid values:
+         * <p>
+         * 
+         * *   cas.cf53r
+         * *   cas.cf52r
+         * *   cas.cf52m1r
+         * *   cas.tg52g2
+         * *   ens.afq-c2m3i.medium
          */
         public Builder serverType(String serverType) {
             this.putQueryParameter("ServerType", serverType);

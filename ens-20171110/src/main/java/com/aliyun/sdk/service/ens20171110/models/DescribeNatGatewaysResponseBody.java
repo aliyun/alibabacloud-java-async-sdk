@@ -86,7 +86,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * NatGateways.
+         * Details about the NAT gateways.
          */
         public Builder natGateways(java.util.List < NatGateways> natGateways) {
             this.natGateways = natGateways;
@@ -94,7 +94,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The number of NAT gateways that are returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -230,7 +230,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             private String vSwitchId; 
 
             /**
-             * CreationTime.
+             * The time when the NAT gateway was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -238,7 +238,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * EnsRegionId.
+             * The ID of the ENS node.
              */
             public Builder ensRegionId(String ensRegionId) {
                 this.ensRegionId = ensRegionId;
@@ -246,7 +246,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the NAT gateway.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -254,7 +254,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * NatGatewayId.
+             * The ID of the NAT gateway.
              */
             public Builder natGatewayId(String natGatewayId) {
                 this.natGatewayId = natGatewayId;
@@ -262,7 +262,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkId.
+             * The ID of the network.
              */
             public Builder networkId(String networkId) {
                 this.networkId = networkId;
@@ -270,7 +270,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * Spec.
+             * The type of the NAT gateway.
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -278,7 +278,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * The ID of the vSwitch.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;

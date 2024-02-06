@@ -17,15 +17,9 @@ public class DeleteSecurityGroupRequest extends Request {
     @Validation(required = true)
     private String securityGroupId;
 
-    @Query
-    @NameInMap("Version")
-    @Validation(required = true)
-    private String version;
-
     private DeleteSecurityGroupRequest(Builder builder) {
         super(builder);
         this.securityGroupId = builder.securityGroupId;
-        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -48,16 +42,8 @@ public class DeleteSecurityGroupRequest extends Request {
         return this.securityGroupId;
     }
 
-    /**
-     * @return version
-     */
-    public String getVersion() {
-        return this.version;
-    }
-
     public static final class Builder extends Request.Builder<DeleteSecurityGroupRequest, Builder> {
         private String securityGroupId; 
-        private String version; 
 
         private Builder() {
             super();
@@ -66,24 +52,14 @@ public class DeleteSecurityGroupRequest extends Request {
         private Builder(DeleteSecurityGroupRequest request) {
             super(request);
             this.securityGroupId = request.securityGroupId;
-            this.version = request.version;
         } 
 
         /**
-         * SecurityGroupId.
+         * The security group ID of the instance.
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
             this.securityGroupId = securityGroupId;
-            return this;
-        }
-
-        /**
-         * Version.
-         */
-        public Builder version(String version) {
-            this.putQueryParameter("Version", version);
-            this.version = version;
             return this;
         }
 

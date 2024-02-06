@@ -112,7 +112,7 @@ public class DescribeFileSystemsRequest extends Request {
         } 
 
         /**
-         * EnsRegionId.
+         * The ID of the region.
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -121,7 +121,7 @@ public class DescribeFileSystemsRequest extends Request {
         }
 
         /**
-         * FileSystemId.
+         * The ID of the file system.
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -130,7 +130,7 @@ public class DescribeFileSystemsRequest extends Request {
         }
 
         /**
-         * FileSystemName.
+         * The name of the file system.
          */
         public Builder fileSystemName(String fileSystemName) {
             this.putQueryParameter("FileSystemName", fileSystemName);
@@ -139,7 +139,7 @@ public class DescribeFileSystemsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number. Pages start from page **1**. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -148,7 +148,7 @@ public class DescribeFileSystemsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. The maximum value is **100**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

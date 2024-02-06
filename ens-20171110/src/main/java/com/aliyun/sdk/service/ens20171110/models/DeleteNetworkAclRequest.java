@@ -55,7 +55,7 @@ public class DeleteNetworkAclRequest extends Request {
         } 
 
         /**
-         * NetworkAclId.
+         * The ID of the network ACL.
          */
         public Builder networkAclId(String networkAclId) {
             this.putQueryParameter("NetworkAclId", networkAclId);

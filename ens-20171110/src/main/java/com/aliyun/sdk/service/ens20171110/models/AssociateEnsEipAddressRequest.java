@@ -98,7 +98,7 @@ public class AssociateEnsEipAddressRequest extends Request {
         } 
 
         /**
-         * AllocationId.
+         * The ID of the EIP.
          */
         public Builder allocationId(String allocationId) {
             this.putQueryParameter("AllocationId", allocationId);
@@ -107,7 +107,10 @@ public class AssociateEnsEipAddressRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the cloud service with which you want to associate the EIP.
+         * <p>
+         * 
+         * >  IDs of Edge Load Balancer (ELB) are supported.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -116,7 +119,14 @@ public class AssociateEnsEipAddressRequest extends Request {
         }
 
         /**
-         * InstanceType.
+         * The type of instance with which you want to associate the EIP. Valid values:
+         * <p>
+         * 
+         * *   **Nat**: a NAT gateway.
+         * *   **SlbInstance**: an ELB instance.
+         * *   **NetworkInterface**: a secondary ENI.
+         * *   **NatSlbInstance**: If you want to associate multiple EIPs to an ELB instance, you need to set the parameter to this value.
+         * *   **EnsInstance** (default): an ENS instance.
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -125,7 +135,11 @@ public class AssociateEnsEipAddressRequest extends Request {
         }
 
         /**
-         * Standby.
+         * Specifies whether the EIP is a secondary EIP. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder standby(Boolean standby) {
             this.putQueryParameter("Standby", standby);

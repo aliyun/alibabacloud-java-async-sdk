@@ -14,8 +14,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class JoinSecurityGroupRequest extends Request {
     @Query
     @NameInMap("InstanceId")
-    @Validation(required = true)
     private String instanceId;
+
+    @Query
+    @NameInMap("NetworkInterfaceId")
+    private String networkInterfaceId;
 
     @Query
     @NameInMap("SecurityGroupId")
@@ -25,6 +28,7 @@ public class JoinSecurityGroupRequest extends Request {
     private JoinSecurityGroupRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
+        this.networkInterfaceId = builder.networkInterfaceId;
         this.securityGroupId = builder.securityGroupId;
     }
 
@@ -49,6 +53,13 @@ public class JoinSecurityGroupRequest extends Request {
     }
 
     /**
+     * @return networkInterfaceId
+     */
+    public String getNetworkInterfaceId() {
+        return this.networkInterfaceId;
+    }
+
+    /**
      * @return securityGroupId
      */
     public String getSecurityGroupId() {
@@ -57,6 +68,7 @@ public class JoinSecurityGroupRequest extends Request {
 
     public static final class Builder extends Request.Builder<JoinSecurityGroupRequest, Builder> {
         private String instanceId; 
+        private String networkInterfaceId; 
         private String securityGroupId; 
 
         private Builder() {
@@ -66,11 +78,12 @@ public class JoinSecurityGroupRequest extends Request {
         private Builder(JoinSecurityGroupRequest request) {
             super(request);
             this.instanceId = request.instanceId;
+            this.networkInterfaceId = request.networkInterfaceId;
             this.securityGroupId = request.securityGroupId;
         } 
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -79,7 +92,16 @@ public class JoinSecurityGroupRequest extends Request {
         }
 
         /**
-         * SecurityGroupId.
+         * The ID of the ENI.
+         */
+        public Builder networkInterfaceId(String networkInterfaceId) {
+            this.putQueryParameter("NetworkInterfaceId", networkInterfaceId);
+            this.networkInterfaceId = networkInterfaceId;
+            return this;
+        }
+
+        /**
+         * The ID of the security group.
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);

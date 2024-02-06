@@ -55,7 +55,7 @@ public class DeleteNatGatewayRequest extends Request {
         } 
 
         /**
-         * NatGatewayId.
+         * The ID of the NAT gateway that you want to delete.
          */
         public Builder natGatewayId(String natGatewayId) {
             this.putQueryParameter("NatGatewayId", natGatewayId);

@@ -86,7 +86,7 @@ public class CreateLoadBalancerResponseBody extends TeaModel {
         private String vSwitchId; 
 
         /**
-         * LoadBalancerId.
+         * The ID of the ELB instance.
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.loadBalancerId = loadBalancerId;
@@ -94,7 +94,7 @@ public class CreateLoadBalancerResponseBody extends TeaModel {
         }
 
         /**
-         * LoadBalancerName.
+         * The name of the ELB instance.
          */
         public Builder loadBalancerName(String loadBalancerName) {
             this.loadBalancerName = loadBalancerName;
@@ -102,7 +102,7 @@ public class CreateLoadBalancerResponseBody extends TeaModel {
         }
 
         /**
-         * NetworkId.
+         * The ID of the network.
          */
         public Builder networkId(String networkId) {
             this.networkId = networkId;
@@ -110,7 +110,7 @@ public class CreateLoadBalancerResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class CreateLoadBalancerResponseBody extends TeaModel {
         }
 
         /**
-         * VSwitchId.
+         * The ID of the vSwitch to which the ELB instance belongs.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.vSwitchId = vSwitchId;

@@ -152,7 +152,7 @@ public class ListApplicationsRequest extends Request {
         } 
 
         /**
-         * AppVersions.
+         * The version number of the application. Separate multiple version numbers with commas (,). If you want to query data of all versions of applications, specify All for this parameter. By default, only data of applications in the stable versions are queried.
          */
         public Builder appVersions(String appVersions) {
             this.putQueryParameter("AppVersions", appVersions);
@@ -161,7 +161,7 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * ClusterNames.
+         * The name of the application cluster. Separate multiple names with commas (,). If you want to query applications of all clusters in your account, specify All for this parameter. Default value: All.
          */
         public Builder clusterNames(String clusterNames) {
             this.putQueryParameter("ClusterNames", clusterNames);
@@ -170,7 +170,16 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * Level.
+         * The region level by which edge resources of the application are collected. The value is of the enumeration type. Valid values:
+         * <p>
+         * 
+         * *   National: Chinese mainland
+         * *   Big: area
+         * *   Middle: province
+         * *   Small: city
+         * *   RegionId: edge node
+         * 
+         * Default value: National.
          */
         public Builder level(String level) {
             this.putQueryParameter("Level", level);
@@ -179,7 +188,7 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * MaxDate.
+         * The end of the time range to query. Specify the time in the 2006-01-02 format. By default, the time range to query is not restricted.
          */
         public Builder maxDate(String maxDate) {
             this.putQueryParameter("MaxDate", maxDate);
@@ -188,7 +197,7 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * MinDate.
+         * The beginning of the time range to query. Specify the time in the 2006-01-02 format. By default, the time range to query is not restricted.
          */
         public Builder minDate(String minDate) {
             this.putQueryParameter("MinDate", minDate);
@@ -197,7 +206,7 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * OutAppInfoParams.
+         * Specifies whether to return other information about the application, such as statistics on resource instances and pods. The value must be a JSON string. By default, all information is returned.
          */
         public Builder outAppInfoParams(String outAppInfoParams) {
             this.putQueryParameter("OutAppInfoParams", outAppInfoParams);
@@ -206,7 +215,7 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number. Pages start from page 1. This parameter is optional if you want to return all information about the applications.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -215,7 +224,7 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. This parameter is optional if you want to return all information about the applications.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

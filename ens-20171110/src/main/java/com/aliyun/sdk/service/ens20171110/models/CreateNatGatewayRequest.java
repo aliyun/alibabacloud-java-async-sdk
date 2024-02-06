@@ -114,7 +114,7 @@ public class CreateNatGatewayRequest extends Request {
         } 
 
         /**
-         * EnsRegionId.
+         * The ID of the Edge Node Service (ENS) node.
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -123,7 +123,7 @@ public class CreateNatGatewayRequest extends Request {
         }
 
         /**
-         * InstanceType.
+         * The instance type of the NAT gateway. Set the value to **enat.default**.
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -132,7 +132,7 @@ public class CreateNatGatewayRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the NAT gateway. The name must be 1 to 128 characters in length. The name cannot start with `http://` or `https://`.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -141,7 +141,7 @@ public class CreateNatGatewayRequest extends Request {
         }
 
         /**
-         * NetworkId.
+         * The ID of the network.
          */
         public Builder networkId(String networkId) {
             this.putQueryParameter("NetworkId", networkId);
@@ -150,7 +150,7 @@ public class CreateNatGatewayRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * The ID of the vSwitch.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);

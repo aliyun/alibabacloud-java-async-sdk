@@ -50,7 +50,7 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AssignedPrivateIpAddressesSet.
+         * Details about the ENI and the secondary private IP addresses that are assigned to the ENI.
          */
         public Builder assignedPrivateIpAddressesSet(AssignedPrivateIpAddressesSet assignedPrivateIpAddressesSet) {
             this.assignedPrivateIpAddressesSet = assignedPrivateIpAddressesSet;
@@ -58,7 +58,7 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
             private java.util.List < String > privateIpSet; 
 
             /**
-             * NetworkInterfaceId.
+             * The ID of the ENI.
              */
             public Builder networkInterfaceId(String networkInterfaceId) {
                 this.networkInterfaceId = networkInterfaceId;
@@ -118,7 +118,7 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * PrivateIpSet.
+             * The secondary private IP addresses that are assigned to the ENI.
              */
             public Builder privateIpSet(java.util.List < String > privateIpSet) {
                 this.privateIpSet = privateIpSet;

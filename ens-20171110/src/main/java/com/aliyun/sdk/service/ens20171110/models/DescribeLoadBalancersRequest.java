@@ -182,7 +182,7 @@ public class DescribeLoadBalancersRequest extends Request {
         } 
 
         /**
-         * Address.
+         * The IP address that the ELB instance uses to provide services.
          */
         public Builder address(String address) {
             this.putQueryParameter("Address", address);
@@ -191,7 +191,7 @@ public class DescribeLoadBalancersRequest extends Request {
         }
 
         /**
-         * EnsRegionId.
+         * The ID of the Edge Node Service (ENS) node.
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -200,7 +200,7 @@ public class DescribeLoadBalancersRequest extends Request {
         }
 
         /**
-         * LoadBalancerId.
+         * The ID of the ELB instance.
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
@@ -209,7 +209,7 @@ public class DescribeLoadBalancersRequest extends Request {
         }
 
         /**
-         * LoadBalancerName.
+         * The name of the ELB instance.
          */
         public Builder loadBalancerName(String loadBalancerName) {
             this.putQueryParameter("LoadBalancerName", loadBalancerName);
@@ -218,7 +218,11 @@ public class DescribeLoadBalancersRequest extends Request {
         }
 
         /**
-         * LoadBalancerStatus.
+         * The status of the ELB instance. Valid values:
+         * <p>
+         * 
+         * *   **Active** (default): The listener for the instance can forward the received traffic based on the rule.
+         * *   **InActive**: The listener for the instance does not forward the received traffic.
          */
         public Builder loadBalancerStatus(String loadBalancerStatus) {
             this.putQueryParameter("LoadBalancerStatus", loadBalancerStatus);
@@ -227,7 +231,7 @@ public class DescribeLoadBalancersRequest extends Request {
         }
 
         /**
-         * NetworkId.
+         * The ID of the network.
          */
         public Builder networkId(String networkId) {
             this.putQueryParameter("NetworkId", networkId);
@@ -236,7 +240,7 @@ public class DescribeLoadBalancersRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -245,7 +249,7 @@ public class DescribeLoadBalancersRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Default value: 10. Valid values: **10** to **100**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -254,7 +258,7 @@ public class DescribeLoadBalancersRequest extends Request {
         }
 
         /**
-         * ServerId.
+         * The ID of the backend server.
          */
         public Builder serverId(String serverId) {
             this.putQueryParameter("ServerId", serverId);
@@ -263,7 +267,7 @@ public class DescribeLoadBalancersRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * The ID of the vSwitch.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);

@@ -54,7 +54,10 @@ public class DescribeEnsRegionsRequest extends Request {
         } 
 
         /**
-         * EnsRegionId.
+         * The ID of the node.
+         * <p>
+         * 
+         * By default, all available node IDs are returned.
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);

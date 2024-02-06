@@ -45,11 +45,6 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
     @NameInMap("SourcePortRange")
     private String sourcePortRange;
 
-    @Query
-    @NameInMap("Version")
-    @Validation(required = true)
-    private String version;
-
     private AuthorizeSecurityGroupEgressRequest(Builder builder) {
         super(builder);
         this.destCidrIp = builder.destCidrIp;
@@ -59,7 +54,6 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
         this.priority = builder.priority;
         this.securityGroupId = builder.securityGroupId;
         this.sourcePortRange = builder.sourcePortRange;
-        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -124,13 +118,6 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
         return this.sourcePortRange;
     }
 
-    /**
-     * @return version
-     */
-    public String getVersion() {
-        return this.version;
-    }
-
     public static final class Builder extends Request.Builder<AuthorizeSecurityGroupEgressRequest, Builder> {
         private String destCidrIp; 
         private String ipProtocol; 
@@ -139,7 +126,6 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
         private Integer priority; 
         private String securityGroupId; 
         private String sourcePortRange; 
-        private String version; 
 
         private Builder() {
             super();
@@ -154,11 +140,13 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
             this.priority = request.priority;
             this.securityGroupId = request.securityGroupId;
             this.sourcePortRange = request.sourcePortRange;
-            this.version = request.version;
         } 
 
         /**
-         * DestCidrIp.
+         * The destination IP addresses. CIDR blocks and IPv4 addresses are supported.
+         * <p>
+         * 
+         * This parameter is empty by default.
          */
         public Builder destCidrIp(String destCidrIp) {
             this.putQueryParameter("DestCidrIp", destCidrIp);
@@ -167,7 +155,14 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
         }
 
         /**
-         * IpProtocol.
+         * The transport layer protocol. The values of this parameter are case-sensitive. Valid values:
+         * <p>
+         * 
+         * *   tcp: TCP.
+         * *   udp: UDP.
+         * *   icmp: ICMP.
+         * *   gre: GRE.
+         * *   all: All protocols are supported.
          */
         public Builder ipProtocol(String ipProtocol) {
             this.putQueryParameter("IpProtocol", ipProtocol);
@@ -176,7 +171,11 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
         }
 
         /**
-         * Policy.
+         * The action of security group rule N that determines whether to allow inbound access. Valid values:
+         * <p>
+         * 
+         * *   accept: allows access. This is the default value.
+         * *   drop: denies access and returns no responses.
          */
         public Builder policy(String policy) {
             this.putQueryParameter("Policy", policy);
@@ -185,7 +184,13 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
         }
 
         /**
-         * PortRange.
+         * The range of destination ports that correspond to the transport layer protocol for security group rule N. Valid values:
+         * <p>
+         * 
+         * *   When the IpProtocol parameter is set to tcp or udp, the port number range is **1** to **65535**. The start port number and the end port number are separated by a forward slash (/). Correct example: **1/200**. Incorrect example: **200/1**.
+         * *   When the IpProtocol parameter is set to icmp, the port number range is **-1/-1**, which indicates all ports.
+         * *   When the IpProtocol parameter is set to gre, the port number range is **-1/-1**, which indicates all ports.
+         * *   When the IpProtocol parameter is set to all, the port number range is **-1/-1**, which indicates all ports.
          */
         public Builder portRange(String portRange) {
             this.putQueryParameter("PortRange", portRange);
@@ -194,7 +199,7 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
         }
 
         /**
-         * Priority.
+         * The priority of the security group rule. Valid values: **1 to 100**. Default value: **1**.
          */
         public Builder priority(Integer priority) {
             this.putQueryParameter("Priority", priority);
@@ -203,7 +208,7 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
         }
 
         /**
-         * SecurityGroupId.
+         * The ID of the security group.
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -212,20 +217,17 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
         }
 
         /**
-         * SourcePortRange.
+         * The range of port numbers that correspond to the transport layer protocol for the source security group. Valid values:
+         * <p>
+         * 
+         * *   When the IpProtocol parameter is set to tcp or udp, the port number range is **1** to **65535**. The start port number and the end port number are separated by a forward slash (/). Correct example: **1/200**. Incorrect example: **200/1**.
+         * *   When the IpProtocol parameter is set to icmp, the port number range is **-1/-1**, which indicates all ports.
+         * *   When the IpProtocol parameter is set to gre, the port number range is **-1/-1**, which indicates all ports.
+         * *   When the IpProtocol parameter is set to all, the port number range is **-1/-1**, which indicates all ports.
          */
         public Builder sourcePortRange(String sourcePortRange) {
             this.putQueryParameter("SourcePortRange", sourcePortRange);
             this.sourcePortRange = sourcePortRange;
-            return this;
-        }
-
-        /**
-         * 2017-11-10
-         */
-        public Builder version(String version) {
-            this.putQueryParameter("Version", version);
-            this.version = version;
             return this;
         }
 

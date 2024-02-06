@@ -14,24 +14,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class LeaveSecurityGroupRequest extends Request {
     @Query
     @NameInMap("InstanceId")
-    @Validation(required = true)
     private String instanceId;
+
+    @Query
+    @NameInMap("NetworkInterfaceId")
+    private String networkInterfaceId;
 
     @Query
     @NameInMap("SecurityGroupId")
     @Validation(required = true)
     private String securityGroupId;
 
-    @Query
-    @NameInMap("Version")
-    @Validation(required = true)
-    private String version;
-
     private LeaveSecurityGroupRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
+        this.networkInterfaceId = builder.networkInterfaceId;
         this.securityGroupId = builder.securityGroupId;
-        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -55,23 +53,23 @@ public class LeaveSecurityGroupRequest extends Request {
     }
 
     /**
+     * @return networkInterfaceId
+     */
+    public String getNetworkInterfaceId() {
+        return this.networkInterfaceId;
+    }
+
+    /**
      * @return securityGroupId
      */
     public String getSecurityGroupId() {
         return this.securityGroupId;
     }
 
-    /**
-     * @return version
-     */
-    public String getVersion() {
-        return this.version;
-    }
-
     public static final class Builder extends Request.Builder<LeaveSecurityGroupRequest, Builder> {
         private String instanceId; 
+        private String networkInterfaceId; 
         private String securityGroupId; 
-        private String version; 
 
         private Builder() {
             super();
@@ -80,12 +78,12 @@ public class LeaveSecurityGroupRequest extends Request {
         private Builder(LeaveSecurityGroupRequest request) {
             super(request);
             this.instanceId = request.instanceId;
+            this.networkInterfaceId = request.networkInterfaceId;
             this.securityGroupId = request.securityGroupId;
-            this.version = request.version;
         } 
 
         /**
-         * InstanceId.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -94,20 +92,20 @@ public class LeaveSecurityGroupRequest extends Request {
         }
 
         /**
-         * SecurityGroupId.
+         * The ID of the ENI.
          */
-        public Builder securityGroupId(String securityGroupId) {
-            this.putQueryParameter("SecurityGroupId", securityGroupId);
-            this.securityGroupId = securityGroupId;
+        public Builder networkInterfaceId(String networkInterfaceId) {
+            this.putQueryParameter("NetworkInterfaceId", networkInterfaceId);
+            this.networkInterfaceId = networkInterfaceId;
             return this;
         }
 
         /**
-         * Version.
+         * The ID of the security group.
          */
-        public Builder version(String version) {
-            this.putQueryParameter("Version", version);
-            this.version = version;
+        public Builder securityGroupId(String securityGroupId) {
+            this.putQueryParameter("SecurityGroupId", securityGroupId);
+            this.securityGroupId = securityGroupId;
             return this;
         }
 

@@ -384,7 +384,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * AutoRenew.
+         * Specifies whether to enable the auto-renewal feature. Valid values: **True** and **False**. Default value: False.
          */
         public Builder autoRenew(String autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -393,7 +393,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * AutoRenewPeriod.
+         * The auto-renewal period for the instance. This parameter is required when the **AutoRenew** parameter is set to **True**. Valid values: **1** to **12**. Unit: months.
          */
         public Builder autoRenewPeriod(String autoRenewPeriod) {
             this.putQueryParameter("AutoRenewPeriod", autoRenewPeriod);
@@ -402,7 +402,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * EnsRegionId.
+         * The region ID.
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -411,7 +411,13 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * HostName.
+         * The hostname of the Elastic Compute Service (ECS) instance. General naming rules: The hostname cannot start or end with a period (.) or hyphen (-). It cannot contain consecutive periods (.) or hyphens (-).
+         * <p>
+         * 
+         * Naming rules for specific instances:
+         * 
+         * *   For Windows instances, the hostname must be **2** to **15** characters in length and cannot contain periods (.) or contain only digits. The hostname cannot contain periods (.) or contain only digits.
+         * *   For instances that run one of other operating systems such as Linux, the hostname must be **2** to **64** characters in length. You can use periods (.) to separate the hostname into multiple segments. Each segment can contain letters, digits, and hyphens (-).
          */
         public Builder hostName(String hostName) {
             this.putQueryParameter("HostName", hostName);
@@ -420,7 +426,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * ImageId.
+         * The ID of the image file that you select when creating the instance.
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -429,7 +435,14 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * InstanceName.
+         * The name of the instance. The name must conform to the following naming conventions:
+         * <p>
+         * 
+         * *   The name must be **2** to **128** characters in length.
+         * *   It must start with a letter but cannot start with http:// or https://.
+         * *   The name can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).
+         * 
+         * If you do not specify this parameter, the instance ID is used as the instance name by default.
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -438,7 +451,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * InstanceType.
+         * The type of the instance.
+         * <p>
+         * 
+         * For more information, see [](~~66124~~).
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -447,7 +463,11 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * InternetChargeType.
+         * This parameter is required if you create the instance for the first time. The existing billing method is used by default if you have created an instance. Valid values:
+         * <p>
+         * 
+         * *   **BandwidthByDay**: Pay by daily peak bandwidth.
+         * *   **95BandwidthByMonth**: Pay by monthly 95th percentile bandwidth.
          */
         public Builder internetChargeType(String internetChargeType) {
             this.putQueryParameter("InternetChargeType", internetChargeType);
@@ -456,7 +476,12 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * IpType.
+         * The type of IP address. Valid values:
+         * <p>
+         * 
+         * *   **ipv4**: IPv4. This is the default value.
+         * *   **ipv6**: IPv6.
+         * *   **ipv4Andipv6**: IPv4 and IPv6.
          */
         public Builder ipType(String ipType) {
             this.putQueryParameter("IpType", ipType);
@@ -465,7 +490,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * KeyPairName.
+         * The name of the key pair. You can specify only one name.
          */
         public Builder keyPairName(String keyPairName) {
             this.putQueryParameter("KeyPairName", keyPairName);
@@ -483,7 +508,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * Password.
+         * The password of the instance.
+         * <p>
+         * 
+         * The password must be 8 to 30 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include: ``()`~!@#$%^&*-_+=|{}[]:;\"<>,.?/``
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -492,7 +520,12 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * PasswordInherit.
+         * Specifies whether to use the preset password of the image. Valid values:
+         * <p>
+         * 
+         * - **true**: The password preset in the image is used, and the **Password** parameter must be null. For secure access, make sure that the selected image has a password configured.
+         * 
+         * - **false**: does not use the password preset in the image.
          */
         public Builder passwordInherit(Boolean passwordInherit) {
             this.putQueryParameter("PasswordInherit", passwordInherit);
@@ -501,7 +534,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * PaymentType.
+         * The billing method of the instance. The value is set to Subscription.
          */
         public Builder paymentType(String paymentType) {
             this.putQueryParameter("PaymentType", paymentType);
@@ -510,7 +543,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * Period.
+         * The subscription period of the instance. Valid values: **1** to **9** and **12**. Unit: months.
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -519,7 +552,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * PrivateIpAddress.
+         * The internal IP address. If this parameter is specified, you must specify the vSwitch ID. The vSwitch must be created first. Otherwise, an error is returned.
          */
         public Builder privateIpAddress(String privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);
@@ -528,7 +561,11 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * PublicIpIdentification.
+         * Specifies whether a public IP address can be assigned to the specified instance. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder publicIpIdentification(Boolean publicIpIdentification) {
             this.putQueryParameter("PublicIpIdentification", publicIpIdentification);
@@ -537,7 +574,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * Quantity.
+         * The number of instances.
          */
         public Builder quantity(String quantity) {
             this.putQueryParameter("Quantity", quantity);
@@ -546,7 +583,12 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * UniqueSuffix.
+         * Specifies whether to automatically append sequential suffixes to the hostnames specified by the **HostName** parameter and instance names specified by the **InstanceName** parameter. The sequential numbers in the suffix range from **001** to **999**.
+         * <p>
+         * 
+         * Examples: **LocalHost001** and **LocalHost002**, and **MyInstance001** and **MyInstance002**.
+         * 
+         * Default value: **false**.
          */
         public Builder uniqueSuffix(Boolean uniqueSuffix) {
             this.putQueryParameter("UniqueSuffix", uniqueSuffix);
@@ -555,7 +597,12 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * UserData.
+         * Custom data. The data starts with `#!`. The data can be at most 256 characters in length and 16 KB in size. Only custom scripts are supported and cannot be rendered by InstanceMetaData.
+         * <p>
+         * 
+         * You can specify custom data. The data is encoded in Base64. The system does not encrypt your custom data when API requests are initiated. We recommend that you do not pass in confidential information such as passwords and private keys in plaintext. If you want to provide sensitive data such as passwords and private keys, encrypt the data and then encode it in Base64. The data is decrypted on the instance in the way it is encrypted.
+         * 
+         * For more information, see [User data formats](https://cloudinit.readthedocs.io/en/latest/topics/format.html).
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);
@@ -564,7 +611,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * The ID of the vSwitch.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -606,7 +653,7 @@ public class CreateInstanceRequest extends Request {
             private String size; 
 
             /**
-             * Size.
+             * The capacity of the first data disk. Unit: GiB. The capacity is at least 20 GiB and is a multiple of 10 GiB.
              */
             public Builder size(String size) {
                 this.size = size;
@@ -647,7 +694,7 @@ public class CreateInstanceRequest extends Request {
             private String size; 
 
             /**
-             * Size.
+             * The size of the system disk. Unit: GiB. Valid values: **20** and **40**. The value cannot be smaller than the size of the image and must be a multiple of 10 GiB.
              */
             public Builder size(String size) {
                 this.size = size;

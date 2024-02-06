@@ -22,16 +22,10 @@ public class DescribeEpnMeasurementDataRequest extends Request {
     @Validation(required = true)
     private String startDate;
 
-    @Query
-    @NameInMap("Version")
-    @Validation(required = true)
-    private String version;
-
     private DescribeEpnMeasurementDataRequest(Builder builder) {
         super(builder);
         this.endDate = builder.endDate;
         this.startDate = builder.startDate;
-        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -61,17 +55,9 @@ public class DescribeEpnMeasurementDataRequest extends Request {
         return this.startDate;
     }
 
-    /**
-     * @return version
-     */
-    public String getVersion() {
-        return this.version;
-    }
-
     public static final class Builder extends Request.Builder<DescribeEpnMeasurementDataRequest, Builder> {
         private String endDate; 
         private String startDate; 
-        private String version; 
 
         private Builder() {
             super();
@@ -81,11 +67,10 @@ public class DescribeEpnMeasurementDataRequest extends Request {
             super(request);
             this.endDate = request.endDate;
             this.startDate = request.startDate;
-            this.version = request.version;
         } 
 
         /**
-         * EndDate.
+         * The end of the time range to query. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -94,20 +79,11 @@ public class DescribeEpnMeasurementDataRequest extends Request {
         }
 
         /**
-         * StartDate.
+         * The beginning of the time range to query. Specify the time in the yyyy-mm-ddthh:mm:ssz format. The time must be in UTC.
          */
         public Builder startDate(String startDate) {
             this.putQueryParameter("StartDate", startDate);
             this.startDate = startDate;
-            return this;
-        }
-
-        /**
-         * Version.
-         */
-        public Builder version(String version) {
-            this.putQueryParameter("Version", version);
-            this.version = version;
             return this;
         }
 

@@ -100,7 +100,7 @@ public class DescribePrePaidInstanceStockRequest extends Request {
         } 
 
         /**
-         * DataDiskSize.
+         * The ID of the datadisk.
          */
         public Builder dataDiskSize(Integer dataDiskSize) {
             this.putQueryParameter("DataDiskSize", dataDiskSize);
@@ -109,7 +109,7 @@ public class DescribePrePaidInstanceStockRequest extends Request {
         }
 
         /**
-         * EnsRegionId.
+         * The ID of the edge node.
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -118,7 +118,7 @@ public class DescribePrePaidInstanceStockRequest extends Request {
         }
 
         /**
-         * InstanceSpec.
+         * The size of the system disk. Unit: GB.
          */
         public Builder instanceSpec(String instanceSpec) {
             this.putQueryParameter("InstanceSpec", instanceSpec);
@@ -127,7 +127,7 @@ public class DescribePrePaidInstanceStockRequest extends Request {
         }
 
         /**
-         * SystemDiskSize.
+         * The ID of the systemdisk
          */
         public Builder systemDiskSize(Integer systemDiskSize) {
             this.putQueryParameter("SystemDiskSize", systemDiskSize);

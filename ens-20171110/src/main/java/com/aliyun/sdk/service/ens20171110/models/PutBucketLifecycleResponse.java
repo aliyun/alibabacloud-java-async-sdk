@@ -1,0 +1,126 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.ens20171110.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link PutBucketLifecycleResponse} extends {@link TeaModel}
+ *
+ * <p>PutBucketLifecycleResponse</p>
+ */
+public class PutBucketLifecycleResponse extends Response {
+    @NameInMap("headers")
+    private java.util.Map < String, String > headers;
+
+    @NameInMap("statusCode")
+    private Integer statusCode;
+
+    @NameInMap("body")
+    private PutBucketLifecycleResponseBody body;
+
+    private PutBucketLifecycleResponse(BuilderImpl builder) {
+        super(builder);
+        this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
+        this.body = builder.body;
+    }
+
+    public static PutBucketLifecycleResponse create() {
+        return new BuilderImpl().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new BuilderImpl(this);
+    }
+
+    /**
+     * @return headers
+     */
+    public java.util.Map < String, String > getHeaders() {
+        return this.headers;
+    }
+
+    /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
+     * @return body
+     */
+    public PutBucketLifecycleResponseBody getBody() {
+        return this.body;
+    }
+
+    public interface Builder extends Response.Builder<PutBucketLifecycleResponse, Builder> {
+
+        Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
+
+        Builder body(PutBucketLifecycleResponseBody body);
+
+        @Override
+        PutBucketLifecycleResponse build();
+
+    } 
+
+    private static final class BuilderImpl
+            extends Response.BuilderImpl<PutBucketLifecycleResponse, Builder>
+            implements Builder {
+        private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
+        private PutBucketLifecycleResponseBody body; 
+
+        private BuilderImpl() {
+            super();
+        } 
+
+        private BuilderImpl(PutBucketLifecycleResponse response) {
+            super(response);
+            this.headers = response.headers;
+            this.statusCode = response.statusCode;
+            this.body = response.body;
+        } 
+
+        /**
+         * headers.
+         */
+        @Override
+        public Builder headers(java.util.Map < String, String > headers) {
+            this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(PutBucketLifecycleResponseBody body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public PutBucketLifecycleResponse build() {
+            return new PutBucketLifecycleResponse(this);
+        } 
+
+    } 
+
+}

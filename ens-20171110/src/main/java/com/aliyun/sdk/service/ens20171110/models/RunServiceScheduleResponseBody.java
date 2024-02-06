@@ -122,7 +122,7 @@ public class RunServiceScheduleResponseBody extends TeaModel {
         private Boolean tcpPorts; 
 
         /**
-         * CommandResults.
+         * The execution results of the commands.
          */
         public Builder commandResults(CommandResults commandResults) {
             this.commandResults = commandResults;
@@ -130,7 +130,7 @@ public class RunServiceScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * Index.
+         * The index number of the scheduled virtual device (pod).
          */
         public Builder index(Integer index) {
             this.index = index;
@@ -138,7 +138,7 @@ public class RunServiceScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * The ID of the scheduled instance.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -146,7 +146,7 @@ public class RunServiceScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceIp.
+         * The IP address of the scheduled instance.
          */
         public Builder instanceIp(String instanceIp) {
             this.instanceIp = instanceIp;
@@ -154,7 +154,7 @@ public class RunServiceScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * InstancePort.
+         * The start port of the scheduled instance.
          */
         public Builder instancePort(Integer instancePort) {
             this.instancePort = instancePort;
@@ -162,7 +162,7 @@ public class RunServiceScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +170,7 @@ public class RunServiceScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestRepeated.
+         * Indicates whether the request is repeated. This parameter is not returned if ServcieAction is set to Console.
          */
         public Builder requestRepeated(String requestRepeated) {
             this.requestRepeated = requestRepeated;
@@ -178,7 +178,7 @@ public class RunServiceScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * TcpPorts.
+         * The TCP port range of the scheduled instance or container. The value is in the ${from}-$-{to} format. Example: 80-88.
          */
         public Builder tcpPorts(Boolean tcpPorts) {
             this.tcpPorts = tcpPorts;
@@ -242,7 +242,7 @@ public class RunServiceScheduleResponseBody extends TeaModel {
             private String resultMsg; 
 
             /**
-             * Command.
+             * The command.
              */
             public Builder command(String command) {
                 this.command = command;
@@ -250,7 +250,7 @@ public class RunServiceScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * ContainerName.
+             * The name of the container.
              */
             public Builder containerName(String containerName) {
                 this.containerName = containerName;
@@ -258,7 +258,7 @@ public class RunServiceScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * ResultMsg.
+             * The execution result of the command.
              */
             public Builder resultMsg(String resultMsg) {
                 this.resultMsg = resultMsg;

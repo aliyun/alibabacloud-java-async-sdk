@@ -86,7 +86,7 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
         }
 
         /**
-         * PushResults.
+         * The push results of data files.
          */
         public Builder pushResults(PushResults pushResults) {
             this.pushResults = pushResults;
@@ -110,7 +110,7 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -194,7 +194,7 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * RegionId.
+             * The ID of the ENS node.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -202,7 +202,7 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The start time of the push operation. The time is displayed in UTC.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -210,7 +210,7 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
             }
 
             /**
-             * StatusDescrip.
+             * The description of the status.
              */
             public Builder statusDescrip(String statusDescrip) {
                 this.statusDescrip = statusDescrip;
@@ -218,7 +218,7 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The time when the status was last updated. The time is displayed in UTC.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -259,7 +259,7 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
             private java.util.List < RegionId> regionId; 
 
             /**
-             * RegionId.
+             * The ID of the ENS node.
              */
             public Builder regionId(java.util.List < RegionId> regionId) {
                 this.regionId = regionId;
@@ -324,7 +324,7 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * RegionIdCount.
+             * The total number of ENS nodes.
              */
             public Builder regionIdCount(Integer regionIdCount) {
                 this.regionIdCount = regionIdCount;
@@ -332,7 +332,7 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
             }
 
             /**
-             * RegionIds.
+             * The push status of data files on the ENS node.
              */
             public Builder regionIds(RegionIds regionIds) {
                 this.regionIds = regionIds;
@@ -340,7 +340,7 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The push status. The value is of the enumeration type. Valid values: SUCCESS FAILED PUSHING
              */
             public Builder status(String status) {
                 this.status = status;
@@ -446,7 +446,7 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * Name.
+             * The name of the data file.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -454,7 +454,7 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
             }
 
             /**
-             * StatusStatS.
+             * The push status of data files.
              */
             public Builder statusStatS(StatusStatS statusStatS) {
                 this.statusStatS = statusStatS;
@@ -462,7 +462,7 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * The version number of the data file.
              */
             public Builder version(String version) {
                 this.version = version;

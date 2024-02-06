@@ -233,7 +233,7 @@ public class CreateLoadBalancerUDPListenerRequest extends Request {
         } 
 
         /**
-         * BackendServerPort.
+         * The backend port that is used by the ELB instance. Valid values: **1** to **65535**.
          */
         public Builder backendServerPort(Integer backendServerPort) {
             this.putQueryParameter("BackendServerPort", backendServerPort);
@@ -242,7 +242,10 @@ public class CreateLoadBalancerUDPListenerRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the listener. The description must be **1** to **80** characters in length.
+         * <p>
+         * 
+         * >  The value cannot start with `http://` or `https://`.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -251,7 +254,11 @@ public class CreateLoadBalancerUDPListenerRequest extends Request {
         }
 
         /**
-         * EipTransmit.
+         * Specifies whether to enable elastic IP address (EIP) pass-through. Valid values:
+         * <p>
+         * 
+         * *   **on**
+         * *   **off** (default)
          */
         public Builder eipTransmit(String eipTransmit) {
             this.putQueryParameter("EipTransmit", eipTransmit);
@@ -260,7 +267,7 @@ public class CreateLoadBalancerUDPListenerRequest extends Request {
         }
 
         /**
-         * HealthCheckConnectPort.
+         * The port that is used for health checks. Valid values: **1** to **65535**. If you leave this parameter empty, the port specified by BackendServerPort is used for health checks.
          */
         public Builder healthCheckConnectPort(Integer healthCheckConnectPort) {
             this.putQueryParameter("HealthCheckConnectPort", healthCheckConnectPort);
@@ -269,7 +276,14 @@ public class CreateLoadBalancerUDPListenerRequest extends Request {
         }
 
         /**
-         * HealthCheckConnectTimeout.
+         * The timeout period of a health check response. If a backend server does not respond within the specified timeout period, the server fails to pass the health check.
+         * <p>
+         * 
+         * *   Default value: 5.
+         * *   Valid values: **1** to **300**.
+         * *   Unit: seconds.
+         * 
+         * >  If the value that you specified for HealthCheckConnectTimeout is smaller than the value of HealthCheckInterval, HealthCheckConnectTimeout becomes invalid and the timeout period that you specified for HealthCheckInterval is used.
          */
         public Builder healthCheckConnectTimeout(Integer healthCheckConnectTimeout) {
             this.putQueryParameter("HealthCheckConnectTimeout", healthCheckConnectTimeout);
@@ -278,7 +292,7 @@ public class CreateLoadBalancerUDPListenerRequest extends Request {
         }
 
         /**
-         * HealthCheckExp.
+         * The response string for UDP listener health checks. The string can be up to 64 characters in length and can contain only letters and digits.
          */
         public Builder healthCheckExp(String healthCheckExp) {
             this.putQueryParameter("HealthCheckExp", healthCheckExp);
@@ -287,7 +301,7 @@ public class CreateLoadBalancerUDPListenerRequest extends Request {
         }
 
         /**
-         * HealthCheckInterval.
+         * The interval at which health checks are performed. Valid values: **1** to **50**. Default value: **2**. Unit: seconds.
          */
         public Builder healthCheckInterval(Integer healthCheckInterval) {
             this.putQueryParameter("HealthCheckInterval", healthCheckInterval);
@@ -296,7 +310,7 @@ public class CreateLoadBalancerUDPListenerRequest extends Request {
         }
 
         /**
-         * HealthCheckReq.
+         * The request string for UDP listener health checks. The string can be up to 64 characters in length and can contain only letters and digits.
          */
         public Builder healthCheckReq(String healthCheckReq) {
             this.putQueryParameter("HealthCheckReq", healthCheckReq);
@@ -305,7 +319,7 @@ public class CreateLoadBalancerUDPListenerRequest extends Request {
         }
 
         /**
-         * HealthyThreshold.
+         * The number of consecutive successful health checks that must occur before an unhealthy and inaccessible backend server is declared healthy and accessible. Valid values: **2** to **10**. Default value: **3**.
          */
         public Builder healthyThreshold(Integer healthyThreshold) {
             this.putQueryParameter("HealthyThreshold", healthyThreshold);
@@ -314,7 +328,7 @@ public class CreateLoadBalancerUDPListenerRequest extends Request {
         }
 
         /**
-         * ListenerPort.
+         * The frontend port that is used by the ELB instance. Valid values: **1** to **65535**.
          */
         public Builder listenerPort(Integer listenerPort) {
             this.putQueryParameter("ListenerPort", listenerPort);
@@ -323,7 +337,7 @@ public class CreateLoadBalancerUDPListenerRequest extends Request {
         }
 
         /**
-         * LoadBalancerId.
+         * The ID of the Edge Load Balancer (ELB) instance.
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
@@ -332,7 +346,15 @@ public class CreateLoadBalancerUDPListenerRequest extends Request {
         }
 
         /**
-         * Scheduler.
+         * The routing algorithm. Valid values:
+         * <p>
+         * 
+         * *   **wrr** (default): Backend servers with higher weights receive more requests than backend servers with lower weights.
+         * *   **wlc**: Requests are distributed based on the weight and load of each backend server. The load refers to the number of connections on a backend server. If two backend servers have the same weight, the backend server that has fewer connections receives more requests.
+         * *   **rr**: Requests are distributed to backend servers in sequence.
+         * *   **sch**: consistent hashing that is based on source IP addresses. Requests from the same source IP address are distributed to the same backend server.
+         * *   **qch**: consistent hashing that is based on QUIC connection IDs. Requests that contain the same QUIC connection ID are distributed to the same backend server.
+         * *   **iqch**: consistent hashing that is based on specific three bytes of the iQUIC CIDs. Requests whose second to fourth bytes are the same are distributed to the same backend server.
          */
         public Builder scheduler(String scheduler) {
             this.putQueryParameter("Scheduler", scheduler);
@@ -341,7 +363,7 @@ public class CreateLoadBalancerUDPListenerRequest extends Request {
         }
 
         /**
-         * UnhealthyThreshold.
+         * The number of consecutive failed health checks that must occur before a healthy and accessible backend server is declared unhealthy and inaccessible. Valid values: **2** to **10**. Default value: **3**.
          */
         public Builder unhealthyThreshold(Integer unhealthyThreshold) {
             this.putQueryParameter("UnhealthyThreshold", unhealthyThreshold);
