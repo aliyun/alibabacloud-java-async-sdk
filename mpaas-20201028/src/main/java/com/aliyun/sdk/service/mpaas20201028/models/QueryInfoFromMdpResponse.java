@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetMcubeNebulaResourceResponse} extends {@link TeaModel}
+ * {@link QueryInfoFromMdpResponse} extends {@link TeaModel}
  *
- * <p>GetMcubeNebulaResourceResponse</p>
+ * <p>QueryInfoFromMdpResponse</p>
  */
-public class GetMcubeNebulaResourceResponse extends Response {
+public class QueryInfoFromMdpResponse extends Response {
     @NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -19,16 +19,16 @@ public class GetMcubeNebulaResourceResponse extends Response {
     private Integer statusCode;
 
     @NameInMap("body")
-    private GetMcubeNebulaResourceResponseBody body;
+    private QueryInfoFromMdpResponseBody body;
 
-    private GetMcubeNebulaResourceResponse(BuilderImpl builder) {
+    private QueryInfoFromMdpResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static GetMcubeNebulaResourceResponse create() {
+    public static QueryInfoFromMdpResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +54,35 @@ public class GetMcubeNebulaResourceResponse extends Response {
     /**
      * @return body
      */
-    public GetMcubeNebulaResourceResponseBody getBody() {
+    public QueryInfoFromMdpResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<GetMcubeNebulaResourceResponse, Builder> {
+    public interface Builder extends Response.Builder<QueryInfoFromMdpResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(GetMcubeNebulaResourceResponseBody body);
+        Builder body(QueryInfoFromMdpResponseBody body);
 
         @Override
-        GetMcubeNebulaResourceResponse build();
+        QueryInfoFromMdpResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<GetMcubeNebulaResourceResponse, Builder>
+            extends Response.BuilderImpl<QueryInfoFromMdpResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private GetMcubeNebulaResourceResponseBody body; 
+        private QueryInfoFromMdpResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(GetMcubeNebulaResourceResponse response) {
+        private BuilderImpl(QueryInfoFromMdpResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +111,14 @@ public class GetMcubeNebulaResourceResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(GetMcubeNebulaResourceResponseBody body) {
+        public Builder body(QueryInfoFromMdpResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public GetMcubeNebulaResourceResponse build() {
-            return new GetMcubeNebulaResourceResponse(this);
+        public QueryInfoFromMdpResponse build() {
+            return new QueryInfoFromMdpResponse(this);
         } 
 
     } 

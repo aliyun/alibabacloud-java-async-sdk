@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.mpaas20201028;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.mpaas20201028.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -187,6 +188,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<PushTemplateResponse> pushTemplate(PushTemplateRequest request);
 
     CompletableFuture<PushUnBindResponse> pushUnBind(PushUnBindRequest request);
+
+    CompletableFuture<QueryInfoFromMdpResponse> queryInfoFromMdp(QueryInfoFromMdpRequest request);
 
     CompletableFuture<QueryMappCenterAppResponse> queryMappCenterApp(QueryMappCenterAppRequest request);
 
