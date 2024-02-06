@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.oceanbasepro20190901;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.oceanbasepro20190901.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -89,6 +90,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeAvailableSpecResponse> describeAvailableSpec(DescribeAvailableSpecRequest request);
 
     CompletableFuture<DescribeAvailableZoneResponse> describeAvailableZone(DescribeAvailableZoneRequest request);
+
+    CompletableFuture<DescribeBackupSetDownloadLinkResponse> describeBackupSetDownloadLink(DescribeBackupSetDownloadLinkRequest request);
 
     CompletableFuture<DescribeCharsetResponse> describeCharset(DescribeCharsetRequest request);
 
