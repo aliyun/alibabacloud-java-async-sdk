@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.btripopen20220520;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.btripopen20220520.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -31,6 +32,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ApplyAddResponse> applyAdd(ApplyAddRequest request);
 
     CompletableFuture<ApplyApproveResponse> applyApprove(ApplyApproveRequest request);
+
+    CompletableFuture<ApplyExternalNodeStatusUpdateResponse> applyExternalNodeStatusUpdate(ApplyExternalNodeStatusUpdateRequest request);
 
     CompletableFuture<ApplyInvoiceTaskResponse> applyInvoiceTask(ApplyInvoiceTaskRequest request);
 
