@@ -74,7 +74,10 @@ public class DescribeSQAConfigResponseBody extends TeaModel {
         private String SQAStatus; 
 
         /**
-         * DBClusterId.
+         * The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBClusters](~~129857~~) operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a region.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -82,7 +85,7 @@ public class DescribeSQAConfigResponseBody extends TeaModel {
         }
 
         /**
-         * GroupName.
+         * The name of the resource group.
          */
         public Builder groupName(String groupName) {
             this.groupName = groupName;
@@ -90,7 +93,7 @@ public class DescribeSQAConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +101,7 @@ public class DescribeSQAConfigResponseBody extends TeaModel {
         }
 
         /**
-         * SQAStatus.
+         * Indicates whether short query acceleration (SQA) is enabled.
          */
         public Builder SQAStatus(String SQAStatus) {
             this.SQAStatus = SQAStatus;

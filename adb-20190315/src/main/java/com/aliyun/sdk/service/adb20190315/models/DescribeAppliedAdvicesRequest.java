@@ -140,10 +140,10 @@ public class DescribeAppliedAdvicesRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.
          * <p>
          * 
-         * > You can call the [DescribeDBClusters](~~129857~~) operation to query the IDs of Data Warehouse Edition (V3.0) clusters.
+         * >  You can call the [DescribeDBClusters](~~129857~~) operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a region.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);

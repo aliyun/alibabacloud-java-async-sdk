@@ -50,7 +50,7 @@ public class DescribeEIURangeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * EIUInfo.
+         * The queried information about the number of EIUs.
          */
         public Builder EIUInfo(EIUInfo EIUInfo) {
             this.EIUInfo = EIUInfo;
@@ -58,7 +58,7 @@ public class DescribeEIURangeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class DescribeEIURangeResponseBody extends TeaModel {
             private java.util.List < String > storageResourceRange; 
 
             /**
-             * DefaultValue.
+             * The suggested value for the number of EIUs.
              */
             public Builder defaultValue(String defaultValue) {
                 this.defaultValue = defaultValue;
@@ -130,7 +130,7 @@ public class DescribeEIURangeResponseBody extends TeaModel {
             }
 
             /**
-             * EIURange.
+             * The queried range for the number of EIUs.
              */
             public Builder EIURange(java.util.List < Long > EIURange) {
                 this.EIURange = EIURange;
@@ -138,7 +138,7 @@ public class DescribeEIURangeResponseBody extends TeaModel {
             }
 
             /**
-             * StorageResourceRange.
+             * A reserved parameter.
              */
             public Builder storageResourceRange(java.util.List < String > storageResourceRange) {
                 this.storageResourceRange = storageResourceRange;

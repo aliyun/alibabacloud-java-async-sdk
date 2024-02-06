@@ -299,7 +299,7 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
             }
 
             /**
-             * The SQL statement used to execute the BUILD task.
+             * The SQL statement that is used to execute the BUILD job.
              */
             public Builder buildSQL(String buildSQL) {
                 this.buildSQL = buildSQL;
@@ -307,7 +307,7 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the suggestion execution task. Valid values:
+             * The state of the suggestion execution job. Valid values:
              * <p>
              * 
              * *   **SUCCEED**
@@ -319,7 +319,7 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
             }
 
             /**
-             * The page number. Pages start from page 1. Default value: 1.
+             * The page number. Pages start from 1. Default value: 1.
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -340,7 +340,7 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
             }
 
             /**
-             * The SQL statement used to roll back the suggestion.
+             * The SQL statement that is used to roll back the suggestion.
              */
             public Builder rollbackSQL(String rollbackSQL) {
                 this.rollbackSQL = rollbackSQL;
@@ -376,7 +376,7 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned. The value is an integer that is greater than or equal to 0. Default value: 0.
+             * The total number of entries returned. Minimum value: 0. Default value: 0.
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

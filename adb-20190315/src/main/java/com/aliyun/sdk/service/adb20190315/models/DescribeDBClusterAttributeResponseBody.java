@@ -50,7 +50,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the cluster.
+         * The queried cluster information.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -770,7 +770,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The specifications of computing resources that are used in the cluster in elastic mode. The increase of computing resources can speed up queries. You can adjust the value of this parameter to scale the cluster.
+             * The specifications of computing resources that are used in the cluster in elastic mode. Computing resources are used to compute data. The increase in the computing resources can accelerate queries. You can scale computing resources based on your business requirements.
              */
             public Builder computeResource(String computeResource) {
                 this.computeResource = computeResource;
@@ -778,7 +778,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The Virtual Private Cloud (VPC) endpoint of the cluster.
+             * The Virtual Private Cloud (VPC) endpoint that is used to connect to the cluster.
              */
             public Builder connectionString(String connectionString) {
                 this.connectionString = connectionString;
@@ -826,7 +826,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the cluster. Valid values:
+             * The cluster type. Valid values:
              * <p>
              * 
              * *   **Common**: common cluster.
@@ -862,7 +862,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the database engine. **3.0** is returned.
+             * The engine version of the cluster. **3.0** is returned.
              */
             public Builder DBVersion(String DBVersion) {
                 this.DBVersion = DBVersion;
@@ -870,7 +870,11 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * DiskEncryption.
+             * Indicates whether disk encryption is enabled. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder diskEncryption(String diskEncryption) {
                 this.diskEncryption = diskEncryption;
@@ -906,7 +910,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Data Transmission Service (DTS) synchronization task. This parameter is returned only for MySQL analytic instances.
+             * The ID of the Data Transmission Service (DTS) synchronization job. This parameter is returned only for MySQL analytic instances.
              */
             public Builder dtsJobId(String dtsJobId) {
                 this.dtsJobId = dtsJobId;
@@ -925,8 +929,8 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
              * The single-node specifications of an EIU. Valid values:
              * <p>
              * 
-             * *   8Core64GB: If this value is returned, an EIU of the cluster has 24 cores and 192 GB memory.
-             * *   12Core96GB: If this value is returned, an EIU of the cluster has 36 cores and 288 GB memory.
+             * *   8Core64GB: If this value is returned, the specifications of an EIU are 24 cores and 192 GB memory.
+             * *   12Core96GB: If this value is returned, the specifications of an EIU are 36 cores and 288 GB memory.
              */
             public Builder elasticIOResourceSize(String elasticIOResourceSize) {
                 this.elasticIOResourceSize = elasticIOResourceSize;
@@ -982,7 +986,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the cluster expires. The time follows the ISO 8601 standard in the *yyyy-MM-ddTHH:mm:ssZ* format. The time is displayed in UTC. Example: *2999-09-08T16:00:00Z*.
+             * The expiration time of the cluster. The time follows the ISO 8601 standard in the *yyyy-MM-ddTHH:mm:ssZ* format. The time is displayed in UTC. Example: *2999-09-08T16:00:00Z*.
              * <p>
              * 
              * > 
@@ -1009,7 +1013,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address.
+             * The public IP address of the cluster.
              */
             public Builder innerIp(String innerIp) {
                 this.innerIp = innerIp;
@@ -1043,7 +1047,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
              * *   **ManualLock**: The cluster is manually locked.
              * *   **LockByExpiration**: The cluster is automatically locked due to cluster expiration.
              * *   **LockByRestoration**: The cluster is automatically locked due to cluster restoration.
-             * *   **LockByDiskQuota**: The cluster is automatically locked when it has used 90% of its storage.
+             * *   **LockByDiskQuota**: The cluster is automatically locked when 90% of the cluster storage is used.
              */
             public Builder lockMode(String lockMode) {
                 this.lockMode = lockMode;
@@ -1062,7 +1066,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The maintenance window of the cluster. The window follows the ISO 8601 standard in the *HH:mmZ- HH:mmZ* format. The time is displayed in UTC. An example is *04:00Z-05:00Z*, which indicates that routine maintenance can be performed from 04:00 to 05:00.
+             * The maintenance window of the cluster. The time is displayed in the *HH:mmZ-HH:mmZ* format in UTC. An example is *04:00Z-05:00Z*, which indicates that routine maintenance is performed from 04:00 to 05:00.
              * <p>
              * 
              * >  For more information about maintenance windows, see [Configure a maintenance window](~~122569~~).
@@ -1131,7 +1135,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The specifications of storage resources that are used in the cluster in elastic mode. These resources are used to read and write data. You can increase the value of this parameter to improve the read and write performance of the cluster.
+             * The specifications of storage resources that are used in the cluster in elastic mode. Storage resources are used to read and write data. The increase in the storage resources can improve the read and write performance of the cluster.
              */
             public Builder storageResource(String storageResource) {
                 this.storageResource = storageResource;

@@ -50,7 +50,7 @@ public class DescribeDBClusterAccessWhiteListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the information of IP whitelists.
+         * The queried IP address whitelists.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -58,7 +58,7 @@ public class DescribeDBClusterAccessWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,10 +122,10 @@ public class DescribeDBClusterAccessWhiteListResponseBody extends TeaModel {
             private String securityIPList; 
 
             /**
-             * The attribute of the whitelist group. It is empty by default.
+             * The attribute of the IP address whitelist. By default, this parameter is empty.
              * <p>
              * 
-             * >  The groups with hidden attribute are not displayed in the console. The groups with hidden attribute are used to access DTS and PolarDB-X.
+             * >  The IP address whitelists that have the **hidden** attribute are not displayed in the console. These IP address whitelists are used to access services such as Data Transmission Service (DTS) and PolarDB-X.
              */
             public Builder DBClusterIPArrayAttribute(String DBClusterIPArrayAttribute) {
                 this.DBClusterIPArrayAttribute = DBClusterIPArrayAttribute;
@@ -136,8 +136,8 @@ public class DescribeDBClusterAccessWhiteListResponseBody extends TeaModel {
              * The name of the IP address whitelist.
              * <p>
              * 
-             * *   The name of the IP address whitelist group must be 2 to 32 characters in length and can contain lowercase letters, digits, and underscores (\_). The name must start with a lowercase letter and end with a digit or lowercase letter.
-             * *   You can create up to 50 whitelists for a cluster.
+             * *   The name of an IP address whitelist must be 2 to 32 characters in length. The name can contain lowercase letters, digits, and underscores (\_). The name must start with a lowercase letter and end with a lowercase letter or digit.
+             * *   Each cluster supports up to 50 IP address whitelists.
              */
             public Builder DBClusterIPArrayName(String DBClusterIPArrayName) {
                 this.DBClusterIPArrayName = DBClusterIPArrayName;
@@ -145,7 +145,7 @@ public class DescribeDBClusterAccessWhiteListResponseBody extends TeaModel {
             }
 
             /**
-             * The IP addresses in an IP address whitelist. A maximum of 1,000 IP addresses can be returned. These addresses are separated with commas (,).
+             * The IP addresses in the IP address whitelist. Up to 1,000 IP addresses can be returned. Multiple IP addresses are separated by commas (,).
              */
             public Builder securityIPList(String securityIPList) {
                 this.securityIPList = securityIPList;

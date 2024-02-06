@@ -13,15 +13,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDBClusterResourcePoolPerformanceResponse extends Response {
     @NameInMap("headers")
-    @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     private Integer statusCode;
 
     @NameInMap("body")
-    @Validation(required = true)
     private DescribeDBClusterResourcePoolPerformanceResponseBody body;
 
     private DescribeDBClusterResourcePoolPerformanceResponse(BuilderImpl builder) {

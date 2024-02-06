@@ -140,7 +140,10 @@ public class DescribeTaskInfoRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBClusters](~~129857~~) operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a region.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -167,7 +170,10 @@ public class DescribeTaskInfoRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the cluster.
+         * <p>
+         * 
+         * >  You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -194,7 +200,7 @@ public class DescribeTaskInfoRequest extends Request {
         }
 
         /**
-         * The ID of the task.
+         * The task ID.
          */
         public Builder taskId(Integer taskId) {
             this.putQueryParameter("TaskId", taskId);

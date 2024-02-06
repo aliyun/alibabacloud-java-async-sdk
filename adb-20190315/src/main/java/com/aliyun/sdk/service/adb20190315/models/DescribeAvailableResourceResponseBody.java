@@ -62,7 +62,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The resources available in elastic mode.
+         * The supported zones.
          */
         public Builder availableZoneList(java.util.List < AvailableZoneList> availableZoneList) {
             this.availableZoneList = availableZoneList;
@@ -147,7 +147,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             private String step; 
 
             /**
-             * MaxCount.
+             * The maximum amount of elastic I/O resources.
              */
             public Builder maxCount(String maxCount) {
                 this.maxCount = maxCount;
@@ -155,7 +155,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * MinCount.
+             * The minimum amount of elastic I/O resources.
              */
             public Builder minCount(String minCount) {
                 this.minCount = minCount;
@@ -163,7 +163,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * Step.
+             * The step size.
              */
             public Builder step(String step) {
                 this.step = step;
@@ -240,7 +240,11 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             private java.util.List < String > supportedStorageResource; 
 
             /**
-             * The maximum number of EIUs.
+             * The disk storage type. Valid values:
+             * <p>
+             * 
+             * *   **hdd**
+             * *   **ssd**
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;
@@ -248,7 +252,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * SupportedComputeResource.
+             * The supported computing resources.
              */
             public Builder supportedComputeResource(java.util.List < String > supportedComputeResource) {
                 this.supportedComputeResource = supportedComputeResource;
@@ -256,7 +260,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * SupportedElasticIOResource.
+             * The supported elastic I/O resources.
              */
             public Builder supportedElasticIOResource(SupportedElasticIOResource supportedElasticIOResource) {
                 this.supportedElasticIOResource = supportedElasticIOResource;
@@ -264,7 +268,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * SupportedStorageResource.
+             * The supported storage resources.
              */
             public Builder supportedStorageResource(java.util.List < String > supportedStorageResource) {
                 this.supportedStorageResource = supportedStorageResource;
@@ -329,7 +333,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             private String step; 
 
             /**
-             * MaxCount.
+             * A reserved parameter.
              */
             public Builder maxCount(String maxCount) {
                 this.maxCount = maxCount;
@@ -337,7 +341,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * MinCount.
+             * A reserved parameter.
              */
             public Builder minCount(String minCount) {
                 this.minCount = minCount;
@@ -345,7 +349,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * Step.
+             * A reserved parameter.
              */
             public Builder step(String step) {
                 this.step = step;
@@ -386,7 +390,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             private NodeCount nodeCount; 
 
             /**
-             * NodeCount.
+             * The information about the supported compute nodes.
              */
             public Builder nodeCount(NodeCount nodeCount) {
                 this.nodeCount = nodeCount;
@@ -451,7 +455,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             private String step; 
 
             /**
-             * MaxCount.
+             * The maximum number of compute nodes.
              */
             public Builder maxCount(String maxCount) {
                 this.maxCount = maxCount;
@@ -459,7 +463,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * MinCount.
+             * The minimum number of compute nodes.
              */
             public Builder minCount(String minCount) {
                 this.minCount = minCount;
@@ -467,7 +471,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * Step.
+             * The step size.
              */
             public Builder step(String step) {
                 this.step = step;
@@ -520,7 +524,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             private java.util.List < String > storageSize; 
 
             /**
-             * NodeCount.
+             * The number of the supported compute nodes.
              */
             public Builder nodeCount(SupportedNodeCountListNodeCount nodeCount) {
                 this.nodeCount = nodeCount;
@@ -528,7 +532,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * StorageSize.
+             * The support storage capacity. Unit: GB.
              */
             public Builder storageSize(java.util.List < String > storageSize) {
                 this.storageSize = storageSize;
@@ -605,7 +609,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             private String tips; 
 
             /**
-             * InstanceClass.
+             * The supported instance type.
              */
             public Builder instanceClass(String instanceClass) {
                 this.instanceClass = instanceClass;
@@ -613,7 +617,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * SupportedExecutorList.
+             * A reserved parameter.
              */
             public Builder supportedExecutorList(java.util.List < SupportedExecutorList> supportedExecutorList) {
                 this.supportedExecutorList = supportedExecutorList;
@@ -621,7 +625,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * SupportedNodeCountList.
+             * The supported compute nodes.
              */
             public Builder supportedNodeCountList(java.util.List < SupportedNodeCountList> supportedNodeCountList) {
                 this.supportedNodeCountList = supportedNodeCountList;
@@ -629,7 +633,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * Tips.
+             * The description of the instance type.
              */
             public Builder tips(String tips) {
                 this.tips = tips;
@@ -694,7 +698,12 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             private java.util.List < SupportedInstanceClassList> supportedInstanceClassList; 
 
             /**
-             * The step size.
+             * The supported edition. Valid values:
+             * <p>
+             * 
+             * *   **basic**: Basic Edition.
+             * *   **cluster**: Cluster Edition.
+             * *   **mixed_storage**: elastic mode for Cluster Edition.
              */
             public Builder serial(String serial) {
                 this.serial = serial;
@@ -702,7 +711,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum number of EIUs.
+             * The supported resources in elastic mode.
              */
             public Builder supportedFlexibleResource(java.util.List < SupportedFlexibleResource> supportedFlexibleResource) {
                 this.supportedFlexibleResource = supportedFlexibleResource;
@@ -710,7 +719,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * SupportedInstanceClassList.
+             * The supported resources in reserved mode.
              */
             public Builder supportedInstanceClassList(java.util.List < SupportedInstanceClassList> supportedInstanceClassList) {
                 this.supportedInstanceClassList = supportedInstanceClassList;
@@ -763,7 +772,11 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             private java.util.List < SupportedSerialList> supportedSerialList; 
 
             /**
-             * N/A
+             * The supported mode. Valid values:
+             * <p>
+             * 
+             * *   **flexible**: elastic mode.
+             * *   **reserver**: reserved mode.
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -771,7 +784,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The available elastic I/O units (EIUs).
+             * The supported editions.
              */
             public Builder supportedSerialList(java.util.List < SupportedSerialList> supportedSerialList) {
                 this.supportedSerialList = supportedSerialList;
@@ -848,7 +861,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * SupportedComputeResource.
+             * A reserved parameter.
              */
             public Builder supportedComputeResource(java.util.List < String > supportedComputeResource) {
                 this.supportedComputeResource = supportedComputeResource;
@@ -856,7 +869,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The available computing resources.
+             * The supported modes.
              */
             public Builder supportedMode(java.util.List < SupportedMode> supportedMode) {
                 this.supportedMode = supportedMode;
@@ -864,7 +877,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * SupportedStorageResource.
+             * A reserved parameter.
              */
             public Builder supportedStorageResource(java.util.List < String > supportedStorageResource) {
                 this.supportedStorageResource = supportedStorageResource;
@@ -872,11 +885,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The storage type. Valid values:
-             * <p>
-             * 
-             * *   **hdd**
-             * *   **ssd**
+             * The zone ID.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

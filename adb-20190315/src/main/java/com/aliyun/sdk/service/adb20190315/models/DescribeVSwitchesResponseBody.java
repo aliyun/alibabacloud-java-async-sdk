@@ -258,7 +258,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the vSwitch is the default vSwitch. Valid values: **true** **false**
+             * Indicates whether the vSwitch is the default vSwitch. Valid values: **true**: The vSwitch is the default vSwitch. **false**: The vSwitch is not the default vSwitch.
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -339,7 +339,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             private java.util.List < VSwitch> vSwitch; 
 
             /**
-             * VSwitch.
+             * The queried vSwitch.
              */
             public Builder vSwitch(java.util.List < VSwitch> vSwitch) {
                 this.vSwitch = vSwitch;

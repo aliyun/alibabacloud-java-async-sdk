@@ -50,7 +50,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
         private TaskInfo taskInfo; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the task.
+         * The queried task.
          */
         public Builder taskInfo(TaskInfo taskInfo) {
             this.taskInfo = taskInfo;
@@ -146,7 +146,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
             private Integer taskId; 
 
             /**
-             * The start time of the task. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format.
+             * The start time of the task. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.
              */
             public Builder beginTime(String beginTime) {
                 this.beginTime = beginTime;
@@ -154,7 +154,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The end time of the task. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format.
+             * The end time of the task. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.
              */
             public Builder finishTime(String finishTime) {
                 this.finishTime = finishTime;
@@ -170,7 +170,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the task.
+             * The status. Valid values:
              * <p>
              * 
              * *   Waiting
@@ -189,7 +189,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the task.
+             * The task ID.
              */
             public Builder taskId(Integer taskId) {
                 this.taskId = taskId;

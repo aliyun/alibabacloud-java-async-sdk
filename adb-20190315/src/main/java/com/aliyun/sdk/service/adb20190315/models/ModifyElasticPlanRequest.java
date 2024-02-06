@@ -26,6 +26,10 @@ public class ModifyElasticPlanRequest extends Request {
     private String elasticPlanEndDay;
 
     @Query
+    @NameInMap("ElasticPlanMonthlyRepeat")
+    private String elasticPlanMonthlyRepeat;
+
+    @Query
     @NameInMap("ElasticPlanName")
     @Validation(required = true)
     private String elasticPlanName;
@@ -77,7 +81,6 @@ public class ModifyElasticPlanRequest extends Request {
 
     @Query
     @NameInMap("ResourcePoolName")
-    @Validation(required = true)
     private String resourcePoolName;
 
     private ModifyElasticPlanRequest(Builder builder) {
@@ -85,6 +88,7 @@ public class ModifyElasticPlanRequest extends Request {
         this.DBClusterId = builder.DBClusterId;
         this.elasticPlanEnable = builder.elasticPlanEnable;
         this.elasticPlanEndDay = builder.elasticPlanEndDay;
+        this.elasticPlanMonthlyRepeat = builder.elasticPlanMonthlyRepeat;
         this.elasticPlanName = builder.elasticPlanName;
         this.elasticPlanNodeNum = builder.elasticPlanNodeNum;
         this.elasticPlanStartDay = builder.elasticPlanStartDay;
@@ -132,6 +136,13 @@ public class ModifyElasticPlanRequest extends Request {
      */
     public String getElasticPlanEndDay() {
         return this.elasticPlanEndDay;
+    }
+
+    /**
+     * @return elasticPlanMonthlyRepeat
+     */
+    public String getElasticPlanMonthlyRepeat() {
+        return this.elasticPlanMonthlyRepeat;
     }
 
     /**
@@ -229,6 +240,7 @@ public class ModifyElasticPlanRequest extends Request {
         private String DBClusterId; 
         private Boolean elasticPlanEnable; 
         private String elasticPlanEndDay; 
+        private String elasticPlanMonthlyRepeat; 
         private String elasticPlanName; 
         private Integer elasticPlanNodeNum; 
         private String elasticPlanStartDay; 
@@ -252,6 +264,7 @@ public class ModifyElasticPlanRequest extends Request {
             this.DBClusterId = request.DBClusterId;
             this.elasticPlanEnable = request.elasticPlanEnable;
             this.elasticPlanEndDay = request.elasticPlanEndDay;
+            this.elasticPlanMonthlyRepeat = request.elasticPlanMonthlyRepeat;
             this.elasticPlanName = request.elasticPlanName;
             this.elasticPlanNodeNum = request.elasticPlanNodeNum;
             this.elasticPlanStartDay = request.elasticPlanStartDay;
@@ -298,6 +311,15 @@ public class ModifyElasticPlanRequest extends Request {
         public Builder elasticPlanEndDay(String elasticPlanEndDay) {
             this.putQueryParameter("ElasticPlanEndDay", elasticPlanEndDay);
             this.elasticPlanEndDay = elasticPlanEndDay;
+            return this;
+        }
+
+        /**
+         * ElasticPlanMonthlyRepeat.
+         */
+        public Builder elasticPlanMonthlyRepeat(String elasticPlanMonthlyRepeat) {
+            this.putQueryParameter("ElasticPlanMonthlyRepeat", elasticPlanMonthlyRepeat);
+            this.elasticPlanMonthlyRepeat = elasticPlanMonthlyRepeat;
             return this;
         }
 

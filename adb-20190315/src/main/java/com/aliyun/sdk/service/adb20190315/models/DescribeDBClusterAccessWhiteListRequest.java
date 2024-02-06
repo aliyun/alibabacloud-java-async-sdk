@@ -111,7 +111,7 @@ public class DescribeDBClusterAccessWhiteListRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * The cluster ID.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);

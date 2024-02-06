@@ -90,6 +90,9 @@ public class DescribeElasticPlanResponseBody extends TeaModel {
         @NameInMap("EndTime")
         private String endTime;
 
+        @NameInMap("MonthlyRepeat")
+        private String monthlyRepeat;
+
         @NameInMap("PlanName")
         private String planName;
 
@@ -112,6 +115,7 @@ public class DescribeElasticPlanResponseBody extends TeaModel {
             this.enable = builder.enable;
             this.endDay = builder.endDay;
             this.endTime = builder.endTime;
+            this.monthlyRepeat = builder.monthlyRepeat;
             this.planName = builder.planName;
             this.resourcePoolName = builder.resourcePoolName;
             this.startDay = builder.startDay;
@@ -170,6 +174,13 @@ public class DescribeElasticPlanResponseBody extends TeaModel {
         }
 
         /**
+         * @return monthlyRepeat
+         */
+        public String getMonthlyRepeat() {
+            return this.monthlyRepeat;
+        }
+
+        /**
          * @return planName
          */
         public String getPlanName() {
@@ -211,6 +222,7 @@ public class DescribeElasticPlanResponseBody extends TeaModel {
             private Boolean enable; 
             private String endDay; 
             private String endTime; 
+            private String monthlyRepeat; 
             private String planName; 
             private String resourcePoolName; 
             private String startDay; 
@@ -284,6 +296,14 @@ public class DescribeElasticPlanResponseBody extends TeaModel {
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
+                return this;
+            }
+
+            /**
+             * MonthlyRepeat.
+             */
+            public Builder monthlyRepeat(String monthlyRepeat) {
+                this.monthlyRepeat = monthlyRepeat;
                 return this;
             }
 

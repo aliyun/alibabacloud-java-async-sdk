@@ -86,7 +86,7 @@ public class DescribeAvailableAdvicesResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * Details of the suggestions.
+         * The queried suggestions.
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -259,7 +259,7 @@ public class DescribeAvailableAdvicesResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * The date when the suggestion was generated. The date follows the yyyyMMdd format. The date is displayed in UTC.
+             * The time when the suggestion was generated. The time follows the ISO 8601 standard in the yyyyMMdd format. The time is displayed in UTC.
              */
             public Builder adviceDate(String adviceDate) {
                 this.adviceDate = adviceDate;
@@ -278,8 +278,8 @@ public class DescribeAvailableAdvicesResponseBody extends TeaModel {
              * The type of the suggestion. Valid values:
              * <p>
              * 
-             * *   **Index**: index optimization
-             * *   **Tiering**: hot and cold data optimization
+             * *   **Index**: index optimization.
+             * *   **Tiering**: hot and cold data optimization.
              */
             public Builder adviceType(String adviceType) {
                 this.adviceType = adviceType;
@@ -295,7 +295,7 @@ public class DescribeAvailableAdvicesResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page. The value must be an integer that is greater than 0. Default value: 1.
+             * The page number. Pages start from 1. Default value: 1.
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -303,10 +303,10 @@ public class DescribeAvailableAdvicesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page. Default value: 30. Valid values:
+             * The number of entries per page. Valid values:
              * <p>
              * 
-             * *   **30**
+             * *   **30** (default)
              * *   **50**
              * *   **100**
              */
@@ -324,7 +324,7 @@ public class DescribeAvailableAdvicesResponseBody extends TeaModel {
             }
 
             /**
-             * The SQL statement used to apply the suggestion.
+             * The SQL statement that is used to apply the suggestion.
              */
             public Builder SQL(String SQL) {
                 this.SQL = SQL;
@@ -332,7 +332,7 @@ public class DescribeAvailableAdvicesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned. The value must be an integer that is greater than or equal to 0. Default value: 0.
+             * The total number of entries returned. Minimum value: 0. Default value: 0.
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

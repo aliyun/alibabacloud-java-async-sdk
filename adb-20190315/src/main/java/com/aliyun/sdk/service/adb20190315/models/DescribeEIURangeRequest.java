@@ -197,7 +197,10 @@ public class DescribeEIURangeRequest extends Request {
         } 
 
         /**
-         * ComputeResource.
+         * The specifications of computing resources.
+         * <p>
+         * 
+         * >  You can call the [DescribeComputeResource](~~469002~~) operation to query the specifications of computing resources.
          */
         public Builder computeResource(String computeResource) {
             this.putQueryParameter("ComputeResource", computeResource);
@@ -206,7 +209,13 @@ public class DescribeEIURangeRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.
+         * <p>
+         * 
+         * *   This parameter can be left empty when **Operation** is set to **Buy**.
+         * *   This parameter must be specified when **Operation** is set to **Upgrade** or **Downgrade**.
+         * 
+         * >  You can call the [DescribeDBClusters](~~129857~~) operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a region.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -215,7 +224,7 @@ public class DescribeEIURangeRequest extends Request {
         }
 
         /**
-         * DBClusterVersion.
+         * The version of the AnalyticDB for MySQL Data Warehouse Edition cluster. Set the value to **3.0**.
          */
         public Builder DBClusterVersion(String DBClusterVersion) {
             this.putQueryParameter("DBClusterVersion", DBClusterVersion);
@@ -224,7 +233,12 @@ public class DescribeEIURangeRequest extends Request {
         }
 
         /**
-         * Operation.
+         * The type of the operation. Valid values:
+         * <p>
+         * 
+         * *   **Buy**: purchases a cluster.
+         * *   **Upgrade**: upgrades a cluster.
+         * *   **Downgrade**: downgrades a cluster.
          */
         public Builder operation(String operation) {
             this.putQueryParameter("Operation", operation);
@@ -251,7 +265,10 @@ public class DescribeEIURangeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the cluster.
+         * <p>
+         * 
+         * >  You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -287,7 +304,10 @@ public class DescribeEIURangeRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * The zone ID of the cluster.
+         * <p>
+         * 
+         * >  You can call the [DescribeRegions](~~612293~~) operation to query the most recent zone list.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

@@ -629,7 +629,13 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * DiskEncryption.
+         * Specifies whether to enable disk encryption.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   true
+         * *   false
          */
         public Builder diskEncryption(String diskEncryption) {
             this.putQueryParameter("DiskEncryption", diskEncryption);
@@ -656,7 +662,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * KmsId.
+         * The Key Management Service (KMS) ID that is used for disk encryption. This parameter is valid only when DiskEncryption is set to true.
          */
         public Builder kmsId(String kmsId) {
             this.putQueryParameter("KmsId", kmsId);
@@ -668,10 +674,8 @@ public class CreateDBClusterRequest extends Request {
          * The mode of the cluster. Valid values:
          * <p>
          * 
-         * *   **Reserver**: the reserved mode
-         * *   **Flexible**: the elastic mode
-         * 
-         * >  If you do not specify this parameter, the cluster is in reserved mode.
+         * *   **Reserver**: the reserved mode.
+         * *   **Flexible**: the elastic mode.
          */
         public Builder mode(String mode) {
             this.putQueryParameter("Mode", mode);

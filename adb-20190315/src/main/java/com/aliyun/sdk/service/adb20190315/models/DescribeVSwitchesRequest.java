@@ -235,7 +235,7 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * VswId.
+         * The vSwitch ID.
          */
         public Builder vswId(String vswId) {
             this.putQueryParameter("VswId", vswId);

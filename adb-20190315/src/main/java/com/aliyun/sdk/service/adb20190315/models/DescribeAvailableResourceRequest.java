@@ -167,11 +167,11 @@ public class DescribeAvailableResourceRequest extends Request {
         } 
 
         /**
-         * The supported mode. Valid values:
+         * The language of query results. Valid values:
          * <p>
          * 
-         * *   **flexible**: elastic mode
-         * *   **reserver**: reserved mode
+         * *   **zh-CN** (default): Chinese.
+         * *   **en-US**: English.
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -189,7 +189,7 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * DBClusterVersion.
+         * The version of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.
          */
         public Builder DBClusterVersion(String DBClusterVersion) {
             this.putQueryParameter("DBClusterVersion", DBClusterVersion);
@@ -216,7 +216,10 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * The resources available in the zones.
+         * The region ID.
+         * <p>
+         * 
+         * >  You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -243,7 +246,10 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * The ID of the zone.
+         * The zone ID.
+         * <p>
+         * 
+         * >  You can call the [DescribeRegions](~~143074~~) operation to query the most recent zone list.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

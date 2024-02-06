@@ -140,7 +140,10 @@ public class ModifyResubmitConfigRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The cluster ID.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBClusters](~~129857~~) operation to query the information about all AnalyticDB for MySQL clusters within a region, including cluster IDs.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -167,7 +170,7 @@ public class ModifyResubmitConfigRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The resource group ID.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -194,7 +197,7 @@ public class ModifyResubmitConfigRequest extends Request {
         }
 
         /**
-         * Rules.
+         * The job resubmission rules.
          */
         public Builder rules(java.util.List < Rules> rules) {
             String rulesShrink = shrink(rules, "Rules", "json");
@@ -285,7 +288,7 @@ public class ModifyResubmitConfigRequest extends Request {
             private String targetGroupName; 
 
             /**
-             * ExceedMemoryException.
+             * Specifies whether to configure out-of-memory (OOM) check.
              */
             public Builder exceedMemoryException(Boolean exceedMemoryException) {
                 this.exceedMemoryException = exceedMemoryException;
@@ -293,7 +296,7 @@ public class ModifyResubmitConfigRequest extends Request {
             }
 
             /**
-             * GroupName.
+             * The name of the source resource group.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -301,7 +304,7 @@ public class ModifyResubmitConfigRequest extends Request {
             }
 
             /**
-             * PeakMemory.
+             * The peak memory usage.
              */
             public Builder peakMemory(String peakMemory) {
                 this.peakMemory = peakMemory;
@@ -309,7 +312,7 @@ public class ModifyResubmitConfigRequest extends Request {
             }
 
             /**
-             * QueryTime.
+             * The duration of the SQL statement. Unit: milliseconds.
              */
             public Builder queryTime(String queryTime) {
                 this.queryTime = queryTime;
@@ -317,7 +320,7 @@ public class ModifyResubmitConfigRequest extends Request {
             }
 
             /**
-             * TargetGroupName.
+             * The name of the destination resource group.
              */
             public Builder targetGroupName(String targetGroupName) {
                 this.targetGroupName = targetGroupName;

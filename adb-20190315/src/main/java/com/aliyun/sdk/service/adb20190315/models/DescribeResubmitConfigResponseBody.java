@@ -62,7 +62,10 @@ public class DescribeResubmitConfigResponseBody extends TeaModel {
         private java.util.List < Rules> rules; 
 
         /**
-         * DBClusterId.
+         * The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBClusters](~~129857~~) operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a region.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -70,7 +73,7 @@ public class DescribeResubmitConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +81,7 @@ public class DescribeResubmitConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Rules.
+         * The job resubmission rules.
          */
         public Builder rules(java.util.List < Rules> rules) {
             this.rules = rules;
@@ -166,7 +169,7 @@ public class DescribeResubmitConfigResponseBody extends TeaModel {
             private String targetGroupName; 
 
             /**
-             * ExceedMemoryException.
+             * Indicates whether out-of-memory (OOM) check is configured.
              */
             public Builder exceedMemoryException(Boolean exceedMemoryException) {
                 this.exceedMemoryException = exceedMemoryException;
@@ -174,7 +177,7 @@ public class DescribeResubmitConfigResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * The name of the source resource group.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -182,7 +185,7 @@ public class DescribeResubmitConfigResponseBody extends TeaModel {
             }
 
             /**
-             * PeakMemory.
+             * The peak memory usage.
              */
             public Builder peakMemory(String peakMemory) {
                 this.peakMemory = peakMemory;
@@ -190,7 +193,7 @@ public class DescribeResubmitConfigResponseBody extends TeaModel {
             }
 
             /**
-             * QueryTime.
+             * The duration of the SQL statement. Unit: milliseconds.
              */
             public Builder queryTime(String queryTime) {
                 this.queryTime = queryTime;
@@ -198,7 +201,7 @@ public class DescribeResubmitConfigResponseBody extends TeaModel {
             }
 
             /**
-             * TargetGroupName.
+             * The name of the destination resource group.
              */
             public Builder targetGroupName(String targetGroupName) {
                 this.targetGroupName = targetGroupName;

@@ -238,7 +238,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the backup set.
+             * The backup set ID.
              */
             public Builder backupId(String backupId) {
                 this.backupId = backupId;
@@ -254,7 +254,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The backup size. Unit: bytes.
+             * The size of the backup set. Unit: bytes.
              */
             public Builder backupSize(Long backupSize) {
                 this.backupSize = backupSize;

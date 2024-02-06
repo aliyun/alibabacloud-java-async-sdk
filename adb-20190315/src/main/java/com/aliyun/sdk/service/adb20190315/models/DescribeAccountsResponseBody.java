@@ -153,9 +153,9 @@ public class DescribeAccountsResponseBody extends TeaModel {
              * The state of the database account. Valid values:
              * <p>
              * 
-             * *   Creating
-             * *   Available
-             * *   Deleting
+             * *   **Creating**
+             * *   **Available**
+             * *   **Deleting**
              */
             public Builder accountStatus(String accountStatus) {
                 this.accountStatus = accountStatus;
@@ -163,9 +163,11 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * *   Normal: standard account.
+             * The type of the database account. Valid values:
              * <p>
-             * *   Super: privileged account.
+             * 
+             * *   **Normal**: standard account.
+             * *   **Super**: privileged account.
              */
             public Builder accountType(String accountType) {
                 this.accountType = accountType;

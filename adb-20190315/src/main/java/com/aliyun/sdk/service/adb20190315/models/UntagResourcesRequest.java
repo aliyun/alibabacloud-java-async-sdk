@@ -169,13 +169,13 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * Specifies whether to detach all tags. This parameter takes effect only when the TagKey.N parameter is not specified. Valid values:
+         * Specifies whether to remove all tags from clusters. Default value: false. Valid values:
          * <p>
          * 
-         * *   true
-         * *   false
+         * *   **true**
+         * *   **false**
          * 
-         * Default value: false.
+         * >  If you specify TagKey and this parameter, this parameter does not take effect.
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -202,7 +202,10 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.
+         * The region ID.
+         * <p>
+         * 
+         * >  You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -211,7 +214,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The ID of cluster N. Valid values of N: 1 to 50.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -238,7 +241,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The type of the cluster. Set the value to `ALIYUN::ADB::CLUSTER`.
+         * The resource type. Set the value to **ALIYUN::ADB::CLUSTER**.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -247,7 +250,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * TagKey.
+         * The key of tag N. Valid values of N: 1 to 20.
          */
         public Builder tagKey(java.util.List < String > tagKey) {
             this.putQueryParameter("TagKey", tagKey);

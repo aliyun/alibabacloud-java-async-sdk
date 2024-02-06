@@ -140,6 +140,9 @@ public class DescribeAccountsRequest extends Request {
 
         /**
          * The name of the database account.
+         * <p>
+         * 
+         * >  If you do not specify this parameter, the information about all database accounts is returned.
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -148,9 +151,11 @@ public class DescribeAccountsRequest extends Request {
         }
 
         /**
-         * *   Normal: standard account.
+         * The type of the database account. If you do not specify this parameter, the information about all account types is returned. Valid values:
          * <p>
-         * *   Super: privileged account.
+         * 
+         * *   **Normal**: standard account.
+         * *   **Super**: privileged account.
          */
         public Builder accountType(String accountType) {
             this.putQueryParameter("AccountType", accountType);
@@ -159,7 +164,10 @@ public class DescribeAccountsRequest extends Request {
         }
 
         /**
-         * The cluster ID.
+         * The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBClusters](~~129857~~) operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a region.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
