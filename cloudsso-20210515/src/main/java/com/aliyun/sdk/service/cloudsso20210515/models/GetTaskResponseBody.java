@@ -50,7 +50,7 @@ public class GetTaskResponseBody extends TeaModel {
         private Task task; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class GetTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the task.
+         * The task information.
          */
         public Builder task(Task task) {
             this.task = task;
@@ -294,7 +294,7 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the task ended.
+             * The end time of the task.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -341,7 +341,7 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the task started.
+             * The start time of the task.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -349,7 +349,7 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the task. Valid values:
+             * The task status. Valid values:
              * <p>
              * 
              * *   InProgress: The task is running.
@@ -402,7 +402,7 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the task.
+             * The task ID.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -410,7 +410,7 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the task. Valid values:
+             * The task type. Valid values:
              * <p>
              * 
              * *   ProvisionAccessConfiguration: An access configuration is provisioned.

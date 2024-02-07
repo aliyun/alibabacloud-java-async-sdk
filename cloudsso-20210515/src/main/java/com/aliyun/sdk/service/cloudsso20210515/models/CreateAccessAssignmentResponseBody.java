@@ -50,7 +50,7 @@ public class CreateAccessAssignmentResponseBody extends TeaModel {
         private Task task; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class CreateAccessAssignmentResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the task.
+         * The queried task.
          */
         public Builder task(Task task) {
             this.task = task;
@@ -286,7 +286,7 @@ public class CreateAccessAssignmentResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the task. Valid values:
+             * The task status. Valid values:
              * <p>
              * 
              * *   InProgress: The task is running.
@@ -315,7 +315,7 @@ public class CreateAccessAssignmentResponseBody extends TeaModel {
             }
 
             /**
-             * The path ID of the task object in your resource directory.
+             * The path ID of the task object in the resource directory.
              */
             public Builder targetPath(String targetPath) {
                 this.targetPath = targetPath;
@@ -323,7 +323,7 @@ public class CreateAccessAssignmentResponseBody extends TeaModel {
             }
 
             /**
-             * The path name of the task object in your resource directory.
+             * The path name of the task object in the resource directory.
              */
             public Builder targetPathName(String targetPathName) {
                 this.targetPathName = targetPathName;
@@ -331,7 +331,7 @@ public class CreateAccessAssignmentResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the task object. The value is fixed as RD-Account, which indicates an account in your resource directory.
+             * The type of the task object. The value is fixed as RD-Account, which indicates the accounts in the resource directory.
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -339,7 +339,7 @@ public class CreateAccessAssignmentResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the task.
+             * The ID of the job.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -347,7 +347,7 @@ public class CreateAccessAssignmentResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the task. The value is fixed as CreateAccessAssignment, which indicates that access permissions on an account in your resource directory are assigned.
+             * The task type. The value is fixed as CreateAccessAssignment, which indicates that access permissions on an account in your resource directory are assigned.
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;

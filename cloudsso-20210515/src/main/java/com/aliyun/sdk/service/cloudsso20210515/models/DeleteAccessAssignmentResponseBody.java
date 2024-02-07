@@ -50,7 +50,7 @@ public class DeleteAccessAssignmentResponseBody extends TeaModel {
         private Task task; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DeleteAccessAssignmentResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the task.
+         * The task information.
          */
         public Builder task(Task task) {
             this.task = task;
@@ -286,7 +286,7 @@ public class DeleteAccessAssignmentResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the task. Valid values:
+             * The task status. Valid values:
              * <p>
              * 
              * *   InProgress: The task is running.
@@ -339,7 +339,7 @@ public class DeleteAccessAssignmentResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the task.
+             * The task ID.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -347,7 +347,7 @@ public class DeleteAccessAssignmentResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the task. The value is fixed as DeleteAccessAssignment, which indicates that access permissions on an account in your resource directory are removed.
+             * The task type. The value is fixed as DeleteAccessAssignment, which indicates that access permissions on an account in your resource directory are removed.
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;

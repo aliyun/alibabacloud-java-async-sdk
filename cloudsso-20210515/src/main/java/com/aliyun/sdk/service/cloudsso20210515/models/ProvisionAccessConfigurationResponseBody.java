@@ -50,7 +50,7 @@ public class ProvisionAccessConfigurationResponseBody extends TeaModel {
         private java.util.List < Tasks> tasks; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ProvisionAccessConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the task.
+         * The task information.
          */
         public Builder tasks(java.util.List < Tasks> tasks) {
             this.tasks = tasks;
@@ -222,7 +222,7 @@ public class ProvisionAccessConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the task. Valid values:
+             * The task status. Valid values:
              * <p>
              * 
              * *   InProgress: The task is running.
@@ -251,7 +251,7 @@ public class ProvisionAccessConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * The path ID of the task object in your resource directory.
+             * The path ID of the task object in the resource directory.
              */
             public Builder targetPath(String targetPath) {
                 this.targetPath = targetPath;
@@ -259,7 +259,7 @@ public class ProvisionAccessConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * The path name of the task object in your resource directory.
+             * The path name of the task object in the resource directory.
              */
             public Builder targetPathName(String targetPathName) {
                 this.targetPathName = targetPathName;
@@ -267,7 +267,7 @@ public class ProvisionAccessConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the task object. The value is fixed as RD-Account, which indicates an account in your resource directory.
+             * The type of the task object. The value is fixed as RD-Account, which indicates the accounts in the resource directory.
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -275,7 +275,7 @@ public class ProvisionAccessConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the task.
+             * The task ID.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -283,7 +283,7 @@ public class ProvisionAccessConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the task. The value is fixed as ProvisionAccessConfiguration, which indicates that an access configuration is provisioned.
+             * The task type. The value is fixed as ProvisionAccessConfiguration, which indicates that an access configuration is provisioned.
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;

@@ -109,8 +109,8 @@ public class ListAccessConfigurationProvisioningsResponseBody extends TeaModel {
          * Indicates whether the queried entries are truncated. Valid values:
          * <p>
          * 
-         * *   true: The queried entries are truncated.
-         * *   false: The queried entries are not truncated.
+         * *   true
+         * *   false
          */
         public Builder isTruncated(Boolean isTruncated) {
             this.isTruncated = isTruncated;
@@ -118,7 +118,7 @@ public class ListAccessConfigurationProvisioningsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The maximum number of entries returned per page.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -126,7 +126,7 @@ public class ListAccessConfigurationProvisioningsResponseBody extends TeaModel {
         }
 
         /**
-         * The token that is returned for the next page.
+         * The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.
          * <p>
          * 
          * >  This parameter is returned only when the value of `IsTruncated` is `true`.
@@ -137,7 +137,7 @@ public class ListAccessConfigurationProvisioningsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -353,7 +353,7 @@ public class ListAccessConfigurationProvisioningsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the custom policy that is created for an account in your resource directory.
+             * The name of the custom policy that is created for an account in the resource directory.
              */
             public Builder RAMPolicyNames(java.util.List < String > RAMPolicyNames) {
                 this.RAMPolicyNames = RAMPolicyNames;
@@ -361,7 +361,7 @@ public class ListAccessConfigurationProvisioningsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the RAM role that is created for an account in your resource directory.
+             * The name of the RAM role that is created for an account in the resource directory.
              */
             public Builder RAMRoleName(String RAMRoleName) {
                 this.RAMRoleName = RAMRoleName;
@@ -369,7 +369,7 @@ public class ListAccessConfigurationProvisioningsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Security Assertion Markup Language (SAML) identity provider (IdP) that is created within an account in your resource directory.
+             * The name of the Security Assertion Markup Language (SAML) identity provider (IdP) that is created within an account in the resource directory.
              */
             public Builder SAMLProviderName(String SAMLProviderName) {
                 this.SAMLProviderName = SAMLProviderName;
@@ -393,7 +393,7 @@ public class ListAccessConfigurationProvisioningsResponseBody extends TeaModel {
              * The ID of the task object.
              * <p>
              * 
-             * If the value of TargetType is `RD-Account`, the value of this parameter is the UID of an account in your resource directory.
+             * If the value of TargetType is `RD-Account`, the value of this parameter is the UID of an account in the resource directory.
              */
             public Builder targetId(String targetId) {
                 this.targetId = targetId;
@@ -409,7 +409,7 @@ public class ListAccessConfigurationProvisioningsResponseBody extends TeaModel {
             }
 
             /**
-             * The path ID of the task object in your resource directory.
+             * The path ID of the task object in the resource directory.
              */
             public Builder targetPath(String targetPath) {
                 this.targetPath = targetPath;
@@ -417,7 +417,7 @@ public class ListAccessConfigurationProvisioningsResponseBody extends TeaModel {
             }
 
             /**
-             * The path name of the task object in your resource directory.
+             * The path name of the task object in the resource directory.
              */
             public Builder targetPathName(String targetPathName) {
                 this.targetPathName = targetPathName;
@@ -428,7 +428,7 @@ public class ListAccessConfigurationProvisioningsResponseBody extends TeaModel {
              * The type of the task object.
              * <p>
              * 
-             * The value is fixed as RD-Account, which indicates an account in your resource directory.
+             * Set the value to RD-Account, which specifies the accounts in the resource directory.
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;

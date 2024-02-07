@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.cloudsso20210515;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.cloudsso20210515.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -46,7 +47,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ClearExternalSAMLIdentityProviderResponse> clearExternalSAMLIdentityProvider(ClearExternalSAMLIdentityProviderRequest request);
 
     /**
-      * When you call this operation, an asynchronous task is created. You can call the [GetTask](~~340670~~) operation to query the progress of task execution by using the value of the `TaskId` response parameter.
+      * When you call this operation, an asynchronous task is created. You can call the [GetTask](~~340670~~) operation to query the progress of the task based on the value of the `TaskId` response parameter.
       * For more information about how to assign permissions on an account in your resource directory, see [Overview of multi-account authorization](~~266726~~).
       * This topic provides an example on how to assign access permissions on the account `114240524784****` in your resource directory to the CloudSSO user `u-00q8wbq42wiltcrk****` by using the access configuration `ac-00jhtfl8thteu6uj****`. After the call is successful, the CloudSSO user can access resources within the account in the resource directory.
       *
@@ -219,6 +220,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<GetGroupResponse> getGroup(GetGroupRequest request);
 
+    CompletableFuture<GetLoginPreferenceResponse> getLoginPreference(GetLoginPreferenceRequest request);
+
     /**
       * If you enable username-password logon for CloudSSO users, you can also configure MFA for the users.
       * This topic provides an example on how to query the MFA setting of all CloudSSO users that belong to the directory named `00q8wbq42wiltcrk****`.
@@ -239,6 +242,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<GetMFAAuthenticationStatusResponse> getMFAAuthenticationStatus(GetMFAAuthenticationStatusRequest request);
 
+    CompletableFuture<GetPasswordPolicyResponse> getPasswordPolicy(GetPasswordPolicyRequest request);
+
     /**
       * This topic provides an example on how to query the status of SCIM synchronization within the directory `d-00fc2p61****`. The returned result shows that SCIM synchronization is in the Enabled state.
       *
@@ -254,7 +259,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetTaskResponse> getTask(GetTaskRequest request);
 
     /**
-      * You can call the GetTaskStatus operation to query the status of an asynchronous task. If you want to query more information about an asynchronous task, you can call the [GetTask](~~340670~~) operation.
+      * You can call the GetTaskStatus operation to query the status of an asynchronous task. If you want to query more information about an asynchronous task, call the [GetTask](~~340670~~) operation.
       * This topic provides an example on how to query the information about the task whose ID is `t-shfqw1u1edszvxw5****`.
       *
      */
@@ -283,7 +288,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetUserProvisioningStatisticsResponse> getUserProvisioningStatistics(GetUserProvisioningStatisticsRequest request);
 
     /**
-      * This topic provides an example on how to query the assigned access permissions on the account `114240524784****` in your resource directory. The returned result shows that access permissions on the account in your resource directory are assigned to one user.
+      * This topic provides an example on how to query the assigned access permissions on the account `114240524784****` in your resource directory. The returned result shows that access permissions on the account in your resource directory is assigned to one user.
       *
      */
     CompletableFuture<ListAccessAssignmentsResponse> listAccessAssignments(ListAccessAssignmentsRequest request);
@@ -416,12 +421,16 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<SetExternalSAMLIdentityProviderResponse> setExternalSAMLIdentityProvider(SetExternalSAMLIdentityProviderRequest request);
 
+    CompletableFuture<SetLoginPreferenceResponse> setLoginPreference(SetLoginPreferenceRequest request);
+
     /**
       * If a CloudSSO administrator enables username-password logon for users, CloudSSO automatically enables MFA to improve security. The administrator can call this operation to enable or disable MFA based on the business requirements.
       * This topic provides an example on how to enable MFA for users.
       *
      */
     CompletableFuture<SetMFAAuthenticationStatusResponse> setMFAAuthenticationStatus(SetMFAAuthenticationStatusRequest request);
+
+    CompletableFuture<SetPasswordPolicyResponse> setPasswordPolicy(SetPasswordPolicyRequest request);
 
     /**
       * You can synchronize users or groups from an external identity provider (IdP) that supports SCIM 2.0 to CloudSSO only after SCIM synchronization is enabled. If you disable SCIM synchronization, you can no longer synchronize users or groups to CloudSSO. The following list describes the impacts after SCIM synchronization is enabled or disabled:

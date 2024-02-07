@@ -161,7 +161,7 @@ public class ListAccessAssignmentsRequest extends Request {
         }
 
         /**
-         * The ID of the directory.
+         * The directory ID.
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -170,7 +170,7 @@ public class ListAccessAssignmentsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The maximum number of entries per page.
          * <p>
          * 
          * Valid values: 1 to 20.
@@ -184,7 +184,7 @@ public class ListAccessAssignmentsRequest extends Request {
         }
 
         /**
-         * The token to return for the next page. If this is your first time to call this operation, you do not need to specify `NextToken`.
+         * The pagination token that is used in the next request to retrieve a new page of results. If this is your first time to call this operation, you do not need to specify the `NextToken` parameter.
          * <p>
          * 
          * When you call this operation for the first time, if the total number of entries to return exceeds the value of `MaxResults`, the entries are truncated. Only the entries that match the value of `MaxResults` are returned, and the excess entries are not returned. In this case, the value of the response parameter `IsTruncated` is `true`, and `NextToken` is returned. In the next call, you can use the value of `NextToken` and maintain the settings of the other request parameters to query the excess entries. You can repeat the call until the value of `IsTruncated` becomes `false`. This way, all entries are returned.
@@ -199,10 +199,10 @@ public class ListAccessAssignmentsRequest extends Request {
          * The ID of the CloudSSO identity. The ID can be used to filter access permissions.
          * <p>
          * 
-         * *   If you set `PrincipalType` to User, set `PrincipalId` to the ID of the Cloud SSO user.
+         * *   If you set `PrincipalType` to User, set `PrincipalId` to the ID of the CloudSSO user.
          * *   If you set `PrincipalType` to Group, set `PrincipalId` to the ID of the CloudSSO group.
          * 
-         * >  You can use the ID to filter access permissions only if you specify both `PrincipalId` and `PrincipalType`.
+         * >  You can use the type to filter access permissions only if you specify both PrincipalId and `PrincipalType`.``
          */
         public Builder principalId(String principalId) {
             this.putQueryParameter("PrincipalId", principalId);
@@ -217,7 +217,7 @@ public class ListAccessAssignmentsRequest extends Request {
          * *   User
          * *   Group
          * 
-         * >  You can use the type to filter access permissions only if you specify both `PrincipalId` and `PrincipalType`.
+         * >  You can use the type to filter access permissions only if you specify both PrincipalId and `PrincipalType`.``
          */
         public Builder principalType(String principalType) {
             this.putQueryParameter("PrincipalType", principalType);
@@ -229,7 +229,7 @@ public class ListAccessAssignmentsRequest extends Request {
          * The ID of the task object. The ID can be used to filter access permissions.
          * <p>
          * 
-         * >  You can use the ID to filter access permissions only if you specify both `TargetId` and `TargetType`.
+         * >  You can use the type to filter access permissions only if you specify both `TargetId` and `TargetType`.
          */
         public Builder targetId(String targetId) {
             this.putQueryParameter("TargetId", targetId);
@@ -241,7 +241,7 @@ public class ListAccessAssignmentsRequest extends Request {
          * The type of the task object. The type can be used to filter access permissions.
          * <p>
          * 
-         * Set the value to RD-Account, which indicates an account in your resource directory.
+         * Set the value to RD-Account, which specifies the accounts in the resource directory.
          * 
          * >  You can use the type to filter access permissions only if you specify both `TargetId` and `TargetType`.
          */

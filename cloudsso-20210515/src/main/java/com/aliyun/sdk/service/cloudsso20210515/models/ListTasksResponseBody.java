@@ -101,8 +101,8 @@ public class ListTasksResponseBody extends TeaModel {
          * Indicates whether the queried entries are truncated. Valid values:
          * <p>
          * 
-         * *   true: The queried entries are truncated.
-         * *   false: The queried entries are not truncated.
+         * *   true
+         * *   false
          */
         public Builder isTruncated(Boolean isTruncated) {
             this.isTruncated = isTruncated;
@@ -110,7 +110,7 @@ public class ListTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The maximum number of entries returned per page.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -118,7 +118,7 @@ public class ListTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The token that is returned for the next page.
+         * The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.
          * <p>
          * 
          * >  This parameter is returned only when the value of `IsTruncated` is `true`.
@@ -129,7 +129,7 @@ public class ListTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -381,7 +381,7 @@ public class ListTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the task ended.
+             * The end time of the task.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -428,7 +428,7 @@ public class ListTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the task started.
+             * The start time of the task.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -436,7 +436,7 @@ public class ListTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the task. Valid values:
+             * The task status. Valid values:
              * <p>
              * 
              * *   InProgress: The task is running.
@@ -465,7 +465,7 @@ public class ListTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The path ID of the task object in your resource directory.
+             * The path ID of the task object in the resource directory.
              */
             public Builder targetPath(String targetPath) {
                 this.targetPath = targetPath;
@@ -473,7 +473,7 @@ public class ListTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The path name of the task object in your resource directory.
+             * The path name of the task object in the resource directory.
              */
             public Builder targetPathName(String targetPathName) {
                 this.targetPathName = targetPathName;
@@ -484,7 +484,7 @@ public class ListTasksResponseBody extends TeaModel {
              * The type of the task object.
              * <p>
              * 
-             * The value is fixed as RD-Account, which indicates an account in your resource directory.
+             * The value is fixed as RD-Account, which indicates the accounts in the resource directory.
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -492,7 +492,7 @@ public class ListTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the task.
+             * The ID of the job.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -500,13 +500,13 @@ public class ListTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the task. Valid values:
+             * The task type. Valid values:
              * <p>
              * 
              * *   ProvisionAccessConfiguration: An access configuration is provisioned.
              * *   DeprovisionAccessConfiguration: An access configuration is de-provisioned.
-             * *   CreateAccessAssignment: Access permissions on an account in your resource directory are assigned.
-             * *   DeleteAccessAssignment: Access permissions on an account in your resource directory are removed.
+             * *   CreateAccessAssignment: Access permissions on an account in the resource directory are assigned.
+             * *   DeleteAccessAssignment: Access permissions on an account in the resource directory are removed.
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;

@@ -50,7 +50,7 @@ public class GetTaskStatusResponseBody extends TeaModel {
         private TaskStatus taskStatus; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class GetTaskStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The status information of the task.
+         * The status information about the task.
          */
         public Builder taskStatus(TaskStatus taskStatus) {
             this.taskStatus = taskStatus;
@@ -158,7 +158,7 @@ public class GetTaskStatusResponseBody extends TeaModel {
             private String taskType; 
 
             /**
-             * The time when the task ended.
+             * The end time of the task.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -177,7 +177,7 @@ public class GetTaskStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the task started.
+             * The start time of the task.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -185,7 +185,7 @@ public class GetTaskStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the task. Valid values:
+             * The task status. Valid values:
              * <p>
              * 
              * *   InProgress: The task is running.
@@ -198,7 +198,7 @@ public class GetTaskStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the task.
+             * The task ID.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -206,7 +206,7 @@ public class GetTaskStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the task. Valid values:
+             * The task type. Valid values:
              * <p>
              * 
              * *   ProvisionAccessConfiguration: An access configuration is provisioned.
