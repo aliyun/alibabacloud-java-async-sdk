@@ -150,7 +150,7 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key.
+             * The key of the tag.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -158,7 +158,7 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * The value of the tag.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -592,7 +592,11 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
             }
 
             /**
-             * ManagedType.
+             * managed type:
+             * <p>
+             * - none: unmanaged. The default value for ACK clusters.
+             * - agent: managed agent (including KSM). The default values for ASK, ACS, and AckOne clusters.
+             * - agent-exporter: managed agent and exporters. The default value for the cloud service type.
              */
             public Builder managedType(String managedType) {
                 this.managedType = managedType;
@@ -648,7 +652,7 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
             }
 
             /**
-             * VPC ID.
+             * The VPC ID.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.arms20190808;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.arms20190808.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -142,6 +143,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteAppListResponse> deleteAppList(DeleteAppListRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<DeleteCmsExporterResponse> deleteCmsExporter(DeleteCmsExporterRequest request);
 
     CompletableFuture<DeleteContactResponse> deleteContact(DeleteContactRequest request);
@@ -242,6 +247,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetAuthTokenResponse> getAuthToken(GetAuthTokenRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<GetCloudClusterAllUrlResponse> getCloudClusterAllUrl(GetCloudClusterAllUrlRequest request);
 
     CompletableFuture<GetClusterAllUrlResponse> getClusterAllUrl(GetClusterAllUrlRequest request);
@@ -322,6 +331,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<InstallAddonResponse> installAddon(InstallAddonRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<InstallCmsExporterResponse> installCmsExporter(InstallCmsExporterRequest request);
 
     CompletableFuture<InstallEnvironmentFeatureResponse> installEnvironmentFeature(InstallEnvironmentFeatureRequest request);
@@ -336,12 +349,18 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListAddonReleasesResponse> listAddonReleases(ListAddonReleasesRequest request);
 
+    CompletableFuture<ListAddonsResponse> listAddons(ListAddonsRequest request);
+
     CompletableFuture<ListAlertEventsResponse> listAlertEvents(ListAlertEventsRequest request);
 
     CompletableFuture<ListAlertsResponse> listAlerts(ListAlertsRequest request);
 
     CompletableFuture<ListClusterFromGrafanaResponse> listClusterFromGrafana(ListClusterFromGrafanaRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<ListCmsInstancesResponse> listCmsInstances(ListCmsInstancesRequest request);
 
     /**
