@@ -28,17 +28,12 @@ public class ListImagesRequest extends Request {
     @NameInMap("PageSize")
     private Long pageSize;
 
-    @Query
-    @NameInMap("RegionId")
-    private String regionId;
-
     private ListImagesRequest(Builder builder) {
         super(builder);
         this.imageIds = builder.imageIds;
         this.imageNames = builder.imageNames;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -82,19 +77,11 @@ public class ListImagesRequest extends Request {
         return this.pageSize;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<ListImagesRequest, Builder> {
         private java.util.List < String > imageIds; 
         private java.util.List < String > imageNames; 
         private Long pageNumber; 
         private Long pageSize; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -106,7 +93,6 @@ public class ListImagesRequest extends Request {
             this.imageNames = request.imageNames;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
-            this.regionId = request.regionId;
         } 
 
         /**
@@ -144,15 +130,6 @@ public class ListImagesRequest extends Request {
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

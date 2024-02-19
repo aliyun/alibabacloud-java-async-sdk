@@ -17,14 +17,9 @@ public class GetImageRequest extends Request {
     @Validation(required = true)
     private String imageId;
 
-    @Query
-    @NameInMap("RegionId")
-    private String regionId;
-
     private GetImageRequest(Builder builder) {
         super(builder);
         this.imageId = builder.imageId;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -47,16 +42,8 @@ public class GetImageRequest extends Request {
         return this.imageId;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<GetImageRequest, Builder> {
         private String imageId; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -65,7 +52,6 @@ public class GetImageRequest extends Request {
         private Builder(GetImageRequest request) {
             super(request);
             this.imageId = request.imageId;
-            this.regionId = request.regionId;
         } 
 
         /**
@@ -74,15 +60,6 @@ public class GetImageRequest extends Request {
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
             this.imageId = imageId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

@@ -26,10 +26,6 @@ public class AddImageRequest extends Request {
     private String name;
 
     @Query
-    @NameInMap("RegionId")
-    private String regionId;
-
-    @Query
     @NameInMap("VMImageSpec")
     private VMImageSpec VMImageSpec;
 
@@ -42,7 +38,6 @@ public class AddImageRequest extends Request {
         this.containerImageSpec = builder.containerImageSpec;
         this.description = builder.description;
         this.name = builder.name;
-        this.regionId = builder.regionId;
         this.VMImageSpec = builder.VMImageSpec;
         this.version = builder.version;
     }
@@ -82,13 +77,6 @@ public class AddImageRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return VMImageSpec
      */
     public VMImageSpec getVMImageSpec() {
@@ -106,7 +94,6 @@ public class AddImageRequest extends Request {
         private ContainerImageSpec containerImageSpec; 
         private String description; 
         private String name; 
-        private String regionId; 
         private VMImageSpec VMImageSpec; 
         private String version; 
 
@@ -119,7 +106,6 @@ public class AddImageRequest extends Request {
             this.containerImageSpec = request.containerImageSpec;
             this.description = request.description;
             this.name = request.name;
-            this.regionId = request.regionId;
             this.VMImageSpec = request.VMImageSpec;
             this.version = request.version;
         } 
@@ -149,15 +135,6 @@ public class AddImageRequest extends Request {
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
             this.name = name;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

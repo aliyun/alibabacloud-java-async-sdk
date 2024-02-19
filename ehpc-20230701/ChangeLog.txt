@@ -1,3 +1,6 @@
+2024-02-19 Version: 2.0.0
+- Generated java-async 2023-07-01 for EHPC.
+
 2024-02-05 Version: 1.0.0
 - Generated java-async 2023-07-01 for EHPC.
 
