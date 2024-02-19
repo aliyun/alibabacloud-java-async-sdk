@@ -24,11 +24,15 @@ public class DescribeSampleDataResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("SampleDataStatus")
+    private String sampleDataStatus;
+
     private DescribeSampleDataResponseBody(Builder builder) {
         this.DBInstanceId = builder.DBInstanceId;
         this.errorMessage = builder.errorMessage;
         this.hasSampleData = builder.hasSampleData;
         this.requestId = builder.requestId;
+        this.sampleDataStatus = builder.sampleDataStatus;
     }
 
     public static Builder builder() {
@@ -67,11 +71,19 @@ public class DescribeSampleDataResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return sampleDataStatus
+     */
+    public String getSampleDataStatus() {
+        return this.sampleDataStatus;
+    }
+
     public static final class Builder {
         private String DBInstanceId; 
         private String errorMessage; 
         private Boolean hasSampleData; 
         private String requestId; 
+        private String sampleDataStatus; 
 
         /**
          * The ID of the instance.
@@ -106,6 +118,14 @@ public class DescribeSampleDataResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * SampleDataStatus.
+         */
+        public Builder sampleDataStatus(String sampleDataStatus) {
+            this.sampleDataStatus = sampleDataStatus;
             return this;
         }
 

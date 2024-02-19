@@ -374,10 +374,14 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
 
     }
     public static class Usage extends TeaModel {
+        @NameInMap("EmbeddingEntries")
+        private Integer embeddingEntries;
+
         @NameInMap("EmbeddingTokens")
         private Integer embeddingTokens;
 
         private Usage(Builder builder) {
+            this.embeddingEntries = builder.embeddingEntries;
             this.embeddingTokens = builder.embeddingTokens;
         }
 
@@ -390,6 +394,13 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
         }
 
         /**
+         * @return embeddingEntries
+         */
+        public Integer getEmbeddingEntries() {
+            return this.embeddingEntries;
+        }
+
+        /**
          * @return embeddingTokens
          */
         public Integer getEmbeddingTokens() {
@@ -397,7 +408,16 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer embeddingEntries; 
             private Integer embeddingTokens; 
+
+            /**
+             * EmbeddingEntries.
+             */
+            public Builder embeddingEntries(Integer embeddingEntries) {
+                this.embeddingEntries = embeddingEntries;
+                return this;
+            }
 
             /**
              * EmbeddingTokens.

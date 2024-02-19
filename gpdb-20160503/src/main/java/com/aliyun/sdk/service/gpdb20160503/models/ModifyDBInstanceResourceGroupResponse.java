@@ -13,15 +13,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyDBInstanceResourceGroupResponse extends Response {
     @NameInMap("headers")
-    @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     private Integer statusCode;
 
     @NameInMap("body")
-    @Validation(required = true)
     private ModifyDBInstanceResourceGroupResponseBody body;
 
     private ModifyDBInstanceResourceGroupResponse(BuilderImpl builder) {
