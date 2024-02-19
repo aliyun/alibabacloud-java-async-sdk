@@ -23,12 +23,10 @@ public class GetLindormInstanceListRequest extends Request {
 
     @Query
     @NameInMap("PageNumber")
-    @Validation(required = true)
     private Integer pageNumber;
 
     @Query
     @NameInMap("PageSize")
-    @Validation(required = true)
     private Integer pageSize;
 
     @Query
