@@ -24,6 +24,7 @@ public class ListFunctionAsyncInvokeConfigsRequest extends Request {
 
     @Host
     @NameInMap("AccountID")
+    @Deprecated
     private String accountID;
 
     @Header
