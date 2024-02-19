@@ -17,6 +17,10 @@ public class AddZoneRequest extends Request {
     private String clientToken;
 
     @Query
+    @NameInMap("DnsGroup")
+    private String dnsGroup;
+
+    @Query
     @NameInMap("Lang")
     private String lang;
 
@@ -43,6 +47,7 @@ public class AddZoneRequest extends Request {
     private AddZoneRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
+        this.dnsGroup = builder.dnsGroup;
         this.lang = builder.lang;
         this.proxyPattern = builder.proxyPattern;
         this.resourceGroupId = builder.resourceGroupId;
@@ -69,6 +74,13 @@ public class AddZoneRequest extends Request {
      */
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    /**
+     * @return dnsGroup
+     */
+    public String getDnsGroup() {
+        return this.dnsGroup;
     }
 
     /**
@@ -115,6 +127,7 @@ public class AddZoneRequest extends Request {
 
     public static final class Builder extends Request.Builder<AddZoneRequest, Builder> {
         private String clientToken; 
+        private String dnsGroup; 
         private String lang; 
         private String proxyPattern; 
         private String resourceGroupId; 
@@ -129,6 +142,7 @@ public class AddZoneRequest extends Request {
         private Builder(AddZoneRequest request) {
             super(request);
             this.clientToken = request.clientToken;
+            this.dnsGroup = request.dnsGroup;
             this.lang = request.lang;
             this.proxyPattern = request.proxyPattern;
             this.resourceGroupId = request.resourceGroupId;
@@ -143,6 +157,15 @@ public class AddZoneRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * DnsGroup.
+         */
+        public Builder dnsGroup(String dnsGroup) {
+            this.putQueryParameter("DnsGroup", dnsGroup);
+            this.dnsGroup = dnsGroup;
             return this;
         }
 
