@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.ebs20210730;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.ebs20210730.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -166,6 +167,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DescribeDiskReplicaPairsResponse> describeDiskReplicaPairs(DescribeDiskReplicaPairsRequest request);
 
+    CompletableFuture<DescribeDisksResponse> describeDisks(DescribeDisksRequest request);
+
     CompletableFuture<DescribeEnterpriseSnapshotPolicyResponse> describeEnterpriseSnapshotPolicy(DescribeEnterpriseSnapshotPolicyRequest request);
 
     /**
@@ -201,6 +204,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<FailoverDiskReplicaPairResponse> failoverDiskReplicaPair(FailoverDiskReplicaPairRequest request);
+
+    CompletableFuture<GetDiskResponse> getDisk(GetDiskRequest request);
 
     /**
       * Specify at least one of the following parameters or parameter pairs in a request to determine a query object:

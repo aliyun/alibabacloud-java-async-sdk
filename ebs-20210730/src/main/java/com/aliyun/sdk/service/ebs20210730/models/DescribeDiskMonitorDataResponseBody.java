@@ -107,8 +107,14 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
         @NameInMap("ReadBPS")
         private Long readBPS;
 
+        @NameInMap("ReadBlockSize")
+        private Long readBlockSize;
+
         @NameInMap("ReadIOPS")
         private Long readIOPS;
+
+        @NameInMap("ReadLatency")
+        private Long readLatency;
 
         @NameInMap("Timestamp")
         private String timestamp;
@@ -116,8 +122,14 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
         @NameInMap("WriteBPS")
         private Long writeBPS;
 
+        @NameInMap("WriteBlockSize")
+        private Long writeBlockSize;
+
         @NameInMap("WriteIOPS")
         private Long writeIOPS;
+
+        @NameInMap("WriteLatency")
+        private Long writeLatency;
 
         private MonitorData(Builder builder) {
             this.BPSPercent = builder.BPSPercent;
@@ -125,10 +137,14 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             this.diskId = builder.diskId;
             this.IOPSPercent = builder.IOPSPercent;
             this.readBPS = builder.readBPS;
+            this.readBlockSize = builder.readBlockSize;
             this.readIOPS = builder.readIOPS;
+            this.readLatency = builder.readLatency;
             this.timestamp = builder.timestamp;
             this.writeBPS = builder.writeBPS;
+            this.writeBlockSize = builder.writeBlockSize;
             this.writeIOPS = builder.writeIOPS;
+            this.writeLatency = builder.writeLatency;
         }
 
         public static Builder builder() {
@@ -175,10 +191,24 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
         }
 
         /**
+         * @return readBlockSize
+         */
+        public Long getReadBlockSize() {
+            return this.readBlockSize;
+        }
+
+        /**
          * @return readIOPS
          */
         public Long getReadIOPS() {
             return this.readIOPS;
+        }
+
+        /**
+         * @return readLatency
+         */
+        public Long getReadLatency() {
+            return this.readLatency;
         }
 
         /**
@@ -196,10 +226,24 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
         }
 
         /**
+         * @return writeBlockSize
+         */
+        public Long getWriteBlockSize() {
+            return this.writeBlockSize;
+        }
+
+        /**
          * @return writeIOPS
          */
         public Long getWriteIOPS() {
             return this.writeIOPS;
+        }
+
+        /**
+         * @return writeLatency
+         */
+        public Long getWriteLatency() {
+            return this.writeLatency;
         }
 
         public static final class Builder {
@@ -208,10 +252,14 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             private String diskId; 
             private Long IOPSPercent; 
             private Long readBPS; 
+            private Long readBlockSize; 
             private Long readIOPS; 
+            private Long readLatency; 
             private String timestamp; 
             private Long writeBPS; 
+            private Long writeBlockSize; 
             private Long writeIOPS; 
+            private Long writeLatency; 
 
             /**
              * The percentage of BPS.
@@ -254,10 +302,26 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             }
 
             /**
+             * ReadBlockSize.
+             */
+            public Builder readBlockSize(Long readBlockSize) {
+                this.readBlockSize = readBlockSize;
+                return this;
+            }
+
+            /**
              * The maximum number of read IOPS.
              */
             public Builder readIOPS(Long readIOPS) {
                 this.readIOPS = readIOPS;
+                return this;
+            }
+
+            /**
+             * ReadLatency.
+             */
+            public Builder readLatency(Long readLatency) {
+                this.readLatency = readLatency;
                 return this;
             }
 
@@ -278,10 +342,26 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             }
 
             /**
+             * WriteBlockSize.
+             */
+            public Builder writeBlockSize(Long writeBlockSize) {
+                this.writeBlockSize = writeBlockSize;
+                return this;
+            }
+
+            /**
              * The maximum number of write IOPS.
              */
             public Builder writeIOPS(Long writeIOPS) {
                 this.writeIOPS = writeIOPS;
+                return this;
+            }
+
+            /**
+             * WriteLatency.
+             */
+            public Builder writeLatency(Long writeLatency) {
+                this.writeLatency = writeLatency;
                 return this;
             }
 
