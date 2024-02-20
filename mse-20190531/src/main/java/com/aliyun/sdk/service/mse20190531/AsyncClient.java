@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.mse20190531;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.mse20190531.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -25,6 +26,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddBlackWhiteListResponse> addBlackWhiteList(AddBlackWhiteListRequest request);
 
     CompletableFuture<AddGatewayResponse> addGateway(AddGatewayRequest request);
+
+    CompletableFuture<AddGatewayAuthResponse> addGatewayAuth(AddGatewayAuthRequest request);
 
     CompletableFuture<AddGatewayAuthConsumerResponse> addGatewayAuthConsumer(AddGatewayAuthConsumerRequest request);
 
@@ -203,6 +206,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetGatewayResponse> getGateway(GetGatewayRequest request);
 
     CompletableFuture<GetGatewayAuthConsumerDetailResponse> getGatewayAuthConsumerDetail(GetGatewayAuthConsumerDetailRequest request);
+
+    CompletableFuture<GetGatewayAuthDetailResponse> getGatewayAuthDetail(GetGatewayAuthDetailRequest request);
 
     CompletableFuture<GetGatewayDomainDetailResponse> getGatewayDomainDetail(GetGatewayDomainDetailRequest request);
 
