@@ -202,7 +202,12 @@ public class DescribeDefenseTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * DefenseSubScene.
+             * The sub-scenario in which the template is used. Valid values:
+             * <p>
+             * 
+             * *   **web**: The template is a bot management template that is used for website protection.
+             * *   **app**: The template is a bot management template that is used for app protection.
+             * *   **basic**: The template is a bot management template that is used for basic protection.
              */
             public Builder defenseSubScene(String defenseSubScene) {
                 this.defenseSubScene = defenseSubScene;

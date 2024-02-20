@@ -119,6 +119,9 @@ public class DescribeHybridCloudResourcesResponseBody extends TeaModel {
         @NameInMap("HttpsPorts")
         private java.util.List < Long > httpsPorts;
 
+        @NameInMap("IPv6Enabled")
+        private Boolean iPv6Enabled;
+
         @NameInMap("Ipv6Enabled")
         private Boolean ipv6Enabled;
 
@@ -144,6 +147,7 @@ public class DescribeHybridCloudResourcesResponseBody extends TeaModel {
             this.http2Enabled = builder.http2Enabled;
             this.httpPorts = builder.httpPorts;
             this.httpsPorts = builder.httpsPorts;
+            this.iPv6Enabled = builder.iPv6Enabled;
             this.ipv6Enabled = builder.ipv6Enabled;
             this.protectionResource = builder.protectionResource;
             this.TLSVersion = builder.TLSVersion;
@@ -223,6 +227,13 @@ public class DescribeHybridCloudResourcesResponseBody extends TeaModel {
         }
 
         /**
+         * @return iPv6Enabled
+         */
+        public Boolean getIPv6Enabled() {
+            return this.iPv6Enabled;
+        }
+
+        /**
          * @return ipv6Enabled
          */
         public Boolean getIpv6Enabled() {
@@ -267,6 +278,7 @@ public class DescribeHybridCloudResourcesResponseBody extends TeaModel {
             private Boolean http2Enabled; 
             private java.util.List < Long > httpPorts; 
             private java.util.List < Long > httpsPorts; 
+            private Boolean iPv6Enabled; 
             private Boolean ipv6Enabled; 
             private String protectionResource; 
             private String TLSVersion; 
@@ -366,6 +378,14 @@ public class DescribeHybridCloudResourcesResponseBody extends TeaModel {
              */
             public Builder httpsPorts(java.util.List < Long > httpsPorts) {
                 this.httpsPorts = httpsPorts;
+                return this;
+            }
+
+            /**
+             * IPv6Enabled.
+             */
+            public Builder iPv6Enabled(Boolean iPv6Enabled) {
+                this.iPv6Enabled = iPv6Enabled;
                 return this;
             }
 

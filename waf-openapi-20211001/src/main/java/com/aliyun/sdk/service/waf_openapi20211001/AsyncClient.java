@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.waf_openapi20211001;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.waf_openapi20211001.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 

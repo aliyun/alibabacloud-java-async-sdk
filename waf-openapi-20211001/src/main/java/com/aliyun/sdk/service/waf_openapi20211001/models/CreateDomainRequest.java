@@ -765,6 +765,9 @@ public class CreateDomainRequest extends Request {
         @Validation(maximum = 3600, minimum = 1)
         private Integer writeTimeout;
 
+        @NameInMap("XffProto")
+        private Boolean xffProto;
+
         private Redirect(Builder builder) {
             this.backends = builder.backends;
             this.cnameEnabled = builder.cnameEnabled;
@@ -781,6 +784,7 @@ public class CreateDomainRequest extends Request {
             this.sniEnabled = builder.sniEnabled;
             this.sniHost = builder.sniHost;
             this.writeTimeout = builder.writeTimeout;
+            this.xffProto = builder.xffProto;
         }
 
         public static Builder builder() {
@@ -896,6 +900,13 @@ public class CreateDomainRequest extends Request {
             return this.writeTimeout;
         }
 
+        /**
+         * @return xffProto
+         */
+        public Boolean getXffProto() {
+            return this.xffProto;
+        }
+
         public static final class Builder {
             private java.util.List < String > backends; 
             private Boolean cnameEnabled; 
@@ -912,6 +923,7 @@ public class CreateDomainRequest extends Request {
             private Boolean sniEnabled; 
             private String sniHost; 
             private Integer writeTimeout; 
+            private Boolean xffProto; 
 
             /**
              * The IP addresses or domain names of the origin server.
@@ -1072,6 +1084,14 @@ public class CreateDomainRequest extends Request {
              */
             public Builder writeTimeout(Integer writeTimeout) {
                 this.writeTimeout = writeTimeout;
+                return this;
+            }
+
+            /**
+             * XffProto.
+             */
+            public Builder xffProto(Boolean xffProto) {
+                this.xffProto = xffProto;
                 return this;
             }
 

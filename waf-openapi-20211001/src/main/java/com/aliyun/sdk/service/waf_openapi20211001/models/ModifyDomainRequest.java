@@ -746,6 +746,9 @@ public class ModifyDomainRequest extends Request {
         @Validation(maximum = 3600, minimum = 1)
         private Integer writeTimeout;
 
+        @NameInMap("XffProto")
+        private Boolean xffProto;
+
         private Redirect(Builder builder) {
             this.backends = builder.backends;
             this.cnameEnabled = builder.cnameEnabled;
@@ -762,6 +765,7 @@ public class ModifyDomainRequest extends Request {
             this.sniEnabled = builder.sniEnabled;
             this.sniHost = builder.sniHost;
             this.writeTimeout = builder.writeTimeout;
+            this.xffProto = builder.xffProto;
         }
 
         public static Builder builder() {
@@ -877,6 +881,13 @@ public class ModifyDomainRequest extends Request {
             return this.writeTimeout;
         }
 
+        /**
+         * @return xffProto
+         */
+        public Boolean getXffProto() {
+            return this.xffProto;
+        }
+
         public static final class Builder {
             private java.util.List < String > backends; 
             private Boolean cnameEnabled; 
@@ -893,6 +904,7 @@ public class ModifyDomainRequest extends Request {
             private Boolean sniEnabled; 
             private String sniHost; 
             private Integer writeTimeout; 
+            private Boolean xffProto; 
 
             /**
              * The back-to-origin IP addresses or domain names. You can specify only one type of address. If you use the domain name type, only IPv4 is supported.
@@ -1057,6 +1069,14 @@ public class ModifyDomainRequest extends Request {
              */
             public Builder writeTimeout(Integer writeTimeout) {
                 this.writeTimeout = writeTimeout;
+                return this;
+            }
+
+            /**
+             * XffProto.
+             */
+            public Builder xffProto(Boolean xffProto) {
+                this.xffProto = xffProto;
                 return this;
             }
 

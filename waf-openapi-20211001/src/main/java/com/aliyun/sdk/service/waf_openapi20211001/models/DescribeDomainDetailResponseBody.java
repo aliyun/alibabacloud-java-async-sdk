@@ -901,6 +901,9 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         @NameInMap("WriteTimeout")
         private Integer writeTimeout;
 
+        @NameInMap("XffProto")
+        private Boolean xffProto;
+
         private Redirect(Builder builder) {
             this.backends = builder.backends;
             this.connectTimeout = builder.connectTimeout;
@@ -915,6 +918,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             this.sniEnabled = builder.sniEnabled;
             this.sniHost = builder.sniHost;
             this.writeTimeout = builder.writeTimeout;
+            this.xffProto = builder.xffProto;
         }
 
         public static Builder builder() {
@@ -1016,6 +1020,13 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             return this.writeTimeout;
         }
 
+        /**
+         * @return xffProto
+         */
+        public Boolean getXffProto() {
+            return this.xffProto;
+        }
+
         public static final class Builder {
             private java.util.List < Backends> backends; 
             private Integer connectTimeout; 
@@ -1030,6 +1041,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             private Boolean sniEnabled; 
             private String sniHost; 
             private Integer writeTimeout; 
+            private Boolean xffProto; 
 
             /**
              * An array of addresses of origin servers.
@@ -1159,6 +1171,14 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
              */
             public Builder writeTimeout(Integer writeTimeout) {
                 this.writeTimeout = writeTimeout;
+                return this;
+            }
+
+            /**
+             * XffProto.
+             */
+            public Builder xffProto(Boolean xffProto) {
+                this.xffProto = xffProto;
                 return this;
             }
 
