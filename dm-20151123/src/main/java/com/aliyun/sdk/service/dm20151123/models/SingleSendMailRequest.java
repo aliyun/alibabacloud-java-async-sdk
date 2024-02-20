@@ -77,6 +77,14 @@ public class SingleSendMailRequest extends Request {
     @Validation(required = true)
     private String toAddress;
 
+    @Query
+    @NameInMap("UnSubscribeFilterLevel")
+    private String unSubscribeFilterLevel;
+
+    @Query
+    @NameInMap("UnSubscribeLinkType")
+    private String unSubscribeLinkType;
+
     private SingleSendMailRequest(Builder builder) {
         super(builder);
         this.accountName = builder.accountName;
@@ -94,6 +102,8 @@ public class SingleSendMailRequest extends Request {
         this.tagName = builder.tagName;
         this.textBody = builder.textBody;
         this.toAddress = builder.toAddress;
+        this.unSubscribeFilterLevel = builder.unSubscribeFilterLevel;
+        this.unSubscribeLinkType = builder.unSubscribeLinkType;
     }
 
     public static Builder builder() {
@@ -214,6 +224,20 @@ public class SingleSendMailRequest extends Request {
         return this.toAddress;
     }
 
+    /**
+     * @return unSubscribeFilterLevel
+     */
+    public String getUnSubscribeFilterLevel() {
+        return this.unSubscribeFilterLevel;
+    }
+
+    /**
+     * @return unSubscribeLinkType
+     */
+    public String getUnSubscribeLinkType() {
+        return this.unSubscribeLinkType;
+    }
+
     public static final class Builder extends Request.Builder<SingleSendMailRequest, Builder> {
         private String accountName; 
         private Integer addressType; 
@@ -230,6 +254,8 @@ public class SingleSendMailRequest extends Request {
         private String tagName; 
         private String textBody; 
         private String toAddress; 
+        private String unSubscribeFilterLevel; 
+        private String unSubscribeLinkType; 
 
         private Builder() {
             super();
@@ -252,6 +278,8 @@ public class SingleSendMailRequest extends Request {
             this.tagName = request.tagName;
             this.textBody = request.textBody;
             this.toAddress = request.toAddress;
+            this.unSubscribeFilterLevel = request.unSubscribeFilterLevel;
+            this.unSubscribeLinkType = request.unSubscribeLinkType;
         } 
 
         /**
@@ -386,6 +414,24 @@ public class SingleSendMailRequest extends Request {
         public Builder toAddress(String toAddress) {
             this.putQueryParameter("ToAddress", toAddress);
             this.toAddress = toAddress;
+            return this;
+        }
+
+        /**
+         * UnSubscribeFilterLevel.
+         */
+        public Builder unSubscribeFilterLevel(String unSubscribeFilterLevel) {
+            this.putQueryParameter("UnSubscribeFilterLevel", unSubscribeFilterLevel);
+            this.unSubscribeFilterLevel = unSubscribeFilterLevel;
+            return this;
+        }
+
+        /**
+         * UnSubscribeLinkType.
+         */
+        public Builder unSubscribeLinkType(String unSubscribeLinkType) {
+            this.putQueryParameter("UnSubscribeLinkType", unSubscribeLinkType);
+            this.unSubscribeLinkType = unSubscribeLinkType;
             return this;
         }
 
