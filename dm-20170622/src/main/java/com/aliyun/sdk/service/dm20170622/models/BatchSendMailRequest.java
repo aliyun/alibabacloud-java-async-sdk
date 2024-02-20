@@ -60,6 +60,14 @@ public class BatchSendMailRequest extends Request {
     @Validation(required = true)
     private String templateName;
 
+    @Query
+    @NameInMap("UnSubscribeFilterLevel")
+    private String unSubscribeFilterLevel;
+
+    @Query
+    @NameInMap("UnSubscribeLinkType")
+    private String unSubscribeLinkType;
+
     private BatchSendMailRequest(Builder builder) {
         super(builder);
         this.accountName = builder.accountName;
@@ -73,6 +81,8 @@ public class BatchSendMailRequest extends Request {
         this.resourceOwnerId = builder.resourceOwnerId;
         this.tagName = builder.tagName;
         this.templateName = builder.templateName;
+        this.unSubscribeFilterLevel = builder.unSubscribeFilterLevel;
+        this.unSubscribeLinkType = builder.unSubscribeLinkType;
     }
 
     public static Builder builder() {
@@ -165,6 +175,20 @@ public class BatchSendMailRequest extends Request {
         return this.templateName;
     }
 
+    /**
+     * @return unSubscribeFilterLevel
+     */
+    public String getUnSubscribeFilterLevel() {
+        return this.unSubscribeFilterLevel;
+    }
+
+    /**
+     * @return unSubscribeLinkType
+     */
+    public String getUnSubscribeLinkType() {
+        return this.unSubscribeLinkType;
+    }
+
     public static final class Builder extends Request.Builder<BatchSendMailRequest, Builder> {
         private String accountName; 
         private Integer addressType; 
@@ -177,6 +201,8 @@ public class BatchSendMailRequest extends Request {
         private Long resourceOwnerId; 
         private String tagName; 
         private String templateName; 
+        private String unSubscribeFilterLevel; 
+        private String unSubscribeLinkType; 
 
         private Builder() {
             super();
@@ -195,6 +221,8 @@ public class BatchSendMailRequest extends Request {
             this.resourceOwnerId = request.resourceOwnerId;
             this.tagName = request.tagName;
             this.templateName = request.templateName;
+            this.unSubscribeFilterLevel = request.unSubscribeFilterLevel;
+            this.unSubscribeLinkType = request.unSubscribeLinkType;
         } 
 
         /**
@@ -293,6 +321,24 @@ public class BatchSendMailRequest extends Request {
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);
             this.templateName = templateName;
+            return this;
+        }
+
+        /**
+         * UnSubscribeFilterLevel.
+         */
+        public Builder unSubscribeFilterLevel(String unSubscribeFilterLevel) {
+            this.putQueryParameter("UnSubscribeFilterLevel", unSubscribeFilterLevel);
+            this.unSubscribeFilterLevel = unSubscribeFilterLevel;
+            return this;
+        }
+
+        /**
+         * UnSubscribeLinkType.
+         */
+        public Builder unSubscribeLinkType(String unSubscribeLinkType) {
+            this.putQueryParameter("UnSubscribeLinkType", unSubscribeLinkType);
+            this.unSubscribeLinkType = unSubscribeLinkType;
             return this;
         }
 
