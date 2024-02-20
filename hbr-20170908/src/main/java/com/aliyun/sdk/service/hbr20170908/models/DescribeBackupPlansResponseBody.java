@@ -122,7 +122,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The returned backup plans that meet the specified conditions.
+         * The queried backup plans.
          */
         public Builder backupPlans(BackupPlans backupPlans) {
             this.backupPlans = backupPlans;
@@ -385,7 +385,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the data source. Only **UDM_DISK** may be returned.
+             * The type of the data source. Valid value: **UDM_DISK**.
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -563,7 +563,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             private String schedule; 
 
             /**
-             * The backup type. Only **COMPLETE** may be returned, which indicates full backup.
+             * The backup type. **COMPLETE** indicates full backup.
              */
             public Builder backupType(String backupType) {
                 this.backupType = backupType;
@@ -579,7 +579,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The retention period of the backup data in remote backup mode. Unit: day.
+             * The retention period of the backup data in remote backup mode. Unit: days.
              */
             public Builder destinationRetention(Long destinationRetention) {
                 this.destinationRetention = destinationRetention;
@@ -603,7 +603,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The retention period of the backup data. Unit: day.
+             * The retention period of the backup data. Unit: days.
              */
             public Builder retention(Long retention) {
                 this.retention = retention;
@@ -627,10 +627,10 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The backup policy. Format: `I|{startTime}|{interval}`. The system runs the first backup job at a point in time that is specified by `{startTime}` and the subsequent backup jobs at an interval that is specified by `{interval}`. The system does not run a backup job before the specified point in time. Each backup job, except the first one, starts only after the previous backup job is complete. For example, `I|1631685600|P1D` indicates that the system runs the first backup job at 14:00:00 on September 15, 2021 and the subsequent backup jobs once a day.
+             * The backup policy. Format: `I|{startTime}|{interval}`. The system runs the first backup job at a point in time that is specified by `{startTime}` and the subsequent backup jobs at an interval that is specified by `{interval}`. The system does not run a backup job before the specified point in time. Each backup job, except the first one, starts only after the previous backup job is completed. For example, `I|1631685600|P1D` indicates that the system runs the first backup job at 14:00:00 on September 15, 2021 and the subsequent backup jobs once a day.
              * <p>
              * 
-             * *   `startTime`: the time at which the system starts to run a backup job. The value is a UNIX timestamp. Unit: seconds.
+             * *   `startTime`: the time at which the system starts to run a backup job. The time follows the UNIX time format. Unit: seconds.
              * *   `interval`: the interval at which the system runs a backup job. The interval follows the ISO 8601 standard. For example, PT1H indicates an interval of 1 hour. P1D indicates an interval of one day.
              */
             public Builder schedule(String schedule) {
@@ -1282,7 +1282,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             private String vaultId; 
 
             /**
-             * The ID of the data source group for backup.
+             * The ID of the data source group.
              */
             public Builder backupSourceGroupId(String backupSourceGroupId) {
                 this.backupSourceGroupId = backupSourceGroupId;
@@ -1290,7 +1290,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The backup type. Only **COMPLETE** may be returned, which indicates full backup.
+             * The backup type. **COMPLETE** indicates full backup.
              */
             public Builder backupType(String backupType) {
                 this.backupType = backupType;
@@ -1298,7 +1298,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is valid only if **SourceType** is set to **OSS**. This parameter indicates the name of the OSS bucket.
+             * This parameter is valid only when **SourceType** is set to **OSS**. This parameter indicates the name of the OSS bucket.
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -1306,7 +1306,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * ChangeListPath.
+             * The configurations of the incremental file synchronization. This parameter is required only for data synchronization.
              */
             public Builder changeListPath(String changeListPath) {
                 this.changeListPath = changeListPath;
@@ -1314,7 +1314,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of a backup client.
+             * The ID of the backup client.
              */
             public Builder clientId(String clientId) {
                 this.clientId = clientId;
@@ -1330,7 +1330,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is valid only if **SourceType** is set to **NAS**. This parameter indicates the time when the file system was created. The value is a UNIX timestamp. Unit: seconds.
+             * This parameter is valid only when **SourceType** is set to **NAS**. This parameter indicates the time when the file system was created. This value is a UNIX timestamp. Unit: seconds.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -1338,7 +1338,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the backup plan was created. The value is a UNIX timestamp. Unit: seconds.
+             * The time when the backup plan was created. This value is a UNIX timestamp. Unit: seconds.
              */
             public Builder createdTime(Long createdTime) {
                 this.createdTime = createdTime;
@@ -1426,7 +1426,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is valid only if **SourceType** is set to **ECS_FILE**. This parameter indicates the paths to the files that are excluded from the backup job.
+             * This parameter is valid only when **SourceType** is set to **ECS_FILE**. This parameter indicates the paths to the files that are excluded from the backup job.
              */
             public Builder exclude(String exclude) {
                 this.exclude = exclude;
@@ -1434,7 +1434,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is valid only if **SourceType** is set to **NAS**. This parameter indicates the ID of the NAS file system.
+             * This parameter is valid only when **SourceType** is set to **NAS**. This parameter indicates the ID of the NAS file system.
              */
             public Builder fileSystemId(String fileSystemId) {
                 this.fileSystemId = fileSystemId;
@@ -1442,7 +1442,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is valid only if **SourceType** is set to **ECS_FILE**. This parameter indicates the paths to the files that are backed up.
+             * This parameter is valid only when **SourceType** is set to **ECS_FILE**. This parameter indicates the paths to the files that are backed up.
              */
             public Builder include(String include) {
                 this.include = include;
@@ -1450,7 +1450,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the group to which the instance belongs.
+             * The ID of the instance group.
              */
             public Builder instanceGroupId(String instanceGroupId) {
                 this.instanceGroupId = instanceGroupId;
@@ -1458,7 +1458,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is valid only if **SourceType** is set to **ECS_FILE**. This parameter indicates the ID of the ECS instance.
+             * This parameter is valid only when **SourceType** is set to **ECS_FILE**. This parameter indicates the ID of the ECS instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -1486,7 +1486,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * LatestExecuteJobId.
+             * The latest execution job id of plan.
              */
             public Builder latestExecuteJobId(String latestExecuteJobId) {
                 this.latestExecuteJobId = latestExecuteJobId;
@@ -1494,7 +1494,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is valid only if **SourceType** is set to **ECS_FILE**. This parameter indicates whether Windows Volume Shadow Copy Service (VSS) is used to define a source path.
+             * This parameter is valid only when **SourceType** is set to **ECS_FILE**. This parameter indicates whether VSS is used to define a source path.
              */
             public Builder options(String options) {
                 this.options = options;
@@ -1510,7 +1510,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The source paths. This parameter is valid only if **SourceType** is set to **ECS_FILE**.
+             * The source paths. This parameter is valid only when **SourceType** is set to **ECS_FILE**.
              */
             public Builder paths(Paths paths) {
                 this.paths = paths;
@@ -1534,7 +1534,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is valid only if **SourceType** is set to **OSS**. This parameter indicates the prefix of objects that are backed up.
+             * This parameter is valid only when **SourceType** is set to **OSS**. This parameter indicates the prefix of the objects that are backed up.
              */
             public Builder prefix(String prefix) {
                 this.prefix = prefix;
@@ -1550,7 +1550,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The retention period of the backup data. Unit: day.
+             * The retention period of the backup data. Unit: days.
              */
             public Builder retention(Long retention) {
                 this.retention = retention;
@@ -1566,10 +1566,10 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The backup policy. Format: `I|{startTime}|{interval}`. The system runs the first backup job at a point in time that is specified by `{startTime}` and the subsequent backup jobs at an interval that is specified by `{interval}`. The system does not run a backup job before the specified point in time. Each backup job, except the first one, starts only after the previous backup job is complete. For example, `I|1631685600|P1D` indicates that the system runs the first backup job at 14:00:00 on September 15, 2021 and the subsequent backup jobs once a day.
+             * The backup policy. Format: `I|{startTime}|{interval}`. The system runs the first backup job at a point in time that is specified by `{startTime}` and the subsequent backup jobs at an interval that is specified by `{interval}`. The system does not run a backup job before the specified point in time. Each backup job, except the first one, starts only after the previous backup job is completed. For example, `I|1631685600|P1D` indicates that the system runs the first backup job at 14:00:00 on September 15, 2021 and the subsequent backup jobs once a day.
              * <p>
              * 
-             * *   **startTime**: the time at which the system starts to run a backup job. The value is a UNIX timestamp. Unit: seconds.
+             * *   **startTime**: the time at which the system starts to run a backup job. The time follows the UNIX time format. Unit: seconds.
              * *   **interval**: the interval at which the system runs a backup job. The interval follows the ISO 8601 standard. For example, PT1H indicates an interval of 1 hour. P1D indicates an interval of one day.
              */
             public Builder schedule(String schedule) {
@@ -1593,12 +1593,12 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is valid only if **SourceType** is set to **ECS_FILE**. This parameter indicates the throttling rules. Format: `{start}|{end}|{bandwidth}`. Multiple throttling rules are separated with vertical bars (`|`). A time range cannot overlap with another one.
+             * This parameter is valid only when **SourceType** is set to **ECS_FILE**. This parameter indicates the throttling rules. Format: `{start}|{end}|{bandwidth}`. Multiple throttling rules are separated with vertical bars (`|`). A time range cannot overlap with another one.
              * <p>
              * 
              * *   start: the start hour.
              * *   end: the end hour.
-             * *   bandwidth: the bandwidth. Unit: KB/s.
+             * *   bandwidth: the bandwidth. Unit: KB.
              */
             public Builder speedLimit(String speedLimit) {
                 this.speedLimit = speedLimit;
@@ -1614,7 +1614,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the backup plan was updated. The value is a UNIX timestamp. Unit: seconds.
+             * The time when the backup plan was updated. This value is a UNIX timestamp. Unit: seconds.
              */
             public Builder updatedTime(Long updatedTime) {
                 this.updatedTime = updatedTime;

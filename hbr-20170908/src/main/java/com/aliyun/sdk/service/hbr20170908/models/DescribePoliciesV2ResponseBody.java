@@ -285,6 +285,9 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
 
     }
     public static class Rules extends TeaModel {
+        @NameInMap("ArchiveDays")
+        private Long archiveDays;
+
         @NameInMap("BackupType")
         private String backupType;
 
@@ -309,7 +312,11 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
         @NameInMap("Schedule")
         private String schedule;
 
+        @NameInMap("VaultId")
+        private String vaultId;
+
         private Rules(Builder builder) {
+            this.archiveDays = builder.archiveDays;
             this.backupType = builder.backupType;
             this.keepLatestSnapshots = builder.keepLatestSnapshots;
             this.replicationRegionId = builder.replicationRegionId;
@@ -318,6 +325,7 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
             this.ruleId = builder.ruleId;
             this.ruleType = builder.ruleType;
             this.schedule = builder.schedule;
+            this.vaultId = builder.vaultId;
         }
 
         public static Builder builder() {
@@ -326,6 +334,13 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
 
         public static Rules create() {
             return builder().build();
+        }
+
+        /**
+         * @return archiveDays
+         */
+        public Long getArchiveDays() {
+            return this.archiveDays;
         }
 
         /**
@@ -384,7 +399,15 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
             return this.schedule;
         }
 
+        /**
+         * @return vaultId
+         */
+        public String getVaultId() {
+            return this.vaultId;
+        }
+
         public static final class Builder {
+            private Long archiveDays; 
             private String backupType; 
             private Long keepLatestSnapshots; 
             private String replicationRegionId; 
@@ -393,6 +416,15 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
             private String ruleId; 
             private String ruleType; 
             private String schedule; 
+            private String vaultId; 
+
+            /**
+             * ArchiveDays.
+             */
+            public Builder archiveDays(Long archiveDays) {
+                this.archiveDays = archiveDays;
+                return this;
+            }
 
             /**
              * This parameter is returned only if the value of the **RuleType** parameter is **BACKUP**. This parameter indicates the backup type. Only **COMPLETE** may be returned, which indicates full backup.
@@ -472,6 +504,14 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
              */
             public Builder schedule(String schedule) {
                 this.schedule = schedule;
+                return this;
+            }
+
+            /**
+             * VaultId.
+             */
+            public Builder vaultId(String vaultId) {
+                this.vaultId = vaultId;
                 return this;
             }
 
