@@ -18,6 +18,10 @@ public class DescribeTableStatisticsRequest extends Request {
     private String DBClusterId;
 
     @Query
+    @NameInMap("Keyword")
+    private String keyword;
+
+    @Query
     @NameInMap("Order")
     private String order;
 
@@ -54,6 +58,7 @@ public class DescribeTableStatisticsRequest extends Request {
     private DescribeTableStatisticsRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
+        this.keyword = builder.keyword;
         this.order = builder.order;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -82,6 +87,13 @@ public class DescribeTableStatisticsRequest extends Request {
      */
     public String getDBClusterId() {
         return this.DBClusterId;
+    }
+
+    /**
+     * @return keyword
+     */
+    public String getKeyword() {
+        return this.keyword;
     }
 
     /**
@@ -142,6 +154,7 @@ public class DescribeTableStatisticsRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeTableStatisticsRequest, Builder> {
         private String DBClusterId; 
+        private String keyword; 
         private String order; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -158,6 +171,7 @@ public class DescribeTableStatisticsRequest extends Request {
         private Builder(DescribeTableStatisticsRequest request) {
             super(request);
             this.DBClusterId = request.DBClusterId;
+            this.keyword = request.keyword;
             this.order = request.order;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -177,6 +191,15 @@ public class DescribeTableStatisticsRequest extends Request {
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
             this.DBClusterId = DBClusterId;
+            return this;
+        }
+
+        /**
+         * Keyword.
+         */
+        public Builder keyword(String keyword) {
+            this.putQueryParameter("Keyword", keyword);
+            this.keyword = keyword;
             return this;
         }
 

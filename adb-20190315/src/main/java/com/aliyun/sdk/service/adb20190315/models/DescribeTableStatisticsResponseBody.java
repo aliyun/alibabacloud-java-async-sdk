@@ -158,8 +158,14 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
         @NameInMap("DataSize")
         private Long dataSize;
 
+        @NameInMap("HotDataSize")
+        private Long hotDataSize;
+
         @NameInMap("IndexSize")
         private Long indexSize;
+
+        @NameInMap("OtherSize")
+        private Long otherSize;
 
         @NameInMap("PartitionCount")
         private Long partitionCount;
@@ -173,18 +179,28 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
         @NameInMap("SchemaName")
         private String schemaName;
 
+        @NameInMap("SpaceRatio")
+        private Double spaceRatio;
+
         @NameInMap("TableName")
         private String tableName;
+
+        @NameInMap("TotalSize")
+        private Long totalSize;
 
         private TableStatisticRecords(Builder builder) {
             this.coldDataSize = builder.coldDataSize;
             this.dataSize = builder.dataSize;
+            this.hotDataSize = builder.hotDataSize;
             this.indexSize = builder.indexSize;
+            this.otherSize = builder.otherSize;
             this.partitionCount = builder.partitionCount;
             this.primaryKeyIndexSize = builder.primaryKeyIndexSize;
             this.rowCount = builder.rowCount;
             this.schemaName = builder.schemaName;
+            this.spaceRatio = builder.spaceRatio;
             this.tableName = builder.tableName;
+            this.totalSize = builder.totalSize;
         }
 
         public static Builder builder() {
@@ -210,10 +226,24 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
         }
 
         /**
+         * @return hotDataSize
+         */
+        public Long getHotDataSize() {
+            return this.hotDataSize;
+        }
+
+        /**
          * @return indexSize
          */
         public Long getIndexSize() {
             return this.indexSize;
+        }
+
+        /**
+         * @return otherSize
+         */
+        public Long getOtherSize() {
+            return this.otherSize;
         }
 
         /**
@@ -245,21 +275,39 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
         }
 
         /**
+         * @return spaceRatio
+         */
+        public Double getSpaceRatio() {
+            return this.spaceRatio;
+        }
+
+        /**
          * @return tableName
          */
         public String getTableName() {
             return this.tableName;
         }
 
+        /**
+         * @return totalSize
+         */
+        public Long getTotalSize() {
+            return this.totalSize;
+        }
+
         public static final class Builder {
             private Long coldDataSize; 
             private Long dataSize; 
+            private Long hotDataSize; 
             private Long indexSize; 
+            private Long otherSize; 
             private Long partitionCount; 
             private Long primaryKeyIndexSize; 
             private Long rowCount; 
             private String schemaName; 
+            private Double spaceRatio; 
             private String tableName; 
+            private Long totalSize; 
 
             /**
              * The total amount of cold data. Unit: byte.
@@ -281,10 +329,26 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
             }
 
             /**
+             * HotDataSize.
+             */
+            public Builder hotDataSize(Long hotDataSize) {
+                this.hotDataSize = hotDataSize;
+                return this;
+            }
+
+            /**
              * The amount of data in indexes. Unit: byte.
              */
             public Builder indexSize(Long indexSize) {
                 this.indexSize = indexSize;
+                return this;
+            }
+
+            /**
+             * OtherSize.
+             */
+            public Builder otherSize(Long otherSize) {
+                this.otherSize = otherSize;
                 return this;
             }
 
@@ -321,10 +385,26 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
             }
 
             /**
+             * SpaceRatio.
+             */
+            public Builder spaceRatio(Double spaceRatio) {
+                this.spaceRatio = spaceRatio;
+                return this;
+            }
+
+            /**
              * The name of the table.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
+                return this;
+            }
+
+            /**
+             * TotalSize.
+             */
+            public Builder totalSize(Long totalSize) {
+                this.totalSize = totalSize;
                 return this;
             }
 
