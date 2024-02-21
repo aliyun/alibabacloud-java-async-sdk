@@ -129,15 +129,15 @@ public class ListScalingConfigItemV2Request extends Request {
             super();
         } 
 
-        private Builder(ListScalingConfigItemV2Request response) {
-            super(response);
-            this.configItemType = response.configItemType;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.scalingGroupBizId = response.scalingGroupBizId;
+        private Builder(ListScalingConfigItemV2Request request) {
+            super(request);
+            this.configItemType = request.configItemType;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.scalingGroupBizId = request.scalingGroupBizId;
         } 
 
         /**

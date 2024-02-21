@@ -245,24 +245,24 @@ public class ListClustersRequest extends Request {
             super();
         } 
 
-        private Builder(ListClustersRequest response) {
-            super(response);
-            this.clusterTypeList = response.clusterTypeList;
-            this.createType = response.createType;
-            this.defaultStatus = response.defaultStatus;
-            this.depositType = response.depositType;
-            this.expiredTagList = response.expiredTagList;
-            this.isDesc = response.isDesc;
-            this.machineType = response.machineType;
-            this.name = response.name;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.statusList = response.statusList;
-            this.tag = response.tag;
-            this.vpcId = response.vpcId;
+        private Builder(ListClustersRequest request) {
+            super(request);
+            this.clusterTypeList = request.clusterTypeList;
+            this.createType = request.createType;
+            this.defaultStatus = request.defaultStatus;
+            this.depositType = request.depositType;
+            this.expiredTagList = request.expiredTagList;
+            this.isDesc = request.isDesc;
+            this.machineType = request.machineType;
+            this.name = request.name;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.statusList = request.statusList;
+            this.tag = request.tag;
+            this.vpcId = request.vpcId;
         } 
 
         /**

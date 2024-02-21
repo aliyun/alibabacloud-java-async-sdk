@@ -43,6 +43,14 @@ public class ModifyClusterTemplateRequest extends Request {
     private String configurations;
 
     @Query
+    @NameInMap("DataDiskEncrypted")
+    private Boolean dataDiskEncrypted;
+
+    @Query
+    @NameInMap("DataDiskKMSKeyId")
+    private String dataDiskKMSKeyId;
+
+    @Query
     @NameInMap("DepositType")
     private String depositType;
 
@@ -184,6 +192,8 @@ public class ModifyClusterTemplateRequest extends Request {
         this.clusterType = builder.clusterType;
         this.config = builder.config;
         this.configurations = builder.configurations;
+        this.dataDiskEncrypted = builder.dataDiskEncrypted;
+        this.dataDiskKMSKeyId = builder.dataDiskKMSKeyId;
         this.depositType = builder.depositType;
         this.easEnable = builder.easEnable;
         this.emrVer = builder.emrVer;
@@ -278,6 +288,20 @@ public class ModifyClusterTemplateRequest extends Request {
      */
     public String getConfigurations() {
         return this.configurations;
+    }
+
+    /**
+     * @return dataDiskEncrypted
+     */
+    public Boolean getDataDiskEncrypted() {
+        return this.dataDiskEncrypted;
+    }
+
+    /**
+     * @return dataDiskKMSKeyId
+     */
+    public String getDataDiskKMSKeyId() {
+        return this.dataDiskKMSKeyId;
     }
 
     /**
@@ -512,6 +536,8 @@ public class ModifyClusterTemplateRequest extends Request {
         private String clusterType; 
         private java.util.List < Config> config; 
         private String configurations; 
+        private Boolean dataDiskEncrypted; 
+        private String dataDiskKMSKeyId; 
         private String depositType; 
         private Boolean easEnable; 
         private String emrVer; 
@@ -549,47 +575,49 @@ public class ModifyClusterTemplateRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyClusterTemplateRequest response) {
-            super(response);
-            this.autoRenew = response.autoRenew;
-            this.bizId = response.bizId;
-            this.bootstrapAction = response.bootstrapAction;
-            this.chargeType = response.chargeType;
-            this.clusterType = response.clusterType;
-            this.config = response.config;
-            this.configurations = response.configurations;
-            this.depositType = response.depositType;
-            this.easEnable = response.easEnable;
-            this.emrVer = response.emrVer;
-            this.highAvailabilityEnable = response.highAvailabilityEnable;
-            this.hostGroup = response.hostGroup;
-            this.initCustomHiveMetaDb = response.initCustomHiveMetaDb;
-            this.instanceGeneration = response.instanceGeneration;
-            this.ioOptimized = response.ioOptimized;
-            this.isOpenPublicIp = response.isOpenPublicIp;
-            this.keyPairName = response.keyPairName;
-            this.logPath = response.logPath;
-            this.machineType = response.machineType;
-            this.masterPwd = response.masterPwd;
-            this.metaStoreConf = response.metaStoreConf;
-            this.metaStoreType = response.metaStoreType;
-            this.netType = response.netType;
-            this.optionSoftWareList = response.optionSoftWareList;
-            this.period = response.period;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.securityGroupId = response.securityGroupId;
-            this.securityGroupName = response.securityGroupName;
-            this.sshEnable = response.sshEnable;
-            this.tag = response.tag;
-            this.templateName = response.templateName;
-            this.useCustomHiveMetaDb = response.useCustomHiveMetaDb;
-            this.useLocalMetaDb = response.useLocalMetaDb;
-            this.userDefinedEmrEcsRole = response.userDefinedEmrEcsRole;
-            this.vSwitchId = response.vSwitchId;
-            this.vpcId = response.vpcId;
-            this.zoneId = response.zoneId;
+        private Builder(ModifyClusterTemplateRequest request) {
+            super(request);
+            this.autoRenew = request.autoRenew;
+            this.bizId = request.bizId;
+            this.bootstrapAction = request.bootstrapAction;
+            this.chargeType = request.chargeType;
+            this.clusterType = request.clusterType;
+            this.config = request.config;
+            this.configurations = request.configurations;
+            this.dataDiskEncrypted = request.dataDiskEncrypted;
+            this.dataDiskKMSKeyId = request.dataDiskKMSKeyId;
+            this.depositType = request.depositType;
+            this.easEnable = request.easEnable;
+            this.emrVer = request.emrVer;
+            this.highAvailabilityEnable = request.highAvailabilityEnable;
+            this.hostGroup = request.hostGroup;
+            this.initCustomHiveMetaDb = request.initCustomHiveMetaDb;
+            this.instanceGeneration = request.instanceGeneration;
+            this.ioOptimized = request.ioOptimized;
+            this.isOpenPublicIp = request.isOpenPublicIp;
+            this.keyPairName = request.keyPairName;
+            this.logPath = request.logPath;
+            this.machineType = request.machineType;
+            this.masterPwd = request.masterPwd;
+            this.metaStoreConf = request.metaStoreConf;
+            this.metaStoreType = request.metaStoreType;
+            this.netType = request.netType;
+            this.optionSoftWareList = request.optionSoftWareList;
+            this.period = request.period;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.securityGroupId = request.securityGroupId;
+            this.securityGroupName = request.securityGroupName;
+            this.sshEnable = request.sshEnable;
+            this.tag = request.tag;
+            this.templateName = request.templateName;
+            this.useCustomHiveMetaDb = request.useCustomHiveMetaDb;
+            this.useLocalMetaDb = request.useLocalMetaDb;
+            this.userDefinedEmrEcsRole = request.userDefinedEmrEcsRole;
+            this.vSwitchId = request.vSwitchId;
+            this.vpcId = request.vpcId;
+            this.zoneId = request.zoneId;
         } 
 
         /**
@@ -652,6 +680,24 @@ public class ModifyClusterTemplateRequest extends Request {
         public Builder configurations(String configurations) {
             this.putQueryParameter("Configurations", configurations);
             this.configurations = configurations;
+            return this;
+        }
+
+        /**
+         * DataDiskEncrypted.
+         */
+        public Builder dataDiskEncrypted(Boolean dataDiskEncrypted) {
+            this.putQueryParameter("DataDiskEncrypted", dataDiskEncrypted);
+            this.dataDiskEncrypted = dataDiskEncrypted;
+            return this;
+        }
+
+        /**
+         * DataDiskKMSKeyId.
+         */
+        public Builder dataDiskKMSKeyId(String dataDiskKMSKeyId) {
+            this.putQueryParameter("DataDiskKMSKeyId", dataDiskKMSKeyId);
+            this.dataDiskKMSKeyId = dataDiskKMSKeyId;
             return this;
         }
 
@@ -926,7 +972,7 @@ public class ModifyClusterTemplateRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * VPC ID。
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

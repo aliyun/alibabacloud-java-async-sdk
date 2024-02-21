@@ -825,7 +825,7 @@ public class ListEmrAvailableConfigResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * VPC ID。
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -1023,7 +1023,7 @@ public class ListEmrAvailableConfigResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * VPC ID。
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -1113,7 +1113,7 @@ public class ListEmrAvailableConfigResponseBody extends TeaModel {
         private String description;
 
         @NameInMap("VRouterId")
-        private String VRouterId;
+        private String vRouterId;
 
         @NameInMap("VpcId")
         private String vpcId;
@@ -1128,7 +1128,7 @@ public class ListEmrAvailableConfigResponseBody extends TeaModel {
             this.cidrBlock = builder.cidrBlock;
             this.creationTime = builder.creationTime;
             this.description = builder.description;
-            this.VRouterId = builder.VRouterId;
+            this.vRouterId = builder.vRouterId;
             this.vpcId = builder.vpcId;
             this.vpcName = builder.vpcName;
             this.vswitchInfoList = builder.vswitchInfoList;
@@ -1164,10 +1164,10 @@ public class ListEmrAvailableConfigResponseBody extends TeaModel {
         }
 
         /**
-         * @return VRouterId
+         * @return vRouterId
          */
         public String getVRouterId() {
-            return this.VRouterId;
+            return this.vRouterId;
         }
 
         /**
@@ -1195,7 +1195,7 @@ public class ListEmrAvailableConfigResponseBody extends TeaModel {
             private String cidrBlock; 
             private String creationTime; 
             private String description; 
-            private String VRouterId; 
+            private String vRouterId; 
             private String vpcId; 
             private String vpcName; 
             private VswitchInfoList vswitchInfoList; 
@@ -1227,13 +1227,13 @@ public class ListEmrAvailableConfigResponseBody extends TeaModel {
             /**
              * VRouterId.
              */
-            public Builder VRouterId(String VRouterId) {
-                this.VRouterId = VRouterId;
+            public Builder vRouterId(String vRouterId) {
+                this.vRouterId = vRouterId;
                 return this;
             }
 
             /**
-             * VpcId.
+             * VPC ID。
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

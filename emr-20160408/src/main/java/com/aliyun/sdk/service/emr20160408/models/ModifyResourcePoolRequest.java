@@ -142,16 +142,16 @@ public class ModifyResourcePoolRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyResourcePoolRequest response) {
-            super(response);
-            this.active = response.active;
-            this.clusterId = response.clusterId;
-            this.config = response.config;
-            this.id = response.id;
-            this.name = response.name;
-            this.regionId = response.regionId;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.yarnsiteconfig = response.yarnsiteconfig;
+        private Builder(ModifyResourcePoolRequest request) {
+            super(request);
+            this.active = request.active;
+            this.clusterId = request.clusterId;
+            this.config = request.config;
+            this.id = request.id;
+            this.name = request.name;
+            this.regionId = request.regionId;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.yarnsiteconfig = request.yarnsiteconfig;
         } 
 
         /**

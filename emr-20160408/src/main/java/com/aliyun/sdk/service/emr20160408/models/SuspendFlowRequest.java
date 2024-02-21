@@ -77,11 +77,11 @@ public class SuspendFlowRequest extends Request {
             super();
         } 
 
-        private Builder(SuspendFlowRequest response) {
-            super(response);
-            this.flowInstanceId = response.flowInstanceId;
-            this.projectId = response.projectId;
-            this.regionId = response.regionId;
+        private Builder(SuspendFlowRequest request) {
+            super(request);
+            this.flowInstanceId = request.flowInstanceId;
+            this.projectId = request.projectId;
+            this.regionId = request.regionId;
         } 
 
         /**

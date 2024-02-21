@@ -156,17 +156,17 @@ public class CreateResourceQueueRequest extends Request {
             super();
         } 
 
-        private Builder(CreateResourceQueueRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.config = response.config;
-            this.leaf = response.leaf;
-            this.name = response.name;
-            this.parentQueueId = response.parentQueueId;
-            this.qualifiedName = response.qualifiedName;
-            this.regionId = response.regionId;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.resourcePoolId = response.resourcePoolId;
+        private Builder(CreateResourceQueueRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.config = request.config;
+            this.leaf = request.leaf;
+            this.name = request.name;
+            this.parentQueueId = request.parentQueueId;
+            this.qualifiedName = request.qualifiedName;
+            this.regionId = request.regionId;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.resourcePoolId = request.resourcePoolId;
         } 
 
         /**

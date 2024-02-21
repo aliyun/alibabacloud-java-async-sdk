@@ -142,16 +142,16 @@ public class ListClusterOperationRequest extends Request {
             super();
         } 
 
-        private Builder(ListClusterOperationRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.operationId = response.operationId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.serviceName = response.serviceName;
-            this.status = response.status;
+        private Builder(ListClusterOperationRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.operationId = request.operationId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.serviceName = request.serviceName;
+            this.status = request.status;
         } 
 
         /**

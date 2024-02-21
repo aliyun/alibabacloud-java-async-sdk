@@ -104,13 +104,13 @@ public class CreateFlowCategoryRequest extends Request {
             super();
         } 
 
-        private Builder(CreateFlowCategoryRequest response) {
-            super(response);
-            this.name = response.name;
-            this.parentId = response.parentId;
-            this.projectId = response.projectId;
-            this.regionId = response.regionId;
-            this.type = response.type;
+        private Builder(CreateFlowCategoryRequest request) {
+            super(request);
+            this.name = request.name;
+            this.parentId = request.parentId;
+            this.projectId = request.projectId;
+            this.regionId = request.regionId;
+            this.type = request.type;
         } 
 
         /**

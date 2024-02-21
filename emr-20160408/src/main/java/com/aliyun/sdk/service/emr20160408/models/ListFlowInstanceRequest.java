@@ -219,22 +219,22 @@ public class ListFlowInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(ListFlowInstanceRequest response) {
-            super(response);
-            this.flowId = response.flowId;
-            this.flowName = response.flowName;
-            this.id = response.id;
-            this.instanceId = response.instanceId;
-            this.nodeInstanceId = response.nodeInstanceId;
-            this.orderBy = response.orderBy;
-            this.orderType = response.orderType;
-            this.owner = response.owner;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.projectId = response.projectId;
-            this.regionId = response.regionId;
-            this.statusList = response.statusList;
-            this.timeRange = response.timeRange;
+        private Builder(ListFlowInstanceRequest request) {
+            super(request);
+            this.flowId = request.flowId;
+            this.flowName = request.flowName;
+            this.id = request.id;
+            this.instanceId = request.instanceId;
+            this.nodeInstanceId = request.nodeInstanceId;
+            this.orderBy = request.orderBy;
+            this.orderType = request.orderType;
+            this.owner = request.owner;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.projectId = request.projectId;
+            this.regionId = request.regionId;
+            this.statusList = request.statusList;
+            this.timeRange = request.timeRange;
         } 
 
         /**

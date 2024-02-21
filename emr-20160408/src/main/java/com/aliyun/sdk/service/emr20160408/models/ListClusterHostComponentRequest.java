@@ -181,19 +181,19 @@ public class ListClusterHostComponentRequest extends Request {
             super();
         } 
 
-        private Builder(ListClusterHostComponentRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.componentName = response.componentName;
-            this.componentStatus = response.componentStatus;
-            this.hostInstanceId = response.hostInstanceId;
-            this.hostName = response.hostName;
-            this.hostRole = response.hostRole;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.serviceName = response.serviceName;
+        private Builder(ListClusterHostComponentRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.componentName = request.componentName;
+            this.componentStatus = request.componentStatus;
+            this.hostInstanceId = request.hostInstanceId;
+            this.hostName = request.hostName;
+            this.hostRole = request.hostRole;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.serviceName = request.serviceName;
         } 
 
         /**

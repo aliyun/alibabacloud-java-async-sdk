@@ -327,30 +327,30 @@ public class ModifyFlowForWebRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyFlowForWebRequest response) {
-            super(response);
-            this.alertConf = response.alertConf;
-            this.alertDingDingGroupBizId = response.alertDingDingGroupBizId;
-            this.alertUserGroupBizId = response.alertUserGroupBizId;
-            this.clusterId = response.clusterId;
-            this.createCluster = response.createCluster;
-            this.cronExpr = response.cronExpr;
-            this.description = response.description;
-            this.endSchedule = response.endSchedule;
-            this.graph = response.graph;
-            this.hostName = response.hostName;
-            this.id = response.id;
-            this.lifecycle = response.lifecycle;
-            this.logArchiveLocation = response.logArchiveLocation;
-            this.name = response.name;
-            this.namespace = response.namespace;
-            this.parentCategory = response.parentCategory;
-            this.parentFlowList = response.parentFlowList;
-            this.periodic = response.periodic;
-            this.projectId = response.projectId;
-            this.regionId = response.regionId;
-            this.startSchedule = response.startSchedule;
-            this.status = response.status;
+        private Builder(ModifyFlowForWebRequest request) {
+            super(request);
+            this.alertConf = request.alertConf;
+            this.alertDingDingGroupBizId = request.alertDingDingGroupBizId;
+            this.alertUserGroupBizId = request.alertUserGroupBizId;
+            this.clusterId = request.clusterId;
+            this.createCluster = request.createCluster;
+            this.cronExpr = request.cronExpr;
+            this.description = request.description;
+            this.endSchedule = request.endSchedule;
+            this.graph = request.graph;
+            this.hostName = request.hostName;
+            this.id = request.id;
+            this.lifecycle = request.lifecycle;
+            this.logArchiveLocation = request.logArchiveLocation;
+            this.name = request.name;
+            this.namespace = request.namespace;
+            this.parentCategory = request.parentCategory;
+            this.parentFlowList = request.parentFlowList;
+            this.periodic = request.periodic;
+            this.projectId = request.projectId;
+            this.regionId = request.regionId;
+            this.startSchedule = request.startSchedule;
+            this.status = request.status;
         } 
 
         /**

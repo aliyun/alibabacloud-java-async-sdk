@@ -207,21 +207,21 @@ public class ListClusterServiceConfigHistoryRequest extends Request {
             super();
         } 
 
-        private Builder(ListClusterServiceConfigHistoryRequest response) {
-            super(response);
-            this.author = response.author;
-            this.clusterId = response.clusterId;
-            this.comment = response.comment;
-            this.configFileName = response.configFileName;
-            this.configItemKey = response.configItemKey;
-            this.configVersion = response.configVersion;
-            this.hostGroupId = response.hostGroupId;
-            this.hostInstanceId = response.hostInstanceId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.serviceName = response.serviceName;
+        private Builder(ListClusterServiceConfigHistoryRequest request) {
+            super(request);
+            this.author = request.author;
+            this.clusterId = request.clusterId;
+            this.comment = request.comment;
+            this.configFileName = request.configFileName;
+            this.configItemKey = request.configItemKey;
+            this.configVersion = request.configVersion;
+            this.hostGroupId = request.hostGroupId;
+            this.hostInstanceId = request.hostInstanceId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.serviceName = request.serviceName;
         } 
 
         /**

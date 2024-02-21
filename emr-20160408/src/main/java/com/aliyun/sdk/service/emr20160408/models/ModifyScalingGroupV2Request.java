@@ -117,14 +117,14 @@ public class ModifyScalingGroupV2Request extends Request {
             super();
         } 
 
-        private Builder(ModifyScalingGroupV2Request response) {
-            super(response);
-            this.description = response.description;
-            this.name = response.name;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.scalingGroupBizId = response.scalingGroupBizId;
+        private Builder(ModifyScalingGroupV2Request request) {
+            super(request);
+            this.description = request.description;
+            this.name = request.name;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.scalingGroupBizId = request.scalingGroupBizId;
         } 
 
         /**

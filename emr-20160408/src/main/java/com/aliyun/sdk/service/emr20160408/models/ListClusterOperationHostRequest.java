@@ -130,15 +130,15 @@ public class ListClusterOperationHostRequest extends Request {
             super();
         } 
 
-        private Builder(ListClusterOperationHostRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.operationId = response.operationId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.status = response.status;
+        private Builder(ListClusterOperationHostRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.operationId = request.operationId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.status = request.status;
         } 
 
         /**

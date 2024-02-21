@@ -77,11 +77,11 @@ public class DeleteFlowProjectClusterSettingRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteFlowProjectClusterSettingRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.projectId = response.projectId;
-            this.regionId = response.regionId;
+        private Builder(DeleteFlowProjectClusterSettingRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.projectId = request.projectId;
+            this.regionId = request.regionId;
         } 
 
         /**

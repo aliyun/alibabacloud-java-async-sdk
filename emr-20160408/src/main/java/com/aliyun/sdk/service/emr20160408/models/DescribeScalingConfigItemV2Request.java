@@ -117,14 +117,14 @@ public class DescribeScalingConfigItemV2Request extends Request {
             super();
         } 
 
-        private Builder(DescribeScalingConfigItemV2Request response) {
-            super(response);
-            this.configItemType = response.configItemType;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.scalingConfigItemId = response.scalingConfigItemId;
-            this.scalingGroupBizId = response.scalingGroupBizId;
+        private Builder(DescribeScalingConfigItemV2Request request) {
+            super(request);
+            this.configItemType = request.configItemType;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.scalingConfigItemId = request.scalingConfigItemId;
+            this.scalingGroupBizId = request.scalingGroupBizId;
         } 
 
         /**

@@ -90,12 +90,12 @@ public class RefreshClusterResourcePoolRequest extends Request {
             super();
         } 
 
-        private Builder(RefreshClusterResourcePoolRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.regionId = response.regionId;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.resourcePoolId = response.resourcePoolId;
+        private Builder(RefreshClusterResourcePoolRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.regionId = request.regionId;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.resourcePoolId = request.resourcePoolId;
         } 
 
         /**

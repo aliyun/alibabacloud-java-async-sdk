@@ -166,18 +166,18 @@ public class ListFlowRequest extends Request {
             super();
         } 
 
-        private Builder(ListFlowRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.id = response.id;
-            this.jobId = response.jobId;
-            this.name = response.name;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.periodic = response.periodic;
-            this.projectId = response.projectId;
-            this.regionId = response.regionId;
-            this.status = response.status;
+        private Builder(ListFlowRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.id = request.id;
+            this.jobId = request.jobId;
+            this.name = request.name;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.periodic = request.periodic;
+            this.projectId = request.projectId;
+            this.regionId = request.regionId;
+            this.status = request.status;
         } 
 
         /**

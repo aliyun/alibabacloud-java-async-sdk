@@ -75,11 +75,11 @@ public class ListEmrAvailableConfigRequest extends Request {
             super();
         } 
 
-        private Builder(ListEmrAvailableConfigRequest response) {
-            super(response);
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ListEmrAvailableConfigRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

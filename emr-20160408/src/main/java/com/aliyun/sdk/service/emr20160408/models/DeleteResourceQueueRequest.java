@@ -90,12 +90,12 @@ public class DeleteResourceQueueRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteResourceQueueRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.regionId = response.regionId;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.resourceQueueId = response.resourceQueueId;
+        private Builder(DeleteResourceQueueRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.regionId = request.regionId;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.resourceQueueId = request.resourceQueueId;
         } 
 
         /**

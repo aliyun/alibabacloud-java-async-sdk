@@ -15,11 +15,15 @@ public class ResizeClusterV2ResponseBody extends TeaModel {
     @NameInMap("ClusterId")
     private String clusterId;
 
+    @NameInMap("OperationId")
+    private String operationId;
+
     @NameInMap("RequestId")
     private String requestId;
 
     private ResizeClusterV2ResponseBody(Builder builder) {
         this.clusterId = builder.clusterId;
+        this.operationId = builder.operationId;
         this.requestId = builder.requestId;
     }
 
@@ -39,6 +43,13 @@ public class ResizeClusterV2ResponseBody extends TeaModel {
     }
 
     /**
+     * @return operationId
+     */
+    public String getOperationId() {
+        return this.operationId;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -47,6 +58,7 @@ public class ResizeClusterV2ResponseBody extends TeaModel {
 
     public static final class Builder {
         private String clusterId; 
+        private String operationId; 
         private String requestId; 
 
         /**
@@ -54,6 +66,14 @@ public class ResizeClusterV2ResponseBody extends TeaModel {
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
+            return this;
+        }
+
+        /**
+         * OperationId.
+         */
+        public Builder operationId(String operationId) {
+            this.operationId = operationId;
             return this;
         }
 

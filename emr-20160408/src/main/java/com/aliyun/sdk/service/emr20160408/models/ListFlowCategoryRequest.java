@@ -115,14 +115,14 @@ public class ListFlowCategoryRequest extends Request {
             super();
         } 
 
-        private Builder(ListFlowCategoryRequest response) {
-            super(response);
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.parentId = response.parentId;
-            this.projectId = response.projectId;
-            this.regionId = response.regionId;
-            this.root = response.root;
+        private Builder(ListFlowCategoryRequest request) {
+            super(request);
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.parentId = request.parentId;
+            this.projectId = request.projectId;
+            this.regionId = request.regionId;
+            this.root = request.root;
         } 
 
         /**

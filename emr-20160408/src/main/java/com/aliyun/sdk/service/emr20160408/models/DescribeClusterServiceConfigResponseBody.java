@@ -84,11 +84,15 @@ public class DescribeClusterServiceConfigResponseBody extends TeaModel {
         @NameInMap("Value")
         private String value;
 
+        @NameInMap("ValueScope")
+        private String valueScope;
+
         private ConfigItemValue(Builder builder) {
             this.description = builder.description;
             this.isCustom = builder.isCustom;
             this.itemName = builder.itemName;
             this.value = builder.value;
+            this.valueScope = builder.valueScope;
         }
 
         public static Builder builder() {
@@ -127,11 +131,19 @@ public class DescribeClusterServiceConfigResponseBody extends TeaModel {
             return this.value;
         }
 
+        /**
+         * @return valueScope
+         */
+        public String getValueScope() {
+            return this.valueScope;
+        }
+
         public static final class Builder {
             private String description; 
             private Boolean isCustom; 
             private String itemName; 
             private String value; 
+            private String valueScope; 
 
             /**
              * Description.
@@ -162,6 +174,14 @@ public class DescribeClusterServiceConfigResponseBody extends TeaModel {
              */
             public Builder value(String value) {
                 this.value = value;
+                return this;
+            }
+
+            /**
+             * ValueScope.
+             */
+            public Builder valueScope(String valueScope) {
+                this.valueScope = valueScope;
                 return this;
             }
 

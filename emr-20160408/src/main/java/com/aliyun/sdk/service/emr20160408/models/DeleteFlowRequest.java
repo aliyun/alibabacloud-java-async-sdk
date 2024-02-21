@@ -77,11 +77,11 @@ public class DeleteFlowRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteFlowRequest response) {
-            super(response);
-            this.id = response.id;
-            this.projectId = response.projectId;
-            this.regionId = response.regionId;
+        private Builder(DeleteFlowRequest request) {
+            super(request);
+            this.id = request.id;
+            this.projectId = request.projectId;
+            this.regionId = request.regionId;
         } 
 
         /**

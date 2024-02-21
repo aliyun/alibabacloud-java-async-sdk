@@ -89,12 +89,12 @@ public class ListFlowProjectUserRequest extends Request {
             super();
         } 
 
-        private Builder(ListFlowProjectUserRequest response) {
-            super(response);
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.projectId = response.projectId;
-            this.regionId = response.regionId;
+        private Builder(ListFlowProjectUserRequest request) {
+            super(request);
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.projectId = request.projectId;
+            this.regionId = request.regionId;
         } 
 
         /**

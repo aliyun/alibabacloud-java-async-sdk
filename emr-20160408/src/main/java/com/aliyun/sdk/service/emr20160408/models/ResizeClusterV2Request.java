@@ -17,6 +17,10 @@ public class ResizeClusterV2Request extends Request {
     private Boolean autoPayOrder;
 
     @Query
+    @NameInMap("ClickhouseConf")
+    private String clickhouseConf;
+
+    @Query
     @NameInMap("ClusterId")
     @Validation(required = true)
     private String clusterId;
@@ -50,6 +54,7 @@ public class ResizeClusterV2Request extends Request {
     private ResizeClusterV2Request(Builder builder) {
         super(builder);
         this.autoPayOrder = builder.autoPayOrder;
+        this.clickhouseConf = builder.clickhouseConf;
         this.clusterId = builder.clusterId;
         this.hostComponentInfo = builder.hostComponentInfo;
         this.hostGroup = builder.hostGroup;
@@ -77,6 +82,13 @@ public class ResizeClusterV2Request extends Request {
      */
     public Boolean getAutoPayOrder() {
         return this.autoPayOrder;
+    }
+
+    /**
+     * @return clickhouseConf
+     */
+    public String getClickhouseConf() {
+        return this.clickhouseConf;
     }
 
     /**
@@ -130,6 +142,7 @@ public class ResizeClusterV2Request extends Request {
 
     public static final class Builder extends Request.Builder<ResizeClusterV2Request, Builder> {
         private Boolean autoPayOrder; 
+        private String clickhouseConf; 
         private String clusterId; 
         private java.util.List < HostComponentInfo> hostComponentInfo; 
         private java.util.List < HostGroup> hostGroup; 
@@ -142,16 +155,17 @@ public class ResizeClusterV2Request extends Request {
             super();
         } 
 
-        private Builder(ResizeClusterV2Request response) {
-            super(response);
-            this.autoPayOrder = response.autoPayOrder;
-            this.clusterId = response.clusterId;
-            this.hostComponentInfo = response.hostComponentInfo;
-            this.hostGroup = response.hostGroup;
-            this.isOpenPublicIp = response.isOpenPublicIp;
-            this.promotionInfo = response.promotionInfo;
-            this.regionId = response.regionId;
-            this.vswitchId = response.vswitchId;
+        private Builder(ResizeClusterV2Request request) {
+            super(request);
+            this.autoPayOrder = request.autoPayOrder;
+            this.clickhouseConf = request.clickhouseConf;
+            this.clusterId = request.clusterId;
+            this.hostComponentInfo = request.hostComponentInfo;
+            this.hostGroup = request.hostGroup;
+            this.isOpenPublicIp = request.isOpenPublicIp;
+            this.promotionInfo = request.promotionInfo;
+            this.regionId = request.regionId;
+            this.vswitchId = request.vswitchId;
         } 
 
         /**
@@ -160,6 +174,15 @@ public class ResizeClusterV2Request extends Request {
         public Builder autoPayOrder(Boolean autoPayOrder) {
             this.putQueryParameter("AutoPayOrder", autoPayOrder);
             this.autoPayOrder = autoPayOrder;
+            return this;
+        }
+
+        /**
+         * ClickhouseConf.
+         */
+        public Builder clickhouseConf(String clickhouseConf) {
+            this.putQueryParameter("ClickhouseConf", clickhouseConf);
+            this.clickhouseConf = clickhouseConf;
             return this;
         }
 

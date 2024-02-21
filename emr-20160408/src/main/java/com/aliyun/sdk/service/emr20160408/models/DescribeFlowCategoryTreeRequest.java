@@ -116,14 +116,14 @@ public class DescribeFlowCategoryTreeRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeFlowCategoryTreeRequest response) {
-            super(response);
-            this.categoryId = response.categoryId;
-            this.keyword = response.keyword;
-            this.mode = response.mode;
-            this.projectId = response.projectId;
-            this.regionId = response.regionId;
-            this.type = response.type;
+        private Builder(DescribeFlowCategoryTreeRequest request) {
+            super(request);
+            this.categoryId = request.categoryId;
+            this.keyword = request.keyword;
+            this.mode = request.mode;
+            this.projectId = request.projectId;
+            this.regionId = request.regionId;
+            this.type = request.type;
         } 
 
         /**

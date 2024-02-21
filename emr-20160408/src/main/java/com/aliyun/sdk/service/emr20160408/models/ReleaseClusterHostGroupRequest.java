@@ -18,6 +18,14 @@ public class ReleaseClusterHostGroupRequest extends Request {
     private String clusterId;
 
     @Query
+    @NameInMap("DecommissionTimeout")
+    private Integer decommissionTimeout;
+
+    @Query
+    @NameInMap("EnableGracefulDecommission")
+    private Boolean enableGracefulDecommission;
+
+    @Query
     @NameInMap("HostGroupId")
     @Validation(required = true)
     private String hostGroupId;
@@ -32,15 +40,22 @@ public class ReleaseClusterHostGroupRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ReleaseNumber")
+    private Integer releaseNumber;
+
+    @Query
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private ReleaseClusterHostGroupRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
+        this.decommissionTimeout = builder.decommissionTimeout;
+        this.enableGracefulDecommission = builder.enableGracefulDecommission;
         this.hostGroupId = builder.hostGroupId;
         this.instanceIdList = builder.instanceIdList;
         this.regionId = builder.regionId;
+        this.releaseNumber = builder.releaseNumber;
         this.resourceOwnerId = builder.resourceOwnerId;
     }
 
@@ -65,6 +80,20 @@ public class ReleaseClusterHostGroupRequest extends Request {
     }
 
     /**
+     * @return decommissionTimeout
+     */
+    public Integer getDecommissionTimeout() {
+        return this.decommissionTimeout;
+    }
+
+    /**
+     * @return enableGracefulDecommission
+     */
+    public Boolean getEnableGracefulDecommission() {
+        return this.enableGracefulDecommission;
+    }
+
+    /**
      * @return hostGroupId
      */
     public String getHostGroupId() {
@@ -86,6 +115,13 @@ public class ReleaseClusterHostGroupRequest extends Request {
     }
 
     /**
+     * @return releaseNumber
+     */
+    public Integer getReleaseNumber() {
+        return this.releaseNumber;
+    }
+
+    /**
      * @return resourceOwnerId
      */
     public Long getResourceOwnerId() {
@@ -94,22 +130,28 @@ public class ReleaseClusterHostGroupRequest extends Request {
 
     public static final class Builder extends Request.Builder<ReleaseClusterHostGroupRequest, Builder> {
         private String clusterId; 
+        private Integer decommissionTimeout; 
+        private Boolean enableGracefulDecommission; 
         private String hostGroupId; 
         private String instanceIdList; 
         private String regionId; 
+        private Integer releaseNumber; 
         private Long resourceOwnerId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ReleaseClusterHostGroupRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.hostGroupId = response.hostGroupId;
-            this.instanceIdList = response.instanceIdList;
-            this.regionId = response.regionId;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ReleaseClusterHostGroupRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.decommissionTimeout = request.decommissionTimeout;
+            this.enableGracefulDecommission = request.enableGracefulDecommission;
+            this.hostGroupId = request.hostGroupId;
+            this.instanceIdList = request.instanceIdList;
+            this.regionId = request.regionId;
+            this.releaseNumber = request.releaseNumber;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
@@ -118,6 +160,24 @@ public class ReleaseClusterHostGroupRequest extends Request {
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
             this.clusterId = clusterId;
+            return this;
+        }
+
+        /**
+         * DecommissionTimeout.
+         */
+        public Builder decommissionTimeout(Integer decommissionTimeout) {
+            this.putQueryParameter("DecommissionTimeout", decommissionTimeout);
+            this.decommissionTimeout = decommissionTimeout;
+            return this;
+        }
+
+        /**
+         * EnableGracefulDecommission.
+         */
+        public Builder enableGracefulDecommission(Boolean enableGracefulDecommission) {
+            this.putQueryParameter("EnableGracefulDecommission", enableGracefulDecommission);
+            this.enableGracefulDecommission = enableGracefulDecommission;
             return this;
         }
 
@@ -145,6 +205,15 @@ public class ReleaseClusterHostGroupRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ReleaseNumber.
+         */
+        public Builder releaseNumber(Integer releaseNumber) {
+            this.putQueryParameter("ReleaseNumber", releaseNumber);
+            this.releaseNumber = releaseNumber;
             return this;
         }
 

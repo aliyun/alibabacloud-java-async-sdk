@@ -245,24 +245,24 @@ public class ListScalingActivityV2Request extends Request {
             super();
         } 
 
-        private Builder(ListScalingActivityV2Request response) {
-            super(response);
-            this.clusterBizId = response.clusterBizId;
-            this.currentSize = response.currentSize;
-            this.hostGroupId = response.hostGroupId;
-            this.hostGroupName = response.hostGroupName;
-            this.limit = response.limit;
-            this.orderField = response.orderField;
-            this.orderMode = response.orderMode;
-            this.pageCount = response.pageCount;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.scalingGroupBizId = response.scalingGroupBizId;
-            this.scalingRuleName = response.scalingRuleName;
-            this.status = response.status;
+        private Builder(ListScalingActivityV2Request request) {
+            super(request);
+            this.clusterBizId = request.clusterBizId;
+            this.currentSize = request.currentSize;
+            this.hostGroupId = request.hostGroupId;
+            this.hostGroupName = request.hostGroupName;
+            this.limit = request.limit;
+            this.orderField = request.orderField;
+            this.orderMode = request.orderMode;
+            this.pageCount = request.pageCount;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.scalingGroupBizId = request.scalingGroupBizId;
+            this.scalingRuleName = request.scalingRuleName;
+            this.status = request.status;
         } 
 
         /**

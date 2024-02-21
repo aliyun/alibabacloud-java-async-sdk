@@ -103,13 +103,13 @@ public class CreateFlowProjectRequest extends Request {
             super();
         } 
 
-        private Builder(CreateFlowProjectRequest response) {
-            super(response);
-            this.description = response.description;
-            this.name = response.name;
-            this.productType = response.productType;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
+        private Builder(CreateFlowProjectRequest request) {
+            super(request);
+            this.description = request.description;
+            this.name = request.name;
+            this.productType = request.productType;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
         } 
 
         /**

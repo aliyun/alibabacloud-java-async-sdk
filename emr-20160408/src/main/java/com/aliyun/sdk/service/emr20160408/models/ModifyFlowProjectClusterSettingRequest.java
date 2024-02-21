@@ -142,16 +142,16 @@ public class ModifyFlowProjectClusterSettingRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyFlowProjectClusterSettingRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.defaultQueue = response.defaultQueue;
-            this.defaultUser = response.defaultUser;
-            this.hostList = response.hostList;
-            this.projectId = response.projectId;
-            this.queueList = response.queueList;
-            this.regionId = response.regionId;
-            this.userList = response.userList;
+        private Builder(ModifyFlowProjectClusterSettingRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.defaultQueue = request.defaultQueue;
+            this.defaultUser = request.defaultUser;
+            this.hostList = request.hostList;
+            this.projectId = request.projectId;
+            this.queueList = request.queueList;
+            this.regionId = request.regionId;
+            this.userList = request.userList;
         } 
 
         /**

@@ -153,17 +153,17 @@ public class ListFlowNodeInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(ListFlowNodeInstanceRequest response) {
-            super(response);
-            this.orderBy = response.orderBy;
-            this.orderType = response.orderType;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.projectId = response.projectId;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.startTime = response.startTime;
-            this.statusList = response.statusList;
+        private Builder(ListFlowNodeInstanceRequest request) {
+            super(request);
+            this.orderBy = request.orderBy;
+            this.orderType = request.orderType;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.projectId = request.projectId;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.startTime = request.startTime;
+            this.statusList = request.statusList;
         } 
 
         /**

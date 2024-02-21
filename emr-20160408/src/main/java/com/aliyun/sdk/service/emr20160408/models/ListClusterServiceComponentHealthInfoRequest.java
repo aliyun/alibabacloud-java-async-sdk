@@ -102,13 +102,13 @@ public class ListClusterServiceComponentHealthInfoRequest extends Request {
             super();
         } 
 
-        private Builder(ListClusterServiceComponentHealthInfoRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.componentName = response.componentName;
-            this.regionId = response.regionId;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.serviceName = response.serviceName;
+        private Builder(ListClusterServiceComponentHealthInfoRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.componentName = request.componentName;
+            this.regionId = request.regionId;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.serviceName = request.serviceName;
         } 
 
         /**

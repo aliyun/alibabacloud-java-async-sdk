@@ -101,13 +101,13 @@ public class DescribeScalingGroupInstanceV2Request extends Request {
             super();
         } 
 
-        private Builder(DescribeScalingGroupInstanceV2Request response) {
-            super(response);
-            this.hostGroupBizId = response.hostGroupBizId;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.scalingGroupBizId = response.scalingGroupBizId;
+        private Builder(DescribeScalingGroupInstanceV2Request request) {
+            super(request);
+            this.hostGroupBizId = request.hostGroupBizId;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.scalingGroupBizId = request.scalingGroupBizId;
         } 
 
         /**

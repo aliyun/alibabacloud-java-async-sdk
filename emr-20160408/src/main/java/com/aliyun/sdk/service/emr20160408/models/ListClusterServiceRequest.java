@@ -103,13 +103,13 @@ public class ListClusterServiceRequest extends Request {
             super();
         } 
 
-        private Builder(ListClusterServiceRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ListClusterServiceRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

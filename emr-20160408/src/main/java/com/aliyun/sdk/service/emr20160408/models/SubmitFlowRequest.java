@@ -90,12 +90,12 @@ public class SubmitFlowRequest extends Request {
             super();
         } 
 
-        private Builder(SubmitFlowRequest response) {
-            super(response);
-            this.conf = response.conf;
-            this.flowId = response.flowId;
-            this.projectId = response.projectId;
-            this.regionId = response.regionId;
+        private Builder(SubmitFlowRequest request) {
+            super(request);
+            this.conf = request.conf;
+            this.flowId = request.flowId;
+            this.projectId = request.projectId;
+            this.regionId = request.regionId;
         } 
 
         /**

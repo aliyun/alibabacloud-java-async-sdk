@@ -76,11 +76,11 @@ public class DescribeClusterResourcePoolSchedulerTypeRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeClusterResourcePoolSchedulerTypeRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.regionId = response.regionId;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DescribeClusterResourcePoolSchedulerTypeRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.regionId = request.regionId;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

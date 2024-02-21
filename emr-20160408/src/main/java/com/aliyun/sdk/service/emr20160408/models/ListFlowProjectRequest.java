@@ -127,15 +127,15 @@ public class ListFlowProjectRequest extends Request {
             super();
         } 
 
-        private Builder(ListFlowProjectRequest response) {
-            super(response);
-            this.name = response.name;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.productType = response.productType;
-            this.projectId = response.projectId;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
+        private Builder(ListFlowProjectRequest request) {
+            super(request);
+            this.name = request.name;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.productType = request.productType;
+            this.projectId = request.projectId;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
         } 
 
         /**

@@ -116,14 +116,14 @@ public class RunScalingActionV2Request extends Request {
             super();
         } 
 
-        private Builder(RunScalingActionV2Request response) {
-            super(response);
-            this.actionParam = response.actionParam;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.scalingActionType = response.scalingActionType;
-            this.scalingGroupBizId = response.scalingGroupBizId;
+        private Builder(RunScalingActionV2Request request) {
+            super(request);
+            this.actionParam = request.actionParam;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.scalingActionType = request.scalingActionType;
+            this.scalingGroupBizId = request.scalingGroupBizId;
         } 
 
         /**

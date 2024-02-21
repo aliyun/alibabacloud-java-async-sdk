@@ -90,12 +90,12 @@ public class ModifyClusterNameRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyClusterNameRequest response) {
-            super(response);
-            this.id = response.id;
-            this.name = response.name;
-            this.regionId = response.regionId;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ModifyClusterNameRequest request) {
+            super(request);
+            this.id = request.id;
+            this.name = request.name;
+            this.regionId = request.regionId;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

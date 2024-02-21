@@ -13,16 +13,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyClusterTemplateResponse extends Response {
     @NameInMap("headers")
-    @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    private Integer statusCode;
+
     @NameInMap("body")
-    @Validation(required = true)
     private ModifyClusterTemplateResponseBody body;
 
     private ModifyClusterTemplateResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +45,13 @@ public class ModifyClusterTemplateResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public ModifyClusterTemplateResponseBody getBody() {
@@ -52,6 +61,8 @@ public class ModifyClusterTemplateResponse extends Response {
     public interface Builder extends Response.Builder<ModifyClusterTemplateResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(ModifyClusterTemplateResponseBody body);
 
@@ -64,6 +75,7 @@ public class ModifyClusterTemplateResponse extends Response {
             extends Response.BuilderImpl<ModifyClusterTemplateResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private ModifyClusterTemplateResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +85,7 @@ public class ModifyClusterTemplateResponse extends Response {
         private BuilderImpl(ModifyClusterTemplateResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +95,15 @@ public class ModifyClusterTemplateResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

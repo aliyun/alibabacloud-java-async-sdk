@@ -169,18 +169,18 @@ public class CreateClusterHostGroupRequest extends Request {
             super();
         } 
 
-        private Builder(CreateClusterHostGroupRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.comment = response.comment;
-            this.hostGroupName = response.hostGroupName;
-            this.hostGroupParams = response.hostGroupParams;
-            this.hostGroupType = response.hostGroupType;
-            this.payType = response.payType;
-            this.regionId = response.regionId;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.securityGroupId = response.securityGroupId;
-            this.vswitchId = response.vswitchId;
+        private Builder(CreateClusterHostGroupRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.comment = request.comment;
+            this.hostGroupName = request.hostGroupName;
+            this.hostGroupParams = request.hostGroupParams;
+            this.hostGroupType = request.hostGroupType;
+            this.payType = request.payType;
+            this.regionId = request.regionId;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.securityGroupId = request.securityGroupId;
+            this.vswitchId = request.vswitchId;
         } 
 
         /**

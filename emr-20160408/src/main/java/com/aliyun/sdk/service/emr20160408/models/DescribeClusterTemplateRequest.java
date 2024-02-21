@@ -75,11 +75,11 @@ public class DescribeClusterTemplateRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeClusterTemplateRequest response) {
-            super(response);
-            this.bizId = response.bizId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DescribeClusterTemplateRequest request) {
+            super(request);
+            this.bizId = request.bizId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

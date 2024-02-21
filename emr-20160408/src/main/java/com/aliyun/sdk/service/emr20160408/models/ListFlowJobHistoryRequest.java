@@ -154,17 +154,17 @@ public class ListFlowJobHistoryRequest extends Request {
             super();
         } 
 
-        private Builder(ListFlowJobHistoryRequest response) {
-            super(response);
-            this.id = response.id;
-            this.instanceId = response.instanceId;
-            this.jobType = response.jobType;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.projectId = response.projectId;
-            this.regionId = response.regionId;
-            this.statusList = response.statusList;
-            this.timeRange = response.timeRange;
+        private Builder(ListFlowJobHistoryRequest request) {
+            super(request);
+            this.id = request.id;
+            this.instanceId = request.instanceId;
+            this.jobType = request.jobType;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.projectId = request.projectId;
+            this.regionId = request.regionId;
+            this.statusList = request.statusList;
+            this.timeRange = request.timeRange;
         } 
 
         /**

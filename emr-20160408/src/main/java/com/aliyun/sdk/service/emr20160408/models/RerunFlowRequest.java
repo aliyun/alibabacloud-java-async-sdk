@@ -90,12 +90,12 @@ public class RerunFlowRequest extends Request {
             super();
         } 
 
-        private Builder(RerunFlowRequest response) {
-            super(response);
-            this.flowInstanceId = response.flowInstanceId;
-            this.projectId = response.projectId;
-            this.reRunFail = response.reRunFail;
-            this.regionId = response.regionId;
+        private Builder(RerunFlowRequest request) {
+            super(request);
+            this.flowInstanceId = request.flowInstanceId;
+            this.projectId = request.projectId;
+            this.reRunFail = request.reRunFail;
+            this.regionId = request.regionId;
         } 
 
         /**

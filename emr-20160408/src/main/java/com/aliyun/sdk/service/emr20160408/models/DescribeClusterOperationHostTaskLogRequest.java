@@ -130,15 +130,15 @@ public class DescribeClusterOperationHostTaskLogRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeClusterOperationHostTaskLogRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.hostId = response.hostId;
-            this.operationId = response.operationId;
-            this.regionId = response.regionId;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.status = response.status;
-            this.taskId = response.taskId;
+        private Builder(DescribeClusterOperationHostTaskLogRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.hostId = request.hostId;
+            this.operationId = request.operationId;
+            this.regionId = request.regionId;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.status = request.status;
+            this.taskId = request.taskId;
         } 
 
         /**

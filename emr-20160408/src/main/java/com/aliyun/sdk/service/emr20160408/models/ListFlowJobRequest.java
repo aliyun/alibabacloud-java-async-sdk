@@ -141,16 +141,16 @@ public class ListFlowJobRequest extends Request {
             super();
         } 
 
-        private Builder(ListFlowJobRequest response) {
-            super(response);
-            this.adhoc = response.adhoc;
-            this.id = response.id;
-            this.name = response.name;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.projectId = response.projectId;
-            this.regionId = response.regionId;
-            this.type = response.type;
+        private Builder(ListFlowJobRequest request) {
+            super(request);
+            this.adhoc = request.adhoc;
+            this.id = request.id;
+            this.name = request.name;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.projectId = request.projectId;
+            this.regionId = request.regionId;
+            this.type = request.type;
         } 
 
         /**

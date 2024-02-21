@@ -975,6 +975,9 @@ public class DescribeClusterBasicInfoResponseBody extends TeaModel {
         @NameInMap("ChargeType")
         private String chargeType;
 
+        @NameInMap("ClickhouseConf")
+        private String clickhouseConf;
+
         @NameInMap("ClusterId")
         private String clusterId;
 
@@ -992,6 +995,12 @@ public class DescribeClusterBasicInfoResponseBody extends TeaModel {
 
         @NameInMap("CreateType")
         private String createType;
+
+        @NameInMap("DataDiskEncrypted")
+        private Boolean dataDiskEncrypted;
+
+        @NameInMap("DataDiskKMSKeyId")
+        private String dataDiskKMSKeyId;
 
         @NameInMap("DepositType")
         private String depositType;
@@ -1074,6 +1083,9 @@ public class DescribeClusterBasicInfoResponseBody extends TeaModel {
         @NameInMap("RelateClusterInfo")
         private RelateClusterInfo relateClusterInfo;
 
+        @NameInMap("ResizeClusterEnable")
+        private Boolean resizeClusterEnable;
+
         @NameInMap("ResizeDiskEnable")
         private Boolean resizeDiskEnable;
 
@@ -1133,12 +1145,15 @@ public class DescribeClusterBasicInfoResponseBody extends TeaModel {
             this.bootstrapActionList = builder.bootstrapActionList;
             this.bootstrapFailed = builder.bootstrapFailed;
             this.chargeType = builder.chargeType;
+            this.clickhouseConf = builder.clickhouseConf;
             this.clusterId = builder.clusterId;
             this.configurations = builder.configurations;
             this.coreNodeInService = builder.coreNodeInService;
             this.coreNodeTotal = builder.coreNodeTotal;
             this.createResource = builder.createResource;
             this.createType = builder.createType;
+            this.dataDiskEncrypted = builder.dataDiskEncrypted;
+            this.dataDiskKMSKeyId = builder.dataDiskKMSKeyId;
             this.depositType = builder.depositType;
             this.easEnable = builder.easEnable;
             this.expiredTime = builder.expiredTime;
@@ -1166,6 +1181,7 @@ public class DescribeClusterBasicInfoResponseBody extends TeaModel {
             this.regionId = builder.regionId;
             this.relateClusterId = builder.relateClusterId;
             this.relateClusterInfo = builder.relateClusterInfo;
+            this.resizeClusterEnable = builder.resizeClusterEnable;
             this.resizeDiskEnable = builder.resizeDiskEnable;
             this.runningTime = builder.runningTime;
             this.securityGroupId = builder.securityGroupId;
@@ -1263,6 +1279,13 @@ public class DescribeClusterBasicInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return clickhouseConf
+         */
+        public String getClickhouseConf() {
+            return this.clickhouseConf;
+        }
+
+        /**
          * @return clusterId
          */
         public String getClusterId() {
@@ -1302,6 +1325,20 @@ public class DescribeClusterBasicInfoResponseBody extends TeaModel {
          */
         public String getCreateType() {
             return this.createType;
+        }
+
+        /**
+         * @return dataDiskEncrypted
+         */
+        public Boolean getDataDiskEncrypted() {
+            return this.dataDiskEncrypted;
+        }
+
+        /**
+         * @return dataDiskKMSKeyId
+         */
+        public String getDataDiskKMSKeyId() {
+            return this.dataDiskKMSKeyId;
         }
 
         /**
@@ -1494,6 +1531,13 @@ public class DescribeClusterBasicInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return resizeClusterEnable
+         */
+        public Boolean getResizeClusterEnable() {
+            return this.resizeClusterEnable;
+        }
+
+        /**
          * @return resizeDiskEnable
          */
         public Boolean getResizeDiskEnable() {
@@ -1616,12 +1660,15 @@ public class DescribeClusterBasicInfoResponseBody extends TeaModel {
             private BootstrapActionList bootstrapActionList; 
             private Boolean bootstrapFailed; 
             private String chargeType; 
+            private String clickhouseConf; 
             private String clusterId; 
             private String configurations; 
             private Integer coreNodeInService; 
             private Integer coreNodeTotal; 
             private String createResource; 
             private String createType; 
+            private Boolean dataDiskEncrypted; 
+            private String dataDiskKMSKeyId; 
             private String depositType; 
             private Boolean easEnable; 
             private Long expiredTime; 
@@ -1649,6 +1696,7 @@ public class DescribeClusterBasicInfoResponseBody extends TeaModel {
             private String regionId; 
             private String relateClusterId; 
             private RelateClusterInfo relateClusterInfo; 
+            private Boolean resizeClusterEnable; 
             private Boolean resizeDiskEnable; 
             private Integer runningTime; 
             private String securityGroupId; 
@@ -1747,6 +1795,14 @@ public class DescribeClusterBasicInfoResponseBody extends TeaModel {
             }
 
             /**
+             * ClickhouseConf.
+             */
+            public Builder clickhouseConf(String clickhouseConf) {
+                this.clickhouseConf = clickhouseConf;
+                return this;
+            }
+
+            /**
              * ClusterId.
              */
             public Builder clusterId(String clusterId) {
@@ -1791,6 +1847,22 @@ public class DescribeClusterBasicInfoResponseBody extends TeaModel {
              */
             public Builder createType(String createType) {
                 this.createType = createType;
+                return this;
+            }
+
+            /**
+             * DataDiskEncrypted.
+             */
+            public Builder dataDiskEncrypted(Boolean dataDiskEncrypted) {
+                this.dataDiskEncrypted = dataDiskEncrypted;
+                return this;
+            }
+
+            /**
+             * DataDiskKMSKeyId.
+             */
+            public Builder dataDiskKMSKeyId(String dataDiskKMSKeyId) {
+                this.dataDiskKMSKeyId = dataDiskKMSKeyId;
                 return this;
             }
 
@@ -2007,6 +2079,14 @@ public class DescribeClusterBasicInfoResponseBody extends TeaModel {
              */
             public Builder relateClusterInfo(RelateClusterInfo relateClusterInfo) {
                 this.relateClusterInfo = relateClusterInfo;
+                return this;
+            }
+
+            /**
+             * ResizeClusterEnable.
+             */
+            public Builder resizeClusterEnable(Boolean resizeClusterEnable) {
+                this.resizeClusterEnable = resizeClusterEnable;
                 return this;
             }
 
