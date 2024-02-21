@@ -139,6 +139,9 @@ public class GetStackInstanceResponseBody extends TeaModel {
         @NameInMap("DriftDetectionTime")
         private String driftDetectionTime;
 
+        @NameInMap("Outputs")
+        private java.util.List < java.util.Map<String, ?>> outputs;
+
         @NameInMap("ParameterOverrides")
         private java.util.List < ParameterOverrides> parameterOverrides;
 
@@ -169,6 +172,7 @@ public class GetStackInstanceResponseBody extends TeaModel {
         private StackInstance(Builder builder) {
             this.accountId = builder.accountId;
             this.driftDetectionTime = builder.driftDetectionTime;
+            this.outputs = builder.outputs;
             this.parameterOverrides = builder.parameterOverrides;
             this.rdFolderId = builder.rdFolderId;
             this.regionId = builder.regionId;
@@ -200,6 +204,13 @@ public class GetStackInstanceResponseBody extends TeaModel {
          */
         public String getDriftDetectionTime() {
             return this.driftDetectionTime;
+        }
+
+        /**
+         * @return outputs
+         */
+        public java.util.List < java.util.Map<String, ?>> getOutputs() {
+            return this.outputs;
         }
 
         /**
@@ -268,6 +279,7 @@ public class GetStackInstanceResponseBody extends TeaModel {
         public static final class Builder {
             private String accountId; 
             private String driftDetectionTime; 
+            private java.util.List < java.util.Map<String, ?>> outputs; 
             private java.util.List < ParameterOverrides> parameterOverrides; 
             private String rdFolderId; 
             private String regionId; 
@@ -294,6 +306,14 @@ public class GetStackInstanceResponseBody extends TeaModel {
              */
             public Builder driftDetectionTime(String driftDetectionTime) {
                 this.driftDetectionTime = driftDetectionTime;
+                return this;
+            }
+
+            /**
+             * Outputs.
+             */
+            public Builder outputs(java.util.List < java.util.Map<String, ?>> outputs) {
+                this.outputs = outputs;
                 return this;
             }
 

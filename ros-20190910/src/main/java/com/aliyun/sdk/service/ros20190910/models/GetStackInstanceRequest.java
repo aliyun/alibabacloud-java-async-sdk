@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetStackInstanceRequest extends Request {
     @Query
+    @NameInMap("OutputOption")
+    private String outputOption;
+
+    @Query
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
@@ -34,6 +38,7 @@ public class GetStackInstanceRequest extends Request {
 
     private GetStackInstanceRequest(Builder builder) {
         super(builder);
+        this.outputOption = builder.outputOption;
         this.regionId = builder.regionId;
         this.stackGroupName = builder.stackGroupName;
         this.stackInstanceAccountId = builder.stackInstanceAccountId;
@@ -51,6 +56,13 @@ public class GetStackInstanceRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return outputOption
+     */
+    public String getOutputOption() {
+        return this.outputOption;
     }
 
     /**
@@ -82,6 +94,7 @@ public class GetStackInstanceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetStackInstanceRequest, Builder> {
+        private String outputOption; 
         private String regionId; 
         private String stackGroupName; 
         private String stackInstanceAccountId; 
@@ -93,11 +106,21 @@ public class GetStackInstanceRequest extends Request {
 
         private Builder(GetStackInstanceRequest request) {
             super(request);
+            this.outputOption = request.outputOption;
             this.regionId = request.regionId;
             this.stackGroupName = request.stackGroupName;
             this.stackInstanceAccountId = request.stackInstanceAccountId;
             this.stackInstanceRegionId = request.stackInstanceRegionId;
         } 
+
+        /**
+         * OutputOption.
+         */
+        public Builder outputOption(String outputOption) {
+            this.putQueryParameter("OutputOption", outputOption);
+            this.outputOption = outputOption;
+            return this;
+        }
 
         /**
          * The region ID of the stack group. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
