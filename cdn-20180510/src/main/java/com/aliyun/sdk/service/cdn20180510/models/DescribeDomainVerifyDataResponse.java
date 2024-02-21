@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DeleteCdnDomainResponse} extends {@link TeaModel}
+ * {@link DescribeDomainVerifyDataResponse} extends {@link TeaModel}
  *
- * <p>DeleteCdnDomainResponse</p>
+ * <p>DescribeDomainVerifyDataResponse</p>
  */
-public class DeleteCdnDomainResponse extends Response {
+public class DescribeDomainVerifyDataResponse extends Response {
     @NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -19,16 +19,16 @@ public class DeleteCdnDomainResponse extends Response {
     private Integer statusCode;
 
     @NameInMap("body")
-    private DeleteCdnDomainResponseBody body;
+    private DescribeDomainVerifyDataResponseBody body;
 
-    private DeleteCdnDomainResponse(BuilderImpl builder) {
+    private DescribeDomainVerifyDataResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DeleteCdnDomainResponse create() {
+    public static DescribeDomainVerifyDataResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +54,35 @@ public class DeleteCdnDomainResponse extends Response {
     /**
      * @return body
      */
-    public DeleteCdnDomainResponseBody getBody() {
+    public DescribeDomainVerifyDataResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DeleteCdnDomainResponse, Builder> {
+    public interface Builder extends Response.Builder<DescribeDomainVerifyDataResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DeleteCdnDomainResponseBody body);
+        Builder body(DescribeDomainVerifyDataResponseBody body);
 
         @Override
-        DeleteCdnDomainResponse build();
+        DescribeDomainVerifyDataResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DeleteCdnDomainResponse, Builder>
+            extends Response.BuilderImpl<DescribeDomainVerifyDataResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private DeleteCdnDomainResponseBody body; 
+        private DescribeDomainVerifyDataResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DeleteCdnDomainResponse response) {
+        private BuilderImpl(DescribeDomainVerifyDataResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +111,14 @@ public class DeleteCdnDomainResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DeleteCdnDomainResponseBody body) {
+        public Builder body(DescribeDomainVerifyDataResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DeleteCdnDomainResponse build() {
-            return new DeleteCdnDomainResponse(this);
+        public DescribeDomainVerifyDataResponse build() {
+            return new DescribeDomainVerifyDataResponse(this);
         } 
 
     } 

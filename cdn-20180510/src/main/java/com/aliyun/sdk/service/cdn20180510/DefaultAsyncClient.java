@@ -129,8 +129,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * **
-      * **The maximum number of times that each user can call this operation per second is 20.
+      * >The maximum number of times that each user can call this operation per second is 20.
       *
      */
     @Override
@@ -2230,6 +2229,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeDomainUvDataResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+      * You can call this operation to query the verification content of an accelerated domain name based on whether the global resource plan is enabled.
+      *
+     */
+    @Override
+    public CompletableFuture<DescribeDomainVerifyDataResponse> describeDomainVerifyData(DescribeDomainVerifyDataRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeDomainVerifyData").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeDomainVerifyDataResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeDomainVerifyDataResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

@@ -55,7 +55,7 @@ public class CdnMigrateRegisterRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * The accelerated domain name for which you want to register the dynamic routing feature. You can specify only one domain name in each request.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);

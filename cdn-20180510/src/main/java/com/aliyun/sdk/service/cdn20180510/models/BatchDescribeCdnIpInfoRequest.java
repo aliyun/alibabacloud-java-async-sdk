@@ -58,11 +58,8 @@ public class BatchDescribeCdnIpInfoRequest extends Request {
          * The list of IP addresses to query. Separate IP addresses with commas (,). You can specify up to 20 IP addresses at a time.
          * <p>
          * 
-         * > 
-         * 
-         * *   Example of an IPv4 address: 192.0.2.1
-         * 
-         * *   Example of an IPv6 address: 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
+         * > *   Example of an IPv4 address: 192.0.2.1
+         * >*   Example of an IPv6 address: 2001:db8:ffff:ffff:ffff:\*\*\*\*:ffff.
          */
         public Builder ipAddrList(String ipAddrList) {
             this.putQueryParameter("IpAddrList", ipAddrList);

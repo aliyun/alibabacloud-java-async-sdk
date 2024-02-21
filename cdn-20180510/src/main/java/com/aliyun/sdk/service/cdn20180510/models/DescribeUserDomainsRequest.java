@@ -371,7 +371,7 @@ public class DescribeUserDomainsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Valid values: **1** to **100000**.
+         * The page number. Valid values: **1** to **100000**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -380,7 +380,7 @@ public class DescribeUserDomainsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: **1 to 50**. Default value: **20**. Maximum value: **50**.
+         * The number of entries to return on each page. Valid values: **1 to 500**. Default value: **20**. Maximum value: **500**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

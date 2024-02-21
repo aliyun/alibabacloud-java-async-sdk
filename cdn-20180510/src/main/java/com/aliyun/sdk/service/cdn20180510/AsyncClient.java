@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.cdn20180510;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.cdn20180510.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -48,8 +49,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<BatchDeleteCdnDomainConfigResponse> batchDeleteCdnDomainConfig(BatchDeleteCdnDomainConfigRequest request);
 
     /**
-      * **
-      * **The maximum number of times that each user can call this operation per second is 20.
+      * >The maximum number of times that each user can call this operation per second is 20.
       *
      */
     CompletableFuture<BatchDescribeCdnIpInfoResponse> batchDescribeCdnIpInfo(BatchDescribeCdnIpInfoRequest request);
@@ -893,6 +893,12 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<DescribeDomainUvDataResponse> describeDomainUvData(DescribeDomainUvDataRequest request);
+
+    /**
+      * You can call this operation to query the verification content of an accelerated domain name based on whether the global resource plan is enabled.
+      *
+     */
+    CompletableFuture<DescribeDomainVerifyDataResponse> describeDomainVerifyData(DescribeDomainVerifyDataRequest request);
 
     /**
       * > You can call this operation up to 30 times per second per account.

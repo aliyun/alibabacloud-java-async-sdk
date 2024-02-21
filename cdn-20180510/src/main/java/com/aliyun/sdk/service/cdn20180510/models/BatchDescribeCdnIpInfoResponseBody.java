@@ -186,7 +186,7 @@ public class BatchDescribeCdnIpInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the client.
+             * The IP address.
              */
             public Builder ipAddress(String ipAddress) {
                 this.ipAddress = ipAddress;

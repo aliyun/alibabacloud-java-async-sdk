@@ -111,7 +111,7 @@ public class ChangeCdnDomainToDcdnRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * The accelerated domain name. You can specify only one domain name in each request.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -120,7 +120,10 @@ public class ChangeCdnDomainToDcdnRequest extends Request {
         }
 
         /**
-         * Operation.
+         * The operation that you want to perform on the check items. Valid values:
+         * <p>
+         * 
+         * **preCheck**: return the verification result.
          */
         public Builder operation(String operation) {
             this.putQueryParameter("Operation", operation);

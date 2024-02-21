@@ -62,7 +62,7 @@ public class CdnMigrateRegisterResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * DomainName.
+         * The accelerated domain name. You can specify only one domain name.
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -70,7 +70,7 @@ public class CdnMigrateRegisterResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,12 @@ public class CdnMigrateRegisterResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The registration status. Valid values:
+         * <p>
+         * 
+         * *   **running**
+         * *   **succeed**
+         * *   **failed**
          */
         public Builder status(String status) {
             this.status = status;

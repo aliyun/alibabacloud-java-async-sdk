@@ -7,18 +7,18 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ChangeCdnDomainToDcdnResponseBody} extends {@link TeaModel}
+ * {@link DescribeDomainVerifyDataResponseBody} extends {@link TeaModel}
  *
- * <p>ChangeCdnDomainToDcdnResponseBody</p>
+ * <p>DescribeDomainVerifyDataResponseBody</p>
  */
-public class ChangeCdnDomainToDcdnResponseBody extends TeaModel {
+public class DescribeDomainVerifyDataResponseBody extends TeaModel {
     @NameInMap("Content")
-    private java.util.Map < String, ? > content;
+    private String content;
 
     @NameInMap("RequestId")
     private String requestId;
 
-    private ChangeCdnDomainToDcdnResponseBody(Builder builder) {
+    private DescribeDomainVerifyDataResponseBody(Builder builder) {
         this.content = builder.content;
         this.requestId = builder.requestId;
     }
@@ -27,14 +27,14 @@ public class ChangeCdnDomainToDcdnResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static ChangeCdnDomainToDcdnResponseBody create() {
+    public static DescribeDomainVerifyDataResponseBody create() {
         return builder().build();
     }
 
     /**
      * @return content
      */
-    public java.util.Map < String, ? > getContent() {
+    public String getContent() {
         return this.content;
     }
 
@@ -46,27 +46,27 @@ public class ChangeCdnDomainToDcdnResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.Map < String, ? > content; 
+        private String content; 
         private String requestId; 
 
         /**
-         * The content of the migration instructions.
+         * The verification content.
          */
-        public Builder content(java.util.Map < String, ? > content) {
+        public Builder content(String content) {
             this.content = content;
             return this;
         }
 
         /**
-         * The request ID.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public ChangeCdnDomainToDcdnResponseBody build() {
-            return new ChangeCdnDomainToDcdnResponseBody(this);
+        public DescribeDomainVerifyDataResponseBody build() {
+            return new DescribeDomainVerifyDataResponseBody(this);
         } 
 
     } 
