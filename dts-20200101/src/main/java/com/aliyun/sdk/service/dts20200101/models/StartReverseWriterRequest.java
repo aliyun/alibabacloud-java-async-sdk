@@ -92,7 +92,10 @@ public class StartReverseWriterRequest extends Request {
         }
 
         /**
-         * CheckPoint.
+         * The offset of the Incremental Write module. Specify a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. 
+         * <p>
+         * 
+         * > The default value is the offset that is automatically saved by DTS when the task is paused.
          */
         public Builder checkPoint(String checkPoint) {
             this.putQueryParameter("CheckPoint", checkPoint);
@@ -101,7 +104,7 @@ public class StartReverseWriterRequest extends Request {
         }
 
         /**
-         * DtsJobId.
+         * The ID of the reverse task that was created by calling the CreateReverseDtsJob operation.
          */
         public Builder dtsJobId(String dtsJobId) {
             this.putQueryParameter("DtsJobId", dtsJobId);

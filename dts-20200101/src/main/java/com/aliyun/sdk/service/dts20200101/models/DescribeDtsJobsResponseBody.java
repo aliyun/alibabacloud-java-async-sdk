@@ -1355,7 +1355,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
              * Indicates whether full data verification is performed. Valid values:
              * <p>
              * -  **true**: yes
-             * -   **false**: no
+             * -  **false**: no
              */
             public Builder fullDataCheck(Boolean fullDataCheck) {
                 this.fullDataCheck = fullDataCheck;
@@ -1366,7 +1366,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
              * Indicates whether incremental data verification is performed. Valid values:
              * <p>
              * -  **true**: yes
-             * -   **false**: no
+             * -  **false**: no
              */
             public Builder incDataCheck(Boolean incDataCheck) {
                 this.incDataCheck = incDataCheck;
@@ -2590,7 +2590,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The error message returned if incremental data synchronization failed.
+             * The error message returned if the task failed.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -2598,7 +2598,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The progress of incremental data synchronization. Unit: percentage.
+             * The progress of the full data verification task. Unit: percentage.
              */
             public Builder percent(String percent) {
                 this.percent = percent;
@@ -2606,7 +2606,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries that have been migrated or synchronized during incremental data migration or synchronization.
+             * The progress of the full data verification task.
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -2614,7 +2614,13 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of incremental data synchronization.
+             * The state of the full data verification task. Valid values:
+             * <p>
+             * 
+             * - **NotStarted**: The verification is not started. 
+             * - **Checking**: The verification is in progress. 
+             * - **Failed**: The verification failed. 
+             * - **Finished**: The verification is complete.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -2691,7 +2697,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The error message returned if incremental data synchronization failed.
+             * The error message returned if the task failed.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -2699,7 +2705,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The progress of incremental data synchronization. Unit: percentage.
+             * The progress of the incremental data verification task. Unit: percentage.
              */
             public Builder percent(String percent) {
                 this.percent = percent;
@@ -2707,7 +2713,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries that have been migrated or synchronized during incremental data migration or synchronization.
+             * The progress of the incremental data verification task.
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -2715,7 +2721,13 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of incremental data synchronization.
+             * The state of the incremental data verification task. Valid values:
+             * <p>
+             * 
+             * - **Catched**: The verification is delayed. 
+             * - **NotStarted**: The verification is not started. 
+             * - **Checking**: The verification is in progress. 
+             * - **Failed**: The verification failed.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -2830,7 +2842,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
              * Indicates whether full data verification is performed. Valid values:
              * <p>
              * -  **true**: yes
-             * -   **false**: no
+             * -  **false**: no
              */
             public Builder fullDataCheck(Boolean fullDataCheck) {
                 this.fullDataCheck = fullDataCheck;
@@ -2841,7 +2853,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
              * Indicates whether incremental data verification is performed. Valid values:
              * <p>
              * -  **true**: yes
-             * -   **false**: no
+             * -  **false**: no
              */
             public Builder incDataCheck(Boolean incDataCheck) {
                 this.incDataCheck = incDataCheck;
@@ -4054,7 +4066,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * FullDataCheckStatus.
+             * The state information about the full data verification task.
              */
             public Builder fullDataCheckStatus(ReverseJobFullDataCheckStatus fullDataCheckStatus) {
                 this.fullDataCheckStatus = fullDataCheckStatus;
@@ -4062,7 +4074,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * IncDataCheckStatus.
+             * The state information about the incremental data verification task.
              */
             public Builder incDataCheckStatus(ReverseJobIncDataCheckStatus incDataCheckStatus) {
                 this.incDataCheckStatus = incDataCheckStatus;
@@ -5343,7 +5355,11 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * DtsBisLabel.
+             * The environment tag of the DTS instance. Valid values:
+             * <p>
+             * 
+             * - **normal**
+             * - **online**
              */
             public Builder dtsBisLabel(String dtsBisLabel) {
                 this.dtsBisLabel = dtsBisLabel;

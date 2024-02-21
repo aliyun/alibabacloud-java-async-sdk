@@ -1500,6 +1500,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Before you call this operation, make sure that your instance is not released and is paused. You can check the status of the instance in the Data Transmission Service (DTS) console or by calling the [DescribeDtsJobDetail](~~208925~~) operation.
+      *
+     */
     @Override
     public CompletableFuture<StartReverseWriterResponse> startReverseWriter(StartReverseWriterRequest request) {
         try {

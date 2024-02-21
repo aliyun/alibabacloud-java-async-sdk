@@ -123,7 +123,11 @@ public class DescribeDataCheckReportUrlRequest extends Request {
         }
 
         /**
-         * CheckType.
+         * The data verification method. Valid values:
+         * <p>
+         * 
+         * *   **1**: full data verification.
+         * *   **2**: incremental data verification.
          */
         public Builder checkType(Integer checkType) {
             this.putQueryParameter("CheckType", checkType);
@@ -132,7 +136,7 @@ public class DescribeDataCheckReportUrlRequest extends Request {
         }
 
         /**
-         * DbName.
+         * The name of the verified source database.
          */
         public Builder dbName(String dbName) {
             this.putQueryParameter("DbName", dbName);
@@ -141,7 +145,7 @@ public class DescribeDataCheckReportUrlRequest extends Request {
         }
 
         /**
-         * DtsJobId.
+         * The ID of the Data Transmission Service (DTS) task. You can call the [DescribeDtsJobs](~~209702~~) operation to query the task ID.
          */
         public Builder dtsJobId(String dtsJobId) {
             this.putQueryParameter("DtsJobId", dtsJobId);
@@ -150,7 +154,7 @@ public class DescribeDataCheckReportUrlRequest extends Request {
         }
 
         /**
-         * TbName.
+         * The name of the table verified in the source database.
          */
         public Builder tbName(String tbName) {
             this.putQueryParameter("TbName", tbName);

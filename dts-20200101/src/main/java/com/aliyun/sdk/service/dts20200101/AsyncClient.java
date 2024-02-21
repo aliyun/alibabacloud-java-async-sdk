@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.dts20200101;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.dts20200101.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -343,6 +344,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<StartMigrationJobResponse> startMigrationJob(StartMigrationJobRequest request);
 
+    /**
+      * Before you call this operation, make sure that your instance is not released and is paused. You can check the status of the instance in the Data Transmission Service (DTS) console or by calling the [DescribeDtsJobDetail](~~208925~~) operation.
+      *
+     */
     CompletableFuture<StartReverseWriterResponse> startReverseWriter(StartReverseWriterRequest request);
 
     /**

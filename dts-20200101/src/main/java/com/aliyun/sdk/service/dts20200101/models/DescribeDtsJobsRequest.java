@@ -317,7 +317,11 @@ public class DescribeDtsJobsRequest extends Request {
         }
 
         /**
-         * DtsBisLabel.
+         * The environment tag of the DTS instance. Valid values:
+         * <p>
+         * 
+         * - **normal**
+         * - **online**
          */
         public Builder dtsBisLabel(String dtsBisLabel) {
             this.putQueryParameter("DtsBisLabel", dtsBisLabel);
