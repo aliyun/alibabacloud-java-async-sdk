@@ -1,3 +1,6 @@
+2024-02-21 Version: 1.0.5
+- Generated java-async 2017-09-08 for hbr.
+
 2024-02-20 Version: 1.0.4
 - Generated java-async 2017-09-08 for hbr.
 
