@@ -535,7 +535,7 @@ public class GetDasSQLLogHotDataRequest extends Request {
         }
 
         /**
-         * The maximum number of entries per page.
+         * The maximum number of entries per page. Valid values: 5 to 100.
          */
         public Builder maxRecordsPerPage(Long maxRecordsPerPage) {
             this.putBodyParameter("MaxRecordsPerPage", maxRecordsPerPage);

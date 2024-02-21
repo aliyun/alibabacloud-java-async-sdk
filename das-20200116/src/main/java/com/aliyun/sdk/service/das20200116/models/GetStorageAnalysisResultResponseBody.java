@@ -86,7 +86,7 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code returned.
          */
         public Builder code(Long code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,10 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
+         * <p>
+         * 
+         * >  If the request is successful, **Successful** is returned. Otherwise, an error message such as an error code is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +113,7 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +121,11 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -206,7 +213,7 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * AssociatedData.
+             * The data associated with items to be optimized.
              */
             public Builder associatedData(String associatedData) {
                 this.associatedData = associatedData;
@@ -214,7 +221,7 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * DbName.
+             * The database name.
              */
             public Builder dbName(String dbName) {
                 this.dbName = dbName;
@@ -222,7 +229,11 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * OptimizeAdvice.
+             * The optimization suggestion. Valid values:
+             * <p>
+             * 
+             * *   **NEED_ANALYZE_TABLE**: You can execute the ANALYZE TABLE statement on the related table during off-peak hours.
+             * *   **NEED_OPTIMIZE_TABLE**: You can reclaim fragments during off-peak hours.
              */
             public Builder optimizeAdvice(String optimizeAdvice) {
                 this.optimizeAdvice = optimizeAdvice;
@@ -230,7 +241,11 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * OptimizeItemName.
+             * The item to be optimized. Valid values:
+             * <p>
+             * 
+             * *   **NEED_ANALYZE_TABLE**: The statistical data in information_schema.tables differs greatly from the physical file size.
+             * *   **NEED_OPTIMIZE_TABLE**: The fragmentation degree of the table is high.
              */
             public Builder optimizeItemName(String optimizeItemName) {
                 this.optimizeItemName = optimizeItemName;
@@ -238,7 +253,7 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * The table name.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -411,7 +426,10 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             private Long totalSize; 
 
             /**
-             * AvgRowLength.
+             * The average row length.
+             * <p>
+             * 
+             * >  Unit: bytes.
              */
             public Builder avgRowLength(Long avgRowLength) {
                 this.avgRowLength = avgRowLength;
@@ -419,7 +437,10 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * DataFree.
+             * The size of storage occupied by fragments.
+             * <p>
+             * 
+             * >  Unit: bytes.
              */
             public Builder dataFree(Long dataFree) {
                 this.dataFree = dataFree;
@@ -427,7 +448,10 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * DataSize.
+             * The size of storage occupied by the table data.
+             * <p>
+             * 
+             * >  Unit: bytes.
              */
             public Builder dataSize(Long dataSize) {
                 this.dataSize = dataSize;
@@ -435,7 +459,7 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * DbName.
+             * The database name.
              */
             public Builder dbName(String dbName) {
                 this.dbName = dbName;
@@ -443,7 +467,7 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * Engine.
+             * The type of the engine used by the table.
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -451,7 +475,10 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * IndexSize.
+             * The size of storage occupied by indexes.
+             * <p>
+             * 
+             * >  Unit: bytes.
              */
             public Builder indexSize(Long indexSize) {
                 this.indexSize = indexSize;
@@ -459,7 +486,10 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * PhyTotalSize.
+             * The size of the table storage.
+             * <p>
+             * 
+             * >  Unit: byte. The value of the parameter is the sum of DataSize, IndexSize, and DataFree.
              */
             public Builder phyTotalSize(Long phyTotalSize) {
                 this.phyTotalSize = phyTotalSize;
@@ -467,7 +497,10 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * PhysicalFileSize.
+             * The physical file size of the table.
+             * <p>
+             * 
+             * >  Unit: byte. You may fail to obtain the physical file size because of the deployment mode of the database instance.
              */
             public Builder physicalFileSize(Long physicalFileSize) {
                 this.physicalFileSize = physicalFileSize;
@@ -475,7 +508,7 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * The table name.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -483,7 +516,7 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * TableRows.
+             * The number of rows in the table.
              */
             public Builder tableRows(Long tableRows) {
                 this.tableRows = tableRows;
@@ -491,7 +524,7 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * TableType.
+             * The table type.
              */
             public Builder tableType(String tableType) {
                 this.tableType = tableType;
@@ -499,7 +532,10 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * TotalSize.
+             * The size of storage occupied by table data and indexes.
+             * <p>
+             * 
+             * >  Unit: byte. The value of the parameter is the sum of DataSize and IndexSize.
              */
             public Builder totalSize(Long totalSize) {
                 this.totalSize = totalSize;
@@ -636,7 +672,11 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             private Long totalUsedStorageSize; 
 
             /**
-             * AnalysisErrorType.
+             * The reason why the analysis on the database and table fails.
+             * <p>
+             * 
+             * *   **DB_OR_TABLE_NOT_EXIST**: The specified database or table does not exist.
+             * *   **DB_NOT_EXIST**: The specified database does not exist.
              */
             public Builder analysisErrorType(String analysisErrorType) {
                 this.analysisErrorType = analysisErrorType;
@@ -644,7 +684,7 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * AnalysisSuccess.
+             * Indicates whether the analysis on the database and table is successful.
              */
             public Builder analysisSuccess(Boolean analysisSuccess) {
                 this.analysisSuccess = analysisSuccess;
@@ -652,7 +692,10 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * DailyIncrement.
+             * The estimated daily storage usage increment in the last seven days.
+             * <p>
+             * 
+             * >  Unit: bytes.
              */
             public Builder dailyIncrement(Long dailyIncrement) {
                 this.dailyIncrement = dailyIncrement;
@@ -660,7 +703,7 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * EstimateAvailableDays.
+             * The estimated number of days before the remaining storage runs out.
              */
             public Builder estimateAvailableDays(Long estimateAvailableDays) {
                 this.estimateAvailableDays = estimateAvailableDays;
@@ -668,7 +711,7 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * NeedOptimizeItemList.
+             * The list of items to be optimized.
              */
             public Builder needOptimizeItemList(java.util.List < NeedOptimizeItemList> needOptimizeItemList) {
                 this.needOptimizeItemList = needOptimizeItemList;
@@ -676,7 +719,7 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * TableStats.
+             * The information about the table.
              */
             public Builder tableStats(java.util.List < TableStats> tableStats) {
                 this.tableStats = tableStats;
@@ -684,7 +727,10 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * TotalFreeStorageSize.
+             * The size of remaining storage.
+             * <p>
+             * 
+             * >  Unit: bytes.
              */
             public Builder totalFreeStorageSize(Long totalFreeStorageSize) {
                 this.totalFreeStorageSize = totalFreeStorageSize;
@@ -692,7 +738,10 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * TotalStorageSize.
+             * The total size of instance storage.
+             * <p>
+             * 
+             * >  Unit: bytes.
              */
             public Builder totalStorageSize(Long totalStorageSize) {
                 this.totalStorageSize = totalStorageSize;
@@ -700,7 +749,10 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * TotalUsedStorageSize.
+             * The size of used storage.
+             * <p>
+             * 
+             * >  Unit: bytes.
              */
             public Builder totalUsedStorageSize(Long totalUsedStorageSize) {
                 this.totalUsedStorageSize = totalUsedStorageSize;
@@ -825,7 +877,7 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             private Long totalDbCount; 
 
             /**
-             * AnalyzedDbCount.
+             * The number of databases that have been analyzed.
              */
             public Builder analyzedDbCount(Long analyzedDbCount) {
                 this.analyzedDbCount = analyzedDbCount;
@@ -833,7 +885,7 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * StorageAnalysisResult.
+             * The details of storage analysis.
              */
             public Builder storageAnalysisResult(StorageAnalysisResult storageAnalysisResult) {
                 this.storageAnalysisResult = storageAnalysisResult;
@@ -841,7 +893,7 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * TaskFinish.
+             * Indicates whether the task is complete.
              */
             public Builder taskFinish(Boolean taskFinish) {
                 this.taskFinish = taskFinish;
@@ -849,7 +901,7 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * The task ID.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -857,7 +909,10 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * TaskProgress.
+             * The task progress.
+             * <p>
+             * 
+             * >  Valid values are integers that range from 0 to 100.
              */
             public Builder taskProgress(Long taskProgress) {
                 this.taskProgress = taskProgress;
@@ -865,7 +920,16 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * TaskState.
+             * The status of the storage analysis task. Valid values:
+             * <p>
+             * 
+             * *   **INIT**: The task is being initialized.
+             * *   **PENDING**: The task is being queued for execution.
+             * *   **RECEIVED**: The task is received for execution.
+             * *   **RUNNING**: The task is being executed.
+             * *   **RETRY**: The task is being retried.
+             * *   **SUCCESS**: The task succeeds.
+             * *   **FAILURE**: The task fails.
              */
             public Builder taskState(String taskState) {
                 this.taskState = taskState;
@@ -873,7 +937,7 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * TaskSuccess.
+             * Indicates whether the task is successful.
              */
             public Builder taskSuccess(Boolean taskSuccess) {
                 this.taskSuccess = taskSuccess;
@@ -881,7 +945,7 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * TotalDbCount.
+             * The number of databases that need to be analyzed in the storage analysis task.
              */
             public Builder totalDbCount(Long totalDbCount) {
                 this.totalDbCount = totalDbCount;

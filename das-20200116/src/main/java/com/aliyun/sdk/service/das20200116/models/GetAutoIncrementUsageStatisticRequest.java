@@ -99,7 +99,10 @@ public class GetAutoIncrementUsageStatisticRequest extends Request {
         } 
 
         /**
-         * DbNames.
+         * The database name. If you specify a database, the operation queries the usage of auto-increment table IDs in the specified database. Otherwise, the operation queries the usage of auto-increment table IDs in all databases on the instance.
+         * <p>
+         * 
+         * >  Specify the parameter value as a JSON array, such as \[\"db1\",\"db2\"]. Separate multiple database names with commas (,).
          */
         public Builder dbNames(String dbNames) {
             this.putQueryParameter("DbNames", dbNames);
@@ -108,7 +111,7 @@ public class GetAutoIncrementUsageStatisticRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -117,7 +120,7 @@ public class GetAutoIncrementUsageStatisticRequest extends Request {
         }
 
         /**
-         * RatioFilter.
+         * The usage threshold of auto-increment IDs. Only usage that exceeds the threshold can be returned. Valid values are decimals that range from 0 to 1.
          */
         public Builder ratioFilter(Double ratioFilter) {
             this.putQueryParameter("RatioFilter", ratioFilter);
@@ -126,7 +129,11 @@ public class GetAutoIncrementUsageStatisticRequest extends Request {
         }
 
         /**
-         * RealTime.
+         * Specifies whether to query real-time data. Valid values:
+         * <p>
+         * 
+         * *   **true**: queries data in real time except for data generated in the last 10 minutes.****
+         * *   **false**: queries data generated in the last 2 hours. If no such data exists, queries the latest data.
          */
         public Builder realTime(Boolean realTime) {
             this.putQueryParameter("RealTime", realTime);

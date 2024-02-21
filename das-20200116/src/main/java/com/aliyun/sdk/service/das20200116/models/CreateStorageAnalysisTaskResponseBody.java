@@ -86,7 +86,7 @@ public class CreateStorageAnalysisTaskResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code returned.
          */
         public Builder code(Long code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class CreateStorageAnalysisTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,10 @@ public class CreateStorageAnalysisTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
+         * <p>
+         * 
+         * >  If the request is successful, **Successful** is returned. Otherwise, an error message such as an error code is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +113,7 @@ public class CreateStorageAnalysisTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +121,11 @@ public class CreateStorageAnalysisTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -182,7 +189,11 @@ public class CreateStorageAnalysisTaskResponseBody extends TeaModel {
             private String taskId; 
 
             /**
-             * CreateTaskSuccess.
+             * Indicates whether the task is created. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder createTaskSuccess(Boolean createTaskSuccess) {
                 this.createTaskSuccess = createTaskSuccess;
@@ -190,7 +201,7 @@ public class CreateStorageAnalysisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * The error message returned.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -198,7 +209,7 @@ public class CreateStorageAnalysisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * The task ID.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreateQueryOptimizeTagResponse} extends {@link TeaModel}
+ * {@link GetDeadLockDetailListResponse} extends {@link TeaModel}
  *
- * <p>CreateQueryOptimizeTagResponse</p>
+ * <p>GetDeadLockDetailListResponse</p>
  */
-public class CreateQueryOptimizeTagResponse extends Response {
+public class GetDeadLockDetailListResponse extends Response {
     @NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -19,16 +19,16 @@ public class CreateQueryOptimizeTagResponse extends Response {
     private Integer statusCode;
 
     @NameInMap("body")
-    private CreateQueryOptimizeTagResponseBody body;
+    private GetDeadLockDetailListResponseBody body;
 
-    private CreateQueryOptimizeTagResponse(BuilderImpl builder) {
+    private GetDeadLockDetailListResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static CreateQueryOptimizeTagResponse create() {
+    public static GetDeadLockDetailListResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +54,35 @@ public class CreateQueryOptimizeTagResponse extends Response {
     /**
      * @return body
      */
-    public CreateQueryOptimizeTagResponseBody getBody() {
+    public GetDeadLockDetailListResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<CreateQueryOptimizeTagResponse, Builder> {
+    public interface Builder extends Response.Builder<GetDeadLockDetailListResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(CreateQueryOptimizeTagResponseBody body);
+        Builder body(GetDeadLockDetailListResponseBody body);
 
         @Override
-        CreateQueryOptimizeTagResponse build();
+        GetDeadLockDetailListResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<CreateQueryOptimizeTagResponse, Builder>
+            extends Response.BuilderImpl<GetDeadLockDetailListResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private CreateQueryOptimizeTagResponseBody body; 
+        private GetDeadLockDetailListResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(CreateQueryOptimizeTagResponse response) {
+        private BuilderImpl(GetDeadLockDetailListResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +111,14 @@ public class CreateQueryOptimizeTagResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(CreateQueryOptimizeTagResponseBody body) {
+        public Builder body(GetDeadLockDetailListResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public CreateQueryOptimizeTagResponse build() {
-            return new CreateQueryOptimizeTagResponse(this);
+        public GetDeadLockDetailListResponse build() {
+            return new GetDeadLockDetailListResponse(this);
         } 
 
     } 

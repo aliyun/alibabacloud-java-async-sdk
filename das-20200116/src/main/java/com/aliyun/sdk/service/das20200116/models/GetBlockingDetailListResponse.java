@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreateQueryOptimizeTagResponse} extends {@link TeaModel}
+ * {@link GetBlockingDetailListResponse} extends {@link TeaModel}
  *
- * <p>CreateQueryOptimizeTagResponse</p>
+ * <p>GetBlockingDetailListResponse</p>
  */
-public class CreateQueryOptimizeTagResponse extends Response {
+public class GetBlockingDetailListResponse extends Response {
     @NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -19,16 +19,16 @@ public class CreateQueryOptimizeTagResponse extends Response {
     private Integer statusCode;
 
     @NameInMap("body")
-    private CreateQueryOptimizeTagResponseBody body;
+    private GetBlockingDetailListResponseBody body;
 
-    private CreateQueryOptimizeTagResponse(BuilderImpl builder) {
+    private GetBlockingDetailListResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static CreateQueryOptimizeTagResponse create() {
+    public static GetBlockingDetailListResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +54,35 @@ public class CreateQueryOptimizeTagResponse extends Response {
     /**
      * @return body
      */
-    public CreateQueryOptimizeTagResponseBody getBody() {
+    public GetBlockingDetailListResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<CreateQueryOptimizeTagResponse, Builder> {
+    public interface Builder extends Response.Builder<GetBlockingDetailListResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(CreateQueryOptimizeTagResponseBody body);
+        Builder body(GetBlockingDetailListResponseBody body);
 
         @Override
-        CreateQueryOptimizeTagResponse build();
+        GetBlockingDetailListResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<CreateQueryOptimizeTagResponse, Builder>
+            extends Response.BuilderImpl<GetBlockingDetailListResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private CreateQueryOptimizeTagResponseBody body; 
+        private GetBlockingDetailListResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(CreateQueryOptimizeTagResponse response) {
+        private BuilderImpl(GetBlockingDetailListResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +111,14 @@ public class CreateQueryOptimizeTagResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(CreateQueryOptimizeTagResponseBody body) {
+        public Builder body(GetBlockingDetailListResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public CreateQueryOptimizeTagResponse build() {
-            return new CreateQueryOptimizeTagResponse(this);
+        public GetBlockingDetailListResponse build() {
+            return new GetBlockingDetailListResponse(this);
         } 
 
     } 

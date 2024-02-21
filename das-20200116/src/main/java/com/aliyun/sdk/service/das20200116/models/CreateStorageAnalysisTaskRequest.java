@@ -97,7 +97,7 @@ public class CreateStorageAnalysisTaskRequest extends Request {
         } 
 
         /**
-         * DbName.
+         * The database name. If you specify a database, the operation analyzes the storage usage of the specified database.
          */
         public Builder dbName(String dbName) {
             this.putQueryParameter("DbName", dbName);
@@ -106,7 +106,7 @@ public class CreateStorageAnalysisTaskRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -115,7 +115,10 @@ public class CreateStorageAnalysisTaskRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * The node ID.
+         * <p>
+         * 
+         * >  This parameter is reserved.
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -124,7 +127,7 @@ public class CreateStorageAnalysisTaskRequest extends Request {
         }
 
         /**
-         * TableName.
+         * The table name. If you specify a table in the specified database, the operation analyzes the storage usage of the specified table. If you specify a table, you must also specify the database to which the table belongs by using **DbName**.
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);

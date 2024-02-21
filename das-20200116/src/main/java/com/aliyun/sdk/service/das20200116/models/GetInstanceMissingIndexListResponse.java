@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreateQueryOptimizeTagResponse} extends {@link TeaModel}
+ * {@link GetInstanceMissingIndexListResponse} extends {@link TeaModel}
  *
- * <p>CreateQueryOptimizeTagResponse</p>
+ * <p>GetInstanceMissingIndexListResponse</p>
  */
-public class CreateQueryOptimizeTagResponse extends Response {
+public class GetInstanceMissingIndexListResponse extends Response {
     @NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -19,16 +19,16 @@ public class CreateQueryOptimizeTagResponse extends Response {
     private Integer statusCode;
 
     @NameInMap("body")
-    private CreateQueryOptimizeTagResponseBody body;
+    private GetInstanceMissingIndexListResponseBody body;
 
-    private CreateQueryOptimizeTagResponse(BuilderImpl builder) {
+    private GetInstanceMissingIndexListResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static CreateQueryOptimizeTagResponse create() {
+    public static GetInstanceMissingIndexListResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +54,35 @@ public class CreateQueryOptimizeTagResponse extends Response {
     /**
      * @return body
      */
-    public CreateQueryOptimizeTagResponseBody getBody() {
+    public GetInstanceMissingIndexListResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<CreateQueryOptimizeTagResponse, Builder> {
+    public interface Builder extends Response.Builder<GetInstanceMissingIndexListResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(CreateQueryOptimizeTagResponseBody body);
+        Builder body(GetInstanceMissingIndexListResponseBody body);
 
         @Override
-        CreateQueryOptimizeTagResponse build();
+        GetInstanceMissingIndexListResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<CreateQueryOptimizeTagResponse, Builder>
+            extends Response.BuilderImpl<GetInstanceMissingIndexListResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private CreateQueryOptimizeTagResponseBody body; 
+        private GetInstanceMissingIndexListResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(CreateQueryOptimizeTagResponse response) {
+        private BuilderImpl(GetInstanceMissingIndexListResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +111,14 @@ public class CreateQueryOptimizeTagResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(CreateQueryOptimizeTagResponseBody body) {
+        public Builder body(GetInstanceMissingIndexListResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public CreateQueryOptimizeTagResponse build() {
-            return new CreateQueryOptimizeTagResponse(this);
+        public GetInstanceMissingIndexListResponse build() {
+            return new GetInstanceMissingIndexListResponse(this);
         } 
 
     } 

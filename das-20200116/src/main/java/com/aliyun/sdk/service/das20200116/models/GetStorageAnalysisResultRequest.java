@@ -84,7 +84,7 @@ public class GetStorageAnalysisResultRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -93,7 +93,10 @@ public class GetStorageAnalysisResultRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * The node ID.
+         * <p>
+         * 
+         * >  This parameter is reserved.
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -102,7 +105,7 @@ public class GetStorageAnalysisResultRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * The task ID, which is returned after you call the CreateStorageAnalysisTask operation.
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
