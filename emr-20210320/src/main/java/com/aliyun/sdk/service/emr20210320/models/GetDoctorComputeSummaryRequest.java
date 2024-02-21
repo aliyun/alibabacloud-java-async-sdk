@@ -99,7 +99,7 @@ public class GetDoctorComputeSummaryRequest extends Request {
         } 
 
         /**
-         * 集群ID。
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -108,7 +108,7 @@ public class GetDoctorComputeSummaryRequest extends Request {
         }
 
         /**
-         * ComponentInfo.
+         * The resource information, which is used to filter the results.
          */
         public Builder componentInfo(ComponentInfo componentInfo) {
             this.putQueryParameter("ComponentInfo", componentInfo);
@@ -117,7 +117,7 @@ public class GetDoctorComputeSummaryRequest extends Request {
         }
 
         /**
-         * DateTime.
+         * Specify the date in the ISO 8601 standard. For example, 2023-01-01 represents January 1, 2023.
          */
         public Builder dateTime(String dateTime) {
             this.putQueryParameter("DateTime", dateTime);
@@ -126,7 +126,7 @@ public class GetDoctorComputeSummaryRequest extends Request {
         }
 
         /**
-         * 区域ID。
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -180,7 +180,7 @@ public class GetDoctorComputeSummaryRequest extends Request {
             private String componentType; 
 
             /**
-             * ComponentName.
+             * Set the filter condition name based on the value of ComponentType. For example, if you set ComponentType to queue, you can specify a specific queue name to obtain the resource usage of a specific queue.
              */
             public Builder componentName(String componentName) {
                 this.componentName = componentName;
@@ -188,7 +188,14 @@ public class GetDoctorComputeSummaryRequest extends Request {
             }
 
             /**
-             * ComponentType.
+             * The resource type for filtering. Valid values:
+             * <p>
+             * 
+             * *   engine: filters results by engine.
+             * *   queue: filters results by queue.
+             * *   cluster: displays the results at the cluster level.
+             * 
+             * If you do not specify this parameter, the information at the cluster level is displayed by default.
              */
             public Builder componentType(String componentType) {
                 this.componentType = componentType;

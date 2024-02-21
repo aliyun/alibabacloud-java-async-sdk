@@ -155,7 +155,7 @@ public class ListDoctorHBaseTablesRequest extends Request {
         } 
 
         /**
-         * 集群ID。
+         * The ID of the cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -164,7 +164,7 @@ public class ListDoctorHBaseTablesRequest extends Request {
         }
 
         /**
-         * DateTime.
+         * The query date.
          */
         public Builder dateTime(String dateTime) {
             this.putQueryParameter("DateTime", dateTime);
@@ -173,7 +173,7 @@ public class ListDoctorHBaseTablesRequest extends Request {
         }
 
         /**
-         * 一次获取的最大记录数。取值范围：1~100。
+         * The maximum number of entries that are returned.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -182,7 +182,7 @@ public class ListDoctorHBaseTablesRequest extends Request {
         }
 
         /**
-         * 标记当前开始读取的位置，置空表示从头开始。
+         * Marks the current position to start reading. If this field is empty, the data is read from the beginning.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -191,7 +191,12 @@ public class ListDoctorHBaseTablesRequest extends Request {
         }
 
         /**
-         * OrderBy.
+         * The field that you use to sort the query results.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   tableSize
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -200,7 +205,11 @@ public class ListDoctorHBaseTablesRequest extends Request {
         }
 
         /**
-         * OrderType.
+         * The order in which you want to sort the query results. Valid value:
+         * <p>
+         * 
+         * *   ASC: in ascending order
+         * *   DESC: in descending order
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -209,7 +218,7 @@ public class ListDoctorHBaseTablesRequest extends Request {
         }
 
         /**
-         * 区域ID。
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -218,7 +227,7 @@ public class ListDoctorHBaseTablesRequest extends Request {
         }
 
         /**
-         * TableNames.
+         * The table names, which are used to filter the query results.
          */
         public Builder tableNames(java.util.List < String > tableNames) {
             this.putQueryParameter("TableNames", tableNames);

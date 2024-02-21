@@ -70,7 +70,7 @@ public class GetClusterRequest extends Request {
         } 
 
         /**
-         * 集群ID。
+         * The ID of the cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -79,7 +79,7 @@ public class GetClusterRequest extends Request {
         }
 
         /**
-         * 地域ID。
+         * The ID of the region in which you want to create the instance.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

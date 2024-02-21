@@ -134,7 +134,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             private Integer hiveScore; 
 
             /**
-             * The score for the distribution of files of different sizes stored in the Hive database.
+             * The score for the file sizes of the Hive database.
              */
             public Builder hiveDistributionScore(Integer hiveDistributionScore) {
                 this.hiveDistributionScore = hiveDistributionScore;
@@ -142,7 +142,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The score for the distribution of files stored in different formats in the Hive database.
+             * The score for the data formats of the Hive database.
              */
             public Builder hiveFormatScore(Integer hiveFormatScore) {
                 this.hiveFormatScore = hiveFormatScore;
@@ -259,7 +259,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             private String formatSizeUnit; 
 
             /**
-             * The daily increment of storage format-specific data.
+             * The daily increment of data in the format.
              */
             public Builder formatDayGrowthSize(Long formatDayGrowthSize) {
                 this.formatDayGrowthSize = formatDayGrowthSize;
@@ -275,7 +275,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The proportion of data in a specific storage format.
+             * The proportion of the data in the format.
              */
             public Builder formatRatio(Float formatRatio) {
                 this.formatRatio = formatRatio;
@@ -283,7 +283,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of storage format-specific data.
+             * The amount of data in the format.
              */
             public Builder formatSize(Long formatSize) {
                 this.formatSize = formatSize;
@@ -291,7 +291,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The day-to-day growth rate of storage format-specific data.
+             * The day-to-day growth rate of data in the format.
              */
             public Builder formatSizeDayGrowthRatio(Float formatSizeDayGrowthRatio) {
                 this.formatSizeDayGrowthRatio = formatSizeDayGrowthRatio;
@@ -299,7 +299,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the amount of storage format-specific data.
+             * The unit of the amount of data in the format.
              */
             public Builder formatSizeUnit(String formatSizeUnit) {
                 this.formatSizeUnit = formatSizeUnit;
@@ -5300,7 +5300,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             private WarmDataSizeDayGrowthRatio warmDataSizeDayGrowthRatio; 
 
             /**
-             * The daily increment of the amount of cold data. Cold data refers to data that is not accessed for more than 30 days but is accessed in 90 days.
+             * The daily increment of the amount of cold data. Cold data refers to data that is not accessed for more than 30 days but is accessed in previous 90 days.
              */
             public Builder coldDataDayGrowthSize(ColdDataDayGrowthSize coldDataDayGrowthSize) {
                 this.coldDataDayGrowthSize = coldDataDayGrowthSize;
@@ -5308,7 +5308,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The proportion of cold data. Cold data refers to data that is not accessed for more than 30 days but is accessed in 90 days.
+             * The proportion of cold data. Cold data refers to data that is not accessed for more than 30 days but is accessed in previous 90 days.
              */
             public Builder coldDataRatio(ColdDataRatio coldDataRatio) {
                 this.coldDataRatio = coldDataRatio;
@@ -5316,7 +5316,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of cold data. Cold data refers to data that is not accessed for more than 30 days but is accessed in 90 days.
+             * The amount of cold data. Cold data refers to data that is not accessed for more than 30 days but is accessed in previous 90 days.
              */
             public Builder coldDataSize(ColdDataSize coldDataSize) {
                 this.coldDataSize = coldDataSize;
@@ -5324,7 +5324,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The day-to-day growth rate of the amount of cold data. Cold data refers to data that is not accessed for more than 30 days but is accessed in 90 days.
+             * The day-to-day growth rate of the amount of cold data. Cold data refers to data that is not accessed for more than 30 days but is accessed in previous 90 days.
              */
             public Builder coldDataSizeDayGrowthRatio(ColdDataSizeDayGrowthRatio coldDataSizeDayGrowthRatio) {
                 this.coldDataSizeDayGrowthRatio = coldDataSizeDayGrowthRatio;
@@ -5396,7 +5396,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The daily increment of the amount of hot data. Hot data refers to data that is accessed in recent seven days.
+             * The daily increment of the amount of hot data. Hot data refers to data that is accessed in previous seven days.
              */
             public Builder hotDataDayGrowthSize(HotDataDayGrowthSize hotDataDayGrowthSize) {
                 this.hotDataDayGrowthSize = hotDataDayGrowthSize;
@@ -5404,7 +5404,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The proportion of hot data. Hot data refers to data that is accessed in recent seven days.
+             * The proportion of hot data. Hot data refers to data that is accessed in previous seven days.
              */
             public Builder hotDataRatio(HotDataRatio hotDataRatio) {
                 this.hotDataRatio = hotDataRatio;
@@ -5412,7 +5412,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of hot data. Hot data refers to data that is accessed in recent seven days.
+             * The amount of hot data. Hot data refers to data that is accessed in previous seven days.
              */
             public Builder hotDataSize(HotDataSize hotDataSize) {
                 this.hotDataSize = hotDataSize;
@@ -5420,7 +5420,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The day-to-day growth rate of the amount of hot data. Hot data refers to data that is accessed in recent seven days.
+             * The day-to-day growth rate of the amount of hot data. Hot data refers to data that is accessed in previous seven days.
              */
             public Builder hotDataSizeDayGrowthRatio(HotDataSizeDayGrowthRatio hotDataSizeDayGrowthRatio) {
                 this.hotDataSizeDayGrowthRatio = hotDataSizeDayGrowthRatio;
@@ -5572,7 +5572,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The daily incremental of the total data volume.
+             * The daily incremental of the total amount of data.
              */
             public Builder totalDataDayGrowthSize(TotalDataDayGrowthSize totalDataDayGrowthSize) {
                 this.totalDataDayGrowthSize = totalDataDayGrowthSize;
@@ -5620,7 +5620,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The daily increment of the amount of warm data. Warm data refers to data that is not accessed for more than 7 days but is accessed in 30 days.
+             * The daily increment of the amount of warm data. Warm data refers to data that is not accessed for more than 7 days but is accessed in previous 30 days.
              */
             public Builder warmDataDayGrowthSize(WarmDataDayGrowthSize warmDataDayGrowthSize) {
                 this.warmDataDayGrowthSize = warmDataDayGrowthSize;
@@ -5628,7 +5628,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The proportion of warm data. Warm data refers to data that is not accessed for more than 7 days but is accessed in 30 days.
+             * The proportion of warm data. Warm data refers to data that is not accessed for more than 7 days but is accessed in previous 30 days.
              */
             public Builder warmDataRatio(WarmDataRatio warmDataRatio) {
                 this.warmDataRatio = warmDataRatio;
@@ -5636,7 +5636,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of warm data. Warm data refers to data that is not accessed for more than 7 days but is accessed in 30 days.
+             * The amount of warm data. Warm data refers to data that is not accessed for more than 7 days but is accessed in previous 30 days.
              */
             public Builder warmDataSize(WarmDataSize warmDataSize) {
                 this.warmDataSize = warmDataSize;
@@ -5644,7 +5644,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The day-to-day growth rate of the amount of warm data. Warm data refers to data that is not accessed for more than 7 days but is accessed in 30 days.
+             * The day-to-day growth rate of the amount of warm data. Warm data refers to data that is not accessed for more than 7 days but is accessed in previous 30 days.
              */
             public Builder warmDataSizeDayGrowthRatio(WarmDataSizeDayGrowthRatio warmDataSizeDayGrowthRatio) {
                 this.warmDataSizeDayGrowthRatio = warmDataSizeDayGrowthRatio;

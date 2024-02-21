@@ -50,7 +50,7 @@ public class GetDoctorHBaseRegionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -344,7 +344,7 @@ public class GetDoctorHBaseRegionResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -360,7 +360,7 @@ public class GetDoctorHBaseRegionResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -445,7 +445,7 @@ public class GetDoctorHBaseRegionResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -461,7 +461,7 @@ public class GetDoctorHBaseRegionResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -546,7 +546,7 @@ public class GetDoctorHBaseRegionResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -562,7 +562,7 @@ public class GetDoctorHBaseRegionResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -667,7 +667,7 @@ public class GetDoctorHBaseRegionResponseBody extends TeaModel {
             }
 
             /**
-             * StoreFileCount.
+             * The number of StoreFiles.
              */
             public Builder storeFileCount(StoreFileCount storeFileCount) {
                 this.storeFileCount = storeFileCount;
@@ -748,7 +748,7 @@ public class GetDoctorHBaseRegionResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * Metrics.
+             * The metric information.
              */
             public Builder metrics(Metrics metrics) {
                 this.metrics = metrics;

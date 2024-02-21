@@ -50,7 +50,7 @@ public class GetDoctorHBaseRegionServerResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class GetDoctorHBaseRegionServerResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID。
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,7 +134,7 @@ public class GetDoctorHBaseRegionServerResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -142,7 +142,7 @@ public class GetDoctorHBaseRegionServerResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -150,7 +150,7 @@ public class GetDoctorHBaseRegionServerResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -158,7 +158,7 @@ public class GetDoctorHBaseRegionServerResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -235,7 +235,7 @@ public class GetDoctorHBaseRegionServerResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -243,7 +243,7 @@ public class GetDoctorHBaseRegionServerResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -251,7 +251,7 @@ public class GetDoctorHBaseRegionServerResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -259,7 +259,7 @@ public class GetDoctorHBaseRegionServerResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -336,7 +336,7 @@ public class GetDoctorHBaseRegionServerResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -344,7 +344,7 @@ public class GetDoctorHBaseRegionServerResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -352,7 +352,7 @@ public class GetDoctorHBaseRegionServerResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -360,7 +360,7 @@ public class GetDoctorHBaseRegionServerResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -437,7 +437,7 @@ public class GetDoctorHBaseRegionServerResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -445,7 +445,7 @@ public class GetDoctorHBaseRegionServerResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -453,7 +453,7 @@ public class GetDoctorHBaseRegionServerResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -461,7 +461,7 @@ public class GetDoctorHBaseRegionServerResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -538,7 +538,7 @@ public class GetDoctorHBaseRegionServerResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -546,7 +546,7 @@ public class GetDoctorHBaseRegionServerResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -554,7 +554,7 @@ public class GetDoctorHBaseRegionServerResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -562,7 +562,7 @@ public class GetDoctorHBaseRegionServerResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -639,7 +639,7 @@ public class GetDoctorHBaseRegionServerResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -647,7 +647,7 @@ public class GetDoctorHBaseRegionServerResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -655,7 +655,7 @@ public class GetDoctorHBaseRegionServerResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -663,7 +663,7 @@ public class GetDoctorHBaseRegionServerResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -740,7 +740,7 @@ public class GetDoctorHBaseRegionServerResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -748,7 +748,7 @@ public class GetDoctorHBaseRegionServerResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -756,7 +756,7 @@ public class GetDoctorHBaseRegionServerResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -764,7 +764,7 @@ public class GetDoctorHBaseRegionServerResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -841,7 +841,7 @@ public class GetDoctorHBaseRegionServerResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -849,7 +849,7 @@ public class GetDoctorHBaseRegionServerResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -857,7 +857,7 @@ public class GetDoctorHBaseRegionServerResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -865,7 +865,7 @@ public class GetDoctorHBaseRegionServerResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -942,7 +942,7 @@ public class GetDoctorHBaseRegionServerResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -950,7 +950,7 @@ public class GetDoctorHBaseRegionServerResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -958,7 +958,7 @@ public class GetDoctorHBaseRegionServerResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -966,7 +966,7 @@ public class GetDoctorHBaseRegionServerResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -1043,7 +1043,7 @@ public class GetDoctorHBaseRegionServerResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1051,7 +1051,7 @@ public class GetDoctorHBaseRegionServerResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1059,7 +1059,7 @@ public class GetDoctorHBaseRegionServerResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -1067,7 +1067,7 @@ public class GetDoctorHBaseRegionServerResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -1216,7 +1216,7 @@ public class GetDoctorHBaseRegionServerResponseBody extends TeaModel {
             private TotalWriteRequest totalWriteRequest; 
 
             /**
-             * AvgGc.
+             * The average garbage collection (GC) duration.
              */
             public Builder avgGc(AvgGc avgGc) {
                 this.avgGc = avgGc;
@@ -1224,7 +1224,7 @@ public class GetDoctorHBaseRegionServerResponseBody extends TeaModel {
             }
 
             /**
-             * CacheRatio.
+             * The cache hit ratio.
              */
             public Builder cacheRatio(CacheRatio cacheRatio) {
                 this.cacheRatio = cacheRatio;
@@ -1232,7 +1232,7 @@ public class GetDoctorHBaseRegionServerResponseBody extends TeaModel {
             }
 
             /**
-             * DailyReadRequest.
+             * The number of daily read requests.
              */
             public Builder dailyReadRequest(DailyReadRequest dailyReadRequest) {
                 this.dailyReadRequest = dailyReadRequest;
@@ -1240,7 +1240,7 @@ public class GetDoctorHBaseRegionServerResponseBody extends TeaModel {
             }
 
             /**
-             * DailyReadRequestDayGrowthRatio.
+             * The day-to-day increment rate of the number of daily read requests.
              */
             public Builder dailyReadRequestDayGrowthRatio(DailyReadRequestDayGrowthRatio dailyReadRequestDayGrowthRatio) {
                 this.dailyReadRequestDayGrowthRatio = dailyReadRequestDayGrowthRatio;
@@ -1248,7 +1248,7 @@ public class GetDoctorHBaseRegionServerResponseBody extends TeaModel {
             }
 
             /**
-             * DailyWriteRequest.
+             * The number of daily write requests.
              */
             public Builder dailyWriteRequest(DailyWriteRequest dailyWriteRequest) {
                 this.dailyWriteRequest = dailyWriteRequest;
@@ -1256,7 +1256,7 @@ public class GetDoctorHBaseRegionServerResponseBody extends TeaModel {
             }
 
             /**
-             * DailyWriteRequestDayGrowthRatio.
+             * The day-to-day increment rate of the number of daily write requests.
              */
             public Builder dailyWriteRequestDayGrowthRatio(DailyWriteRequestDayGrowthRatio dailyWriteRequestDayGrowthRatio) {
                 this.dailyWriteRequestDayGrowthRatio = dailyWriteRequestDayGrowthRatio;
@@ -1264,7 +1264,7 @@ public class GetDoctorHBaseRegionServerResponseBody extends TeaModel {
             }
 
             /**
-             * RegionCount.
+             * The number of regions.
              */
             public Builder regionCount(RegionCount regionCount) {
                 this.regionCount = regionCount;
@@ -1272,7 +1272,7 @@ public class GetDoctorHBaseRegionServerResponseBody extends TeaModel {
             }
 
             /**
-             * TotalReadRequest.
+             * The cumulative number of read requests.
              */
             public Builder totalReadRequest(TotalReadRequest totalReadRequest) {
                 this.totalReadRequest = totalReadRequest;
@@ -1280,7 +1280,7 @@ public class GetDoctorHBaseRegionServerResponseBody extends TeaModel {
             }
 
             /**
-             * TotalRequest.
+             * The cumulative number of total requests.
              */
             public Builder totalRequest(TotalRequest totalRequest) {
                 this.totalRequest = totalRequest;
@@ -1288,7 +1288,7 @@ public class GetDoctorHBaseRegionServerResponseBody extends TeaModel {
             }
 
             /**
-             * TotalWriteRequest.
+             * The cumulative number of write requests.
              */
             public Builder totalWriteRequest(TotalWriteRequest totalWriteRequest) {
                 this.totalWriteRequest = totalWriteRequest;
@@ -1329,7 +1329,7 @@ public class GetDoctorHBaseRegionServerResponseBody extends TeaModel {
             private Metrics metrics; 
 
             /**
-             * Metrics.
+             * The metric information.
              */
             public Builder metrics(Metrics metrics) {
                 this.metrics = metrics;

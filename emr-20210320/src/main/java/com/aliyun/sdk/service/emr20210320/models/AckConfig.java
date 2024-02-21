@@ -31,7 +31,7 @@ public class AckConfig extends TeaModel {
     private Float limitCpu;
 
     @NameInMap("LimitMemory")
-    private String limitMemory;
+    private Float limitMemory;
 
     @NameInMap("MountHostCgroup")
     private Boolean mountHostCgroup;
@@ -46,7 +46,7 @@ public class AckConfig extends TeaModel {
     private Float requestCpu;
 
     @NameInMap("RequestMemory")
-    private String requestMemory;
+    private Float requestMemory;
 
     @NameInMap("Tolerations")
     private java.util.List < Toleration > tolerations;
@@ -120,7 +120,7 @@ public class AckConfig extends TeaModel {
     /**
      * @return limitMemory
      */
-    public String getLimitMemory() {
+    public Float getLimitMemory() {
         return this.limitMemory;
     }
 
@@ -155,7 +155,7 @@ public class AckConfig extends TeaModel {
     /**
      * @return requestMemory
      */
-    public String getRequestMemory() {
+    public Float getRequestMemory() {
         return this.requestMemory;
     }
 
@@ -173,12 +173,12 @@ public class AckConfig extends TeaModel {
         private Integer dataDiskSize; 
         private String dataDiskStorageClass; 
         private Float limitCpu; 
-        private String limitMemory; 
+        private Float limitMemory; 
         private Boolean mountHostCgroup; 
         private String namespace; 
         private java.util.List < Tag > nodeSelectors; 
         private Float requestCpu; 
-        private String requestMemory; 
+        private Float requestMemory; 
         private java.util.List < Toleration > tolerations; 
 
         /**
@@ -232,7 +232,7 @@ public class AckConfig extends TeaModel {
         /**
          * Pod的内存限制值。
          */
-        public Builder limitMemory(String limitMemory) {
+        public Builder limitMemory(Float limitMemory) {
             this.limitMemory = limitMemory;
             return this;
         }
@@ -272,7 +272,7 @@ public class AckConfig extends TeaModel {
         /**
          * Pod的内存请求值。
          */
-        public Builder requestMemory(String requestMemory) {
+        public Builder requestMemory(Float requestMemory) {
             this.requestMemory = requestMemory;
             return this;
         }

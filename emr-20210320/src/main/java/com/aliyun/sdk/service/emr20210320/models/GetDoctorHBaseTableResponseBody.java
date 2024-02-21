@@ -50,7 +50,7 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -178,7 +178,7 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * ReadRequestUnbalanceSuggestion.
+             * The description of read imbalance.
              */
             public Builder readRequestUnbalanceSuggestion(String readRequestUnbalanceSuggestion) {
                 this.readRequestUnbalanceSuggestion = readRequestUnbalanceSuggestion;
@@ -194,7 +194,7 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * RequestUnbalanceSuggestion.
+             * The description of read/write imbalance.
              */
             public Builder requestUnbalanceSuggestion(String requestUnbalanceSuggestion) {
                 this.requestUnbalanceSuggestion = requestUnbalanceSuggestion;
@@ -218,7 +218,7 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             }
 
             /**
-             * WriteRequestUnbalanceSuggestion.
+             * The description of write imbalance.
              */
             public Builder writeRequestUnbalanceSuggestion(String writeRequestUnbalanceSuggestion) {
                 this.writeRequestUnbalanceSuggestion = writeRequestUnbalanceSuggestion;
@@ -3196,7 +3196,7 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
             private Metrics metrics; 
 
             /**
-             * Analysis.
+             * The diagnosis result.
              */
             public Builder analysis(Analysis analysis) {
                 this.analysis = analysis;

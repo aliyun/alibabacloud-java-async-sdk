@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ComponentInstanceSelector</p>
  */
 public class ComponentInstanceSelector extends TeaModel {
+    @NameInMap("ActionScope")
+    @Deprecated
+    private String actionScope;
+
     @NameInMap("ApplicationName")
     private String applicationName;
 
@@ -22,9 +26,11 @@ public class ComponentInstanceSelector extends TeaModel {
     private java.util.List < Components> components;
 
     @NameInMap("RunActionScope")
+    @Validation(required = true)
     private String runActionScope;
 
     private ComponentInstanceSelector(Builder builder) {
+        this.actionScope = builder.actionScope;
         this.applicationName = builder.applicationName;
         this.componentInstances = builder.componentInstances;
         this.components = builder.components;
@@ -37,6 +43,13 @@ public class ComponentInstanceSelector extends TeaModel {
 
     public static ComponentInstanceSelector create() {
         return builder().build();
+    }
+
+    /**
+     * @return actionScope
+     */
+    public String getActionScope() {
+        return this.actionScope;
     }
 
     /**
@@ -68,10 +81,19 @@ public class ComponentInstanceSelector extends TeaModel {
     }
 
     public static final class Builder {
+        private String actionScope; 
         private String applicationName; 
         private java.util.List < ComponentInstances> componentInstances; 
         private java.util.List < Components> components; 
         private String runActionScope; 
+
+        /**
+         * ActionScope.
+         */
+        public Builder actionScope(String actionScope) {
+            this.actionScope = actionScope;
+            return this;
+        }
 
         /**
          * 应用名称。
@@ -100,7 +122,11 @@ public class ComponentInstanceSelector extends TeaModel {
         }
 
         /**
-         * 执行范围。
+         * 动作执行范围。取值范围：
+         * <p>
+         * - APPLICATION：应用级别。
+         * - COMPONENT：组件级别。
+         * - COMPONENT_INSTANCE：组件实例级别。
          */
         public Builder runActionScope(String runActionScope) {
             this.runActionScope = runActionScope;

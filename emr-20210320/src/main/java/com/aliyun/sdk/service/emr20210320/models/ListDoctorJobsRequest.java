@@ -210,7 +210,7 @@ public class ListDoctorJobsRequest extends Request {
         } 
 
         /**
-         * app ID数组
+         * The IDs of the jobs that are submitted to YARN.
          */
         public Builder appIds(java.util.List < String > appIds) {
             this.putQueryParameter("AppIds", appIds);
@@ -219,7 +219,7 @@ public class ListDoctorJobsRequest extends Request {
         }
 
         /**
-         * 集群ID。
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -228,7 +228,7 @@ public class ListDoctorJobsRequest extends Request {
         }
 
         /**
-         * 结束range
+         * The range of end time. You can filter jobs whose end time falls within the specified time range.
          */
         public Builder endRange(EndRange endRange) {
             this.putQueryParameter("EndRange", endRange);
@@ -237,7 +237,7 @@ public class ListDoctorJobsRequest extends Request {
         }
 
         /**
-         * 一次获取的最大记录数。取值范围：1~100。
+         * The maximum number of entries to return on each page.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -246,7 +246,7 @@ public class ListDoctorJobsRequest extends Request {
         }
 
         /**
-         * 标记当前开始读取的位置，置空表示从头开始。
+         * The pagination token that is used in the request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -255,7 +255,11 @@ public class ListDoctorJobsRequest extends Request {
         }
 
         /**
-         * 排序字段
+         * The field that you use to sort the query results. Valid values:
+         * <p>
+         * 
+         * *   vcoreSeconds: the aggregated number of vCPUs that are allocated to the job multiplied by the number of seconds the job has been running
+         * *   memSeconds: the aggregated amount of memory that is allocated to the job multiplied by the number of seconds the job has been running
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -264,7 +268,11 @@ public class ListDoctorJobsRequest extends Request {
         }
 
         /**
-         * 排序类型
+         * The order in which you want to sort the query results. Valid values:
+         * <p>
+         * 
+         * *   ASC: the ascending order
+         * *   DESC: the descending order
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -273,7 +281,7 @@ public class ListDoctorJobsRequest extends Request {
         }
 
         /**
-         * Queues.
+         * The YARN queues to which the jobs are submitted.
          */
         public Builder queues(java.util.List < String > queues) {
             this.putQueryParameter("Queues", queues);
@@ -282,7 +290,7 @@ public class ListDoctorJobsRequest extends Request {
         }
 
         /**
-         * 区域ID。
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -291,7 +299,7 @@ public class ListDoctorJobsRequest extends Request {
         }
 
         /**
-         * 开始range
+         * The range of start time. You can filter jobs whose start time falls within the specified time range.
          */
         public Builder startRange(StartRange startRange) {
             this.putQueryParameter("StartRange", startRange);
@@ -300,7 +308,7 @@ public class ListDoctorJobsRequest extends Request {
         }
 
         /**
-         * Types.
+         * The YARN engines to which the jobs are submitted.
          */
         public Builder types(java.util.List < String > types) {
             this.putQueryParameter("Types", types);
@@ -309,7 +317,7 @@ public class ListDoctorJobsRequest extends Request {
         }
 
         /**
-         * Users.
+         * The users who submit the jobs.
          */
         public Builder users(java.util.List < String > users) {
             this.putQueryParameter("Users", users);
@@ -363,7 +371,7 @@ public class ListDoctorJobsRequest extends Request {
             private Long startTime; 
 
             /**
-             * EndTime.
+             * The end of the time range during which jobs ended. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. Unit: milliseconds.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -371,7 +379,7 @@ public class ListDoctorJobsRequest extends Request {
             }
 
             /**
-             * StartTime.
+             * The beginning of the time range during which jobs ended. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. Unit: milliseconds.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -424,7 +432,7 @@ public class ListDoctorJobsRequest extends Request {
             private Long startTime; 
 
             /**
-             * EndTime.
+             * The end of the time range during which jobs were submitted. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. Unit: milliseconds.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -432,7 +440,7 @@ public class ListDoctorJobsRequest extends Request {
             }
 
             /**
-             * StartTime.
+             * The beginning of the time range during which jobs were submitted. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. Unit: milliseconds.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;

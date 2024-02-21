@@ -118,7 +118,7 @@ public class ListApplicationConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of pages.
+         * The total number of pages returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -326,7 +326,7 @@ public class ListApplicationConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the configuration item.
+             * The key of the configuration item.
              */
             public Builder configItemKey(String configItemKey) {
                 this.configItemKey = configItemKey;
@@ -342,7 +342,7 @@ public class ListApplicationConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the application was created.
+             * The creation time.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -382,7 +382,7 @@ public class ListApplicationConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node group.
+             * The node group ID.
              */
             public Builder nodeGroupId(String nodeGroupId) {
                 this.nodeGroupId = nodeGroupId;
@@ -398,7 +398,7 @@ public class ListApplicationConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the application was updated.
+             * The update time.
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

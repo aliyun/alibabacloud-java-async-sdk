@@ -86,7 +86,7 @@ public class ListDoctorReportsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Data.
+         * The reports.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -94,7 +94,7 @@ public class ListDoctorReportsResponseBody extends TeaModel {
         }
 
         /**
-         * 本次请求所返回的最大记录条数。
+         * The maximum number of entries returned.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -102,7 +102,7 @@ public class ListDoctorReportsResponseBody extends TeaModel {
         }
 
         /**
-         * 返回读取到的数据位置，空代表数据已经读取完毕。
+         * A pagination token.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -110,7 +110,7 @@ public class ListDoctorReportsResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID。
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListDoctorReportsResponseBody extends TeaModel {
         }
 
         /**
-         * 本次请求条件下的数据总量。
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -182,7 +182,7 @@ public class ListDoctorReportsResponseBody extends TeaModel {
             private String summary; 
 
             /**
-             * Score.
+             * The score.
              */
             public Builder score(Integer score) {
                 this.score = score;
@@ -190,7 +190,7 @@ public class ListDoctorReportsResponseBody extends TeaModel {
             }
 
             /**
-             * Suggestion.
+             * The optimization suggestion.
              */
             public Builder suggestion(String suggestion) {
                 this.suggestion = suggestion;
@@ -198,7 +198,7 @@ public class ListDoctorReportsResponseBody extends TeaModel {
             }
 
             /**
-             * Summary.
+             * The summary of the report.
              */
             public Builder summary(String summary) {
                 this.summary = summary;
@@ -263,7 +263,58 @@ public class ListDoctorReportsResponseBody extends TeaModel {
             private SummaryReport summaryReport; 
 
             /**
-             * ComponentTypes.
+             * The component types.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   compute
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   hive
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   hdfs
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   yarn
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   oss
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   hbase
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder componentTypes(java.util.List < String > componentTypes) {
                 this.componentTypes = componentTypes;
@@ -271,7 +322,7 @@ public class ListDoctorReportsResponseBody extends TeaModel {
             }
 
             /**
-             * DateTime.
+             * The date on which the report was generated.
              */
             public Builder dateTime(String dateTime) {
                 this.dateTime = dateTime;
@@ -279,7 +330,7 @@ public class ListDoctorReportsResponseBody extends TeaModel {
             }
 
             /**
-             * SummaryReport.
+             * The summary of the report.
              */
             public Builder summaryReport(SummaryReport summaryReport) {
                 this.summaryReport = summaryReport;

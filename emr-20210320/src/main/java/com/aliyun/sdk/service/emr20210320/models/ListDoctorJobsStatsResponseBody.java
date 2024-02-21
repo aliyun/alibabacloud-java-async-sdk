@@ -86,7 +86,7 @@ public class ListDoctorJobsStatsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Data.
+         * The summary of job information.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -94,7 +94,7 @@ public class ListDoctorJobsStatsResponseBody extends TeaModel {
         }
 
         /**
-         * 本次请求所返回的最大记录条数。
+         * The maximum number of entries returned.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -102,7 +102,7 @@ public class ListDoctorJobsStatsResponseBody extends TeaModel {
         }
 
         /**
-         * 返回读取到的数据位置，空代表数据已经读取完毕。
+         * A pagination token.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -110,7 +110,7 @@ public class ListDoctorJobsStatsResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID。
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListDoctorJobsStatsResponseBody extends TeaModel {
         }
 
         /**
-         * 本次请求条件下的数据总量。
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -194,7 +194,7 @@ public class ListDoctorJobsStatsResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -202,7 +202,7 @@ public class ListDoctorJobsStatsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -210,7 +210,7 @@ public class ListDoctorJobsStatsResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -218,7 +218,7 @@ public class ListDoctorJobsStatsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -295,7 +295,7 @@ public class ListDoctorJobsStatsResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -303,7 +303,7 @@ public class ListDoctorJobsStatsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -311,7 +311,7 @@ public class ListDoctorJobsStatsResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -319,7 +319,7 @@ public class ListDoctorJobsStatsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -396,7 +396,7 @@ public class ListDoctorJobsStatsResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -404,7 +404,7 @@ public class ListDoctorJobsStatsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -412,7 +412,7 @@ public class ListDoctorJobsStatsResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -420,7 +420,7 @@ public class ListDoctorJobsStatsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -521,7 +521,7 @@ public class ListDoctorJobsStatsResponseBody extends TeaModel {
             private VcoreSeconds vcoreSeconds; 
 
             /**
-             * AppsCount.
+             * The total number of jobs.
              */
             public Builder appsCount(AppsCount appsCount) {
                 this.appsCount = appsCount;
@@ -529,7 +529,7 @@ public class ListDoctorJobsStatsResponseBody extends TeaModel {
             }
 
             /**
-             * MemSeconds.
+             * The aggregated amount of memory that is allocated to the job multiplied by the number of seconds the job has been running.
              */
             public Builder memSeconds(MemSeconds memSeconds) {
                 this.memSeconds = memSeconds;
@@ -537,7 +537,7 @@ public class ListDoctorJobsStatsResponseBody extends TeaModel {
             }
 
             /**
-             * Queue.
+             * The YARN queue to which the job was submitted.
              */
             public Builder queue(String queue) {
                 this.queue = queue;
@@ -545,7 +545,7 @@ public class ListDoctorJobsStatsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the compute engine.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -553,7 +553,7 @@ public class ListDoctorJobsStatsResponseBody extends TeaModel {
             }
 
             /**
-             * User.
+             * The username that is used to submit the job.
              */
             public Builder user(String user) {
                 this.user = user;
@@ -561,7 +561,7 @@ public class ListDoctorJobsStatsResponseBody extends TeaModel {
             }
 
             /**
-             * VcoreSeconds.
+             * The aggregated number of vCPUs that are allocated to the job multiplied by the number of seconds the job has been running.
              */
             public Builder vcoreSeconds(VcoreSeconds vcoreSeconds) {
                 this.vcoreSeconds = vcoreSeconds;

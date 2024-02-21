@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.emr20210320;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.emr20210320.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -34,6 +35,14 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteClusterResponse> deleteCluster(DeleteClusterRequest request);
 
+    CompletableFuture<GetApmDataResponse> getApmData(GetApmDataRequest request);
+
+    /**
+      * 查询应用详情。
+      *
+     */
+    CompletableFuture<GetApplicationResponse> getApplication(GetApplicationRequest request);
+
     /**
       * 获取弹性伸缩活动详情。
       *
@@ -46,10 +55,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<GetAutoScalingPolicyResponse> getAutoScalingPolicy(GetAutoScalingPolicyRequest request);
 
-    /**
-      * 调用GetCluster获取集群详情。
-      *
-     */
     CompletableFuture<GetClusterResponse> getCluster(GetClusterRequest request);
 
     /**
@@ -154,11 +159,9 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<IncreaseNodesResponse> increaseNodes(IncreaseNodesRequest request);
 
-    /**
-      * 加入资源组。
-      *
-     */
     CompletableFuture<JoinResourceGroupResponse> joinResourceGroup(JoinResourceGroupRequest request);
+
+    CompletableFuture<ListApmMetadataResponse> listApmMetadata(ListApmMetadataRequest request);
 
     /**
       * 查询应用配置。
@@ -179,6 +182,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListAutoScalingActivitiesResponse> listAutoScalingActivities(ListAutoScalingActivitiesRequest request);
 
     CompletableFuture<ListClustersResponse> listClusters(ListClustersRequest request);
+
+    /**
+      * 查询组件实例列表。
+      *
+     */
+    CompletableFuture<ListComponentInstancesResponse> listComponentInstances(ListComponentInstancesRequest request);
+
+    /**
+      * 查询组件列表。
+      *
+     */
+    CompletableFuture<ListComponentsResponse> listComponents(ListComponentsRequest request);
 
     /**
       * list all doctor analysis apps
@@ -248,16 +263,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListInstanceTypesResponse> listInstanceTypes(ListInstanceTypesRequest request);
 
-    /**
-      * 查询节点组。
-      *
-     */
     CompletableFuture<ListNodeGroupsResponse> listNodeGroups(ListNodeGroupsRequest request);
 
-    /**
-      * 查询节点。
-      *
-     */
     CompletableFuture<ListNodesResponse> listNodes(ListNodesRequest request);
 
     /**
@@ -269,17 +276,17 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
 
     /**
-      * 设置弹性伸缩规则。
+      * You can call this operation to configure auto scaling policies.
       *
      */
     CompletableFuture<PutAutoScalingPolicyResponse> putAutoScalingPolicy(PutAutoScalingPolicyRequest request);
 
+    CompletableFuture<QueryApmComponentsResponse> queryApmComponents(QueryApmComponentsRequest request);
+
+    CompletableFuture<QueryApmGrafanaDataResponse> queryApmGrafanaData(QueryApmGrafanaDataRequest request);
+
     CompletableFuture<RemoveAutoScalingPolicyResponse> removeAutoScalingPolicy(RemoveAutoScalingPolicyRequest request);
 
-    /**
-      * 执行应用操作。
-      *
-     */
     CompletableFuture<RunApplicationActionResponse> runApplicationAction(RunApplicationActionRequest request);
 
     CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);

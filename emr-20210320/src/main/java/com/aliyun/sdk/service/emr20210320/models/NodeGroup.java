@@ -63,6 +63,9 @@ public class NodeGroup extends TeaModel {
     @NameInMap("StateChangeReason")
     private NodeGroupStateChangeReason stateChangeReason;
 
+    @NameInMap("Status")
+    private String status;
+
     @NameInMap("SystemDisk")
     private SystemDisk systemDisk;
 
@@ -93,6 +96,7 @@ public class NodeGroup extends TeaModel {
         this.spotInstanceRemedy = builder.spotInstanceRemedy;
         this.spotStrategy = builder.spotStrategy;
         this.stateChangeReason = builder.stateChangeReason;
+        this.status = builder.status;
         this.systemDisk = builder.systemDisk;
         this.vSwitchIds = builder.vSwitchIds;
         this.withPublicIp = builder.withPublicIp;
@@ -227,6 +231,13 @@ public class NodeGroup extends TeaModel {
     }
 
     /**
+     * @return status
+     */
+    public String getStatus() {
+        return this.status;
+    }
+
+    /**
      * @return systemDisk
      */
     public SystemDisk getSystemDisk() {
@@ -272,6 +283,7 @@ public class NodeGroup extends TeaModel {
         private Boolean spotInstanceRemedy; 
         private String spotStrategy; 
         private NodeGroupStateChangeReason stateChangeReason; 
+        private String status; 
         private SystemDisk systemDisk; 
         private java.util.List < String > vSwitchIds; 
         private Boolean withPublicIp; 
@@ -433,6 +445,14 @@ public class NodeGroup extends TeaModel {
          */
         public Builder stateChangeReason(NodeGroupStateChangeReason stateChangeReason) {
             this.stateChangeReason = stateChangeReason;
+            return this;
+        }
+
+        /**
+         * 节点组状态，NodeGroupState别名。
+         */
+        public Builder status(String status) {
+            this.status = status;
             return this;
         }
 

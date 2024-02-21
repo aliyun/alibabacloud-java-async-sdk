@@ -102,7 +102,7 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * ReleaseVersions.
+         * The major EMR versions.
          */
         public Builder releaseVersions(java.util.List < ReleaseVersions> releaseVersions) {
             this.releaseVersions = releaseVersions;
@@ -182,10 +182,7 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
             private String series; 
 
             /**
-             * IaaS类型。取值范围：
-             * <p>
-             * - ECS：基于ECS构建。
-             * - K8S：基于K8S构建。
+             * The IaaS type.
              */
             public Builder iaasType(String iaasType) {
                 this.iaasType = iaasType;
@@ -193,7 +190,7 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * EMR发行版。
+             * The EMR version.
              */
             public Builder releaseVersion(String releaseVersion) {
                 this.releaseVersion = releaseVersion;
@@ -201,7 +198,7 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * 版本序列。
+             * The version series.
              */
             public Builder series(String series) {
                 this.series = series;

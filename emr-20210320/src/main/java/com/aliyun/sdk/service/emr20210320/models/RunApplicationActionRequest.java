@@ -204,7 +204,7 @@ public class RunApplicationActionRequest extends Request {
         }
 
         /**
-         * The name of the operation.
+         * The operation object.
          */
         public Builder componentInstanceSelector(ComponentInstanceSelector componentInstanceSelector) {
             this.putQueryParameter("ComponentInstanceSelector", componentInstanceSelector);

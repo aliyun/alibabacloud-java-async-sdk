@@ -3815,7 +3815,7 @@ public class GetDoctorHDFSDirectoryResponseBody extends TeaModel {
             private WarmDataSizeDayGrowthRatio warmDataSizeDayGrowthRatio; 
 
             /**
-             * The daily increment of the amount of cold data. Cold data refers to data that is not accessed for more than 30 days but is accessed in 90 days.
+             * The daily increment of the amount of cold data. Cold data refers to data that is not accessed for more than 30 days but is accessed in previous 90 days.
              */
             public Builder coldDataDayGrowthSize(ColdDataDayGrowthSize coldDataDayGrowthSize) {
                 this.coldDataDayGrowthSize = coldDataDayGrowthSize;
@@ -3823,7 +3823,7 @@ public class GetDoctorHDFSDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of cold data. Cold data refers to data that is not accessed for more than 30 days but is accessed in 90 days.
+             * The amount of cold data. Cold data refers to data that is not accessed for more than 30 days but is accessed in previous 90 days.
              */
             public Builder coldDataSize(ColdDataSize coldDataSize) {
                 this.coldDataSize = coldDataSize;
@@ -3831,7 +3831,7 @@ public class GetDoctorHDFSDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * The day-to-day growth rate of the amount of cold data. Cold data refers to data that is not accessed for more than 30 days but is accessed in 90 days.
+             * The day-to-day growth rate of the amount of cold data. Cold data refers to data that is not accessed for more than 30 days but is accessed in previous 90 days.
              */
             public Builder coldDataSizeDayGrowthRatio(ColdDataSizeDayGrowthRatio coldDataSizeDayGrowthRatio) {
                 this.coldDataSizeDayGrowthRatio = coldDataSizeDayGrowthRatio;
@@ -3887,7 +3887,7 @@ public class GetDoctorHDFSDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * The daily increment of the amount of hot data. Hot data refers to data that is accessed in recent seven days.
+             * The daily increment of the amount of hot data. Hot data refers to data that is accessed in previous seven days.
              */
             public Builder hotDataDayGrowthSize(HotDataDayGrowthSize hotDataDayGrowthSize) {
                 this.hotDataDayGrowthSize = hotDataDayGrowthSize;
@@ -3895,7 +3895,7 @@ public class GetDoctorHDFSDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of hot data. Hot data refers to data that is accessed in recent seven days.
+             * The amount of hot data. Hot data refers to data that is accessed in previous seven days.
              */
             public Builder hotDataSize(HotDataSize hotDataSize) {
                 this.hotDataSize = hotDataSize;
@@ -3903,7 +3903,7 @@ public class GetDoctorHDFSDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * The day-to-day growth rate of the amount of hot data. Hot data refers to data that is accessed in recent seven days.
+             * The day-to-day growth rate of the amount of hot data. Hot data refers to data that is accessed in previous seven days.
              */
             public Builder hotDataSizeDayGrowthRatio(HotDataSizeDayGrowthRatio hotDataSizeDayGrowthRatio) {
                 this.hotDataSizeDayGrowthRatio = hotDataSizeDayGrowthRatio;
@@ -4007,7 +4007,7 @@ public class GetDoctorHDFSDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * The daily incremental of the total data volume.
+             * The daily incremental of the total amount of data.
              */
             public Builder totalDataDayGrowthSize(TotalDataDayGrowthSize totalDataDayGrowthSize) {
                 this.totalDataDayGrowthSize = totalDataDayGrowthSize;
@@ -4055,7 +4055,7 @@ public class GetDoctorHDFSDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * The daily increment of the amount of warm data. Warm data refers to data that is not accessed for more than 7 days but is accessed in 30 days.
+             * The daily increment of the amount of warm data. Warm data refers to data that is not accessed for more than 7 days but is accessed in previous 30 days.
              */
             public Builder warmDataDayGrowthSize(WarmDataDayGrowthSize warmDataDayGrowthSize) {
                 this.warmDataDayGrowthSize = warmDataDayGrowthSize;
@@ -4063,7 +4063,7 @@ public class GetDoctorHDFSDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of warm data. Warm data refers to data that is not accessed for more than 7 days but is accessed in 30 days.
+             * The amount of warm data. Warm data refers to data that is not accessed for more than 7 days but is accessed in previous 30 days.
              */
             public Builder warmDataSize(WarmDataSize warmDataSize) {
                 this.warmDataSize = warmDataSize;
@@ -4071,7 +4071,7 @@ public class GetDoctorHDFSDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * The day-to-day growth rate of the amount of warm data. Warm data refers to data that is not accessed for more than 7 days but is accessed in 30 days.
+             * The day-to-day growth rate of the amount of warm data. Warm data refers to data that is not accessed for more than 7 days but is accessed in previous 30 days.
              */
             public Builder warmDataSizeDayGrowthRatio(WarmDataSizeDayGrowthRatio warmDataSizeDayGrowthRatio) {
                 this.warmDataSizeDayGrowthRatio = warmDataSizeDayGrowthRatio;

@@ -100,7 +100,7 @@ public class GetDoctorHBaseRegionServerRequest extends Request {
         } 
 
         /**
-         * 集群ID。
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -109,7 +109,7 @@ public class GetDoctorHBaseRegionServerRequest extends Request {
         }
 
         /**
-         * DateTime.
+         * The date.
          */
         public Builder dateTime(String dateTime) {
             this.putQueryParameter("DateTime", dateTime);
@@ -118,7 +118,7 @@ public class GetDoctorHBaseRegionServerRequest extends Request {
         }
 
         /**
-         * 区域ID。
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -127,7 +127,7 @@ public class GetDoctorHBaseRegionServerRequest extends Request {
         }
 
         /**
-         * RegionServerHost.
+         * The host of the region server.
          */
         public Builder regionServerHost(String regionServerHost) {
             this.putQueryParameter("RegionServerHost", regionServerHost);

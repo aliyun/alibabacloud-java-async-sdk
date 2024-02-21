@@ -155,7 +155,7 @@ public class ListDoctorHBaseRegionServersRequest extends Request {
         } 
 
         /**
-         * 集群ID。
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -164,7 +164,7 @@ public class ListDoctorHBaseRegionServersRequest extends Request {
         }
 
         /**
-         * DateTime.
+         * The query date.
          */
         public Builder dateTime(String dateTime) {
             this.putQueryParameter("DateTime", dateTime);
@@ -173,7 +173,7 @@ public class ListDoctorHBaseRegionServersRequest extends Request {
         }
 
         /**
-         * 一次获取的最大记录数。取值范围：1~100。
+         * The maximum number of entries to return on each page.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -182,7 +182,7 @@ public class ListDoctorHBaseRegionServersRequest extends Request {
         }
 
         /**
-         * 标记当前开始读取的位置，置空表示从头开始。
+         * The pagination token that is used in the request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -191,7 +191,10 @@ public class ListDoctorHBaseRegionServersRequest extends Request {
         }
 
         /**
-         * OrderBy.
+         * The field that you use to sort the query results. Valid value:
+         * <p>
+         * 
+         * *   regionCount: the number of regions.
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -200,7 +203,11 @@ public class ListDoctorHBaseRegionServersRequest extends Request {
         }
 
         /**
-         * OrderType.
+         * The order in which you want to sort the query results. Valid value:
+         * <p>
+         * 
+         * *   ASC: in ascending order
+         * *   DESC: in descending order
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -209,7 +216,7 @@ public class ListDoctorHBaseRegionServersRequest extends Request {
         }
 
         /**
-         * 区域ID。
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -218,7 +225,7 @@ public class ListDoctorHBaseRegionServersRequest extends Request {
         }
 
         /**
-         * RegionServerHosts.
+         * The RegionServer hosts.
          */
         public Builder regionServerHosts(java.util.List < String > regionServerHosts) {
             this.putQueryParameter("RegionServerHosts", regionServerHosts);

@@ -85,7 +85,7 @@ public class GetDoctorHBaseClusterRequest extends Request {
         } 
 
         /**
-         * 集群ID。
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -94,7 +94,7 @@ public class GetDoctorHBaseClusterRequest extends Request {
         }
 
         /**
-         * DateTime.
+         * The date.
          */
         public Builder dateTime(String dateTime) {
             this.putQueryParameter("DateTime", dateTime);
@@ -103,7 +103,7 @@ public class GetDoctorHBaseClusterRequest extends Request {
         }
 
         /**
-         * 区域ID。
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

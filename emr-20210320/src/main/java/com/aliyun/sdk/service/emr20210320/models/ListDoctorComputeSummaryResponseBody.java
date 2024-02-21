@@ -86,7 +86,7 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Data.
+         * The details of resource usage.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -94,7 +94,7 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * 本次请求所返回的最大记录条数。
+         * The maximum number of entries that are returned.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -102,7 +102,7 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * 返回读取到的数据位置，空代表数据已经读取完毕。
+         * A pagination token.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -110,7 +110,7 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID。
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * 本次请求条件下的数据总量。
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -218,7 +218,7 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
             private Long unhealthyJobCount; 
 
             /**
-             * HealthyJobCount.
+             * The total number of healthy jobs.
              */
             public Builder healthyJobCount(Long healthyJobCount) {
                 this.healthyJobCount = healthyJobCount;
@@ -226,7 +226,7 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * NeedAttentionJobCount.
+             * The total number of jobs that require attention.
              */
             public Builder needAttentionJobCount(Long needAttentionJobCount) {
                 this.needAttentionJobCount = needAttentionJobCount;
@@ -234,7 +234,7 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Score.
+             * The score for jobs.
              */
             public Builder score(Integer score) {
                 this.score = score;
@@ -242,7 +242,7 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * ScoreDayGrowthRatio.
+             * The day-to-day growth rate of the score for jobs.
              */
             public Builder scoreDayGrowthRatio(Float scoreDayGrowthRatio) {
                 this.scoreDayGrowthRatio = scoreDayGrowthRatio;
@@ -250,7 +250,7 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * SubHealthyJobCount.
+             * The total number of sub-healthy jobs.
              */
             public Builder subHealthyJobCount(Long subHealthyJobCount) {
                 this.subHealthyJobCount = subHealthyJobCount;
@@ -258,7 +258,7 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * UnhealthyJobCount.
+             * The total number of unhealthy jobs.
              */
             public Builder unhealthyJobCount(Long unhealthyJobCount) {
                 this.unhealthyJobCount = unhealthyJobCount;
@@ -335,7 +335,7 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -343,7 +343,7 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -351,7 +351,7 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -359,7 +359,7 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -436,7 +436,7 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -444,7 +444,7 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -452,7 +452,7 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -460,7 +460,7 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -537,7 +537,7 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -545,7 +545,7 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -553,7 +553,7 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -561,7 +561,7 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -638,7 +638,7 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -646,7 +646,7 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -654,7 +654,7 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -662,7 +662,7 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -739,7 +739,7 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -747,7 +747,7 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -755,7 +755,7 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -763,7 +763,7 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -840,7 +840,7 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -848,7 +848,7 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -856,7 +856,7 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -864,7 +864,7 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -941,7 +941,7 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -949,7 +949,7 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -957,7 +957,7 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -965,7 +965,7 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -1042,7 +1042,7 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1050,7 +1050,7 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1058,7 +1058,7 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -1066,7 +1066,7 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -1191,7 +1191,7 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
             private WriteSize writeSize; 
 
             /**
-             * MemSeconds.
+             * The total memory consumption over time in seconds.
              */
             public Builder memSeconds(MemSeconds memSeconds) {
                 this.memSeconds = memSeconds;
@@ -1199,7 +1199,7 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * MemSecondsDayGrowthRatio.
+             * The day-to-day growth rate of the total memory consumption over time in seconds.
              */
             public Builder memSecondsDayGrowthRatio(MemSecondsDayGrowthRatio memSecondsDayGrowthRatio) {
                 this.memSecondsDayGrowthRatio = memSecondsDayGrowthRatio;
@@ -1207,7 +1207,7 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * MemUtilization.
+             * The average memory usage.
              */
             public Builder memUtilization(MemUtilization memUtilization) {
                 this.memUtilization = memUtilization;
@@ -1215,7 +1215,7 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * ReadSize.
+             * The total amount of data read from the file system.
              */
             public Builder readSize(ReadSize readSize) {
                 this.readSize = readSize;
@@ -1223,7 +1223,7 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * VcoreSeconds.
+             * The total CPU consumption over time in seconds.
              */
             public Builder vcoreSeconds(VcoreSeconds vcoreSeconds) {
                 this.vcoreSeconds = vcoreSeconds;
@@ -1231,7 +1231,7 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * VcoreSecondsDayGrowthRatio.
+             * The day-to-day growth rate of the total CPU consumption over time in seconds.
              */
             public Builder vcoreSecondsDayGrowthRatio(VcoreSecondsDayGrowthRatio vcoreSecondsDayGrowthRatio) {
                 this.vcoreSecondsDayGrowthRatio = vcoreSecondsDayGrowthRatio;
@@ -1239,7 +1239,7 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * VcoreUtilization.
+             * The average CPU utilization. The meaning is the same as the %CPU parameter in the output of the top command in Linux.
              */
             public Builder vcoreUtilization(VcoreUtilization vcoreUtilization) {
                 this.vcoreUtilization = vcoreUtilization;
@@ -1247,7 +1247,7 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * WriteSize.
+             * The total amount of data written to the file system.
              */
             public Builder writeSize(WriteSize writeSize) {
                 this.writeSize = writeSize;
@@ -1312,7 +1312,7 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
             private Metrics metrics; 
 
             /**
-             * Analysis.
+             * The resource analysis results.
              */
             public Builder analysis(Analysis analysis) {
                 this.analysis = analysis;
@@ -1320,7 +1320,7 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * ComponentName.
+             * The name of the resource whose details are obtained based on the value of ComponentTypes. For example, if the value of ComponentTypes is Queue, the value of this parameter is a queue, such as DW.
              */
             public Builder componentName(String componentName) {
                 this.componentName = componentName;
@@ -1328,7 +1328,7 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Metrics.
+             * The metric information.
              */
             public Builder metrics(Metrics metrics) {
                 this.metrics = metrics;

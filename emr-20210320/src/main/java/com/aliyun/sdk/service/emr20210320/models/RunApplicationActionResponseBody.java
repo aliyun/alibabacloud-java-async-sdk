@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RunApplicationActionResponseBody</p>
  */
 public class RunApplicationActionResponseBody extends TeaModel {
+    @NameInMap("AbnInstances")
+    private java.util.List < AbnInstances> abnInstances;
+
     @NameInMap("OperationId")
     private String operationId;
 
@@ -19,6 +22,7 @@ public class RunApplicationActionResponseBody extends TeaModel {
     private String requestId;
 
     private RunApplicationActionResponseBody(Builder builder) {
+        this.abnInstances = builder.abnInstances;
         this.operationId = builder.operationId;
         this.requestId = builder.requestId;
     }
@@ -29,6 +33,13 @@ public class RunApplicationActionResponseBody extends TeaModel {
 
     public static RunApplicationActionResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return abnInstances
+     */
+    public java.util.List < AbnInstances> getAbnInstances() {
+        return this.abnInstances;
     }
 
     /**
@@ -46,8 +57,17 @@ public class RunApplicationActionResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private java.util.List < AbnInstances> abnInstances; 
         private String operationId; 
         private String requestId; 
+
+        /**
+         * The abnormal nodes.
+         */
+        public Builder abnInstances(java.util.List < AbnInstances> abnInstances) {
+            this.abnInstances = abnInstances;
+            return this;
+        }
 
         /**
          * The operation ID.
@@ -71,4 +91,65 @@ public class RunApplicationActionResponseBody extends TeaModel {
 
     } 
 
+    public static class AbnInstances extends TeaModel {
+        @NameInMap("NodeId")
+        private String nodeId;
+
+        @NameInMap("NodeName")
+        private String nodeName;
+
+        private AbnInstances(Builder builder) {
+            this.nodeId = builder.nodeId;
+            this.nodeName = builder.nodeName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AbnInstances create() {
+            return builder().build();
+        }
+
+        /**
+         * @return nodeId
+         */
+        public String getNodeId() {
+            return this.nodeId;
+        }
+
+        /**
+         * @return nodeName
+         */
+        public String getNodeName() {
+            return this.nodeName;
+        }
+
+        public static final class Builder {
+            private String nodeId; 
+            private String nodeName; 
+
+            /**
+             * NodeId.
+             */
+            public Builder nodeId(String nodeId) {
+                this.nodeId = nodeId;
+                return this;
+            }
+
+            /**
+             * NodeName.
+             */
+            public Builder nodeName(String nodeName) {
+                this.nodeName = nodeName;
+                return this;
+            }
+
+            public AbnInstances build() {
+                return new AbnInstances(this);
+            } 
+
+        } 
+
+    }
 }

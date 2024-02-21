@@ -50,7 +50,7 @@ public class GetDoctorComputeSummaryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The details of resource usage.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class GetDoctorComputeSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID。
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,7 @@ public class GetDoctorComputeSummaryResponseBody extends TeaModel {
             private Long unhealthyJobCount; 
 
             /**
-             * HealthyJobCount.
+             * The total number of healthy jobs.
              */
             public Builder healthyJobCount(Long healthyJobCount) {
                 this.healthyJobCount = healthyJobCount;
@@ -166,7 +166,7 @@ public class GetDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * NeedAttentionJobCount.
+             * The total number of jobs that require attention.
              */
             public Builder needAttentionJobCount(Long needAttentionJobCount) {
                 this.needAttentionJobCount = needAttentionJobCount;
@@ -174,7 +174,7 @@ public class GetDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Score.
+             * The score for jobs.
              */
             public Builder score(Integer score) {
                 this.score = score;
@@ -182,7 +182,7 @@ public class GetDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * ScoreDayGrowthRatio.
+             * The day-to-day growth rate of the score for jobs.
              */
             public Builder scoreDayGrowthRatio(Float scoreDayGrowthRatio) {
                 this.scoreDayGrowthRatio = scoreDayGrowthRatio;
@@ -190,7 +190,7 @@ public class GetDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * SubHealthyJobCount.
+             * The total number of sub-healthy jobs.
              */
             public Builder subHealthyJobCount(Long subHealthyJobCount) {
                 this.subHealthyJobCount = subHealthyJobCount;
@@ -198,7 +198,7 @@ public class GetDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * UnhealthyJobCount.
+             * The total number of unhealthy jobs.
              */
             public Builder unhealthyJobCount(Long unhealthyJobCount) {
                 this.unhealthyJobCount = unhealthyJobCount;
@@ -275,7 +275,7 @@ public class GetDoctorComputeSummaryResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -283,7 +283,7 @@ public class GetDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -291,7 +291,7 @@ public class GetDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -299,7 +299,7 @@ public class GetDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -376,7 +376,7 @@ public class GetDoctorComputeSummaryResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -384,7 +384,7 @@ public class GetDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -392,7 +392,7 @@ public class GetDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -400,7 +400,7 @@ public class GetDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -477,7 +477,7 @@ public class GetDoctorComputeSummaryResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -485,7 +485,7 @@ public class GetDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -493,7 +493,7 @@ public class GetDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -501,7 +501,7 @@ public class GetDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -578,7 +578,7 @@ public class GetDoctorComputeSummaryResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -586,7 +586,7 @@ public class GetDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -594,7 +594,7 @@ public class GetDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -602,7 +602,7 @@ public class GetDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -679,7 +679,7 @@ public class GetDoctorComputeSummaryResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -687,7 +687,7 @@ public class GetDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -695,7 +695,7 @@ public class GetDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -703,7 +703,7 @@ public class GetDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -780,7 +780,7 @@ public class GetDoctorComputeSummaryResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -788,7 +788,7 @@ public class GetDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -796,7 +796,7 @@ public class GetDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -804,7 +804,7 @@ public class GetDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -881,7 +881,7 @@ public class GetDoctorComputeSummaryResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -889,7 +889,7 @@ public class GetDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -897,7 +897,7 @@ public class GetDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -905,7 +905,7 @@ public class GetDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -982,7 +982,7 @@ public class GetDoctorComputeSummaryResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -990,7 +990,7 @@ public class GetDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -998,7 +998,7 @@ public class GetDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -1006,7 +1006,7 @@ public class GetDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -1131,7 +1131,7 @@ public class GetDoctorComputeSummaryResponseBody extends TeaModel {
             private WriteSize writeSize; 
 
             /**
-             * MemSeconds.
+             * The total memory consumption over time in seconds.
              */
             public Builder memSeconds(MemSeconds memSeconds) {
                 this.memSeconds = memSeconds;
@@ -1139,7 +1139,7 @@ public class GetDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * MemSecondsDayGrowthRatio.
+             * The day-to-day growth rate of the total memory consumption over time in seconds.
              */
             public Builder memSecondsDayGrowthRatio(MemSecondsDayGrowthRatio memSecondsDayGrowthRatio) {
                 this.memSecondsDayGrowthRatio = memSecondsDayGrowthRatio;
@@ -1147,7 +1147,7 @@ public class GetDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * MemUtilization.
+             * The average memory usage.
              */
             public Builder memUtilization(MemUtilization memUtilization) {
                 this.memUtilization = memUtilization;
@@ -1155,7 +1155,7 @@ public class GetDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * ReadSize.
+             * The total amount of data read from the file system.
              */
             public Builder readSize(ReadSize readSize) {
                 this.readSize = readSize;
@@ -1163,7 +1163,7 @@ public class GetDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * VcoreSeconds.
+             * The total CPU consumption over time in seconds.
              */
             public Builder vcoreSeconds(VcoreSeconds vcoreSeconds) {
                 this.vcoreSeconds = vcoreSeconds;
@@ -1171,7 +1171,7 @@ public class GetDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * VcoreSecondsDayGrowthRatio.
+             * The day-to-day growth rate of the total CPU consumption over time in seconds.
              */
             public Builder vcoreSecondsDayGrowthRatio(VcoreSecondsDayGrowthRatio vcoreSecondsDayGrowthRatio) {
                 this.vcoreSecondsDayGrowthRatio = vcoreSecondsDayGrowthRatio;
@@ -1179,7 +1179,7 @@ public class GetDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * VcoreUtilization.
+             * The average CPU utilization. The meaning is the same as the %CPU parameter in the output of the top command in Linux.
              */
             public Builder vcoreUtilization(VcoreUtilization vcoreUtilization) {
                 this.vcoreUtilization = vcoreUtilization;
@@ -1187,7 +1187,7 @@ public class GetDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * WriteSize.
+             * The total amount of data written to the file system.
              */
             public Builder writeSize(WriteSize writeSize) {
                 this.writeSize = writeSize;
@@ -1240,7 +1240,7 @@ public class GetDoctorComputeSummaryResponseBody extends TeaModel {
             private Metrics metrics; 
 
             /**
-             * Analysis.
+             * The resource analysis information.
              */
             public Builder analysis(Analysis analysis) {
                 this.analysis = analysis;
@@ -1248,7 +1248,7 @@ public class GetDoctorComputeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Metrics.
+             * The metrics.
              */
             public Builder metrics(Metrics metrics) {
                 this.metrics = metrics;

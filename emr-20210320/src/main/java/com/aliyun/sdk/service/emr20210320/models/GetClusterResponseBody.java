@@ -50,7 +50,7 @@ public class GetClusterResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Cluster.
+         * The details of the master instance.
          */
         public Builder cluster(Cluster cluster) {
             this.cluster = cluster;
@@ -58,7 +58,7 @@ public class GetClusterResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID。
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

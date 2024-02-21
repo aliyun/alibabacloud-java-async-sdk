@@ -63,9 +63,6 @@ public class Cluster extends TeaModel {
     @NameInMap("StateChangeReason")
     private ClusterStateChangeReason stateChangeReason;
 
-    @NameInMap("Status")
-    private String status;
-
     @NameInMap("SubscriptionConfig")
     private SubscriptionConfig subscriptionConfig;
 
@@ -90,7 +87,6 @@ public class Cluster extends TeaModel {
         this.resourceGroupId = builder.resourceGroupId;
         this.securityMode = builder.securityMode;
         this.stateChangeReason = builder.stateChangeReason;
-        this.status = builder.status;
         this.subscriptionConfig = builder.subscriptionConfig;
         this.tags = builder.tags;
     }
@@ -223,13 +219,6 @@ public class Cluster extends TeaModel {
     }
 
     /**
-     * @return status
-     */
-    public String getStatus() {
-        return this.status;
-    }
-
-    /**
      * @return subscriptionConfig
      */
     public SubscriptionConfig getSubscriptionConfig() {
@@ -261,7 +250,6 @@ public class Cluster extends TeaModel {
         private String resourceGroupId; 
         private String securityMode; 
         private ClusterStateChangeReason stateChangeReason; 
-        private String status; 
         private SubscriptionConfig subscriptionConfig; 
         private java.util.List < Tag > tags; 
 
@@ -398,14 +386,6 @@ public class Cluster extends TeaModel {
          */
         public Builder stateChangeReason(ClusterStateChangeReason stateChangeReason) {
             this.stateChangeReason = stateChangeReason;
-            return this;
-        }
-
-        /**
-         * 集群状态，值同clusterState
-         */
-        public Builder status(String status) {
-            this.status = status;
             return this;
         }
 

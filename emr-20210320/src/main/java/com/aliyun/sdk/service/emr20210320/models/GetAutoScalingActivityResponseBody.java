@@ -58,7 +58,7 @@ public class GetAutoScalingActivityResponseBody extends TeaModel {
         }
 
         /**
-         * ScalingActivity.
+         * The information about the scaling activity.
          */
         public Builder scalingActivity(ScalingActivity scalingActivity) {
             this.scalingActivity = scalingActivity;
@@ -262,7 +262,7 @@ public class GetAutoScalingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * The instances corresponding to this scaling activity.
+             * The instances that correspond to the scaling activity.
              */
             public Builder activityResults(java.util.List < ScalingActivityResult > activityResults) {
                 this.activityResults = activityResults;

@@ -100,7 +100,7 @@ public class JoinResourceGroupRequest extends Request {
         } 
 
         /**
-         * The ID of the region in which you want to create the instance.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

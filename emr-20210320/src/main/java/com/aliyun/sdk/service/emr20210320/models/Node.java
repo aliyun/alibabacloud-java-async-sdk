@@ -21,6 +21,9 @@ public class Node extends TeaModel {
     @NameInMap("AutoRenewDurationUnit")
     private String autoRenewDurationUnit;
 
+    @NameInMap("CreateTime")
+    private Long createTime;
+
     @NameInMap("ExpireTime")
     private Long expireTime;
 
@@ -58,6 +61,7 @@ public class Node extends TeaModel {
         this.autoRenew = builder.autoRenew;
         this.autoRenewDuration = builder.autoRenewDuration;
         this.autoRenewDurationUnit = builder.autoRenewDurationUnit;
+        this.createTime = builder.createTime;
         this.expireTime = builder.expireTime;
         this.instanceType = builder.instanceType;
         this.maintenanceStatus = builder.maintenanceStatus;
@@ -98,6 +102,13 @@ public class Node extends TeaModel {
      */
     public String getAutoRenewDurationUnit() {
         return this.autoRenewDurationUnit;
+    }
+
+    /**
+     * @return createTime
+     */
+    public Long getCreateTime() {
+        return this.createTime;
     }
 
     /**
@@ -181,6 +192,7 @@ public class Node extends TeaModel {
         private Boolean autoRenew; 
         private Integer autoRenewDuration; 
         private String autoRenewDurationUnit; 
+        private Long createTime; 
         private Long expireTime; 
         private String instanceType; 
         private String maintenanceStatus; 
@@ -214,6 +226,14 @@ public class Node extends TeaModel {
          */
         public Builder autoRenewDurationUnit(String autoRenewDurationUnit) {
             this.autoRenewDurationUnit = autoRenewDurationUnit;
+            return this;
+        }
+
+        /**
+         * CreateTime.
+         */
+        public Builder createTime(Long createTime) {
+            this.createTime = createTime;
             return this;
         }
 

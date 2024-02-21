@@ -50,7 +50,7 @@ public class GetDoctorReportComponentSummaryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The content of the report.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -138,7 +138,7 @@ public class GetDoctorReportComponentSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Summary.
+             * The summary of the report.
              */
             public Builder summary(String summary) {
                 this.summary = summary;

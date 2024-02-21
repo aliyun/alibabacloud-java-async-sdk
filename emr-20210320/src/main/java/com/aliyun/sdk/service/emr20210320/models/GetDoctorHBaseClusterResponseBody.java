@@ -50,7 +50,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID。
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             private Integer hbaseScore; 
 
             /**
-             * HbaseScore.
+             * The overall score of the HBase cluster.
              */
             public Builder hbaseScore(Integer hbaseScore) {
                 this.hbaseScore = hbaseScore;
@@ -175,7 +175,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -183,7 +183,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -191,7 +191,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -199,7 +199,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -276,7 +276,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -284,7 +284,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -292,7 +292,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -300,7 +300,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -377,7 +377,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -385,7 +385,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -393,7 +393,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -401,7 +401,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -478,7 +478,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -486,7 +486,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -494,7 +494,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -502,7 +502,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -579,7 +579,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -587,7 +587,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -595,7 +595,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -603,7 +603,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -680,7 +680,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -688,7 +688,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -696,7 +696,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -704,7 +704,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -781,7 +781,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -789,7 +789,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -797,7 +797,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -805,7 +805,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -882,7 +882,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -890,7 +890,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -898,7 +898,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -906,7 +906,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -983,7 +983,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -991,7 +991,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -999,7 +999,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -1007,7 +1007,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -1084,7 +1084,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1092,7 +1092,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1100,7 +1100,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -1108,7 +1108,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -1185,7 +1185,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1193,7 +1193,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1201,7 +1201,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -1209,7 +1209,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -1286,7 +1286,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1294,7 +1294,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1302,7 +1302,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -1310,7 +1310,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -1387,7 +1387,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1395,7 +1395,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1403,7 +1403,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -1411,7 +1411,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -1488,7 +1488,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * Description.
+             * The description of the metric.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1496,7 +1496,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1504,7 +1504,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -1512,7 +1512,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the metric.
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -1709,7 +1709,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             private TotalWriteRequest totalWriteRequest; 
 
             /**
-             * AvgLoad.
+             * The average load.
              */
             public Builder avgLoad(AvgLoad avgLoad) {
                 this.avgLoad = avgLoad;
@@ -1717,7 +1717,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             }
 
             /**
-             * DailyReadRequest.
+             * The number of read requests in a day.
              */
             public Builder dailyReadRequest(DailyReadRequest dailyReadRequest) {
                 this.dailyReadRequest = dailyReadRequest;
@@ -1725,7 +1725,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             }
 
             /**
-             * DailyWriteRequest.
+             * The number of write requests in a day.
              */
             public Builder dailyWriteRequest(DailyWriteRequest dailyWriteRequest) {
                 this.dailyWriteRequest = dailyWriteRequest;
@@ -1733,7 +1733,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             }
 
             /**
-             * MemHeap.
+             * The memory size.
              */
             public Builder memHeap(MemHeap memHeap) {
                 this.memHeap = memHeap;
@@ -1741,7 +1741,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             }
 
             /**
-             * NormalAvgLoad.
+             * The normal average load.
              */
             public Builder normalAvgLoad(NormalAvgLoad normalAvgLoad) {
                 this.normalAvgLoad = normalAvgLoad;
@@ -1749,7 +1749,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             }
 
             /**
-             * RegionBalance.
+             * The region balance degree.
              */
             public Builder regionBalance(RegionBalance regionBalance) {
                 this.regionBalance = regionBalance;
@@ -1757,7 +1757,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             }
 
             /**
-             * RegionCount.
+             * The number of regions.
              */
             public Builder regionCount(RegionCount regionCount) {
                 this.regionCount = regionCount;
@@ -1765,7 +1765,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             }
 
             /**
-             * RegionServerCount.
+             * The number of region servers.
              */
             public Builder regionServerCount(RegionServerCount regionServerCount) {
                 this.regionServerCount = regionServerCount;
@@ -1773,7 +1773,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             }
 
             /**
-             * StoreFileCount.
+             * The number of StoreFiles.
              */
             public Builder storeFileCount(StoreFileCount storeFileCount) {
                 this.storeFileCount = storeFileCount;
@@ -1781,7 +1781,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             }
 
             /**
-             * TableCount.
+             * The number of tables.
              */
             public Builder tableCount(TableCount tableCount) {
                 this.tableCount = tableCount;
@@ -1789,7 +1789,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             }
 
             /**
-             * TotalDataSize.
+             * The size of the cluster.
              */
             public Builder totalDataSize(TotalDataSize totalDataSize) {
                 this.totalDataSize = totalDataSize;
@@ -1797,7 +1797,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             }
 
             /**
-             * TotalReadRequest.
+             * The total number of read requests.
              */
             public Builder totalReadRequest(TotalReadRequest totalReadRequest) {
                 this.totalReadRequest = totalReadRequest;
@@ -1805,7 +1805,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             }
 
             /**
-             * TotalRequest.
+             * The total number of requests in the cluster.
              */
             public Builder totalRequest(TotalRequest totalRequest) {
                 this.totalRequest = totalRequest;
@@ -1813,7 +1813,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             }
 
             /**
-             * TotalWriteRequest.
+             * The total number of write requests.
              */
             public Builder totalWriteRequest(TotalWriteRequest totalWriteRequest) {
                 this.totalWriteRequest = totalWriteRequest;
@@ -1866,7 +1866,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             private Metrics metrics; 
 
             /**
-             * Analysis.
+             * The analysis result.
              */
             public Builder analysis(Analysis analysis) {
                 this.analysis = analysis;
@@ -1874,7 +1874,7 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Metrics.
+             * The metric information.
              */
             public Builder metrics(Metrics metrics) {
                 this.metrics = metrics;

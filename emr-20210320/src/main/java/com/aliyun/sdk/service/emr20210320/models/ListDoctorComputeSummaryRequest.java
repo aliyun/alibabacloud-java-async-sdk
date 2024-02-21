@@ -155,7 +155,7 @@ public class ListDoctorComputeSummaryRequest extends Request {
         } 
 
         /**
-         * 集群ID。
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -164,7 +164,14 @@ public class ListDoctorComputeSummaryRequest extends Request {
         }
 
         /**
-         * ComponentTypes.
+         * The resource types, which are used to filter query results. Valid values:
+         * <p>
+         * 
+         * *   engine: filters results by engine.
+         * *   queue: filters results by queue.
+         * *   cluster: displays the results at the cluster level.
+         * 
+         * If you do not specify this parameter, the information at the cluster level is displayed by default. Currently, only one resource type is supported. If you specify multiple resource types, the first resource type is used by default.
          */
         public Builder componentTypes(java.util.List < String > componentTypes) {
             this.putQueryParameter("ComponentTypes", componentTypes);
@@ -173,7 +180,7 @@ public class ListDoctorComputeSummaryRequest extends Request {
         }
 
         /**
-         * DateTime.
+         * Specify the date in the ISO 8601 standard. For example, 2023-01-01 represents January 1, 2023.
          */
         public Builder dateTime(String dateTime) {
             this.putQueryParameter("DateTime", dateTime);
@@ -182,7 +189,7 @@ public class ListDoctorComputeSummaryRequest extends Request {
         }
 
         /**
-         * 一次获取的最大记录数。取值范围：1~100。
+         * The maximum number of entries to return on each page.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -191,7 +198,7 @@ public class ListDoctorComputeSummaryRequest extends Request {
         }
 
         /**
-         * 标记当前开始读取的位置，置空表示从头开始。
+         * The pagination token that is used in the request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -200,7 +207,23 @@ public class ListDoctorComputeSummaryRequest extends Request {
         }
 
         /**
-         * OrderBy.
+         * The basis on which you want to sort the query results. Valid values:
+         * <p>
+         * 
+         * 1.  vcoreSeconds: the total CPU consumption over time in seconds.
+         * 2.  memSeconds: the total memory consumption over time in seconds.
+         * 3.  vcoreUtilization: the average CPU utilization. The meaning is the same as the %CPU parameter in the output of the top command in Linux.
+         * 4.  memUtilization: the average memory usage.
+         * 5.  vcoreSecondsDayGrowthRatio: the day-to-day growth rate of the total CPU consumption over time in seconds.
+         * 6.  memSecondsDayGrowthRatio: the day-to-day growth rate of the total memory consumption over time in seconds.
+         * 7.  readSize: the total amount of data read from the file system.
+         * 8.  writeSize: the total amount of data written to the file system.
+         * 9.  healthyJobCount: the total number of healthy jobs.
+         * 10. subHealthyJobCount: the total number of sub-healthy jobs.
+         * 11. unhealthyJobCount: the total number of unhealthy jobs.
+         * 12. needAttentionJobCount: the total number of jobs that require attention.
+         * 13. score: the score for jobs.
+         * 14. scoreDayGrowthRatio: the day-to-day growth rate of the score for jobs.
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -209,7 +232,11 @@ public class ListDoctorComputeSummaryRequest extends Request {
         }
 
         /**
-         * OrderType.
+         * The order in which you want to sort the query results. Valid values:
+         * <p>
+         * 
+         * *   ASC: in ascending order.
+         * *   DESC: in descending order.
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -218,7 +245,7 @@ public class ListDoctorComputeSummaryRequest extends Request {
         }
 
         /**
-         * 区域ID。
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

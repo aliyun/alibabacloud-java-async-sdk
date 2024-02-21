@@ -170,7 +170,7 @@ public class UpdateApplicationConfigsRequest extends Request {
         } 
 
         /**
-         * The list of application configurations.
+         * The application configurations.
          */
         public Builder applicationConfigs(java.util.List < UpdateApplicationConfig > applicationConfigs) {
             this.putQueryParameter("ApplicationConfigs", applicationConfigs);
@@ -233,7 +233,7 @@ public class UpdateApplicationConfigsRequest extends Request {
         }
 
         /**
-         * The ID of the node group.
+         * The node group ID.
          */
         public Builder nodeGroupId(String nodeGroupId) {
             this.putQueryParameter("NodeGroupId", nodeGroupId);

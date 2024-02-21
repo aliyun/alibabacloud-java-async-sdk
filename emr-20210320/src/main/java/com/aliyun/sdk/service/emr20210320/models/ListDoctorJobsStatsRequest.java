@@ -168,7 +168,7 @@ public class ListDoctorJobsStatsRequest extends Request {
         } 
 
         /**
-         * 集群ID。
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -177,7 +177,7 @@ public class ListDoctorJobsStatsRequest extends Request {
         }
 
         /**
-         * EndRange.
+         * The range of end time. You can filter jobs whose end time falls within the specified time range.
          */
         public Builder endRange(EndRange endRange) {
             this.putQueryParameter("EndRange", endRange);
@@ -186,7 +186,10 @@ public class ListDoctorJobsStatsRequest extends Request {
         }
 
         /**
-         * GroupBy.
+         * The fields that are used for grouping data.
+         * <p>
+         * 
+         * Currently, only the first value is used for grouping data. Combinations of multiple values will be supported in the future.
          */
         public Builder groupBy(java.util.List < String > groupBy) {
             this.putQueryParameter("GroupBy", groupBy);
@@ -195,7 +198,7 @@ public class ListDoctorJobsStatsRequest extends Request {
         }
 
         /**
-         * 一次获取的最大记录数。取值范围：1~100。
+         * The maximum number of entries to return on each page.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -204,7 +207,7 @@ public class ListDoctorJobsStatsRequest extends Request {
         }
 
         /**
-         * 标记当前开始读取的位置，置空表示从头开始。
+         * The pagination token that is used in the request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -213,7 +216,11 @@ public class ListDoctorJobsStatsRequest extends Request {
         }
 
         /**
-         * OrderBy.
+         * The field that you use to sort the query results. Valid values:
+         * <p>
+         * 
+         * *   vcoreSeconds: the aggregated number of vCPUs that are allocated to the job multiplied by the number of seconds the job has been running
+         * *   memSeconds: the aggregated amount of memory that is allocated to the job multiplied by the number of seconds the job has been running
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -222,7 +229,11 @@ public class ListDoctorJobsStatsRequest extends Request {
         }
 
         /**
-         * OrderType.
+         * The order in which you want to sort the query results. Valid values:
+         * <p>
+         * 
+         * *   ASC: in ascending order
+         * *   DESC: in descending order
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -231,7 +242,7 @@ public class ListDoctorJobsStatsRequest extends Request {
         }
 
         /**
-         * 区域ID。
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -240,7 +251,7 @@ public class ListDoctorJobsStatsRequest extends Request {
         }
 
         /**
-         * StartRange.
+         * The range of start time. You can filter jobs whose start time falls within the specified time range.
          */
         public Builder startRange(StartRange startRange) {
             this.putQueryParameter("StartRange", startRange);
@@ -294,7 +305,7 @@ public class ListDoctorJobsStatsRequest extends Request {
             private Long startTime; 
 
             /**
-             * EndTime.
+             * The end of the time range during which jobs ended. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -302,7 +313,7 @@ public class ListDoctorJobsStatsRequest extends Request {
             }
 
             /**
-             * StartTime.
+             * The beginning of the time range during which jobs ended. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -355,7 +366,7 @@ public class ListDoctorJobsStatsRequest extends Request {
             private Long startTime; 
 
             /**
-             * EndTime.
+             * The end of the time range during which jobs were submitted. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. Unit: milliseconds.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -363,7 +374,7 @@ public class ListDoctorJobsStatsRequest extends Request {
             }
 
             /**
-             * StartTime.
+             * The beginning of the time range during which jobs were submitted. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. Unit: milliseconds.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
