@@ -221,7 +221,7 @@ public class DescribeDBInstancePerformanceRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The instance ID.
          * <p>
          * 
          * >  If you set this parameter to the ID of a sharded cluster instance, you must also specify the **NodeId** parameter.
@@ -233,7 +233,7 @@ public class DescribeDBInstancePerformanceRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Specify the time in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC. The end time must be later than the start time.
+         * The end of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC. The end time must be later than the start time.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -242,10 +242,10 @@ public class DescribeDBInstancePerformanceRequest extends Request {
         }
 
         /**
-         * A performance metric. For more information about the valid values, see [Performance metrics](~~64048~~).
+         * The performance metric. For more information about valid values, see [Performance metrics](~~64048~~).
          * <p>
          * 
-         * >  If you specify multiple metrics, separate them with commas (,).
+         * >  If you need to specify multiple metrics, separate the metrics with commas (,).
          */
         public Builder key(String key) {
             this.putQueryParameter("Key", key);
@@ -257,7 +257,7 @@ public class DescribeDBInstancePerformanceRequest extends Request {
          * The ID of the mongos or shard node in a sharded cluster instance. You can specify this parameter to view the performance data of a single node.
          * <p>
          * 
-         * >  This parameter is valid only when **DBInstanceId** is set to the ID of a sharded cluster instance.
+         * >  This parameter is valid when you set the **DBInstanceId** parameter to the ID of a sharded cluster instance.
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -284,14 +284,17 @@ public class DescribeDBInstancePerformanceRequest extends Request {
         }
 
         /**
-         * The role of the node in a standalone or replica set instance.
+         * The role of the node in a standalone or replica set instance. Valid values:
          * <p>
          * 
-         * * **Primary**
-         * * **Secondary**
+         * *   **Primary**
+         * *   **Secondary**
          * 
-         * > * This parameter is valid only when you specify the **DBInstanceId** parameter to the ID of a standalone instance or a replica set instance.
-         * > * If you set the **DBInstanceId** parameter to the ID of a standalone instance, the value of this parameter can only be **Primary**.
+         * > 
+         * 
+         * *   This parameter is valid only when you set the **DBInstanceId** parameter to the ID of a standalone instance or a replica set instance.
+         * 
+         * *   If you set the **DBInstanceId** parameter to the ID of a standalone instance, the value of this parameter can only be **Primary**.
          */
         public Builder replicaSetRole(String replicaSetRole) {
             this.putQueryParameter("ReplicaSetRole", replicaSetRole);
@@ -321,7 +324,7 @@ public class DescribeDBInstancePerformanceRequest extends Request {
          * The role ID of the node in a standalone or replica set instance. You can call the [DescribeReplicaSetRole](~~62134~~) operation to query the role ID of the node.
          * <p>
          * 
-         * >  This parameter is valid only when you specify the **DBInstanceId** parameter to the ID of a standalone instance or a replica set instance.
+         * >  This parameter is available when you set the **DBInstanceId** parameter to the ID of a standalone instance or a replica set instance.
          */
         public Builder roleId(String roleId) {
             this.putQueryParameter("RoleId", roleId);
@@ -330,7 +333,7 @@ public class DescribeDBInstancePerformanceRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
+         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

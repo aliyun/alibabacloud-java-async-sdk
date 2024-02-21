@@ -154,7 +154,12 @@ public class DeleteGlobalSecurityIPGroupRequest extends Request {
         } 
 
         /**
-         * GlobalIgName.
+         * The name of the IP whitelist template. The name must meet the following requirements:
+         * <p>
+         * 
+         * *   It can contain lowercase letters, digits, and underscores (\_).
+         * *   It must start with a letter and end with a letter or digit.
+         * *   It must be 2 to 120 characters in length.
          */
         public Builder globalIgName(String globalIgName) {
             this.putQueryParameter("GlobalIgName", globalIgName);
@@ -163,7 +168,7 @@ public class DeleteGlobalSecurityIPGroupRequest extends Request {
         }
 
         /**
-         * GlobalSecurityGroupId.
+         * The ID of the IP whitelist template.
          */
         public Builder globalSecurityGroupId(String globalSecurityGroupId) {
             this.putQueryParameter("GlobalSecurityGroupId", globalSecurityGroupId);
@@ -190,7 +195,7 @@ public class DeleteGlobalSecurityIPGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

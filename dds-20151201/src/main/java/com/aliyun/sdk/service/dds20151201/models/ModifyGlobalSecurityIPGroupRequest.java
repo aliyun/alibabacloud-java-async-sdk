@@ -156,7 +156,10 @@ public class ModifyGlobalSecurityIPGroupRequest extends Request {
         } 
 
         /**
-         * GIpList.
+         * The IP addresses in the whitelist template.
+         * <p>
+         * 
+         * > Separate multiple IP addresses with commas (,). You can create up to 1,000 IP addresses or CIDR blocks for all IP address whitelists.
          */
         public Builder gIpList(String gIpList) {
             this.putQueryParameter("GIpList", gIpList);
@@ -165,7 +168,7 @@ public class ModifyGlobalSecurityIPGroupRequest extends Request {
         }
 
         /**
-         * GlobalIgName.
+         * The name of the IP whitelist template.
          */
         public Builder globalIgName(String globalIgName) {
             this.putQueryParameter("GlobalIgName", globalIgName);
@@ -174,7 +177,7 @@ public class ModifyGlobalSecurityIPGroupRequest extends Request {
         }
 
         /**
-         * GlobalSecurityGroupId.
+         * The ID of the IP whitelist template.
          */
         public Builder globalSecurityGroupId(String globalSecurityGroupId) {
             this.putQueryParameter("GlobalSecurityGroupId", globalSecurityGroupId);
@@ -201,7 +204,7 @@ public class ModifyGlobalSecurityIPGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

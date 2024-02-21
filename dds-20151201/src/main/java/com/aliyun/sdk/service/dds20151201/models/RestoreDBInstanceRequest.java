@@ -149,10 +149,10 @@ public class RestoreDBInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the backup.
+         * The ID of the backup set.
          * <p>
          * 
-         * >  You can call the [DescribeBackups](~~62172~~) operation to query the backup ID.
+         * > You can call the [DescribeBackups](~~62172~~) operation to query the backup set ID.
          */
         public Builder backupId(Integer backupId) {
             this.putQueryParameter("BackupId", backupId);

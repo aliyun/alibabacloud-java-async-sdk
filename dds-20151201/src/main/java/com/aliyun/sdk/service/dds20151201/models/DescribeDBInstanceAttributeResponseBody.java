@@ -50,7 +50,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information of the instance.
+         * The details of the instance.
          */
         public Builder DBInstances(DBInstances DBInstances) {
             this.DBInstances = DBInstances;
@@ -242,7 +242,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The storage capacity of the Configserver node. Unit: GB.
+             * The storage capacity of the Configserver node.
              */
             public Builder nodeStorage(Integer nodeStorage) {
                 this.nodeStorage = nodeStorage;
@@ -527,7 +527,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * The VPC ID of the instance.
              * <p>
              * 
-             * >  This parameter is returned if the network type of the instance is VPC.
+             * > This parameter is returned if the network type of the instance is VPC.
              */
             public Builder VPCId(String VPCId) {
                 this.VPCId = VPCId;
@@ -538,7 +538,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * The vSwitch ID of the instance.
              * <p>
              * 
-             * >  This parameter is returned if the network type of the instance is VPC.
+             * > This parameter is returned if the network type of the instance is VPC.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -719,8 +719,8 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * The network type of the instance. Valid values:
              * <p>
              * 
-             * *   **Classic**: classic network
-             * *   **VPC**: VPC
+             * *   **Classic**: classic network.
+             * *   **VPC**: VPC.
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -743,7 +743,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * The instance ID.
              * <p>
              * 
-             * >  This parameter is returned if the network type of the instance is VPC.
+             * > This parameter is returned if the network type of the instance is VPC.
              */
             public Builder VPCCloudInstanceId(String VPCCloudInstanceId) {
                 this.VPCCloudInstanceId = VPCCloudInstanceId;
@@ -754,7 +754,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * The VPC ID of the instance.
              * <p>
              * 
-             * >  This parameter is returned if the network type of the instance is VPC.
+             * > This parameter is returned if the network type of the instance is VPC.
              */
             public Builder VPCId(String VPCId) {
                 this.VPCId = VPCId;
@@ -765,7 +765,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * The vSwitch ID of the instance.
              * <p>
              * 
-             * >  This parameter is returned if the network type of the instance is virtual private cloud (VPC).
+             * > This parameter is returned if the network type of the instance is Virtual Private Cloud (VPC).
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -983,7 +983,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum  MBPS of the shard node, Unit: MB/s.
+             * shard节点的最大云盘吞吐量。
              */
             public Builder maxDiskMbps(String maxDiskMbps) {
                 this.maxDiskMbps = maxDiskMbps;
@@ -1023,7 +1023,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The storage capacity of the shard node. Unit: GB.
+             * The storage capacity of the shard node.
              */
             public Builder nodeStorage(Integer nodeStorage) {
                 this.nodeStorage = nodeStorage;
@@ -1141,7 +1141,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key.
+             * The tag key of the instance.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1149,7 +1149,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * The tag value of the instance.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1843,7 +1843,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * Indicates whether performance burst is enabled for the ESSD AutoPL disk.
+             * 是否已开启突发
              */
             public Builder burstingEnabled(Boolean burstingEnabled) {
                 this.burstingEnabled = burstingEnabled;
@@ -1862,8 +1862,8 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * The billing method of the instance. Valid values:
              * <p>
              * 
-             * *   **PrePaid**: subscription
-             * *   **PostPaid**: pay-as-you-go
+             * *   **PrePaid**: subscription.
+             * *   **PostPaid**: pay-as-you-go.
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -1871,10 +1871,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The information of the Configserver nodes.
+             * The details of the Configserver nodes.
              * <p>
              * 
-             * >  This parameter is returned if the instance is a sharded cluster instance.
+             * > This parameter is returned if the instance is a sharded cluster instance.
              */
             public Builder configserverList(ConfigserverList configserverList) {
                 this.configserverList = configserverList;
@@ -1898,7 +1898,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The instance type of the instance.
+             * The instance type.
              */
             public Builder DBInstanceClass(String DBInstanceClass) {
                 this.DBInstanceClass = DBInstanceClass;
@@ -1927,11 +1927,12 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * 
              * *   **all_completed**: All orders are being produced or complete.
              * *   **order_unpaid**: The instance has unpaid orders.
-             * *   **order_wait_for_produce**: Orders are being delivered for production.
+             * *   **order_wait_for_produce**: Order are being delivered for production.
              * 
-             * >  The order production process includes the following steps: place an order, pay for an order, deliver an order for production, produce an order, and complete the production.
-             * > *   If an order is in the **order_wait_for_produce** state for a long time, an error occurs when the order is being delivered for production. The system will automatically retry.
-             * > *   The instance status changes only when the order is in the producing and complete state, such as changing configurations and running.
+             * > The order production process includes the following steps: place an order, pay for an order, deliver an order for production, produce an order, and complete an order.
+             * 
+             * *   If an order is in the **order_wait_for_produce** state for a long time, an error occurs when the order is being delivered for production. The system will automatically retry.
+             * *   The instance status changes only when the order is in the producing and complete state, such as changing configurations and running.
              */
             public Builder DBInstanceOrderStatus(String DBInstanceOrderStatus) {
                 this.DBInstanceOrderStatus = DBInstanceOrderStatus;
@@ -1942,8 +1943,8 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * Indicates whether release protection is enabled for the instance. Valid values:
              * <p>
              * 
-             * *   **true**
-             * *   **false**
+             * *   **true**: Release protection is enabled.
+             * *   **false** Release protection is disabled.
              */
             public Builder DBInstanceReleaseProtection(Boolean DBInstanceReleaseProtection) {
                 this.DBInstanceReleaseProtection = DBInstanceReleaseProtection;
@@ -1970,8 +1971,8 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * The architecture of the instance. Valid values:
              * <p>
              * 
-             * *   **replicate**: replica set instance
-             * *   **sharding**: sharded cluster instance
+             * *   **replicate**: replica set instance.
+             * *   **sharding**: sharded cluster instance.
              */
             public Builder DBInstanceType(String DBInstanceType) {
                 this.DBInstanceType = DBInstanceType;
@@ -1987,7 +1988,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether disk encryption is enabled.
+             * 是否开启云盘加密
              */
             public Builder encrypted(Boolean encrypted) {
                 this.encrypted = encrypted;
@@ -1995,7 +1996,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The Key Management Service (KMS) key used for disk encryption.
+             * 云盘加密对应的kms-key
              */
             public Builder encryptionKey(String encryptionKey) {
                 this.encryptionKey = encryptionKey;
@@ -2011,7 +2012,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The database engine version of the instance.
+             * The database engine version of the instance. Valid values:
              * <p>
              * 
              * *   **6.0**
@@ -2029,7 +2030,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * The time when the subscription instance expires. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.
              * <p>
              * 
-             * >  This parameter is returned if the instance is a subscription instance.
+             * > This parameter is returned if the instance is a subscription instance.
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -2043,9 +2044,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * *   **cn-hangzhou-g**: Hangzhou Zone G
              * *   **cn-hangzhou-h**: Hangzhou Zone H
              * *   **cn-hangzhou-i**: Hangzhou Zone I
-             * *   **cn-hongkong-b**: Hongkong Zone B
-             * *   **cn-hongkong-c**: Hongkong Zone C
-             * *   **cn-hongkong-d**: Hongkong Zone D
+             * *   **cn-hongkong-b**: Hong Kong Zone B
+             * *   **cn-hongkong-c**: Hong Kong Zone C
+             * *   **cn-hongkong-d**: Hong Kong Zone D
              * *   **cn-wulanchabu-a**: Ulanqab Zone A
              * *   **cn-wulanchabu-b**: Ulanqab Zone B
              * *   **cn-wulanchabu-c**: Ulanqab Zone C
@@ -2059,8 +2060,11 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * *   **eu-central-1b**: Frankfurt Zone B
              * *   **eu-central-1c**: Frankfurt Zone C
              * 
-             * > *   This parameter is returned if the instance is a replica set or sharded cluster instance that runs MongoDB 4.4 or 5.0 and uses multi-zone deployment.
-             * > *   This parameter is returned only if you use the China site (aliyun.com).
+             * > 
+             * 
+             * *   This parameter is returned if the instance is a replica set or sharded cluster instance that runs MongoDB 4.4 or 5.0 and uses multi-zone deployment.
+             * 
+             * *   This parameter is returned only if you use the Chine site (aliyun.com).
              */
             public Builder hiddenZoneId(String hiddenZoneId) {
                 this.hiddenZoneId = hiddenZoneId;
@@ -2071,10 +2075,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * The kind code of the instance. Valid values:
              * <p>
              * 
-             * *   **0**: physical machine
-             * *   **1**: Elastic Compute Service (ECS) instance
-             * *   **2**: Docker cluster
-             * *   **18**: Kubernetes cluster
+             * *   **0**: physical machine.
+             * *   **1**: Elastic Compute Service (ECS) instance.
+             * *   **2**: Docker cluster.
+             * *   **18**: Kubernetes cluster.
              */
             public Builder kindCode(String kindCode) {
                 this.kindCode = kindCode;
@@ -2096,8 +2100,8 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * *   **Unlock**: The instance is not locked.
              * *   **ManualLock**: The instance is manually locked.
              * *   **LockByExpiration**: The instance is automatically locked due to instance expiration.
-             * *   **LockByRestoration**: The instance is automatically locked before the instance is rolled back.
-             * *   **LockByDiskQuota**: The instance is automatically locked after the storage space is exhausted.
+             * *   **LockByRestoration**: The instance is automatically locked before it is rolled back.
+             * *   **LockByDiskQuota**: The instance is automatically locked due to exhausted storage capacity.
              * *   **Released**: The instance is released.
              */
             public Builder lockMode(String lockMode) {
@@ -2138,7 +2142,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum MBPS of the instance, Unit: MB/s.
+             * 实例的最大云盘吞吐量，单位MB/s。
              */
             public Builder maxMBPS(Integer maxMBPS) {
                 this.maxMBPS = maxMBPS;
@@ -2146,10 +2150,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The information of the mongos nodes.
+             * The details of the mongos nodes.
              * <p>
              * 
-             * >  This parameter is returned if the instance is a sharded cluster instance.
+             * > This parameter is returned if the instance is a sharded cluster instance.
              */
             public Builder mongosList(MongosList mongosList) {
                 this.mongosList = mongosList;
@@ -2160,8 +2164,8 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * The network type of the instance. Valid values:
              * <p>
              * 
-             * *   **Classic**: classic network
-             * *   **VPC**: VPC
+             * *   **Classic**
+             * *   **VPC**
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -2175,7 +2179,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * *   **mongodb**
              * *   **dynamodb**
              * 
-             * >  This parameter is returned if the instance is a sharded cluster instance.
+             * > This parameter is returned if the instance is a sharded cluster instance.
              */
             public Builder protocolType(String protocolType) {
                 this.protocolType = protocolType;
@@ -2183,7 +2187,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The provisioned performance of the ESSD AutoPL disk.
+             * 预配置性能
              */
             public Builder provisionedIops(Long provisionedIops) {
                 this.provisionedIops = provisionedIops;
@@ -2207,10 +2211,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The logical ID of the replica set instance.
+             * The logical ID of the replica instance.
              * <p>
              * 
-             * >  ApsaraDB for MongoDB does not support new instances of this type. This parameter applies only to previous-version replica set instances.
+             * > ApsaraDB for MongoDB does not support new instances of this type. This parameter applies only to previous-version replica instances.
              */
             public Builder replacateId(String replacateId) {
                 this.replacateId = replacateId;
@@ -2221,7 +2225,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * The name of the replica set instance.
              * <p>
              * 
-             * >  This parameter is returned if the instance is a replica set instance.
+             * > This parameter is returned if the instance is a replica set instance.
              */
             public Builder replicaSetName(String replicaSetName) {
                 this.replicaSetName = replicaSetName;
@@ -2229,10 +2233,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The information of the replica set instance.
+             * The details of the replica set instance.
              * <p>
              * 
-             * >  This parameter is returned if the instance is a replica set instance.
+             * > This parameter is returned if the instance is a replica set instance.
              */
             public Builder replicaSets(ReplicaSets replicaSets) {
                 this.replicaSets = replicaSets;
@@ -2243,7 +2247,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * The number of nodes in the instance.
              * <p>
              * 
-             * >  This parameter is returned if the instance is a replica set instance.
+             * > This parameter is returned if the instance is a replica set instance.
              */
             public Builder replicationFactor(String replicationFactor) {
                 this.replicationFactor = replicationFactor;
@@ -2251,10 +2255,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group to which the instance belongs.
+             * The ID of the resource group.
              * <p>
              * 
-             * >  This parameter is returned only if you use the China site (aliyun.com).
+             * > This parameter is returned only if you use the China site (aliyun.com).
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -2268,9 +2272,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * *   **cn-hangzhou-g**: Hangzhou Zone G
              * *   **cn-hangzhou-h**: Hangzhou Zone H
              * *   **cn-hangzhou-i**: Hangzhou Zone I
-             * *   **cn-hongkong-b**: Hongkong Zone B
-             * *   **cn-hongkong-c**: Hongkong Zone C
-             * *   **cn-hongkong-d**: Hongkong Zone D
+             * *   **cn-hongkong-b**: Hong Kong Zone B
+             * *   **cn-hongkong-c**: Hong Kong Zone C
+             * *   **cn-hongkong-d**: Hong Kong Zone D
              * *   **cn-wulanchabu-a**: Ulanqab Zone A
              * *   **cn-wulanchabu-b**: Ulanqab Zone B
              * *   **cn-wulanchabu-c**: Ulanqab Zone C
@@ -2284,8 +2288,11 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * *   **eu-central-1b**: Frankfurt Zone B
              * *   **eu-central-1c**: Frankfurt Zone C
              * 
-             * > *   This parameter is returned if the instance is a replica set or sharded cluster instance that runs MongoDB 4.4 or 5.0 and uses multi-zone deployment.
-             * > *   This parameter is returned only if you use the China site (aliyun.com).
+             * > 
+             * 
+             * *   This parameter is returned if the instance is a replica set or sharded cluster instance that runs MongoDB 4.4 or 5.0 and uses multi-zone deployment.
+             * 
+             * *   This parameter is returned only if you use the Chine site (aliyun.com).
              */
             public Builder secondaryZoneId(String secondaryZoneId) {
                 this.secondaryZoneId = secondaryZoneId;
@@ -2293,10 +2300,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The information of the shard nodes.
+             * The details of the shard nodes.
              * <p>
              * 
-             * >  This parameter is returned if the instance is a sharded cluster instance.
+             * > This parameter is returned if the instance is a sharded cluster instance.
              */
             public Builder shardList(ShardList shardList) {
                 this.shardList = shardList;
@@ -2315,7 +2322,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * The storage type of the instance. Valid values:
              * <p>
              * 
-             * **cloud_essd1**: ESSD PL1 **cloud_essd2**: ESSD PL2 **cloud_essd3**: ESSD PL3 **local_ssd**: local SSD **cloud_essd_dbfs_s**: DBFS disk
+             * **cloud_essd1**: PL1 ESSD. **cloud_essd2**: PL2. ESSD. **cloud_essd3**: PL3 ESSD. **local_ssd**: local SSD.
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;
@@ -2323,7 +2330,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The progress of data synchronization in percentage. When you are changing the configurations of the instance, you must synchronize the data of the instance. You can obtain the data synchronization progress based on the value returned for this parameter.
+             * 数据同步进度百分比。当实例处在变配中时，需要进行数据同步等操作，可以通过该字段判断同步进度。
              */
             public Builder syncPercent(String syncPercent) {
                 this.syncPercent = syncPercent;
@@ -2339,11 +2346,11 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the cluster backup mode is enabled. Valid values:
+             * 是否使用集群备份模式。取值说明：
              * <p>
              * 
-             * *   **true**: The cluster backup mode is enabled.
-             * *   **false**: The cluster backup mode is disabled.
+             * - **true**：启用集群备份模式。
+             * - **false**未启用集群备份模式。
              */
             public Builder useClusterBackup(Boolean useClusterBackup) {
                 this.useClusterBackup = useClusterBackup;
@@ -2354,7 +2361,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * The instance ID.
              * <p>
              * 
-             * >  This parameter is returned if the network type of the instance is VPC.
+             * > This parameter is returned if the network type of the instance is VPC.
              */
             public Builder VPCCloudInstanceIds(String VPCCloudInstanceIds) {
                 this.VPCCloudInstanceIds = VPCCloudInstanceIds;
@@ -2365,7 +2372,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * The VPC ID of the instance.
              * <p>
              * 
-             * >  This parameter is returned if the network type of the instance is VPC.
+             * > This parameter is returned if the network type of the instance is VPC.
              */
             public Builder VPCId(String VPCId) {
                 this.VPCId = VPCId;
@@ -2376,7 +2383,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * The vSwitch ID of the instance.
              * <p>
              * 
-             * >  This parameter is returned if the network type of the instance is VPC.
+             * > This parameter is returned if the network type of the instance is VPC.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -2384,12 +2391,12 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether password-free access within the VPC is enabled. Valid values:
+             * Indicates whether password-free access over VPC is enabled. Valid values:
              * <p>
              * 
-             * *   **Open**: Password-free access within the VPC is enabled.
-             * *   **Close**: Password-free access within the VPC is disabled, and you must use a password for access.
-             * *   **NotSupport**: Password-free access within the VPC is not supported.
+             * *   **Open**: Password-free access over VPC is enabled.
+             * *   **Close**: Password-free access over VPC is disabled, and you must use a password for access.
+             * *   **NotSupport**: Password-free access over VPC is not supported.
              */
             public Builder vpcAuthMode(String vpcAuthMode) {
                 this.vpcAuthMode = vpcAuthMode;
@@ -2397,7 +2404,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the zone in which the instance resides.
+             * The zone ID of the instance.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

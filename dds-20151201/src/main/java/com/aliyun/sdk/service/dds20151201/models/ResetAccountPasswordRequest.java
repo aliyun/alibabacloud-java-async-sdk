@@ -178,7 +178,7 @@ public class ResetAccountPasswordRequest extends Request {
         }
 
         /**
-         * The account for which you want to reset the password. Set the value to **root**.
+         * The account whose password needs to be reset. Set the value to **root**.
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -200,12 +200,12 @@ public class ResetAccountPasswordRequest extends Request {
         }
 
         /**
-         * The role of the instance. Valid values:
+         * 实例的角色类型，取值说明
          * <p>
          * 
-         * *   db: a shard node.
-         * *   cs: a Configserver node.
-         * *   mongos: a mongos node.
+         * 
+         * - 当实例类型为分片集群时，charactertype为必选； 取值为db 和cs。
+         * - 当实例类型为副本集时，charactertype 可为空或传入normal。
          */
         public Builder characterType(String characterType) {
             this.putQueryParameter("CharacterType", characterType);
@@ -214,7 +214,7 @@ public class ResetAccountPasswordRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

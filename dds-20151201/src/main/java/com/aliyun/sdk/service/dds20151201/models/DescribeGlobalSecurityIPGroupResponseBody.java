@@ -50,7 +50,7 @@ public class DescribeGlobalSecurityIPGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * GlobalSecurityIPGroup.
+         * The global IP whitelist templates.
          */
         public Builder globalSecurityIPGroup(java.util.List < GlobalSecurityIPGroup> globalSecurityIPGroup) {
             this.globalSecurityIPGroup = globalSecurityIPGroup;
@@ -58,7 +58,7 @@ public class DescribeGlobalSecurityIPGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The unique ID of the request. If the request fails, provide this ID for technical support to troubleshoot the failure.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +146,7 @@ public class DescribeGlobalSecurityIPGroupResponseBody extends TeaModel {
             private String regionId; 
 
             /**
-             * DBInstances.
+             * The instances associated with the global whitelist template.
              */
             public Builder DBInstances(java.util.List < String > DBInstances) {
                 this.DBInstances = DBInstances;
@@ -154,7 +154,10 @@ public class DescribeGlobalSecurityIPGroupResponseBody extends TeaModel {
             }
 
             /**
-             * GIpList.
+             * The IP addresses in the whitelist template.
+             * <p>
+             * 
+             * > Separate multiple IP addresses with commas (,). You can create up to 1,000 IP addresses or CIDR blocks for all IP address whitelists.
              */
             public Builder gIpList(String gIpList) {
                 this.gIpList = gIpList;
@@ -162,7 +165,7 @@ public class DescribeGlobalSecurityIPGroupResponseBody extends TeaModel {
             }
 
             /**
-             * GlobalIgName.
+             * The name of the IP whitelist template.
              */
             public Builder globalIgName(String globalIgName) {
                 this.globalIgName = globalIgName;
@@ -170,7 +173,7 @@ public class DescribeGlobalSecurityIPGroupResponseBody extends TeaModel {
             }
 
             /**
-             * GlobalSecurityGroupId.
+             * The ID of the IP whitelist template.
              */
             public Builder globalSecurityGroupId(String globalSecurityGroupId) {
                 this.globalSecurityGroupId = globalSecurityGroupId;
@@ -178,7 +181,7 @@ public class DescribeGlobalSecurityIPGroupResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID of the instance.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

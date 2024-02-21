@@ -86,7 +86,7 @@ public class DescribeBackupDBsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Details about the databases.
+         * The details of the databases.
          */
         public Builder databases(Databases databases) {
             this.databases = databases;
@@ -94,7 +94,7 @@ public class DescribeBackupDBsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The page number of the page returned.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -110,7 +110,7 @@ public class DescribeBackupDBsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

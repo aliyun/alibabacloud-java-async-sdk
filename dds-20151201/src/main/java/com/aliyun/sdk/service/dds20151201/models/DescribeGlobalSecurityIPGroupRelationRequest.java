@@ -126,7 +126,7 @@ public class DescribeGlobalSecurityIPGroupRelationRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The instance ID.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -153,7 +153,7 @@ public class DescribeGlobalSecurityIPGroupRelationRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

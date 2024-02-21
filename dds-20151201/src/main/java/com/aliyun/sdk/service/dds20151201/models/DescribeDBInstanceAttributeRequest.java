@@ -208,11 +208,7 @@ public class DescribeDBInstanceAttributeRequest extends Request {
         }
 
         /**
-         * Specifies whether to delete the instance. Valid values:
-         * <p>
-         * 
-         * *   **false**: queries the details of running instances.
-         * *   **true**: queries the details of deleted instances.
+         * IsDelete.
          */
         public Builder isDelete(Boolean isDelete) {
             this.putQueryParameter("IsDelete", isDelete);

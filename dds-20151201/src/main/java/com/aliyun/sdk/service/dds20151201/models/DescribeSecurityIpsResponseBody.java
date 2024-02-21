@@ -62,7 +62,7 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
         private String securityIps; 
 
         /**
-         * The ID of the request.
+         * Whether to display DAS whitelist information.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the information of IP whitelists.
+         * The IP addresses in the default whitelist.
          */
         public Builder securityIpGroups(SecurityIpGroups securityIpGroups) {
             this.securityIpGroups = securityIpGroups;
@@ -78,7 +78,7 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
         }
 
         /**
-         * The IP addresses in the default whitelist.
+         * The ID of the instance.
          */
         public Builder securityIps(String securityIps) {
             this.securityIps = securityIps;
@@ -142,7 +142,7 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
             private String securityIpList; 
 
             /**
-             * The attribute of the IP whitelist. This parameter is empty by default.
+             * An array that consists of the information of IP whitelists.
              */
             public Builder securityIpGroupAttribute(String securityIpGroupAttribute) {
                 this.securityIpGroupAttribute = securityIpGroupAttribute;
@@ -150,7 +150,7 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the IP whitelist.
+             * The ID of the request.
              */
             public Builder securityIpGroupName(String securityIpGroupName) {
                 this.securityIpGroupName = securityIpGroupName;
@@ -158,7 +158,7 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * The IP addresses in the whitelist.
+             * The name of the IP whitelist.
              */
             public Builder securityIpList(String securityIpList) {
                 this.securityIpList = securityIpList;

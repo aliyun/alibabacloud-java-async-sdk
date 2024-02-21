@@ -62,7 +62,7 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * Details about the instances.
+         * The information of instances.
          */
         public Builder DBInstances(java.util.List < DBInstances> DBInstances) {
             this.DBInstances = DBInstances;
@@ -70,7 +70,7 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
         }
 
         /**
-         * The number of instances in the query result.
+         * The number of instances in the query results.
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -142,7 +142,7 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
             private String nodeId; 
 
             /**
-             * The type of the mongos node.
+             * The instance type of the mongos node.
              */
             public Builder nodeClass(String nodeClass) {
                 this.nodeClass = nodeClass;
@@ -271,7 +271,7 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * The storage capacity of the shard node. Unit: GB.
+             * The storage space of the shard node. Unit: GB.
              */
             public Builder nodeStorage(Integer nodeStorage) {
                 this.nodeStorage = nodeStorage;
@@ -332,12 +332,12 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The key of tag N of the instance. Valid values of N: **1** to **20**.
+             * The tag key. Valid values of N: **1** to **20**.
              * <p>
              * 
              * *   The key cannot start with `aliyun`, `acs:`, `http://`, or `https://`.
-             * *   The key can be up to 64 characters in length.
-             * *   The key cannot be an empty string.
+             * *   It can be up to 64 characters in length.
+             * *   It cannot be an empty string.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -345,7 +345,7 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * The value of tag N of the instance. Valid values of N: **1** to **20**.
+             * The tag value. Valid values of N: **1** to **20**.
              * <p>
              * 
              * *   The value cannot start with `aliyun`, `acs:`, `http://`, or `https://`.
@@ -679,11 +679,14 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * The I/O throughput consumed by the instance.
+             * The read and write throughput consumed by the instance.
              * <p>
              * 
-             * > * This parameter is returned when the instance is a serverless instance.
-             * > * Serverless instances are available only in the China site (aliyun.com).
+             * > 
+             * 
+             * *   This parameter is returned when the instance is a serverless instance.
+             * 
+             * *   Serverless instances are available only in the China site (aliyun.com).
              */
             public Builder capacityUnit(String capacityUnit) {
                 this.capacityUnit = capacityUnit;
@@ -703,7 +706,7 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance was created. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The time when the instance was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -711,7 +714,7 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * The instance type of the instance. The instance type varies based on the instance architecture. For more information about instance types supported by different instance architectures, see the following topics:
+             * The instance type. The instance type varies based on the instance architecture. For more information about instance types supported by different instance architectures, see the following references:
              * <p>
              * 
              * *   [Standalone instance types](~~311407~~)
@@ -732,7 +735,7 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * The instance ID.
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -748,7 +751,7 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * The storage capacity of the instance.
+             * The storage space of the instance. Unit: GB.
              */
             public Builder DBInstanceStorage(Integer DBInstanceStorage) {
                 this.DBInstanceStorage = DBInstanceStorage;
@@ -756,7 +759,7 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * The category of the instance. Valid values:
+             * The architecture of the instance. Valid values:
              * <p>
              * 
              * *   **sharding**: sharded cluster instance
@@ -768,7 +771,7 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance data was destroyed. The time is in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * The time when the instance data was destroyed. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder destroyTime(String destroyTime) {
                 this.destroyTime = destroyTime;
@@ -792,7 +795,7 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance expires. The time is in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.
+             * The time when the instance expires. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -814,7 +817,7 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * The last time when the instance was downgraded.
+             * The date when the last downgrade operation was performed.
              */
             public Builder lastDowngradeTime(String lastDowngradeTime) {
                 this.lastDowngradeTime = lastDowngradeTime;
@@ -826,11 +829,11 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
              * <p>
              * 
              * *   **Unlock**: The instance is not locked.
-             * *   **ManualLock**: The cluster is manually locked.
-             * *   **LockByExpiration**: The instance is automatically locked after it expires.
+             * *   **ManualLock**: The instance is manually locked.
+             * *   **LockByExpiration**: The instance is automatically locked due to instance expiration.
              * *   **LockByRestoration**: The instance is automatically locked before it is rolled back.
-             * *   **LockByDiskQuota**: The instance is automatically locked after the storage capacity is exhausted.
-             * *   **Released**: The instance is released. After an instance is released, the instance cannot be unlocked. You can only restore the backup data of the instance to a new instance. This process requires an extended period of time.
+             * *   **LockByDiskQuota**: The instance is automatically locked after the storage space is exhausted.
+             * *   **Released**: The instance is released. After an instance is released, the instance cannot be unlocked. You can only restore the backup data of the instance to a new instance. This process requires a long period of time.
              */
             public Builder lockMode(String lockMode) {
                 this.lockMode = lockMode;
@@ -838,10 +841,10 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * Details about the mongos node.
+             * The details of the mongos nodes.
              * <p>
              * 
-             * >  This parameter is returned if the instance is a sharded cluster instance.
+             * >  This parameter is returned when the instance is a sharded cluster instance.
              */
             public Builder mongosList(java.util.List < MongosList> mongosList) {
                 this.mongosList = mongosList;
@@ -872,7 +875,7 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
              * The number of nodes in the instance.
              * <p>
              * 
-             * >  This parameter is returned if the instance is a replica set instance.
+             * >  This parameter is returned when the instance is a replica set instance.
              */
             public Builder replicationFactor(String replicationFactor) {
                 this.replicationFactor = replicationFactor;
@@ -880,7 +883,7 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * The ID of the resource group to which the instance belongs.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -888,10 +891,10 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * Details about the shard node.
+             * The details of the shard nodes.
              * <p>
              * 
-             * >  This parameter is returned if the instance is a sharded cluster instance.
+             * >  This parameter is returned when the instance is a sharded cluster instance.
              */
             public Builder shardList(java.util.List < ShardList> shardList) {
                 this.shardList = shardList;
@@ -899,7 +902,7 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the instance.
+             * The tags to add to the instance.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -907,11 +910,11 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether password-free access within a VPC is enabled. Valid values:
+             * Indicates whether password-free access over VPC is enabled. Valid values:
              * <p>
              * 
-             * *   **Open**: Password-free access is enabled.
-             * *   **Close**: Password-free access is disabled.
+             * *   **Open**: Password-free access over VPC is enabled.
+             * *   **Close**: Password-free access over VPC is disabled.
              */
             public Builder vpcAuthMode(String vpcAuthMode) {
                 this.vpcAuthMode = vpcAuthMode;

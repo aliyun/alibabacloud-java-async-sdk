@@ -122,10 +122,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         private String snapshotBackupType; 
 
         /**
-         * The frequency at which high-frequency backups are created. Valid values:
+         * The frequency at which high-frequency backup is created. Valid values:
          * <p>
          * 
-         * *   **-1**: disables high-frequency backup.
+         * *   **-1**: High-frequency backup is disabled.
          * *   **15**: every 15 minutes.
          * *   **30**: every 30 minutes.
          * *   **60**: every hour.
@@ -142,7 +142,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The retention period of backups. Unit: days.
+         * The retention period of the backup data. Unit: day.
          */
         public Builder backupRetentionPeriod(String backupRetentionPeriod) {
             this.backupRetentionPeriod = backupRetentionPeriod;
@@ -150,11 +150,11 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether log backup is enabled. Default value: 0. Valid values:
+         * Indicates whether the log backup feature is enabled. Valid values:
          * <p>
          * 
-         * *   **0**: disables log backup.
-         * *   **1**: enables log backup.
+         * *   **0** (default): The log backup feature is disabled.
+         * *   **1**: The log backup feature is enabled.
          */
         public Builder enableBackupLog(Integer enableBackupLog) {
             this.enableBackupLog = enableBackupLog;
@@ -162,7 +162,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The number of days for which to retain log backups. Valid values: 7 to 730.
+         * The number of days for which log backups are retained. Valid values: 7 to 730.
          */
         public Builder logBackupRetentionPeriod(Integer logBackupRetentionPeriod) {
             this.logBackupRetentionPeriod = logBackupRetentionPeriod;
@@ -187,7 +187,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The time range to back up data. The time is in the *HH:mm*Z-*HH:mm*Z format. The time is displayed in UTC.
+         * The time range during which the backup was created. The time follows the ISO 8601 standard in the *HH:mm*Z-*HH:mm*Z format. The time is displayed in UTC.
          */
         public Builder preferredBackupTime(String preferredBackupTime) {
             this.preferredBackupTime = preferredBackupTime;
@@ -195,7 +195,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -203,11 +203,11 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The snapshot backup type. Default value: Standard. Valid values:
+         * The snapshot backup type. Valid values:
          * <p>
          * 
          * *   **Flash**: single-digit second backup
-         * *   **Standard**: standard backup
+         * *   **Standard** (default): standard backup
          */
         public Builder snapshotBackupType(String snapshotBackupType) {
             this.snapshotBackupType = snapshotBackupType;

@@ -86,7 +86,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Details about backup sets.
+         * The details of the backup sets.
          */
         public Builder backups(Backups backups) {
             this.backups = backups;
@@ -94,7 +94,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of the page to return.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,12 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The number of entries returned per page. Valid values:
+         * <p>
+         * 
+         * *   **30** (default)
+         * *   **50**
+         * *   **100**
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +115,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +123,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of backup sets that were returned.
+         * The total number of backup sets.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -294,7 +299,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The end of the backup time range. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format and displayed in UTC.
+             * The end of the backup time range. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder backupEndTime(String backupEndTime) {
                 this.backupEndTime = backupEndTime;
@@ -313,7 +318,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
              * The internal download URL of the backup set.
              * <p>
              * 
-             * >  You can use this URL to download the backup set from on the ECS instance which is on the same network as the ApsaraDB for MongoDB instance.
+             * > You can use this URL to download the backup set from on the Elastic Compute Service (ECS) instance which is on the same network as the ApsaraDB for MongoDB instance.
              */
             public Builder backupIntranetDownloadURL(String backupIntranetDownloadURL) {
                 this.backupIntranetDownloadURL = backupIntranetDownloadURL;
@@ -321,7 +326,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The backup method. Valid values:
+             * The method that is used to generate the backup set. Valid values:
              * <p>
              * 
              * *   **Snapshot**
@@ -334,11 +339,11 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The backup mode.
+             * The backup mode of the backup set. Valid values:
              * <p>
              * 
-             * *   **Automated**: automatic backup
-             * *   **Manual**: manual backup
+             * *   **Automated**:
+             * *   **Manual**
              */
             public Builder backupMode(String backupMode) {
                 this.backupMode = backupMode;
@@ -354,7 +359,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The beginning of the backup time range. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format and displayed in UTC.
+             * The beginning of the backup time range. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder backupStartTime(String backupStartTime) {
                 this.backupStartTime = backupStartTime;
@@ -362,11 +367,11 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the backup. Valid values:
+             * The status of the backup task. Valid values:
              * <p>
              * 
-             * *   **Success**: The backup task is successful.
-             * *   **Failed**: The backup task failed.
+             * *   **Success**
+             * *   **Failed**
              */
             public Builder backupStatus(String backupStatus) {
                 this.backupStatus = backupStatus;
@@ -374,11 +379,11 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The backup method.
+             * The backup type. Valid values:
              * <p>
              * 
-             * *   **FullBackup**: a full backup
-             * *   **IncrementalBackup**: an incremental backup
+             * *   **FullBackup**
+             * *   **IncrementalBackup**
              */
             public Builder backupType(String backupType) {
                 this.backupType = backupType;

@@ -50,7 +50,7 @@ public class DescribeKernelReleaseNotesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The list of version release notes.
+         * The list of the version release notes.
          */
         public Builder releaseNotes(ReleaseNotes releaseNotes) {
             this.releaseNotes = releaseNotes;
@@ -58,7 +58,7 @@ public class DescribeKernelReleaseNotesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeKernelReleaseNotesResponseBody extends TeaModel {
             }
 
             /**
-             * Publishes the log.
+             * The release notes.
              */
             public Builder releaseNote(String releaseNote) {
                 this.releaseNote = releaseNote;
@@ -159,7 +159,7 @@ public class DescribeKernelReleaseNotesResponseBody extends TeaModel {
             private java.util.List < ReleaseNote> releaseNote; 
 
             /**
-             * Publishes the log.
+             * The release notes.
              */
             public Builder releaseNote(java.util.List < ReleaseNote> releaseNote) {
                 this.releaseNote = releaseNote;

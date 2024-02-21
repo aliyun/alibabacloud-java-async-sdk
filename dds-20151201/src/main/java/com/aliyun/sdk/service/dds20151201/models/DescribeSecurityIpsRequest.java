@@ -148,7 +148,7 @@ public class DescribeSecurityIpsRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * com.aliyun.abs.dds.service.v20151201.domain.GetDdsSecurityIpsRequest
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -193,7 +193,7 @@ public class DescribeSecurityIpsRequest extends Request {
         }
 
         /**
-         * Whether to display DAS whitelist information.
+         * The operation that you want to perform. Set the value to **DescribeSecurityIps**.
          */
         public Builder showHDMIps(Boolean showHDMIps) {
             this.putQueryParameter("ShowHDMIps", showHDMIps);

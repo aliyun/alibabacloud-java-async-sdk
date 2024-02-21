@@ -192,7 +192,7 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
-         * The current connection string, which is to be modified.
+         * The current endpoint that is to be modified.
          */
         public Builder currentConnectionString(String currentConnectionString) {
             this.putQueryParameter("CurrentConnectionString", currentConnectionString);
@@ -201,10 +201,10 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The instance ID.
          * <p>
          * 
-         * >  If you set this parameter to the ID of a sharded cluster instance, you must also specify the **NodeId** parameter.
+         * > If you set this parameter to the ID of a sharded cluster instance, you must also specify the **NodeId** parameter.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -213,10 +213,10 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
-         * The new connection string. It must be 8 to 64 characters in length and can contain letters and digits. It must start with a lowercase letter.
+         * The new endpoint. It must be 8 to 64 characters in length and can contain letters and digits. It must start with a lowercase letter.
          * <p>
          * 
-         * >  You need only to specify the prefix of the connection string. The content other than the prefix cannot be modified.
+         * > You need only to specify the prefix of the endpoint. The content other than the prefix cannot be modified.
          */
         public Builder newConnectionString(String newConnectionString) {
             this.putQueryParameter("NewConnectionString", newConnectionString);
@@ -225,9 +225,9 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
-         * The new port. The new port ranges from 1000 to 65535.
+         * 新的端口，端口范围需要在1000~65535之间。
          * <p>
-         * >This parameter is available only when the DBInstanceId parameter is set to a cloud-disk instance ID.
+         * > 当**DBInstanceId**参数传入的是云盘实例ID时，本参数才可用。
          */
         public Builder newPort(Integer newPort) {
             this.putQueryParameter("NewPort", newPort);
@@ -239,7 +239,7 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
          * The ID of the mongos in the specified sharded cluster instance. Only one mongos ID can be specified in each call.
          * <p>
          * 
-         * >  This parameter is valid only if you set the **DBInstanceId** parameter to the ID of a sharded cluster instance.
+         * > This parameter is valid only when you specify the **DBInstanceId** parameter to the ID of a sharded cluster instance.
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);

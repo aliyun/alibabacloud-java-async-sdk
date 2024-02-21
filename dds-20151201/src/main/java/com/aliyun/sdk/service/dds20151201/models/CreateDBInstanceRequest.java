@@ -674,7 +674,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * The coupon code. Default value: `youhuiquan_promotion_option_id_for_blank`.
+         * Specifies whether to use coupons. Default value: null. Valid values:
+         * <p>
+         * - **default** or **null**: uses coupons.
+         * - **youhuiquan_promotion_option_id_for_blank**: does not use coupons.
          */
         public Builder couponNo(String couponNo) {
             this.putQueryParameter("CouponNo", couponNo);

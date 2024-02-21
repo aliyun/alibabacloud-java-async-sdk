@@ -287,7 +287,7 @@ public class DescribeDBInstancesOverviewRequest extends Request {
         }
 
         /**
-         * The instance type of the instance. The instance type varies based on the instance architecture. For more information about instance types supported by different instance architectures, see the following topics:
+         * The instance type. The instance type varies based on the instance architecture. For more information about instance types supported by different instance architectures, see the following references:
          * <p>
          * 
          * *   [Standalone instance types](~~311407~~)
@@ -304,8 +304,11 @@ public class DescribeDBInstancesOverviewRequest extends Request {
          * The ID of the instance for which you want to query the overview information.
          * <p>
          * 
-         * > * If you do not specify this parameter, the overview information of all instances under this account is queried.
-         * > * Separate the instance IDs with commas (,).
+         * > 
+         * 
+         * *   If you do not specify this parameter, the overview information of all instances within this account is queried.
+         * 
+         * *   Separate the instance IDs with commas (,).
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -323,14 +326,17 @@ public class DescribeDBInstancesOverviewRequest extends Request {
         }
 
         /**
-         * The category of the instance. Valid values:
+         * The architecture of the instance. Valid values:
          * <p>
          * 
-         * - **sharding**: sharded cluster instance
-         * - **replicate**: replica set or standalone instance
+         * *   **sharding**: sharded cluster instance
+         * *   **replicate**: replica set or standalone instance
          * 
-         * > * To query the overview information of a sharded cluster instance, you must set the parameter to **sharding**.
-         * > * If you do not specify this parameter, the overview information of all instances under this account is queried.
+         * > 
+         * 
+         * *   To query the overview information of a sharded cluster instance, you must set the parameter to **sharding**.
+         * 
+         * *   If you do not specify this parameter, the overview information of all instances within this account is queried.
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -342,8 +348,8 @@ public class DescribeDBInstancesOverviewRequest extends Request {
          * The network type of the instance. Valid values:
          * <p>
          * 
-         * *   **Classic**
-         * *   **VPC**
+         * *   **Classic**: classic network
+         * *   **VPC**: Virtual Private Cloud (VPC)
          */
         public Builder networkType(String networkType) {
             this.putQueryParameter("NetworkType", networkType);
@@ -379,7 +385,7 @@ public class DescribeDBInstancesOverviewRequest extends Request {
         }
 
         /**
-         * The ID of the resource group. For more information, see [View basic information of a resource group](~~151181~~).
+         * The ID of the resource group to which the instance belongs. For more information, see [View the basic information of a resource group](~~151181~~).
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -406,7 +412,7 @@ public class DescribeDBInstancesOverviewRequest extends Request {
         }
 
         /**
-         * The ID of the vSwitch.
+         * The ID of the vSwitch to which the instance is connected.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -415,7 +421,7 @@ public class DescribeDBInstancesOverviewRequest extends Request {
         }
 
         /**
-         * The ID of the virtual private cloud (VPC).
+         * The ID of the VPC in which the instance is deployed.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -424,7 +430,7 @@ public class DescribeDBInstancesOverviewRequest extends Request {
         }
 
         /**
-         * The ID of the zone.
+         * The zone ID of the instance.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

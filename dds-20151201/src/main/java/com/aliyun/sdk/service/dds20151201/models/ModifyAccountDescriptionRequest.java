@@ -167,9 +167,8 @@ public class ModifyAccountDescriptionRequest extends Request {
          * The description of the account.
          * <p>
          * 
-         * *   It cannot start with http:// or https://.
-         * *   It must start with a letter.
-         * *   It must be 2 to 256 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-).
+         * *   The description must start with a letter and cannot start with http:// or https://.
+         * *   The description must be 2 to 256 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-).
          */
         public Builder accountDescription(String accountDescription) {
             this.putQueryParameter("AccountDescription", accountDescription);
@@ -178,7 +177,7 @@ public class ModifyAccountDescriptionRequest extends Request {
         }
 
         /**
-         * The name of the account for which you want to modify the description.
+         * The name of the account whose description is to be modified.
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);

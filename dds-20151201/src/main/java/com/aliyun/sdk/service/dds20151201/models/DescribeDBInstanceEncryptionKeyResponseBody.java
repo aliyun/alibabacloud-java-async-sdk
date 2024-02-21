@@ -142,7 +142,7 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
         }
 
         /**
-         * The scheduled time when the key for the instance will be deleted. If the value is empty, the key will not be deleted.
+         * The scheduled time when the key for the instance will be deleted. If the parameter is left empty, the key will not be deleted.
          */
         public Builder deleteDate(String deleteDate) {
             this.deleteDate = deleteDate;
@@ -186,7 +186,7 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
         }
 
         /**
-         * The expiration time of the key for the instance. The time is displayed in UTC. If the value is empty, the key for the instance will not expire.
+         * The expiration time of the key for the instance. The time is displayed in UTC. If the parameter is left empty, the key for the instance will not expire.
          */
         public Builder materialExpireTime(String materialExpireTime) {
             this.materialExpireTime = materialExpireTime;
@@ -202,7 +202,7 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
