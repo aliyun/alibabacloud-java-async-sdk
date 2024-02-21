@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.hologram20220601;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.hologram20220601.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -17,6 +18,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     static AsyncClient create() {
         return builder().build();
     }
+
+    CompletableFuture<ChangeResourceGroupResponse> changeResourceGroup(ChangeResourceGroupRequest request);
 
     /**
       * > Before you call this operation, make sure that you understand the billing method and pricing of Hologres because this operation is charged.
@@ -51,9 +54,17 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DeleteInstanceResponse> deleteInstance(DeleteInstanceRequest request);
 
+    CompletableFuture<DisableHiveAccessResponse> disableHiveAccess(DisableHiveAccessRequest request);
+
+    CompletableFuture<EnableHiveAccessResponse> enableHiveAccess(EnableHiveAccessRequest request);
+
     CompletableFuture<GetInstanceResponse> getInstance(GetInstanceRequest request);
 
+    CompletableFuture<GetWarehouseDetailResponse> getWarehouseDetail(GetWarehouseDetailRequest request);
+
     CompletableFuture<ListInstancesResponse> listInstances(ListInstancesRequest request);
+
+    CompletableFuture<ListWarehousesResponse> listWarehouses(ListWarehousesRequest request);
 
     /**
       * > Before you call this operation, make sure that you understand the billing method and pricing of Hologres because this operation is charged.

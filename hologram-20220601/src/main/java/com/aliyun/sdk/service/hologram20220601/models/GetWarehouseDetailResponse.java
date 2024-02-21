@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ListInstancesResponse} extends {@link TeaModel}
+ * {@link GetWarehouseDetailResponse} extends {@link TeaModel}
  *
- * <p>ListInstancesResponse</p>
+ * <p>GetWarehouseDetailResponse</p>
  */
-public class ListInstancesResponse extends Response {
+public class GetWarehouseDetailResponse extends Response {
     @NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -19,16 +19,16 @@ public class ListInstancesResponse extends Response {
     private Integer statusCode;
 
     @NameInMap("body")
-    private ListInstancesResponseBody body;
+    private GetWarehouseDetailResponseBody body;
 
-    private ListInstancesResponse(BuilderImpl builder) {
+    private GetWarehouseDetailResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static ListInstancesResponse create() {
+    public static GetWarehouseDetailResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +54,35 @@ public class ListInstancesResponse extends Response {
     /**
      * @return body
      */
-    public ListInstancesResponseBody getBody() {
+    public GetWarehouseDetailResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<ListInstancesResponse, Builder> {
+    public interface Builder extends Response.Builder<GetWarehouseDetailResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(ListInstancesResponseBody body);
+        Builder body(GetWarehouseDetailResponseBody body);
 
         @Override
-        ListInstancesResponse build();
+        GetWarehouseDetailResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<ListInstancesResponse, Builder>
+            extends Response.BuilderImpl<GetWarehouseDetailResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private ListInstancesResponseBody body; 
+        private GetWarehouseDetailResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(ListInstancesResponse response) {
+        private BuilderImpl(GetWarehouseDetailResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +111,14 @@ public class ListInstancesResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(ListInstancesResponseBody body) {
+        public Builder body(GetWarehouseDetailResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public ListInstancesResponse build() {
-            return new ListInstancesResponse(this);
+        public GetWarehouseDetailResponse build() {
+            return new GetWarehouseDetailResponse(this);
         } 
 
     } 
