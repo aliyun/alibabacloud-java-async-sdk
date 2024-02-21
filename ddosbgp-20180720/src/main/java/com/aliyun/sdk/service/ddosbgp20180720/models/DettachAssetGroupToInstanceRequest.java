@@ -98,7 +98,7 @@ public class DettachAssetGroupToInstanceRequest extends Request {
         } 
 
         /**
-         * AssetGroupList.
+         * The information about the asset that you want to dissociate.
          */
         public Builder assetGroupList(java.util.List < AssetGroupList> assetGroupList) {
             String assetGroupListShrink = shrink(assetGroupList, "AssetGroupList", "json");
@@ -108,7 +108,10 @@ public class DettachAssetGroupToInstanceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
+         * <p>
+         * 
+         * >  You can call the [DescribeInstanceList](~~118698~~) operation to query the IDs of all Anti-DDoS Origin instances of paid editions.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -117,7 +120,10 @@ public class DettachAssetGroupToInstanceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region in which the instance resides.
+         * <p>
+         * 
+         * >  You can call the [DescribeRegions](~~118703~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -126,7 +132,7 @@ public class DettachAssetGroupToInstanceRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * The source IP address of the request. The system specifies this parameter.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -195,7 +201,7 @@ public class DettachAssetGroupToInstanceRequest extends Request {
             private String type; 
 
             /**
-             * Name.
+             * The ID of the asset. If the asset is a Web Application Firewall (WAF) instance, specify the ID of the WAF instance.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -203,7 +209,7 @@ public class DettachAssetGroupToInstanceRequest extends Request {
             }
 
             /**
-             * Region.
+             * The region ID of the asset.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -211,7 +217,11 @@ public class DettachAssetGroupToInstanceRequest extends Request {
             }
 
             /**
-             * Type.
+             * The type of the asset. Valid values:
+             * <p>
+             * 
+             * *   **waf**: WAF instance
+             * *   **ga**: Global Accelerator (GA) instance
              */
             public Builder type(String type) {
                 this.type = type;

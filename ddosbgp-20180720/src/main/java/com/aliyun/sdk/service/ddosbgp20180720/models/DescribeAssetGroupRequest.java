@@ -112,7 +112,7 @@ public class DescribeAssetGroupRequest extends Request {
         } 
 
         /**
-         * Name.
+         * The ID of the asset. If the asset is a Web Application Firewall (WAF) instance, specify the ID of the WAF instance.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -121,7 +121,7 @@ public class DescribeAssetGroupRequest extends Request {
         }
 
         /**
-         * Region.
+         * The region ID of the asset.
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -130,7 +130,10 @@ public class DescribeAssetGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region in which the instance resides.
+         * <p>
+         * 
+         * >  You can call the [DescribeRegions](~~118703~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -139,7 +142,7 @@ public class DescribeAssetGroupRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * The source IP address of the request. The system specifies this parameter.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -148,7 +151,11 @@ public class DescribeAssetGroupRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type of the asset. Valid values:
+         * <p>
+         * 
+         * *   **waf**: WAF instance
+         * *   **ga**: Global Accelerator (GA) instance
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

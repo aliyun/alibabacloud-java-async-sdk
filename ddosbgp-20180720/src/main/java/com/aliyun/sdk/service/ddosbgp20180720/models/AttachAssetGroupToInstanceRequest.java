@@ -98,7 +98,7 @@ public class AttachAssetGroupToInstanceRequest extends Request {
         } 
 
         /**
-         * AssetGroupList.
+         * The information about the asset to be associated.
          */
         public Builder assetGroupList(java.util.List < AssetGroupList> assetGroupList) {
             String assetGroupListShrink = shrink(assetGroupList, "AssetGroupList", "json");
@@ -108,7 +108,10 @@ public class AttachAssetGroupToInstanceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance to query.
+         * <p>
+         * 
+         * >  You can call the [DescribeInstanceList](~~118698~~) operation to query the IDs of all Anti-DDoS Origin instances of paid editions.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -117,7 +120,10 @@ public class AttachAssetGroupToInstanceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region in which the instance resides.
+         * <p>
+         * 
+         * >  You can call the [DescribeRegions](~~118703~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -126,7 +132,7 @@ public class AttachAssetGroupToInstanceRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * The source IP address of the request. The system specifies this parameter.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -207,7 +213,7 @@ public class AttachAssetGroupToInstanceRequest extends Request {
             private String type; 
 
             /**
-             * MemberUid.
+             * The UID of the member to which the asset belongs.
              */
             public Builder memberUid(String memberUid) {
                 this.memberUid = memberUid;
@@ -215,7 +221,7 @@ public class AttachAssetGroupToInstanceRequest extends Request {
             }
 
             /**
-             * Name.
+             * The ID of the asset that you want to add. If the asset is a Web Application Firewall (WAF) instance, specify the ID of the WAF instance.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -223,7 +229,7 @@ public class AttachAssetGroupToInstanceRequest extends Request {
             }
 
             /**
-             * Region.
+             * The region ID of the asset.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -231,7 +237,7 @@ public class AttachAssetGroupToInstanceRequest extends Request {
             }
 
             /**
-             * Type.
+             * The type of the asset.
              */
             public Builder type(String type) {
                 this.type = type;

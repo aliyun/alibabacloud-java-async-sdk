@@ -62,7 +62,7 @@ public class DescribeAssetGroupResponseBody extends TeaModel {
         private Long total; 
 
         /**
-         * AssetGroupList.
+         * The information about the asset.
          */
         public Builder assetGroupList(java.util.List < AssetGroupList> assetGroupList) {
             this.assetGroupList = assetGroupList;
@@ -70,7 +70,7 @@ public class DescribeAssetGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeAssetGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * The total number of entries returned.
          */
         public Builder total(Long total) {
             this.total = total;
@@ -142,7 +142,7 @@ public class DescribeAssetGroupResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Name.
+             * The ID of the asset.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -150,7 +150,7 @@ public class DescribeAssetGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * The region to which the asset belongs.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -158,7 +158,7 @@ public class DescribeAssetGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the asset.
              */
             public Builder type(String type) {
                 this.type = type;

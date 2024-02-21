@@ -138,7 +138,10 @@ public class DescribeAssetGroupToInstanceRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The ID of the instance to query.
+         * <p>
+         * 
+         * >  You can call the [DescribeInstanceList](~~118698~~) operation to query the IDs of all Anti-DDoS Origin instances of paid editions.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -147,7 +150,7 @@ public class DescribeAssetGroupToInstanceRequest extends Request {
         }
 
         /**
-         * MemberUid.
+         * The UID of the member to which the asset belongs.
          */
         public Builder memberUid(String memberUid) {
             this.putQueryParameter("MemberUid", memberUid);
@@ -156,7 +159,7 @@ public class DescribeAssetGroupToInstanceRequest extends Request {
         }
 
         /**
-         * Name.
+         * The ID of the asset. If the asset is a Web Application Firewall (WAF) instance, specify the ID of the WAF instance.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -165,7 +168,7 @@ public class DescribeAssetGroupToInstanceRequest extends Request {
         }
 
         /**
-         * Region.
+         * The region ID of the asset.
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -174,7 +177,10 @@ public class DescribeAssetGroupToInstanceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region in which the instance resides.
+         * <p>
+         * 
+         * >  You can call the [DescribeRegions](~~118703~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -183,7 +189,7 @@ public class DescribeAssetGroupToInstanceRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * The source IP address of the request. The system specifies this parameter.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -192,7 +198,11 @@ public class DescribeAssetGroupToInstanceRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type of the asset. Valid values:
+         * <p>
+         * 
+         * *   **waf**: WAF instance
+         * *   **ga**: Global Accelerator (GA) instance
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

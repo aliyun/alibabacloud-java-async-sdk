@@ -62,7 +62,7 @@ public class DescribeAssetGroupToInstanceResponseBody extends TeaModel {
         private Long total; 
 
         /**
-         * DataList.
+         * The response parameters.
          */
         public Builder dataList(java.util.List < DataList> dataList) {
             this.dataList = dataList;
@@ -70,7 +70,7 @@ public class DescribeAssetGroupToInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeAssetGroupToInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * The total number of entries returned.
          */
         public Builder total(Long total) {
             this.total = total;
@@ -166,7 +166,7 @@ public class DescribeAssetGroupToInstanceResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * InstanceId.
+             * The ID of the Anti-DDoS Origin instance of a paid edition.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -174,7 +174,7 @@ public class DescribeAssetGroupToInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * MemberUid.
+             * The UID of the member to which the asset belongs.
              */
             public Builder memberUid(String memberUid) {
                 this.memberUid = memberUid;
@@ -182,7 +182,7 @@ public class DescribeAssetGroupToInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The ID of the asset.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -190,7 +190,7 @@ public class DescribeAssetGroupToInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * The region ID of the asset.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -198,7 +198,7 @@ public class DescribeAssetGroupToInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the asset.
              */
             public Builder type(String type) {
                 this.type = type;
