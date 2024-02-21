@@ -255,7 +255,7 @@ public class CreateInstanceRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable auto-renewal. This parameter takes effect only when the PaymentType parameter is set to Subscription.
+         * Specifies whether to enable auto-renewal for the instance. This parameter takes effect only if you set PaymentType to Subscription.
          * <p>
          * 
          * *   true: enable
@@ -268,7 +268,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The auto-renewal cycle of the instance. This parameter takes effect only when the autoRenew parameter is set to true. Unit: months.
+         * The auto-renewal cycle of the instance. This parameter takes effect only if you set autoRenew to true. Unit: months.
          * <p>
          * 
          * Valid values:
@@ -282,7 +282,11 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * commodityCode.
+         * The commodity code.
+         * <p>
+         * 
+         * *   ons_rmqpost_public_intl: pay-as-you-go
+         * *   ons_rmqsub_public_intl: subscription
          */
         public Builder commodityCode(String commodityCode) {
             this.putBodyParameter("commodityCode", commodityCode);
@@ -303,7 +307,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The information about the network.
+         * The network configurations.
          */
         public Builder networkInfo(NetworkInfo networkInfo) {
             this.putBodyParameter("networkInfo", networkInfo);
@@ -312,12 +316,12 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The billing method of the instance. ApsaraMQ for RocketMQ supports the subscription and pay-as-you-go billing methods.
+         * The billing method of the instance. ApsaraMQ for RocketMQ supports the subscription and pay-as-you-go billing methods.
          * <p>
          * 
          * Valid values:
          * 
-         * *   PayAsYouGo: pay-as-you go. This billing method allows you to use resources before you pay for the resources.
+         * *   PayAsYouGo: This billing method allows you to use resources before you pay for the resources.
          * *   Subscription: This billing method allows you to use resources after you pay for the resources.
          * 
          * For more information, see [Billing methods](~~427234~~).
@@ -329,7 +333,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The subscription duration of the instance. This parameter takes effect only when the PaymentType parameter is set to Subscription.
+         * The subscription duration of the instance. This parameter takes effect only if you set PaymentType to Subscription.
          * <p>
          * 
          * Valid values:
@@ -359,7 +363,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The information about the instance specification.
+         * The information about the instance specifications.
          */
         public Builder productInfo(ProductInfo productInfo) {
             this.putBodyParameter("productInfo", productInfo);
@@ -368,7 +372,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The description of the instance.
+         * The instance description.
          */
         public Builder remark(String remark) {
             this.putBodyParameter("remark", remark);
@@ -377,7 +381,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * The resource group ID.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("resourceGroupId", resourceGroupId);
@@ -395,7 +399,7 @@ public class CreateInstanceRequest extends Request {
          * *   ultimate: Enterprise Platinum Edition
          * *   professional: Professional Edition
          * 
-         * > After you create a ApsaraMQ for RocketMQ instance, you can only upgrade the primary edition of the instance. The following editions are sorted in ascending order: Standard Edition, Professional Edition, and Platinum Edition. For example, an instance of Standard Edition can be upgraded to Professional Edition. However, an instance of Professional Edition cannot be downgraded to Standard Edition.
+         * >  After an instance is created, you can only upgrade the primary edition of the instance. The following editions are sorted in ascending order: Standard Edition, Professional Edition, Enterprise Platinum Edition. For example, you can upgrade an instance of Standard Edition to Professional Edition, but cannot downgrade an instance of Professional Edition to Standard Edition.
          */
         public Builder seriesCode(String seriesCode) {
             this.putBodyParameter("seriesCode", seriesCode);
@@ -404,7 +408,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The code of the service to which the instance belongs. The service code of ApsaraMQ for RocketMQ is rmq.
+         * The code of the service to which the instance belongs. The service code of ApsaraMQ for RocketMQ is rmq.
          */
         public Builder serviceCode(String serviceCode) {
             this.putBodyParameter("serviceCode", serviceCode);
@@ -418,12 +422,12 @@ public class CreateInstanceRequest extends Request {
          * 
          * Valid values:
          * 
-         * *   cluster_ha: Cluster High-availability Edition
+         * *   cluster_ha: High-availability Cluster Edition
          * *   single_node: Standalone Edition
          * 
-         * If you set the seriesCode parameter to ultimate, you can set this parameter to only cluster_ha.
+         * If you set seriesCode to ultimate, you can set this parameter to only cluster_ha.
          * 
-         * > After you create a ApsaraMQ for RocketMQ instance, you cannot change the sub-category edition of the instance.
+         * >  After an instance is created, you cannot change the sub-category edition of the instance.
          */
         public Builder subSeriesCode(String subSeriesCode) {
             this.putBodyParameter("subSeriesCode", subSeriesCode);
@@ -515,7 +519,7 @@ public class CreateInstanceRequest extends Request {
              * The Internet bandwidth. Unit: MB/s.
              * <p>
              * 
-             * This parameter is required only when the flowOutType parameter is set to payByBandwidth.
+             * This parameter is required only if you set flowOutType to payByBandwidth.
              * 
              * Valid values: 1 to 1000.
              */
@@ -525,13 +529,13 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * The metering method for Internet usage.
+             * The billing method of Internet usage.
              * <p>
              * 
              * Valid values:
              * 
-             * *   payByBandwidth: pay-by-bandwidth. If the Internet access feature is enabled, specify this value for the parameter.
-             * *   uninvolved: N/A. If the Internet access feature is disabled, specify this value for the parameter.
+             * *   payByBandwidth: pay-by-bandwidth. If Internet access is enabled for an instance, specify this value for the parameter.
+             * *   uninvolved: No billing method is involved. If Internet access is disabled for an instance, specify this value for the parameter.
              */
             public Builder flowOutType(String flowOutType) {
                 this.flowOutType = flowOutType;
@@ -547,7 +551,7 @@ public class CreateInstanceRequest extends Request {
              * *   enable
              * *   disable
              * 
-             * By default, ApsaraMQ for RocketMQ instances are accessed in VPCs. If you enable the Internet access feature, you are charged for Internet outbound bandwidth. For more information, see [Internet access fee](~~427240~~).
+             * By default, ApsaraMQ for RocketMQ allows you to access instances in VPCs. If you enable Internet access for an instance, you can access the instance over the Internet. After you enable this feature, you are charged for outbound Internet traffic. For more information, see [Internet access fee](~~427240~~).
              */
             public Builder internetSpec(String internetSpec) {
                 this.internetSpec = internetSpec;
@@ -555,11 +559,11 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * The whitelist that includes the IP addresses that are allowed to access the ApsaraMQ for RocketMQ broker over the Internet. This parameter can be configured only when you use a public endpoint to access the ApsaraMQ for RocketMQ broker.
+             * The whitelist that includes the IP addresses that are allowed to access the ApsaraMQ for RocketMQ broker over the Internet. This parameter can be configured only if you use a public endpoint to access the instance.
              * <p>
              * 
-             * *   If this parameter is not configured, all IP addresses are allowed to access the ApsaraMQ for RocketMQ broker over the Internet.
-             * *   If this parameter is configured, only the IP addresses that are included in the whitelist can access the ApsaraMQ for RocketMQ broker over the Internet.
+             * *   If you do not configure an IP address whitelist, all CIDR blocks are allowed to access the ApsaraMQ for RocketMQ broker over the Internet.
+             * *   If configure an IP address whitlist, only the IP addresses in the whitelist are allowed to access the ApsaraMQ for RocketMQ broker over the Internet.
              */
             public Builder ipWhitelist(java.util.List < String > ipWhitelist) {
                 this.ipWhitelist = ipWhitelist;
@@ -626,7 +630,7 @@ public class CreateInstanceRequest extends Request {
             private String vpcId; 
 
             /**
-             * securityGroupIds.
+             * The ID of the security group to which the instance belongs.
              */
             public Builder securityGroupIds(String securityGroupIds) {
                 this.securityGroupIds = securityGroupIds;
@@ -634,10 +638,10 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * The ID of the vSwitch with which the instance is associated.
+             * The ID of the vSwitch with which you want to associate the instance.
              * <p>
              * 
-             * > After you create a ApsaraMQ for RocketMQ instance, you cannot change the vSwitch to which the instance is connected. If you want to change the vSwitch with which a ApsaraMQ for RocketMQ is associated, you must release the instance and purchase a new instance.
+             * >  After an ApsaraMQ for RocketMQ instance is created, you cannot change the vSwitch with which the instance is associated. If you want to change the vSwitch with which the instance is associated, you must release the instance and purchase a new instance.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -645,10 +649,10 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * The ID of the VPC with which the instance that you want to create is associated.
+             * The ID of the VPC in which you want to deploy the instance.
              * <p>
              * 
-             * > After you create a ApsaraMQ for RocketMQ instance, you cannot change the VPC in which the instance is created. If you want to change the VPC with which a ApsaraMQ for RocketMQ is associated, you must release the instance and purchase a new instance.
+             * >  After an ApsaraMQ for RocketMQ instance is created, you cannot change the VPC in which the instance is deployed. If you want to change the VPC in which the instance is deployed, you must release the instance and create a new instance.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -821,9 +825,9 @@ public class CreateInstanceRequest extends Request {
              * *   true: enable
              * *   false: disable
              * 
-             * After you enable the elastic TPS feature for a ApsaraMQ for RocketMQ instance, you can use a specific amount of TPS that exceeds the specification limit. You are charged for the elastic TPS feature. For more information, see [Computing fee](~~427237~~).
+             * After you enable the elastic TPS feature for an ApsaraMQ for RocketMQ instance, you can use a specific number of TPS that exceeds the specification limit. You are charged for using the elastic TPS feature. For more information, see [Computing fees](~~427237~~).
              * 
-             * > The elastic TPS feature is supported by only specific instance editions. For more information, see [Instance specifications](~~444715~~).
+             * >  The elastic TPS feature is supported only by instances of specific editions. For more information, see [Instance editions](~~444715~~).
              */
             public Builder autoScaling(Boolean autoScaling) {
                 this.autoScaling = autoScaling;
@@ -831,7 +835,13 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * chargeType.
+             * The billing method.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   provisioned
+             * *   ondemand
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -839,7 +849,7 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * intranetSpec.
+             * This parameter is no longer used. You do not need to configure this parameter.
              */
             public Builder intranetSpec(String intranetSpec) {
                 this.intranetSpec = intranetSpec;
@@ -850,9 +860,9 @@ public class CreateInstanceRequest extends Request {
              * The retention period of messages. Unit: hours.
              * <p>
              * 
-             * For information about the valid values of this parameter, see the "Limits on resource quotas" section in [Usage limits](~~440347~~).
+             * For information about the valid values of this parameter, see the "Limits on resource quotas" section of the [Limits](~~440347~~) topic.
              * 
-             * The storage of messages in ApsaraMQ for RocketMQ is serverless and scalable. You are charged for message storage based on your actual usage. You can change the retention period of messages to adjust storage capacity. For more information, see [Storage fee](~~427238~~).
+             * ApsaraMQ for RocketMQ supports serverless scaling of message storage. You are charged storage fees based on your actual storage usage. You can change the retention period of messages to manage storage capacity. For more information, see [Storage fees](~~427238~~).
              */
             public Builder messageRetentionTime(Integer messageRetentionTime) {
                 this.messageRetentionTime = messageRetentionTime;
@@ -860,7 +870,7 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * The computing specification that is used to send and receive messages. For information about the upper limit of TPS, see [Instance specifications](~~444715~~).
+             * The computing specification that specifies the messaging transactions per second (TPS) of the instance. For information about computing specification limits, see [Instance specifications](~~444715~~).
              */
             public Builder msgProcessSpec(String msgProcessSpec) {
                 this.msgProcessSpec = msgProcessSpec;
@@ -868,10 +878,12 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * The ratio between sent messages and received messages in the instance.
+             * The proportion of message sending TPS to the messaging TPS on the instance.
              * <p>
              * 
-             * Value values: 0.2 to 0.5.
+             * For example, you create an instance whose peak messaging TPS is specified as 1,000 and the proportion of message sending TPS is specified as 0.8. In this case, the peak message sending TPS is 800 and the peak message receiving TPS is 200 on the instance.
+             * 
+             * Valid values: 0 to 1. Default value: 0.5.
              */
             public Builder sendReceiveRatio(Float sendReceiveRatio) {
                 this.sendReceiveRatio = sendReceiveRatio;

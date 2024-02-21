@@ -138,7 +138,7 @@ public class ListInstancesRequest extends Request {
          * The number of entries returned on each page.
          * <p>
          * 
-         * Value values: 10 to 200.
+         * Valid values: 10 to 200.
          * 
          * If the value that you specify for this parameter is less than 10, the system uses 10 as the value. If the value that you specify for this parameter is greater than 200, the system uses 200 as the value.
          */

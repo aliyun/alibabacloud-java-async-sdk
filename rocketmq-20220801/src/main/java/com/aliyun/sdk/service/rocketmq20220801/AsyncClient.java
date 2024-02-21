@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.rocketmq20220801;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.rocketmq20220801.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -69,6 +70,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetTopicResponse> getTopic(GetTopicRequest request);
 
+    CompletableFuture<ListAvailableZonesResponse> listAvailableZones(ListAvailableZonesRequest request);
+
     CompletableFuture<ListConsumerGroupSubscriptionsResponse> listConsumerGroupSubscriptions(ListConsumerGroupSubscriptionsRequest request);
 
     /**
@@ -82,6 +85,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<ListInstancesResponse> listInstances(ListInstancesRequest request);
+
+    CompletableFuture<ListRegionsResponse> listRegions(ListRegionsRequest request);
 
     CompletableFuture<ListTopicsResponse> listTopics(ListTopicsRequest request);
 

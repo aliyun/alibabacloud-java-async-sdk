@@ -218,7 +218,7 @@ public class ListInstancesResponseBody extends TeaModel {
             private Boolean traceOn; 
 
             /**
-             * traceOn.
+             * Whether to enable tracking capability. Non-serverless instances are enabled by default, and serverless instances are optional for users.
              */
             public Builder traceOn(Boolean traceOn) {
                 this.traceOn = traceOn;
@@ -622,7 +622,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * productInfo.
+             * The product information of instance.
              */
             public Builder productInfo(ProductInfo productInfo) {
                 this.productInfo = productInfo;

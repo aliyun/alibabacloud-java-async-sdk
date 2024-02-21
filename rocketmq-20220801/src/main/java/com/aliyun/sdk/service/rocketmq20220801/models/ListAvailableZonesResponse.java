@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DeleteTopicResponse} extends {@link TeaModel}
+ * {@link ListAvailableZonesResponse} extends {@link TeaModel}
  *
- * <p>DeleteTopicResponse</p>
+ * <p>ListAvailableZonesResponse</p>
  */
-public class DeleteTopicResponse extends Response {
+public class ListAvailableZonesResponse extends Response {
     @NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -19,16 +19,16 @@ public class DeleteTopicResponse extends Response {
     private Integer statusCode;
 
     @NameInMap("body")
-    private DeleteTopicResponseBody body;
+    private ListAvailableZonesResponseBody body;
 
-    private DeleteTopicResponse(BuilderImpl builder) {
+    private ListAvailableZonesResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DeleteTopicResponse create() {
+    public static ListAvailableZonesResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +54,35 @@ public class DeleteTopicResponse extends Response {
     /**
      * @return body
      */
-    public DeleteTopicResponseBody getBody() {
+    public ListAvailableZonesResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DeleteTopicResponse, Builder> {
+    public interface Builder extends Response.Builder<ListAvailableZonesResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DeleteTopicResponseBody body);
+        Builder body(ListAvailableZonesResponseBody body);
 
         @Override
-        DeleteTopicResponse build();
+        ListAvailableZonesResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DeleteTopicResponse, Builder>
+            extends Response.BuilderImpl<ListAvailableZonesResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private DeleteTopicResponseBody body; 
+        private ListAvailableZonesResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DeleteTopicResponse response) {
+        private BuilderImpl(ListAvailableZonesResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +111,14 @@ public class DeleteTopicResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DeleteTopicResponseBody body) {
+        public Builder body(ListAvailableZonesResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DeleteTopicResponse build() {
-            return new DeleteTopicResponse(this);
+        public ListAvailableZonesResponse build() {
+            return new ListAvailableZonesResponse(this);
         } 
 
     } 

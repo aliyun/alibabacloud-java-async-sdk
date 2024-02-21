@@ -912,7 +912,7 @@ public class GetInstanceResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * securityGroupIds.
+             * The ID of the security group with which the instance is associated.
              */
             public Builder securityGroupIds(String securityGroupIds) {
                 this.securityGroupIds = securityGroupIds;
@@ -1173,7 +1173,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * traceOn.
+             * Whether to enable tracking capability. Non-serverless instances are enabled by default, and serverless instances are optional for users.
              */
             public Builder traceOn(Boolean traceOn) {
                 this.traceOn = traceOn;
