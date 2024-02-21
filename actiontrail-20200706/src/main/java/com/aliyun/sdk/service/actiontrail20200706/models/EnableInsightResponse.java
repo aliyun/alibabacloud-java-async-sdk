@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link LookupEventsResponse} extends {@link TeaModel}
+ * {@link EnableInsightResponse} extends {@link TeaModel}
  *
- * <p>LookupEventsResponse</p>
+ * <p>EnableInsightResponse</p>
  */
-public class LookupEventsResponse extends Response {
+public class EnableInsightResponse extends Response {
     @NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -19,16 +19,16 @@ public class LookupEventsResponse extends Response {
     private Integer statusCode;
 
     @NameInMap("body")
-    private LookupEventsResponseBody body;
+    private EnableInsightResponseBody body;
 
-    private LookupEventsResponse(BuilderImpl builder) {
+    private EnableInsightResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static LookupEventsResponse create() {
+    public static EnableInsightResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +54,35 @@ public class LookupEventsResponse extends Response {
     /**
      * @return body
      */
-    public LookupEventsResponseBody getBody() {
+    public EnableInsightResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<LookupEventsResponse, Builder> {
+    public interface Builder extends Response.Builder<EnableInsightResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(LookupEventsResponseBody body);
+        Builder body(EnableInsightResponseBody body);
 
         @Override
-        LookupEventsResponse build();
+        EnableInsightResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<LookupEventsResponse, Builder>
+            extends Response.BuilderImpl<EnableInsightResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private LookupEventsResponseBody body; 
+        private EnableInsightResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(LookupEventsResponse response) {
+        private BuilderImpl(EnableInsightResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +111,14 @@ public class LookupEventsResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(LookupEventsResponseBody body) {
+        public Builder body(EnableInsightResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public LookupEventsResponse build() {
-            return new LookupEventsResponse(this);
+        public EnableInsightResponse build() {
+            return new EnableInsightResponse(this);
         } 
 
     } 
