@@ -262,7 +262,13 @@ public class DescribeProcessListRequest extends Request {
         }
 
         /**
-         * The column by which the query results are sorted.
+         * Sorting by the specified column name. Valid values:
+         * <p>
+         * 
+         * *   elapsed: the cumulative execution time
+         * *   written_rows: the number of written rows
+         * *   read_rows: the number of read rows
+         * *   memory_usage: the memory usage
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);

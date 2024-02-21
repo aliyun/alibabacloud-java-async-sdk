@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.clickhouse20191111;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.clickhouse20191111.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 

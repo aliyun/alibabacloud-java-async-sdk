@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateDBInstanceRequest extends Request {
     @Query
+    @NameInMap("AutoRenew")
+    private Boolean autoRenew;
+
+    @Query
     @NameInMap("BackupSetID")
     private String backupSetID;
 
@@ -141,6 +145,7 @@ public class CreateDBInstanceRequest extends Request {
 
     private CreateDBInstanceRequest(Builder builder) {
         super(builder);
+        this.autoRenew = builder.autoRenew;
         this.backupSetID = builder.backupSetID;
         this.clientToken = builder.clientToken;
         this.DBClusterCategory = builder.DBClusterCategory;
@@ -183,6 +188,13 @@ public class CreateDBInstanceRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return autoRenew
+     */
+    public Boolean getAutoRenew() {
+        return this.autoRenew;
     }
 
     /**
@@ -389,6 +401,7 @@ public class CreateDBInstanceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateDBInstanceRequest, Builder> {
+        private Boolean autoRenew; 
         private String backupSetID; 
         private String clientToken; 
         private String DBClusterCategory; 
@@ -425,6 +438,7 @@ public class CreateDBInstanceRequest extends Request {
 
         private Builder(CreateDBInstanceRequest request) {
             super(request);
+            this.autoRenew = request.autoRenew;
             this.backupSetID = request.backupSetID;
             this.clientToken = request.clientToken;
             this.DBClusterCategory = request.DBClusterCategory;
@@ -455,6 +469,15 @@ public class CreateDBInstanceRequest extends Request {
             this.zoneId = request.zoneId;
             this.zoneIdBak = request.zoneIdBak;
         } 
+
+        /**
+         * AutoRenew.
+         */
+        public Builder autoRenew(Boolean autoRenew) {
+            this.putQueryParameter("AutoRenew", autoRenew);
+            this.autoRenew = autoRenew;
+            return this;
+        }
 
         /**
          * The ID of the backup set. You can call the [DescribeBackups](~~360339~~) operation to query the backup sets.

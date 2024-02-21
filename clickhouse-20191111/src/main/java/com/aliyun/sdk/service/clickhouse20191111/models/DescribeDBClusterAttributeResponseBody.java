@@ -1286,11 +1286,11 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the cluster supports an HTTP port. Valid values:
+             * Indicates whether HTTPS ports are supported. Valid values:
              * <p>
              * 
-             * *   **true**: An HTTP port is supported.
-             * *   **false**: An HTTP port is not supported.
+             * *   **true**
+             * *   **false**
              */
             public Builder supportHttpsPort(Boolean supportHttpsPort) {
                 this.supportHttpsPort = supportHttpsPort;
@@ -1370,7 +1370,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneIdVswitchMap.
+             * The list of vSwitch IDs in multi-zone clusters.
              */
             public Builder zoneIdVswitchMap(java.util.Map < String, ? > zoneIdVswitchMap) {
                 this.zoneIdVswitchMap = zoneIdVswitchMap;

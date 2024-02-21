@@ -218,9 +218,9 @@ public class DescribeSynDbsResponseBody extends TeaModel {
             private Boolean synStatus; 
 
             /**
-             * *   If the value **true** is returned for the **SynStatus** parameter, this parameter is not returned.
+             * *   When the value **true** is returned for the **SynStatus** parameter, the system does not return the ErrorMsg parameter.
              * <p>
-             * *   If the value **false** is returned for the **SynStatus** parameter, the system returns the ErrorMsg parameter that provides the cause why the data synchronization failed.
+             * *   When the value **false** is returned for the **SynStatus** parameter, the system returns for the ErrorMsg parameter the cause why the data synchronization failed.
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;

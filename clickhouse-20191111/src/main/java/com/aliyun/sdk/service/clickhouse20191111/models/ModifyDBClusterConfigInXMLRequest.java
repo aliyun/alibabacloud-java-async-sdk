@@ -101,7 +101,7 @@ public class ModifyDBClusterConfigInXMLRequest extends Request {
          * The configuration parameters whose settings you want to modify. You can call the [DescribeDBClusterConfigInXML](~~452210~~) operation to query configuration parameters, and modify the settings of the returned configuration parameters.
          * <p>
          * 
-         * >  You must specify all configuration parameters even when you want to modify the setting of a single parameter. If a configuration parameter is not specified, the original value of this parameter is retained or the modification fails.
+         * > You must specify all configuration parameters even when you want to modify the setting of a single parameter. If a configuration parameter is not specified, the original value of this parameter is retained or the modification fails.
          */
         public Builder config(String config) {
             this.putQueryParameter("Config", config);
