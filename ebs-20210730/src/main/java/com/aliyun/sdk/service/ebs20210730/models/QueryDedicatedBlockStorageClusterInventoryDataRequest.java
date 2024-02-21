@@ -159,7 +159,7 @@ public class QueryDedicatedBlockStorageClusterInventoryDataRequest extends Reque
         }
 
         /**
-         * The time interval （seconds） between data retrieval points.
+         * The time interval (seconds) between data retrieval points.
          */
         public Builder period(Integer period) {
             this.putBodyParameter("Period", period);

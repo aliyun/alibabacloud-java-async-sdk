@@ -294,7 +294,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * The read bandwidth of the disk. Unit: Mbit/s.
+             * The read bandwidth of the disk. Unit: MByte/s.
              */
             public Builder readBPS(Long readBPS) {
                 this.readBPS = readBPS;
@@ -302,7 +302,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * ReadBlockSize.
+             * Read IO block size. Unit: Bytes
              */
             public Builder readBlockSize(Long readBlockSize) {
                 this.readBlockSize = readBlockSize;
@@ -318,7 +318,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * ReadLatency.
+             * Read IO latency. Unit:  microsecond
              */
             public Builder readLatency(Long readLatency) {
                 this.readLatency = readLatency;
@@ -334,7 +334,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * The write bandwidth of the disk. Unit: Mbit/s.
+             * The write bandwidth of the disk. Unit: MByte/s.
              */
             public Builder writeBPS(Long writeBPS) {
                 this.writeBPS = writeBPS;
@@ -342,7 +342,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * WriteBlockSize.
+             * Write IO block size. Unit: Bytes
              */
             public Builder writeBlockSize(Long writeBlockSize) {
                 this.writeBlockSize = writeBlockSize;
@@ -358,7 +358,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * WriteLatency.
+             * Write IO latency. Unit: microsecond
              */
             public Builder writeLatency(Long writeLatency) {
                 this.writeLatency = writeLatency;
