@@ -204,7 +204,7 @@ public class DescribeRouteServicesInCenRequest extends Request {
         }
 
         /**
-         * The ID of the CEN instance.
+         * The ID of the Cloud Enterprise Network (CEN) instance.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -225,7 +225,7 @@ public class DescribeRouteServicesInCenRequest extends Request {
         }
 
         /**
-         * The ID of the region where the cloud service is deployed.
+         * The region ID of the cloud service.
          * <p>
          * 
          * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
@@ -237,7 +237,7 @@ public class DescribeRouteServicesInCenRequest extends Request {
         }
 
         /**
-         * The ID of the virtual private cloud (VPC) that is associated with the cloud service.
+         * The ID of the VPC associated with the cloud service.
          */
         public Builder hostVpcId(String hostVpcId) {
             this.putQueryParameter("HostVpcId", hostVpcId);
@@ -273,7 +273,7 @@ public class DescribeRouteServicesInCenRequest extends Request {
         }
 
         /**
-         * The number of entries to return per page. Default value: **10**. Valid values: **1** to **50**.
+         * The number of entries per page. Default value: **10**. Valid values: **1** to **50**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

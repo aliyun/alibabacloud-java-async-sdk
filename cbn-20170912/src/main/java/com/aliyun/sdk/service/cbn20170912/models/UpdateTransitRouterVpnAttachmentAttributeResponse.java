@@ -13,15 +13,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UpdateTransitRouterVpnAttachmentAttributeResponse extends Response {
     @NameInMap("headers")
-    @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     private Integer statusCode;
 
     @NameInMap("body")
-    @Validation(required = true)
     private UpdateTransitRouterVpnAttachmentAttributeResponseBody body;
 
     private UpdateTransitRouterVpnAttachmentAttributeResponse(BuilderImpl builder) {

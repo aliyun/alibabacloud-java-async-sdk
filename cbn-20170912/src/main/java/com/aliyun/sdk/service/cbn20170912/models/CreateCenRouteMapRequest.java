@@ -509,10 +509,10 @@ public class CreateCenRouteMapRequest extends Request {
         } 
 
         /**
-         * The match method that is used to match routes against the AS paths. Valid values:
+         * The match method that is used to match routes based on AS paths. Valid values:
          * <p>
          * 
-         * *   **Include**: fuzzy match. A route meets the match condition if the AS path of the route overlaps with the AS paths specified in the match condition.
+         * *   **Include**: fuzzy match. A route meets the match condition if the AS path of the route overlaps with the AS path specified in the match condition.
          * *   **Complete**: exact match. A route is a match only if the AS path of the route is the same as an AS path specified in the match condition.
          */
         public Builder asPathMatchMode(String asPathMatchMode) {
@@ -548,11 +548,11 @@ public class CreateCenRouteMapRequest extends Request {
          * 
          * *   **Include**: fuzzy match. A route is a match if the route prefix is included in the match conditions.
          * 
-         *     For example, if you set the match condition to 10.10.0.0/16 and fuzzy match is enabled, the route whose prefix is 10.10.1.0/24 is a match.
+         * For example, if you set the match condition to 10.10.0.0/16 and fuzzy match is applied, the route whose prefix is 10.10.1.0/24 meets the match condition.
          * 
          * *   **Complete**: exact match. A route is a match only if the route prefix is the same as the prefix specified in the match condition.
          * 
-         *     For example, if you set the match condition to 10.10.0.0/16 and exact match is enabled, a route is a match only if the prefix is 10.10.0.0/16.
+         * For example, if you set the match condition to 10.10.0.0/16 and exact match is enabled, a route is a match only if the prefix is 10.10.0.0/16.
          */
         public Builder cidrMatchMode(String cidrMatchMode) {
             this.putQueryParameter("CidrMatchMode", cidrMatchMode);
@@ -561,7 +561,7 @@ public class CreateCenRouteMapRequest extends Request {
         }
 
         /**
-         * The match method that is used to match routes based on the community. Valid values:
+         * The match method that is used to evaluate routes based on the community. Valid values:
          * <p>
          * 
          * *   **Include**: fuzzy match. A route meets the match condition if the community of the route overlaps with the community specified in the match condition.
@@ -660,7 +660,7 @@ public class CreateCenRouteMapRequest extends Request {
          * Specifies whether to exclude the destination network instance IDs. Valid values:
          * <p>
          * 
-         * *   **false** (default value): A route is a match if its destination network instance ID is in the list specified by **DestinationInstanceIds.N**.
+         * *   **false** (default value): A route meets the match condition if its destination network instance ID is in the list specified by **DestinationInstanceIds.N**.
          * *   **true**: A route meets the match condition if its destination network instance ID is not in the list specified by **DestinationInstanceIds.N**.
          */
         public Builder destinationInstanceIdsReverseMatch(Boolean destinationInstanceIdsReverseMatch) {
@@ -682,7 +682,7 @@ public class CreateCenRouteMapRequest extends Request {
         }
 
         /**
-         * The action to be performed on a route that meets all match conditions. Valid values:
+         * The action to be performed on a route that meets all the match conditions. Valid values:
          * <p>
          * 
          * *   **Permit**: the route is permitted.
@@ -909,7 +909,7 @@ public class CreateCenRouteMapRequest extends Request {
          * Specifies whether to exclude the source network instance IDs. Valid values:
          * <p>
          * 
-         * *   **false** (default value): A route is a match if its source network instance ID is in the list specified by **SourceInstanceIds.N**.
+         * *   **false** (default value): A route meets the match condition if its source network instance ID is in the list specified by **SourceInstanceIds.N**.
          * *   **true**: A route is a match if its source network instance ID is not in the list specified by **SourceInstanceIds.N**.
          */
         public Builder sourceInstanceIdsReverseMatch(Boolean sourceInstanceIdsReverseMatch) {
@@ -957,11 +957,11 @@ public class CreateCenRouteMapRequest extends Request {
          * 
          * *   **RegionIn**: Routes are advertised to the gateways in the regions that are connected by the CEN instance.
          * 
-         *     For example, routes are advertised from network instances deployed in the current region or other regions to the gateway deployed in the current region.
+         * For example, routes are advertised from network instances deployed in the current region or other regions to the gateway deployed in the current region.
          * 
          * *   **RegionOut**: Routes are advertised from the gateways in the regions that are connected by the CEN instance.
          * 
-         *     For example, routes are advertised from the gateway deployed in the current region to network instances deployed in the same region, or to gateways deployed in other regions.
+         * For example, routes are advertised from the gateway deployed in the current region to network instances deployed in the same region, or to gateways deployed in other regions.
          */
         public Builder transmitDirection(String transmitDirection) {
             this.putQueryParameter("TransmitDirection", transmitDirection);

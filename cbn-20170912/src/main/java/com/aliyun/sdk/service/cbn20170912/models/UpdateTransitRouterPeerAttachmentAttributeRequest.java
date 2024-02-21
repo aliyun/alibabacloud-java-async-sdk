@@ -251,7 +251,7 @@ public class UpdateTransitRouterPeerAttachmentAttributeRequest extends Request {
         }
 
         /**
-         * The maximum bandwidth value of the inter-region connection. Unit: Mbit/s.
+         * The bandwidth value of the inter-region connection. Unit: Mbit/s.
          * <p>
          * 
          * *   This parameter specifies the maximum bandwidth value for the inter-region connection if you set **BandwidthType** to **BandwidthPackage**.
@@ -280,7 +280,7 @@ public class UpdateTransitRouterPeerAttachmentAttributeRequest extends Request {
          * The ID of the bandwidth plan that is used to allocate bandwidth to the inter-region connection.
          * <p>
          * 
-         * > If you set **BandwidthType** to **DataTransfer**, you do not need to set this parameter.
+         * >  If you set **BandwidthType** to **DataTransfer**, you do not need to set this parameter.
          */
         public Builder cenBandwidthPackageId(String cenBandwidthPackageId) {
             this.putQueryParameter("CenBandwidthPackageId", cenBandwidthPackageId);
@@ -303,7 +303,12 @@ public class UpdateTransitRouterPeerAttachmentAttributeRequest extends Request {
         }
 
         /**
-         * DefaultLinkType.
+         * The default line type.
+         * <p>
+         * 
+         * Valid values: Platinum and Gold.
+         * 
+         * Platinum is supported only when BandwidthType is set to DataTransfer.
          */
         public Builder defaultLinkType(String defaultLinkType) {
             this.putQueryParameter("DefaultLinkType", defaultLinkType);

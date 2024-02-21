@@ -251,7 +251,7 @@ public class ModifyTransitRouterCidrRequest extends Request {
          * The new description of the transit router CIDR block.
          * <p>
          * 
-         * The description must be 1 to 256 characters in length.
+         * The description must be 1 to 256 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -276,7 +276,7 @@ public class ModifyTransitRouterCidrRequest extends Request {
          * The new name of the transit router CIDR block.
          * <p>
          * 
-         * The name must be 1 to 128 characters in length.
+         * The name must be 1 to 128 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

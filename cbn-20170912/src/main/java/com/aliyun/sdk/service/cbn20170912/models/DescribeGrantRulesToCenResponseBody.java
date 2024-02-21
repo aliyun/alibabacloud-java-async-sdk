@@ -156,6 +156,9 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
         @NameInMap("ChildInstanceType")
         private String childInstanceType;
 
+        @NameInMap("CreateTime")
+        private Long createTime;
+
         @NameInMap("OrderType")
         private String orderType;
 
@@ -166,6 +169,7 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
             this.childInstanceOwnerId = builder.childInstanceOwnerId;
             this.childInstanceRegionId = builder.childInstanceRegionId;
             this.childInstanceType = builder.childInstanceType;
+            this.createTime = builder.createTime;
             this.orderType = builder.orderType;
         }
 
@@ -220,6 +224,13 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
         }
 
         /**
+         * @return createTime
+         */
+        public Long getCreateTime() {
+            return this.createTime;
+        }
+
+        /**
          * @return orderType
          */
         public String getOrderType() {
@@ -233,6 +244,7 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
             private Long childInstanceOwnerId; 
             private String childInstanceRegionId; 
             private String childInstanceType; 
+            private Long createTime; 
             private String orderType; 
 
             /**
@@ -286,6 +298,14 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
              */
             public Builder childInstanceType(String childInstanceType) {
                 this.childInstanceType = childInstanceType;
+                return this;
+            }
+
+            /**
+             * CreateTime.
+             */
+            public Builder createTime(Long createTime) {
+                this.createTime = createTime;
                 return this;
             }
 

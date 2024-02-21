@@ -184,7 +184,7 @@ public class CreateCenChildInstanceRouteEntryToAttachmentRequest extends Request
         } 
 
         /**
-         * The ID of the Cloud Enterprise Network (CEN) instance.
+         * The CEN instance ID.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);

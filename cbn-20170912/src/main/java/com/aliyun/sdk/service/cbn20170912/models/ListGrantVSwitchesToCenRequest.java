@@ -185,7 +185,7 @@ public class ListGrantVSwitchesToCenRequest extends Request {
         } 
 
         /**
-         * The ID of the CEN instance.
+         * The CEN instance ID.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -260,7 +260,7 @@ public class ListGrantVSwitchesToCenRequest extends Request {
         }
 
         /**
-         * The ID of the VPC.
+         * The VPC ID.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

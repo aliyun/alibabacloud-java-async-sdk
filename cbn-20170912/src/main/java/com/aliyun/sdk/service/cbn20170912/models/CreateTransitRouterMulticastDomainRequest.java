@@ -314,7 +314,7 @@ public class CreateTransitRouterMulticastDomainRequest extends Request {
          * The description of the multicast domain.
          * <p>
          * 
-         * The description must be 0 to 256 characters in length, and can contain letters, digits, commas (,), periods (.), semicolons (;), forward slashes (/), at signs (@), underscores (\_), and hyphens (-).
+         * The description must be 1 to 256 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.
          */
         public Builder transitRouterMulticastDomainDescription(String transitRouterMulticastDomainDescription) {
             this.putQueryParameter("TransitRouterMulticastDomainDescription", transitRouterMulticastDomainDescription);
@@ -326,7 +326,7 @@ public class CreateTransitRouterMulticastDomainRequest extends Request {
          * The name of the multicast domain.
          * <p>
          * 
-         * The name must be 0 to 128 characters in length, and can contain letters, digits, commas (,), periods (.), semicolons (;), forward slashes (/), at signs (@), underscores (\_), and hyphens (-).
+         * The name must be 1 to 128 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.
          */
         public Builder transitRouterMulticastDomainName(String transitRouterMulticastDomainName) {
             this.putQueryParameter("TransitRouterMulticastDomainName", transitRouterMulticastDomainName);

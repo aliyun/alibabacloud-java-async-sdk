@@ -212,7 +212,7 @@ public class CreateCenChildInstanceRouteEntryToCenRequest extends Request {
          * The ID of the Alibaba Cloud account to which the network instance belongs.
          * <p>
          * 
-         * > If the network instance belongs to another Alibaba Cloud account, this parameter is required.
+         * >  If the network instance belongs to another Alibaba Cloud account, this parameter is required.
          */
         public Builder childInstanceAliUid(Long childInstanceAliUid) {
             this.putQueryParameter("ChildInstanceAliUid", childInstanceAliUid);
@@ -242,7 +242,7 @@ public class CreateCenChildInstanceRouteEntryToCenRequest extends Request {
         }
 
         /**
-         * The type of the network instance. Valid values:
+         * The type of the attached network instance. Valid values:
          * <p>
          * 
          * *   **VPC**: a virtual private cloud (VPC)
@@ -255,7 +255,7 @@ public class CreateCenChildInstanceRouteEntryToCenRequest extends Request {
         }
 
         /**
-         * The destination CIDR block of the route.
+         * The destination CIDR block of the route entry.
          * <p>
          * 
          * Specify the value of this parameter in CIDR notation. Example: 192.168.10.0/24.
@@ -303,7 +303,7 @@ public class CreateCenChildInstanceRouteEntryToCenRequest extends Request {
         }
 
         /**
-         * The ID of the route table configured on the network instance.
+         * The ID of the route table of the network instance.
          */
         public Builder routeTableId(String routeTableId) {
             this.putQueryParameter("RouteTableId", routeTableId);

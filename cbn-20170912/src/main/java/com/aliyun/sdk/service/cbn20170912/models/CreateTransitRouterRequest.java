@@ -224,7 +224,7 @@ public class CreateTransitRouterRequest extends Request {
         } 
 
         /**
-         * CenId.
+         * The ID of the Cloud Enterprise Network (CEN) instance.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -233,7 +233,11 @@ public class CreateTransitRouterRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, the system automatically uses **RequestId** as **ClientToken**. The value of **RequestId** of each API request is different.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -242,7 +246,11 @@ public class CreateTransitRouterRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to check the request without performing the operation. Check items include permissions and the status of the specified cloud resources. Valid values:
+         * <p>
+         * 
+         * *   **false** (default): sends the request. If the request passes the check, an Enterprise Edition transit router is created.
+         * *   **true**: checks the request but does not create the Enterprise Edition transit router. If you use this value, the system checks whether the required parameters are set, and whether the request syntax is valid. If the request fails the check, an error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -269,7 +277,10 @@ public class CreateTransitRouterRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the Enterprise Edition transit router is deployed.
+         * <p>
+         * 
+         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -296,7 +307,13 @@ public class CreateTransitRouterRequest extends Request {
         }
 
         /**
-         * SupportMulticast.
+         * Specifies whether to enable the multicast feature for the Enterprise Edition transit router. Valid values:
+         * <p>
+         * 
+         * *   **false** (default): no
+         * *   **true**: yes
+         * 
+         * The multicast feature is supported only in specific regions. You can call [ListTransitRouterAvailableResource](~~261356~~) to query the regions that support multicast.
          */
         public Builder supportMulticast(Boolean supportMulticast) {
             this.putQueryParameter("SupportMulticast", supportMulticast);
@@ -305,7 +322,10 @@ public class CreateTransitRouterRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The information about the tags.
+         * <p>
+         * 
+         * You can specify at most 20 tags in each call.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -314,7 +334,12 @@ public class CreateTransitRouterRequest extends Request {
         }
 
         /**
-         * TransitRouterCidrList.
+         * The CIDR blocks of the transit router.
+         * <p>
+         * 
+         * You can add up to five CIDR blocks at a time. For more information about CIDR blocks of transit routers, see [CIDR blocks of transit routers](~~462635~~).
+         * 
+         * >  Only Enterprise Edition transit routers support CIDR blocks.
          */
         public Builder transitRouterCidrList(java.util.List < TransitRouterCidrList> transitRouterCidrList) {
             String transitRouterCidrListShrink = shrink(transitRouterCidrList, "TransitRouterCidrList", "json");
@@ -324,7 +349,10 @@ public class CreateTransitRouterRequest extends Request {
         }
 
         /**
-         * TransitRouterDescription.
+         * The description of the Enterprise Edition transit router instance.
+         * <p>
+         * 
+         * The description must be 1 to 256 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.
          */
         public Builder transitRouterDescription(String transitRouterDescription) {
             this.putQueryParameter("TransitRouterDescription", transitRouterDescription);
@@ -333,7 +361,10 @@ public class CreateTransitRouterRequest extends Request {
         }
 
         /**
-         * TransitRouterName.
+         * The name of the Enterprise Edition transit router.
+         * <p>
+         * 
+         * The name must be 1 to 128 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.
          */
         public Builder transitRouterName(String transitRouterName) {
             this.putQueryParameter("TransitRouterName", transitRouterName);
@@ -387,7 +418,12 @@ public class CreateTransitRouterRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
+             * <p>
+             * 
+             * The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             * 
+             * You can specify at most 20 tag keys.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -395,7 +431,12 @@ public class CreateTransitRouterRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag value.
+             * <p>
+             * 
+             * The tag value can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
+             * 
+             * Each tag key has a unique tag value. You can specify at most 20 tag values in each call.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -472,7 +513,7 @@ public class CreateTransitRouterRequest extends Request {
             private Boolean publishCidrRoute; 
 
             /**
-             * Cidr.
+             * The CIDR block of the transit router.
              */
             public Builder cidr(String cidr) {
                 this.cidr = cidr;
@@ -480,7 +521,10 @@ public class CreateTransitRouterRequest extends Request {
             }
 
             /**
-             * Description.
+             * The description of the CIDR block.
+             * <p>
+             * 
+             * The description must be 1 to 256 characters in length.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -488,7 +532,10 @@ public class CreateTransitRouterRequest extends Request {
             }
 
             /**
-             * Name.
+             * The name of the CIDR block.
+             * <p>
+             * 
+             * The name must be 1 to 128 characters in length.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -496,7 +543,18 @@ public class CreateTransitRouterRequest extends Request {
             }
 
             /**
-             * PublishCidrRoute.
+             * Specifies whether to allow the system to automatically add a route that points to the CIDR block to the route table of the transit router.
+             * <p>
+             * 
+             * *   **true** (default): yes.
+             * 
+             *     A value of true specifies that after you create a private VPN connection and enable route learning for the connection, the system automatically adds a blackhole route to the route table of the transit router to which the VPN connection is attached.
+             * 
+             *     The destination CIDR block of the blackhole route is the CIDR block of the transit router. The CIDR block of the transit router refers to the CIDR block from which gateway IP addresses are allocated to IPsec-VPN connections.
+             * 
+             *     The blackhole route is only advertised to the route table of the virtual border router (VBR) that is connected to the transit router.
+             * 
+             * *   **false**: no.
              */
             public Builder publishCidrRoute(Boolean publishCidrRoute) {
                 this.publishCidrRoute = publishCidrRoute;

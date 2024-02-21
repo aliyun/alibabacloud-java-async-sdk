@@ -18,6 +18,10 @@ public class EnableCenVbrHealthCheckRequest extends Request {
     private String cenId;
 
     @Query
+    @NameInMap("Description")
+    private String description;
+
+    @Query
     @NameInMap("HealthCheckInterval")
     @Validation(maximum = 3, minimum = 1)
     private Integer healthCheckInterval;
@@ -73,6 +77,7 @@ public class EnableCenVbrHealthCheckRequest extends Request {
     private EnableCenVbrHealthCheckRequest(Builder builder) {
         super(builder);
         this.cenId = builder.cenId;
+        this.description = builder.description;
         this.healthCheckInterval = builder.healthCheckInterval;
         this.healthCheckOnly = builder.healthCheckOnly;
         this.healthCheckSourceIp = builder.healthCheckSourceIp;
@@ -105,6 +110,13 @@ public class EnableCenVbrHealthCheckRequest extends Request {
      */
     public String getCenId() {
         return this.cenId;
+    }
+
+    /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
     }
 
     /**
@@ -193,6 +205,7 @@ public class EnableCenVbrHealthCheckRequest extends Request {
 
     public static final class Builder extends Request.Builder<EnableCenVbrHealthCheckRequest, Builder> {
         private String cenId; 
+        private String description; 
         private Integer healthCheckInterval; 
         private Boolean healthCheckOnly; 
         private String healthCheckSourceIp; 
@@ -213,6 +226,7 @@ public class EnableCenVbrHealthCheckRequest extends Request {
         private Builder(EnableCenVbrHealthCheckRequest request) {
             super(request);
             this.cenId = request.cenId;
+            this.description = request.description;
             this.healthCheckInterval = request.healthCheckInterval;
             this.healthCheckOnly = request.healthCheckOnly;
             this.healthCheckSourceIp = request.healthCheckSourceIp;
@@ -233,6 +247,15 @@ public class EnableCenVbrHealthCheckRequest extends Request {
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
             this.cenId = cenId;
+            return this;
+        }
+
+        /**
+         * Description.
+         */
+        public Builder description(String description) {
+            this.putQueryParameter("Description", description);
+            this.description = description;
             return this;
         }
 

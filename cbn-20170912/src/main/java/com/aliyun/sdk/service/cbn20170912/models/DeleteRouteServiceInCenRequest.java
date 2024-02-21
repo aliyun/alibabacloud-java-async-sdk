@@ -170,10 +170,7 @@ public class DeleteRouteServiceInCenRequest extends Request {
         } 
 
         /**
-         * The ID of the region in which the network instance of the cloud service that you want to access is deployed.
-         * <p>
-         * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * The ID of the region where the cloud service is accessed.
          */
         public Builder accessRegionId(String accessRegionId) {
             this.putQueryParameter("AccessRegionId", accessRegionId);
@@ -200,7 +197,10 @@ public class DeleteRouteServiceInCenRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the cloud service is deployed.
+         * The region ID of the cloud service.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder hostRegionId(String hostRegionId) {
             this.putQueryParameter("HostRegionId", hostRegionId);

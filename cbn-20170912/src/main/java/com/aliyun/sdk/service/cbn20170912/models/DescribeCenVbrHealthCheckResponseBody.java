@@ -102,7 +102,7 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -262,7 +262,7 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -281,13 +281,13 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
              * Indicates whether probing is enabled. Valid values:
              * <p>
              * 
-             * *   **true**: yes
+             * *   **true**: Probing is enabled.
              * 
-             *     If probing is enabled, the system does not switch to another route when the detected route is not reachable.
+             *         If you enable probing, the system does not switch to another route if the detected route is not reachable.
              * 
-             * *   **false**: no
+             * *   **false**: Probing is disabled.
              * 
-             *     If probing is disabled and a redundant route is specified, the system switches to the redundant route when the detected route is not reachable.
+             *           If probing is disabled and a redundant route is specified, the system switches to the redundant route when the detected route is not reachable.
              */
             public Builder healthCheckOnly(Boolean healthCheckOnly) {
                 this.healthCheckOnly = healthCheckOnly;
@@ -319,7 +319,7 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VBR.
+             * The VBR ID.
              */
             public Builder vbrInstanceId(String vbrInstanceId) {
                 this.vbrInstanceId = vbrInstanceId;

@@ -49,7 +49,6 @@ public class DescribeGrantRulesToCenRequest extends Request {
 
     @Query
     @NameInMap("RegionId")
-    @Validation(required = true)
     private String regionId;
 
     @Query

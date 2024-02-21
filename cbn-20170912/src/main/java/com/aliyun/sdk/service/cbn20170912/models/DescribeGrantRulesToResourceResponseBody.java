@@ -144,12 +144,16 @@ public class DescribeGrantRulesToResourceResponseBody extends TeaModel {
         @NameInMap("CenOwnerId")
         private Long cenOwnerId;
 
+        @NameInMap("CreateTime")
+        private String createTime;
+
         @NameInMap("OrderType")
         private String orderType;
 
         private GrantRules(Builder builder) {
             this.cenId = builder.cenId;
             this.cenOwnerId = builder.cenOwnerId;
+            this.createTime = builder.createTime;
             this.orderType = builder.orderType;
         }
 
@@ -176,6 +180,13 @@ public class DescribeGrantRulesToResourceResponseBody extends TeaModel {
         }
 
         /**
+         * @return createTime
+         */
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        /**
          * @return orderType
          */
         public String getOrderType() {
@@ -185,6 +196,7 @@ public class DescribeGrantRulesToResourceResponseBody extends TeaModel {
         public static final class Builder {
             private String cenId; 
             private Long cenOwnerId; 
+            private String createTime; 
             private String orderType; 
 
             /**
@@ -200,6 +212,14 @@ public class DescribeGrantRulesToResourceResponseBody extends TeaModel {
              */
             public Builder cenOwnerId(Long cenOwnerId) {
                 this.cenOwnerId = cenOwnerId;
+                return this;
+            }
+
+            /**
+             * CreateTime.
+             */
+            public Builder createTime(String createTime) {
+                this.createTime = createTime;
                 return this;
             }
 

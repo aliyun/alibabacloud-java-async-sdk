@@ -202,6 +202,9 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
         @NameInMap("CreationTime")
         private String creationTime;
 
+        @NameInMap("OrderType")
+        private String orderType;
+
         @NameInMap("ResourceType")
         private String resourceType;
 
@@ -236,6 +239,7 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
             this.autoPublishRouteEnabled = builder.autoPublishRouteEnabled;
             this.cenId = builder.cenId;
             this.creationTime = builder.creationTime;
+            this.orderType = builder.orderType;
             this.resourceType = builder.resourceType;
             this.status = builder.status;
             this.tags = builder.tags;
@@ -275,6 +279,13 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
          */
         public String getCreationTime() {
             return this.creationTime;
+        }
+
+        /**
+         * @return orderType
+         */
+        public String getOrderType() {
+            return this.orderType;
         }
 
         /**
@@ -351,6 +362,7 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
             private Boolean autoPublishRouteEnabled; 
             private String cenId; 
             private String creationTime; 
+            private String orderType; 
             private String resourceType; 
             private String status; 
             private java.util.List < Tags> tags; 
@@ -390,6 +402,14 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
+                return this;
+            }
+
+            /**
+             * OrderType.
+             */
+            public Builder orderType(String orderType) {
+                this.orderType = orderType;
                 return this;
             }
 

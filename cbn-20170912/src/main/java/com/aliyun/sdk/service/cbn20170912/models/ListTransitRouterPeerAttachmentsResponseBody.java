@@ -122,7 +122,7 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
         }
 
         /**
-         * The queried inter-region connections.
+         * A list of inter-region connections.
          */
         public Builder transitRouterAttachments(java.util.List < TransitRouterAttachments> transitRouterAttachments) {
             this.transitRouterAttachments = transitRouterAttachments;
@@ -439,11 +439,11 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
             private String transitRouterId; 
 
             /**
-             * Indicates whether the local Enterprise Edition transit router automatically advertises routes of the inter-region connection to the peer transit router. Valid values:
+             * Indicates whether the local Enterprise Edition transit router automatically advertises routes of the cross-region connection to the peer transit router. Valid values:
              * <p>
              * 
-             * *   **false** (default): no
-             * *   **true**: yes
+             * *   **false** (default)
+             * *   **true**
              */
             public Builder autoPublishRouteEnabled(Boolean autoPublishRouteEnabled) {
                 this.autoPublishRouteEnabled = autoPublishRouteEnabled;
@@ -451,7 +451,7 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum bandwidth value of the inter-region connection. Unit: Mbit/s.
+             * The bandwidth value of the inter-region connection. Unit: Mbit/s.
              * <p>
              * 
              * *   This parameter specifies the maximum bandwidth value for the inter-region connection if you set **BandwidthType** to **BandwidthPackage**.
@@ -466,9 +466,8 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
              * The bandwidth allocation method. Valid values:
              * <p>
              * 
-             * **BandwidthPackage**: allocates bandwidth from a bandwidth plan.
-             * 
-             * **DataTransfer**: bills bandwidth based on the pay-by-data-transfer metering method.
+             * *   **BandwidthPackage**: allocates bandwidth from a bandwidth plan.
+             * *   **DataTransfer**: bandwidth is billed based on the pay-by-data-transfer metering method.
              */
             public Builder bandwidthType(String bandwidthType) {
                 this.bandwidthType = bandwidthType;
@@ -503,7 +502,11 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultLinkType.
+             * The default line type.
+             * <p>
+             * 
+             * *   **Gold** (default)
+             * *   **Platinum**
              */
             public Builder defaultLinkType(String defaultLinkType) {
                 this.defaultLinkType = defaultLinkType;
@@ -554,7 +557,7 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
              * The type of the resource to which the transit router is connected. Valid values:
              * <p>
              * 
-             * *   **VPC**: VPC
+             * *   **VPC**: virtual private cloud (VPC)
              * *   **CCN**: Cloud Connect Network (CCN) instance
              * *   **VBR**: virtual border router (VBR)
              * *   **TR**: transit router
@@ -568,10 +571,10 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
              * The status of the inter-region connection. Valid values:
              * <p>
              * 
-             * *   **Attached**: The inter-region connection is created.
-             * *   **Attaching**: The inter-region connection is being created on the transit router.
-             * *   **Detaching**: The inter-region connection is being deleted from the transit router.
-             * *   **Detached**: The inter-region connection is deleted from the transit router.
+             * *   **Attached**
+             * *   **Attaching**
+             * *   **Detaching**
+             * *   **Detached**
              */
             public Builder status(String status) {
                 this.status = status;
@@ -579,7 +582,7 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The tags.
+             * A list of tags.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;

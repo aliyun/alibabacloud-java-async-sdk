@@ -50,7 +50,7 @@ public class ListTransitRouterCidrResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The CIDR blocks of the transit router.
+         * The information about the CIDR block.
          */
         public Builder cidrLists(java.util.List < CidrLists> cidrLists) {
             this.cidrLists = cidrLists;
@@ -189,7 +189,7 @@ public class ListTransitRouterCidrResponseBody extends TeaModel {
              * The type of the CIDR block.
              * <p>
              * 
-             * The value is set to **IPv4**, which indicates that the CIDR block is of the IPv4 type.
+             * The value is **IPv4**, which indicates that the CIDR block is of the IPv4 type.
              */
             public Builder family(String family) {
                 this.family = family;
@@ -205,18 +205,18 @@ public class ListTransitRouterCidrResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the system is allowed to automatically add a route to the route table of the transit router.
+             * Indicates whether the system is allowed to automatically add a route to the route table of the transit router. Valid values:
              * <p>
              * 
-             * - **true**: yes.
+             * *   **true**
              * 
-             *      A value of true indicates that if you create a private VPN connection and add a route learning policy for the VPC connection, the system automatically adds the following route to the route table of the transit router that is in route learning relationship with the VPN connection:
-             *       
-             *     A blackhole route whose destination CIDR block is the CIDR block of the transit router. The CIDR block of the transit router refers to the CIDR block from which gateway IP addresses are allocated to IPsec-VPN connections. 
-             *           
-             *    The blackhole route is advertised only to the route tables of VBRs that are connected to the transit router. 
+             *     A value of **true** indicates that after you create a private VPN connection and enable route learning for the connection, the system automatically adds a blackhole route to the route table of the transit router to which the VPN connection is attached.
              * 
-             * - **false**: no.
+             *     The destination CIDR block of the blackhole route is the CIDR block of the transit router. The CIDR block of the transit router refers to the CIDR block from which gateway IP addresses are allocated to IPsec-VPN connections.
+             * 
+             *     The blackhole route is advertised only to the route table of the virtual border router (VBR) that is connected to the transit router.
+             * 
+             * *   **false**
              */
             public Builder publishCidrRoute(Boolean publishCidrRoute) {
                 this.publishCidrRoute = publishCidrRoute;
@@ -224,7 +224,7 @@ public class ListTransitRouterCidrResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the CIDR block.
+             * The ID of the transit router CIDR block.
              */
             public Builder transitRouterCidrId(String transitRouterCidrId) {
                 this.transitRouterCidrId = transitRouterCidrId;
@@ -232,7 +232,7 @@ public class ListTransitRouterCidrResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the transit router.
+             * The transit router ID.
              */
             public Builder transitRouterId(String transitRouterId) {
                 this.transitRouterId = transitRouterId;

@@ -233,7 +233,7 @@ public class UpdateTransitRouterRouteEntryRequest extends Request {
          * The new description of the route.
          * <p>
          * 
-         * The description must be 0 to 256 characters in length, and can contain letters, digits, commas (,), periods (.), semicolons (;), forward slashes (/), at signs (@), underscores (\_), and hyphens (-).
+         * The description must be 1 to 256 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.
          */
         public Builder transitRouterRouteEntryDescription(String transitRouterRouteEntryDescription) {
             this.putQueryParameter("TransitRouterRouteEntryDescription", transitRouterRouteEntryDescription);
@@ -254,7 +254,7 @@ public class UpdateTransitRouterRouteEntryRequest extends Request {
          * The new name of the route.
          * <p>
          * 
-         * The name must be 1 to 128 characters in length, and can contain letters, digits, and the following special characters: , . ; / @ \_ -. You can also leave the name empty.
+         * The name must be 1 to 128 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.
          */
         public Builder transitRouterRouteEntryName(String transitRouterRouteEntryName) {
             this.putQueryParameter("TransitRouterRouteEntryName", transitRouterRouteEntryName);

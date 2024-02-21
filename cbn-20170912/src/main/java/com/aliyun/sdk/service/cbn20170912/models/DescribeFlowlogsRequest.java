@@ -364,7 +364,7 @@ public class DescribeFlowlogsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * The page number. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -373,7 +373,7 @@ public class DescribeFlowlogsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Minimum value: **1**. Default value: **20**.
+         * The number of entries per page. Minimum value: **1**. Default value: **20**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

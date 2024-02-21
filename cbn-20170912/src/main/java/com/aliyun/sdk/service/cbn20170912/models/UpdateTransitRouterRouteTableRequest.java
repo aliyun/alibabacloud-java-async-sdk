@@ -256,7 +256,7 @@ public class UpdateTransitRouterRouteTableRequest extends Request {
          * The description of the route table.
          * <p>
          * 
-         * The description must be 2 to 256 characters in length, and can contain letters, digits, and the following special characters: , . ; / @ \_ -. You can also leave the description empty.
+         * The description must be 1 to 256 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.
          */
         public Builder transitRouterRouteTableDescription(String transitRouterRouteTableDescription) {
             this.putQueryParameter("TransitRouterRouteTableDescription", transitRouterRouteTableDescription);
@@ -277,7 +277,7 @@ public class UpdateTransitRouterRouteTableRequest extends Request {
          * The name of the route table.
          * <p>
          * 
-         * The name must be 1 to 128 characters in length, and can contain letters, digits, and the following special characters: , . ; / @ \_ -. You can also leave the name empty.
+         * The name must be 1 to 128 characters in length, and cannot start with http:// or https://. You can also leave this parameter empty.
          */
         public Builder transitRouterRouteTableName(String transitRouterRouteTableName) {
             this.putQueryParameter("TransitRouterRouteTableName", transitRouterRouteTableName);

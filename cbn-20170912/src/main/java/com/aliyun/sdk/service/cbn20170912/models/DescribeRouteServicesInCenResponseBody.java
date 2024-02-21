@@ -86,7 +86,7 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The number of the returned page.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -323,7 +323,7 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region where the cloud service is deployed.
+             * The region ID of the cloud service.
              */
             public Builder hostRegionId(String hostRegionId) {
                 this.hostRegionId = hostRegionId;
@@ -331,7 +331,7 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC that is associated with the cloud service.
+             * The ID of the VPC associated with the cloud service.
              */
             public Builder hostVpcId(String hostVpcId) {
                 this.hostVpcId = hostVpcId;
@@ -342,9 +342,9 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
              * The status of the cloud service. Valid values:
              * <p>
              * 
-             * *   **Creating**: The cloud service is being created.
-             * *   **Active**: The cloud service is available.
-             * *   **Deleting**: The cloud service is being deleted.
+             * *   **Creating**
+             * *   **Active**
+             * *   **Deleting**
              */
             public Builder status(String status) {
                 this.status = status;

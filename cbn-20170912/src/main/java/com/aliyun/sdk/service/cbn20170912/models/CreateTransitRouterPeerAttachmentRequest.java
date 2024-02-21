@@ -321,7 +321,11 @@ public class CreateTransitRouterPeerAttachmentRequest extends Request {
         }
 
         /**
-         * The maximum bandwidth value of the inter-region connection. Unit: Mbit/s.
+         * The bandwidth value of the inter-region connection. Unit: Mbit/s.
+         * <p>
+         * 
+         * *   This parameter specifies the maximum bandwidth value for the inter-region connection if you set **BandwidthType** to **BandwidthPackage**.
+         * *   This parameter specifies the bandwidth throttling threshold for the inter-region connection if you set **BandwidthType** to **DataTransfer**.
          */
         public Builder bandwidth(Integer bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -333,7 +337,8 @@ public class CreateTransitRouterPeerAttachmentRequest extends Request {
          * The method that is used to allocate bandwidth to the inter-region connection. Valid values:
          * <p>
          * 
-         * **BandwidthPackage**: allocates bandwidth from a bandwidth plan.
+         * *   **BandwidthPackage**: allocates bandwidth from a bandwidth plan.
+         * *   **DataTransfer**: bandwidth is billed based on the pay-by-data-transfer metering method.
          */
         public Builder bandwidthType(String bandwidthType) {
             this.putQueryParameter("BandwidthType", bandwidthType);
@@ -345,7 +350,7 @@ public class CreateTransitRouterPeerAttachmentRequest extends Request {
          * The ID of the bandwidth plan that is used to allocate bandwidth to the inter-region connection.
          * <p>
          * 
-         * If this parameter is not set, the system allocates bandwidth that is used for testing purposes to the inter-region connection. The default bandwidth for testing purpose is 1 Kbit/s. You can use the bandwidth to test the connectivity of IPv4 networks.
+         * *   If you set **BandwidthType** to **DataTransfer**, you do not need to set this parameter.
          */
         public Builder cenBandwidthPackageId(String cenBandwidthPackageId) {
             this.putQueryParameter("CenBandwidthPackageId", cenBandwidthPackageId);
@@ -377,7 +382,12 @@ public class CreateTransitRouterPeerAttachmentRequest extends Request {
         }
 
         /**
-         * DefaultLinkType.
+         * The default line type.
+         * <p>
+         * 
+         * Valid values: Platinum and Gold.
+         * 
+         * Platinum is supported only when BandwidthType is set to DataTransfer.
          */
         public Builder defaultLinkType(String defaultLinkType) {
             this.putQueryParameter("DefaultLinkType", defaultLinkType);

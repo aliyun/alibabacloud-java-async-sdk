@@ -181,7 +181,7 @@ public class DescribeCenVbrHealthCheckRequest extends Request {
         } 
 
         /**
-         * The ID of the CEN instance.
+         * The ID of the Cloud Enterprise Network (CEN) instance.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -253,7 +253,7 @@ public class DescribeCenVbrHealthCheckRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account that owns the VBR.
+         * The ID of the Alibaba Cloud account that owns the VBRs.
          */
         public Builder vbrInstanceOwnerId(Long vbrInstanceOwnerId) {
             this.putQueryParameter("VbrInstanceOwnerId", vbrInstanceOwnerId);
@@ -262,7 +262,7 @@ public class DescribeCenVbrHealthCheckRequest extends Request {
         }
 
         /**
-         * The ID of the region where the VBR is deployed.
+         * The ID of the region where the VBRs are deployed.
          * <p>
          * 
          * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
