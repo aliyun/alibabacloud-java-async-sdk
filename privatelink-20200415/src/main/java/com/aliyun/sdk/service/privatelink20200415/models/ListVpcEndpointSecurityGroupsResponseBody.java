@@ -102,7 +102,7 @@ public class ListVpcEndpointSecurityGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The security groups that are associated with the endpoint.
+         * The information about the security groups.
          */
         public Builder securityGroups(java.util.List < SecurityGroups> securityGroups) {
             this.securityGroups = securityGroups;

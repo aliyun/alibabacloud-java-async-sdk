@@ -278,7 +278,7 @@ public class GetVpcEndpointServiceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The default bandwidth of the endpoint connection. Valid values: **100** to 10240. Unit: Mbit/s.
+         * The default maximum bandwidth of the endpoint connection. Unit: Mbit/s. Valid values: **100** to 10240.
          */
         public Builder connectBandwidth(Integer connectBandwidth) {
             this.connectBandwidth = connectBandwidth;
@@ -440,10 +440,10 @@ public class GetVpcEndpointServiceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether zone affinity is enabled. Valid values:
+         * Indicates whether the domain name of the nearest endpoint that is associated with the endpoint service is resolved first. Valid values:
          * <p>
          * 
-         * *   **true**
+         * *   **true** (default)
          * *   **false**
          */
         public Builder zoneAffinityEnabled(Boolean zoneAffinityEnabled) {

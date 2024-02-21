@@ -206,7 +206,7 @@ public class AddZoneToVpcEndpointRequest extends Request {
         }
 
         /**
-         * The IP address of the endpoint ENI in the zone that you want to add.
+         * The IP address of the endpoint elastic network interface (ENI) in the zone that you want to add.
          */
         public Builder ip(String ip) {
             this.putQueryParameter("ip", ip);

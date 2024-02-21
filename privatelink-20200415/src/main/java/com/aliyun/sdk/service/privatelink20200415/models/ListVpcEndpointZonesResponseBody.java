@@ -102,7 +102,7 @@ public class ListVpcEndpointZonesResponseBody extends TeaModel {
         }
 
         /**
-         * The zones.
+         * The information about the zones.
          */
         public Builder zones(java.util.List < Zones> zones) {
             this.zones = zones;
@@ -226,7 +226,7 @@ public class ListVpcEndpointZonesResponseBody extends TeaModel {
             private String zoneStatus; 
 
             /**
-             * The endpoint ENI ID.
+             * The ID of the endpoint ENI.
              */
             public Builder eniId(String eniId) {
                 this.eniId = eniId;
@@ -261,7 +261,7 @@ public class ListVpcEndpointZonesResponseBody extends TeaModel {
              * The domain name of the zone.
              * <p>
              * 
-             * After the endpoint is connected to the endpoint service, you can access the service resources in the endpoint service by using the domain name of the zone.
+             * After the endpoint in the zone is connected to the endpoint service, you can access the service resources of the endpoint service by using the domain name of the zone.
              */
             public Builder zoneDomain(String zoneDomain) {
                 this.zoneDomain = zoneDomain;
@@ -277,7 +277,7 @@ public class ListVpcEndpointZonesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether IPv6 is enabled for the endpoint service. Valid values:
+             * Indicates whether the endpoint service supports IPv6. Valid values:
              * <p>
              * 
              * *   **true**

@@ -191,8 +191,9 @@ public class AttachResourceToVpcEndpointServiceRequest extends Request {
          * The type of the service resource. Valid values:
          * <p>
          * 
-         * *   **slb**: a Classic Load Balancer (CLB) instance that supports PrivateLink. In addition, the CLB instance is deployed in a virtual private cloud (VPC).
-         * *   **alb**: an Application Load Balancer (ALB) instance that supports PrivateLink. In addition, the ALB instance is deployed in a VPC.
+         * *   **slb**: a Classic Load Balancer (CLB) instance
+         * *   **alb**: an Application Load Balancer (ALB) instance
+         * *   **nlb**: a Network Load Balancer (NLB) instance
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -210,7 +211,7 @@ public class AttachResourceToVpcEndpointServiceRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * The zone ID of the service resource.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

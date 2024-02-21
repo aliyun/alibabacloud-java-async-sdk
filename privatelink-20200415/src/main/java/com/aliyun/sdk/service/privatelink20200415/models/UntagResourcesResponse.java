@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link UpdateVpcEndpointServiceAttributeResponse} extends {@link TeaModel}
+ * {@link UntagResourcesResponse} extends {@link TeaModel}
  *
- * <p>UpdateVpcEndpointServiceAttributeResponse</p>
+ * <p>UntagResourcesResponse</p>
  */
-public class UpdateVpcEndpointServiceAttributeResponse extends Response {
+public class UntagResourcesResponse extends Response {
     @NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -19,16 +19,16 @@ public class UpdateVpcEndpointServiceAttributeResponse extends Response {
     private Integer statusCode;
 
     @NameInMap("body")
-    private UpdateVpcEndpointServiceAttributeResponseBody body;
+    private UntagResourcesResponseBody body;
 
-    private UpdateVpcEndpointServiceAttributeResponse(BuilderImpl builder) {
+    private UntagResourcesResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static UpdateVpcEndpointServiceAttributeResponse create() {
+    public static UntagResourcesResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +54,35 @@ public class UpdateVpcEndpointServiceAttributeResponse extends Response {
     /**
      * @return body
      */
-    public UpdateVpcEndpointServiceAttributeResponseBody getBody() {
+    public UntagResourcesResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<UpdateVpcEndpointServiceAttributeResponse, Builder> {
+    public interface Builder extends Response.Builder<UntagResourcesResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(UpdateVpcEndpointServiceAttributeResponseBody body);
+        Builder body(UntagResourcesResponseBody body);
 
         @Override
-        UpdateVpcEndpointServiceAttributeResponse build();
+        UntagResourcesResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<UpdateVpcEndpointServiceAttributeResponse, Builder>
+            extends Response.BuilderImpl<UntagResourcesResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private UpdateVpcEndpointServiceAttributeResponseBody body; 
+        private UntagResourcesResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(UpdateVpcEndpointServiceAttributeResponse response) {
+        private BuilderImpl(UntagResourcesResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +111,14 @@ public class UpdateVpcEndpointServiceAttributeResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(UpdateVpcEndpointServiceAttributeResponseBody body) {
+        public Builder body(UntagResourcesResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public UpdateVpcEndpointServiceAttributeResponse build() {
-            return new UpdateVpcEndpointServiceAttributeResponse(this);
+        public UntagResourcesResponse build() {
+            return new UntagResourcesResponse(this);
         } 
 
     } 

@@ -7,11 +7,15 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link TagResourcesRequest} extends {@link RequestModel}
+ * {@link UntagResourcesRequest} extends {@link RequestModel}
  *
- * <p>TagResourcesRequest</p>
+ * <p>UntagResourcesRequest</p>
  */
-public class TagResourcesRequest extends Request {
+public class UntagResourcesRequest extends Request {
+    @Body
+    @NameInMap("All")
+    private Boolean all;
+
     @Body
     @NameInMap("ClientToken")
     private String clientToken;
@@ -36,31 +40,38 @@ public class TagResourcesRequest extends Request {
     private String resourceType;
 
     @Body
-    @NameInMap("Tag")
-    @Validation(required = true)
-    private java.util.List < Tag> tag;
+    @NameInMap("TagKey")
+    private java.util.List < String > tagKey;
 
-    private TagResourcesRequest(Builder builder) {
+    private UntagResourcesRequest(Builder builder) {
         super(builder);
+        this.all = builder.all;
         this.clientToken = builder.clientToken;
         this.dryRun = builder.dryRun;
         this.regionId = builder.regionId;
         this.resourceId = builder.resourceId;
         this.resourceType = builder.resourceType;
-        this.tag = builder.tag;
+        this.tagKey = builder.tagKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static TagResourcesRequest create() {
+    public static UntagResourcesRequest create() {
         return builder().build();
     }
 
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return all
+     */
+    public Boolean getAll() {
+        return this.all;
     }
 
     /**
@@ -99,33 +110,50 @@ public class TagResourcesRequest extends Request {
     }
 
     /**
-     * @return tag
+     * @return tagKey
      */
-    public java.util.List < Tag> getTag() {
-        return this.tag;
+    public java.util.List < String > getTagKey() {
+        return this.tagKey;
     }
 
-    public static final class Builder extends Request.Builder<TagResourcesRequest, Builder> {
+    public static final class Builder extends Request.Builder<UntagResourcesRequest, Builder> {
+        private Boolean all; 
         private String clientToken; 
         private Boolean dryRun; 
         private String regionId; 
         private java.util.List < String > resourceId; 
         private String resourceType; 
-        private java.util.List < Tag> tag; 
+        private java.util.List < String > tagKey; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(TagResourcesRequest request) {
+        private Builder(UntagResourcesRequest request) {
             super(request);
+            this.all = request.all;
             this.clientToken = request.clientToken;
             this.dryRun = request.dryRun;
             this.regionId = request.regionId;
             this.resourceId = request.resourceId;
             this.resourceType = request.resourceType;
-            this.tag = request.tag;
+            this.tagKey = request.tagKey;
         } 
+
+        /**
+         * Specifies whether to remove all tags from the resource. Valid values:
+         * <p>
+         * 
+         * *   **true**: removes all tags from the resource.
+         * *   **false**: does not remove all tags from the resource.
+         * 
+         * >  If you specify both this parameter and **TagKey**, this parameter is invalid.
+         */
+        public Builder all(Boolean all) {
+            this.putBodyParameter("All", all);
+            this.all = all;
+            return this;
+        }
 
         /**
          * The client token that is used to ensure the idempotence of the request.
@@ -146,7 +174,7 @@ public class TagResourcesRequest extends Request {
          * <p>
          * 
          * *   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-         * *   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
+         * *   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a `2xx HTTP` status code is returned and the operation is performed.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putBodyParameter("DryRun", dryRun);
@@ -167,7 +195,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The resource IDs. Up to 50 resource IDs are supported.
+         * The resource IDs. You can specify up to 50 resource IDs.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putBodyParameter("ResourceId", resourceId);
@@ -176,7 +204,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The type of resource. Valid values:
+         * The resource type. Valid values:
          * <p>
          * 
          * *   **vpcendpoint**: endpoint
@@ -189,88 +217,19 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The tags to add to the resources.
+         * The keys of the tags that you want to remove from the resource. You can specify up to 20 tag keys.
          */
-        public Builder tag(java.util.List < Tag> tag) {
-            this.putBodyParameter("Tag", tag);
-            this.tag = tag;
+        public Builder tagKey(java.util.List < String > tagKey) {
+            this.putBodyParameter("TagKey", tagKey);
+            this.tagKey = tagKey;
             return this;
         }
 
         @Override
-        public TagResourcesRequest build() {
-            return new TagResourcesRequest(this);
+        public UntagResourcesRequest build() {
+            return new UntagResourcesRequest(this);
         } 
 
     } 
 
-    public static class Tag extends TeaModel {
-        @NameInMap("Key")
-        @Validation(required = true)
-        private String key;
-
-        @NameInMap("Value")
-        @Validation(required = true)
-        private String value;
-
-        private Tag(Builder builder) {
-            this.key = builder.key;
-            this.value = builder.value;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static Tag create() {
-            return builder().build();
-        }
-
-        /**
-         * @return key
-         */
-        public String getKey() {
-            return this.key;
-        }
-
-        /**
-         * @return value
-         */
-        public String getValue() {
-            return this.value;
-        }
-
-        public static final class Builder {
-            private String key; 
-            private String value; 
-
-            /**
-             * The key of tag N to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.
-             * <p>
-             * 
-             * The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`.
-             */
-            public Builder key(String key) {
-                this.key = key;
-                return this;
-            }
-
-            /**
-             * The value of tag N to add to the resource. You can specify up to 20 tag values. The tag value can be an empty string.
-             * <p>
-             * 
-             * The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `acs:` or `aliyun`.
-             */
-            public Builder value(String value) {
-                this.value = value;
-                return this;
-            }
-
-            public Tag build() {
-                return new Tag(this);
-            } 
-
-        } 
-
-    }
 }

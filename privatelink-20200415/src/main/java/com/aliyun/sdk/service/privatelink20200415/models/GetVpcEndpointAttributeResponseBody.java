@@ -302,7 +302,7 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
          * <p>
          * 
          * *   **Normal**: The endpoint runs as expected.
-         * *   **FinacialLocked**: The endpoint is locked due to overdue payments.
+         * *   **FinancialLocked**: The endpoint is locked due to overdue payments.
          */
         public Builder endpointBusinessStatus(String endpointBusinessStatus) {
             this.endpointBusinessStatus = endpointBusinessStatus;
@@ -439,11 +439,11 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether zone affinity is enabled. Valid values:
+         * Indicates whether the domain name of the nearest endpoint that is associated with the endpoint service is resolved first. Valid values:
          * <p>
          * 
-         * *   **true**: Zone affinity is enabled.
-         * *   **false**: Zone affinity is disabled.
+         * *   **true**
+         * *   **false**
          */
         public Builder zoneAffinityEnabled(Boolean zoneAffinityEnabled) {
             this.zoneAffinityEnabled = zoneAffinityEnabled;

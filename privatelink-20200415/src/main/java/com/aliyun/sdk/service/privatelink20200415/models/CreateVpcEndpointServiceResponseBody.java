@@ -210,7 +210,7 @@ public class CreateVpcEndpointServiceResponseBody extends TeaModel {
          * <p>
          * 
          * *   **Normal**: The endpoint service runs as expected.
-         * *   **FinacialLocked**: The endpoint service is locked due to overdue payments.
+         * *   **FinancialLocked**: The endpoint service is locked due to overdue payments.
          */
         public Builder serviceBusinessStatus(String serviceBusinessStatus) {
             this.serviceBusinessStatus = serviceBusinessStatus;
@@ -257,7 +257,6 @@ public class CreateVpcEndpointServiceResponseBody extends TeaModel {
          * *   **Pending**: The endpoint service is being modified.
          * *   **Active**: The endpoint service is available.
          * *   **Deleting**: The endpoint service is being deleted.
-         * *   **Inactive**: The endpoint service is unavailable.
          */
         public Builder serviceStatus(String serviceStatus) {
             this.serviceStatus = serviceStatus;

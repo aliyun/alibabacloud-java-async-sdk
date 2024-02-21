@@ -154,7 +154,7 @@ public class ListVpcEndpointServicesByEndUserRequest extends Request {
         } 
 
         /**
-         * MaxResults.
+         * The number of entries to return on each page. Valid values: **1** to **50**. Default value: **50**.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -163,7 +163,11 @@ public class ListVpcEndpointServicesByEndUserRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results. Valid values:
+         * <p>
+         * 
+         * *   If this is your first request and no next requests are to be performed, you do not need to specify this parameter.
+         * *   If a next request is to be performed, set the value to the value of **NextToken** that is returned from the last call.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -172,7 +176,10 @@ public class ListVpcEndpointServicesByEndUserRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the endpoint.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~DescribeRegions~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -181,7 +188,7 @@ public class ListVpcEndpointServicesByEndUserRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The resource group ID.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -190,7 +197,7 @@ public class ListVpcEndpointServicesByEndUserRequest extends Request {
         }
 
         /**
-         * ServiceId.
+         * The ID of the endpoint service that you want to query.
          */
         public Builder serviceId(String serviceId) {
             this.putQueryParameter("ServiceId", serviceId);
@@ -199,7 +206,7 @@ public class ListVpcEndpointServicesByEndUserRequest extends Request {
         }
 
         /**
-         * ServiceName.
+         * The name of the endpoint service that you want to query.
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);
@@ -208,7 +215,10 @@ public class ListVpcEndpointServicesByEndUserRequest extends Request {
         }
 
         /**
-         * ServiceType.
+         * The type of the endpoint service.
+         * <p>
+         * 
+         * Set the value to **Interface**. You can specify CLB and ALB instances as service resources for the endpoint service.
          */
         public Builder serviceType(String serviceType) {
             this.putQueryParameter("ServiceType", serviceType);
@@ -217,7 +227,7 @@ public class ListVpcEndpointServicesByEndUserRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The list of tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -271,7 +281,10 @@ public class ListVpcEndpointServicesByEndUserRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag. You can specify up to 20 tag keys. The tag key cannot be an empty string.
+             * <p>
+             * 
+             * The tag key must be 1 to 64 characters in length and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -279,7 +292,10 @@ public class ListVpcEndpointServicesByEndUserRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the tag. You can specify up to 20 tag values. The tag value can be an empty string.
+             * <p>
+             * 
+             * The tag value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

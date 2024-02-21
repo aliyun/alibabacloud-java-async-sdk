@@ -347,10 +347,7 @@ public class CreateVpcEndpointRequest extends Request {
         }
 
         /**
-         * The ID of the security group that is associated with the endpoint ENI. The security group can be used to control data transfer between the VPC and the endpoint ENI.
-         * <p>
-         * 
-         * The endpoint can be associated with up to 10 security groups.
+         * The IDs of security groups that are associated with the endpoint elastic network interface (ENI).
          */
         public Builder securityGroupId(java.util.List < String > securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -377,7 +374,7 @@ public class CreateVpcEndpointRequest extends Request {
         }
 
         /**
-         * The list of tags.
+         * The tags to add to the resource.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -458,7 +455,7 @@ public class CreateVpcEndpointRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag.
+             * The key of the tag to add to the resource.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -466,7 +463,7 @@ public class CreateVpcEndpointRequest extends Request {
             }
 
             /**
-             * The value of the tag.
+             * The value of the tag to add to the resource.
              */
             public Builder value(String value) {
                 this.value = value;

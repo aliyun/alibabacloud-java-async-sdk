@@ -218,7 +218,7 @@ public class CreateVpcEndpointResponseBody extends TeaModel {
          * <p>
          * 
          * *   **Normal**: The endpoint runs as expected.
-         * *   **FinacialLocked**: The endpoint is locked due to overdue payments.
+         * *   **FinancialLocked**: The endpoint is locked due to overdue payments.
          */
         public Builder endpointBusinessStatus(String endpointBusinessStatus) {
             this.endpointBusinessStatus = endpointBusinessStatus;

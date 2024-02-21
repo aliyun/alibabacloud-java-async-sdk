@@ -224,7 +224,11 @@ public class ListVpcEndpointServicesRequest extends Request {
         } 
 
         /**
-         * AutoAcceptEnabled.
+         * Specifies whether to automatically accept endpoint connection requests. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false** (default)
          */
         public Builder autoAcceptEnabled(Boolean autoAcceptEnabled) {
             this.putQueryParameter("AutoAcceptEnabled", autoAcceptEnabled);
@@ -233,7 +237,7 @@ public class ListVpcEndpointServicesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The number of entries to return on each page. Valid values: **1** to **50**. Default value: **50**.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -242,7 +246,11 @@ public class ListVpcEndpointServicesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results. Valid values:
+         * <p>
+         * 
+         * *   If this is your first request and no next requests are to be performed, you do not need to specify this parameter.
+         * *   If a next request is to be performed, set the parameter to the value of NextToken that is returned from the last call.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -251,7 +259,10 @@ public class ListVpcEndpointServicesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the endpoint service.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~120468~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -260,7 +271,7 @@ public class ListVpcEndpointServicesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The resource group ID.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -269,7 +280,7 @@ public class ListVpcEndpointServicesRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The service resource ID.
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -278,7 +289,11 @@ public class ListVpcEndpointServicesRequest extends Request {
         }
 
         /**
-         * ServiceBusinessStatus.
+         * The service state of the endpoint service. Valid values:
+         * <p>
+         * 
+         * *   **Normal**: The endpoint service runs as expected.
+         * *   **FinancialLocked**: The endpoint service is locked due to overdue payments.
          */
         public Builder serviceBusinessStatus(String serviceBusinessStatus) {
             this.putQueryParameter("ServiceBusinessStatus", serviceBusinessStatus);
@@ -287,7 +302,7 @@ public class ListVpcEndpointServicesRequest extends Request {
         }
 
         /**
-         * ServiceId.
+         * The endpoint service ID.
          */
         public Builder serviceId(String serviceId) {
             this.putQueryParameter("ServiceId", serviceId);
@@ -296,7 +311,7 @@ public class ListVpcEndpointServicesRequest extends Request {
         }
 
         /**
-         * ServiceName.
+         * The name of the endpoint service.
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);
@@ -305,7 +320,11 @@ public class ListVpcEndpointServicesRequest extends Request {
         }
 
         /**
-         * ServiceResourceType.
+         * The type of the service resource. Valid values:
+         * <p>
+         * 
+         * *   **slb**: a Classic Load Balancer (CLB) instance
+         * *   **alb**: an Application Load Balancer (ALB) instance
          */
         public Builder serviceResourceType(String serviceResourceType) {
             this.putQueryParameter("ServiceResourceType", serviceResourceType);
@@ -314,7 +333,13 @@ public class ListVpcEndpointServicesRequest extends Request {
         }
 
         /**
-         * ServiceStatus.
+         * The state of the endpoint service. Valid values:
+         * <p>
+         * 
+         * *   **Creating**: The endpoint service is being created.
+         * *   **Pending**: The endpoint service is being modified.
+         * *   **Active**: The endpoint service is available.
+         * *   **Deleting**: The endpoint service is being deleted
          */
         public Builder serviceStatus(String serviceStatus) {
             this.putQueryParameter("ServiceStatus", serviceStatus);
@@ -323,7 +348,7 @@ public class ListVpcEndpointServicesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The list of tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -332,7 +357,11 @@ public class ListVpcEndpointServicesRequest extends Request {
         }
 
         /**
-         * ZoneAffinityEnabled.
+         * Specifies whether to first resolve the domain name of the nearest endpoint that is associated with the endpoint service. Valid values:
+         * <p>
+         * 
+         * *   **true** (default)
+         * *   **false**
          */
         public Builder zoneAffinityEnabled(Boolean zoneAffinityEnabled) {
             this.putQueryParameter("ZoneAffinityEnabled", zoneAffinityEnabled);
@@ -386,7 +415,10 @@ public class ListVpcEndpointServicesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag. You can specify up to 20 tag keys. The tag key cannot be an empty string.
+             * <p>
+             * 
+             * The tag key must be 1 to 64 characters in length and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -394,7 +426,10 @@ public class ListVpcEndpointServicesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the tag. You can specify up to 20 tag values. The tag value can be an empty string.
+             * <p>
+             * 
+             * The tag value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

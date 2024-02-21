@@ -7,43 +7,41 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link TagResourcesRequest} extends {@link RequestModel}
+ * {@link ListTagResourcesRequest} extends {@link RequestModel}
  *
- * <p>TagResourcesRequest</p>
+ * <p>ListTagResourcesRequest</p>
  */
-public class TagResourcesRequest extends Request {
-    @Body
+public class ListTagResourcesRequest extends Request {
+    @Query
     @NameInMap("ClientToken")
     private String clientToken;
 
-    @Body
-    @NameInMap("DryRun")
-    private Boolean dryRun;
+    @Query
+    @NameInMap("NextToken")
+    private String nextToken;
 
-    @Body
+    @Query
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
 
-    @Body
+    @Query
     @NameInMap("ResourceId")
-    @Validation(required = true)
     private java.util.List < String > resourceId;
 
-    @Body
+    @Query
     @NameInMap("ResourceType")
     @Validation(required = true)
     private String resourceType;
 
-    @Body
+    @Query
     @NameInMap("Tag")
-    @Validation(required = true)
     private java.util.List < Tag> tag;
 
-    private TagResourcesRequest(Builder builder) {
+    private ListTagResourcesRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
-        this.dryRun = builder.dryRun;
+        this.nextToken = builder.nextToken;
         this.regionId = builder.regionId;
         this.resourceId = builder.resourceId;
         this.resourceType = builder.resourceType;
@@ -54,7 +52,7 @@ public class TagResourcesRequest extends Request {
         return new Builder();
     }
 
-    public static TagResourcesRequest create() {
+    public static ListTagResourcesRequest create() {
         return builder().build();
     }
 
@@ -71,10 +69,10 @@ public class TagResourcesRequest extends Request {
     }
 
     /**
-     * @return dryRun
+     * @return nextToken
      */
-    public Boolean getDryRun() {
-        return this.dryRun;
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     /**
@@ -105,9 +103,9 @@ public class TagResourcesRequest extends Request {
         return this.tag;
     }
 
-    public static final class Builder extends Request.Builder<TagResourcesRequest, Builder> {
+    public static final class Builder extends Request.Builder<ListTagResourcesRequest, Builder> {
         private String clientToken; 
-        private Boolean dryRun; 
+        private String nextToken; 
         private String regionId; 
         private java.util.List < String > resourceId; 
         private String resourceType; 
@@ -117,10 +115,10 @@ public class TagResourcesRequest extends Request {
             super();
         } 
 
-        private Builder(TagResourcesRequest request) {
+        private Builder(ListTagResourcesRequest request) {
             super(request);
             this.clientToken = request.clientToken;
-            this.dryRun = request.dryRun;
+            this.nextToken = request.nextToken;
             this.regionId = request.regionId;
             this.resourceId = request.resourceId;
             this.resourceType = request.resourceType;
@@ -132,85 +130,78 @@ public class TagResourcesRequest extends Request {
          * <p>
          * 
          * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, the system automatically uses the request ID as the client token.******** The request ID may be different for each request.
          */
         public Builder clientToken(String clientToken) {
-            this.putBodyParameter("ClientToken", clientToken);
+            this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
             return this;
         }
 
         /**
-         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
+         * The pagination token that is used in the next request to retrieve a new page of results.
          * <p>
          * 
-         * *   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-         * *   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
+         * *   If this is your first request or no next requests are to be sent, you do not need to specify this parameter.
+         * *   If a next request is to be sent, you must specify the token that is obtained from the previous request as the value of **NextToken**.
          */
-        public Builder dryRun(Boolean dryRun) {
-            this.putBodyParameter("DryRun", dryRun);
-            this.dryRun = dryRun;
+        public Builder nextToken(String nextToken) {
+            this.putQueryParameter("NextToken", nextToken);
+            this.nextToken = nextToken;
             return this;
         }
 
         /**
-         * The region ID of the PrivateLink instance.
-         * <p>
-         * 
-         * You can call the [DescribeRegions](~~120468~~) operation to query the most recent region list.
+         * The ID of the region where the resource resides. You can call the [DescribeRegions](~~120468~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
-            this.putBodyParameter("RegionId", regionId);
+            this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
             return this;
         }
 
         /**
-         * The resource IDs. Up to 50 resource IDs are supported.
+         * The resource IDs. You can specify up to 50 resource IDs.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
-            this.putBodyParameter("ResourceId", resourceId);
+            this.putQueryParameter("ResourceId", resourceId);
             this.resourceId = resourceId;
             return this;
         }
 
         /**
-         * The type of resource. Valid values:
+         * The type of the resource. Valid values:
          * <p>
          * 
          * *   **vpcendpoint**: endpoint
          * *   **vpcendpointservice**: endpoint service
          */
         public Builder resourceType(String resourceType) {
-            this.putBodyParameter("ResourceType", resourceType);
+            this.putQueryParameter("ResourceType", resourceType);
             this.resourceType = resourceType;
             return this;
         }
 
         /**
-         * The tags to add to the resources.
+         * The tags to add to the resource.
          */
         public Builder tag(java.util.List < Tag> tag) {
-            this.putBodyParameter("Tag", tag);
+            this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
         }
 
         @Override
-        public TagResourcesRequest build() {
-            return new TagResourcesRequest(this);
+        public ListTagResourcesRequest build() {
+            return new ListTagResourcesRequest(this);
         } 
 
     } 
 
     public static class Tag extends TeaModel {
         @NameInMap("Key")
-        @Validation(required = true)
         private String key;
 
         @NameInMap("Value")
-        @Validation(required = true)
         private String value;
 
         private Tag(Builder builder) {
@@ -248,7 +239,7 @@ public class TagResourcesRequest extends Request {
              * The key of tag N to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.
              * <p>
              * 
-             * The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`.
+             * The tag key can be up to 64 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The tag key must start with a letter but cannot start with `aliyun` or `acs:`. The tag key cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -259,7 +250,7 @@ public class TagResourcesRequest extends Request {
              * The value of tag N to add to the resource. You can specify up to 20 tag values. The tag value can be an empty string.
              * <p>
              * 
-             * The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `acs:` or `aliyun`.
+             * The tag value can be up to 128 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The tag value must start with a letter but cannot start with `aliyun` or `acs:`. The tag value cannot contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

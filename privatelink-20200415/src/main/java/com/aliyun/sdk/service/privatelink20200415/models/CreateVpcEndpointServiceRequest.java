@@ -328,7 +328,7 @@ public class CreateVpcEndpointServiceRequest extends Request {
         }
 
         /**
-         * The list of tags.
+         * The tags to add to the resource.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -418,11 +418,11 @@ public class CreateVpcEndpointServiceRequest extends Request {
              * The type of the service resource that is added to the endpoint service. You can add up to 20 service resources to the endpoint service. Valid values:
              * <p>
              * 
-             * *   **slb**: a CLB instance
-             * *   **alb**: an ALB instance
-             * *   **nlb**: a NLB instance
+             * *   **slb**: Classic Load Balancer (CLB) instance
+             * *   **alb**: Application Load Balancer (ALB) instance
+             * *   **nlb**: Network Load Balancer (NLB) instance
              * 
-             * >  In regions where PrivateLink is supported, CLB instances deployed in virtual private clouds (VPCs) can serve as service resources of the endpoint service.
+             * >  In regions where PrivateLink is supported, CLB instances deployed in virtual private clouds (VPCs) can serve as the service resources of the endpoint service.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -483,10 +483,10 @@ public class CreateVpcEndpointServiceRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag. You can specify up to 20 tag keys. The tag key cannot be an empty string.
+             * The key of the tag to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.
              * <p>
              * 
-             * The tag key must be 1 to 64 characters in length and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
+             * The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -494,10 +494,10 @@ public class CreateVpcEndpointServiceRequest extends Request {
             }
 
             /**
-             * The value of the tag. You can specify up to 20 tag values. The tag value can be an empty string.
+             * The value of the tag to add to the resource. You can specify up to 20 tag values. The tag value can be an empty string.
              * <p>
              * 
-             * The tag value must be 1 to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             * The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.
              */
             public Builder value(String value) {
                 this.value = value;

@@ -86,7 +86,7 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * MaxResults.
+         * The number of entries returned per page.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -94,7 +94,11 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:
+         * <p>
+         * 
+         * *   If no value is returned for **NextToken**, no next requests are performed.
+         * *   If a value is returned for **NextToken**, the value can be used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -102,7 +106,7 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +114,7 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
         }
 
         /**
-         * Services.
+         * The endpoint services.
          */
         public Builder services(java.util.List < Services> services) {
             this.services = services;
@@ -118,7 +122,7 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -170,7 +174,7 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -178,7 +182,7 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the tag.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -327,7 +331,11 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
             private java.util.List < String > zones; 
 
             /**
-             * Payer.
+             * The payer. Valid values:
+             * <p>
+             * 
+             * *   **Endpoint**: the service consumer
+             * *   **EndpointService**: the service provider
              */
             public Builder payer(String payer) {
                 this.payer = payer;
@@ -335,7 +343,7 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The resource group ID.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -343,7 +351,7 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceDomain.
+             * The domain name of the endpoint service that can be associated with the endpoint.
              */
             public Builder serviceDomain(String serviceDomain) {
                 this.serviceDomain = serviceDomain;
@@ -351,7 +359,7 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceId.
+             * The ID of the endpoint service that can be associated with the endpoint.
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;
@@ -359,7 +367,7 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceName.
+             * The name of the endpoint service that can be associated with the endpoint.
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -375,7 +383,11 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceSupportIPv6.
+             * Indicates whether IPv6 is enabled. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder serviceSupportIPv6(Boolean serviceSupportIPv6) {
                 this.serviceSupportIPv6 = serviceSupportIPv6;
@@ -383,7 +395,10 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceType.
+             * The type of the endpoint service.
+             * <p>
+             * 
+             * Only **Interface** is returned, which indicates an interface endpoint. You can specify **CLB** and **ALB** instances as service resources.
              */
             public Builder serviceType(String serviceType) {
                 this.serviceType = serviceType;
@@ -391,7 +406,7 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The list of tags.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -399,7 +414,7 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
             }
 
             /**
-             * Zones.
+             * The zones of the endpoint service that can be associated with the endpoint.
              */
             public Builder zones(java.util.List < String > zones) {
                 this.zones = zones;
