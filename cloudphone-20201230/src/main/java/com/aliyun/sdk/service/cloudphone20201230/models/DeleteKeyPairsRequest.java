@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteKeyPairsRequest</p>
  */
 public class DeleteKeyPairsRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("KeyPairName")
     @Validation(required = true)
@@ -38,19 +42,15 @@ public class DeleteKeyPairsRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     private DeleteKeyPairsRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.keyPairName = builder.keyPairName;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -64,6 +64,13 @@ public class DeleteKeyPairsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -108,39 +115,41 @@ public class DeleteKeyPairsRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
     public static final class Builder extends Request.Builder<DeleteKeyPairsRequest, Builder> {
+        private String sourceRegionId; 
         private java.util.List < String > keyPairName; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DeleteKeyPairsRequest response) {
-            super(response);
-            this.keyPairName = response.keyPairName;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.sourceRegionId = response.sourceRegionId;
+        private Builder(DeleteKeyPairsRequest request) {
+            super(request);
+            this.sourceRegionId = request.sourceRegionId;
+            this.keyPairName = request.keyPairName;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * KeyPairName.
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
+
+        /**
+         * The name of the key pair that the cloud phone uses. The value can be a JSON array that consists of up to 100 SSH key pair names. Separate multiple key pair names with commas (,).
          */
         public Builder keyPairName(java.util.List < String > keyPairName) {
             this.putQueryParameter("KeyPairName", keyPairName);
@@ -167,7 +176,7 @@ public class DeleteKeyPairsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the key pair that you want to delete.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -190,15 +199,6 @@ public class DeleteKeyPairsRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

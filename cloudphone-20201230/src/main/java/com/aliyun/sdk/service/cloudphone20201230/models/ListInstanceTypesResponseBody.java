@@ -50,7 +50,7 @@ public class ListInstanceTypesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * InstanceTypes.
+         * The instance types.
          */
         public Builder instanceTypes(InstanceTypes instanceTypes) {
             this.instanceTypes = instanceTypes;
@@ -58,7 +58,7 @@ public class ListInstanceTypesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -223,7 +223,7 @@ public class ListInstanceTypesResponseBody extends TeaModel {
             private Resolutions resolutions; 
 
             /**
-             * CpuCoreCount.
+             * The number of vCPUs supported by the instance type.
              */
             public Builder cpuCoreCount(Integer cpuCoreCount) {
                 this.cpuCoreCount = cpuCoreCount;
@@ -231,7 +231,7 @@ public class ListInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultResolution.
+             * The default resolution supported by the instance type.
              */
             public Builder defaultResolution(String defaultResolution) {
                 this.defaultResolution = defaultResolution;
@@ -239,7 +239,7 @@ public class ListInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * The instance type.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -247,7 +247,7 @@ public class ListInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceTypeFamily.
+             * The instance type family.
              */
             public Builder instanceTypeFamily(String instanceTypeFamily) {
                 this.instanceTypeFamily = instanceTypeFamily;
@@ -255,7 +255,7 @@ public class ListInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * MemorySize.
+             * The memory size supported by the instance type. Unit: GiB.
              */
             public Builder memorySize(String memorySize) {
                 this.memorySize = memorySize;
@@ -263,7 +263,7 @@ public class ListInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the instance type in Chinese.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -271,7 +271,7 @@ public class ListInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * NameEn.
+             * The name of the instance type in English.
              */
             public Builder nameEn(String nameEn) {
                 this.nameEn = nameEn;
@@ -279,7 +279,7 @@ public class ListInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * Resolutions.
+             * The resolutions supported by the instance type.
              */
             public Builder resolutions(Resolutions resolutions) {
                 this.resolutions = resolutions;
@@ -320,7 +320,7 @@ public class ListInstanceTypesResponseBody extends TeaModel {
             private java.util.List < InstanceType> instanceType; 
 
             /**
-             * InstanceType.
+             * The instance type.
              */
             public Builder instanceType(java.util.List < InstanceType> instanceType) {
                 this.instanceType = instanceType;

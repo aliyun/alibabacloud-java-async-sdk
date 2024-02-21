@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteImagesRequest</p>
  */
 public class DeleteImagesRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("Force")
     private Boolean force;
@@ -42,12 +46,9 @@ public class DeleteImagesRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     private DeleteImagesRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.force = builder.force;
         this.imageId = builder.imageId;
         this.ownerAccount = builder.ownerAccount;
@@ -55,7 +56,6 @@ public class DeleteImagesRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -69,6 +69,13 @@ public class DeleteImagesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -120,14 +127,8 @@ public class DeleteImagesRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
     public static final class Builder extends Request.Builder<DeleteImagesRequest, Builder> {
+        private String sourceRegionId; 
         private Boolean force; 
         private java.util.List < String > imageId; 
         private String ownerAccount; 
@@ -135,26 +136,34 @@ public class DeleteImagesRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DeleteImagesRequest response) {
-            super(response);
-            this.force = response.force;
-            this.imageId = response.imageId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.sourceRegionId = response.sourceRegionId;
+        private Builder(DeleteImagesRequest request) {
+            super(request);
+            this.sourceRegionId = request.sourceRegionId;
+            this.force = request.force;
+            this.imageId = request.imageId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * Force.
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
+
+        /**
+         * Specifies whether to forcefully delete the image. Default value: false
          */
         public Builder force(Boolean force) {
             this.putQueryParameter("Force", force);
@@ -163,7 +172,7 @@ public class DeleteImagesRequest extends Request {
         }
 
         /**
-         * ImageId.
+         * The image IDs. You can specify up to 100 images.
          */
         public Builder imageId(java.util.List < String > imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -190,7 +199,7 @@ public class DeleteImagesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -213,15 +222,6 @@ public class DeleteImagesRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

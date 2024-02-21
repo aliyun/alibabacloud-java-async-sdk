@@ -50,7 +50,7 @@ public class DeleteImagesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ImageResponses.
+         * Details about images that are deleted.
          */
         public Builder imageResponses(ImageResponses imageResponses) {
             this.imageResponses = imageResponses;
@@ -58,7 +58,7 @@ public class DeleteImagesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class DeleteImagesResponseBody extends TeaModel {
             private String message; 
 
             /**
-             * Code.
+             * The HTTP status code that is returned when the image is deleted.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -130,7 +130,7 @@ public class DeleteImagesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageId.
+             * The ID of the image that is requested for deletion.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -138,7 +138,7 @@ public class DeleteImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * The message that is returned when the image is deleted.
              */
             public Builder message(String message) {
                 this.message = message;

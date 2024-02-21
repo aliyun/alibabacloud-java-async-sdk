@@ -86,7 +86,7 @@ public class ListInstancesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Instances.
+         * Details of the instances.
          */
         public Builder instances(Instances instances) {
             this.instances = instances;
@@ -94,7 +94,7 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * The maximum number of entries returned on each page. Valid values: 1 to 100.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -102,7 +102,7 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * A pagination token. It can be used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -110,7 +110,7 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries that is returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -194,7 +194,7 @@ public class ListInstancesResponseBody extends TeaModel {
             private String ipAddress; 
 
             /**
-             * AllocationId.
+             * The ID of the EIP that is used by the instance.
              */
             public Builder allocationId(String allocationId) {
                 this.allocationId = allocationId;
@@ -202,7 +202,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Bandwidth.
+             * The bandwidth of the EIP.
              */
             public Builder bandwidth(Integer bandwidth) {
                 this.bandwidth = bandwidth;
@@ -210,7 +210,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InternetChargeType.
+             * The billing method of the EIP.
              */
             public Builder internetChargeType(String internetChargeType) {
                 this.internetChargeType = internetChargeType;
@@ -218,7 +218,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * IpAddress.
+             * The EIP.
              */
             public Builder ipAddress(String ipAddress) {
                 this.ipAddress = ipAddress;
@@ -227,6 +227,108 @@ public class ListInstancesResponseBody extends TeaModel {
 
             public EipAddress build() {
                 return new EipAddress(this);
+            } 
+
+        } 
+
+    }
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * The tag key of the instance.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * The tag value of the instance.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
+    public static class Tags extends TeaModel {
+        @NameInMap("Tag")
+        private java.util.List < Tag> tag;
+
+        private Tags(Builder builder) {
+            this.tag = builder.tag;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tag
+         */
+        public java.util.List < Tag> getTag() {
+            return this.tag;
+        }
+
+        public static final class Builder {
+            private java.util.List < Tag> tag; 
+
+            /**
+             * Tag.
+             */
+            public Builder tag(java.util.List < Tag> tag) {
+                this.tag = tag;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
             } 
 
         } 
@@ -271,7 +373,7 @@ public class ListInstancesResponseBody extends TeaModel {
             private String vSwitchId; 
 
             /**
-             * PrivateIpAddress.
+             * The private IP address.
              */
             public Builder privateIpAddress(String privateIpAddress) {
                 this.privateIpAddress = privateIpAddress;
@@ -279,7 +381,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * The vSwitch ID.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -345,6 +447,9 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("Status")
         private String status;
 
+        @NameInMap("Tags")
+        private Tags tags;
+
         @NameInMap("VpcAttributes")
         private VpcAttributes vpcAttributes;
 
@@ -372,6 +477,7 @@ public class ListInstancesResponseBody extends TeaModel {
             this.resolution = builder.resolution;
             this.securityGroupId = builder.securityGroupId;
             this.status = builder.status;
+            this.tags = builder.tags;
             this.vpcAttributes = builder.vpcAttributes;
             this.webRtcToken = builder.webRtcToken;
             this.zoneId = builder.zoneId;
@@ -505,6 +611,13 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return tags
+         */
+        public Tags getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return vpcAttributes
          */
         public VpcAttributes getVpcAttributes() {
@@ -543,12 +656,13 @@ public class ListInstancesResponseBody extends TeaModel {
             private String resolution; 
             private String securityGroupId; 
             private String status; 
+            private Tags tags; 
             private VpcAttributes vpcAttributes; 
             private String webRtcToken; 
             private String zoneId; 
 
             /**
-             * AutoRenew.
+             * Indicates whether auto-renewal is enabled. This parameter takes effect only for subscription instances.
              */
             public Builder autoRenew(Boolean autoRenew) {
                 this.autoRenew = autoRenew;
@@ -556,7 +670,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ChargeType.
+             * The billing method of the instance.
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -564,7 +678,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * The time when the image was created. The time follows the ISO 8601 standard.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -572,7 +686,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The instance description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -580,7 +694,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * EipAddress.
+             * The information about the elastic IP address (EIP) of the instance.
              */
             public Builder eipAddress(EipAddress eipAddress) {
                 this.eipAddress = eipAddress;
@@ -588,7 +702,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ExpiredTime.
+             * The time when the subscription instance expires.
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -596,7 +710,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageId.
+             * The image ID.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -604,7 +718,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The instance ID.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -612,7 +726,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * The instance name.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -620,7 +734,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * The instance type.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -628,7 +742,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * KeyPairName.
+             * The name of the key pair for the instance.
              */
             public Builder keyPairName(String keyPairName) {
                 this.keyPairName = keyPairName;
@@ -636,7 +750,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * OsName.
+             * The display name of the OS in Chinese.
              */
             public Builder osName(String osName) {
                 this.osName = osName;
@@ -644,7 +758,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * OsNameEn.
+             * The display name of the OS in English.
              */
             public Builder osNameEn(String osNameEn) {
                 this.osNameEn = osNameEn;
@@ -652,7 +766,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -660,7 +774,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Resolution.
+             * The resolution of the instance.
              */
             public Builder resolution(String resolution) {
                 this.resolution = resolution;
@@ -668,7 +782,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroupId.
+             * The ID of the security group that the instance uses. The security group is the same as that of the Elastic Compute Service (ECS) instance that you use.
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -676,7 +790,14 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The instance state. Valid values:
+             * <p>
+             * 
+             * *   Pending: The instance is being created.
+             * *   Running: The instance is running.
+             * *   Starting: The instance is being started.
+             * *   Stopping: The instance is being stopped.
+             * *   Stopped: The instance is stopped.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -684,7 +805,15 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VpcAttributes.
+             * The tags of the instance.
+             */
+            public Builder tags(Tags tags) {
+                this.tags = tags;
+                return this;
+            }
+
+            /**
+             * The information about the virtual private cloud (VPC) in which the instance is deployed.
              */
             public Builder vpcAttributes(VpcAttributes vpcAttributes) {
                 this.vpcAttributes = vpcAttributes;
@@ -692,7 +821,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * WebRtcToken.
+             * The information about webRtcToken.
              */
             public Builder webRtcToken(String webRtcToken) {
                 this.webRtcToken = webRtcToken;
@@ -700,7 +829,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * The zone ID.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

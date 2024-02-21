@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ImportImageRequest</p>
  */
 public class ImportImageRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("ClientToken")
     private String clientToken;
@@ -63,12 +67,9 @@ public class ImportImageRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     private ImportImageRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.clientToken = builder.clientToken;
         this.description = builder.description;
         this.format = builder.format;
@@ -81,7 +82,6 @@ public class ImportImageRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -95,6 +95,13 @@ public class ImportImageRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -181,14 +188,8 @@ public class ImportImageRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
     public static final class Builder extends Request.Builder<ImportImageRequest, Builder> {
+        private String sourceRegionId; 
         private String clientToken; 
         private String description; 
         private String format; 
@@ -201,31 +202,39 @@ public class ImportImageRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ImportImageRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.description = response.description;
-            this.format = response.format;
-            this.imageName = response.imageName;
-            this.ossBucket = response.ossBucket;
-            this.ossObject = response.ossObject;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.platform = response.platform;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.sourceRegionId = response.sourceRegionId;
+        private Builder(ImportImageRequest request) {
+            super(request);
+            this.sourceRegionId = request.sourceRegionId;
+            this.clientToken = request.clientToken;
+            this.description = request.description;
+            this.format = request.format;
+            this.imageName = request.imageName;
+            this.ossBucket = request.ossBucket;
+            this.ossObject = request.ossObject;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.platform = request.platform;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * ClientToken.
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
+
+        /**
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -234,7 +243,7 @@ public class ImportImageRequest extends Request {
         }
 
         /**
-         * Description.
+         * The image description. The description must be 2 to 256 characters in length, and cannot start with `http://` or `https://`.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -243,7 +252,11 @@ public class ImportImageRequest extends Request {
         }
 
         /**
-         * Format.
+         * The image format. Valid values:
+         * <p>
+         * 
+         * *   RAW
+         * *   QCOW2
          */
         public Builder format(String format) {
             this.putQueryParameter("Format", format);
@@ -252,7 +265,7 @@ public class ImportImageRequest extends Request {
         }
 
         /**
-         * ImageName.
+         * The image name. The name must be 2 to 128 characters in length. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-). It must start with a letter and cannot start with `http://` or `https://`.
          */
         public Builder imageName(String imageName) {
             this.putQueryParameter("ImageName", imageName);
@@ -261,7 +274,7 @@ public class ImportImageRequest extends Request {
         }
 
         /**
-         * OssBucket.
+         * The OSS bucket to which you want to import the image.
          */
         public Builder ossBucket(String ossBucket) {
             this.putQueryParameter("OssBucket", ossBucket);
@@ -270,7 +283,7 @@ public class ImportImageRequest extends Request {
         }
 
         /**
-         * OssObject.
+         * The name (key) of the image file that you want to use as an OSS object.
          */
         public Builder ossObject(String ossObject) {
             this.putQueryParameter("OssObject", ossObject);
@@ -297,7 +310,10 @@ public class ImportImageRequest extends Request {
         }
 
         /**
-         * Platform.
+         * The OS distribution. Valid values:
+         * <p>
+         * 
+         * *   Android 9.0
          */
         public Builder platform(String platform) {
             this.putQueryParameter("Platform", platform);
@@ -306,7 +322,7 @@ public class ImportImageRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where you want to import the image to the ECP instance.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -329,15 +345,6 @@ public class ImportImageRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

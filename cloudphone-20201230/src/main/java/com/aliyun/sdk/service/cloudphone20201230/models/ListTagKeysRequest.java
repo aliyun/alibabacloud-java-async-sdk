@@ -7,11 +7,15 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeZonesRequest} extends {@link RequestModel}
+ * {@link ListTagKeysRequest} extends {@link RequestModel}
  *
- * <p>DescribeZonesRequest</p>
+ * <p>ListTagKeysRequest</p>
  */
-public class DescribeZonesRequest extends Request {
+public class ListTagKeysRequest extends Request {
+    @Query
+    @NameInMap("NextToken")
+    private String nextToken;
+
     @Query
     @NameInMap("OwnerAccount")
     private String ownerAccount;
@@ -30,34 +34,38 @@ public class DescribeZonesRequest extends Request {
     private String resourceOwnerAccount;
 
     @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
+    @NameInMap("ResourceType")
+    @Validation(required = true)
+    private String resourceType;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
-    private DescribeZonesRequest(Builder builder) {
+    private ListTagKeysRequest(Builder builder) {
         super(builder);
+        this.nextToken = builder.nextToken;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
-        this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
+        this.resourceType = builder.resourceType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DescribeZonesRequest create() {
+    public static ListTagKeysRequest create() {
         return builder().build();
     }
 
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     /**
@@ -89,40 +97,42 @@ public class DescribeZonesRequest extends Request {
     }
 
     /**
-     * @return resourceOwnerId
+     * @return resourceType
      */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
+    public String getResourceType() {
+        return this.resourceType;
     }
 
-    /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    public static final class Builder extends Request.Builder<DescribeZonesRequest, Builder> {
+    public static final class Builder extends Request.Builder<ListTagKeysRequest, Builder> {
+        private String nextToken; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
         private String resourceOwnerAccount; 
-        private Long resourceOwnerId; 
-        private String sourceRegionId; 
+        private String resourceType; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeZonesRequest response) {
-            super(response);
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.sourceRegionId = response.sourceRegionId;
+        private Builder(ListTagKeysRequest request) {
+            super(request);
+            this.nextToken = request.nextToken;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceType = request.resourceType;
         } 
+
+        /**
+         * The pagination token that is used in the next request to retrieve a new page of results.
+         */
+        public Builder nextToken(String nextToken) {
+            this.putQueryParameter("NextToken", nextToken);
+            this.nextToken = nextToken;
+            return this;
+        }
 
         /**
          * OwnerAccount.
@@ -143,7 +153,7 @@ public class DescribeZonesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -161,26 +171,20 @@ public class DescribeZonesRequest extends Request {
         }
 
         /**
-         * ResourceOwnerId.
+         * The resource type. Valid value:
+         * <p>
+         * 
+         * *   instance: Elastic Cloud Phone (ECP) instance
          */
-        public Builder resourceOwnerId(Long resourceOwnerId) {
-            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
-            this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder resourceType(String resourceType) {
+            this.putQueryParameter("ResourceType", resourceType);
+            this.resourceType = resourceType;
             return this;
         }
 
         @Override
-        public DescribeZonesRequest build() {
-            return new DescribeZonesRequest(this);
+        public ListTagKeysRequest build() {
+            return new ListTagKeysRequest(this);
         } 
 
     } 

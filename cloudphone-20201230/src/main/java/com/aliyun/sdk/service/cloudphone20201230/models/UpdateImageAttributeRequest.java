@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateImageAttributeRequest</p>
  */
 public class UpdateImageAttributeRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("AddAccount")
     private java.util.List < String > addAccount;
@@ -54,12 +58,9 @@ public class UpdateImageAttributeRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     private UpdateImageAttributeRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.addAccount = builder.addAccount;
         this.description = builder.description;
         this.imageId = builder.imageId;
@@ -70,7 +71,6 @@ public class UpdateImageAttributeRequest extends Request {
         this.removeAccount = builder.removeAccount;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -84,6 +84,13 @@ public class UpdateImageAttributeRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -156,14 +163,8 @@ public class UpdateImageAttributeRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
     public static final class Builder extends Request.Builder<UpdateImageAttributeRequest, Builder> {
+        private String sourceRegionId; 
         private java.util.List < String > addAccount; 
         private String description; 
         private String imageId; 
@@ -174,29 +175,37 @@ public class UpdateImageAttributeRequest extends Request {
         private java.util.List < String > removeAccount; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(UpdateImageAttributeRequest response) {
-            super(response);
-            this.addAccount = response.addAccount;
-            this.description = response.description;
-            this.imageId = response.imageId;
-            this.imageName = response.imageName;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.removeAccount = response.removeAccount;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.sourceRegionId = response.sourceRegionId;
+        private Builder(UpdateImageAttributeRequest request) {
+            super(request);
+            this.sourceRegionId = request.sourceRegionId;
+            this.addAccount = request.addAccount;
+            this.description = request.description;
+            this.imageId = request.imageId;
+            this.imageName = request.imageName;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.removeAccount = request.removeAccount;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * AddAccount.
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
+
+        /**
+         * The IDs of the Alibaba Cloud accounts that are authorized to share images. You can specify up to 10 Alibaba Cloud accounts.
          */
         public Builder addAccount(java.util.List < String > addAccount) {
             this.putQueryParameter("AddAccount", addAccount);
@@ -205,7 +214,7 @@ public class UpdateImageAttributeRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the custom image. The description must be 2 to 256 characters in length. It cannot start with `http://` or `https://`. By default, this parameter is empty, which indicates that the original description is retained.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -214,7 +223,7 @@ public class UpdateImageAttributeRequest extends Request {
         }
 
         /**
-         * ImageId.
+         * The image ID.
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -223,7 +232,7 @@ public class UpdateImageAttributeRequest extends Request {
         }
 
         /**
-         * ImageName.
+         * The name of the custom image. The name must be 2 to 128 characters in length. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-). It cannot start with `http://` or `https://`. By default, this parameter is empty, which indicates that the original name is retained.
          */
         public Builder imageName(String imageName) {
             this.putQueryParameter("ImageName", imageName);
@@ -250,7 +259,7 @@ public class UpdateImageAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -259,7 +268,7 @@ public class UpdateImageAttributeRequest extends Request {
         }
 
         /**
-         * RemoveAccount.
+         * The IDs of the Alibaba Cloud accounts from which you want to revoke image sharing permissions. You can specify up to 10 Alibaba Cloud accounts.
          */
         public Builder removeAccount(java.util.List < String > removeAccount) {
             this.putQueryParameter("RemoveAccount", removeAccount);
@@ -282,15 +291,6 @@ public class UpdateImageAttributeRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

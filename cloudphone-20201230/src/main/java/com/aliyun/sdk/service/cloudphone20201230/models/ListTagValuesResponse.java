@@ -7,26 +7,28 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ModifyImageAttributeResponse} extends {@link TeaModel}
+ * {@link ListTagValuesResponse} extends {@link TeaModel}
  *
- * <p>ModifyImageAttributeResponse</p>
+ * <p>ListTagValuesResponse</p>
  */
-public class ModifyImageAttributeResponse extends Response {
+public class ListTagValuesResponse extends Response {
     @NameInMap("headers")
-    @Validation(required = true)
     private java.util.Map < String, String > headers;
 
-    @NameInMap("body")
-    @Validation(required = true)
-    private ModifyImageAttributeResponseBody body;
+    @NameInMap("statusCode")
+    private Integer statusCode;
 
-    private ModifyImageAttributeResponse(BuilderImpl builder) {
+    @NameInMap("body")
+    private ListTagValuesResponseBody body;
+
+    private ListTagValuesResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static ModifyImageAttributeResponse create() {
+    public static ListTagValuesResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -43,36 +45,47 @@ public class ModifyImageAttributeResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
-    public ModifyImageAttributeResponseBody getBody() {
+    public ListTagValuesResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<ModifyImageAttributeResponse, Builder> {
+    public interface Builder extends Response.Builder<ListTagValuesResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(ModifyImageAttributeResponseBody body);
+        Builder statusCode(Integer statusCode);
+
+        Builder body(ListTagValuesResponseBody body);
 
         @Override
-        ModifyImageAttributeResponse build();
+        ListTagValuesResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<ModifyImageAttributeResponse, Builder>
+            extends Response.BuilderImpl<ListTagValuesResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private ModifyImageAttributeResponseBody body; 
+        private Integer statusCode; 
+        private ListTagValuesResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(ModifyImageAttributeResponse response) {
+        private BuilderImpl(ListTagValuesResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -86,17 +99,26 @@ public class ModifyImageAttributeResponse extends Response {
         }
 
         /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
+            return this;
+        }
+
+        /**
          * body.
          */
         @Override
-        public Builder body(ModifyImageAttributeResponseBody body) {
+        public Builder body(ListTagValuesResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public ModifyImageAttributeResponse build() {
-            return new ModifyImageAttributeResponse(this);
+        public ListTagValuesResponse build() {
+            return new ListTagValuesResponse(this);
         } 
 
     } 

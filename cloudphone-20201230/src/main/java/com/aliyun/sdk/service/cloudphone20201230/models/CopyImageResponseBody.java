@@ -50,7 +50,7 @@ public class CopyImageResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ImageId.
+         * The ID of the image that is copied to the destination region.
          */
         public Builder imageId(String imageId) {
             this.imageId = imageId;
@@ -58,7 +58,7 @@ public class CopyImageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

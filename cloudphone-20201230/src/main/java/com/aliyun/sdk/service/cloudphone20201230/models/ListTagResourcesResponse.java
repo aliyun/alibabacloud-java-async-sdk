@@ -7,26 +7,28 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CancelCopyImageResponse} extends {@link TeaModel}
+ * {@link ListTagResourcesResponse} extends {@link TeaModel}
  *
- * <p>CancelCopyImageResponse</p>
+ * <p>ListTagResourcesResponse</p>
  */
-public class CancelCopyImageResponse extends Response {
+public class ListTagResourcesResponse extends Response {
     @NameInMap("headers")
-    @Validation(required = true)
     private java.util.Map < String, String > headers;
 
-    @NameInMap("body")
-    @Validation(required = true)
-    private CancelCopyImageResponseBody body;
+    @NameInMap("statusCode")
+    private Integer statusCode;
 
-    private CancelCopyImageResponse(BuilderImpl builder) {
+    @NameInMap("body")
+    private ListTagResourcesResponseBody body;
+
+    private ListTagResourcesResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static CancelCopyImageResponse create() {
+    public static ListTagResourcesResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -43,36 +45,47 @@ public class CancelCopyImageResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
-    public CancelCopyImageResponseBody getBody() {
+    public ListTagResourcesResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<CancelCopyImageResponse, Builder> {
+    public interface Builder extends Response.Builder<ListTagResourcesResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(CancelCopyImageResponseBody body);
+        Builder statusCode(Integer statusCode);
+
+        Builder body(ListTagResourcesResponseBody body);
 
         @Override
-        CancelCopyImageResponse build();
+        ListTagResourcesResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<CancelCopyImageResponse, Builder>
+            extends Response.BuilderImpl<ListTagResourcesResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private CancelCopyImageResponseBody body; 
+        private Integer statusCode; 
+        private ListTagResourcesResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(CancelCopyImageResponse response) {
+        private BuilderImpl(ListTagResourcesResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -86,17 +99,26 @@ public class CancelCopyImageResponse extends Response {
         }
 
         /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
+            return this;
+        }
+
+        /**
          * body.
          */
         @Override
-        public Builder body(CancelCopyImageResponseBody body) {
+        public Builder body(ListTagResourcesResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public CancelCopyImageResponse build() {
-            return new CancelCopyImageResponse(this);
+        public ListTagResourcesResponse build() {
+            return new ListTagResourcesResponse(this);
         } 
 
     } 

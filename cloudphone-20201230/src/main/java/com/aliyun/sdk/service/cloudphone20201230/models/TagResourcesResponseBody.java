@@ -7,15 +7,15 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CancelCopyImageResponseBody} extends {@link TeaModel}
+ * {@link TagResourcesResponseBody} extends {@link TeaModel}
  *
- * <p>CancelCopyImageResponseBody</p>
+ * <p>TagResourcesResponseBody</p>
  */
-public class CancelCopyImageResponseBody extends TeaModel {
+public class TagResourcesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
-    private CancelCopyImageResponseBody(Builder builder) {
+    private TagResourcesResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -23,7 +23,7 @@ public class CancelCopyImageResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static CancelCopyImageResponseBody create() {
+    public static TagResourcesResponseBody create() {
         return builder().build();
     }
 
@@ -38,15 +38,15 @@ public class CancelCopyImageResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public CancelCopyImageResponseBody build() {
-            return new CancelCopyImageResponseBody(this);
+        public TagResourcesResponseBody build() {
+            return new TagResourcesResponseBody(this);
         } 
 
     } 

@@ -7,19 +7,14 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link StartInstancesRequest} extends {@link RequestModel}
+ * {@link UntagResourcesRequest} extends {@link RequestModel}
  *
- * <p>StartInstancesRequest</p>
+ * <p>UntagResourcesRequest</p>
  */
-public class StartInstancesRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
+public class UntagResourcesRequest extends Request {
     @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
-    private java.util.List < String > instanceId;
+    @NameInMap("All")
+    private Boolean all;
 
     @Query
     @NameInMap("OwnerAccount")
@@ -35,29 +30,40 @@ public class StartInstancesRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ResourceId")
+    @Validation(required = true)
+    private java.util.List < String > resourceId;
+
+    @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
     @Query
-    @NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
+    @NameInMap("ResourceType")
+    @Validation(required = true)
+    private String resourceType;
 
-    private StartInstancesRequest(Builder builder) {
+    @Query
+    @NameInMap("TagKey")
+    private java.util.List < String > tagKey;
+
+    private UntagResourcesRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
-        this.instanceId = builder.instanceId;
+        this.all = builder.all;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
+        this.resourceId = builder.resourceId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
-        this.resourceOwnerId = builder.resourceOwnerId;
+        this.resourceType = builder.resourceType;
+        this.tagKey = builder.tagKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static StartInstancesRequest create() {
+    public static UntagResourcesRequest create() {
         return builder().build();
     }
 
@@ -67,17 +73,10 @@ public class StartInstancesRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return all
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
-     * @return instanceId
-     */
-    public java.util.List < String > getInstanceId() {
-        return this.instanceId;
+    public Boolean getAll() {
+        return this.all;
     }
 
     /**
@@ -102,6 +101,13 @@ public class StartInstancesRequest extends Request {
     }
 
     /**
+     * @return resourceId
+     */
+    public java.util.List < String > getResourceId() {
+        return this.resourceId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -109,51 +115,51 @@ public class StartInstancesRequest extends Request {
     }
 
     /**
-     * @return resourceOwnerId
+     * @return resourceType
      */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
+    public String getResourceType() {
+        return this.resourceType;
     }
 
-    public static final class Builder extends Request.Builder<StartInstancesRequest, Builder> {
-        private String sourceRegionId; 
-        private java.util.List < String > instanceId; 
+    /**
+     * @return tagKey
+     */
+    public java.util.List < String > getTagKey() {
+        return this.tagKey;
+    }
+
+    public static final class Builder extends Request.Builder<UntagResourcesRequest, Builder> {
+        private Boolean all; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
+        private java.util.List < String > resourceId; 
         private String resourceOwnerAccount; 
-        private Long resourceOwnerId; 
+        private String resourceType; 
+        private java.util.List < String > tagKey; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(StartInstancesRequest request) {
+        private Builder(UntagResourcesRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
-            this.instanceId = request.instanceId;
+            this.all = request.all;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
+            this.resourceId = request.resourceId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
-            this.resourceOwnerId = request.resourceOwnerId;
+            this.resourceType = request.resourceType;
+            this.tagKey = request.tagKey;
         } 
 
         /**
-         * SourceRegionId.
+         * Specifies whether to delete all tags. This parameter takes effect only when the TagKey.N parameter is not specified. Valid values: true and false. Default value: false.
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
-            return this;
-        }
-
-        /**
-         * The instance IDs.
-         */
-        public Builder instanceId(java.util.List < String > instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
+        public Builder all(Boolean all) {
+            this.putQueryParameter("All", all);
+            this.all = all;
             return this;
         }
 
@@ -185,6 +191,15 @@ public class StartInstancesRequest extends Request {
         }
 
         /**
+         * The resource IDs. You can specify up to 50 resources.
+         */
+        public Builder resourceId(java.util.List < String > resourceId) {
+            this.putQueryParameter("ResourceId", resourceId);
+            this.resourceId = resourceId;
+            return this;
+        }
+
+        /**
          * ResourceOwnerAccount.
          */
         public Builder resourceOwnerAccount(String resourceOwnerAccount) {
@@ -194,17 +209,29 @@ public class StartInstancesRequest extends Request {
         }
 
         /**
-         * ResourceOwnerId.
+         * The resource type. Valid value:
+         * <p>
+         * 
+         * *   instance: Elastic Cloud Phone (ECP) instance
          */
-        public Builder resourceOwnerId(Long resourceOwnerId) {
-            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
-            this.resourceOwnerId = resourceOwnerId;
+        public Builder resourceType(String resourceType) {
+            this.putQueryParameter("ResourceType", resourceType);
+            this.resourceType = resourceType;
+            return this;
+        }
+
+        /**
+         * The tag keys. You can specify up to 20 tag keys.
+         */
+        public Builder tagKey(java.util.List < String > tagKey) {
+            this.putQueryParameter("TagKey", tagKey);
+            this.tagKey = tagKey;
             return this;
         }
 
         @Override
-        public StartInstancesRequest build() {
-            return new StartInstancesRequest(this);
+        public UntagResourcesRequest build() {
+            return new UntagResourcesRequest(this);
         } 
 
     } 

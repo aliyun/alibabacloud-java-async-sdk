@@ -7,26 +7,28 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeZonesResponse} extends {@link TeaModel}
+ * {@link UntagResourcesResponse} extends {@link TeaModel}
  *
- * <p>DescribeZonesResponse</p>
+ * <p>UntagResourcesResponse</p>
  */
-public class DescribeZonesResponse extends Response {
+public class UntagResourcesResponse extends Response {
     @NameInMap("headers")
-    @Validation(required = true)
     private java.util.Map < String, String > headers;
 
-    @NameInMap("body")
-    @Validation(required = true)
-    private DescribeZonesResponseBody body;
+    @NameInMap("statusCode")
+    private Integer statusCode;
 
-    private DescribeZonesResponse(BuilderImpl builder) {
+    @NameInMap("body")
+    private UntagResourcesResponseBody body;
+
+    private UntagResourcesResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DescribeZonesResponse create() {
+    public static UntagResourcesResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -43,36 +45,47 @@ public class DescribeZonesResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
-    public DescribeZonesResponseBody getBody() {
+    public UntagResourcesResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DescribeZonesResponse, Builder> {
+    public interface Builder extends Response.Builder<UntagResourcesResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(DescribeZonesResponseBody body);
+        Builder statusCode(Integer statusCode);
+
+        Builder body(UntagResourcesResponseBody body);
 
         @Override
-        DescribeZonesResponse build();
+        UntagResourcesResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DescribeZonesResponse, Builder>
+            extends Response.BuilderImpl<UntagResourcesResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private DescribeZonesResponseBody body; 
+        private Integer statusCode; 
+        private UntagResourcesResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DescribeZonesResponse response) {
+        private BuilderImpl(UntagResourcesResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -86,17 +99,26 @@ public class DescribeZonesResponse extends Response {
         }
 
         /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
+            return this;
+        }
+
+        /**
          * body.
          */
         @Override
-        public Builder body(DescribeZonesResponseBody body) {
+        public Builder body(UntagResourcesResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DescribeZonesResponse build() {
-            return new DescribeZonesResponse(this);
+        public UntagResourcesResponse build() {
+            return new UntagResourcesResponse(this);
         } 
 
     } 

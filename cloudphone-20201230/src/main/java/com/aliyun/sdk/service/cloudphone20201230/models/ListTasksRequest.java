@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListTasksRequest</p>
  */
 public class ListTasksRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("InstanceId")
     private String instanceId;
@@ -45,10 +49,6 @@ public class ListTasksRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("TaskId")
     private java.util.List < String > taskId;
@@ -63,6 +63,7 @@ public class ListTasksRequest extends Request {
 
     private ListTasksRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.instanceId = builder.instanceId;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
@@ -71,7 +72,6 @@ public class ListTasksRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
         this.taskId = builder.taskId;
         this.taskStatus = builder.taskStatus;
         this.taskType = builder.taskType;
@@ -88,6 +88,13 @@ public class ListTasksRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -147,13 +154,6 @@ public class ListTasksRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
      * @return taskId
      */
     public java.util.List < String > getTaskId() {
@@ -175,6 +175,7 @@ public class ListTasksRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListTasksRequest, Builder> {
+        private String sourceRegionId; 
         private String instanceId; 
         private Integer maxResults; 
         private String nextToken; 
@@ -183,7 +184,6 @@ public class ListTasksRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
         private java.util.List < String > taskId; 
         private String taskStatus; 
         private String taskType; 
@@ -192,24 +192,33 @@ public class ListTasksRequest extends Request {
             super();
         } 
 
-        private Builder(ListTasksRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.sourceRegionId = response.sourceRegionId;
-            this.taskId = response.taskId;
-            this.taskStatus = response.taskStatus;
-            this.taskType = response.taskType;
+        private Builder(ListTasksRequest request) {
+            super(request);
+            this.sourceRegionId = request.sourceRegionId;
+            this.instanceId = request.instanceId;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.taskId = request.taskId;
+            this.taskStatus = request.taskStatus;
+            this.taskType = request.taskType;
         } 
 
         /**
-         * InstanceId.
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
+
+        /**
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -218,7 +227,7 @@ public class ListTasksRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The maximum number of entries to return on each page. Valid values: 1 to 100. Default value: 50.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -227,7 +236,7 @@ public class ListTasksRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -254,7 +263,7 @@ public class ListTasksRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -281,16 +290,7 @@ public class ListTasksRequest extends Request {
         }
 
         /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
-            return this;
-        }
-
-        /**
-         * TaskId.
+         * The task IDs. Valid values of N: 1 to 100.
          */
         public Builder taskId(java.util.List < String > taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -299,7 +299,16 @@ public class ListTasksRequest extends Request {
         }
 
         /**
-         * TaskStatus.
+         * The task state. Valid values:
+         * <p>
+         * 
+         * *   Finished
+         * *   Processing
+         * *   Failed
+         * 
+         * This parameter is empty by default.
+         * 
+         * >  The system only queries tasks that are in the Finished, Processing, and Failed states and ignores other values.
          */
         public Builder taskStatus(String taskStatus) {
             this.putQueryParameter("TaskStatus", taskStatus);
@@ -308,7 +317,14 @@ public class ListTasksRequest extends Request {
         }
 
         /**
-         * TaskType.
+         * The name of the operation that you can call to execute the task on the instance. Valid values:
+         * <p>
+         * 
+         * *   Shell: runs a shell command.
+         * *   InstallApplication: installs an application.
+         * *   UninstallApplication: uninstalls an application.
+         * *   SendFile: uploads a file.
+         * *   ImportImage: imports an image.
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

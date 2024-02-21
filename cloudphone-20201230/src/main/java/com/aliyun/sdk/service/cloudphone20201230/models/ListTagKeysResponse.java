@@ -7,26 +7,28 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeImagesResponse} extends {@link TeaModel}
+ * {@link ListTagKeysResponse} extends {@link TeaModel}
  *
- * <p>DescribeImagesResponse</p>
+ * <p>ListTagKeysResponse</p>
  */
-public class DescribeImagesResponse extends Response {
+public class ListTagKeysResponse extends Response {
     @NameInMap("headers")
-    @Validation(required = true)
     private java.util.Map < String, String > headers;
 
-    @NameInMap("body")
-    @Validation(required = true)
-    private DescribeImagesResponseBody body;
+    @NameInMap("statusCode")
+    private Integer statusCode;
 
-    private DescribeImagesResponse(BuilderImpl builder) {
+    @NameInMap("body")
+    private ListTagKeysResponseBody body;
+
+    private ListTagKeysResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DescribeImagesResponse create() {
+    public static ListTagKeysResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -43,36 +45,47 @@ public class DescribeImagesResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
-    public DescribeImagesResponseBody getBody() {
+    public ListTagKeysResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DescribeImagesResponse, Builder> {
+    public interface Builder extends Response.Builder<ListTagKeysResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(DescribeImagesResponseBody body);
+        Builder statusCode(Integer statusCode);
+
+        Builder body(ListTagKeysResponseBody body);
 
         @Override
-        DescribeImagesResponse build();
+        ListTagKeysResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DescribeImagesResponse, Builder>
+            extends Response.BuilderImpl<ListTagKeysResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private DescribeImagesResponseBody body; 
+        private Integer statusCode; 
+        private ListTagKeysResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DescribeImagesResponse response) {
+        private BuilderImpl(ListTagKeysResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -86,17 +99,26 @@ public class DescribeImagesResponse extends Response {
         }
 
         /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
+            return this;
+        }
+
+        /**
          * body.
          */
         @Override
-        public Builder body(DescribeImagesResponseBody body) {
+        public Builder body(ListTagKeysResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DescribeImagesResponse build() {
-            return new DescribeImagesResponse(this);
+        public ListTagKeysResponse build() {
+            return new ListTagKeysResponse(this);
         } 
 
     } 

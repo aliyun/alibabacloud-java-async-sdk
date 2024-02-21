@@ -62,7 +62,7 @@ public class ListInstanceVncUrlResponseBody extends TeaModel {
         private String webRtcToken; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class ListInstanceVncUrlResponseBody extends TeaModel {
         }
 
         /**
-         * VncUrl.
+         * The Virtual Network Computing (VNC) connection URL.
          */
         public Builder vncUrl(String vncUrl) {
             this.vncUrl = vncUrl;
@@ -78,7 +78,7 @@ public class ListInstanceVncUrlResponseBody extends TeaModel {
         }
 
         /**
-         * WebRtcToken.
+         * The token that is used for WebRTC logon.
          */
         public Builder webRtcToken(String webRtcToken) {
             this.webRtcToken = webRtcToken;

@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListKeyPairsRequest</p>
  */
 public class ListKeyPairsRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("KeyPairFingerPrint")
     private String keyPairFingerPrint;
@@ -49,12 +53,9 @@ public class ListKeyPairsRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     private ListKeyPairsRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.keyPairFingerPrint = builder.keyPairFingerPrint;
         this.keyPairName = builder.keyPairName;
         this.maxResults = builder.maxResults;
@@ -64,7 +65,6 @@ public class ListKeyPairsRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -78,6 +78,13 @@ public class ListKeyPairsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -143,14 +150,8 @@ public class ListKeyPairsRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
     public static final class Builder extends Request.Builder<ListKeyPairsRequest, Builder> {
+        private String sourceRegionId; 
         private String keyPairFingerPrint; 
         private String keyPairName; 
         private Integer maxResults; 
@@ -160,28 +161,36 @@ public class ListKeyPairsRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListKeyPairsRequest response) {
-            super(response);
-            this.keyPairFingerPrint = response.keyPairFingerPrint;
-            this.keyPairName = response.keyPairName;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.sourceRegionId = response.sourceRegionId;
+        private Builder(ListKeyPairsRequest request) {
+            super(request);
+            this.sourceRegionId = request.sourceRegionId;
+            this.keyPairFingerPrint = request.keyPairFingerPrint;
+            this.keyPairName = request.keyPairName;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * KeyPairFingerPrint.
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
+
+        /**
+         * The fingerprint of the key pair. The message-digest algorithm 5 (MD5) is used based on the public key fingerprint format defined in RFC 4716.
          */
         public Builder keyPairFingerPrint(String keyPairFingerPrint) {
             this.putQueryParameter("KeyPairFingerPrint", keyPairFingerPrint);
@@ -190,7 +199,7 @@ public class ListKeyPairsRequest extends Request {
         }
 
         /**
-         * KeyPairName.
+         * The name of the key pair.
          */
         public Builder keyPairName(String keyPairName) {
             this.putQueryParameter("KeyPairName", keyPairName);
@@ -199,7 +208,7 @@ public class ListKeyPairsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The maximum number of entries per page. Valid values: 1 to 100.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -208,7 +217,7 @@ public class ListKeyPairsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -235,7 +244,7 @@ public class ListKeyPairsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the key pair resides.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -258,15 +267,6 @@ public class ListKeyPairsRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 

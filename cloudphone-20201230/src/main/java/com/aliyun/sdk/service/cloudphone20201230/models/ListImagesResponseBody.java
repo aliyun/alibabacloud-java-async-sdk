@@ -98,7 +98,7 @@ public class ListImagesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Images.
+         * The list of images.
          */
         public Builder images(Images images) {
             this.images = images;
@@ -106,7 +106,7 @@ public class ListImagesResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * The maximum number of entries that is returned on each page. Valid values: 1 to 100.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -114,7 +114,7 @@ public class ListImagesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * A pagination token. It can be used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -122,7 +122,7 @@ public class ListImagesResponseBody extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -130,7 +130,7 @@ public class ListImagesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class ListImagesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of images.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -322,7 +322,7 @@ public class ListImagesResponseBody extends TeaModel {
             private String usage; 
 
             /**
-             * CreationTime.
+             * The time when the image was created. The time follows the ISO 8601 standard.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -330,7 +330,7 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The image description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -338,7 +338,7 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageCategory.
+             * The image type.
              */
             public Builder imageCategory(String imageCategory) {
                 this.imageCategory = imageCategory;
@@ -346,7 +346,7 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageId.
+             * The image ID.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -354,7 +354,7 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageName.
+             * The image name.
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -362,7 +362,7 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * IsSelfShared.
+             * Indicates whether the image is shared with other Alibaba Cloud accounts.
              */
             public Builder isSelfShared(Boolean isSelfShared) {
                 this.isSelfShared = isSelfShared;
@@ -370,7 +370,7 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * OSName.
+             * The display name of the OS in Chinese.
              */
             public Builder OSName(String OSName) {
                 this.OSName = OSName;
@@ -378,7 +378,7 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * OSNameEn.
+             * The display name of the OS in English.
              */
             public Builder OSNameEn(String OSNameEn) {
                 this.OSNameEn = OSNameEn;
@@ -386,7 +386,7 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * OSType.
+             * The image OS.
              */
             public Builder OSType(String OSType) {
                 this.OSType = OSType;
@@ -394,7 +394,7 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Platform.
+             * The OS distribution.
              */
             public Builder platform(String platform) {
                 this.platform = platform;
@@ -402,7 +402,7 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Progress.
+             * The progress of image creation.
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -410,7 +410,7 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The image state.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -418,7 +418,11 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Usage.
+             * Indicates whether the image is used by instances. Valid values:
+             * <p>
+             * 
+             * *   none: The image is idle.
+             * *   instance: The image is used by instances.
              */
             public Builder usage(String usage) {
                 this.usage = usage;

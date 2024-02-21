@@ -50,7 +50,7 @@ public class ListZonesResponseBody extends TeaModel {
         private Zones zones; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ListZonesResponseBody extends TeaModel {
         }
 
         /**
-         * Zones.
+         * The zones available in the current region.
          */
         public Builder zones(Zones zones) {
             this.zones = zones;
@@ -98,7 +98,7 @@ public class ListZonesResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * ZoneId.
+             * The zone ID.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

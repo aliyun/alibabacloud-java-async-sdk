@@ -12,9 +12,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListInstancesRequest</p>
  */
 public class ListInstancesRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("ChargeType")
     private String chargeType;
+
+    @Query
+    @NameInMap("Filter")
+    private java.util.List < Filter> filter;
 
     @Query
     @NameInMap("ImageId")
@@ -73,13 +81,13 @@ public class ListInstancesRequest extends Request {
     @NameInMap("ShowWebRtcToken")
     private Boolean showWebRtcToken;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     @Query
     @NameInMap("Status")
     private String status;
+
+    @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
 
     @Query
     @NameInMap("ZoneId")
@@ -87,7 +95,9 @@ public class ListInstancesRequest extends Request {
 
     private ListInstancesRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.chargeType = builder.chargeType;
+        this.filter = builder.filter;
         this.imageId = builder.imageId;
         this.instanceId = builder.instanceId;
         this.instanceName = builder.instanceName;
@@ -102,8 +112,8 @@ public class ListInstancesRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.showWebRtcToken = builder.showWebRtcToken;
-        this.sourceRegionId = builder.sourceRegionId;
         this.status = builder.status;
+        this.tag = builder.tag;
         this.zoneId = builder.zoneId;
     }
 
@@ -121,10 +131,24 @@ public class ListInstancesRequest extends Request {
     }
 
     /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
+    }
+
+    /**
      * @return chargeType
      */
     public String getChargeType() {
         return this.chargeType;
+    }
+
+    /**
+     * @return filter
+     */
+    public java.util.List < Filter> getFilter() {
+        return this.filter;
     }
 
     /**
@@ -226,17 +250,17 @@ public class ListInstancesRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
      * @return status
      */
     public String getStatus() {
         return this.status;
+    }
+
+    /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
     }
 
     /**
@@ -247,7 +271,9 @@ public class ListInstancesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListInstancesRequest, Builder> {
+        private String sourceRegionId; 
         private String chargeType; 
+        private java.util.List < Filter> filter; 
         private String imageId; 
         private java.util.List < String > instanceId; 
         private String instanceName; 
@@ -262,38 +288,53 @@ public class ListInstancesRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private Boolean showWebRtcToken; 
-        private String sourceRegionId; 
         private String status; 
+        private java.util.List < Tag> tag; 
         private String zoneId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListInstancesRequest response) {
-            super(response);
-            this.chargeType = response.chargeType;
-            this.imageId = response.imageId;
-            this.instanceId = response.instanceId;
-            this.instanceName = response.instanceName;
-            this.instanceType = response.instanceType;
-            this.keyPairName = response.keyPairName;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resolution = response.resolution;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.showWebRtcToken = response.showWebRtcToken;
-            this.sourceRegionId = response.sourceRegionId;
-            this.status = response.status;
-            this.zoneId = response.zoneId;
+        private Builder(ListInstancesRequest request) {
+            super(request);
+            this.sourceRegionId = request.sourceRegionId;
+            this.chargeType = request.chargeType;
+            this.filter = request.filter;
+            this.imageId = request.imageId;
+            this.instanceId = request.instanceId;
+            this.instanceName = request.instanceName;
+            this.instanceType = request.instanceType;
+            this.keyPairName = request.keyPairName;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resolution = request.resolution;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.showWebRtcToken = request.showWebRtcToken;
+            this.status = request.status;
+            this.tag = request.tag;
+            this.zoneId = request.zoneId;
         } 
 
         /**
-         * ChargeType.
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
+
+        /**
+         * The billing method. Valid values:
+         * <p>
+         * 
+         * *   PrePaid: subscription
+         * *   PostPaid: pay-as-you-go
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -302,7 +343,16 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * ImageId.
+         * Filter.
+         */
+        public Builder filter(java.util.List < Filter> filter) {
+            this.putQueryParameter("Filter", filter);
+            this.filter = filter;
+            return this;
+        }
+
+        /**
+         * The image ID.
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -311,7 +361,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The instance IDs. Valid values of N: 1 to 100.
          */
         public Builder instanceId(java.util.List < String > instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -320,7 +370,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * InstanceName.
+         * The instance name.
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -329,7 +379,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * InstanceType.
+         * The instance type.
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -338,7 +388,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * KeyPairName.
+         * The key pair name. The name must be globally unique. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http:// or https://. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
          */
         public Builder keyPairName(String keyPairName) {
             this.putQueryParameter("KeyPairName", keyPairName);
@@ -347,7 +397,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The maximum number of entries returned on each page. Valid values: 1 to 100.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -356,7 +406,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -383,7 +433,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -392,7 +442,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * Resolution.
+         * The instance resolution.
          */
         public Builder resolution(String resolution) {
             this.putQueryParameter("Resolution", resolution);
@@ -419,7 +469,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * ShowWebRtcToken.
+         * Specifies whether webRtcToken is returned in the query result.
          */
         public Builder showWebRtcToken(Boolean showWebRtcToken) {
             this.putQueryParameter("ShowWebRtcToken", showWebRtcToken);
@@ -428,16 +478,15 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
-            return this;
-        }
-
-        /**
-         * Status.
+         * The instance status. Valid values:
+         * <p>
+         * 
+         * *   Pending: The instance is being created.
+         * *   Running: The instance is running.
+         * *   Starting: The instance is being started.
+         * *   Stopping: The instance is being stopped.
+         * *   Stopped: The instance is stopped.
+         * *   Expired: The instance has expired.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -446,7 +495,16 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * The instances that you want to filter by using a specified tag.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
+         * The ID of the zone where the instance resides.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -461,4 +519,126 @@ public class ListInstancesRequest extends Request {
 
     } 
 
+    public static class Filter extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Filter(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Filter create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Filter build() {
+                return new Filter(this);
+            } 
+
+        } 
+
+    }
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * The tag key of the instance. Valid values of N: 1 to 20.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * The tag value of the instance. Valid values of N: 1 to 20.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

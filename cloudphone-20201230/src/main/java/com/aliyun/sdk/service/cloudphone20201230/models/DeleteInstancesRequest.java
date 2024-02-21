@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteInstancesRequest</p>
  */
 public class DeleteInstancesRequest extends Request {
+    @Host
+    @NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @Query
     @NameInMap("Force")
     private Boolean force;
@@ -42,12 +46,9 @@ public class DeleteInstancesRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Host
-    @NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
     private DeleteInstancesRequest(Builder builder) {
         super(builder);
+        this.sourceRegionId = builder.sourceRegionId;
         this.force = builder.force;
         this.instanceId = builder.instanceId;
         this.ownerAccount = builder.ownerAccount;
@@ -55,7 +56,6 @@ public class DeleteInstancesRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.sourceRegionId = builder.sourceRegionId;
     }
 
     public static Builder builder() {
@@ -69,6 +69,13 @@ public class DeleteInstancesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
     }
 
     /**
@@ -120,14 +127,8 @@ public class DeleteInstancesRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
     public static final class Builder extends Request.Builder<DeleteInstancesRequest, Builder> {
+        private String sourceRegionId; 
         private Boolean force; 
         private java.util.List < String > instanceId; 
         private String ownerAccount; 
@@ -135,26 +136,38 @@ public class DeleteInstancesRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String sourceRegionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DeleteInstancesRequest response) {
-            super(response);
-            this.force = response.force;
-            this.instanceId = response.instanceId;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.sourceRegionId = response.sourceRegionId;
+        private Builder(DeleteInstancesRequest request) {
+            super(request);
+            this.sourceRegionId = request.sourceRegionId;
+            this.force = request.force;
+            this.instanceId = request.instanceId;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * Force.
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.putHostParameter("SourceRegionId", sourceRegionId);
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
+
+        /**
+         * Specifies whether to forcefully release the instance if it is in the Running status. Valid values:
+         * <p>
+         * 
+         * *   true. If you set the Force parameter to true, temporary data in the memory and storage of the instance is erased and cannot be restored after you call the operation, which is similar to the effect of a power-off action.
+         * *   false (default)
          */
         public Builder force(Boolean force) {
             this.putQueryParameter("Force", force);
@@ -163,7 +176,7 @@ public class DeleteInstancesRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The instance IDs. Valid values of N: 1 to 100.
          */
         public Builder instanceId(java.util.List < String > instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -190,7 +203,7 @@ public class DeleteInstancesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -213,15 +226,6 @@ public class DeleteInstancesRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
             return this;
         }
 
