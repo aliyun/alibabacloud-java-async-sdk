@@ -13,15 +13,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UpdateXpackMonitorConfigResponse extends Response {
     @NameInMap("headers")
-    @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     private Integer statusCode;
 
     @NameInMap("body")
-    @Validation(required = true)
     private UpdateXpackMonitorConfigResponseBody body;
 
     private UpdateXpackMonitorConfigResponse(BuilderImpl builder) {
