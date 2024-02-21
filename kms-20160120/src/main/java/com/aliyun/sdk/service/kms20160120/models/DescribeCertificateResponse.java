@@ -13,16 +13,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeCertificateResponse extends Response {
     @NameInMap("headers")
-    @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    private Integer statusCode;
+
     @NameInMap("body")
-    @Validation(required = true)
     private DescribeCertificateResponseBody body;
 
     private DescribeCertificateResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +45,13 @@ public class DescribeCertificateResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public DescribeCertificateResponseBody getBody() {
@@ -52,6 +61,8 @@ public class DescribeCertificateResponse extends Response {
     public interface Builder extends Response.Builder<DescribeCertificateResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(DescribeCertificateResponseBody body);
 
@@ -64,6 +75,7 @@ public class DescribeCertificateResponse extends Response {
             extends Response.BuilderImpl<DescribeCertificateResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private DescribeCertificateResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +85,7 @@ public class DescribeCertificateResponse extends Response {
         private BuilderImpl(DescribeCertificateResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +95,15 @@ public class DescribeCertificateResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

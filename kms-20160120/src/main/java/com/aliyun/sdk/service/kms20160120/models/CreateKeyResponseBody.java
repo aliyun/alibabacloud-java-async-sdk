@@ -50,7 +50,7 @@ public class CreateKeyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * The metadata of the CMK.
          */
         public Builder keyMetadata(KeyMetadata keyMetadata) {
             this.keyMetadata = keyMetadata;
@@ -58,7 +58,7 @@ public class CreateKeyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the dedicated KMS instance.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -302,148 +302,10 @@ public class CreateKeyResponseBody extends TeaModel {
             private String rotationInterval; 
 
             /**
-             * The period of automatic key rotation. Unit: seconds. The value is in the format of an integer followed by the letter s. For example, if the rotation period is seven days, this parameter is set to 604800s. This value is returned only when the value of the AutomaticRotation parameter is Enabled or Suspended.
+             * The Alibaba Cloud Resource Name (ARN) of the CMK.
              */
             public Builder arn(String arn) {
                 this.arn = arn;
-                return this;
-            }
-
-            /**
-             * The time when the key material expires. The time is displayed in UTC.
-             * <p>
-             * 
-             * If this parameter value is empty, the key material does not expire.
-             */
-            public Builder automaticRotation(String automaticRotation) {
-                this.automaticRotation = automaticRotation;
-                return this;
-            }
-
-            /**
-             * The usage of the CMK.
-             */
-            public Builder creationDate(String creationDate) {
-                this.creationDate = creationDate;
-                return this;
-            }
-
-            /**
-             * The Alibaba Cloud Resource Name (ARN) of the CMK.
-             */
-            public Builder creator(String creator) {
-                this.creator = creator;
-                return this;
-            }
-
-            /**
-             * The date and time when the CMK was created. The time is displayed in UTC.
-             */
-            public Builder DKMSInstanceId(String DKMSInstanceId) {
-                this.DKMSInstanceId = DKMSInstanceId;
-                return this;
-            }
-
-            /**
-             * The time when the last rotation was performed. The time is displayed in UTC.
-             * <p>
-             * 
-             * For a new CMK, this parameter value is the time when the initial version of the CMK was generated.
-             */
-            public Builder deleteDate(String deleteDate) {
-                this.deleteDate = deleteDate;
-                return this;
-            }
-
-            /**
-             * The ID of the current primary key version of the symmetric CMK.
-             * <p>
-             * 
-             * > * The primary key version of a symmetric CMK is an active encryption key. KMS uses the primary key version of a specified CMK to encrypt data.
-             * > * This parameter is unavailable for asymmetric CMKs.
-             */
-            public Builder description(String description) {
-                this.description = description;
-                return this;
-            }
-
-            /**
-             * The metadata of the CMK.
-             */
-            public Builder keyId(String keyId) {
-                this.keyId = keyId;
-                return this;
-            }
-
-            /**
-             * The description of the CMK.
-             */
-            public Builder keySpec(String keySpec) {
-                this.keySpec = keySpec;
-                return this;
-            }
-
-            /**
-             * The time when the next rotation will be performed.
-             * <p>
-             * 
-             * >  This value is returned only when the value of the AutomaticRotation parameter is Enabled or Suspended.
-             */
-            public Builder keyState(String keyState) {
-                this.keyState = keyState;
-                return this;
-            }
-
-            /**
-             * The protection level of the CMK.
-             */
-            public Builder keyUsage(String keyUsage) {
-                this.keyUsage = keyUsage;
-                return this;
-            }
-
-            /**
-             * The creator of the CMK.
-             */
-            public Builder lastRotationDate(String lastRotationDate) {
-                this.lastRotationDate = lastRotationDate;
-                return this;
-            }
-
-            /**
-             * The source of the key material for the CMK.
-             */
-            public Builder materialExpireTime(String materialExpireTime) {
-                this.materialExpireTime = materialExpireTime;
-                return this;
-            }
-
-            /**
-             * The ID of the CMK. The ID must be globally unique.
-             */
-            public Builder nextRotationDate(String nextRotationDate) {
-                this.nextRotationDate = nextRotationDate;
-                return this;
-            }
-
-            /**
-             * The type of the CMK.
-             */
-            public Builder origin(String origin) {
-                this.origin = origin;
-                return this;
-            }
-
-            /**
-             * The time when the CMK is scheduled for deletion.
-             * <p>
-             * 
-             * For more information, see [ScheduleKeyDeletion](~~44196~~).
-             * 
-             * >  This value is returned only when the value of the KeyState parameter is PendingDeletion.
-             */
-            public Builder primaryKeyVersion(String primaryKeyVersion) {
-                this.primaryKeyVersion = primaryKeyVersion;
                 return this;
             }
 
@@ -457,8 +319,69 @@ public class CreateKeyResponseBody extends TeaModel {
              * 
              * >  Automatic key rotation is available only for symmetric CMKs.
              */
-            public Builder protectionLevel(String protectionLevel) {
-                this.protectionLevel = protectionLevel;
+            public Builder automaticRotation(String automaticRotation) {
+                this.automaticRotation = automaticRotation;
+                return this;
+            }
+
+            /**
+             * The date and time when the CMK was created. The time is displayed in UTC.
+             */
+            public Builder creationDate(String creationDate) {
+                this.creationDate = creationDate;
+                return this;
+            }
+
+            /**
+             * The creator of the CMK.
+             */
+            public Builder creator(String creator) {
+                this.creator = creator;
+                return this;
+            }
+
+            /**
+             * The ID of the dedicated KMS instance.
+             */
+            public Builder DKMSInstanceId(String DKMSInstanceId) {
+                this.DKMSInstanceId = DKMSInstanceId;
+                return this;
+            }
+
+            /**
+             * The time when the CMK is scheduled for deletion.
+             * <p>
+             * 
+             * For more information, see [ScheduleKeyDeletion](~~44196~~).
+             * 
+             * >  This value is returned only when the value of the KeyState parameter is PendingDeletion.
+             */
+            public Builder deleteDate(String deleteDate) {
+                this.deleteDate = deleteDate;
+                return this;
+            }
+
+            /**
+             * The description of the CMK.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * The ID of the CMK. The ID must be globally unique.
+             */
+            public Builder keyId(String keyId) {
+                this.keyId = keyId;
+                return this;
+            }
+
+            /**
+             * The type of the CMK.
+             */
+            public Builder keySpec(String keySpec) {
+                this.keySpec = keySpec;
                 return this;
             }
 
@@ -467,6 +390,83 @@ public class CreateKeyResponseBody extends TeaModel {
              * <p>
              * 
              * For more information, see [Impact of CMK status on API operations](~~44211~~).
+             */
+            public Builder keyState(String keyState) {
+                this.keyState = keyState;
+                return this;
+            }
+
+            /**
+             * The usage of the CMK.
+             */
+            public Builder keyUsage(String keyUsage) {
+                this.keyUsage = keyUsage;
+                return this;
+            }
+
+            /**
+             * The time when the last rotation was performed. The time is displayed in UTC.
+             * <p>
+             * 
+             * For a new CMK, this parameter value is the time when the initial version of the CMK was generated.
+             */
+            public Builder lastRotationDate(String lastRotationDate) {
+                this.lastRotationDate = lastRotationDate;
+                return this;
+            }
+
+            /**
+             * The time when the key material expires. The time is displayed in UTC.
+             * <p>
+             * 
+             * If this parameter value is empty, the key material does not expire.
+             */
+            public Builder materialExpireTime(String materialExpireTime) {
+                this.materialExpireTime = materialExpireTime;
+                return this;
+            }
+
+            /**
+             * The time when the next rotation will be performed.
+             * <p>
+             * 
+             * >  This value is returned only when the value of the AutomaticRotation parameter is Enabled or Suspended.
+             */
+            public Builder nextRotationDate(String nextRotationDate) {
+                this.nextRotationDate = nextRotationDate;
+                return this;
+            }
+
+            /**
+             * The source of the key material for the CMK.
+             */
+            public Builder origin(String origin) {
+                this.origin = origin;
+                return this;
+            }
+
+            /**
+             * The ID of the current primary key version of the symmetric CMK.
+             * <p>
+             * 
+             * > * The primary key version of a symmetric CMK is an active encryption key. KMS uses the primary key version of a specified CMK to encrypt data.
+             * > * This parameter is unavailable for asymmetric CMKs.
+             */
+            public Builder primaryKeyVersion(String primaryKeyVersion) {
+                this.primaryKeyVersion = primaryKeyVersion;
+                return this;
+            }
+
+            /**
+             * The protection level of the CMK.
+             */
+            public Builder protectionLevel(String protectionLevel) {
+                this.protectionLevel = protectionLevel;
+                return this;
+            }
+
+            /**
+             * The period of automatic key rotation. Unit: seconds. The value is in the format of an integer followed by the letter s. For example, if the rotation period is seven days, this parameter is set to 604800s. This value is returned only when the value of the AutomaticRotation parameter is Enabled or Suspended.
              */
             public Builder rotationInterval(String rotationInterval) {
                 this.rotationInterval = rotationInterval;
