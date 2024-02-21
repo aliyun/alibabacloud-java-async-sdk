@@ -110,7 +110,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
         }
 
         /**
-         * The scenarios.
+         * The resource scenarios.
          */
         public Builder templateScratches(java.util.List < TemplateScratches> templateScratches) {
             this.templateScratches = templateScratches;
@@ -170,7 +170,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
             private String parameterValue; 
 
             /**
-             * The name of the parameter.
+             * The parameter name.
              */
             public Builder parameterKey(String parameterKey) {
                 this.parameterKey = parameterKey;
@@ -178,7 +178,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the parameter.
+             * The parameter value.
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;
@@ -239,7 +239,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
             }
 
             /**
-             * The filters for resource types.
+             * The resource types for filtering resources.
              */
             public Builder resourceTypeFilter(java.util.List < String > resourceTypeFilter) {
                 this.resourceTypeFilter = resourceTypeFilter;
@@ -361,7 +361,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
             }
 
             /**
-             * The filters for resource types.
+             * The resource types for filtering resources.
              */
             public Builder resourceTypeFilter(java.util.List < String > resourceTypeFilter) {
                 this.resourceTypeFilter = resourceTypeFilter;
@@ -414,7 +414,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key of the scenario.
+             * The tag key of the resource scenario.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -422,7 +422,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value of the scenario.
+             * The tag value of the resource scenario.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -631,7 +631,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * The time when the scenario was created.
+             * The time when the resource scenario was created.
              * <p>
              * 
              * The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
@@ -642,7 +642,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the scenario.
+             * The description of the resource scenario.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -650,10 +650,10 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
             }
 
             /**
-             * The status code that is returned if the scenario failed to be generated.
+             * The status code of the resource scenario that failed to be generated.
              * <p>
              * 
-             * >  This parameter is returned only if Status is set to GENERATE_FAILED.
+             * >  This parameter is returned only if the value of Status is GENERATE_FAILED.
              */
             public Builder failedCode(String failedCode) {
                 this.failedCode = failedCode;
@@ -674,7 +674,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
             }
 
             /**
-             * The parameters that are configured for the scenario.
+             * The preference parameters of the resource scenario.
              */
             public Builder preferenceParameters(java.util.List < PreferenceParameters> preferenceParameters) {
                 this.preferenceParameters = preferenceParameters;
@@ -714,7 +714,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the scenario.
+             * The state of the resource scenario.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -722,10 +722,10 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
             }
 
             /**
-             * The reason why the scenario failed to be generated.
+             * The reason why the resource scenario failed to be generated.
              * <p>
              * 
-             * >  This parameter is returned only if Status is set to GENERATE_FAILED.
+             * >  This parameter is returned only if the value of Status is GENERATE_FAILED.
              */
             public Builder statusReason(String statusReason) {
                 this.statusReason = statusReason;
@@ -733,7 +733,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the scenario.
+             * The tags of the resource scenario.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -741,7 +741,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
             }
 
             /**
-             * The scenario ID.
+             * The ID of the resource scenario.
              */
             public Builder templateScratchId(String templateScratchId) {
                 this.templateScratchId = templateScratchId;
@@ -749,7 +749,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the scenario. Valid values:
+             * The type of the resource scenario. Valid values:
              * <p>
              * 
              * *   ResourceImport: resource management
@@ -761,7 +761,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the scenario was updated.
+             * The time when the resource scenario was updated.
              * <p>
              * 
              * The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.

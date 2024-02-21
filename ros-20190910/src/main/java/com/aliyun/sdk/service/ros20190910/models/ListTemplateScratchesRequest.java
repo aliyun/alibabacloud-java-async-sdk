@@ -234,7 +234,7 @@ public class ListTemplateScratchesRequest extends Request {
         }
 
         /**
-         * The type of the scenario. Valid values:
+         * The type of the resource scenario. Valid values:
          * <p>
          * 
          * *   ArchitectureReplication: resource replication
