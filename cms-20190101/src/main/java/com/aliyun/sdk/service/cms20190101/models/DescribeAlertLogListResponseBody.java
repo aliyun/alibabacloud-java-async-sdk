@@ -293,7 +293,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
              * The description of the alert rule.
              * <p>
              * 
-             * > The content of the alert rule. If the metric value meets the alert condition, an alert is triggered.
+             * >  The content of the alert rule. This parameter indicates the conditions that trigger an alert.
              */
             public Builder expression(String expression) {
                 this.expression = expression;
@@ -301,7 +301,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The severity level and notification methods of the alert. Valid values:
+             * The alert level and the methods that are used to send alert notifications. Valid values:
              * <p>
              * 
              * *   P4: Alert notifications are sent by using emails and DingTalk chatbots.
@@ -503,7 +503,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The queried resources.
+             * notifyTargetList.
              */
             public Builder notifyTargetList(java.util.List < String > notifyTargetList) {
                 this.notifyTargetList = notifyTargetList;
@@ -694,7 +694,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
              * The category of the alert notification method. Valid values:
              * <p>
              * 
-             * *   Mail: email
+             * *   MAIL: email
              * *   ALIIM: TradeManager
              * *   SMS: text message
              * *   CALL: phone call
@@ -707,7 +707,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The alert notification methods.
+             * The notification object corresponding to the alert notification method.
              */
             public Builder value(java.util.List < String > value) {
                 this.value = value;
@@ -1201,7 +1201,10 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             private java.util.List < WebhookList> webhookList; 
 
             /**
-             * The timestamp that was generated when the alert was triggered. Unit: milliseconds.
+             * The timestamp that was generated when the alert was triggered.
+             * <p>
+             * 
+             * Unit: milliseconds.
              */
             public Builder alertTime(String alertTime) {
                 this.alertTime = alertTime;
@@ -1233,10 +1236,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The TradeManager IDs of the alert contacts.
-             * <p>
-             * 
-             * > This parameter is valid only on the China site (aliyun.com).
+             * ContactALIIWWList.
              */
             public Builder contactALIIWWList(java.util.List < String > contactALIIWWList) {
                 this.contactALIIWWList = contactALIIWWList;
@@ -1244,7 +1244,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The DingTalk chatbots of the alert contacts.
+             * ContactDingList.
              */
             public Builder contactDingList(java.util.List < String > contactDingList) {
                 this.contactDingList = contactDingList;
@@ -1252,7 +1252,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The alert contact groups.
+             * ContactGroups.
              */
             public Builder contactGroups(java.util.List < String > contactGroups) {
                 this.contactGroups = contactGroups;
@@ -1260,7 +1260,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The email addresses of the alert contacts.
+             * ContactMailList.
              */
             public Builder contactMailList(java.util.List < String > contactMailList) {
                 this.contactMailList = contactMailList;
@@ -1268,10 +1268,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The phone numbers of the alert contacts that receive alert phone calls.
-             * <p>
-             * 
-             * > This parameter is valid only on the China site (aliyun.com).
+             * ContactOnCallList.
              */
             public Builder contactOnCallList(java.util.List < String > contactOnCallList) {
                 this.contactOnCallList = contactOnCallList;
@@ -1279,10 +1276,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The phone numbers of the alert contacts that receive alert text messages.
-             * <p>
-             * 
-             * > This parameter is valid only on the China site (aliyun.com).
+             * ContactSMSList.
              */
             public Builder contactSMSList(java.util.List < String > contactSMSList) {
                 this.contactSMSList = contactSMSList;
@@ -1298,7 +1292,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The webhook URLs of the alert contacts.
+             * DingdingWebhookList.
              */
             public Builder dingdingWebhookList(java.util.List < String > dingdingWebhookList) {
                 this.dingdingWebhookList = dingdingWebhookList;
@@ -1362,7 +1356,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The severity level and notification methods of the alert. Valid values:
+             * The alert level and the methods that are used to send alert notifications. Valid values:
              * <p>
              * 
              * *   P4: Alert notifications are sent by using emails and DingTalk chatbots.
@@ -1446,7 +1440,7 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the alert notification method.
+             * The details about the sending results of alert notifications.
              */
             public Builder sendDetail(SendDetail sendDetail) {
                 this.sendDetail = sendDetail;

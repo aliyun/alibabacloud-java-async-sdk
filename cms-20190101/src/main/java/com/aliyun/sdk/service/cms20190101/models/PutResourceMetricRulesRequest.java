@@ -55,7 +55,10 @@ public class PutResourceMetricRulesRequest extends Request {
         } 
 
         /**
-         * Rules.
+         * The threshold-triggered alert rules.
+         * <p>
+         * 
+         * Valid values of N: 1 to 500.
          */
         public Builder rules(java.util.List < Rules> rules) {
             this.putQueryParameter("Rules", rules);
@@ -616,7 +619,7 @@ public class PutResourceMetricRulesRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -624,7 +627,7 @@ public class PutResourceMetricRulesRequest extends Request {
             }
 
             /**
-             * The value of the tag.
+             * The tag value.
              * <p>
              * 
              * >  You can use a template parameter to specify a tag value. CloudMonitor replaces the value of the template parameter with an actual tag value.
@@ -862,7 +865,7 @@ public class PutResourceMetricRulesRequest extends Request {
             }
 
             /**
-             * The alert contact group. The alert notifications are sent to the alert contacts in the alert contact group.
+             * The alert contact groups. The alert notifications are sent to the alert contacts in the alert contact group.
              * <p>
              * 
              * Valid values of N: 1 to 500.
@@ -897,7 +900,7 @@ public class PutResourceMetricRulesRequest extends Request {
             }
 
             /**
-             * The interval at which the alert rule is executed.
+             * The interval at which alerts are triggered based on the alert rule.
              * <p>
              * 
              * Unit: seconds.
@@ -912,7 +915,7 @@ public class PutResourceMetricRulesRequest extends Request {
             }
 
             /**
-             * Labels.
+             * If the metric meets the specified condition in the alert rule and CloudMonitor sends an alert notification, the tag is also written to the metric and displayed in the alert notification.
              */
             public Builder labels(java.util.List < Labels> labels) {
                 this.labels = labels;
@@ -920,7 +923,7 @@ public class PutResourceMetricRulesRequest extends Request {
             }
 
             /**
-             * The name of the metric.
+             * The metric name.
              * <p>
              * 
              * Valid values of N: 1 to 500.
@@ -949,7 +952,7 @@ public class PutResourceMetricRulesRequest extends Request {
              * The method that is used to handle alerts when no monitoring data is found. Valid values:
              * <p>
              * 
-             * *   KEEP_LAST_STATE (default value): No operation is performed.
+             * *   KEEP_LAST_STATE (default): No operation is performed.
              * *   INSUFFICIENT_DATA: An alert whose content is "Insufficient data" is triggered.
              * *   OK: The status is considered normal.
              * 
@@ -987,7 +990,7 @@ public class PutResourceMetricRulesRequest extends Request {
             }
 
             /**
-             * The information about the resource. Examples: `[{"instanceId":"i-uf6j91r34rnwawoo****"}]` and `[{"userId":"100931896542****"}]`.
+             * The information about the resource. Example: `[{"instanceId":"i-uf6j91r34rnwawoo****"}]` or `[{"userId":"100931896542****"}]`.
              * <p>
              * 
              * Valid values of N: 1 to 500.
@@ -1007,7 +1010,7 @@ public class PutResourceMetricRulesRequest extends Request {
              * 
              * You can specify a new ID or the ID of an existing alert rule. For information about how to query the ID of an alert rule, see [DescribeMetricRuleList](~~114941~~).
              * 
-             * >  If you specify a new ID, you create a threshold-triggered alert rule.
+             * >  If you specify a new ID, a threshold-triggered alert rule is created.
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -1022,7 +1025,7 @@ public class PutResourceMetricRulesRequest extends Request {
              * 
              * You can specify a new name or the name of an existing alert rule. For information about how to query the name of an alert rule, see [DescribeMetricRuleList](~~114941~~).
              * 
-             * >  If you specify a new name, you create a threshold-triggered alert rule.
+             * >  If you specify a new name, a threshold-triggered alert rule is created.
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -1030,7 +1033,7 @@ public class PutResourceMetricRulesRequest extends Request {
             }
 
             /**
-             * The mute period during which new alerts are not sent even if the trigger conditions are met.
+             * The mute period during which new alert notifications are not sent even if the trigger conditions are met.
              * <p>
              * 
              * Unit: seconds. Default value: 86400.

@@ -319,7 +319,11 @@ public class DescribeAlertLogHistogramRequest extends Request {
         }
 
         /**
-         * EventType.
+         * The type of the alert event. Valid values:
+         * <p>
+         * 
+         * *   TRIGGERED: The alert is triggered.
+         * *   RESOLVED: The alert is resolved.
          */
         public Builder eventType(String eventType) {
             this.putQueryParameter("EventType", eventType);
@@ -432,7 +436,10 @@ public class DescribeAlertLogHistogramRequest extends Request {
         }
 
         /**
-         * RuleId.
+         * The ID of the alert rule.
+         * <p>
+         * 
+         * For more information about how to obtain the ID of an alert rule, see [DescribeMetricRuleList](~~114941~~).
          */
         public Builder ruleId(String ruleId) {
             this.putQueryParameter("RuleId", ruleId);

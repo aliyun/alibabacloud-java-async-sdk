@@ -17,6 +17,10 @@ public class CreateHybridMonitorTaskRequest extends Request {
     private java.util.List < AttachLabels> attachLabels;
 
     @Query
+    @NameInMap("CloudAccessId")
+    private java.util.List < String > cloudAccessId;
+
+    @Query
     @NameInMap("CollectInterval")
     private String collectInterval;
 
@@ -66,6 +70,7 @@ public class CreateHybridMonitorTaskRequest extends Request {
     private CreateHybridMonitorTaskRequest(Builder builder) {
         super(builder);
         this.attachLabels = builder.attachLabels;
+        this.cloudAccessId = builder.cloudAccessId;
         this.collectInterval = builder.collectInterval;
         this.collectTargetType = builder.collectTargetType;
         this.description = builder.description;
@@ -97,6 +102,13 @@ public class CreateHybridMonitorTaskRequest extends Request {
      */
     public java.util.List < AttachLabels> getAttachLabels() {
         return this.attachLabels;
+    }
+
+    /**
+     * @return cloudAccessId
+     */
+    public java.util.List < String > getCloudAccessId() {
+        return this.cloudAccessId;
     }
 
     /**
@@ -178,6 +190,7 @@ public class CreateHybridMonitorTaskRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateHybridMonitorTaskRequest, Builder> {
         private java.util.List < AttachLabels> attachLabels; 
+        private java.util.List < String > cloudAccessId; 
         private String collectInterval; 
         private String collectTargetType; 
         private String description; 
@@ -197,6 +210,7 @@ public class CreateHybridMonitorTaskRequest extends Request {
         private Builder(CreateHybridMonitorTaskRequest request) {
             super(request);
             this.attachLabels = request.attachLabels;
+            this.cloudAccessId = request.cloudAccessId;
             this.collectInterval = request.collectInterval;
             this.collectTargetType = request.collectTargetType;
             this.description = request.description;
@@ -211,7 +225,10 @@ public class CreateHybridMonitorTaskRequest extends Request {
         } 
 
         /**
-         * AttachLabels.
+         * The tags of the metric.
+         * <p>
+         * 
+         * >  This parameter is required only if the `TaskType` parameter is set to `aliyun_sls`.
          */
         public Builder attachLabels(java.util.List < AttachLabels> attachLabels) {
             this.putQueryParameter("AttachLabels", attachLabels);
@@ -220,11 +237,20 @@ public class CreateHybridMonitorTaskRequest extends Request {
         }
 
         /**
-         * The interval at which metrics are collected. Valid values:
+         * CloudAccessId.
+         */
+        public Builder cloudAccessId(java.util.List < String > cloudAccessId) {
+            this.putQueryParameter("CloudAccessId", cloudAccessId);
+            this.cloudAccessId = cloudAccessId;
+            return this;
+        }
+
+        /**
+         * The collection period of the metric. Valid values:
          * <p>
          * 
          * *   15
-         * *   60 (default value)
+         * *   60 (default)
          * 
          * Unit: seconds.
          * 
@@ -285,7 +311,7 @@ public class CreateHybridMonitorTaskRequest extends Request {
         }
 
         /**
-         * The configurations of the logs that are imported from Log Service.
+         * The configurations of the logs that are imported from Simple Log Service.
          * <p>
          * 
          * >  This parameter is required only if the `TaskType` parameter is set to `aliyun_sls`.
@@ -300,7 +326,7 @@ public class CreateHybridMonitorTaskRequest extends Request {
          * The ID of the member account.
          * <p>
          * 
-         * If you call API operations by using a management account, you can connect the Alibaba Cloud services that are activated for a member account in a resource directory to Hybrid Cloud Monitoring. You can use the resource directory to monitor Alibaba Cloud services across enterprise accounts.
+         * If you call this operation by using the management account of a resource directory, you can connect the Alibaba Cloud services that are activated for all members in the resource directory to Hybrid Cloud Monitoring. You can use the resource directory to monitor Alibaba Cloud services across enterprise accounts.
          * 
          * >  This parameter is required only if the `TaskType` parameter is set to `aliyun_fc`.
          */
@@ -327,7 +353,7 @@ public class CreateHybridMonitorTaskRequest extends Request {
          * <p>
          * 
          * *   If the `TaskType` parameter is set to `aliyun_fc`, enter the name of the metric import task.
-         * *   If the `TaskType` parameter is set to `aliyun_sls`, enter the name of the metric for logs imported from Log Service.
+         * *   If the `TaskType` parameter is set to `aliyun_sls`, enter the name of the metric for logs imported from Simple Log Service.
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);
@@ -336,11 +362,11 @@ public class CreateHybridMonitorTaskRequest extends Request {
         }
 
         /**
-         * Specifies whether to create a metric import task for an Alibaba Cloud service or create a metric for logs imported from Log Service. Valid values:
+         * The type of the metric import task. Valid values:
          * <p>
          * 
-         * *   aliyun_fc: creates a metric import task for an Alibaba Cloud service
-         * *   aliyun_sls: creates a metric for logs imported from Log Service
+         * *   aliyun_fc: metric import tasks for Alibaba Cloud services.
+         * *   aliyun_sls: metrics for logs imported from Simple Log Service.
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);
@@ -357,26 +383,23 @@ public class CreateHybridMonitorTaskRequest extends Request {
          * 
          * The following code shows a sample configuration file:
          * 
-         * ```
-         * 
-         * products:
-         * - namespace: acs_ecs_dashboard
-         *   metric_info:
-         *   - metric_list:
-         *     - cpu_total
-         *     - cpu_idle
-         *     - diskusage_utilization
-         *     - CPUUtilization
-         *     - DiskReadBPS
-         *     - InternetOut
-         *     - IntranetOut
-         *     - cpu_system
-         * - namespace: acs_rds_dashboard
-         *   metric_info:
-         *   - metric_list:
-         *     - MySQL_QPS
-         *     - MySQL_TPS
-         * ```
+         *     products:
+         *     - namespace: acs_ecs_dashboard
+         *       metric_info:
+         *       - metric_list:
+         *         - cpu_total
+         *         - cpu_idle
+         *         - diskusage_utilization
+         *         - CPUUtilization
+         *         - DiskReadBPS
+         *         - InternetOut
+         *         - IntranetOut
+         *         - cpu_system
+         *     - namespace: acs_rds_dashboard
+         *       metric_info:
+         *       - metric_list:
+         *         - MySQL_QPS
+         *         - MySQL_TPS
          * 
          * >  This parameter is required only if the `TaskType` parameter is set to `aliyun_fc`.
          */
@@ -493,7 +516,7 @@ public class CreateHybridMonitorTaskRequest extends Request {
             private String express; 
 
             /**
-             * The alias of the extended field that specifies the result of basic operations that are performed on aggregation results.
+             * The alias of the extended field that specifies the result of basic operations performed on aggregation results.
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -501,7 +524,7 @@ public class CreateHybridMonitorTaskRequest extends Request {
             }
 
             /**
-             * The extended field that specifies the result of basic operations that are performed on aggregation results.
+             * The extended field that specifies the result of basic operations performed on aggregation results.
              */
             public Builder express(String express) {
                 this.express = express;
@@ -566,7 +589,7 @@ public class CreateHybridMonitorTaskRequest extends Request {
             private String value; 
 
             /**
-             * The method that is used to filter logs imported from Log Service. Valid values:
+             * The method that is used to filter logs imported from Simple Log Service. Valid values:
              * <p>
              * 
              * *   `contain`: contains
@@ -584,7 +607,7 @@ public class CreateHybridMonitorTaskRequest extends Request {
             }
 
             /**
-             * The name of the key that is used to filter logs imported from Log Service.
+             * The name of the key that is used to filter logs imported from Simple Log Service.
              */
             public Builder SLSKeyName(String SLSKeyName) {
                 this.SLSKeyName = SLSKeyName;
@@ -592,7 +615,7 @@ public class CreateHybridMonitorTaskRequest extends Request {
             }
 
             /**
-             * The value of the key that is used to filter logs imported from Log Service.
+             * The value of the key that is used to filter logs imported from Simple Log Service.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -645,7 +668,7 @@ public class CreateHybridMonitorTaskRequest extends Request {
             private String relation; 
 
             /**
-             * The conditions that are used to filter logs imported from Log Service.
+             * The conditions that are used to filter logs imported from Simple Log Service.
              */
             public Builder filters(java.util.List < Filters> filters) {
                 this.filters = filters;
@@ -656,7 +679,7 @@ public class CreateHybridMonitorTaskRequest extends Request {
              * The relationship between multiple filter conditions. Valid values:
              * <p>
              * 
-             * *   and (default value): Logs are processed only if all filter conditions are met.
+             * *   and (default): Logs are processed only if all filter conditions are met.
              * *   or: Logs are processed if one of the filter conditions is met.
              */
             public Builder relation(String relation) {
@@ -718,7 +741,7 @@ public class CreateHybridMonitorTaskRequest extends Request {
             }
 
             /**
-             * The name of the key that is used to aggregate logs imported from Log Service.
+             * The name of the key that is used to aggregate logs imported from Simple Log Service.
              */
             public Builder SLSKeyName(String SLSKeyName) {
                 this.SLSKeyName = SLSKeyName;
@@ -815,7 +838,20 @@ public class CreateHybridMonitorTaskRequest extends Request {
             }
 
             /**
-             * Function.
+             * The function that is used to aggregate the log data of a statistical period. Valid values:
+             * <p>
+             * 
+             * *   count: counts the number.
+             * *   sum: calculates the total value.
+             * *   avg: calculates the average value.
+             * *   max: calculates the maximum value.
+             * *   min: calculates the minimum value.
+             * *   value: collects samples within the statistical period.
+             * *   countps: calculates the number of values of the specified field divided by the total number of seconds within a statistical period.
+             * *   sumps: calculates the sum of the values of the specified field divided by the total number of seconds within a statistical period.
+             * *   distinct: calculates the number of unique values of the specified field within a statistical period.
+             * *   distribution: calculates the number of logs that meet a specified condition within the statistical period.
+             * *   percentile: sorts the values of the specified field in ascending order, and then returns the value that is at the specified percentile within the statistical period. Example: P50.
              */
             public Builder function(String function) {
                 this.function = function;
@@ -823,7 +859,11 @@ public class CreateHybridMonitorTaskRequest extends Request {
             }
 
             /**
-             * Parameter1.
+             * The value of the function that is used to aggregate logs imported from Simple Log Service.
+             * <p>
+             * 
+             * *   If the `Function` parameter is set to `distribution`, this parameter specifies the lower limit of the statistical interval. For example, if you want to calculate the number of HTTP requests whose status code is 2XX, set this parameter to 200.
+             * *   If the `Function` parameter is set to `percentile`, this parameter specifies the percentile at which the expected value is. For example, 0.5 specifies P50.
              */
             public Builder parameter1(String parameter1) {
                 this.parameter1 = parameter1;
@@ -831,7 +871,10 @@ public class CreateHybridMonitorTaskRequest extends Request {
             }
 
             /**
-             * Parameter2.
+             * The value of the function that is used to aggregate logs imported from Simple Log Service.
+             * <p>
+             * 
+             * >  This parameter is required only if the `Function` parameter is set to `distribution`. This parameter specifies the upper limit of the statistical interval. For example, if you want to calculate the number of HTTP requests whose status code is 2XX, set this parameter to 299.
              */
             public Builder parameter2(String parameter2) {
                 this.parameter2 = parameter2;
@@ -839,7 +882,7 @@ public class CreateHybridMonitorTaskRequest extends Request {
             }
 
             /**
-             * The name of the key that is used to aggregate logs imported from Log Service.
+             * The name of the key that is used to aggregate logs imported from Simple Log Service.
              */
             public Builder SLSKeyName(String SLSKeyName) {
                 this.SLSKeyName = SLSKeyName;
@@ -916,7 +959,7 @@ public class CreateHybridMonitorTaskRequest extends Request {
             private java.util.List < Statistics> statistics; 
 
             /**
-             * The extended fields that specify the results of basic operations that are performed on aggregation results.
+             * The extended fields that specify the results of basic operations performed on aggregation results.
              */
             public Builder express(java.util.List < Express> express) {
                 this.express = express;
@@ -924,7 +967,7 @@ public class CreateHybridMonitorTaskRequest extends Request {
             }
 
             /**
-             * The conditions that are used to filter logs imported from Log Service.
+             * The conditions that are used to filter logs imported from Simple Log Service.
              */
             public Builder filter(Filter filter) {
                 this.filter = filter;
@@ -940,7 +983,7 @@ public class CreateHybridMonitorTaskRequest extends Request {
             }
 
             /**
-             * Statistics.
+             * The method that is used to aggregate logs imported from Simple Log Service.
              */
             public Builder statistics(java.util.List < Statistics> statistics) {
                 this.statistics = statistics;

@@ -121,7 +121,7 @@ public class DescribeSystemEventAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the system event.
+         * The details of the event.
          */
         public Builder systemEvents(SystemEvents systemEvents) {
             this.systemEvents = systemEvents;
@@ -281,7 +281,7 @@ public class DescribeSystemEventAttributeResponseBody extends TeaModel {
             private Long time; 
 
             /**
-             * The details of the system event.
+             * The details of the event.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -305,7 +305,7 @@ public class DescribeSystemEventAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance.
+             * The instance name.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -313,12 +313,12 @@ public class DescribeSystemEventAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The level of the system event. Valid values:
+             * The severity level of the alert. Valid values:
              * <p>
              * 
-             * *   CRITICAL: critical
-             * *   WARN: warning
-             * *   INFO: information
+             * *   CRITICAL
+             * *   WARN
+             * *   INFO
              */
             public Builder level(String level) {
                 this.level = level;
@@ -326,7 +326,7 @@ public class DescribeSystemEventAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the system event.
+             * The event name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -342,7 +342,7 @@ public class DescribeSystemEventAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -350,7 +350,7 @@ public class DescribeSystemEventAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource.
+             * The resource ID.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -358,7 +358,7 @@ public class DescribeSystemEventAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the system event.
+             * The status of the event.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -366,7 +366,7 @@ public class DescribeSystemEventAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the system event occurred.
+             * The time when the event occurred. The value is a timestamp.
              * <p>
              * 
              * Unit: milliseconds.

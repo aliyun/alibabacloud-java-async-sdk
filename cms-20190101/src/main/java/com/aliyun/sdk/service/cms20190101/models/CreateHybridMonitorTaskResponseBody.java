@@ -86,10 +86,10 @@ public class CreateHybridMonitorTaskResponseBody extends TeaModel {
         private Long taskId; 
 
         /**
-         * The HTTP status code.
+         * The response code.
          * <p>
          * 
-         * >  The status code 200 indicates that the call was successful.
+         * >  The status code 200 indicates that the request was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -97,7 +97,7 @@ public class CreateHybridMonitorTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * The error message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -105,7 +105,7 @@ public class CreateHybridMonitorTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -113,11 +113,11 @@ public class CreateHybridMonitorTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful. Valid values:
+         * Indicates whether the request was successful. Valid values:
          * <p>
          * 
-         * *   true: The call was successful.
-         * *   false: The call failed.
+         * *   true
+         * *   false
          */
         public Builder success(String success) {
             this.success = success;
@@ -125,7 +125,7 @@ public class CreateHybridMonitorTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the metric import task.
+         * The ID of the monitoring task.
          */
         public Builder taskId(Long taskId) {
             this.taskId = taskId;

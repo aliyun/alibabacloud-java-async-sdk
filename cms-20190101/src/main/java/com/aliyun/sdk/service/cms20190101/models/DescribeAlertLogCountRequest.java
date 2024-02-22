@@ -309,7 +309,7 @@ public class DescribeAlertLogCountRequest extends Request {
          * 
          * You can query only the alert logs within the last year. If the query time is longer than one year, the return value of the `AlertLogCount` parameter is empty.
          * 
-         * >  The interval between the start time (`StartTime`) and end time (`EndTime`) must be less than or equal to 15 days.
+         * >  The interval between the start time (StartTime) and end time (EndTime) must be less than or equal to 15 days. The start time and end time must be specified or left empty at the same time. If you do not specify the start time and end time, the alert logs within the last 15 minutes are queried by default.
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -318,7 +318,11 @@ public class DescribeAlertLogCountRequest extends Request {
         }
 
         /**
-         * EventType.
+         * The type of the alert event. Valid values:
+         * <p>
+         * 
+         * *   TRIGGERED: The alert is triggered.
+         * *   RESOLVED: The alert is resolved.
          */
         public Builder eventType(String eventType) {
             this.putQueryParameter("EventType", eventType);
@@ -432,7 +436,10 @@ public class DescribeAlertLogCountRequest extends Request {
         }
 
         /**
-         * RuleId.
+         * The ID of the alert rule.
+         * <p>
+         * 
+         * For more information about how to obtain the ID of an alert rule, see [DescribeMetricRuleList](~~114941~~).
          */
         public Builder ruleId(String ruleId) {
             this.putQueryParameter("RuleId", ruleId);
@@ -493,7 +500,7 @@ public class DescribeAlertLogCountRequest extends Request {
          * 
          * You can query only the alert logs within the last year. If the query time is longer than one year, the return value of the `AlertLogCount` parameter is empty.
          * 
-         * >  The interval between the start time (`StartTime`) and end time (`EndTime`) must be less than or equal to 15 days.
+         * >  The interval between the start time (StartTime) and end time (EndTime) must be less than or equal to 15 days. The start time and end time must be specified or left empty at the same time. If you do not specify the start time and end time, the alert logs within the last 15 minutes are queried by default.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

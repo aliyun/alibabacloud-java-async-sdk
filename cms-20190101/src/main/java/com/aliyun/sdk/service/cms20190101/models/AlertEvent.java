@@ -18,6 +18,12 @@ public class AlertEvent extends TeaModel {
     @NameInMap("AlertStatus")
     private String alertStatus;
 
+    @NameInMap("Arn")
+    private String arn;
+
+    @NameInMap("Content")
+    private String content;
+
     @NameInMap("CustomLabels")
     private java.util.Map < String, ? > customLabels;
 
@@ -30,11 +36,17 @@ public class AlertEvent extends TeaModel {
     @NameInMap("EventName")
     private String eventName;
 
+    @NameInMap("EventType")
+    private String eventType;
+
     @NameInMap("Expression")
     private String expression;
 
     @NameInMap("Metrics")
     private java.util.List < Metrics> metrics;
+
+    @NameInMap("Product")
+    private String product;
 
     @NameInMap("ResourceInfo")
     private java.util.Map < String, ? > resourceInfo;
@@ -63,12 +75,16 @@ public class AlertEvent extends TeaModel {
     private AlertEvent(Builder builder) {
         this.alertName = builder.alertName;
         this.alertStatus = builder.alertStatus;
+        this.arn = builder.arn;
+        this.content = builder.content;
         this.customLabels = builder.customLabels;
         this.deDupId = builder.deDupId;
         this.details = builder.details;
         this.eventName = builder.eventName;
+        this.eventType = builder.eventType;
         this.expression = builder.expression;
         this.metrics = builder.metrics;
+        this.product = builder.product;
         this.resourceInfo = builder.resourceInfo;
         this.ruleName = builder.ruleName;
         this.severity = builder.severity;
@@ -102,6 +118,20 @@ public class AlertEvent extends TeaModel {
     }
 
     /**
+     * @return arn
+     */
+    public String getArn() {
+        return this.arn;
+    }
+
+    /**
+     * @return content
+     */
+    public String getContent() {
+        return this.content;
+    }
+
+    /**
      * @return customLabels
      */
     public java.util.Map < String, ? > getCustomLabels() {
@@ -130,6 +160,13 @@ public class AlertEvent extends TeaModel {
     }
 
     /**
+     * @return eventType
+     */
+    public String getEventType() {
+        return this.eventType;
+    }
+
+    /**
      * @return expression
      */
     public String getExpression() {
@@ -141,6 +178,13 @@ public class AlertEvent extends TeaModel {
      */
     public java.util.List < Metrics> getMetrics() {
         return this.metrics;
+    }
+
+    /**
+     * @return product
+     */
+    public String getProduct() {
+        return this.product;
     }
 
     /**
@@ -202,12 +246,16 @@ public class AlertEvent extends TeaModel {
     public static final class Builder {
         private String alertName; 
         private String alertStatus; 
+        private String arn; 
+        private String content; 
         private java.util.Map < String, ? > customLabels; 
         private String deDupId; 
         private String details; 
         private String eventName; 
+        private String eventType; 
         private String expression; 
         private java.util.List < Metrics> metrics; 
+        private String product; 
         private java.util.Map < String, ? > resourceInfo; 
         private String ruleName; 
         private String severity; 
@@ -230,6 +278,22 @@ public class AlertEvent extends TeaModel {
          */
         public Builder alertStatus(String alertStatus) {
             this.alertStatus = alertStatus;
+            return this;
+        }
+
+        /**
+         * Arn.
+         */
+        public Builder arn(String arn) {
+            this.arn = arn;
+            return this;
+        }
+
+        /**
+         * Content.
+         */
+        public Builder content(String content) {
+            this.content = content;
             return this;
         }
 
@@ -266,6 +330,14 @@ public class AlertEvent extends TeaModel {
         }
 
         /**
+         * EventType.
+         */
+        public Builder eventType(String eventType) {
+            this.eventType = eventType;
+            return this;
+        }
+
+        /**
          * Expression.
          */
         public Builder expression(String expression) {
@@ -278,6 +350,14 @@ public class AlertEvent extends TeaModel {
          */
         public Builder metrics(java.util.List < Metrics> metrics) {
             this.metrics = metrics;
+            return this;
+        }
+
+        /**
+         * Product.
+         */
+        public Builder product(String product) {
+            this.product = product;
             return this;
         }
 

@@ -301,7 +301,14 @@ public class DescribeAlertLogListRequest extends Request {
         }
 
         /**
-         * The end timestamp of the alert logs to be queried. Unit: milliseconds.
+         * The end timestamp of the alert logs to be queried.
+         * <p>
+         * 
+         * Unit: milliseconds.
+         * 
+         * You can query only the alert logs within the last year. If the query time is longer than one year, the return value of the `AlertLogList` parameter is empty.
+         * 
+         * >  The time period between the start time specified by `StartTime` and end time specified by `EndTime` must be less than or equal to 15 days. You must specify StartTime and EndTime at the same time, or leave StartTime and EndTime empty at the same time. If you do not specify this parameter, the alert logs within the last 15 minutes are queried by default.
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -310,7 +317,11 @@ public class DescribeAlertLogListRequest extends Request {
         }
 
         /**
-         * EventType.
+         * The type of the alert event. Valid values:
+         * <p>
+         * 
+         * *   TRIGGERED: The alert is triggered.
+         * *   RESOLVED: The alert is resolved.
          */
         public Builder eventType(String eventType) {
             this.putQueryParameter("EventType", eventType);
@@ -319,7 +330,7 @@ public class DescribeAlertLogListRequest extends Request {
         }
 
         /**
-         * The dimension based on which data is aggregated. This parameter is equivalent to the GROUP BY clause in SQL. Valid values:
+         * The dimensions based on which data is aggregated. This parameter is equivalent to the GROUP BY clause in SQL. Valid values:
          * <p>
          * 
          * *   `product`: aggregates data by cloud service.
@@ -381,7 +392,7 @@ public class DescribeAlertLogListRequest extends Request {
          * The namespace of the cloud service.
          * <p>
          * 
-         * > For more information about the namespaces of different cloud services, see [Appendix 1: Metrics](~~163515~~).
+         * >  For information about how to query the namespace of a cloud service, see [Appendix 1: Metrics](~~163515~~).
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -390,7 +401,10 @@ public class DescribeAlertLogListRequest extends Request {
         }
 
         /**
-         * The page number. Default value: 1.
+         * The page number.
+         * <p>
+         * 
+         * Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -399,7 +413,10 @@ public class DescribeAlertLogListRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 10.
+         * The number of entries per page.
+         * <p>
+         * 
+         * Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -408,7 +425,10 @@ public class DescribeAlertLogListRequest extends Request {
         }
 
         /**
-         * The abbreviation of the cloud service name.
+         * The abbreviation of the service name.
+         * <p>
+         * 
+         * For information about how to obtain the abbreviation of a cloud service name, see [DescribeProductsOfActiveMetricRule](~~114930~~).
          */
         public Builder product(String product) {
             this.putQueryParameter("Product", product);
@@ -417,7 +437,10 @@ public class DescribeAlertLogListRequest extends Request {
         }
 
         /**
-         * The ID of the alert rule. For more information about how to query the ID of an alert rule, see [DescribeMetricRuleList](~~114941~~).
+         * The ID of the alert rule.
+         * <p>
+         * 
+         * For information about how to obtain the ID of an alert rule, see [DescribeMetricRuleList](~~114941~~).
          */
         public Builder ruleId(String ruleId) {
             this.putQueryParameter("RuleId", ruleId);
@@ -462,7 +485,7 @@ public class DescribeAlertLogListRequest extends Request {
         }
 
         /**
-         * SourceType.
+         * The type of the alert rule. Valid value: METRIC. This value indicates an alert rule for time series metrics.
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);
@@ -471,7 +494,14 @@ public class DescribeAlertLogListRequest extends Request {
         }
 
         /**
-         * The start timestamp of the alert logs to be queried. Unit: milliseconds.
+         * The start timestamp of the alert logs to be queried.
+         * <p>
+         * 
+         * Unit: milliseconds.
+         * 
+         * You can query only the alert logs within the last year. If the query time is longer than one year, the return value of the `AlertLogList` parameter is empty.
+         * 
+         * >  The time period between the start time specified by `StartTime` and the end time specified by `EndTime` must be less than or equal to 15 days. You must specify StartTime and EndTime at the same time, or leave StartTime and EndTime empty at the same time. If you do not specify this parameter, the alert logs within the last 15 minutes are queried by default.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

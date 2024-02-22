@@ -31,6 +31,9 @@ public class NotificationStrategy extends TeaModel {
     @Validation(required = true)
     private String name;
 
+    @NameInMap("Product")
+    private String product;
+
     @NameInMap("PushingSetting")
     private PushingSetting pushingSetting;
 
@@ -50,6 +53,7 @@ public class NotificationStrategy extends TeaModel {
         this.filterSetting = builder.filterSetting;
         this.groupingSetting = builder.groupingSetting;
         this.name = builder.name;
+        this.product = builder.product;
         this.pushingSetting = builder.pushingSetting;
         this.updateTime = builder.updateTime;
         this.userId = builder.userId;
@@ -107,6 +111,13 @@ public class NotificationStrategy extends TeaModel {
     }
 
     /**
+     * @return product
+     */
+    public String getProduct() {
+        return this.product;
+    }
+
+    /**
      * @return pushingSetting
      */
     public PushingSetting getPushingSetting() {
@@ -141,6 +152,7 @@ public class NotificationStrategy extends TeaModel {
         private FilterSetting filterSetting; 
         private GroupingSetting groupingSetting; 
         private String name; 
+        private String product; 
         private PushingSetting pushingSetting; 
         private String updateTime; 
         private String userId; 
@@ -191,6 +203,14 @@ public class NotificationStrategy extends TeaModel {
          */
         public Builder name(String name) {
             this.name = name;
+            return this;
+        }
+
+        /**
+         * Product.
+         */
+        public Builder product(String product) {
+            this.product = product;
             return this;
         }
 

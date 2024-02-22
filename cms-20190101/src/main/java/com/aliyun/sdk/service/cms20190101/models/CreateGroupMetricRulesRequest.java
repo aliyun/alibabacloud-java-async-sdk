@@ -711,6 +711,9 @@ public class CreateGroupMetricRulesRequest extends Request {
         @NameInMap("NoEffectiveInterval")
         private String noEffectiveInterval;
 
+        @NameInMap("Options")
+        private String options;
+
         @NameInMap("Period")
         private String period;
 
@@ -741,6 +744,7 @@ public class CreateGroupMetricRulesRequest extends Request {
             this.namespace = builder.namespace;
             this.noDataPolicy = builder.noDataPolicy;
             this.noEffectiveInterval = builder.noEffectiveInterval;
+            this.options = builder.options;
             this.period = builder.period;
             this.ruleId = builder.ruleId;
             this.ruleName = builder.ruleName;
@@ -841,6 +845,13 @@ public class CreateGroupMetricRulesRequest extends Request {
         }
 
         /**
+         * @return options
+         */
+        public String getOptions() {
+            return this.options;
+        }
+
+        /**
          * @return period
          */
         public String getPeriod() {
@@ -888,6 +899,7 @@ public class CreateGroupMetricRulesRequest extends Request {
             private String namespace; 
             private String noDataPolicy; 
             private String noEffectiveInterval; 
+            private String options; 
             private String period; 
             private String ruleId; 
             private String ruleName; 
@@ -1138,6 +1150,14 @@ public class CreateGroupMetricRulesRequest extends Request {
              */
             public Builder noEffectiveInterval(String noEffectiveInterval) {
                 this.noEffectiveInterval = noEffectiveInterval;
+                return this;
+            }
+
+            /**
+             * Options.
+             */
+            public Builder options(String options) {
+                this.options = options;
                 return this;
             }
 

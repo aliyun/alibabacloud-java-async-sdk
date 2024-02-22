@@ -132,7 +132,7 @@ public class CreateHybridMonitorNamespaceRequest extends Request {
         }
 
         /**
-         * NamespaceRegion.
+         * The region where the metric data is stored.
          */
         public Builder namespaceRegion(String namespaceRegion) {
             this.putQueryParameter("NamespaceRegion", namespaceRegion);
@@ -141,7 +141,13 @@ public class CreateHybridMonitorNamespaceRequest extends Request {
         }
 
         /**
-         * NamespaceType.
+         * The storage scheme of metric data. Valid values:
+         * <p>
+         * 
+         * *   m_prom_pool: The metric data is stored in Simple Log Service.
+         * *   m_prometheus: The metric data is stored in the storage space provided by CloudMonitor.
+         * 
+         * >  For more information about the storage schemes of metric data, see [Storage schemes of metric data in Hybrid Cloud Monitoring](~~2594921~~).
          */
         public Builder namespaceType(String namespaceType) {
             this.putQueryParameter("NamespaceType", namespaceType);
@@ -150,15 +156,15 @@ public class CreateHybridMonitorNamespaceRequest extends Request {
         }
 
         /**
-         * The data retention period of the namespace. Valid values:
+         * The data retention period. Valid values:
          * <p>
          * 
-         * *   cms.s1.large: 15 days
-         * *   cms.s1.xlarge: 32 days
-         * *   cms.s1.2xlarge: 63 days
-         * *   cms.s1.3xlarge (default value): 93 days
-         * *   cms.s1.6xlarge: 185 days
-         * *   cms.s1.12xlarge: 376 days
+         * *   cms.s1.large (Retention Period 15 Days)
+         * *   cms.s1.xlarge (Retention Period 32 Days)
+         * *   cms.s1.2xlarge (Retention Period 63 Days)
+         * *   cms.s1.3xlarge (Retention Period 93 Days) (default)
+         * *   cms.s1.6xlarge (Retention Period 185 Days)
+         * *   cms.s1.12xlarge (Retention Period 367 Days)
          * 
          * For information about the pricing for different retention periods, see the **Pricing** section in [Billing of the dashboard feature](~~223532~~).
          */

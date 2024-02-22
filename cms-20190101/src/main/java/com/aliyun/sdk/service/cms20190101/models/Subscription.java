@@ -21,9 +21,15 @@ public class Subscription extends TeaModel {
     @NameInMap("Description")
     private String description;
 
+    @NameInMap("Enabled")
+    private Boolean enabled;
+
     @NameInMap("Name")
     @Validation(required = true)
     private String name;
+
+    @NameInMap("Product")
+    private String product;
 
     @NameInMap("Relation")
     private String relation;
@@ -41,7 +47,9 @@ public class Subscription extends TeaModel {
         this.conditions = builder.conditions;
         this.createTime = builder.createTime;
         this.description = builder.description;
+        this.enabled = builder.enabled;
         this.name = builder.name;
+        this.product = builder.product;
         this.relation = builder.relation;
         this.strategyUuid = builder.strategyUuid;
         this.updateTime = builder.updateTime;
@@ -78,10 +86,24 @@ public class Subscription extends TeaModel {
     }
 
     /**
+     * @return enabled
+     */
+    public Boolean getEnabled() {
+        return this.enabled;
+    }
+
+    /**
      * @return name
      */
     public String getName() {
         return this.name;
+    }
+
+    /**
+     * @return product
+     */
+    public String getProduct() {
+        return this.product;
     }
 
     /**
@@ -116,7 +138,9 @@ public class Subscription extends TeaModel {
         private java.util.List < Conditions> conditions; 
         private String createTime; 
         private String description; 
+        private Boolean enabled; 
         private String name; 
+        private String product; 
         private String relation; 
         private String strategyUuid; 
         private String updateTime; 
@@ -147,10 +171,26 @@ public class Subscription extends TeaModel {
         }
 
         /**
+         * Enabled.
+         */
+        public Builder enabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+
+        /**
          * Name.
          */
         public Builder name(String name) {
             this.name = name;
+            return this;
+        }
+
+        /**
+         * Product.
+         */
+        public Builder product(String product) {
+            this.product = product;
             return this;
         }
 

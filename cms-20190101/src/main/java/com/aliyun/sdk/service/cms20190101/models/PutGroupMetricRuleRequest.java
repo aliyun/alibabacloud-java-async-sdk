@@ -72,6 +72,10 @@ public class PutGroupMetricRuleRequest extends Request {
     private String noEffectiveInterval;
 
     @Query
+    @NameInMap("Options")
+    private String options;
+
+    @Query
     @NameInMap("Period")
     private String period;
 
@@ -109,6 +113,7 @@ public class PutGroupMetricRuleRequest extends Request {
         this.namespace = builder.namespace;
         this.noDataPolicy = builder.noDataPolicy;
         this.noEffectiveInterval = builder.noEffectiveInterval;
+        this.options = builder.options;
         this.period = builder.period;
         this.ruleId = builder.ruleId;
         this.ruleName = builder.ruleName;
@@ -228,6 +233,13 @@ public class PutGroupMetricRuleRequest extends Request {
     }
 
     /**
+     * @return options
+     */
+    public String getOptions() {
+        return this.options;
+    }
+
+    /**
      * @return period
      */
     public String getPeriod() {
@@ -277,6 +289,7 @@ public class PutGroupMetricRuleRequest extends Request {
         private String namespace; 
         private String noDataPolicy; 
         private String noEffectiveInterval; 
+        private String options; 
         private String period; 
         private String ruleId; 
         private String ruleName; 
@@ -303,6 +316,7 @@ public class PutGroupMetricRuleRequest extends Request {
             this.namespace = request.namespace;
             this.noDataPolicy = request.noDataPolicy;
             this.noEffectiveInterval = request.noEffectiveInterval;
+            this.options = request.options;
             this.period = request.period;
             this.ruleId = request.ruleId;
             this.ruleName = request.ruleName;
@@ -464,6 +478,15 @@ public class PutGroupMetricRuleRequest extends Request {
         public Builder noEffectiveInterval(String noEffectiveInterval) {
             this.putQueryParameter("NoEffectiveInterval", noEffectiveInterval);
             this.noEffectiveInterval = noEffectiveInterval;
+            return this;
+        }
+
+        /**
+         * Options.
+         */
+        public Builder options(String options) {
+            this.putQueryParameter("Options", options);
+            this.options = options;
             return this;
         }
 
