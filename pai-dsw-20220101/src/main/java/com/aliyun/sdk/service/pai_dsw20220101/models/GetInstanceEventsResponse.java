@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetIdleInstanceCullerResponse} extends {@link TeaModel}
+ * {@link GetInstanceEventsResponse} extends {@link TeaModel}
  *
- * <p>GetIdleInstanceCullerResponse</p>
+ * <p>GetInstanceEventsResponse</p>
  */
-public class GetIdleInstanceCullerResponse extends Response {
+public class GetInstanceEventsResponse extends Response {
     @NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -19,16 +19,16 @@ public class GetIdleInstanceCullerResponse extends Response {
     private Integer statusCode;
 
     @NameInMap("body")
-    private GetIdleInstanceCullerResponseBody body;
+    private GetInstanceEventsResponseBody body;
 
-    private GetIdleInstanceCullerResponse(BuilderImpl builder) {
+    private GetInstanceEventsResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static GetIdleInstanceCullerResponse create() {
+    public static GetInstanceEventsResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +54,35 @@ public class GetIdleInstanceCullerResponse extends Response {
     /**
      * @return body
      */
-    public GetIdleInstanceCullerResponseBody getBody() {
+    public GetInstanceEventsResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<GetIdleInstanceCullerResponse, Builder> {
+    public interface Builder extends Response.Builder<GetInstanceEventsResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(GetIdleInstanceCullerResponseBody body);
+        Builder body(GetInstanceEventsResponseBody body);
 
         @Override
-        GetIdleInstanceCullerResponse build();
+        GetInstanceEventsResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<GetIdleInstanceCullerResponse, Builder>
+            extends Response.BuilderImpl<GetInstanceEventsResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private GetIdleInstanceCullerResponseBody body; 
+        private GetInstanceEventsResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(GetIdleInstanceCullerResponse response) {
+        private BuilderImpl(GetInstanceEventsResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +111,14 @@ public class GetIdleInstanceCullerResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(GetIdleInstanceCullerResponseBody body) {
+        public Builder body(GetInstanceEventsResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public GetIdleInstanceCullerResponse build() {
-            return new GetIdleInstanceCullerResponse(this);
+        public GetInstanceEventsResponse build() {
+            return new GetInstanceEventsResponse(this);
         } 
 
     } 
