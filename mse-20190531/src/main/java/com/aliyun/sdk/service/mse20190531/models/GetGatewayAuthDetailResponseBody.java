@@ -885,7 +885,7 @@ public class GetGatewayAuthDetailResponseBody extends TeaModel {
         private java.util.List < ResourceList> resourceList;
 
         @NameInMap("ScopesList")
-        private java.util.List < String > scopesList;
+        private String scopesList;
 
         @NameInMap("Status")
         private Boolean status;
@@ -1058,7 +1058,7 @@ public class GetGatewayAuthDetailResponseBody extends TeaModel {
         /**
          * @return scopesList
          */
-        public java.util.List < String > getScopesList() {
+        public String getScopesList() {
             return this.scopesList;
         }
 
@@ -1128,7 +1128,7 @@ public class GetGatewayAuthDetailResponseBody extends TeaModel {
             private String name; 
             private String redirectUrl; 
             private java.util.List < ResourceList> resourceList; 
-            private java.util.List < String > scopesList; 
+            private String scopesList; 
             private Boolean status; 
             private String sub; 
             private String tokenName; 
@@ -1268,7 +1268,7 @@ public class GetGatewayAuthDetailResponseBody extends TeaModel {
             /**
              * ScopesList.
              */
-            public Builder scopesList(java.util.List < String > scopesList) {
+            public Builder scopesList(String scopesList) {
                 this.scopesList = scopesList;
                 return this;
             }
