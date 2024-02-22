@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ListCategoryRequest} extends {@link RequestModel}
+ * {@link DeleteDocRequest} extends {@link RequestModel}
  *
- * <p>ListCategoryRequest</p>
+ * <p>DeleteDocRequest</p>
  */
-public class ListCategoryRequest extends Request {
+public class DeleteDocRequest extends Request {
     @Host
     @NameInMap("RegionId")
     private String regionId;
@@ -20,28 +20,23 @@ public class ListCategoryRequest extends Request {
     @NameInMap("AgentKey")
     private String agentKey;
 
-    @Body
-    @NameInMap("KnowledgeType")
-    private Integer knowledgeType;
+    @Query
+    @NameInMap("KnowledgeId")
+    @Validation(required = true)
+    private Long knowledgeId;
 
-    @Body
-    @NameInMap("ParentCategoryId")
-    @Validation()
-    private Long parentCategoryId;
-
-    private ListCategoryRequest(Builder builder) {
+    private DeleteDocRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.agentKey = builder.agentKey;
-        this.knowledgeType = builder.knowledgeType;
-        this.parentCategoryId = builder.parentCategoryId;
+        this.knowledgeId = builder.knowledgeId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ListCategoryRequest create() {
+    public static DeleteDocRequest create() {
         return builder().build();
     }
 
@@ -65,35 +60,26 @@ public class ListCategoryRequest extends Request {
     }
 
     /**
-     * @return knowledgeType
+     * @return knowledgeId
      */
-    public Integer getKnowledgeType() {
-        return this.knowledgeType;
+    public Long getKnowledgeId() {
+        return this.knowledgeId;
     }
 
-    /**
-     * @return parentCategoryId
-     */
-    public Long getParentCategoryId() {
-        return this.parentCategoryId;
-    }
-
-    public static final class Builder extends Request.Builder<ListCategoryRequest, Builder> {
+    public static final class Builder extends Request.Builder<DeleteDocRequest, Builder> {
         private String regionId; 
         private String agentKey; 
-        private Integer knowledgeType; 
-        private Long parentCategoryId; 
+        private Long knowledgeId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListCategoryRequest request) {
+        private Builder(DeleteDocRequest request) {
             super(request);
             this.regionId = request.regionId;
             this.agentKey = request.agentKey;
-            this.knowledgeType = request.knowledgeType;
-            this.parentCategoryId = request.parentCategoryId;
+            this.knowledgeId = request.knowledgeId;
         } 
 
         /**
@@ -115,26 +101,17 @@ public class ListCategoryRequest extends Request {
         }
 
         /**
-         * KnowledgeType.
+         * KnowledgeId.
          */
-        public Builder knowledgeType(Integer knowledgeType) {
-            this.putBodyParameter("KnowledgeType", knowledgeType);
-            this.knowledgeType = knowledgeType;
-            return this;
-        }
-
-        /**
-         * ParentCategoryId.
-         */
-        public Builder parentCategoryId(Long parentCategoryId) {
-            this.putBodyParameter("ParentCategoryId", parentCategoryId);
-            this.parentCategoryId = parentCategoryId;
+        public Builder knowledgeId(Long knowledgeId) {
+            this.putQueryParameter("KnowledgeId", knowledgeId);
+            this.knowledgeId = knowledgeId;
             return this;
         }
 
         @Override
-        public ListCategoryRequest build() {
-            return new ListCategoryRequest(this);
+        public DeleteDocRequest build() {
+            return new DeleteDocRequest(this);
         } 
 
     } 

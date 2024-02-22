@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.chatbot20220408;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.chatbot20220408.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -40,6 +41,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateDSEntityValueResponse> createDSEntityValue(CreateDSEntityValueRequest request);
 
+    CompletableFuture<CreateDocResponse> createDoc(CreateDocRequest request);
+
     CompletableFuture<CreateFaqResponse> createFaq(CreateFaqRequest request);
 
     CompletableFuture<CreateInstanceResponse> createInstance(CreateInstanceRequest request);
@@ -68,6 +71,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteDSEntityValueResponse> deleteDSEntityValue(DeleteDSEntityValueRequest request);
 
+    CompletableFuture<DeleteDocResponse> deleteDoc(DeleteDocRequest request);
+
     CompletableFuture<DeleteFaqResponse> deleteFaq(DeleteFaqRequest request);
 
     CompletableFuture<DeleteInstanceResponse> deleteInstance(DeleteInstanceRequest request);
@@ -87,6 +92,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeCategoryResponse> describeCategory(DescribeCategoryRequest request);
 
     CompletableFuture<DescribeDSEntityResponse> describeDSEntity(DescribeDSEntityRequest request);
+
+    CompletableFuture<DescribeDocResponse> describeDoc(DescribeDocRequest request);
 
     CompletableFuture<DescribeFaqResponse> describeFaq(DescribeFaqRequest request);
 
@@ -142,6 +149,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<QueryPerspectivesResponse> queryPerspectives(QueryPerspectivesRequest request);
 
+    CompletableFuture<RetryDocResponse> retryDoc(RetryDocRequest request);
+
+    CompletableFuture<SearchDocResponse> searchDoc(SearchDocRequest request);
+
     CompletableFuture<SearchFaqResponse> searchFaq(SearchFaqRequest request);
 
     CompletableFuture<UpdateCategoryResponse> updateCategory(UpdateCategoryRequest request);
@@ -151,6 +162,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateDSEntityResponse> updateDSEntity(UpdateDSEntityRequest request);
 
     CompletableFuture<UpdateDSEntityValueResponse> updateDSEntityValue(UpdateDSEntityValueRequest request);
+
+    CompletableFuture<UpdateDocResponse> updateDoc(UpdateDocRequest request);
 
     CompletableFuture<UpdateFaqResponse> updateFaq(UpdateFaqRequest request);
 

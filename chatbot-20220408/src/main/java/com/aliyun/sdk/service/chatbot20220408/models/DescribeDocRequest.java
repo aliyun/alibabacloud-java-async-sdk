@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ListCategoryRequest} extends {@link RequestModel}
+ * {@link DescribeDocRequest} extends {@link RequestModel}
  *
- * <p>ListCategoryRequest</p>
+ * <p>DescribeDocRequest</p>
  */
-public class ListCategoryRequest extends Request {
+public class DescribeDocRequest extends Request {
     @Host
     @NameInMap("RegionId")
     private String regionId;
@@ -20,28 +20,28 @@ public class ListCategoryRequest extends Request {
     @NameInMap("AgentKey")
     private String agentKey;
 
-    @Body
-    @NameInMap("KnowledgeType")
-    private Integer knowledgeType;
+    @Query
+    @NameInMap("KnowledgeId")
+    @Validation(required = true)
+    private Long knowledgeId;
 
-    @Body
-    @NameInMap("ParentCategoryId")
-    @Validation()
-    private Long parentCategoryId;
+    @Query
+    @NameInMap("ShowDetail")
+    private Boolean showDetail;
 
-    private ListCategoryRequest(Builder builder) {
+    private DescribeDocRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.agentKey = builder.agentKey;
-        this.knowledgeType = builder.knowledgeType;
-        this.parentCategoryId = builder.parentCategoryId;
+        this.knowledgeId = builder.knowledgeId;
+        this.showDetail = builder.showDetail;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ListCategoryRequest create() {
+    public static DescribeDocRequest create() {
         return builder().build();
     }
 
@@ -65,35 +65,35 @@ public class ListCategoryRequest extends Request {
     }
 
     /**
-     * @return knowledgeType
+     * @return knowledgeId
      */
-    public Integer getKnowledgeType() {
-        return this.knowledgeType;
+    public Long getKnowledgeId() {
+        return this.knowledgeId;
     }
 
     /**
-     * @return parentCategoryId
+     * @return showDetail
      */
-    public Long getParentCategoryId() {
-        return this.parentCategoryId;
+    public Boolean getShowDetail() {
+        return this.showDetail;
     }
 
-    public static final class Builder extends Request.Builder<ListCategoryRequest, Builder> {
+    public static final class Builder extends Request.Builder<DescribeDocRequest, Builder> {
         private String regionId; 
         private String agentKey; 
-        private Integer knowledgeType; 
-        private Long parentCategoryId; 
+        private Long knowledgeId; 
+        private Boolean showDetail; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListCategoryRequest request) {
+        private Builder(DescribeDocRequest request) {
             super(request);
             this.regionId = request.regionId;
             this.agentKey = request.agentKey;
-            this.knowledgeType = request.knowledgeType;
-            this.parentCategoryId = request.parentCategoryId;
+            this.knowledgeId = request.knowledgeId;
+            this.showDetail = request.showDetail;
         } 
 
         /**
@@ -115,26 +115,26 @@ public class ListCategoryRequest extends Request {
         }
 
         /**
-         * KnowledgeType.
+         * KnowledgeId.
          */
-        public Builder knowledgeType(Integer knowledgeType) {
-            this.putBodyParameter("KnowledgeType", knowledgeType);
-            this.knowledgeType = knowledgeType;
+        public Builder knowledgeId(Long knowledgeId) {
+            this.putQueryParameter("KnowledgeId", knowledgeId);
+            this.knowledgeId = knowledgeId;
             return this;
         }
 
         /**
-         * ParentCategoryId.
+         * ShowDetail.
          */
-        public Builder parentCategoryId(Long parentCategoryId) {
-            this.putBodyParameter("ParentCategoryId", parentCategoryId);
-            this.parentCategoryId = parentCategoryId;
+        public Builder showDetail(Boolean showDetail) {
+            this.putQueryParameter("ShowDetail", showDetail);
+            this.showDetail = showDetail;
             return this;
         }
 
         @Override
-        public ListCategoryRequest build() {
-            return new ListCategoryRequest(this);
+        public DescribeDocRequest build() {
+            return new DescribeDocRequest(this);
         } 
 
     } 

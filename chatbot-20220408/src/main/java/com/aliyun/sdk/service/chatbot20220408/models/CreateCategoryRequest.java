@@ -21,6 +21,14 @@ public class CreateCategoryRequest extends Request {
     private String agentKey;
 
     @Body
+    @NameInMap("BizCode")
+    private String bizCode;
+
+    @Body
+    @NameInMap("KnowledgeType")
+    private Integer knowledgeType;
+
+    @Body
     @NameInMap("Name")
     @Validation(required = true)
     private String name;
@@ -34,6 +42,8 @@ public class CreateCategoryRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.agentKey = builder.agentKey;
+        this.bizCode = builder.bizCode;
+        this.knowledgeType = builder.knowledgeType;
         this.name = builder.name;
         this.parentCategoryId = builder.parentCategoryId;
     }
@@ -66,6 +76,20 @@ public class CreateCategoryRequest extends Request {
     }
 
     /**
+     * @return bizCode
+     */
+    public String getBizCode() {
+        return this.bizCode;
+    }
+
+    /**
+     * @return knowledgeType
+     */
+    public Integer getKnowledgeType() {
+        return this.knowledgeType;
+    }
+
+    /**
      * @return name
      */
     public String getName() {
@@ -82,6 +106,8 @@ public class CreateCategoryRequest extends Request {
     public static final class Builder extends Request.Builder<CreateCategoryRequest, Builder> {
         private String regionId; 
         private String agentKey; 
+        private String bizCode; 
+        private Integer knowledgeType; 
         private String name; 
         private Long parentCategoryId; 
 
@@ -93,6 +119,8 @@ public class CreateCategoryRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.agentKey = request.agentKey;
+            this.bizCode = request.bizCode;
+            this.knowledgeType = request.knowledgeType;
             this.name = request.name;
             this.parentCategoryId = request.parentCategoryId;
         } 
@@ -112,6 +140,24 @@ public class CreateCategoryRequest extends Request {
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
             this.agentKey = agentKey;
+            return this;
+        }
+
+        /**
+         * BizCode.
+         */
+        public Builder bizCode(String bizCode) {
+            this.putBodyParameter("BizCode", bizCode);
+            this.bizCode = bizCode;
+            return this;
+        }
+
+        /**
+         * KnowledgeType.
+         */
+        public Builder knowledgeType(Integer knowledgeType) {
+            this.putBodyParameter("KnowledgeType", knowledgeType);
+            this.knowledgeType = knowledgeType;
             return this;
         }
 

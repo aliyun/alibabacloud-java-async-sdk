@@ -21,6 +21,10 @@ public class UpdateCategoryRequest extends Request {
     private String agentKey;
 
     @Body
+    @NameInMap("BizCode")
+    private String bizCode;
+
+    @Body
     @NameInMap("CategoryId")
     @Validation(required = true)
     private Long categoryId;
@@ -34,6 +38,7 @@ public class UpdateCategoryRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.agentKey = builder.agentKey;
+        this.bizCode = builder.bizCode;
         this.categoryId = builder.categoryId;
         this.name = builder.name;
     }
@@ -66,6 +71,13 @@ public class UpdateCategoryRequest extends Request {
     }
 
     /**
+     * @return bizCode
+     */
+    public String getBizCode() {
+        return this.bizCode;
+    }
+
+    /**
      * @return categoryId
      */
     public Long getCategoryId() {
@@ -82,6 +94,7 @@ public class UpdateCategoryRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateCategoryRequest, Builder> {
         private String regionId; 
         private String agentKey; 
+        private String bizCode; 
         private Long categoryId; 
         private String name; 
 
@@ -93,6 +106,7 @@ public class UpdateCategoryRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.agentKey = request.agentKey;
+            this.bizCode = request.bizCode;
             this.categoryId = request.categoryId;
             this.name = request.name;
         } 
@@ -112,6 +126,15 @@ public class UpdateCategoryRequest extends Request {
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
             this.agentKey = agentKey;
+            return this;
+        }
+
+        /**
+         * BizCode.
+         */
+        public Builder bizCode(String bizCode) {
+            this.putBodyParameter("BizCode", bizCode);
+            this.bizCode = bizCode;
             return this;
         }
 

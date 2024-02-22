@@ -72,6 +72,9 @@ public class ListCategoryResponseBody extends TeaModel {
     } 
 
     public static class Categories extends TeaModel {
+        @NameInMap("BizCode")
+        private String bizCode;
+
         @NameInMap("CategoryId")
         private Long categoryId;
 
@@ -85,6 +88,7 @@ public class ListCategoryResponseBody extends TeaModel {
         private Integer status;
 
         private Categories(Builder builder) {
+            this.bizCode = builder.bizCode;
             this.categoryId = builder.categoryId;
             this.name = builder.name;
             this.parentCategoryId = builder.parentCategoryId;
@@ -97,6 +101,13 @@ public class ListCategoryResponseBody extends TeaModel {
 
         public static Categories create() {
             return builder().build();
+        }
+
+        /**
+         * @return bizCode
+         */
+        public String getBizCode() {
+            return this.bizCode;
         }
 
         /**
@@ -128,10 +139,19 @@ public class ListCategoryResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String bizCode; 
             private Long categoryId; 
             private String name; 
             private Long parentCategoryId; 
             private Integer status; 
+
+            /**
+             * BizCode.
+             */
+            public Builder bizCode(String bizCode) {
+                this.bizCode = bizCode;
+                return this;
+            }
 
             /**
              * CategoryId.
