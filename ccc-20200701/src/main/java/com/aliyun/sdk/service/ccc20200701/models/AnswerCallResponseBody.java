@@ -167,6 +167,9 @@ public class AnswerCallResponseBody extends TeaModel {
         @NameInMap("Destination")
         private String destination;
 
+        @NameInMap("Index")
+        private Long index;
+
         @NameInMap("JobId")
         private String jobId;
 
@@ -197,6 +200,7 @@ public class AnswerCallResponseBody extends TeaModel {
             this.channelState = builder.channelState;
             this.channelVariables = builder.channelVariables;
             this.destination = builder.destination;
+            this.index = builder.index;
             this.jobId = builder.jobId;
             this.originator = builder.originator;
             this.releaseInitiator = builder.releaseInitiator;
@@ -248,6 +252,13 @@ public class AnswerCallResponseBody extends TeaModel {
          */
         public String getDestination() {
             return this.destination;
+        }
+
+        /**
+         * @return index
+         */
+        public Long getIndex() {
+            return this.index;
         }
 
         /**
@@ -312,6 +323,7 @@ public class AnswerCallResponseBody extends TeaModel {
             private String channelState; 
             private String channelVariables; 
             private String destination; 
+            private Long index; 
             private String jobId; 
             private String originator; 
             private String releaseInitiator; 
@@ -358,6 +370,14 @@ public class AnswerCallResponseBody extends TeaModel {
              */
             public Builder destination(String destination) {
                 this.destination = destination;
+                return this;
+            }
+
+            /**
+             * Index.
+             */
+            public Builder index(Long index) {
+                this.index = index;
                 return this;
             }
 

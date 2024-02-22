@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.ccc20200701;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.ccc20200701.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -19,6 +20,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     CompletableFuture<AbortCampaignResponse> abortCampaign(AbortCampaignRequest request);
+
+    CompletableFuture<AddBlacklistCallTaggingResponse> addBlacklistCallTagging(AddBlacklistCallTaggingRequest request);
 
     CompletableFuture<AddCasesResponse> addCases(AddCasesRequest request);
 
@@ -341,6 +344,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RegisterDevicesResponse> registerDevices(RegisterDevicesRequest request);
 
     CompletableFuture<ReleaseCallResponse> releaseCall(ReleaseCallRequest request);
+
+    CompletableFuture<RemoveBlacklistCallTaggingResponse> removeBlacklistCallTagging(RemoveBlacklistCallTaggingRequest request);
 
     CompletableFuture<RemoveDoNotCallNumbersResponse> removeDoNotCallNumbers(RemoveDoNotCallNumbersRequest request);
 
