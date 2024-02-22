@@ -24,6 +24,9 @@ public class GetServiceResponseBody extends TeaModel {
     @NameInMap("Categories")
     private String categories;
 
+    @NameInMap("Commodity")
+    private Commodity commodity;
+
     @NameInMap("CommodityCode")
     private String commodityCode;
 
@@ -188,6 +191,7 @@ public class GetServiceResponseBody extends TeaModel {
         this.approvalType = builder.approvalType;
         this.billEntityMappings = builder.billEntityMappings;
         this.categories = builder.categories;
+        this.commodity = builder.commodity;
         this.commodityCode = builder.commodityCode;
         this.commodityEntities = builder.commodityEntities;
         this.commoditySpecifications = builder.commoditySpecifications;
@@ -277,6 +281,13 @@ public class GetServiceResponseBody extends TeaModel {
      */
     public String getCategories() {
         return this.categories;
+    }
+
+    /**
+     * @return commodity
+     */
+    public Commodity getCommodity() {
+        return this.commodity;
     }
 
     /**
@@ -655,6 +666,7 @@ public class GetServiceResponseBody extends TeaModel {
         private String approvalType; 
         private BillEntityMappings billEntityMappings; 
         private String categories; 
+        private Commodity commodity; 
         private String commodityCode; 
         private java.util.List < CommodityEntities> commodityEntities; 
         private java.util.List < CommoditySpecifications> commoditySpecifications; 
@@ -738,6 +750,14 @@ public class GetServiceResponseBody extends TeaModel {
          */
         public Builder categories(String categories) {
             this.categories = categories;
+            return this;
+        }
+
+        /**
+         * Commodity.
+         */
+        public Builder commodity(Commodity commodity) {
+            this.commodity = commodity;
             return this;
         }
 
@@ -1389,6 +1409,107 @@ public class GetServiceResponseBody extends TeaModel {
 
             public BillEntityMappings build() {
                 return new BillEntityMappings(this);
+            } 
+
+        } 
+
+    }
+    public static class Commodity extends TeaModel {
+        @NameInMap("ChargeType")
+        private String chargeType;
+
+        @NameInMap("Components")
+        private java.util.List < String > components;
+
+        @NameInMap("OrderTime")
+        private java.util.Map < String, java.util.List<String>> orderTime;
+
+        @NameInMap("Type")
+        private String type;
+
+        private Commodity(Builder builder) {
+            this.chargeType = builder.chargeType;
+            this.components = builder.components;
+            this.orderTime = builder.orderTime;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Commodity create() {
+            return builder().build();
+        }
+
+        /**
+         * @return chargeType
+         */
+        public String getChargeType() {
+            return this.chargeType;
+        }
+
+        /**
+         * @return components
+         */
+        public java.util.List < String > getComponents() {
+            return this.components;
+        }
+
+        /**
+         * @return orderTime
+         */
+        public java.util.Map < String, java.util.List<String>> getOrderTime() {
+            return this.orderTime;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private String chargeType; 
+            private java.util.List < String > components; 
+            private java.util.Map < String, java.util.List<String>> orderTime; 
+            private String type; 
+
+            /**
+             * ChargeType.
+             */
+            public Builder chargeType(String chargeType) {
+                this.chargeType = chargeType;
+                return this;
+            }
+
+            /**
+             * Components.
+             */
+            public Builder components(java.util.List < String > components) {
+                this.components = components;
+                return this;
+            }
+
+            /**
+             * OrderTime.
+             */
+            public Builder orderTime(java.util.Map < String, java.util.List<String>> orderTime) {
+                this.orderTime = orderTime;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public Commodity build() {
+                return new Commodity(this);
             } 
 
         } 

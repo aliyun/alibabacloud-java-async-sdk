@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>alibabacloud-computenestsupplier20210521</artifactId>
-  <version>1.1.8</version>
+  <version>1.1.9</version>
   <packaging>jar</packaging>
   <name>alibabacloud-computenestsupplier20210521</name>
   <description>Alibaba Cloud ComputeNestSupplier (20210521) Async SDK for Java
