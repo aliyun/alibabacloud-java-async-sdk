@@ -122,9 +122,6 @@ public class DescribeHybridCloudResourcesResponseBody extends TeaModel {
         @NameInMap("IPv6Enabled")
         private Boolean iPv6Enabled;
 
-        @NameInMap("Ipv6Enabled")
-        private Boolean ipv6Enabled;
-
         @NameInMap("ProtectionResource")
         private String protectionResource;
 
@@ -148,7 +145,6 @@ public class DescribeHybridCloudResourcesResponseBody extends TeaModel {
             this.httpPorts = builder.httpPorts;
             this.httpsPorts = builder.httpsPorts;
             this.iPv6Enabled = builder.iPv6Enabled;
-            this.ipv6Enabled = builder.ipv6Enabled;
             this.protectionResource = builder.protectionResource;
             this.TLSVersion = builder.TLSVersion;
             this.xffHeaderMode = builder.xffHeaderMode;
@@ -234,13 +230,6 @@ public class DescribeHybridCloudResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * @return ipv6Enabled
-         */
-        public Boolean getIpv6Enabled() {
-            return this.ipv6Enabled;
-        }
-
-        /**
          * @return protectionResource
          */
         public String getProtectionResource() {
@@ -279,7 +268,6 @@ public class DescribeHybridCloudResourcesResponseBody extends TeaModel {
             private java.util.List < Long > httpPorts; 
             private java.util.List < Long > httpsPorts; 
             private Boolean iPv6Enabled; 
-            private Boolean ipv6Enabled; 
             private String protectionResource; 
             private String TLSVersion; 
             private Integer xffHeaderMode; 
@@ -386,18 +374,6 @@ public class DescribeHybridCloudResourcesResponseBody extends TeaModel {
              */
             public Builder iPv6Enabled(Boolean iPv6Enabled) {
                 this.iPv6Enabled = iPv6Enabled;
-                return this;
-            }
-
-            /**
-             * Indicates whether IPv6 is supported. Valid values:
-             * <p>
-             * 
-             * *   **true**
-             * *   **false**
-             */
-            public Builder ipv6Enabled(Boolean ipv6Enabled) {
-                this.ipv6Enabled = ipv6Enabled;
                 return this;
             }
 
