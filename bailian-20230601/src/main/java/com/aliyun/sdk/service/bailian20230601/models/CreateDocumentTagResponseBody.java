@@ -50,7 +50,7 @@ public class CreateDocumentTagResponseBody extends TeaModel {
         private String tagId; 
 
         /**
-         * RequestId.
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

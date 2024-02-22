@@ -102,7 +102,7 @@ public class ListDocumentTagsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -82,7 +82,7 @@ public class DescribeDocumentImportJobResponseBody extends TeaModel {
         }
 
         /**
-         * JobId.
+         * Id of the request
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -90,7 +90,7 @@ public class DescribeDocumentImportJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
