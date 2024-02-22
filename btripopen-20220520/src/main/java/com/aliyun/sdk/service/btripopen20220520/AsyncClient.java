@@ -67,6 +67,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CommonApplySyncResponse> commonApplySync(CommonApplySyncRequest request);
 
+    CompletableFuture<CooperatorFlightBillSettlementQueryResponse> cooperatorFlightBillSettlementQuery(CooperatorFlightBillSettlementQueryRequest request);
+
     CompletableFuture<CooperatorHotelBillSettlementQueryResponse> cooperatorHotelBillSettlementQuery(CooperatorHotelBillSettlementQueryRequest request);
 
     CompletableFuture<CorpAuthLinkInfoQueryResponse> corpAuthLinkInfoQuery(CorpAuthLinkInfoQueryRequest request);
