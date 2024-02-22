@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.cloudauth20190307;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.cloudauth20190307.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -17,6 +18,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     static AsyncClient create() {
         return builder().build();
     }
+
+    CompletableFuture<AIGCFaceVerifyResponse> aIGCFaceVerify(AIGCFaceVerifyRequest request);
 
     CompletableFuture<CompareFaceVerifyResponse> compareFaceVerify(CompareFaceVerifyRequest request);
 

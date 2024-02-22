@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link Mobile3MetaSimpleVerifyResponse} extends {@link TeaModel}
+ * {@link AIGCFaceVerifyResponse} extends {@link TeaModel}
  *
- * <p>Mobile3MetaSimpleVerifyResponse</p>
+ * <p>AIGCFaceVerifyResponse</p>
  */
-public class Mobile3MetaSimpleVerifyResponse extends Response {
+public class AIGCFaceVerifyResponse extends Response {
     @NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -19,16 +19,16 @@ public class Mobile3MetaSimpleVerifyResponse extends Response {
     private Integer statusCode;
 
     @NameInMap("body")
-    private Mobile3MetaSimpleVerifyResponseBody body;
+    private AIGCFaceVerifyResponseBody body;
 
-    private Mobile3MetaSimpleVerifyResponse(BuilderImpl builder) {
+    private AIGCFaceVerifyResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static Mobile3MetaSimpleVerifyResponse create() {
+    public static AIGCFaceVerifyResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +54,35 @@ public class Mobile3MetaSimpleVerifyResponse extends Response {
     /**
      * @return body
      */
-    public Mobile3MetaSimpleVerifyResponseBody getBody() {
+    public AIGCFaceVerifyResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<Mobile3MetaSimpleVerifyResponse, Builder> {
+    public interface Builder extends Response.Builder<AIGCFaceVerifyResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(Mobile3MetaSimpleVerifyResponseBody body);
+        Builder body(AIGCFaceVerifyResponseBody body);
 
         @Override
-        Mobile3MetaSimpleVerifyResponse build();
+        AIGCFaceVerifyResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<Mobile3MetaSimpleVerifyResponse, Builder>
+            extends Response.BuilderImpl<AIGCFaceVerifyResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private Mobile3MetaSimpleVerifyResponseBody body; 
+        private AIGCFaceVerifyResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(Mobile3MetaSimpleVerifyResponse response) {
+        private BuilderImpl(AIGCFaceVerifyResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +111,14 @@ public class Mobile3MetaSimpleVerifyResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(Mobile3MetaSimpleVerifyResponseBody body) {
+        public Builder body(AIGCFaceVerifyResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public Mobile3MetaSimpleVerifyResponse build() {
-            return new Mobile3MetaSimpleVerifyResponse(this);
+        public AIGCFaceVerifyResponse build() {
+            return new AIGCFaceVerifyResponse(this);
         } 
 
     } 
