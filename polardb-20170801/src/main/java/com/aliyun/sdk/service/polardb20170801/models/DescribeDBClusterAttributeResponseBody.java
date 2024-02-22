@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBClusterAttributeResponseBody</p>
  */
 public class DescribeDBClusterAttributeResponseBody extends TeaModel {
+    @NameInMap("AiCreatingTime")
+    private String aiCreatingTime;
+
     @NameInMap("AiType")
     private String aiType;
 
@@ -175,6 +178,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     private String zoneIds;
 
     private DescribeDBClusterAttributeResponseBody(Builder builder) {
+        this.aiCreatingTime = builder.aiCreatingTime;
         this.aiType = builder.aiType;
         this.architecture = builder.architecture;
         this.blktagTotal = builder.blktagTotal;
@@ -237,6 +241,13 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
 
     public static DescribeDBClusterAttributeResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return aiCreatingTime
+     */
+    public String getAiCreatingTime() {
+        return this.aiCreatingTime;
     }
 
     /**
@@ -618,6 +629,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String aiCreatingTime; 
         private String aiType; 
         private String architecture; 
         private Long blktagTotal; 
@@ -672,6 +684,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         private String VPCId; 
         private String vSwitchId; 
         private String zoneIds; 
+
+        /**
+         * AiCreatingTime.
+         */
+        public Builder aiCreatingTime(String aiCreatingTime) {
+            this.aiCreatingTime = aiCreatingTime;
+            return this;
+        }
 
         /**
          * The information status of the AI node. Valid values:
@@ -1234,6 +1254,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @NameInMap("MemorySize")
         private String memorySize;
 
+        @NameInMap("RemoteMemorySize")
+        private String remoteMemorySize;
+
         @NameInMap("SccMode")
         @Validation(required = true)
         private String sccMode;
@@ -1265,6 +1288,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             this.maxConnections = builder.maxConnections;
             this.maxIOPS = builder.maxIOPS;
             this.memorySize = builder.memorySize;
+            this.remoteMemorySize = builder.remoteMemorySize;
             this.sccMode = builder.sccMode;
             this.serverWeight = builder.serverWeight;
             this.serverlessType = builder.serverlessType;
@@ -1379,6 +1403,13 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return remoteMemorySize
+         */
+        public String getRemoteMemorySize() {
+            return this.remoteMemorySize;
+        }
+
+        /**
          * @return sccMode
          */
         public String getSccMode() {
@@ -1428,6 +1459,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             private Integer maxConnections; 
             private Integer maxIOPS; 
             private String memorySize; 
+            private String remoteMemorySize; 
             private String sccMode; 
             private String serverWeight; 
             private String serverlessType; 
@@ -1570,6 +1602,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
              */
             public Builder memorySize(String memorySize) {
                 this.memorySize = memorySize;
+                return this;
+            }
+
+            /**
+             * RemoteMemorySize.
+             */
+            public Builder remoteMemorySize(String remoteMemorySize) {
+                this.remoteMemorySize = remoteMemorySize;
                 return this;
             }
 
