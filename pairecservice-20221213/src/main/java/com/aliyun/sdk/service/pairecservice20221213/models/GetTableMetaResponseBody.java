@@ -15,6 +15,9 @@ public class GetTableMetaResponseBody extends TeaModel {
     @NameInMap("CanDelete")
     private Boolean canDelete;
 
+    @NameInMap("Config")
+    private String config;
+
     @NameInMap("Description")
     private String description;
 
@@ -23,6 +26,9 @@ public class GetTableMetaResponseBody extends TeaModel {
 
     @NameInMap("GmtCreateTime")
     private String gmtCreateTime;
+
+    @NameInMap("GmtImportedTime")
+    private String gmtImportedTime;
 
     @NameInMap("GmtModifiedTime")
     private String gmtModifiedTime;
@@ -39,6 +45,9 @@ public class GetTableMetaResponseBody extends TeaModel {
     @NameInMap("ResourceId")
     private String resourceId;
 
+    @NameInMap("TableMetaId")
+    private String tableMetaId;
+
     @NameInMap("TableName")
     private String tableName;
 
@@ -50,14 +59,17 @@ public class GetTableMetaResponseBody extends TeaModel {
 
     private GetTableMetaResponseBody(Builder builder) {
         this.canDelete = builder.canDelete;
+        this.config = builder.config;
         this.description = builder.description;
         this.fields = builder.fields;
         this.gmtCreateTime = builder.gmtCreateTime;
+        this.gmtImportedTime = builder.gmtImportedTime;
         this.gmtModifiedTime = builder.gmtModifiedTime;
         this.module = builder.module;
         this.name = builder.name;
         this.requestId = builder.requestId;
         this.resourceId = builder.resourceId;
+        this.tableMetaId = builder.tableMetaId;
         this.tableName = builder.tableName;
         this.type = builder.type;
         this.url = builder.url;
@@ -79,6 +91,13 @@ public class GetTableMetaResponseBody extends TeaModel {
     }
 
     /**
+     * @return config
+     */
+    public String getConfig() {
+        return this.config;
+    }
+
+    /**
      * @return description
      */
     public String getDescription() {
@@ -97,6 +116,13 @@ public class GetTableMetaResponseBody extends TeaModel {
      */
     public String getGmtCreateTime() {
         return this.gmtCreateTime;
+    }
+
+    /**
+     * @return gmtImportedTime
+     */
+    public String getGmtImportedTime() {
+        return this.gmtImportedTime;
     }
 
     /**
@@ -135,6 +161,13 @@ public class GetTableMetaResponseBody extends TeaModel {
     }
 
     /**
+     * @return tableMetaId
+     */
+    public String getTableMetaId() {
+        return this.tableMetaId;
+    }
+
+    /**
      * @return tableName
      */
     public String getTableName() {
@@ -157,14 +190,17 @@ public class GetTableMetaResponseBody extends TeaModel {
 
     public static final class Builder {
         private Boolean canDelete; 
+        private String config; 
         private String description; 
         private java.util.List < Fields> fields; 
         private String gmtCreateTime; 
+        private String gmtImportedTime; 
         private String gmtModifiedTime; 
         private String module; 
         private String name; 
         private String requestId; 
         private String resourceId; 
+        private String tableMetaId; 
         private String tableName; 
         private String type; 
         private String url; 
@@ -174,6 +210,14 @@ public class GetTableMetaResponseBody extends TeaModel {
          */
         public Builder canDelete(Boolean canDelete) {
             this.canDelete = canDelete;
+            return this;
+        }
+
+        /**
+         * Config.
+         */
+        public Builder config(String config) {
+            this.config = config;
             return this;
         }
 
@@ -198,6 +242,14 @@ public class GetTableMetaResponseBody extends TeaModel {
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
+            return this;
+        }
+
+        /**
+         * GmtImportedTime.
+         */
+        public Builder gmtImportedTime(String gmtImportedTime) {
+            this.gmtImportedTime = gmtImportedTime;
             return this;
         }
 
@@ -238,6 +290,14 @@ public class GetTableMetaResponseBody extends TeaModel {
          */
         public Builder resourceId(String resourceId) {
             this.resourceId = resourceId;
+            return this;
+        }
+
+        /**
+         * TableMetaId.
+         */
+        public Builder tableMetaId(String tableMetaId) {
+            this.tableMetaId = tableMetaId;
             return this;
         }
 

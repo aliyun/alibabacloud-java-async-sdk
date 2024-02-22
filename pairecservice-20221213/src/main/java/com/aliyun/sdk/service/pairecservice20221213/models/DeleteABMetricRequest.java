@@ -14,6 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DeleteABMetricRequest extends Request {
     @Path
     @NameInMap("ABMetricId")
+    @Validation(required = true)
     private String ABMetricId;
 
     @Query

@@ -14,21 +14,29 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class GetInstanceResourceTableRequest extends Request {
     @Path
     @NameInMap("InstanceId")
+    @Validation(required = true)
     private String instanceId;
 
     @Path
     @NameInMap("ResourceId")
+    @Validation(required = true)
     private String resourceId;
 
     @Path
     @NameInMap("TableName")
+    @Validation(required = true)
     private String tableName;
+
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
 
     private GetInstanceResourceTableRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
         this.resourceId = builder.resourceId;
         this.tableName = builder.tableName;
+        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -65,10 +73,18 @@ public class GetInstanceResourceTableRequest extends Request {
         return this.tableName;
     }
 
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public static final class Builder extends Request.Builder<GetInstanceResourceTableRequest, Builder> {
         private String instanceId; 
         private String resourceId; 
         private String tableName; 
+        private String regionId; 
 
         private Builder() {
             super();
@@ -79,6 +95,7 @@ public class GetInstanceResourceTableRequest extends Request {
             this.instanceId = request.instanceId;
             this.resourceId = request.resourceId;
             this.tableName = request.tableName;
+            this.regionId = request.regionId;
         } 
 
         /**
@@ -105,6 +122,15 @@ public class GetInstanceResourceTableRequest extends Request {
         public Builder tableName(String tableName) {
             this.putPathParameter("TableName", tableName);
             this.tableName = tableName;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 

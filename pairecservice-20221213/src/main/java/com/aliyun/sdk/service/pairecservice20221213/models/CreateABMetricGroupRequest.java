@@ -18,26 +18,32 @@ public class CreateABMetricGroupRequest extends Request {
 
     @Body
     @NameInMap("ABMetricIds")
+    @Validation(required = true)
     private String ABMetricIds;
 
     @Body
     @NameInMap("Description")
+    @Validation(required = true)
     private String description;
 
     @Body
     @NameInMap("InstanceId")
+    @Validation(required = true)
     private String instanceId;
 
     @Body
     @NameInMap("Name")
+    @Validation(required = true)
     private String name;
 
     @Body
     @NameInMap("Realtime")
+    @Validation(required = true)
     private Boolean realtime;
 
     @Body
     @NameInMap("SceneId")
+    @Validation(required = true)
     private String sceneId;
 
     private CreateABMetricGroupRequest(Builder builder) {

@@ -196,6 +196,9 @@ public class ListTableMetasResponseBody extends TeaModel {
         @NameInMap("CanDelete")
         private Boolean canDelete;
 
+        @NameInMap("Config")
+        private String config;
+
         @NameInMap("Description")
         private String description;
 
@@ -234,6 +237,7 @@ public class ListTableMetasResponseBody extends TeaModel {
 
         private TableMetas(Builder builder) {
             this.canDelete = builder.canDelete;
+            this.config = builder.config;
             this.description = builder.description;
             this.fields = builder.fields;
             this.gmtCreateTime = builder.gmtCreateTime;
@@ -261,6 +265,13 @@ public class ListTableMetasResponseBody extends TeaModel {
          */
         public Boolean getCanDelete() {
             return this.canDelete;
+        }
+
+        /**
+         * @return config
+         */
+        public String getConfig() {
+            return this.config;
         }
 
         /**
@@ -349,6 +360,7 @@ public class ListTableMetasResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean canDelete; 
+            private String config; 
             private String description; 
             private java.util.List < Fields> fields; 
             private String gmtCreateTime; 
@@ -367,6 +379,14 @@ public class ListTableMetasResponseBody extends TeaModel {
              */
             public Builder canDelete(Boolean canDelete) {
                 this.canDelete = canDelete;
+                return this;
+            }
+
+            /**
+             * Config.
+             */
+            public Builder config(String config) {
+                this.config = config;
                 return this;
             }
 

@@ -14,6 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class GetABMetricRequest extends Request {
     @Path
     @NameInMap("ABMetricId")
+    @Validation(required = true)
     private String ABMetricId;
 
     @Query

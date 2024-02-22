@@ -14,30 +14,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class UpdateABMetricGroupRequest extends Request {
     @Path
     @NameInMap("ABMetricGroupId")
+    @Validation(required = true)
     private String ABMetricGroupId;
 
     @Body
     @NameInMap("ABMetricIds")
+    @Validation(required = true)
     private String ABMetricIds;
 
     @Body
     @NameInMap("Description")
+    @Validation(required = true)
     private String description;
 
     @Body
     @NameInMap("InstanceId")
+    @Validation(required = true)
     private String instanceId;
 
     @Body
     @NameInMap("Name")
+    @Validation(required = true)
     private String name;
 
     @Body
     @NameInMap("Realtime")
+    @Validation(required = true)
     private Boolean realtime;
 
     @Body
     @NameInMap("SceneId")
+    @Validation(required = true)
     private String sceneId;
 
     private UpdateABMetricGroupRequest(Builder builder) {

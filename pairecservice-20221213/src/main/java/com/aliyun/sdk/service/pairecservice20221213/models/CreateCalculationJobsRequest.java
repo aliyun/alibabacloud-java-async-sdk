@@ -18,18 +18,22 @@ public class CreateCalculationJobsRequest extends Request {
 
     @Body
     @NameInMap("ABMetricIds")
+    @Validation(required = true)
     private String ABMetricIds;
 
     @Body
     @NameInMap("EndDate")
+    @Validation(required = true)
     private String endDate;
 
     @Body
     @NameInMap("InstanceId")
+    @Validation(required = true)
     private String instanceId;
 
     @Body
     @NameInMap("StartDate")
+    @Validation(required = true)
     private String startDate;
 
     private CreateCalculationJobsRequest(Builder builder) {

@@ -18,10 +18,12 @@ public class CreateABMetricRequest extends Request {
 
     @Body
     @NameInMap("Definition")
+    @Validation(required = true)
     private String definition;
 
     @Body
     @NameInMap("Description")
+    @Validation(required = true)
     private String description;
 
     @Body
@@ -35,6 +37,7 @@ public class CreateABMetricRequest extends Request {
 
     @Body
     @NameInMap("Name")
+    @Validation(required = true)
     private String name;
 
     @Body
@@ -43,6 +46,7 @@ public class CreateABMetricRequest extends Request {
 
     @Body
     @NameInMap("Realtime")
+    @Validation(required = true)
     private Boolean realtime;
 
     @Body
@@ -55,6 +59,7 @@ public class CreateABMetricRequest extends Request {
 
     @Body
     @NameInMap("SceneId")
+    @Validation(required = true)
     private String sceneId;
 
     @Body
@@ -63,10 +68,12 @@ public class CreateABMetricRequest extends Request {
 
     @Body
     @NameInMap("TableMetaId")
+    @Validation(required = true)
     private String tableMetaId;
 
     @Body
     @NameInMap("Type")
+    @Validation(required = true)
     private String type;
 
     private CreateABMetricRequest(Builder builder) {

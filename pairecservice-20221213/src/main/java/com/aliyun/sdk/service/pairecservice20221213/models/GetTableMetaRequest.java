@@ -14,10 +14,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class GetTableMetaRequest extends Request {
     @Path
     @NameInMap("TableMetaId")
+    @Validation(required = true)
     private String tableMetaId;
 
     @Query
     @NameInMap("InstanceId")
+    @Validation(required = true)
     private String instanceId;
 
     private GetTableMetaRequest(Builder builder) {

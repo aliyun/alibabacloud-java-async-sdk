@@ -14,14 +14,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class UpdateABMetricRequest extends Request {
     @Path
     @NameInMap("ABMetricId")
+    @Validation(required = true)
     private String ABMetricId;
 
     @Body
     @NameInMap("Definition")
+    @Validation(required = true)
     private String definition;
 
     @Body
     @NameInMap("Description")
+    @Validation(required = true)
     private String description;
 
     @Body
@@ -35,6 +38,7 @@ public class UpdateABMetricRequest extends Request {
 
     @Body
     @NameInMap("Name")
+    @Validation(required = true)
     private String name;
 
     @Body
@@ -43,6 +47,7 @@ public class UpdateABMetricRequest extends Request {
 
     @Body
     @NameInMap("Realtime")
+    @Validation(required = true)
     private Boolean realtime;
 
     @Body
@@ -55,6 +60,7 @@ public class UpdateABMetricRequest extends Request {
 
     @Body
     @NameInMap("SceneId")
+    @Validation(required = true)
     private String sceneId;
 
     @Body
@@ -63,10 +69,12 @@ public class UpdateABMetricRequest extends Request {
 
     @Body
     @NameInMap("TableMetaId")
+    @Validation(required = true)
     private String tableMetaId;
 
     @Body
     @NameInMap("Type")
+    @Validation(required = true)
     private String type;
 
     private UpdateABMetricRequest(Builder builder) {

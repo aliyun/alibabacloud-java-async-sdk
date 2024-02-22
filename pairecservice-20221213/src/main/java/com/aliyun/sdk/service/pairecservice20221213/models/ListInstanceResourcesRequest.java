@@ -14,7 +14,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListInstanceResourcesRequest extends Request {
     @Path
     @NameInMap("InstanceId")
+    @Validation(required = true)
     private String instanceId;
+
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
 
     @Query
     @NameInMap("Category")
@@ -31,6 +36,7 @@ public class ListInstanceResourcesRequest extends Request {
     private ListInstanceResourcesRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
+        this.regionId = builder.regionId;
         this.category = builder.category;
         this.group = builder.group;
         this.type = builder.type;
@@ -57,6 +63,13 @@ public class ListInstanceResourcesRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return category
      */
     public String getCategory() {
@@ -79,6 +92,7 @@ public class ListInstanceResourcesRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListInstanceResourcesRequest, Builder> {
         private String instanceId; 
+        private String regionId; 
         private String category; 
         private String group; 
         private String type; 
@@ -90,6 +104,7 @@ public class ListInstanceResourcesRequest extends Request {
         private Builder(ListInstanceResourcesRequest request) {
             super(request);
             this.instanceId = request.instanceId;
+            this.regionId = request.regionId;
             this.category = request.category;
             this.group = request.group;
             this.type = request.type;
@@ -101,6 +116,15 @@ public class ListInstanceResourcesRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 

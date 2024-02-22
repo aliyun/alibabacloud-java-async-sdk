@@ -33,6 +33,7 @@ public class CreateFeatureConsistencyCheckJobRequest extends Request {
 
     @Body
     @NameInMap("SamplingDuration")
+    @Validation(required = true)
     private Integer samplingDuration;
 
     private CreateFeatureConsistencyCheckJobRequest(Builder builder) {

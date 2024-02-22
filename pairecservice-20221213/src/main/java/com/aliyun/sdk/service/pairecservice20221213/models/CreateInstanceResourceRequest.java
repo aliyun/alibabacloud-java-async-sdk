@@ -14,27 +14,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class CreateInstanceResourceRequest extends Request {
     @Path
     @NameInMap("InstanceId")
+    @Validation(required = true)
     private String instanceId;
+
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
 
     @Body
     @NameInMap("Category")
+    @Validation(required = true)
     private String category;
 
     @Body
     @NameInMap("Group")
+    @Validation(required = true)
     private String group;
 
     @Body
     @NameInMap("Type")
+    @Validation(required = true)
     private String type;
 
     @Body
     @NameInMap("Uri")
+    @Validation(required = true)
     private String uri;
 
     private CreateInstanceResourceRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
+        this.regionId = builder.regionId;
         this.category = builder.category;
         this.group = builder.group;
         this.type = builder.type;
@@ -59,6 +69,13 @@ public class CreateInstanceResourceRequest extends Request {
      */
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -91,6 +108,7 @@ public class CreateInstanceResourceRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateInstanceResourceRequest, Builder> {
         private String instanceId; 
+        private String regionId; 
         private String category; 
         private String group; 
         private String type; 
@@ -103,6 +121,7 @@ public class CreateInstanceResourceRequest extends Request {
         private Builder(CreateInstanceResourceRequest request) {
             super(request);
             this.instanceId = request.instanceId;
+            this.regionId = request.regionId;
             this.category = request.category;
             this.group = request.group;
             this.type = request.type;
@@ -115,6 +134,15 @@ public class CreateInstanceResourceRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 

@@ -14,10 +14,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class CheckInstanceResourcesRequest extends Request {
     @Path
     @NameInMap("InstanceId")
+    @Validation(required = true)
     private String instanceId;
 
     @Body
     @NameInMap("Type")
+    @Validation(required = true)
     private String type;
 
     @Body

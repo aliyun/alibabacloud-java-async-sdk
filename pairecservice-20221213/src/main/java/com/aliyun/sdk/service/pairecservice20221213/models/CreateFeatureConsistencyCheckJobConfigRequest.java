@@ -48,6 +48,30 @@ public class CreateFeatureConsistencyCheckJobConfigRequest extends Request {
     private String featurePriority;
 
     @Body
+    @NameInMap("FeatureStoreItemId")
+    private String featureStoreItemId;
+
+    @Body
+    @NameInMap("FeatureStoreModelId")
+    private String featureStoreModelId;
+
+    @Body
+    @NameInMap("FeatureStoreProjectId")
+    private String featureStoreProjectId;
+
+    @Body
+    @NameInMap("FeatureStoreProjectName")
+    private String featureStoreProjectName;
+
+    @Body
+    @NameInMap("FeatureStoreSeqFeatureView")
+    private String featureStoreSeqFeatureView;
+
+    @Body
+    @NameInMap("FeatureStoreUserId")
+    private String featureStoreUserId;
+
+    @Body
     @NameInMap("FgJarVersion")
     private String fgJarVersion;
 
@@ -68,22 +92,18 @@ public class CreateFeatureConsistencyCheckJobConfigRequest extends Request {
 
     @Body
     @NameInMap("ItemIdField")
-    @Validation(required = true)
     private String itemIdField;
 
     @Body
     @NameInMap("ItemTable")
-    @Validation(required = true)
     private String itemTable;
 
     @Body
     @NameInMap("ItemTablePartitionField")
-    @Validation(required = true)
     private String itemTablePartitionField;
 
     @Body
     @NameInMap("ItemTablePartitionFieldFormat")
-    @Validation(required = true)
     private String itemTablePartitionFieldFormat;
 
     @Body
@@ -107,26 +127,28 @@ public class CreateFeatureConsistencyCheckJobConfigRequest extends Request {
 
     @Body
     @NameInMap("ServiceId")
+    @Validation(required = true)
     private String serviceId;
 
     @Body
-    @NameInMap("UserIdField")
+    @NameInMap("UseFeatureStore")
     @Validation(required = true)
+    private Boolean useFeatureStore;
+
+    @Body
+    @NameInMap("UserIdField")
     private String userIdField;
 
     @Body
     @NameInMap("UserTable")
-    @Validation(required = true)
     private String userTable;
 
     @Body
     @NameInMap("UserTablePartitionField")
-    @Validation(required = true)
     private String userTablePartitionField;
 
     @Body
     @NameInMap("UserTablePartitionFieldFormat")
-    @Validation(required = true)
     private String userTablePartitionFieldFormat;
 
     @Body
@@ -143,6 +165,12 @@ public class CreateFeatureConsistencyCheckJobConfigRequest extends Request {
         this.featureDisplayExclude = builder.featureDisplayExclude;
         this.featureLandingResourceId = builder.featureLandingResourceId;
         this.featurePriority = builder.featurePriority;
+        this.featureStoreItemId = builder.featureStoreItemId;
+        this.featureStoreModelId = builder.featureStoreModelId;
+        this.featureStoreProjectId = builder.featureStoreProjectId;
+        this.featureStoreProjectName = builder.featureStoreProjectName;
+        this.featureStoreSeqFeatureView = builder.featureStoreSeqFeatureView;
+        this.featureStoreUserId = builder.featureStoreUserId;
         this.fgJarVersion = builder.fgJarVersion;
         this.fgJsonFileName = builder.fgJsonFileName;
         this.generateZip = builder.generateZip;
@@ -156,6 +184,7 @@ public class CreateFeatureConsistencyCheckJobConfigRequest extends Request {
         this.sampleRate = builder.sampleRate;
         this.sceneId = builder.sceneId;
         this.serviceId = builder.serviceId;
+        this.useFeatureStore = builder.useFeatureStore;
         this.userIdField = builder.userIdField;
         this.userTable = builder.userTable;
         this.userTablePartitionField = builder.userTablePartitionField;
@@ -230,6 +259,48 @@ public class CreateFeatureConsistencyCheckJobConfigRequest extends Request {
      */
     public String getFeaturePriority() {
         return this.featurePriority;
+    }
+
+    /**
+     * @return featureStoreItemId
+     */
+    public String getFeatureStoreItemId() {
+        return this.featureStoreItemId;
+    }
+
+    /**
+     * @return featureStoreModelId
+     */
+    public String getFeatureStoreModelId() {
+        return this.featureStoreModelId;
+    }
+
+    /**
+     * @return featureStoreProjectId
+     */
+    public String getFeatureStoreProjectId() {
+        return this.featureStoreProjectId;
+    }
+
+    /**
+     * @return featureStoreProjectName
+     */
+    public String getFeatureStoreProjectName() {
+        return this.featureStoreProjectName;
+    }
+
+    /**
+     * @return featureStoreSeqFeatureView
+     */
+    public String getFeatureStoreSeqFeatureView() {
+        return this.featureStoreSeqFeatureView;
+    }
+
+    /**
+     * @return featureStoreUserId
+     */
+    public String getFeatureStoreUserId() {
+        return this.featureStoreUserId;
     }
 
     /**
@@ -324,6 +395,13 @@ public class CreateFeatureConsistencyCheckJobConfigRequest extends Request {
     }
 
     /**
+     * @return useFeatureStore
+     */
+    public Boolean getUseFeatureStore() {
+        return this.useFeatureStore;
+    }
+
+    /**
      * @return userIdField
      */
     public String getUserIdField() {
@@ -367,6 +445,12 @@ public class CreateFeatureConsistencyCheckJobConfigRequest extends Request {
         private String featureDisplayExclude; 
         private String featureLandingResourceId; 
         private String featurePriority; 
+        private String featureStoreItemId; 
+        private String featureStoreModelId; 
+        private String featureStoreProjectId; 
+        private String featureStoreProjectName; 
+        private String featureStoreSeqFeatureView; 
+        private String featureStoreUserId; 
         private String fgJarVersion; 
         private String fgJsonFileName; 
         private Boolean generateZip; 
@@ -380,6 +464,7 @@ public class CreateFeatureConsistencyCheckJobConfigRequest extends Request {
         private Double sampleRate; 
         private String sceneId; 
         private String serviceId; 
+        private Boolean useFeatureStore; 
         private String userIdField; 
         private String userTable; 
         private String userTablePartitionField; 
@@ -400,6 +485,12 @@ public class CreateFeatureConsistencyCheckJobConfigRequest extends Request {
             this.featureDisplayExclude = request.featureDisplayExclude;
             this.featureLandingResourceId = request.featureLandingResourceId;
             this.featurePriority = request.featurePriority;
+            this.featureStoreItemId = request.featureStoreItemId;
+            this.featureStoreModelId = request.featureStoreModelId;
+            this.featureStoreProjectId = request.featureStoreProjectId;
+            this.featureStoreProjectName = request.featureStoreProjectName;
+            this.featureStoreSeqFeatureView = request.featureStoreSeqFeatureView;
+            this.featureStoreUserId = request.featureStoreUserId;
             this.fgJarVersion = request.fgJarVersion;
             this.fgJsonFileName = request.fgJsonFileName;
             this.generateZip = request.generateZip;
@@ -413,6 +504,7 @@ public class CreateFeatureConsistencyCheckJobConfigRequest extends Request {
             this.sampleRate = request.sampleRate;
             this.sceneId = request.sceneId;
             this.serviceId = request.serviceId;
+            this.useFeatureStore = request.useFeatureStore;
             this.userIdField = request.userIdField;
             this.userTable = request.userTable;
             this.userTablePartitionField = request.userTablePartitionField;
@@ -489,6 +581,60 @@ public class CreateFeatureConsistencyCheckJobConfigRequest extends Request {
         public Builder featurePriority(String featurePriority) {
             this.putBodyParameter("FeaturePriority", featurePriority);
             this.featurePriority = featurePriority;
+            return this;
+        }
+
+        /**
+         * FeatureStoreItemId.
+         */
+        public Builder featureStoreItemId(String featureStoreItemId) {
+            this.putBodyParameter("FeatureStoreItemId", featureStoreItemId);
+            this.featureStoreItemId = featureStoreItemId;
+            return this;
+        }
+
+        /**
+         * FeatureStoreModelId.
+         */
+        public Builder featureStoreModelId(String featureStoreModelId) {
+            this.putBodyParameter("FeatureStoreModelId", featureStoreModelId);
+            this.featureStoreModelId = featureStoreModelId;
+            return this;
+        }
+
+        /**
+         * FeatureStoreProjectId.
+         */
+        public Builder featureStoreProjectId(String featureStoreProjectId) {
+            this.putBodyParameter("FeatureStoreProjectId", featureStoreProjectId);
+            this.featureStoreProjectId = featureStoreProjectId;
+            return this;
+        }
+
+        /**
+         * FeatureStoreProjectName.
+         */
+        public Builder featureStoreProjectName(String featureStoreProjectName) {
+            this.putBodyParameter("FeatureStoreProjectName", featureStoreProjectName);
+            this.featureStoreProjectName = featureStoreProjectName;
+            return this;
+        }
+
+        /**
+         * FeatureStoreSeqFeatureView.
+         */
+        public Builder featureStoreSeqFeatureView(String featureStoreSeqFeatureView) {
+            this.putBodyParameter("FeatureStoreSeqFeatureView", featureStoreSeqFeatureView);
+            this.featureStoreSeqFeatureView = featureStoreSeqFeatureView;
+            return this;
+        }
+
+        /**
+         * FeatureStoreUserId.
+         */
+        public Builder featureStoreUserId(String featureStoreUserId) {
+            this.putBodyParameter("FeatureStoreUserId", featureStoreUserId);
+            this.featureStoreUserId = featureStoreUserId;
             return this;
         }
 
@@ -606,6 +752,15 @@ public class CreateFeatureConsistencyCheckJobConfigRequest extends Request {
         public Builder serviceId(String serviceId) {
             this.putBodyParameter("ServiceId", serviceId);
             this.serviceId = serviceId;
+            return this;
+        }
+
+        /**
+         * UseFeatureStore.
+         */
+        public Builder useFeatureStore(Boolean useFeatureStore) {
+            this.putBodyParameter("UseFeatureStore", useFeatureStore);
+            this.useFeatureStore = useFeatureStore;
             return this;
         }
 

@@ -14,10 +14,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DeleteABMetricGroupRequest extends Request {
     @Path
     @NameInMap("ABMetricGroupId")
+    @Validation(required = true)
     private String ABMetricGroupId;
 
     @Query
     @NameInMap("InstanceId")
+    @Validation(required = true)
     private String instanceId;
 
     private DeleteABMetricGroupRequest(Builder builder) {

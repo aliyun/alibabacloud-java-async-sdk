@@ -27,6 +27,7 @@ public class ListCalculationJobsRequest extends Request {
 
     @Query
     @NameInMap("SceneId")
+    @Validation(required = true)
     private String sceneId;
 
     @Query

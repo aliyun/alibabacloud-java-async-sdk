@@ -14,6 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class UpdateTableMetaRequest extends Request {
     @Path
     @NameInMap("TableMetaId")
+    @Validation(required = true)
     private String tableMetaId;
 
     @Body
@@ -22,26 +23,32 @@ public class UpdateTableMetaRequest extends Request {
 
     @Body
     @NameInMap("Fields")
+    @Validation(required = true)
     private java.util.List < Fields> fields;
 
     @Body
     @NameInMap("InstanceId")
+    @Validation(required = true)
     private String instanceId;
 
     @Body
     @NameInMap("Module")
+    @Validation(required = true)
     private String module;
 
     @Body
     @NameInMap("Name")
+    @Validation(required = true)
     private String name;
 
     @Body
     @NameInMap("ResourceId")
+    @Validation(required = true)
     private String resourceId;
 
     @Body
     @NameInMap("TableName")
+    @Validation(required = true)
     private String tableName;
 
     private UpdateTableMetaRequest(Builder builder) {
@@ -231,20 +238,33 @@ public class UpdateTableMetaRequest extends Request {
     } 
 
     public static class Fields extends TeaModel {
+        @NameInMap("DataType")
+        private String dataType;
+
         @NameInMap("IsDimensionField")
+        @Validation(required = true)
         private Boolean isDimensionField;
 
+        @NameInMap("IsPartitionField")
+        @Validation(required = true)
+        private String isPartitionField;
+
         @NameInMap("Meaning")
+        @Validation(required = true)
         private String meaning;
 
         @NameInMap("Name")
+        @Validation(required = true)
         private String name;
 
         @NameInMap("Type")
+        @Validation(required = true)
         private String type;
 
         private Fields(Builder builder) {
+            this.dataType = builder.dataType;
             this.isDimensionField = builder.isDimensionField;
+            this.isPartitionField = builder.isPartitionField;
             this.meaning = builder.meaning;
             this.name = builder.name;
             this.type = builder.type;
@@ -259,10 +279,24 @@ public class UpdateTableMetaRequest extends Request {
         }
 
         /**
+         * @return dataType
+         */
+        public String getDataType() {
+            return this.dataType;
+        }
+
+        /**
          * @return isDimensionField
          */
         public Boolean getIsDimensionField() {
             return this.isDimensionField;
+        }
+
+        /**
+         * @return isPartitionField
+         */
+        public String getIsPartitionField() {
+            return this.isPartitionField;
         }
 
         /**
@@ -287,16 +321,34 @@ public class UpdateTableMetaRequest extends Request {
         }
 
         public static final class Builder {
+            private String dataType; 
             private Boolean isDimensionField; 
+            private String isPartitionField; 
             private String meaning; 
             private String name; 
             private String type; 
+
+            /**
+             * DataType.
+             */
+            public Builder dataType(String dataType) {
+                this.dataType = dataType;
+                return this;
+            }
 
             /**
              * IsDimensionField.
              */
             public Builder isDimensionField(Boolean isDimensionField) {
                 this.isDimensionField = isDimensionField;
+                return this;
+            }
+
+            /**
+             * IsPartitionField.
+             */
+            public Builder isPartitionField(String isPartitionField) {
+                this.isPartitionField = isPartitionField;
                 return this;
             }
 

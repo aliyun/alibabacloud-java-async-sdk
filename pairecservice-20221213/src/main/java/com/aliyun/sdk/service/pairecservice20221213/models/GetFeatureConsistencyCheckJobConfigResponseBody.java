@@ -36,6 +36,24 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
     @NameInMap("FeaturePriority")
     private String featurePriority;
 
+    @NameInMap("FeatureStoreItemId")
+    private String featureStoreItemId;
+
+    @NameInMap("FeatureStoreModelId")
+    private String featureStoreModelId;
+
+    @NameInMap("FeatureStoreProjectId")
+    private String featureStoreProjectId;
+
+    @NameInMap("FeatureStoreProjectName")
+    private String featureStoreProjectName;
+
+    @NameInMap("FeatureStoreSeqFeatureView")
+    private String featureStoreSeqFeatureView;
+
+    @NameInMap("FeatureStoreUserId")
+    private String featureStoreUserId;
+
     @NameInMap("FgJarVersion")
     private String fgJarVersion;
 
@@ -102,6 +120,9 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
     @NameInMap("Status")
     private String status;
 
+    @NameInMap("UseFeatureStore")
+    private Boolean useFeatureStore;
+
     @NameInMap("UserIdField")
     private String userIdField;
 
@@ -126,6 +147,12 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
         this.featureLandingResourceId = builder.featureLandingResourceId;
         this.featureLandingResourceUri = builder.featureLandingResourceUri;
         this.featurePriority = builder.featurePriority;
+        this.featureStoreItemId = builder.featureStoreItemId;
+        this.featureStoreModelId = builder.featureStoreModelId;
+        this.featureStoreProjectId = builder.featureStoreProjectId;
+        this.featureStoreProjectName = builder.featureStoreProjectName;
+        this.featureStoreSeqFeatureView = builder.featureStoreSeqFeatureView;
+        this.featureStoreUserId = builder.featureStoreUserId;
         this.fgJarVersion = builder.fgJarVersion;
         this.fgJsonFileName = builder.fgJsonFileName;
         this.generateZip = builder.generateZip;
@@ -148,6 +175,7 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
         this.serviceId = builder.serviceId;
         this.serviceName = builder.serviceName;
         this.status = builder.status;
+        this.useFeatureStore = builder.useFeatureStore;
         this.userIdField = builder.userIdField;
         this.userTable = builder.userTable;
         this.userTablePartitionField = builder.userTablePartitionField;
@@ -217,6 +245,48 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
      */
     public String getFeaturePriority() {
         return this.featurePriority;
+    }
+
+    /**
+     * @return featureStoreItemId
+     */
+    public String getFeatureStoreItemId() {
+        return this.featureStoreItemId;
+    }
+
+    /**
+     * @return featureStoreModelId
+     */
+    public String getFeatureStoreModelId() {
+        return this.featureStoreModelId;
+    }
+
+    /**
+     * @return featureStoreProjectId
+     */
+    public String getFeatureStoreProjectId() {
+        return this.featureStoreProjectId;
+    }
+
+    /**
+     * @return featureStoreProjectName
+     */
+    public String getFeatureStoreProjectName() {
+        return this.featureStoreProjectName;
+    }
+
+    /**
+     * @return featureStoreSeqFeatureView
+     */
+    public String getFeatureStoreSeqFeatureView() {
+        return this.featureStoreSeqFeatureView;
+    }
+
+    /**
+     * @return featureStoreUserId
+     */
+    public String getFeatureStoreUserId() {
+        return this.featureStoreUserId;
     }
 
     /**
@@ -374,6 +444,13 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
     }
 
     /**
+     * @return useFeatureStore
+     */
+    public Boolean getUseFeatureStore() {
+        return this.useFeatureStore;
+    }
+
+    /**
      * @return userIdField
      */
     public String getUserIdField() {
@@ -417,6 +494,12 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
         private String featureLandingResourceId; 
         private String featureLandingResourceUri; 
         private String featurePriority; 
+        private String featureStoreItemId; 
+        private String featureStoreModelId; 
+        private String featureStoreProjectId; 
+        private String featureStoreProjectName; 
+        private String featureStoreSeqFeatureView; 
+        private String featureStoreUserId; 
         private String fgJarVersion; 
         private String fgJsonFileName; 
         private Boolean generateZip; 
@@ -439,6 +522,7 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
         private String serviceId; 
         private String serviceName; 
         private String status; 
+        private Boolean useFeatureStore; 
         private String userIdField; 
         private String userTable; 
         private String userTablePartitionField; 
@@ -506,6 +590,54 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
          */
         public Builder featurePriority(String featurePriority) {
             this.featurePriority = featurePriority;
+            return this;
+        }
+
+        /**
+         * FeatureStoreItemId.
+         */
+        public Builder featureStoreItemId(String featureStoreItemId) {
+            this.featureStoreItemId = featureStoreItemId;
+            return this;
+        }
+
+        /**
+         * FeatureStoreModelId.
+         */
+        public Builder featureStoreModelId(String featureStoreModelId) {
+            this.featureStoreModelId = featureStoreModelId;
+            return this;
+        }
+
+        /**
+         * FeatureStoreProjectId.
+         */
+        public Builder featureStoreProjectId(String featureStoreProjectId) {
+            this.featureStoreProjectId = featureStoreProjectId;
+            return this;
+        }
+
+        /**
+         * FeatureStoreProjectName.
+         */
+        public Builder featureStoreProjectName(String featureStoreProjectName) {
+            this.featureStoreProjectName = featureStoreProjectName;
+            return this;
+        }
+
+        /**
+         * FeatureStoreSeqFeatureView.
+         */
+        public Builder featureStoreSeqFeatureView(String featureStoreSeqFeatureView) {
+            this.featureStoreSeqFeatureView = featureStoreSeqFeatureView;
+            return this;
+        }
+
+        /**
+         * FeatureStoreUserId.
+         */
+        public Builder featureStoreUserId(String featureStoreUserId) {
+            this.featureStoreUserId = featureStoreUserId;
             return this;
         }
 
@@ -682,6 +814,14 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
          */
         public Builder status(String status) {
             this.status = status;
+            return this;
+        }
+
+        /**
+         * UseFeatureStore.
+         */
+        public Builder useFeatureStore(Boolean useFeatureStore) {
+            this.useFeatureStore = useFeatureStore;
             return this;
         }
 

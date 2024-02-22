@@ -19,6 +19,7 @@ public class ListTableMetasRequest extends Request {
 
     @Query
     @NameInMap("Module")
+    @Validation(required = true)
     private String module;
 
     @Query

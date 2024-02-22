@@ -14,7 +14,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListABMetricGroupsRequest extends Request {
     @Query
     @NameInMap("InstanceId")
+    @Validation(required = true)
     private String instanceId;
+
+    @Query
+    @NameInMap("Order")
+    private String order;
 
     @Query
     @NameInMap("PageNumber")
@@ -32,13 +37,19 @@ public class ListABMetricGroupsRequest extends Request {
     @NameInMap("SceneId")
     private String sceneId;
 
+    @Query
+    @NameInMap("SortBy")
+    private String sortBy;
+
     private ListABMetricGroupsRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
+        this.order = builder.order;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.realtime = builder.realtime;
         this.sceneId = builder.sceneId;
+        this.sortBy = builder.sortBy;
     }
 
     public static Builder builder() {
@@ -59,6 +70,13 @@ public class ListABMetricGroupsRequest extends Request {
      */
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    /**
+     * @return order
+     */
+    public String getOrder() {
+        return this.order;
     }
 
     /**
@@ -89,12 +107,21 @@ public class ListABMetricGroupsRequest extends Request {
         return this.sceneId;
     }
 
+    /**
+     * @return sortBy
+     */
+    public String getSortBy() {
+        return this.sortBy;
+    }
+
     public static final class Builder extends Request.Builder<ListABMetricGroupsRequest, Builder> {
         private String instanceId; 
+        private String order; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private Boolean realtime; 
         private String sceneId; 
+        private String sortBy; 
 
         private Builder() {
             super();
@@ -103,10 +130,12 @@ public class ListABMetricGroupsRequest extends Request {
         private Builder(ListABMetricGroupsRequest request) {
             super(request);
             this.instanceId = request.instanceId;
+            this.order = request.order;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.realtime = request.realtime;
             this.sceneId = request.sceneId;
+            this.sortBy = request.sortBy;
         } 
 
         /**
@@ -115,6 +144,15 @@ public class ListABMetricGroupsRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * Order.
+         */
+        public Builder order(String order) {
+            this.putQueryParameter("Order", order);
+            this.order = order;
             return this;
         }
 
@@ -151,6 +189,15 @@ public class ListABMetricGroupsRequest extends Request {
         public Builder sceneId(String sceneId) {
             this.putQueryParameter("SceneId", sceneId);
             this.sceneId = sceneId;
+            return this;
+        }
+
+        /**
+         * SortBy.
+         */
+        public Builder sortBy(String sortBy) {
+            this.putQueryParameter("SortBy", sortBy);
+            this.sortBy = sortBy;
             return this;
         }
 

@@ -14,10 +14,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class GetCalculationJobRequest extends Request {
     @Path
     @NameInMap("CalculationJobId")
+    @Validation(required = true)
     private String calculationJobId;
 
     @Query
     @NameInMap("InstanceId")
+    @Validation(required = true)
     private String instanceId;
 
     private GetCalculationJobRequest(Builder builder) {

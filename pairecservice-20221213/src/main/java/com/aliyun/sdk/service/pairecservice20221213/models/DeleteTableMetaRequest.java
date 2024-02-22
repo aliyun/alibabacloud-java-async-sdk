@@ -14,6 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DeleteTableMetaRequest extends Request {
     @Path
     @NameInMap("TableMetaId")
+    @Validation(required = true)
     private String tableMetaId;
 
     @Query

@@ -53,6 +53,30 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
     private String featurePriority;
 
     @Body
+    @NameInMap("FeatureStoreItemId")
+    private String featureStoreItemId;
+
+    @Body
+    @NameInMap("FeatureStoreModelId")
+    private String featureStoreModelId;
+
+    @Body
+    @NameInMap("FeatureStoreProjectId")
+    private String featureStoreProjectId;
+
+    @Body
+    @NameInMap("FeatureStoreProjectName")
+    private String featureStoreProjectName;
+
+    @Body
+    @NameInMap("FeatureStoreSeqFeatureView")
+    private String featureStoreSeqFeatureView;
+
+    @Body
+    @NameInMap("FeatureStoreUserId")
+    private String featureStoreUserId;
+
+    @Body
     @NameInMap("FgJarVersion")
     private String fgJarVersion;
 
@@ -70,6 +94,10 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
     @NameInMap("InstanceId")
     @Validation(required = true)
     private String instanceId;
+
+    @Body
+    @NameInMap("IsUseFeatureStore")
+    private Boolean isUseFeatureStore;
 
     @Body
     @NameInMap("ItemIdField")
@@ -149,10 +177,17 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
         this.featureDisplayExclude = builder.featureDisplayExclude;
         this.featureLandingResourceId = builder.featureLandingResourceId;
         this.featurePriority = builder.featurePriority;
+        this.featureStoreItemId = builder.featureStoreItemId;
+        this.featureStoreModelId = builder.featureStoreModelId;
+        this.featureStoreProjectId = builder.featureStoreProjectId;
+        this.featureStoreProjectName = builder.featureStoreProjectName;
+        this.featureStoreSeqFeatureView = builder.featureStoreSeqFeatureView;
+        this.featureStoreUserId = builder.featureStoreUserId;
         this.fgJarVersion = builder.fgJarVersion;
         this.fgJsonFileName = builder.fgJsonFileName;
         this.generateZip = builder.generateZip;
         this.instanceId = builder.instanceId;
+        this.isUseFeatureStore = builder.isUseFeatureStore;
         this.itemIdField = builder.itemIdField;
         this.itemTable = builder.itemTable;
         this.itemTablePartitionField = builder.itemTablePartitionField;
@@ -246,6 +281,48 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
     }
 
     /**
+     * @return featureStoreItemId
+     */
+    public String getFeatureStoreItemId() {
+        return this.featureStoreItemId;
+    }
+
+    /**
+     * @return featureStoreModelId
+     */
+    public String getFeatureStoreModelId() {
+        return this.featureStoreModelId;
+    }
+
+    /**
+     * @return featureStoreProjectId
+     */
+    public String getFeatureStoreProjectId() {
+        return this.featureStoreProjectId;
+    }
+
+    /**
+     * @return featureStoreProjectName
+     */
+    public String getFeatureStoreProjectName() {
+        return this.featureStoreProjectName;
+    }
+
+    /**
+     * @return featureStoreSeqFeatureView
+     */
+    public String getFeatureStoreSeqFeatureView() {
+        return this.featureStoreSeqFeatureView;
+    }
+
+    /**
+     * @return featureStoreUserId
+     */
+    public String getFeatureStoreUserId() {
+        return this.featureStoreUserId;
+    }
+
+    /**
      * @return fgJarVersion
      */
     public String getFgJarVersion() {
@@ -271,6 +348,13 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
      */
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    /**
+     * @return isUseFeatureStore
+     */
+    public Boolean getIsUseFeatureStore() {
+        return this.isUseFeatureStore;
     }
 
     /**
@@ -381,10 +465,17 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
         private String featureDisplayExclude; 
         private String featureLandingResourceId; 
         private String featurePriority; 
+        private String featureStoreItemId; 
+        private String featureStoreModelId; 
+        private String featureStoreProjectId; 
+        private String featureStoreProjectName; 
+        private String featureStoreSeqFeatureView; 
+        private String featureStoreUserId; 
         private String fgJarVersion; 
         private String fgJsonFileName; 
         private Boolean generateZip; 
         private String instanceId; 
+        private Boolean isUseFeatureStore; 
         private String itemIdField; 
         private String itemTable; 
         private String itemTablePartitionField; 
@@ -415,10 +506,17 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
             this.featureDisplayExclude = request.featureDisplayExclude;
             this.featureLandingResourceId = request.featureLandingResourceId;
             this.featurePriority = request.featurePriority;
+            this.featureStoreItemId = request.featureStoreItemId;
+            this.featureStoreModelId = request.featureStoreModelId;
+            this.featureStoreProjectId = request.featureStoreProjectId;
+            this.featureStoreProjectName = request.featureStoreProjectName;
+            this.featureStoreSeqFeatureView = request.featureStoreSeqFeatureView;
+            this.featureStoreUserId = request.featureStoreUserId;
             this.fgJarVersion = request.fgJarVersion;
             this.fgJsonFileName = request.fgJsonFileName;
             this.generateZip = request.generateZip;
             this.instanceId = request.instanceId;
+            this.isUseFeatureStore = request.isUseFeatureStore;
             this.itemIdField = request.itemIdField;
             this.itemTable = request.itemTable;
             this.itemTablePartitionField = request.itemTablePartitionField;
@@ -517,6 +615,60 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
         }
 
         /**
+         * FeatureStoreItemId.
+         */
+        public Builder featureStoreItemId(String featureStoreItemId) {
+            this.putBodyParameter("FeatureStoreItemId", featureStoreItemId);
+            this.featureStoreItemId = featureStoreItemId;
+            return this;
+        }
+
+        /**
+         * FeatureStoreModelId.
+         */
+        public Builder featureStoreModelId(String featureStoreModelId) {
+            this.putBodyParameter("FeatureStoreModelId", featureStoreModelId);
+            this.featureStoreModelId = featureStoreModelId;
+            return this;
+        }
+
+        /**
+         * FeatureStoreProjectId.
+         */
+        public Builder featureStoreProjectId(String featureStoreProjectId) {
+            this.putBodyParameter("FeatureStoreProjectId", featureStoreProjectId);
+            this.featureStoreProjectId = featureStoreProjectId;
+            return this;
+        }
+
+        /**
+         * FeatureStoreProjectName.
+         */
+        public Builder featureStoreProjectName(String featureStoreProjectName) {
+            this.putBodyParameter("FeatureStoreProjectName", featureStoreProjectName);
+            this.featureStoreProjectName = featureStoreProjectName;
+            return this;
+        }
+
+        /**
+         * FeatureStoreSeqFeatureView.
+         */
+        public Builder featureStoreSeqFeatureView(String featureStoreSeqFeatureView) {
+            this.putBodyParameter("FeatureStoreSeqFeatureView", featureStoreSeqFeatureView);
+            this.featureStoreSeqFeatureView = featureStoreSeqFeatureView;
+            return this;
+        }
+
+        /**
+         * FeatureStoreUserId.
+         */
+        public Builder featureStoreUserId(String featureStoreUserId) {
+            this.putBodyParameter("FeatureStoreUserId", featureStoreUserId);
+            this.featureStoreUserId = featureStoreUserId;
+            return this;
+        }
+
+        /**
          * FgJarVersion.
          */
         public Builder fgJarVersion(String fgJarVersion) {
@@ -549,6 +701,15 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * IsUseFeatureStore.
+         */
+        public Builder isUseFeatureStore(Boolean isUseFeatureStore) {
+            this.putBodyParameter("IsUseFeatureStore", isUseFeatureStore);
+            this.isUseFeatureStore = isUseFeatureStore;
             return this;
         }
 
