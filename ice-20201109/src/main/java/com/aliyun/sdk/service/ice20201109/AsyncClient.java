@@ -365,12 +365,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<SubmitStandardCustomizedVoiceJobResponse> submitStandardCustomizedVoiceJob(SubmitStandardCustomizedVoiceJobRequest request);
 
-    /**
-      * @deprecated
-      *
-     */
-    CompletableFuture<SubmitSubtitleProduceJobResponse> submitSubtitleProduceJob(SubmitSubtitleProduceJobRequest request);
-
     CompletableFuture<SubmitSyncMediaInfoJobResponse> submitSyncMediaInfoJob(SubmitSyncMediaInfoJobRequest request);
 
     CompletableFuture<SubmitTranscodeJobResponse> submitTranscodeJob(SubmitTranscodeJobRequest request);
