@@ -230,6 +230,12 @@ public class CreateADConnectorDirectoryRequest extends Request {
 
         /**
          * The method that is used to connect the client to cloud desktops.
+         * <p>
+         * 
+         * Valid values:
+         * - VPC (Only connect through VPC)
+         * - Internet (Only connect through the Internet [Default])
+         * - Any (Both VPC and Internet are supported)
          */
         public Builder desktopAccessType(String desktopAccessType) {
             this.putQueryParameter("DesktopAccessType", desktopAccessType);
@@ -284,6 +290,11 @@ public class CreateADConnectorDirectoryRequest extends Request {
 
         /**
          * Specifies whether to grant the permissions of the local administrator to the regular user of the cloud desktop.
+         * <p>
+         * 
+         * Valid values:
+         * - true (To grant the local administrator permission [Default])
+         * - false (Not to grant the local administrator permission)
          */
         public Builder enableAdminAccess(Boolean enableAdminAccess) {
             this.putQueryParameter("EnableAdminAccess", enableAdminAccess);
@@ -296,6 +307,10 @@ public class CreateADConnectorDirectoryRequest extends Request {
          * <p>
          * 
          * >  The first time you log on to the Elastic Desktop Service (EDS) client as a regular user, you must bind an MFA device.
+         * 
+         * Valid values:
+         * - true (To enable MFA)
+         * - false (To disable MFA [Default])
          */
         public Builder mfaEnabled(Boolean mfaEnabled) {
             this.putQueryParameter("MfaEnabled", mfaEnabled);
@@ -314,6 +329,11 @@ public class CreateADConnectorDirectoryRequest extends Request {
 
         /**
          * The type of the AD connector.
+         * <p>
+         * 
+         * Valid values:
+         * - 1 (General)
+         * - 2 (Advanced)
          */
         public Builder specification(Long specification) {
             this.putQueryParameter("Specification", specification);
