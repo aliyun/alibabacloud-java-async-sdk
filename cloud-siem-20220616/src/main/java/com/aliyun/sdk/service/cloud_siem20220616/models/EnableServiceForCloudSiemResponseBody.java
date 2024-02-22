@@ -50,7 +50,11 @@ public class EnableServiceForCloudSiemResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * Indicates whether the threat analysis feature is authorized to access the resource directory. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -58,7 +62,7 @@ public class EnableServiceForCloudSiemResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -86,7 +86,7 @@ public class DescribeAlertSceneResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The response code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class DescribeAlertSceneResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class DescribeAlertSceneResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class DescribeAlertSceneResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class DescribeAlertSceneResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -194,7 +198,7 @@ public class DescribeAlertSceneResponseBody extends TeaModel {
             private java.util.List < String > values; 
 
             /**
-             * Name.
+             * The display name of the attribute for the entity.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -202,7 +206,7 @@ public class DescribeAlertSceneResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The attribute of the entity.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -210,7 +214,7 @@ public class DescribeAlertSceneResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The right operand that is displayed by default in the whitelist rule.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -218,7 +222,7 @@ public class DescribeAlertSceneResponseBody extends TeaModel {
             }
 
             /**
-             * Values.
+             * The right operands supported by the whitelist rule.
              */
             public Builder values(java.util.List < String > values) {
                 this.values = values;
@@ -331,7 +335,7 @@ public class DescribeAlertSceneResponseBody extends TeaModel {
             private java.util.List < Targets> targets; 
 
             /**
-             * AlertName.
+             * The name of the alert. The value varies based on the display language (Chinese or English) of the Security Center console.
              */
             public Builder alertName(String alertName) {
                 this.alertName = alertName;
@@ -339,7 +343,7 @@ public class DescribeAlertSceneResponseBody extends TeaModel {
             }
 
             /**
-             * AlertNameId.
+             * The ID of the alert name.
              */
             public Builder alertNameId(String alertNameId) {
                 this.alertNameId = alertNameId;
@@ -347,7 +351,7 @@ public class DescribeAlertSceneResponseBody extends TeaModel {
             }
 
             /**
-             * AlertTile.
+             * The title of the alert notification. The value varies based on the display language (Chinese or English) of the Security Center console.
              */
             public Builder alertTile(String alertTile) {
                 this.alertTile = alertTile;
@@ -355,7 +359,7 @@ public class DescribeAlertSceneResponseBody extends TeaModel {
             }
 
             /**
-             * AlertTileId.
+             * The ID of the alert title.
              */
             public Builder alertTileId(String alertTileId) {
                 this.alertTileId = alertTileId;
@@ -363,7 +367,7 @@ public class DescribeAlertSceneResponseBody extends TeaModel {
             }
 
             /**
-             * AlertType.
+             * The type of the alert. The value varies based on the display language (Chinese or English) of the Security Center console.
              */
             public Builder alertType(String alertType) {
                 this.alertType = alertType;
@@ -371,7 +375,7 @@ public class DescribeAlertSceneResponseBody extends TeaModel {
             }
 
             /**
-             * AlertTypeId.
+             * The ID of the alert type.
              */
             public Builder alertTypeId(String alertTypeId) {
                 this.alertTypeId = alertTypeId;
@@ -379,7 +383,7 @@ public class DescribeAlertSceneResponseBody extends TeaModel {
             }
 
             /**
-             * Targets.
+             * The information about the entities for which you need to add the alert to the whitelist.
              */
             public Builder targets(java.util.List < Targets> targets) {
                 this.targets = targets;

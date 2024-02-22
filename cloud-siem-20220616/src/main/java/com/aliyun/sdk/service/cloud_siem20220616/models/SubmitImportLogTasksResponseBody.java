@@ -50,7 +50,7 @@ public class SubmitImportLogTasksResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class SubmitImportLogTasksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class SubmitImportLogTasksResponseBody extends TeaModel {
             private Integer count; 
 
             /**
-             * Count.
+             * The number of log collection tasks that are submitted.
              */
             public Builder count(Integer count) {
                 this.count = count;

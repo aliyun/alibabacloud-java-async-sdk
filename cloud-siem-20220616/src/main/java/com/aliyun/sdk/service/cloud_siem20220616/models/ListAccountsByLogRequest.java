@@ -99,7 +99,14 @@ public class ListAccountsByLogRequest extends Request {
         } 
 
         /**
-         * CloudCode.
+         * The code that is used for multi-cloud environments.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   qcloud
+         * *   hcloud
+         * *   aliyun
          */
         public Builder cloudCode(String cloudCode) {
             this.putBodyParameter("CloudCode", cloudCode);
@@ -108,7 +115,7 @@ public class ListAccountsByLogRequest extends Request {
         }
 
         /**
-         * LogCodes.
+         * The codes of logs. The value is a JSON array.
          */
         public Builder logCodes(java.util.List < String > logCodes) {
             this.putBodyParameter("LogCodes", logCodes);
@@ -117,7 +124,7 @@ public class ListAccountsByLogRequest extends Request {
         }
 
         /**
-         * ProdCode.
+         * The code of the service.
          */
         public Builder prodCode(String prodCode) {
             this.putBodyParameter("ProdCode", prodCode);
@@ -126,7 +133,11 @@ public class ListAccountsByLogRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The data management center of the threat analysis feature. Specify this parameter based on the region where your assets reside. Valid values:
+         * <p>
+         * 
+         * *   cn-hangzhou: Your assets reside in regions inside China.
+         * *   ap-southeast-1: Your assets reside in regions outside China.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);

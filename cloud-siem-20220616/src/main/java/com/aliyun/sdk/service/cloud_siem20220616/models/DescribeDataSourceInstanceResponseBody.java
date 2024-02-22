@@ -50,7 +50,7 @@ public class DescribeDataSourceInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class DescribeDataSourceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeDataSourceInstanceResponseBody extends TeaModel {
             private String paraValue; 
 
             /**
-             * ParaCode.
+             * The code of the parameter.
              */
             public Builder paraCode(String paraCode) {
                 this.paraCode = paraCode;
@@ -118,7 +118,7 @@ public class DescribeDataSourceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ParaValue.
+             * The value of the parameter.
              */
             public Builder paraValue(String paraValue) {
                 this.paraValue = paraValue;
@@ -195,7 +195,7 @@ public class DescribeDataSourceInstanceResponseBody extends TeaModel {
             private java.util.List < DataSourceInstanceParams> dataSourceInstanceParams; 
 
             /**
-             * AccountId.
+             * The ID of the cloud account.
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -203,7 +203,12 @@ public class DescribeDataSourceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * CloudCode.
+             * The code of the cloud service provider. Valid values:
+             * <p>
+             * 
+             * *   qcloud: Tencent Cloud
+             * *   aliyun: Alibaba Cloud
+             * *   hcloud: Huawei Cloud
              */
             public Builder cloudCode(String cloudCode) {
                 this.cloudCode = cloudCode;
@@ -211,7 +216,7 @@ public class DescribeDataSourceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * DataSourceInstanceId.
+             * The ID of the data source. The ID is an MD5 hash value that is calculated by the threat analysis feature based on specific parameters.
              */
             public Builder dataSourceInstanceId(String dataSourceInstanceId) {
                 this.dataSourceInstanceId = dataSourceInstanceId;
@@ -219,7 +224,7 @@ public class DescribeDataSourceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * DataSourceInstanceParams.
+             * The parameters of the data source.
              */
             public Builder dataSourceInstanceParams(java.util.List < DataSourceInstanceParams> dataSourceInstanceParams) {
                 this.dataSourceInstanceParams = dataSourceInstanceParams;

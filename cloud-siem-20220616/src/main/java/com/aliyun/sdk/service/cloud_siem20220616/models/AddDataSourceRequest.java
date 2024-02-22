@@ -139,7 +139,7 @@ public class AddDataSourceRequest extends Request {
         } 
 
         /**
-         * AccountId.
+         * The ID of the cloud account.
          */
         public Builder accountId(String accountId) {
             this.putBodyParameter("AccountId", accountId);
@@ -148,7 +148,14 @@ public class AddDataSourceRequest extends Request {
         }
 
         /**
-         * CloudCode.
+         * The code of the cloud service provider.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   qcloud
+         * *   hcloud
+         * *   aliyun
          */
         public Builder cloudCode(String cloudCode) {
             this.putBodyParameter("CloudCode", cloudCode);
@@ -157,7 +164,7 @@ public class AddDataSourceRequest extends Request {
         }
 
         /**
-         * DataSourceInstanceName.
+         * The name of the data source.
          */
         public Builder dataSourceInstanceName(String dataSourceInstanceName) {
             this.putBodyParameter("DataSourceInstanceName", dataSourceInstanceName);
@@ -166,7 +173,7 @@ public class AddDataSourceRequest extends Request {
         }
 
         /**
-         * DataSourceInstanceParams.
+         * The parameters of the data source. Set this parameter to a JSON array.
          */
         public Builder dataSourceInstanceParams(String dataSourceInstanceParams) {
             this.putBodyParameter("DataSourceInstanceParams", dataSourceInstanceParams);
@@ -175,7 +182,7 @@ public class AddDataSourceRequest extends Request {
         }
 
         /**
-         * DataSourceInstanceRemark.
+         * The remarks on the data source.
          */
         public Builder dataSourceInstanceRemark(String dataSourceInstanceRemark) {
             this.putBodyParameter("DataSourceInstanceRemark", dataSourceInstanceRemark);
@@ -184,7 +191,12 @@ public class AddDataSourceRequest extends Request {
         }
 
         /**
-         * DataSourceType.
+         * The type of the data source. Valid values:
+         * <p>
+         * 
+         * *   obs: Huawei Cloud Object Storage Service (OBS)
+         * *   wafApi: download API of Tencent Cloud Web Application Firewall (WAF)
+         * *   ckafka: Tencent Cloud Kafka (CKafka)
          */
         public Builder dataSourceType(String dataSourceType) {
             this.putBodyParameter("DataSourceType", dataSourceType);
@@ -193,7 +205,11 @@ public class AddDataSourceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:
+         * <p>
+         * 
+         * *   cn-hangzhou: Your assets reside in regions in China.
+         * *   ap-southeast-1: Your assets reside in regions outside China.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);

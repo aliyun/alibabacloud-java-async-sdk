@@ -140,7 +140,11 @@ public class AddUserSourceLogConfigRequest extends Request {
         } 
 
         /**
-         * Deleted.
+         * Specifies whether to add logs or delete added logs. Valid values:
+         * <p>
+         * 
+         * *   \-1: deletes added logs.
+         * *   0: adds logs.
          */
         public Builder deleted(Integer deleted) {
             this.putBodyParameter("Deleted", deleted);
@@ -149,7 +153,7 @@ public class AddUserSourceLogConfigRequest extends Request {
         }
 
         /**
-         * DisPlayLine.
+         * The display details of the Logstore.
          */
         public Builder disPlayLine(String disPlayLine) {
             this.putBodyParameter("DisPlayLine", disPlayLine);
@@ -158,7 +162,11 @@ public class AddUserSourceLogConfigRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:
+         * <p>
+         * 
+         * *   cn-hangzhou: Your assets reside in regions in China.
+         * *   ap-southeast-1: Your assets reside in regions outside China.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -167,7 +175,7 @@ public class AddUserSourceLogConfigRequest extends Request {
         }
 
         /**
-         * SourceLogCode.
+         * The log code.
          */
         public Builder sourceLogCode(String sourceLogCode) {
             this.putBodyParameter("SourceLogCode", sourceLogCode);
@@ -176,7 +184,7 @@ public class AddUserSourceLogConfigRequest extends Request {
         }
 
         /**
-         * SourceLogInfo.
+         * The details of the Logstore that you want to use in the JSON string format.
          */
         public Builder sourceLogInfo(String sourceLogInfo) {
             this.putBodyParameter("SourceLogInfo", sourceLogInfo);
@@ -185,7 +193,7 @@ public class AddUserSourceLogConfigRequest extends Request {
         }
 
         /**
-         * SourceProdCode.
+         * The code of the cloud service.
          */
         public Builder sourceProdCode(String sourceProdCode) {
             this.putBodyParameter("SourceProdCode", sourceProdCode);
@@ -194,7 +202,7 @@ public class AddUserSourceLogConfigRequest extends Request {
         }
 
         /**
-         * SubUserId.
+         * The ID of the Alibaba Cloud account.
          */
         public Builder subUserId(Long subUserId) {
             this.putBodyParameter("SubUserId", subUserId);

@@ -232,6 +232,9 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
         @NameInMap("OpLevel")
         private String opLevel;
 
+        @NameInMap("ParamConfig")
+        private java.util.List < ? > paramConfig;
+
         @NameInMap("TaskConfig")
         private String taskConfig;
 
@@ -244,6 +247,7 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
             this.name = builder.name;
             this.opCode = builder.opCode;
             this.opLevel = builder.opLevel;
+            this.paramConfig = builder.paramConfig;
             this.taskConfig = builder.taskConfig;
             this.wafPlaybook = builder.wafPlaybook;
         }
@@ -292,6 +296,13 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
         }
 
         /**
+         * @return paramConfig
+         */
+        public java.util.List < ? > getParamConfig() {
+            return this.paramConfig;
+        }
+
+        /**
          * @return taskConfig
          */
         public String getTaskConfig() {
@@ -311,6 +322,7 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
             private String name; 
             private String opCode; 
             private String opLevel; 
+            private java.util.List < ? > paramConfig; 
             private String taskConfig; 
             private Boolean wafPlaybook; 
 
@@ -355,6 +367,14 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
              */
             public Builder opLevel(String opLevel) {
                 this.opLevel = opLevel;
+                return this;
+            }
+
+            /**
+             * ParamConfig.
+             */
+            public Builder paramConfig(java.util.List < ? > paramConfig) {
+                this.paramConfig = paramConfig;
                 return this;
             }
 

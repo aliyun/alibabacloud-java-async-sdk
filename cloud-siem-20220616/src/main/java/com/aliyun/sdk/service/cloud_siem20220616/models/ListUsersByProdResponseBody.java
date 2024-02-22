@@ -50,7 +50,7 @@ public class ListUsersByProdResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class ListUsersByProdResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -194,7 +194,12 @@ public class ListUsersByProdResponseBody extends TeaModel {
             private String subUserName; 
 
             /**
-             * CloudCode.
+             * The code of the cloud service provider. Valid values:
+             * <p>
+             * 
+             * *   qcloud: Tencent Cloud
+             * *   aliyun: Alibaba Cloud
+             * *   hcloud: Huawei Cloud
              */
             public Builder cloudCode(String cloudCode) {
                 this.cloudCode = cloudCode;
@@ -202,7 +207,7 @@ public class ListUsersByProdResponseBody extends TeaModel {
             }
 
             /**
-             * Imported.
+             * Indicates whether the log is added to the threat analysis feature.
              */
             public Builder imported(Boolean imported) {
                 this.imported = imported;
@@ -210,7 +215,7 @@ public class ListUsersByProdResponseBody extends TeaModel {
             }
 
             /**
-             * LogMdsCode.
+             * The display log code. The value is based on your console settings.
              */
             public Builder logMdsCode(String logMdsCode) {
                 this.logMdsCode = logMdsCode;
@@ -218,7 +223,7 @@ public class ListUsersByProdResponseBody extends TeaModel {
             }
 
             /**
-             * MainUserId.
+             * The ID of the Alibaba Cloud account that is used to purchase the threat analysis feature.
              */
             public Builder mainUserId(Long mainUserId) {
                 this.mainUserId = mainUserId;
@@ -226,7 +231,7 @@ public class ListUsersByProdResponseBody extends TeaModel {
             }
 
             /**
-             * SourceLogCode.
+             * The log code.
              */
             public Builder sourceLogCode(String sourceLogCode) {
                 this.sourceLogCode = sourceLogCode;
@@ -234,7 +239,7 @@ public class ListUsersByProdResponseBody extends TeaModel {
             }
 
             /**
-             * SourceLogName.
+             * The log name.
              */
             public Builder sourceLogName(String sourceLogName) {
                 this.sourceLogName = sourceLogName;
@@ -242,7 +247,7 @@ public class ListUsersByProdResponseBody extends TeaModel {
             }
 
             /**
-             * SourceProdCode.
+             * The code of the cloud service.
              */
             public Builder sourceProdCode(String sourceProdCode) {
                 this.sourceProdCode = sourceProdCode;
@@ -250,7 +255,7 @@ public class ListUsersByProdResponseBody extends TeaModel {
             }
 
             /**
-             * SubUserId.
+             * The ID of the Alibaba Cloud account that can be used to perform operations supported by the threat analysis feature.
              */
             public Builder subUserId(Long subUserId) {
                 this.subUserId = subUserId;
@@ -258,7 +263,7 @@ public class ListUsersByProdResponseBody extends TeaModel {
             }
 
             /**
-             * SubUserName.
+             * The username of the Alibaba Cloud account that can be used to perform operations supported by the threat analysis feature.
              */
             public Builder subUserName(String subUserName) {
                 this.subUserName = subUserName;

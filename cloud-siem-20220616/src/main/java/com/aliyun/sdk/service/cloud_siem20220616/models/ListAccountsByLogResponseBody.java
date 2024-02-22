@@ -50,7 +50,7 @@ public class ListAccountsByLogResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class ListAccountsByLogResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +170,7 @@ public class ListAccountsByLogResponseBody extends TeaModel {
             private Long subUserId; 
 
             /**
-             * AccountId.
+             * The ID of the cloud account.
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -178,7 +178,7 @@ public class ListAccountsByLogResponseBody extends TeaModel {
             }
 
             /**
-             * AccountName.
+             * The name of the cloud account.
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -186,7 +186,7 @@ public class ListAccountsByLogResponseBody extends TeaModel {
             }
 
             /**
-             * Imported.
+             * Indicates whether the account is added. Valid values: -1: yes -0: no
              */
             public Builder imported(Integer imported) {
                 this.imported = imported;
@@ -194,7 +194,7 @@ public class ListAccountsByLogResponseBody extends TeaModel {
             }
 
             /**
-             * LogCode.
+             * The code of the log.
              */
             public Builder logCode(String logCode) {
                 this.logCode = logCode;
@@ -202,7 +202,7 @@ public class ListAccountsByLogResponseBody extends TeaModel {
             }
 
             /**
-             * MainUserId.
+             * The ID of the Alibaba Cloud account that is used to purchase the threat analysis feature.
              */
             public Builder mainUserId(Long mainUserId) {
                 this.mainUserId = mainUserId;
@@ -210,7 +210,7 @@ public class ListAccountsByLogResponseBody extends TeaModel {
             }
 
             /**
-             * ProdCode.
+             * The code of the service.
              */
             public Builder prodCode(String prodCode) {
                 this.prodCode = prodCode;
@@ -218,7 +218,7 @@ public class ListAccountsByLogResponseBody extends TeaModel {
             }
 
             /**
-             * SubUserId.
+             * The ID of the Alibaba Cloud account for which the threat analysis feature is enabled.
              */
             public Builder subUserId(Long subUserId) {
                 this.subUserId = subUserId;

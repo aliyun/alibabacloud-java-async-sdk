@@ -50,7 +50,7 @@ public class EnableAccessForCloudSiemResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class EnableAccessForCloudSiemResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -50,7 +50,7 @@ public class ModifyBindAccountResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class ModifyBindAccountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class ModifyBindAccountResponseBody extends TeaModel {
             private Integer count; 
 
             /**
-             * Count.
+             * The number of the accounts that are modified. The value 1 indicates that the modification is successful, and a value less than or equal to 0 indicates that the modification failed.
              */
             public Builder count(Integer count) {
                 this.count = count;

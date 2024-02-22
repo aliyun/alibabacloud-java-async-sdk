@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.cloud_siem20220616;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.cloud_siem20220616.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 

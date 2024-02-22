@@ -50,7 +50,7 @@ public class ListAllProdsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class ListAllProdsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +146,12 @@ public class ListAllProdsResponseBody extends TeaModel {
             private Integer totalLogCount; 
 
             /**
-             * CloudCode.
+             * The code of the cloud service provider. Valid values:
+             * <p>
+             * 
+             * *   qcloud: Tencent Cloud
+             * *   aliyun: Alibaba Cloud
+             * *   hcloud: Huawei Cloud
              */
             public Builder cloudCode(String cloudCode) {
                 this.cloudCode = cloudCode;
@@ -154,7 +159,7 @@ public class ListAllProdsResponseBody extends TeaModel {
             }
 
             /**
-             * ImportedLogCount.
+             * The number of logs within the cloud service that are added to the threat analysis feature.
              */
             public Builder importedLogCount(Integer importedLogCount) {
                 this.importedLogCount = importedLogCount;
@@ -162,7 +167,7 @@ public class ListAllProdsResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * The time when the logs within the cloud service were last added to the threat analysis feature.
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -170,7 +175,7 @@ public class ListAllProdsResponseBody extends TeaModel {
             }
 
             /**
-             * ProdCode.
+             * The code of the cloud service.
              */
             public Builder prodCode(String prodCode) {
                 this.prodCode = prodCode;
@@ -178,7 +183,7 @@ public class ListAllProdsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalLogCount.
+             * The total number of logs within the cloud service.
              */
             public Builder totalLogCount(Integer totalLogCount) {
                 this.totalLogCount = totalLogCount;
@@ -255,7 +260,7 @@ public class ListAllProdsResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * CurrentPage.
+             * The page number.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -263,7 +268,7 @@ public class ListAllProdsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -271,7 +276,7 @@ public class ListAllProdsResponseBody extends TeaModel {
             }
 
             /**
-             * ProdList.
+             * The cloud services.
              */
             public Builder prodList(java.util.List < ProdList> prodList) {
                 this.prodList = prodList;
@@ -279,7 +284,7 @@ public class ListAllProdsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of logs.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

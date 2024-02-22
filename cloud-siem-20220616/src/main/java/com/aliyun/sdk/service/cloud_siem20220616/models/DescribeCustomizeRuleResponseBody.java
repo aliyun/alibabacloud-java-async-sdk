@@ -94,7 +94,7 @@ public class DescribeCustomizeRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * The return value for the request.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -121,8 +121,8 @@ public class DescribeCustomizeRuleResponseBody extends TeaModel {
          * Indicates whether the request was successful. Valid values:
          * <p>
          * 
-         * *   true
-         * *   false
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -430,7 +430,7 @@ public class DescribeCustomizeRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account in SIEM.
+             * The ID of the Alibaba Cloud account for which the threat analysis feature is enabled.
              */
             public Builder aliuid(Long aliuid) {
                 this.aliuid = aliuid;
@@ -438,7 +438,7 @@ public class DescribeCustomizeRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The extended information about event generation. If the value of eventTransferType is allToSingle, the value of this parameter indicates the length and unit of the alert aggregation window. The HTML escape characters are reversed.
+             * The extended information about event generation. If **eventTransferType** is set to **allToSingle**, a value is returned for EventTransferExt. The return value indicates the length and time unit of the alert aggregation window. The HTML escape characters are reversed.
              */
             public Builder eventTransferExt(String eventTransferExt) {
                 this.eventTransferExt = eventTransferExt;
@@ -461,9 +461,9 @@ public class DescribeCustomizeRuleResponseBody extends TeaModel {
              * The event generation method. Valid values:
              * <p>
              * 
-             * *   default: The default method is used.
-             * *   singleToSingle: The system generates an event for each alert.
-             * *   allToSingle: The system generates an event for alerts within a period of time.
+             * *   **default**: The default method is used.
+             * *   **singleToSingle**: The system generates an event for each alert.
+             * *   **allToSingle**: The system generates an event for alerts within a period of time.
              */
             public Builder eventTransferType(String eventTransferType) {
                 this.eventTransferType = eventTransferType;
@@ -575,7 +575,7 @@ public class DescribeCustomizeRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the rule. Valid values:
+             * The rule type. Valid values:
              * <p>
              * 
              * *   predefine
@@ -590,11 +590,11 @@ public class DescribeCustomizeRuleResponseBody extends TeaModel {
              * The rule status. Valid values:
              * <p>
              * 
-             * *   0: The rule is in the initial state.
-             * *   10: The simulation data is tested.
-             * *   15: The business data is being tested.
-             * *   20: The business data test ends.
-             * *   100: The rule takes effect.
+             * *   **0**: the initial status.
+             * *   **10**: The simulation data is tested.
+             * *   **15**: The business data is being tested.
+             * *   **20**: The business data test ends.
+             * *   **100**: The rule takes effect.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -602,12 +602,12 @@ public class DescribeCustomizeRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The risk level. Valid values:
+             * The threat level. Valid values:
              * <p>
              * 
-             * *   serious: high
-             * *   suspicious: medium
-             * *   remind: low
+             * *   **serious**: high risk
+             * *   **suspicious**: medium risk
+             * *   **remind**: low risk
              */
             public Builder threatLevel(String threatLevel) {
                 this.threatLevel = threatLevel;

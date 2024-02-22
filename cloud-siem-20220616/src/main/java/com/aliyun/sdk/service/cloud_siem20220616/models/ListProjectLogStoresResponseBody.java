@@ -50,7 +50,7 @@ public class ListProjectLogStoresResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class ListProjectLogStoresResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -182,7 +182,7 @@ public class ListProjectLogStoresResponseBody extends TeaModel {
             private String subUserName; 
 
             /**
-             * EndPoint.
+             * The endpoint of the Simple Log Service project.
              */
             public Builder endPoint(String endPoint) {
                 this.endPoint = endPoint;
@@ -190,7 +190,7 @@ public class ListProjectLogStoresResponseBody extends TeaModel {
             }
 
             /**
-             * LocalName.
+             * The name of the region in which the Simple Log Service project resides.
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -198,7 +198,7 @@ public class ListProjectLogStoresResponseBody extends TeaModel {
             }
 
             /**
-             * LogStore.
+             * The name of the Simple Log Service Logstore.
              */
             public Builder logStore(String logStore) {
                 this.logStore = logStore;
@@ -206,7 +206,7 @@ public class ListProjectLogStoresResponseBody extends TeaModel {
             }
 
             /**
-             * MainUserId.
+             * The ID of the Alibaba Cloud account that is used to purchase the threat analysis feature.
              */
             public Builder mainUserId(Long mainUserId) {
                 this.mainUserId = mainUserId;
@@ -214,7 +214,7 @@ public class ListProjectLogStoresResponseBody extends TeaModel {
             }
 
             /**
-             * Project.
+             * The name of the Simple Log Service project.
              */
             public Builder project(String project) {
                 this.project = project;
@@ -222,7 +222,7 @@ public class ListProjectLogStoresResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the region in which the Simple Log Service project resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -230,7 +230,7 @@ public class ListProjectLogStoresResponseBody extends TeaModel {
             }
 
             /**
-             * SubUserId.
+             * The ID of the Alibaba Cloud account that can be used to perform operations supported by the threat analysis feature.
              */
             public Builder subUserId(Long subUserId) {
                 this.subUserId = subUserId;
@@ -238,7 +238,7 @@ public class ListProjectLogStoresResponseBody extends TeaModel {
             }
 
             /**
-             * SubUserName.
+             * The username of the Alibaba Cloud account that can be used to perform operations supported by the threat analysis feature.
              */
             public Builder subUserName(String subUserName) {
                 this.subUserName = subUserName;

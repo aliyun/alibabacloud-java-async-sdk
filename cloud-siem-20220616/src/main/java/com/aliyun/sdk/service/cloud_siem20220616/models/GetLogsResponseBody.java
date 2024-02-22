@@ -202,7 +202,7 @@ public class GetLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries.
+             * The total number of logs.
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;
@@ -412,7 +412,7 @@ public class GetLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The log.
+             * The content of the log.
              */
             public Builder responseData(ResponseData responseData) {
                 this.responseData = responseData;

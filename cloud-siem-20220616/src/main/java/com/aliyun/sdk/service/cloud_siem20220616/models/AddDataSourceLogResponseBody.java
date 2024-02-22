@@ -50,7 +50,7 @@ public class AddDataSourceLogResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class AddDataSourceLogResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class AddDataSourceLogResponseBody extends TeaModel {
             private String logInstanceId; 
 
             /**
-             * Count.
+             * The number of logs that are added. The value 1 indicates that the log is added, and a value less than or equal to 0 indicates that the log failed to be added.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -118,7 +118,7 @@ public class AddDataSourceLogResponseBody extends TeaModel {
             }
 
             /**
-             * LogInstanceId.
+             * The ID of the log. The ID is an MD5 hash value that is calculated by the threat analysis feature based on specific parameters.
              */
             public Builder logInstanceId(String logInstanceId) {
                 this.logInstanceId = logInstanceId;

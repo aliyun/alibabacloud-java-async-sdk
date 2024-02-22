@@ -50,7 +50,7 @@ public class AddUserResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * Indicates whether the cloud account is added to the threat analysis feature.
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class AddUserResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

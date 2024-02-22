@@ -86,7 +86,7 @@ public class ListAccountAccessIdResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class ListAccountAccessIdResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class ListAccountAccessIdResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class ListAccountAccessIdResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class ListAccountAccessIdResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -230,7 +234,7 @@ public class ListAccountAccessIdResponseBody extends TeaModel {
             private Long subUserId; 
 
             /**
-             * AccessId.
+             * The AccessKey ID of the cloud account that is added to the threat analysis feature.
              */
             public Builder accessId(String accessId) {
                 this.accessId = accessId;
@@ -238,7 +242,7 @@ public class ListAccountAccessIdResponseBody extends TeaModel {
             }
 
             /**
-             * AccessIdMd5.
+             * The MD5 hash value of the AccessKey ID.
              */
             public Builder accessIdMd5(String accessIdMd5) {
                 this.accessIdMd5 = accessIdMd5;
@@ -246,7 +250,7 @@ public class ListAccountAccessIdResponseBody extends TeaModel {
             }
 
             /**
-             * AccountId.
+             * The ID of the cloud account.
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -254,7 +258,7 @@ public class ListAccountAccessIdResponseBody extends TeaModel {
             }
 
             /**
-             * AccountStr.
+             * The information about the cloud account to which the AccessKey ID belongs. The value is in the following format: Alibaba Cloud account ID|Alibaba Cloud account username|AccessKey ID.
              */
             public Builder accountStr(String accountStr) {
                 this.accountStr = accountStr;
@@ -262,7 +266,11 @@ public class ListAccountAccessIdResponseBody extends TeaModel {
             }
 
             /**
-             * Bound.
+             * Indicates whether the cloud account to which the AccessKey ID belongs is added to the threat analysis feature. Valid values:
+             * <p>
+             * 
+             * *   0: no
+             * *   1: yes
              */
             public Builder bound(Integer bound) {
                 this.bound = bound;
@@ -270,7 +278,7 @@ public class ListAccountAccessIdResponseBody extends TeaModel {
             }
 
             /**
-             * CloudCode.
+             * The code of the cloud service provider.
              */
             public Builder cloudCode(String cloudCode) {
                 this.cloudCode = cloudCode;
@@ -278,7 +286,7 @@ public class ListAccountAccessIdResponseBody extends TeaModel {
             }
 
             /**
-             * SubUserId.
+             * The ID of the Alibaba Cloud account that is used to add the third-party cloud account.
              */
             public Builder subUserId(Long subUserId) {
                 this.subUserId = subUserId;

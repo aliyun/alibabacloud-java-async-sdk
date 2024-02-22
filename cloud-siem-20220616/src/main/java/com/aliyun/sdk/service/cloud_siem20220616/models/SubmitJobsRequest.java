@@ -69,7 +69,18 @@ public class SubmitJobsRequest extends Request {
         } 
 
         /**
-         * JsonParam.
+         * The parameters of the logs that you want to add. The value is a JSON array, which contains the following parameters:\
+         * <p>
+         * 
+         * 
+         * *   SourceProdCode: the code of the cloud service.
+         * 
+         * *   SourceLogCode: the code of the log.
+         * 
+         * *   Deleted: specifies whether to add the log. Valid values:
+         * 
+         *     *   0: yes
+         *     *   1: no
          */
         public Builder jsonParam(String jsonParam) {
             this.putBodyParameter("JsonParam", jsonParam);
@@ -78,7 +89,11 @@ public class SubmitJobsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:
+         * <p>
+         * 
+         * *   cn-hangzhou: Your assets reside in regions in China.
+         * *   ap-southeast-1: Your assets reside in regions outside China.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);

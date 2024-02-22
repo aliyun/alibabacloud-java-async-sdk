@@ -50,7 +50,7 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Label.
+             * The display value.
              */
             public Builder label(String label) {
                 this.label = label;
@@ -118,7 +118,7 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The actual value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -315,7 +315,11 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * CanEditted.
+             * Indicates whether the edit operation is supported. Valid values:
+             * <p>
+             * 
+             * *   0: no
+             * *   1: yes
              */
             public Builder canEditted(Integer canEditted) {
                 this.canEditted = canEditted;
@@ -323,7 +327,12 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
             }
 
             /**
-             * CloudCode.
+             * The code of the cloud service provider. Valid values:
+             * <p>
+             * 
+             * *   qcloud: Tencent Cloud
+             * *   aliyun: Alibaba Cloud
+             * *   hcloud: Huawei Cloud
              */
             public Builder cloudCode(String cloudCode) {
                 this.cloudCode = cloudCode;
@@ -331,7 +340,12 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
             }
 
             /**
-             * DataSourceType.
+             * The type of the data source. Valid values:
+             * <p>
+             * 
+             * *   obs: Huawei Cloud OBS
+             * *   wafApi: download API of Tencent Cloud WAF
+             * *   ckafka: Tencent Cloud CKafka
              */
             public Builder dataSourceType(String dataSourceType) {
                 this.dataSourceType = dataSourceType;
@@ -339,7 +353,7 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultValue.
+             * The default value of the parameter.
              */
             public Builder defaultValue(String defaultValue) {
                 this.defaultValue = defaultValue;
@@ -347,7 +361,11 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
             }
 
             /**
-             * Disabled.
+             * Indicates whether the modification operation is forbidden. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder disabled(Boolean disabled) {
                 this.disabled = disabled;
@@ -355,7 +373,7 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
             }
 
             /**
-             * FormatCheck.
+             * The method that is used to check the parameter format.
              */
             public Builder formatCheck(String formatCheck) {
                 this.formatCheck = formatCheck;
@@ -363,7 +381,7 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
             }
 
             /**
-             * Hit.
+             * The additional information.
              */
             public Builder hit(String hit) {
                 this.hit = hit;
@@ -371,7 +389,7 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ParaCode.
+             * The code of the parameter.
              */
             public Builder paraCode(String paraCode) {
                 this.paraCode = paraCode;
@@ -379,7 +397,11 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ParaLevel.
+             * The parameter level. Valid values:
+             * <p>
+             * 
+             * *   1: data source
+             * *   2: log
              */
             public Builder paraLevel(Integer paraLevel) {
                 this.paraLevel = paraLevel;
@@ -387,7 +409,7 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ParaName.
+             * The name of the parameter.
              */
             public Builder paraName(String paraName) {
                 this.paraName = paraName;
@@ -395,7 +417,7 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ParaType.
+             * The data type of the parameter.
              */
             public Builder paraType(String paraType) {
                 this.paraType = paraType;
@@ -403,7 +425,7 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ParamValue.
+             * The value of the parameter.
              */
             public Builder paramValue(java.util.List < ParamValue> paramValue) {
                 this.paramValue = paramValue;
@@ -411,7 +433,11 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
             }
 
             /**
-             * Required.
+             * Indicates whether the parameter is required. Valid values:
+             * <p>
+             * 
+             * *   1: yes
+             * *   0: no
              */
             public Builder required(Integer required) {
                 this.required = required;
@@ -419,7 +445,7 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * The note on the parameter value.
              */
             public Builder title(String title) {
                 this.title = title;

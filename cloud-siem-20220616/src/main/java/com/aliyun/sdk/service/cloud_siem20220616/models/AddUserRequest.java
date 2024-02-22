@@ -69,7 +69,7 @@ public class AddUserRequest extends Request {
         } 
 
         /**
-         * AddedUserId.
+         * The ID of the cloud account.
          */
         public Builder addedUserId(Long addedUserId) {
             this.putBodyParameter("AddedUserId", addedUserId);
@@ -78,7 +78,11 @@ public class AddUserRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:
+         * <p>
+         * 
+         * *   cn-hangzhou: Your assets reside in regions in China.
+         * *   ap-southeast-1: Your assets reside in regions outside China.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);

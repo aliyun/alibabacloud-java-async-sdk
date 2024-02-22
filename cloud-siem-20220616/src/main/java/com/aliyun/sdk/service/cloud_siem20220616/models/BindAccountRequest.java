@@ -114,7 +114,7 @@ public class BindAccountRequest extends Request {
         } 
 
         /**
-         * AccessId.
+         * The AccessKey ID of the cloud account.
          */
         public Builder accessId(String accessId) {
             this.putBodyParameter("AccessId", accessId);
@@ -123,7 +123,7 @@ public class BindAccountRequest extends Request {
         }
 
         /**
-         * AccountId.
+         * The ID of the cloud account.
          */
         public Builder accountId(String accountId) {
             this.putBodyParameter("AccountId", accountId);
@@ -132,7 +132,7 @@ public class BindAccountRequest extends Request {
         }
 
         /**
-         * AccountName.
+         * The username of the cloud account.
          */
         public Builder accountName(String accountName) {
             this.putBodyParameter("AccountName", accountName);
@@ -141,7 +141,13 @@ public class BindAccountRequest extends Request {
         }
 
         /**
-         * CloudCode.
+         * The code of the cloud service provider.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   qcloud
+         * *   hcloud
          */
         public Builder cloudCode(String cloudCode) {
             this.putBodyParameter("CloudCode", cloudCode);
@@ -150,7 +156,11 @@ public class BindAccountRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:
+         * <p>
+         * 
+         * *   cn-hangzhou: Your assets reside in regions in China.
+         * *   ap-southeast-1: Your assets reside in regions outside China.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);

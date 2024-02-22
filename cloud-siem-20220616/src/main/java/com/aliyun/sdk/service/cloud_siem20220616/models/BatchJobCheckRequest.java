@@ -68,7 +68,7 @@ public class BatchJobCheckRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * The data management center of the threat analysis feature. Specify this parameter based on the region where your assets reside.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -77,7 +77,7 @@ public class BatchJobCheckRequest extends Request {
         }
 
         /**
-         * SubmitId.
+         * The id of task.
          */
         public Builder submitId(String submitId) {
             this.putBodyParameter("SubmitId", submitId);

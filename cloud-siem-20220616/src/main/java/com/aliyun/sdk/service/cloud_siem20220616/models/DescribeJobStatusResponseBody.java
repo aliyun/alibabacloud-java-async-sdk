@@ -98,7 +98,7 @@ public class DescribeJobStatusResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class DescribeJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class DescribeJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * The error code.
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -122,7 +122,7 @@ public class DescribeJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +130,7 @@ public class DescribeJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,11 @@ public class DescribeJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -238,7 +242,7 @@ public class DescribeJobStatusResponseBody extends TeaModel {
             private String regionCode; 
 
             /**
-             * ErrorCode.
+             * The error code.
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -246,7 +250,7 @@ public class DescribeJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * LogCode.
+             * The log code.
              */
             public Builder logCode(String logCode) {
                 this.logCode = logCode;
@@ -254,7 +258,7 @@ public class DescribeJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * LogStoreNamePattern.
+             * The pattern of SLS logstore name.
              */
             public Builder logStoreNamePattern(String logStoreNamePattern) {
                 this.logStoreNamePattern = logStoreNamePattern;
@@ -262,7 +266,7 @@ public class DescribeJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ProductCode.
+             * The code of product.
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -270,7 +274,7 @@ public class DescribeJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectNamePattern.
+             * The pattern of SLS project name.
              */
             public Builder projectNamePattern(String projectNamePattern) {
                 this.projectNamePattern = projectNamePattern;
@@ -278,7 +282,7 @@ public class DescribeJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * RegionCode.
+             * The ID of the region in which the instance resides.
              */
             public Builder regionCode(String regionCode) {
                 this.regionCode = regionCode;
@@ -331,7 +335,7 @@ public class DescribeJobStatusResponseBody extends TeaModel {
             private String productCode; 
 
             /**
-             * LogList.
+             * The list of log.
              */
             public Builder logList(java.util.List < LogList> logList) {
                 this.logList = logList;
@@ -339,7 +343,7 @@ public class DescribeJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ProductCode.
+             * The code of product.
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -392,7 +396,7 @@ public class DescribeJobStatusResponseBody extends TeaModel {
             private Long userId; 
 
             /**
-             * ProductList.
+             * The list of product.
              */
             public Builder productList(java.util.List < ProductList> productList) {
                 this.productList = productList;
@@ -400,7 +404,7 @@ public class DescribeJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * The account id of aliyun.
              */
             public Builder userId(Long userId) {
                 this.userId = userId;
@@ -513,7 +517,7 @@ public class DescribeJobStatusResponseBody extends TeaModel {
             private String taskStatus; 
 
             /**
-             * ConfigId.
+             * The ID of the task configuration.
              */
             public Builder configId(String configId) {
                 this.configId = configId;
@@ -521,7 +525,7 @@ public class DescribeJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ErrTaskList.
+             * The list of failed task.
              */
             public Builder errTaskList(java.util.List < ErrTaskList> errTaskList) {
                 this.errTaskList = errTaskList;
@@ -529,7 +533,7 @@ public class DescribeJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * FailedCount.
+             * The number of failed tasks.
              */
             public Builder failedCount(Integer failedCount) {
                 this.failedCount = failedCount;
@@ -537,7 +541,7 @@ public class DescribeJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * FinishCount.
+             * The number of scan tasks that are complete.
              */
             public Builder finishCount(Integer finishCount) {
                 this.finishCount = finishCount;
@@ -545,7 +549,7 @@ public class DescribeJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * FolderId.
+             * The ID of the folder.
              */
             public Builder folderId(String folderId) {
                 this.folderId = folderId;
@@ -553,7 +557,7 @@ public class DescribeJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * TaskCount.
+             * The number of existing tasks that are created to add logs within the data source.
              */
             public Builder taskCount(Integer taskCount) {
                 this.taskCount = taskCount;
@@ -561,7 +565,7 @@ public class DescribeJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * TaskStatus.
+             * The status of submitted task.
              */
             public Builder taskStatus(String taskStatus) {
                 this.taskStatus = taskStatus;

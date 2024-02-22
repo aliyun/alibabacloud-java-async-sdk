@@ -94,7 +94,7 @@ public class DescribeCustomizeRuleTestHistogramResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * The return value for the request.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;

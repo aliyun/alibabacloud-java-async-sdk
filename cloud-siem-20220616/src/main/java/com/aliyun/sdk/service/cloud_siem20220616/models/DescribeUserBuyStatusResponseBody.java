@@ -50,7 +50,7 @@ public class DescribeUserBuyStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class DescribeUserBuyStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -218,7 +218,11 @@ public class DescribeUserBuyStatusResponseBody extends TeaModel {
             private String subUserName; 
 
             /**
-             * CanBuy.
+             * Indicates whether the logon Alibaba Cloud account can be used to place orders for the threat analysis feature, such as purchase, upgrade, and specifications change orders. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder canBuy(Boolean canBuy) {
                 this.canBuy = canBuy;
@@ -226,7 +230,7 @@ public class DescribeUserBuyStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Capacity.
+             * The log storage capacity that is purchased for the threat analysis feature. Unit: GB.
              */
             public Builder capacity(Integer capacity) {
                 this.capacity = capacity;
@@ -234,7 +238,7 @@ public class DescribeUserBuyStatusResponseBody extends TeaModel {
             }
 
             /**
-             * DurationDays.
+             * The number of days before the expiration time of the threat analysis feature.
              */
             public Builder durationDays(Long durationDays) {
                 this.durationDays = durationDays;
@@ -242,7 +246,7 @@ public class DescribeUserBuyStatusResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The timestamp when the threat analysis feature expires. Unit: milliseconds.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -250,7 +254,7 @@ public class DescribeUserBuyStatusResponseBody extends TeaModel {
             }
 
             /**
-             * MainUserId.
+             * The ID of the Alibaba Cloud account that is used to purchase the threat analysis feature.
              */
             public Builder mainUserId(Long mainUserId) {
                 this.mainUserId = mainUserId;
@@ -258,7 +262,7 @@ public class DescribeUserBuyStatusResponseBody extends TeaModel {
             }
 
             /**
-             * MainUserName.
+             * The username of the Alibaba Cloud account that is used to purchase the threat analysis feature.
              */
             public Builder mainUserName(String mainUserName) {
                 this.mainUserName = mainUserName;
@@ -266,7 +270,7 @@ public class DescribeUserBuyStatusResponseBody extends TeaModel {
             }
 
             /**
-             * MasterUserId.
+             * The ID of the management account of the resource directory.
              */
             public Builder masterUserId(Long masterUserId) {
                 this.masterUserId = masterUserId;
@@ -274,7 +278,7 @@ public class DescribeUserBuyStatusResponseBody extends TeaModel {
             }
 
             /**
-             * MasterUserName.
+             * The display name of the management account of the resource directory.
              */
             public Builder masterUserName(String masterUserName) {
                 this.masterUserName = masterUserName;
@@ -282,7 +286,7 @@ public class DescribeUserBuyStatusResponseBody extends TeaModel {
             }
 
             /**
-             * SasInstanceId.
+             * The instance ID of Security Center.
              */
             public Builder sasInstanceId(String sasInstanceId) {
                 this.sasInstanceId = sasInstanceId;
@@ -290,7 +294,7 @@ public class DescribeUserBuyStatusResponseBody extends TeaModel {
             }
 
             /**
-             * SubUserId.
+             * The ID of the logon Alibaba Cloud account.
              */
             public Builder subUserId(Long subUserId) {
                 this.subUserId = subUserId;
@@ -298,7 +302,7 @@ public class DescribeUserBuyStatusResponseBody extends TeaModel {
             }
 
             /**
-             * SubUserName.
+             * The username of the logon Alibaba Cloud account.
              */
             public Builder subUserName(String subUserName) {
                 this.subUserName = subUserName;

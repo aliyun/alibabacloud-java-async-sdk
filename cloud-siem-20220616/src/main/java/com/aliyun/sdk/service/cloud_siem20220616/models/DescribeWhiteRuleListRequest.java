@@ -126,7 +126,7 @@ public class DescribeWhiteRuleListRequest extends Request {
         } 
 
         /**
-         * AlertName.
+         * The name of the alert.
          */
         public Builder alertName(String alertName) {
             this.putBodyParameter("AlertName", alertName);
@@ -135,7 +135,7 @@ public class DescribeWhiteRuleListRequest extends Request {
         }
 
         /**
-         * AlertType.
+         * The type of the alert.
          */
         public Builder alertType(String alertType) {
             this.putBodyParameter("AlertType", alertType);
@@ -144,7 +144,7 @@ public class DescribeWhiteRuleListRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The page number. Pages start from page 1.
          */
         public Builder currentPage(Integer currentPage) {
             this.putBodyParameter("CurrentPage", currentPage);
@@ -153,7 +153,7 @@ public class DescribeWhiteRuleListRequest extends Request {
         }
 
         /**
-         * IncidentUuid.
+         * The UUID of the event.
          */
         public Builder incidentUuid(String incidentUuid) {
             this.putBodyParameter("IncidentUuid", incidentUuid);
@@ -162,7 +162,7 @@ public class DescribeWhiteRuleListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Valid values: 1 to 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -171,7 +171,11 @@ public class DescribeWhiteRuleListRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:
+         * <p>
+         * 
+         * *   cn-hangzhou: Your assets reside in regions in China.
+         * *   ap-southeast-1: Your assets reside in regions outside China.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);

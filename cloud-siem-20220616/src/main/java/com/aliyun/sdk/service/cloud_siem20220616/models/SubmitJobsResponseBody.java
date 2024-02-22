@@ -50,7 +50,7 @@ public class SubmitJobsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The total number of tasks.
          */
         public Builder data(Integer data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class SubmitJobsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -50,7 +50,7 @@ public class DescribeImportedLogCountResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class DescribeImportedLogCountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class DescribeImportedLogCountResponseBody extends TeaModel {
             private Integer unImportedLogCount; 
 
             /**
-             * ImportedLogCount.
+             * The number of logs that are added.
              */
             public Builder importedLogCount(Integer importedLogCount) {
                 this.importedLogCount = importedLogCount;
@@ -130,7 +130,7 @@ public class DescribeImportedLogCountResponseBody extends TeaModel {
             }
 
             /**
-             * TotalLogCount.
+             * The total number of logs.
              */
             public Builder totalLogCount(Integer totalLogCount) {
                 this.totalLogCount = totalLogCount;
@@ -138,7 +138,7 @@ public class DescribeImportedLogCountResponseBody extends TeaModel {
             }
 
             /**
-             * UnImportedLogCount.
+             * The number of logs that are not added.
              */
             public Builder unImportedLogCount(Integer unImportedLogCount) {
                 this.unImportedLogCount = unImportedLogCount;

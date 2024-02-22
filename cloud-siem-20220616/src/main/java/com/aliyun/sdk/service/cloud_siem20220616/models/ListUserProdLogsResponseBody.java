@@ -50,7 +50,7 @@ public class ListUserProdLogsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class ListUserProdLogsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -206,7 +206,7 @@ public class ListUserProdLogsResponseBody extends TeaModel {
             private String subUserName; 
 
             /**
-             * DisplayLine.
+             * The display details of the Logstore.
              */
             public Builder displayLine(String displayLine) {
                 this.displayLine = displayLine;
@@ -214,7 +214,11 @@ public class ListUserProdLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Displayed.
+             * Indicates whether the details of the added log are returned. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder displayed(Boolean displayed) {
                 this.displayed = displayed;
@@ -222,7 +226,11 @@ public class ListUserProdLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Imported.
+             * Indicates whether the log is added to the threat analysis feature. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder imported(Boolean imported) {
                 this.imported = imported;
@@ -230,7 +238,11 @@ public class ListUserProdLogsResponseBody extends TeaModel {
             }
 
             /**
-             * IsDeleted.
+             * Indicates whether the log is added to the threat analysis feature. Valid values:
+             * <p>
+             * 
+             * *   0: yes
+             * *   1: no
              */
             public Builder isDeleted(Integer isDeleted) {
                 this.isDeleted = isDeleted;
@@ -238,7 +250,7 @@ public class ListUserProdLogsResponseBody extends TeaModel {
             }
 
             /**
-             * MainUserId.
+             * The ID of the Alibaba Cloud account that is used to purchase the threat analysis feature.
              */
             public Builder mainUserId(Long mainUserId) {
                 this.mainUserId = mainUserId;
@@ -246,7 +258,7 @@ public class ListUserProdLogsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceLogCode.
+             * The log code.
              */
             public Builder sourceLogCode(String sourceLogCode) {
                 this.sourceLogCode = sourceLogCode;
@@ -254,7 +266,7 @@ public class ListUserProdLogsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceLogInfo.
+             * The details of the Logstore. The value is a JSON string.
              */
             public Builder sourceLogInfo(String sourceLogInfo) {
                 this.sourceLogInfo = sourceLogInfo;
@@ -262,7 +274,7 @@ public class ListUserProdLogsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceProdCode.
+             * The code of the cloud service.
              */
             public Builder sourceProdCode(String sourceProdCode) {
                 this.sourceProdCode = sourceProdCode;
@@ -270,7 +282,7 @@ public class ListUserProdLogsResponseBody extends TeaModel {
             }
 
             /**
-             * SubUserId.
+             * The ID of the Alibaba Cloud account that can be used to perform operations supported by the threat analysis feature.
              */
             public Builder subUserId(Long subUserId) {
                 this.subUserId = subUserId;
@@ -278,7 +290,7 @@ public class ListUserProdLogsResponseBody extends TeaModel {
             }
 
             /**
-             * SubUserName.
+             * The username of the Alibaba Cloud account that can be used to perform operations supported by the threat analysis feature.
              */
             public Builder subUserName(String subUserName) {
                 this.subUserName = subUserName;

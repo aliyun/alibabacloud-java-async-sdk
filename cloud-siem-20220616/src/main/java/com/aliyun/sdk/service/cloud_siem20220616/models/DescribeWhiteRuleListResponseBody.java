@@ -86,7 +86,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The response code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -182,7 +186,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * CurrentPage.
+             * The current page number.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -190,7 +194,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -198,7 +202,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;
@@ -287,7 +291,11 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * IsVar.
+             * Indicates whether the left operand is a variable. Valid values:
+             * <p>
+             * 
+             * *   true: variable
+             * *   false: constant
              */
             public Builder isVar(Boolean isVar) {
                 this.isVar = isVar;
@@ -295,7 +303,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * Modifier.
+             * The remarks on the left operand.
              */
             public Builder modifier(String modifier) {
                 this.modifier = modifier;
@@ -303,7 +311,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * ModifierParam.
+             * The key-value pair information of the remarks.
              */
             public Builder modifierParam(java.util.Map < String, ? > modifierParam) {
                 this.modifierParam = modifierParam;
@@ -311,7 +319,11 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * Indicates whether the left operand is a constant. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder type(String type) {
                 this.type = type;
@@ -319,7 +331,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The variable of the left operand.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -408,7 +420,11 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * IsVar.
+             * Indicates whether the right operand is a constant or a runtime variable that is obtained from the runtime context. Valid values:
+             * <p>
+             * 
+             * *   true: runtime variable
+             * *   false: constant
              */
             public Builder isVar(Boolean isVar) {
                 this.isVar = isVar;
@@ -416,7 +432,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * Modifier.
+             * The remarks on the right operand.
              */
             public Builder modifier(String modifier) {
                 this.modifier = modifier;
@@ -424,7 +440,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * ModifierParam.
+             * The key-value pair information of the remarks.
              */
             public Builder modifierParam(java.util.Map < String, ? > modifierParam) {
                 this.modifierParam = modifierParam;
@@ -432,7 +448,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The data type of the right operand.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -440,7 +456,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The right operand.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -529,7 +545,11 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
             private Right right; 
 
             /**
-             * IsNot.
+             * Indicates whether the result is inverted. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder isNot(Boolean isNot) {
                 this.isNot = isNot;
@@ -537,7 +557,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * ItemId.
+             * The ID of the rule condition.
              */
             public Builder itemId(Integer itemId) {
                 this.itemId = itemId;
@@ -545,7 +565,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * Left.
+             * The left operand of the rule condition.
              */
             public Builder left(Left left) {
                 this.left = left;
@@ -553,7 +573,15 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * Operator.
+             * The logical operator of the rule condition. Valid values:
+             * <p>
+             * 
+             * *   `=`: equals to
+             * *   `<>`: does not equal to
+             * *   `in`: contains
+             * *   `not in`: does not contain
+             * *   `REGEXP`: matches a regular expression
+             * *   `NOT REGEXP`: does not match a regular expression
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -561,7 +589,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * Right.
+             * The right operand of the rule condition.
              */
             public Builder right(Right right) {
                 this.right = right;
@@ -614,7 +642,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
             private String logic; 
 
             /**
-             * Conditions.
+             * The rule conditions.
              */
             public Builder conditions(java.util.List < Conditions> conditions) {
                 this.conditions = conditions;
@@ -622,7 +650,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * Logic.
+             * The logical relationships among the rule conditions.
              */
             public Builder logic(String logic) {
                 this.logic = logic;
@@ -807,7 +835,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
             private Long subAliuid; 
 
             /**
-             * AlertName.
+             * The alert name.
              */
             public Builder alertName(String alertName) {
                 this.alertName = alertName;
@@ -815,7 +843,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * AlertNameId.
+             * The ID of the alert name.
              */
             public Builder alertNameId(String alertNameId) {
                 this.alertNameId = alertNameId;
@@ -823,7 +851,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * AlertType.
+             * The alert type.
              */
             public Builder alertType(String alertType) {
                 this.alertType = alertType;
@@ -831,7 +859,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * AlertTypeId.
+             * The ID of the alert type.
              */
             public Builder alertTypeId(String alertTypeId) {
                 this.alertTypeId = alertTypeId;
@@ -839,7 +867,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * AlertUuid.
+             * The UUID of the alert.
              */
             public Builder alertUuid(String alertUuid) {
                 this.alertUuid = alertUuid;
@@ -847,7 +875,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * Aliuid.
+             * The ID of the Alibaba Cloud account that is used to purchase the threat analysis feature.
              */
             public Builder aliuid(Long aliuid) {
                 this.aliuid = aliuid;
@@ -855,7 +883,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * Expression.
+             * The conditions in the rule. The value is a JSON array.
              */
             public Builder expression(Expression expression) {
                 this.expression = expression;
@@ -863,7 +891,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The time when the whitelist rule was created.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -871,7 +899,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The time when the whitelist rule was modified.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -879,7 +907,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the whitelist rule.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -887,7 +915,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * IncidentUuid.
+             * The UUID of the event.
              */
             public Builder incidentUuid(String incidentUuid) {
                 this.incidentUuid = incidentUuid;
@@ -895,7 +923,11 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the whitelist rule. Valid values:
+             * <p>
+             * 
+             * *   1: enabled
+             * *   0: disabled
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -903,7 +935,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * SubAliuid.
+             * The ID of the Alibaba Cloud account that is used to create the whitelist rule.
              */
             public Builder subAliuid(Long subAliuid) {
                 this.subAliuid = subAliuid;
@@ -956,7 +988,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
             private java.util.List < ResponseData> responseData; 
 
             /**
-             * PageInfo.
+             * The pagination information.
              */
             public Builder pageInfo(PageInfo pageInfo) {
                 this.pageInfo = pageInfo;
@@ -964,7 +996,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * ResponseData.
+             * The detailed data.
              */
             public Builder responseData(java.util.List < ResponseData> responseData) {
                 this.responseData = responseData;

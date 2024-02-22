@@ -118,7 +118,7 @@ public class PostCustomizeRuleTestRequest extends Request {
         }
 
         /**
-         * The simulation data for the testing. This parameter is available only when TestType is set to simulate.
+         * The simulation data for the test. This parameter is available only when TestType is set to simulate.
          */
         public Builder simulatedData(String simulatedData) {
             this.putBodyParameter("SimulatedData", simulatedData);
@@ -127,7 +127,7 @@ public class PostCustomizeRuleTestRequest extends Request {
         }
 
         /**
-         * The testing type. Valid values:
+         * The test type. Valid values:
          * <p>
          * 
          * *   simulate: simulation data test

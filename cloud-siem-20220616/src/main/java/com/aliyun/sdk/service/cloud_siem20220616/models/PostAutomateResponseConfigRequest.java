@@ -152,7 +152,7 @@ public class PostAutomateResponseConfigRequest extends Request {
         } 
 
         /**
-         * The configuration of the action that is performed after the rule is hit. The value is in JSON format.
+         * The action configuration of the automated response rule. The value is in the JSON format.
          */
         public Builder actionConfig(String actionConfig) {
             this.putBodyParameter("ActionConfig", actionConfig);
@@ -161,12 +161,12 @@ public class PostAutomateResponseConfigRequest extends Request {
         }
 
         /**
-         * The action that is performed after the rule is hit. Separate multiple values with commas (,). Valid values:
+         * The type of the handling action. Multiple types are separated by commas (,). Valid values:
          * <p>
          * 
-         * *   doPlaybook: Execute a playbook.
-         * *   changeEventStatus: Change the event status.
-         * *   changeThreatLevel: Change the threat level of the event.
+         * *   **doPlaybook**: runs the playbook.
+         * *   **changeEventStatus**: changes the event status.
+         * *   **changeThreatLevel**: changes the threat level of the event.
          */
         public Builder actionType(String actionType) {
             this.putBodyParameter("ActionType", actionType);
@@ -175,11 +175,11 @@ public class PostAutomateResponseConfigRequest extends Request {
         }
 
         /**
-         * The rule type. Valid values:
+         * The type of the automated response rule. Valid values:
          * <p>
          * 
-         * *   event
-         * *   alert
+         * *   **event**
+         * *   **alert**
          */
         public Builder autoResponseType(String autoResponseType) {
             this.putBodyParameter("AutoResponseType", autoResponseType);
@@ -188,7 +188,7 @@ public class PostAutomateResponseConfigRequest extends Request {
         }
 
         /**
-         * The trigger condition of the rule. The value is in JSON format.
+         * The trigger condition of the automated response rule. The value is in the JSON format.
          */
         public Builder executionCondition(String executionCondition) {
             this.putBodyParameter("ExecutionCondition", executionCondition);
@@ -206,11 +206,11 @@ public class PostAutomateResponseConfigRequest extends Request {
         }
 
         /**
-         * The data management center of the threat analysis feature. Specify this parameter based on the region in which your assets reside. Valid values:
+         * The data management center of the threat analysis feature. Specify this parameter based on the regions in which your assets reside. Valid values:
          * <p>
          * 
-         * *   cn-hangzhou: Your assets reside in regions inside China.
-         * *   ap-southeast-1: Your assets reside in regions outside China.
+         * *   **cn-hangzhou**: Your assets reside in regions in China.
+         * *   **ap-southeast-1**: Your assets reside in regions outside China.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);

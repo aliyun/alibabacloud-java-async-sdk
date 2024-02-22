@@ -50,7 +50,7 @@ public class ListDataSourceTypesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class ListDataSourceTypesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class ListDataSourceTypesResponseBody extends TeaModel {
             private String dataSourceType; 
 
             /**
-             * CloudCode.
+             * The code of the third-party cloud service.
              */
             public Builder cloudCode(String cloudCode) {
                 this.cloudCode = cloudCode;
@@ -118,7 +118,12 @@ public class ListDataSourceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * DataSourceType.
+             * The type of the data source. Valid values:
+             * <p>
+             * 
+             * *   obs: Huawei Cloud Object Storage Service (OBS)
+             * *   wafApi: download API of Tencent Cloud Web Application Firewall (WAF)
+             * *   ckafka: Tencent Cloud Kafka (CKafka)
              */
             public Builder dataSourceType(String dataSourceType) {
                 this.dataSourceType = dataSourceType;

@@ -50,7 +50,7 @@ public class ListBindAccountResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class ListBindAccountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -182,7 +182,7 @@ public class ListBindAccountResponseBody extends TeaModel {
             private String modifyTime; 
 
             /**
-             * AccessId.
+             * The AccessKey ID of the cloud account.
              */
             public Builder accessId(String accessId) {
                 this.accessId = accessId;
@@ -190,7 +190,7 @@ public class ListBindAccountResponseBody extends TeaModel {
             }
 
             /**
-             * AccountId.
+             * The ID of the cloud account.
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -198,7 +198,7 @@ public class ListBindAccountResponseBody extends TeaModel {
             }
 
             /**
-             * AccountName.
+             * The username of the cloud account.
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -206,7 +206,7 @@ public class ListBindAccountResponseBody extends TeaModel {
             }
 
             /**
-             * BindId.
+             * The ID that is generated when the cloud account is added.
              */
             public Builder bindId(Long bindId) {
                 this.bindId = bindId;
@@ -214,7 +214,12 @@ public class ListBindAccountResponseBody extends TeaModel {
             }
 
             /**
-             * CloudCode.
+             * The code of the cloud service provider. Valid values:
+             * <p>
+             * 
+             * *   qcloud: Tencent Cloud
+             * *   aliyun: Alibaba Cloud
+             * *   hcloud: Huawei Cloud
              */
             public Builder cloudCode(String cloudCode) {
                 this.cloudCode = cloudCode;
@@ -222,7 +227,7 @@ public class ListBindAccountResponseBody extends TeaModel {
             }
 
             /**
-             * CreateUser.
+             * The ID of the account that is used to add the cloud account.
              */
             public Builder createUser(String createUser) {
                 this.createUser = createUser;
@@ -230,7 +235,7 @@ public class ListBindAccountResponseBody extends TeaModel {
             }
 
             /**
-             * DataSourceCount.
+             * The number of data sources that are added to the threat analysis feature within the cloud account.
              */
             public Builder dataSourceCount(Long dataSourceCount) {
                 this.dataSourceCount = dataSourceCount;
@@ -238,7 +243,7 @@ public class ListBindAccountResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * The modification time.
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;

@@ -50,7 +50,7 @@ public class DescribeProdCountResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class DescribeProdCountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class DescribeProdCountResponseBody extends TeaModel {
             private Integer qcloudProdCount; 
 
             /**
-             * AliyunProdCount.
+             * The number of Alibaba Cloud services.
              */
             public Builder aliyunProdCount(Integer aliyunProdCount) {
                 this.aliyunProdCount = aliyunProdCount;
@@ -130,7 +130,7 @@ public class DescribeProdCountResponseBody extends TeaModel {
             }
 
             /**
-             * HcloudProdCount.
+             * The number of Huawei Cloud services.
              */
             public Builder hcloudProdCount(Integer hcloudProdCount) {
                 this.hcloudProdCount = hcloudProdCount;
@@ -138,7 +138,7 @@ public class DescribeProdCountResponseBody extends TeaModel {
             }
 
             /**
-             * QcloudProdCount.
+             * The number of Tencent Cloud services.
              */
             public Builder qcloudProdCount(Integer qcloudProdCount) {
                 this.qcloudProdCount = qcloudProdCount;
