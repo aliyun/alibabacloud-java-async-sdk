@@ -123,6 +123,10 @@ public class ModifyScalingGroupRequest extends Request {
     private String scalingGroupName;
 
     @Query
+    @NameInMap("ScalingPolicy")
+    private String scalingPolicy;
+
+    @Query
     @NameInMap("SpotAllocationStrategy")
     private String spotAllocationStrategy;
 
@@ -167,6 +171,7 @@ public class ModifyScalingGroupRequest extends Request {
         this.resourceOwnerId = builder.resourceOwnerId;
         this.scalingGroupId = builder.scalingGroupId;
         this.scalingGroupName = builder.scalingGroupName;
+        this.scalingPolicy = builder.scalingPolicy;
         this.spotAllocationStrategy = builder.spotAllocationStrategy;
         this.spotInstancePools = builder.spotInstancePools;
         this.spotInstanceRemedy = builder.spotInstanceRemedy;
@@ -376,6 +381,13 @@ public class ModifyScalingGroupRequest extends Request {
     }
 
     /**
+     * @return scalingPolicy
+     */
+    public String getScalingPolicy() {
+        return this.scalingPolicy;
+    }
+
+    /**
      * @return spotAllocationStrategy
      */
     public String getSpotAllocationStrategy() {
@@ -431,6 +443,7 @@ public class ModifyScalingGroupRequest extends Request {
         private Long resourceOwnerId; 
         private String scalingGroupId; 
         private String scalingGroupName; 
+        private String scalingPolicy; 
         private String spotAllocationStrategy; 
         private Integer spotInstancePools; 
         private Boolean spotInstanceRemedy; 
@@ -469,6 +482,7 @@ public class ModifyScalingGroupRequest extends Request {
             this.resourceOwnerId = request.resourceOwnerId;
             this.scalingGroupId = request.scalingGroupId;
             this.scalingGroupName = request.scalingGroupName;
+            this.scalingPolicy = request.scalingPolicy;
             this.spotAllocationStrategy = request.spotAllocationStrategy;
             this.spotInstancePools = request.spotInstancePools;
             this.spotInstanceRemedy = request.spotInstanceRemedy;
@@ -785,6 +799,15 @@ public class ModifyScalingGroupRequest extends Request {
         public Builder scalingGroupName(String scalingGroupName) {
             this.putQueryParameter("ScalingGroupName", scalingGroupName);
             this.scalingGroupName = scalingGroupName;
+            return this;
+        }
+
+        /**
+         * ScalingPolicy.
+         */
+        public Builder scalingPolicy(String scalingPolicy) {
+            this.putQueryParameter("ScalingPolicy", scalingPolicy);
+            this.scalingPolicy = scalingPolicy;
             return this;
         }
 
