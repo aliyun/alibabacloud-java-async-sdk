@@ -160,7 +160,7 @@ public class ListCertRequest extends Request {
         }
 
         /**
-         * The keyword for the query. You can enter a name, domain name, or Subject Alternative Name (SAN) extension. Fuzzy match is supported.
+         * The keyword that is used for queries. The value can be a name, domain name, or subject alternative name (SAN) attribute. Fuzzy match is supported.
          */
         public Builder keyWord(String keyWord) {
             this.putQueryParameter("KeyWord", keyWord);
@@ -204,7 +204,7 @@ public class ListCertRequest extends Request {
         }
 
         /**
-         * The ID of the certificate repository. You can call the [ListCertWarehouse](~~453246~~) operation to query the IDs of certificate repositories.
+         * The ID of the certificate repository. You can call the ListCertWarehouse API operation to query the IDs of certificate repositories.
          */
         public Builder warehouseId(Long warehouseId) {
             this.putQueryParameter("WarehouseId", warehouseId);

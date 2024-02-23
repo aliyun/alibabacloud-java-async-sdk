@@ -86,7 +86,7 @@ public class ListCertResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * An array that consists of the certificates.
+         * The certificates.
          */
         public Builder certList(java.util.List < CertList> certList) {
             this.certList = certList;
@@ -354,7 +354,7 @@ public class ListCertResponseBody extends TeaModel {
             }
 
             /**
-             * The domain names that are bound to the certificate. Multiple domain names are separated by commas.
+             * All domain names that are bound to the certificate. Multiple domain names are separated by commas (,).
              */
             public Builder sans(String sans) {
                 this.sans = sans;
@@ -386,7 +386,7 @@ public class ListCertResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the certificate repository.
+             * The ID of the certificate application repository.
              */
             public Builder whId(Long whId) {
                 this.whId = whId;
@@ -394,7 +394,7 @@ public class ListCertResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID of the certificate repository.
+             * The instance ID of the certificate application repository.
              */
             public Builder whInstanceId(String whInstanceId) {
                 this.whInstanceId = whInstanceId;

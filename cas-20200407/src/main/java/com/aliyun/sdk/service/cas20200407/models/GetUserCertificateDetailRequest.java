@@ -69,7 +69,7 @@ public class GetUserCertificateDetailRequest extends Request {
         } 
 
         /**
-         * If true，the Cert、Key、EncryptCert、EncryptPrivateKey、SignCert、SignPrivateKey will return null，default is false。
+         * If true, the Cert, Key, EncryptCert, EncryptPrivateKey, SignCert, SignPrivateKey will return null, default is false.
          */
         public Builder certFilter(Boolean certFilter) {
             this.putQueryParameter("CertFilter", certFilter);
