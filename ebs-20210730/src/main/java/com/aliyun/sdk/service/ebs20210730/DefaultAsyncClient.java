@@ -239,6 +239,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+      * Currently, this API is only available for use with ACS resource hosting and is not yet open for direct invocation.
+      *
+     */
+    @Override
+    public CompletableFuture<DeleteDiskResponse> deleteDisk(DeleteDiskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteDisk").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteDiskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteDiskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
       * ## [](#)Usage notes
       * *   For information about the regions in which the replication pair-consistent group feature is available, see [Overview](~~314563~~).
       * *   Before you can delete a replication pair-consistent group, make sure that no replication pairs exist in the group.

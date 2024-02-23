@@ -87,6 +87,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateEnterpriseSnapshotPolicyResponse> createEnterpriseSnapshotPolicy(CreateEnterpriseSnapshotPolicyRequest request);
 
     /**
+      * Currently, this API is only available for use with ACS resource hosting and is not yet open for direct invocation.
+      *
+     */
+    CompletableFuture<DeleteDiskResponse> deleteDisk(DeleteDiskRequest request);
+
+    /**
       * ## [](#)Usage notes
       * *   For information about the regions in which the replication pair-consistent group feature is available, see [Overview](~~314563~~).
       * *   Before you can delete a replication pair-consistent group, make sure that no replication pairs exist in the group.
