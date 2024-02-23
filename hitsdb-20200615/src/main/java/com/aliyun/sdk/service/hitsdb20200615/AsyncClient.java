@@ -66,6 +66,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<OpenComputeEngineResponse> openComputeEngine(OpenComputeEngineRequest request);
 
+    CompletableFuture<OpenComputePreCheckResponse> openComputePreCheck(OpenComputePreCheckRequest request);
+
     CompletableFuture<ReleaseLindormInstanceResponse> releaseLindormInstance(ReleaseLindormInstanceRequest request);
 
     /**
