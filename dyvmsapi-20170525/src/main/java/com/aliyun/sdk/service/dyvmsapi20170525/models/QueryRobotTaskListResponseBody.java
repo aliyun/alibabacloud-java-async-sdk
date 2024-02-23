@@ -110,7 +110,7 @@ public class QueryRobotTaskListResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * Code.
+         * The response code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +118,20 @@ public class QueryRobotTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The robocall tasks, in the JSON format.
+         * <p>
+         * 
+         * *   **id**: the unique ID of the robocall task.
+         * *   **taskName**: the task name.
+         * *   **robotId**: the robot ID.
+         * *   **robotName**: the robot name.
+         * *   **status**: the task state.
+         * *   **scheduleType**: the scheduling type. Valid values: **SINGLE** and **ORDER**. The value SINGLE indicates that the task was started immediately after it was created. The value ORDER indicates that the task was started at a scheduled time.
+         * *   **createTime**: the time when the task was created, in the yyyy.MM.dd HH:mm:ss format.
+         * *   **completeTime**: the time when the task was completed, in the yyyy.MM.dd HH:mm:ss format.
+         * *   **fireTime**: the time when the task was started, in the yyyy.MM.dd HH:mm:ss format.
+         * *   **totalCount**: the total number of calls processed.
+         * *   **finishCount**: the number of calls completed.
          */
         public Builder data(String data) {
             this.data = data;
@@ -126,7 +139,7 @@ public class QueryRobotTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -134,7 +147,7 @@ public class QueryRobotTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * PageNo.
+         * The page number.
          */
         public Builder pageNo(String pageNo) {
             this.pageNo = pageNo;
@@ -142,7 +155,7 @@ public class QueryRobotTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -150,7 +163,7 @@ public class QueryRobotTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +171,7 @@ public class QueryRobotTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of tasks.
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;

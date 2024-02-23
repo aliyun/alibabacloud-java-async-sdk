@@ -207,25 +207,31 @@ public class IvrCallRequest extends Request {
             super();
         } 
 
-        private Builder(IvrCallRequest response) {
-            super(response);
-            this.byeCode = response.byeCode;
-            this.byeTtsParams = response.byeTtsParams;
-            this.calledNumber = response.calledNumber;
-            this.calledShowNumber = response.calledShowNumber;
-            this.menuKeyMap = response.menuKeyMap;
-            this.outId = response.outId;
-            this.ownerId = response.ownerId;
-            this.playTimes = response.playTimes;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.startCode = response.startCode;
-            this.startTtsParams = response.startTtsParams;
-            this.timeout = response.timeout;
+        private Builder(IvrCallRequest request) {
+            super(request);
+            this.byeCode = request.byeCode;
+            this.byeTtsParams = request.byeTtsParams;
+            this.calledNumber = request.calledNumber;
+            this.calledShowNumber = request.calledShowNumber;
+            this.menuKeyMap = request.menuKeyMap;
+            this.outId = request.outId;
+            this.ownerId = request.ownerId;
+            this.playTimes = request.playTimes;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.startCode = request.startCode;
+            this.startTtsParams = request.startTtsParams;
+            this.timeout = request.timeout;
         } 
 
         /**
-         * ByeCode.
+         * The end voice.
+         * <p>
+         * 
+         * *   If you use a voice notification file, this parameter specifies the voice ID. You can log on to the [Voice Messaging Service console](https://dyvms.console.aliyun.com/overview/home), choose **Voice Messages** > **Voice Notifications**, and then click the **Voice Notification Files** tab to view the voice ID.
+         * *   If you use a TTS template, this parameter specifies the template ID. You can log on to the [Voice Messaging Service console](https://dyvms.console.aliyun.com/overview/home), choose **Voice Messages** > **Voice Notifications**, and then click the **TTS Template** tab to view the template ID.
+         * 
+         * > The value of the ByeCode parameter must be of the same type as the value of the StartCode parameter. This means that both parameters must specify voice IDs or TTS template IDs.
          */
         public Builder byeCode(String byeCode) {
             this.putQueryParameter("ByeCode", byeCode);
@@ -234,7 +240,10 @@ public class IvrCallRequest extends Request {
         }
 
         /**
-         * ByeTtsParams.
+         * The variables in the TTS template, in the JSON format.
+         * <p>
+         * 
+         * > This parameter is required when the ByeCode parameter is set to the ID of a TTS template that contains variables.
          */
         public Builder byeTtsParams(String byeTtsParams) {
             this.putQueryParameter("ByeTtsParams", byeTtsParams);
@@ -243,7 +252,10 @@ public class IvrCallRequest extends Request {
         }
 
         /**
-         * CalledNumber.
+         * The called number.
+         * <p>
+         * 
+         * Only phone numbers in the Chinese mainland are supported. Each request supports only one called number.
          */
         public Builder calledNumber(String calledNumber) {
             this.putQueryParameter("CalledNumber", calledNumber);
@@ -252,7 +264,10 @@ public class IvrCallRequest extends Request {
         }
 
         /**
-         * CalledShowNumber.
+         * The calling number.
+         * <p>
+         * 
+         * The value must be a number you purchased. Each request supports only one calling number. In most cases, a calling number is configured with the maximum number of concurrent requests. New requests fail if the maximum number of concurrent requests is reached. You can log on to the [Voice Messaging Service console](https://dyvms.console.aliyun.com/overview/home) and choose **Real Number Service > Real Number Management** to view the number you purchased.
          */
         public Builder calledShowNumber(String calledShowNumber) {
             this.putQueryParameter("CalledShowNumber", calledShowNumber);
@@ -261,7 +276,7 @@ public class IvrCallRequest extends Request {
         }
 
         /**
-         * MenuKeyMap.
+         * The information about the key pressed by the subscriber.
          */
         public Builder menuKeyMap(java.util.List < MenuKeyMap> menuKeyMap) {
             this.putQueryParameter("MenuKeyMap", menuKeyMap);
@@ -270,7 +285,10 @@ public class IvrCallRequest extends Request {
         }
 
         /**
-         * OutId.
+         * The ID that is reserved for the caller of the operation. This ID is returned to the caller in a receipt message.
+         * <p>
+         * 
+         * The value is of the STRING type and must be 1 to 15 bytes in length.
          */
         public Builder outId(String outId) {
             this.putQueryParameter("OutId", outId);
@@ -288,7 +306,7 @@ public class IvrCallRequest extends Request {
         }
 
         /**
-         * PlayTimes.
+         * The number of replay times. Valid values: 1 to 3.
          */
         public Builder playTimes(Long playTimes) {
             this.putQueryParameter("PlayTimes", playTimes);
@@ -315,7 +333,11 @@ public class IvrCallRequest extends Request {
         }
 
         /**
-         * StartCode.
+         * The voice that is played when the call begins.
+         * <p>
+         * 
+         * *   If you use a voice notification file, this parameter specifies the voice ID. You can log on to the [Voice Messaging Service console](https://dyvms.console.aliyun.com/overview/home), choose **Voice Messages** > Voice Notifications, and then click the **Voice Notification Files** tab to view the voice ID.
+         * *   If you use a text-to-speech (TTS) template, this parameter specifies the template ID. You can log on to the [Voice Messaging Service console](https://dyvms.console.aliyun.com/overview/home), choose **Voice Messages** > **Voice Notifications**, and then click the **TTS Template** tab to view the template ID.
          */
         public Builder startCode(String startCode) {
             this.putQueryParameter("StartCode", startCode);
@@ -324,7 +346,10 @@ public class IvrCallRequest extends Request {
         }
 
         /**
-         * StartTtsParams.
+         * The variables in the TTS template, in the JSON format.
+         * <p>
+         * 
+         * > This parameter is required when the StartCode parameter is set to the ID of a TTS template that contains variables.
          */
         public Builder startTtsParams(String startTtsParams) {
             this.putQueryParameter("StartTtsParams", startTtsParams);
@@ -333,7 +358,7 @@ public class IvrCallRequest extends Request {
         }
 
         /**
-         * Timeout.
+         * The timeout period for the subscriber to press a key. Unit: milliseconds.
          */
         public Builder timeout(Integer timeout) {
             this.putQueryParameter("Timeout", timeout);
@@ -399,7 +424,11 @@ public class IvrCallRequest extends Request {
             private String ttsParams; 
 
             /**
-             * Code.
+             * The voice that corresponds to the key specified by the **MenuKeyMap.N.Key** parameter.
+             * <p>
+             * 
+             * *   If you use a voice notification file, this parameter specifies the voice ID. You can log on to the [Voice Messaging Service console](https://dyvms.console.aliyun.com/overview/home), choose **Voice Messages** > **Voice Notifications**, and then click the **Voice Notification Files** tab to view the voice ID.
+             * *   If you use a TTS template, this parameter specifies the template ID. You can log on to the [Voice Messaging Service console](https://dyvms.console.aliyun.com/overview/home), choose **Voice Messages** > **Voice Notifications**, and then click the **TTS Template** tab to view the template ID.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -407,7 +436,7 @@ public class IvrCallRequest extends Request {
             }
 
             /**
-             * Key.
+             * The key that can be pressed by the subscriber.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -415,7 +444,14 @@ public class IvrCallRequest extends Request {
             }
 
             /**
-             * TtsParams.
+             * The variables in the TTS template, in the JSON format.
+             * <p>
+             * 
+             * > 
+             * 
+             * *   This parameter specifies the substitution relationship of the variables in the TTS template if the value of the **MenuKeyMap.N.Code** parameter is set to the ID of the TTS template.
+             * 
+             * *   This parameter is required if the value of the **MenuKeyMap.N.Code** parameter is set to the ID of a TTS template that contains variables.
              */
             public Builder ttsParams(String ttsParams) {
                 this.ttsParams = ttsParams;

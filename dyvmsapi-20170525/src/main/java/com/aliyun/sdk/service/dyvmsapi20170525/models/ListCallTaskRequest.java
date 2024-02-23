@@ -167,22 +167,27 @@ public class ListCallTaskRequest extends Request {
             super();
         } 
 
-        private Builder(ListCallTaskRequest response) {
-            super(response);
-            this.bizType = response.bizType;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.status = response.status;
-            this.taskId = response.taskId;
-            this.taskName = response.taskName;
-            this.templateName = response.templateName;
+        private Builder(ListCallTaskRequest request) {
+            super(request);
+            this.bizType = request.bizType;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.status = request.status;
+            this.taskId = request.taskId;
+            this.taskName = request.taskName;
+            this.templateName = request.templateName;
         } 
 
         /**
-         * BizType.
+         * The type of the task template. Valid values:
+         * <p>
+         * 
+         * *   **VMS_VOICE_TTS**: the text-to-speech (TTS) notification template.
+         * *   **VMS_VOICE_CODE**: the voice notification template.
+         * *   **VMS_TTS**: the voice verification code template.
          */
         public Builder bizType(String bizType) {
             this.putQueryParameter("BizType", bizType);
@@ -200,7 +205,7 @@ public class ListCallTaskRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -209,7 +214,7 @@ public class ListCallTaskRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -236,7 +241,17 @@ public class ListCallTaskRequest extends Request {
         }
 
         /**
-         * Status.
+         * The task state. Valid values:
+         * <p>
+         * 
+         * *   **INIT**: The task is in the initial state.
+         * *   **RELEASE**: The task is being parsed.
+         * *   **RUNNING**: The task is running.
+         * *   **STOP**: The task is suspended.
+         * *   **SYSTEM_STOP**: The task is suspended by the system.
+         * *   **CANCEL**: The task is canceled.
+         * *   **SYSTEM_CANCEL**: The task is canceled by the system.
+         * *   **DONE**: The task is complete.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -245,7 +260,7 @@ public class ListCallTaskRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * The task ID.
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -254,7 +269,7 @@ public class ListCallTaskRequest extends Request {
         }
 
         /**
-         * TaskName.
+         * The task name.
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);
@@ -263,7 +278,7 @@ public class ListCallTaskRequest extends Request {
         }
 
         /**
-         * TemplateName.
+         * The template name.
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);

@@ -128,19 +128,22 @@ public class UploadRobotTaskCalledFileRequest extends Request {
             super();
         } 
 
-        private Builder(UploadRobotTaskCalledFileRequest response) {
-            super(response);
-            this.calledNumber = response.calledNumber;
-            this.id = response.id;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.ttsParam = response.ttsParam;
-            this.ttsParamHead = response.ttsParamHead;
+        private Builder(UploadRobotTaskCalledFileRequest request) {
+            super(request);
+            this.calledNumber = request.calledNumber;
+            this.id = request.id;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.ttsParam = request.ttsParam;
+            this.ttsParamHead = request.ttsParamHead;
         } 
 
         /**
-         * CalledNumber.
+         * The called numbers. Separate multiple called numbers with commas (,).
+         * <p>
+         * 
+         * > After you create a robocall task, you must upload called numbers in batches. You can upload up to 300,000 called numbers for each task.
          */
         public Builder calledNumber(String calledNumber) {
             this.putQueryParameter("CalledNumber", calledNumber);
@@ -149,7 +152,7 @@ public class UploadRobotTaskCalledFileRequest extends Request {
         }
 
         /**
-         * Id.
+         * The unique ID of the robocall task. You can call the [CreateRobotTask](~~CreateRobotTask~~) operation to obtain the ID of the robocall task.
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -185,7 +188,11 @@ public class UploadRobotTaskCalledFileRequest extends Request {
         }
 
         /**
-         * TtsParam.
+         * The values of the variable in the text-to-speech (TTS) template, in the JSON format. The variable values specified by the TtsParam parameter must match the variable names specified by the TtsParamHead parameter.
+         * <p>
+         * 
+         * *   If all the called numbers carry the same variable values, you can set the value of the number field to **all** and upload only one copy of the variable values.
+         * *   If only some of the called numbers carry the same variable values, you can set the value of the number field to **all** for these called numbers and set the value of the number field and variable values for other called numbers based on your business requirements. The system preferentially selects the values that you set for the called numbers.
          */
         public Builder ttsParam(String ttsParam) {
             this.putQueryParameter("TtsParam", ttsParam);
@@ -194,7 +201,7 @@ public class UploadRobotTaskCalledFileRequest extends Request {
         }
 
         /**
-         * TtsParamHead.
+         * The list of variable names carried in the robocall task, in the JSON format. The TtsParamHead parameter must be used together with the TtsParam parameter.
          */
         public Builder ttsParamHead(String ttsParamHead) {
             this.putQueryParameter("TtsParamHead", ttsParamHead);

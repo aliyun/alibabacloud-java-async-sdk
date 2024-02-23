@@ -209,25 +209,28 @@ public class CreateRobotTaskRequest extends Request {
             super();
         } 
 
-        private Builder(CreateRobotTaskRequest response) {
-            super(response);
-            this.caller = response.caller;
-            this.corpName = response.corpName;
-            this.dialogId = response.dialogId;
-            this.isSelfLine = response.isSelfLine;
-            this.numberStatusIdent = response.numberStatusIdent;
-            this.ownerId = response.ownerId;
-            this.recallInterval = response.recallInterval;
-            this.recallStateCodes = response.recallStateCodes;
-            this.recallTimes = response.recallTimes;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.retryType = response.retryType;
-            this.taskName = response.taskName;
+        private Builder(CreateRobotTaskRequest request) {
+            super(request);
+            this.caller = request.caller;
+            this.corpName = request.corpName;
+            this.dialogId = request.dialogId;
+            this.isSelfLine = request.isSelfLine;
+            this.numberStatusIdent = request.numberStatusIdent;
+            this.ownerId = request.ownerId;
+            this.recallInterval = request.recallInterval;
+            this.recallStateCodes = request.recallStateCodes;
+            this.recallTimes = request.recallTimes;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.retryType = request.retryType;
+            this.taskName = request.taskName;
         } 
 
         /**
-         * Caller.
+         * The calling number.
+         * <p>
+         * 
+         * You must use the phone numbers that you have purchased and separate multiple numbers with commas (,). You can log on to the [Voice Messaging Service console](https://dyvms.console.aliyun.com/overview/home) and choose **Real Number Service** > **Real Number Management** to view the numbers you purchased.
          */
         public Builder caller(String caller) {
             this.putQueryParameter("Caller", caller);
@@ -236,7 +239,7 @@ public class CreateRobotTaskRequest extends Request {
         }
 
         /**
-         * CorpName.
+         * The company name, which must be the same as the **enterprise name** on the qualification management page.
          */
         public Builder corpName(String corpName) {
             this.putQueryParameter("CorpName", corpName);
@@ -245,7 +248,10 @@ public class CreateRobotTaskRequest extends Request {
         }
 
         /**
-         * DialogId.
+         * The ID of the robot or communication script that is used to initiate the call.
+         * <p>
+         * 
+         * You can log on to the [Voice Messaging Service console](https://dyvms.console.aliyun.com/overview/home) and choose **Intelligent Voice Robot** > **Communication Script Management** to view the communication script ID.
          */
         public Builder dialogId(Long dialogId) {
             this.putQueryParameter("DialogId", dialogId);
@@ -254,7 +260,13 @@ public class CreateRobotTaskRequest extends Request {
         }
 
         /**
-         * IsSelfLine.
+         * Specifies whether to call the self-managed line. Valid values:
+         * <p>
+         * 
+         * *   **false** (default)
+         * *   **true**
+         * 
+         * > If you set this parameter to **true**, calling numbers are not verified.
          */
         public Builder isSelfLine(Boolean isSelfLine) {
             this.putQueryParameter("IsSelfLine", isSelfLine);
@@ -263,7 +275,13 @@ public class CreateRobotTaskRequest extends Request {
         }
 
         /**
-         * NumberStatusIdent.
+         * Specifies whether to enable number status identification. Valid values:
+         * <p>
+         * 
+         * *   **false** (default)
+         * *   **true**
+         * 
+         * > If you set this parameter to **true**, the reason why a call is not answered is recorded.
          */
         public Builder numberStatusIdent(Boolean numberStatusIdent) {
             this.putQueryParameter("NumberStatusIdent", numberStatusIdent);
@@ -281,7 +299,10 @@ public class CreateRobotTaskRequest extends Request {
         }
 
         /**
-         * RecallInterval.
+         * The redial interval. Unit: minutes. The value must be greater than 1.
+         * <p>
+         * 
+         * > The maximum redial interval is 30 minutes.
          */
         public Builder recallInterval(Integer recallInterval) {
             this.putQueryParameter("RecallInterval", recallInterval);
@@ -290,7 +311,15 @@ public class CreateRobotTaskRequest extends Request {
         }
 
         /**
-         * RecallStateCodes.
+         * The call state in which redial is required. Separate multiple call states with commas (,). Valid values:
+         * <p>
+         * 
+         * *   **200010**: The phone of the called party is powered off.
+         * *   **200011**: The number of the called party is out of service.
+         * *   **200002**: The line is busy.
+         * *   **200012**: The call is lost.
+         * *   **200005**: The called party cannot be connected.
+         * *   **200003**: The called party does not respond to the call.
          */
         public Builder recallStateCodes(String recallStateCodes) {
             this.putQueryParameter("RecallStateCodes", recallStateCodes);
@@ -299,7 +328,7 @@ public class CreateRobotTaskRequest extends Request {
         }
 
         /**
-         * RecallTimes.
+         * The number of redial times.
          */
         public Builder recallTimes(Integer recallTimes) {
             this.putQueryParameter("RecallTimes", recallTimes);
@@ -326,7 +355,11 @@ public class CreateRobotTaskRequest extends Request {
         }
 
         /**
-         * RetryType.
+         * Specifies whether to enable auto-redial. Valid values:
+         * <p>
+         * 
+         * *   **1**: enables auto-redial.
+         * *   **0**: disables auto-redial.
          */
         public Builder retryType(Integer retryType) {
             this.putQueryParameter("RetryType", retryType);
@@ -335,7 +368,7 @@ public class CreateRobotTaskRequest extends Request {
         }
 
         /**
-         * TaskName.
+         * The task name. The task name can be up to 30 characters in length.
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);

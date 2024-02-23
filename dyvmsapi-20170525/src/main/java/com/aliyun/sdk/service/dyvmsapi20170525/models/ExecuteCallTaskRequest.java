@@ -115,18 +115,21 @@ public class ExecuteCallTaskRequest extends Request {
             super();
         } 
 
-        private Builder(ExecuteCallTaskRequest response) {
-            super(response);
-            this.fireTime = response.fireTime;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.status = response.status;
-            this.taskId = response.taskId;
+        private Builder(ExecuteCallTaskRequest request) {
+            super(request);
+            this.fireTime = request.fireTime;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.status = request.status;
+            this.taskId = request.taskId;
         } 
 
         /**
-         * FireTime.
+         * The time when the call task is executed, in the yyyy-MM-dd HH:mm:ss format.
+         * <p>
+         * 
+         * > You can leave this parameter empty.
          */
         public Builder fireTime(String fireTime) {
             this.putQueryParameter("FireTime", fireTime);
@@ -162,7 +165,12 @@ public class ExecuteCallTaskRequest extends Request {
         }
 
         /**
-         * Status.
+         * The task state. Valid values:
+         * <p>
+         * 
+         * *   **RUNNING**
+         * *   **STOP**
+         * *   **CANCEL**
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -171,7 +179,7 @@ public class ExecuteCallTaskRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * The task ID. You can call the [CreateCallTask](~~CreateCallTask~~) operation to obtain the task ID.
          */
         public Builder taskId(Long taskId) {
             this.putQueryParameter("TaskId", taskId);

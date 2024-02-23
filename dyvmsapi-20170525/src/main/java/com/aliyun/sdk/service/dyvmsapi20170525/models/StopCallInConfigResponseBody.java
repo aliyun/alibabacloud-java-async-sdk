@@ -7,27 +7,27 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetRtcTokenResponseBody} extends {@link TeaModel}
+ * {@link StopCallInConfigResponseBody} extends {@link TeaModel}
  *
- * <p>GetRtcTokenResponseBody</p>
+ * <p>StopCallInConfigResponseBody</p>
  */
-public class GetRtcTokenResponseBody extends TeaModel {
+public class StopCallInConfigResponseBody extends TeaModel {
     @NameInMap("Code")
     private String code;
+
+    @NameInMap("Data")
+    private Boolean data;
 
     @NameInMap("Message")
     private String message;
 
-    @NameInMap("Module")
-    private String module;
-
     @NameInMap("RequestId")
     private String requestId;
 
-    private GetRtcTokenResponseBody(Builder builder) {
+    private StopCallInConfigResponseBody(Builder builder) {
         this.code = builder.code;
+        this.data = builder.data;
         this.message = builder.message;
-        this.module = builder.module;
         this.requestId = builder.requestId;
     }
 
@@ -35,7 +35,7 @@ public class GetRtcTokenResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static GetRtcTokenResponseBody create() {
+    public static StopCallInConfigResponseBody create() {
         return builder().build();
     }
 
@@ -47,17 +47,17 @@ public class GetRtcTokenResponseBody extends TeaModel {
     }
 
     /**
+     * @return data
+     */
+    public Boolean getData() {
+        return this.data;
+    }
+
+    /**
      * @return message
      */
     public String getMessage() {
         return this.message;
-    }
-
-    /**
-     * @return module
-     */
-    public String getModule() {
-        return this.module;
     }
 
     /**
@@ -69,12 +69,12 @@ public class GetRtcTokenResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
+        private Boolean data; 
         private String message; 
-        private String module; 
         private String requestId; 
 
         /**
-         * Code.
+         * The response code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +82,19 @@ public class GetRtcTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * Indicates whether the inbound call was stopped. Valid values:
+         * <p>
+         * 
+         * *   true: The inbound call was stopped.
+         * *   false: The inbound call failed to be stopped.
+         */
+        public Builder data(Boolean data) {
+            this.data = data;
+            return this;
+        }
+
+        /**
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,23 +102,15 @@ public class GetRtcTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Module.
-         */
-        public Builder module(String module) {
-            this.module = module;
-            return this;
-        }
-
-        /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public GetRtcTokenResponseBody build() {
-            return new GetRtcTokenResponseBody(this);
+        public StopCallInConfigResponseBody build() {
+            return new StopCallInConfigResponseBody(this);
         } 
 
     } 

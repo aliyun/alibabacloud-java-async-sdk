@@ -142,20 +142,20 @@ public class AddVirtualNumberRelationRequest extends Request {
             super();
         } 
 
-        private Builder(AddVirtualNumberRelationRequest response) {
-            super(response);
-            this.corpNameList = response.corpNameList;
-            this.numberList = response.numberList;
-            this.ownerId = response.ownerId;
-            this.phoneNum = response.phoneNum;
-            this.prodCode = response.prodCode;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.routeType = response.routeType;
+        private Builder(AddVirtualNumberRelationRequest request) {
+            super(request);
+            this.corpNameList = request.corpNameList;
+            this.numberList = request.numberList;
+            this.ownerId = request.ownerId;
+            this.phoneNum = request.phoneNum;
+            this.prodCode = request.prodCode;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.routeType = request.routeType;
         } 
 
         /**
-         * CorpNameList.
+         * The company names. Separate multiple company names with commas (,).
          */
         public Builder corpNameList(String corpNameList) {
             this.putQueryParameter("CorpNameList", corpNameList);
@@ -164,7 +164,7 @@ public class AddVirtualNumberRelationRequest extends Request {
         }
 
         /**
-         * NumberList.
+         * The real numbers. Separate multiple real numbers with commas (,).
          */
         public Builder numberList(String numberList) {
             this.putQueryParameter("NumberList", numberList);
@@ -182,7 +182,7 @@ public class AddVirtualNumberRelationRequest extends Request {
         }
 
         /**
-         * PhoneNum.
+         * The virtual number.
          */
         public Builder phoneNum(String phoneNum) {
             this.putQueryParameter("PhoneNum", phoneNum);
@@ -191,7 +191,7 @@ public class AddVirtualNumberRelationRequest extends Request {
         }
 
         /**
-         * ProdCode.
+         * The service name. Default value: **dyvms**.
          */
         public Builder prodCode(String prodCode) {
             this.putQueryParameter("ProdCode", prodCode);
@@ -218,7 +218,11 @@ public class AddVirtualNumberRelationRequest extends Request {
         }
 
         /**
-         * RouteType.
+         * The route type. Valid values:
+         * <p>
+         * 
+         * *   **0**: number location first.
+         * *   **1**: random.
          */
         public Builder routeType(Integer routeType) {
             this.putQueryParameter("RouteType", routeType);

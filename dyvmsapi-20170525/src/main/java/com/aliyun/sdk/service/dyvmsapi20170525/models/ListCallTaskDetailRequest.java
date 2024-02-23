@@ -140,20 +140,20 @@ public class ListCallTaskDetailRequest extends Request {
             super();
         } 
 
-        private Builder(ListCallTaskDetailRequest response) {
-            super(response);
-            this.calledNum = response.calledNum;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.status = response.status;
-            this.taskId = response.taskId;
+        private Builder(ListCallTaskDetailRequest request) {
+            super(request);
+            this.calledNum = request.calledNum;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.status = request.status;
+            this.taskId = request.taskId;
         } 
 
         /**
-         * CalledNum.
+         * The called number.
          */
         public Builder calledNum(String calledNum) {
             this.putQueryParameter("CalledNum", calledNum);
@@ -171,7 +171,7 @@ public class ListCallTaskDetailRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -180,7 +180,7 @@ public class ListCallTaskDetailRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -207,7 +207,12 @@ public class ListCallTaskDetailRequest extends Request {
         }
 
         /**
-         * Status.
+         * The task state. Valid values:
+         * <p>
+         * 
+         * *   **SUCCESS**: The task is successful.
+         * *   **FAIL**: The task fails.
+         * *   **INIT**: The task is not started.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -216,7 +221,7 @@ public class ListCallTaskDetailRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * The task ID.
          */
         public Builder taskId(Long taskId) {
             this.putQueryParameter("TaskId", taskId);

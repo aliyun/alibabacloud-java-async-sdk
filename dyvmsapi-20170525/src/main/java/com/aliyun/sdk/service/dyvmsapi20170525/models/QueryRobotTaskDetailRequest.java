@@ -88,16 +88,16 @@ public class QueryRobotTaskDetailRequest extends Request {
             super();
         } 
 
-        private Builder(QueryRobotTaskDetailRequest response) {
-            super(response);
-            this.id = response.id;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(QueryRobotTaskDetailRequest request) {
+            super(request);
+            this.id = request.id;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * Id.
+         * The unique ID of the robocall task. You can call the [CreateRobotTask](~~CreateRobotTask~~) operation to obtain the task ID.
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);

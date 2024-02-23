@@ -98,7 +98,7 @@ public class ListCallTaskResponseBody extends TeaModel {
         private Long total; 
 
         /**
-         * Code.
+         * The response code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class ListCallTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The task information.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class ListCallTaskResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +122,7 @@ public class ListCallTaskResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +130,7 @@ public class ListCallTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class ListCallTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * The total number of tasks.
          */
         public Builder total(Long total) {
             this.total = total;
@@ -346,7 +346,12 @@ public class ListCallTaskResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * BizType.
+             * The type of the task template. Valid values:
+             * <p>
+             * 
+             * *   **VMS_VOICE_TTS**: the TTS notification template.
+             * *   **VMS_VOICE_CODE**: the voice notification template.
+             * *   **VMS_TTS**: the voice verification code template.
              */
             public Builder bizType(String bizType) {
                 this.bizType = bizType;
@@ -354,7 +359,7 @@ public class ListCallTaskResponseBody extends TeaModel {
             }
 
             /**
-             * CompleteTime.
+             * The time when the task was completed. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder completeTime(String completeTime) {
                 this.completeTime = completeTime;
@@ -362,7 +367,7 @@ public class ListCallTaskResponseBody extends TeaModel {
             }
 
             /**
-             * CompletedCount.
+             * The number of tasks that were complete.
              */
             public Builder completedCount(Long completedCount) {
                 this.completedCount = completedCount;
@@ -370,7 +375,7 @@ public class ListCallTaskResponseBody extends TeaModel {
             }
 
             /**
-             * CompletedRate.
+             * The task progress.
              */
             public Builder completedRate(Integer completedRate) {
                 this.completedRate = completedRate;
@@ -378,7 +383,7 @@ public class ListCallTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Data.
+             * This parameter is unavailable.
              */
             public Builder data(String data) {
                 this.data = data;
@@ -386,7 +391,7 @@ public class ListCallTaskResponseBody extends TeaModel {
             }
 
             /**
-             * DataType.
+             * The type of the called number.
              */
             public Builder dataType(String dataType) {
                 this.dataType = dataType;
@@ -394,7 +399,7 @@ public class ListCallTaskResponseBody extends TeaModel {
             }
 
             /**
-             * FireTime.
+             * The time when the scheduled task was started. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder fireTime(String fireTime) {
                 this.fireTime = fireTime;
@@ -402,7 +407,7 @@ public class ListCallTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The task ID.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -410,7 +415,7 @@ public class ListCallTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Resource.
+             * The calling number.
              */
             public Builder resource(String resource) {
                 this.resource = resource;
@@ -418,7 +423,17 @@ public class ListCallTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The task state. Valid values:
+             * <p>
+             * 
+             * *   **INIT**: The task was in the initial state.
+             * *   **RELEASE**: The task was being parsed.
+             * *   **RUNNING**: The task was running.
+             * *   **STOP**: The task was manually suspended.
+             * *   **SYSTEM_STOP**: The task was suspended by the system.
+             * *   **CANCEL**: The task was manually canceled.
+             * *   **SYSTEM_CANCEL**: The task was canceled by the system.
+             * *   **DONE**: The task was complete.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -426,7 +441,7 @@ public class ListCallTaskResponseBody extends TeaModel {
             }
 
             /**
-             * StopTime.
+             * This parameter is unavailable.
              */
             public Builder stopTime(String stopTime) {
                 this.stopTime = stopTime;
@@ -434,7 +449,7 @@ public class ListCallTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskName.
+             * The task name.
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -442,7 +457,7 @@ public class ListCallTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateCode.
+             * The ID of the voice template.
              */
             public Builder templateCode(String templateCode) {
                 this.templateCode = templateCode;
@@ -450,7 +465,7 @@ public class ListCallTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateName.
+             * The template name.
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -458,7 +473,7 @@ public class ListCallTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of called numbers.
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

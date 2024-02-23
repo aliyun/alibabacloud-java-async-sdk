@@ -74,7 +74,11 @@ public class ListHotlineTransferRegisterFileResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The response code.
+         * <p>
+         * 
+         * *   The value OK indicates that the request was successful.
+         * *   For more information about other response codes, see [API error codes](~~112502~~).
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +86,7 @@ public class ListHotlineTransferRegisterFileResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The response parameters.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +94,7 @@ public class ListHotlineTransferRegisterFileResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +102,7 @@ public class ListHotlineTransferRegisterFileResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -234,7 +238,7 @@ public class ListHotlineTransferRegisterFileResponseBody extends TeaModel {
             private Long resUniqueCode; 
 
             /**
-             * Agree.
+             * The authenticity of the commitment.
              */
             public Builder agree(String agree) {
                 this.agree = agree;
@@ -242,7 +246,7 @@ public class ListHotlineTransferRegisterFileResponseBody extends TeaModel {
             }
 
             /**
-             * CorpName.
+             * The enterprise name.
              */
             public Builder corpName(String corpName) {
                 this.corpName = corpName;
@@ -250,7 +254,7 @@ public class ListHotlineTransferRegisterFileResponseBody extends TeaModel {
             }
 
             /**
-             * HotlineNumber.
+             * The China 400 number.
              */
             public Builder hotlineNumber(String hotlineNumber) {
                 this.hotlineNumber = hotlineNumber;
@@ -258,7 +262,7 @@ public class ListHotlineTransferRegisterFileResponseBody extends TeaModel {
             }
 
             /**
-             * MngOpIdentityCard.
+             * The ID card number of the handler.
              */
             public Builder mngOpIdentityCard(String mngOpIdentityCard) {
                 this.mngOpIdentityCard = mngOpIdentityCard;
@@ -266,7 +270,7 @@ public class ListHotlineTransferRegisterFileResponseBody extends TeaModel {
             }
 
             /**
-             * MngOpMail.
+             * The email address of the handler.
              */
             public Builder mngOpMail(String mngOpMail) {
                 this.mngOpMail = mngOpMail;
@@ -274,7 +278,7 @@ public class ListHotlineTransferRegisterFileResponseBody extends TeaModel {
             }
 
             /**
-             * MngOpMobile.
+             * The mobile phone number of the handler.
              */
             public Builder mngOpMobile(String mngOpMobile) {
                 this.mngOpMobile = mngOpMobile;
@@ -282,7 +286,7 @@ public class ListHotlineTransferRegisterFileResponseBody extends TeaModel {
             }
 
             /**
-             * MngOpName.
+             * The name of the handler.
              */
             public Builder mngOpName(String mngOpName) {
                 this.mngOpName = mngOpName;
@@ -290,7 +294,7 @@ public class ListHotlineTransferRegisterFileResponseBody extends TeaModel {
             }
 
             /**
-             * QualificationId.
+             * The qualification ID.
              */
             public Builder qualificationId(String qualificationId) {
                 this.qualificationId = qualificationId;
@@ -298,7 +302,7 @@ public class ListHotlineTransferRegisterFileResponseBody extends TeaModel {
             }
 
             /**
-             * ResUniqueCode.
+             * The unique code of the query operation.
              */
             public Builder resUniqueCode(Long resUniqueCode) {
                 this.resUniqueCode = resUniqueCode;
@@ -375,7 +379,7 @@ public class ListHotlineTransferRegisterFileResponseBody extends TeaModel {
             private java.util.List < Values> values; 
 
             /**
-             * PageNo.
+             * The page number.
              */
             public Builder pageNo(Integer pageNo) {
                 this.pageNo = pageNo;
@@ -383,7 +387,7 @@ public class ListHotlineTransferRegisterFileResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -391,7 +395,7 @@ public class ListHotlineTransferRegisterFileResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * The total number of entries returned.
              */
             public Builder total(Long total) {
                 this.total = total;
@@ -399,7 +403,7 @@ public class ListHotlineTransferRegisterFileResponseBody extends TeaModel {
             }
 
             /**
-             * Values.
+             * The registration file.
              */
             public Builder values(java.util.List < Values> values) {
                 this.values = values;

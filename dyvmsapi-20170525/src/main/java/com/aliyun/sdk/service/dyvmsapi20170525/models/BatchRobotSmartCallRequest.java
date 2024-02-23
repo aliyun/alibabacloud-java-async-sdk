@@ -221,26 +221,29 @@ public class BatchRobotSmartCallRequest extends Request {
             super();
         } 
 
-        private Builder(BatchRobotSmartCallRequest response) {
-            super(response);
-            this.calledNumber = response.calledNumber;
-            this.calledShowNumber = response.calledShowNumber;
-            this.corpName = response.corpName;
-            this.dialogId = response.dialogId;
-            this.earlyMediaAsr = response.earlyMediaAsr;
-            this.isSelfLine = response.isSelfLine;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.scheduleCall = response.scheduleCall;
-            this.scheduleTime = response.scheduleTime;
-            this.taskName = response.taskName;
-            this.ttsParam = response.ttsParam;
-            this.ttsParamHead = response.ttsParamHead;
+        private Builder(BatchRobotSmartCallRequest request) {
+            super(request);
+            this.calledNumber = request.calledNumber;
+            this.calledShowNumber = request.calledShowNumber;
+            this.corpName = request.corpName;
+            this.dialogId = request.dialogId;
+            this.earlyMediaAsr = request.earlyMediaAsr;
+            this.isSelfLine = request.isSelfLine;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.scheduleCall = request.scheduleCall;
+            this.scheduleTime = request.scheduleTime;
+            this.taskName = request.taskName;
+            this.ttsParam = request.ttsParam;
+            this.ttsParamHead = request.ttsParamHead;
         } 
 
         /**
-         * CalledNumber.
+         * The called number. Only mobile phone numbers in the Chinese mainland are supported.
+         * <p>
+         * 
+         * You can set up to 1,000 called numbers and separate the numbers with commas (,).
          */
         public Builder calledNumber(String calledNumber) {
             this.putQueryParameter("CalledNumber", calledNumber);
@@ -249,7 +252,10 @@ public class BatchRobotSmartCallRequest extends Request {
         }
 
         /**
-         * CalledShowNumber.
+         * The number displayed to called parties, which must be a number you purchased. You can view the numbers you purchased in the [Voice Messaging Service console](https://dyvms.console.aliyun.com/dyvms.htm#/number/normal).
+         * <p>
+         * 
+         * You can set up to 100 numbers and separate the numbers with commas (,).
          */
         public Builder calledShowNumber(String calledShowNumber) {
             this.putQueryParameter("CalledShowNumber", calledShowNumber);
@@ -258,7 +264,10 @@ public class BatchRobotSmartCallRequest extends Request {
         }
 
         /**
-         * CorpName.
+         * The company name, which must be the same as the **company name** specified on the [qualification management page](https://dyvms.console.aliyun.com/dyvms.htm#/corp/normal).
+         * <p>
+         * 
+         * > This parameter is optional if **isSelfLine** is set to **true**.
          */
         public Builder corpName(String corpName) {
             this.putQueryParameter("CorpName", corpName);
@@ -267,7 +276,10 @@ public class BatchRobotSmartCallRequest extends Request {
         }
 
         /**
-         * DialogId.
+         * The ID of the robot or communication script that is used to initiate a call.
+         * <p>
+         * 
+         * You can obtain the **communication script ID** from the [Communication script management](https://dyvms.console.aliyun.com/dyvms.htm#/smart-call/saas/robot/list) page.
          */
         public Builder dialogId(String dialogId) {
             this.putQueryParameter("DialogId", dialogId);
@@ -276,7 +288,10 @@ public class BatchRobotSmartCallRequest extends Request {
         }
 
         /**
-         * EarlyMediaAsr.
+         * The speech recognition identifier of early media. The default value is **false**, which means that the speech recognition identifier of early media is not enabled.
+         * <p>
+         * 
+         * Set the parameter to **true** if you want to enable the speech recognition identifier of early media.
          */
         public Builder earlyMediaAsr(Boolean earlyMediaAsr) {
             this.putQueryParameter("EarlyMediaAsr", earlyMediaAsr);
@@ -285,7 +300,7 @@ public class BatchRobotSmartCallRequest extends Request {
         }
 
         /**
-         * IsSelfLine.
+         * Specifies whether to call the self-managed line. Default value: **false**.
          */
         public Builder isSelfLine(Boolean isSelfLine) {
             this.putQueryParameter("IsSelfLine", isSelfLine);
@@ -321,7 +336,7 @@ public class BatchRobotSmartCallRequest extends Request {
         }
 
         /**
-         * ScheduleCall.
+         * Specifies whether the call is scheduled. If you set this parameter to **true**, the **ScheduleTime** parameter is required.
          */
         public Builder scheduleCall(Boolean scheduleCall) {
             this.putQueryParameter("ScheduleCall", scheduleCall);
@@ -330,7 +345,10 @@ public class BatchRobotSmartCallRequest extends Request {
         }
 
         /**
-         * ScheduleTime.
+         * The preset call time. This value is a UNIX timestamp. Unit: milliseconds.
+         * <p>
+         * 
+         * >  This parameter is required only when **ScheduleCall** is set to **true**.
          */
         public Builder scheduleTime(Long scheduleTime) {
             this.putQueryParameter("ScheduleTime", scheduleTime);
@@ -339,7 +357,7 @@ public class BatchRobotSmartCallRequest extends Request {
         }
 
         /**
-         * TaskName.
+         * The task name. The task name can be up to 30 characters in length.
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);
@@ -348,7 +366,10 @@ public class BatchRobotSmartCallRequest extends Request {
         }
 
         /**
-         * TtsParam.
+         * The variable value of the TTS template, in the JSON format.
+         * <p>
+         * 
+         * The variable value must correspond to a number. The TtsParam parameter must be used together with the TtsParamHead parameter.
          */
         public Builder ttsParam(String ttsParam) {
             this.putQueryParameter("TtsParam", ttsParam);
@@ -357,7 +378,10 @@ public class BatchRobotSmartCallRequest extends Request {
         }
 
         /**
-         * TtsParamHead.
+         * The call tasks with variables, in the JSON format.
+         * <p>
+         * 
+         * The parameter value is a list of variable names. The TtsParamHead parameter must be used together with the TtsParam parameter.
          */
         public Builder ttsParamHead(String ttsParamHead) {
             this.putQueryParameter("TtsParamHead", ttsParamHead);

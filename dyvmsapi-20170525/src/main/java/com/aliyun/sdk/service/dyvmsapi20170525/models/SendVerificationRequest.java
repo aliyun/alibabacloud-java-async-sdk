@@ -116,18 +116,18 @@ public class SendVerificationRequest extends Request {
             super();
         } 
 
-        private Builder(SendVerificationRequest response) {
-            super(response);
-            this.bizType = response.bizType;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.target = response.target;
-            this.verifyType = response.verifyType;
+        private Builder(SendVerificationRequest request) {
+            super(request);
+            this.bizType = request.bizType;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.target = request.target;
+            this.verifyType = request.verifyType;
         } 
 
         /**
-         * BizType.
+         * The business type. Set the value to **CONTACT**.
          */
         public Builder bizType(String bizType) {
             this.putQueryParameter("BizType", bizType);
@@ -163,7 +163,7 @@ public class SendVerificationRequest extends Request {
         }
 
         /**
-         * Target.
+         * The mobile phone number that receives the SMS verification code.
          */
         public Builder target(String target) {
             this.putQueryParameter("Target", target);
@@ -172,7 +172,7 @@ public class SendVerificationRequest extends Request {
         }
 
         /**
-         * VerifyType.
+         * The mode of sending the SMS verification code. Set the value to **SMS**.
          */
         public Builder verifyType(String verifyType) {
             this.putQueryParameter("VerifyType", verifyType);

@@ -26,7 +26,6 @@ public class GetTokenRequest extends Request {
 
     @Query
     @NameInMap("TokenType")
-    @Validation()
     private String tokenType;
 
     private GetTokenRequest(Builder builder) {
@@ -88,12 +87,12 @@ public class GetTokenRequest extends Request {
             super();
         } 
 
-        private Builder(GetTokenRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.tokenType = response.tokenType;
+        private Builder(GetTokenRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.tokenType = request.tokenType;
         } 
 
         /**
@@ -124,7 +123,7 @@ public class GetTokenRequest extends Request {
         }
 
         /**
-         * TokenType.
+         * The token type.
          */
         public Builder tokenType(String tokenType) {
             this.putQueryParameter("TokenType", tokenType);

@@ -74,7 +74,11 @@ public class BatchRobotSmartCallResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * Code.
+         * The response code.
+         * <p>
+         * 
+         * *   The value OK indicates that the request was successful.
+         * *   For more information about other response codes, see [API error codes](~~112502~~).
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +86,7 @@ public class BatchRobotSmartCallResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +94,7 @@ public class BatchRobotSmartCallResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +102,7 @@ public class BatchRobotSmartCallResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * The unique ID of the robocall task. You can call the [QueryCallDetailByTaskId](~~393537~~) operation to query the details of the task based on the task ID.
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

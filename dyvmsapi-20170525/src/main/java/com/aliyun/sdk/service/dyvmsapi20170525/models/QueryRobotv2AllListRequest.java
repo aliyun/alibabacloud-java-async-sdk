@@ -74,11 +74,11 @@ public class QueryRobotv2AllListRequest extends Request {
             super();
         } 
 
-        private Builder(QueryRobotv2AllListRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(QueryRobotv2AllListRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

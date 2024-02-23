@@ -74,7 +74,11 @@ public class AddVirtualNumberRelationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The response code.
+         * <p>
+         * 
+         * *   The value 200 indicates that the request was successful.
+         * *   For more information about other response codes, see [API error codes](~~112502~~).
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +86,10 @@ public class AddVirtualNumberRelationResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The numbers that failed to be associated.
+         * <p>
+         * 
+         * > If all numbers are associated, no value is returned for this parameter.
          */
         public Builder data(String data) {
             this.data = data;
@@ -90,7 +97,7 @@ public class AddVirtualNumberRelationResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +105,7 @@ public class AddVirtualNumberRelationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

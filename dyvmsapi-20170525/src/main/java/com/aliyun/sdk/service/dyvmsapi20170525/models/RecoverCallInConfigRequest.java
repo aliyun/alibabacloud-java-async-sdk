@@ -7,11 +7,16 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetCallInfoRequest} extends {@link RequestModel}
+ * {@link RecoverCallInConfigRequest} extends {@link RequestModel}
  *
- * <p>GetCallInfoRequest</p>
+ * <p>RecoverCallInConfigRequest</p>
  */
-public class GetCallInfoRequest extends Request {
+public class RecoverCallInConfigRequest extends Request {
+    @Query
+    @NameInMap("Number")
+    @Validation(required = true)
+    private String number;
+
     @Query
     @NameInMap("OwnerId")
     private Long ownerId;
@@ -24,30 +29,32 @@ public class GetCallInfoRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RtcId")
-    @Validation(required = true)
-    private String rtcId;
-
-    private GetCallInfoRequest(Builder builder) {
+    private RecoverCallInConfigRequest(Builder builder) {
         super(builder);
+        this.number = builder.number;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.rtcId = builder.rtcId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static GetCallInfoRequest create() {
+    public static RecoverCallInConfigRequest create() {
         return builder().build();
     }
 
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return number
+     */
+    public String getNumber() {
+        return this.number;
     }
 
     /**
@@ -71,30 +78,32 @@ public class GetCallInfoRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    /**
-     * @return rtcId
-     */
-    public String getRtcId() {
-        return this.rtcId;
-    }
-
-    public static final class Builder extends Request.Builder<GetCallInfoRequest, Builder> {
+    public static final class Builder extends Request.Builder<RecoverCallInConfigRequest, Builder> {
+        private String number; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String rtcId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetCallInfoRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.rtcId = response.rtcId;
+        private Builder(RecoverCallInConfigRequest request) {
+            super(request);
+            this.number = request.number;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
+
+        /**
+         * The China 400 number that is used to transfer the inbound call.
+         */
+        public Builder number(String number) {
+            this.putQueryParameter("Number", number);
+            this.number = number;
+            return this;
+        }
 
         /**
          * OwnerId.
@@ -123,18 +132,9 @@ public class GetCallInfoRequest extends Request {
             return this;
         }
 
-        /**
-         * RtcId.
-         */
-        public Builder rtcId(String rtcId) {
-            this.putQueryParameter("RtcId", rtcId);
-            this.rtcId = rtcId;
-            return this;
-        }
-
         @Override
-        public GetCallInfoRequest build() {
-            return new GetCallInfoRequest(this);
+        public RecoverCallInConfigRequest build() {
+            return new RecoverCallInConfigRequest(this);
         } 
 
     } 

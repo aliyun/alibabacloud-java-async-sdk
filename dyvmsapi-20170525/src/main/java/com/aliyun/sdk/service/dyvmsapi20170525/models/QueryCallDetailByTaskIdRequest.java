@@ -116,18 +116,18 @@ public class QueryCallDetailByTaskIdRequest extends Request {
             super();
         } 
 
-        private Builder(QueryCallDetailByTaskIdRequest response) {
-            super(response);
-            this.callee = response.callee;
-            this.ownerId = response.ownerId;
-            this.queryDate = response.queryDate;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.taskId = response.taskId;
+        private Builder(QueryCallDetailByTaskIdRequest request) {
+            super(request);
+            this.callee = request.callee;
+            this.ownerId = request.ownerId;
+            this.queryDate = request.queryDate;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.taskId = request.taskId;
         } 
 
         /**
-         * Callee.
+         * The called number. You can view the outbound call records of only one called number.
          */
         public Builder callee(String callee) {
             this.putQueryParameter("Callee", callee);
@@ -145,7 +145,7 @@ public class QueryCallDetailByTaskIdRequest extends Request {
         }
 
         /**
-         * QueryDate.
+         * The start time of the outbound robocall task. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
          */
         public Builder queryDate(Long queryDate) {
             this.putQueryParameter("QueryDate", queryDate);
@@ -172,7 +172,7 @@ public class QueryCallDetailByTaskIdRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * The unique ID of the outbound robocall task. The task ID is returned after the outbound robocall task is successfully delivered. You can view the task ID on the [Task Management](https://dyvms.console.aliyun.com/job/list) page of the Voice Messaging Service console, or call the **BatchRobotSmartCall** operation to obtain the **task ID**.
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

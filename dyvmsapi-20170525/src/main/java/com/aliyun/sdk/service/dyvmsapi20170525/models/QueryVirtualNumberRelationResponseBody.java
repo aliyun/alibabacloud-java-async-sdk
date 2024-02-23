@@ -62,7 +62,11 @@ public class QueryVirtualNumberRelationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The response code.
+         * <p>
+         * 
+         * *   The value 200 indicates that the request was successful.
+         * *   For more information about other response codes, see [API error codes](~~112502~~).
          */
         public Builder code(String code) {
             this.code = code;
@@ -70,7 +74,14 @@ public class QueryVirtualNumberRelationResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The list of associations between virtual numbers and real numbers. The following fields are returned:
+         * <p>
+         * 
+         * *   **relatedNum**: the real number.
+         * *   **createTime**: the time when the number was activated.
+         * *   **pageNo**: the page number.
+         * *   **pageSize**: the number of entries per page.
+         * *   **total**: the total number of entries returned.
          */
         public Builder data(String data) {
             this.data = data;
@@ -78,7 +89,7 @@ public class QueryVirtualNumberRelationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

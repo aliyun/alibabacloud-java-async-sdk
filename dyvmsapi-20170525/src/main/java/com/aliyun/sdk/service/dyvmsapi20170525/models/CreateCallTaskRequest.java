@@ -217,26 +217,31 @@ public class CreateCallTaskRequest extends Request {
             super();
         } 
 
-        private Builder(CreateCallTaskRequest response) {
-            super(response);
-            this.bizType = response.bizType;
-            this.data = response.data;
-            this.dataType = response.dataType;
-            this.fireTime = response.fireTime;
-            this.ownerId = response.ownerId;
-            this.resource = response.resource;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.resourceType = response.resourceType;
-            this.scheduleType = response.scheduleType;
-            this.stopTime = response.stopTime;
-            this.taskName = response.taskName;
-            this.templateCode = response.templateCode;
-            this.templateName = response.templateName;
+        private Builder(CreateCallTaskRequest request) {
+            super(request);
+            this.bizType = request.bizType;
+            this.data = request.data;
+            this.dataType = request.dataType;
+            this.fireTime = request.fireTime;
+            this.ownerId = request.ownerId;
+            this.resource = request.resource;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.resourceType = request.resourceType;
+            this.scheduleType = request.scheduleType;
+            this.stopTime = request.stopTime;
+            this.taskName = request.taskName;
+            this.templateCode = request.templateCode;
+            this.templateName = request.templateName;
         } 
 
         /**
-         * BizType.
+         * The type of the task template. Valid values:
+         * <p>
+         * 
+         * *   **VMS_VOICE_TTS**: the text-to-speech (TTS) notification template.
+         * *   **VMS_VOICE_CODE**: the voice notification template.
+         * *   **VMS_TTS**: the voice verification code template.
          */
         public Builder bizType(String bizType) {
             this.putQueryParameter("BizType", bizType);
@@ -245,7 +250,11 @@ public class CreateCallTaskRequest extends Request {
         }
 
         /**
-         * Data.
+         * The called numbers.
+         * <p>
+         * 
+         * *   If you set DataType to LIST, the value of Data is in the LIST format.
+         * *   If you set DataType to JSON, the value of Data is in the JSON format.
          */
         public Builder data(String data) {
             this.putQueryParameter("Data", data);
@@ -254,7 +263,11 @@ public class CreateCallTaskRequest extends Request {
         }
 
         /**
-         * DataType.
+         * The type of called numbers. Valid values:
+         * <p>
+         * 
+         * *   **LIST**: the called numbers that are separated by commas (,).
+         * *   **JSON**: a JSON-formatted list of called numbers with template parameters.
          */
         public Builder dataType(String dataType) {
             this.putQueryParameter("DataType", dataType);
@@ -263,7 +276,7 @@ public class CreateCallTaskRequest extends Request {
         }
 
         /**
-         * FireTime.
+         * This parameter is unavailable.
          */
         public Builder fireTime(String fireTime) {
             this.putQueryParameter("FireTime", fireTime);
@@ -281,7 +294,7 @@ public class CreateCallTaskRequest extends Request {
         }
 
         /**
-         * Resource.
+         * The calling number. Only virtual numbers are supported.
          */
         public Builder resource(String resource) {
             this.putQueryParameter("Resource", resource);
@@ -308,7 +321,7 @@ public class CreateCallTaskRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of the calling number. Set the value to **LIST**.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -317,7 +330,7 @@ public class CreateCallTaskRequest extends Request {
         }
 
         /**
-         * ScheduleType.
+         * This parameter is unavailable.
          */
         public Builder scheduleType(String scheduleType) {
             this.putQueryParameter("ScheduleType", scheduleType);
@@ -326,7 +339,7 @@ public class CreateCallTaskRequest extends Request {
         }
 
         /**
-         * StopTime.
+         * This parameter is unavailable.
          */
         public Builder stopTime(String stopTime) {
             this.putQueryParameter("StopTime", stopTime);
@@ -335,7 +348,7 @@ public class CreateCallTaskRequest extends Request {
         }
 
         /**
-         * TaskName.
+         * The task name.
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);
@@ -344,7 +357,7 @@ public class CreateCallTaskRequest extends Request {
         }
 
         /**
-         * TemplateCode.
+         * The template ID.
          */
         public Builder templateCode(String templateCode) {
             this.putQueryParameter("TemplateCode", templateCode);
@@ -353,7 +366,7 @@ public class CreateCallTaskRequest extends Request {
         }
 
         /**
-         * TemplateName.
+         * The template name.
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);

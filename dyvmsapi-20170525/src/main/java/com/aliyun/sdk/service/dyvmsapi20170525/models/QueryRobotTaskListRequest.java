@@ -139,16 +139,16 @@ public class QueryRobotTaskListRequest extends Request {
             super();
         } 
 
-        private Builder(QueryRobotTaskListRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.pageNo = response.pageNo;
-            this.pageSize = response.pageSize;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.status = response.status;
-            this.taskName = response.taskName;
-            this.time = response.time;
+        private Builder(QueryRobotTaskListRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
+            this.pageNo = request.pageNo;
+            this.pageSize = request.pageSize;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.status = request.status;
+            this.taskName = request.taskName;
+            this.time = request.time;
         } 
 
         /**
@@ -161,7 +161,7 @@ public class QueryRobotTaskListRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * The page number.
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -170,7 +170,7 @@ public class QueryRobotTaskListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -197,7 +197,19 @@ public class QueryRobotTaskListRequest extends Request {
         }
 
         /**
-         * Status.
+         * The task state. Valid values:
+         * <p>
+         * 
+         * *   **INIT**: The task is not started.
+         * *   **READY**: The task is ready to start.
+         * *   **DISPATCH**: The task is being parsed.
+         * *   **EXCUTING**: The task is being executed.
+         * *   **MANUAL_STOP**: The task is manually suspended.
+         * *   **SYSTEM_STOP**: The task is suspended by the system.
+         * *   **ARREARS_STOP**: The task is suspended due to overdue payments.
+         * *   **CANCEL**: The task is manually canceled.
+         * *   **SYSTEM_CANCEL**: The task is canceled by the system.
+         * *   **FINISH**: The task is complete.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -206,7 +218,7 @@ public class QueryRobotTaskListRequest extends Request {
         }
 
         /**
-         * TaskName.
+         * The task name.
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);
@@ -215,7 +227,7 @@ public class QueryRobotTaskListRequest extends Request {
         }
 
         /**
-         * Time.
+         * The date when the task is created, in the yyyy-MM-dd format.
          */
         public Builder time(String time) {
             this.putQueryParameter("Time", time);

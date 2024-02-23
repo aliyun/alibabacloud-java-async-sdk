@@ -39,20 +39,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
-    @Override
-    public CompletableFuture<AddRtcAccountResponse> addRtcAccount(AddRtcAccountRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AddRtcAccount").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AddRtcAccountResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<AddRtcAccountResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+      * ### QPS limits
+      * You can call this operation up to 200 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<AddVirtualNumberRelationResponse> addVirtualNumberRelation(AddVirtualNumberRelationRequest request) {
         try {
@@ -67,6 +58,16 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * *   In an intelligent speech interaction task, you can use the robot communication scripts preset in the Voice Messaging Service console, or invoke the callback function to return the response mode configured by the business party in each call.
+      * *   The BatchRobotSmartCall operation is used to initiate an outbound robocall task by using the robot communication scripts preset in the Voice Messaging Service console.
+      * ## Prerequisites
+      * *   You have passed the real-name verification for an enterprise user and passed the enterprise qualification review.
+      * *   You have purchased numbers in the [Voice Messaging Service console](https://dyvms.console.aliyun.com/dyvms.htm#/number/normal).
+      * *   You have added communication scripts on the [Communication script management](https://dyvms.console.aliyun.com/dyvms.htm#/smart-call/saas/robot/list) page, and the communication scripts have been approved.
+      * > Before you call this operation, make sure that you are familiar with the [billing](https://www.aliyun.com/price/product#/vms/detail) of Voice Messaging Service (VMS).
+      *
+     */
     @Override
     public CompletableFuture<BatchRobotSmartCallResponse> batchRobotSmartCall(BatchRobotSmartCallRequest request) {
         try {
@@ -81,20 +82,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<CancelCallResponse> cancelCall(CancelCallRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CancelCall").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CancelCallResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<CancelCallResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<CancelOrderRobotTaskResponse> cancelOrderRobotTask(CancelOrderRobotTaskRequest request) {
         try {
@@ -109,6 +101,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Only a task in progress can be terminated by calling the CancelRobotTask operation, and the task cannot be resumed after it is terminated.
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<CancelRobotTaskResponse> cancelRobotTask(CancelRobotTaskRequest request) {
         try {
@@ -123,20 +121,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<ClickToDialResponse> clickToDial(ClickToDialRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ClickToDial").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ClickToDialResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<ClickToDialResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+      * You can create up to 1,000 voice notifications for each task.
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<CreateCallTaskResponse> createCallTask(CreateCallTaskRequest request) {
         try {
@@ -151,6 +141,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You can call this operation to initiate an outbound robocall task by using the robot communication scripts preset in the Voice Messaging Service console. In an intelligent speech interaction task, you can use the robot communication scripts preset in the Voice Messaging Service console, or invoke the callback function to return the response mode configured by the business party in each call.
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<CreateRobotTaskResponse> createRobotTask(CreateRobotTaskRequest request) {
         try {
@@ -165,6 +161,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You can call this operation to delete only tasks that are not started, that are completed, and that are terminated.
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<DeleteRobotTaskResponse> deleteRobotTask(DeleteRobotTaskRequest request) {
         try {
@@ -179,6 +181,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<ExecuteCallTaskResponse> executeCallTask(ExecuteCallTaskRequest request) {
         try {
@@ -193,20 +200,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<GetCallInfoResponse> getCallInfo(GetCallInfoRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetCallInfo").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetCallInfoResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<GetCallInfoResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<GetHotlineQualificationByOrderResponse> getHotlineQualificationByOrder(GetHotlineQualificationByOrderRequest request) {
         try {
@@ -221,34 +219,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<GetMqttTokenResponse> getMqttToken(GetMqttTokenRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetMqttToken").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetMqttTokenResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<GetMqttTokenResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<GetRtcTokenResponse> getRtcToken(GetRtcTokenRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetRtcToken").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetRtcTokenResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<GetRtcTokenResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+      * ### QPS limits
+      * You can call this operation up to five times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<GetTokenResponse> getToken(GetTokenRequest request) {
         try {
@@ -263,6 +238,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * *   Your enterprise qualification is approved. For more information, see [Submit enterprise qualifications](~~149795~~).
+      * *   Voice numbers are purchased. For more information, see [Purchase numbers](~~149794~~).
+      * *   When the subscriber answers the call, the subscriber hears a voice that instructs the subscriber to press a key as needed. If the [message receipt](~~112503~~) feature is enabled, the Voice Messaging Service (VMS) platform returns the information about the key pressed by the subscriber to the business system. The key information includes the order confirmation, questionnaire survey, and satisfaction survey completed by the subscriber.
+      * ## QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<IvrCallResponse> ivrCall(IvrCallRequest request) {
         try {
@@ -277,6 +260,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<ListCallTaskResponse> listCallTask(ListCallTaskRequest request) {
         try {
@@ -291,6 +279,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<ListCallTaskDetailResponse> listCallTaskDetail(ListCallTaskDetailRequest request) {
         try {
@@ -305,6 +298,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<ListHotlineTransferNumberResponse> listHotlineTransferNumber(ListHotlineTransferNumberRequest request) {
         try {
@@ -319,6 +317,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<ListHotlineTransferRegisterFileResponse> listHotlineTransferRegisterFile(ListHotlineTransferRegisterFileRequest request) {
         try {
@@ -333,6 +336,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * QueryCallDetailByCallId is a common query operation. You can call this operation to query the details of a voice notification, voice verification code, interactive voice response (IVR), intelligent inbound voice call, intelligent outbound voice call, or intelligent robocall.
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<QueryCallDetailByCallIdResponse> queryCallDetailByCallId(QueryCallDetailByCallIdRequest request) {
         try {
@@ -361,6 +370,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<QueryCallInPoolTransferConfigResponse> queryCallInPoolTransferConfig(QueryCallInPoolTransferConfigRequest request) {
         try {
@@ -375,6 +389,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<QueryCallInTransferRecordResponse> queryCallInTransferRecord(QueryCallInTransferRecordRequest request) {
         try {
@@ -403,6 +422,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<QueryRobotTaskCallDetailResponse> queryRobotTaskCallDetail(QueryRobotTaskCallDetailRequest request) {
         try {
@@ -417,6 +441,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<QueryRobotTaskCallListResponse> queryRobotTaskCallList(QueryRobotTaskCallListRequest request) {
         try {
@@ -431,6 +460,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<QueryRobotTaskDetailResponse> queryRobotTaskDetail(QueryRobotTaskDetailRequest request) {
         try {
@@ -445,6 +479,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<QueryRobotTaskListResponse> queryRobotTaskList(QueryRobotTaskListRequest request) {
         try {
@@ -459,6 +498,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<QueryRobotv2AllListResponse> queryRobotv2AllList(QueryRobotv2AllListRequest request) {
         try {
@@ -473,6 +517,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<QueryVirtualNumberResponse> queryVirtualNumber(QueryVirtualNumberRequest request) {
         try {
@@ -487,6 +536,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### QPS limits
+      * You can call this operation up to 200 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<QueryVirtualNumberRelationResponse> queryVirtualNumberRelation(QueryVirtualNumberRelationRequest request) {
         try {
@@ -516,19 +570,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
-    public CompletableFuture<RefreshMqttTokenResponse> refreshMqttToken(RefreshMqttTokenRequest request) {
+    public CompletableFuture<RecoverCallInConfigResponse> recoverCallInConfig(RecoverCallInConfigRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RefreshMqttToken").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RefreshMqttTokenResponse.create());
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RecoverCallInConfig").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RecoverCallInConfigResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
-            CompletableFuture<RefreshMqttTokenResponse> future = new CompletableFuture<>();
+            CompletableFuture<RecoverCallInConfigResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
     }
 
+    /**
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<SendVerificationResponse> sendVerification(SendVerificationRequest request) {
         try {
@@ -543,6 +602,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<SetTransferCalleePoolConfigResponse> setTransferCalleePoolConfig(SetTransferCalleePoolConfigRequest request) {
         try {
@@ -557,6 +621,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * *   Due to business adjustments, the updates of the voice notification and voice verification code services have been stopped in regions outside the Chinese mainland and the services have been discontinued since March 2022. Only qualified customers can continue using the voice notification and voice verification code services.
+      * *   For more information about voice plans or voice service billing, see [Pricing of VMS on China site (aliyun.com)](~~150083~~).
+      * ### QPS limits
+      * You can call this operation up to 1,000 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<SingleCallByTtsResponse> singleCallByTts(SingleCallByTtsRequest request) {
         try {
@@ -571,6 +642,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > Due to business adjustments, the updates of the voice notification and voice verification code services have been stopped in regions outside the Chinese mainland and the services have been discontinued since March 2022. Only qualified customers can continue using the voice notification and voice verification code services.
+      * You can call the [SingleCallByTts](~~393519~~) operation to send voice notifications with variables.
+      * ### QPS limits
+      * You can call this operation up to 1,200 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<SingleCallByVoiceResponse> singleCallByVoice(SingleCallByVoiceRequest request) {
         try {
@@ -585,6 +663,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * *   The SmartCall operation must be used together with the [intelligent outbound HTTP operation](~~112703~~). After the call initiated by the Voice Messaging Service (VMS) platform is connected, the VMS platform sends the text converted from speech back to the business side, and the business side then returns the follow-up action to the VMS platform.
+      * *   The SmartCall operation does not support the following characters: `@ = : "" $ { } ^ * ￥`.
+      * ### QPS limits
+      * You can call this operation up to 1,000 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<SmartCallResponse> smartCall(SmartCallRequest request) {
         try {
@@ -599,6 +684,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You can call this operation to initiate a specified action on the called number of an outbound robocall when the call is transferred to an agent of the call center.
+      * > You can only initiate the action of bridging a called number and an agent of the call center.
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<SmartCallOperateResponse> smartCallOperate(SmartCallOperateRequest request) {
         try {
@@ -613,6 +705,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<StartRobotTaskResponse> startRobotTask(StartRobotTaskRequest request) {
         try {
@@ -628,6 +725,26 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
+    public CompletableFuture<StopCallInConfigResponse> stopCallInConfig(StopCallInConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("StopCallInConfig").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(StopCallInConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<StopCallInConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+      * After you stop a robocall task, you can call the [StartRobotTask](~~StartRobotTask~~) operation to start it again.
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+     */
+    @Override
     public CompletableFuture<StopRobotTaskResponse> stopRobotTask(StopRobotTaskRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -641,6 +758,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<SubmitHotlineTransferRegisterResponse> submitHotlineTransferRegister(SubmitHotlineTransferRegisterRequest request) {
         try {
@@ -655,6 +777,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### QPS limits
+      * You can call this operation up to 100 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<UploadRobotTaskCalledFileResponse> uploadRobotTaskCalledFile(UploadRobotTaskCalledFileRequest request) {
         try {

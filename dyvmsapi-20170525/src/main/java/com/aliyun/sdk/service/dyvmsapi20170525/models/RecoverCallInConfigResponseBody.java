@@ -7,16 +7,16 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ClickToDialResponseBody} extends {@link TeaModel}
+ * {@link RecoverCallInConfigResponseBody} extends {@link TeaModel}
  *
- * <p>ClickToDialResponseBody</p>
+ * <p>RecoverCallInConfigResponseBody</p>
  */
-public class ClickToDialResponseBody extends TeaModel {
-    @NameInMap("CallId")
-    private String callId;
-
+public class RecoverCallInConfigResponseBody extends TeaModel {
     @NameInMap("Code")
     private String code;
+
+    @NameInMap("Data")
+    private Boolean data;
 
     @NameInMap("Message")
     private String message;
@@ -24,9 +24,9 @@ public class ClickToDialResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
-    private ClickToDialResponseBody(Builder builder) {
-        this.callId = builder.callId;
+    private RecoverCallInConfigResponseBody(Builder builder) {
         this.code = builder.code;
+        this.data = builder.data;
         this.message = builder.message;
         this.requestId = builder.requestId;
     }
@@ -35,15 +35,8 @@ public class ClickToDialResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static ClickToDialResponseBody create() {
+    public static RecoverCallInConfigResponseBody create() {
         return builder().build();
-    }
-
-    /**
-     * @return callId
-     */
-    public String getCallId() {
-        return this.callId;
     }
 
     /**
@@ -51,6 +44,13 @@ public class ClickToDialResponseBody extends TeaModel {
      */
     public String getCode() {
         return this.code;
+    }
+
+    /**
+     * @return data
+     */
+    public Boolean getData() {
+        return this.data;
     }
 
     /**
@@ -68,21 +68,13 @@ public class ClickToDialResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String callId; 
         private String code; 
+        private Boolean data; 
         private String message; 
         private String requestId; 
 
         /**
-         * CallId.
-         */
-        public Builder callId(String callId) {
-            this.callId = callId;
-            return this;
-        }
-
-        /**
-         * Code.
+         * The response code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -90,7 +82,19 @@ public class ClickToDialResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * Indicates whether the inbound call was resumed. Valid values:
+         * <p>
+         * 
+         * *   true: The inbound call was resumed.
+         * *   false: The inbound call failed to be resumed.
+         */
+        public Builder data(Boolean data) {
+            this.data = data;
+            return this;
+        }
+
+        /**
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,15 +102,15 @@ public class ClickToDialResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public ClickToDialResponseBody build() {
-            return new ClickToDialResponseBody(this);
+        public RecoverCallInConfigResponseBody build() {
+            return new RecoverCallInConfigResponseBody(this);
         } 
 
     } 

@@ -74,7 +74,11 @@ public class SmartCallOperateResponseBody extends TeaModel {
         private Boolean status; 
 
         /**
-         * Code.
+         * The response code.
+         * <p>
+         * 
+         * *   The value OK indicates that the request was successful.
+         * *   For more information about other response codes, see [API error codes](~~112502~~).
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +86,7 @@ public class SmartCallOperateResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +94,7 @@ public class SmartCallOperateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +102,11 @@ public class SmartCallOperateResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The action result. Valid values:
+         * <p>
+         * 
+         * *   **true**: The action was successful.
+         * *   **false**: The action failed.
          */
         public Builder status(Boolean status) {
             this.status = status;

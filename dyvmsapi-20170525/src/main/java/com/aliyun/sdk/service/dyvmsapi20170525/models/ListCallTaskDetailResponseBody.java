@@ -110,7 +110,11 @@ public class ListCallTaskDetailResponseBody extends TeaModel {
         private Long totalPage; 
 
         /**
-         * Code.
+         * The response code.
+         * <p>
+         * 
+         * *   The value OK indicates that the request was successful.
+         * *   For more information about other response codes, see [API error codes](~~112502~~).
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +122,7 @@ public class ListCallTaskDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The information about the task.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -126,7 +130,7 @@ public class ListCallTaskDetailResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -134,7 +138,7 @@ public class ListCallTaskDetailResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -142,7 +146,7 @@ public class ListCallTaskDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +154,7 @@ public class ListCallTaskDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * The total number of called numbers.
          */
         public Builder total(Long total) {
             this.total = total;
@@ -158,7 +162,7 @@ public class ListCallTaskDetailResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPage.
+         * The total number of pages.
          */
         public Builder totalPage(Long totalPage) {
             this.totalPage = totalPage;
@@ -246,7 +250,7 @@ public class ListCallTaskDetailResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * CalledNum.
+             * The called number.
              */
             public Builder calledNum(String calledNum) {
                 this.calledNum = calledNum;
@@ -254,7 +258,7 @@ public class ListCallTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Caller.
+             * The calling number.
              */
             public Builder caller(String caller) {
                 this.caller = caller;
@@ -262,7 +266,7 @@ public class ListCallTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * The call duration. Unit: seconds.
              */
             public Builder duration(Long duration) {
                 this.duration = duration;
@@ -270,7 +274,7 @@ public class ListCallTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * This parameter is unavailable.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -278,7 +282,12 @@ public class ListCallTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The task state. Valid values:
+             * <p>
+             * 
+             * *   **SUCCESS**: The task was successful.
+             * *   **FAIL**: The task failed.
+             * *   **INIT**: The task was not started.
              */
             public Builder status(String status) {
                 this.status = status;

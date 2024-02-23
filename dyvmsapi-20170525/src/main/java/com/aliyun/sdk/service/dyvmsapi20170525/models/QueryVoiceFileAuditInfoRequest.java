@@ -101,17 +101,21 @@ public class QueryVoiceFileAuditInfoRequest extends Request {
             super();
         } 
 
-        private Builder(QueryVoiceFileAuditInfoRequest response) {
-            super(response);
-            this.businessType = response.businessType;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.voiceCodes = response.voiceCodes;
+        private Builder(QueryVoiceFileAuditInfoRequest request) {
+            super(request);
+            this.businessType = request.businessType;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.voiceCodes = request.voiceCodes;
         } 
 
         /**
-         * BusinessType.
+         * The type of the voice file. Valid values:
+         * <p>
+         * 
+         * *   **0** (default): the voice notification file.
+         * *   **2**: the recording file.
          */
         public Builder businessType(Integer businessType) {
             this.putQueryParameter("BusinessType", businessType);
@@ -147,7 +151,10 @@ public class QueryVoiceFileAuditInfoRequest extends Request {
         }
 
         /**
-         * VoiceCodes.
+         * The ID of the voice file. You can log on to the [Voice Messaging Service console](https://dyvms.console.aliyun.com/overview/home), choose **Voice Messages** > **Voice Notifications** or **Voice File Management**, and then click the **Voice Notification Files** tab to view the **voice ID**.
+         * <p>
+         * 
+         * > You can query up to 10 voice files each time. Separate the voice file names with commas (,).
          */
         public Builder voiceCodes(String voiceCodes) {
             this.putQueryParameter("VoiceCodes", voiceCodes);

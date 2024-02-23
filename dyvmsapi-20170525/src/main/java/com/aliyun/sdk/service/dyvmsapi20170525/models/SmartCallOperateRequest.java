@@ -115,18 +115,18 @@ public class SmartCallOperateRequest extends Request {
             super();
         } 
 
-        private Builder(SmartCallOperateRequest response) {
-            super(response);
-            this.callId = response.callId;
-            this.command = response.command;
-            this.ownerId = response.ownerId;
-            this.param = response.param;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(SmartCallOperateRequest request) {
+            super(request);
+            this.callId = request.callId;
+            this.command = request.command;
+            this.ownerId = request.ownerId;
+            this.param = request.param;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * CallId.
+         * The unique receipt ID of the call. You can call the [SmartCall](~~393526~~) operation to obtain the receipt ID.
          */
         public Builder callId(String callId) {
             this.putQueryParameter("CallId", callId);
@@ -135,7 +135,10 @@ public class SmartCallOperateRequest extends Request {
         }
 
         /**
-         * Command.
+         * The action that is initiated to the called number of an outbound robocall.
+         * <p>
+         * 
+         * > Only the value **parallelBridge** is supported. This value indicates that a bridge action is initiated between a called number and an agent of the call center.
          */
         public Builder command(String command) {
             this.putQueryParameter("Command", command);
@@ -153,7 +156,7 @@ public class SmartCallOperateRequest extends Request {
         }
 
         /**
-         * Param.
+         * The extended field.
          */
         public Builder param(String param) {
             this.putQueryParameter("Param", param);

@@ -130,19 +130,23 @@ public class SetTransferCalleePoolConfigRequest extends Request {
             super();
         } 
 
-        private Builder(SetTransferCalleePoolConfigRequest response) {
-            super(response);
-            this.calledRouteMode = response.calledRouteMode;
-            this.details = response.details;
-            this.ownerId = response.ownerId;
-            this.phoneNumber = response.phoneNumber;
-            this.qualificationId = response.qualificationId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(SetTransferCalleePoolConfigRequest request) {
+            super(request);
+            this.calledRouteMode = request.calledRouteMode;
+            this.details = request.details;
+            this.ownerId = request.ownerId;
+            this.phoneNumber = request.phoneNumber;
+            this.qualificationId = request.qualificationId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * CalledRouteMode.
+         * The call mode. Valid values:
+         * <p>
+         * 
+         * *   **roundRobin**
+         * *   **random**
          */
         public Builder calledRouteMode(String calledRouteMode) {
             this.putQueryParameter("CalledRouteMode", calledRouteMode);
@@ -151,7 +155,7 @@ public class SetTransferCalleePoolConfigRequest extends Request {
         }
 
         /**
-         * Details.
+         * The information about the phone numbers for transferring the call.
          */
         public Builder details(java.util.List < Details> details) {
             this.putQueryParameter("Details", details);
@@ -169,7 +173,7 @@ public class SetTransferCalleePoolConfigRequest extends Request {
         }
 
         /**
-         * PhoneNumber.
+         * The phone number used for transferring the call.
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putQueryParameter("PhoneNumber", phoneNumber);
@@ -178,7 +182,7 @@ public class SetTransferCalleePoolConfigRequest extends Request {
         }
 
         /**
-         * QualificationId.
+         * The qualification ID. You can call the [GetHotlineQualificationByOrder](~~393548~~) operation to obtain the qualification ID.
          */
         public Builder qualificationId(String qualificationId) {
             this.putQueryParameter("QualificationId", qualificationId);
@@ -251,7 +255,7 @@ public class SetTransferCalleePoolConfigRequest extends Request {
             private String caller; 
 
             /**
-             * Called.
+             * The called number.
              */
             public Builder called(String called) {
                 this.called = called;
@@ -259,7 +263,7 @@ public class SetTransferCalleePoolConfigRequest extends Request {
             }
 
             /**
-             * Caller.
+             * The calling number.
              */
             public Builder caller(String caller) {
                 this.caller = caller;

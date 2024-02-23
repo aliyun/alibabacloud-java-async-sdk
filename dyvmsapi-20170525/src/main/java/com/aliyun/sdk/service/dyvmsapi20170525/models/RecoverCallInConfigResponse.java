@@ -7,26 +7,28 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link RefreshMqttTokenResponse} extends {@link TeaModel}
+ * {@link RecoverCallInConfigResponse} extends {@link TeaModel}
  *
- * <p>RefreshMqttTokenResponse</p>
+ * <p>RecoverCallInConfigResponse</p>
  */
-public class RefreshMqttTokenResponse extends Response {
+public class RecoverCallInConfigResponse extends Response {
     @NameInMap("headers")
-    @Validation(required = true)
     private java.util.Map < String, String > headers;
 
-    @NameInMap("body")
-    @Validation(required = true)
-    private RefreshMqttTokenResponseBody body;
+    @NameInMap("statusCode")
+    private Integer statusCode;
 
-    private RefreshMqttTokenResponse(BuilderImpl builder) {
+    @NameInMap("body")
+    private RecoverCallInConfigResponseBody body;
+
+    private RecoverCallInConfigResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static RefreshMqttTokenResponse create() {
+    public static RecoverCallInConfigResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -43,36 +45,47 @@ public class RefreshMqttTokenResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
-    public RefreshMqttTokenResponseBody getBody() {
+    public RecoverCallInConfigResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<RefreshMqttTokenResponse, Builder> {
+    public interface Builder extends Response.Builder<RecoverCallInConfigResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(RefreshMqttTokenResponseBody body);
+        Builder statusCode(Integer statusCode);
+
+        Builder body(RecoverCallInConfigResponseBody body);
 
         @Override
-        RefreshMqttTokenResponse build();
+        RecoverCallInConfigResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<RefreshMqttTokenResponse, Builder>
+            extends Response.BuilderImpl<RecoverCallInConfigResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private RefreshMqttTokenResponseBody body; 
+        private Integer statusCode; 
+        private RecoverCallInConfigResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(RefreshMqttTokenResponse response) {
+        private BuilderImpl(RecoverCallInConfigResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -86,17 +99,26 @@ public class RefreshMqttTokenResponse extends Response {
         }
 
         /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
+            return this;
+        }
+
+        /**
          * body.
          */
         @Override
-        public Builder body(RefreshMqttTokenResponseBody body) {
+        public Builder body(RecoverCallInConfigResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public RefreshMqttTokenResponse build() {
-            return new RefreshMqttTokenResponse(this);
+        public RecoverCallInConfigResponse build() {
+            return new RecoverCallInConfigResponse(this);
         } 
 
     } 

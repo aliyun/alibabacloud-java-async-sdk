@@ -88,12 +88,12 @@ public class QueryCallInPoolTransferConfigRequest extends Request {
             super();
         } 
 
-        private Builder(QueryCallInPoolTransferConfigRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.phoneNumber = response.phoneNumber;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(QueryCallInPoolTransferConfigRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
+            this.phoneNumber = request.phoneNumber;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
@@ -106,7 +106,7 @@ public class QueryCallInPoolTransferConfigRequest extends Request {
         }
 
         /**
-         * PhoneNumber.
+         * The China 400 number used to transfer the call.
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putQueryParameter("PhoneNumber", phoneNumber);

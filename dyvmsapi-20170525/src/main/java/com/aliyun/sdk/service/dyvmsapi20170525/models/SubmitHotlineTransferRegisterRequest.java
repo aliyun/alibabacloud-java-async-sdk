@@ -213,25 +213,29 @@ public class SubmitHotlineTransferRegisterRequest extends Request {
             super();
         } 
 
-        private Builder(SubmitHotlineTransferRegisterRequest response) {
-            super(response);
-            this.agreement = response.agreement;
-            this.hotlineNumber = response.hotlineNumber;
-            this.operatorIdentityCard = response.operatorIdentityCard;
-            this.operatorMail = response.operatorMail;
-            this.operatorMailVerifyCode = response.operatorMailVerifyCode;
-            this.operatorMobile = response.operatorMobile;
-            this.operatorMobileVerifyCode = response.operatorMobileVerifyCode;
-            this.operatorName = response.operatorName;
-            this.ownerId = response.ownerId;
-            this.qualificationId = response.qualificationId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.transferPhoneNumberInfos = response.transferPhoneNumberInfos;
+        private Builder(SubmitHotlineTransferRegisterRequest request) {
+            super(request);
+            this.agreement = request.agreement;
+            this.hotlineNumber = request.hotlineNumber;
+            this.operatorIdentityCard = request.operatorIdentityCard;
+            this.operatorMail = request.operatorMail;
+            this.operatorMailVerifyCode = request.operatorMailVerifyCode;
+            this.operatorMobile = request.operatorMobile;
+            this.operatorMobileVerifyCode = request.operatorMobileVerifyCode;
+            this.operatorName = request.operatorName;
+            this.ownerId = request.ownerId;
+            this.qualificationId = request.qualificationId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.transferPhoneNumberInfos = request.transferPhoneNumberInfos;
         } 
 
         /**
-         * Agreement.
+         * The authenticity of the commitment. Valid values:
+         * <p>
+         * 
+         * *   **true**: The commitment is authentic.
+         * *   **false**: The commitment is not authentic.
          */
         public Builder agreement(String agreement) {
             this.putQueryParameter("Agreement", agreement);
@@ -240,7 +244,7 @@ public class SubmitHotlineTransferRegisterRequest extends Request {
         }
 
         /**
-         * HotlineNumber.
+         * The China 400 number.
          */
         public Builder hotlineNumber(String hotlineNumber) {
             this.putQueryParameter("HotlineNumber", hotlineNumber);
@@ -249,7 +253,7 @@ public class SubmitHotlineTransferRegisterRequest extends Request {
         }
 
         /**
-         * OperatorIdentityCard.
+         * The ID card number of the handler.
          */
         public Builder operatorIdentityCard(String operatorIdentityCard) {
             this.putQueryParameter("OperatorIdentityCard", operatorIdentityCard);
@@ -258,7 +262,7 @@ public class SubmitHotlineTransferRegisterRequest extends Request {
         }
 
         /**
-         * OperatorMail.
+         * The email address of the handler.
          */
         public Builder operatorMail(String operatorMail) {
             this.putQueryParameter("OperatorMail", operatorMail);
@@ -267,7 +271,7 @@ public class SubmitHotlineTransferRegisterRequest extends Request {
         }
 
         /**
-         * OperatorMailVerifyCode.
+         * The verification code that is received by the mailbox of the handler.
          */
         public Builder operatorMailVerifyCode(String operatorMailVerifyCode) {
             this.putQueryParameter("OperatorMailVerifyCode", operatorMailVerifyCode);
@@ -276,7 +280,7 @@ public class SubmitHotlineTransferRegisterRequest extends Request {
         }
 
         /**
-         * OperatorMobile.
+         * The mobile phone number of the handler.
          */
         public Builder operatorMobile(String operatorMobile) {
             this.putQueryParameter("OperatorMobile", operatorMobile);
@@ -285,7 +289,7 @@ public class SubmitHotlineTransferRegisterRequest extends Request {
         }
 
         /**
-         * OperatorMobileVerifyCode.
+         * The verification code that is received by the mobile phone of the handler.
          */
         public Builder operatorMobileVerifyCode(String operatorMobileVerifyCode) {
             this.putQueryParameter("OperatorMobileVerifyCode", operatorMobileVerifyCode);
@@ -294,7 +298,7 @@ public class SubmitHotlineTransferRegisterRequest extends Request {
         }
 
         /**
-         * OperatorName.
+         * The name of the handler.
          */
         public Builder operatorName(String operatorName) {
             this.putQueryParameter("OperatorName", operatorName);
@@ -312,7 +316,7 @@ public class SubmitHotlineTransferRegisterRequest extends Request {
         }
 
         /**
-         * QualificationId.
+         * The qualification ID. You can call the [GetHotlineQualificationByOrder](~~393548~~) operation to obtain the qualification ID.
          */
         public Builder qualificationId(String qualificationId) {
             this.putQueryParameter("QualificationId", qualificationId);
@@ -339,7 +343,7 @@ public class SubmitHotlineTransferRegisterRequest extends Request {
         }
 
         /**
-         * TransferPhoneNumberInfos.
+         * The registration information about the China 400 number.
          */
         public Builder transferPhoneNumberInfos(java.util.List < TransferPhoneNumberInfos> transferPhoneNumberInfos) {
             this.putQueryParameter("TransferPhoneNumberInfos", transferPhoneNumberInfos);
@@ -408,7 +412,7 @@ public class SubmitHotlineTransferRegisterRequest extends Request {
             private String phoneNumberOwnerName; 
 
             /**
-             * IdentityCard.
+             * The ID card number of the number owner.
              */
             public Builder identityCard(String identityCard) {
                 this.identityCard = identityCard;
@@ -416,7 +420,7 @@ public class SubmitHotlineTransferRegisterRequest extends Request {
             }
 
             /**
-             * PhoneNumber.
+             * The China 400 number that you want to submit for registration.
              */
             public Builder phoneNumber(String phoneNumber) {
                 this.phoneNumber = phoneNumber;
@@ -424,7 +428,7 @@ public class SubmitHotlineTransferRegisterRequest extends Request {
             }
 
             /**
-             * PhoneNumberOwnerName.
+             * The real name or company name of the number owner.
              */
             public Builder phoneNumberOwnerName(String phoneNumberOwnerName) {
                 this.phoneNumberOwnerName = phoneNumberOwnerName;

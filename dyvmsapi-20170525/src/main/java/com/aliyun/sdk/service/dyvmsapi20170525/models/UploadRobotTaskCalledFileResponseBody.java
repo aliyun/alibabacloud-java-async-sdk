@@ -74,7 +74,11 @@ public class UploadRobotTaskCalledFileResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The response code.
+         * <p>
+         * 
+         * *   The value OK indicates that the request was successful.
+         * *   For more information about other response codes, see [API error codes](~~112502~~).
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +86,10 @@ public class UploadRobotTaskCalledFileResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The unique ID of the robocall task.
+         * <p>
+         * 
+         * You can call the [QueryRobotTaskDetail](~~QueryRobotTaskDetail~~) operation to query the details of the robocall task based on the task ID.
          */
         public Builder data(String data) {
             this.data = data;
@@ -90,7 +97,7 @@ public class UploadRobotTaskCalledFileResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +105,7 @@ public class UploadRobotTaskCalledFileResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

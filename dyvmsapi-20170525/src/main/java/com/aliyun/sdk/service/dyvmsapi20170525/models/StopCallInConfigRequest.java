@@ -7,11 +7,16 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetMqttTokenRequest} extends {@link RequestModel}
+ * {@link StopCallInConfigRequest} extends {@link RequestModel}
  *
- * <p>GetMqttTokenRequest</p>
+ * <p>StopCallInConfigRequest</p>
  */
-public class GetMqttTokenRequest extends Request {
+public class StopCallInConfigRequest extends Request {
+    @Query
+    @NameInMap("Number")
+    @Validation(required = true)
+    private String number;
+
     @Query
     @NameInMap("OwnerId")
     private Long ownerId;
@@ -24,8 +29,9 @@ public class GetMqttTokenRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    private GetMqttTokenRequest(Builder builder) {
+    private StopCallInConfigRequest(Builder builder) {
         super(builder);
+        this.number = builder.number;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
@@ -35,13 +41,20 @@ public class GetMqttTokenRequest extends Request {
         return new Builder();
     }
 
-    public static GetMqttTokenRequest create() {
+    public static StopCallInConfigRequest create() {
         return builder().build();
     }
 
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return number
+     */
+    public String getNumber() {
+        return this.number;
     }
 
     /**
@@ -65,7 +78,8 @@ public class GetMqttTokenRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    public static final class Builder extends Request.Builder<GetMqttTokenRequest, Builder> {
+    public static final class Builder extends Request.Builder<StopCallInConfigRequest, Builder> {
+        private String number; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
@@ -74,12 +88,22 @@ public class GetMqttTokenRequest extends Request {
             super();
         } 
 
-        private Builder(GetMqttTokenRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(StopCallInConfigRequest request) {
+            super(request);
+            this.number = request.number;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
+
+        /**
+         * The China 400 number from which the inbound call to be stopped is transferred.
+         */
+        public Builder number(String number) {
+            this.putQueryParameter("Number", number);
+            this.number = number;
+            return this;
+        }
 
         /**
          * OwnerId.
@@ -109,8 +133,8 @@ public class GetMqttTokenRequest extends Request {
         }
 
         @Override
-        public GetMqttTokenRequest build() {
-            return new GetMqttTokenRequest(this);
+        public StopCallInConfigRequest build() {
+            return new StopCallInConfigRequest(this);
         } 
 
     } 

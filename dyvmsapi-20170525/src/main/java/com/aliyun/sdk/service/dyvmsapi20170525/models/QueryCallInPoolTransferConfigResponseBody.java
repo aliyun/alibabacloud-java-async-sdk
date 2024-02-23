@@ -74,7 +74,11 @@ public class QueryCallInPoolTransferConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The response code.
+         * <p>
+         * 
+         * *   The value OK indicates that the request was successful.
+         * *   For more information about other response codes, see [API error codes](~~112502~~).
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +86,7 @@ public class QueryCallInPoolTransferConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The response parameters.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +94,7 @@ public class QueryCallInPoolTransferConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +102,7 @@ public class QueryCallInPoolTransferConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +142,7 @@ public class QueryCallInPoolTransferConfigResponseBody extends TeaModel {
             private String called; 
 
             /**
-             * Called.
+             * The number used to transfer the call.
              */
             public Builder called(String called) {
                 this.called = called;
@@ -215,7 +219,11 @@ public class QueryCallInPoolTransferConfigResponseBody extends TeaModel {
             private String transferTimeout; 
 
             /**
-             * CalledRouteMode.
+             * The call mode. Valid values:
+             * <p>
+             * 
+             * *   **roundRobin**
+             * *   **random**
              */
             public Builder calledRouteMode(String calledRouteMode) {
                 this.calledRouteMode = calledRouteMode;
@@ -223,7 +231,7 @@ public class QueryCallInPoolTransferConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Details.
+             * The details of the response parameters.
              */
             public Builder details(java.util.List < Details> details) {
                 this.details = details;
@@ -231,7 +239,7 @@ public class QueryCallInPoolTransferConfigResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The time when the call transfer task was created.
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -239,7 +247,7 @@ public class QueryCallInPoolTransferConfigResponseBody extends TeaModel {
             }
 
             /**
-             * TransferTimeout.
+             * The timeout period for transferring the call.
              */
             public Builder transferTimeout(String transferTimeout) {
                 this.transferTimeout = transferTimeout;

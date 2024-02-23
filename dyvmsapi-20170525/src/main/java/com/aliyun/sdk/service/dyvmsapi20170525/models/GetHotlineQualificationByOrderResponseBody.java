@@ -74,7 +74,11 @@ public class GetHotlineQualificationByOrderResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The response code.
+         * <p>
+         * 
+         * *   The value OK indicates that the request was successful.
+         * *   For more information about other response codes, see [API error codes](~~112502~~).
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +86,7 @@ public class GetHotlineQualificationByOrderResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The response parameters.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +94,7 @@ public class GetHotlineQualificationByOrderResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +102,7 @@ public class GetHotlineQualificationByOrderResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -162,7 +166,7 @@ public class GetHotlineQualificationByOrderResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * OrderId.
+             * The ID of the qualification application ticket.
              */
             public Builder orderId(String orderId) {
                 this.orderId = orderId;
@@ -170,7 +174,7 @@ public class GetHotlineQualificationByOrderResponseBody extends TeaModel {
             }
 
             /**
-             * QualificationId.
+             * The qualification ID.
              */
             public Builder qualificationId(String qualificationId) {
                 this.qualificationId = qualificationId;
@@ -178,7 +182,11 @@ public class GetHotlineQualificationByOrderResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The qualification state. Valid values:
+             * <p>
+             * 
+             * *   **NORMAL**
+             * *   **OTHER**
              */
             public Builder status(String status) {
                 this.status = status;

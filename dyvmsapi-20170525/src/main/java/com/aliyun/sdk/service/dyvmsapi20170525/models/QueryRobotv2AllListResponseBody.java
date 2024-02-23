@@ -74,7 +74,11 @@ public class QueryRobotv2AllListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The response code.
+         * <p>
+         * 
+         * *   The value OK indicates that the request was successful.
+         * *   For more information about other response codes, see [API error codes](~~112502~~).
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +86,12 @@ public class QueryRobotv2AllListResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The information about the robot communication script, in the JSON format.
+         * <p>
+         * 
+         * *   **id**: the ID of the robot communication script.
+         * *   **robotName**: the name of the robot communication script.
+         * *   **robotType**: the type of the robot communication script.
          */
         public Builder data(String data) {
             this.data = data;
@@ -90,7 +99,7 @@ public class QueryRobotv2AllListResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +107,7 @@ public class QueryRobotv2AllListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

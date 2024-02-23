@@ -74,7 +74,11 @@ public class QueryCallDetailByCallIdResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The response code.
+         * <p>
+         * 
+         * *   The value OK indicates that the request was successful.
+         * *   For more information about other response codes, see [API error codes](~~112502~~).
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +86,23 @@ public class QueryCallDetailByCallIdResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The details of the call, in the JSON format.
+         * <p>
+         * 
+         * *   **caller**: the calling number.
+         * *   **startDate**: the time when the call was started.
+         * *   **stateDesc**: the description of the call state.
+         * *   **duration**: the call duration. Unit: seconds. The value **0** indicates that the user was not connected.
+         * *   **callerShowNumber**: the calling number displayed to the called party.
+         * *   **gmtCreate**: the time when the call request was received.
+         * *   **state**: the call state. The call state is returned by the Internet service provider (ISP) in real time. For more information about call states, see [ISP-returned error codes](~~55085~~).
+         * *   **endDate**: the time when the call was ended.
+         * *   **calleeShowNumber**: the number displayed to the called party.
+         * *   **callee**: the called number.
+         * *   **aRingTime**: the time when Line A started to ring, in the yyyy-MM-dd HH:mm:ss format.
+         * *   **aEndTime**: the time when ringing on Line A ended, in the yyyy-MM-dd HH:mm:ss format.
+         * *   **bRingTime**: the time when Line B started to ring, in the yyyy-MM-dd HH:mm:ss format.
+         * *   **bEndTime**: the time when ringing on Line B ended, in the yyyy-MM-dd HH:mm:ss format.
          */
         public Builder data(String data) {
             this.data = data;
@@ -90,7 +110,7 @@ public class QueryCallDetailByCallIdResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +118,7 @@ public class QueryCallDetailByCallIdResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

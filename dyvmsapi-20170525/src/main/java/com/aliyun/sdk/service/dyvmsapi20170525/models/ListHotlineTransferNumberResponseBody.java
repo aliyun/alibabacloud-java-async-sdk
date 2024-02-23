@@ -74,7 +74,11 @@ public class ListHotlineTransferNumberResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The response code.
+         * <p>
+         * 
+         * *   The value OK indicates that the request was successful.
+         * *   For more information about other response codes, see [API error codes](~~112502~~).
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +86,7 @@ public class ListHotlineTransferNumberResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The information about the registered phone number.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +94,7 @@ public class ListHotlineTransferNumberResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +102,7 @@ public class ListHotlineTransferNumberResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -198,7 +202,7 @@ public class ListHotlineTransferNumberResponseBody extends TeaModel {
             private String resUniqueCode; 
 
             /**
-             * HotlineNumber.
+             * The China 400 number.
              */
             public Builder hotlineNumber(String hotlineNumber) {
                 this.hotlineNumber = hotlineNumber;
@@ -206,7 +210,7 @@ public class ListHotlineTransferNumberResponseBody extends TeaModel {
             }
 
             /**
-             * IdentityCard.
+             * The ID card number of the number owner.
              */
             public Builder identityCard(String identityCard) {
                 this.identityCard = identityCard;
@@ -214,7 +218,7 @@ public class ListHotlineTransferNumberResponseBody extends TeaModel {
             }
 
             /**
-             * NumberOwnerName.
+             * The real name of the number owner or the company name.
              */
             public Builder numberOwnerName(String numberOwnerName) {
                 this.numberOwnerName = numberOwnerName;
@@ -222,7 +226,7 @@ public class ListHotlineTransferNumberResponseBody extends TeaModel {
             }
 
             /**
-             * PhoneNumber.
+             * The registered phone number.
              */
             public Builder phoneNumber(String phoneNumber) {
                 this.phoneNumber = phoneNumber;
@@ -230,7 +234,7 @@ public class ListHotlineTransferNumberResponseBody extends TeaModel {
             }
 
             /**
-             * QualificationId.
+             * The qualification ID.
              */
             public Builder qualificationId(String qualificationId) {
                 this.qualificationId = qualificationId;
@@ -238,7 +242,7 @@ public class ListHotlineTransferNumberResponseBody extends TeaModel {
             }
 
             /**
-             * ResUniqueCode.
+             * The resource code.
              */
             public Builder resUniqueCode(String resUniqueCode) {
                 this.resUniqueCode = resUniqueCode;
@@ -315,7 +319,7 @@ public class ListHotlineTransferNumberResponseBody extends TeaModel {
             private java.util.List < Values> values; 
 
             /**
-             * PageNo.
+             * The page number.
              */
             public Builder pageNo(Integer pageNo) {
                 this.pageNo = pageNo;
@@ -323,7 +327,7 @@ public class ListHotlineTransferNumberResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -331,7 +335,7 @@ public class ListHotlineTransferNumberResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * The total number of entries returned.
              */
             public Builder total(Long total) {
                 this.total = total;
@@ -339,7 +343,7 @@ public class ListHotlineTransferNumberResponseBody extends TeaModel {
             }
 
             /**
-             * Values.
+             * The phone numbers.
              */
             public Builder values(java.util.List < Values> values) {
                 this.values = values;

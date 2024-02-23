@@ -74,7 +74,10 @@ public class SingleCallByVoiceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * CallId.
+         * The unique receipt ID for the call.
+         * <p>
+         * 
+         * You can call the [QueryCallDetailByCallId](~~393529~~) operation to query the details of the call.
          */
         public Builder callId(String callId) {
             this.callId = callId;
@@ -82,7 +85,11 @@ public class SingleCallByVoiceResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * The response code.
+         * <p>
+         * 
+         * *   The value OK indicates that the request was successful.****
+         * *   For more information about other response codes, see [API error codes](~~112502~~).
          */
         public Builder code(String code) {
             this.code = code;
@@ -90,7 +97,7 @@ public class SingleCallByVoiceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +105,7 @@ public class SingleCallByVoiceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

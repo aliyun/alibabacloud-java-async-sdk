@@ -88,12 +88,12 @@ public class CancelOrderRobotTaskRequest extends Request {
             super();
         } 
 
-        private Builder(CancelOrderRobotTaskRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.taskId = response.taskId;
+        private Builder(CancelOrderRobotTaskRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.taskId = request.taskId;
         } 
 
         /**
@@ -124,7 +124,7 @@ public class CancelOrderRobotTaskRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * The unique ID of the robocall task. You can call the [CreateRobotTask](~~393531~~) operation to obtain the ID of the robocall task.
          */
         public Builder taskId(Long taskId) {
             this.putQueryParameter("TaskId", taskId);

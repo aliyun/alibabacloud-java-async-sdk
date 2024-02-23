@@ -191,20 +191,20 @@ public class QueryVirtualNumberRelationRequest extends Request {
             super();
         } 
 
-        private Builder(QueryVirtualNumberRelationRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.pageNo = response.pageNo;
-            this.pageSize = response.pageSize;
-            this.phoneNum = response.phoneNum;
-            this.prodCode = response.prodCode;
-            this.qualificationId = response.qualificationId;
-            this.regionNameCity = response.regionNameCity;
-            this.relatedNum = response.relatedNum;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.routeType = response.routeType;
-            this.specId = response.specId;
+        private Builder(QueryVirtualNumberRelationRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
+            this.pageNo = request.pageNo;
+            this.pageSize = request.pageSize;
+            this.phoneNum = request.phoneNum;
+            this.prodCode = request.prodCode;
+            this.qualificationId = request.qualificationId;
+            this.regionNameCity = request.regionNameCity;
+            this.relatedNum = request.relatedNum;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.routeType = request.routeType;
+            this.specId = request.specId;
         } 
 
         /**
@@ -217,7 +217,7 @@ public class QueryVirtualNumberRelationRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * The page number.
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -226,7 +226,7 @@ public class QueryVirtualNumberRelationRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -235,7 +235,7 @@ public class QueryVirtualNumberRelationRequest extends Request {
         }
 
         /**
-         * PhoneNum.
+         * The virtual number.
          */
         public Builder phoneNum(String phoneNum) {
             this.putQueryParameter("PhoneNum", phoneNum);
@@ -244,7 +244,7 @@ public class QueryVirtualNumberRelationRequest extends Request {
         }
 
         /**
-         * ProdCode.
+         * The service name. Default value: **dyvms**.
          */
         public Builder prodCode(String prodCode) {
             this.putQueryParameter("ProdCode", prodCode);
@@ -253,7 +253,10 @@ public class QueryVirtualNumberRelationRequest extends Request {
         }
 
         /**
-         * QualificationId.
+         * The qualification ID.
+         * <p>
+         * 
+         * You can log on to the [Voice Messaging Service console](https://dyvms.console.aliyun.com/overview/home), choose **Qualifications\&Communication Scripts > Qualification Management**, and then click **Details** in the Actions column to view the qualification ID.
          */
         public Builder qualificationId(Long qualificationId) {
             this.putQueryParameter("QualificationId", qualificationId);
@@ -262,7 +265,7 @@ public class QueryVirtualNumberRelationRequest extends Request {
         }
 
         /**
-         * RegionNameCity.
+         * The city to which the virtual number belongs.
          */
         public Builder regionNameCity(String regionNameCity) {
             this.putQueryParameter("RegionNameCity", regionNameCity);
@@ -271,7 +274,7 @@ public class QueryVirtualNumberRelationRequest extends Request {
         }
 
         /**
-         * RelatedNum.
+         * The real number.
          */
         public Builder relatedNum(String relatedNum) {
             this.putQueryParameter("RelatedNum", relatedNum);
@@ -298,7 +301,10 @@ public class QueryVirtualNumberRelationRequest extends Request {
         }
 
         /**
-         * RouteType.
+         * The route type. Valid values:
+         * <p>
+         * 
+         * **0**: number location first. **1**: random.
          */
         public Builder routeType(Integer routeType) {
             this.putQueryParameter("RouteType", routeType);
@@ -307,7 +313,12 @@ public class QueryVirtualNumberRelationRequest extends Request {
         }
 
         /**
-         * SpecId.
+         * The number type. Valid values:
+         * <p>
+         * 
+         * *   **1**: the number provided by a virtual network operator, in the 05710000\*\*\*\* format.
+         * *   **2**: the number provided by an Internet service provider (ISP).
+         * *   **3**: a 5-digit phone number that starts with 95.
          */
         public Builder specId(Long specId) {
             this.putQueryParameter("SpecId", specId);

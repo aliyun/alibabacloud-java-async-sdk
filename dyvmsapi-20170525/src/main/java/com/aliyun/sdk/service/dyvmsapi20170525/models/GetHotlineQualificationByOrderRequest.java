@@ -88,16 +88,19 @@ public class GetHotlineQualificationByOrderRequest extends Request {
             super();
         } 
 
-        private Builder(GetHotlineQualificationByOrderRequest response) {
-            super(response);
-            this.orderId = response.orderId;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(GetHotlineQualificationByOrderRequest request) {
+            super(request);
+            this.orderId = request.orderId;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * OrderId.
+         * The ticket ID.
+         * <p>
+         * 
+         * You can log on to the [Voice Messaging Service console](https://dyvms.console.aliyun.com/overview/home), choose **Qualification\&Communication Script Management** > **Qualification Management**, and then click the **400 Qualifications** tab to view the ticket ID.
          */
         public Builder orderId(String orderId) {
             this.putQueryParameter("OrderId", orderId);

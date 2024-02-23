@@ -116,18 +116,18 @@ public class QueryRobotTaskCallDetailRequest extends Request {
             super();
         } 
 
-        private Builder(QueryRobotTaskCallDetailRequest response) {
-            super(response);
-            this.callee = response.callee;
-            this.ownerId = response.ownerId;
-            this.queryDate = response.queryDate;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.taskId = response.taskId;
+        private Builder(QueryRobotTaskCallDetailRequest request) {
+            super(request);
+            this.callee = request.callee;
+            this.ownerId = request.ownerId;
+            this.queryDate = request.queryDate;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.taskId = request.taskId;
         } 
 
         /**
-         * Callee.
+         * The called number.
          */
         public Builder callee(String callee) {
             this.putQueryParameter("Callee", callee);
@@ -145,7 +145,7 @@ public class QueryRobotTaskCallDetailRequest extends Request {
         }
 
         /**
-         * QueryDate.
+         * The timestamp of the time at which the call details you want to query.
          */
         public Builder queryDate(Long queryDate) {
             this.putQueryParameter("QueryDate", queryDate);
@@ -172,7 +172,7 @@ public class QueryRobotTaskCallDetailRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * The unique ID of the robocall task. You can call the [CreateRobotTask](~~393531~~) operation to obtain the task ID.
          */
         public Builder taskId(Long taskId) {
             this.putQueryParameter("TaskId", taskId);

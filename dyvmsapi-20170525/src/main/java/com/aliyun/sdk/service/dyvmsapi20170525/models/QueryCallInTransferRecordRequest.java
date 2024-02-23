@@ -143,20 +143,20 @@ public class QueryCallInTransferRecordRequest extends Request {
             super();
         } 
 
-        private Builder(QueryCallInTransferRecordRequest response) {
-            super(response);
-            this.callInCaller = response.callInCaller;
-            this.ownerId = response.ownerId;
-            this.pageNo = response.pageNo;
-            this.pageSize = response.pageSize;
-            this.phoneNumber = response.phoneNumber;
-            this.queryDate = response.queryDate;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(QueryCallInTransferRecordRequest request) {
+            super(request);
+            this.callInCaller = request.callInCaller;
+            this.ownerId = request.ownerId;
+            this.pageNo = request.pageNo;
+            this.pageSize = request.pageSize;
+            this.phoneNumber = request.phoneNumber;
+            this.queryDate = request.queryDate;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * CallInCaller.
+         * The calling number of the inbound call.
          */
         public Builder callInCaller(String callInCaller) {
             this.putQueryParameter("CallInCaller", callInCaller);
@@ -174,7 +174,7 @@ public class QueryCallInTransferRecordRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * The page number. Default value: **1**.
          */
         public Builder pageNo(Long pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -183,7 +183,7 @@ public class QueryCallInTransferRecordRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Valid values: 1 to 10.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -192,7 +192,7 @@ public class QueryCallInTransferRecordRequest extends Request {
         }
 
         /**
-         * PhoneNumber.
+         * The phone number to which a call is transferred.
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putQueryParameter("PhoneNumber", phoneNumber);
@@ -201,7 +201,10 @@ public class QueryCallInTransferRecordRequest extends Request {
         }
 
         /**
-         * QueryDate.
+         * The time at which call transfer records are queried, in the YYYY-MM-DD hh:mm:ss format.
+         * <p>
+         * 
+         * > The query result is all the call transfer records of the specified day.
          */
         public Builder queryDate(String queryDate) {
             this.putQueryParameter("QueryDate", queryDate);

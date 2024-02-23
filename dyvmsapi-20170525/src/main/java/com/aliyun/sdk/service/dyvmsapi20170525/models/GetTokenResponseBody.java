@@ -86,7 +86,11 @@ public class GetTokenResponseBody extends TeaModel {
         private String token; 
 
         /**
-         * Code.
+         * The response code.
+         * <p>
+         * 
+         * *   The value OK indicates that the request was successful.
+         * *   For more information about other response codes, see [API error codes](~~112502~~).
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +98,7 @@ public class GetTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -102,7 +106,7 @@ public class GetTokenResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +114,7 @@ public class GetTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -118,7 +122,7 @@ public class GetTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Token.
+         * The token.
          */
         public Builder token(String token) {
             this.token = token;

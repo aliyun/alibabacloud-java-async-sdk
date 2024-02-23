@@ -88,12 +88,12 @@ public class DeleteRobotTaskRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteRobotTaskRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.taskId = response.taskId;
+        private Builder(DeleteRobotTaskRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.taskId = request.taskId;
         } 
 
         /**
@@ -124,7 +124,7 @@ public class DeleteRobotTaskRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * The unique ID of the robocall task. You can call the [CreateRobotTask](~~CreateRobotTask~~) operation to obtain the task ID.
          */
         public Builder taskId(Long taskId) {
             this.putQueryParameter("TaskId", taskId);

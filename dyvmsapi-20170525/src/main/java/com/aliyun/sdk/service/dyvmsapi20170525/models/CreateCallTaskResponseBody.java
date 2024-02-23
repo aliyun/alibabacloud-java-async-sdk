@@ -62,7 +62,7 @@ public class CreateCallTaskResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The response code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -70,7 +70,7 @@ public class CreateCallTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The task ID.
          */
         public Builder data(Long data) {
             this.data = data;
@@ -78,7 +78,7 @@ public class CreateCallTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

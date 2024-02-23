@@ -101,13 +101,13 @@ public class StartRobotTaskRequest extends Request {
             super();
         } 
 
-        private Builder(StartRobotTaskRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.scheduleTime = response.scheduleTime;
-            this.taskId = response.taskId;
+        private Builder(StartRobotTaskRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.scheduleTime = request.scheduleTime;
+            this.taskId = request.taskId;
         } 
 
         /**
@@ -138,7 +138,7 @@ public class StartRobotTaskRequest extends Request {
         }
 
         /**
-         * ScheduleTime.
+         * The time scheduled for starting the robocall task, in the yyyy-MM-dd HH:mm:ss format.
          */
         public Builder scheduleTime(String scheduleTime) {
             this.putQueryParameter("ScheduleTime", scheduleTime);
@@ -147,7 +147,7 @@ public class StartRobotTaskRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * The unique ID of the robocall task. You can call the [CreateRobotTask](~~CreateRobotTask~~) operation to obtain the task ID.
          */
         public Builder taskId(Long taskId) {
             this.putQueryParameter("TaskId", taskId);

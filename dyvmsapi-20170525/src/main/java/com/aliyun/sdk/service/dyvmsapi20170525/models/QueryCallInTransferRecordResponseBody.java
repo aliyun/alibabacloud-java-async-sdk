@@ -74,7 +74,11 @@ public class QueryCallInTransferRecordResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The response code.
+         * <p>
+         * 
+         * *   The value OK indicates that the request was successful.
+         * *   For more information about other response codes, see [API error codes](~~112502~~).
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +86,7 @@ public class QueryCallInTransferRecordResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The response parameters.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +94,7 @@ public class QueryCallInTransferRecordResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +102,7 @@ public class QueryCallInTransferRecordResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -198,7 +202,7 @@ public class QueryCallInTransferRecordResponseBody extends TeaModel {
             private String transferCaller; 
 
             /**
-             * CallInCalled.
+             * The called number of the inbound call.
              */
             public Builder callInCalled(String callInCalled) {
                 this.callInCalled = callInCalled;
@@ -206,7 +210,7 @@ public class QueryCallInTransferRecordResponseBody extends TeaModel {
             }
 
             /**
-             * CallInCaller.
+             * The calling number of the inbound call.
              */
             public Builder callInCaller(String callInCaller) {
                 this.callInCaller = callInCaller;
@@ -214,7 +218,7 @@ public class QueryCallInTransferRecordResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The time when the call was initiated.
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -222,7 +226,7 @@ public class QueryCallInTransferRecordResponseBody extends TeaModel {
             }
 
             /**
-             * RecordUrl.
+             * The recording URL.
              */
             public Builder recordUrl(String recordUrl) {
                 this.recordUrl = recordUrl;
@@ -230,7 +234,7 @@ public class QueryCallInTransferRecordResponseBody extends TeaModel {
             }
 
             /**
-             * TransferCalled.
+             * The phone number to which the call was transferred.
              */
             public Builder transferCalled(String transferCalled) {
                 this.transferCalled = transferCalled;
@@ -238,7 +242,7 @@ public class QueryCallInTransferRecordResponseBody extends TeaModel {
             }
 
             /**
-             * TransferCaller.
+             * The calling number that transferred the call.
              */
             public Builder transferCaller(String transferCaller) {
                 this.transferCaller = transferCaller;
@@ -315,7 +319,7 @@ public class QueryCallInTransferRecordResponseBody extends TeaModel {
             private java.util.List < Values> values; 
 
             /**
-             * PageNo.
+             * The page number.
              */
             public Builder pageNo(Long pageNo) {
                 this.pageNo = pageNo;
@@ -323,7 +327,7 @@ public class QueryCallInTransferRecordResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries per page.
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -331,7 +335,7 @@ public class QueryCallInTransferRecordResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * The total number of entries returned.
              */
             public Builder total(Long total) {
                 this.total = total;
@@ -339,7 +343,7 @@ public class QueryCallInTransferRecordResponseBody extends TeaModel {
             }
 
             /**
-             * Values.
+             * The call transfer records.
              */
             public Builder values(java.util.List < Values> values) {
                 this.values = values;

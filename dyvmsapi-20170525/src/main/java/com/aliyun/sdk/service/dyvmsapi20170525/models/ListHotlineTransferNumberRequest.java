@@ -129,19 +129,19 @@ public class ListHotlineTransferNumberRequest extends Request {
             super();
         } 
 
-        private Builder(ListHotlineTransferNumberRequest response) {
-            super(response);
-            this.hotlineNumber = response.hotlineNumber;
-            this.ownerId = response.ownerId;
-            this.pageNo = response.pageNo;
-            this.pageSize = response.pageSize;
-            this.qualificationId = response.qualificationId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(ListHotlineTransferNumberRequest request) {
+            super(request);
+            this.hotlineNumber = request.hotlineNumber;
+            this.ownerId = request.ownerId;
+            this.pageNo = request.pageNo;
+            this.pageSize = request.pageSize;
+            this.qualificationId = request.qualificationId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * HotlineNumber.
+         * The China 400 number.
          */
         public Builder hotlineNumber(String hotlineNumber) {
             this.putQueryParameter("HotlineNumber", hotlineNumber);
@@ -159,7 +159,7 @@ public class ListHotlineTransferNumberRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * The page number. Default value: **1**.
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -168,7 +168,7 @@ public class ListHotlineTransferNumberRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Valid values: 1 to 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -177,7 +177,7 @@ public class ListHotlineTransferNumberRequest extends Request {
         }
 
         /**
-         * QualificationId.
+         * The qualification ID. You can call the [GetHotlineQualificationByOrder](~~393548~~) operation to obtain the qualification ID.
          */
         public Builder qualificationId(String qualificationId) {
             this.putQueryParameter("QualificationId", qualificationId);

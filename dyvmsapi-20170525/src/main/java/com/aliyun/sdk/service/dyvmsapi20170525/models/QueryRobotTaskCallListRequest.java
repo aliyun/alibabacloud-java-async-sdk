@@ -205,25 +205,32 @@ public class QueryRobotTaskCallListRequest extends Request {
             super();
         } 
 
-        private Builder(QueryRobotTaskCallListRequest response) {
-            super(response);
-            this.callResult = response.callResult;
-            this.called = response.called;
-            this.dialogCountFrom = response.dialogCountFrom;
-            this.dialogCountTo = response.dialogCountTo;
-            this.durationFrom = response.durationFrom;
-            this.durationTo = response.durationTo;
-            this.hangupDirection = response.hangupDirection;
-            this.ownerId = response.ownerId;
-            this.pageNo = response.pageNo;
-            this.pageSize = response.pageSize;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.taskId = response.taskId;
+        private Builder(QueryRobotTaskCallListRequest request) {
+            super(request);
+            this.callResult = request.callResult;
+            this.called = request.called;
+            this.dialogCountFrom = request.dialogCountFrom;
+            this.dialogCountTo = request.dialogCountTo;
+            this.durationFrom = request.durationFrom;
+            this.durationTo = request.durationTo;
+            this.hangupDirection = request.hangupDirection;
+            this.ownerId = request.ownerId;
+            this.pageNo = request.pageNo;
+            this.pageSize = request.pageSize;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.taskId = request.taskId;
         } 
 
         /**
-         * CallResult.
+         * The call result. Valid values:
+         * <p>
+         * 
+         * *   **200002**: The line is busy.
+         * *   **200005**: The called party cannot be connected.
+         * *   **200010**: The phone of the called party is powered off.
+         * *   **200011**: The called party is out of service.
+         * *   **200012**: The call is lost.
          */
         public Builder callResult(String callResult) {
             this.putQueryParameter("CallResult", callResult);
@@ -232,7 +239,7 @@ public class QueryRobotTaskCallListRequest extends Request {
         }
 
         /**
-         * Called.
+         * The called number.
          */
         public Builder called(String called) {
             this.putQueryParameter("Called", called);
@@ -241,7 +248,7 @@ public class QueryRobotTaskCallListRequest extends Request {
         }
 
         /**
-         * DialogCountFrom.
+         * The minimum number of conversation rounds in the call.
          */
         public Builder dialogCountFrom(String dialogCountFrom) {
             this.putQueryParameter("DialogCountFrom", dialogCountFrom);
@@ -250,7 +257,7 @@ public class QueryRobotTaskCallListRequest extends Request {
         }
 
         /**
-         * DialogCountTo.
+         * The maximum number of conversation rounds in the call.
          */
         public Builder dialogCountTo(String dialogCountTo) {
             this.putQueryParameter("DialogCountTo", dialogCountTo);
@@ -259,7 +266,7 @@ public class QueryRobotTaskCallListRequest extends Request {
         }
 
         /**
-         * DurationFrom.
+         * The minimum call duration.
          */
         public Builder durationFrom(String durationFrom) {
             this.putQueryParameter("DurationFrom", durationFrom);
@@ -268,7 +275,7 @@ public class QueryRobotTaskCallListRequest extends Request {
         }
 
         /**
-         * DurationTo.
+         * The maximum call duration.
          */
         public Builder durationTo(String durationTo) {
             this.putQueryParameter("DurationTo", durationTo);
@@ -277,7 +284,11 @@ public class QueryRobotTaskCallListRequest extends Request {
         }
 
         /**
-         * HangupDirection.
+         * The party who hangs up. Valid values:
+         * <p>
+         * 
+         * *   **0**: the called party.
+         * *   **1**: the robot.
          */
         public Builder hangupDirection(String hangupDirection) {
             this.putQueryParameter("HangupDirection", hangupDirection);
@@ -295,7 +306,7 @@ public class QueryRobotTaskCallListRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * The page number.
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -304,7 +315,7 @@ public class QueryRobotTaskCallListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -331,7 +342,7 @@ public class QueryRobotTaskCallListRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * The unique ID of the robocall task. You can call the [CreateRobotTask](~~393531~~) operation to obtain the task ID.
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

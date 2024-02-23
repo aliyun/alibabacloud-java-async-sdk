@@ -87,16 +87,22 @@ public class QueryRobotInfoListRequest extends Request {
             super();
         } 
 
-        private Builder(QueryRobotInfoListRequest response) {
-            super(response);
-            this.auditStatus = response.auditStatus;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(QueryRobotInfoListRequest request) {
+            super(request);
+            this.auditStatus = request.auditStatus;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * AuditStatus.
+         * The review state. Valid values:
+         * <p>
+         * 
+         * *   **CONFIGURABLE**
+         * *   **AUDITING**
+         * *   **AUDITPASS**
+         * *   **AUDITFAIL**
          */
         public Builder auditStatus(String auditStatus) {
             this.putQueryParameter("AuditStatus", auditStatus);

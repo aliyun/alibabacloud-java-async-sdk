@@ -74,7 +74,11 @@ public class QueryRobotInfoListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The response code.
+         * <p>
+         * 
+         * *   The value OK indicates that the request was successful.
+         * *   For more information about other response codes, see [API error codes](~~112502~~).
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +86,19 @@ public class QueryRobotInfoListResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The basic information about the robot, in the JSON format. The basic information contains the following parameters:
+         * <p>
+         * 
+         * *   **id**: the robot ID.
+         * *   **robotName**: the robot name.
+         * *   **robotType**: the robot type.
+         * *   **auditStatus**: the review state.
+         * *   **gmtCreate**: the time when the task was created.
+         * *   **gmtModified**: the time when the task was modified.
+         * *   **partnerId**: the partner ID.
+         * *   **asrId**: the ID of the automatic speech recognition (ASR) model.
+         * *   **asrType**: the ASR type. Valid values: **Public** and **Private**.
+         * *   **remark**: the additional information.
          */
         public Builder data(String data) {
             this.data = data;
@@ -90,7 +106,7 @@ public class QueryRobotInfoListResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +114,7 @@ public class QueryRobotInfoListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

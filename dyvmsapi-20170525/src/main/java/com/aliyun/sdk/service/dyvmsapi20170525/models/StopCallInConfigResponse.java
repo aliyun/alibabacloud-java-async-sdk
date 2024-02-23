@@ -7,26 +7,28 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link AddRtcAccountResponse} extends {@link TeaModel}
+ * {@link StopCallInConfigResponse} extends {@link TeaModel}
  *
- * <p>AddRtcAccountResponse</p>
+ * <p>StopCallInConfigResponse</p>
  */
-public class AddRtcAccountResponse extends Response {
+public class StopCallInConfigResponse extends Response {
     @NameInMap("headers")
-    @Validation(required = true)
     private java.util.Map < String, String > headers;
 
-    @NameInMap("body")
-    @Validation(required = true)
-    private AddRtcAccountResponseBody body;
+    @NameInMap("statusCode")
+    private Integer statusCode;
 
-    private AddRtcAccountResponse(BuilderImpl builder) {
+    @NameInMap("body")
+    private StopCallInConfigResponseBody body;
+
+    private StopCallInConfigResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static AddRtcAccountResponse create() {
+    public static StopCallInConfigResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -43,36 +45,47 @@ public class AddRtcAccountResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
-    public AddRtcAccountResponseBody getBody() {
+    public StopCallInConfigResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<AddRtcAccountResponse, Builder> {
+    public interface Builder extends Response.Builder<StopCallInConfigResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(AddRtcAccountResponseBody body);
+        Builder statusCode(Integer statusCode);
+
+        Builder body(StopCallInConfigResponseBody body);
 
         @Override
-        AddRtcAccountResponse build();
+        StopCallInConfigResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<AddRtcAccountResponse, Builder>
+            extends Response.BuilderImpl<StopCallInConfigResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private AddRtcAccountResponseBody body; 
+        private Integer statusCode; 
+        private StopCallInConfigResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(AddRtcAccountResponse response) {
+        private BuilderImpl(StopCallInConfigResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -86,17 +99,26 @@ public class AddRtcAccountResponse extends Response {
         }
 
         /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
+            return this;
+        }
+
+        /**
          * body.
          */
         @Override
-        public Builder body(AddRtcAccountResponseBody body) {
+        public Builder body(StopCallInConfigResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public AddRtcAccountResponse build() {
-            return new AddRtcAccountResponse(this);
+        public StopCallInConfigResponse build() {
+            return new StopCallInConfigResponse(this);
         } 
 
     } 

@@ -126,15 +126,15 @@ public class QueryVirtualNumberRequest extends Request {
             super();
         } 
 
-        private Builder(QueryVirtualNumberRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.pageNo = response.pageNo;
-            this.pageSize = response.pageSize;
-            this.prodCode = response.prodCode;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.routeType = response.routeType;
+        private Builder(QueryVirtualNumberRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
+            this.pageNo = request.pageNo;
+            this.pageSize = request.pageSize;
+            this.prodCode = request.prodCode;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.routeType = request.routeType;
         } 
 
         /**
@@ -147,7 +147,7 @@ public class QueryVirtualNumberRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * The page number.
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -156,7 +156,7 @@ public class QueryVirtualNumberRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -165,7 +165,7 @@ public class QueryVirtualNumberRequest extends Request {
         }
 
         /**
-         * ProdCode.
+         * The service name. Default value: **dyvms**.
          */
         public Builder prodCode(String prodCode) {
             this.putQueryParameter("ProdCode", prodCode);
@@ -192,7 +192,11 @@ public class QueryVirtualNumberRequest extends Request {
         }
 
         /**
-         * RouteType.
+         * The route type. Valid values:
+         * <p>
+         * 
+         * *   **0**: number location first.
+         * *   **1**: random.
          */
         public Builder routeType(Integer routeType) {
             this.putQueryParameter("RouteType", routeType);

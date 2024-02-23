@@ -74,7 +74,10 @@ public class QueryVoiceFileAuditInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The response code.
+         * <p>
+         * 
+         * The value OK indicates that the request was successful. For more information about other response codes, see [API error codes](~~112502~~).
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +85,7 @@ public class QueryVoiceFileAuditInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The response parameters.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -90,7 +93,7 @@ public class QueryVoiceFileAuditInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +101,7 @@ public class QueryVoiceFileAuditInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -162,7 +165,17 @@ public class QueryVoiceFileAuditInfoResponseBody extends TeaModel {
             private String voiceCode; 
 
             /**
-             * AuditState.
+             * The review state of the voice file. Valid values:
+             * <p>
+             * 
+             * *   **AUDIT_STATE_INIT**: The voice file was under review.
+             * *   **AUDIT_STATE_PASS**: The voice file was approved.
+             * *   **AUDIT_STATE_NOT_PASS**: The voice file was rejected.
+             * *   **AUDIT_STATE_UPLOADING**: The voice file was approved and is being uploaded.
+             * *   **AUDIT_STATE_REDOING**: The voice file was being reprocessed.
+             * *   **AUDIT_SATE_CANCEL**: The review of the voice file was canceled.
+             * *   **AUDIT_PAUSE**: The review of the voice file was suspended.
+             * *   **AUDIT_ORDER_FINISHED**: The voice file was approved by the ticket system and was waiting for the review of the Internet service provider (ISP).
              */
             public Builder auditState(String auditState) {
                 this.auditState = auditState;
@@ -170,7 +183,7 @@ public class QueryVoiceFileAuditInfoResponseBody extends TeaModel {
             }
 
             /**
-             * RejectInfo.
+             * The reason why the voice file was rejected.
              */
             public Builder rejectInfo(String rejectInfo) {
                 this.rejectInfo = rejectInfo;
@@ -178,7 +191,7 @@ public class QueryVoiceFileAuditInfoResponseBody extends TeaModel {
             }
 
             /**
-             * VoiceCode.
+             * The code of the voice file.
              */
             public Builder voiceCode(String voiceCode) {
                 this.voiceCode = voiceCode;
