@@ -28,6 +28,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateNodeGroupResponse> createNodeGroup(CreateNodeGroupRequest request);
 
     /**
+      * Currently we only support taihao platform
+      *
+     */
+    CompletableFuture<CreateReportResponse> createReport(CreateReportRequest request);
+
+    /**
       * 缩容节点。
       *
      */
@@ -56,6 +62,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetAutoScalingPolicyResponse> getAutoScalingPolicy(GetAutoScalingPolicyRequest request);
 
     CompletableFuture<GetClusterResponse> getCluster(GetClusterRequest request);
+
+    /**
+      * 获取集群克隆详情。
+      *
+     */
+    CompletableFuture<GetClusterCloneMetaResponse> getClusterCloneMeta(GetClusterCloneMetaRequest request);
 
     /**
       * get one doctor analysis app
@@ -153,10 +165,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<GetOperationResponse> getOperation(GetOperationRequest request);
 
-    /**
-      * 扩容节点。
-      *
-     */
     CompletableFuture<IncreaseNodesResponse> increaseNodes(IncreaseNodesRequest request);
 
     CompletableFuture<JoinResourceGroupResponse> joinResourceGroup(JoinResourceGroupRequest request);

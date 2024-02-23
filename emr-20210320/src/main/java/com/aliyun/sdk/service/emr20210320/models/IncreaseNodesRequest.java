@@ -31,6 +31,10 @@ public class IncreaseNodesRequest extends Request {
     private Integer increaseNodeCount;
 
     @Query
+    @NameInMap("MinIncreaseNodeCount")
+    private Integer minIncreaseNodeCount;
+
+    @Query
     @NameInMap("NodeGroupId")
     @Validation(required = true)
     private String nodeGroupId;
@@ -54,6 +58,7 @@ public class IncreaseNodesRequest extends Request {
         this.autoPayOrder = builder.autoPayOrder;
         this.clusterId = builder.clusterId;
         this.increaseNodeCount = builder.increaseNodeCount;
+        this.minIncreaseNodeCount = builder.minIncreaseNodeCount;
         this.nodeGroupId = builder.nodeGroupId;
         this.paymentDuration = builder.paymentDuration;
         this.paymentDurationUnit = builder.paymentDurationUnit;
@@ -102,6 +107,13 @@ public class IncreaseNodesRequest extends Request {
     }
 
     /**
+     * @return minIncreaseNodeCount
+     */
+    public Integer getMinIncreaseNodeCount() {
+        return this.minIncreaseNodeCount;
+    }
+
+    /**
      * @return nodeGroupId
      */
     public String getNodeGroupId() {
@@ -134,6 +146,7 @@ public class IncreaseNodesRequest extends Request {
         private Boolean autoPayOrder; 
         private String clusterId; 
         private Integer increaseNodeCount; 
+        private Integer minIncreaseNodeCount; 
         private String nodeGroupId; 
         private Integer paymentDuration; 
         private String paymentDurationUnit; 
@@ -149,6 +162,7 @@ public class IncreaseNodesRequest extends Request {
             this.autoPayOrder = request.autoPayOrder;
             this.clusterId = request.clusterId;
             this.increaseNodeCount = request.increaseNodeCount;
+            this.minIncreaseNodeCount = request.minIncreaseNodeCount;
             this.nodeGroupId = request.nodeGroupId;
             this.paymentDuration = request.paymentDuration;
             this.paymentDurationUnit = request.paymentDurationUnit;
@@ -194,6 +208,15 @@ public class IncreaseNodesRequest extends Request {
         public Builder increaseNodeCount(Integer increaseNodeCount) {
             this.putQueryParameter("IncreaseNodeCount", increaseNodeCount);
             this.increaseNodeCount = increaseNodeCount;
+            return this;
+        }
+
+        /**
+         * MinIncreaseNodeCount.
+         */
+        public Builder minIncreaseNodeCount(Integer minIncreaseNodeCount) {
+            this.putQueryParameter("MinIncreaseNodeCount", minIncreaseNodeCount);
+            this.minIncreaseNodeCount = minIncreaseNodeCount;
             return this;
         }
 
