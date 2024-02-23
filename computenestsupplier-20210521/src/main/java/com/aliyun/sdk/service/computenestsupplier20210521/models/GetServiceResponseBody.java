@@ -36,6 +36,9 @@ public class GetServiceResponseBody extends TeaModel {
     @NameInMap("CommoditySpecifications")
     private java.util.List < CommoditySpecifications> commoditySpecifications;
 
+    @NameInMap("ComponentsConfigs")
+    private java.util.List < ComponentsConfigs> componentsConfigs;
+
     @NameInMap("CreateTime")
     private String createTime;
 
@@ -195,6 +198,7 @@ public class GetServiceResponseBody extends TeaModel {
         this.commodityCode = builder.commodityCode;
         this.commodityEntities = builder.commodityEntities;
         this.commoditySpecifications = builder.commoditySpecifications;
+        this.componentsConfigs = builder.componentsConfigs;
         this.createTime = builder.createTime;
         this.crossRegionConnectionStatus = builder.crossRegionConnectionStatus;
         this.defaultLicenseDays = builder.defaultLicenseDays;
@@ -309,6 +313,13 @@ public class GetServiceResponseBody extends TeaModel {
      */
     public java.util.List < CommoditySpecifications> getCommoditySpecifications() {
         return this.commoditySpecifications;
+    }
+
+    /**
+     * @return componentsConfigs
+     */
+    public java.util.List < ComponentsConfigs> getComponentsConfigs() {
+        return this.componentsConfigs;
     }
 
     /**
@@ -670,6 +681,7 @@ public class GetServiceResponseBody extends TeaModel {
         private String commodityCode; 
         private java.util.List < CommodityEntities> commodityEntities; 
         private java.util.List < CommoditySpecifications> commoditySpecifications; 
+        private java.util.List < ComponentsConfigs> componentsConfigs; 
         private String createTime; 
         private String crossRegionConnectionStatus; 
         private Long defaultLicenseDays; 
@@ -782,6 +794,14 @@ public class GetServiceResponseBody extends TeaModel {
          */
         public Builder commoditySpecifications(java.util.List < CommoditySpecifications> commoditySpecifications) {
             this.commoditySpecifications = commoditySpecifications;
+            return this;
+        }
+
+        /**
+         * ComponentsConfigs.
+         */
+        public Builder componentsConfigs(java.util.List < ComponentsConfigs> componentsConfigs) {
+            this.componentsConfigs = componentsConfigs;
             return this;
         }
 
@@ -1672,6 +1692,67 @@ public class GetServiceResponseBody extends TeaModel {
 
             public CommoditySpecifications build() {
                 return new CommoditySpecifications(this);
+            } 
+
+        } 
+
+    }
+    public static class ComponentsConfigs extends TeaModel {
+        @NameInMap("ComponentsMappings")
+        private java.util.Map < String, String > componentsMappings;
+
+        @NameInMap("TemplateName")
+        private String templateName;
+
+        private ComponentsConfigs(Builder builder) {
+            this.componentsMappings = builder.componentsMappings;
+            this.templateName = builder.templateName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ComponentsConfigs create() {
+            return builder().build();
+        }
+
+        /**
+         * @return componentsMappings
+         */
+        public java.util.Map < String, String > getComponentsMappings() {
+            return this.componentsMappings;
+        }
+
+        /**
+         * @return templateName
+         */
+        public String getTemplateName() {
+            return this.templateName;
+        }
+
+        public static final class Builder {
+            private java.util.Map < String, String > componentsMappings; 
+            private String templateName; 
+
+            /**
+             * ComponentsMappings.
+             */
+            public Builder componentsMappings(java.util.Map < String, String > componentsMappings) {
+                this.componentsMappings = componentsMappings;
+                return this;
+            }
+
+            /**
+             * TemplateName.
+             */
+            public Builder templateName(String templateName) {
+                this.templateName = templateName;
+                return this;
+            }
+
+            public ComponentsConfigs build() {
+                return new ComponentsConfigs(this);
             } 
 
         } 
