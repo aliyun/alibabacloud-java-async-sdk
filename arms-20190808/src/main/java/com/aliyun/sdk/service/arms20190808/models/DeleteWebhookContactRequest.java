@@ -55,7 +55,7 @@ public class DeleteWebhookContactRequest extends Request {
         } 
 
         /**
-         * WebhookId.
+         * The ID of the webhook alert contact.
          */
         public Builder webhookId(Long webhookId) {
             this.putQueryParameter("WebhookId", webhookId);

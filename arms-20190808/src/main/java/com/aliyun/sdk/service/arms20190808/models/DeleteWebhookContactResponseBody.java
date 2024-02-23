@@ -50,7 +50,11 @@ public class DeleteWebhookContactResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * IsSuccess.
+         * Indicates whether the webhook alert contact was deleted.
+         * <p>
+         * 
+         * *   `true`
+         * *   `false`
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -58,7 +62,7 @@ public class DeleteWebhookContactResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

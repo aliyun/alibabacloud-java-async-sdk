@@ -553,9 +553,113 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
         } 
 
     }
+    public static class CustomVPCSetting extends TeaModel {
+        @NameInMap("RegionId")
+        private String regionId;
+
+        @NameInMap("SecureGroupId")
+        private String secureGroupId;
+
+        @NameInMap("VSwitchId")
+        private String vSwitchId;
+
+        @NameInMap("VpcId")
+        private String vpcId;
+
+        private CustomVPCSetting(Builder builder) {
+            this.regionId = builder.regionId;
+            this.secureGroupId = builder.secureGroupId;
+            this.vSwitchId = builder.vSwitchId;
+            this.vpcId = builder.vpcId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CustomVPCSetting create() {
+            return builder().build();
+        }
+
+        /**
+         * @return regionId
+         */
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        /**
+         * @return secureGroupId
+         */
+        public String getSecureGroupId() {
+            return this.secureGroupId;
+        }
+
+        /**
+         * @return vSwitchId
+         */
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+        /**
+         * @return vpcId
+         */
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        public static final class Builder {
+            private String regionId; 
+            private String secureGroupId; 
+            private String vSwitchId; 
+            private String vpcId; 
+
+            /**
+             * The region ID.
+             */
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * SecureGroupId.
+             */
+            public Builder secureGroupId(String secureGroupId) {
+                this.secureGroupId = secureGroupId;
+                return this;
+            }
+
+            /**
+             * VSwitchId.
+             */
+            public Builder vSwitchId(String vSwitchId) {
+                this.vSwitchId = vSwitchId;
+                return this;
+            }
+
+            /**
+             * VpcId.
+             */
+            public Builder vpcId(String vpcId) {
+                this.vpcId = vpcId;
+                return this;
+            }
+
+            public CustomVPCSetting build() {
+                return new CustomVPCSetting(this);
+            } 
+
+        } 
+
+    }
     public static class CommonSetting extends TeaModel {
         @NameInMap("CustomHost")
         private CustomHost customHost;
+
+        @NameInMap("CustomVPCSetting")
+        private CustomVPCSetting customVPCSetting;
 
         @NameInMap("IpType")
         private Integer ipType;
@@ -574,6 +678,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
 
         private CommonSetting(Builder builder) {
             this.customHost = builder.customHost;
+            this.customVPCSetting = builder.customVPCSetting;
             this.ipType = builder.ipType;
             this.isOpenTrace = builder.isOpenTrace;
             this.monitorSamples = builder.monitorSamples;
@@ -594,6 +699,13 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
          */
         public CustomHost getCustomHost() {
             return this.customHost;
+        }
+
+        /**
+         * @return customVPCSetting
+         */
+        public CustomVPCSetting getCustomVPCSetting() {
+            return this.customVPCSetting;
         }
 
         /**
@@ -633,6 +745,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
 
         public static final class Builder {
             private CustomHost customHost; 
+            private CustomVPCSetting customVPCSetting; 
             private Integer ipType; 
             private Boolean isOpenTrace; 
             private Integer monitorSamples; 
@@ -644,6 +757,14 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
              */
             public Builder customHost(CustomHost customHost) {
                 this.customHost = customHost;
+                return this;
+            }
+
+            /**
+             * CustomVPCSetting.
+             */
+            public Builder customVPCSetting(CustomVPCSetting customVPCSetting) {
+                this.customVPCSetting = customVPCSetting;
                 return this;
             }
 

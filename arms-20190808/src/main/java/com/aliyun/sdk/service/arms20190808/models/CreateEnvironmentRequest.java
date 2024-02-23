@@ -41,6 +41,10 @@ public class CreateEnvironmentRequest extends Request {
     private String managedType;
 
     @Query
+    @NameInMap("PrometheusInstanceId")
+    private String prometheusInstanceId;
+
+    @Query
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
@@ -61,6 +65,7 @@ public class CreateEnvironmentRequest extends Request {
         this.environmentSubType = builder.environmentSubType;
         this.environmentType = builder.environmentType;
         this.managedType = builder.managedType;
+        this.prometheusInstanceId = builder.prometheusInstanceId;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.tags = builder.tags;
@@ -122,6 +127,13 @@ public class CreateEnvironmentRequest extends Request {
     }
 
     /**
+     * @return prometheusInstanceId
+     */
+    public String getPrometheusInstanceId() {
+        return this.prometheusInstanceId;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -149,6 +161,7 @@ public class CreateEnvironmentRequest extends Request {
         private String environmentSubType; 
         private String environmentType; 
         private String managedType; 
+        private String prometheusInstanceId; 
         private String regionId; 
         private String resourceGroupId; 
         private java.util.List < Tags> tags; 
@@ -165,6 +178,7 @@ public class CreateEnvironmentRequest extends Request {
             this.environmentSubType = request.environmentSubType;
             this.environmentType = request.environmentType;
             this.managedType = request.managedType;
+            this.prometheusInstanceId = request.prometheusInstanceId;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
             this.tags = request.tags;
@@ -235,6 +249,15 @@ public class CreateEnvironmentRequest extends Request {
         public Builder managedType(String managedType) {
             this.putQueryParameter("ManagedType", managedType);
             this.managedType = managedType;
+            return this;
+        }
+
+        /**
+         * PrometheusInstanceId.
+         */
+        public Builder prometheusInstanceId(String prometheusInstanceId) {
+            this.putQueryParameter("PrometheusInstanceId", prometheusInstanceId);
+            this.prometheusInstanceId = prometheusInstanceId;
             return this;
         }
 
