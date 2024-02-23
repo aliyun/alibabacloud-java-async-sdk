@@ -199,10 +199,14 @@ public class ListClusterTypesResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
+        @NameInMap("Code")
+        private String code;
+
         @NameInMap("ShowName")
         private String showName;
 
         private Data(Builder builder) {
+            this.code = builder.code;
             this.showName = builder.showName;
         }
 
@@ -215,6 +219,13 @@ public class ListClusterTypesResponseBody extends TeaModel {
         }
 
         /**
+         * @return code
+         */
+        public String getCode() {
+            return this.code;
+        }
+
+        /**
          * @return showName
          */
         public String getShowName() {
@@ -222,7 +233,16 @@ public class ListClusterTypesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String code; 
             private String showName; 
+
+            /**
+             * The status code returned.
+             */
+            public Builder code(String code) {
+                this.code = code;
+                return this;
+            }
 
             /**
              * The type of the MSE engine that can be activated.
