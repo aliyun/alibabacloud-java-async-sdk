@@ -253,6 +253,12 @@ public class GetTaskInfoResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
+        @NameInMap("ErrorCode")
+        private String errorCode;
+
+        @NameInMap("ErrorMessage")
+        private String errorMessage;
+
         @NameInMap("Result")
         private Result result;
 
@@ -266,6 +272,8 @@ public class GetTaskInfoResponseBody extends TeaModel {
         private String taskStatus;
 
         private Data(Builder builder) {
+            this.errorCode = builder.errorCode;
+            this.errorMessage = builder.errorMessage;
             this.result = builder.result;
             this.taskId = builder.taskId;
             this.taskKey = builder.taskKey;
@@ -278,6 +286,20 @@ public class GetTaskInfoResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return errorCode
+         */
+        public String getErrorCode() {
+            return this.errorCode;
+        }
+
+        /**
+         * @return errorMessage
+         */
+        public String getErrorMessage() {
+            return this.errorMessage;
         }
 
         /**
@@ -309,10 +331,28 @@ public class GetTaskInfoResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String errorCode; 
+            private String errorMessage; 
             private Result result; 
             private String taskId; 
             private String taskKey; 
             private String taskStatus; 
+
+            /**
+             * ErrorCode.
+             */
+            public Builder errorCode(String errorCode) {
+                this.errorCode = errorCode;
+                return this;
+            }
+
+            /**
+             * ErrorMessage.
+             */
+            public Builder errorMessage(String errorMessage) {
+                this.errorMessage = errorMessage;
+                return this;
+            }
 
             /**
              * Result.
