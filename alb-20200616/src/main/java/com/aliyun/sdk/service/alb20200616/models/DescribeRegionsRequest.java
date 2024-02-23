@@ -54,12 +54,12 @@ public class DescribeRegionsRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
+         * The supported natural language. Valid values:
          * <p>
          * 
-         * *   **zh-CN**: Chinese
-         * *   **en-US**: English
-         * *   **ja**: Japanese
+         * *   zh-CN: **Chinese**
+         * *   en-US: **English**
+         * *   ja: **Japanese**
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);

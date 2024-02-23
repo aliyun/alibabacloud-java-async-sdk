@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.alb20200616;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.alb20200616.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -87,7 +88,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateAScriptsResponse> createAScripts(CreateAScriptsRequest request);
 
     /**
-      * **CreateAcl** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListAcls](~~213617~~) operation to query the status of the task.
+      * ## Usage notes
+      * The **CreateAcl** operation is asynchronous. After you send a request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [ListAcls](~~213617~~) operation to query the status of an ACL:
       * *   If an ACL is in the **Creating** state, the ACL is being created.
       * *   If an ACL is in the **Available** state, the ACL is created.
       *
@@ -97,9 +99,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateHealthCheckTemplateResponse> createHealthCheckTemplate(CreateHealthCheckTemplateRequest request);
 
     /**
-      * **CreateListener** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [GetListenerAttribute](~~2254865~~) operation to query the status of the task.
-      * *   If the HTTP, HTTPS, or QUIC listener is in the **Provisioning** state, the listener is being created.
-      * *   If the HTTP, HTTPS, or QUIC listener is in the **Running** state, the listener is created.
+      * ## Usage notes
+      * **CreateListener** is an asynchronous operation. After you call this operation, the system returns a request ID. However, the operation is still being performed in the background. You can call the [GetListenerAttribute](~~214353~~) operation to query the status of the HTTP, HTTPS, or QUIC listener.
+      * *   If the HTTP, HTTPS, or QUIC listener is in the **Provisioning** state, it indicates that the listener is being created.
+      * *   If the HTTP, HTTPS, or QUIC listener is in the **Running** state, it indicates that the listener has been created successfully.
       *
      */
     CompletableFuture<CreateListenerResponse> createListener(CreateListenerRequest request);
@@ -143,7 +146,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateSecurityPolicyResponse> createSecurityPolicy(CreateSecurityPolicyRequest request);
 
     /**
-      * **CreateServerGroup** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListServerGroups](~~213627~~) operation to query the status of the task.
+      * **CreateServerGroup** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [ListServerGroups](~~213627~~) to query the status of a server group.
       * *   If a server group is in the **Creating** state, it indicates that the server group is being created.
       * *   If a server group is in the **Available** state, it indicates that the server group is created.
       *
@@ -448,7 +451,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateLoadBalancerZonesResponse> updateLoadBalancerZones(UpdateLoadBalancerZonesRequest request);
 
     /**
-      * ## Description
       * *   **UpdateRuleAttribute** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListRules](~~214379~~) operation to query the status of a forwarding rule:
       *     *   If a forwarding rule is in the **Configuring** state, the forwarding rule is being updated.
       *     *   If a forwarding rule is in the **Available** state, the forwarding rule is updated.

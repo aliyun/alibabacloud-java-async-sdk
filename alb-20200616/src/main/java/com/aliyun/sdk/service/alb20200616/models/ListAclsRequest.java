@@ -125,7 +125,7 @@ public class ListAclsRequest extends Request {
         } 
 
         /**
-         * The ACL IDs.
+         * The ID of the network ACL. You can specify at most 20 network ACL IDs in each request.
          */
         public Builder aclIds(java.util.List < String > aclIds) {
             this.putQueryParameter("AclIds", aclIds);
@@ -134,7 +134,7 @@ public class ListAclsRequest extends Request {
         }
 
         /**
-         * The ACL names. You can specify up to 10 ACL names in each request.
+         * The names of the network ACLs. You can specify at most 10 network ACL names in each request.
          */
         public Builder aclNames(java.util.List < String > aclNames) {
             this.putQueryParameter("AclNames", aclNames);
@@ -152,11 +152,11 @@ public class ListAclsRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. Valid values:
+         * The token that is used for the next query. Valid values:
          * <p>
          * 
-         * *   You do not need to specify this parameter for the first request.
-         * *   You must specify the token that is obtained from the previous query as the value of NextToken.
+         * *   If this is your first query or no next query is to be sent, ignore this parameter.
+         * *   If a next query is to be sent, set the value to the value of NextToken that is returned from the last call.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -165,7 +165,7 @@ public class ListAclsRequest extends Request {
         }
 
         /**
-         * The resource group ID. You can filter the results based on the specified ID.
+         * The ID of the resource group. You can filter the query results based on the specified ID.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -174,7 +174,7 @@ public class ListAclsRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -228,7 +228,7 @@ public class ListAclsRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The tag key. The tag key can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -236,7 +236,7 @@ public class ListAclsRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag value. The tag value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

@@ -187,7 +187,7 @@ public class UpdateRuleAttributeRequest extends Request {
         }
 
         /**
-         * The match conditions of the forwarding rule.
+         * The match condition of the forwarding rule.
          */
         public Builder ruleConditions(java.util.List < RuleConditions> ruleConditions) {
             this.putQueryParameter("RuleConditions", ruleConditions);
@@ -1601,7 +1601,7 @@ public class UpdateRuleAttributeRequest extends Request {
             private String value; 
 
             /**
-             * The key of the cookie. The key must be 1 to 100 characters in length, and can contain printable characters such as lowercase letters, asterisks (\*), and question marks (?). However, the key cannot contain uppercase letters, space characters, or the following special characters: `# [ ] { } \ | < > &`.
+             * The key of the cookie. The key must be 1 to 100 characters in length, and can contain printable characters such as lowercase letters, asterisks (\*), and question marks (?). However, uppercase letters, space characters, and the following special characters are not supported: `# [ ] { } \ | < > &`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1650,7 +1650,7 @@ public class UpdateRuleAttributeRequest extends Request {
             private java.util.List < Values> values; 
 
             /**
-             * The configurations of the cookies.
+             * The configuration of the cookie.
              */
             public Builder values(java.util.List < Values> values) {
                 this.values = values;
@@ -1752,7 +1752,7 @@ public class UpdateRuleAttributeRequest extends Request {
             private java.util.List < String > values; 
 
             /**
-             * The hostname.
+             * The hostnames.
              */
             public Builder values(java.util.List < String > values) {
                 this.values = values;
@@ -1834,7 +1834,7 @@ public class UpdateRuleAttributeRequest extends Request {
             private java.util.List < String > values; 
 
             /**
-             * The path.
+             * The paths.
              */
             public Builder values(java.util.List < String > values) {
                 this.values = values;
@@ -1887,7 +1887,7 @@ public class UpdateRuleAttributeRequest extends Request {
             private String value; 
 
             /**
-             * They key of the query string. The key must be 1 to 100 characters in length, and can contain printable characters such as lowercase letters, asterisks (\*), and question marks (?). The key cannot contain uppercase letters, space characters, or the following special characters: `# [ ] { } \ | < > &`.
+             * They key of the query string. The key must be 1 to 100 characters in length, and can contain printable characters such as lowercase letters, asterisks (\*), and question marks (?). However, the key cannot contain uppercase letters, space characters, or the following special characters: `# [ ] { } \ | < > &`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1936,7 +1936,7 @@ public class UpdateRuleAttributeRequest extends Request {
             private java.util.List < QueryStringConfigValues> values; 
 
             /**
-             * The query strings.
+             * The query string.
              */
             public Builder values(java.util.List < QueryStringConfigValues> values) {
                 this.values = values;
@@ -1989,7 +1989,12 @@ public class UpdateRuleAttributeRequest extends Request {
             private java.util.List < String > values; 
 
             /**
-             * They key of the query string. The key must be 1 to 100 characters in length, and can contain printable characters such as lowercase letters, asterisks (\*), and question marks (?). The key cannot contain uppercase letters, space characters, or the following special characters: `# [ ] { } \ | < > &`.
+             * The key of the header.
+             * <p>
+             * 
+             * *   The key must be 1 to 40 characters in length.
+             * *   It can contain lowercase letters, digits, hyphens (-), and underscores (\_).
+             * *   Cookie and Host are not supported.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1997,7 +2002,7 @@ public class UpdateRuleAttributeRequest extends Request {
             }
 
             /**
-             * The query strings.
+             * The values of the header.
              */
             public Builder values(java.util.List < String > values) {
                 this.values = values;
@@ -2038,7 +2043,7 @@ public class UpdateRuleAttributeRequest extends Request {
             private java.util.List < String > values; 
 
             /**
-             * The query strings.
+             * The response status codes.
              */
             public Builder values(java.util.List < String > values) {
                 this.values = values;
@@ -2079,7 +2084,7 @@ public class UpdateRuleAttributeRequest extends Request {
             private java.util.List < String > values; 
 
             /**
-             * The IP addresses or CIDR blocks.
+             * The IP address or CIDR block based on which user traffic is matched. You can specify multiple IP addresses or CIDR blocks.
              */
             public Builder values(java.util.List < String > values) {
                 this.values = values;
@@ -2228,7 +2233,7 @@ public class UpdateRuleAttributeRequest extends Request {
             private String type; 
 
             /**
-             * The configurations of the cookies.
+             * The configuration of the cookie.
              */
             public Builder cookieConfig(CookieConfig cookieConfig) {
                 this.cookieConfig = cookieConfig;
@@ -2244,7 +2249,7 @@ public class UpdateRuleAttributeRequest extends Request {
             }
 
             /**
-             * The configurations of the host.
+             * The configurations of the hosts.
              */
             public Builder hostConfig(HostConfig hostConfig) {
                 this.hostConfig = hostConfig;
@@ -2260,7 +2265,7 @@ public class UpdateRuleAttributeRequest extends Request {
             }
 
             /**
-             * The configurations of the URLs.
+             * The configurations of the paths.
              */
             public Builder pathConfig(PathConfig pathConfig) {
                 this.pathConfig = pathConfig;
@@ -2276,7 +2281,7 @@ public class UpdateRuleAttributeRequest extends Request {
             }
 
             /**
-             * ResponseHeaderConfig.
+             * The configuration of the header.
              */
             public Builder responseHeaderConfig(ResponseHeaderConfig responseHeaderConfig) {
                 this.responseHeaderConfig = responseHeaderConfig;
@@ -2284,7 +2289,7 @@ public class UpdateRuleAttributeRequest extends Request {
             }
 
             /**
-             * ResponseStatusCodeConfig.
+             * The configurations of the response status codes.
              */
             public Builder responseStatusCodeConfig(ResponseStatusCodeConfig responseStatusCodeConfig) {
                 this.responseStatusCodeConfig = responseStatusCodeConfig;
@@ -2292,7 +2297,7 @@ public class UpdateRuleAttributeRequest extends Request {
             }
 
             /**
-             * The configuration of the source IP-based forwarding rule. You can add at most five source IP-based forwarding rules.
+             * The configuration of the source IP addresses based on which user traffic is matched. You can add at most five source IP-based forwarding rules.
              */
             public Builder sourceIpConfig(SourceIpConfig sourceIpConfig) {
                 this.sourceIpConfig = sourceIpConfig;
@@ -2300,16 +2305,18 @@ public class UpdateRuleAttributeRequest extends Request {
             }
 
             /**
-             * The type of the forwarding rule. You can specify at most seven types. Valid values:
+             * The type of the forwarding rule. You can specify up to seven types. Valid values:
              * <p>
              * 
-             * *   **Host**: Requests are distributed based on hosts.
-             * *   **Path**: Requests are distributed based on paths.
-             * *   **Header**: Requests are distributed based on HTTP headers.
-             * *   **QueryString**: Requests are distributed based on query strings.
-             * *   **Method**: Requests are distributed based on request methods.
-             * *   **Cookie**: Requests are distributed based on cookies.
+             * *   **Host**: Requests are forwarded based on hosts.
+             * *   **Path**: Requests are forwarded based on paths.
+             * *   **Header**: Requests are forwarded based on HTTP headers.
+             * *   **QueryString**: Requests are forwarded based on query strings.
+             * *   **Method**: Requests are forwarded based on request methods.
+             * *   **Cookie**: Requests are forwarded based on cookies.
              * *   **SourceIp**: Requests are distributed based on source IP addresses.
+             * *   **ResponseHeader**: Requests are forwarded based on HTTP response headers.
+             * *   **ResponseStatusCode**: Requests are forwarded based on response status codes.
              */
             public Builder type(String type) {
                 this.type = type;

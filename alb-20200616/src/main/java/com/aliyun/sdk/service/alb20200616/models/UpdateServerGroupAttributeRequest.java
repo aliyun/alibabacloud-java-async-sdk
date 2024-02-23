@@ -17,6 +17,10 @@ public class UpdateServerGroupAttributeRequest extends Request {
     private String clientToken;
 
     @Query
+    @NameInMap("ConnectionDrainConfig")
+    private ConnectionDrainConfig connectionDrainConfig;
+
+    @Query
     @NameInMap("DryRun")
     private Boolean dryRun;
 
@@ -42,6 +46,10 @@ public class UpdateServerGroupAttributeRequest extends Request {
     private String serviceName;
 
     @Query
+    @NameInMap("SlowStartConfig")
+    private SlowStartConfig slowStartConfig;
+
+    @Query
     @NameInMap("StickySessionConfig")
     private StickySessionConfig stickySessionConfig;
 
@@ -56,12 +64,14 @@ public class UpdateServerGroupAttributeRequest extends Request {
     private UpdateServerGroupAttributeRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
+        this.connectionDrainConfig = builder.connectionDrainConfig;
         this.dryRun = builder.dryRun;
         this.healthCheckConfig = builder.healthCheckConfig;
         this.scheduler = builder.scheduler;
         this.serverGroupId = builder.serverGroupId;
         this.serverGroupName = builder.serverGroupName;
         this.serviceName = builder.serviceName;
+        this.slowStartConfig = builder.slowStartConfig;
         this.stickySessionConfig = builder.stickySessionConfig;
         this.uchConfig = builder.uchConfig;
         this.upstreamKeepaliveEnabled = builder.upstreamKeepaliveEnabled;
@@ -85,6 +95,13 @@ public class UpdateServerGroupAttributeRequest extends Request {
      */
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    /**
+     * @return connectionDrainConfig
+     */
+    public ConnectionDrainConfig getConnectionDrainConfig() {
+        return this.connectionDrainConfig;
     }
 
     /**
@@ -130,6 +147,13 @@ public class UpdateServerGroupAttributeRequest extends Request {
     }
 
     /**
+     * @return slowStartConfig
+     */
+    public SlowStartConfig getSlowStartConfig() {
+        return this.slowStartConfig;
+    }
+
+    /**
      * @return stickySessionConfig
      */
     public StickySessionConfig getStickySessionConfig() {
@@ -152,12 +176,14 @@ public class UpdateServerGroupAttributeRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateServerGroupAttributeRequest, Builder> {
         private String clientToken; 
+        private ConnectionDrainConfig connectionDrainConfig; 
         private Boolean dryRun; 
         private HealthCheckConfig healthCheckConfig; 
         private String scheduler; 
         private String serverGroupId; 
         private String serverGroupName; 
         private String serviceName; 
+        private SlowStartConfig slowStartConfig; 
         private StickySessionConfig stickySessionConfig; 
         private UchConfig uchConfig; 
         private Boolean upstreamKeepaliveEnabled; 
@@ -169,12 +195,14 @@ public class UpdateServerGroupAttributeRequest extends Request {
         private Builder(UpdateServerGroupAttributeRequest request) {
             super(request);
             this.clientToken = request.clientToken;
+            this.connectionDrainConfig = request.connectionDrainConfig;
             this.dryRun = request.dryRun;
             this.healthCheckConfig = request.healthCheckConfig;
             this.scheduler = request.scheduler;
             this.serverGroupId = request.serverGroupId;
             this.serverGroupName = request.serverGroupName;
             this.serviceName = request.serviceName;
+            this.slowStartConfig = request.slowStartConfig;
             this.stickySessionConfig = request.stickySessionConfig;
             this.uchConfig = request.uchConfig;
             this.upstreamKeepaliveEnabled = request.upstreamKeepaliveEnabled;
@@ -191,6 +219,15 @@ public class UpdateServerGroupAttributeRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * ConnectionDrainConfig.
+         */
+        public Builder connectionDrainConfig(ConnectionDrainConfig connectionDrainConfig) {
+            this.putQueryParameter("ConnectionDrainConfig", connectionDrainConfig);
+            this.connectionDrainConfig = connectionDrainConfig;
             return this;
         }
 
@@ -261,6 +298,15 @@ public class UpdateServerGroupAttributeRequest extends Request {
         }
 
         /**
+         * SlowStartConfig.
+         */
+        public Builder slowStartConfig(SlowStartConfig slowStartConfig) {
+            this.putQueryParameter("SlowStartConfig", slowStartConfig);
+            this.slowStartConfig = slowStartConfig;
+            return this;
+        }
+
+        /**
          * The configuration of session persistence.
          */
         public Builder stickySessionConfig(StickySessionConfig stickySessionConfig) {
@@ -270,7 +316,7 @@ public class UpdateServerGroupAttributeRequest extends Request {
         }
 
         /**
-         * UchConfig.
+         * The setting of consistent hashing based on URLs.
          */
         public Builder uchConfig(UchConfig uchConfig) {
             this.putQueryParameter("UchConfig", uchConfig);
@@ -279,7 +325,7 @@ public class UpdateServerGroupAttributeRequest extends Request {
         }
 
         /**
-         * UpstreamKeepaliveEnabled.
+         * Specifies whether to enable persistent TCP connections.
          */
         public Builder upstreamKeepaliveEnabled(Boolean upstreamKeepaliveEnabled) {
             this.putQueryParameter("UpstreamKeepaliveEnabled", upstreamKeepaliveEnabled);
@@ -294,6 +340,67 @@ public class UpdateServerGroupAttributeRequest extends Request {
 
     } 
 
+    public static class ConnectionDrainConfig extends TeaModel {
+        @NameInMap("ConnectionDrainEnabled")
+        private Boolean connectionDrainEnabled;
+
+        @NameInMap("ConnectionDrainTimeout")
+        private Integer connectionDrainTimeout;
+
+        private ConnectionDrainConfig(Builder builder) {
+            this.connectionDrainEnabled = builder.connectionDrainEnabled;
+            this.connectionDrainTimeout = builder.connectionDrainTimeout;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ConnectionDrainConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return connectionDrainEnabled
+         */
+        public Boolean getConnectionDrainEnabled() {
+            return this.connectionDrainEnabled;
+        }
+
+        /**
+         * @return connectionDrainTimeout
+         */
+        public Integer getConnectionDrainTimeout() {
+            return this.connectionDrainTimeout;
+        }
+
+        public static final class Builder {
+            private Boolean connectionDrainEnabled; 
+            private Integer connectionDrainTimeout; 
+
+            /**
+             * ConnectionDrainEnabled.
+             */
+            public Builder connectionDrainEnabled(Boolean connectionDrainEnabled) {
+                this.connectionDrainEnabled = connectionDrainEnabled;
+                return this;
+            }
+
+            /**
+             * ConnectionDrainTimeout.
+             */
+            public Builder connectionDrainTimeout(Integer connectionDrainTimeout) {
+                this.connectionDrainTimeout = connectionDrainTimeout;
+                return this;
+            }
+
+            public ConnectionDrainConfig build() {
+                return new ConnectionDrainConfig(this);
+            } 
+
+        } 
+
+    }
     public static class HealthCheckConfig extends TeaModel {
         @NameInMap("HealthCheckCodes")
         private java.util.List < String > healthCheckCodes;
@@ -623,6 +730,67 @@ public class UpdateServerGroupAttributeRequest extends Request {
         } 
 
     }
+    public static class SlowStartConfig extends TeaModel {
+        @NameInMap("SlowStartDuration")
+        private Integer slowStartDuration;
+
+        @NameInMap("SlowStartEnabled")
+        private Boolean slowStartEnabled;
+
+        private SlowStartConfig(Builder builder) {
+            this.slowStartDuration = builder.slowStartDuration;
+            this.slowStartEnabled = builder.slowStartEnabled;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SlowStartConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return slowStartDuration
+         */
+        public Integer getSlowStartDuration() {
+            return this.slowStartDuration;
+        }
+
+        /**
+         * @return slowStartEnabled
+         */
+        public Boolean getSlowStartEnabled() {
+            return this.slowStartEnabled;
+        }
+
+        public static final class Builder {
+            private Integer slowStartDuration; 
+            private Boolean slowStartEnabled; 
+
+            /**
+             * SlowStartDuration.
+             */
+            public Builder slowStartDuration(Integer slowStartDuration) {
+                this.slowStartDuration = slowStartDuration;
+                return this;
+            }
+
+            /**
+             * SlowStartEnabled.
+             */
+            public Builder slowStartEnabled(Boolean slowStartEnabled) {
+                this.slowStartEnabled = slowStartEnabled;
+                return this;
+            }
+
+            public SlowStartConfig build() {
+                return new SlowStartConfig(this);
+            } 
+
+        } 
+
+    }
     public static class StickySessionConfig extends TeaModel {
         @NameInMap("Cookie")
         private String cookie;
@@ -791,7 +959,7 @@ public class UpdateServerGroupAttributeRequest extends Request {
             private String value; 
 
             /**
-             * Type.
+             * The type of the parameter.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -799,7 +967,7 @@ public class UpdateServerGroupAttributeRequest extends Request {
             }
 
             /**
-             * Value.
+             * The setting of consistent hashing.
              */
             public Builder value(String value) {
                 this.value = value;

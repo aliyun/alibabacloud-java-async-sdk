@@ -34,6 +34,10 @@ public class ListServerGroupsRequest extends Request {
     private java.util.List < String > serverGroupNames;
 
     @Query
+    @NameInMap("ServerGroupType")
+    private String serverGroupType;
+
+    @Query
     @NameInMap("Tag")
     private java.util.List < Tag> tag;
 
@@ -48,6 +52,7 @@ public class ListServerGroupsRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.serverGroupIds = builder.serverGroupIds;
         this.serverGroupNames = builder.serverGroupNames;
+        this.serverGroupType = builder.serverGroupType;
         this.tag = builder.tag;
         this.vpcId = builder.vpcId;
     }
@@ -101,6 +106,13 @@ public class ListServerGroupsRequest extends Request {
     }
 
     /**
+     * @return serverGroupType
+     */
+    public String getServerGroupType() {
+        return this.serverGroupType;
+    }
+
+    /**
      * @return tag
      */
     public java.util.List < Tag> getTag() {
@@ -120,6 +132,7 @@ public class ListServerGroupsRequest extends Request {
         private String resourceGroupId; 
         private java.util.List < String > serverGroupIds; 
         private java.util.List < String > serverGroupNames; 
+        private String serverGroupType; 
         private java.util.List < Tag> tag; 
         private String vpcId; 
 
@@ -134,6 +147,7 @@ public class ListServerGroupsRequest extends Request {
             this.resourceGroupId = request.resourceGroupId;
             this.serverGroupIds = request.serverGroupIds;
             this.serverGroupNames = request.serverGroupNames;
+            this.serverGroupType = request.serverGroupType;
             this.tag = request.tag;
             this.vpcId = request.vpcId;
         } 
@@ -184,6 +198,15 @@ public class ListServerGroupsRequest extends Request {
         public Builder serverGroupNames(java.util.List < String > serverGroupNames) {
             this.putQueryParameter("ServerGroupNames", serverGroupNames);
             this.serverGroupNames = serverGroupNames;
+            return this;
+        }
+
+        /**
+         * ServerGroupType.
+         */
+        public Builder serverGroupType(String serverGroupType) {
+            this.putQueryParameter("ServerGroupType", serverGroupType);
+            this.serverGroupType = serverGroupType;
             return this;
         }
 

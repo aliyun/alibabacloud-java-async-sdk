@@ -459,7 +459,7 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Tags.
+         * The tags.
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.tags = tags;
@@ -1155,7 +1155,7 @@ public class GetListenerAttributeResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The tag key. The tag key can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1163,7 +1163,7 @@ public class GetListenerAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The tag value. The tag value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

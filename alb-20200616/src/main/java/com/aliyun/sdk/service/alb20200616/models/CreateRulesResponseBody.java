@@ -133,7 +133,10 @@ public class CreateRulesResponseBody extends TeaModel {
             private String ruleId; 
 
             /**
-             * Priority.
+             * The priority of the forwarding rule. Valid values: **1 to 10000**. A smaller value indicates a higher priority.
+             * <p>
+             * 
+             * > The priorities of the forwarding rules created for the same listener must be unique.
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -141,7 +144,7 @@ public class CreateRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RuleId.
+             * The forwarding rule ID.
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;

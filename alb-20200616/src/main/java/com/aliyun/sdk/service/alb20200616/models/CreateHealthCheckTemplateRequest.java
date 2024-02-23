@@ -256,7 +256,7 @@ public class CreateHealthCheckTemplateRequest extends Request {
          * 
          * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
          * 
-         * > If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.
+         * >  If you do not specify this parameter, the system automatically uses the value of RequestId as the value of ClientToken. The request ID may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -278,12 +278,7 @@ public class CreateHealthCheckTemplateRequest extends Request {
         }
 
         /**
-         * The interval at which health checks are performed.
-         * <p>
-         * 
-         * Valid values: **1 to 50**.
-         * 
-         * Default value: **2**.
+         * The HTTP status codes that are used to indicate whether the backend server passes the health check.
          */
         public Builder healthCheckCodes(java.util.List < String > healthCheckCodes) {
             this.putQueryParameter("HealthCheckCodes", healthCheckCodes);
@@ -441,7 +436,7 @@ public class CreateHealthCheckTemplateRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -509,7 +504,7 @@ public class CreateHealthCheckTemplateRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The tag key. The tag key can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -517,7 +512,7 @@ public class CreateHealthCheckTemplateRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag value. The tag value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

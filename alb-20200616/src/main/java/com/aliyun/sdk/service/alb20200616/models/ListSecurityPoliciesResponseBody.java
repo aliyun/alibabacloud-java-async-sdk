@@ -174,7 +174,7 @@ public class ListSecurityPoliciesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -182,7 +182,7 @@ public class ListSecurityPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -315,7 +315,7 @@ public class ListSecurityPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the resource was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -323,7 +323,7 @@ public class ListSecurityPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The resource group ID.
+             * The ID of the resource group.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -331,7 +331,7 @@ public class ListSecurityPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The security policy ID.
+             * The ID of the security policy.
              */
             public Builder securityPolicyId(String securityPolicyId) {
                 this.securityPolicyId = securityPolicyId;
@@ -367,7 +367,7 @@ public class ListSecurityPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tags.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;

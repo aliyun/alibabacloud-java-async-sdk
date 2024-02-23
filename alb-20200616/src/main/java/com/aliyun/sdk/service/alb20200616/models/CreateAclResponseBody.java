@@ -62,7 +62,7 @@ public class CreateAclResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ACL ID.
+         * The ID of the ACL.
          */
         public Builder aclId(String aclId) {
             this.aclId = aclId;
@@ -70,7 +70,7 @@ public class CreateAclResponseBody extends TeaModel {
         }
 
         /**
-         * The asynchronous task ID.
+         * The ID of the asynchronous task.
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -78,7 +78,7 @@ public class CreateAclResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

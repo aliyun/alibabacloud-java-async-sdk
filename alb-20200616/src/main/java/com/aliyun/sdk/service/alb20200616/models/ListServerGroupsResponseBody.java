@@ -114,7 +114,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The backend server groups.
+         * A list of server groups.
          */
         public Builder serverGroups(java.util.List < ServerGroups> serverGroups) {
             this.serverGroups = serverGroups;
@@ -135,6 +135,67 @@ public class ListServerGroupsResponseBody extends TeaModel {
 
     } 
 
+    public static class ConnectionDrainConfig extends TeaModel {
+        @NameInMap("ConnectionDrainEnabled")
+        private Boolean connectionDrainEnabled;
+
+        @NameInMap("ConnectionDrainTimeout")
+        private Integer connectionDrainTimeout;
+
+        private ConnectionDrainConfig(Builder builder) {
+            this.connectionDrainEnabled = builder.connectionDrainEnabled;
+            this.connectionDrainTimeout = builder.connectionDrainTimeout;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ConnectionDrainConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return connectionDrainEnabled
+         */
+        public Boolean getConnectionDrainEnabled() {
+            return this.connectionDrainEnabled;
+        }
+
+        /**
+         * @return connectionDrainTimeout
+         */
+        public Integer getConnectionDrainTimeout() {
+            return this.connectionDrainTimeout;
+        }
+
+        public static final class Builder {
+            private Boolean connectionDrainEnabled; 
+            private Integer connectionDrainTimeout; 
+
+            /**
+             * ConnectionDrainEnabled.
+             */
+            public Builder connectionDrainEnabled(Boolean connectionDrainEnabled) {
+                this.connectionDrainEnabled = connectionDrainEnabled;
+                return this;
+            }
+
+            /**
+             * ConnectionDrainTimeout.
+             */
+            public Builder connectionDrainTimeout(Integer connectionDrainTimeout) {
+                this.connectionDrainTimeout = connectionDrainTimeout;
+                return this;
+            }
+
+            public ConnectionDrainConfig build() {
+                return new ConnectionDrainConfig(this);
+            } 
+
+        } 
+
+    }
     public static class HealthCheckConfig extends TeaModel {
         @NameInMap("HealthCheckCodes")
         private java.util.List < String > healthCheckCodes;
@@ -302,7 +363,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The backend port that is used for health checks. Valid values: **0** to **65535**.
+             * The port that you want to use for health checks on backend servers. Valid values: **0** to **65535**.
              * <p>
              * 
              * A value of **0** indicates that the port on a backend server is used for health checks.
@@ -325,16 +386,16 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name that is used for health checks. The domain name must meet the following requirements:
+             * The domain name that is used for health checks. The domain name meets the following requirements:
              * <p>
              * 
-             * *   The domain name must be 1 to 80 characters in length.
-             * *   The domain name can contain lowercase letters, digits, hyphens (-), and periods (.).
-             * *   It must contain at least one period (.) but cannot start or end with a period (.).
-             * *   The rightmost domain label of the domain name can contain only letters, and cannot contain digits or hyphens (-).
-             * *   The domain name cannot start or end with a hyphen (-).
+             * *   The domain name is 1 to 80 characters in length.
+             * *   The domain name contains lowercase letters, digits, hyphens (-), and periods (.).
+             * *   The domain name contains at least one period (.) but does not start or end with a period (.).
+             * *   The rightmost domain label of the domain name contains only letters, and does not contain digits or hyphens (-).
+             * *   The domain name does not start or end with a hyphen (-).
              * 
-             * > This parameter takes effect only when the **HealthCheckProtocol** parameter is set to **HTTP**.
+             * >  This parameter takes effect only when **HealthCheckProtocol** is set to **HTTP** or **HTTPS**. HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, and then apply for the privilege to use HTPS on the **ALB** tab.
              */
             public Builder healthCheckHost(String healthCheckHost) {
                 this.healthCheckHost = healthCheckHost;
@@ -347,7 +408,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
              * 
              * Valid values: **HTTP1.0** and **HTTP1.1**.
              * 
-             * > This parameter takes effect only when the **HealthCheckProtocol** parameter is set to **HTTP**.
+             * >  This parameter takes effect when **HealthCheckProtocol** is set to **HTTP** or **HTTPS**. HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, and then apply for the privilege to use HTPS on the **ALB** tab.
              */
             public Builder healthCheckHttpVersion(String healthCheckHttpVersion) {
                 this.healthCheckHttpVersion = healthCheckHttpVersion;
@@ -355,7 +416,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The interval at which health checks are performed. Unit: seconds. Valid values: **1** to **50**.
+             * The interval between two consecutive health checks. Unit: seconds. Valid values: **1** to **50**.
              */
             public Builder healthCheckInterval(Integer healthCheckInterval) {
                 this.healthCheckInterval = healthCheckInterval;
@@ -363,14 +424,14 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The method that you want to use for the health check. Valid values:
+             * The HTTP method that is used for health checks. Valid values:
              * <p>
              * 
              * *   **GET**: If the length of a response exceeds 8 KB, the response is truncated. However, the health check result is not affected.
-             * *   **POST**: gRPC health checks automatically use the POST method.
-             * *   **HEAD**: HTTP health checks automatically use the HEAD method.
+             * *   **POST**: gRPC health checks on listeners use the POST method by default.
+             * *   **HEAD**: HTTP and HTTPS health checks on listeners use the HEAD method by default.
              * 
-             * > This parameter takes effect only when the **HealthCheckProtocol** parameter is set to **HTTP** or **gRPC**.
+             * >  This parameter takes effect when **HealthCheckProtocol** is set to **HTTP**, **HTTPS**, or **gRPC**. HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, and then apply for the privilege to use HTTPS on the **ALB** tab.
              */
             public Builder healthCheckMethod(String healthCheckMethod) {
                 this.healthCheckMethod = healthCheckMethod;
@@ -381,7 +442,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
              * The path that is used for health checks.
              * <p>
              * 
-             * > This parameter takes effect only when the **HealthCheckProtocol** parameter is set to **HTTP**.
+             * >  This parameter takes effect only when **HealthCheckProtocol** is set to **HTTP** or **HTTPS**. HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, and then apply for the privilege to use HTPS on the **ALB** tab.
              */
             public Builder healthCheckPath(String healthCheckPath) {
                 this.healthCheckPath = healthCheckPath;
@@ -389,12 +450,15 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol that is used for health checks. Valid values:
+             * The protocol that you want to use for health checks. Valid values:
              * <p>
              * 
-             * *   **HTTP**: To perform HTTP health checks, ALB sends HEAD or GET requests to a backend server to check whether the backend server is healthy.
-             * *   **TCP**: To perform TCP health checks, ALB sends SYN packets to a backend server to check whether the port of the backend server is available to receive requests.
-             * *   **gRPC**: To perform gRPC health checks, ALB sends POST or GET requests to a backend server to check whether the backend server is healthy.
+             * *   **HTTP**: ALB performs HTTP health checks by sending HEAD or GET requests to a backend server to check whether the backend server is healthy.
+             * *   **HTTPS**: ALB performs HTTPS health checks by sending HEAD or GET requests to a backend server to check whether the backend server is healthy. HTTPS supports data encryption and provides higher data security than HTTP.
+             * *   **TCP**: To perform TCP health checks, ALB sends SYN packets to the backend server to check whether the port of the backend server is available to receive requests.
+             * *   **gRPC**: ALB performs gRPC health checks by sending POST or GET requests to a backend server to check whether the backend server is healthy.
+             * 
+             * >  HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, and then apply for the privilege to use HTTPS on the **ALB** tab.
              */
             public Builder healthCheckProtocol(String healthCheckProtocol) {
                 this.healthCheckProtocol = healthCheckProtocol;
@@ -402,7 +466,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The timeout period of a health check. If a backend server does not respond within the specified timeout period, the backend server is declared unhealthy. Unit: seconds.
+             * The timeout period for a health check response. If a backend server does not respond within the specified timeout period, the backend server fails the health check. Unit: seconds.
              */
             public Builder healthCheckTimeout(Integer healthCheckTimeout) {
                 this.healthCheckTimeout = healthCheckTimeout;
@@ -427,6 +491,67 @@ public class ListServerGroupsResponseBody extends TeaModel {
 
             public HealthCheckConfig build() {
                 return new HealthCheckConfig(this);
+            } 
+
+        } 
+
+    }
+    public static class SlowStartConfig extends TeaModel {
+        @NameInMap("SlowStartDuration")
+        private Integer slowStartDuration;
+
+        @NameInMap("SlowStartEnabled")
+        private Boolean slowStartEnabled;
+
+        private SlowStartConfig(Builder builder) {
+            this.slowStartDuration = builder.slowStartDuration;
+            this.slowStartEnabled = builder.slowStartEnabled;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SlowStartConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return slowStartDuration
+         */
+        public Integer getSlowStartDuration() {
+            return this.slowStartDuration;
+        }
+
+        /**
+         * @return slowStartEnabled
+         */
+        public Boolean getSlowStartEnabled() {
+            return this.slowStartEnabled;
+        }
+
+        public static final class Builder {
+            private Integer slowStartDuration; 
+            private Boolean slowStartEnabled; 
+
+            /**
+             * SlowStartDuration.
+             */
+            public Builder slowStartDuration(Integer slowStartDuration) {
+                this.slowStartDuration = slowStartDuration;
+                return this;
+            }
+
+            /**
+             * SlowStartEnabled.
+             */
+            public Builder slowStartEnabled(Boolean slowStartEnabled) {
+                this.slowStartEnabled = slowStartEnabled;
+                return this;
+            }
+
+            public SlowStartConfig build() {
+                return new SlowStartConfig(this);
             } 
 
         } 
@@ -506,7 +631,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
              * The timeout period of a cookie. Unit: seconds. Valid values: **1** to **86400**.
              * <p>
              * 
-             * > This parameter takes effect only when the **StickySessionEnabled** parameter is set to **true** and the **StickySessionType** parameter is set to **Insert**.
+             * >  This parameter takes effect only when **StickySessionEnabled** is set to **true** and **StickySessionType** is set to **Insert**.
              */
             public Builder cookieTimeout(Integer cookieTimeout) {
                 this.cookieTimeout = cookieTimeout;
@@ -514,7 +639,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether to enable session persistence. Valid values:
+             * Indicates whether session persistence is enabled. Valid values:
              * <p>
              * 
              * *   **true**
@@ -529,13 +654,8 @@ public class ListServerGroupsResponseBody extends TeaModel {
              * The method that is used to handle a cookie. Valid values:
              * <p>
              * 
-             * *   **Insert**: inserts a cookie.
-             * 
-             * ALB inserts a cookie (SERVERID) into the first HTTP or HTTPS response packet that is sent to a client. The next request from the client contains this cookie and the listener forwards this request to the recorded backend server.
-             * 
-             * *   **Server**: rewrites a cookie.
-             * 
-             * When ALB detects a user-defined cookie, it overwrites the original cookie with the user-defined cookie. Subsequent requests to ALB carry this user-defined cookie, and ALB determines the destination servers of the requests based on the cookies.
+             * *   **Insert**: inserts a cookie. ALB inserts a cookie (SERVERID) into the first HTTP or HTTPS response packet that is sent to a client. The next request from the client contains this cookie and the listener distributes this request to the recorded backend server.
+             * *   **Server**: rewrites a cookie. When ALB detects a user-defined cookie, it overwrites the original cookie with the user-defined cookie. Subsequent requests to ALB carry this user-defined cookie, and ALB determines the destination servers of the requests based on the cookies.
              */
             public Builder stickySessionType(String stickySessionType) {
                 this.stickySessionType = stickySessionType;
@@ -649,7 +769,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Type.
+             * The data type of the common parameter.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -657,7 +777,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * The parameter value for consistent hashing.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -675,6 +795,9 @@ public class ListServerGroupsResponseBody extends TeaModel {
         @NameInMap("ConfigManagedEnabled")
         private Boolean configManagedEnabled;
 
+        @NameInMap("ConnectionDrainConfig")
+        private ConnectionDrainConfig connectionDrainConfig;
+
         @NameInMap("CreateTime")
         private String createTime;
 
@@ -686,6 +809,9 @@ public class ListServerGroupsResponseBody extends TeaModel {
 
         @NameInMap("Protocol")
         private String protocol;
+
+        @NameInMap("RelatedLoadBalancerIds")
+        private java.util.List < String > relatedLoadBalancerIds;
 
         @NameInMap("ResourceGroupId")
         private String resourceGroupId;
@@ -711,6 +837,9 @@ public class ListServerGroupsResponseBody extends TeaModel {
         @NameInMap("ServiceName")
         private String serviceName;
 
+        @NameInMap("SlowStartConfig")
+        private SlowStartConfig slowStartConfig;
+
         @NameInMap("StickySessionConfig")
         private StickySessionConfig stickySessionConfig;
 
@@ -728,10 +857,12 @@ public class ListServerGroupsResponseBody extends TeaModel {
 
         private ServerGroups(Builder builder) {
             this.configManagedEnabled = builder.configManagedEnabled;
+            this.connectionDrainConfig = builder.connectionDrainConfig;
             this.createTime = builder.createTime;
             this.healthCheckConfig = builder.healthCheckConfig;
             this.ipv6Enabled = builder.ipv6Enabled;
             this.protocol = builder.protocol;
+            this.relatedLoadBalancerIds = builder.relatedLoadBalancerIds;
             this.resourceGroupId = builder.resourceGroupId;
             this.scheduler = builder.scheduler;
             this.serverCount = builder.serverCount;
@@ -740,6 +871,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
             this.serverGroupStatus = builder.serverGroupStatus;
             this.serverGroupType = builder.serverGroupType;
             this.serviceName = builder.serviceName;
+            this.slowStartConfig = builder.slowStartConfig;
             this.stickySessionConfig = builder.stickySessionConfig;
             this.tags = builder.tags;
             this.uchConfig = builder.uchConfig;
@@ -760,6 +892,13 @@ public class ListServerGroupsResponseBody extends TeaModel {
          */
         public Boolean getConfigManagedEnabled() {
             return this.configManagedEnabled;
+        }
+
+        /**
+         * @return connectionDrainConfig
+         */
+        public ConnectionDrainConfig getConnectionDrainConfig() {
+            return this.connectionDrainConfig;
         }
 
         /**
@@ -788,6 +927,13 @@ public class ListServerGroupsResponseBody extends TeaModel {
          */
         public String getProtocol() {
             return this.protocol;
+        }
+
+        /**
+         * @return relatedLoadBalancerIds
+         */
+        public java.util.List < String > getRelatedLoadBalancerIds() {
+            return this.relatedLoadBalancerIds;
         }
 
         /**
@@ -847,6 +993,13 @@ public class ListServerGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return slowStartConfig
+         */
+        public SlowStartConfig getSlowStartConfig() {
+            return this.slowStartConfig;
+        }
+
+        /**
          * @return stickySessionConfig
          */
         public StickySessionConfig getStickySessionConfig() {
@@ -883,10 +1036,12 @@ public class ListServerGroupsResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean configManagedEnabled; 
+            private ConnectionDrainConfig connectionDrainConfig; 
             private String createTime; 
             private HealthCheckConfig healthCheckConfig; 
             private Boolean ipv6Enabled; 
             private String protocol; 
+            private java.util.List < String > relatedLoadBalancerIds; 
             private String resourceGroupId; 
             private String scheduler; 
             private Integer serverCount; 
@@ -895,6 +1050,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
             private String serverGroupStatus; 
             private String serverGroupType; 
             private String serviceName; 
+            private SlowStartConfig slowStartConfig; 
             private StickySessionConfig stickySessionConfig; 
             private java.util.List < Tags> tags; 
             private UchConfig uchConfig; 
@@ -914,7 +1070,15 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * ConnectionDrainConfig.
+             */
+            public Builder connectionDrainConfig(ConnectionDrainConfig connectionDrainConfig) {
+                this.connectionDrainConfig = connectionDrainConfig;
+                return this;
+            }
+
+            /**
+             * The time when the resource was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -922,7 +1086,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The health check configurations.
+             * The health check configuration.
              */
             public Builder healthCheckConfig(HealthCheckConfig healthCheckConfig) {
                 this.healthCheckConfig = healthCheckConfig;
@@ -945,8 +1109,8 @@ public class ListServerGroupsResponseBody extends TeaModel {
              * The backend protocol. Valid values:
              * <p>
              * 
-             * *   **HTTP**: allows you to associate an HTTPS, HTTP, or QUIC listener with the server group.
-             * *   **HTTPS**: allows you to associate HTTPS listeners with backend servers.
+             * *   **HTTP**: allows you to associate HTTPS, HTTP, or QUIC listeners with backend servers.
+             * *   **HTTPS**: allows you to associate an HTTPS listener with the server group.
              * *   **GRPC**: allows you to associate an HTTPS or QUIC listener with the server group.
              */
             public Builder protocol(String protocol) {
@@ -955,7 +1119,15 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group to which the resource belongs.
+             * RelatedLoadBalancerIds.
+             */
+            public Builder relatedLoadBalancerIds(java.util.List < String > relatedLoadBalancerIds) {
+                this.relatedLoadBalancerIds = relatedLoadBalancerIds;
+                return this;
+            }
+
+            /**
+             * The resource group ID to which the GA instance belongs.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -967,7 +1139,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
              * <p>
              * 
              * *   **Wrr**: Backend servers with higher weights receive more requests than backend servers with lower weights.
-             * *   **Wlc**: Requests are distributed based on the weight and load of each backend server. The load refers to the number of connections on a backend server. If two backend servers have the same weight, the backend server that has fewer connections is expected to receive more requests.
+             * *   **Wlc**: Requests are distributed based on the weight and load of each backend server. The load refers to the number of connections on a backend server. If multiple backend servers have the same weight, requests are forwarded to the backend server with the least number of connections.
              * *   **Sch**: The consistent hashing algorithm is used. Requests from the same source IP address are distributed to the same backend server.
              */
             public Builder scheduler(String scheduler) {
@@ -984,7 +1156,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The server group ID.
+             * The ID of the server group.
              */
             public Builder serverGroupId(String serverGroupId) {
                 this.serverGroupId = serverGroupId;
@@ -992,7 +1164,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The server group name.
+             * The name of the server group.
              */
             public Builder serverGroupName(String serverGroupName) {
                 this.serverGroupName = serverGroupName;
@@ -1034,6 +1206,14 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
+             * SlowStartConfig.
+             */
+            public Builder slowStartConfig(SlowStartConfig slowStartConfig) {
+                this.slowStartConfig = slowStartConfig;
+                return this;
+            }
+
+            /**
              * The configuration of session persistence.
              */
             public Builder stickySessionConfig(StickySessionConfig stickySessionConfig) {
@@ -1050,7 +1230,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * UchConfig.
+             * The configuration of consistent hashing based on URLs.
              */
             public Builder uchConfig(UchConfig uchConfig) {
                 this.uchConfig = uchConfig;
@@ -1058,7 +1238,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether persistent TCP connections are enabled. Valid values:
+             * Indicates whether long-lived TCP connections are enabled. Valid values:
              * <p>
              * 
              * *   **true**
@@ -1070,7 +1250,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the virtual private cloud (VPC).
+             * The VPC ID.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

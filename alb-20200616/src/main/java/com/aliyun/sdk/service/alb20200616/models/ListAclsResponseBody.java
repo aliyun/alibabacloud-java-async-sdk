@@ -86,7 +86,7 @@ public class ListAclsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The ACLs.
+         * The network ACLs.
          */
         public Builder acls(java.util.List < Acls> acls) {
             this.acls = acls;
@@ -94,7 +94,7 @@ public class ListAclsResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of ACLs returned. This parameter is optional. Valid values: **1** to **100**. If this parameter is not specified, the default value **20** is returned.
+         * The maximum number of network ACLs returned. This parameter is optional. Valid values: **1** to **100**. If this parameter is not set, the default value **20** is returned.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -102,10 +102,10 @@ public class ListAclsResponseBody extends TeaModel {
         }
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:
+         * The token that is used for the next query. Valid values:
          * <p>
          * 
-         * *   If **NextToken** is empty, no next page exists.
+         * *   If **NextToken** is empty, it indicates that no next query is to be sent.
          * *   If **NextToken** is returned, the value indicates the token that is used for the next query.
          */
         public Builder nextToken(String nextToken) {
@@ -114,7 +114,7 @@ public class ListAclsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -174,7 +174,7 @@ public class ListAclsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -182,7 +182,7 @@ public class ListAclsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -307,7 +307,7 @@ public class ListAclsResponseBody extends TeaModel {
             private java.util.List < Tags> tags; 
 
             /**
-             * The ACL ID.
+             * The ID of the network ACL.
              */
             public Builder aclId(String aclId) {
                 this.aclId = aclId;
@@ -315,7 +315,7 @@ public class ListAclsResponseBody extends TeaModel {
             }
 
             /**
-             * The ACL name.
+             * The name of the network ACL.
              */
             public Builder aclName(String aclName) {
                 this.aclName = aclName;
@@ -323,12 +323,12 @@ public class ListAclsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the ACL. Valid values:
+             * The status of the network ACL. Valid values:
              * <p>
              * 
-             * *   **Creating**
-             * *   **Available**
-             * *   **Configuring**
+             * *   **Creating**: The network ACL is being created.
+             * *   **Available**: The network ACL is available.
+             * *   **Configuring**: The network ACL is being configured.
              */
             public Builder aclStatus(String aclStatus) {
                 this.aclStatus = aclStatus;
@@ -336,7 +336,7 @@ public class ListAclsResponseBody extends TeaModel {
             }
 
             /**
-             * The IP version. Only **IPv4** may be returned.
+             * The IP version. **IPv4** is returned.
              */
             public Builder addressIPVersion(String addressIPVersion) {
                 this.addressIPVersion = addressIPVersion;
@@ -344,11 +344,11 @@ public class ListAclsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether configuration management is enabled. Valid values:
+             * The status of configuration management. Valid values:
              * <p>
              * 
-             * *   **true**
-             * *   **false**
+             * *   **true**: configuration management is enabled.
+             * *   **false**: configuration management is disabled.
              */
             public Builder configManagedEnabled(Boolean configManagedEnabled) {
                 this.configManagedEnabled = configManagedEnabled;
@@ -356,7 +356,7 @@ public class ListAclsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the resource was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -364,7 +364,7 @@ public class ListAclsResponseBody extends TeaModel {
             }
 
             /**
-             * The resource group ID.
+             * The ID of the resource group.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -372,7 +372,7 @@ public class ListAclsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tags.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;

@@ -373,7 +373,7 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -391,7 +391,7 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * The zones and the vSwitches. You must specify at least two zones.
+         * The zones and the vSwitches in the zones. You must specify at least two zones.
          */
         public Builder zoneMappings(java.util.List < ZoneMappings> zoneMappings) {
             this.putQueryParameter("ZoneMappings", zoneMappings);
@@ -580,7 +580,7 @@ public class CreateLoadBalancerRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The tag key can be up to 128 characters in length, and cannot start with acs: or aliyun. It cannot contain http:// or https://.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -588,7 +588,7 @@ public class CreateLoadBalancerRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag value can be up to 128 characters in length, and cannot start with acs: or aliyun. It cannot contain http:// or https://.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -667,7 +667,7 @@ public class CreateLoadBalancerRequest extends Request {
             private String zoneId; 
 
             /**
-             * AllocationId.
+             * 公网实例绑定的EIP实例ID。至少需要添加2个可用区，最多支持添加10个可用区。
              */
             public Builder allocationId(String allocationId) {
                 this.allocationId = allocationId;
@@ -675,7 +675,7 @@ public class CreateLoadBalancerRequest extends Request {
             }
 
             /**
-             * IntranetAddress.
+             * The private IPv4 address. You must add at least two zones. You can add a maximum of 10 zones.
              */
             public Builder intranetAddress(String intranetAddress) {
                 this.intranetAddress = intranetAddress;
@@ -683,7 +683,7 @@ public class CreateLoadBalancerRequest extends Request {
             }
 
             /**
-             * The ID of the vSwitch in the zone. You can specify only one vSwitch (subnet) in each zone of an ALB instance. You can specify up to 10 vSwitch IDs.
+             * The vSwitch in the zone. You can specify only one vSwitch (subnet) in each zone of an ALB instance. You can specify up to 10 zones.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -691,10 +691,10 @@ public class CreateLoadBalancerRequest extends Request {
             }
 
             /**
-             * The ID of the zone where the ALB instance is deployed. You can specify up to 10 zone IDs.
+             * The zone ID of the ALB instance. You can specify up to 10 zones for an ALB instance.
              * <p>
              * 
-             * You can call the [DescribeZones](~~36064~~) operation to query the zones of the ALB instance.
+             * You can call the [DescribeZones](~~36064~~) operation to query the most recent zone list.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
