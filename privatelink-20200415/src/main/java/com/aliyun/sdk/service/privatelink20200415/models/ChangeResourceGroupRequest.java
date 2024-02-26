@@ -23,15 +23,14 @@ public class ChangeResourceGroupRequest extends Request {
     private String resourceId;
 
     @Query
-    @NameInMap("ResourceRegionId")
-    @Validation(required = true)
-    private String resourceRegionId;
+    @NameInMap("ResourceType")
+    private String resourceType;
 
     private ChangeResourceGroupRequest(Builder builder) {
         super(builder);
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceId = builder.resourceId;
-        this.resourceRegionId = builder.resourceRegionId;
+        this.resourceType = builder.resourceType;
     }
 
     public static Builder builder() {
@@ -62,16 +61,16 @@ public class ChangeResourceGroupRequest extends Request {
     }
 
     /**
-     * @return resourceRegionId
+     * @return resourceType
      */
-    public String getResourceRegionId() {
-        return this.resourceRegionId;
+    public String getResourceType() {
+        return this.resourceType;
     }
 
     public static final class Builder extends Request.Builder<ChangeResourceGroupRequest, Builder> {
         private String resourceGroupId; 
         private String resourceId; 
-        private String resourceRegionId; 
+        private String resourceType; 
 
         private Builder() {
             super();
@@ -81,7 +80,7 @@ public class ChangeResourceGroupRequest extends Request {
             super(request);
             this.resourceGroupId = request.resourceGroupId;
             this.resourceId = request.resourceId;
-            this.resourceRegionId = request.resourceRegionId;
+            this.resourceType = request.resourceType;
         } 
 
         /**
@@ -103,11 +102,15 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * The region ID of the resource group.
+         * The type of resource. Valid values:
+         * <p>
+         * 
+         * *   **vpcendpoint**: endpoint
+         * *   **vpcendpointservice**: endpoint service
          */
-        public Builder resourceRegionId(String resourceRegionId) {
-            this.putQueryParameter("ResourceRegionId", resourceRegionId);
-            this.resourceRegionId = resourceRegionId;
+        public Builder resourceType(String resourceType) {
+            this.putQueryParameter("ResourceType", resourceType);
+            this.resourceType = resourceType;
             return this;
         }
 

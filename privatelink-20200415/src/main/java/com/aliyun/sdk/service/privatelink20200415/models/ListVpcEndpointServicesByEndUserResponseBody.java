@@ -375,7 +375,12 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceResourceType.
+             * The type of the service resource. Valid values:
+             * <p>
+             * 
+             * *   **slb**: Classic Load Balancer (CLB) instance
+             * *   **alb**: Application Load Balancer (ALB) instance
+             * *   **nlb**: Network Load Balancer (NLB) instance
              */
             public Builder serviceResourceType(String serviceResourceType) {
                 this.serviceResourceType = serviceResourceType;
