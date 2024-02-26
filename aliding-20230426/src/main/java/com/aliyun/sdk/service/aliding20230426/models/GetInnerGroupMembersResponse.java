@@ -1,0 +1,126 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.aliding20230426.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link GetInnerGroupMembersResponse} extends {@link TeaModel}
+ *
+ * <p>GetInnerGroupMembersResponse</p>
+ */
+public class GetInnerGroupMembersResponse extends Response {
+    @NameInMap("headers")
+    private java.util.Map < String, String > headers;
+
+    @NameInMap("statusCode")
+    private Integer statusCode;
+
+    @NameInMap("body")
+    private GetInnerGroupMembersResponseBody body;
+
+    private GetInnerGroupMembersResponse(BuilderImpl builder) {
+        super(builder);
+        this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
+        this.body = builder.body;
+    }
+
+    public static GetInnerGroupMembersResponse create() {
+        return new BuilderImpl().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new BuilderImpl(this);
+    }
+
+    /**
+     * @return headers
+     */
+    public java.util.Map < String, String > getHeaders() {
+        return this.headers;
+    }
+
+    /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
+     * @return body
+     */
+    public GetInnerGroupMembersResponseBody getBody() {
+        return this.body;
+    }
+
+    public interface Builder extends Response.Builder<GetInnerGroupMembersResponse, Builder> {
+
+        Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
+
+        Builder body(GetInnerGroupMembersResponseBody body);
+
+        @Override
+        GetInnerGroupMembersResponse build();
+
+    } 
+
+    private static final class BuilderImpl
+            extends Response.BuilderImpl<GetInnerGroupMembersResponse, Builder>
+            implements Builder {
+        private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
+        private GetInnerGroupMembersResponseBody body; 
+
+        private BuilderImpl() {
+            super();
+        } 
+
+        private BuilderImpl(GetInnerGroupMembersResponse response) {
+            super(response);
+            this.headers = response.headers;
+            this.statusCode = response.statusCode;
+            this.body = response.body;
+        } 
+
+        /**
+         * headers.
+         */
+        @Override
+        public Builder headers(java.util.Map < String, String > headers) {
+            this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(GetInnerGroupMembersResponseBody body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public GetInnerGroupMembersResponse build() {
+            return new GetInnerGroupMembersResponse(this);
+        } 
+
+    } 
+
+}

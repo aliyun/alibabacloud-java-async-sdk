@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.aliding20230426;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.aliding20230426.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -41,6 +42,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<BatchUpdateFormDataByInstanceMapResponse> batchUpdateFormDataByInstanceMap(BatchUpdateFormDataByInstanceMapRequest request);
 
     CompletableFuture<CancelScheduleConferenceResponse> cancelScheduleConference(CancelScheduleConferenceRequest request);
+
+    CompletableFuture<CheckUserIsGroupMemberResponse> checkUserIsGroupMember(CheckUserIsGroupMemberRequest request);
 
     CompletableFuture<ClearResponse> clear(ClearRequest request);
 
@@ -120,9 +123,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ExecuteTaskResponse> executeTask(ExecuteTaskRequest request);
 
+    CompletableFuture<ExpandGroupCapacityResponse> expandGroupCapacity(ExpandGroupCapacityRequest request);
+
     CompletableFuture<GetActivityListResponse> getActivityList(GetActivityListRequest request);
 
     CompletableFuture<GetAllSheetsResponse> getAllSheets(GetAllSheetsRequest request);
+
+    CompletableFuture<GetConversaionSpaceResponse> getConversaionSpace(GetConversaionSpaceRequest request);
 
     CompletableFuture<GetCorpAccomplishmentTasksResponse> getCorpAccomplishmentTasks(GetCorpAccomplishmentTasksRequest request);
 
@@ -134,11 +141,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetFieldDefByUuidResponse> getFieldDefByUuid(GetFieldDefByUuidRequest request);
 
+    CompletableFuture<GetFileDownloadInfoResponse> getFileDownloadInfo(GetFileDownloadInfoRequest request);
+
     CompletableFuture<GetFormComponentDefinitionListResponse> getFormComponentDefinitionList(GetFormComponentDefinitionListRequest request);
 
     CompletableFuture<GetFormDataByIDResponse> getFormDataByID(GetFormDataByIDRequest request);
 
     CompletableFuture<GetFormListInAppResponse> getFormListInApp(GetFormListInAppRequest request);
+
+    CompletableFuture<GetInnerGroupMembersResponse> getInnerGroupMembers(GetInnerGroupMembersRequest request);
 
     CompletableFuture<GetInstanceByIdResponse> getInstanceById(GetInstanceByIdRequest request);
 
@@ -156,6 +167,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetMineWorkspaceResponse> getMineWorkspace(GetMineWorkspaceRequest request);
 
+    CompletableFuture<GetNewestInnerGroupsResponse> getNewestInnerGroups(GetNewestInnerGroupsRequest request);
+
     CompletableFuture<GetNodeResponse> getNode(GetNodeRequest request);
 
     CompletableFuture<GetNodeByUrlResponse> getNodeByUrl(GetNodeByUrlRequest request);
@@ -171,6 +184,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetProcessDefinitionResponse> getProcessDefinition(GetProcessDefinitionRequest request);
 
     CompletableFuture<GetRangeResponse> getRange(GetRangeRequest request);
+
+    CompletableFuture<GetRelatedWorkspacesResponse> getRelatedWorkspaces(GetRelatedWorkspacesRequest request);
 
     CompletableFuture<GetReportTemplateByNameResponse> getReportTemplateByName(GetReportTemplateByNameRequest request);
 
@@ -205,6 +220,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListApplicationResponse> listApplication(ListApplicationRequest request);
 
     CompletableFuture<ListCalendarsResponse> listCalendars(ListCalendarsRequest request);
+
+    CompletableFuture<ListDentriesResponse> listDentries(ListDentriesRequest request);
 
     CompletableFuture<ListEventsResponse> listEvents(ListEventsRequest request);
 
@@ -286,6 +303,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<SearchFormDatasResponse> searchFormDatas(SearchFormDatasRequest request);
 
+    CompletableFuture<SearchInnerGroupsResponse> searchInnerGroups(SearchInnerGroupsRequest request);
+
     CompletableFuture<SendBannerResponse> sendBanner(SendBannerRequest request);
 
     CompletableFuture<SendPopupResponse> sendPopup(SendPopupRequest request);
@@ -325,6 +344,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateMeetingRoomGroupResponse> updateMeetingRoomGroup(UpdateMeetingRoomGroupRequest request);
 
     CompletableFuture<UpdateRangeResponse> updateRange(UpdateRangeRequest request);
+
+    CompletableFuture<UpdateScheduleConfSettingsResponse> updateScheduleConfSettings(UpdateScheduleConfSettingsRequest request);
 
     CompletableFuture<UpdateScheduleConferenceResponse> updateScheduleConference(UpdateScheduleConferenceRequest request);
 

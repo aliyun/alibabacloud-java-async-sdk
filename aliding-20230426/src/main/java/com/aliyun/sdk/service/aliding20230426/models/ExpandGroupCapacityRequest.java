@@ -7,36 +7,36 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link QueryScheduleConferenceRequest} extends {@link RequestModel}
+ * {@link ExpandGroupCapacityRequest} extends {@link RequestModel}
  *
- * <p>QueryScheduleConferenceRequest</p>
+ * <p>ExpandGroupCapacityRequest</p>
  */
-public class QueryScheduleConferenceRequest extends Request {
+public class ExpandGroupCapacityRequest extends Request {
     @Header
     @NameInMap("AccountContext")
     private AccountContext accountContext;
 
     @Body
+    @NameInMap("OpenConversationId")
+    @Validation(required = true)
+    private String openConversationId;
+
+    @Body
     @NameInMap("TenantContext")
     private TenantContext tenantContext;
 
-    @Body
-    @NameInMap("scheduleConferenceId")
-    @Validation(required = true)
-    private String scheduleConferenceId;
-
-    private QueryScheduleConferenceRequest(Builder builder) {
+    private ExpandGroupCapacityRequest(Builder builder) {
         super(builder);
         this.accountContext = builder.accountContext;
+        this.openConversationId = builder.openConversationId;
         this.tenantContext = builder.tenantContext;
-        this.scheduleConferenceId = builder.scheduleConferenceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static QueryScheduleConferenceRequest create() {
+    public static ExpandGroupCapacityRequest create() {
         return builder().build();
     }
 
@@ -53,33 +53,33 @@ public class QueryScheduleConferenceRequest extends Request {
     }
 
     /**
+     * @return openConversationId
+     */
+    public String getOpenConversationId() {
+        return this.openConversationId;
+    }
+
+    /**
      * @return tenantContext
      */
     public TenantContext getTenantContext() {
         return this.tenantContext;
     }
 
-    /**
-     * @return scheduleConferenceId
-     */
-    public String getScheduleConferenceId() {
-        return this.scheduleConferenceId;
-    }
-
-    public static final class Builder extends Request.Builder<QueryScheduleConferenceRequest, Builder> {
+    public static final class Builder extends Request.Builder<ExpandGroupCapacityRequest, Builder> {
         private AccountContext accountContext; 
+        private String openConversationId; 
         private TenantContext tenantContext; 
-        private String scheduleConferenceId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(QueryScheduleConferenceRequest request) {
+        private Builder(ExpandGroupCapacityRequest request) {
             super(request);
             this.accountContext = request.accountContext;
+            this.openConversationId = request.openConversationId;
             this.tenantContext = request.tenantContext;
-            this.scheduleConferenceId = request.scheduleConferenceId;
         } 
 
         /**
@@ -93,6 +93,15 @@ public class QueryScheduleConferenceRequest extends Request {
         }
 
         /**
+         * OpenConversationId.
+         */
+        public Builder openConversationId(String openConversationId) {
+            this.putBodyParameter("OpenConversationId", openConversationId);
+            this.openConversationId = openConversationId;
+            return this;
+        }
+
+        /**
          * TenantContext.
          */
         public Builder tenantContext(TenantContext tenantContext) {
@@ -102,18 +111,9 @@ public class QueryScheduleConferenceRequest extends Request {
             return this;
         }
 
-        /**
-         * scheduleConferenceId.
-         */
-        public Builder scheduleConferenceId(String scheduleConferenceId) {
-            this.putBodyParameter("scheduleConferenceId", scheduleConferenceId);
-            this.scheduleConferenceId = scheduleConferenceId;
-            return this;
-        }
-
         @Override
-        public QueryScheduleConferenceRequest build() {
-            return new QueryScheduleConferenceRequest(this);
+        public ExpandGroupCapacityRequest build() {
+            return new ExpandGroupCapacityRequest(this);
         } 
 
     } 

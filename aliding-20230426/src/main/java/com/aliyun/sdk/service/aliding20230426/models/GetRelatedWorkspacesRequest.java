@@ -7,36 +7,35 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link QueryScheduleConferenceRequest} extends {@link RequestModel}
+ * {@link GetRelatedWorkspacesRequest} extends {@link RequestModel}
  *
- * <p>QueryScheduleConferenceRequest</p>
+ * <p>GetRelatedWorkspacesRequest</p>
  */
-public class QueryScheduleConferenceRequest extends Request {
+public class GetRelatedWorkspacesRequest extends Request {
     @Header
     @NameInMap("AccountContext")
     private AccountContext accountContext;
 
     @Body
+    @NameInMap("IncludeRecent")
+    private Boolean includeRecent;
+
+    @Body
     @NameInMap("TenantContext")
     private TenantContext tenantContext;
 
-    @Body
-    @NameInMap("scheduleConferenceId")
-    @Validation(required = true)
-    private String scheduleConferenceId;
-
-    private QueryScheduleConferenceRequest(Builder builder) {
+    private GetRelatedWorkspacesRequest(Builder builder) {
         super(builder);
         this.accountContext = builder.accountContext;
+        this.includeRecent = builder.includeRecent;
         this.tenantContext = builder.tenantContext;
-        this.scheduleConferenceId = builder.scheduleConferenceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static QueryScheduleConferenceRequest create() {
+    public static GetRelatedWorkspacesRequest create() {
         return builder().build();
     }
 
@@ -53,33 +52,33 @@ public class QueryScheduleConferenceRequest extends Request {
     }
 
     /**
+     * @return includeRecent
+     */
+    public Boolean getIncludeRecent() {
+        return this.includeRecent;
+    }
+
+    /**
      * @return tenantContext
      */
     public TenantContext getTenantContext() {
         return this.tenantContext;
     }
 
-    /**
-     * @return scheduleConferenceId
-     */
-    public String getScheduleConferenceId() {
-        return this.scheduleConferenceId;
-    }
-
-    public static final class Builder extends Request.Builder<QueryScheduleConferenceRequest, Builder> {
+    public static final class Builder extends Request.Builder<GetRelatedWorkspacesRequest, Builder> {
         private AccountContext accountContext; 
+        private Boolean includeRecent; 
         private TenantContext tenantContext; 
-        private String scheduleConferenceId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(QueryScheduleConferenceRequest request) {
+        private Builder(GetRelatedWorkspacesRequest request) {
             super(request);
             this.accountContext = request.accountContext;
+            this.includeRecent = request.includeRecent;
             this.tenantContext = request.tenantContext;
-            this.scheduleConferenceId = request.scheduleConferenceId;
         } 
 
         /**
@@ -93,6 +92,15 @@ public class QueryScheduleConferenceRequest extends Request {
         }
 
         /**
+         * IncludeRecent.
+         */
+        public Builder includeRecent(Boolean includeRecent) {
+            this.putBodyParameter("IncludeRecent", includeRecent);
+            this.includeRecent = includeRecent;
+            return this;
+        }
+
+        /**
          * TenantContext.
          */
         public Builder tenantContext(TenantContext tenantContext) {
@@ -102,18 +110,9 @@ public class QueryScheduleConferenceRequest extends Request {
             return this;
         }
 
-        /**
-         * scheduleConferenceId.
-         */
-        public Builder scheduleConferenceId(String scheduleConferenceId) {
-            this.putBodyParameter("scheduleConferenceId", scheduleConferenceId);
-            this.scheduleConferenceId = scheduleConferenceId;
-            return this;
-        }
-
         @Override
-        public QueryScheduleConferenceRequest build() {
-            return new QueryScheduleConferenceRequest(this);
+        public GetRelatedWorkspacesRequest build() {
+            return new GetRelatedWorkspacesRequest(this);
         } 
 
     } 
