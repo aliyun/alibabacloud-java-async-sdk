@@ -39,10 +39,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
-    /**
-      * 创建函数别名。
-      *
-     */
     @Override
     public CompletableFuture<CreateAliasResponse> createAlias(CreateAliasRequest request) {
         try {
@@ -57,10 +53,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * 创建自定义域名。
-      *
-     */
     @Override
     public CompletableFuture<CreateCustomDomainResponse> createCustomDomain(CreateCustomDomainRequest request) {
         try {
@@ -75,10 +67,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * 创建函数。
-      *
-     */
     @Override
     public CompletableFuture<CreateFunctionResponse> createFunction(CreateFunctionRequest request) {
         try {
@@ -93,10 +81,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * 创建层版本。
-      *
-     */
     @Override
     public CompletableFuture<CreateLayerVersionResponse> createLayerVersion(CreateLayerVersionRequest request) {
         try {
@@ -111,10 +95,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * 创建函数触发器。
-      *
-     */
     @Override
     public CompletableFuture<CreateTriggerResponse> createTrigger(CreateTriggerRequest request) {
         try {
@@ -129,10 +109,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * 创建VPC绑定。
-      *
-     */
     @Override
     public CompletableFuture<CreateVpcBindingResponse> createVpcBinding(CreateVpcBindingRequest request) {
         try {
@@ -147,10 +123,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * 删除函数别名。
-      *
-     */
     @Override
     public CompletableFuture<DeleteAliasResponse> deleteAlias(DeleteAliasRequest request) {
         try {
@@ -165,10 +137,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * 删除函数异步调用配置。
-      *
-     */
     @Override
     public CompletableFuture<DeleteAsyncInvokeConfigResponse> deleteAsyncInvokeConfig(DeleteAsyncInvokeConfigRequest request) {
         try {
@@ -183,10 +151,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * 删除函数并发度配置。
-      *
-     */
     @Override
     public CompletableFuture<DeleteConcurrencyConfigResponse> deleteConcurrencyConfig(DeleteConcurrencyConfigRequest request) {
         try {
@@ -201,10 +165,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * 删除自定义域名。
-      *
-     */
     @Override
     public CompletableFuture<DeleteCustomDomainResponse> deleteCustomDomain(DeleteCustomDomainRequest request) {
         try {
@@ -219,10 +179,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * 删除函数。
-      *
-     */
     @Override
     public CompletableFuture<DeleteFunctionResponse> deleteFunction(DeleteFunctionRequest request) {
         try {
@@ -237,10 +193,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * 删除函数版本。
-      *
-     */
     @Override
     public CompletableFuture<DeleteFunctionVersionResponse> deleteFunctionVersion(DeleteFunctionVersionRequest request) {
         try {
@@ -255,10 +207,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * 删除层版本。
-      *
-     */
     @Override
     public CompletableFuture<DeleteLayerVersionResponse> deleteLayerVersion(DeleteLayerVersionRequest request) {
         try {
@@ -273,10 +221,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * 删除函数预留配置。
-      *
-     */
     @Override
     public CompletableFuture<DeleteProvisionConfigResponse> deleteProvisionConfig(DeleteProvisionConfigRequest request) {
         try {
@@ -291,10 +235,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * 删除函数触发器。
-      *
-     */
     @Override
     public CompletableFuture<DeleteTriggerResponse> deleteTrigger(DeleteTriggerRequest request) {
         try {
@@ -309,10 +249,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * 删除VPC绑定。
-      *
-     */
     @Override
     public CompletableFuture<DeleteVpcBindingResponse> deleteVpcBinding(DeleteVpcBindingRequest request) {
         try {
@@ -327,10 +263,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * 获取函数别名信息。
-      *
-     */
     @Override
     public CompletableFuture<GetAliasResponse> getAlias(GetAliasRequest request) {
         try {
@@ -345,10 +277,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * 获取函数异步调用配置。
-      *
-     */
     @Override
     public CompletableFuture<GetAsyncInvokeConfigResponse> getAsyncInvokeConfig(GetAsyncInvokeConfigRequest request) {
         try {
@@ -363,10 +291,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * 获取函数并发度配置。
-      *
-     */
     @Override
     public CompletableFuture<GetConcurrencyConfigResponse> getConcurrencyConfig(GetConcurrencyConfigRequest request) {
         try {
@@ -381,10 +305,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * 获取自定义域名。
-      *
-     */
     @Override
     public CompletableFuture<GetCustomDomainResponse> getCustomDomain(GetCustomDomainRequest request) {
         try {
@@ -399,10 +319,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * 获取函数信息。
-      *
-     */
     @Override
     public CompletableFuture<GetFunctionResponse> getFunction(GetFunctionRequest request) {
         try {
@@ -417,10 +333,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * 获取函数代码。
-      *
-     */
     @Override
     public CompletableFuture<GetFunctionCodeResponse> getFunctionCode(GetFunctionCodeRequest request) {
         try {
@@ -435,10 +347,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * 获取层版本。
-      *
-     */
     @Override
     public CompletableFuture<GetLayerVersionResponse> getLayerVersion(GetLayerVersionRequest request) {
         try {
@@ -453,10 +361,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * 根据资源标识获取层版本。
-      *
-     */
     @Override
     public CompletableFuture<GetLayerVersionByArnResponse> getLayerVersionByArn(GetLayerVersionByArnRequest request) {
         try {
@@ -471,10 +375,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * 获取函数预留配置。
-      *
-     */
     @Override
     public CompletableFuture<GetProvisionConfigResponse> getProvisionConfig(GetProvisionConfigRequest request) {
         try {
@@ -490,7 +390,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 获取资源标签。
+      * @deprecated
       *
      */
     @Override
@@ -507,10 +407,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * 获取函数触发器。
-      *
-     */
     @Override
     public CompletableFuture<GetTriggerResponse> getTrigger(GetTriggerRequest request) {
         try {
@@ -525,10 +421,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * 调用函数。
-      *
-     */
     @Override
     public CompletableFuture<InvokeFunctionResponse> invokeFunction(InvokeFunctionRequest request) {
         try {
@@ -572,10 +464,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * 列出函数别名。
-      *
-     */
     @Override
     public CompletableFuture<ListAliasesResponse> listAliases(ListAliasesRequest request) {
         try {
@@ -590,10 +478,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * 列出函数异步调用配置。
-      *
-     */
     @Override
     public CompletableFuture<ListAsyncInvokeConfigsResponse> listAsyncInvokeConfigs(ListAsyncInvokeConfigsRequest request) {
         try {
@@ -608,10 +492,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * 列出函数并发度配置。
-      *
-     */
     @Override
     public CompletableFuture<ListConcurrencyConfigsResponse> listConcurrencyConfigs(ListConcurrencyConfigsRequest request) {
         try {
@@ -626,10 +506,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * 列出自定义域名。
-      *
-     */
     @Override
     public CompletableFuture<ListCustomDomainsResponse> listCustomDomains(ListCustomDomainsRequest request) {
         try {
@@ -644,10 +520,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * 列出函数版本。
-      *
-     */
     @Override
     public CompletableFuture<ListFunctionVersionsResponse> listFunctionVersions(ListFunctionVersionsRequest request) {
         try {
@@ -662,10 +534,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * 列出函数。
-      *
-     */
     @Override
     public CompletableFuture<ListFunctionsResponse> listFunctions(ListFunctionsRequest request) {
         try {
@@ -680,10 +548,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * 列出函数实例。
-      *
-     */
     @Override
     public CompletableFuture<ListInstancesResponse> listInstances(ListInstancesRequest request) {
         try {
@@ -698,10 +562,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * 列出层版本。
-      *
-     */
     @Override
     public CompletableFuture<ListLayerVersionsResponse> listLayerVersions(ListLayerVersionsRequest request) {
         try {
@@ -716,10 +576,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * 列出层。
-      *
-     */
     @Override
     public CompletableFuture<ListLayersResponse> listLayers(ListLayersRequest request) {
         try {
@@ -734,10 +590,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * 列出函数预留配置。
-      *
-     */
     @Override
     public CompletableFuture<ListProvisionConfigsResponse> listProvisionConfigs(ListProvisionConfigsRequest request) {
         try {
@@ -753,7 +605,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 列出具有标签的资源。
+      * @deprecated
       *
      */
     @Override
@@ -770,10 +622,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * 列出函数触发器。
-      *
-     */
     @Override
     public CompletableFuture<ListTriggersResponse> listTriggers(ListTriggersRequest request) {
         try {
@@ -788,10 +636,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * 列出VPC绑定配置。
-      *
-     */
     @Override
     public CompletableFuture<ListVpcBindingsResponse> listVpcBindings(ListVpcBindingsRequest request) {
         try {
@@ -806,10 +650,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * 发布函数版本。
-      *
-     */
     @Override
     public CompletableFuture<PublishFunctionVersionResponse> publishFunctionVersion(PublishFunctionVersionRequest request) {
         try {
@@ -824,10 +664,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * 设置函数异步调用配置。
-      *
-     */
     @Override
     public CompletableFuture<PutAsyncInvokeConfigResponse> putAsyncInvokeConfig(PutAsyncInvokeConfigRequest request) {
         try {
@@ -842,10 +678,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * 设置函数并发度配置。
-      *
-     */
     @Override
     public CompletableFuture<PutConcurrencyConfigResponse> putConcurrencyConfig(PutConcurrencyConfigRequest request) {
         try {
@@ -860,10 +692,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * 设置层的访问权限。
-      *
-     */
     @Override
     public CompletableFuture<PutLayerACLResponse> putLayerACL(PutLayerACLRequest request) {
         try {
@@ -878,10 +706,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * 设置函数预留配置。
-      *
-     */
     @Override
     public CompletableFuture<PutProvisionConfigResponse> putProvisionConfig(PutProvisionConfigRequest request) {
         try {
@@ -897,7 +721,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 设置资源标签。
+      * @deprecated
       *
      */
     @Override
@@ -915,7 +739,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 删除资源标签。
+      * @deprecated
       *
      */
     @Override
@@ -932,10 +756,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * 更新函数别名。
-      *
-     */
     @Override
     public CompletableFuture<UpdateAliasResponse> updateAlias(UpdateAliasRequest request) {
         try {
@@ -950,10 +770,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * 更新自定义域名。
-      *
-     */
     @Override
     public CompletableFuture<UpdateCustomDomainResponse> updateCustomDomain(UpdateCustomDomainRequest request) {
         try {
@@ -968,10 +784,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * 更新函数。
-      *
-     */
     @Override
     public CompletableFuture<UpdateFunctionResponse> updateFunction(UpdateFunctionRequest request) {
         try {
@@ -986,10 +798,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * 更新函数触发器。
-      *
-     */
     @Override
     public CompletableFuture<UpdateTriggerResponse> updateTrigger(UpdateTriggerRequest request) {
         try {

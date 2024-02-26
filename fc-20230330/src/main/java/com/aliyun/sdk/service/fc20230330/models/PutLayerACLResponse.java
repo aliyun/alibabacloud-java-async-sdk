@@ -13,11 +13,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class PutLayerACLResponse extends Response {
     @NameInMap("headers")
-    @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     private Integer statusCode;
 
     private PutLayerACLResponse(BuilderImpl builder) {
