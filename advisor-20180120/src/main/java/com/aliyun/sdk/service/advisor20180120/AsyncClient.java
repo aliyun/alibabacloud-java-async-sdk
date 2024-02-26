@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.advisor20180120;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.advisor20180120.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -20,6 +21,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeAdvicesResponse> describeAdvices(DescribeAdvicesRequest request);
 
+    CompletableFuture<DescribeAdvicesFlatPageResponse> describeAdvicesFlatPage(DescribeAdvicesFlatPageRequest request);
+
     CompletableFuture<DescribeAdvicesPageResponse> describeAdvicesPage(DescribeAdvicesPageRequest request);
 
     CompletableFuture<DescribeAdvisorChecksResponse> describeAdvisorChecks(DescribeAdvisorChecksRequest request);
@@ -33,5 +36,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RefreshAdvisorCheckResponse> refreshAdvisorCheck(RefreshAdvisorCheckRequest request);
 
     CompletableFuture<RefreshAdvisorResourceResponse> refreshAdvisorResource(RefreshAdvisorResourceRequest request);
+
+    CompletableFuture<ReportBizAlertInfoResponse> reportBizAlertInfo(ReportBizAlertInfoRequest request);
 
 }

@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeAdvisorResourcesResponse} extends {@link TeaModel}
+ * {@link ReportBizAlertInfoResponse} extends {@link TeaModel}
  *
- * <p>DescribeAdvisorResourcesResponse</p>
+ * <p>ReportBizAlertInfoResponse</p>
  */
-public class DescribeAdvisorResourcesResponse extends Response {
+public class ReportBizAlertInfoResponse extends Response {
     @NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -19,16 +19,16 @@ public class DescribeAdvisorResourcesResponse extends Response {
     private Integer statusCode;
 
     @NameInMap("body")
-    private DescribeAdvisorResourcesResponseBody body;
+    private ReportBizAlertInfoResponseBody body;
 
-    private DescribeAdvisorResourcesResponse(BuilderImpl builder) {
+    private ReportBizAlertInfoResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DescribeAdvisorResourcesResponse create() {
+    public static ReportBizAlertInfoResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +54,35 @@ public class DescribeAdvisorResourcesResponse extends Response {
     /**
      * @return body
      */
-    public DescribeAdvisorResourcesResponseBody getBody() {
+    public ReportBizAlertInfoResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DescribeAdvisorResourcesResponse, Builder> {
+    public interface Builder extends Response.Builder<ReportBizAlertInfoResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DescribeAdvisorResourcesResponseBody body);
+        Builder body(ReportBizAlertInfoResponseBody body);
 
         @Override
-        DescribeAdvisorResourcesResponse build();
+        ReportBizAlertInfoResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DescribeAdvisorResourcesResponse, Builder>
+            extends Response.BuilderImpl<ReportBizAlertInfoResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private DescribeAdvisorResourcesResponseBody body; 
+        private ReportBizAlertInfoResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DescribeAdvisorResourcesResponse response) {
+        private BuilderImpl(ReportBizAlertInfoResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +111,14 @@ public class DescribeAdvisorResourcesResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DescribeAdvisorResourcesResponseBody body) {
+        public Builder body(ReportBizAlertInfoResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DescribeAdvisorResourcesResponse build() {
-            return new DescribeAdvisorResourcesResponse(this);
+        public ReportBizAlertInfoResponse build() {
+            return new ReportBizAlertInfoResponse(this);
         } 
 
     } 
