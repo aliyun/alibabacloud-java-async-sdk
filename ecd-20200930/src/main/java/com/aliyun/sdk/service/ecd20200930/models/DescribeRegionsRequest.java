@@ -69,7 +69,30 @@ public class DescribeRegionsRequest extends Request {
         } 
 
         /**
-         * The ID of the region.
+         * The display language of the specified service in a location.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   en
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     : English
+         * 
+         * *   zh (default)
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     : Chinese
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -78,7 +101,7 @@ public class DescribeRegionsRequest extends Request {
         }
 
         /**
-         * The list of regions.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

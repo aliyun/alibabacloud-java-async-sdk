@@ -721,6 +721,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
 
+    CompletableFuture<UnbindUserDesktopResponse> unbindUserDesktop(UnbindUserDesktopRequest request);
+
     CompletableFuture<UnlockVirtualMFADeviceResponse> unlockVirtualMFADevice(UnlockVirtualMFADeviceRequest request);
 
     CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);

@@ -50,7 +50,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DescribeRegions
+         * The information about regions.
          */
         public Builder regions(java.util.List < Regions> regions) {
             this.regions = regions;
@@ -58,7 +58,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * The operation that you want to perform. Set the value to DescribeRegions.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             private String regionId; 
 
             /**
-             * LocalName.
+             * The display name of the region, which varies based on the current language.
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -130,7 +130,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionEndpoint.
+             * The endpoint of the region.
              */
             public Builder regionEndpoint(String regionEndpoint) {
                 this.regionEndpoint = regionEndpoint;
@@ -138,7 +138,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
