@@ -14,7 +14,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class UpgradePostPayOrderRequest extends Request {
     @Query
     @NameInMap("DiskSize")
-    @Validation(required = true)
     private Integer diskSize;
 
     @Query
@@ -48,6 +47,10 @@ public class UpgradePostPayOrderRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ServerlessConfig")
+    private ServerlessConfig serverlessConfig;
+
+    @Query
     @NameInMap("SpecType")
     private String specType;
 
@@ -65,6 +68,7 @@ public class UpgradePostPayOrderRequest extends Request {
         this.ioMaxSpec = builder.ioMaxSpec;
         this.partitionNum = builder.partitionNum;
         this.regionId = builder.regionId;
+        this.serverlessConfig = builder.serverlessConfig;
         this.specType = builder.specType;
         this.topicQuota = builder.topicQuota;
     }
@@ -139,6 +143,13 @@ public class UpgradePostPayOrderRequest extends Request {
     }
 
     /**
+     * @return serverlessConfig
+     */
+    public ServerlessConfig getServerlessConfig() {
+        return this.serverlessConfig;
+    }
+
+    /**
      * @return specType
      */
     public String getSpecType() {
@@ -161,6 +172,7 @@ public class UpgradePostPayOrderRequest extends Request {
         private String ioMaxSpec; 
         private Integer partitionNum; 
         private String regionId; 
+        private ServerlessConfig serverlessConfig; 
         private String specType; 
         private Integer topicQuota; 
 
@@ -178,6 +190,7 @@ public class UpgradePostPayOrderRequest extends Request {
             this.ioMaxSpec = request.ioMaxSpec;
             this.partitionNum = request.partitionNum;
             this.regionId = request.regionId;
+            this.serverlessConfig = request.serverlessConfig;
             this.specType = request.specType;
             this.topicQuota = request.topicQuota;
         } 
@@ -284,6 +297,16 @@ public class UpgradePostPayOrderRequest extends Request {
         }
 
         /**
+         * ServerlessConfig.
+         */
+        public Builder serverlessConfig(ServerlessConfig serverlessConfig) {
+            String serverlessConfigShrink = shrink(serverlessConfig, "ServerlessConfig", "json");
+            this.putQueryParameter("ServerlessConfig", serverlessConfigShrink);
+            this.serverlessConfig = serverlessConfig;
+            return this;
+        }
+
+        /**
          * The edition of the instance. Valid values:
          * <p>
          * 
@@ -321,4 +344,65 @@ public class UpgradePostPayOrderRequest extends Request {
 
     } 
 
+    public static class ServerlessConfig extends TeaModel {
+        @NameInMap("ReservedPublishCapacity")
+        private Long reservedPublishCapacity;
+
+        @NameInMap("ReservedSubscribeCapacity")
+        private Long reservedSubscribeCapacity;
+
+        private ServerlessConfig(Builder builder) {
+            this.reservedPublishCapacity = builder.reservedPublishCapacity;
+            this.reservedSubscribeCapacity = builder.reservedSubscribeCapacity;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ServerlessConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return reservedPublishCapacity
+         */
+        public Long getReservedPublishCapacity() {
+            return this.reservedPublishCapacity;
+        }
+
+        /**
+         * @return reservedSubscribeCapacity
+         */
+        public Long getReservedSubscribeCapacity() {
+            return this.reservedSubscribeCapacity;
+        }
+
+        public static final class Builder {
+            private Long reservedPublishCapacity; 
+            private Long reservedSubscribeCapacity; 
+
+            /**
+             * ReservedPublishCapacity.
+             */
+            public Builder reservedPublishCapacity(Long reservedPublishCapacity) {
+                this.reservedPublishCapacity = reservedPublishCapacity;
+                return this;
+            }
+
+            /**
+             * ReservedSubscribeCapacity.
+             */
+            public Builder reservedSubscribeCapacity(Long reservedSubscribeCapacity) {
+                this.reservedSubscribeCapacity = reservedSubscribeCapacity;
+                return this;
+            }
+
+            public ServerlessConfig build() {
+                return new ServerlessConfig(this);
+            } 
+
+        } 
+
+    }
 }
