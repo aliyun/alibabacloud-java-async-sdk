@@ -90,6 +90,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<ListCountriesResponse> listCountries(ListCountriesRequest request);
 
+    CompletableFuture<ListCouponUsageResponse> listCouponUsage(ListCouponUsageRequest request);
+
     /**
       * Caller must be a Partner from International Site, either Distribution or Reseller will do.
       *
