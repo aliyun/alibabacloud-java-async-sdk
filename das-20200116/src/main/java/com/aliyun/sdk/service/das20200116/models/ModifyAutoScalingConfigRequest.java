@@ -190,9 +190,11 @@ public class ModifyAutoScalingConfigRequest extends Request {
         private Boolean apply;
 
         @NameInMap("BandwidthUsageLowerThreshold")
+        @Validation(maximum = 70, minimum = 10)
         private Integer bandwidthUsageLowerThreshold;
 
         @NameInMap("BandwidthUsageUpperThreshold")
+        @Validation(maximum = 95, minimum = 50)
         private Integer bandwidthUsageUpperThreshold;
 
         @NameInMap("Downgrade")

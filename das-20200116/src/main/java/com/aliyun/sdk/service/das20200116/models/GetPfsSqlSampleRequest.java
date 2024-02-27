@@ -14,10 +14,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class GetPfsSqlSampleRequest extends Request {
     @Body
     @NameInMap("EndTime")
+    @Validation(required = true)
     private Long endTime;
 
     @Body
     @NameInMap("InstanceId")
+    @Validation(required = true)
     private String instanceId;
 
     @Body
@@ -30,6 +32,7 @@ public class GetPfsSqlSampleRequest extends Request {
 
     @Body
     @NameInMap("StartTime")
+    @Validation(required = true)
     private Long startTime;
 
     private GetPfsSqlSampleRequest(Builder builder) {
