@@ -21,6 +21,10 @@ public class ModifyDBInstanceSSLRequest extends Request {
     private String CAType;
 
     @Query
+    @NameInMap("Certificate")
+    private String certificate;
+
+    @Query
     @NameInMap("ClientCACert")
     private String clientCACert;
 
@@ -59,6 +63,10 @@ public class ModifyDBInstanceSSLRequest extends Request {
     private Long ownerId;
 
     @Query
+    @NameInMap("PassWord")
+    private String passWord;
+
+    @Query
     @NameInMap("ReplicationACL")
     private String replicationACL;
 
@@ -90,6 +98,7 @@ public class ModifyDBInstanceSSLRequest extends Request {
         super(builder);
         this.ACL = builder.ACL;
         this.CAType = builder.CAType;
+        this.certificate = builder.certificate;
         this.clientCACert = builder.clientCACert;
         this.clientCAEnabled = builder.clientCAEnabled;
         this.clientCertRevocationList = builder.clientCertRevocationList;
@@ -99,6 +108,7 @@ public class ModifyDBInstanceSSLRequest extends Request {
         this.forceEncryption = builder.forceEncryption;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.passWord = builder.passWord;
         this.replicationACL = builder.replicationACL;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
@@ -133,6 +143,13 @@ public class ModifyDBInstanceSSLRequest extends Request {
      */
     public String getCAType() {
         return this.CAType;
+    }
+
+    /**
+     * @return certificate
+     */
+    public String getCertificate() {
+        return this.certificate;
     }
 
     /**
@@ -199,6 +216,13 @@ public class ModifyDBInstanceSSLRequest extends Request {
     }
 
     /**
+     * @return passWord
+     */
+    public String getPassWord() {
+        return this.passWord;
+    }
+
+    /**
      * @return replicationACL
      */
     public String getReplicationACL() {
@@ -250,6 +274,7 @@ public class ModifyDBInstanceSSLRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyDBInstanceSSLRequest, Builder> {
         private String ACL; 
         private String CAType; 
+        private String certificate; 
         private String clientCACert; 
         private Integer clientCAEnabled; 
         private String clientCertRevocationList; 
@@ -259,6 +284,7 @@ public class ModifyDBInstanceSSLRequest extends Request {
         private String forceEncryption; 
         private String ownerAccount; 
         private Long ownerId; 
+        private String passWord; 
         private String replicationACL; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
@@ -275,6 +301,7 @@ public class ModifyDBInstanceSSLRequest extends Request {
             super(request);
             this.ACL = request.ACL;
             this.CAType = request.CAType;
+            this.certificate = request.certificate;
             this.clientCACert = request.clientCACert;
             this.clientCAEnabled = request.clientCAEnabled;
             this.clientCertRevocationList = request.clientCertRevocationList;
@@ -284,6 +311,7 @@ public class ModifyDBInstanceSSLRequest extends Request {
             this.forceEncryption = request.forceEncryption;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.passWord = request.passWord;
             this.replicationACL = request.replicationACL;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
@@ -318,6 +346,15 @@ public class ModifyDBInstanceSSLRequest extends Request {
         public Builder CAType(String CAType) {
             this.putQueryParameter("CAType", CAType);
             this.CAType = CAType;
+            return this;
+        }
+
+        /**
+         * Certificate.
+         */
+        public Builder certificate(String certificate) {
+            this.putQueryParameter("Certificate", certificate);
+            this.certificate = certificate;
             return this;
         }
 
@@ -384,7 +421,11 @@ public class ModifyDBInstanceSSLRequest extends Request {
         }
 
         /**
-         * ForceEncryption.
+         * Specifies whether to enable the forceful SSL encryption feature. This parameter is supported only for ApsaraDB RDS for SQL Server instances. For more information, see [Configure the SSL encryption feature](~~95715~~). Valid values:
+         * <p>
+         * 
+         * *   **1**: enables the feature.
+         * *   **0**: disables the feature.
          */
         public Builder forceEncryption(String forceEncryption) {
             this.putQueryParameter("ForceEncryption", forceEncryption);
@@ -407,6 +448,15 @@ public class ModifyDBInstanceSSLRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * PassWord.
+         */
+        public Builder passWord(String passWord) {
+            this.putQueryParameter("PassWord", passWord);
+            this.passWord = passWord;
             return this;
         }
 
@@ -475,7 +525,7 @@ public class ModifyDBInstanceSSLRequest extends Request {
         }
 
         /**
-         * TlsVersion.
+         * The minimum Transport Layer Security (TLS) version. Valid values: 1.0, 1.1, and 1.2. This parameter is supported only for ApsaraDB RDS for SQL Server instances. For more information, see [Configure the SSL encryption feature](~~95715~~).
          */
         public Builder tlsVersion(String tlsVersion) {
             this.putQueryParameter("TlsVersion", tlsVersion);

@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.rds20140815;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.rds20140815.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -1149,7 +1150,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
       * @deprecated
-      * This operation is phased out. Use the DescribeDBInstances operation instead.
+      * >  The DescribeDBInstancesAsCsv operation is phased out. You can call the DescribeDBInstances operation.
       *
      */
     CompletableFuture<DescribeDBInstancesAsCsvResponse> describeDBInstancesAsCsv(DescribeDBInstancesAsCsvRequest request);

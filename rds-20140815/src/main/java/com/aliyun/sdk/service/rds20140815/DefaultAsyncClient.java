@@ -2500,7 +2500,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
       * @deprecated
-      * This operation is phased out. Use the DescribeDBInstances operation instead.
+      * >  The DescribeDBInstancesAsCsv operation is phased out. You can call the DescribeDBInstances operation.
       *
      */
     @Override

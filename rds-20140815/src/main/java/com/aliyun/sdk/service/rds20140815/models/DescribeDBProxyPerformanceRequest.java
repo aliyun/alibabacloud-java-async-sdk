@@ -203,7 +203,11 @@ public class DescribeDBProxyPerformanceRequest extends Request {
         }
 
         /**
-         * The type of proxy that is enabled on the instance. Set the value to **DedicatedProxy**.
+         * The type of the database proxy instance. Valid values:
+         * <p>
+         * 
+         * *   common: the general-purpose database proxy
+         * *   exclusive: the dedicated database proxy
          */
         public Builder DBProxyInstanceType(String DBProxyInstanceType) {
             this.putQueryParameter("DBProxyInstanceType", DBProxyInstanceType);

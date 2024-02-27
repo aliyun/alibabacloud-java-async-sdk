@@ -184,7 +184,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             private String DBInstanceId; 
 
             /**
-             * The ID of the read-only instance.
+             * The read-only instance ID.
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -977,7 +977,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the instance. For more information, see [Instance states](~~26315~~).
+             * The instance status. For more information, see [Instance statuses](~~26315~~).
              */
             public Builder DBInstanceStatus(String DBInstanceStatus) {
                 this.DBInstanceStatus = DBInstanceStatus;
@@ -1007,7 +1007,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the dedicated cluster.
+             * The ID of the dedicated cluster to which the instances belong.
              */
             public Builder dedicatedHostGroupId(String dedicatedHostGroupId) {
                 this.dedicatedHostGroupId = dedicatedHostGroupId;
@@ -1150,7 +1150,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the disaster recovery instance. This parameter is returned only when the instance is a primary instance and has a disaster recovery instance.
+             * The ID of the disaster recovery instance. This parameter is returned only when the instance is a primary instance and has a disaster recovery instance attached.
              */
             public Builder guardDBInstanceId(String guardDBInstanceId) {
                 this.guardDBInstanceId = guardDBInstanceId;
@@ -1202,7 +1202,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the primary instance. If the value of this parameter is null, the instance is a primary instance.
+             * The ID of the primary instance. If this parameter is null, the instance is a primary instance.
              */
             public Builder masterInstanceId(String masterInstanceId) {
                 this.masterInstanceId = masterInstanceId;
@@ -1236,7 +1236,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the IDs of the read-only instances that are attached to the instance. This parameter is returned only when the instance is a primary instance and has read-only instances.
+             * The IDs of the read-only instances that are attached to the primary instance. This parameter is returned only when the instance is a primary instance.
              */
             public Builder readOnlyDBInstanceIds(ReadOnlyDBInstanceIds readOnlyDBInstanceIds) {
                 this.readOnlyDBInstanceIds = readOnlyDBInstanceIds;
@@ -1244,7 +1244,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the instance.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1272,7 +1272,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the temporary instance. This parameter is returned only when the instance is a primary instance and has a temporary instance.
+             * The ID of the temporary instance. This parameter is returned only when the instance is a primary instance and has a temporary instance attached.
              */
             public Builder tempDBInstanceId(String tempDBInstanceId) {
                 this.tempDBInstanceId = tempDBInstanceId;
@@ -1288,7 +1288,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The severity level of the exception that is detected on the instance. This parameter is returned only when the instance is created in an ApsaraDB MyBase cluster that runs MySQL on Standard Edition. Valid values:
+             * The severity of the exception that is detected on the instance. This parameter is returned only when the instance is created in an ApsaraDB MyBase cluster that runs MySQL on Standard Edition. Valid values:
              * <p>
              * 
              * *   **1**: The instance is normal.
@@ -1308,7 +1308,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The VPC ID.
+             * The ID of the instance. This parameter is returned only when the instance resides in a VPC.
              */
             public Builder vpcCloudInstanceId(String vpcCloudInstanceId) {
                 this.vpcCloudInstanceId = vpcCloudInstanceId;
@@ -1316,7 +1316,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The virtual private cloud (VPC) ID of the instance.
+             * The virtual private cloud (VPC) ID.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

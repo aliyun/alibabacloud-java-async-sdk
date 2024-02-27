@@ -1671,7 +1671,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * The method that is used to update the minor engine version of the instance. Valid values:
              * <p>
              * 
-             * *   **Auto:** automatic update.
+             * *   **Auto**: automatic update.
              * *   **Manual**: manual update. The minor engine version of the instance is forcefully updated only when the in-use minor engine version is phased out.
              */
             public Builder autoUpgradeMinorVersion(String autoUpgradeMinorVersion) {
@@ -1691,7 +1691,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * The configuration of the Babelfish feature for the ApsaraDB RDS for PostgreSQL instance.
              * <p>
              * 
-             * >  This parameter is suitable only for ApsaraDB RDS for PostgreSQL instances for which Babelfish is enabled. For more information, see [Introduction to Babelfish](~~428613~~).
+             * >  This parameter applies only to ApsaraDB RDS for PostgreSQL instances for which Babelfish is enabled. For more information, see [Introduction to Babelfish](~~428613~~).
              */
             public Builder babelfishConfig(BabelfishConfig babelfishConfig) {
                 this.babelfishConfig = babelfishConfig;
@@ -1731,7 +1731,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * ColdDataEnabled.
+             * A reserved parameter.
              */
             public Builder coldDataEnabled(Boolean coldDataEnabled) {
                 this.coldDataEnabled = coldDataEnabled;
@@ -1770,8 +1770,8 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * The type of the proxy that is used by the instance. Valid values:
              * <p>
              * 
-             * *   **1**: shared proxy
-             * *   **2**: dedicated proxy
+             * *   **1**: shared database proxy
+             * *   **2**: dedicated database proxy
              * 
              * >  We recommend that you use the **ProxyType** parameter instead of this parameter.
              */
@@ -1781,7 +1781,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The creation time of the instance. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -1843,7 +1843,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The disk usage of the instance.
+             * The disk usage of the instance. Unit: MB.
              */
             public Builder DBInstanceDiskUsed(String DBInstanceDiskUsed) {
                 this.DBInstanceDiskUsed = DBInstanceDiskUsed;
@@ -1898,9 +1898,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * The storage type of the instance. Valid values:
              * <p>
              * 
-             * *   **local_ssd** and **ephemeral_ssd**: local SSD
+             * *   **local_ssd** or **ephemeral_ssd**: local SSD
              * *   **cloud_ssd**: standard SSD
-             * *   **cloud_essd**: enhanced SSD (ESSD)
+             * *   **cloud_essd**: enhanced SSD (ESSD).
              * *   **general_essd**: general ESSD
              */
             public Builder DBInstanceStorageType(String DBInstanceStorageType) {
@@ -1931,7 +1931,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The dedicated cluster ID.
+             * The ID of the dedicated cluster to which the instances belong.
              */
             public Builder dedicatedHostGroupId(String dedicatedHostGroupId) {
                 this.dedicatedHostGroupId = dedicatedHostGroupId;
@@ -1973,7 +1973,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The expiration time. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The expiration time of the instance. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              * <p>
              * 
              * >  Pay-as-you-go instances never expire.
@@ -2000,7 +2000,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the disaster recovery instance that is attached to the instance.
+             * The ID of the disaster recovery instance that is attached to the primary instance.
              */
             public Builder guardDBInstanceId(String guardDBInstanceId) {
                 this.guardDBInstanceId = guardDBInstanceId;
@@ -2008,7 +2008,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address type. Only **IPv4** addresses are supported.
+             * The IP address type. Only **IPv4 addresses** are supported.
              */
             public Builder IPType(String IPType) {
                 this.IPType = IPType;
@@ -2016,7 +2016,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance from which incremental data comes. The incremental data of a read-only instance comes from its primary instance. If this parameter is not returned, the instance is a primary instance.
+             * The ID of the instance from which incremental data comes. The incremental data of a disaster recovery instance comes from its primary instance. The incremental data of a read-only instance comes from its primary instance. If this parameter is not returned, the instance is a primary instance.
              */
             public Builder incrementSourceDBInstanceId(String incrementSourceDBInstanceId) {
                 this.incrementSourceDBInstanceId = incrementSourceDBInstanceId;
@@ -2048,7 +2048,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * IoAccelerationEnabled.
+             * A reserved parameter.
              */
             public Builder ioAccelerationEnabled(String ioAccelerationEnabled) {
                 this.ioAccelerationEnabled = ioAccelerationEnabled;
@@ -2088,7 +2088,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The maintenance window of the instance. The time is displayed in UTC. Take note that the maintenance window displayed in the ApsaraDB RDS console is equal to the value of this parameter plus 8 hours.
+             * The maintenance window of the instance. The time is displayed in UTC. The maintenance window displayed in the ApsaraDB RDS console is equal to the value of this parameter plus 8 hours.
              */
             public Builder maintainTime(String maintainTime) {
                 this.maintainTime = maintainTime;
@@ -2155,7 +2155,6 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * 
              * *   **Postpaid**: pay-as-you-go
              * *   **Prepaid**: subscription
-             * *   **SERVERLESS**: Serverless
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -2244,7 +2243,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the zone of the secondary instance.
+             * The zone IDs of the secondary instances.
              */
             public Builder slaveZones(SlaveZones slaveZones) {
                 this.slaveZones = slaveZones;
@@ -2252,7 +2251,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the instance supports superuser accounts, such as the system administrator (SA) account, the Active Directory (AD) account, and the host account. Valid values:
+             * Indicates whether the instance supports superuser accounts, such as the system administrator (SA) account, Active Directory (AD) account, and host account. Valid values:
              * <p>
              * 
              * *   **Enable**
@@ -2264,7 +2263,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the temporary instance that is attached to the instance.
+             * The ID of the temporary instance that is attached to the primary instance.
              */
             public Builder tempDBInstanceId(String tempDBInstanceId) {
                 this.tempDBInstanceId = tempDBInstanceId;
@@ -2288,7 +2287,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The severity level of the exception that is detected on the instance. This parameter is returned only when the instance is created in an ApsaraDB MyBase cluster that runs MySQL on Standard Edition. Valid values:
+             * The severity of the exception that is detected on the instance. This parameter is returned only when the instance is created in an ApsaraDB MyBase cluster that runs MySQL on Standard Edition. Valid values:
              * <p>
              * 
              * *   **1**: The instance is normal.
@@ -2308,7 +2307,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The VPC ID.
+             * The ID of the instance. This parameter is returned only when the instance resides in a VPC.
              */
             public Builder vpcCloudInstanceId(String vpcCloudInstanceId) {
                 this.vpcCloudInstanceId = vpcCloudInstanceId;
@@ -2316,7 +2315,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The VPC ID.
+             * The virtual private cloud (VPC) ID.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

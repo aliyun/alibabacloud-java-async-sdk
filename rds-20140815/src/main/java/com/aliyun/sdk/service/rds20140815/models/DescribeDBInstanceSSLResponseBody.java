@@ -336,7 +336,11 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * ForceEncryption.
+         * Indicates whether the forceful SSL encryption feature is enabled. This parameter is supported only for ApsaraDB RDS for SQL Server instances. For more information, see [Configure the SSL encryption feature](~~95715~~).
+         * <p>
+         * 
+         * *   **1**: enabled
+         * *   **0**: The feature is disabled.
          */
         public Builder forceEncryption(String forceEncryption) {
             this.forceEncryption = forceEncryption;
@@ -481,7 +485,7 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * TlsVersion.
+         * The minimum Transport Layer Security (TLS) version. Valid values: 1.0, 1.1, and 1.2. This parameter is supported only for ApsaraDB RDS for SQL Server instances. For more information, see [Configure the SSL encryption feature](~~95715~~).
          */
         public Builder tlsVersion(String tlsVersion) {
             this.tlsVersion = tlsVersion;

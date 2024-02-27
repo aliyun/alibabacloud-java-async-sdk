@@ -513,7 +513,7 @@ public class CloneDBInstanceRequest extends Request {
         }
 
         /**
-         * A reserved parameter. You do not need to specify this parameter.
+         * This parameter is reserved. You do not need to specify this parameter.
          */
         public Builder burstingEnabled(Boolean burstingEnabled) {
             this.putQueryParameter("BurstingEnabled", burstingEnabled);
@@ -643,7 +643,7 @@ public class CloneDBInstanceRequest extends Request {
         }
 
         /**
-         * IoAccelerationEnabled.
+         * A reserved parameter.
          */
         public Builder ioAccelerationEnabled(String ioAccelerationEnabled) {
             this.putQueryParameter("IoAccelerationEnabled", ioAccelerationEnabled);
