@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.rtc20180111;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.rtc20180111.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -52,6 +53,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeCallListResponse> describeCallList(DescribeCallListRequest request);
 
+    CompletableFuture<DescribeChannelResponse> describeChannel(DescribeChannelRequest request);
+
+    CompletableFuture<DescribeChannelAllUsersResponse> describeChannelAllUsers(DescribeChannelAllUsersRequest request);
+
     CompletableFuture<DescribeChannelAreaDistributionStatDataResponse> describeChannelAreaDistributionStatData(DescribeChannelAreaDistributionStatDataRequest request);
 
     CompletableFuture<DescribeChannelDistributionStatDataResponse> describeChannelDistributionStatData(DescribeChannelDistributionStatDataRequest request);
@@ -62,9 +67,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeChannelTopPubUserListResponse> describeChannelTopPubUserList(DescribeChannelTopPubUserListRequest request);
 
+    CompletableFuture<DescribeChannelUserResponse> describeChannelUser(DescribeChannelUserRequest request);
+
     CompletableFuture<DescribeChannelUserMetricsResponse> describeChannelUserMetrics(DescribeChannelUserMetricsRequest request);
 
     CompletableFuture<DescribeChannelUsersResponse> describeChannelUsers(DescribeChannelUsersRequest request);
+
+    CompletableFuture<DescribeChannelsResponse> describeChannels(DescribeChannelsRequest request);
 
     CompletableFuture<DescribeEndPointEventListResponse> describeEndPointEventList(DescribeEndPointEventListRequest request);
 
@@ -130,13 +139,25 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<RemoveTerminalsResponse> removeTerminals(RemoveTerminalsRequest request);
 
+    CompletableFuture<RemoveUsersResponse> removeUsers(RemoveUsersRequest request);
+
+    CompletableFuture<StartCloudRecordResponse> startCloudRecord(StartCloudRecordRequest request);
+
     CompletableFuture<StartMPUTaskResponse> startMPUTask(StartMPUTaskRequest request);
 
     CompletableFuture<StartRecordTaskResponse> startRecordTask(StartRecordTaskRequest request);
 
+    CompletableFuture<StartStreamingOutResponse> startStreamingOut(StartStreamingOutRequest request);
+
+    CompletableFuture<StopChannelResponse> stopChannel(StopChannelRequest request);
+
+    CompletableFuture<StopCloudRecordResponse> stopCloudRecord(StopCloudRecordRequest request);
+
     CompletableFuture<StopMPUTaskResponse> stopMPUTask(StopMPUTaskRequest request);
 
     CompletableFuture<StopRecordTaskResponse> stopRecordTask(StopRecordTaskRequest request);
+
+    CompletableFuture<StopStreamingOutResponse> stopStreamingOut(StopStreamingOutRequest request);
 
     CompletableFuture<UpdateAutoLiveStreamRuleResponse> updateAutoLiveStreamRule(UpdateAutoLiveStreamRuleRequest request);
 
