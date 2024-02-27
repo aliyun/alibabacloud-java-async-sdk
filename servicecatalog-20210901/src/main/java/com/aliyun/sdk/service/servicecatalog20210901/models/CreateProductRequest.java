@@ -35,6 +35,10 @@ public class CreateProductRequest extends Request {
     @Validation(required = true, maxLength = 100, minLength = 1)
     private String providerName;
 
+    @Body
+    @NameInMap("TemplateType")
+    private String templateType;
+
     private CreateProductRequest(Builder builder) {
         super(builder);
         this.description = builder.description;
@@ -42,6 +46,7 @@ public class CreateProductRequest extends Request {
         this.productType = builder.productType;
         this.productVersionParameters = builder.productVersionParameters;
         this.providerName = builder.providerName;
+        this.templateType = builder.templateType;
     }
 
     public static Builder builder() {
@@ -92,12 +97,20 @@ public class CreateProductRequest extends Request {
         return this.providerName;
     }
 
+    /**
+     * @return templateType
+     */
+    public String getTemplateType() {
+        return this.templateType;
+    }
+
     public static final class Builder extends Request.Builder<CreateProductRequest, Builder> {
         private String description; 
         private String productName; 
         private String productType; 
         private ProductVersionParameters productVersionParameters; 
         private String providerName; 
+        private String templateType; 
 
         private Builder() {
             super();
@@ -110,6 +123,7 @@ public class CreateProductRequest extends Request {
             this.productType = request.productType;
             this.productVersionParameters = request.productVersionParameters;
             this.providerName = request.providerName;
+            this.templateType = request.templateType;
         } 
 
         /**
@@ -167,6 +181,15 @@ public class CreateProductRequest extends Request {
         public Builder providerName(String providerName) {
             this.putBodyParameter("ProviderName", providerName);
             this.providerName = providerName;
+            return this;
+        }
+
+        /**
+         * TemplateType.
+         */
+        public Builder templateType(String templateType) {
+            this.putBodyParameter("TemplateType", templateType);
+            this.templateType = templateType;
             return this;
         }
 

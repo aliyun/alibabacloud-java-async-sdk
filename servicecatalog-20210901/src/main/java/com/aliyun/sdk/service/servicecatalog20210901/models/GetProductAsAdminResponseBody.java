@@ -113,6 +113,9 @@ public class GetProductAsAdminResponseBody extends TeaModel {
         @NameInMap("ProviderName")
         private String providerName;
 
+        @NameInMap("TemplateType")
+        private String templateType;
+
         private ProductDetail(Builder builder) {
             this.createTime = builder.createTime;
             this.description = builder.description;
@@ -121,6 +124,7 @@ public class GetProductAsAdminResponseBody extends TeaModel {
             this.productName = builder.productName;
             this.productType = builder.productType;
             this.providerName = builder.providerName;
+            this.templateType = builder.templateType;
         }
 
         public static Builder builder() {
@@ -180,6 +184,13 @@ public class GetProductAsAdminResponseBody extends TeaModel {
             return this.providerName;
         }
 
+        /**
+         * @return templateType
+         */
+        public String getTemplateType() {
+            return this.templateType;
+        }
+
         public static final class Builder {
             private String createTime; 
             private String description; 
@@ -188,6 +199,7 @@ public class GetProductAsAdminResponseBody extends TeaModel {
             private String productName; 
             private String productType; 
             private String providerName; 
+            private String templateType; 
 
             /**
              * The creation time.
@@ -248,6 +260,14 @@ public class GetProductAsAdminResponseBody extends TeaModel {
              */
             public Builder providerName(String providerName) {
                 this.providerName = providerName;
+                return this;
+            }
+
+            /**
+             * TemplateType.
+             */
+            public Builder templateType(String templateType) {
+                this.templateType = templateType;
                 return this;
             }
 
