@@ -2266,6 +2266,20 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
+    public CompletableFuture<ListUserDrawRecordByPkResponse> listUserDrawRecordByPk(ListUserDrawRecordByPkRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListUserDrawRecordByPk").setMethod(HttpMethod.GET).setPathRegex("/listUserDrawRecords").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListUserDrawRecordByPkResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListUserDrawRecordByPkResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
     public CompletableFuture<ListUserKeysResponse> listUserKeys(ListUserKeysRequest request) {
         try {
             this.handler.validateRequestModel(request);
