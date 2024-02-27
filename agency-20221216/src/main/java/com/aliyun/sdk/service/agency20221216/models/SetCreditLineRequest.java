@@ -70,7 +70,7 @@ public class SetCreditLineRequest extends Request {
         } 
 
         /**
-         * CreditLine.
+         * New Credit Line
          */
         public Builder creditLine(String creditLine) {
             this.putQueryParameter("CreditLine", creditLine);
@@ -79,7 +79,7 @@ public class SetCreditLineRequest extends Request {
         }
 
         /**
-         * Uid.
+         * The UID of Sub Account.
          */
         public Builder uid(Long uid) {
             this.putQueryParameter("Uid", uid);

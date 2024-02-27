@@ -84,7 +84,7 @@ public class QuotaListExportPagedRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * Pagination, current page number, starting from 1.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -93,7 +93,11 @@ public class QuotaListExportPagedRequest extends Request {
         }
 
         /**
-         * Language.
+         * Multilingual Parameters, the default language is English.</br>
+         * <p>
+         * en: English</br>
+         * zh: Chinese</br>
+         * ja: Japanese </br>
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -102,7 +106,7 @@ public class QuotaListExportPagedRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * Pagination, record number on each page, maximum 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

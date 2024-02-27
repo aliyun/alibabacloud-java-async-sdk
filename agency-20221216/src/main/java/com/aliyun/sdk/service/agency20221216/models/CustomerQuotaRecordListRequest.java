@@ -144,7 +144,7 @@ public class CustomerQuotaRecordListRequest extends Request {
         } 
 
         /**
-         * EndDate.
+         * End Date Format: yyyy-MM-dd
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -153,7 +153,7 @@ public class CustomerQuotaRecordListRequest extends Request {
         }
 
         /**
-         * EndUserPk.
+         * Customer UID
          */
         public Builder endUserPk(Long endUserPk) {
             this.putQueryParameter("EndUserPk", endUserPk);
@@ -162,7 +162,11 @@ public class CustomerQuotaRecordListRequest extends Request {
         }
 
         /**
-         * Language.
+         * Multilingual Parameters, the default language is English.</br>
+         * <p>
+         * en: English</br>
+         * zh: Chinese</br>
+         * ja: Japanese </br>
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -171,7 +175,11 @@ public class CustomerQuotaRecordListRequest extends Request {
         }
 
         /**
-         * OperationType.
+         * Operation Type Enum</br>
+         * <p>
+         * all All types</br>
+         * quota_create Create quota</br>
+         * quota_amount_adjust Adjust the amount of quota</br>
          */
         public Builder operationType(String operationType) {
             this.putQueryParameter("OperationType", operationType);
@@ -180,7 +188,7 @@ public class CustomerQuotaRecordListRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * Pagination, current page number, starting from 1.
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -189,7 +197,7 @@ public class CustomerQuotaRecordListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * Pagination, record number on each page. Maximum 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -198,7 +206,7 @@ public class CustomerQuotaRecordListRequest extends Request {
         }
 
         /**
-         * StartDate.
+         * Start Date Format: yyyy-MM-dd
          */
         public Builder startDate(String startDate) {
             this.putQueryParameter("StartDate", startDate);

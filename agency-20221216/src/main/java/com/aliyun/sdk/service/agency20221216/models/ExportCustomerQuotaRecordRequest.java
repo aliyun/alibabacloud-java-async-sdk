@@ -114,7 +114,7 @@ public class ExportCustomerQuotaRecordRequest extends Request {
         } 
 
         /**
-         * EndDate.
+         * End Date Format:  yyyy-MM-dd
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -123,7 +123,7 @@ public class ExportCustomerQuotaRecordRequest extends Request {
         }
 
         /**
-         * EndUserPk.
+         * Customer UID
          */
         public Builder endUserPk(Long endUserPk) {
             this.putQueryParameter("EndUserPk", endUserPk);
@@ -132,7 +132,11 @@ public class ExportCustomerQuotaRecordRequest extends Request {
         }
 
         /**
-         * Language.
+         * Multilingual Parameters, the default language is English.</br>
+         * <p>
+         * en: English</br>
+         * zh: Chinese</br>
+         * ja: Japanese </br>
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -141,7 +145,11 @@ public class ExportCustomerQuotaRecordRequest extends Request {
         }
 
         /**
-         * OperationType.
+         * Operation Type Enum</br>
+         * <p>
+         * all All types</br>
+         * quota_create Create quota</br>
+         * quota_amount_adjust Adjust the amount of quota</br>
          */
         public Builder operationType(String operationType) {
             this.putQueryParameter("OperationType", operationType);
@@ -150,7 +158,7 @@ public class ExportCustomerQuotaRecordRequest extends Request {
         }
 
         /**
-         * StartDate.
+         * Start Date Format:  yyyy-MM-dd
          */
         public Builder startDate(String startDate) {
             this.putQueryParameter("StartDate", startDate);

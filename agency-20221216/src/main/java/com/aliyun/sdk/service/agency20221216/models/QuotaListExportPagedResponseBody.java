@@ -110,7 +110,7 @@ public class QuotaListExportPagedResponseBody extends TeaModel {
         private Integer total; 
 
         /**
-         * Code.
+         * Status code of returning result, 200 means success.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +118,7 @@ public class QuotaListExportPagedResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * Listed data of returning result
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -126,7 +126,7 @@ public class QuotaListExportPagedResponseBody extends TeaModel {
         }
 
         /**
-         * Msg.
+         * Description of returning result
          */
         public Builder msg(String msg) {
             this.msg = msg;
@@ -134,7 +134,7 @@ public class QuotaListExportPagedResponseBody extends TeaModel {
         }
 
         /**
-         * PageNo.
+         * Current page number
          */
         public Builder pageNo(Integer pageNo) {
             this.pageNo = pageNo;
@@ -142,7 +142,7 @@ public class QuotaListExportPagedResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * Record number on each page
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -150,7 +150,7 @@ public class QuotaListExportPagedResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * ID of the Request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,7 @@ public class QuotaListExportPagedResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * Total volume
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -258,7 +258,7 @@ public class QuotaListExportPagedResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * CreateTime.
+             * Create Time
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -266,7 +266,7 @@ public class QuotaListExportPagedResponseBody extends TeaModel {
             }
 
             /**
-             * FileName.
+             * File Name
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -274,7 +274,7 @@ public class QuotaListExportPagedResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * Notification Message
              */
             public Builder message(String message) {
                 this.message = message;
@@ -282,7 +282,7 @@ public class QuotaListExportPagedResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * Display of Task Status
              */
             public Builder status(String status) {
                 this.status = status;
@@ -290,7 +290,11 @@ public class QuotaListExportPagedResponseBody extends TeaModel {
             }
 
             /**
-             * StatusCode.
+             * Task Status Enum</br>
+             * <p>
+             * 2: Exporting</br>
+             * 3: Export Success</br>
+             * -1: Export Fail</br>
              */
             public Builder statusCode(String statusCode) {
                 this.statusCode = statusCode;
@@ -298,7 +302,7 @@ public class QuotaListExportPagedResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * The link to download exported file.
              */
             public Builder url(String url) {
                 this.url = url;

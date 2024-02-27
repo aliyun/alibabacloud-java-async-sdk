@@ -85,14 +85,10 @@ public class GetMonthlyBillRequest extends Request {
         } 
 
         /**
-         * Bill Owner type.
+         * Bill Owner type. Value Range:</br>
          * <p>
-         * 
-         *  Value range:
-         * 
-         * 1: Master account 
-         * 
-         * 2: Sub account
+         * 1: Master account</br>
+         * 2: Sub account</br>
          */
         public Builder billOwner(String billOwner) {
             this.putQueryParameter("BillOwner", billOwner);
@@ -104,23 +100,15 @@ public class GetMonthlyBillRequest extends Request {
          * Value Range:
          * <p>
          * 
-         * MonthlyInvoice
-         * 
-         * MonthRefundInvoice
-         * 
-         * MonthlySummary
-         * 
-         * MonthlyInstanceAddAdjustBill 
-         * 
-         * MonthlyInstanceRefundBill
-         * 
-         * MonthlyAddAdjustInvoce
-         * 
-         * MonthlyRefundAdjustInvoce 
-         * 
-         * MonthlyInstanceConsumeV2 
-         * 
-         * MarginReportV2
+         * - MonthlyInvoice
+         * - MonthRefundInvoice
+         * - MonthlySummary
+         * - MonthlyInstanceAddAdjustBill 
+         * - MonthlyInstanceRefundBill
+         * - MonthlyAddAdjustInvoce
+         * - MonthlyRefundAdjustInvoce 
+         * - MonthlyInstanceConsumeV2 
+         * - MarginReportV2
          */
         public Builder billType(String billType) {
             this.putQueryParameter("BillType", billType);

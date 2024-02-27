@@ -145,6 +145,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Note that sometimes you may find that the customer\\"s Used Credit is negative. This indicates that there is no need to restore the Used Credit, and its ready for customer\\"s usage. This phenomenon occurs because a refund is generated while the customer\\"s credit is full, thereby triggered additional increasing on the customer\\"s credit.
+      * For example, if the customer\\"s maximum Available Credit is 1000 with no usage, and a refund of 300 occurs, the Used Credit will become -300.
+      *
+     */
     @Override
     public CompletableFuture<DeductOutstandingBalanceResponse> deductOutstandingBalance(DeductOutstandingBalanceRequest request) {
         try {
@@ -159,6 +164,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * The caller should be the Partner as identified in the Alibaba Cloud distribution model. </br>
+      * **This content is only published on the international site. **
+      *
+     */
     @Override
     public CompletableFuture<EditEndUserStatusResponse> editEndUserStatus(EditEndUserStatusRequest request) {
         try {
@@ -173,6 +183,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * The caller should be the Partner as identified in the Alibaba Cloud distribution model. </br>
+      * **This content is only published on the international site. **
+      *
+     */
     @Override
     public CompletableFuture<EditNewBuyStatusResponse> editNewBuyStatus(EditNewBuyStatusRequest request) {
         try {
@@ -187,6 +202,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * The caller should be the Partner as identified in the Alibaba Cloud distribution model. </br>
+      * **This content is only published on the international site. **
+      *
+     */
     @Override
     public CompletableFuture<EditZeroCreditShutdownResponse> editZeroCreditShutdown(EditZeroCreditShutdownRequest request) {
         try {
@@ -201,6 +221,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Caller must be a Partner from International Site, either Distribution or Reseller will do.
+      *
+     */
     @Override
     public CompletableFuture<ExportCustomerQuotaRecordResponse> exportCustomerQuotaRecord(ExportCustomerQuotaRecordRequest request) {
         try {
@@ -299,6 +323,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * The current API request rate for the Cloud Product has not been disclosed.
+      *
+     */
     @Override
     public CompletableFuture<InviteSubAccountResponse> inviteSubAccount(InviteSubAccountRequest request) {
         try {
@@ -313,6 +341,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * The current API request rate for cloud products has not been disclosed.
+      *
+     */
     @Override
     public CompletableFuture<ListCountriesResponse> listCountries(ListCountriesRequest request) {
         try {
@@ -327,6 +359,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Caller must be a Partner from International Site, either Distribution or Reseller will do.
+      *
+     */
     @Override
     public CompletableFuture<QuotaListExportPagedResponse> quotaListExportPaged(QuotaListExportPagedRequest request) {
         try {

@@ -74,7 +74,12 @@ public class SetAccountInfoResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * Result Code:
+         * <p>
+         * *   200 OK
+         * *   1109 System error
+         * *   3030 Sub Account Nickname exceeds maximum length,  maximum length 150 bytes.
+         * *   3031 Remark exceeds maximum length,  maximum length 3000 bytes.
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +87,7 @@ public class SetAccountInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * Message information
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +95,7 @@ public class SetAccountInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * Request ID, Alibaba Cloud will track errors with this.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +103,7 @@ public class SetAccountInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Candidate Value: True/False, which indicates whether the current API call itself is successful. It does not guarantee the success of subsequent business operations.
          */
         public Builder success(Boolean success) {
             this.success = success;

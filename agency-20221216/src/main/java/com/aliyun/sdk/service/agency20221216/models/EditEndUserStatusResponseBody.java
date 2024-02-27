@@ -86,7 +86,7 @@ public class EditEndUserStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * Status Code</br>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class EditEndUserStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * Success or not</br>
          */
         public Builder data(String data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class EditEndUserStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * Message</br>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class EditEndUserStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Msg.
+         * Message</br>
          */
         public Builder msg(String msg) {
             this.msg = msg;
@@ -118,7 +118,7 @@ public class EditEndUserStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * Request ID</br>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

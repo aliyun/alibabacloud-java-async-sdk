@@ -55,7 +55,9 @@ public class InviteSubAccountRequest extends Request {
         } 
 
         /**
-         * AccountInfoList.
+         * List of invited account information,  less than 5 accounts at a time.</br>
+         * <p>
+         * `Sub-levels <= 5`
          */
         public Builder accountInfoList(java.util.List < AccountInfoList> accountInfoList) {
             this.putQueryParameter("AccountInfoList", accountInfoList);
@@ -188,7 +190,10 @@ public class InviteSubAccountRequest extends Request {
             private String zeroCreditShutdownPolicy; 
 
             /**
-             * AccountNickname.
+             * The name of Sub Account:</br>
+             * <p>
+             * 1. Use the official name of Company, if Sub Account is an enterprise.</br>
+             * 2. Use the official name of Partner, if Sub Account is a T2 reseller.</br>
              */
             public Builder accountNickname(String accountNickname) {
                 this.accountNickname = accountNickname;
@@ -196,7 +201,7 @@ public class InviteSubAccountRequest extends Request {
             }
 
             /**
-             * CreditLine.
+             * The total budget Credit of Sub Account that distributed by Partner.
              */
             public Builder creditLine(String creditLine) {
                 this.creditLine = creditLine;
@@ -204,7 +209,7 @@ public class InviteSubAccountRequest extends Request {
             }
 
             /**
-             * CustomerId.
+             * Customer ID, Returning ID from CreateCustomer API.
              */
             public Builder customerId(String customerId) {
                 this.customerId = customerId;
@@ -212,7 +217,7 @@ public class InviteSubAccountRequest extends Request {
             }
 
             /**
-             * EmailAddress.
+             * The email address of End User,  which will receive the invitation email.
              */
             public Builder emailAddress(String emailAddress) {
                 this.emailAddress = emailAddress;
@@ -220,7 +225,10 @@ public class InviteSubAccountRequest extends Request {
             }
 
             /**
-             * NewBuyStatus.
+             * Initial Order Status</br>
+             * <p>
+             * 1. ban：Ban the new purchase action--After End User finish registration and authorization, they can\"t issue Cloud Resource order immediately. Partner should manually update the "Order Control" settings as "Normal" to enable new order.</br>
+             * 2. normal：Normal--After End User finished registration and authorization, they can issue Cloud Resource order immediately.</br>
              */
             public Builder newBuyStatus(String newBuyStatus) {
                 this.newBuyStatus = newBuyStatus;
@@ -228,7 +236,7 @@ public class InviteSubAccountRequest extends Request {
             }
 
             /**
-             * Remark.
+             * Description of Sub Account.
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -236,7 +244,12 @@ public class InviteSubAccountRequest extends Request {
             }
 
             /**
-             * SubAccountType.
+             * The type of Sub Account</br>
+             * <p>
+             * 
+             * 1 Agency\"s End User</br>
+             * 2 Reseller\"s End user</br>
+             * 5 Reseller\"s T2 Partner</br>
              */
             public Builder subAccountType(String subAccountType) {
                 this.subAccountType = subAccountType;
@@ -244,7 +257,11 @@ public class InviteSubAccountRequest extends Request {
             }
 
             /**
-             * ZeroCreditShutdownPolicy.
+             * Partner\"s Shutdown Policy Management for Sub Account.</br>
+             * <p>
+             * 1: delayStop. The account have Shutdown-delay Privilege,  After Shutdown-delay Credit is ran out, Alibaba Cloud will take over resources and keep the instance for 15 days. In addition, the instance will be released if Sub Account failed to pay the bill within these 15 days.</br>
+             * 2: noStop. Partner will manually manage Shutdown Status for Sub Account. Meanwhile, System would not manage the resource\"s life-circle of Sub Account.</br>
+             * 3: immediatelyStop. Once valid quota of Sub Account falls below 0 and be identified as defaulting account, it will trigger the instance shutdown immediately.</br>
              */
             public Builder zeroCreditShutdownPolicy(String zeroCreditShutdownPolicy) {
                 this.zeroCreditShutdownPolicy = zeroCreditShutdownPolicy;

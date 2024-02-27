@@ -110,7 +110,7 @@ public class CustomerQuotaRecordListResponseBody extends TeaModel {
         private Integer total; 
 
         /**
-         * Code.
+         * Status code of returning result, 200 means success.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +118,7 @@ public class CustomerQuotaRecordListResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * Listed data of returning result
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -126,7 +126,7 @@ public class CustomerQuotaRecordListResponseBody extends TeaModel {
         }
 
         /**
-         * Msg.
+         * Description of returning data
          */
         public Builder msg(String msg) {
             this.msg = msg;
@@ -134,7 +134,7 @@ public class CustomerQuotaRecordListResponseBody extends TeaModel {
         }
 
         /**
-         * PageNo.
+         * Current page number
          */
         public Builder pageNo(Integer pageNo) {
             this.pageNo = pageNo;
@@ -142,7 +142,7 @@ public class CustomerQuotaRecordListResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * Record number on each page
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -150,7 +150,7 @@ public class CustomerQuotaRecordListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * ID of request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,7 @@ public class CustomerQuotaRecordListResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * Total volume
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -282,7 +282,7 @@ public class CustomerQuotaRecordListResponseBody extends TeaModel {
             private String updateBeforeAmount; 
 
             /**
-             * OperationSubmitType.
+             * The way to submit the quota adjustment operation. API/ACPN
              */
             public Builder operationSubmitType(String operationSubmitType) {
                 this.operationSubmitType = operationSubmitType;
@@ -290,7 +290,7 @@ public class CustomerQuotaRecordListResponseBody extends TeaModel {
             }
 
             /**
-             * OperationTime.
+             * The time of submit the quota adjustment operation.
              */
             public Builder operationTime(String operationTime) {
                 this.operationTime = operationTime;
@@ -298,7 +298,11 @@ public class CustomerQuotaRecordListResponseBody extends TeaModel {
             }
 
             /**
-             * OperationTypeCode.
+             * Operation Type Enum</br>
+             * <p>
+             * all All types</br>
+             * quota_create Create quota</br>
+             * quota_amount_adjust Adjust the amount of quota</br>
              */
             public Builder operationTypeCode(String operationTypeCode) {
                 this.operationTypeCode = operationTypeCode;
@@ -306,7 +310,7 @@ public class CustomerQuotaRecordListResponseBody extends TeaModel {
             }
 
             /**
-             * OperationTypeDesc.
+             * The description of submitted quota adjustment operation.
              */
             public Builder operationTypeDesc(String operationTypeDesc) {
                 this.operationTypeDesc = operationTypeDesc;
@@ -314,7 +318,7 @@ public class CustomerQuotaRecordListResponseBody extends TeaModel {
             }
 
             /**
-             * OperationUid.
+             * The UID of operator(Partner\"s UID).
              */
             public Builder operationUid(String operationUid) {
                 this.operationUid = operationUid;
@@ -322,7 +326,7 @@ public class CustomerQuotaRecordListResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateAfterAmount.
+             * Updated quota amount
              */
             public Builder updateAfterAmount(String updateAfterAmount) {
                 this.updateAfterAmount = updateAfterAmount;
@@ -330,7 +334,7 @@ public class CustomerQuotaRecordListResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateAmount.
+             * The difference amount between updated quota and original quota.
              */
             public Builder updateAmount(String updateAmount) {
                 this.updateAmount = updateAmount;
@@ -338,7 +342,7 @@ public class CustomerQuotaRecordListResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateBeforeAmount.
+             * Original quota amount
              */
             public Builder updateBeforeAmount(String updateBeforeAmount) {
                 this.updateBeforeAmount = updateBeforeAmount;

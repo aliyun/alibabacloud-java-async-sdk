@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.agency20221216;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.agency20221216.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -31,14 +32,38 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CustomerQuotaRecordListResponse> customerQuotaRecordList(CustomerQuotaRecordListRequest request);
 
+    /**
+      * Note that sometimes you may find that the customer\\"s Used Credit is negative. This indicates that there is no need to restore the Used Credit, and its ready for customer\\"s usage. This phenomenon occurs because a refund is generated while the customer\\"s credit is full, thereby triggered additional increasing on the customer\\"s credit.
+      * For example, if the customer\\"s maximum Available Credit is 1000 with no usage, and a refund of 300 occurs, the Used Credit will become -300.
+      *
+     */
     CompletableFuture<DeductOutstandingBalanceResponse> deductOutstandingBalance(DeductOutstandingBalanceRequest request);
 
+    /**
+      * The caller should be the Partner as identified in the Alibaba Cloud distribution model. </br>
+      * **This content is only published on the international site. **
+      *
+     */
     CompletableFuture<EditEndUserStatusResponse> editEndUserStatus(EditEndUserStatusRequest request);
 
+    /**
+      * The caller should be the Partner as identified in the Alibaba Cloud distribution model. </br>
+      * **This content is only published on the international site. **
+      *
+     */
     CompletableFuture<EditNewBuyStatusResponse> editNewBuyStatus(EditNewBuyStatusRequest request);
 
+    /**
+      * The caller should be the Partner as identified in the Alibaba Cloud distribution model. </br>
+      * **This content is only published on the international site. **
+      *
+     */
     CompletableFuture<EditZeroCreditShutdownResponse> editZeroCreditShutdown(EditZeroCreditShutdownRequest request);
 
+    /**
+      * Caller must be a Partner from International Site, either Distribution or Reseller will do.
+      *
+     */
     CompletableFuture<ExportCustomerQuotaRecordResponse> exportCustomerQuotaRecord(ExportCustomerQuotaRecordRequest request);
 
     CompletableFuture<GetAccountInfoResponse> getAccountInfo(GetAccountInfoRequest request);
@@ -53,10 +78,22 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetUnassociatedCustomerResponse> getUnassociatedCustomer(GetUnassociatedCustomerRequest request);
 
+    /**
+      * The current API request rate for the Cloud Product has not been disclosed.
+      *
+     */
     CompletableFuture<InviteSubAccountResponse> inviteSubAccount(InviteSubAccountRequest request);
 
+    /**
+      * The current API request rate for cloud products has not been disclosed.
+      *
+     */
     CompletableFuture<ListCountriesResponse> listCountries(ListCountriesRequest request);
 
+    /**
+      * Caller must be a Partner from International Site, either Distribution or Reseller will do.
+      *
+     */
     CompletableFuture<QuotaListExportPagedResponse> quotaListExportPaged(QuotaListExportPagedRequest request);
 
     CompletableFuture<ResendEmailResponse> resendEmail(ResendEmailRequest request);

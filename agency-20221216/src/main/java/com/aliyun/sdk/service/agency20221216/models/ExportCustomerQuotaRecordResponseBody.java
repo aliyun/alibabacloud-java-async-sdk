@@ -74,7 +74,7 @@ public class ExportCustomerQuotaRecordResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * code
+         * Code
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class ExportCustomerQuotaRecordResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * Data
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +90,7 @@ public class ExportCustomerQuotaRecordResponseBody extends TeaModel {
         }
 
         /**
-         * Msg.
+         * Description
          */
         public Builder msg(String msg) {
             this.msg = msg;
@@ -98,7 +98,7 @@ public class ExportCustomerQuotaRecordResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * ID of the Request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +150,7 @@ public class ExportCustomerQuotaRecordResponseBody extends TeaModel {
             private Long id; 
 
             /**
-             * Cost.
+             * Estimated duration, in minutes.
              */
             public Builder cost(Integer cost) {
                 this.cost = cost;
@@ -158,7 +158,7 @@ public class ExportCustomerQuotaRecordResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * ID of Export task
              */
             public Builder id(Long id) {
                 this.id = id;

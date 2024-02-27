@@ -70,7 +70,7 @@ public class DeductOutstandingBalanceRequest extends Request {
         } 
 
         /**
-         * DeductAmount.
+         * The Deducted Credit to be offset.
          */
         public Builder deductAmount(String deductAmount) {
             this.putQueryParameter("DeductAmount", deductAmount);
@@ -79,7 +79,7 @@ public class DeductOutstandingBalanceRequest extends Request {
         }
 
         /**
-         * Uid.
+         * Account UID of Distribution Customer.
          */
         public Builder uid(Long uid) {
             this.putQueryParameter("Uid", uid);

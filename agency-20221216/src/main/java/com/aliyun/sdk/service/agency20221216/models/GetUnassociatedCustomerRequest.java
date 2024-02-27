@@ -70,7 +70,7 @@ public class GetUnassociatedCustomerRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * Pagination, current page.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -79,7 +79,7 @@ public class GetUnassociatedCustomerRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * Pagination, record number on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

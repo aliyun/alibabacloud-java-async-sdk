@@ -68,7 +68,12 @@ public class EditNewBuyStatusRequest extends Request {
         } 
 
         /**
-         * NewBuyStatus.
+         * New Purchase Status</br>
+         * <p>
+         * 
+         * - cancelBan: Cancel the restriction for New Purchase request</br>
+         * 
+         * - ban: ban the New Purchase request</br>
          */
         public Builder newBuyStatus(String newBuyStatus) {
             this.putQueryParameter("NewBuyStatus", newBuyStatus);
@@ -77,7 +82,7 @@ public class EditNewBuyStatusRequest extends Request {
         }
 
         /**
-         * Uid.
+         * Customer UID
          */
         public Builder uid(Long uid) {
             this.putQueryParameter("Uid", uid);

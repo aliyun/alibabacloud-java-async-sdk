@@ -86,7 +86,7 @@ public class CreateCustomerResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * Code indicating whether the call was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class CreateCustomerResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * Data indicating whether a customer was successfully created. If it\"s "true", the Message contains CID.
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class CreateCustomerResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * Massage indicating whether the call was successful.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class CreateCustomerResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * Request ID, Alibaba Cloud will track errors with this.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class CreateCustomerResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Candidate Value: True/False, which indicates whether the current API call it self was successful. It does not guarantee the success of subsequent business operations.
          */
         public Builder success(Boolean success) {
             this.success = success;

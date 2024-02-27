@@ -85,7 +85,10 @@ public class GetDailyBillRequest extends Request {
         } 
 
         /**
-         * BillOwner.
+         * Bill Owner type. Value Range:</br>
+         * <p>
+         * 1: Master account</br>
+         * 2: Sub account</br>
          */
         public Builder billOwner(String billOwner) {
             this.putQueryParameter("BillOwner", billOwner);
@@ -94,7 +97,13 @@ public class GetDailyBillRequest extends Request {
         }
 
         /**
-         * BillType.
+         * BillType. Value Range:</br>
+         * <p>
+         * 
+         * - DailyOrder(Deprecated)
+         * - DailyBill (Deprecated)
+         * - DailyInstanceBill (Deprecated)
+         * - DailyInstanceBillV2
          */
         public Builder billType(String billType) {
             this.putQueryParameter("BillType", billType);

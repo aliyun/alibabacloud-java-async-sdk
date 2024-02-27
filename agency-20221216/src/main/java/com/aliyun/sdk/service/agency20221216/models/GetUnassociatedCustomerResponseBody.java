@@ -98,7 +98,10 @@ public class GetUnassociatedCustomerResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * Error Code, Candidate Value：
+         * <p>
+         * * 200: OK
+         * * 1109: System error
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +109,7 @@ public class GetUnassociatedCustomerResponseBody extends TeaModel {
         }
 
         /**
-         * InviteInfoList.
+         * List of Invitation Information
          */
         public Builder inviteInfoList(InviteInfoList inviteInfoList) {
             this.inviteInfoList = inviteInfoList;
@@ -114,7 +117,7 @@ public class GetUnassociatedCustomerResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * Message information
          */
         public Builder message(String message) {
             this.message = message;
@@ -122,7 +125,7 @@ public class GetUnassociatedCustomerResponseBody extends TeaModel {
         }
 
         /**
-         * PageInfo.
+         * Pagination Information
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -130,7 +133,7 @@ public class GetUnassociatedCustomerResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * Request ID, Alibaba Cloud will track errors with this.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +141,7 @@ public class GetUnassociatedCustomerResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Candidate Value: True/False, which indicates whether the current API call itself is successful. It does not guarantee the success of subsequent business operations.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -226,7 +229,7 @@ public class GetUnassociatedCustomerResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * AccountNickname.
+             * The name of Customer who are to be invited.
              */
             public Builder accountNickname(String accountNickname) {
                 this.accountNickname = accountNickname;
@@ -234,7 +237,7 @@ public class GetUnassociatedCustomerResponseBody extends TeaModel {
             }
 
             /**
-             * Email.
+             * The Email of Customer who are to be invited.
              */
             public Builder email(String email) {
                 this.email = email;
@@ -242,7 +245,7 @@ public class GetUnassociatedCustomerResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The time of email been sent out.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -250,7 +253,7 @@ public class GetUnassociatedCustomerResponseBody extends TeaModel {
             }
 
             /**
-             * InviteId.
+             * Invitation ID
              */
             public Builder inviteId(Long inviteId) {
                 this.inviteId = inviteId;
@@ -258,7 +261,12 @@ public class GetUnassociatedCustomerResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * Invitation Status:
+             * <p>
+             * * 0 No visit on registration URL
+             * * 1 Successful Registration
+             * * 2 Unsuccessful Registration
+             * * 3 Registration URL have been visited, but no submitted sheet/ticket.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -364,7 +372,7 @@ public class GetUnassociatedCustomerResponseBody extends TeaModel {
             private Integer total; 
 
             /**
-             * Page.
+             * Pagination, current page.
              */
             public Builder page(Integer page) {
                 this.page = page;
@@ -372,7 +380,7 @@ public class GetUnassociatedCustomerResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * Pagination, record number on each page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -380,7 +388,7 @@ public class GetUnassociatedCustomerResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * Pagination, page volume in total.
              */
             public Builder total(Integer total) {
                 this.total = total;

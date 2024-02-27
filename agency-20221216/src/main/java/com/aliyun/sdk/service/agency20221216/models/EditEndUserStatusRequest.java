@@ -68,7 +68,12 @@ public class EditEndUserStatusRequest extends Request {
         } 
 
         /**
-         * CreditStatus.
+         * Shutdown Status</br>
+         * <p>
+         * 
+         * - postPayFreeze, the account have been blocked</br>
+         * 
+         * - postPayThaw, the account have been unlocked</br>
          */
         public Builder creditStatus(String creditStatus) {
             this.putQueryParameter("CreditStatus", creditStatus);
@@ -77,7 +82,7 @@ public class EditEndUserStatusRequest extends Request {
         }
 
         /**
-         * uid
+         * UID
          */
         public Builder uid(Long uid) {
             this.putQueryParameter("Uid", uid);

@@ -86,7 +86,10 @@ public class InviteSubAccountResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * Error Code: </br>
+         * <p>
+         * • 200 OK</br>
+         * • 1109 System Error</br>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +97,7 @@ public class InviteSubAccountResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * Message</br>
          */
         public Builder message(String message) {
             this.message = message;
@@ -102,7 +105,7 @@ public class InviteSubAccountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * Request ID, Alibaba Cloud will track errors with this ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +113,7 @@ public class InviteSubAccountResponseBody extends TeaModel {
         }
 
         /**
-         * Results.
+         * List of invitation sending results
          */
         public Builder results(Results results) {
             this.results = results;
@@ -118,7 +121,7 @@ public class InviteSubAccountResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Candidate Values: True/False, this value states if the current API calling action is successful. It does not guarantee the success of subsequent business operations.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -182,7 +185,7 @@ public class InviteSubAccountResponseBody extends TeaModel {
             private String regUrl; 
 
             /**
-             * Days.
+             * Valid days of registration URL, count on daily basis.
              */
             public Builder days(Integer days) {
                 this.days = days;
@@ -190,7 +193,7 @@ public class InviteSubAccountResponseBody extends TeaModel {
             }
 
             /**
-             * InviteId.
+             * Invitation ID, The invitation status tracking code.
              */
             public Builder inviteId(Long inviteId) {
                 this.inviteId = inviteId;
@@ -198,7 +201,7 @@ public class InviteSubAccountResponseBody extends TeaModel {
             }
 
             /**
-             * RegUrl.
+             * URL for Partner Customer Registration.
              */
             public Builder regUrl(String regUrl) {
                 this.regUrl = regUrl;
@@ -275,7 +278,7 @@ public class InviteSubAccountResponseBody extends TeaModel {
             private Boolean success; 
 
             /**
-             * Code.
+             * Error Code, 200 OK
              */
             public Builder code(String code) {
                 this.code = code;
@@ -283,7 +286,7 @@ public class InviteSubAccountResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * Message, Notes of Code
              */
             public Builder message(String message) {
                 this.message = message;
@@ -291,7 +294,7 @@ public class InviteSubAccountResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * Returning Message of Invitation Results
              */
             public Builder result(Result result) {
                 this.result = result;
@@ -299,7 +302,7 @@ public class InviteSubAccountResponseBody extends TeaModel {
             }
 
             /**
-             * Success.
+             * Always true.
              */
             public Builder success(Boolean success) {
                 this.success = success;
@@ -340,7 +343,7 @@ public class InviteSubAccountResponseBody extends TeaModel {
             private java.util.List < ResultsResult> result; 
 
             /**
-             * Result.
+             * Returning Message of Invitation Results
              */
             public Builder result(java.util.List < ResultsResult> result) {
                 this.result = result;

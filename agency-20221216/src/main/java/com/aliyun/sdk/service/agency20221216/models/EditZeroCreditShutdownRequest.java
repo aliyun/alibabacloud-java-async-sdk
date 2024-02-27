@@ -68,7 +68,7 @@ public class EditZeroCreditShutdownRequest extends Request {
         } 
 
         /**
-         * ShutdownPolicy.
+         * UID
          */
         public Builder shutdownPolicy(String shutdownPolicy) {
             this.putQueryParameter("ShutdownPolicy", shutdownPolicy);
@@ -77,7 +77,7 @@ public class EditZeroCreditShutdownRequest extends Request {
         }
 
         /**
-         * uid
+         * No Change History
          */
         public Builder uid(Long uid) {
             this.putQueryParameter("Uid", uid);

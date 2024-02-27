@@ -114,7 +114,7 @@ public class CreateCustomerRequest extends Request {
         } 
 
         /**
-         * CustomerName.
+         * Customer\"s name.
          */
         public Builder customerName(String customerName) {
             this.putQueryParameter("CustomerName", customerName);
@@ -123,7 +123,7 @@ public class CreateCustomerRequest extends Request {
         }
 
         /**
-         * CustomerSource.
+         * The source/channel that allow client to connected with us. Please enumerate with Customer Source.
          */
         public Builder customerSource(String customerSource) {
             this.putQueryParameter("CustomerSource", customerSource);
@@ -132,7 +132,7 @@ public class CreateCustomerRequest extends Request {
         }
 
         /**
-         * CustomerSubTrade.
+         * The sub-industry that Customer\"s business belongs to. Please enumerate with Customer Trade.
          */
         public Builder customerSubTrade(String customerSubTrade) {
             this.putQueryParameter("CustomerSubTrade", customerSubTrade);
@@ -141,7 +141,7 @@ public class CreateCustomerRequest extends Request {
         }
 
         /**
-         * CustomerTrade.
+         * The industry that Customer\"s business belongs to. Please enumerate with Customer Trade.
          */
         public Builder customerTrade(String customerTrade) {
             this.putQueryParameter("CustomerTrade", customerTrade);
@@ -150,7 +150,7 @@ public class CreateCustomerRequest extends Request {
         }
 
         /**
-         * Nation.
+         * The region that Customer choose to launch the Cloud Service. Please use ListCountries to confirm the valid region list for current UID.
          */
         public Builder nation(String nation) {
             this.putQueryParameter("Nation", nation);

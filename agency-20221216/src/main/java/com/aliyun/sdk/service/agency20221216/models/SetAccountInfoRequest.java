@@ -83,7 +83,10 @@ public class SetAccountInfoRequest extends Request {
         } 
 
         /**
-         * AccountNickname.
+         * Sub Account Nickname. 
+         * <p>
+         * * Use the official name of Company, if Sub Account is an enterprise.
+         * * Use the official name of Partner, if Sub Account is a T2 reseller.
          */
         public Builder accountNickname(String accountNickname) {
             this.putQueryParameter("AccountNickname", accountNickname);
@@ -92,7 +95,7 @@ public class SetAccountInfoRequest extends Request {
         }
 
         /**
-         * Remark.
+         * Description of Sub Account.
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -101,7 +104,7 @@ public class SetAccountInfoRequest extends Request {
         }
 
         /**
-         * Uid.
+         * The UID of Sub Account.
          */
         public Builder uid(Long uid) {
             this.putQueryParameter("Uid", uid);

@@ -86,7 +86,10 @@ public class ListCountriesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * Error Code
+         * <p>
+         * * 200: OK
+         * * 1109: System error
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +97,7 @@ public class ListCountriesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * List of Region Code
          */
         public Builder data(java.util.List < String > data) {
             this.data = data;
@@ -102,7 +105,7 @@ public class ListCountriesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * Message information
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +113,7 @@ public class ListCountriesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * Request ID, Alibaba Cloud will track errors with this.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +121,7 @@ public class ListCountriesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Candidate Value: True/False, which indicates whether the current API call itself is successful. It does not guarantee the success of subsequent business operations.
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -86,7 +86,7 @@ public class EditZeroCreditShutdownResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * Success or not</br>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class EditZeroCreditShutdownResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * Request ID</br>
          */
         public Builder data(String data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class EditZeroCreditShutdownResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * Message</br>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class EditZeroCreditShutdownResponseBody extends TeaModel {
         }
 
         /**
-         * Msg.
+         * NO_STOP
          */
         public Builder msg(String msg) {
             this.msg = msg;
@@ -118,7 +118,7 @@ public class EditZeroCreditShutdownResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * success
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

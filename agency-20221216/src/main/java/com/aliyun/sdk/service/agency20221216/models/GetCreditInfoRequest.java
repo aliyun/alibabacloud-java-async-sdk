@@ -55,7 +55,7 @@ public class GetCreditInfoRequest extends Request {
         } 
 
         /**
-         * Uid.
+         * Sub Account UID
          */
         public Builder uid(Long uid) {
             this.putQueryParameter("Uid", uid);

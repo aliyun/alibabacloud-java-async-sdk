@@ -55,7 +55,9 @@ public class GetInviteStatusRequest extends Request {
         } 
 
         /**
-         * inviteId list
+         * inviteId list</br>
+         * <p>
+         * `Sub-levels <= 5`
          */
         public Builder inviteStatusList(java.util.List < InviteStatusList> inviteStatusList) {
             this.putQueryParameter("InviteStatusList", inviteStatusList);
@@ -97,7 +99,7 @@ public class GetInviteStatusRequest extends Request {
             private Long inviteId; 
 
             /**
-             * InviteId.
+             * Invitation ID, From interface InviteSubAccount
              */
             public Builder inviteId(Long inviteId) {
                 this.inviteId = inviteId;

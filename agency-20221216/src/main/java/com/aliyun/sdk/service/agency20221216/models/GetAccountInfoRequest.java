@@ -98,7 +98,7 @@ public class GetAccountInfoRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * Pagination, current page.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -107,7 +107,7 @@ public class GetAccountInfoRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * Pagination, record number on each page, maximum 20.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -116,7 +116,7 @@ public class GetAccountInfoRequest extends Request {
         }
 
         /**
-         * Uid.
+         * Account UID of Distribution Customer. This parameter and the UserType parameter must have one filled. If this parameter is empty, then check all Distribution Customer accounts of the selected UserType.
          */
         public Builder uid(Long uid) {
             this.putQueryParameter("Uid", uid);
@@ -125,7 +125,11 @@ public class GetAccountInfoRequest extends Request {
         }
 
         /**
-         * UserType.
+         * Distribution Customer\"s Account Type:
+         * <p>
+         * - 1 End User
+         * - 2 Enterprise
+         * - 3 T2 Partner
          */
         public Builder userType(String userType) {
             this.putQueryParameter("UserType", userType);

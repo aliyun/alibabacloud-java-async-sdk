@@ -55,7 +55,9 @@ public class ResendEmailRequest extends Request {
         } 
 
         /**
-         * InviteId.
+         * Invitation ID, from interface InviteSubAccount </br>
+         * <p>
+         * Note: This field type is Long, which may result in precision loss in serialization/deserialization process. Please ensure the value does not exceed 9007199254740991.
          */
         public Builder inviteId(Long inviteId) {
             this.putQueryParameter("InviteId", inviteId);
