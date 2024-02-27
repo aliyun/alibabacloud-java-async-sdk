@@ -60,6 +60,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<CreateCertificateWithCsrRequestResponse> createCertificateWithCsrRequest(CreateCertificateWithCsrRequestRequest request);
 
+    CompletableFuture<CreateCsrResponse> createCsr(CreateCsrRequest request);
+
     CompletableFuture<CreateWHClientCertificateResponse> createWHClientCertificate(CreateWHClientCertificateRequest request);
 
     CompletableFuture<DecryptResponse> decrypt(DecryptRequest request);
@@ -71,6 +73,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<DeleteCertificateRequestResponse> deleteCertificateRequest(DeleteCertificateRequestRequest request);
+
+    CompletableFuture<DeleteCsrResponse> deleteCsr(DeleteCsrRequest request);
 
     CompletableFuture<DeletePCACertResponse> deletePCACert(DeletePCACertRequest request);
 
@@ -93,6 +97,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetCertWarehouseQuotaResponse> getCertWarehouseQuota(GetCertWarehouseQuotaRequest request);
 
+    CompletableFuture<GetCsrDetailResponse> getCsrDetail(GetCsrDetailRequest request);
+
     /**
       * You can call this operation up to 100 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
@@ -106,6 +112,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListCertResponse> listCert(ListCertRequest request);
 
     CompletableFuture<ListCertWarehouseResponse> listCertWarehouse(ListCertWarehouseRequest request);
+
+    CompletableFuture<ListCsrResponse> listCsr(ListCsrRequest request);
 
     /**
       * You can call the ListUserCertificateOrder operation to query the certificates or certificate orders of users. If you set OrderType to CERT or UPLOAD, certificates are returned. If you set OrderType to CPACK or BUY, certificate orders are returned.
@@ -125,6 +133,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RevokeWHClientCertificateResponse> revokeWHClientCertificate(RevokeWHClientCertificateRequest request);
 
     CompletableFuture<SignResponse> sign(SignRequest request);
+
+    CompletableFuture<UpdateCsrResponse> updateCsr(UpdateCsrRequest request);
+
+    CompletableFuture<UploadCsrResponse> uploadCsr(UploadCsrRequest request);
 
     /**
       * The unique identifier of the certificate.
