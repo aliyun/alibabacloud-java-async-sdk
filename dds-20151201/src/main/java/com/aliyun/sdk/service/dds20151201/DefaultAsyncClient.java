@@ -206,7 +206,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Creates or clones an ApsaraDB for MongoDB replica set instance.
+      * Make sure that you fully understand the billing methods and [pricing](https://www.aliyun.com/price/product#/mongodb/detail/mongodb_computeudr_dp_cn) of ApsaraDB for MongoDB before you call this operation.
+      * For more information about the instance types of ApsaraDB for MongoDB instances, see [Instance types](https://www.alibabacloud.com/help/en/mongodb/product-overview/instance-types-1).
+      * To create sharded cluster instances, you can call the [CreateShardingDBInstance](~~CreateShardingDBInstance~~) operation.
       *
      */
     @Override

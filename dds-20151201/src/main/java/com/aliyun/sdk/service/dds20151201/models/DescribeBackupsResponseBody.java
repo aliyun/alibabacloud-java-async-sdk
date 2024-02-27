@@ -152,6 +152,9 @@ public class DescribeBackupsResponseBody extends TeaModel {
         @NameInMap("BackupIntranetDownloadURL")
         private String backupIntranetDownloadURL;
 
+        @NameInMap("BackupJobId")
+        private Long backupJobId;
+
         @NameInMap("BackupMethod")
         private String backupMethod;
 
@@ -176,6 +179,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             this.backupEndTime = builder.backupEndTime;
             this.backupId = builder.backupId;
             this.backupIntranetDownloadURL = builder.backupIntranetDownloadURL;
+            this.backupJobId = builder.backupJobId;
             this.backupMethod = builder.backupMethod;
             this.backupMode = builder.backupMode;
             this.backupSize = builder.backupSize;
@@ -228,6 +232,13 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return backupJobId
+         */
+        public Long getBackupJobId() {
+            return this.backupJobId;
+        }
+
+        /**
          * @return backupMethod
          */
         public String getBackupMethod() {
@@ -275,6 +286,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             private String backupEndTime; 
             private Integer backupId; 
             private String backupIntranetDownloadURL; 
+            private Long backupJobId; 
             private String backupMethod; 
             private String backupMode; 
             private Long backupSize; 
@@ -322,6 +334,14 @@ public class DescribeBackupsResponseBody extends TeaModel {
              */
             public Builder backupIntranetDownloadURL(String backupIntranetDownloadURL) {
                 this.backupIntranetDownloadURL = backupIntranetDownloadURL;
+                return this;
+            }
+
+            /**
+             * BackupJobId.
+             */
+            public Builder backupJobId(Long backupJobId) {
+                this.backupJobId = backupJobId;
                 return this;
             }
 

@@ -62,7 +62,7 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
         private String securityIps; 
 
         /**
-         * Whether to display DAS whitelist information.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
         }
 
         /**
-         * The IP addresses in the default whitelist.
+         * An array that consists of the information of IP whitelists.
          */
         public Builder securityIpGroups(SecurityIpGroups securityIpGroups) {
             this.securityIpGroups = securityIpGroups;
@@ -78,7 +78,7 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the instance.
+         * The IP addresses in the default whitelist.
          */
         public Builder securityIps(String securityIps) {
             this.securityIps = securityIps;
@@ -142,7 +142,7 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
             private String securityIpList; 
 
             /**
-             * An array that consists of the information of IP whitelists.
+             * The attribute of the IP address whitelist.
              */
             public Builder securityIpGroupAttribute(String securityIpGroupAttribute) {
                 this.securityIpGroupAttribute = securityIpGroupAttribute;
@@ -150,7 +150,7 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request.
+             * The name of the IP whitelist.
              */
             public Builder securityIpGroupName(String securityIpGroupName) {
                 this.securityIpGroupName = securityIpGroupName;

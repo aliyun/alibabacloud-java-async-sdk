@@ -34,6 +34,10 @@ public class ModifyBackupPolicyRequest extends Request {
     private Long enableBackupLog;
 
     @Query
+    @NameInMap("HighFrequencyBackupRetention")
+    private Long highFrequencyBackupRetention;
+
+    @Query
     @NameInMap("LogBackupRetentionPeriod")
     private Long logBackupRetentionPeriod;
 
@@ -64,10 +68,6 @@ public class ModifyBackupPolicyRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
-    @NameInMap("SecurityToken")
-    private String securityToken;
-
-    @Query
     @NameInMap("SnapshotBackupType")
     private String snapshotBackupType;
 
@@ -78,6 +78,7 @@ public class ModifyBackupPolicyRequest extends Request {
         this.backupRetentionPeriod = builder.backupRetentionPeriod;
         this.DBInstanceId = builder.DBInstanceId;
         this.enableBackupLog = builder.enableBackupLog;
+        this.highFrequencyBackupRetention = builder.highFrequencyBackupRetention;
         this.logBackupRetentionPeriod = builder.logBackupRetentionPeriod;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -85,7 +86,6 @@ public class ModifyBackupPolicyRequest extends Request {
         this.preferredBackupTime = builder.preferredBackupTime;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.securityToken = builder.securityToken;
         this.snapshotBackupType = builder.snapshotBackupType;
     }
 
@@ -138,6 +138,13 @@ public class ModifyBackupPolicyRequest extends Request {
     }
 
     /**
+     * @return highFrequencyBackupRetention
+     */
+    public Long getHighFrequencyBackupRetention() {
+        return this.highFrequencyBackupRetention;
+    }
+
+    /**
      * @return logBackupRetentionPeriod
      */
     public Long getLogBackupRetentionPeriod() {
@@ -187,13 +194,6 @@ public class ModifyBackupPolicyRequest extends Request {
     }
 
     /**
-     * @return securityToken
-     */
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
-    /**
      * @return snapshotBackupType
      */
     public String getSnapshotBackupType() {
@@ -206,6 +206,7 @@ public class ModifyBackupPolicyRequest extends Request {
         private Long backupRetentionPeriod; 
         private String DBInstanceId; 
         private Long enableBackupLog; 
+        private Long highFrequencyBackupRetention; 
         private Long logBackupRetentionPeriod; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -213,7 +214,6 @@ public class ModifyBackupPolicyRequest extends Request {
         private String preferredBackupTime; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String securityToken; 
         private String snapshotBackupType; 
 
         private Builder() {
@@ -227,6 +227,7 @@ public class ModifyBackupPolicyRequest extends Request {
             this.backupRetentionPeriod = request.backupRetentionPeriod;
             this.DBInstanceId = request.DBInstanceId;
             this.enableBackupLog = request.enableBackupLog;
+            this.highFrequencyBackupRetention = request.highFrequencyBackupRetention;
             this.logBackupRetentionPeriod = request.logBackupRetentionPeriod;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -234,7 +235,6 @@ public class ModifyBackupPolicyRequest extends Request {
             this.preferredBackupTime = request.preferredBackupTime;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.securityToken = request.securityToken;
             this.snapshotBackupType = request.snapshotBackupType;
         } 
 
@@ -303,6 +303,15 @@ public class ModifyBackupPolicyRequest extends Request {
         public Builder enableBackupLog(Long enableBackupLog) {
             this.putQueryParameter("EnableBackupLog", enableBackupLog);
             this.enableBackupLog = enableBackupLog;
+            return this;
+        }
+
+        /**
+         * HighFrequencyBackupRetention.
+         */
+        public Builder highFrequencyBackupRetention(Long highFrequencyBackupRetention) {
+            this.putQueryParameter("HighFrequencyBackupRetention", highFrequencyBackupRetention);
+            this.highFrequencyBackupRetention = highFrequencyBackupRetention;
             return this;
         }
 
@@ -383,15 +392,6 @@ public class ModifyBackupPolicyRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * SecurityToken.
-         */
-        public Builder securityToken(String securityToken) {
-            this.putQueryParameter("SecurityToken", securityToken);
-            this.securityToken = securityToken;
             return this;
         }
 

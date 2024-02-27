@@ -21,6 +21,9 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     @NameInMap("EnableBackupLog")
     private Integer enableBackupLog;
 
+    @NameInMap("HighFrequencyBackupRetention")
+    private String highFrequencyBackupRetention;
+
     @NameInMap("LogBackupRetentionPeriod")
     private Integer logBackupRetentionPeriod;
 
@@ -40,6 +43,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         this.backupInterval = builder.backupInterval;
         this.backupRetentionPeriod = builder.backupRetentionPeriod;
         this.enableBackupLog = builder.enableBackupLog;
+        this.highFrequencyBackupRetention = builder.highFrequencyBackupRetention;
         this.logBackupRetentionPeriod = builder.logBackupRetentionPeriod;
         this.preferredBackupPeriod = builder.preferredBackupPeriod;
         this.preferredBackupTime = builder.preferredBackupTime;
@@ -74,6 +78,13 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
      */
     public Integer getEnableBackupLog() {
         return this.enableBackupLog;
+    }
+
+    /**
+     * @return highFrequencyBackupRetention
+     */
+    public String getHighFrequencyBackupRetention() {
+        return this.highFrequencyBackupRetention;
     }
 
     /**
@@ -115,6 +126,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         private Integer backupInterval; 
         private String backupRetentionPeriod; 
         private Integer enableBackupLog; 
+        private String highFrequencyBackupRetention; 
         private Integer logBackupRetentionPeriod; 
         private String preferredBackupPeriod; 
         private String preferredBackupTime; 
@@ -158,6 +170,14 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
          */
         public Builder enableBackupLog(Integer enableBackupLog) {
             this.enableBackupLog = enableBackupLog;
+            return this;
+        }
+
+        /**
+         * HighFrequencyBackupRetention.
+         */
+        public Builder highFrequencyBackupRetention(String highFrequencyBackupRetention) {
+            this.highFrequencyBackupRetention = highFrequencyBackupRetention;
             return this;
         }
 
