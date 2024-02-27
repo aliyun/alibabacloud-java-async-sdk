@@ -251,6 +251,9 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
         @NameInMap("identities")
         private Identities identities;
 
+        @NameInMap("jobNumber")
+        private String jobNumber;
+
         @NameInMap("joinTime")
         private Long joinTime;
 
@@ -279,6 +282,7 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
             this.email = builder.email;
             this.hiredDate = builder.hiredDate;
             this.identities = builder.identities;
+            this.jobNumber = builder.jobNumber;
             this.joinTime = builder.joinTime;
             this.lastVisitTime = builder.lastVisitTime;
             this.mobile = builder.mobile;
@@ -339,6 +343,13 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
         }
 
         /**
+         * @return jobNumber
+         */
+        public String getJobNumber() {
+            return this.jobNumber;
+        }
+
+        /**
          * @return joinTime
          */
         public Long getJoinTime() {
@@ -394,6 +405,7 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
             private String email; 
             private Long hiredDate; 
             private Identities identities; 
+            private String jobNumber; 
             private Long joinTime; 
             private Long lastVisitTime; 
             private String mobile; 
@@ -447,6 +459,14 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
              */
             public Builder identities(Identities identities) {
                 this.identities = identities;
+                return this;
+            }
+
+            /**
+             * jobNumber.
+             */
+            public Builder jobNumber(String jobNumber) {
+                this.jobNumber = jobNumber;
                 return this;
             }
 
