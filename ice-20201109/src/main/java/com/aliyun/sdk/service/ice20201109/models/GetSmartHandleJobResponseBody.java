@@ -178,9 +178,13 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
         @NameInMap("MediaId")
         private String mediaId;
 
+        @NameInMap("Usage")
+        private String usage;
+
         private JobResult(Builder builder) {
             this.aiResult = builder.aiResult;
             this.mediaId = builder.mediaId;
+            this.usage = builder.usage;
         }
 
         public static Builder builder() {
@@ -205,9 +209,17 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
             return this.mediaId;
         }
 
+        /**
+         * @return usage
+         */
+        public String getUsage() {
+            return this.usage;
+        }
+
         public static final class Builder {
             private String aiResult; 
             private String mediaId; 
+            private String usage; 
 
             /**
              * 智能分析结果
@@ -222,6 +234,14 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;
+                return this;
+            }
+
+            /**
+             * Usage.
+             */
+            public Builder usage(String usage) {
+                this.usage = usage;
                 return this;
             }
 
