@@ -182,7 +182,7 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the cluster.
+         * The latest version of the database engine.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -190,10 +190,34 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The latest version of the database engine.
+         * The release note of the kernel version.
          */
         public Builder DBLatestVersion(String DBLatestVersion) {
             this.DBLatestVersion = DBLatestVersion;
+            return this;
+        }
+
+        /**
+         * The versions to which the cluster can be upgraded.
+         */
+        public Builder DBMinorVersion(String DBMinorVersion) {
+            this.DBMinorVersion = DBMinorVersion;
+            return this;
+        }
+
+        /**
+         * The version of PolarProxy.
+         */
+        public Builder DBRevisionVersion(String DBRevisionVersion) {
+            this.DBRevisionVersion = DBRevisionVersion;
+            return this;
+        }
+
+        /**
+         * DBRevisionVersionList.
+         */
+        public Builder DBRevisionVersionList(java.util.List < DBRevisionVersionList> DBRevisionVersionList) {
+            this.DBRevisionVersionList = DBRevisionVersionList;
             return this;
         }
 
@@ -210,40 +234,16 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
          * 
          * *   If `DBVersion` is **5.6**, the value of this parameter is **5.6.16**.
          */
-        public Builder DBMinorVersion(String DBMinorVersion) {
-            this.DBMinorVersion = DBMinorVersion;
-            return this;
-        }
-
-        /**
-         * The revision version of the database engine.
-         * <p>
-         * 
-         * > For a cluster of the PolarDB for MySQL 5.6, the `DBRevisionVersion` parameter returns the revision version information only if the revision version is released later than August 31, 2020. Otherwise, this parameter returns an empty value. For more information about the kernel version of a cluster that runs the PolarDB for MySQL, see [PolarDB for MySQL](~~423884~~).
-         */
-        public Builder DBRevisionVersion(String DBRevisionVersion) {
-            this.DBRevisionVersion = DBRevisionVersion;
-            return this;
-        }
-
-        /**
-         * 可升级的版本信息列表。
-         */
-        public Builder DBRevisionVersionList(java.util.List < DBRevisionVersionList> DBRevisionVersionList) {
-            this.DBRevisionVersionList = DBRevisionVersionList;
-            return this;
-        }
-
-        /**
-         * The major version of the database engine. Valid values:
-         * <p>
-         * 
-         * *   **8.0**
-         * *   **5.7**
-         * *   **5.6**
-         */
         public Builder DBVersion(String DBVersion) {
             this.DBVersion = DBVersion;
+            return this;
+        }
+
+        /**
+         * The latest version of PolarProxy.
+         */
+        public Builder DBVersionStatus(String DBVersionStatus) {
+            this.DBVersionStatus = DBVersionStatus;
             return this;
         }
 
@@ -257,29 +257,13 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
          * 
          * > For more information about how to upgrade the minor version, see [Upgrade versions](~~158572~~).
          */
-        public Builder DBVersionStatus(String DBVersionStatus) {
-            this.DBVersionStatus = DBVersionStatus;
-            return this;
-        }
-
-        /**
-         * Indicates whether the kernel version is the latest version. Valid values:
-         * <p>
-         * 
-         * *   **true**
-         * *   **false**
-         */
         public Builder isLatestVersion(String isLatestVersion) {
             this.isLatestVersion = isLatestVersion;
             return this;
         }
 
         /**
-         * Indicates whether PolarProxy is the latest version. Valid values:
-         * <p>
-         * 
-         * *   **true**
-         * *   **false**
+         * The ID of the cluster.
          */
         public Builder isProxyLatestVersion(String isProxyLatestVersion) {
             this.isProxyLatestVersion = isProxyLatestVersion;
@@ -287,7 +271,7 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The latest version of PolarProxy.
+         * The revision version of the database engine.
          */
         public Builder proxyLatestVersion(String proxyLatestVersion) {
             this.proxyLatestVersion = proxyLatestVersion;
@@ -295,10 +279,23 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The version of PolarProxy.
+         * The release status of the kernel version. Valid values:
+         * <p>
+         * 
+         * *   **Stable**: The kernel version is stable.
+         * *   **Old**: The kernel version is old. We recommend that you do not upgrade the cluster to this version returned for this parameter.
+         * *   **HighRisk**: The kernel version has critical defects. We recommend that you do not upgrade the cluster to this version returned for this parameter.
          */
         public Builder proxyRevisionVersion(String proxyRevisionVersion) {
             this.proxyRevisionVersion = proxyRevisionVersion;
+            return this;
+        }
+
+        /**
+         * The code of the revision version of the database engine to which the cluster can be upgraded.
+         */
+        public Builder proxyVersionStatus(String proxyVersionStatus) {
+            this.proxyVersionStatus = proxyVersionStatus;
             return this;
         }
 
@@ -309,16 +306,9 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
          * *   **Stable**: The minor version is stable.
          * *   **Old**: The minor version is outdated. We recommend that you upgrade the cluster to the latest version.
          * *   **HighRisk**: The minor version has critical defects. We recommend that you immediately upgrade the cluster to the latest version.
+         * *   **Beta**: The minor version is a beta version.
          * 
          * > For more information about how to upgrade the PolarProxy version, see [Upgrade versions](~~158572~~).
-         */
-        public Builder proxyVersionStatus(String proxyVersionStatus) {
-            this.proxyVersionStatus = proxyVersionStatus;
-            return this;
-        }
-
-        /**
-         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -394,7 +384,7 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
             private String revisionVersionName; 
 
             /**
-             * 版本发布说明。
+             * ReleaseNote.
              */
             public Builder releaseNote(String releaseNote) {
                 this.releaseNote = releaseNote;
@@ -402,11 +392,7 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
             }
 
             /**
-             * 数据库版本发布状态。取值范围如下：
-             * <p>
-             * * **Stable**：当前版本状态稳定。
-             * * **Old**：当前版本过旧，不建议升级到该版本。
-             * * **HighRisk**：当前版本有严重缺陷，不建议升级到该版本。
+             * ReleaseType.
              */
             public Builder releaseType(String releaseType) {
                 this.releaseType = releaseType;
@@ -414,7 +400,7 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
             }
 
             /**
-             * 数据库引擎的修订版本Code，用于指定升级到该目标版本。
+             * RevisionVersionCode.
              */
             public Builder revisionVersionCode(String revisionVersionCode) {
                 this.revisionVersionCode = revisionVersionCode;
@@ -422,7 +408,7 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
             }
 
             /**
-             * 数据库引擎的修订版本号。
+             * RevisionVersionName.
              */
             public Builder revisionVersionName(String revisionVersionName) {
                 this.revisionVersionName = revisionVersionName;

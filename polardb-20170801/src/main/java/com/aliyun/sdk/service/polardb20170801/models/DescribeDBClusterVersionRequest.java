@@ -125,10 +125,10 @@ public class DescribeDBClusterVersionRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * The revision version of the database engine.
          * <p>
          * 
-         * > You can call the [DescribeDBClusters](~~98094~~) operation to query the details of all the clusters for your account, such as the cluster ID.
+         * >  For a cluster of the PolarDB for MySQL 5.6, the DBRevisionVersion parameter returns the revision version information only if the `Revision Version` is released later than August 31, 2020. Otherwise, this parameter returns an empty value. For more information about the kernel version of a cluster that runs the PolarDB for MySQL, see [PolarDB for MySQL](~~423884~~).
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -137,7 +137,7 @@ public class DescribeDBClusterVersionRequest extends Request {
         }
 
         /**
-         * DescribeType.
+         * The ID of the request.
          */
         public Builder describeType(String describeType) {
             this.putQueryParameter("DescribeType", describeType);

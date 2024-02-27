@@ -220,7 +220,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDBClusterTDEResponse> describeDBClusterTDE(DescribeDBClusterTDERequest request);
 
     /**
-      * > For more information, see [Engine versions](~~471239~~) and [PolarDB for MySQL](~~172561~~).
+      * The release note of the kernel version.
       *
      */
     CompletableFuture<DescribeDBClusterVersionResponse> describeDBClusterVersion(DescribeDBClusterVersionRequest request);

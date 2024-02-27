@@ -62,6 +62,10 @@ public class ModifyDBClusterPrimaryZoneRequest extends Request {
     @Validation(required = true)
     private String zoneId;
 
+    @Query
+    @NameInMap("ZoneType")
+    private String zoneType;
+
     private ModifyDBClusterPrimaryZoneRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
@@ -76,6 +80,7 @@ public class ModifyDBClusterPrimaryZoneRequest extends Request {
         this.VPCId = builder.VPCId;
         this.vSwitchId = builder.vSwitchId;
         this.zoneId = builder.zoneId;
+        this.zoneType = builder.zoneType;
     }
 
     public static Builder builder() {
@@ -175,6 +180,13 @@ public class ModifyDBClusterPrimaryZoneRequest extends Request {
         return this.zoneId;
     }
 
+    /**
+     * @return zoneType
+     */
+    public String getZoneType() {
+        return this.zoneType;
+    }
+
     public static final class Builder extends Request.Builder<ModifyDBClusterPrimaryZoneRequest, Builder> {
         private String DBClusterId; 
         private Boolean fromTimeService; 
@@ -188,6 +200,7 @@ public class ModifyDBClusterPrimaryZoneRequest extends Request {
         private String VPCId; 
         private String vSwitchId; 
         private String zoneId; 
+        private String zoneType; 
 
         private Builder() {
             super();
@@ -207,6 +220,7 @@ public class ModifyDBClusterPrimaryZoneRequest extends Request {
             this.VPCId = request.VPCId;
             this.vSwitchId = request.vSwitchId;
             this.zoneId = request.zoneId;
+            this.zoneType = request.zoneType;
         } 
 
         /**
@@ -345,6 +359,15 @@ public class ModifyDBClusterPrimaryZoneRequest extends Request {
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
             this.zoneId = zoneId;
+            return this;
+        }
+
+        /**
+         * ZoneType.
+         */
+        public Builder zoneType(String zoneType) {
+            this.putQueryParameter("ZoneType", zoneType);
+            this.zoneType = zoneType;
             return this;
         }
 

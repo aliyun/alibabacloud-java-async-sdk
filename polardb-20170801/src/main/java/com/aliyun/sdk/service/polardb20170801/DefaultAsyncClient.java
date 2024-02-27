@@ -947,7 +947,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > For more information, see [Engine versions](~~471239~~) and [PolarDB for MySQL](~~172561~~).
+      * The release note of the kernel version.
       *
      */
     @Override
