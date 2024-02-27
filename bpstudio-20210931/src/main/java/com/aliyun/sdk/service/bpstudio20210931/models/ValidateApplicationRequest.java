@@ -18,12 +18,17 @@ public class ValidateApplicationRequest extends Request {
     private String applicationId;
 
     @Body
+    @NameInMap("ClientToken")
+    private String clientToken;
+
+    @Body
     @NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
     private ValidateApplicationRequest(Builder builder) {
         super(builder);
         this.applicationId = builder.applicationId;
+        this.clientToken = builder.clientToken;
         this.resourceGroupId = builder.resourceGroupId;
     }
 
@@ -48,6 +53,13 @@ public class ValidateApplicationRequest extends Request {
     }
 
     /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
      * @return resourceGroupId
      */
     public String getResourceGroupId() {
@@ -56,6 +68,7 @@ public class ValidateApplicationRequest extends Request {
 
     public static final class Builder extends Request.Builder<ValidateApplicationRequest, Builder> {
         private String applicationId; 
+        private String clientToken; 
         private String resourceGroupId; 
 
         private Builder() {
@@ -65,6 +78,7 @@ public class ValidateApplicationRequest extends Request {
         private Builder(ValidateApplicationRequest request) {
             super(request);
             this.applicationId = request.applicationId;
+            this.clientToken = request.clientToken;
             this.resourceGroupId = request.resourceGroupId;
         } 
 
@@ -74,6 +88,15 @@ public class ValidateApplicationRequest extends Request {
         public Builder applicationId(String applicationId) {
             this.putQueryParameter("ApplicationId", applicationId);
             this.applicationId = applicationId;
+            return this;
+        }
+
+        /**
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putBodyParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
             return this;
         }
 

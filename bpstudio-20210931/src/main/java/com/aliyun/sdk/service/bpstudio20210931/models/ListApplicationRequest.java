@@ -164,7 +164,7 @@ public class ListApplicationRequest extends Request {
         }
 
         /**
-         * The HTTP status code.
+         * The pagination size of the resulting value cannot be less than the minimum value of 1 and cannot be greater than the maximum value of 50.
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -173,7 +173,7 @@ public class ListApplicationRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the application belongs.
+         * The pagination page number of the resulting value cannot be less than the minimum value of 1 and cannot be greater than the maximum value of 10000.
          */
         public Builder nextToken(Integer nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -200,7 +200,7 @@ public class ListApplicationRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * Resource Id
          */
         public Builder resourceId(String resourceId) {
             this.putBodyParameter("ResourceId", resourceId);
@@ -218,7 +218,7 @@ public class ListApplicationRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * Template Id
          */
         public Builder templateId(String templateId) {
             this.putBodyParameter("TemplateId", templateId);

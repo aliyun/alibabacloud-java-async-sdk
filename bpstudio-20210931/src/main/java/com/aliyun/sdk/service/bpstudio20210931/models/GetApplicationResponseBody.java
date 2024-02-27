@@ -90,33 +90,7 @@ public class GetApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * Possible application states:
-         * <p>
-         * 
-         * *   Creating: The application is being created.
-         * *   Modified: The application has been modified.
-         * *   Verifying: The application is being verified.
-         * *   Verified_Failure: The application failed to pass the verification.
-         * *   Verified_Success: The application has passed the verification.
-         * *   Valuating: Fees are being calculated for the application.
-         * *   Valuating_Failure: Fees failed to be calculated for the application.
-         * *   Valuating_Success: Fees are calculated for the application.
-         * *   Deploying: The application is being deployed.
-         * *   Deployed_Failure: The application failed to be deployed.
-         * *   Partially_Deployed_Success: Some resources of the application are deployed.
-         * *   Deployed_Success: The application is deployed.
-         * *   Destroying: The application is being released.
-         * *   Delayed_Destroy: The application release is delayed.
-         * *   Destroyed_Failure: The application failed to be released.
-         * *   Partially_Destroyed_Success: Some resources of the application are released.
-         * *   Destroyed_Success: The application is released.
-         * *   Revised: The application architecture is adjusted.
-         * *   Verifying_In_Revision: The application resources are being verified during architecture adjustment.
-         * *   Verified_Failure_In_Revision: The application resources failed to pass the verification during architecture adjustment.
-         * *   Verified_Success_In_Revision: The application resources are verified during architecture adjustment.
-         * *   Valuating_In_Revision: Fees are being calculated for the application during architecture adjustment.
-         * *   Valuating_Failure_In_Revision: Fees failed to be calculated for the application during architecture adjustment.
-         * *   Valuating_Success_In_Revision: Fees are calculated for the application during architecture adjustment.
+         * Reason for the request failure
          */
         public Builder message(String message) {
             this.message = message;
@@ -124,7 +98,7 @@ public class GetApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the application.
+         * Request ID
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -569,7 +543,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The service code.
+             * Product code
              */
             public Builder resourceCode(String resourceCode) {
                 this.resourceCode = resourceCode;
@@ -942,7 +916,7 @@ public class GetApplicationResponseBody extends TeaModel {
             private String templateId; 
 
             /**
-             * The description of the application.
+             * App ID
              */
             public Builder applicationId(String applicationId) {
                 this.applicationId = applicationId;
@@ -958,7 +932,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the application topology image.
+             * The time when the app was created
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -966,7 +940,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The message returned for the request.
+             * Application description
              */
             public Builder description(String description) {
                 this.description = description;
@@ -990,7 +964,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the image in the database.
+             * App name
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1006,7 +980,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 1411182597819805/topo-MCEXDI5EL2OM10NY.json
+             * The ID of the resource group to which the app belongs
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -1030,7 +1004,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * CADT application
+             * The ID of the template associated with the application
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;

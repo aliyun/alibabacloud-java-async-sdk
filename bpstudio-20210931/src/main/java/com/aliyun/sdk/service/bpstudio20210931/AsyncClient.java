@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.bpstudio20210931;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.bpstudio20210931.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -35,6 +36,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeployApplicationResponse> deployApplication(DeployApplicationRequest request);
 
     CompletableFuture<ExecuteOperationASyncResponse> executeOperationASync(ExecuteOperationASyncRequest request);
+
+    CompletableFuture<ExecuteOperationSyncResponse> executeOperationSync(ExecuteOperationSyncRequest request);
 
     CompletableFuture<GetApplicationResponse> getApplication(GetApplicationRequest request);
 
