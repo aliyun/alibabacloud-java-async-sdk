@@ -18,10 +18,6 @@ public class ExecDatamaskRequest extends Request {
     private String data;
 
     @Query
-    @NameInMap("FeatureType")
-    private Integer featureType;
-
-    @Query
     @NameInMap("Lang")
     private String lang;
 
@@ -33,7 +29,6 @@ public class ExecDatamaskRequest extends Request {
     private ExecDatamaskRequest(Builder builder) {
         super(builder);
         this.data = builder.data;
-        this.featureType = builder.featureType;
         this.lang = builder.lang;
         this.templateId = builder.templateId;
     }
@@ -59,13 +54,6 @@ public class ExecDatamaskRequest extends Request {
     }
 
     /**
-     * @return featureType
-     */
-    public Integer getFeatureType() {
-        return this.featureType;
-    }
-
-    /**
      * @return lang
      */
     public String getLang() {
@@ -81,7 +69,6 @@ public class ExecDatamaskRequest extends Request {
 
     public static final class Builder extends Request.Builder<ExecDatamaskRequest, Builder> {
         private String data; 
-        private Integer featureType; 
         private String lang; 
         private Long templateId; 
 
@@ -92,7 +79,6 @@ public class ExecDatamaskRequest extends Request {
         private Builder(ExecDatamaskRequest request) {
             super(request);
             this.data = request.data;
-            this.featureType = request.featureType;
             this.lang = request.lang;
             this.templateId = request.templateId;
         } 
@@ -108,15 +94,6 @@ public class ExecDatamaskRequest extends Request {
         public Builder data(String data) {
             this.putQueryParameter("Data", data);
             this.data = data;
-            return this;
-        }
-
-        /**
-         * FeatureType.
-         */
-        public Builder featureType(Integer featureType) {
-            this.putQueryParameter("FeatureType", featureType);
-            this.featureType = featureType;
             return this;
         }
 

@@ -17,10 +17,6 @@ public class DescribeCategoryTemplateRuleListRequest extends Request {
     private Integer currentPage;
 
     @Query
-    @NameInMap("FeatureType")
-    private Integer featureType;
-
-    @Query
     @NameInMap("Lang")
     private String lang;
 
@@ -39,7 +35,6 @@ public class DescribeCategoryTemplateRuleListRequest extends Request {
     private DescribeCategoryTemplateRuleListRequest(Builder builder) {
         super(builder);
         this.currentPage = builder.currentPage;
-        this.featureType = builder.featureType;
         this.lang = builder.lang;
         this.pageSize = builder.pageSize;
         this.riskLevelId = builder.riskLevelId;
@@ -64,13 +59,6 @@ public class DescribeCategoryTemplateRuleListRequest extends Request {
      */
     public Integer getCurrentPage() {
         return this.currentPage;
-    }
-
-    /**
-     * @return featureType
-     */
-    public Integer getFeatureType() {
-        return this.featureType;
     }
 
     /**
@@ -103,7 +91,6 @@ public class DescribeCategoryTemplateRuleListRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeCategoryTemplateRuleListRequest, Builder> {
         private Integer currentPage; 
-        private Integer featureType; 
         private String lang; 
         private Integer pageSize; 
         private Long riskLevelId; 
@@ -116,7 +103,6 @@ public class DescribeCategoryTemplateRuleListRequest extends Request {
         private Builder(DescribeCategoryTemplateRuleListRequest request) {
             super(request);
             this.currentPage = request.currentPage;
-            this.featureType = request.featureType;
             this.lang = request.lang;
             this.pageSize = request.pageSize;
             this.riskLevelId = request.riskLevelId;
@@ -129,15 +115,6 @@ public class DescribeCategoryTemplateRuleListRequest extends Request {
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
             this.currentPage = currentPage;
-            return this;
-        }
-
-        /**
-         * FeatureType.
-         */
-        public Builder featureType(Integer featureType) {
-            this.putQueryParameter("FeatureType", featureType);
-            this.featureType = featureType;
             return this;
         }
 

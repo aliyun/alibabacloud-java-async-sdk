@@ -37,10 +37,6 @@ public class CreateDataLimitRequest extends Request {
     private Integer eventStatus;
 
     @Query
-    @NameInMap("FeatureType")
-    private Integer featureType;
-
-    @Query
     @NameInMap("Lang")
     private String lang;
 
@@ -78,10 +74,6 @@ public class CreateDataLimitRequest extends Request {
     private String serviceRegionId;
 
     @Query
-    @NameInMap("SourceIp")
-    private String sourceIp;
-
-    @Query
     @NameInMap("UserName")
     private String userName;
 
@@ -93,7 +85,6 @@ public class CreateDataLimitRequest extends Request {
         this.enable = builder.enable;
         this.engineType = builder.engineType;
         this.eventStatus = builder.eventStatus;
-        this.featureType = builder.featureType;
         this.lang = builder.lang;
         this.logStoreDay = builder.logStoreDay;
         this.ocrStatus = builder.ocrStatus;
@@ -103,7 +94,6 @@ public class CreateDataLimitRequest extends Request {
         this.resourceType = builder.resourceType;
         this.samplingSize = builder.samplingSize;
         this.serviceRegionId = builder.serviceRegionId;
-        this.sourceIp = builder.sourceIp;
         this.userName = builder.userName;
     }
 
@@ -160,13 +150,6 @@ public class CreateDataLimitRequest extends Request {
      */
     public Integer getEventStatus() {
         return this.eventStatus;
-    }
-
-    /**
-     * @return featureType
-     */
-    public Integer getFeatureType() {
-        return this.featureType;
     }
 
     /**
@@ -233,13 +216,6 @@ public class CreateDataLimitRequest extends Request {
     }
 
     /**
-     * @return sourceIp
-     */
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
-    /**
      * @return userName
      */
     public String getUserName() {
@@ -253,7 +229,6 @@ public class CreateDataLimitRequest extends Request {
         private Integer enable; 
         private String engineType; 
         private Integer eventStatus; 
-        private Integer featureType; 
         private String lang; 
         private Integer logStoreDay; 
         private Integer ocrStatus; 
@@ -263,7 +238,6 @@ public class CreateDataLimitRequest extends Request {
         private Integer resourceType; 
         private Integer samplingSize; 
         private String serviceRegionId; 
-        private String sourceIp; 
         private String userName; 
 
         private Builder() {
@@ -278,7 +252,6 @@ public class CreateDataLimitRequest extends Request {
             this.enable = request.enable;
             this.engineType = request.engineType;
             this.eventStatus = request.eventStatus;
-            this.featureType = request.featureType;
             this.lang = request.lang;
             this.logStoreDay = request.logStoreDay;
             this.ocrStatus = request.ocrStatus;
@@ -288,7 +261,6 @@ public class CreateDataLimitRequest extends Request {
             this.resourceType = request.resourceType;
             this.samplingSize = request.samplingSize;
             this.serviceRegionId = request.serviceRegionId;
-            this.sourceIp = request.sourceIp;
             this.userName = request.userName;
         } 
 
@@ -371,15 +343,6 @@ public class CreateDataLimitRequest extends Request {
         public Builder eventStatus(Integer eventStatus) {
             this.putQueryParameter("EventStatus", eventStatus);
             this.eventStatus = eventStatus;
-            return this;
-        }
-
-        /**
-         * FeatureType.
-         */
-        public Builder featureType(Integer featureType) {
-            this.putQueryParameter("FeatureType", featureType);
-            this.featureType = featureType;
             return this;
         }
 
@@ -496,15 +459,6 @@ public class CreateDataLimitRequest extends Request {
         public Builder serviceRegionId(String serviceRegionId) {
             this.putQueryParameter("ServiceRegionId", serviceRegionId);
             this.serviceRegionId = serviceRegionId;
-            return this;
-        }
-
-        /**
-         * SourceIp.
-         */
-        public Builder sourceIp(String sourceIp) {
-            this.putQueryParameter("SourceIp", sourceIp);
-            this.sourceIp = sourceIp;
             return this;
         }
 

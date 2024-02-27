@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DisableUserConfigResponse} extends {@link TeaModel}
+ * {@link DescribeParentInstanceResponse} extends {@link TeaModel}
  *
- * <p>DisableUserConfigResponse</p>
+ * <p>DescribeParentInstanceResponse</p>
  */
-public class DisableUserConfigResponse extends Response {
+public class DescribeParentInstanceResponse extends Response {
     @NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -19,16 +19,16 @@ public class DisableUserConfigResponse extends Response {
     private Integer statusCode;
 
     @NameInMap("body")
-    private DisableUserConfigResponseBody body;
+    private DescribeParentInstanceResponseBody body;
 
-    private DisableUserConfigResponse(BuilderImpl builder) {
+    private DescribeParentInstanceResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DisableUserConfigResponse create() {
+    public static DescribeParentInstanceResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +54,35 @@ public class DisableUserConfigResponse extends Response {
     /**
      * @return body
      */
-    public DisableUserConfigResponseBody getBody() {
+    public DescribeParentInstanceResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DisableUserConfigResponse, Builder> {
+    public interface Builder extends Response.Builder<DescribeParentInstanceResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DisableUserConfigResponseBody body);
+        Builder body(DescribeParentInstanceResponseBody body);
 
         @Override
-        DisableUserConfigResponse build();
+        DescribeParentInstanceResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DisableUserConfigResponse, Builder>
+            extends Response.BuilderImpl<DescribeParentInstanceResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private DisableUserConfigResponseBody body; 
+        private DescribeParentInstanceResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DisableUserConfigResponse response) {
+        private BuilderImpl(DescribeParentInstanceResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +111,14 @@ public class DisableUserConfigResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DisableUserConfigResponseBody body) {
+        public Builder body(DescribeParentInstanceResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DisableUserConfigResponse build() {
-            return new DisableUserConfigResponse(this);
+        public DescribeParentInstanceResponse build() {
+            return new DescribeParentInstanceResponse(this);
         } 
 
     } 

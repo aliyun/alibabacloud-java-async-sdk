@@ -18,10 +18,6 @@ public class CreateScanTaskRequest extends Request {
     private Long dataLimitId;
 
     @Query
-    @NameInMap("FeatureType")
-    private Integer featureType;
-
-    @Query
     @NameInMap("IntervalDay")
     @Validation(required = true)
     private Integer intervalDay;
@@ -60,10 +56,6 @@ public class CreateScanTaskRequest extends Request {
     private String scanRangeContent;
 
     @Query
-    @NameInMap("SourceIp")
-    private String sourceIp;
-
-    @Query
     @NameInMap("TaskName")
     @Validation(required = true)
     private String taskName;
@@ -75,7 +67,6 @@ public class CreateScanTaskRequest extends Request {
     private CreateScanTaskRequest(Builder builder) {
         super(builder);
         this.dataLimitId = builder.dataLimitId;
-        this.featureType = builder.featureType;
         this.intervalDay = builder.intervalDay;
         this.lang = builder.lang;
         this.ossScanPath = builder.ossScanPath;
@@ -84,7 +75,6 @@ public class CreateScanTaskRequest extends Request {
         this.runMinute = builder.runMinute;
         this.scanRange = builder.scanRange;
         this.scanRangeContent = builder.scanRangeContent;
-        this.sourceIp = builder.sourceIp;
         this.taskName = builder.taskName;
         this.taskUserName = builder.taskUserName;
     }
@@ -107,13 +97,6 @@ public class CreateScanTaskRequest extends Request {
      */
     public Long getDataLimitId() {
         return this.dataLimitId;
-    }
-
-    /**
-     * @return featureType
-     */
-    public Integer getFeatureType() {
-        return this.featureType;
     }
 
     /**
@@ -173,13 +156,6 @@ public class CreateScanTaskRequest extends Request {
     }
 
     /**
-     * @return sourceIp
-     */
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
-    /**
      * @return taskName
      */
     public String getTaskName() {
@@ -195,7 +171,6 @@ public class CreateScanTaskRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateScanTaskRequest, Builder> {
         private Long dataLimitId; 
-        private Integer featureType; 
         private Integer intervalDay; 
         private String lang; 
         private String ossScanPath; 
@@ -204,7 +179,6 @@ public class CreateScanTaskRequest extends Request {
         private Integer runMinute; 
         private Integer scanRange; 
         private String scanRangeContent; 
-        private String sourceIp; 
         private String taskName; 
         private String taskUserName; 
 
@@ -215,7 +189,6 @@ public class CreateScanTaskRequest extends Request {
         private Builder(CreateScanTaskRequest request) {
             super(request);
             this.dataLimitId = request.dataLimitId;
-            this.featureType = request.featureType;
             this.intervalDay = request.intervalDay;
             this.lang = request.lang;
             this.ossScanPath = request.ossScanPath;
@@ -224,7 +197,6 @@ public class CreateScanTaskRequest extends Request {
             this.runMinute = request.runMinute;
             this.scanRange = request.scanRange;
             this.scanRangeContent = request.scanRangeContent;
-            this.sourceIp = request.sourceIp;
             this.taskName = request.taskName;
             this.taskUserName = request.taskUserName;
         } 
@@ -235,15 +207,6 @@ public class CreateScanTaskRequest extends Request {
         public Builder dataLimitId(Long dataLimitId) {
             this.putQueryParameter("DataLimitId", dataLimitId);
             this.dataLimitId = dataLimitId;
-            return this;
-        }
-
-        /**
-         * FeatureType.
-         */
-        public Builder featureType(Integer featureType) {
-            this.putQueryParameter("FeatureType", featureType);
-            this.featureType = featureType;
             return this;
         }
 
@@ -326,15 +289,6 @@ public class CreateScanTaskRequest extends Request {
         public Builder scanRangeContent(String scanRangeContent) {
             this.putQueryParameter("ScanRangeContent", scanRangeContent);
             this.scanRangeContent = scanRangeContent;
-            return this;
-        }
-
-        /**
-         * SourceIp.
-         */
-        public Builder sourceIp(String sourceIp) {
-            this.putQueryParameter("SourceIp", sourceIp);
-            this.sourceIp = sourceIp;
             return this;
         }
 

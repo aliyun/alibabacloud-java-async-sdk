@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.sddp20190103;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.sddp20190103.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -173,6 +174,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<DescribePackagesResponse> describePackages(DescribePackagesRequest request);
+
+    CompletableFuture<DescribeParentInstanceResponse> describeParentInstance(DescribeParentInstanceRequest request);
 
     /**
       * You can call this operation to query the sensitivity levels that are defined in the current rule template provided by DSC. This helps you learn about the number of times that each sensitivity level is referenced in the rule template and the highest sensitivity level.

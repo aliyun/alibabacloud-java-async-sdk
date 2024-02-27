@@ -13,10 +13,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeEventTypesRequest extends Request {
     @Query
-    @NameInMap("FeatureType")
-    private Integer featureType;
-
-    @Query
     @NameInMap("Lang")
     private String lang;
 
@@ -34,7 +30,6 @@ public class DescribeEventTypesRequest extends Request {
 
     private DescribeEventTypesRequest(Builder builder) {
         super(builder);
-        this.featureType = builder.featureType;
         this.lang = builder.lang;
         this.parentTypeId = builder.parentTypeId;
         this.resourceId = builder.resourceId;
@@ -52,13 +47,6 @@ public class DescribeEventTypesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return featureType
-     */
-    public Integer getFeatureType() {
-        return this.featureType;
     }
 
     /**
@@ -90,7 +78,6 @@ public class DescribeEventTypesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeEventTypesRequest, Builder> {
-        private Integer featureType; 
         private String lang; 
         private Long parentTypeId; 
         private Integer resourceId; 
@@ -102,21 +89,11 @@ public class DescribeEventTypesRequest extends Request {
 
         private Builder(DescribeEventTypesRequest request) {
             super(request);
-            this.featureType = request.featureType;
             this.lang = request.lang;
             this.parentTypeId = request.parentTypeId;
             this.resourceId = request.resourceId;
             this.status = request.status;
         } 
-
-        /**
-         * FeatureType.
-         */
-        public Builder featureType(Integer featureType) {
-            this.putQueryParameter("FeatureType", featureType);
-            this.featureType = featureType;
-            return this;
-        }
 
         /**
          * The language of the content within the request and response. Valid values:

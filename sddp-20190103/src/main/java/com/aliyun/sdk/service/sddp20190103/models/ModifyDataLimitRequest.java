@@ -25,10 +25,6 @@ public class ModifyDataLimitRequest extends Request {
     private String engineType;
 
     @Query
-    @NameInMap("FeatureType")
-    private Integer featureType;
-
-    @Query
     @NameInMap("Id")
     @Validation(required = true)
     private Long id;
@@ -87,7 +83,6 @@ public class ModifyDataLimitRequest extends Request {
         this.auditStatus = builder.auditStatus;
         this.autoScan = builder.autoScan;
         this.engineType = builder.engineType;
-        this.featureType = builder.featureType;
         this.id = builder.id;
         this.lang = builder.lang;
         this.logStoreDay = builder.logStoreDay;
@@ -135,13 +130,6 @@ public class ModifyDataLimitRequest extends Request {
      */
     public String getEngineType() {
         return this.engineType;
-    }
-
-    /**
-     * @return featureType
-     */
-    public Integer getFeatureType() {
-        return this.featureType;
     }
 
     /**
@@ -239,7 +227,6 @@ public class ModifyDataLimitRequest extends Request {
         private Integer auditStatus; 
         private Integer autoScan; 
         private String engineType; 
-        private Integer featureType; 
         private Long id; 
         private String lang; 
         private Integer logStoreDay; 
@@ -263,7 +250,6 @@ public class ModifyDataLimitRequest extends Request {
             this.auditStatus = request.auditStatus;
             this.autoScan = request.autoScan;
             this.engineType = request.engineType;
-            this.featureType = request.featureType;
             this.id = request.id;
             this.lang = request.lang;
             this.logStoreDay = request.logStoreDay;
@@ -317,15 +303,6 @@ public class ModifyDataLimitRequest extends Request {
         public Builder engineType(String engineType) {
             this.putQueryParameter("EngineType", engineType);
             this.engineType = engineType;
-            return this;
-        }
-
-        /**
-         * FeatureType.
-         */
-        public Builder featureType(Integer featureType) {
-            this.putQueryParameter("FeatureType", featureType);
-            this.featureType = featureType;
             return this;
         }
 

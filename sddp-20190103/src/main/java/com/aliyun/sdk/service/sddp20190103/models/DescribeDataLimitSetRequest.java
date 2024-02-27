@@ -13,10 +13,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDataLimitSetRequest extends Request {
     @Query
-    @NameInMap("FeatureType")
-    private Integer featureType;
-
-    @Query
     @NameInMap("Lang")
     private String lang;
 
@@ -30,7 +26,6 @@ public class DescribeDataLimitSetRequest extends Request {
 
     private DescribeDataLimitSetRequest(Builder builder) {
         super(builder);
-        this.featureType = builder.featureType;
         this.lang = builder.lang;
         this.parentId = builder.parentId;
         this.resourceType = builder.resourceType;
@@ -47,13 +42,6 @@ public class DescribeDataLimitSetRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return featureType
-     */
-    public Integer getFeatureType() {
-        return this.featureType;
     }
 
     /**
@@ -78,7 +66,6 @@ public class DescribeDataLimitSetRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeDataLimitSetRequest, Builder> {
-        private Integer featureType; 
         private String lang; 
         private String parentId; 
         private Integer resourceType; 
@@ -89,20 +76,10 @@ public class DescribeDataLimitSetRequest extends Request {
 
         private Builder(DescribeDataLimitSetRequest request) {
             super(request);
-            this.featureType = request.featureType;
             this.lang = request.lang;
             this.parentId = request.parentId;
             this.resourceType = request.resourceType;
         } 
-
-        /**
-         * FeatureType.
-         */
-        public Builder featureType(Integer featureType) {
-            this.putQueryParameter("FeatureType", featureType);
-            this.featureType = featureType;
-            return this;
-        }
 
         /**
          * The language of the content within the request and response. Valid values:

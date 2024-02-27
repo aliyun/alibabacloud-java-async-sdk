@@ -17,17 +17,12 @@ public class DisableUserConfigRequest extends Request {
     private String code;
 
     @Query
-    @NameInMap("FeatureType")
-    private Integer featureType;
-
-    @Query
     @NameInMap("Lang")
     private String lang;
 
     private DisableUserConfigRequest(Builder builder) {
         super(builder);
         this.code = builder.code;
-        this.featureType = builder.featureType;
         this.lang = builder.lang;
     }
 
@@ -52,13 +47,6 @@ public class DisableUserConfigRequest extends Request {
     }
 
     /**
-     * @return featureType
-     */
-    public Integer getFeatureType() {
-        return this.featureType;
-    }
-
-    /**
      * @return lang
      */
     public String getLang() {
@@ -67,7 +55,6 @@ public class DisableUserConfigRequest extends Request {
 
     public static final class Builder extends Request.Builder<DisableUserConfigRequest, Builder> {
         private String code; 
-        private Integer featureType; 
         private String lang; 
 
         private Builder() {
@@ -77,7 +64,6 @@ public class DisableUserConfigRequest extends Request {
         private Builder(DisableUserConfigRequest request) {
             super(request);
             this.code = request.code;
-            this.featureType = request.featureType;
             this.lang = request.lang;
         } 
 
@@ -87,15 +73,6 @@ public class DisableUserConfigRequest extends Request {
         public Builder code(String code) {
             this.putQueryParameter("Code", code);
             this.code = code;
-            return this;
-        }
-
-        /**
-         * FeatureType.
-         */
-        public Builder featureType(Integer featureType) {
-            this.putQueryParameter("FeatureType", featureType);
-            this.featureType = featureType;
             return this;
         }
 

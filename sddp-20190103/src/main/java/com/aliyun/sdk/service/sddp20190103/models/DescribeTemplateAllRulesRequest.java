@@ -13,10 +13,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeTemplateAllRulesRequest extends Request {
     @Query
-    @NameInMap("FeatureType")
-    private Integer featureType;
-
-    @Query
     @NameInMap("Lang")
     private String lang;
 
@@ -26,7 +22,6 @@ public class DescribeTemplateAllRulesRequest extends Request {
 
     private DescribeTemplateAllRulesRequest(Builder builder) {
         super(builder);
-        this.featureType = builder.featureType;
         this.lang = builder.lang;
         this.templateId = builder.templateId;
     }
@@ -45,13 +40,6 @@ public class DescribeTemplateAllRulesRequest extends Request {
     }
 
     /**
-     * @return featureType
-     */
-    public Integer getFeatureType() {
-        return this.featureType;
-    }
-
-    /**
      * @return lang
      */
     public String getLang() {
@@ -66,7 +54,6 @@ public class DescribeTemplateAllRulesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeTemplateAllRulesRequest, Builder> {
-        private Integer featureType; 
         private String lang; 
         private Long templateId; 
 
@@ -76,19 +63,9 @@ public class DescribeTemplateAllRulesRequest extends Request {
 
         private Builder(DescribeTemplateAllRulesRequest request) {
             super(request);
-            this.featureType = request.featureType;
             this.lang = request.lang;
             this.templateId = request.templateId;
         } 
-
-        /**
-         * FeatureType.
-         */
-        public Builder featureType(Integer featureType) {
-            this.putQueryParameter("FeatureType", featureType);
-            this.featureType = featureType;
-            return this;
-        }
 
         /**
          * Lang.

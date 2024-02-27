@@ -59,10 +59,6 @@ public class CreateRuleRequest extends Request {
     private Integer ruleType;
 
     @Query
-    @NameInMap("SourceIp")
-    private String sourceIp;
-
-    @Query
     @NameInMap("StatExpress")
     private String statExpress;
 
@@ -95,7 +91,6 @@ public class CreateRuleRequest extends Request {
         this.productId = builder.productId;
         this.riskLevelId = builder.riskLevelId;
         this.ruleType = builder.ruleType;
-        this.sourceIp = builder.sourceIp;
         this.statExpress = builder.statExpress;
         this.status = builder.status;
         this.supportForm = builder.supportForm;
@@ -194,13 +189,6 @@ public class CreateRuleRequest extends Request {
     }
 
     /**
-     * @return sourceIp
-     */
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
-    /**
      * @return statExpress
      */
     public String getStatExpress() {
@@ -247,7 +235,6 @@ public class CreateRuleRequest extends Request {
         private Long productId; 
         private Long riskLevelId; 
         private Integer ruleType; 
-        private String sourceIp; 
         private String statExpress; 
         private Integer status; 
         private Integer supportForm; 
@@ -271,7 +258,6 @@ public class CreateRuleRequest extends Request {
             this.productId = request.productId;
             this.riskLevelId = request.riskLevelId;
             this.ruleType = request.ruleType;
-            this.sourceIp = request.sourceIp;
             this.statExpress = request.statExpress;
             this.status = request.status;
             this.supportForm = request.supportForm;
@@ -400,15 +386,6 @@ public class CreateRuleRequest extends Request {
         public Builder ruleType(Integer ruleType) {
             this.putQueryParameter("RuleType", ruleType);
             this.ruleType = ruleType;
-            return this;
-        }
-
-        /**
-         * SourceIp.
-         */
-        public Builder sourceIp(String sourceIp) {
-            this.putQueryParameter("SourceIp", sourceIp);
-            this.sourceIp = sourceIp;
             return this;
         }
 

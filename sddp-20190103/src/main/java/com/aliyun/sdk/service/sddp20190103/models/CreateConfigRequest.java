@@ -21,16 +21,8 @@ public class CreateConfigRequest extends Request {
     private String description;
 
     @Query
-    @NameInMap("FeatureType")
-    private Integer featureType;
-
-    @Query
     @NameInMap("Lang")
     private String lang;
-
-    @Query
-    @NameInMap("SourceIp")
-    private String sourceIp;
 
     @Query
     @NameInMap("Value")
@@ -40,9 +32,7 @@ public class CreateConfigRequest extends Request {
         super(builder);
         this.code = builder.code;
         this.description = builder.description;
-        this.featureType = builder.featureType;
         this.lang = builder.lang;
-        this.sourceIp = builder.sourceIp;
         this.value = builder.value;
     }
 
@@ -74,24 +64,10 @@ public class CreateConfigRequest extends Request {
     }
 
     /**
-     * @return featureType
-     */
-    public Integer getFeatureType() {
-        return this.featureType;
-    }
-
-    /**
      * @return lang
      */
     public String getLang() {
         return this.lang;
-    }
-
-    /**
-     * @return sourceIp
-     */
-    public String getSourceIp() {
-        return this.sourceIp;
     }
 
     /**
@@ -104,9 +80,7 @@ public class CreateConfigRequest extends Request {
     public static final class Builder extends Request.Builder<CreateConfigRequest, Builder> {
         private String code; 
         private String description; 
-        private Integer featureType; 
         private String lang; 
-        private String sourceIp; 
         private String value; 
 
         private Builder() {
@@ -117,9 +91,7 @@ public class CreateConfigRequest extends Request {
             super(request);
             this.code = request.code;
             this.description = request.description;
-            this.featureType = request.featureType;
             this.lang = request.lang;
-            this.sourceIp = request.sourceIp;
             this.value = request.value;
         } 
 
@@ -147,15 +119,6 @@ public class CreateConfigRequest extends Request {
         }
 
         /**
-         * FeatureType.
-         */
-        public Builder featureType(Integer featureType) {
-            this.putQueryParameter("FeatureType", featureType);
-            this.featureType = featureType;
-            return this;
-        }
-
-        /**
          * The language of the content within the request and response. Default value: **zh_cn**. Valid values:
          * <p>
          * 
@@ -165,15 +128,6 @@ public class CreateConfigRequest extends Request {
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
             this.lang = lang;
-            return this;
-        }
-
-        /**
-         * SourceIp.
-         */
-        public Builder sourceIp(String sourceIp) {
-            this.putQueryParameter("SourceIp", sourceIp);
-            this.sourceIp = sourceIp;
             return this;
         }
 

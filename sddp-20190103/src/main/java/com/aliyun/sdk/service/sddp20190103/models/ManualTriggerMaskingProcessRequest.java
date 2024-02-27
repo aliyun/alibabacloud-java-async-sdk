@@ -81,11 +81,11 @@ public class ManualTriggerMaskingProcessRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Valid values:
+         * The language of the content within the request and response, default value zh_cn. Valid values:
          * <p>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * *   **zh_cn**: Chinese
+         * *   **en_us**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

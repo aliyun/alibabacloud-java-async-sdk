@@ -416,7 +416,12 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * WarnLevel.
+         * The risk level of the alert that is triggered. Valid values:
+         * <p>
+         * 
+         * *   **1**: low
+         * *   **2**: medium
+         * *   **3**: high
          */
         public Builder warnLevel(Integer warnLevel) {
             this.putQueryParameter("WarnLevel", warnLevel);
