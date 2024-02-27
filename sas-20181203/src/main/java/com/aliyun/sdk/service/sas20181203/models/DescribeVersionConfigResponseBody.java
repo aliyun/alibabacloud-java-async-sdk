@@ -18,6 +18,9 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     @NameInMap("AllowPartialBuy")
     private Integer allowPartialBuy;
 
+    @NameInMap("AntiRansomwareService")
+    private Integer antiRansomwareService;
+
     @NameInMap("AppWhiteList")
     private Integer appWhiteList;
 
@@ -126,6 +129,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     private DescribeVersionConfigResponseBody(Builder builder) {
         this.agentlessCapacity = builder.agentlessCapacity;
         this.allowPartialBuy = builder.allowPartialBuy;
+        this.antiRansomwareService = builder.antiRansomwareService;
         this.appWhiteList = builder.appWhiteList;
         this.appWhiteListAuthCount = builder.appWhiteListAuthCount;
         this.assetLevel = builder.assetLevel;
@@ -183,6 +187,13 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
      */
     public Integer getAllowPartialBuy() {
         return this.allowPartialBuy;
+    }
+
+    /**
+     * @return antiRansomwareService
+     */
+    public Integer getAntiRansomwareService() {
+        return this.antiRansomwareService;
     }
 
     /**
@@ -433,6 +444,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     public static final class Builder {
         private Long agentlessCapacity; 
         private Integer allowPartialBuy; 
+        private Integer antiRansomwareService; 
         private Integer appWhiteList; 
         private Long appWhiteListAuthCount; 
         private Integer assetLevel; 
@@ -489,6 +501,14 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
          */
         public Builder allowPartialBuy(Integer allowPartialBuy) {
             this.allowPartialBuy = allowPartialBuy;
+            return this;
+        }
+
+        /**
+         * AntiRansomwareService.
+         */
+        public Builder antiRansomwareService(Integer antiRansomwareService) {
+            this.antiRansomwareService = antiRansomwareService;
             return this;
         }
 

@@ -82,7 +82,7 @@ public class DeleteVulAutoRepairConfigRequest extends Request {
         } 
 
         /**
-         * AliasName.
+         * The alias of the vulnerability.
          */
         public Builder aliasName(String aliasName) {
             this.putQueryParameter("AliasName", aliasName);
@@ -91,7 +91,7 @@ public class DeleteVulAutoRepairConfigRequest extends Request {
         }
 
         /**
-         * ConfigIdList.
+         * The configuration ID of the vulnerability. You can call the [ListVulAutoRepairConfig](~~ListVulAutoRepairConfig~~) operation to query the configuration IDs of the vulnerability.
          */
         public Builder configIdList(java.util.List < Long > configIdList) {
             this.putQueryParameter("ConfigIdList", configIdList);
@@ -100,7 +100,11 @@ public class DeleteVulAutoRepairConfigRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type of the vulnerability. Valid values:
+         * <p>
+         * 
+         * *   **cve**: Linux software vulnerability
+         * *   **sys**: Windows system vulnerability
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
