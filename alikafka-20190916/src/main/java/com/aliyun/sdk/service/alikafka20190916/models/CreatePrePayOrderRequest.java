@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreatePrePayOrderRequest extends Request {
     @Query
+    @NameInMap("ConfluentConfig")
+    private ConfluentConfig confluentConfig;
+
+    @Query
     @NameInMap("DeployType")
     @Validation(required = true)
     private Integer deployType;
@@ -66,6 +70,7 @@ public class CreatePrePayOrderRequest extends Request {
 
     private CreatePrePayOrderRequest(Builder builder) {
         super(builder);
+        this.confluentConfig = builder.confluentConfig;
         this.deployType = builder.deployType;
         this.diskSize = builder.diskSize;
         this.diskType = builder.diskType;
@@ -91,6 +96,13 @@ public class CreatePrePayOrderRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return confluentConfig
+     */
+    public ConfluentConfig getConfluentConfig() {
+        return this.confluentConfig;
     }
 
     /**
@@ -178,6 +190,7 @@ public class CreatePrePayOrderRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreatePrePayOrderRequest, Builder> {
+        private ConfluentConfig confluentConfig; 
         private Integer deployType; 
         private Integer diskSize; 
         private String diskType; 
@@ -197,6 +210,7 @@ public class CreatePrePayOrderRequest extends Request {
 
         private Builder(CreatePrePayOrderRequest request) {
             super(request);
+            this.confluentConfig = request.confluentConfig;
             this.deployType = request.deployType;
             this.diskSize = request.diskSize;
             this.diskType = request.diskType;
@@ -210,6 +224,16 @@ public class CreatePrePayOrderRequest extends Request {
             this.tag = request.tag;
             this.topicQuota = request.topicQuota;
         } 
+
+        /**
+         * ConfluentConfig.
+         */
+        public Builder confluentConfig(ConfluentConfig confluentConfig) {
+            String confluentConfigShrink = shrink(confluentConfig, "ConfluentConfig", "json");
+            this.putQueryParameter("ConfluentConfig", confluentConfigShrink);
+            this.confluentConfig = confluentConfig;
+            return this;
+        }
 
         /**
          * The deployment mode of the instance. Valid values:
@@ -370,6 +394,387 @@ public class CreatePrePayOrderRequest extends Request {
 
     } 
 
+    public static class ConfluentConfig extends TeaModel {
+        @NameInMap("ConnectCU")
+        private Integer connectCU;
+
+        @NameInMap("ConnectReplica")
+        private Integer connectReplica;
+
+        @NameInMap("ControlCenterCU")
+        private Integer controlCenterCU;
+
+        @NameInMap("ControlCenterReplica")
+        private Integer controlCenterReplica;
+
+        @NameInMap("ControlCenterStorage")
+        private Integer controlCenterStorage;
+
+        @NameInMap("KafkaCU")
+        private Integer kafkaCU;
+
+        @NameInMap("KafkaReplica")
+        private Integer kafkaReplica;
+
+        @NameInMap("KafkaRestProxyCU")
+        private Integer kafkaRestProxyCU;
+
+        @NameInMap("KafkaRestProxyReplica")
+        private Integer kafkaRestProxyReplica;
+
+        @NameInMap("KafkaStorage")
+        private Integer kafkaStorage;
+
+        @NameInMap("KsqlCU")
+        private Integer ksqlCU;
+
+        @NameInMap("KsqlReplica")
+        private Integer ksqlReplica;
+
+        @NameInMap("KsqlStorage")
+        private Integer ksqlStorage;
+
+        @NameInMap("SchemaRegistryCU")
+        private Integer schemaRegistryCU;
+
+        @NameInMap("SchemaRegistryReplica")
+        private Integer schemaRegistryReplica;
+
+        @NameInMap("ZooKeeperCU")
+        private Integer zooKeeperCU;
+
+        @NameInMap("ZooKeeperReplica")
+        private Integer zooKeeperReplica;
+
+        @NameInMap("ZooKeeperStorage")
+        private Integer zooKeeperStorage;
+
+        private ConfluentConfig(Builder builder) {
+            this.connectCU = builder.connectCU;
+            this.connectReplica = builder.connectReplica;
+            this.controlCenterCU = builder.controlCenterCU;
+            this.controlCenterReplica = builder.controlCenterReplica;
+            this.controlCenterStorage = builder.controlCenterStorage;
+            this.kafkaCU = builder.kafkaCU;
+            this.kafkaReplica = builder.kafkaReplica;
+            this.kafkaRestProxyCU = builder.kafkaRestProxyCU;
+            this.kafkaRestProxyReplica = builder.kafkaRestProxyReplica;
+            this.kafkaStorage = builder.kafkaStorage;
+            this.ksqlCU = builder.ksqlCU;
+            this.ksqlReplica = builder.ksqlReplica;
+            this.ksqlStorage = builder.ksqlStorage;
+            this.schemaRegistryCU = builder.schemaRegistryCU;
+            this.schemaRegistryReplica = builder.schemaRegistryReplica;
+            this.zooKeeperCU = builder.zooKeeperCU;
+            this.zooKeeperReplica = builder.zooKeeperReplica;
+            this.zooKeeperStorage = builder.zooKeeperStorage;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ConfluentConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return connectCU
+         */
+        public Integer getConnectCU() {
+            return this.connectCU;
+        }
+
+        /**
+         * @return connectReplica
+         */
+        public Integer getConnectReplica() {
+            return this.connectReplica;
+        }
+
+        /**
+         * @return controlCenterCU
+         */
+        public Integer getControlCenterCU() {
+            return this.controlCenterCU;
+        }
+
+        /**
+         * @return controlCenterReplica
+         */
+        public Integer getControlCenterReplica() {
+            return this.controlCenterReplica;
+        }
+
+        /**
+         * @return controlCenterStorage
+         */
+        public Integer getControlCenterStorage() {
+            return this.controlCenterStorage;
+        }
+
+        /**
+         * @return kafkaCU
+         */
+        public Integer getKafkaCU() {
+            return this.kafkaCU;
+        }
+
+        /**
+         * @return kafkaReplica
+         */
+        public Integer getKafkaReplica() {
+            return this.kafkaReplica;
+        }
+
+        /**
+         * @return kafkaRestProxyCU
+         */
+        public Integer getKafkaRestProxyCU() {
+            return this.kafkaRestProxyCU;
+        }
+
+        /**
+         * @return kafkaRestProxyReplica
+         */
+        public Integer getKafkaRestProxyReplica() {
+            return this.kafkaRestProxyReplica;
+        }
+
+        /**
+         * @return kafkaStorage
+         */
+        public Integer getKafkaStorage() {
+            return this.kafkaStorage;
+        }
+
+        /**
+         * @return ksqlCU
+         */
+        public Integer getKsqlCU() {
+            return this.ksqlCU;
+        }
+
+        /**
+         * @return ksqlReplica
+         */
+        public Integer getKsqlReplica() {
+            return this.ksqlReplica;
+        }
+
+        /**
+         * @return ksqlStorage
+         */
+        public Integer getKsqlStorage() {
+            return this.ksqlStorage;
+        }
+
+        /**
+         * @return schemaRegistryCU
+         */
+        public Integer getSchemaRegistryCU() {
+            return this.schemaRegistryCU;
+        }
+
+        /**
+         * @return schemaRegistryReplica
+         */
+        public Integer getSchemaRegistryReplica() {
+            return this.schemaRegistryReplica;
+        }
+
+        /**
+         * @return zooKeeperCU
+         */
+        public Integer getZooKeeperCU() {
+            return this.zooKeeperCU;
+        }
+
+        /**
+         * @return zooKeeperReplica
+         */
+        public Integer getZooKeeperReplica() {
+            return this.zooKeeperReplica;
+        }
+
+        /**
+         * @return zooKeeperStorage
+         */
+        public Integer getZooKeeperStorage() {
+            return this.zooKeeperStorage;
+        }
+
+        public static final class Builder {
+            private Integer connectCU; 
+            private Integer connectReplica; 
+            private Integer controlCenterCU; 
+            private Integer controlCenterReplica; 
+            private Integer controlCenterStorage; 
+            private Integer kafkaCU; 
+            private Integer kafkaReplica; 
+            private Integer kafkaRestProxyCU; 
+            private Integer kafkaRestProxyReplica; 
+            private Integer kafkaStorage; 
+            private Integer ksqlCU; 
+            private Integer ksqlReplica; 
+            private Integer ksqlStorage; 
+            private Integer schemaRegistryCU; 
+            private Integer schemaRegistryReplica; 
+            private Integer zooKeeperCU; 
+            private Integer zooKeeperReplica; 
+            private Integer zooKeeperStorage; 
+
+            /**
+             * ConnectCU.
+             */
+            public Builder connectCU(Integer connectCU) {
+                this.connectCU = connectCU;
+                return this;
+            }
+
+            /**
+             * ConnectReplica.
+             */
+            public Builder connectReplica(Integer connectReplica) {
+                this.connectReplica = connectReplica;
+                return this;
+            }
+
+            /**
+             * ControlCenterCU.
+             */
+            public Builder controlCenterCU(Integer controlCenterCU) {
+                this.controlCenterCU = controlCenterCU;
+                return this;
+            }
+
+            /**
+             * ControlCenterReplica.
+             */
+            public Builder controlCenterReplica(Integer controlCenterReplica) {
+                this.controlCenterReplica = controlCenterReplica;
+                return this;
+            }
+
+            /**
+             * ControlCenterStorage.
+             */
+            public Builder controlCenterStorage(Integer controlCenterStorage) {
+                this.controlCenterStorage = controlCenterStorage;
+                return this;
+            }
+
+            /**
+             * KafkaCU.
+             */
+            public Builder kafkaCU(Integer kafkaCU) {
+                this.kafkaCU = kafkaCU;
+                return this;
+            }
+
+            /**
+             * KafkaReplica.
+             */
+            public Builder kafkaReplica(Integer kafkaReplica) {
+                this.kafkaReplica = kafkaReplica;
+                return this;
+            }
+
+            /**
+             * KafkaRestProxyCU.
+             */
+            public Builder kafkaRestProxyCU(Integer kafkaRestProxyCU) {
+                this.kafkaRestProxyCU = kafkaRestProxyCU;
+                return this;
+            }
+
+            /**
+             * KafkaRestProxyReplica.
+             */
+            public Builder kafkaRestProxyReplica(Integer kafkaRestProxyReplica) {
+                this.kafkaRestProxyReplica = kafkaRestProxyReplica;
+                return this;
+            }
+
+            /**
+             * KafkaStorage.
+             */
+            public Builder kafkaStorage(Integer kafkaStorage) {
+                this.kafkaStorage = kafkaStorage;
+                return this;
+            }
+
+            /**
+             * KsqlCU.
+             */
+            public Builder ksqlCU(Integer ksqlCU) {
+                this.ksqlCU = ksqlCU;
+                return this;
+            }
+
+            /**
+             * KsqlReplica.
+             */
+            public Builder ksqlReplica(Integer ksqlReplica) {
+                this.ksqlReplica = ksqlReplica;
+                return this;
+            }
+
+            /**
+             * KsqlStorage.
+             */
+            public Builder ksqlStorage(Integer ksqlStorage) {
+                this.ksqlStorage = ksqlStorage;
+                return this;
+            }
+
+            /**
+             * SchemaRegistryCU.
+             */
+            public Builder schemaRegistryCU(Integer schemaRegistryCU) {
+                this.schemaRegistryCU = schemaRegistryCU;
+                return this;
+            }
+
+            /**
+             * SchemaRegistryReplica.
+             */
+            public Builder schemaRegistryReplica(Integer schemaRegistryReplica) {
+                this.schemaRegistryReplica = schemaRegistryReplica;
+                return this;
+            }
+
+            /**
+             * ZooKeeperCU.
+             */
+            public Builder zooKeeperCU(Integer zooKeeperCU) {
+                this.zooKeeperCU = zooKeeperCU;
+                return this;
+            }
+
+            /**
+             * ZooKeeperReplica.
+             */
+            public Builder zooKeeperReplica(Integer zooKeeperReplica) {
+                this.zooKeeperReplica = zooKeeperReplica;
+                return this;
+            }
+
+            /**
+             * ZooKeeperStorage.
+             */
+            public Builder zooKeeperStorage(Integer zooKeeperStorage) {
+                this.zooKeeperStorage = zooKeeperStorage;
+                return this;
+            }
+
+            public ConfluentConfig build() {
+                return new ConfluentConfig(this);
+            } 
+
+        } 
+
+    }
     public static class Tag extends TeaModel {
         @NameInMap("Key")
         @Validation(required = true)

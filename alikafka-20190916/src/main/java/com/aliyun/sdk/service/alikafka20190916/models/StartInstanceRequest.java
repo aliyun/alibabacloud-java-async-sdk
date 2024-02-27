@@ -88,6 +88,10 @@ public class StartInstanceRequest extends Request {
     private String vSwitchId;
 
     @Query
+    @NameInMap("VSwitchIds")
+    private java.util.List < String > vSwitchIds;
+
+    @Query
     @NameInMap("VpcId")
     @Validation(required = true)
     private String vpcId;
@@ -116,6 +120,7 @@ public class StartInstanceRequest extends Request {
         this.userPhoneNum = builder.userPhoneNum;
         this.username = builder.username;
         this.vSwitchId = builder.vSwitchId;
+        this.vSwitchIds = builder.vSwitchIds;
         this.vpcId = builder.vpcId;
         this.zoneId = builder.zoneId;
     }
@@ -260,6 +265,13 @@ public class StartInstanceRequest extends Request {
     }
 
     /**
+     * @return vSwitchIds
+     */
+    public java.util.List < String > getVSwitchIds() {
+        return this.vSwitchIds;
+    }
+
+    /**
      * @return vpcId
      */
     public String getVpcId() {
@@ -292,6 +304,7 @@ public class StartInstanceRequest extends Request {
         private String userPhoneNum; 
         private String username; 
         private String vSwitchId; 
+        private java.util.List < String > vSwitchIds; 
         private String vpcId; 
         private String zoneId; 
 
@@ -319,6 +332,7 @@ public class StartInstanceRequest extends Request {
             this.userPhoneNum = request.userPhoneNum;
             this.username = request.username;
             this.vSwitchId = request.vSwitchId;
+            this.vSwitchIds = request.vSwitchIds;
             this.vpcId = request.vpcId;
             this.zoneId = request.zoneId;
         } 
@@ -549,6 +563,15 @@ public class StartInstanceRequest extends Request {
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
             this.vSwitchId = vSwitchId;
+            return this;
+        }
+
+        /**
+         * VSwitchIds.
+         */
+        public Builder vSwitchIds(java.util.List < String > vSwitchIds) {
+            this.putQueryParameter("VSwitchIds", vSwitchIds);
+            this.vSwitchIds = vSwitchIds;
             return this;
         }
 
