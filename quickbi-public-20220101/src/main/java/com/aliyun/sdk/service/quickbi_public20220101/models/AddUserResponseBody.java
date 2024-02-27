@@ -104,6 +104,9 @@ public class AddUserResponseBody extends TeaModel {
         @NameInMap("NickName")
         private String nickName;
 
+        @NameInMap("RoleIdList")
+        private java.util.List < Long > roleIdList;
+
         @NameInMap("UserId")
         private String userId;
 
@@ -115,6 +118,7 @@ public class AddUserResponseBody extends TeaModel {
             this.adminUser = builder.adminUser;
             this.authAdminUser = builder.authAdminUser;
             this.nickName = builder.nickName;
+            this.roleIdList = builder.roleIdList;
             this.userId = builder.userId;
             this.userType = builder.userType;
         }
@@ -156,6 +160,13 @@ public class AddUserResponseBody extends TeaModel {
         }
 
         /**
+         * @return roleIdList
+         */
+        public java.util.List < Long > getRoleIdList() {
+            return this.roleIdList;
+        }
+
+        /**
          * @return userId
          */
         public String getUserId() {
@@ -174,6 +185,7 @@ public class AddUserResponseBody extends TeaModel {
             private Boolean adminUser; 
             private Boolean authAdminUser; 
             private String nickName; 
+            private java.util.List < Long > roleIdList; 
             private String userId; 
             private Integer userType; 
 
@@ -206,6 +218,14 @@ public class AddUserResponseBody extends TeaModel {
              */
             public Builder nickName(String nickName) {
                 this.nickName = nickName;
+                return this;
+            }
+
+            /**
+             * RoleIdList.
+             */
+            public Builder roleIdList(java.util.List < Long > roleIdList) {
+                this.roleIdList = roleIdList;
                 return this;
             }
 

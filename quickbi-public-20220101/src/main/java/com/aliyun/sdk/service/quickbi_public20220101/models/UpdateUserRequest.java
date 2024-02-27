@@ -25,6 +25,10 @@ public class UpdateUserRequest extends Request {
     private String nickName;
 
     @Query
+    @NameInMap("RoleIds")
+    private String roleIds;
+
+    @Query
     @NameInMap("UserId")
     @Validation(required = true)
     private String userId;
@@ -39,6 +43,7 @@ public class UpdateUserRequest extends Request {
         this.adminUser = builder.adminUser;
         this.authAdminUser = builder.authAdminUser;
         this.nickName = builder.nickName;
+        this.roleIds = builder.roleIds;
         this.userId = builder.userId;
         this.userType = builder.userType;
     }
@@ -78,6 +83,13 @@ public class UpdateUserRequest extends Request {
     }
 
     /**
+     * @return roleIds
+     */
+    public String getRoleIds() {
+        return this.roleIds;
+    }
+
+    /**
      * @return userId
      */
     public String getUserId() {
@@ -95,6 +107,7 @@ public class UpdateUserRequest extends Request {
         private Boolean adminUser; 
         private Boolean authAdminUser; 
         private String nickName; 
+        private String roleIds; 
         private String userId; 
         private Integer userType; 
 
@@ -107,6 +120,7 @@ public class UpdateUserRequest extends Request {
             this.adminUser = request.adminUser;
             this.authAdminUser = request.authAdminUser;
             this.nickName = request.nickName;
+            this.roleIds = request.roleIds;
             this.userId = request.userId;
             this.userType = request.userType;
         } 
@@ -147,6 +161,15 @@ public class UpdateUserRequest extends Request {
         public Builder nickName(String nickName) {
             this.putQueryParameter("NickName", nickName);
             this.nickName = nickName;
+            return this;
+        }
+
+        /**
+         * RoleIds.
+         */
+        public Builder roleIds(String roleIds) {
+            this.putQueryParameter("RoleIds", roleIds);
+            this.roleIds = roleIds;
             return this;
         }
 

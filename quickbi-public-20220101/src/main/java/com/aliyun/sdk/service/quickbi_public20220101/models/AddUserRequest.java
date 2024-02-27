@@ -19,18 +19,20 @@ public class AddUserRequest extends Request {
 
     @Query
     @NameInMap("AdminUser")
-    @Validation(required = true)
     private Boolean adminUser;
 
     @Query
     @NameInMap("AuthAdminUser")
-    @Validation(required = true)
     private Boolean authAdminUser;
 
     @Query
     @NameInMap("NickName")
     @Validation(required = true)
     private String nickName;
+
+    @Body
+    @NameInMap("RoleIds")
+    private String roleIds;
 
     @Query
     @NameInMap("UserType")
@@ -43,6 +45,7 @@ public class AddUserRequest extends Request {
         this.adminUser = builder.adminUser;
         this.authAdminUser = builder.authAdminUser;
         this.nickName = builder.nickName;
+        this.roleIds = builder.roleIds;
         this.userType = builder.userType;
     }
 
@@ -88,6 +91,13 @@ public class AddUserRequest extends Request {
     }
 
     /**
+     * @return roleIds
+     */
+    public String getRoleIds() {
+        return this.roleIds;
+    }
+
+    /**
      * @return userType
      */
     public Integer getUserType() {
@@ -99,6 +109,7 @@ public class AddUserRequest extends Request {
         private Boolean adminUser; 
         private Boolean authAdminUser; 
         private String nickName; 
+        private String roleIds; 
         private Integer userType; 
 
         private Builder() {
@@ -111,6 +122,7 @@ public class AddUserRequest extends Request {
             this.adminUser = request.adminUser;
             this.authAdminUser = request.authAdminUser;
             this.nickName = request.nickName;
+            this.roleIds = request.roleIds;
             this.userType = request.userType;
         } 
 
@@ -147,6 +159,15 @@ public class AddUserRequest extends Request {
         public Builder nickName(String nickName) {
             this.putQueryParameter("NickName", nickName);
             this.nickName = nickName;
+            return this;
+        }
+
+        /**
+         * RoleIds.
+         */
+        public Builder roleIds(String roleIds) {
+            this.putBodyParameter("RoleIds", roleIds);
+            this.roleIds = roleIds;
             return this;
         }
 

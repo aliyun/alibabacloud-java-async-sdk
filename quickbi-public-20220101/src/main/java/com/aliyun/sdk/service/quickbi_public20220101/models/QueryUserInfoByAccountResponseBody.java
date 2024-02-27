@@ -117,6 +117,9 @@ public class QueryUserInfoByAccountResponseBody extends TeaModel {
         @NameInMap("Phone")
         private String phone;
 
+        @NameInMap("RoleIdList")
+        private java.util.List < Long > roleIdList;
+
         @NameInMap("UserId")
         private String userId;
 
@@ -131,6 +134,7 @@ public class QueryUserInfoByAccountResponseBody extends TeaModel {
             this.email = builder.email;
             this.nickName = builder.nickName;
             this.phone = builder.phone;
+            this.roleIdList = builder.roleIdList;
             this.userId = builder.userId;
             this.userType = builder.userType;
         }
@@ -193,6 +197,13 @@ public class QueryUserInfoByAccountResponseBody extends TeaModel {
         }
 
         /**
+         * @return roleIdList
+         */
+        public java.util.List < Long > getRoleIdList() {
+            return this.roleIdList;
+        }
+
+        /**
          * @return userId
          */
         public String getUserId() {
@@ -214,6 +225,7 @@ public class QueryUserInfoByAccountResponseBody extends TeaModel {
             private String email; 
             private String nickName; 
             private String phone; 
+            private java.util.List < Long > roleIdList; 
             private String userId; 
             private Integer userType; 
 
@@ -278,6 +290,14 @@ public class QueryUserInfoByAccountResponseBody extends TeaModel {
              */
             public Builder phone(String phone) {
                 this.phone = phone;
+                return this;
+            }
+
+            /**
+             * RoleIdList.
+             */
+            public Builder roleIdList(java.util.List < Long > roleIdList) {
+                this.roleIdList = roleIdList;
                 return this;
             }
 

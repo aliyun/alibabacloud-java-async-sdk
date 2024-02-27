@@ -17,9 +17,14 @@ public class QueryUserInfoByAccountRequest extends Request {
     @Validation(required = true)
     private String account;
 
+    @Query
+    @NameInMap("ParentAccountName")
+    private String parentAccountName;
+
     private QueryUserInfoByAccountRequest(Builder builder) {
         super(builder);
         this.account = builder.account;
+        this.parentAccountName = builder.parentAccountName;
     }
 
     public static Builder builder() {
@@ -42,8 +47,16 @@ public class QueryUserInfoByAccountRequest extends Request {
         return this.account;
     }
 
+    /**
+     * @return parentAccountName
+     */
+    public String getParentAccountName() {
+        return this.parentAccountName;
+    }
+
     public static final class Builder extends Request.Builder<QueryUserInfoByAccountRequest, Builder> {
         private String account; 
+        private String parentAccountName; 
 
         private Builder() {
             super();
@@ -52,6 +65,7 @@ public class QueryUserInfoByAccountRequest extends Request {
         private Builder(QueryUserInfoByAccountRequest request) {
             super(request);
             this.account = request.account;
+            this.parentAccountName = request.parentAccountName;
         } 
 
         /**
@@ -70,6 +84,15 @@ public class QueryUserInfoByAccountRequest extends Request {
         public Builder account(String account) {
             this.putQueryParameter("Account", account);
             this.account = account;
+            return this;
+        }
+
+        /**
+         * ParentAccountName.
+         */
+        public Builder parentAccountName(String parentAccountName) {
+            this.putQueryParameter("ParentAccountName", parentAccountName);
+            this.parentAccountName = parentAccountName;
             return this;
         }
 
