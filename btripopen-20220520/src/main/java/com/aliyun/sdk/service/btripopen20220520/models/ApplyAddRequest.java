@@ -1066,6 +1066,87 @@ public class ApplyAddRequest extends Request {
         } 
 
     }
+    public static class HotelIntlCitys extends TeaModel {
+        @NameInMap("city_code")
+        private String cityCode;
+
+        @NameInMap("city_name")
+        private String cityName;
+
+        @NameInMap("fee")
+        private Long fee;
+
+        private HotelIntlCitys(Builder builder) {
+            this.cityCode = builder.cityCode;
+            this.cityName = builder.cityName;
+            this.fee = builder.fee;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static HotelIntlCitys create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cityCode
+         */
+        public String getCityCode() {
+            return this.cityCode;
+        }
+
+        /**
+         * @return cityName
+         */
+        public String getCityName() {
+            return this.cityName;
+        }
+
+        /**
+         * @return fee
+         */
+        public Long getFee() {
+            return this.fee;
+        }
+
+        public static final class Builder {
+            private String cityCode; 
+            private String cityName; 
+            private Long fee; 
+
+            /**
+             * city_code.
+             */
+            public Builder cityCode(String cityCode) {
+                this.cityCode = cityCode;
+                return this;
+            }
+
+            /**
+             * city_name.
+             */
+            public Builder cityName(String cityName) {
+                this.cityName = cityName;
+                return this;
+            }
+
+            /**
+             * fee.
+             */
+            public Builder fee(Long fee) {
+                this.fee = fee;
+                return this;
+            }
+
+            public HotelIntlCitys build() {
+                return new HotelIntlCitys(this);
+            } 
+
+        } 
+
+    }
     public static class ExternalTravelerStandard extends TeaModel {
         @NameInMap("business_discount")
         private Integer businessDiscount;
@@ -1081,6 +1162,9 @@ public class ApplyAddRequest extends Request {
 
         @NameInMap("hotel_citys")
         private java.util.List < HotelCitys> hotelCitys;
+
+        @NameInMap("hotel_intl_citys")
+        private java.util.List < HotelIntlCitys> hotelIntlCitys;
 
         @NameInMap("international_flight_cabins")
         private String internationalFlightCabins;
@@ -1100,6 +1184,7 @@ public class ApplyAddRequest extends Request {
             this.firstDiscount = builder.firstDiscount;
             this.flightCabins = builder.flightCabins;
             this.hotelCitys = builder.hotelCitys;
+            this.hotelIntlCitys = builder.hotelIntlCitys;
             this.internationalFlightCabins = builder.internationalFlightCabins;
             this.premiumEconomyDiscount = builder.premiumEconomyDiscount;
             this.reserveType = builder.reserveType;
@@ -1150,6 +1235,13 @@ public class ApplyAddRequest extends Request {
         }
 
         /**
+         * @return hotelIntlCitys
+         */
+        public java.util.List < HotelIntlCitys> getHotelIntlCitys() {
+            return this.hotelIntlCitys;
+        }
+
+        /**
          * @return internationalFlightCabins
          */
         public String getInternationalFlightCabins() {
@@ -1183,6 +1275,7 @@ public class ApplyAddRequest extends Request {
             private Integer firstDiscount; 
             private String flightCabins; 
             private java.util.List < HotelCitys> hotelCitys; 
+            private java.util.List < HotelIntlCitys> hotelIntlCitys; 
             private String internationalFlightCabins; 
             private Integer premiumEconomyDiscount; 
             private Integer reserveType; 
@@ -1225,6 +1318,14 @@ public class ApplyAddRequest extends Request {
              */
             public Builder hotelCitys(java.util.List < HotelCitys> hotelCitys) {
                 this.hotelCitys = hotelCitys;
+                return this;
+            }
+
+            /**
+             * hotel_intl_citys.
+             */
+            public Builder hotelIntlCitys(java.util.List < HotelIntlCitys> hotelIntlCitys) {
+                this.hotelIntlCitys = hotelIntlCitys;
                 return this;
             }
 
@@ -2290,6 +2391,87 @@ public class ApplyAddRequest extends Request {
         } 
 
     }
+    public static class TravelerStandardHotelIntlCitys extends TeaModel {
+        @NameInMap("city_code")
+        private String cityCode;
+
+        @NameInMap("city_name")
+        private String cityName;
+
+        @NameInMap("fee")
+        private Long fee;
+
+        private TravelerStandardHotelIntlCitys(Builder builder) {
+            this.cityCode = builder.cityCode;
+            this.cityName = builder.cityName;
+            this.fee = builder.fee;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TravelerStandardHotelIntlCitys create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cityCode
+         */
+        public String getCityCode() {
+            return this.cityCode;
+        }
+
+        /**
+         * @return cityName
+         */
+        public String getCityName() {
+            return this.cityName;
+        }
+
+        /**
+         * @return fee
+         */
+        public Long getFee() {
+            return this.fee;
+        }
+
+        public static final class Builder {
+            private String cityCode; 
+            private String cityName; 
+            private Long fee; 
+
+            /**
+             * city_code.
+             */
+            public Builder cityCode(String cityCode) {
+                this.cityCode = cityCode;
+                return this;
+            }
+
+            /**
+             * city_name.
+             */
+            public Builder cityName(String cityName) {
+                this.cityName = cityName;
+                return this;
+            }
+
+            /**
+             * fee.
+             */
+            public Builder fee(Long fee) {
+                this.fee = fee;
+                return this;
+            }
+
+            public TravelerStandardHotelIntlCitys build() {
+                return new TravelerStandardHotelIntlCitys(this);
+            } 
+
+        } 
+
+    }
     public static class TravelerStandard extends TeaModel {
         @NameInMap("business_discount")
         private Integer businessDiscount;
@@ -2308,6 +2490,9 @@ public class ApplyAddRequest extends Request {
 
         @NameInMap("hotel_citys")
         private java.util.List < TravelerStandardHotelCitys> hotelCitys;
+
+        @NameInMap("hotel_intl_citys")
+        private java.util.List < TravelerStandardHotelIntlCitys> hotelIntlCitys;
 
         @NameInMap("international_flight_cabins")
         private String internationalFlightCabins;
@@ -2331,6 +2516,7 @@ public class ApplyAddRequest extends Request {
             this.firstDiscount = builder.firstDiscount;
             this.flightCabins = builder.flightCabins;
             this.hotelCitys = builder.hotelCitys;
+            this.hotelIntlCitys = builder.hotelIntlCitys;
             this.internationalFlightCabins = builder.internationalFlightCabins;
             this.premiumEconomyDiscount = builder.premiumEconomyDiscount;
             this.reserveType = builder.reserveType;
@@ -2389,6 +2575,13 @@ public class ApplyAddRequest extends Request {
         }
 
         /**
+         * @return hotelIntlCitys
+         */
+        public java.util.List < TravelerStandardHotelIntlCitys> getHotelIntlCitys() {
+            return this.hotelIntlCitys;
+        }
+
+        /**
          * @return internationalFlightCabins
          */
         public String getInternationalFlightCabins() {
@@ -2430,6 +2623,7 @@ public class ApplyAddRequest extends Request {
             private Integer firstDiscount; 
             private String flightCabins; 
             private java.util.List < TravelerStandardHotelCitys> hotelCitys; 
+            private java.util.List < TravelerStandardHotelIntlCitys> hotelIntlCitys; 
             private String internationalFlightCabins; 
             private Integer premiumEconomyDiscount; 
             private Integer reserveType; 
@@ -2481,6 +2675,14 @@ public class ApplyAddRequest extends Request {
              */
             public Builder hotelCitys(java.util.List < TravelerStandardHotelCitys> hotelCitys) {
                 this.hotelCitys = hotelCitys;
+                return this;
+            }
+
+            /**
+             * hotel_intl_citys.
+             */
+            public Builder hotelIntlCitys(java.util.List < TravelerStandardHotelIntlCitys> hotelIntlCitys) {
+                this.hotelIntlCitys = hotelIntlCitys;
                 return this;
             }
 
