@@ -3074,6 +3074,936 @@ public class CreateEventStreamingRequest extends Request {
         } 
 
     }
+    public static class AuthorizationType extends TeaModel {
+        @NameInMap("Form")
+        private String form;
+
+        @NameInMap("Template")
+        private String template;
+
+        @NameInMap("Value")
+        private String value;
+
+        private AuthorizationType(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AuthorizationType create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            /**
+             * The format into which you want to transform events. Default value: CONSTANT.
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * The template based on which you want to transform events.
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * The name of the MNS queue.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public AuthorizationType build() {
+                return new AuthorizationType(this);
+            } 
+
+        } 
+
+    }
+    public static class Data extends TeaModel {
+        @NameInMap("Form")
+        private String form;
+
+        @NameInMap("Template")
+        private String template;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Data(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Data create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            /**
+             * The format into which you want to transform events. Default value: CONSTANT.
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * The template based on which you want to transform events.
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * The name of the MNS queue.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Data build() {
+                return new Data(this);
+            } 
+
+        } 
+
+    }
+    public static class NetworkType extends TeaModel {
+        @NameInMap("Form")
+        private String form;
+
+        @NameInMap("Template")
+        private String template;
+
+        @NameInMap("Value")
+        private String value;
+
+        private NetworkType(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NetworkType create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            /**
+             * The format into which you want to transform events. Default value: CONSTANT.
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * The template based on which you want to transform events.
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * The name of the MNS queue.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public NetworkType build() {
+                return new NetworkType(this);
+            } 
+
+        } 
+
+    }
+    public static class Password extends TeaModel {
+        @NameInMap("Form")
+        private String form;
+
+        @NameInMap("Template")
+        private String template;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Password(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Password create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            /**
+             * The format into which you want to transform events. Default value: CONSTANT.
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * The template based on which you want to transform events.
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * The name of the MNS queue.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Password build() {
+                return new Password(this);
+            } 
+
+        } 
+
+    }
+    public static class SecurityGroupId extends TeaModel {
+        @NameInMap("Form")
+        private String form;
+
+        @NameInMap("Template")
+        private String template;
+
+        @NameInMap("Value")
+        private String value;
+
+        private SecurityGroupId(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SecurityGroupId create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            /**
+             * The format into which you want to transform events. Default value: CONSTANT.
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * The template based on which you want to transform events.
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * The name of the MNS queue.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public SecurityGroupId build() {
+                return new SecurityGroupId(this);
+            } 
+
+        } 
+
+    }
+    public static class URL extends TeaModel {
+        @NameInMap("Form")
+        private String form;
+
+        @NameInMap("Template")
+        private String template;
+
+        @NameInMap("Value")
+        private String value;
+
+        private URL(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static URL create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            /**
+             * The format into which you want to transform events. Default value: CONSTANT.
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * The template based on which you want to transform events.
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * The name of the MNS queue.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public URL build() {
+                return new URL(this);
+            } 
+
+        } 
+
+    }
+    public static class Username extends TeaModel {
+        @NameInMap("Form")
+        private String form;
+
+        @NameInMap("Template")
+        private String template;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Username(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Username create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            /**
+             * The format into which you want to transform events. Default value: CONSTANT.
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * The template based on which you want to transform events.
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * The name of the MNS queue.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Username build() {
+                return new Username(this);
+            } 
+
+        } 
+
+    }
+    public static class VSwitchId extends TeaModel {
+        @NameInMap("Form")
+        private String form;
+
+        @NameInMap("Template")
+        private String template;
+
+        @NameInMap("Value")
+        private String value;
+
+        private VSwitchId(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VSwitchId create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            /**
+             * The format into which you want to transform events. Default value: CONSTANT.
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * The template based on which you want to transform events.
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * The name of the MNS queue.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public VSwitchId build() {
+                return new VSwitchId(this);
+            } 
+
+        } 
+
+    }
+    public static class VpcId extends TeaModel {
+        @NameInMap("Form")
+        private String form;
+
+        @NameInMap("Template")
+        private String template;
+
+        @NameInMap("Value")
+        private String value;
+
+        private VpcId(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VpcId create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            /**
+             * The format into which you want to transform events. Default value: CONSTANT.
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * The template based on which you want to transform events.
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * The name of the MNS queue.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public VpcId build() {
+                return new VpcId(this);
+            } 
+
+        } 
+
+    }
+    public static class SinkPrometheusParameters extends TeaModel {
+        @NameInMap("AuthorizationType")
+        private AuthorizationType authorizationType;
+
+        @NameInMap("Data")
+        private Data data;
+
+        @NameInMap("NetworkType")
+        private NetworkType networkType;
+
+        @NameInMap("Password")
+        private Password password;
+
+        @NameInMap("SecurityGroupId")
+        private SecurityGroupId securityGroupId;
+
+        @NameInMap("URL")
+        private URL URL;
+
+        @NameInMap("Username")
+        private Username username;
+
+        @NameInMap("VSwitchId")
+        private VSwitchId vSwitchId;
+
+        @NameInMap("VpcId")
+        private VpcId vpcId;
+
+        private SinkPrometheusParameters(Builder builder) {
+            this.authorizationType = builder.authorizationType;
+            this.data = builder.data;
+            this.networkType = builder.networkType;
+            this.password = builder.password;
+            this.securityGroupId = builder.securityGroupId;
+            this.URL = builder.URL;
+            this.username = builder.username;
+            this.vSwitchId = builder.vSwitchId;
+            this.vpcId = builder.vpcId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SinkPrometheusParameters create() {
+            return builder().build();
+        }
+
+        /**
+         * @return authorizationType
+         */
+        public AuthorizationType getAuthorizationType() {
+            return this.authorizationType;
+        }
+
+        /**
+         * @return data
+         */
+        public Data getData() {
+            return this.data;
+        }
+
+        /**
+         * @return networkType
+         */
+        public NetworkType getNetworkType() {
+            return this.networkType;
+        }
+
+        /**
+         * @return password
+         */
+        public Password getPassword() {
+            return this.password;
+        }
+
+        /**
+         * @return securityGroupId
+         */
+        public SecurityGroupId getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        /**
+         * @return URL
+         */
+        public URL getURL() {
+            return this.URL;
+        }
+
+        /**
+         * @return username
+         */
+        public Username getUsername() {
+            return this.username;
+        }
+
+        /**
+         * @return vSwitchId
+         */
+        public VSwitchId getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+        /**
+         * @return vpcId
+         */
+        public VpcId getVpcId() {
+            return this.vpcId;
+        }
+
+        public static final class Builder {
+            private AuthorizationType authorizationType; 
+            private Data data; 
+            private NetworkType networkType; 
+            private Password password; 
+            private SecurityGroupId securityGroupId; 
+            private URL URL; 
+            private Username username; 
+            private VSwitchId vSwitchId; 
+            private VpcId vpcId; 
+
+            /**
+             * AuthorizationType.
+             */
+            public Builder authorizationType(AuthorizationType authorizationType) {
+                this.authorizationType = authorizationType;
+                return this;
+            }
+
+            /**
+             * Data.
+             */
+            public Builder data(Data data) {
+                this.data = data;
+                return this;
+            }
+
+            /**
+             * NetworkType.
+             */
+            public Builder networkType(NetworkType networkType) {
+                this.networkType = networkType;
+                return this;
+            }
+
+            /**
+             * Password.
+             */
+            public Builder password(Password password) {
+                this.password = password;
+                return this;
+            }
+
+            /**
+             * SecurityGroupId.
+             */
+            public Builder securityGroupId(SecurityGroupId securityGroupId) {
+                this.securityGroupId = securityGroupId;
+                return this;
+            }
+
+            /**
+             * URL.
+             */
+            public Builder URL(URL URL) {
+                this.URL = URL;
+                return this;
+            }
+
+            /**
+             * Username.
+             */
+            public Builder username(Username username) {
+                this.username = username;
+                return this;
+            }
+
+            /**
+             * VSwitchId.
+             */
+            public Builder vSwitchId(VSwitchId vSwitchId) {
+                this.vSwitchId = vSwitchId;
+                return this;
+            }
+
+            /**
+             * VpcId.
+             */
+            public Builder vpcId(VpcId vpcId) {
+                this.vpcId = vpcId;
+                return this;
+            }
+
+            public SinkPrometheusParameters build() {
+                return new SinkPrometheusParameters(this);
+            } 
+
+        } 
+
+    }
     public static class SinkRabbitMQParametersBody extends TeaModel {
         @NameInMap("Form")
         private String form;
@@ -4741,7 +5671,7 @@ public class CreateEventStreamingRequest extends Request {
         } 
 
     }
-    public static class SecurityGroupId extends TeaModel {
+    public static class SinkRocketMQParametersSecurityGroupId extends TeaModel {
         @NameInMap("Form")
         private String form;
 
@@ -4751,7 +5681,7 @@ public class CreateEventStreamingRequest extends Request {
         @NameInMap("Value")
         private String value;
 
-        private SecurityGroupId(Builder builder) {
+        private SinkRocketMQParametersSecurityGroupId(Builder builder) {
             this.form = builder.form;
             this.template = builder.template;
             this.value = builder.value;
@@ -4761,7 +5691,7 @@ public class CreateEventStreamingRequest extends Request {
             return new Builder();
         }
 
-        public static SecurityGroupId create() {
+        public static SinkRocketMQParametersSecurityGroupId create() {
             return builder().build();
         }
 
@@ -4815,8 +5745,8 @@ public class CreateEventStreamingRequest extends Request {
                 return this;
             }
 
-            public SecurityGroupId build() {
-                return new SecurityGroupId(this);
+            public SinkRocketMQParametersSecurityGroupId build() {
+                return new SinkRocketMQParametersSecurityGroupId(this);
             } 
 
         } 
@@ -5065,7 +5995,7 @@ public class CreateEventStreamingRequest extends Request {
         } 
 
     }
-    public static class VpcId extends TeaModel {
+    public static class SinkRocketMQParametersVpcId extends TeaModel {
         @NameInMap("Form")
         private String form;
 
@@ -5075,7 +6005,7 @@ public class CreateEventStreamingRequest extends Request {
         @NameInMap("Value")
         private String value;
 
-        private VpcId(Builder builder) {
+        private SinkRocketMQParametersVpcId(Builder builder) {
             this.form = builder.form;
             this.template = builder.template;
             this.value = builder.value;
@@ -5085,7 +6015,7 @@ public class CreateEventStreamingRequest extends Request {
             return new Builder();
         }
 
-        public static VpcId create() {
+        public static SinkRocketMQParametersVpcId create() {
             return builder().build();
         }
 
@@ -5139,8 +6069,8 @@ public class CreateEventStreamingRequest extends Request {
                 return this;
             }
 
-            public VpcId build() {
-                return new VpcId(this);
+            public SinkRocketMQParametersVpcId build() {
+                return new SinkRocketMQParametersVpcId(this);
             } 
 
         } 
@@ -5175,7 +6105,7 @@ public class CreateEventStreamingRequest extends Request {
         private SinkRocketMQParametersProperties properties;
 
         @NameInMap("SecurityGroupId")
-        private SecurityGroupId securityGroupId;
+        private SinkRocketMQParametersSecurityGroupId securityGroupId;
 
         @NameInMap("Tags")
         private Tags tags;
@@ -5187,7 +6117,7 @@ public class CreateEventStreamingRequest extends Request {
         private VSwitchIds vSwitchIds;
 
         @NameInMap("VpcId")
-        private VpcId vpcId;
+        private SinkRocketMQParametersVpcId vpcId;
 
         private SinkRocketMQParameters(Builder builder) {
             this.body = builder.body;
@@ -5280,7 +6210,7 @@ public class CreateEventStreamingRequest extends Request {
         /**
          * @return securityGroupId
          */
-        public SecurityGroupId getSecurityGroupId() {
+        public SinkRocketMQParametersSecurityGroupId getSecurityGroupId() {
             return this.securityGroupId;
         }
 
@@ -5308,7 +6238,7 @@ public class CreateEventStreamingRequest extends Request {
         /**
          * @return vpcId
          */
-        public VpcId getVpcId() {
+        public SinkRocketMQParametersVpcId getVpcId() {
             return this.vpcId;
         }
 
@@ -5322,11 +6252,11 @@ public class CreateEventStreamingRequest extends Request {
             private Keys keys; 
             private Network network; 
             private SinkRocketMQParametersProperties properties; 
-            private SecurityGroupId securityGroupId; 
+            private SinkRocketMQParametersSecurityGroupId securityGroupId; 
             private Tags tags; 
             private SinkRocketMQParametersTopic topic; 
             private VSwitchIds vSwitchIds; 
-            private VpcId vpcId; 
+            private SinkRocketMQParametersVpcId vpcId; 
 
             /**
              * The message body.
@@ -5407,7 +6337,7 @@ public class CreateEventStreamingRequest extends Request {
             /**
              * The security group ID.
              */
-            public Builder securityGroupId(SecurityGroupId securityGroupId) {
+            public Builder securityGroupId(SinkRocketMQParametersSecurityGroupId securityGroupId) {
                 this.securityGroupId = securityGroupId;
                 return this;
             }
@@ -5439,7 +6369,7 @@ public class CreateEventStreamingRequest extends Request {
             /**
              * The VPC ID.
              */
-            public Builder vpcId(VpcId vpcId) {
+            public Builder vpcId(SinkRocketMQParametersVpcId vpcId) {
                 this.vpcId = vpcId;
                 return this;
             }
@@ -5993,6 +6923,9 @@ public class CreateEventStreamingRequest extends Request {
         @NameInMap("SinkMNSParameters")
         private SinkMNSParameters sinkMNSParameters;
 
+        @NameInMap("SinkPrometheusParameters")
+        private SinkPrometheusParameters sinkPrometheusParameters;
+
         @NameInMap("SinkRabbitMQParameters")
         private SinkRabbitMQParameters sinkRabbitMQParameters;
 
@@ -6008,6 +6941,7 @@ public class CreateEventStreamingRequest extends Request {
             this.sinkFnfParameters = builder.sinkFnfParameters;
             this.sinkKafkaParameters = builder.sinkKafkaParameters;
             this.sinkMNSParameters = builder.sinkMNSParameters;
+            this.sinkPrometheusParameters = builder.sinkPrometheusParameters;
             this.sinkRabbitMQParameters = builder.sinkRabbitMQParameters;
             this.sinkRocketMQParameters = builder.sinkRocketMQParameters;
             this.sinkSLSParameters = builder.sinkSLSParameters;
@@ -6057,6 +6991,13 @@ public class CreateEventStreamingRequest extends Request {
         }
 
         /**
+         * @return sinkPrometheusParameters
+         */
+        public SinkPrometheusParameters getSinkPrometheusParameters() {
+            return this.sinkPrometheusParameters;
+        }
+
+        /**
          * @return sinkRabbitMQParameters
          */
         public SinkRabbitMQParameters getSinkRabbitMQParameters() {
@@ -6083,6 +7024,7 @@ public class CreateEventStreamingRequest extends Request {
             private SinkFnfParameters sinkFnfParameters; 
             private SinkKafkaParameters sinkKafkaParameters; 
             private SinkMNSParameters sinkMNSParameters; 
+            private SinkPrometheusParameters sinkPrometheusParameters; 
             private SinkRabbitMQParameters sinkRabbitMQParameters; 
             private SinkRocketMQParameters sinkRocketMQParameters; 
             private SinkSLSParameters sinkSLSParameters; 
@@ -6124,6 +7066,14 @@ public class CreateEventStreamingRequest extends Request {
              */
             public Builder sinkMNSParameters(SinkMNSParameters sinkMNSParameters) {
                 this.sinkMNSParameters = sinkMNSParameters;
+                return this;
+            }
+
+            /**
+             * SinkPrometheusParameters.
+             */
+            public Builder sinkPrometheusParameters(SinkPrometheusParameters sinkPrometheusParameters) {
+                this.sinkPrometheusParameters = sinkPrometheusParameters;
                 return this;
             }
 
@@ -6257,7 +7207,7 @@ public class CreateEventStreamingRequest extends Request {
             private String username; 
 
             /**
-             * The URL and port number of the data subscription channel.
+             * The URL and port number of the change tracking instance.
              */
             public Builder brokerUrl(String brokerUrl) {
                 this.brokerUrl = brokerUrl;
@@ -6265,7 +7215,7 @@ public class CreateEventStreamingRequest extends Request {
             }
 
             /**
-             * The consumer offset. It is the timestamp that indicates when the SDK client consumes the first data record.
+             * The UNIX timestamp that is generated when the SDK client consumes the first data record.
              */
             public Builder initCheckPoint(Long initCheckPoint) {
                 this.initCheckPoint = initCheckPoint;
@@ -6297,7 +7247,7 @@ public class CreateEventStreamingRequest extends Request {
             }
 
             /**
-             * The topic to which you want to subscribe by using the data subscription channel.
+             * The name of the tracked topic of the change tracking instance.
              */
             public Builder topic(String topic) {
                 this.topic = topic;
@@ -6344,6 +7294,9 @@ public class CreateEventStreamingRequest extends Request {
         @NameInMap("VSwitchIds")
         private String vSwitchIds;
 
+        @NameInMap("ValueDataType")
+        private String valueDataType;
+
         @NameInMap("VpcId")
         private String vpcId;
 
@@ -6356,6 +7309,7 @@ public class CreateEventStreamingRequest extends Request {
             this.securityGroupId = builder.securityGroupId;
             this.topic = builder.topic;
             this.vSwitchIds = builder.vSwitchIds;
+            this.valueDataType = builder.valueDataType;
             this.vpcId = builder.vpcId;
         }
 
@@ -6424,6 +7378,13 @@ public class CreateEventStreamingRequest extends Request {
         }
 
         /**
+         * @return valueDataType
+         */
+        public String getValueDataType() {
+            return this.valueDataType;
+        }
+
+        /**
          * @return vpcId
          */
         public String getVpcId() {
@@ -6439,10 +7400,11 @@ public class CreateEventStreamingRequest extends Request {
             private String securityGroupId; 
             private String topic; 
             private String vSwitchIds; 
+            private String valueDataType; 
             private String vpcId; 
 
             /**
-             * The ID of the consumer group that subscribes to the topic.
+             * The group ID of the consumer that subscribes to the topic.
              */
             public Builder consumerGroup(String consumerGroup) {
                 this.consumerGroup = consumerGroup;
@@ -6450,7 +7412,7 @@ public class CreateEventStreamingRequest extends Request {
             }
 
             /**
-             * The instance ID.
+             * The ID of the Message Queue for Apache Kafka instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -6458,7 +7420,7 @@ public class CreateEventStreamingRequest extends Request {
             }
 
             /**
-             * The network type. Default value: Default. The value PublicNetwork specifies virtual private clouds (VPCs).
+             * The network setting. Default value: Default. The value PublicNetwork specifies a virtual private cloud (VPC).
              */
             public Builder network(String network) {
                 this.network = network;
@@ -6474,7 +7436,7 @@ public class CreateEventStreamingRequest extends Request {
             }
 
             /**
-             * The region ID.
+             * The ID of the region where the Message Queue for Apache Kafka instance resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -6502,6 +7464,14 @@ public class CreateEventStreamingRequest extends Request {
              */
             public Builder vSwitchIds(String vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
+                return this;
+            }
+
+            /**
+             * ValueDataType.
+             */
+            public Builder valueDataType(String valueDataType) {
+                this.valueDataType = valueDataType;
                 return this;
             }
 
@@ -6579,7 +7549,7 @@ public class CreateEventStreamingRequest extends Request {
             }
 
             /**
-             * The queue name.
+             * The name of the MNS queue.
              */
             public Builder queueName(String queueName) {
                 this.queueName = queueName;
@@ -6587,7 +7557,7 @@ public class CreateEventStreamingRequest extends Request {
             }
 
             /**
-             * The region ID.
+             * The ID of the region where the MNS queue resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -6602,6 +7572,9 @@ public class CreateEventStreamingRequest extends Request {
 
     }
     public static class SourceMQTTParameters extends TeaModel {
+        @NameInMap("BodyDataType")
+        private String bodyDataType;
+
         @NameInMap("InstanceId")
         private String instanceId;
 
@@ -6612,6 +7585,7 @@ public class CreateEventStreamingRequest extends Request {
         private String topic;
 
         private SourceMQTTParameters(Builder builder) {
+            this.bodyDataType = builder.bodyDataType;
             this.instanceId = builder.instanceId;
             this.regionId = builder.regionId;
             this.topic = builder.topic;
@@ -6623,6 +7597,13 @@ public class CreateEventStreamingRequest extends Request {
 
         public static SourceMQTTParameters create() {
             return builder().build();
+        }
+
+        /**
+         * @return bodyDataType
+         */
+        public String getBodyDataType() {
+            return this.bodyDataType;
         }
 
         /**
@@ -6647,12 +7628,21 @@ public class CreateEventStreamingRequest extends Request {
         }
 
         public static final class Builder {
+            private String bodyDataType; 
             private String instanceId; 
             private String regionId; 
             private String topic; 
 
             /**
-             * The instance ID.
+             * BodyDataType.
+             */
+            public Builder bodyDataType(String bodyDataType) {
+                this.bodyDataType = bodyDataType;
+                return this;
+            }
+
+            /**
+             * The ID of the Message Queue for MQTT instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -6660,7 +7650,7 @@ public class CreateEventStreamingRequest extends Request {
             }
 
             /**
-             * The region ID.
+             * The ID of the region where the Message Queue for MQTT instance resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -6668,7 +7658,7 @@ public class CreateEventStreamingRequest extends Request {
             }
 
             /**
-             * The topic in which messages are stored.
+             * The topic from which messages are sent.
              */
             public Builder topic(String topic) {
                 this.topic = topic;
@@ -6834,7 +7824,7 @@ public class CreateEventStreamingRequest extends Request {
             }
 
             /**
-             * The name of the queue on the Message Queue for RabbitMQ instance.
+             * The queue name of the Message Queue for RabbitMQ instance.
              */
             public Builder queueName(String queueName) {
                 this.queueName = queueName;
@@ -6842,7 +7832,7 @@ public class CreateEventStreamingRequest extends Request {
             }
 
             /**
-             * The region ID. You can call the [describeregions](~~62010~~) operation to query the most recent region list.
+             * The ID of the region where the Message Queue for RabbitMQ instance resides. You can call the [DescribeRegions](~~62010~~) operation to query the most recent region list.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -6850,7 +7840,7 @@ public class CreateEventStreamingRequest extends Request {
             }
 
             /**
-             * The name of the vhost of the Message Queue for RabbitMQ instance.
+             * The vhost name of the Message Queue for RabbitMQ instance.
              */
             public Builder virtualHostName(String virtualHostName) {
                 this.virtualHostName = virtualHostName;
@@ -7151,7 +8141,7 @@ public class CreateEventStreamingRequest extends Request {
             }
 
             /**
-             * The SQL statement that is used to filter messages.
+             * The SQL statement that you want to use to filter messages.
              */
             public Builder filterSql(String filterSql) {
                 this.filterSql = filterSql;
@@ -7159,7 +8149,7 @@ public class CreateEventStreamingRequest extends Request {
             }
 
             /**
-             * The message filter type.
+             * The method that you want to use to filter messages.
              */
             public Builder filterType(String filterType) {
                 this.filterType = filterType;
@@ -7183,7 +8173,7 @@ public class CreateEventStreamingRequest extends Request {
             }
 
             /**
-             * The region where the Message Queue for Apache RocketMQ instance resides.
+             * The ID of the Message Queue for Apache RocketMQ instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -7191,7 +8181,7 @@ public class CreateEventStreamingRequest extends Request {
             }
 
             /**
-             * The network type of the instance. Valid values:
+             * The network type of the Message Queue for Apache RocketMQ instance. Valid values:
              * <p>
              * 
              * *   PublicNetwork
@@ -7211,7 +8201,7 @@ public class CreateEventStreamingRequest extends Request {
             }
 
             /**
-             * The security group ID of the instance.
+             * The security group ID of the Message Queue for Apache RocketMQ instance.
              */
             public Builder instanceSecurityGroupId(String instanceSecurityGroupId) {
                 this.instanceSecurityGroupId = instanceSecurityGroupId;
@@ -7235,7 +8225,7 @@ public class CreateEventStreamingRequest extends Request {
             }
 
             /**
-             * The vSwitch ID of the instance.
+             * The vSwitch ID of the Message Queue for Apache RocketMQ instance.
              */
             public Builder instanceVSwitchIds(String instanceVSwitchIds) {
                 this.instanceVSwitchIds = instanceVSwitchIds;
@@ -7243,7 +8233,7 @@ public class CreateEventStreamingRequest extends Request {
             }
 
             /**
-             * The VPC ID of the instance.
+             * The VPC ID of the Message Queue for Apache RocketMQ instance.
              */
             public Builder instanceVpcId(String instanceVpcId) {
                 this.instanceVpcId = instanceVpcId;
@@ -7259,12 +8249,12 @@ public class CreateEventStreamingRequest extends Request {
             }
 
             /**
-             * The offset from which message consumption starts. Valid values:
+             * The offset from which messages are consumed. Valid values:
              * <p>
              * 
-             * *   CONSUME_FROM_LAST_OFFSET: Start message consumption from the latest offset.
-             * *   CONSUME_FROM_FIRST_OFFSET: Start message consumption from the earliest offset.
-             * *   CONSUME_FROM_TIMESTAMP: Start message consumption from the offset at the specified point in time.
+             * *   CONSUME_FROM_LAST_OFFSET: Messages are consumed from the latest offset.
+             * *   CONSUME_FROM_FIRST_OFFSET: Messages are consumed from the earliest offset.
+             * *   CONSUME_FROM_TIMESTAMP: Messages are consumed from the offset at the specified point in time.
              * 
              * Default value: CONSUME_FROM_LAST_OFFSET.
              */
@@ -7274,7 +8264,7 @@ public class CreateEventStreamingRequest extends Request {
             }
 
             /**
-             * The region ID.
+             * The ID of the region where the Message Queue for Apache RocketMQ instance resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -7282,7 +8272,7 @@ public class CreateEventStreamingRequest extends Request {
             }
 
             /**
-             * The security group of the cross-border task.
+             * The security group ID of the cross-border task.
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -7290,7 +8280,7 @@ public class CreateEventStreamingRequest extends Request {
             }
 
             /**
-             * The tag that is used to filter messages.
+             * The tag that you want to use to filter messages.
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -7399,7 +8389,7 @@ public class CreateEventStreamingRequest extends Request {
             private String roleName; 
 
             /**
-             * The consumer offset. The value begin indicates the earliest offset, and the value end indicates the latest offset. You can also specify a time in seconds to start message consumption.
+             * The consumer offset. The value begin specifies the earliest offset, and the value end specifies the latest offset. You can also specify a time in seconds to start consumption.
              */
             public Builder consumePosition(String consumePosition) {
                 this.consumePosition = consumePosition;
@@ -7407,7 +8397,7 @@ public class CreateEventStreamingRequest extends Request {
             }
 
             /**
-             * The Simple Log Service Logstore.
+             * The Log Service Logstore.
              */
             public Builder logStore(String logStore) {
                 this.logStore = logStore;
@@ -7415,7 +8405,7 @@ public class CreateEventStreamingRequest extends Request {
             }
 
             /**
-             * The Simple Log Service project.
+             * The Log Service project.
              */
             public Builder project(String project) {
                 this.project = project;
@@ -7423,7 +8413,7 @@ public class CreateEventStreamingRequest extends Request {
             }
 
             /**
-             * The role name. If you want to authorize EventBridge to use this role to read logs in Simple Log Service, you must select Alibaba Cloud Service for Selected Trusted Entity and EventBridge for Select Trusted Service when you create the role in the Resource Access Management (RAM) console.
+             * The role name. If you want to authorize EventBridge to use this role to read logs in Log Service, you must select Alibaba Cloud Service for Selected Trusted Entity and EventBridge for Select Trusted Service when you create the role in the Resource Access Management (RAM) console.
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;
@@ -7548,7 +8538,7 @@ public class CreateEventStreamingRequest extends Request {
             private SourceSLSParameters sourceSLSParameters; 
 
             /**
-             * The parameters that are configured if you specify the event source as Data Transmission Service (DTS).
+             * The parameters that are configured if you specify Data Transmission Service (DTS) as the event source.
              */
             public Builder sourceDTSParameters(SourceDTSParameters sourceDTSParameters) {
                 this.sourceDTSParameters = sourceDTSParameters;
@@ -7556,7 +8546,7 @@ public class CreateEventStreamingRequest extends Request {
             }
 
             /**
-             * The parameters that are configured if you specify the event source as Message Queue for Apache Kafka.
+             * The parameters that are configured if you specify Message Queue for Apache Kafka as the event source.
              */
             public Builder sourceKafkaParameters(SourceKafkaParameters sourceKafkaParameters) {
                 this.sourceKafkaParameters = sourceKafkaParameters;
@@ -7564,7 +8554,7 @@ public class CreateEventStreamingRequest extends Request {
             }
 
             /**
-             * The parameters that are configured if you specify the event source as Message Service (MNS).
+             * The parameters that are configured if you specify Message Service (MNS) as the event source.
              */
             public Builder sourceMNSParameters(SourceMNSParameters sourceMNSParameters) {
                 this.sourceMNSParameters = sourceMNSParameters;
@@ -7572,7 +8562,7 @@ public class CreateEventStreamingRequest extends Request {
             }
 
             /**
-             * The parameters that are configured if you specify the event source as Message Queue for MQTT.
+             * The parameters that are configured if you specify Message Queue for MQTT as the event source.
              */
             public Builder sourceMQTTParameters(SourceMQTTParameters sourceMQTTParameters) {
                 this.sourceMQTTParameters = sourceMQTTParameters;
@@ -7588,7 +8578,7 @@ public class CreateEventStreamingRequest extends Request {
             }
 
             /**
-             * The parameters that are configured if you specify the event source as Message Queue for RabbitMQ.
+             * The parameters that are configured if you specify Message Queue for RabbitMQ as the event source.
              */
             public Builder sourceRabbitMQParameters(SourceRabbitMQParameters sourceRabbitMQParameters) {
                 this.sourceRabbitMQParameters = sourceRabbitMQParameters;
@@ -7596,7 +8586,7 @@ public class CreateEventStreamingRequest extends Request {
             }
 
             /**
-             * The parameters that are configured if you specify the event source as Message Queue for Apache RocketMQ.
+             * The parameters that are configured if you specify Message Queue for Apache RocketMQ as the event source.
              */
             public Builder sourceRocketMQParameters(SourceRocketMQParameters sourceRocketMQParameters) {
                 this.sourceRocketMQParameters = sourceRocketMQParameters;
@@ -7604,7 +8594,7 @@ public class CreateEventStreamingRequest extends Request {
             }
 
             /**
-             * The parameters that are configured if you specify the event source as Simple Log Service.
+             * The parameters that are configured if you specify Log Service as the event source.
              */
             public Builder sourceSLSParameters(SourceSLSParameters sourceSLSParameters) {
                 this.sourceSLSParameters = sourceSLSParameters;

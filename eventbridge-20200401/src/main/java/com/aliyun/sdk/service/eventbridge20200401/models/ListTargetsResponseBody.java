@@ -89,9 +89,8 @@ public class ListTargetsResponseBody extends TeaModel {
          * The returned response code. Valid values:
          * <p>
          * 
-         *     Success: The request is successful. 
-         * 
-         *     Other codes: The request failed. For more information about error codes, see Error codes.
+         * *   Success: The request is successful.
+         * *   Other codes: The request failed. For a list of error codes, see Error codes.
          */
         public Builder code(String code) {
             this.code = code;
@@ -126,9 +125,8 @@ public class ListTargetsResponseBody extends TeaModel {
          * Indicates whether the request is successful. Valid values:
          * <p>
          * 
-         *     true: The request is successful. 
-         * 
-         *     false: The request failed.
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -204,7 +202,7 @@ public class ListTargetsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Form.
+             * The format that is used by the event target parameter.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -212,7 +210,7 @@ public class ListTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceKey.
+             * The resource parameter of the event target.
              */
             public Builder resourceKey(String resourceKey) {
                 this.resourceKey = resourceKey;
@@ -220,7 +218,7 @@ public class ListTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * Template.
+             * The template that is used by the event target parameter.
              */
             public Builder template(String template) {
                 this.template = template;
@@ -228,7 +226,7 @@ public class ListTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the event target parameter.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -341,7 +339,7 @@ public class ListTargetsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Endpoint.
+             * The endpoint of the event target.
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -357,7 +355,7 @@ public class ListTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * EventBusName.
+             * The name of the event bus.
              */
             public Builder eventBusName(String eventBusName) {
                 this.eventBusName = eventBusName;
@@ -365,7 +363,7 @@ public class ListTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the event target.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -373,7 +371,7 @@ public class ListTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * ParamList.
+             * The parameters that are configured for the event target.
              */
             public Builder paramList(java.util.List < ParamList> paramList) {
                 this.paramList = paramList;
@@ -381,7 +379,7 @@ public class ListTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * The name of the event rule.
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -389,7 +387,7 @@ public class ListTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the event target. For more information, see [Event target parameters](~~183698~~).
              */
             public Builder type(String type) {
                 this.type = type;
@@ -462,7 +460,7 @@ public class ListTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the event rule.
+             * The event targets.
              */
             public Builder targets(java.util.List < Targets> targets) {
                 this.targets = targets;

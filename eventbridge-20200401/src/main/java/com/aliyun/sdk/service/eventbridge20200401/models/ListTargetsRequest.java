@@ -128,7 +128,7 @@ public class ListTargetsRequest extends Request {
         }
 
         /**
-         * The maximum number of entries returned per page.
+         * The maximum number of returned entries in a call.
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("Limit", limit);

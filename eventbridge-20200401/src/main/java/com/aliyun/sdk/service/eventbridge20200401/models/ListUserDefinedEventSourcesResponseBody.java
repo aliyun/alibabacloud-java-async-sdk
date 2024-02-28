@@ -452,7 +452,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * The ID of the consumer group that subscribes to the topic.
+             * The ID of the consumer group that subscribes to the topic on the Message Queue for Apache Kafka instance.
              */
             public Builder consumerGroup(String consumerGroup) {
                 this.consumerGroup = consumerGroup;
@@ -476,7 +476,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The network. Valid values: Default and PublicNetwork. Default value: Default. The value PublicNetwork indicates a self-managed network.
+             * The network type. Valid values: Default and PublicNetwork. Default value: Default. The value PublicNetwork indicates a self-managed network.
              */
             public Builder network(String network) {
                 this.network = network;
@@ -492,7 +492,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * The ID of the region where the Message Queue for Apache Kafka instance resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -500,7 +500,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The security group ID.
+             * The ID of the security group to which the Message Queue for Apache Kafka instance belongs.
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -516,7 +516,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The vSwitch ID.
+             * The ID of the vSwitch with which the Message Queue for Apache Kafka instance is associated.
              */
             public Builder vSwitchIds(String vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
@@ -524,7 +524,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The VPC ID.
+             * The ID of the VPC in which the Message Queue for Apache Kafka instance is deployed.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -605,7 +605,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The region where the MNS queue resides.
+             * The ID of the region where the MNS queue resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -943,7 +943,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The instance endpoint.
+             * The endpoint that is used to access the Message Queue for Apache RocketMQ instance.
              */
             public Builder instanceEndpoint(String instanceEndpoint) {
                 this.instanceEndpoint = instanceEndpoint;
@@ -959,7 +959,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The network that is used by the Message Queue for Apache RocketMQ instance.
+             * The type of network over which the Message Queue for Apache RocketMQ instance is accessed.
              */
             public Builder instanceNetwork(String instanceNetwork) {
                 this.instanceNetwork = instanceNetwork;
@@ -967,7 +967,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The instance password.
+             * The password that is used to access the Message Queue for Apache RocketMQ instance.
              */
             public Builder instancePassword(String instancePassword) {
                 this.instancePassword = instancePassword;
@@ -975,7 +975,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The security group ID.
+             * The ID of the security group to which the Message Queue for Apache RocketMQ instance belongs.
              */
             public Builder instanceSecurityGroupId(String instanceSecurityGroupId) {
                 this.instanceSecurityGroupId = instanceSecurityGroupId;
@@ -991,7 +991,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The instance username.
+             * The username that is used to access the Message Queue for Apache RocketMQ instance.
              */
             public Builder instanceUsername(String instanceUsername) {
                 this.instanceUsername = instanceUsername;
@@ -999,7 +999,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The vSwitch ID.
+             * The ID of the vSwitch with which the Message Queue for Apache RocketMQ instance is associated.
              */
             public Builder instanceVSwitchIds(String instanceVSwitchIds) {
                 this.instanceVSwitchIds = instanceVSwitchIds;
@@ -1007,7 +1007,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The virtual private cloud (VPC) ID.
+             * The ID of the virtual private cloud (VPC) in which the Message Queue for Apache RocketMQ instance is deployed.
              */
             public Builder instanceVpcId(String instanceVpcId) {
                 this.instanceVpcId = instanceVpcId;
@@ -1030,7 +1030,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The region where the Message Queue for Apache RocketMQ instance resides.
+             * The ID of the region where the Message Queue for Apache RocketMQ instance resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1131,7 +1131,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             private String roleName; 
 
             /**
-             * The consumer offset. The value begin indicates the earliest offset, and the value end indicates the latest offset. You can also specify a time in seconds to start message consumption.
+             * The consumer offset. The value begin indicates the earliest offset, and the value end indicates the latest offset. You can also specify a time in seconds to start consumption.
              */
             public Builder consumePosition(String consumePosition) {
                 this.consumePosition = consumePosition;
@@ -1236,7 +1236,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * UserData.
+             * The JSON string.
              */
             public Builder userData(String userData) {
                 this.userData = userData;
@@ -1555,8 +1555,16 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
         @NameInMap("EventSourceList")
         private java.util.List < EventSourceList> eventSourceList;
 
+        @NameInMap("NextToken")
+        private String nextToken;
+
+        @NameInMap("Total")
+        private Integer total;
+
         private Data(Builder builder) {
             this.eventSourceList = builder.eventSourceList;
+            this.nextToken = builder.nextToken;
+            this.total = builder.total;
         }
 
         public static Builder builder() {
@@ -1574,14 +1582,46 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             return this.eventSourceList;
         }
 
+        /**
+         * @return nextToken
+         */
+        public String getNextToken() {
+            return this.nextToken;
+        }
+
+        /**
+         * @return total
+         */
+        public Integer getTotal() {
+            return this.total;
+        }
+
         public static final class Builder {
             private java.util.List < EventSourceList> eventSourceList; 
+            private String nextToken; 
+            private Integer total; 
 
             /**
              * The event sources.
              */
             public Builder eventSourceList(java.util.List < EventSourceList> eventSourceList) {
                 this.eventSourceList = eventSourceList;
+                return this;
+            }
+
+            /**
+             * NextToken.
+             */
+            public Builder nextToken(String nextToken) {
+                this.nextToken = nextToken;
+                return this;
+            }
+
+            /**
+             * Total.
+             */
+            public Builder total(Integer total) {
+                this.total = total;
                 return this;
             }
 

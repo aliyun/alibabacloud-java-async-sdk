@@ -86,7 +86,7 @@ public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The returned response code. The value Success indicates that the request is successful.
+         * The response code. The value Success indicates that the request is successful. Other values indicate that the request failed. For a list of error codes, see Error codes.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +118,7 @@ public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the operation is successful. Valid values: true and false.
+         * Indicates whether the operation is successful. If the operation is successful, the value true is returned.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -202,7 +202,7 @@ public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the group to which the queried event type belongs.
+             * The name of the group to which the event type belongs.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -210,7 +210,7 @@ public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The full name of the queried event type.
+             * The full name of the event type.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -218,7 +218,7 @@ public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The short name of the queried event type.
+             * The short name of the event type.
              */
             public Builder shortName(String shortName) {
                 this.shortName = shortName;
@@ -371,7 +371,7 @@ public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the queried event source.
+             * The description of the event source.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -379,7 +379,7 @@ public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the event source to which the queried event type belongs.
+             * The name of the event source to which the event type belongs.
              */
             public Builder eventBusName(String eventBusName) {
                 this.eventBusName = eventBusName;
@@ -387,7 +387,7 @@ public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The queried event types.
+             * The event types.
              */
             public Builder eventTypes(java.util.List < EventTypes> eventTypes) {
                 this.eventTypes = eventTypes;
@@ -395,7 +395,7 @@ public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * FullName.
+             * The full name of the event source.
              */
             public Builder fullName(String fullName) {
                 this.fullName = fullName;
@@ -403,7 +403,7 @@ public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the queried event source.
+             * The name of the event source.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -411,7 +411,7 @@ public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the queried event source. Valid value: Activated.
+             * The status of the event source. Valid value: Activated.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -419,7 +419,7 @@ public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the queried event source.
+             * The type of the event source.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -460,7 +460,7 @@ public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
             private java.util.List < EventSourceList> eventSourceList; 
 
             /**
-             * The name of the event source to which the queried event type belongs.
+             * The event sources.
              */
             public Builder eventSourceList(java.util.List < EventSourceList> eventSourceList) {
                 this.eventSourceList = eventSourceList;

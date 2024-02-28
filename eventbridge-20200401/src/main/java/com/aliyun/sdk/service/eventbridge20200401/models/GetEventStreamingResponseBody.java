@@ -94,7 +94,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         }
 
         /**
-         * The response parameters.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -4767,6 +4767,9 @@ public class GetEventStreamingResponseBody extends TeaModel {
         @NameInMap("VSwitchIds")
         private String vSwitchIds;
 
+        @NameInMap("ValueDataType")
+        private String valueDataType;
+
         @NameInMap("VpcId")
         private String vpcId;
 
@@ -4779,6 +4782,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             this.securityGroupId = builder.securityGroupId;
             this.topic = builder.topic;
             this.vSwitchIds = builder.vSwitchIds;
+            this.valueDataType = builder.valueDataType;
             this.vpcId = builder.vpcId;
         }
 
@@ -4847,6 +4851,13 @@ public class GetEventStreamingResponseBody extends TeaModel {
         }
 
         /**
+         * @return valueDataType
+         */
+        public String getValueDataType() {
+            return this.valueDataType;
+        }
+
+        /**
          * @return vpcId
          */
         public String getVpcId() {
@@ -4862,6 +4873,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private String securityGroupId; 
             private String topic; 
             private String vSwitchIds; 
+            private String valueDataType; 
             private String vpcId; 
 
             /**
@@ -4925,6 +4937,14 @@ public class GetEventStreamingResponseBody extends TeaModel {
              */
             public Builder vSwitchIds(String vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
+                return this;
+            }
+
+            /**
+             * ValueDataType.
+             */
+            public Builder valueDataType(String valueDataType) {
+                this.valueDataType = valueDataType;
                 return this;
             }
 
@@ -6122,7 +6142,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             }
 
             /**
-             * The event provider.
+             * The event provider, which is also known as the event source.
              */
             public Builder source(Source source) {
                 this.source = source;

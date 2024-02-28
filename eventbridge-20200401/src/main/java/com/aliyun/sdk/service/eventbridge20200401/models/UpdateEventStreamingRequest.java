@@ -2421,6 +2421,936 @@ public class UpdateEventStreamingRequest extends Request {
         } 
 
     }
+    public static class AuthorizationType extends TeaModel {
+        @NameInMap("Form")
+        private String form;
+
+        @NameInMap("Template")
+        private String template;
+
+        @NameInMap("Value")
+        private String value;
+
+        private AuthorizationType(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AuthorizationType create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            /**
+             * The method that is used to transform events. Default value: CONSTANT.
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * None.
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * The name of the queue in MNS.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public AuthorizationType build() {
+                return new AuthorizationType(this);
+            } 
+
+        } 
+
+    }
+    public static class Data extends TeaModel {
+        @NameInMap("Form")
+        private String form;
+
+        @NameInMap("Template")
+        private String template;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Data(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Data create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            /**
+             * The method that is used to transform events. Default value: CONSTANT.
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * None.
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * The name of the queue in MNS.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Data build() {
+                return new Data(this);
+            } 
+
+        } 
+
+    }
+    public static class NetworkType extends TeaModel {
+        @NameInMap("Form")
+        private String form;
+
+        @NameInMap("Template")
+        private String template;
+
+        @NameInMap("Value")
+        private String value;
+
+        private NetworkType(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NetworkType create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            /**
+             * The method that is used to transform events. Default value: CONSTANT.
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * None.
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * The name of the queue in MNS.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public NetworkType build() {
+                return new NetworkType(this);
+            } 
+
+        } 
+
+    }
+    public static class Password extends TeaModel {
+        @NameInMap("Form")
+        private String form;
+
+        @NameInMap("Template")
+        private String template;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Password(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Password create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            /**
+             * The method that is used to transform events. Default value: CONSTANT.
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * None.
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * The name of the queue in MNS.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Password build() {
+                return new Password(this);
+            } 
+
+        } 
+
+    }
+    public static class SecurityGroupId extends TeaModel {
+        @NameInMap("Form")
+        private String form;
+
+        @NameInMap("Template")
+        private String template;
+
+        @NameInMap("Value")
+        private String value;
+
+        private SecurityGroupId(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SecurityGroupId create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            /**
+             * The method that is used to transform events. Default value: CONSTANT.
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * None.
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * The name of the queue in MNS.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public SecurityGroupId build() {
+                return new SecurityGroupId(this);
+            } 
+
+        } 
+
+    }
+    public static class URL extends TeaModel {
+        @NameInMap("Form")
+        private String form;
+
+        @NameInMap("Template")
+        private String template;
+
+        @NameInMap("Value")
+        private String value;
+
+        private URL(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static URL create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            /**
+             * The method that is used to transform events. Default value: CONSTANT.
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * None.
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * The name of the queue in MNS.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public URL build() {
+                return new URL(this);
+            } 
+
+        } 
+
+    }
+    public static class Username extends TeaModel {
+        @NameInMap("Form")
+        private String form;
+
+        @NameInMap("Template")
+        private String template;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Username(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Username create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            /**
+             * The method that is used to transform events. Default value: CONSTANT.
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * None.
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * The name of the queue in MNS.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Username build() {
+                return new Username(this);
+            } 
+
+        } 
+
+    }
+    public static class VSwitchId extends TeaModel {
+        @NameInMap("Form")
+        private String form;
+
+        @NameInMap("Template")
+        private String template;
+
+        @NameInMap("Value")
+        private String value;
+
+        private VSwitchId(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VSwitchId create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            /**
+             * The method that is used to transform events. Default value: CONSTANT.
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * None.
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * The name of the queue in MNS.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public VSwitchId build() {
+                return new VSwitchId(this);
+            } 
+
+        } 
+
+    }
+    public static class VpcId extends TeaModel {
+        @NameInMap("Form")
+        private String form;
+
+        @NameInMap("Template")
+        private String template;
+
+        @NameInMap("Value")
+        private String value;
+
+        private VpcId(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VpcId create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            /**
+             * The method that is used to transform events. Default value: CONSTANT.
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * None.
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * The name of the queue in MNS.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public VpcId build() {
+                return new VpcId(this);
+            } 
+
+        } 
+
+    }
+    public static class SinkPrometheusParameters extends TeaModel {
+        @NameInMap("AuthorizationType")
+        private AuthorizationType authorizationType;
+
+        @NameInMap("Data")
+        private Data data;
+
+        @NameInMap("NetworkType")
+        private NetworkType networkType;
+
+        @NameInMap("Password")
+        private Password password;
+
+        @NameInMap("SecurityGroupId")
+        private SecurityGroupId securityGroupId;
+
+        @NameInMap("URL")
+        private URL URL;
+
+        @NameInMap("Username")
+        private Username username;
+
+        @NameInMap("VSwitchId")
+        private VSwitchId vSwitchId;
+
+        @NameInMap("VpcId")
+        private VpcId vpcId;
+
+        private SinkPrometheusParameters(Builder builder) {
+            this.authorizationType = builder.authorizationType;
+            this.data = builder.data;
+            this.networkType = builder.networkType;
+            this.password = builder.password;
+            this.securityGroupId = builder.securityGroupId;
+            this.URL = builder.URL;
+            this.username = builder.username;
+            this.vSwitchId = builder.vSwitchId;
+            this.vpcId = builder.vpcId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SinkPrometheusParameters create() {
+            return builder().build();
+        }
+
+        /**
+         * @return authorizationType
+         */
+        public AuthorizationType getAuthorizationType() {
+            return this.authorizationType;
+        }
+
+        /**
+         * @return data
+         */
+        public Data getData() {
+            return this.data;
+        }
+
+        /**
+         * @return networkType
+         */
+        public NetworkType getNetworkType() {
+            return this.networkType;
+        }
+
+        /**
+         * @return password
+         */
+        public Password getPassword() {
+            return this.password;
+        }
+
+        /**
+         * @return securityGroupId
+         */
+        public SecurityGroupId getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        /**
+         * @return URL
+         */
+        public URL getURL() {
+            return this.URL;
+        }
+
+        /**
+         * @return username
+         */
+        public Username getUsername() {
+            return this.username;
+        }
+
+        /**
+         * @return vSwitchId
+         */
+        public VSwitchId getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+        /**
+         * @return vpcId
+         */
+        public VpcId getVpcId() {
+            return this.vpcId;
+        }
+
+        public static final class Builder {
+            private AuthorizationType authorizationType; 
+            private Data data; 
+            private NetworkType networkType; 
+            private Password password; 
+            private SecurityGroupId securityGroupId; 
+            private URL URL; 
+            private Username username; 
+            private VSwitchId vSwitchId; 
+            private VpcId vpcId; 
+
+            /**
+             * AuthorizationType.
+             */
+            public Builder authorizationType(AuthorizationType authorizationType) {
+                this.authorizationType = authorizationType;
+                return this;
+            }
+
+            /**
+             * Data.
+             */
+            public Builder data(Data data) {
+                this.data = data;
+                return this;
+            }
+
+            /**
+             * NetworkType.
+             */
+            public Builder networkType(NetworkType networkType) {
+                this.networkType = networkType;
+                return this;
+            }
+
+            /**
+             * Password.
+             */
+            public Builder password(Password password) {
+                this.password = password;
+                return this;
+            }
+
+            /**
+             * SecurityGroupId.
+             */
+            public Builder securityGroupId(SecurityGroupId securityGroupId) {
+                this.securityGroupId = securityGroupId;
+                return this;
+            }
+
+            /**
+             * URL.
+             */
+            public Builder URL(URL URL) {
+                this.URL = URL;
+                return this;
+            }
+
+            /**
+             * Username.
+             */
+            public Builder username(Username username) {
+                this.username = username;
+                return this;
+            }
+
+            /**
+             * VSwitchId.
+             */
+            public Builder vSwitchId(VSwitchId vSwitchId) {
+                this.vSwitchId = vSwitchId;
+                return this;
+            }
+
+            /**
+             * VpcId.
+             */
+            public Builder vpcId(VpcId vpcId) {
+                this.vpcId = vpcId;
+                return this;
+            }
+
+            public SinkPrometheusParameters build() {
+                return new SinkPrometheusParameters(this);
+            } 
+
+        } 
+
+    }
     public static class SinkRabbitMQParametersBody extends TeaModel {
         @NameInMap("Form")
         private String form;
@@ -4517,6 +5447,9 @@ public class UpdateEventStreamingRequest extends Request {
         @NameInMap("SinkMNSParameters")
         private SinkMNSParameters sinkMNSParameters;
 
+        @NameInMap("SinkPrometheusParameters")
+        private SinkPrometheusParameters sinkPrometheusParameters;
+
         @NameInMap("SinkRabbitMQParameters")
         private SinkRabbitMQParameters sinkRabbitMQParameters;
 
@@ -4531,6 +5464,7 @@ public class UpdateEventStreamingRequest extends Request {
             this.sinkFnfParameters = builder.sinkFnfParameters;
             this.sinkKafkaParameters = builder.sinkKafkaParameters;
             this.sinkMNSParameters = builder.sinkMNSParameters;
+            this.sinkPrometheusParameters = builder.sinkPrometheusParameters;
             this.sinkRabbitMQParameters = builder.sinkRabbitMQParameters;
             this.sinkRocketMQParameters = builder.sinkRocketMQParameters;
             this.sinkSLSParameters = builder.sinkSLSParameters;
@@ -4573,6 +5507,13 @@ public class UpdateEventStreamingRequest extends Request {
         }
 
         /**
+         * @return sinkPrometheusParameters
+         */
+        public SinkPrometheusParameters getSinkPrometheusParameters() {
+            return this.sinkPrometheusParameters;
+        }
+
+        /**
          * @return sinkRabbitMQParameters
          */
         public SinkRabbitMQParameters getSinkRabbitMQParameters() {
@@ -4598,6 +5539,7 @@ public class UpdateEventStreamingRequest extends Request {
             private SinkFnfParameters sinkFnfParameters; 
             private SinkKafkaParameters sinkKafkaParameters; 
             private SinkMNSParameters sinkMNSParameters; 
+            private SinkPrometheusParameters sinkPrometheusParameters; 
             private SinkRabbitMQParameters sinkRabbitMQParameters; 
             private SinkRocketMQParameters sinkRocketMQParameters; 
             private SinkSLSParameters sinkSLSParameters; 
@@ -4631,6 +5573,14 @@ public class UpdateEventStreamingRequest extends Request {
              */
             public Builder sinkMNSParameters(SinkMNSParameters sinkMNSParameters) {
                 this.sinkMNSParameters = sinkMNSParameters;
+                return this;
+            }
+
+            /**
+             * SinkPrometheusParameters.
+             */
+            public Builder sinkPrometheusParameters(SinkPrometheusParameters sinkPrometheusParameters) {
+                this.sinkPrometheusParameters = sinkPrometheusParameters;
                 return this;
             }
 
@@ -4764,7 +5714,7 @@ public class UpdateEventStreamingRequest extends Request {
             private String username; 
 
             /**
-             * The URL and port number of the data subscription channel.
+             * The URL and port number of the change tracking instance.
              */
             public Builder brokerUrl(String brokerUrl) {
                 this.brokerUrl = brokerUrl;
@@ -4772,7 +5722,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The consumer offset. A consumer offset is a timestamp that indicates when the SDK client consumes the first data record. The value is a UNIX timestamp.
+             * The UNIX timestamp that is generated when the SDK client consumes the first data record.
              */
             public Builder initCheckPoint(Long initCheckPoint) {
                 this.initCheckPoint = initCheckPoint;
@@ -4780,7 +5730,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The password of the consumer group.
+             * The consumer group password.
              */
             public Builder password(String password) {
                 this.password = password;
@@ -4788,7 +5738,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The ID of the consumer group.
+             * The consumer group ID.
              */
             public Builder sid(String sid) {
                 this.sid = sid;
@@ -4804,7 +5754,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The topic to which you want to subscribe by using the data subscription channel.
+             * The name of the tracked topic of the change tracking instance.
              */
             public Builder topic(String topic) {
                 this.topic = topic;
@@ -4812,7 +5762,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The username of the consumer group.
+             * The consumer group username.
              */
             public Builder username(String username) {
                 this.username = username;
@@ -4851,6 +5801,9 @@ public class UpdateEventStreamingRequest extends Request {
         @NameInMap("VSwitchIds")
         private String vSwitchIds;
 
+        @NameInMap("ValueDataType")
+        private String valueDataType;
+
         @NameInMap("VpcId")
         private String vpcId;
 
@@ -4863,6 +5816,7 @@ public class UpdateEventStreamingRequest extends Request {
             this.securityGroupId = builder.securityGroupId;
             this.topic = builder.topic;
             this.vSwitchIds = builder.vSwitchIds;
+            this.valueDataType = builder.valueDataType;
             this.vpcId = builder.vpcId;
         }
 
@@ -4931,6 +5885,13 @@ public class UpdateEventStreamingRequest extends Request {
         }
 
         /**
+         * @return valueDataType
+         */
+        public String getValueDataType() {
+            return this.valueDataType;
+        }
+
+        /**
          * @return vpcId
          */
         public String getVpcId() {
@@ -4946,10 +5907,11 @@ public class UpdateEventStreamingRequest extends Request {
             private String securityGroupId; 
             private String topic; 
             private String vSwitchIds; 
+            private String valueDataType; 
             private String vpcId; 
 
             /**
-             * The ID of the consumer group that subscribes to the topic.
+             * The group ID of the consumer that subscribes to the topic.
              */
             public Builder consumerGroup(String consumerGroup) {
                 this.consumerGroup = consumerGroup;
@@ -4965,7 +5927,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The network. Default value: Default. The value PublicNetwork specifies a virtual private cloud (VPC).
+             * The network setting. Default value: Default. The value PublicNetwork specifies a virtual private cloud (VPC).
              */
             public Builder network(String network) {
                 this.network = network;
@@ -4989,7 +5951,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The ID of the security group to which the Message Queue for Apache Kafka instance belongs.
+             * The security group ID.
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -4997,7 +5959,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The name of the topic in the Message Queue for Apache Kafka instance.
+             * The topic name.
              */
             public Builder topic(String topic) {
                 this.topic = topic;
@@ -5005,7 +5967,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The ID of the vSwitch with which the Message Queue for Apache Kafka instance is associated.
+             * The vSwitch ID.
              */
             public Builder vSwitchIds(String vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
@@ -5013,7 +5975,15 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The ID of the VPC to which the Message Queue for Apache Kafka instance belongs.
+             * ValueDataType.
+             */
+            public Builder valueDataType(String valueDataType) {
+                this.valueDataType = valueDataType;
+                return this;
+            }
+
+            /**
+             * The VPC ID.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -5086,7 +6056,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The queue name.
+             * The name of the MNS queue.
              */
             public Builder queueName(String queueName) {
                 this.queueName = queueName;
@@ -5167,7 +6137,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The ID of the region where the Message Queue for MQTT resides.
+             * The ID of the region where the Message Queue for MQTT instance resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -5175,7 +6145,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The name of the topic in the Message Queue for MQTT instance.
+             * The topic name.
              */
             public Builder topic(String topic) {
                 this.topic = topic;
@@ -5341,7 +6311,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The name of the queue in the Message Queue for RabbitMQ instance.
+             * The name of the queue on the Message Queue for RabbitMQ instance.
              */
             public Builder queueName(String queueName) {
                 this.queueName = queueName;
@@ -5357,7 +6327,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The vhost name of the Message Queue for RabbitMQ instance.
+             * The name of the vhost of the Message Queue for RabbitMQ instance.
              */
             public Builder virtualHostName(String virtualHostName) {
                 this.virtualHostName = virtualHostName;
@@ -5578,7 +6548,7 @@ public class UpdateEventStreamingRequest extends Request {
             private String topic; 
 
             /**
-             * AuthType.
+             * The authentication method.
              */
             public Builder authType(String authType) {
                 this.authType = authType;
@@ -5586,7 +6556,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The ID of the consumer group in the Message Queue for Apache RocketMQ instance.
+             * The ID of the consumer group on the Message Queue for Apache RocketMQ instance.
              */
             public Builder groupID(String groupID) {
                 this.groupID = groupID;
@@ -5594,7 +6564,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * InstanceEndpoint.
+             * The instance endpoint.
              */
             public Builder instanceEndpoint(String instanceEndpoint) {
                 this.instanceEndpoint = instanceEndpoint;
@@ -5610,7 +6580,10 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * InstanceNetwork.
+             * The network type of the instance. Valid values:
+             * <p>
+             * 
+             * PublicNetwork and PrivateNetwork.
              */
             public Builder instanceNetwork(String instanceNetwork) {
                 this.instanceNetwork = instanceNetwork;
@@ -5618,7 +6591,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * InstancePassword.
+             * The instance password.
              */
             public Builder instancePassword(String instancePassword) {
                 this.instancePassword = instancePassword;
@@ -5626,7 +6599,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * InstanceSecurityGroupId.
+             * The security group ID of the instance.
              */
             public Builder instanceSecurityGroupId(String instanceSecurityGroupId) {
                 this.instanceSecurityGroupId = instanceSecurityGroupId;
@@ -5634,7 +6607,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * InstanceType.
+             * The instance type.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -5642,7 +6615,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * InstanceUsername.
+             * The instance username.
              */
             public Builder instanceUsername(String instanceUsername) {
                 this.instanceUsername = instanceUsername;
@@ -5650,7 +6623,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * InstanceVSwitchIds.
+             * The vSwitch ID of the instance.
              */
             public Builder instanceVSwitchIds(String instanceVSwitchIds) {
                 this.instanceVSwitchIds = instanceVSwitchIds;
@@ -5658,7 +6631,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * InstanceVpcId.
+             * The VPC ID of the instance.
              */
             public Builder instanceVpcId(String instanceVpcId) {
                 this.instanceVpcId = instanceVpcId;
@@ -5666,7 +6639,14 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The consumer offset of the message. Valid values: CONSUME_FROM_LAST_OFFSET: consumes messages from the latest offset. CONSUME_FROM_FIRST_OFFSET: consumes messages from the earliest offset. CONSUME_FROM_TIMESTAMP: consumes messages from the offset at the specified point in time. Default value: CONSUME_FROM_LAST_OFFSET.
+             * The offset from which messages are consumed. Valid values:
+             * <p>
+             * 
+             * *   CONSUMEFROMLASTOFFSET: Messages are consumed from the latest offset.
+             * *   CONSUMEFROMFIRSTOFFSET: Messages are consumed from the earliest offset.
+             * *   CONSUMEFROMTIMESTAMP: Messages are consumed from the offset at the specified point in time.
+             * 
+             * Default value: CONSUMEFROMLASTOFFSET.
              */
             public Builder offset(String offset) {
                 this.offset = offset;
@@ -5682,7 +6662,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The tags that are used to filter messages.
+             * The tag that you want to use to filter messages.
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -5690,7 +6670,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The timestamp that indicates the time from which messages are consumed. This parameter is valid only if you set Offset to CONSUME_FROM_TIMESTAMP.
+             * The timestamp that specifies the time from which messages are consumed. This parameter is valid only if you set Offset to CONSUMEFROMTIMESTAMP.
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -5698,7 +6678,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The name of the topic in the Message Queue for Apache RocketMQ instance.
+             * The topic name.
              */
             public Builder topic(String topic) {
                 this.topic = topic;
@@ -5864,7 +6844,7 @@ public class UpdateEventStreamingRequest extends Request {
             private SourceSLSParameters sourceSLSParameters; 
 
             /**
-             * The parameters that are configured if the event source is Data Transmission Service (DTS).
+             * The parameters that are configured if you specify Data Transmission Service (DTS) as the event source.
              */
             public Builder sourceDTSParameters(SourceDTSParameters sourceDTSParameters) {
                 this.sourceDTSParameters = sourceDTSParameters;
@@ -5872,7 +6852,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The parameters that are configured if the event source is Message Queue for Apache Kafka.
+             * The parameters that are configured if you specify Message Queue for Apache Kafka as the event source.
              */
             public Builder sourceKafkaParameters(SourceKafkaParameters sourceKafkaParameters) {
                 this.sourceKafkaParameters = sourceKafkaParameters;
@@ -5880,7 +6860,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The parameters that are configured if the event source is Message Service (MNS).
+             * The parameters that are configured if you specify Message Service (MNS) as the event source.
              */
             public Builder sourceMNSParameters(SourceMNSParameters sourceMNSParameters) {
                 this.sourceMNSParameters = sourceMNSParameters;
@@ -5888,7 +6868,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The parameters that are configured if the event source is Message Queue for MQTT.
+             * The parameters that are configured if you specify Message Queue for MQTT as the event source.
              */
             public Builder sourceMQTTParameters(SourceMQTTParameters sourceMQTTParameters) {
                 this.sourceMQTTParameters = sourceMQTTParameters;
@@ -5904,7 +6884,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The parameters that are configured if the event source is Message Queue for RabbitMQ.
+             * The parameters that are configured if you specify Message Queue for RabbitMQ as the event source.
              */
             public Builder sourceRabbitMQParameters(SourceRabbitMQParameters sourceRabbitMQParameters) {
                 this.sourceRabbitMQParameters = sourceRabbitMQParameters;
@@ -5912,7 +6892,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The parameters that are configured if the event source is Message Queue for Apache RocketMQ.
+             * The parameters that are configured if you specify Message Queue for Apache RocketMQ as the event source.
              */
             public Builder sourceRocketMQParameters(SourceRocketMQParameters sourceRocketMQParameters) {
                 this.sourceRocketMQParameters = sourceRocketMQParameters;
@@ -5920,7 +6900,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The parameters that are configured if the event source is Log Service.
+             * The parameters that are configured if you specify Log Service as the event source.
              */
             public Builder sourceSLSParameters(SourceSLSParameters sourceSLSParameters) {
                 this.sourceSLSParameters = sourceSLSParameters;

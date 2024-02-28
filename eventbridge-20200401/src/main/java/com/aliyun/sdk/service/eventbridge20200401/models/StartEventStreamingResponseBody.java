@@ -13,7 +13,7 @@ import com.aliyun.sdk.gateway.eventbridge.models.*;
  */
 public class StartEventStreamingResponseBody extends TeaModel {
     @NameInMap("Code")
-    private Boolean code;
+    private String code;
 
     @NameInMap("Message")
     private String message;
@@ -42,7 +42,7 @@ public class StartEventStreamingResponseBody extends TeaModel {
     /**
      * @return code
      */
-    public Boolean getCode() {
+    public String getCode() {
         return this.code;
     }
 
@@ -68,7 +68,7 @@ public class StartEventStreamingResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private Boolean code; 
+        private String code; 
         private String message; 
         private String requestId; 
         private Boolean success; 
@@ -76,7 +76,7 @@ public class StartEventStreamingResponseBody extends TeaModel {
         /**
          * The returned response code. The value Success indicates that the request is successful. Other values indicate that the request failed. For more information about error codes, see Error codes.
          */
-        public Builder code(Boolean code) {
+        public Builder code(String code) {
             this.code = code;
             return this;
         }
@@ -98,7 +98,7 @@ public class StartEventStreamingResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values: true and false.
+         * Indicates whether the operation is successful. The value true indicates that the operation is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;

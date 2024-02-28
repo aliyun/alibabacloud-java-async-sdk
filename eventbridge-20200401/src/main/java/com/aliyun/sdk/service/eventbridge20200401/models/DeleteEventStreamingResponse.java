@@ -13,15 +13,12 @@ import com.aliyun.sdk.gateway.eventbridge.models.*;
  */
 public class DeleteEventStreamingResponse extends Response {
     @NameInMap("headers")
-    @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     private Integer statusCode;
 
     @NameInMap("body")
-    @Validation(required = true)
     private DeleteEventStreamingResponseBody body;
 
     private DeleteEventStreamingResponse(BuilderImpl builder) {
