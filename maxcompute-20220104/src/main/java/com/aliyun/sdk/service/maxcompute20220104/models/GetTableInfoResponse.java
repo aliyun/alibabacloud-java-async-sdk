@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetQuotaResponse} extends {@link TeaModel}
+ * {@link GetTableInfoResponse} extends {@link TeaModel}
  *
- * <p>GetQuotaResponse</p>
+ * <p>GetTableInfoResponse</p>
  */
-public class GetQuotaResponse extends Response {
+public class GetTableInfoResponse extends Response {
     @NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -19,16 +19,16 @@ public class GetQuotaResponse extends Response {
     private Integer statusCode;
 
     @NameInMap("body")
-    private GetQuotaResponseBody body;
+    private GetTableInfoResponseBody body;
 
-    private GetQuotaResponse(BuilderImpl builder) {
+    private GetTableInfoResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static GetQuotaResponse create() {
+    public static GetTableInfoResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +54,35 @@ public class GetQuotaResponse extends Response {
     /**
      * @return body
      */
-    public GetQuotaResponseBody getBody() {
+    public GetTableInfoResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<GetQuotaResponse, Builder> {
+    public interface Builder extends Response.Builder<GetTableInfoResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(GetQuotaResponseBody body);
+        Builder body(GetTableInfoResponseBody body);
 
         @Override
-        GetQuotaResponse build();
+        GetTableInfoResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<GetQuotaResponse, Builder>
+            extends Response.BuilderImpl<GetTableInfoResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private GetQuotaResponseBody body; 
+        private GetTableInfoResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(GetQuotaResponse response) {
+        private BuilderImpl(GetTableInfoResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +111,14 @@ public class GetQuotaResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(GetQuotaResponseBody body) {
+        public Builder body(GetTableInfoResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public GetQuotaResponse build() {
-            return new GetQuotaResponse(this);
+        public GetTableInfoResponse build() {
+            return new GetTableInfoResponse(this);
         } 
 
     } 

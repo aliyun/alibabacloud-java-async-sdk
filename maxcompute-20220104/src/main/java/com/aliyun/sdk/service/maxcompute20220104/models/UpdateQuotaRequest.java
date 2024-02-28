@@ -111,7 +111,7 @@ public class UpdateQuotaRequest extends Request {
         } 
 
         /**
-         * nickname.
+         * The name of the quota.
          */
         public Builder nickname(String nickname) {
             this.putPathParameter("nickname", nickname);
@@ -120,7 +120,7 @@ public class UpdateQuotaRequest extends Request {
         }
 
         /**
-         * AkProven.
+         * The trusted AccessKey pairs.
          */
         public Builder akProven(String akProven) {
             this.putHeaderParameter("AkProven", akProven);
@@ -129,7 +129,7 @@ public class UpdateQuotaRequest extends Request {
         }
 
         /**
-         * body.
+         * The request body parameter.
          */
         public Builder body(String body) {
             this.putBodyParameter("body", body);
@@ -138,7 +138,7 @@ public class UpdateQuotaRequest extends Request {
         }
 
         /**
-         * region.
+         * The region ID.
          */
         public Builder region(String region) {
             this.putQueryParameter("region", region);
@@ -147,7 +147,7 @@ public class UpdateQuotaRequest extends Request {
         }
 
         /**
-         * tenantId.
+         * The tenant ID.
          */
         public Builder tenantId(String tenantId) {
             this.putQueryParameter("tenantId", tenantId);

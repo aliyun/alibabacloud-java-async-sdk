@@ -7,18 +7,18 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ListTablesResponseBody} extends {@link TeaModel}
+ * {@link GetTableInfoResponseBody} extends {@link TeaModel}
  *
- * <p>ListTablesResponseBody</p>
+ * <p>GetTableInfoResponseBody</p>
  */
-public class ListTablesResponseBody extends TeaModel {
+public class GetTableInfoResponseBody extends TeaModel {
     @NameInMap("data")
     private Data data;
 
     @NameInMap("requestId")
     private String requestId;
 
-    private ListTablesResponseBody(Builder builder) {
+    private GetTableInfoResponseBody(Builder builder) {
         this.data = builder.data;
         this.requestId = builder.requestId;
     }
@@ -27,7 +27,7 @@ public class ListTablesResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static ListTablesResponseBody create() {
+    public static GetTableInfoResponseBody create() {
         return builder().build();
     }
 
@@ -50,7 +50,7 @@ public class ListTablesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned data.
+         * data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,15 +58,15 @@ public class ListTablesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public ListTablesResponseBody build() {
-            return new ListTablesResponseBody(this);
+        public GetTableInfoResponseBody build() {
+            return new GetTableInfoResponseBody(this);
         } 
 
     } 
@@ -134,7 +134,7 @@ public class ListTablesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The remarks.
+             * comment.
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -142,7 +142,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The security level of the column.
+             * label.
              */
             public Builder label(String label) {
                 this.label = label;
@@ -150,7 +150,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the column.
+             * name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -158,7 +158,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the column.
+             * type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -235,7 +235,7 @@ public class ListTablesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The remarks.
+             * comment.
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -243,7 +243,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The security level of the partition column.
+             * label.
              */
             public Builder label(String label) {
                 this.label = label;
@@ -251,7 +251,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the partition column.
+             * name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -259,7 +259,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the partition column.
+             * type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -273,9 +273,12 @@ public class ListTablesResponseBody extends TeaModel {
         } 
 
     }
-    public static class Tables extends TeaModel {
+    public static class Data extends TeaModel {
         @NameInMap("autoRefreshEnabled")
         private Boolean autoRefreshEnabled;
+
+        @NameInMap("comment")
+        private String comment;
 
         @NameInMap("createTableDDL")
         private String createTableDDL;
@@ -352,9 +355,6 @@ public class ListTablesResponseBody extends TeaModel {
         @NameInMap("storageHandler")
         private String storageHandler;
 
-        @NameInMap("tableComment")
-        private String tableComment;
-
         @NameInMap("tableLabel")
         private String tableLabel;
 
@@ -370,8 +370,9 @@ public class ListTablesResponseBody extends TeaModel {
         @NameInMap("viewText")
         private String viewText;
 
-        private Tables(Builder builder) {
+        private Data(Builder builder) {
             this.autoRefreshEnabled = builder.autoRefreshEnabled;
+            this.comment = builder.comment;
             this.createTableDDL = builder.createTableDDL;
             this.creationTime = builder.creationTime;
             this.displayName = builder.displayName;
@@ -397,7 +398,6 @@ public class ListTablesResponseBody extends TeaModel {
             this.schema = builder.schema;
             this.size = builder.size;
             this.storageHandler = builder.storageHandler;
-            this.tableComment = builder.tableComment;
             this.tableLabel = builder.tableLabel;
             this.tablesotreTableName = builder.tablesotreTableName;
             this.tablestoreColumnsMapping = builder.tablestoreColumnsMapping;
@@ -409,7 +409,7 @@ public class ListTablesResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static Tables create() {
+        public static Data create() {
             return builder().build();
         }
 
@@ -418,6 +418,13 @@ public class ListTablesResponseBody extends TeaModel {
          */
         public Boolean getAutoRefreshEnabled() {
             return this.autoRefreshEnabled;
+        }
+
+        /**
+         * @return comment
+         */
+        public String getComment() {
+            return this.comment;
         }
 
         /**
@@ -596,13 +603,6 @@ public class ListTablesResponseBody extends TeaModel {
         }
 
         /**
-         * @return tableComment
-         */
-        public String getTableComment() {
-            return this.tableComment;
-        }
-
-        /**
          * @return tableLabel
          */
         public String getTableLabel() {
@@ -639,6 +639,7 @@ public class ListTablesResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean autoRefreshEnabled; 
+            private String comment; 
             private String createTableDDL; 
             private Long creationTime; 
             private String displayName; 
@@ -664,7 +665,6 @@ public class ListTablesResponseBody extends TeaModel {
             private String schema; 
             private Long size; 
             private String storageHandler; 
-            private String tableComment; 
             private String tableLabel; 
             private String tablesotreTableName; 
             private String tablestoreColumnsMapping; 
@@ -672,7 +672,7 @@ public class ListTablesResponseBody extends TeaModel {
             private String viewText; 
 
             /**
-             * Indicates whether to enable the scheduled update feature for the materialized view.
+             * autoRefreshEnabled.
              */
             public Builder autoRefreshEnabled(Boolean autoRefreshEnabled) {
                 this.autoRefreshEnabled = autoRefreshEnabled;
@@ -680,7 +680,15 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The DDL statement that is used to create the table.
+             * comment.
+             */
+            public Builder comment(String comment) {
+                this.comment = comment;
+                return this;
+            }
+
+            /**
+             * createTableDDL.
              */
             public Builder createTableDDL(String createTableDDL) {
                 this.createTableDDL = createTableDDL;
@@ -688,7 +696,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the table was created.
+             * creationTime.
              */
             public Builder creationTime(Long creationTime) {
                 this.creationTime = creationTime;
@@ -696,7 +704,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the table.
+             * displayName.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -704,7 +712,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of files.
+             * fileNum.
              */
             public Builder fileNum(Long fileNum) {
                 this.fileNum = fileNum;
@@ -712,7 +720,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the table is an external table.
+             * isExternalTable.
              */
             public Builder isExternalTable(Boolean isExternalTable) {
                 this.isExternalTable = isExternalTable;
@@ -720,7 +728,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the data in the materialized view is invalid due to data changes in the source table.
+             * isOutdated.
              */
             public Builder isOutdated(Boolean isOutdated) {
                 this.isOutdated = isOutdated;
@@ -728,7 +736,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the data was last accessed.
+             * lastAccessTime.
              */
             public Builder lastAccessTime(Long lastAccessTime) {
                 this.lastAccessTime = lastAccessTime;
@@ -736,7 +744,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The last time when the DDL statement of the table was updated.
+             * lastDDLTime.
              */
             public Builder lastDDLTime(Long lastDDLTime) {
                 this.lastDDLTime = lastDDLTime;
@@ -744,7 +752,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the data was last updated.
+             * lastModifiedTime.
              */
             public Builder lastModifiedTime(Long lastModifiedTime) {
                 this.lastModifiedTime = lastModifiedTime;
@@ -752,7 +760,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The lifecycle of the table.
+             * lifecycle.
              */
             public Builder lifecycle(String lifecycle) {
                 this.lifecycle = lifecycle;
@@ -760,7 +768,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The storage location of the external table.
+             * location.
              */
             public Builder location(String location) {
                 this.location = location;
@@ -768,7 +776,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether a materialized view is created.
+             * materializedView.
              */
             public Builder materializedView(Boolean materializedView) {
                 this.materializedView = materializedView;
@@ -776,7 +784,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the table.
+             * name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -784,7 +792,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The information about columns.
+             * nativeColumns.
              */
             public Builder nativeColumns(java.util.List < NativeColumns> nativeColumns) {
                 this.nativeColumns = nativeColumns;
@@ -792,7 +800,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The Alibaba Cloud Resource Name (ARN) of AliyunODPSDefaultRole in Resource Access Management (RAM).
+             * odpsPropertiesRolearn.
              */
             public Builder odpsPropertiesRolearn(String odpsPropertiesRolearn) {
                 this.odpsPropertiesRolearn = odpsPropertiesRolearn;
@@ -800,7 +808,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether to ignore the table header.
+             * odpsSqlTextOptionFlushHeader.
              */
             public Builder odpsSqlTextOptionFlushHeader(Boolean odpsSqlTextOptionFlushHeader) {
                 this.odpsSqlTextOptionFlushHeader = odpsSqlTextOptionFlushHeader;
@@ -808,7 +816,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether to ignore the first N rows of the table header.
+             * odpsTextOptionHeaderLinesCount.
              */
             public Builder odpsTextOptionHeaderLinesCount(Long odpsTextOptionHeaderLinesCount) {
                 this.odpsTextOptionHeaderLinesCount = odpsTextOptionHeaderLinesCount;
@@ -816,7 +824,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The owner of the table.
+             * owner.
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -824,7 +832,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the partition column.
+             * partitionColumns.
              */
             public Builder partitionColumns(java.util.List < PartitionColumns> partitionColumns) {
                 this.partitionColumns = partitionColumns;
@@ -832,7 +840,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The physical size of the table.
+             * physicalSize.
              */
             public Builder physicalSize(Long physicalSize) {
                 this.physicalSize = physicalSize;
@@ -840,7 +848,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the project.
+             * projectName.
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -848,7 +856,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether to enable the query rewrite operation that is performed based on the materialized view.
+             * rewriteEnabled.
              */
             public Builder rewriteEnabled(Boolean rewriteEnabled) {
                 this.rewriteEnabled = rewriteEnabled;
@@ -856,7 +864,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The schema to which the table belongs.
+             * schema.
              */
             public Builder schema(String schema) {
                 this.schema = schema;
@@ -864,7 +872,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the table.
+             * size.
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -872,7 +880,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The extractor of the external table.
+             * storageHandler.
              */
             public Builder storageHandler(String storageHandler) {
                 this.storageHandler = storageHandler;
@@ -880,15 +888,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the table.
-             */
-            public Builder tableComment(String tableComment) {
-                this.tableComment = tableComment;
-                return this;
-            }
-
-            /**
-             * The security level of the table.
+             * tableLabel.
              */
             public Builder tableLabel(String tableLabel) {
                 this.tableLabel = tableLabel;
@@ -896,7 +896,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Tablestore table that you want MaxCompute to access.
+             * tablesotreTableName.
              */
             public Builder tablesotreTableName(String tablesotreTableName) {
                 this.tablesotreTableName = tablesotreTableName;
@@ -904,7 +904,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The columns of the Tablestore table that you want MaxCompute to access. The columns include primary key columns and attribute columns.
+             * tablestoreColumnsMapping.
              */
             public Builder tablestoreColumnsMapping(String tablestoreColumnsMapping) {
                 this.tablestoreColumnsMapping = tablestoreColumnsMapping;
@@ -912,7 +912,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the table.
+             * type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -920,91 +920,10 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * The statement that is used to generate the view.
+             * viewText.
              */
             public Builder viewText(String viewText) {
                 this.viewText = viewText;
-                return this;
-            }
-
-            public Tables build() {
-                return new Tables(this);
-            } 
-
-        } 
-
-    }
-    public static class Data extends TeaModel {
-        @NameInMap("marker")
-        private String marker;
-
-        @NameInMap("maxItem")
-        private Integer maxItem;
-
-        @NameInMap("tables")
-        private java.util.List < Tables> tables;
-
-        private Data(Builder builder) {
-            this.marker = builder.marker;
-            this.maxItem = builder.maxItem;
-            this.tables = builder.tables;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static Data create() {
-            return builder().build();
-        }
-
-        /**
-         * @return marker
-         */
-        public String getMarker() {
-            return this.marker;
-        }
-
-        /**
-         * @return maxItem
-         */
-        public Integer getMaxItem() {
-            return this.maxItem;
-        }
-
-        /**
-         * @return tables
-         */
-        public java.util.List < Tables> getTables() {
-            return this.tables;
-        }
-
-        public static final class Builder {
-            private String marker; 
-            private Integer maxItem; 
-            private java.util.List < Tables> tables; 
-
-            /**
-             * Indicates the marker after which the returned list begins.
-             */
-            public Builder marker(String marker) {
-                this.marker = marker;
-                return this;
-            }
-
-            /**
-             * The maximum number of entries returned per page.
-             */
-            public Builder maxItem(Integer maxItem) {
-                this.maxItem = maxItem;
-                return this;
-            }
-
-            /**
-             * The information about tables.
-             */
-            public Builder tables(java.util.List < Tables> tables) {
-                this.tables = tables;
                 return this;
             }
 

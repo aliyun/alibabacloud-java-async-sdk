@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.maxcompute20220104;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.maxcompute20220104.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -50,11 +51,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetRunningJobsResponse> getRunningJobs(GetRunningJobsRequest request);
 
+    CompletableFuture<GetTableInfoResponse> getTableInfo(GetTableInfoRequest request);
+
     CompletableFuture<GetTrustedProjectsResponse> getTrustedProjects(GetTrustedProjectsRequest request);
 
     CompletableFuture<KillJobsResponse> killJobs(KillJobsRequest request);
 
     CompletableFuture<ListFunctionsResponse> listFunctions(ListFunctionsRequest request);
+
+    CompletableFuture<ListJobInfosResponse> listJobInfos(ListJobInfosRequest request);
 
     CompletableFuture<ListPackagesResponse> listPackages(ListPackagesRequest request);
 

@@ -17,9 +17,14 @@ public class GetProjectRequest extends Request {
     @Validation(required = true)
     private String projectName;
 
+    @Query
+    @NameInMap("verbose")
+    private Boolean verbose;
+
     private GetProjectRequest(Builder builder) {
         super(builder);
         this.projectName = builder.projectName;
+        this.verbose = builder.verbose;
     }
 
     public static Builder builder() {
@@ -42,8 +47,16 @@ public class GetProjectRequest extends Request {
         return this.projectName;
     }
 
+    /**
+     * @return verbose
+     */
+    public Boolean getVerbose() {
+        return this.verbose;
+    }
+
     public static final class Builder extends Request.Builder<GetProjectRequest, Builder> {
         private String projectName; 
+        private Boolean verbose; 
 
         private Builder() {
             super();
@@ -52,6 +65,7 @@ public class GetProjectRequest extends Request {
         private Builder(GetProjectRequest request) {
             super(request);
             this.projectName = request.projectName;
+            this.verbose = request.verbose;
         } 
 
         /**
@@ -60,6 +74,15 @@ public class GetProjectRequest extends Request {
         public Builder projectName(String projectName) {
             this.putPathParameter("projectName", projectName);
             this.projectName = projectName;
+            return this;
+        }
+
+        /**
+         * Specifies whether to use additional information.
+         */
+        public Builder verbose(Boolean verbose) {
+            this.putQueryParameter("verbose", verbose);
+            this.verbose = verbose;
             return this;
         }
 

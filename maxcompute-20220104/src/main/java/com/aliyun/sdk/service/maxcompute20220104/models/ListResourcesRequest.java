@@ -147,7 +147,7 @@ public class ListResourcesRequest extends Request {
         }
 
         /**
-         * schemaName.
+         * The name of the schema.
          */
         public Builder schemaName(String schemaName) {
             this.putQueryParameter("schemaName", schemaName);

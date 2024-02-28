@@ -180,7 +180,26 @@ public class ListProjectsRequest extends Request {
         } 
 
         /**
-         * The flag to choose whether list the specific catalog - system_catalog.
+         * Specifies whether to list a project named SystemCatalog.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   true
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   false
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder listSystemCatalog(Boolean listSystemCatalog) {
             this.putQueryParameter("listSystemCatalog", listSystemCatalog);
@@ -252,7 +271,7 @@ public class ListProjectsRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
+         * The tenant ID.
          */
         public Builder tenantId(String tenantId) {
             this.putQueryParameter("tenantId", tenantId);

@@ -111,7 +111,7 @@ public class GetQuotaRequest extends Request {
         } 
 
         /**
-         * nickname.
+         * The name of the quota.
          */
         public Builder nickname(String nickname) {
             this.putPathParameter("nickname", nickname);
@@ -120,7 +120,7 @@ public class GetQuotaRequest extends Request {
         }
 
         /**
-         * AkProven.
+         * The trusted AccessKey pairs.
          */
         public Builder akProven(String akProven) {
             this.putQueryParameter("AkProven", akProven);
@@ -129,7 +129,7 @@ public class GetQuotaRequest extends Request {
         }
 
         /**
-         * mock.
+         * Specifies whether to include submodules. Valid values: -true: The request includes submodules. -false: The request does not include submodules. This is the default value.
          */
         public Builder mock(Boolean mock) {
             this.putQueryParameter("mock", mock);
@@ -138,7 +138,7 @@ public class GetQuotaRequest extends Request {
         }
 
         /**
-         * region.
+         * The region ID.
          */
         public Builder region(String region) {
             this.putQueryParameter("region", region);
@@ -147,7 +147,7 @@ public class GetQuotaRequest extends Request {
         }
 
         /**
-         * tenantId.
+         * The tenant ID.
          */
         public Builder tenantId(String tenantId) {
             this.putQueryParameter("tenantId", tenantId);

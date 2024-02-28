@@ -15,6 +15,12 @@ public class GetProjectResponseBody extends TeaModel {
     @NameInMap("data")
     private Data data;
 
+    @NameInMap("errorCode")
+    private String errorCode;
+
+    @NameInMap("errorMsg")
+    private String errorMsg;
+
     @NameInMap("httpCode")
     private Integer httpCode;
 
@@ -23,6 +29,8 @@ public class GetProjectResponseBody extends TeaModel {
 
     private GetProjectResponseBody(Builder builder) {
         this.data = builder.data;
+        this.errorCode = builder.errorCode;
+        this.errorMsg = builder.errorMsg;
         this.httpCode = builder.httpCode;
         this.requestId = builder.requestId;
     }
@@ -43,6 +51,20 @@ public class GetProjectResponseBody extends TeaModel {
     }
 
     /**
+     * @return errorCode
+     */
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    /**
+     * @return errorMsg
+     */
+    public String getErrorMsg() {
+        return this.errorMsg;
+    }
+
+    /**
      * @return httpCode
      */
     public Integer getHttpCode() {
@@ -58,6 +80,8 @@ public class GetProjectResponseBody extends TeaModel {
 
     public static final class Builder {
         private Data data; 
+        private String errorCode; 
+        private String errorMsg; 
         private Integer httpCode; 
         private String requestId; 
 
@@ -66,6 +90,22 @@ public class GetProjectResponseBody extends TeaModel {
          */
         public Builder data(Data data) {
             this.data = data;
+            return this;
+        }
+
+        /**
+         * The error code.
+         */
+        public Builder errorCode(String errorCode) {
+            this.errorCode = errorCode;
+            return this;
+        }
+
+        /**
+         * The error message.
+         */
+        public Builder errorMsg(String errorMsg) {
+            this.errorMsg = errorMsg;
             return this;
         }
 
@@ -318,11 +358,15 @@ public class GetProjectResponseBody extends TeaModel {
         @NameInMap("projectBackupSize")
         private Long projectBackupSize;
 
+        @NameInMap("projectTotalSize")
+        private Long projectTotalSize;
+
         @NameInMap("storageTierSize")
         private StorageTierSize storageTierSize;
 
         private StorageTierInfo(Builder builder) {
             this.projectBackupSize = builder.projectBackupSize;
+            this.projectTotalSize = builder.projectTotalSize;
             this.storageTierSize = builder.storageTierSize;
         }
 
@@ -342,6 +386,13 @@ public class GetProjectResponseBody extends TeaModel {
         }
 
         /**
+         * @return projectTotalSize
+         */
+        public Long getProjectTotalSize() {
+            return this.projectTotalSize;
+        }
+
+        /**
          * @return storageTierSize
          */
         public StorageTierSize getStorageTierSize() {
@@ -350,6 +401,7 @@ public class GetProjectResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long projectBackupSize; 
+            private Long projectTotalSize; 
             private StorageTierSize storageTierSize; 
 
             /**
@@ -357,6 +409,14 @@ public class GetProjectResponseBody extends TeaModel {
              */
             public Builder projectBackupSize(Long projectBackupSize) {
                 this.projectBackupSize = projectBackupSize;
+                return this;
+            }
+
+            /**
+             * The total storage.
+             */
+            public Builder projectTotalSize(Long projectTotalSize) {
+                this.projectTotalSize = projectTotalSize;
                 return this;
             }
 
@@ -440,6 +500,9 @@ public class GetProjectResponseBody extends TeaModel {
         @NameInMap("allowFullScan")
         private Boolean allowFullScan;
 
+        @NameInMap("elderTunnelQuota")
+        private String elderTunnelQuota;
+
         @NameInMap("enableDecimal2")
         private Boolean enableDecimal2;
 
@@ -472,6 +535,7 @@ public class GetProjectResponseBody extends TeaModel {
 
         private Properties(Builder builder) {
             this.allowFullScan = builder.allowFullScan;
+            this.elderTunnelQuota = builder.elderTunnelQuota;
             this.enableDecimal2 = builder.enableDecimal2;
             this.enableTunnelQuotaRoute = builder.enableTunnelQuotaRoute;
             this.encryption = builder.encryption;
@@ -497,6 +561,13 @@ public class GetProjectResponseBody extends TeaModel {
          */
         public Boolean getAllowFullScan() {
             return this.allowFullScan;
+        }
+
+        /**
+         * @return elderTunnelQuota
+         */
+        public String getElderTunnelQuota() {
+            return this.elderTunnelQuota;
         }
 
         /**
@@ -571,6 +642,7 @@ public class GetProjectResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean allowFullScan; 
+            private String elderTunnelQuota; 
             private Boolean enableDecimal2; 
             private Boolean enableTunnelQuotaRoute; 
             private Encryption encryption; 
@@ -587,6 +659,14 @@ public class GetProjectResponseBody extends TeaModel {
              */
             public Builder allowFullScan(Boolean allowFullScan) {
                 this.allowFullScan = allowFullScan;
+                return this;
+            }
+
+            /**
+             * This operation does not return a value for this parameter.
+             */
+            public Builder elderTunnelQuota(String elderTunnelQuota) {
+                this.elderTunnelQuota = elderTunnelQuota;
                 return this;
             }
 
@@ -967,6 +1047,9 @@ public class GetProjectResponseBody extends TeaModel {
         @NameInMap("costStorage")
         private String costStorage;
 
+        @NameInMap("createdTime")
+        private Long createdTime;
+
         @NameInMap("defaultQuota")
         private String defaultQuota;
 
@@ -985,6 +1068,9 @@ public class GetProjectResponseBody extends TeaModel {
         @NameInMap("properties")
         private Properties properties;
 
+        @NameInMap("regionId")
+        private String regionId;
+
         @NameInMap("saleTag")
         private SaleTag saleTag;
 
@@ -997,22 +1083,28 @@ public class GetProjectResponseBody extends TeaModel {
         @NameInMap("superAdmins")
         private java.util.List < String > superAdmins;
 
+        @NameInMap("threeTierModel")
+        private Boolean threeTierModel;
+
         @NameInMap("type")
         private String type;
 
         private Data(Builder builder) {
             this.comment = builder.comment;
             this.costStorage = builder.costStorage;
+            this.createdTime = builder.createdTime;
             this.defaultQuota = builder.defaultQuota;
             this.ipWhiteList = builder.ipWhiteList;
             this.name = builder.name;
             this.owner = builder.owner;
             this.productType = builder.productType;
             this.properties = builder.properties;
+            this.regionId = builder.regionId;
             this.saleTag = builder.saleTag;
             this.securityProperties = builder.securityProperties;
             this.status = builder.status;
             this.superAdmins = builder.superAdmins;
+            this.threeTierModel = builder.threeTierModel;
             this.type = builder.type;
         }
 
@@ -1036,6 +1128,13 @@ public class GetProjectResponseBody extends TeaModel {
          */
         public String getCostStorage() {
             return this.costStorage;
+        }
+
+        /**
+         * @return createdTime
+         */
+        public Long getCreatedTime() {
+            return this.createdTime;
         }
 
         /**
@@ -1081,6 +1180,13 @@ public class GetProjectResponseBody extends TeaModel {
         }
 
         /**
+         * @return regionId
+         */
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        /**
          * @return saleTag
          */
         public SaleTag getSaleTag() {
@@ -1109,6 +1215,13 @@ public class GetProjectResponseBody extends TeaModel {
         }
 
         /**
+         * @return threeTierModel
+         */
+        public Boolean getThreeTierModel() {
+            return this.threeTierModel;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
@@ -1118,16 +1231,19 @@ public class GetProjectResponseBody extends TeaModel {
         public static final class Builder {
             private String comment; 
             private String costStorage; 
+            private Long createdTime; 
             private String defaultQuota; 
             private IpWhiteList ipWhiteList; 
             private String name; 
             private String owner; 
             private String productType; 
             private Properties properties; 
+            private String regionId; 
             private SaleTag saleTag; 
             private SecurityProperties securityProperties; 
             private String status; 
             private java.util.List < String > superAdmins; 
+            private Boolean threeTierModel; 
             private String type; 
 
             /**
@@ -1143,6 +1259,14 @@ public class GetProjectResponseBody extends TeaModel {
              */
             public Builder costStorage(String costStorage) {
                 this.costStorage = costStorage;
+                return this;
+            }
+
+            /**
+             * Create time
+             */
+            public Builder createdTime(Long createdTime) {
+                this.createdTime = createdTime;
                 return this;
             }
 
@@ -1195,6 +1319,14 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
+             * RegionID
+             */
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
+                return this;
+            }
+
+            /**
              * The tag.
              */
             public Builder saleTag(SaleTag saleTag) {
@@ -1219,10 +1351,18 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * superAdmins.
+             * The Super_Administrator role.
              */
             public Builder superAdmins(java.util.List < String > superAdmins) {
                 this.superAdmins = superAdmins;
+                return this;
+            }
+
+            /**
+             * Indicates whether the current project supports the three-layer model of MaxCompute.
+             */
+            public Builder threeTierModel(Boolean threeTierModel) {
+                this.threeTierModel = threeTierModel;
                 return this;
             }
 

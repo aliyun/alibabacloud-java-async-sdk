@@ -50,7 +50,7 @@ public class UpdateQuotaResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * data.
+         * The returned data.
          */
         public Builder data(String data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class UpdateQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

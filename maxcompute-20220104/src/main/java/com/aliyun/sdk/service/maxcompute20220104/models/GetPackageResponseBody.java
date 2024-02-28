@@ -94,7 +94,7 @@ public class GetPackageResponseBody extends TeaModel {
         }
 
         /**
-         * errorCode.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -102,7 +102,7 @@ public class GetPackageResponseBody extends TeaModel {
         }
 
         /**
-         * errorMsg.
+         * The error message.
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -110,7 +110,7 @@ public class GetPackageResponseBody extends TeaModel {
         }
 
         /**
-         * httpCode.
+         * Indicates whether the request was successful. If this parameter was not empty and the value of this parameter was not 200, the request failed.
          */
         public Builder httpCode(Integer httpCode) {
             this.httpCode = httpCode;
@@ -259,7 +259,7 @@ public class GetPackageResponseBody extends TeaModel {
             }
 
             /**
-             * schemaName.
+             * The name of schema.
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -340,7 +340,7 @@ public class GetPackageResponseBody extends TeaModel {
             }
 
             /**
-             * schemaName.
+             * The name of schema.
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -421,7 +421,7 @@ public class GetPackageResponseBody extends TeaModel {
             }
 
             /**
-             * schemaName.
+             * The name of schema.
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;

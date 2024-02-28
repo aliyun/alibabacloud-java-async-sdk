@@ -58,7 +58,7 @@ public class ListProjectsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class ListProjectsResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The key of the tag.
+             * The tag key.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -118,7 +118,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag.
+             * The tag value.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -478,7 +478,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the DECIMAL data type in MaxCompute V2.0 is enabled.
+             * Indicates whether the DECIMAL data type in the MaxCompute V2.0 data type edition is enabled.
              */
             public Builder enableDecimal2(Boolean enableDecimal2) {
                 this.enableDecimal2 = enableDecimal2;
@@ -502,7 +502,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of days for which backup data can be retained.
+             * The maximum number of days for which backup data can be retained.
              */
             public Builder retentionDays(Long retentionDays) {
                 this.retentionDays = retentionDays;
@@ -518,7 +518,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * The lifecycle of tables in the project.
+             * The lifecycle of a table in the project.
              */
             public Builder tableLifecycle(TableLifecycle tableLifecycle) {
                 this.tableLifecycle = tableLifecycle;
@@ -526,7 +526,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * The time zone of the project.
+             * The time zone of the instance.
              */
             public Builder timezone(String timezone) {
                 this.timezone = timezone;
@@ -849,6 +849,9 @@ public class ListProjectsResponseBody extends TeaModel {
         @NameInMap("costStorage")
         private String costStorage;
 
+        @NameInMap("createdTime")
+        private Long createdTime;
+
         @NameInMap("defaultQuota")
         private String defaultQuota;
 
@@ -863,6 +866,9 @@ public class ListProjectsResponseBody extends TeaModel {
 
         @NameInMap("properties")
         private Properties properties;
+
+        @NameInMap("regionId")
+        private String regionId;
 
         @NameInMap("saleTag")
         private SaleTag saleTag;
@@ -883,11 +889,13 @@ public class ListProjectsResponseBody extends TeaModel {
             this.tags = builder.tags;
             this.comment = builder.comment;
             this.costStorage = builder.costStorage;
+            this.createdTime = builder.createdTime;
             this.defaultQuota = builder.defaultQuota;
             this.ipWhiteList = builder.ipWhiteList;
             this.name = builder.name;
             this.owner = builder.owner;
             this.properties = builder.properties;
+            this.regionId = builder.regionId;
             this.saleTag = builder.saleTag;
             this.securityProperties = builder.securityProperties;
             this.status = builder.status;
@@ -925,6 +933,13 @@ public class ListProjectsResponseBody extends TeaModel {
         }
 
         /**
+         * @return createdTime
+         */
+        public Long getCreatedTime() {
+            return this.createdTime;
+        }
+
+        /**
          * @return defaultQuota
          */
         public String getDefaultQuota() {
@@ -957,6 +972,13 @@ public class ListProjectsResponseBody extends TeaModel {
          */
         public Properties getProperties() {
             return this.properties;
+        }
+
+        /**
+         * @return regionId
+         */
+        public String getRegionId() {
+            return this.regionId;
         }
 
         /**
@@ -998,11 +1020,13 @@ public class ListProjectsResponseBody extends TeaModel {
             private java.util.List < Tags> tags; 
             private String comment; 
             private String costStorage; 
+            private Long createdTime; 
             private String defaultQuota; 
             private IpWhiteList ipWhiteList; 
             private String name; 
             private String owner; 
             private Properties properties; 
+            private String regionId; 
             private SaleTag saleTag; 
             private SecurityProperties securityProperties; 
             private String status; 
@@ -1010,7 +1034,7 @@ public class ListProjectsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The tag.
+             * The tags.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -1034,6 +1058,14 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
+             * Create time
+             */
+            public Builder createdTime(Long createdTime) {
+                this.createdTime = createdTime;
+                return this;
+            }
+
+            /**
              * The default computing quota.
              */
             public Builder defaultQuota(String defaultQuota) {
@@ -1050,7 +1082,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the MaxCompute project.
+             * The name of the project.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1074,6 +1106,14 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
+             * Region Id
+             */
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
+                return this;
+            }
+
+            /**
              * The identifier of an object in a MaxCompute quota. This identifier is the same as the identifier in the sales bill of Alibaba Cloud. This parameter is used for tags.
              */
             public Builder saleTag(SaleTag saleTag) {
@@ -1090,7 +1130,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the project. Valid values: -AVAILABLE: The project is available. -READONLY: The project is read only. -FROZEN: The project is frozen. -DELETING: The project is being deleted.
+             * The status of the project. Valid values: -AVAILABLE: The project is available. -READONLY: The project is read-only. -FROZEN: The project is frozen. -DELETING: The project is being deleted.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1098,7 +1138,26 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the current project support the three-tier model
+             * Indicates whether the current project supports the MaxCompute three-layer model.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   true
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   false
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder threeTierModel(Boolean threeTierModel) {
                 this.threeTierModel = threeTierModel;

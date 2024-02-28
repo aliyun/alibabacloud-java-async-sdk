@@ -218,7 +218,7 @@ public class ListResourcesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * comment.
+             * The remarks.
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -226,7 +226,7 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * contentMD5.
+             * The Base64-encoded 128-bit MD5 hash value of the HTTP request body.
              */
             public Builder contentMD5(String contentMD5) {
                 this.contentMD5 = contentMD5;
@@ -242,7 +242,7 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * displayName.
+             * The display name.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -250,7 +250,7 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * lastModifiedTime.
+             * The time when the resource was modified.
              */
             public Builder lastModifiedTime(Long lastModifiedTime) {
                 this.lastModifiedTime = lastModifiedTime;
@@ -258,7 +258,7 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * lastUpdator.
+             * The user who updated the resource.
              */
             public Builder lastUpdator(String lastUpdator) {
                 this.lastUpdator = lastUpdator;
@@ -282,7 +282,7 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The schema of the resource.
+             * The schema to which the resource belongs.
              */
             public Builder schema(String schema) {
                 this.schema = schema;
@@ -290,7 +290,7 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * size.
+             * The size of the resource.
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -298,7 +298,50 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource.
+             * The resource type.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   file
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   py
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   jar
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   volumefile
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   table
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder type(String type) {
                 this.type = type;

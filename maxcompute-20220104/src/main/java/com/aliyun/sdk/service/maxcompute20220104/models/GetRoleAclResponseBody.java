@@ -94,7 +94,7 @@ public class GetRoleAclResponseBody extends TeaModel {
         }
 
         /**
-         * errorCode.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -102,7 +102,7 @@ public class GetRoleAclResponseBody extends TeaModel {
         }
 
         /**
-         * errorMsg.
+         * The error message.
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -110,7 +110,7 @@ public class GetRoleAclResponseBody extends TeaModel {
         }
 
         /**
-         * httpCode.
+         * The HTTP status code.
          */
         public Builder httpCode(Integer httpCode) {
             this.httpCode = httpCode;
@@ -198,7 +198,7 @@ public class GetRoleAclResponseBody extends TeaModel {
             }
 
             /**
-             * schemaName.
+             * The Schema name.
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -279,7 +279,7 @@ public class GetRoleAclResponseBody extends TeaModel {
             }
 
             /**
-             * schemaName.
+             * The Schema name.
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -360,7 +360,7 @@ public class GetRoleAclResponseBody extends TeaModel {
             }
 
             /**
-             * schemaName.
+             * The Schema name.
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -441,7 +441,7 @@ public class GetRoleAclResponseBody extends TeaModel {
             }
 
             /**
-             * schemaName.
+             * The Schema name.
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -522,7 +522,7 @@ public class GetRoleAclResponseBody extends TeaModel {
             }
 
             /**
-             * schemaName.
+             * The Schema name.
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -603,7 +603,7 @@ public class GetRoleAclResponseBody extends TeaModel {
             }
 
             /**
-             * schemaName.
+             * The Schema name.
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;

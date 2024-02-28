@@ -147,7 +147,7 @@ public class ListFunctionsRequest extends Request {
         }
 
         /**
-         * schemaName.
+         * the name of schema.
          */
         public Builder schemaName(String schemaName) {
             this.putQueryParameter("schemaName", schemaName);

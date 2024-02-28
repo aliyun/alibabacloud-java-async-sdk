@@ -186,7 +186,7 @@ public class ListFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * displayName.
+             * The display name of the function.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
