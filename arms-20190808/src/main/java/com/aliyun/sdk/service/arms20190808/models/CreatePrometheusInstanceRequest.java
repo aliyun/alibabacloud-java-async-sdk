@@ -30,6 +30,10 @@ public class CreatePrometheusInstanceRequest extends Request {
     private String clusterType;
 
     @Query
+    @NameInMap("Duration")
+    private Integer duration;
+
+    @Query
     @NameInMap("GrafanaInstanceId")
     private String grafanaInstanceId;
 
@@ -68,6 +72,7 @@ public class CreatePrometheusInstanceRequest extends Request {
         this.clusterId = builder.clusterId;
         this.clusterName = builder.clusterName;
         this.clusterType = builder.clusterType;
+        this.duration = builder.duration;
         this.grafanaInstanceId = builder.grafanaInstanceId;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
@@ -117,6 +122,13 @@ public class CreatePrometheusInstanceRequest extends Request {
      */
     public String getClusterType() {
         return this.clusterType;
+    }
+
+    /**
+     * @return duration
+     */
+    public Integer getDuration() {
+        return this.duration;
     }
 
     /**
@@ -180,6 +192,7 @@ public class CreatePrometheusInstanceRequest extends Request {
         private String clusterId; 
         private String clusterName; 
         private String clusterType; 
+        private Integer duration; 
         private String grafanaInstanceId; 
         private String regionId; 
         private String resourceGroupId; 
@@ -199,6 +212,7 @@ public class CreatePrometheusInstanceRequest extends Request {
             this.clusterId = request.clusterId;
             this.clusterName = request.clusterName;
             this.clusterType = request.clusterType;
+            this.duration = request.duration;
             this.grafanaInstanceId = request.grafanaInstanceId;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
@@ -253,6 +267,15 @@ public class CreatePrometheusInstanceRequest extends Request {
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("ClusterType", clusterType);
             this.clusterType = clusterType;
+            return this;
+        }
+
+        /**
+         * Duration.
+         */
+        public Builder duration(Integer duration) {
+            this.putQueryParameter("Duration", duration);
+            this.duration = duration;
             return this;
         }
 

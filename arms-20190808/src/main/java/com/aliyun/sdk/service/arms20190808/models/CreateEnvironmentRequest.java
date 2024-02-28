@@ -253,7 +253,7 @@ public class CreateEnvironmentRequest extends Request {
         }
 
         /**
-         * PrometheusInstanceId.
+         * the ID of prometheus instance bound to the environment. If not provided, please call the InitEnvironment interface to complete the initialization of the storage instance.
          */
         public Builder prometheusInstanceId(String prometheusInstanceId) {
             this.putQueryParameter("PrometheusInstanceId", prometheusInstanceId);

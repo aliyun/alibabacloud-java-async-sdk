@@ -191,6 +191,9 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
         @NameInMap("BindVpcCidr")
         private String bindVpcCidr;
 
+        @NameInMap("DbInstanceStatus")
+        private String dbInstanceStatus;
+
         @NameInMap("EnvironmentId")
         private String environmentId;
 
@@ -249,6 +252,7 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
             this.bindResourceStoreDuration = builder.bindResourceStoreDuration;
             this.bindResourceType = builder.bindResourceType;
             this.bindVpcCidr = builder.bindVpcCidr;
+            this.dbInstanceStatus = builder.dbInstanceStatus;
             this.environmentId = builder.environmentId;
             this.environmentName = builder.environmentName;
             this.environmentSubType = builder.environmentSubType;
@@ -316,6 +320,13 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
          */
         public String getBindVpcCidr() {
             return this.bindVpcCidr;
+        }
+
+        /**
+         * @return dbInstanceStatus
+         */
+        public String getDbInstanceStatus() {
+            return this.dbInstanceStatus;
         }
 
         /**
@@ -444,6 +455,7 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
             private String bindResourceStoreDuration; 
             private String bindResourceType; 
             private String bindVpcCidr; 
+            private String dbInstanceStatus; 
             private String environmentId; 
             private String environmentName; 
             private String environmentSubType; 
@@ -507,6 +519,14 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
              */
             public Builder bindVpcCidr(String bindVpcCidr) {
                 this.bindVpcCidr = bindVpcCidr;
+                return this;
+            }
+
+            /**
+             * DbInstanceStatus.
+             */
+            public Builder dbInstanceStatus(String dbInstanceStatus) {
+                this.dbInstanceStatus = dbInstanceStatus;
                 return this;
             }
 

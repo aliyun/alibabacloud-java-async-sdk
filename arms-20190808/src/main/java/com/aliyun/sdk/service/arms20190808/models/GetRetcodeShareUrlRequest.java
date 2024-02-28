@@ -55,7 +55,7 @@ public class GetRetcodeShareUrlRequest extends Request {
         } 
 
         /**
-         * The logon-free URL of the application.
+         * The process identifier (PID) of the application. For more information about how to obtain the PID, see [Obtain the PID of an application](https://www.alibabacloud.com/help/zh/doc-detail/186100.htm?spm=a2cdw.13409063.0.0.7a72281f0bkTfx#title-imy-7gj-qhr).
          */
         public Builder pid(String pid) {
             this.putQueryParameter("Pid", pid);
