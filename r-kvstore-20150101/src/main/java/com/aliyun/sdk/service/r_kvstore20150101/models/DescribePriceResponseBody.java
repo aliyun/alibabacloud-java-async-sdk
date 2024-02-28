@@ -273,6 +273,207 @@ public class DescribePriceResponseBody extends TeaModel {
         } 
 
     }
+    public static class DepreciateInfo extends TeaModel {
+        @NameInMap("CheapRate")
+        private Long cheapRate;
+
+        @NameInMap("CheapStandAmount")
+        private Long cheapStandAmount;
+
+        @NameInMap("Differential")
+        private Long differential;
+
+        @NameInMap("DifferentialName")
+        private String differentialName;
+
+        @NameInMap("IsContractActivity")
+        private Boolean isContractActivity;
+
+        @NameInMap("IsShow")
+        private Boolean isShow;
+
+        @NameInMap("ListPrice")
+        private Long listPrice;
+
+        @NameInMap("MonthPrice")
+        private Long monthPrice;
+
+        @NameInMap("OriginalStandAmount")
+        private Long originalStandAmount;
+
+        private DepreciateInfo(Builder builder) {
+            this.cheapRate = builder.cheapRate;
+            this.cheapStandAmount = builder.cheapStandAmount;
+            this.differential = builder.differential;
+            this.differentialName = builder.differentialName;
+            this.isContractActivity = builder.isContractActivity;
+            this.isShow = builder.isShow;
+            this.listPrice = builder.listPrice;
+            this.monthPrice = builder.monthPrice;
+            this.originalStandAmount = builder.originalStandAmount;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DepreciateInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cheapRate
+         */
+        public Long getCheapRate() {
+            return this.cheapRate;
+        }
+
+        /**
+         * @return cheapStandAmount
+         */
+        public Long getCheapStandAmount() {
+            return this.cheapStandAmount;
+        }
+
+        /**
+         * @return differential
+         */
+        public Long getDifferential() {
+            return this.differential;
+        }
+
+        /**
+         * @return differentialName
+         */
+        public String getDifferentialName() {
+            return this.differentialName;
+        }
+
+        /**
+         * @return isContractActivity
+         */
+        public Boolean getIsContractActivity() {
+            return this.isContractActivity;
+        }
+
+        /**
+         * @return isShow
+         */
+        public Boolean getIsShow() {
+            return this.isShow;
+        }
+
+        /**
+         * @return listPrice
+         */
+        public Long getListPrice() {
+            return this.listPrice;
+        }
+
+        /**
+         * @return monthPrice
+         */
+        public Long getMonthPrice() {
+            return this.monthPrice;
+        }
+
+        /**
+         * @return originalStandAmount
+         */
+        public Long getOriginalStandAmount() {
+            return this.originalStandAmount;
+        }
+
+        public static final class Builder {
+            private Long cheapRate; 
+            private Long cheapStandAmount; 
+            private Long differential; 
+            private String differentialName; 
+            private Boolean isContractActivity; 
+            private Boolean isShow; 
+            private Long listPrice; 
+            private Long monthPrice; 
+            private Long originalStandAmount; 
+
+            /**
+             * CheapRate.
+             */
+            public Builder cheapRate(Long cheapRate) {
+                this.cheapRate = cheapRate;
+                return this;
+            }
+
+            /**
+             * CheapStandAmount.
+             */
+            public Builder cheapStandAmount(Long cheapStandAmount) {
+                this.cheapStandAmount = cheapStandAmount;
+                return this;
+            }
+
+            /**
+             * Differential.
+             */
+            public Builder differential(Long differential) {
+                this.differential = differential;
+                return this;
+            }
+
+            /**
+             * DifferentialName.
+             */
+            public Builder differentialName(String differentialName) {
+                this.differentialName = differentialName;
+                return this;
+            }
+
+            /**
+             * IsContractActivity.
+             */
+            public Builder isContractActivity(Boolean isContractActivity) {
+                this.isContractActivity = isContractActivity;
+                return this;
+            }
+
+            /**
+             * IsShow.
+             */
+            public Builder isShow(Boolean isShow) {
+                this.isShow = isShow;
+                return this;
+            }
+
+            /**
+             * ListPrice.
+             */
+            public Builder listPrice(Long listPrice) {
+                this.listPrice = listPrice;
+                return this;
+            }
+
+            /**
+             * MonthPrice.
+             */
+            public Builder monthPrice(Long monthPrice) {
+                this.monthPrice = monthPrice;
+                return this;
+            }
+
+            /**
+             * OriginalStandAmount.
+             */
+            public Builder originalStandAmount(Long originalStandAmount) {
+                this.originalStandAmount = originalStandAmount;
+                return this;
+            }
+
+            public DepreciateInfo build() {
+                return new DepreciateInfo(this);
+            } 
+
+        } 
+
+    }
     public static class RuleIds extends TeaModel {
         @NameInMap("RuleId")
         private java.util.List < String > ruleId;
@@ -315,17 +516,29 @@ public class DescribePriceResponseBody extends TeaModel {
 
     }
     public static class Order extends TeaModel {
+        @NameInMap("Code")
+        private String code;
+
         @NameInMap("Coupons")
         private Coupons coupons;
 
         @NameInMap("Currency")
         private String currency;
 
+        @NameInMap("DepreciateInfo")
+        private DepreciateInfo depreciateInfo;
+
         @NameInMap("DiscountAmount")
         private String discountAmount;
 
         @NameInMap("HandlingFeeAmount")
         private String handlingFeeAmount;
+
+        @NameInMap("IsContractActivity")
+        private Boolean isContractActivity;
+
+        @NameInMap("Message")
+        private String message;
 
         @NameInMap("OriginalAmount")
         private String originalAmount;
@@ -336,17 +549,29 @@ public class DescribePriceResponseBody extends TeaModel {
         @NameInMap("ShowDiscountInfo")
         private Boolean showDiscountInfo;
 
+        @NameInMap("StandDiscountPrice")
+        private Long standDiscountPrice;
+
+        @NameInMap("StandPrice")
+        private Long standPrice;
+
         @NameInMap("TradeAmount")
         private String tradeAmount;
 
         private Order(Builder builder) {
+            this.code = builder.code;
             this.coupons = builder.coupons;
             this.currency = builder.currency;
+            this.depreciateInfo = builder.depreciateInfo;
             this.discountAmount = builder.discountAmount;
             this.handlingFeeAmount = builder.handlingFeeAmount;
+            this.isContractActivity = builder.isContractActivity;
+            this.message = builder.message;
             this.originalAmount = builder.originalAmount;
             this.ruleIds = builder.ruleIds;
             this.showDiscountInfo = builder.showDiscountInfo;
+            this.standDiscountPrice = builder.standDiscountPrice;
+            this.standPrice = builder.standPrice;
             this.tradeAmount = builder.tradeAmount;
         }
 
@@ -356,6 +581,13 @@ public class DescribePriceResponseBody extends TeaModel {
 
         public static Order create() {
             return builder().build();
+        }
+
+        /**
+         * @return code
+         */
+        public String getCode() {
+            return this.code;
         }
 
         /**
@@ -373,6 +605,13 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
+         * @return depreciateInfo
+         */
+        public DepreciateInfo getDepreciateInfo() {
+            return this.depreciateInfo;
+        }
+
+        /**
          * @return discountAmount
          */
         public String getDiscountAmount() {
@@ -384,6 +623,20 @@ public class DescribePriceResponseBody extends TeaModel {
          */
         public String getHandlingFeeAmount() {
             return this.handlingFeeAmount;
+        }
+
+        /**
+         * @return isContractActivity
+         */
+        public Boolean getIsContractActivity() {
+            return this.isContractActivity;
+        }
+
+        /**
+         * @return message
+         */
+        public String getMessage() {
+            return this.message;
         }
 
         /**
@@ -408,6 +661,20 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
+         * @return standDiscountPrice
+         */
+        public Long getStandDiscountPrice() {
+            return this.standDiscountPrice;
+        }
+
+        /**
+         * @return standPrice
+         */
+        public Long getStandPrice() {
+            return this.standPrice;
+        }
+
+        /**
          * @return tradeAmount
          */
         public String getTradeAmount() {
@@ -415,14 +682,28 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String code; 
             private Coupons coupons; 
             private String currency; 
+            private DepreciateInfo depreciateInfo; 
             private String discountAmount; 
             private String handlingFeeAmount; 
+            private Boolean isContractActivity; 
+            private String message; 
             private String originalAmount; 
             private RuleIds ruleIds; 
             private Boolean showDiscountInfo; 
+            private Long standDiscountPrice; 
+            private Long standPrice; 
             private String tradeAmount; 
+
+            /**
+             * Code.
+             */
+            public Builder code(String code) {
+                this.code = code;
+                return this;
+            }
 
             /**
              * Details about coupons.
@@ -441,6 +722,14 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
+             * DepreciateInfo.
+             */
+            public Builder depreciateInfo(DepreciateInfo depreciateInfo) {
+                this.depreciateInfo = depreciateInfo;
+                return this;
+            }
+
+            /**
              * The discount amount of the order.
              */
             public Builder discountAmount(String discountAmount) {
@@ -453,6 +742,22 @@ public class DescribePriceResponseBody extends TeaModel {
              */
             public Builder handlingFeeAmount(String handlingFeeAmount) {
                 this.handlingFeeAmount = handlingFeeAmount;
+                return this;
+            }
+
+            /**
+             * IsContractActivity.
+             */
+            public Builder isContractActivity(Boolean isContractActivity) {
+                this.isContractActivity = isContractActivity;
+                return this;
+            }
+
+            /**
+             * Message.
+             */
+            public Builder message(String message) {
+                this.message = message;
                 return this;
             }
 
@@ -477,6 +782,22 @@ public class DescribePriceResponseBody extends TeaModel {
              */
             public Builder showDiscountInfo(Boolean showDiscountInfo) {
                 this.showDiscountInfo = showDiscountInfo;
+                return this;
+            }
+
+            /**
+             * StandDiscountPrice.
+             */
+            public Builder standDiscountPrice(Long standDiscountPrice) {
+                this.standDiscountPrice = standDiscountPrice;
+                return this;
+            }
+
+            /**
+             * StandPrice.
+             */
+            public Builder standPrice(Long standPrice) {
+                this.standPrice = standPrice;
                 return this;
             }
 
@@ -617,6 +938,1015 @@ public class DescribePriceResponseBody extends TeaModel {
         } 
 
     }
+    public static class SubOrderDepreciateInfo extends TeaModel {
+        @NameInMap("CheapRate")
+        private Long cheapRate;
+
+        @NameInMap("CheapStandAmount")
+        private Long cheapStandAmount;
+
+        @NameInMap("Differential")
+        private Long differential;
+
+        @NameInMap("DifferentialName")
+        private String differentialName;
+
+        @NameInMap("IsContractActivity")
+        private Boolean isContractActivity;
+
+        @NameInMap("ListPrice")
+        private Long listPrice;
+
+        @NameInMap("MonthPrice")
+        private Long monthPrice;
+
+        @NameInMap("OriginalStandAmount")
+        private Long originalStandAmount;
+
+        private SubOrderDepreciateInfo(Builder builder) {
+            this.cheapRate = builder.cheapRate;
+            this.cheapStandAmount = builder.cheapStandAmount;
+            this.differential = builder.differential;
+            this.differentialName = builder.differentialName;
+            this.isContractActivity = builder.isContractActivity;
+            this.listPrice = builder.listPrice;
+            this.monthPrice = builder.monthPrice;
+            this.originalStandAmount = builder.originalStandAmount;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SubOrderDepreciateInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cheapRate
+         */
+        public Long getCheapRate() {
+            return this.cheapRate;
+        }
+
+        /**
+         * @return cheapStandAmount
+         */
+        public Long getCheapStandAmount() {
+            return this.cheapStandAmount;
+        }
+
+        /**
+         * @return differential
+         */
+        public Long getDifferential() {
+            return this.differential;
+        }
+
+        /**
+         * @return differentialName
+         */
+        public String getDifferentialName() {
+            return this.differentialName;
+        }
+
+        /**
+         * @return isContractActivity
+         */
+        public Boolean getIsContractActivity() {
+            return this.isContractActivity;
+        }
+
+        /**
+         * @return listPrice
+         */
+        public Long getListPrice() {
+            return this.listPrice;
+        }
+
+        /**
+         * @return monthPrice
+         */
+        public Long getMonthPrice() {
+            return this.monthPrice;
+        }
+
+        /**
+         * @return originalStandAmount
+         */
+        public Long getOriginalStandAmount() {
+            return this.originalStandAmount;
+        }
+
+        public static final class Builder {
+            private Long cheapRate; 
+            private Long cheapStandAmount; 
+            private Long differential; 
+            private String differentialName; 
+            private Boolean isContractActivity; 
+            private Long listPrice; 
+            private Long monthPrice; 
+            private Long originalStandAmount; 
+
+            /**
+             * CheapRate.
+             */
+            public Builder cheapRate(Long cheapRate) {
+                this.cheapRate = cheapRate;
+                return this;
+            }
+
+            /**
+             * CheapStandAmount.
+             */
+            public Builder cheapStandAmount(Long cheapStandAmount) {
+                this.cheapStandAmount = cheapStandAmount;
+                return this;
+            }
+
+            /**
+             * Differential.
+             */
+            public Builder differential(Long differential) {
+                this.differential = differential;
+                return this;
+            }
+
+            /**
+             * DifferentialName.
+             */
+            public Builder differentialName(String differentialName) {
+                this.differentialName = differentialName;
+                return this;
+            }
+
+            /**
+             * IsContractActivity.
+             */
+            public Builder isContractActivity(Boolean isContractActivity) {
+                this.isContractActivity = isContractActivity;
+                return this;
+            }
+
+            /**
+             * ListPrice.
+             */
+            public Builder listPrice(Long listPrice) {
+                this.listPrice = listPrice;
+                return this;
+            }
+
+            /**
+             * MonthPrice.
+             */
+            public Builder monthPrice(Long monthPrice) {
+                this.monthPrice = monthPrice;
+                return this;
+            }
+
+            /**
+             * OriginalStandAmount.
+             */
+            public Builder originalStandAmount(Long originalStandAmount) {
+                this.originalStandAmount = originalStandAmount;
+                return this;
+            }
+
+            public SubOrderDepreciateInfo build() {
+                return new SubOrderDepreciateInfo(this);
+            } 
+
+        } 
+
+    }
+    public static class ModuleAttr extends TeaModel {
+        @NameInMap("Code")
+        private String code;
+
+        @NameInMap("Name")
+        private String name;
+
+        @NameInMap("Type")
+        private Long type;
+
+        @NameInMap("Value")
+        private String value;
+
+        private ModuleAttr(Builder builder) {
+            this.code = builder.code;
+            this.name = builder.name;
+            this.type = builder.type;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ModuleAttr create() {
+            return builder().build();
+        }
+
+        /**
+         * @return code
+         */
+        public String getCode() {
+            return this.code;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return type
+         */
+        public Long getType() {
+            return this.type;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String code; 
+            private String name; 
+            private Long type; 
+            private String value; 
+
+            /**
+             * Code.
+             */
+            public Builder code(String code) {
+                this.code = code;
+                return this;
+            }
+
+            /**
+             * The name of the promotion rule.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(Long type) {
+                this.type = type;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public ModuleAttr build() {
+                return new ModuleAttr(this);
+            } 
+
+        } 
+
+    }
+    public static class ModuleAttrs extends TeaModel {
+        @NameInMap("moduleAttr")
+        private java.util.List < ModuleAttr> moduleAttr;
+
+        private ModuleAttrs(Builder builder) {
+            this.moduleAttr = builder.moduleAttr;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ModuleAttrs create() {
+            return builder().build();
+        }
+
+        /**
+         * @return moduleAttr
+         */
+        public java.util.List < ModuleAttr> getModuleAttr() {
+            return this.moduleAttr;
+        }
+
+        public static final class Builder {
+            private java.util.List < ModuleAttr> moduleAttr; 
+
+            /**
+             * moduleAttr.
+             */
+            public Builder moduleAttr(java.util.List < ModuleAttr> moduleAttr) {
+                this.moduleAttr = moduleAttr;
+                return this;
+            }
+
+            public ModuleAttrs build() {
+                return new ModuleAttrs(this);
+            } 
+
+        } 
+
+    }
+    public static class ModuleInstance extends TeaModel {
+        @NameInMap("DiscountFee")
+        private Double discountFee;
+
+        @NameInMap("ModuleAttrs")
+        private ModuleAttrs moduleAttrs;
+
+        @NameInMap("ModuleCode")
+        private String moduleCode;
+
+        @NameInMap("ModuleId")
+        private String moduleId;
+
+        @NameInMap("ModuleName")
+        private String moduleName;
+
+        @NameInMap("NeedOrderPay")
+        private Boolean needOrderPay;
+
+        @NameInMap("PayFee")
+        private Double payFee;
+
+        @NameInMap("PricingModule")
+        private Boolean pricingModule;
+
+        @NameInMap("StandPrice")
+        private Double standPrice;
+
+        @NameInMap("TotalProductFee")
+        private Double totalProductFee;
+
+        private ModuleInstance(Builder builder) {
+            this.discountFee = builder.discountFee;
+            this.moduleAttrs = builder.moduleAttrs;
+            this.moduleCode = builder.moduleCode;
+            this.moduleId = builder.moduleId;
+            this.moduleName = builder.moduleName;
+            this.needOrderPay = builder.needOrderPay;
+            this.payFee = builder.payFee;
+            this.pricingModule = builder.pricingModule;
+            this.standPrice = builder.standPrice;
+            this.totalProductFee = builder.totalProductFee;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ModuleInstance create() {
+            return builder().build();
+        }
+
+        /**
+         * @return discountFee
+         */
+        public Double getDiscountFee() {
+            return this.discountFee;
+        }
+
+        /**
+         * @return moduleAttrs
+         */
+        public ModuleAttrs getModuleAttrs() {
+            return this.moduleAttrs;
+        }
+
+        /**
+         * @return moduleCode
+         */
+        public String getModuleCode() {
+            return this.moduleCode;
+        }
+
+        /**
+         * @return moduleId
+         */
+        public String getModuleId() {
+            return this.moduleId;
+        }
+
+        /**
+         * @return moduleName
+         */
+        public String getModuleName() {
+            return this.moduleName;
+        }
+
+        /**
+         * @return needOrderPay
+         */
+        public Boolean getNeedOrderPay() {
+            return this.needOrderPay;
+        }
+
+        /**
+         * @return payFee
+         */
+        public Double getPayFee() {
+            return this.payFee;
+        }
+
+        /**
+         * @return pricingModule
+         */
+        public Boolean getPricingModule() {
+            return this.pricingModule;
+        }
+
+        /**
+         * @return standPrice
+         */
+        public Double getStandPrice() {
+            return this.standPrice;
+        }
+
+        /**
+         * @return totalProductFee
+         */
+        public Double getTotalProductFee() {
+            return this.totalProductFee;
+        }
+
+        public static final class Builder {
+            private Double discountFee; 
+            private ModuleAttrs moduleAttrs; 
+            private String moduleCode; 
+            private String moduleId; 
+            private String moduleName; 
+            private Boolean needOrderPay; 
+            private Double payFee; 
+            private Boolean pricingModule; 
+            private Double standPrice; 
+            private Double totalProductFee; 
+
+            /**
+             * DiscountFee.
+             */
+            public Builder discountFee(Double discountFee) {
+                this.discountFee = discountFee;
+                return this;
+            }
+
+            /**
+             * ModuleAttrs.
+             */
+            public Builder moduleAttrs(ModuleAttrs moduleAttrs) {
+                this.moduleAttrs = moduleAttrs;
+                return this;
+            }
+
+            /**
+             * ModuleCode.
+             */
+            public Builder moduleCode(String moduleCode) {
+                this.moduleCode = moduleCode;
+                return this;
+            }
+
+            /**
+             * ModuleId.
+             */
+            public Builder moduleId(String moduleId) {
+                this.moduleId = moduleId;
+                return this;
+            }
+
+            /**
+             * ModuleName.
+             */
+            public Builder moduleName(String moduleName) {
+                this.moduleName = moduleName;
+                return this;
+            }
+
+            /**
+             * NeedOrderPay.
+             */
+            public Builder needOrderPay(Boolean needOrderPay) {
+                this.needOrderPay = needOrderPay;
+                return this;
+            }
+
+            /**
+             * PayFee.
+             */
+            public Builder payFee(Double payFee) {
+                this.payFee = payFee;
+                return this;
+            }
+
+            /**
+             * PricingModule.
+             */
+            public Builder pricingModule(Boolean pricingModule) {
+                this.pricingModule = pricingModule;
+                return this;
+            }
+
+            /**
+             * StandPrice.
+             */
+            public Builder standPrice(Double standPrice) {
+                this.standPrice = standPrice;
+                return this;
+            }
+
+            /**
+             * TotalProductFee.
+             */
+            public Builder totalProductFee(Double totalProductFee) {
+                this.totalProductFee = totalProductFee;
+                return this;
+            }
+
+            public ModuleInstance build() {
+                return new ModuleInstance(this);
+            } 
+
+        } 
+
+    }
+    public static class SubOrderModuleInstance extends TeaModel {
+        @NameInMap("ModuleInstance")
+        private java.util.List < ModuleInstance> moduleInstance;
+
+        private SubOrderModuleInstance(Builder builder) {
+            this.moduleInstance = builder.moduleInstance;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SubOrderModuleInstance create() {
+            return builder().build();
+        }
+
+        /**
+         * @return moduleInstance
+         */
+        public java.util.List < ModuleInstance> getModuleInstance() {
+            return this.moduleInstance;
+        }
+
+        public static final class Builder {
+            private java.util.List < ModuleInstance> moduleInstance; 
+
+            /**
+             * ModuleInstance.
+             */
+            public Builder moduleInstance(java.util.List < ModuleInstance> moduleInstance) {
+                this.moduleInstance = moduleInstance;
+                return this;
+            }
+
+            public SubOrderModuleInstance build() {
+                return new SubOrderModuleInstance(this);
+            } 
+
+        } 
+
+    }
+    public static class OptionalPromotion extends TeaModel {
+        @NameInMap("ActivityExtInfo")
+        private java.util.Map < String, ? > activityExtInfo;
+
+        @NameInMap("CanPromFee")
+        private String canPromFee;
+
+        @NameInMap("CouponNo")
+        private String couponNo;
+
+        @NameInMap("Description")
+        private String description;
+
+        @NameInMap("Name")
+        private String name;
+
+        @NameInMap("OptionCode")
+        private String optionCode;
+
+        @NameInMap("PromotionName")
+        private String promotionName;
+
+        @NameInMap("PromotionOptionNo")
+        private String promotionOptionNo;
+
+        @NameInMap("Selected")
+        private Boolean selected;
+
+        @NameInMap("Show")
+        private Boolean show;
+
+        private OptionalPromotion(Builder builder) {
+            this.activityExtInfo = builder.activityExtInfo;
+            this.canPromFee = builder.canPromFee;
+            this.couponNo = builder.couponNo;
+            this.description = builder.description;
+            this.name = builder.name;
+            this.optionCode = builder.optionCode;
+            this.promotionName = builder.promotionName;
+            this.promotionOptionNo = builder.promotionOptionNo;
+            this.selected = builder.selected;
+            this.show = builder.show;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static OptionalPromotion create() {
+            return builder().build();
+        }
+
+        /**
+         * @return activityExtInfo
+         */
+        public java.util.Map < String, ? > getActivityExtInfo() {
+            return this.activityExtInfo;
+        }
+
+        /**
+         * @return canPromFee
+         */
+        public String getCanPromFee() {
+            return this.canPromFee;
+        }
+
+        /**
+         * @return couponNo
+         */
+        public String getCouponNo() {
+            return this.couponNo;
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return optionCode
+         */
+        public String getOptionCode() {
+            return this.optionCode;
+        }
+
+        /**
+         * @return promotionName
+         */
+        public String getPromotionName() {
+            return this.promotionName;
+        }
+
+        /**
+         * @return promotionOptionNo
+         */
+        public String getPromotionOptionNo() {
+            return this.promotionOptionNo;
+        }
+
+        /**
+         * @return selected
+         */
+        public Boolean getSelected() {
+            return this.selected;
+        }
+
+        /**
+         * @return show
+         */
+        public Boolean getShow() {
+            return this.show;
+        }
+
+        public static final class Builder {
+            private java.util.Map < String, ? > activityExtInfo; 
+            private String canPromFee; 
+            private String couponNo; 
+            private String description; 
+            private String name; 
+            private String optionCode; 
+            private String promotionName; 
+            private String promotionOptionNo; 
+            private Boolean selected; 
+            private Boolean show; 
+
+            /**
+             * ActivityExtInfo.
+             */
+            public Builder activityExtInfo(java.util.Map < String, ? > activityExtInfo) {
+                this.activityExtInfo = activityExtInfo;
+                return this;
+            }
+
+            /**
+             * CanPromFee.
+             */
+            public Builder canPromFee(String canPromFee) {
+                this.canPromFee = canPromFee;
+                return this;
+            }
+
+            /**
+             * The coupon ID.
+             */
+            public Builder couponNo(String couponNo) {
+                this.couponNo = couponNo;
+                return this;
+            }
+
+            /**
+             * The description of the coupon.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * The name of the promotion rule.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * OptionCode.
+             */
+            public Builder optionCode(String optionCode) {
+                this.optionCode = optionCode;
+                return this;
+            }
+
+            /**
+             * PromotionName.
+             */
+            public Builder promotionName(String promotionName) {
+                this.promotionName = promotionName;
+                return this;
+            }
+
+            /**
+             * PromotionOptionNo.
+             */
+            public Builder promotionOptionNo(String promotionOptionNo) {
+                this.promotionOptionNo = promotionOptionNo;
+                return this;
+            }
+
+            /**
+             * Selected.
+             */
+            public Builder selected(Boolean selected) {
+                this.selected = selected;
+                return this;
+            }
+
+            /**
+             * Show.
+             */
+            public Builder show(Boolean show) {
+                this.show = show;
+                return this;
+            }
+
+            public OptionalPromotion build() {
+                return new OptionalPromotion(this);
+            } 
+
+        } 
+
+    }
+    public static class OptionalPromotions extends TeaModel {
+        @NameInMap("OptionalPromotion")
+        private java.util.List < OptionalPromotion> optionalPromotion;
+
+        private OptionalPromotions(Builder builder) {
+            this.optionalPromotion = builder.optionalPromotion;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static OptionalPromotions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return optionalPromotion
+         */
+        public java.util.List < OptionalPromotion> getOptionalPromotion() {
+            return this.optionalPromotion;
+        }
+
+        public static final class Builder {
+            private java.util.List < OptionalPromotion> optionalPromotion; 
+
+            /**
+             * OptionalPromotion.
+             */
+            public Builder optionalPromotion(java.util.List < OptionalPromotion> optionalPromotion) {
+                this.optionalPromotion = optionalPromotion;
+                return this;
+            }
+
+            public OptionalPromotions build() {
+                return new OptionalPromotions(this);
+            } 
+
+        } 
+
+    }
+    public static class PromDetail extends TeaModel {
+        @NameInMap("FinalPromFee")
+        private Double finalPromFee;
+
+        @NameInMap("OptionCode")
+        private String optionCode;
+
+        @NameInMap("PromType")
+        private String promType;
+
+        @NameInMap("PromotionId")
+        private Long promotionId;
+
+        @NameInMap("PromotionName")
+        private String promotionName;
+
+        private PromDetail(Builder builder) {
+            this.finalPromFee = builder.finalPromFee;
+            this.optionCode = builder.optionCode;
+            this.promType = builder.promType;
+            this.promotionId = builder.promotionId;
+            this.promotionName = builder.promotionName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PromDetail create() {
+            return builder().build();
+        }
+
+        /**
+         * @return finalPromFee
+         */
+        public Double getFinalPromFee() {
+            return this.finalPromFee;
+        }
+
+        /**
+         * @return optionCode
+         */
+        public String getOptionCode() {
+            return this.optionCode;
+        }
+
+        /**
+         * @return promType
+         */
+        public String getPromType() {
+            return this.promType;
+        }
+
+        /**
+         * @return promotionId
+         */
+        public Long getPromotionId() {
+            return this.promotionId;
+        }
+
+        /**
+         * @return promotionName
+         */
+        public String getPromotionName() {
+            return this.promotionName;
+        }
+
+        public static final class Builder {
+            private Double finalPromFee; 
+            private String optionCode; 
+            private String promType; 
+            private Long promotionId; 
+            private String promotionName; 
+
+            /**
+             * FinalPromFee.
+             */
+            public Builder finalPromFee(Double finalPromFee) {
+                this.finalPromFee = finalPromFee;
+                return this;
+            }
+
+            /**
+             * OptionCode.
+             */
+            public Builder optionCode(String optionCode) {
+                this.optionCode = optionCode;
+                return this;
+            }
+
+            /**
+             * PromType.
+             */
+            public Builder promType(String promType) {
+                this.promType = promType;
+                return this;
+            }
+
+            /**
+             * PromotionId.
+             */
+            public Builder promotionId(Long promotionId) {
+                this.promotionId = promotionId;
+                return this;
+            }
+
+            /**
+             * PromotionName.
+             */
+            public Builder promotionName(String promotionName) {
+                this.promotionName = promotionName;
+                return this;
+            }
+
+            public PromDetail build() {
+                return new PromDetail(this);
+            } 
+
+        } 
+
+    }
+    public static class PromDetailList extends TeaModel {
+        @NameInMap("PromDetail")
+        private java.util.List < PromDetail> promDetail;
+
+        private PromDetailList(Builder builder) {
+            this.promDetail = builder.promDetail;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PromDetailList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return promDetail
+         */
+        public java.util.List < PromDetail> getPromDetail() {
+            return this.promDetail;
+        }
+
+        public static final class Builder {
+            private java.util.List < PromDetail> promDetail; 
+
+            /**
+             * PromDetail.
+             */
+            public Builder promDetail(java.util.List < PromDetail> promDetail) {
+                this.promDetail = promDetail;
+                return this;
+            }
+
+            public PromDetailList build() {
+                return new PromDetailList(this);
+            } 
+
+        } 
+
+    }
     public static class SubOrderRuleIds extends TeaModel {
         @NameInMap("RuleId")
         private java.util.List < String > ruleId;
@@ -659,26 +1989,54 @@ public class DescribePriceResponseBody extends TeaModel {
 
     }
     public static class SubOrder extends TeaModel {
+        @NameInMap("DepreciateInfo")
+        private SubOrderDepreciateInfo depreciateInfo;
+
         @NameInMap("DiscountAmount")
         private String discountAmount;
 
         @NameInMap("InstanceId")
         private String instanceId;
 
+        @NameInMap("IsContractActivity")
+        private Boolean isContractActivity;
+
+        @NameInMap("ModuleInstance")
+        private SubOrderModuleInstance moduleInstance;
+
+        @NameInMap("OptionalPromotions")
+        private OptionalPromotions optionalPromotions;
+
         @NameInMap("OriginalAmount")
         private String originalAmount;
 
+        @NameInMap("PromDetailList")
+        private PromDetailList promDetailList;
+
         @NameInMap("RuleIds")
         private SubOrderRuleIds ruleIds;
+
+        @NameInMap("StandDiscountPrice")
+        private Long standDiscountPrice;
+
+        @NameInMap("StandPrice")
+        private Long standPrice;
 
         @NameInMap("TradeAmount")
         private String tradeAmount;
 
         private SubOrder(Builder builder) {
+            this.depreciateInfo = builder.depreciateInfo;
             this.discountAmount = builder.discountAmount;
             this.instanceId = builder.instanceId;
+            this.isContractActivity = builder.isContractActivity;
+            this.moduleInstance = builder.moduleInstance;
+            this.optionalPromotions = builder.optionalPromotions;
             this.originalAmount = builder.originalAmount;
+            this.promDetailList = builder.promDetailList;
             this.ruleIds = builder.ruleIds;
+            this.standDiscountPrice = builder.standDiscountPrice;
+            this.standPrice = builder.standPrice;
             this.tradeAmount = builder.tradeAmount;
         }
 
@@ -688,6 +2046,13 @@ public class DescribePriceResponseBody extends TeaModel {
 
         public static SubOrder create() {
             return builder().build();
+        }
+
+        /**
+         * @return depreciateInfo
+         */
+        public SubOrderDepreciateInfo getDepreciateInfo() {
+            return this.depreciateInfo;
         }
 
         /**
@@ -705,10 +2070,38 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
+         * @return isContractActivity
+         */
+        public Boolean getIsContractActivity() {
+            return this.isContractActivity;
+        }
+
+        /**
+         * @return moduleInstance
+         */
+        public SubOrderModuleInstance getModuleInstance() {
+            return this.moduleInstance;
+        }
+
+        /**
+         * @return optionalPromotions
+         */
+        public OptionalPromotions getOptionalPromotions() {
+            return this.optionalPromotions;
+        }
+
+        /**
          * @return originalAmount
          */
         public String getOriginalAmount() {
             return this.originalAmount;
+        }
+
+        /**
+         * @return promDetailList
+         */
+        public PromDetailList getPromDetailList() {
+            return this.promDetailList;
         }
 
         /**
@@ -719,6 +2112,20 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
+         * @return standDiscountPrice
+         */
+        public Long getStandDiscountPrice() {
+            return this.standDiscountPrice;
+        }
+
+        /**
+         * @return standPrice
+         */
+        public Long getStandPrice() {
+            return this.standPrice;
+        }
+
+        /**
          * @return tradeAmount
          */
         public String getTradeAmount() {
@@ -726,11 +2133,26 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private SubOrderDepreciateInfo depreciateInfo; 
             private String discountAmount; 
             private String instanceId; 
+            private Boolean isContractActivity; 
+            private SubOrderModuleInstance moduleInstance; 
+            private OptionalPromotions optionalPromotions; 
             private String originalAmount; 
+            private PromDetailList promDetailList; 
             private SubOrderRuleIds ruleIds; 
+            private Long standDiscountPrice; 
+            private Long standPrice; 
             private String tradeAmount; 
+
+            /**
+             * DepreciateInfo.
+             */
+            public Builder depreciateInfo(SubOrderDepreciateInfo depreciateInfo) {
+                this.depreciateInfo = depreciateInfo;
+                return this;
+            }
 
             /**
              * The discount amount of the order.
@@ -749,6 +2171,30 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
+             * IsContractActivity.
+             */
+            public Builder isContractActivity(Boolean isContractActivity) {
+                this.isContractActivity = isContractActivity;
+                return this;
+            }
+
+            /**
+             * ModuleInstance.
+             */
+            public Builder moduleInstance(SubOrderModuleInstance moduleInstance) {
+                this.moduleInstance = moduleInstance;
+                return this;
+            }
+
+            /**
+             * OptionalPromotions.
+             */
+            public Builder optionalPromotions(OptionalPromotions optionalPromotions) {
+                this.optionalPromotions = optionalPromotions;
+                return this;
+            }
+
+            /**
              * The original price of the order.
              */
             public Builder originalAmount(String originalAmount) {
@@ -757,10 +2203,34 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
+             * PromDetailList.
+             */
+            public Builder promDetailList(PromDetailList promDetailList) {
+                this.promDetailList = promDetailList;
+                return this;
+            }
+
+            /**
              * The rule IDs.
              */
             public Builder ruleIds(SubOrderRuleIds ruleIds) {
                 this.ruleIds = ruleIds;
+                return this;
+            }
+
+            /**
+             * StandDiscountPrice.
+             */
+            public Builder standDiscountPrice(Long standDiscountPrice) {
+                this.standDiscountPrice = standDiscountPrice;
+                return this;
+            }
+
+            /**
+             * StandPrice.
+             */
+            public Builder standPrice(Long standPrice) {
+                this.standPrice = standPrice;
                 return this;
             }
 

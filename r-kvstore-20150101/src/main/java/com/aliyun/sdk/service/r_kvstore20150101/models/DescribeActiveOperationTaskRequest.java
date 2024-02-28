@@ -207,7 +207,11 @@ public class DescribeActiveOperationTaskRequest extends Request {
         }
 
         /**
-         * The time when the O\&M task was created. The time in UTC is displayed in the *yyyy-MM-dd*T*HH:mm:ss*Z format.
+         * Specifies whether to return the historical tasks. Default value: 0. Valid values:
+         * <p>
+         * 
+         * *   **0**: returns the current task.
+         * *   **1**: returns the historical tasks.
          */
         public Builder isHistory(Integer isHistory) {
             this.putQueryParameter("IsHistory", isHistory);
@@ -252,7 +256,10 @@ public class DescribeActiveOperationTaskRequest extends Request {
         }
 
         /**
-         * The ID of the O\&M task.
+         * The region ID of the O&M task. You can call the [DescribeRegions](~~DescribeRegions~~) operation to query the most recent region list.
+         * <p>
+         * 
+         * > A value of **all** indicates all region IDs.
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -288,7 +295,13 @@ public class DescribeActiveOperationTaskRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The type of the O&M task. Valid values:
+         * <p>
+         * 
+         * *   **rds_apsaradb_ha**: master-replica switchover
+         * *   **rds_apsaradb_transfer**: instance migration
+         * *   **rds_apsaradb_upgrade**: minor version update
+         * *   **all**: all types
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

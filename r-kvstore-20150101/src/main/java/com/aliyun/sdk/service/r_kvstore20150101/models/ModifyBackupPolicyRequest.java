@@ -216,15 +216,12 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * Enables or disables the data flashback feature for the instance. Valid values:
+         * Specifies whether to enable incremental data backup. Default value: 0. Valid values:
          * <p>
          * 
-         * *   **1**: enables the data flashback feature. You must also enable AOF persistence by setting `appendonly` to `yes` in the parameter settings of the instance. Then, you can use the data flashback feature.
-         * *   **0** (default): disables the data flashback feature.
-         * 
-         * **
-         * 
-         * **Description** This parameter is available only for ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based and persistent memory-optimized instances. For more information, see [Data flashback](~~443784~~).
+         * *   **1**: enables incremental data backup.
+         * *   **0**: disables incremental data backup.
+         * >This parameter is available only for ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based and persistent memory-optimized instances. For more information, see [Data flashback](~~443784~~).
          */
         public Builder enableBackupLog(Integer enableBackupLog) {
             this.putQueryParameter("EnableBackupLog", enableBackupLog);
@@ -263,15 +260,15 @@ public class ModifyBackupPolicyRequest extends Request {
          * The days of the week to back up data. Valid values:
          * <p>
          * 
-         * *   **Monday**: every Monday
-         * *   **Tuesday**: every Tuesday
-         * *   **Wednesday**: every Wednesday
-         * *   **Thursday**: every Thursday
-         * *   **Friday**: every Friday
-         * *   **Saturday**: every Saturday
-         * *   **Sunday**: every Sunday
+         * *   **Monday**
+         * *   **Tuesday**
+         * *   **Wednesday**
+         * *   **Thursday**
+         * *   **Friday**
+         * *   **Saturday**
+         * *   **Sunday**
          * 
-         * >  Separate multiple options with commas (,).
+         * > Separate multiple options with commas (,).
          */
         public Builder preferredBackupPeriod(String preferredBackupPeriod) {
             this.putQueryParameter("PreferredBackupPeriod", preferredBackupPeriod);
@@ -280,10 +277,10 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * The time range to back up data. Specify the time in the ISO 8601 standard in the *HH:mm*Z-*HH:mm*Z format. The time must be in UTC.
+         * The time range to back up data. Specify the time in the *HH:mm*Z-*HH:mm*Z format. The time is displayed in UTC.
          * <p>
          * 
-         * >  The beginning and end of the time range must be on the hour. The duration must be an hour.
+         * > The beginning and end of the time range must be on the hour. The duration must be an hour.
          */
         public Builder preferredBackupTime(String preferredBackupTime) {
             this.putQueryParameter("PreferredBackupTime", preferredBackupTime);

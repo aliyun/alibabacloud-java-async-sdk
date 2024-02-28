@@ -252,10 +252,10 @@ public class DescribeHistoryMonitorValuesRequest extends Request {
         }
 
         /**
-         * The monitoring metrics. Separate multiple metrics with commas (,).
+         * The monitoring metrics. Separate the metrics with commas (,).
          * <p>
+         * *   This parameter is empty by default. The UsedMemory and quotaMemory metrics are returned. For information about the metrics that are supported by ApsaraDB for Redis instances and their descriptions, see [View performance monitoring data](~~122091~~).
          * 
-         * *   This parameter is empty by default, which indicates that the UsedMemory and quotaMemory metrics are returned. For more information about supported monitoring metrics and their descriptions, see [MonitorKeys](~~122091~~).
          * *   To ensure query efficiency, we recommend that you specify no more than five metrics for a single node at a time, and specify only a single metric when you query aggregate metrics.
          */
         public Builder monitorKeys(String monitorKeys) {

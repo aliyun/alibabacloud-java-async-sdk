@@ -86,7 +86,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The valid values of the parameter.
+         * The database engine that is run on the instance. The value **Redis** is returned for this parameter.
          */
         public Builder engine(String engine) {
             this.engine = engine;
@@ -94,7 +94,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * The default value of the parameter.
+         * The major version that is run on the instance.
          */
         public Builder engineVersion(String engineVersion) {
             this.engineVersion = engineVersion;
@@ -102,11 +102,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * The architecture of the instance. For more information, see [Overview](~~86132~~). Valid values:
-         * <p>
-         * 
-         * *   **logic**: The instance is a cluster master-replica instance or a read/write splitting instance.
-         * *   **normal**: The instance is a standard master-replica instance.
+         * The number of parameters that are supported by the instance.
          */
         public Builder parameterCount(String parameterCount) {
             this.parameterCount = parameterCount;
@@ -114,7 +110,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * Details of the returned parameters.
+         * An array that consists of the details about the parameters returned.
          */
         public Builder parameters(Parameters parameters) {
             this.parameters = parameters;
@@ -122,7 +118,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the parameter. For more information about the parameters and the parameter settings, see [Parameters](~~259681~~).
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -222,7 +218,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             private String parameterValue; 
 
             /**
-             * The check code that indicates the valid values of the parameter.
+             * The valid values of the parameter.
              */
             public Builder checkingCode(String checkingCode) {
                 this.checkingCode = checkingCode;
@@ -230,11 +226,11 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the parameter can be reset. Valid values:
+             * Indicates whether the parameter can be reconfigured. Valid values:
              * <p>
              * 
-             * *   **true**: The parameter can be reset.
-             * *   **false**: The parameter cannot be reset.
+             * *   **true**: The parameter can be reconfigured.
+             * *   **false**: The parameter cannot be reconfigured.
              */
             public Builder forceModify(Boolean forceModify) {
                 this.forceModify = forceModify;
@@ -242,11 +238,11 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether a restart of the instance is required after the parameter is reset. Valid values:
+             * Indicates whether a restart of the instance is required after the parameter is reconfigured. Valid values:
              * <p>
              * 
-             * *   **true**: After the parameter is reset, you must restart the instance to make the new value of the parameter take effect.
-             * *   **false**: After the parameter is reset, the new value of the parameter immediately takes effect. You do not need to restart the instance.
+             * *   **true**: After the parameter is reconfigured, you must restart the instance to make the new value of the parameter take effect.
+             * *   **false**: After the parameter is reconfigured, the new value of the parameter immediately takes effect. You do not need to restart the instance.
              */
             public Builder forceRestart(Boolean forceRestart) {
                 this.forceRestart = forceRestart;

@@ -419,7 +419,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The billing method of the instance. Valid values:
+         * The billing method. Valid values:
          * <p>
          * 
          * *   **PrePaid**: subscription
@@ -435,8 +435,8 @@ public class DescribeInstancesRequest extends Request {
          * The edition of the instance. Valid values:
          * <p>
          * 
-         * *   **Community**: Community Edition
-         * *   **Enterprise**: Enhance Edition (Tair)
+         * *   **Community**: ApsaraDB for Redis Community Edition
+         * *   **Enterprise**: ApsaraDB for Redis Enhanced Edition (Tair)
          */
         public Builder editionType(String editionType) {
             this.putQueryParameter("EditionType", editionType);
@@ -445,7 +445,17 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The database engine version of the instance. Valid values: **2.8**, **4.0**, **5.0**, and **6.0**.
+         * The engine version of the instance. Valid values: **2.8**, **4.0**, and **5.0**.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   1.0
+         * *   2.8
+         * *   4.0
+         * *   5.0
+         * *   6.0
+         * *   7.0
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -489,10 +499,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The IDs of the instances that you want to query.
          * <p>
          * 
-         * > If you specify multiple instance IDs, separate these IDs with commas (,).
+         * >  If you want to specify multiple instance IDs, separate the instance IDs with commas (,). You can specify a maximum of 30 instance IDs in a single request.
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -543,11 +553,11 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The network type of the instance. Valid values:
+         * The network type. Valid values:
          * <p>
          * 
-         * *   **CLASSIC**: classic network
-         * *   **VPC**: Virtual Private Cloud (VPC)
+         * *   **CLASSIC**
+         * *   **VPC**
          */
         public Builder networkType(String networkType) {
             this.putQueryParameter("NetworkType", networkType);
@@ -574,7 +584,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page **1**. Default value: **1**.
+         * The page number. Pages start from page **1**. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -583,7 +593,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
+         * The number of entries per page. Maximum value: **50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -742,10 +752,10 @@ public class DescribeInstancesRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag. A tag is a key-value pair.
+             * The tag key. A tag is a key-value pair.
              * <p>
              * 
-             * > A maximum of five key-value pairs can be specified at a time.
+             * >  A maximum of five key-value pairs can be specified at a time.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -753,7 +763,7 @@ public class DescribeInstancesRequest extends Request {
             }
 
             /**
-             * The value of the tag. A tag is a key-value pair.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;

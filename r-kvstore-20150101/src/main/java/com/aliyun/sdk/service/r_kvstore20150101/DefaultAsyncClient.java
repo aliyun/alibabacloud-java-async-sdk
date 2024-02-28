@@ -286,8 +286,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
       * Before you call this operation, make sure that you understand the billing methods and [pricing](~~54532~~) of ApsaraDB for Redis.
-      * >  For more information about how to create an instance that meets your requirements in the ApsaraDB for Redis console, see [Step 1: Create an ApsaraDB for Redis instance](~~26351~~).
-      * To create an ApsaraDB for Redis Enhanced Edition (Tair) instance that uses cloud disks, call [CreateTairInstance](~~208271~~).
+      * >  For more information about how to create an instance that meets your requirements in the ApsaraDB for Redis console, see Step 1: Create an ApsaraDB for Redis instance.[](~~26351~~)
+      * This operation can only be used to create ApsaraDB for Redis Community Edition instances and ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based classic instances.
       *
      */
     @Override
@@ -425,9 +425,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Specifies whether to return the historical tasks. Valid values:
-      * *   **0**: returns the current task. This is the default value.
-      * *   **1**: returns the historical tasks.
+      * After you have called this API operation and queried the information about a specific O&M task, you can also call the [ModifyActiveOperationTask](~~ModifyActiveOperationTask~~) operation to modify the scheduled switchover time of the O&M task.
       *
      */
     @Override
@@ -632,6 +630,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > Only instances that use cloud disks support this operation.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDBNodeDirectVipInfoResponse> describeDBNodeDirectVipInfo(DescribeDBNodeDirectVipInfoRequest request) {
         try {
@@ -991,7 +993,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * An array that consists of the details about the parameters returned.
+      * After you call this operation to query the parameters and default values of an instance, you can call the [ModifyInstanceConfig](~~61113~~) operation to reconfigure the parameters of the instance.
       *
      */
     @Override
@@ -1259,7 +1261,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The log management feature of ApsaraDB for Redis requires the resources of [Log Service](~~48869~~). To use the log management feature of ApsaraDB for Redis, you can call this operation to associate the RAM role named AliyunServiceRoleForKvstore with the ApsaraDB for Redis instance. For more information, see [Associated RAM roles of ApsaraDB for Redis] (~~184337~~).
+      * The log management feature of ApsaraDB for Redis requires the resources of [Log Service](~~48869~~). To use the log management feature of ApsaraDB for Redis, you can call this operation to associate the RAM role named AliyunServiceRoleForKvstore with the ApsaraDB for Redis instance. For more information, see [Associated RAM roles of ApsaraDB for Redis](~~184337~~).
       *
      */
     @Override

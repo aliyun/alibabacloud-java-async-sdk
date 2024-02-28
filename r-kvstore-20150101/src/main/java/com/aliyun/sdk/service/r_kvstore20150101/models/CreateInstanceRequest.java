@@ -761,7 +761,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * Backup files ID of cluster instance.
+         * The backup set ID.
          */
         public Builder clusterBackupId(String clusterBackupId) {
             this.putQueryParameter("ClusterBackupId", clusterBackupId);
@@ -779,7 +779,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The coupon code. Default value: `youhuiquan_promotion_option_id_for_blank`.
+         * The coupon code. Default value: `default`.
          */
         public Builder couponNo(String couponNo) {
             this.putQueryParameter("CouponNo", couponNo);
@@ -907,8 +907,12 @@ public class CreateInstanceRequest extends Request {
          * The node type. Valid values:
          * <p>
          * 
+         * *   **MASTER_SLAVE**: high availability (master-replica)
          * *   **STAND_ALONE**: standalone
-         * *   **MASTER_SLAVE** (default): high availability (master-replica)
+         * *   **double**: master-replica
+         * *   **single**: standalone
+         * 
+         * >  To create a cloud-native instance, set this parameter to **MASTER_SLAVE** or **STAND_ALONE**. To create a classic instance, set this parameter to **double** or **single**.
          */
         public Builder nodeType(String nodeType) {
             this.putQueryParameter("NodeType", nodeType);
@@ -935,7 +939,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * Parameter template ID.
+         * The parameter template ID, which must be globally unique.
          */
         public Builder paramGroupId(String paramGroupId) {
             this.putQueryParameter("ParamGroupId", paramGroupId);

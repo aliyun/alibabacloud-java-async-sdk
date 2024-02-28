@@ -232,11 +232,11 @@ public class TransformInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable auto-renewal for the instance. Default value: false. Valid values:
+         * Specifies whether to enable auto-renewal for the instance. Valid values:
          * <p>
          * 
          * *   **true**: enables auto-renewal.
-         * *   **false**: disables auto-renewal.
+         * *   **false** (default): disables auto-renewal.
          */
         public Builder autoRenew(String autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -245,10 +245,10 @@ public class TransformInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * The subscription duration that is supported by auto-renewal. Unit: months. Valid values: **1**, **2**, **3**, **6**, and **12**.
+         * The subscription duration that is supported by auto-renewal. Unit: month. Valid values: **1**, **2**, **3**, **6**, and **12**.
          * <p>
          * 
-         * > This parameter is required only if the **AutoRenew** parameter is set to **true**.
+         * >  This parameter is required if the **AutoRenew** parameter is set to **true**.
          */
         public Builder autoRenewPeriod(Long autoRenewPeriod) {
             this.putQueryParameter("AutoRenewPeriod", autoRenewPeriod);
@@ -260,8 +260,8 @@ public class TransformInstanceChargeTypeRequest extends Request {
          * The new billing method. Valid values:
          * <p>
          * 
-         * *   **PrePaid**: subscription. If you set this parameter to PrePaid, you must also set the **Period** parameter.
-         * *   **PostPaid**: pay-as-you-go.
+         * *   **PrePaid**: subscription. If you set this parameter to PrePaid, you must also specify the **Period** parameter.
+         * *   **PostPaid**: pay-as-you-go
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);

@@ -50,7 +50,10 @@ public class CreateBackupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the backup task.
+         * The ID of the backup task.\
+         * <p>
+         * For cluster instances created before December 5, 2023, the return value is a comma-separated list composed of the job ID of each node within an instance. For example, if you have a cluster instance with two shards, the return value of BackupJobID is "10000,10001".\
+         * For cluster instance created after December 5, 2023, all jobs for nodes in an instance are represented by a single job ID.
          */
         public Builder backupJobID(String backupJobID) {
             this.backupJobID = backupJobID;

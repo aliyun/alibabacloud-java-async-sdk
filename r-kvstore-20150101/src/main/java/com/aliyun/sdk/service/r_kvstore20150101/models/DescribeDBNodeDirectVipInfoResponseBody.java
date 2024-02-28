@@ -62,7 +62,7 @@ public class DescribeDBNodeDirectVipInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DirectVipInfo.
+         * The VIPs of shards in the cluster instance.
          */
         public Builder directVipInfo(DirectVipInfo directVipInfo) {
             this.directVipInfo = directVipInfo;
@@ -70,7 +70,7 @@ public class DescribeDBNodeDirectVipInfoResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -78,7 +78,7 @@ public class DescribeDBNodeDirectVipInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +154,10 @@ public class DescribeDBNodeDirectVipInfoResponseBody extends TeaModel {
             private String vip; 
 
             /**
-             * NetType.
+             * The network type of the security group. Valid values:
+             * <p>
+             * 
+             * *   **vpc**: Virtual Private Cloud (VPC)
              */
             public Builder netType(String netType) {
                 this.netType = netType;
@@ -162,7 +165,7 @@ public class DescribeDBNodeDirectVipInfoResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * The shard ID.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -170,7 +173,7 @@ public class DescribeDBNodeDirectVipInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The port number. Valid values: **1024** to **65535**. Default value: **6379**.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -178,7 +181,7 @@ public class DescribeDBNodeDirectVipInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Vip.
+             * The VIP of the shard.
              */
             public Builder vip(String vip) {
                 this.vip = vip;

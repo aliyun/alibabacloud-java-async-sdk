@@ -154,7 +154,7 @@ public class DescribeGlobalSecurityIPGroupRelationRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The instance ID.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -181,7 +181,7 @@ public class DescribeGlobalSecurityIPGroupRelationRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -190,7 +190,7 @@ public class DescribeGlobalSecurityIPGroupRelationRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
