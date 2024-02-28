@@ -192,6 +192,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeReplicaGroupDrillsResponse> describeReplicaGroupDrills(DescribeReplicaGroupDrillsRequest request);
 
+    CompletableFuture<DescribeSolutionInstanceConfigurationResponse> describeSolutionInstanceConfiguration(DescribeSolutionInstanceConfigurationRequest request);
+
     /**
       * ## [](#)Usage notes
       * *   For information about the regions in which the replication pair-consistent group feature is available, see [Overview](~~314563~~).
