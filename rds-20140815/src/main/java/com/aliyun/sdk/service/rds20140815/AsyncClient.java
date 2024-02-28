@@ -1396,6 +1396,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DescribeInstanceLinkedWhitelistTemplateResponse> describeInstanceLinkedWhitelistTemplate(DescribeInstanceLinkedWhitelistTemplateRequest request);
 
+    CompletableFuture<DescribeKmsAssociateResourcesResponse> describeKmsAssociateResources(DescribeKmsAssociateResourcesRequest request);
+
     /**
       * ### [](#)Supported database engines
       * *   MySQL
