@@ -38,6 +38,14 @@ public class ModifyUserRequest extends Request {
     private String instanceId;
 
     @Query
+    @NameInMap("Language")
+    private String language;
+
+    @Query
+    @NameInMap("LanguageStatus")
+    private String languageStatus;
+
+    @Query
     @NameInMap("Mobile")
     private String mobile;
 
@@ -78,6 +86,8 @@ public class ModifyUserRequest extends Request {
         this.effectiveStartTime = builder.effectiveStartTime;
         this.email = builder.email;
         this.instanceId = builder.instanceId;
+        this.language = builder.language;
+        this.languageStatus = builder.languageStatus;
         this.mobile = builder.mobile;
         this.mobileCountryCode = builder.mobileCountryCode;
         this.needResetPassword = builder.needResetPassword;
@@ -144,6 +154,20 @@ public class ModifyUserRequest extends Request {
     }
 
     /**
+     * @return language
+     */
+    public String getLanguage() {
+        return this.language;
+    }
+
+    /**
+     * @return languageStatus
+     */
+    public String getLanguageStatus() {
+        return this.languageStatus;
+    }
+
+    /**
      * @return mobile
      */
     public String getMobile() {
@@ -206,6 +230,8 @@ public class ModifyUserRequest extends Request {
         private Long effectiveStartTime; 
         private String email; 
         private String instanceId; 
+        private String language; 
+        private String languageStatus; 
         private String mobile; 
         private String mobileCountryCode; 
         private Boolean needResetPassword; 
@@ -227,6 +253,8 @@ public class ModifyUserRequest extends Request {
             this.effectiveStartTime = request.effectiveStartTime;
             this.email = request.email;
             this.instanceId = request.instanceId;
+            this.language = request.language;
+            this.languageStatus = request.languageStatus;
             this.mobile = request.mobile;
             this.mobileCountryCode = request.mobileCountryCode;
             this.needResetPassword = request.needResetPassword;
@@ -294,6 +322,24 @@ public class ModifyUserRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * Language.
+         */
+        public Builder language(String language) {
+            this.putQueryParameter("Language", language);
+            this.language = language;
+            return this;
+        }
+
+        /**
+         * LanguageStatus.
+         */
+        public Builder languageStatus(String languageStatus) {
+            this.putQueryParameter("LanguageStatus", languageStatus);
+            this.languageStatus = languageStatus;
             return this;
         }
 

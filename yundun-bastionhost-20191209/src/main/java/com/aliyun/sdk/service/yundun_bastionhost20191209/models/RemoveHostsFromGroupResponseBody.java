@@ -50,10 +50,7 @@ public class RemoveHostsFromGroupResponseBody extends TeaModel {
         private java.util.List < Results> results; 
 
         /**
-         * All Alibaba Cloud API operations must include common request parameters. For more information about common request parameters, see [Common parameters](~~315526~~).
-         * <p>
-         * 
-         * For more information about sample requests, see the "Examples" section of this topic.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -61,7 +58,7 @@ public class RemoveHostsFromGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Removes one or more hosts from a host group.
+         * The result of the call.
          */
         public Builder results(java.util.List < Results> results) {
             this.results = results;
@@ -137,7 +134,14 @@ public class RemoveHostsFromGroupResponseBody extends TeaModel {
             private String message; 
 
             /**
-             * RemoveHostsFromGroup
+             * The return code that indicates whether the call was successful. Valid values:
+             * <p>
+             * 
+             * *   **OK**: The call was successful.
+             * *   **UNEXPECTED**: An unknown error occurred.
+             * *   **INVALID_ARGUMENT**: A request parameter is invalid.
+             * *   **OBJECT_NOT_FOUND**: The specified object on which you want to perform the operation does not exist.
+             * *   **OBJECT_AlREADY_EXISTS**: The specified object on which you want to perform the operation already exists.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -145,7 +149,7 @@ public class RemoveHostsFromGroupResponseBody extends TeaModel {
             }
 
             /**
-             * RemoveHostsFromGroup
+             * The ID of the host group.
              */
             public Builder hostGroupId(String hostGroupId) {
                 this.hostGroupId = hostGroupId;
@@ -153,7 +157,7 @@ public class RemoveHostsFromGroupResponseBody extends TeaModel {
             }
 
             /**
-             * HostId.
+             * The ID of the host.
              */
             public Builder hostId(String hostId) {
                 this.hostId = hostId;
@@ -161,7 +165,7 @@ public class RemoveHostsFromGroupResponseBody extends TeaModel {
             }
 
             /**
-             * WB662865
+             * This parameter is deprecated.
              */
             public Builder message(String message) {
                 this.message = message;

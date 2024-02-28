@@ -99,7 +99,11 @@ public class ResetHostAccountCredentialRequest extends Request {
         } 
 
         /**
-         * ResetHostAccountCredential
+         * The type of the logon credential that you want to delete. Valid values:
+         * <p>
+         * 
+         * *   **Password**
+         * *   **PrivateKey**
          */
         public Builder credentialType(String credentialType) {
             this.putQueryParameter("CredentialType", credentialType);
@@ -108,7 +112,10 @@ public class ResetHostAccountCredentialRequest extends Request {
         }
 
         /**
-         * WB662865
+         * The ID of the host account for which the logon credential is to be deleted.
+         * <p>
+         * 
+         * >  You can call the [ListHostAccounts](~~204372~~) operation to query the ID of the host account.
          */
         public Builder hostAccountId(String hostAccountId) {
             this.putQueryParameter("HostAccountId", hostAccountId);
@@ -117,7 +124,10 @@ public class ResetHostAccountCredentialRequest extends Request {
         }
 
         /**
-         * Deletes the logon credential of a specified host account of a specified Bastionhost instance. The logon credential can be the password or SSH private key.
+         * The ID of the bastion host from which you want to delete the logon credential for the host account.
+         * <p>
+         * 
+         * >  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -126,7 +136,10 @@ public class ResetHostAccountCredentialRequest extends Request {
         }
 
         /**
-         * ResetHostAccountCredential
+         * The region ID of the bastion host from which you want to delete the logon credential for the host account.
+         * <p>
+         * 
+         * >  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

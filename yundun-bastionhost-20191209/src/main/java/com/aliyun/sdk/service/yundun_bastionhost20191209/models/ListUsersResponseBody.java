@@ -107,6 +107,12 @@ public class ListUsersResponseBody extends TeaModel {
         @NameInMap("Email")
         private String email;
 
+        @NameInMap("Language")
+        private String language;
+
+        @NameInMap("LanguageStatus")
+        private String languageStatus;
+
         @NameInMap("Mobile")
         private String mobile;
 
@@ -143,6 +149,8 @@ public class ListUsersResponseBody extends TeaModel {
             this.effectiveEndTime = builder.effectiveEndTime;
             this.effectiveStartTime = builder.effectiveStartTime;
             this.email = builder.email;
+            this.language = builder.language;
+            this.languageStatus = builder.languageStatus;
             this.mobile = builder.mobile;
             this.mobileCountryCode = builder.mobileCountryCode;
             this.needResetPassword = builder.needResetPassword;
@@ -196,6 +204,20 @@ public class ListUsersResponseBody extends TeaModel {
          */
         public String getEmail() {
             return this.email;
+        }
+
+        /**
+         * @return language
+         */
+        public String getLanguage() {
+            return this.language;
+        }
+
+        /**
+         * @return languageStatus
+         */
+        public String getLanguageStatus() {
+            return this.languageStatus;
         }
 
         /**
@@ -274,6 +296,8 @@ public class ListUsersResponseBody extends TeaModel {
             private Long effectiveEndTime; 
             private Long effectiveStartTime; 
             private String email; 
+            private String language; 
+            private String languageStatus; 
             private String mobile; 
             private String mobileCountryCode; 
             private Boolean needResetPassword; 
@@ -322,6 +346,22 @@ public class ListUsersResponseBody extends TeaModel {
              */
             public Builder email(String email) {
                 this.email = email;
+                return this;
+            }
+
+            /**
+             * Language.
+             */
+            public Builder language(String language) {
+                this.language = language;
+                return this;
+            }
+
+            /**
+             * LanguageStatus.
+             */
+            public Builder languageStatus(String languageStatus) {
+                this.languageStatus = languageStatus;
                 return this;
             }
 

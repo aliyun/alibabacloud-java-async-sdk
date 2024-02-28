@@ -62,10 +62,7 @@ public class ListHostsForUserResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The ID of the user.
-         * <p>
-         * 
-         * >  You can call the [ListUsers](~~204522~~) operation to query the ID of the user ID.
+         * The hosts returned.
          */
         public Builder hosts(java.util.List < Hosts> hosts) {
             this.hosts = hosts;
@@ -73,7 +70,7 @@ public class ListHostsForUserResponseBody extends TeaModel {
         }
 
         /**
-         * The hosts returned.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -81,7 +78,7 @@ public class ListHostsForUserResponseBody extends TeaModel {
         }
 
         /**
-         * The public endpoint of the host. The value is a domain name or an IP address.
+         * The total number of hosts returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -193,10 +190,11 @@ public class ListHostsForUserResponseBody extends TeaModel {
             private String OSType; 
 
             /**
-             * All Bastionhost API requests must include common request parameters. For more information about common request parameters, see [Common parameters](~~148139~~).
+             * The endpoint type of the host. Valid values:
              * <p>
              * 
-             * For more information about sample requests, see the "Examples" section of this topic.
+             * *   **Public**: public endpoint
+             * *   **Private**: internal endpoint
              */
             public Builder activeAddressType(String activeAddressType) {
                 this.activeAddressType = activeAddressType;
@@ -204,7 +202,7 @@ public class ListHostsForUserResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request.
+             * The description of the host.
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -212,7 +210,7 @@ public class ListHostsForUserResponseBody extends TeaModel {
             }
 
             /**
-             * HostId.
+             * The ID of the host.
              */
             public Builder hostId(String hostId) {
                 this.hostId = hostId;
@@ -220,7 +218,7 @@ public class ListHostsForUserResponseBody extends TeaModel {
             }
 
             /**
-             * ListHostsForUser
+             * The name of the host.
              */
             public Builder hostName(String hostName) {
                 this.hostName = hostName;
@@ -228,7 +226,7 @@ public class ListHostsForUserResponseBody extends TeaModel {
             }
 
             /**
-             * WB662865
+             * The internal endpoint of the host. The value is a domain name or an IP address.
              */
             public Builder hostPrivateAddress(String hostPrivateAddress) {
                 this.hostPrivateAddress = hostPrivateAddress;
@@ -236,7 +234,7 @@ public class ListHostsForUserResponseBody extends TeaModel {
             }
 
             /**
-             * Queries the hosts that a specified user is authorized or not authorized to manage.
+             * The public endpoint of the host. The value is a domain name or an IP address.
              */
             public Builder hostPublicAddress(String hostPublicAddress) {
                 this.hostPublicAddress = hostPublicAddress;
@@ -244,7 +242,11 @@ public class ListHostsForUserResponseBody extends TeaModel {
             }
 
             /**
-             * ListHostsForUser
+             * The operating system of the host. Valid values:
+             * <p>
+             * 
+             * *   **Linux**
+             * *   **Windows**
              */
             public Builder OSType(String OSType) {
                 this.OSType = OSType;

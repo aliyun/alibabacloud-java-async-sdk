@@ -50,7 +50,7 @@ public class GetHostResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The fingerprint of the host. This parameter uniquely identifies a host.
+         * The information about the host that was queried.
          */
         public Builder host(GetHostResponseBodyHost host) {
             this.host = host;
@@ -58,11 +58,7 @@ public class GetHostResponseBody extends TeaModel {
         }
 
         /**
-         * The endpoint type of the host. Valid values:
-         * <p>
-         * 
-         * *   **Public**: a public endpoint
-         * *   **Private**: an internal endpoint
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -126,7 +122,7 @@ public class GetHostResponseBody extends TeaModel {
             private String protocolName; 
 
             /**
-             * WB662865
+             * The fingerprint of the host. This parameter uniquely identifies a host.
              */
             public Builder hostFingerPrint(String hostFingerPrint) {
                 this.hostFingerPrint = hostFingerPrint;
@@ -134,7 +130,7 @@ public class GetHostResponseBody extends TeaModel {
             }
 
             /**
-             * GetHost
+             * The service port of the host.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -142,7 +138,11 @@ public class GetHostResponseBody extends TeaModel {
             }
 
             /**
-             * ProtocolName.
+             * The protocol that is used to connect to the host. Valid values:
+             * <p>
+             * 
+             * *   **SSH**
+             * *   **RDP**
              */
             public Builder protocolName(String protocolName) {
                 this.protocolName = protocolName;
@@ -315,7 +315,11 @@ public class GetHostResponseBody extends TeaModel {
             private String sourceInstanceState; 
 
             /**
-             * The public endpoint of the host. You can set this parameter to a domain name or an IP address.
+             * The address type of the host. Valid values:
+             * <p>
+             * 
+             * *   **Public**: a public address
+             * *   **Private**: a private address
              */
             public Builder activeAddressType(String activeAddressType) {
                 this.activeAddressType = activeAddressType;
@@ -323,10 +327,7 @@ public class GetHostResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ECS instance or dedicated cluster host that was queried.
-             * <p>
-             * 
-             * >  No value is returned for this parameter if the **Source** parameter is set to **Local**.
+             * The description of the host.
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -334,7 +335,7 @@ public class GetHostResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request.
+             * The ID of the host.
              */
             public Builder hostId(String hostId) {
                 this.hostId = hostId;
@@ -342,10 +343,7 @@ public class GetHostResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Bastionhost instance where you want to query the host.
-             * <p>
-             * 
-             * >  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the Bastionhost instance.
+             * The hostname.
              */
             public Builder hostName(String hostName) {
                 this.hostName = hostName;
@@ -353,7 +351,7 @@ public class GetHostResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the host.
+             * The internal endpoint of the host. The value is a domain name or an IP address.
              */
             public Builder hostPrivateAddress(String hostPrivateAddress) {
                 this.hostPrivateAddress = hostPrivateAddress;
@@ -361,12 +359,7 @@ public class GetHostResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the host. Valid values:
-             * <p>
-             * 
-             * - **Normal**: The host is normal.
-             * 
-             * - **Release**: The host is released.
+             * The public address of the host. The value is a domain name or an IP address.
              */
             public Builder hostPublicAddress(String hostPublicAddress) {
                 this.hostPublicAddress = hostPublicAddress;
@@ -374,7 +367,7 @@ public class GetHostResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkDomainId.
+             * The ID of the new network domain to which the host belongs.
              */
             public Builder networkDomainId(String networkDomainId) {
                 this.networkDomainId = networkDomainId;
@@ -394,7 +387,7 @@ public class GetHostResponseBody extends TeaModel {
             }
 
             /**
-             * GetHost
+             * The protocol information about the host.
              */
             public Builder protocols(java.util.List < Protocols> protocols) {
                 this.protocols = protocols;
@@ -402,7 +395,12 @@ public class GetHostResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol information of the host.
+             * The source of the host. Valid values:
+             * <p>
+             * 
+             * *   **Local**: a host in a data center
+             * *   **Ecs**: an Elastic Compute Service (ECS) instance
+             * *   **Rds**: a host in an ApsaraDB MyBase dedicated cluster
              */
             public Builder source(String source) {
                 this.source = source;
@@ -410,7 +408,10 @@ public class GetHostResponseBody extends TeaModel {
             }
 
             /**
-             * Queries the details of a specified host, such as the name, source, endpoint, protocol, and service port of the host.
+             * The ID of the ECS instance or the host in an ApsaraDB MyBase dedicated cluster.
+             * <p>
+             * 
+             * >  If **Local** is returned for the **Source** parameter, no value is returned for this parameter.
              */
             public Builder sourceInstanceId(String sourceInstanceId) {
                 this.sourceInstanceId = sourceInstanceId;
@@ -418,10 +419,11 @@ public class GetHostResponseBody extends TeaModel {
             }
 
             /**
-             * All Alibaba Cloud API operations must include common request parameters. For more information about common request parameters, see [Common parameters](~~315526~~).
+             * The status of the host. Valid values:
              * <p>
              * 
-             * For more information about sample requests, see the "Examples" section of this topic.
+             * *   **Normal**: normal
+             * *   **Release**: released
              */
             public Builder sourceInstanceState(String sourceInstanceState) {
                 this.sourceInstanceState = sourceInstanceState;

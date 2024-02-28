@@ -292,7 +292,7 @@ public class CreateHostRequest extends Request {
         }
 
         /**
-         * NetworkDomainId.
+         * The ID of the network domain to which the host belongs.
          */
         public Builder networkDomainId(String networkDomainId) {
             this.putQueryParameter("NetworkDomainId", networkDomainId);

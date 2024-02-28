@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.yundun_bastionhost20191209;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.yundun_bastionhost20191209.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -36,7 +37,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddHostsToGroupResponse> addHostsToGroup(AddHostsToGroupRequest request);
 
     /**
-      * This parameter is deprecated.
+      * #
+      * You can call this operation to add one or more users to a user group. After you call the [CreateUserGroup](~~204596~~) operation to create a user group, you can call the AddUsersToGroup operation to add multiple users to the user group. Then, you can manage and grant permissions to the users at a time.
+      * # Limit
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
      */
     CompletableFuture<AddUsersToGroupResponse> addUsersToGroup(AddUsersToGroupRequest request);
@@ -96,8 +100,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteHostResponse> deleteHost(DeleteHostRequest request);
 
     /**
-      * All Alibaba Cloud API operations must include common request parameters. For more information about common request parameters, see [Common parameters](~~315526~~).
-      * For more information about sample requests, see the "Examples" section of this topic.
+      * ## Usage notes
+      * You can call this operation to remove a single host account. If you no longer use a host account that is added to a host in Bastionhost, you can call this operation to remove the host account from the host.  
+      * >  After you remove the host account, you must enter the username and password of the host when you log on to the host in Bastionhost.  
+      * ## Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
      */
     CompletableFuture<DeleteHostAccountResponse> deleteHostAccount(DeleteHostAccountRequest request);
@@ -224,7 +231,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<LockUsersResponse> lockUsers(LockUsersRequest request);
 
     /**
-      * The ID of the request.
+      * You can call the ModifyHost operation to modify the basic information about a host in a data center, an Elastic Compute Service (ECS) instance, or a host in an ApsaraDB MyBase dedicated cluster.
+      * > The basic information about ECS instances and hosts in ApsaraDB MyBase dedicated clusters within your Alibaba Cloud account is synchronized to Bastionhost on a regular basis. After you modify the basic information about an ECS instance or a host in an ApsaraDB MyBase dedicated cluster, the modification result may be overwritten by the synchronized information.
       *
      */
     CompletableFuture<ModifyHostResponse> modifyHost(ModifyHostRequest request);
@@ -263,12 +271,19 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<RejectApproveCommandResponse> rejectApproveCommand(RejectApproveCommandRequest request);
 
+    /**
+      * You can call this operation to reject an O\\&M application of an O\\&M engineer as a Bastionhost administrator.
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+     */
     CompletableFuture<RejectOperationTicketResponse> rejectOperationTicket(RejectOperationTicketRequest request);
 
     CompletableFuture<RemoveHostsFromGroupResponse> removeHostsFromGroup(RemoveHostsFromGroupRequest request);
 
     /**
-      * This parameter is deprecated.
+      * You can call this operation to remove one or more users from a user group. When users in a user group are transferred to a new position, resign, or are switched to another user group, you can call this operation to remove the users from the current user group at a time.  
+      * ## QPS limit
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
      */
     CompletableFuture<RemoveUsersFromGroupResponse> removeUsersFromGroup(RemoveUsersFromGroupRequest request);

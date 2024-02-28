@@ -168,11 +168,7 @@ public class ListHostsForUserRequest extends Request {
         } 
 
         /**
-         * The operating system of the host that you want to query. Valid values:
-         * <p>
-         * 
-         * *   **Linux**
-         * *   **Windows**
+         * The endpoint of the host that you want to query. You can set this parameter to a domain name or an IP address. Only exact match is supported.
          */
         public Builder hostAddress(String hostAddress) {
             this.putQueryParameter("HostAddress", hostAddress);
@@ -181,10 +177,7 @@ public class ListHostsForUserRequest extends Request {
         }
 
         /**
-         * The ID of the Bastionhost instance where you want to query the hosts that the user is authorized or not authorized to manage.
-         * <p>
-         * 
-         * >  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the Bastionhost instance.
+         * The name of the host that you want to query. Only exact match is supported.
          */
         public Builder hostName(String hostName) {
             this.putQueryParameter("HostName", hostName);
@@ -193,11 +186,10 @@ public class ListHostsForUserRequest extends Request {
         }
 
         /**
-         * The category of the host that you want to query. Valid values:
+         * The ID of the bastion host on which you want to query the hosts that the user is authorized or not authorized to manage.
          * <p>
          * 
-         * *   **Authorized**: Query the hosts that the user is authorized to manage. This is the default value.
-         * *   **Unauthorized**: Query the hosts that the user is not authorized to manage.
+         * > You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -206,11 +198,11 @@ public class ListHostsForUserRequest extends Request {
         }
 
         /**
-         * The operating system of the host. Valid values:
+         * Specifies the category of the hosts that you want to query. Valid values:
          * <p>
          * 
-         * *   **Linux**
-         * *   **Windows**
+         * *   **Authorized**: queries the hosts that the user is authorized to manage. This is the default value.
+         * *   **Unauthorized**: queries the hosts that the user is not authorized to manage.
          */
         public Builder mode(String mode) {
             this.putQueryParameter("Mode", mode);
@@ -219,7 +211,11 @@ public class ListHostsForUserRequest extends Request {
         }
 
         /**
-         * The internal endpoint of the host. The value is a domain name or an IP address.
+         * The operating system of the host that you want to query. Valid values:
+         * <p>
+         * 
+         * *   **Linux**
+         * *   **Windows**
          */
         public Builder OSType(String OSType) {
             this.putQueryParameter("OSType", OSType);
@@ -228,11 +224,7 @@ public class ListHostsForUserRequest extends Request {
         }
 
         /**
-         * The endpoint type of the host. Valid values:
-         * <p>
-         * 
-         * *   **Public**: a public endpoint
-         * *   **Private**: an internal endpoint
+         * The number of the page. Default value: 1.
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -241,12 +233,11 @@ public class ListHostsForUserRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The number of entries per page.\
          * <p>
+         * Maximum value: 100. Default value: 20. If you leave this parameter empty, 20 entries are returned per page.
          * 
-         * The value of the PageSize parameter must not exceed 100. Default value: 20. If you leave the PageSize parameter empty, 20 entries are returned on each page.
-         * 
-         * >  We recommend that you do not leave the PageSize parameter empty.
+         * > We recommend that you do not leave this parameter empty.
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -255,7 +246,10 @@ public class ListHostsForUserRequest extends Request {
         }
 
         /**
-         * The endpoint of the host that you want to query. You can set this parameter to a domain name or an IP address. Only exact match is supported.
+         * The region ID of the bastion host on which you want to query the hosts that the user is authorized or not authorized to manage.
+         * <p>
+         * 
+         * > For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -264,7 +258,10 @@ public class ListHostsForUserRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: 1.
+         * The ID of the user.
+         * <p>
+         * 
+         * > You can call the [ListUsers](~~204522~~) operation to query the ID of the user.
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);
