@@ -49,6 +49,10 @@ public class DescribeExposedInstanceListRequest extends Request {
     private Integer pageSize;
 
     @Query
+    @NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @Query
     @NameInMap("VulStatus")
     private Boolean vulStatus;
 
@@ -63,6 +67,7 @@ public class DescribeExposedInstanceListRequest extends Request {
         this.instanceId = builder.instanceId;
         this.instanceName = builder.instanceName;
         this.pageSize = builder.pageSize;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.vulStatus = builder.vulStatus;
     }
 
@@ -143,6 +148,13 @@ public class DescribeExposedInstanceListRequest extends Request {
     }
 
     /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
+    /**
      * @return vulStatus
      */
     public Boolean getVulStatus() {
@@ -159,6 +171,7 @@ public class DescribeExposedInstanceListRequest extends Request {
         private String instanceId; 
         private String instanceName; 
         private Integer pageSize; 
+        private Long resourceDirectoryAccountId; 
         private Boolean vulStatus; 
 
         private Builder() {
@@ -176,6 +189,7 @@ public class DescribeExposedInstanceListRequest extends Request {
             this.instanceId = request.instanceId;
             this.instanceName = request.instanceName;
             this.pageSize = request.pageSize;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.vulStatus = request.vulStatus;
         } 
 
@@ -273,6 +287,15 @@ public class DescribeExposedInstanceListRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 

@@ -13,11 +13,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeExposedInstanceCriteriaRequest extends Request {
     @Query
+    @NameInMap("ResourceDirectoryAccountId")
+    private String resourceDirectoryAccountId;
+
+    @Query
     @NameInMap("Value")
     private String value;
 
     private DescribeExposedInstanceCriteriaRequest(Builder builder) {
         super(builder);
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.value = builder.value;
     }
 
@@ -35,6 +40,13 @@ public class DescribeExposedInstanceCriteriaRequest extends Request {
     }
 
     /**
+     * @return resourceDirectoryAccountId
+     */
+    public String getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
+    /**
      * @return value
      */
     public String getValue() {
@@ -42,6 +54,7 @@ public class DescribeExposedInstanceCriteriaRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeExposedInstanceCriteriaRequest, Builder> {
+        private String resourceDirectoryAccountId; 
         private String value; 
 
         private Builder() {
@@ -50,8 +63,18 @@ public class DescribeExposedInstanceCriteriaRequest extends Request {
 
         private Builder(DescribeExposedInstanceCriteriaRequest request) {
             super(request);
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.value = request.value;
         } 
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(String resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+            return this;
+        }
 
         /**
          * The value of the search condition. Fuzzy match is supported.

@@ -13,12 +13,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeExposedInstanceDetailRequest extends Request {
     @Query
+    @NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @Query
     @NameInMap("Uuid")
     @Validation(required = true)
     private String uuid;
 
     private DescribeExposedInstanceDetailRequest(Builder builder) {
         super(builder);
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.uuid = builder.uuid;
     }
 
@@ -36,6 +41,13 @@ public class DescribeExposedInstanceDetailRequest extends Request {
     }
 
     /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
+    /**
      * @return uuid
      */
     public String getUuid() {
@@ -43,6 +55,7 @@ public class DescribeExposedInstanceDetailRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeExposedInstanceDetailRequest, Builder> {
+        private Long resourceDirectoryAccountId; 
         private String uuid; 
 
         private Builder() {
@@ -51,8 +64,18 @@ public class DescribeExposedInstanceDetailRequest extends Request {
 
         private Builder(DescribeExposedInstanceDetailRequest request) {
             super(request);
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.uuid = request.uuid;
         } 
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+            return this;
+        }
 
         /**
          * The UUID of the server that is exposed on the Internet.

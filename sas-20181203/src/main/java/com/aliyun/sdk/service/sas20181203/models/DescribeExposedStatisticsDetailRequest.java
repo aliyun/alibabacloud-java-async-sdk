@@ -21,6 +21,10 @@ public class DescribeExposedStatisticsDetailRequest extends Request {
     private Integer pageSize;
 
     @Query
+    @NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @Query
     @NameInMap("StatisticsType")
     @Validation(required = true)
     private String statisticsType;
@@ -37,6 +41,7 @@ public class DescribeExposedStatisticsDetailRequest extends Request {
         super(builder);
         this.currentPage = builder.currentPage;
         this.pageSize = builder.pageSize;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.statisticsType = builder.statisticsType;
         this.statisticsTypeGatewayType = builder.statisticsTypeGatewayType;
         this.statisticsTypeInstanceValue = builder.statisticsTypeInstanceValue;
@@ -70,6 +75,13 @@ public class DescribeExposedStatisticsDetailRequest extends Request {
     }
 
     /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
+    /**
      * @return statisticsType
      */
     public String getStatisticsType() {
@@ -93,6 +105,7 @@ public class DescribeExposedStatisticsDetailRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeExposedStatisticsDetailRequest, Builder> {
         private Integer currentPage; 
         private Integer pageSize; 
+        private Long resourceDirectoryAccountId; 
         private String statisticsType; 
         private String statisticsTypeGatewayType; 
         private String statisticsTypeInstanceValue; 
@@ -105,6 +118,7 @@ public class DescribeExposedStatisticsDetailRequest extends Request {
             super(request);
             this.currentPage = request.currentPage;
             this.pageSize = request.pageSize;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.statisticsType = request.statisticsType;
             this.statisticsTypeGatewayType = request.statisticsTypeGatewayType;
             this.statisticsTypeInstanceValue = request.statisticsTypeInstanceValue;
@@ -128,6 +142,15 @@ public class DescribeExposedStatisticsDetailRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 
