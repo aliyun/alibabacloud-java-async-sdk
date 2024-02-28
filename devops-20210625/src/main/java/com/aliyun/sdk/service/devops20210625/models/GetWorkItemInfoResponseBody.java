@@ -453,6 +453,87 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
         } 
 
     }
+    public static class TagDetails extends TeaModel {
+        @NameInMap("color")
+        private String color;
+
+        @NameInMap("identifier")
+        private String identifier;
+
+        @NameInMap("name")
+        private String name;
+
+        private TagDetails(Builder builder) {
+            this.color = builder.color;
+            this.identifier = builder.identifier;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TagDetails create() {
+            return builder().build();
+        }
+
+        /**
+         * @return color
+         */
+        public String getColor() {
+            return this.color;
+        }
+
+        /**
+         * @return identifier
+         */
+        public String getIdentifier() {
+            return this.identifier;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private String color; 
+            private String identifier; 
+            private String name; 
+
+            /**
+             * color.
+             */
+            public Builder color(String color) {
+                this.color = color;
+                return this;
+            }
+
+            /**
+             * identifier.
+             */
+            public Builder identifier(String identifier) {
+                this.identifier = identifier;
+                return this;
+            }
+
+            /**
+             * name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public TagDetails build() {
+                return new TagDetails(this);
+            } 
+
+        } 
+
+    }
     public static class Workitem extends TeaModel {
         @NameInMap("assignedTo")
         private String assignedTo;
@@ -523,6 +604,9 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
         @NameInMap("tag")
         private java.util.List < String > tag;
 
+        @NameInMap("tagDetails")
+        private java.util.List < TagDetails> tagDetails;
+
         @NameInMap("tracker")
         private java.util.List < String > tracker;
 
@@ -559,6 +643,7 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
             this.statusStageIdentifier = builder.statusStageIdentifier;
             this.subject = builder.subject;
             this.tag = builder.tag;
+            this.tagDetails = builder.tagDetails;
             this.tracker = builder.tracker;
             this.updateStatusAt = builder.updateStatusAt;
             this.verifier = builder.verifier;
@@ -735,6 +820,13 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return tagDetails
+         */
+        public java.util.List < TagDetails> getTagDetails() {
+            return this.tagDetails;
+        }
+
+        /**
          * @return tracker
          */
         public java.util.List < String > getTracker() {
@@ -786,6 +878,7 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
             private String statusStageIdentifier; 
             private String subject; 
             private java.util.List < String > tag; 
+            private java.util.List < TagDetails> tagDetails; 
             private java.util.List < String > tracker; 
             private Long updateStatusAt; 
             private java.util.List < String > verifier; 
@@ -972,6 +1065,14 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
              */
             public Builder tag(java.util.List < String > tag) {
                 this.tag = tag;
+                return this;
+            }
+
+            /**
+             * tagDetails.
+             */
+            public Builder tagDetails(java.util.List < TagDetails> tagDetails) {
+                this.tagDetails = tagDetails;
                 return this;
             }
 
