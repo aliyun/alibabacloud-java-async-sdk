@@ -21,6 +21,10 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
     private Integer copiedSnapshotsRetentionDays;
 
     @Query
+    @NameInMap("CopyEncryptionConfiguration")
+    private CopyEncryptionConfiguration copyEncryptionConfiguration;
+
+    @Query
     @NameInMap("EnableCrossRegionCopy")
     private Boolean enableCrossRegionCopy;
 
@@ -80,6 +84,7 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
         super(builder);
         this.sourceRegionId = builder.sourceRegionId;
         this.copiedSnapshotsRetentionDays = builder.copiedSnapshotsRetentionDays;
+        this.copyEncryptionConfiguration = builder.copyEncryptionConfiguration;
         this.enableCrossRegionCopy = builder.enableCrossRegionCopy;
         this.ownerId = builder.ownerId;
         this.resourceGroupId = builder.resourceGroupId;
@@ -120,6 +125,13 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
      */
     public Integer getCopiedSnapshotsRetentionDays() {
         return this.copiedSnapshotsRetentionDays;
+    }
+
+    /**
+     * @return copyEncryptionConfiguration
+     */
+    public CopyEncryptionConfiguration getCopyEncryptionConfiguration() {
+        return this.copyEncryptionConfiguration;
     }
 
     /**
@@ -216,6 +228,7 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
     public static final class Builder extends Request.Builder<CreateAutoSnapshotPolicyRequest, Builder> {
         private String sourceRegionId; 
         private Integer copiedSnapshotsRetentionDays; 
+        private CopyEncryptionConfiguration copyEncryptionConfiguration; 
         private Boolean enableCrossRegionCopy; 
         private Long ownerId; 
         private String resourceGroupId; 
@@ -238,6 +251,7 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
             super(request);
             this.sourceRegionId = request.sourceRegionId;
             this.copiedSnapshotsRetentionDays = request.copiedSnapshotsRetentionDays;
+            this.copyEncryptionConfiguration = request.copyEncryptionConfiguration;
             this.enableCrossRegionCopy = request.enableCrossRegionCopy;
             this.ownerId = request.ownerId;
             this.resourceGroupId = request.resourceGroupId;
@@ -274,6 +288,15 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
         public Builder copiedSnapshotsRetentionDays(Integer copiedSnapshotsRetentionDays) {
             this.putQueryParameter("CopiedSnapshotsRetentionDays", copiedSnapshotsRetentionDays);
             this.copiedSnapshotsRetentionDays = copiedSnapshotsRetentionDays;
+            return this;
+        }
+
+        /**
+         * CopyEncryptionConfiguration.
+         */
+        public Builder copyEncryptionConfiguration(CopyEncryptionConfiguration copyEncryptionConfiguration) {
+            this.putQueryParameter("CopyEncryptionConfiguration", copyEncryptionConfiguration);
+            this.copyEncryptionConfiguration = copyEncryptionConfiguration;
             return this;
         }
 
@@ -422,6 +445,168 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
 
     } 
 
+    public static class Arn extends TeaModel {
+        @NameInMap("AssumeRoleFor")
+        private Long assumeRoleFor;
+
+        @NameInMap("RoleType")
+        private String roleType;
+
+        @NameInMap("Rolearn")
+        private String rolearn;
+
+        private Arn(Builder builder) {
+            this.assumeRoleFor = builder.assumeRoleFor;
+            this.roleType = builder.roleType;
+            this.rolearn = builder.rolearn;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Arn create() {
+            return builder().build();
+        }
+
+        /**
+         * @return assumeRoleFor
+         */
+        public Long getAssumeRoleFor() {
+            return this.assumeRoleFor;
+        }
+
+        /**
+         * @return roleType
+         */
+        public String getRoleType() {
+            return this.roleType;
+        }
+
+        /**
+         * @return rolearn
+         */
+        public String getRolearn() {
+            return this.rolearn;
+        }
+
+        public static final class Builder {
+            private Long assumeRoleFor; 
+            private String roleType; 
+            private String rolearn; 
+
+            /**
+             * AssumeRoleFor.
+             */
+            public Builder assumeRoleFor(Long assumeRoleFor) {
+                this.assumeRoleFor = assumeRoleFor;
+                return this;
+            }
+
+            /**
+             * RoleType.
+             */
+            public Builder roleType(String roleType) {
+                this.roleType = roleType;
+                return this;
+            }
+
+            /**
+             * Rolearn.
+             */
+            public Builder rolearn(String rolearn) {
+                this.rolearn = rolearn;
+                return this;
+            }
+
+            public Arn build() {
+                return new Arn(this);
+            } 
+
+        } 
+
+    }
+    public static class CopyEncryptionConfiguration extends TeaModel {
+        @NameInMap("Arn")
+        private java.util.List < Arn> arn;
+
+        @NameInMap("Encrypted")
+        private Boolean encrypted;
+
+        @NameInMap("KMSKeyId")
+        private String KMSKeyId;
+
+        private CopyEncryptionConfiguration(Builder builder) {
+            this.arn = builder.arn;
+            this.encrypted = builder.encrypted;
+            this.KMSKeyId = builder.KMSKeyId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CopyEncryptionConfiguration create() {
+            return builder().build();
+        }
+
+        /**
+         * @return arn
+         */
+        public java.util.List < Arn> getArn() {
+            return this.arn;
+        }
+
+        /**
+         * @return encrypted
+         */
+        public Boolean getEncrypted() {
+            return this.encrypted;
+        }
+
+        /**
+         * @return KMSKeyId
+         */
+        public String getKMSKeyId() {
+            return this.KMSKeyId;
+        }
+
+        public static final class Builder {
+            private java.util.List < Arn> arn; 
+            private Boolean encrypted; 
+            private String KMSKeyId; 
+
+            /**
+             * Arn.
+             */
+            public Builder arn(java.util.List < Arn> arn) {
+                this.arn = arn;
+                return this;
+            }
+
+            /**
+             * Encrypted.
+             */
+            public Builder encrypted(Boolean encrypted) {
+                this.encrypted = encrypted;
+                return this;
+            }
+
+            /**
+             * KMSKeyId.
+             */
+            public Builder KMSKeyId(String KMSKeyId) {
+                this.KMSKeyId = KMSKeyId;
+                return this;
+            }
+
+            public CopyEncryptionConfiguration build() {
+                return new CopyEncryptionConfiguration(this);
+            } 
+
+        } 
+
+    }
     public static class Tag extends TeaModel {
         @NameInMap("Key")
         private String key;

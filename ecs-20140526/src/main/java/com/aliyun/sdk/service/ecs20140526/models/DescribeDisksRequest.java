@@ -569,16 +569,18 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * The category of the cloud disk or local disk. Valid values:
+         * The category of the disk. Valid values:
          * <p>
          * 
          * *   all: all disk categories
          * *   cloud: basic disk
          * *   cloud_efficiency: ultra disk
          * *   cloud_ssd: standard SSD
-         * *   cloud_essd: ESSD
+         * *   cloud_essd: enhanced SSD (ESSD)
+         * *   cloud_auto: ESSD AutoPL disk
          * *   local_ssd_pro: I/O-intensive local disk
          * *   local_hdd_pro: throughput-intensive local disk
+         * *   cloud_essd_entry: ESSD Entry disk
          * *   ephemeral: retired local disk
          * *   ephemeral_ssd: retired local SSD
          * 
@@ -770,13 +772,13 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to return on each page. Valid values: 1 to 500.
+         * The maximum number of entries per page. Valid values: 10 to 500.
          * <p>
          * 
-         * Default values:
+         * Default value:
          * 
-         * *   If this parameter is not specified or is set to a value smaller than 10, the default value is 10.
-         * *   If this parameter is set to a value greater than 500, the default value is 500.
+         * *   If you do not specify this parameter or you set this parameter to a value less than 10, the default value is 10.
+         * *   If you set this parameter to a value greater than 500, the default value is 500.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);

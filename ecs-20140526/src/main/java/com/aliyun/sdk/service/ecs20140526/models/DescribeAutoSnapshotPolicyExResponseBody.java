@@ -136,6 +136,67 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
 
     } 
 
+    public static class CopyEncryptionConfiguration extends TeaModel {
+        @NameInMap("Encrypted")
+        private Boolean encrypted;
+
+        @NameInMap("KMSKeyId")
+        private String KMSKeyId;
+
+        private CopyEncryptionConfiguration(Builder builder) {
+            this.encrypted = builder.encrypted;
+            this.KMSKeyId = builder.KMSKeyId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CopyEncryptionConfiguration create() {
+            return builder().build();
+        }
+
+        /**
+         * @return encrypted
+         */
+        public Boolean getEncrypted() {
+            return this.encrypted;
+        }
+
+        /**
+         * @return KMSKeyId
+         */
+        public String getKMSKeyId() {
+            return this.KMSKeyId;
+        }
+
+        public static final class Builder {
+            private Boolean encrypted; 
+            private String KMSKeyId; 
+
+            /**
+             * Encrypted.
+             */
+            public Builder encrypted(Boolean encrypted) {
+                this.encrypted = encrypted;
+                return this;
+            }
+
+            /**
+             * KMSKeyId.
+             */
+            public Builder KMSKeyId(String KMSKeyId) {
+                this.KMSKeyId = KMSKeyId;
+                return this;
+            }
+
+            public CopyEncryptionConfiguration build() {
+                return new CopyEncryptionConfiguration(this);
+            } 
+
+        } 
+
+    }
     public static class Tag extends TeaModel {
         @NameInMap("TagKey")
         private String tagKey;
@@ -248,6 +309,9 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
         @NameInMap("CopiedSnapshotsRetentionDays")
         private Integer copiedSnapshotsRetentionDays;
 
+        @NameInMap("CopyEncryptionConfiguration")
+        private CopyEncryptionConfiguration copyEncryptionConfiguration;
+
         @NameInMap("CreationTime")
         private String creationTime;
 
@@ -291,6 +355,7 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
             this.autoSnapshotPolicyId = builder.autoSnapshotPolicyId;
             this.autoSnapshotPolicyName = builder.autoSnapshotPolicyName;
             this.copiedSnapshotsRetentionDays = builder.copiedSnapshotsRetentionDays;
+            this.copyEncryptionConfiguration = builder.copyEncryptionConfiguration;
             this.creationTime = builder.creationTime;
             this.diskNums = builder.diskNums;
             this.enableCrossRegionCopy = builder.enableCrossRegionCopy;
@@ -333,6 +398,13 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
          */
         public Integer getCopiedSnapshotsRetentionDays() {
             return this.copiedSnapshotsRetentionDays;
+        }
+
+        /**
+         * @return copyEncryptionConfiguration
+         */
+        public CopyEncryptionConfiguration getCopyEncryptionConfiguration() {
+            return this.copyEncryptionConfiguration;
         }
 
         /**
@@ -430,6 +502,7 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
             private String autoSnapshotPolicyId; 
             private String autoSnapshotPolicyName; 
             private Integer copiedSnapshotsRetentionDays; 
+            private CopyEncryptionConfiguration copyEncryptionConfiguration; 
             private String creationTime; 
             private Integer diskNums; 
             private Boolean enableCrossRegionCopy; 
@@ -469,6 +542,14 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
              */
             public Builder copiedSnapshotsRetentionDays(Integer copiedSnapshotsRetentionDays) {
                 this.copiedSnapshotsRetentionDays = copiedSnapshotsRetentionDays;
+                return this;
+            }
+
+            /**
+             * CopyEncryptionConfiguration.
+             */
+            public Builder copyEncryptionConfiguration(CopyEncryptionConfiguration copyEncryptionConfiguration) {
+                this.copyEncryptionConfiguration = copyEncryptionConfiguration;
                 return this;
             }
 

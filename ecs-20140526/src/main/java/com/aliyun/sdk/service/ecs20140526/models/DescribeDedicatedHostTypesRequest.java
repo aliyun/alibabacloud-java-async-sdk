@@ -162,7 +162,7 @@ public class DescribeDedicatedHostTypesRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The dedicated host type. For more information, see [Dedicated host types](~~68564~~).
          */
         public Builder dedicatedHostType(String dedicatedHostType) {
             this.putQueryParameter("DedicatedHostType", dedicatedHostType);
@@ -189,7 +189,7 @@ public class DescribeDedicatedHostTypesRequest extends Request {
         }
 
         /**
-         * The ECS instance family supported by the dedicated host type.
+         * The region ID of the dedicated host. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -216,7 +216,7 @@ public class DescribeDedicatedHostTypesRequest extends Request {
         }
 
         /**
-         * The information about the dedicated host type.
+         * The ECS instance family supported by the dedicated host type.
          */
         public Builder supportedInstanceTypeFamily(String supportedInstanceTypeFamily) {
             this.putQueryParameter("SupportedInstanceTypeFamily", supportedInstanceTypeFamily);
