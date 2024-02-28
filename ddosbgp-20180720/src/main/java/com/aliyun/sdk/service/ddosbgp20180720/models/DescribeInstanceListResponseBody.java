@@ -91,7 +91,51 @@ public class DescribeInstanceListResponseBody extends TeaModel {
 
     } 
 
+    public static class AutoProtectCondition extends TeaModel {
+        @NameInMap("Events")
+        private java.util.List < String > events;
+
+        private AutoProtectCondition(Builder builder) {
+            this.events = builder.events;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AutoProtectCondition create() {
+            return builder().build();
+        }
+
+        /**
+         * @return events
+         */
+        public java.util.List < String > getEvents() {
+            return this.events;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > events; 
+
+            /**
+             * Events.
+             */
+            public Builder events(java.util.List < String > events) {
+                this.events = events;
+                return this;
+            }
+
+            public AutoProtectCondition build() {
+                return new AutoProtectCondition(this);
+            } 
+
+        } 
+
+    }
     public static class InstanceList extends TeaModel {
+        @NameInMap("AutoProtectCondition")
+        private AutoProtectCondition autoProtectCondition;
+
         @NameInMap("AutoRenewal")
         private Boolean autoRenewal;
 
@@ -129,6 +173,7 @@ public class DescribeInstanceListResponseBody extends TeaModel {
         private String status;
 
         private InstanceList(Builder builder) {
+            this.autoProtectCondition = builder.autoProtectCondition;
             this.autoRenewal = builder.autoRenewal;
             this.blackholdingCount = builder.blackholdingCount;
             this.commodityType = builder.commodityType;
@@ -149,6 +194,13 @@ public class DescribeInstanceListResponseBody extends TeaModel {
 
         public static InstanceList create() {
             return builder().build();
+        }
+
+        /**
+         * @return autoProtectCondition
+         */
+        public AutoProtectCondition getAutoProtectCondition() {
+            return this.autoProtectCondition;
         }
 
         /**
@@ -236,6 +288,7 @@ public class DescribeInstanceListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private AutoProtectCondition autoProtectCondition; 
             private Boolean autoRenewal; 
             private String blackholdingCount; 
             private String commodityType; 
@@ -248,6 +301,14 @@ public class DescribeInstanceListResponseBody extends TeaModel {
             private String product; 
             private String remark; 
             private String status; 
+
+            /**
+             * AutoProtectCondition.
+             */
+            public Builder autoProtectCondition(AutoProtectCondition autoProtectCondition) {
+                this.autoProtectCondition = autoProtectCondition;
+                return this;
+            }
 
             /**
              * Indicates whether auto-renewal is enabled for the instance. Valid values:

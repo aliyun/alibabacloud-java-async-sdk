@@ -145,6 +145,9 @@ public class DescribePackIpListResponseBody extends TeaModel {
         @NameInMap("MemberUid")
         private String memberUid;
 
+        @NameInMap("NsmStatus")
+        private Integer nsmStatus;
+
         @NameInMap("Product")
         private String product;
 
@@ -160,6 +163,7 @@ public class DescribePackIpListResponseBody extends TeaModel {
         private IpList(Builder builder) {
             this.ip = builder.ip;
             this.memberUid = builder.memberUid;
+            this.nsmStatus = builder.nsmStatus;
             this.product = builder.product;
             this.region = builder.region;
             this.remark = builder.remark;
@@ -186,6 +190,13 @@ public class DescribePackIpListResponseBody extends TeaModel {
          */
         public String getMemberUid() {
             return this.memberUid;
+        }
+
+        /**
+         * @return nsmStatus
+         */
+        public Integer getNsmStatus() {
+            return this.nsmStatus;
         }
 
         /**
@@ -219,6 +230,7 @@ public class DescribePackIpListResponseBody extends TeaModel {
         public static final class Builder {
             private String ip; 
             private String memberUid; 
+            private Integer nsmStatus; 
             private String product; 
             private String region; 
             private String remark; 
@@ -237,6 +249,14 @@ public class DescribePackIpListResponseBody extends TeaModel {
              */
             public Builder memberUid(String memberUid) {
                 this.memberUid = memberUid;
+                return this;
+            }
+
+            /**
+             * NsmStatus.
+             */
+            public Builder nsmStatus(Integer nsmStatus) {
+                this.nsmStatus = nsmStatus;
                 return this;
             }
 
