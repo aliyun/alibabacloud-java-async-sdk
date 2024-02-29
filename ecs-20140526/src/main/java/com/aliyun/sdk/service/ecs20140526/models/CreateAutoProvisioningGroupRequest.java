@@ -122,6 +122,10 @@ public class CreateAutoProvisioningGroupRequest extends Request {
     private java.util.List < SystemDiskConfig> systemDiskConfig;
 
     @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
+    @Query
     @NameInMap("TerminateInstances")
     private Boolean terminateInstances;
 
@@ -171,6 +175,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         this.spotInstancePoolsToUseCount = builder.spotInstancePoolsToUseCount;
         this.spotTargetCapacity = builder.spotTargetCapacity;
         this.systemDiskConfig = builder.systemDiskConfig;
+        this.tag = builder.tag;
         this.terminateInstances = builder.terminateInstances;
         this.terminateInstancesWithExpiration = builder.terminateInstancesWithExpiration;
         this.totalTargetCapacity = builder.totalTargetCapacity;
@@ -381,6 +386,13 @@ public class CreateAutoProvisioningGroupRequest extends Request {
     }
 
     /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
      * @return terminateInstances
      */
     public Boolean getTerminateInstances() {
@@ -443,6 +455,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         private Integer spotInstancePoolsToUseCount; 
         private String spotTargetCapacity; 
         private java.util.List < SystemDiskConfig> systemDiskConfig; 
+        private java.util.List < Tag> tag; 
         private Boolean terminateInstances; 
         private Boolean terminateInstancesWithExpiration; 
         private String totalTargetCapacity; 
@@ -482,6 +495,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             this.spotInstancePoolsToUseCount = request.spotInstancePoolsToUseCount;
             this.spotTargetCapacity = request.spotTargetCapacity;
             this.systemDiskConfig = request.systemDiskConfig;
+            this.tag = request.tag;
             this.terminateInstances = request.terminateInstances;
             this.terminateInstancesWithExpiration = request.terminateInstancesWithExpiration;
             this.totalTargetCapacity = request.totalTargetCapacity;
@@ -781,6 +795,15 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         public Builder systemDiskConfig(java.util.List < SystemDiskConfig> systemDiskConfig) {
             this.putQueryParameter("SystemDiskConfig", systemDiskConfig);
             this.systemDiskConfig = systemDiskConfig;
+            return this;
+        }
+
+        /**
+         * Tag.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
             return this;
         }
 
@@ -1321,14 +1344,14 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         } 
 
     }
-    public static class Tag extends TeaModel {
+    public static class LaunchConfigurationTag extends TeaModel {
         @NameInMap("Key")
         private String key;
 
         @NameInMap("Value")
         private String value;
 
-        private Tag(Builder builder) {
+        private LaunchConfigurationTag(Builder builder) {
             this.key = builder.key;
             this.value = builder.value;
         }
@@ -1337,7 +1360,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             return new Builder();
         }
 
-        public static Tag create() {
+        public static LaunchConfigurationTag create() {
             return builder().build();
         }
 
@@ -1375,8 +1398,8 @@ public class CreateAutoProvisioningGroupRequest extends Request {
                 return this;
             }
 
-            public Tag build() {
-                return new Tag(this);
+            public LaunchConfigurationTag build() {
+                return new LaunchConfigurationTag(this);
             } 
 
         } 
@@ -1471,7 +1494,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         private Integer systemDiskSize;
 
         @NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        private java.util.List < LaunchConfigurationTag> tag;
 
         @NameInMap("UserData")
         private String userData;
@@ -1724,7 +1747,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List < LaunchConfigurationTag> getTag() {
             return this.tag;
         }
 
@@ -1765,7 +1788,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             private String systemDiskName; 
             private String systemDiskPerformanceLevel; 
             private Integer systemDiskSize; 
-            private java.util.List < Tag> tag; 
+            private java.util.List < LaunchConfigurationTag> tag; 
             private String userData; 
 
             /**
@@ -2118,7 +2141,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             /**
              * The tag in the extended configurations of the launch template.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List < LaunchConfigurationTag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -2514,6 +2537,67 @@ public class CreateAutoProvisioningGroupRequest extends Request {
 
             public SystemDiskConfig build() {
                 return new SystemDiskConfig(this);
+            } 
+
+        } 
+
+    }
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * The key of the tag. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain `http://` or `https://`. If both the LaunchTemplateId and LaunchConfiguration.* parameters are specified, the LaunchTemplateId parameter takes precedence.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * The value of the tag. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length. It cannot start with acs: or contain `http://` or `https://`. If both the LaunchTemplateId and LaunchConfiguration.* parameters are specified, the LaunchTemplateId parameter takes precedence.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
             } 
 
         } 

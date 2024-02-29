@@ -259,8 +259,7 @@ public class ModifyAutoSnapshotPolicyExRequest extends Request {
          * CopyEncryptionConfiguration.
          */
         public Builder copyEncryptionConfiguration(CopyEncryptionConfiguration copyEncryptionConfiguration) {
-            String copyEncryptionConfigurationShrink = shrink(copyEncryptionConfiguration, "CopyEncryptionConfiguration", "json");
-            this.putQueryParameter("CopyEncryptionConfiguration", copyEncryptionConfigurationShrink);
+            this.putQueryParameter("CopyEncryptionConfiguration", copyEncryptionConfiguration);
             this.copyEncryptionConfiguration = copyEncryptionConfiguration;
             return this;
         }
