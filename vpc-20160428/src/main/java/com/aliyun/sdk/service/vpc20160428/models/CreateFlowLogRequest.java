@@ -408,7 +408,7 @@ public class CreateFlowLogRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tag of the resource.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -417,7 +417,11 @@ public class CreateFlowLogRequest extends Request {
         }
 
         /**
-         * TrafficPath.
+         * The scope of the traffic that you want to capture. Valid values:
+         * <p>
+         * 
+         * *   **all**: all traffic.
+         * *   **internetGateway**: Internet traffic.
          */
         public Builder trafficPath(java.util.List < String > trafficPath) {
             this.putQueryParameter("TrafficPath", trafficPath);
@@ -485,7 +489,10 @@ public class CreateFlowLogRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.
+             * <p>
+             * 
+             * The tag key can be at most 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -493,7 +500,10 @@ public class CreateFlowLogRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of tag N to add to the resource. You can specify at most 20 tag values. The tag value can be an empty string.
+             * <p>
+             * 
+             * The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.
              */
             public Builder value(String value) {
                 this.value = value;

@@ -370,7 +370,7 @@ public class CreateVpcGatewayEndpointRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags of the resource.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -436,10 +436,10 @@ public class CreateVpcGatewayEndpointRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N to add to the resource. You can specify at most 20 tag keys. The tag key cannot be an empty string.
+             * The key of tag N to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.
              * <p>
              * 
-             * A tag key can be at most 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
+             * The tag key can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -447,10 +447,10 @@ public class CreateVpcGatewayEndpointRequest extends Request {
             }
 
             /**
-             * The value of tag N to add to the resource. You can specify at most 20 tag values. The tag value can be an empty string.
+             * The value of tag N to add to the resource. You can specify up to 20 tag values. The tag value can be an empty string.
              * <p>
              * 
-             * A tag value can be up to 128 characters in length, and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.
+             * The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.
              */
             public Builder value(String value) {
                 this.value = value;

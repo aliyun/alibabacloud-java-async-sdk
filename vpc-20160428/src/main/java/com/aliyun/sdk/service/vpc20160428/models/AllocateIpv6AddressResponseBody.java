@@ -74,7 +74,7 @@ public class AllocateIpv6AddressResponseBody extends TeaModel {
         private String resourceGroupId; 
 
         /**
-         * Ipv6Address.
+         * The IPv6 address.
          */
         public Builder ipv6Address(String ipv6Address) {
             this.ipv6Address = ipv6Address;
@@ -82,7 +82,7 @@ public class AllocateIpv6AddressResponseBody extends TeaModel {
         }
 
         /**
-         * Ipv6AddressId.
+         * The ID of the IPv6 address.
          */
         public Builder ipv6AddressId(String ipv6AddressId) {
             this.ipv6AddressId = ipv6AddressId;
@@ -90,7 +90,7 @@ public class AllocateIpv6AddressResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class AllocateIpv6AddressResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;

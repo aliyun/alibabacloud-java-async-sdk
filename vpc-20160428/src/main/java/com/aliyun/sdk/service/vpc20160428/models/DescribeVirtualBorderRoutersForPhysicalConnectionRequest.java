@@ -155,7 +155,7 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionRequest extends Re
         } 
 
         /**
-         * 25425
+         * The filter keys.
          */
         public Builder filter(java.util.List < Filter> filter) {
             this.putQueryParameter("Filter", filter);
@@ -272,7 +272,7 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionRequest extends Re
             private java.util.List < String > value; 
 
             /**
-             * The filter conditions. You can specify up to five filter conditions. The following filter conditions are supported:
+             * The filter conditions. You can specify at most five filter conditions. The following filter conditions are supported:
              * <p>
              * 
              * *   **PhysicalConnectionId**: filter VBRs by the Express Connect circuit ID.
@@ -289,7 +289,7 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionRequest extends Re
             }
 
             /**
-             * The filter values for keys. You can specify multiple filter values for a key. The logical operator between filter values is OR. If one filter value is matched, the filter condition is matched.
+             * The filter value for the key. You can specify multiple filter values for one key. The logical operator among filter values is OR. If one filter value is matched, the filter condition is matched.
              */
             public Builder value(java.util.List < String > value) {
                 this.value = value;

@@ -395,7 +395,10 @@ public class CreatePublicIpAddressPoolRequest extends Request {
         }
 
         /**
-         * SecurityProtectionTypes.
+         * The editions of Anti-DDoS.
+         * <p>
+         * - If you do not specify this parameter, Anti-DDoS Origin Basic is used.
+         * - If you set the parameter to AntiDDoS_Enhanced, Anti-DDoS Pro/Premium is used.
          */
         public Builder securityProtectionTypes(java.util.List < String > securityProtectionTypes) {
             this.putQueryParameter("SecurityProtectionTypes", securityProtectionTypes);

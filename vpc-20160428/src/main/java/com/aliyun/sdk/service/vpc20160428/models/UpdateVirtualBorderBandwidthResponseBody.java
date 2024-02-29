@@ -86,7 +86,7 @@ public class UpdateVirtualBorderBandwidthResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response code.
+         * The error code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class UpdateVirtualBorderBandwidthResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -118,7 +118,7 @@ public class UpdateVirtualBorderBandwidthResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the maximum bandwidth value is updated.
+         * Indicates whether the operation is successful. Valid values:
          * <p>
          * 
          * *   **true**

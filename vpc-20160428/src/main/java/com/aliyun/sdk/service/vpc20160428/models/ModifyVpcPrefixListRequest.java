@@ -224,7 +224,7 @@ public class ModifyVpcPrefixListRequest extends Request {
         } 
 
         /**
-         * AddPrefixListEntry.
+         * The information about CIDR blocks to be added to the prefix list.
          */
         public Builder addPrefixListEntry(java.util.List < AddPrefixListEntry> addPrefixListEntry) {
             this.putQueryParameter("AddPrefixListEntry", addPrefixListEntry);
@@ -329,7 +329,7 @@ public class ModifyVpcPrefixListRequest extends Request {
         }
 
         /**
-         * RemovePrefixListEntry.
+         * The information about CIDR blocks to be deleted to the prefix list.
          */
         public Builder removePrefixListEntry(java.util.List < RemovePrefixListEntry> removePrefixListEntry) {
             this.putQueryParameter("RemovePrefixListEntry", removePrefixListEntry);

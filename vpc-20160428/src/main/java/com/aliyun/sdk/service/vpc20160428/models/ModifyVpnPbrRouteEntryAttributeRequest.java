@@ -262,7 +262,9 @@ public class ModifyVpnPbrRouteEntryAttributeRequest extends Request {
          * 
          * A smaller value indicates a higher priority.
          * 
-         * If you do not set this parameter, the priority of the policy-based route is not modified.
+         * If you do not specify this parameter, the priority of the policy-based route is not modified.
+         * 
+         * >  You must specify at least one of **NewPriority** and **NewWeight**.
          */
         public Builder newPriority(Integer newPriority) {
             this.putQueryParameter("NewPriority", newPriority);
@@ -274,10 +276,12 @@ public class ModifyVpnPbrRouteEntryAttributeRequest extends Request {
          * The new weight of the policy-based route. Valid values:
          * <p>
          * 
-         * *   **100**: The IPsec-VPN connection associated with the policy-based route serves as an active connection.
-         * *   **0**: The IPsec-VPN connection associated with the policy-based route serves as a standby connection.
+         * *   **100**: The IPsec-VPN connection associated with the policy-based route serves as the active connection.
+         * *   **0**: The IPsec-VPN connection associated with the policy-based route serves as the standby connection.
          * 
-         * If you do not set this parameter, the weight of the policy-based route is not modified.
+         * If you do not specify this parameter, the weight of the policy-based route is not modified.
+         * 
+         * >  You must specify at least one of **NewPriority** and **NewWeight**.
          */
         public Builder newWeight(Integer newWeight) {
             this.putQueryParameter("NewWeight", newWeight);

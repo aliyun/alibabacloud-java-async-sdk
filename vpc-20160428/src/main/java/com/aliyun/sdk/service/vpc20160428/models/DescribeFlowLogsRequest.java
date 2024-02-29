@@ -470,7 +470,7 @@ public class DescribeFlowLogsRequest extends Request {
         }
 
         /**
-         * Tags.
+         * The list of tags.
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putQueryParameter("Tags", tags);

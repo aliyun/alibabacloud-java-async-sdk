@@ -474,7 +474,7 @@ public class ListPrefixListsResponseBody extends TeaModel {
             }
 
             /**
-             * PrefixListType.
+             * The type of the prefix list.
              */
             public Builder prefixListType(String prefixListType) {
                 this.prefixListType = prefixListType;

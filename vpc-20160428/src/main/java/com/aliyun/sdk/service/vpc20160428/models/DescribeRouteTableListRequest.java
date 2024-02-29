@@ -269,7 +269,10 @@ public class DescribeRouteTableListRequest extends Request {
         }
 
         /**
-         * The page number. Default value: **1**.
+         * The value of tag N to add to the resource. You can specify up to 20 tag values. The tag value can be an empty string.
+         * <p>
+         * 
+         * The tag value can be up to 128 characters in length. It cannot start with `aliyun` or `acs:` and cannot contain `http://` or `https://`.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -278,7 +281,11 @@ public class DescribeRouteTableListRequest extends Request {
         }
 
         /**
-         * The number of entries returned per page. Maximum value: **50**. Default value: **10**.
+         * The type of the route table.
+         * <p>
+         * 
+         * *   **System**
+         * *   **Custom**
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -287,10 +294,7 @@ public class DescribeRouteTableListRequest extends Request {
         }
 
         /**
-         * The region ID of the VPC to which the route table belongs.
-         * <p>
-         * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * The number of entries per page.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -299,7 +303,7 @@ public class DescribeRouteTableListRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the route table to be queried belongs.
+         * The details of the route table.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -326,7 +330,7 @@ public class DescribeRouteTableListRequest extends Request {
         }
 
         /**
-         * The ID of the route table that you want to query.
+         * The tags.
          */
         public Builder routeTableId(String routeTableId) {
             this.putQueryParameter("RouteTableId", routeTableId);
@@ -335,7 +339,10 @@ public class DescribeRouteTableListRequest extends Request {
         }
 
         /**
-         * The name of the route table that you want to query.
+         * The key of tag N to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.
+         * <p>
+         * 
+         * The tag key can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
          */
         public Builder routeTableName(String routeTableName) {
             this.putQueryParameter("RouteTableName", routeTableName);
@@ -344,10 +351,7 @@ public class DescribeRouteTableListRequest extends Request {
         }
 
         /**
-         * The type of the route table. Valid values:
-         * <p>
-         * - **System**
-         * - **Custom**
+         * The time when the route table was created.
          */
         public Builder routeTableType(String routeTableType) {
             this.putQueryParameter("RouteTableType", routeTableType);
@@ -356,7 +360,10 @@ public class DescribeRouteTableListRequest extends Request {
         }
 
         /**
-         * The ID of the router to which the route table belongs.
+         * The region ID of the VPC to which the route table belongs.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder routerId(String routerId) {
             this.putQueryParameter("RouterId", routerId);
@@ -365,11 +372,7 @@ public class DescribeRouteTableListRequest extends Request {
         }
 
         /**
-         * The type of the router to which the route table belongs. Valid values:
-         * <p>
-         * 
-         * *   **VRouter** (default)
-         * *   **VBR**
+         * The ID of the resource group to which the route table to be queried belongs.
          */
         public Builder routerType(String routerType) {
             this.putQueryParameter("RouterType", routerType);
@@ -378,7 +381,7 @@ public class DescribeRouteTableListRequest extends Request {
         }
 
         /**
-         * The tags of the resource.
+         * The page number.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -387,10 +390,7 @@ public class DescribeRouteTableListRequest extends Request {
         }
 
         /**
-         * The ID of the virtual private cloud (VPC) to which the route table belongs.
-         * <p>
-         * 
-         * After this parameter is specified, the value of the **RouterType** parameter is automatically set to **VRouter**.
+         * The tags of the resource.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -444,10 +444,7 @@ public class DescribeRouteTableListRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.
-             * <p>
-             * 
-             * The tag key can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
+             * The detailed information about the route tables.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -455,10 +452,7 @@ public class DescribeRouteTableListRequest extends Request {
             }
 
             /**
-             * The value of tag N to add to the resource. You can specify up to 20 tag values. The tag value can be an empty string.
-             * <p>
-             * 
-             * The tag value can be up to 128 characters in length. It cannot start with `aliyun` or `acs:` and cannot contain `http://` or `https://`.
+             * The ID of the VPC to which the route table belongs.
              */
             public Builder value(String value) {
                 this.value = value;

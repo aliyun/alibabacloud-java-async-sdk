@@ -210,7 +210,7 @@ public class ListDhcpOptionsSetsRequest extends Request {
         } 
 
         /**
-         * DhcpOptionsSetId.
+         * The ID of the DHCP options set. You can specify at most 20 IDs.
          */
         public Builder dhcpOptionsSetId(java.util.List < String > dhcpOptionsSetId) {
             this.putQueryParameter("DhcpOptionsSetId", dhcpOptionsSetId);
@@ -222,7 +222,23 @@ public class ListDhcpOptionsSetsRequest extends Request {
          * The name of the DHCP options set.
          * <p>
          * 
-         * The name must be 2 to 128 characters in length and can contain letters, digits, underscores (\_), and hyphens (-). It must start with a letter.
+         * The name must be 1 to 128 characters in length and can contain digits, underscores (\_), and hyphens (-). It must start with a letter.
+         * 
+         * Valid values:
+         * 
+         * *   tf-testAccVpcDhcpOptionsSets-1585169790614573448
+         * 
+         *     <!-- -->
+         * 
+         *     :
+         * 
+         *     <!-- -->
+         * 
+         *     tf-testAccVpcDhcpOptionsSets-1585169790614573448
+         * 
+         *     <!-- -->
+         * 
+         *     .
          */
         public Builder dhcpOptionsSetName(String dhcpOptionsSetName) {
             this.putQueryParameter("DhcpOptionsSetName", dhcpOptionsSetName);
@@ -234,7 +250,7 @@ public class ListDhcpOptionsSetsRequest extends Request {
          * The root domain. For example, you can set the value to example.com.
          * <p>
          * 
-         * After a DHCP options set is associated with a virtual private cloud (VPC), the root domain in the DHCP options set is automatically synchronized with the Elastic Compute Service (ECS) instances in the VPC.
+         * After a DHCP options set is associated with a virtual private cloud (VPC), the root domain in the DHCP options set is automatically synchronized with the ECS instances in the VPC.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -243,7 +259,7 @@ public class ListDhcpOptionsSetsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: **1** to **100**. Default value: **10**.
+         * The number of entries per page. Valid values: **1** to **100**. Default value: **10**.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -252,11 +268,11 @@ public class ListDhcpOptionsSetsRequest extends Request {
         }
 
         /**
-         * The token that is used for the next query. Valid values:
+         * The pagination token that is used in the next request to retrieve a new page of results. Valid values:
          * <p>
          * 
-         * *   If this is your first query or no next queries are to be sent, ignore this parameter.
-         * *   If a subsequent query is to be sent, set the value to the value of **NextToken** that is returned from the last call.
+         * *   You do not need to specify this parameter for the first request.
+         * *   You must specify the token that is obtained from the previous query as the value of the **NextToken** parameter.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -295,7 +311,7 @@ public class ListDhcpOptionsSetsRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the DHCP options set belongs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -322,7 +338,7 @@ public class ListDhcpOptionsSetsRequest extends Request {
         }
 
         /**
-         * Tags.
+         * The tag list.
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -376,7 +392,10 @@ public class ListDhcpOptionsSetsRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The tag key. You can specify up to 20 tag keys. The tag key cannot be an empty string.
+             * <p>
+             * 
+             * The tag key can be up to 64 characters in length and can contain digits, periods (.), underscores (\_), and hyphens (-). The tag key must start with a letter but cannot start with `aliyun` or `acs:`. The tag key cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -384,7 +403,10 @@ public class ListDhcpOptionsSetsRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag value. You can specify at most 20 tag values. The tag value can be an empty string.
+             * <p>
+             * 
+             * The tag value can be up to 128 characters in length and can contain digits, periods (.), underscores (\_), and hyphens (-). The tag value must start with a letter but cannot start with `aliyun` or `acs:`. The tag value cannot contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

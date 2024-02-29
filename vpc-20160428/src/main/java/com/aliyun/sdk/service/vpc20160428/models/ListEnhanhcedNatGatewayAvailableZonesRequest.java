@@ -152,7 +152,7 @@ public class ListEnhanhcedNatGatewayAvailableZonesRequest extends Request {
         }
 
         /**
-         * Filter.
+         * The filter information. You can specify a filter key and a filter value.
          */
         public Builder filter(java.util.List < Filter> filter) {
             this.putQueryParameter("Filter", filter);
@@ -256,7 +256,7 @@ public class ListEnhanhcedNatGatewayAvailableZonesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The filter key. Only **PrivateLinkEnabled** is supported.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -264,7 +264,10 @@ public class ListEnhanhcedNatGatewayAvailableZonesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the filter key.
+             * <p>
+             * 
+             * >  If the filter key is set to **PrivateLinkEnabled**, you must specify a filter value. Valid values: **true** and **false**.
              */
             public Builder value(String value) {
                 this.value = value;

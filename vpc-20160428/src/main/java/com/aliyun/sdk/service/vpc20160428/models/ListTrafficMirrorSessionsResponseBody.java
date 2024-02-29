@@ -394,8 +394,8 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
              * Indicates whether the traffic mirror session was enabled.
              * <p>
              * 
-             * *   **false**: the traffic mirror session was disabled. This is the default value.
-             * *   **true**: the traffic mirror session was enabled.
+             * *   **false** 
+             * *   **true**
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -403,7 +403,7 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum transmission unit (MTU).
+             * The maximum transmission unit.
              */
             public Builder packetLength(Integer packetLength) {
                 this.packetLength = packetLength;
@@ -422,7 +422,7 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group to which the mirrored traffic belongs.
+             * The ID of the resource group to which the traffic mirror session belongs.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -430,7 +430,7 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * The list of tags.
+             * The tag list.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -438,7 +438,7 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the traffic mirror filter.
+             * The ID of the filter.
              */
             public Builder trafficMirrorFilterId(String trafficMirrorFilterId) {
                 this.trafficMirrorFilterId = trafficMirrorFilterId;
@@ -449,8 +449,8 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
              * The status of the traffic mirror session.
              * <p>
              * 
-             * *   **Normal**: active
-             * *   **FinancialLocked**: locked due to overdue payments
+             * *   **Normal**
+             * *   **FinancialLocked**
              */
             public Builder trafficMirrorSessionBusinessStatus(String trafficMirrorSessionBusinessStatus) {
                 this.trafficMirrorSessionBusinessStatus = trafficMirrorSessionBusinessStatus;
@@ -496,7 +496,7 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the mirror source.
+             * The ID of the traffic mirror source.
              */
             public Builder trafficMirrorSourceIds(java.util.List < String > trafficMirrorSourceIds) {
                 this.trafficMirrorSourceIds = trafficMirrorSourceIds;
@@ -504,7 +504,7 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the mirror destination.
+             * The ID of the traffic mirror destination.
              */
             public Builder trafficMirrorTargetId(String trafficMirrorTargetId) {
                 this.trafficMirrorTargetId = trafficMirrorTargetId;
@@ -515,8 +515,8 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
              * The type of the traffic mirror destination. Valid values:
              * <p>
              * 
-             * *   **NetworkInterface**: an ENI
-             * *   **SLB**: an internal-facing SLB instance
+             * *   **NetworkInterface**: an elastic network interface (ENI)
+             * *   **SLB**: an internal-facing Server Load Balancer (SLB) instance
              */
             public Builder trafficMirrorTargetType(String trafficMirrorTargetType) {
                 this.trafficMirrorTargetType = trafficMirrorTargetType;

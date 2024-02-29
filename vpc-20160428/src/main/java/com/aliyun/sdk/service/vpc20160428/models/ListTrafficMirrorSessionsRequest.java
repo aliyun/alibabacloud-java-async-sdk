@@ -283,7 +283,7 @@ public class ListTrafficMirrorSessionsRequest extends Request {
          * Specifies whether to enable the traffic mirror session. Valid values:
          * <p>
          * 
-         * *   **false** (default): does not enable the traffic mirror session.
+         * *   **false**: does not enable the traffic mirror session.
          * *   **true**: enables the traffic mirror session.
          */
         public Builder enabled(Boolean enabled) {
@@ -381,7 +381,7 @@ public class ListTrafficMirrorSessionsRequest extends Request {
         }
 
         /**
-         * Tags.
+         * The tags of the resource.
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -399,7 +399,7 @@ public class ListTrafficMirrorSessionsRequest extends Request {
         }
 
         /**
-         * TrafficMirrorSessionIds.
+         * The IDs of the traffic mirror session. The maximum value of N is 100, which indicates that you can query up to 100 traffic mirror sessions at a time.
          */
         public Builder trafficMirrorSessionIds(java.util.List < String > trafficMirrorSessionIds) {
             this.putQueryParameter("TrafficMirrorSessionIds", trafficMirrorSessionIds);

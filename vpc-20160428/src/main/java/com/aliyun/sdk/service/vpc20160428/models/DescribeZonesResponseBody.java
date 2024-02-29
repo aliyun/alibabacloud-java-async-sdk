@@ -50,7 +50,7 @@ public class DescribeZonesResponseBody extends TeaModel {
         private Zones zones; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeZonesResponseBody extends TeaModel {
         }
 
         /**
-         * The zones that are returned.
+         * The zone list.
          */
         public Builder zones(Zones zones) {
             this.zones = zones;
@@ -122,7 +122,7 @@ public class DescribeZonesResponseBody extends TeaModel {
             private String zoneType; 
 
             /**
-             * The name of the zone.
+             * The zone name.
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -130,7 +130,7 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the zone.
+             * The zone ID.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -138,7 +138,7 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the zones to be queried. Default value: **AvailabilityZone**. This value indicates Alibaba Cloud zones.
+             * The zone type. Default value: **AvailabilityZone**.
              */
             public Builder zoneType(String zoneType) {
                 this.zoneType = zoneType;

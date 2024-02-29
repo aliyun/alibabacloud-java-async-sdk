@@ -284,10 +284,10 @@ public class CreateIpsecServerRequest extends Request {
         }
 
         /**
-         * The IPsec server name.
+         * The name of the IPsec server.
          * <p>
          * 
-         * The name must be 1 to 100 characters in length and cannot start with `http://` or `https://`.
+         * The name must be 1 to 100 characters in length.
          */
         public Builder ipSecServerName(String ipSecServerName) {
             this.putQueryParameter("IpSecServerName", ipSecServerName);
@@ -339,7 +339,10 @@ public class CreateIpsecServerRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable pre-shared key authentication. If you set the value to **true**, pre-shared key authentication is enabled.
+         * Indicates whether pre-shared key authentication is enabled. If you set the value to **true**, pre-shared key authentication is enabled.
+         * <p>
+         * 
+         * >  This parameter is required.
          */
         public Builder pskEnabled(Boolean pskEnabled) {
             this.putQueryParameter("PskEnabled", pskEnabled);

@@ -146,7 +146,7 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
             private String regionId; 
 
             /**
-             * The ID of the instance associated with the next hop.
+             * The ID of the instance that is associated with the next hop.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -167,7 +167,7 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the instance associated with the next hop.
+             * The region ID of the instance associated with the next hop. Valid values:
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -274,7 +274,7 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
              * *   **0**: unavailable
              * *   **1**: available
              * 
-             * >  This parameter is returned if the next hop type is set to **RouterInterface**.
+             * >  This parameter is returned when the next hop type is set to **RouterInterface**.
              */
             public Builder enabled(Integer enabled) {
                 this.enabled = enabled;
@@ -290,10 +290,10 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the next hop.
+             * The ID of the region where the next hop is deployed.
              * <p>
              * 
-             * >  This parameter is returned if the next hop type is set to **RouterInterface**.
+             * >  This parameter is returned when the next hop type is set to **RouterInterface**.
              */
             public Builder nextHopRegionId(String nextHopRegionId) {
                 this.nextHopRegionId = nextHopRegionId;
@@ -312,11 +312,11 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
              * The type of the next hop. Valid values:
              * <p>
              * 
-             * *   **Instance**: an ECS instance
-             * *   **HaVip**: an HAVIP
+             * *   **Instance**: an Elastic Compute Service (ECS) instance
+             * *   **HaVip**: a high-availability virtual IP address (HAVIP)
              * *   **VpnGateway**: a VPN gateway
              * *   **NatGateway**: a NAT gateway
-             * *   **NetworkInterface**: a secondary ENI
+             * *   **NetworkInterface**: a secondary elastic network interface (ENI)
              * *   **RouterInterface**: a router interface
              * *   **IPv6Gateway**: an IPv6 gateway
              * *   **Attachment**: a transit router
@@ -330,7 +330,7 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
              * The weight of the route.
              * <p>
              * 
-             * >  This parameter is returned if the next hop type is set to **RouterInterface**.
+             * >  This parameter is returned when the next hop type is set to **RouterInterface**.
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;
@@ -560,7 +560,7 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the route was modified. The time is displayed in the `YYYY-MM-DDThh:mm:ssZ` format in UTC.
+             * The time when the route was modified. Specify the time in the `YYYY-MM-DDThh:mm:ssZ` format. The time must be in UTC.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -571,8 +571,8 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
              * The IP version. Valid values:
              * <p>
              * 
-             * *   **IPv4**
-             * *   **IPv6**
+             * *   **ipv4**
+             * *   **ipv6**
              */
             public Builder ipVersion(String ipVersion) {
                 this.ipVersion = ipVersion;
@@ -580,7 +580,7 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the next hop.
+             * The information about the next hops.
              */
             public Builder nextHops(NextHops nextHops) {
                 this.nextHops = nextHops;
@@ -588,7 +588,11 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
             }
 
             /**
-             * Origin.
+             * The route origin. Valid values：
+             * <p>
+             * * **RoutePropagation**: The route is created by a dynamic propagation source.
+             * * **SystemCreate**: The route is created by the system.
+             * * **CustomCreate**: The route is created by a user.
              */
             public Builder origin(String origin) {
                 this.origin = origin;
@@ -631,12 +635,12 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the route. Valid values:
+             * The route status. Valid values:
              * <p>
              * 
              * *   **Pending**
              * *   **Available**
-             * *   **Modifying**
+             * *   **Modifying**: The Internet Shared Bandwidth instance is being modified.
              */
             public Builder status(String status) {
                 this.status = status;

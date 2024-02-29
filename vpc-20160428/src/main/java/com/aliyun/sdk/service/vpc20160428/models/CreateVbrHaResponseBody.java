@@ -50,7 +50,7 @@ public class CreateVbrHaResponseBody extends TeaModel {
         private String vbrHaId; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -541,7 +541,7 @@ public class CreateVirtualBorderRouterRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * The resource group ID.
          * <p>
          * 
          * For more information about resource group, see [What is Resource Management?](~~94475~~)
@@ -571,7 +571,7 @@ public class CreateVirtualBorderRouterRequest extends Request {
         }
 
         /**
-         * The tag list.
+         * The tags.
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -649,10 +649,10 @@ public class CreateVirtualBorderRouterRequest extends Request {
             private String value; 
 
             /**
-             * The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.
+             * The tag key. You must enter at least one tag key. You can specify up to 20 tag keys. The tag key cannot be an empty string.
              * <p>
              * 
-             * The key cannot exceed 128 characters in length, and cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.
+             * A tag key can be at most 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -660,10 +660,10 @@ public class CreateVirtualBorderRouterRequest extends Request {
             }
 
             /**
-             * The tag value. You can specify at most 20 tag values. It can be an empty string.
+             * The tag value. You can specify at most 20 tag values. The tag value can be an empty string.
              * <p>
              * 
-             * The tag value cannot exceed 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
+             * The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.
              */
             public Builder value(String value) {
                 this.value = value;

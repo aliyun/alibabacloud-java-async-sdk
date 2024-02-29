@@ -224,7 +224,11 @@ public class UpdateNetworkAclEntriesRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
+         * <p>
+         * 
+         * *   **true**: performs a dry run. The system checks the request for potential issues, including the AccessKey pair, the permissions of the RAM user, and the required parameters. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+         * *   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -494,7 +498,11 @@ public class UpdateNetworkAclEntriesRequest extends Request {
             }
 
             /**
-             * IpVersion.
+             * The IP version. Valid values:
+             * <p>
+             * 
+             * *   **IPv4** (default)
+             * *   **IPv6**
              */
             public Builder ipVersion(String ipVersion) {
                 this.ipVersion = ipVersion;
@@ -524,7 +532,7 @@ public class UpdateNetworkAclEntriesRequest extends Request {
             }
 
             /**
-             * The rule action that determines whether to allow outbound traffic. Valid values:
+             * The action to be performed on network traffic that matches the rule. Valid values:
              * <p>
              * 
              * *   **accept**
@@ -548,7 +556,7 @@ public class UpdateNetworkAclEntriesRequest extends Request {
             }
 
             /**
-             * The protocol type. Valid values:
+             * The protocol. Valid values:
              * <p>
              * 
              * *   **icmp**
@@ -711,7 +719,11 @@ public class UpdateNetworkAclEntriesRequest extends Request {
             }
 
             /**
-             * IpVersion.
+             * The IP version. Valid values:
+             * <p>
+             * 
+             * *   **IPv4** (default)
+             * *   **IPv6**
              */
             public Builder ipVersion(String ipVersion) {
                 this.ipVersion = ipVersion;
@@ -741,7 +753,7 @@ public class UpdateNetworkAclEntriesRequest extends Request {
             }
 
             /**
-             * The rule action that determines whether to allow inbound requests. Valid values:
+             * The action to be performed on network traffic that matches the rule. Valid values:
              * <p>
              * 
              * *   **accept**
@@ -765,7 +777,7 @@ public class UpdateNetworkAclEntriesRequest extends Request {
             }
 
             /**
-             * The protocol type. Valid values:
+             * The protocol. Valid values:
              * <p>
              * 
              * *   **icmp**

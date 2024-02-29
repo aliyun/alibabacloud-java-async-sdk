@@ -224,7 +224,10 @@ public class AllocateIpv6AddressRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
+         * <p>
+         * 
+         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -233,7 +236,11 @@ public class AllocateIpv6AddressRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
+         * <p>
+         * 
+         * *   true: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.
+         * *   false (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -242,7 +249,7 @@ public class AllocateIpv6AddressRequest extends Request {
         }
 
         /**
-         * Ipv6Address.
+         * The IPv6 address. The IPv6 address must be an idle one that falls within the vSwitch CIDR block.
          */
         public Builder ipv6Address(String ipv6Address) {
             this.putQueryParameter("Ipv6Address", ipv6Address);
@@ -251,7 +258,7 @@ public class AllocateIpv6AddressRequest extends Request {
         }
 
         /**
-         * Ipv6AddressDescription.
+         * The description of the IPv6 address.
          */
         public Builder ipv6AddressDescription(String ipv6AddressDescription) {
             this.putQueryParameter("Ipv6AddressDescription", ipv6AddressDescription);
@@ -260,7 +267,7 @@ public class AllocateIpv6AddressRequest extends Request {
         }
 
         /**
-         * Ipv6AddressName.
+         * The name of the IPv6 address.
          */
         public Builder ipv6AddressName(String ipv6AddressName) {
             this.putQueryParameter("Ipv6AddressName", ipv6AddressName);
@@ -287,7 +294,7 @@ public class AllocateIpv6AddressRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -296,7 +303,7 @@ public class AllocateIpv6AddressRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The resource group ID. For more information about resource groups, see related documentation.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -323,7 +330,7 @@ public class AllocateIpv6AddressRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tag list.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -332,7 +339,7 @@ public class AllocateIpv6AddressRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * The ID of the vSwitch to which the IPv6 address belongs.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -386,7 +393,10 @@ public class AllocateIpv6AddressRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N to add to the resource. You can specify at most 20 tag keys. The tag key cannot be an empty string.
+             * <p>
+             * 
+             * The tag key can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -394,7 +404,10 @@ public class AllocateIpv6AddressRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of tag N to add to the resource. You can specify at most 20 tag values. The tag value can be an empty string.
+             * <p>
+             * 
+             * The tag value can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.
              */
             public Builder value(String value) {
                 this.value = value;

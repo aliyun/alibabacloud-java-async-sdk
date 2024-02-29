@@ -170,7 +170,9 @@ public class DescribeVbrHaRequest extends Request {
          * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
+         * 
+         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -179,11 +181,11 @@ public class DescribeVbrHaRequest extends Request {
         }
 
         /**
-         * Specifies whether to precheck the request. Valid values:
+         * Specifies whether to perform only a dry run, without performing the actual request. Valid Values:
          * <p>
          * 
-         * *   **true**: prechecks the request without performing the operation. The system checks the request format, instance status, and whether the required parameters are specified. An error message is returned if the request fails the precheck. If the request passes the precheck, `DRYRUN.SUCCESS` is returned.
-         * *   **false**: prechecks the request. After the request passes the precheck, the operation is performed.
+         * *   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, `DRYRUN.SUCCESS` is returned.
+         * *   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -210,7 +212,7 @@ public class DescribeVbrHaRequest extends Request {
         }
 
         /**
-         * The ID of the region where the VBR is deployed.
+         * The ID of the region in which the VBR is deployed.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -246,7 +248,7 @@ public class DescribeVbrHaRequest extends Request {
         }
 
         /**
-         * The ID of the VBR.
+         * The VBR ID.
          */
         public Builder vbrId(String vbrId) {
             this.putQueryParameter("VbrId", vbrId);

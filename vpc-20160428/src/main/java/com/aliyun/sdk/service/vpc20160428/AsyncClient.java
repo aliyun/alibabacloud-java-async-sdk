@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.vpc20160428;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.vpc20160428.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -353,10 +354,16 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateExpressCloudConnectionResponse> createExpressCloudConnection(CreateExpressCloudConnectionRequest request);
 
+    CompletableFuture<CreateExpressConnectTrafficQosResponse> createExpressConnectTrafficQos(CreateExpressConnectTrafficQosRequest request);
+
+    CompletableFuture<CreateExpressConnectTrafficQosQueueResponse> createExpressConnectTrafficQosQueue(CreateExpressConnectTrafficQosQueueRequest request);
+
+    CompletableFuture<CreateExpressConnectTrafficQosRuleResponse> createExpressConnectTrafficQosRule(CreateExpressConnectTrafficQosRuleRequest request);
+
     CompletableFuture<CreateFailoverTestJobResponse> createFailoverTestJob(CreateFailoverTestJobRequest request);
 
     /**
-      * **CreateFlowLog** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeFlowLogs](~~87923~~) operation to query the status of a flow log:
+      * **CreateFlowLog** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeFlowLogs](~~87923~~) operation to query the status of the flow log.
       * *   If the flow log is in the **Activating** state, the flow log is being created.
       * *   If the flow log is in the **Active** state, the flow log is created and started.
       *
@@ -427,10 +434,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
       * *   Before you create an IPsec server, you must create a VPN gateway and enable the SSL-VPN feature for the VPN gateway. For more information, see [CreateVpnGateway](~~120363~~).
-      * *   **CreateIpsecServer** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [DescribeVpnGateway](~~73720~~) to query the status of the task:
+      * *   Before you create an IPsec server, make sure that no IPsec-VPN connection exists on the VPN gateway. For more information, see [DeleteVpnConnection](~~2526948~~).
+      * *   **CreateIpsecServer** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [DescribeVpnGateway](~~73720~~) to query the status of the task.
       *     *   If the VPN gateway is in the **updating** state, the IPsec server is being created.
       *     *   If the VPN gateway is in the **active** state, the IPsec server is created.
-      * *   You cannot repeatedly call the **CreateIpsecServer** operation for the same VPN gateway within the specified period of time.
+      * *   You cannot repeatedly call **CreateIpsecServer** within the specified period of time.
       *
      */
     CompletableFuture<CreateIpsecServerResponse> createIpsecServer(CreateIpsecServerRequest request);
@@ -577,7 +585,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateRouteTableResponse> createRouteTable(CreateRouteTableRequest request);
 
     /**
-      * ## [](#)
       * When you call this operation, take note of the following limits:
       * *   You can create only one pair of interfaces to be connected between two routers.
       * *   You can create a maximum of five router interfaces for a router.
@@ -683,7 +690,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateVcoRouteEntryResponse> createVcoRouteEntry(CreateVcoRouteEntryRequest request);
 
     /**
-      * When you create a VBR, the VBR is in the **active** state by default.
+      * After you create a VBR, the VBR is in the **active** state.
       *
      */
     CompletableFuture<CreateVirtualBorderRouterResponse> createVirtualBorderRouter(CreateVirtualBorderRouterRequest request);
@@ -710,10 +717,17 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<CreateVpcResponse> createVpc(CreateVpcRequest request);
 
+    /**
+      * *   **CreateVpcGatewayEndpoint** is an asynchronous operation. After a request is sent, the system returns an **EndpointId** and runs the task in the background. You can call the [ListVpcGatewayEndpoints](~~448682~~) operation to query the status of the task.
+      *     *   If the gateway endpoint is in the **Creating** state, the gateway endpoint is being created.
+      *     *   If the gateway endpoint is in the **Created** state, the gateway endpoint is created.
+      * *   You cannot repeatedly call the **CreateVpcGatewayEndpoint** operation for the same endpoint service within the specified period of time.
+      *
+     */
     CompletableFuture<CreateVpcGatewayEndpointResponse> createVpcGatewayEndpoint(CreateVpcGatewayEndpointRequest request);
 
     /**
-      * You cannot repeatedly call the **CreateVpcPrefixList** operation to create a prefix list in a region within the specified period of time.
+      * You cannot repeatedly call the **CreateVpcPrefixList** operation within the specified period of time.
       *
      */
     CompletableFuture<CreateVpcPrefixListResponse> createVpcPrefixList(CreateVpcPrefixListRequest request);
@@ -816,6 +830,12 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<DeleteDhcpOptionsSetResponse> deleteDhcpOptionsSet(DeleteDhcpOptionsSetRequest request);
+
+    CompletableFuture<DeleteExpressConnectTrafficQosResponse> deleteExpressConnectTrafficQos(DeleteExpressConnectTrafficQosRequest request);
+
+    CompletableFuture<DeleteExpressConnectTrafficQosQueueResponse> deleteExpressConnectTrafficQosQueue(DeleteExpressConnectTrafficQosQueueRequest request);
+
+    CompletableFuture<DeleteExpressConnectTrafficQosRuleResponse> deleteExpressConnectTrafficQosRule(DeleteExpressConnectTrafficQosRuleRequest request);
 
     CompletableFuture<DeleteFailoverTestJobResponse> deleteFailoverTestJob(DeleteFailoverTestJobRequest request);
 
@@ -1128,7 +1148,7 @@ public interface AsyncClient extends SdkAutoCloseable {
       * Before you call this operation, take note of the following limits:
       * *   Before you delete a VBR, you must delete all router interfaces of the VBR.
       * *   You can delete only a VBR in the **unconfirmed**, **active**, or **terminated** state.
-      * *   If the VBR belongs to another Alibaba Cloud account, you can delete the VBR only if it is in the **unconfirmed** state.
+      * *   The owner of an Express Connect circuit can delete a VBR that belongs to another account only if the VBR is in the **unconfirmed** state.
       *
      */
     CompletableFuture<DeleteVirtualBorderRouterResponse> deleteVirtualBorderRouter(DeleteVirtualBorderRouterRequest request);
@@ -1200,6 +1220,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DeletionProtectionResponse> deletionProtection(DeletionProtectionRequest request);
 
+    CompletableFuture<Describe95TrafficResponse> describe95Traffic(Describe95TrafficRequest request);
+
     CompletableFuture<DescribeAccessPointsResponse> describeAccessPoints(DescribeAccessPointsRequest request);
 
     CompletableFuture<DescribeBgpGroupsResponse> describeBgpGroups(DescribeBgpGroupsRequest request);
@@ -1235,6 +1257,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeEipMonitorDataResponse> describeEipMonitorData(DescribeEipMonitorDataRequest request);
 
     CompletableFuture<DescribeEipSegmentResponse> describeEipSegment(DescribeEipSegmentRequest request);
+
+    CompletableFuture<DescribeExpressConnectTrafficQosResponse> describeExpressConnectTrafficQos(DescribeExpressConnectTrafficQosRequest request);
+
+    CompletableFuture<DescribeExpressConnectTrafficQosQueueResponse> describeExpressConnectTrafficQosQueue(DescribeExpressConnectTrafficQosQueueRequest request);
+
+    CompletableFuture<DescribeExpressConnectTrafficQosRuleResponse> describeExpressConnectTrafficQosRule(DescribeExpressConnectTrafficQosRuleRequest request);
 
     CompletableFuture<DescribeFailoverTestJobResponse> describeFailoverTestJob(DescribeFailoverTestJobRequest request);
 
@@ -1307,7 +1335,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request);
 
     /**
-      * ## [](#)References
       * Before you call the [DeleteRouteEntry](~~36013~~) operation to delete a route, you can call this operation to query the next hop of the route that you want to delete.
       *
      */
@@ -1626,6 +1653,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ModifyExpressCloudConnectionBandwidthResponse> modifyExpressCloudConnectionBandwidth(ModifyExpressCloudConnectionBandwidthRequest request);
 
+    CompletableFuture<ModifyExpressConnectTrafficQosResponse> modifyExpressConnectTrafficQos(ModifyExpressConnectTrafficQosRequest request);
+
+    CompletableFuture<ModifyExpressConnectTrafficQosQueueResponse> modifyExpressConnectTrafficQosQueue(ModifyExpressConnectTrafficQosQueueRequest request);
+
+    CompletableFuture<ModifyExpressConnectTrafficQosRuleResponse> modifyExpressConnectTrafficQosRule(ModifyExpressConnectTrafficQosRuleRequest request);
+
     /**
       * *   **ModifyFlowLogAttribute** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeFlowLogs](~~87923~~) operation to query the status of a flow log:
       *     *   If the flow log is in the **Modifying** state, the flow log is being modified.
@@ -1755,7 +1788,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyRouterInterfaceAttributeResponse> modifyRouterInterfaceAttribute(ModifyRouterInterfaceAttributeRequest request);
 
     /**
-      * ## [](#)Description
       * After you call this operation, the router interface enters the **Activating** state. After the router interface is activated, the router interface enters the **Active** state.
       * >  You cannot modify the specification of a router interface that has overdue payments.
       *
@@ -1838,10 +1870,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyVpcAttributeResponse> modifyVpcAttribute(ModifyVpcAttributeRequest request);
 
     /**
-      * *   The **ModifyVpcPrefixList** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [ListPrefixLists](~~311535~~) to query the status of a prefix list.
+      * *   **ModifyVpcPrefixList** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListPrefixLists](~~311535~~) to query the status of the task.
       *     *   If the prefix list is in the **Modifying** state, the configuration of the prefix list is being modified.
       *     *   If the prefix list is in the **Created** state, the configuration of the prefix list is modified.
-      *     *   After the configuration of the prefix list is modified, you can call the [GetVpcPrefixListAssociations](~~445478~~) operation to query information about the network instances that are associated with the prefix list and determine whether the associated network instances use the new CIDR blocks. If the association **status** of the prefix list is **Created**, the new CIDR blocks are used by the network instances that are associated with the prefix list.
+      *     *   After the configuration of the prefix list is modified, you can call the [GetVpcPrefixListAssociations](~~445478~~) operation to query the information about the network instances that are associated with the prefix list and determine whether the associated network instances use the new CIDR blocks. If the association **status** of the prefix list is **Created**, the new CIDR blocks are used by the network instances that are associated with the prefix list.
       * *   You cannot repeatedly call **ModifyVpcPrefixList** to modify the configuration of a prefix list within the specified period of time.
       *
      */
@@ -1951,7 +1983,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RecoverPhysicalConnectionResponse> recoverPhysicalConnection(RecoverPhysicalConnectionRequest request);
 
     /**
-      * After the operation is called, the VBR changes from the **terminated** state to the **recovering** state. When the VBR recovers, it enters the **active** state.
+      * After you call this operation, the VBR changes from the **terminated** state to the **recovering** state. After the operation is performed, the VBR enters the **active** state.
       * When you call this operation, take note of the following items:
       * *   Only the owner of the Express Connect circuit can call this operation.
       * *   The Express Connect circuit to which the VBR connects must be in the **Enabled** state.
@@ -2075,7 +2107,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<TerminatePhysicalConnectionResponse> terminatePhysicalConnection(TerminatePhysicalConnectionRequest request);
 
     /**
-      * After the operation is performed, the VBR changes from the **active** state to the **terminating** state. After the VBR is terminated, it enters the **terminated** state.
+      * After you call this operation, the VBR enters the **terminating** state from the **active** state. After the VBR is terminated, the VBR enters the **terminated** state.
       * >  Only the owner of an Express Connect circuit can call this operation.
       *
      */

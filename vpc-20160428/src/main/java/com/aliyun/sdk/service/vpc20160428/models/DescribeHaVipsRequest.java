@@ -182,7 +182,7 @@ public class DescribeHaVipsRequest extends Request {
         } 
 
         /**
-         * Filter.
+         * The details of the filter condition.
          */
         public Builder filter(java.util.List < Filter> filter) {
             this.putQueryParameter("Filter", filter);
@@ -209,7 +209,7 @@ public class DescribeHaVipsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * The page number. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -218,7 +218,7 @@ public class DescribeHaVipsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
+         * The number of entries per page. Maximum value: **50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -227,7 +227,7 @@ public class DescribeHaVipsRequest extends Request {
         }
 
         /**
-         * The ID of the region to which the HAVIP belongs.
+         * The region ID of the HAVIP.
          * <p>
          * 
          * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
@@ -266,7 +266,7 @@ public class DescribeHaVipsRequest extends Request {
         }
 
         /**
-         * Tags.
+         * The tag list.
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -320,10 +320,8 @@ public class DescribeHaVipsRequest extends Request {
             private java.util.List < String > value; 
 
             /**
-             * The filter keys. You can specify at most five filter keys. Valid values of **N**: **1 to 5**.
+             * The filter keys. You can specify at most five filter keys. Valid values of **N**: **1 to 5**. The following filter keys are supported:
              * <p>
-             * 
-             * The following filter keys are supported:
              * 
              * *   **VpcId**: virtual private cloud (VPC) ID
              * *   **VSwitchId**: vSwitch ID
@@ -341,7 +339,7 @@ public class DescribeHaVipsRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the filter key. Valid values of **N**: **1 to 5**.
              */
             public Builder value(java.util.List < String > value) {
                 this.value = value;
@@ -394,10 +392,10 @@ public class DescribeHaVipsRequest extends Request {
             private String value; 
 
             /**
-             * The tag key. You can specify at most 20 tag keys. It cannot be an empty string.
+             * The key of tag N to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.
              * <p>
              * 
-             * The key cannot exceed 64 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.
+             * The tag key can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -405,10 +403,10 @@ public class DescribeHaVipsRequest extends Request {
             }
 
             /**
-             * The tag value. You can specify at most 20 tag values. It can be an empty string.
+             * The value of tag N to add to the resource. You can specify at most 20 tag values. The tag value can be an empty string.
              * <p>
              * 
-             * The tag value cannot exceed 128 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter but cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
+             * The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.
              */
             public Builder value(String value) {
                 this.value = value;

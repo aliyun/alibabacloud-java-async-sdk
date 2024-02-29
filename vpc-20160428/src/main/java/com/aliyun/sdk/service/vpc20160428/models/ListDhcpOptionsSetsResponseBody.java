@@ -82,11 +82,11 @@ public class ListDhcpOptionsSetsResponseBody extends TeaModel {
         }
 
         /**
-         * The token that is used for the next query. Valid values:
+         * A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:
          * <p>
          * 
-         * *   If **NextToken** is empty, it indicates that no next query is to be sent.
-         * *   If a value is returned for **NextToken**, the value is the token that is used for the next query.
+         * *   If **NextToken** is empty, no next page exists.
+         * *   If a value is returned for **NextToken**, the value is used to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -94,7 +94,7 @@ public class ListDhcpOptionsSetsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -102,7 +102,7 @@ public class ListDhcpOptionsSetsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The number of entries.
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -186,7 +186,7 @@ public class ListDhcpOptionsSetsResponseBody extends TeaModel {
             }
 
             /**
-             * The DNS server IP address.
+             * The IP address of the DNS server.
              */
             public Builder domainNameServers(String domainNameServers) {
                 this.domainNameServers = domainNameServers;
@@ -263,7 +263,7 @@ public class ListDhcpOptionsSetsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N added to the resource.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -271,7 +271,7 @@ public class ListDhcpOptionsSetsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of tag N added to the resource.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -456,7 +456,7 @@ public class ListDhcpOptionsSetsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group to which the DHCP options set belongs.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -467,10 +467,10 @@ public class ListDhcpOptionsSetsResponseBody extends TeaModel {
              * The status of the DHCP options set. Valid values:
              * <p>
              * 
-             * *   **Available**: available
-             * *   **InUse**: in use
-             * *   **Pending**: being configured
-             * *   **Deleted**: deleted
+             * *   **Available**
+             * *   **InUse**
+             * *   **Pending**
+             * *   **Deleted**
              */
             public Builder status(String status) {
                 this.status = status;
@@ -478,7 +478,7 @@ public class ListDhcpOptionsSetsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tag list.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;

@@ -86,7 +86,7 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The number of entries returned.
+         * The number of entries.
          */
         public Builder count(Long count) {
             this.count = count;
@@ -94,11 +94,11 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
         }
 
         /**
-         * The token that determines the start point of the next query. Valid values:
+         * A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:
          * <p>
          * 
-         * *   If no value is returned for **NextToken**, no next queries are sent.
-         * *   If **NextToken** is not empty, the value indicates the token that is used for the next query.
+         * *   If **NextToken** is empty, no next page exists.
+         * *   If a value is returned for **NextToken**, the value is used to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -114,7 +114,7 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * The number of entries returned.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -254,7 +254,7 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the prefix list.
+             * The prefix list ID.
              */
             public Builder prefixListId(String prefixListId) {
                 this.prefixListId = prefixListId;
@@ -289,7 +289,7 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
              * The type of the associated resource. Valid values:
              * <p>
              * 
-             * *   **vpcRouteTable** :VPC route table.
+             * *   **vpcRouteTable**: virtual private cloud (VPC) route table.
              * *   **trRouteTable**: route table of a transit router.
              */
             public Builder resourceType(String resourceType) {

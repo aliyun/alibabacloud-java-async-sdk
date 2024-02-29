@@ -316,7 +316,7 @@ public class CreateVpcPrefixListRequest extends Request {
         }
 
         /**
-         * PrefixListEntries.
+         * The CIDR block information specified in the prefix list.
          */
         public Builder prefixListEntries(java.util.List < PrefixListEntries> prefixListEntries) {
             this.putQueryParameter("PrefixListEntries", prefixListEntries);
@@ -376,7 +376,7 @@ public class CreateVpcPrefixListRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tag list.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -494,7 +494,10 @@ public class CreateVpcPrefixListRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N. You can specify up to 20 tag keys. The tag key cannot be an empty string.
+             * <p>
+             * 
+             * The tag key can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -502,7 +505,10 @@ public class CreateVpcPrefixListRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of tag N. You can specify at most 20 tag values. The tag value can be an empty string.
+             * <p>
+             * 
+             * The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.
              */
             public Builder value(String value) {
                 this.value = value;

@@ -94,7 +94,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of the returned page.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * The number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -252,7 +252,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key.
+             * The key of tag N added to the resource.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -260,7 +260,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * The value of tag N added to the resource.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -522,7 +522,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * The elastic IP address (EIP) associated with the HAVIP.
+             * The list of EIPs associated with the HAVIP.
              */
             public Builder associatedEipAddresses(AssociatedEipAddresses associatedEipAddresses) {
                 this.associatedEipAddresses = associatedEipAddresses;
@@ -533,8 +533,8 @@ public class DescribeHaVipsResponseBody extends TeaModel {
              * The type of the instance with which the HAVIP is associated. Valid values:
              * <p>
              * 
-             * *   **EcsInstance**: an ECS instance
-             * *   **NetworkInterface**: an ENI
+             * *   **EcsInstance**: Elastic Compute Service (ECS) instance
+             * *   **NetworkInterface**: elastic network interface (ENI)
              */
             public Builder associatedInstanceType(String associatedInstanceType) {
                 this.associatedInstanceType = associatedInstanceType;
@@ -542,7 +542,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance with which the HAVIP is associated.
+             * The information about the instance associated with the HAVIP.
              */
             public Builder associatedInstances(AssociatedInstances associatedInstances) {
                 this.associatedInstances = associatedInstances;
@@ -625,8 +625,8 @@ public class DescribeHaVipsResponseBody extends TeaModel {
              * The status of the HAVIP. Valid values:
              * <p>
              * 
-             * *   **Creating**
-             * *   **Available**
+             * *   **Creating**: The server group is being created.
+             * *   **Available**: The FULLNAT entry is available.
              * *   **Deleting**
              */
             public Builder status(String status) {
@@ -635,7 +635,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             }
 
             /**
-             * The list of tags.
+             * The tag list.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;

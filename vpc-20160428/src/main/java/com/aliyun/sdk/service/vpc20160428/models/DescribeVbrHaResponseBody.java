@@ -145,7 +145,7 @@ public class DescribeVbrHaResponseBody extends TeaModel {
          * The description of the VBR failover group.
          * <p>
          * 
-         * The description must be 2 to 256 characters in length. It must start with a letter and cannot start with `http://`or `https://`.
+         * The description must be 2 to 256 characters in length. It must start with a letter but cannot start with `http://` or `https://`.
          */
         public Builder description(String description) {
             this.description = description;
@@ -169,7 +169,7 @@ public class DescribeVbrHaResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the region where the VBR is deployed.
+         * The ID of the region in which the VBR is deployed.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -177,7 +177,7 @@ public class DescribeVbrHaResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -185,11 +185,11 @@ public class DescribeVbrHaResponseBody extends TeaModel {
         }
 
         /**
-         * The state of the VBR failover group.
+         * The status of the VBR failover group.
          * <p>
          * 
-         * *   **Creating**: The VBR failover group is being created.
-         * *   **Active**: The VBR failover group is running as expected.
+         * *   **Creating**
+         * *   **Active**
          */
         public Builder status(String status) {
             this.status = status;
@@ -205,7 +205,7 @@ public class DescribeVbrHaResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the VBR.
+         * The VBR ID.
          */
         public Builder vbrId(String vbrId) {
             this.vbrId = vbrId;

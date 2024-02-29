@@ -139,7 +139,7 @@ public class DescribeZonesRequest extends Request {
         } 
 
         /**
-         * The language used in the **LocalName** parameter to display the zone names. Valid values:
+         * The language used in the **LocalName** parameter. Valid values:
          * <p>
          * 
          * *   **zh-cn**: Chinese
@@ -171,7 +171,7 @@ public class DescribeZonesRequest extends Request {
         }
 
         /**
-         * The ID of the region where zones are queried. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * The region ID of the zone. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -198,7 +198,7 @@ public class DescribeZonesRequest extends Request {
         }
 
         /**
-         * The type of the zones to be queried. Default value: **AvailabilityZone**. This value indicates Alibaba Cloud zones.
+         * The zone type. Default value: **AvailabilityZone**.
          */
         public Builder zoneType(String zoneType) {
             this.putQueryParameter("ZoneType", zoneType);

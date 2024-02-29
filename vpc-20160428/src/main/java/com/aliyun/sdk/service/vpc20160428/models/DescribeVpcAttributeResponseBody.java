@@ -349,7 +349,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * AssociatedPropagationSources.
+         * The propagation source associated with the VPC.
          */
         public Builder associatedPropagationSources(AssociatedPropagationSources associatedPropagationSources) {
             this.associatedPropagationSources = associatedPropagationSources;
@@ -635,7 +635,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account to which the CEN instance belongs.
+             * The ID of the account to which the CEN instance belongs.
              */
             public Builder cenOwnerId(Long cenOwnerId) {
                 this.cenOwnerId = cenOwnerId;
@@ -643,10 +643,10 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the CEN instance to which the VPC is attached.
+             * The status of the CEN instance.
              * <p>
              * 
-             * **Attached** is returned only if the VPC is attached to a CEN instance.
+             * **Attached** is returned only when the VPC is attached to a CEN instance.
              */
             public Builder cenStatus(String cenStatus) {
                 this.cenStatus = cenStatus;
@@ -776,7 +776,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * RoutePropagated.
+             * Indicates whether to propagate the routes of the VPC.
              */
             public Builder routePropagated(Boolean routePropagated) {
                 this.routePropagated = routePropagated;
@@ -784,7 +784,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * SourceInstanceId.
+             * The instance ID of the propagation source.
              */
             public Builder sourceInstanceId(String sourceInstanceId) {
                 this.sourceInstanceId = sourceInstanceId;
@@ -792,7 +792,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * SourceOwnerId.
+             * The ID of the account to which the propagation source belongs.
              */
             public Builder sourceOwnerId(Long sourceOwnerId) {
                 this.sourceOwnerId = sourceOwnerId;
@@ -800,7 +800,13 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * SourceType.
+             * The type of the propagation source. Valid values:
+             * <p>
+             * 
+             * - **CEN**
+             * - **VPN**
+             * - **TR**
+             * - **ECR**
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -808,11 +814,12 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the VPC. Valid values:
+             * The status indicating whether the propagation source is attached to the VPC. Valid values:
              * <p>
              * 
-             * *   **Available**
-             * *   **Pending**
+             * - **Attaching**
+             * - **Attached**
+             * - **Detaching**
              */
             public Builder status(String status) {
                 this.status = status;
@@ -853,7 +860,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
             private java.util.List < AssociatedPropagationSourcesAssociatedPropagationSources> associatedPropagationSources; 
 
             /**
-             * AssociatedPropagationSources.
+             * The propagation source associated with the VPC.
              */
             public Builder associatedPropagationSources(java.util.List < AssociatedPropagationSourcesAssociatedPropagationSources> associatedPropagationSources) {
                 this.associatedPropagationSources = associatedPropagationSources;
@@ -906,7 +913,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
             private String resourceType; 
 
             /**
-             * The number of resources deployed in the VPC.
+             * The number of resources in the VPC.
              */
             public Builder resourceCount(Integer resourceCount) {
                 this.resourceCount = resourceCount;
@@ -914,7 +921,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The type of resources deployed in the VPC. Valid values:
+             * The type of resource deployed in the VPC. Valid values: Valid values:
              * <p>
              * 
              * *   **VSwitch**
@@ -1021,7 +1028,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the IPv6 CIDR block. Valid values:
+             * The IPv6 CIDR block type of the VPC. Valid values:
              * <p>
              * 
              * *   **BGP** (default)
@@ -1029,7 +1036,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
              * *   **ChinaUnicom**
              * *   **ChinaTelecom**
              * 
-             * >  If your Alibaba Cloud account is allowed to activate single-ISP bandwidth, you can set this parameter to **ChinaTelecom**, **ChinaUnicom**, or **ChinaMobile**.
+             * >  If you are allowed to use single-ISP bandwidth, valid values are **ChinaTelecom**, **ChinaUnicom**, and **ChinaMobile**
              */
             public Builder ipv6Isp(String ipv6Isp) {
                 this.ipv6Isp = ipv6Isp;
@@ -1164,7 +1171,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The key of tag N added to the resource.
+             * The key of tag N.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1172,7 +1179,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The value of tag N added to the resource.
+             * The value of tag N.
              */
             public Builder value(String value) {
                 this.value = value;

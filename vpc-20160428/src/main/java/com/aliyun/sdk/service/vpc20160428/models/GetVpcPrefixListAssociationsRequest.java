@@ -155,7 +155,7 @@ public class GetVpcPrefixListAssociationsRequest extends Request {
         } 
 
         /**
-         * The number of entries to return on each page. Valid values: **1** to **100**. Default value: **20**.
+         * The number of entries per page. Valid values: **1** to **100**. Default value: **20**.
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -164,11 +164,11 @@ public class GetVpcPrefixListAssociationsRequest extends Request {
         }
 
         /**
-         * The token that determines the start point of the next query. Valid values:
+         * The pagination token that is used in the next request to retrieve a new page of results. Valid values:
          * <p>
          * 
-         * *   If this is your first query and no next queries are to be sent, ignore this parameter.
-         * *   If a next query is to be performed, set the value to the NextToken value returned in the last call to the ListListenerCertificates operation.
+         * *   You do not need to specify this parameter for the first request.
+         * *   If a value is returned for NextToken, specify the value in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);

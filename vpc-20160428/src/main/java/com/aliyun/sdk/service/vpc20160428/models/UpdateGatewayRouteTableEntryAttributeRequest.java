@@ -287,7 +287,7 @@ public class UpdateGatewayRouteTableEntryAttributeRequest extends Request {
         }
 
         /**
-         * GatewayRouteTableId.
+         * The ID of the gateway route table that you want to modify.
          */
         public Builder gatewayRouteTableId(String gatewayRouteTableId) {
             this.putQueryParameter("GatewayRouteTableId", gatewayRouteTableId);
