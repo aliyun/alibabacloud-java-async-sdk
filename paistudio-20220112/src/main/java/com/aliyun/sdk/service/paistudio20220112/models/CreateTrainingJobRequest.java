@@ -37,6 +37,10 @@ public class CreateTrainingJobRequest extends Request {
     private ComputeResource computeResource;
 
     @Body
+    @NameInMap("ExperimentConfig")
+    private ExperimentConfig experimentConfig;
+
+    @Body
     @NameInMap("HyperParameters")
     private java.util.List < HyperParameters> hyperParameters;
 
@@ -90,6 +94,7 @@ public class CreateTrainingJobRequest extends Request {
         this.algorithmVersion = builder.algorithmVersion;
         this.codeDir = builder.codeDir;
         this.computeResource = builder.computeResource;
+        this.experimentConfig = builder.experimentConfig;
         this.hyperParameters = builder.hyperParameters;
         this.inputChannels = builder.inputChannels;
         this.labels = builder.labels;
@@ -156,6 +161,13 @@ public class CreateTrainingJobRequest extends Request {
      */
     public ComputeResource getComputeResource() {
         return this.computeResource;
+    }
+
+    /**
+     * @return experimentConfig
+     */
+    public ExperimentConfig getExperimentConfig() {
+        return this.experimentConfig;
     }
 
     /**
@@ -242,6 +254,7 @@ public class CreateTrainingJobRequest extends Request {
         private String algorithmVersion; 
         private Location codeDir; 
         private ComputeResource computeResource; 
+        private ExperimentConfig experimentConfig; 
         private java.util.List < HyperParameters> hyperParameters; 
         private java.util.List < InputChannels> inputChannels; 
         private java.util.List < Labels> labels; 
@@ -266,6 +279,7 @@ public class CreateTrainingJobRequest extends Request {
             this.algorithmVersion = request.algorithmVersion;
             this.codeDir = request.codeDir;
             this.computeResource = request.computeResource;
+            this.experimentConfig = request.experimentConfig;
             this.hyperParameters = request.hyperParameters;
             this.inputChannels = request.inputChannels;
             this.labels = request.labels;
@@ -330,6 +344,15 @@ public class CreateTrainingJobRequest extends Request {
         public Builder computeResource(ComputeResource computeResource) {
             this.putBodyParameter("ComputeResource", computeResource);
             this.computeResource = computeResource;
+            return this;
+        }
+
+        /**
+         * ExperimentConfig.
+         */
+        public Builder experimentConfig(ExperimentConfig experimentConfig) {
+            this.putBodyParameter("ExperimentConfig", experimentConfig);
+            this.experimentConfig = experimentConfig;
             return this;
         }
 
@@ -676,6 +699,47 @@ public class CreateTrainingJobRequest extends Request {
 
             public ComputeResource build() {
                 return new ComputeResource(this);
+            } 
+
+        } 
+
+    }
+    public static class ExperimentConfig extends TeaModel {
+        @NameInMap("ExperimentId")
+        private String experimentId;
+
+        private ExperimentConfig(Builder builder) {
+            this.experimentId = builder.experimentId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ExperimentConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return experimentId
+         */
+        public String getExperimentId() {
+            return this.experimentId;
+        }
+
+        public static final class Builder {
+            private String experimentId; 
+
+            /**
+             * ExperimentId.
+             */
+            public Builder experimentId(String experimentId) {
+                this.experimentId = experimentId;
+                return this;
+            }
+
+            public ExperimentConfig build() {
+                return new ExperimentConfig(this);
             } 
 
         } 

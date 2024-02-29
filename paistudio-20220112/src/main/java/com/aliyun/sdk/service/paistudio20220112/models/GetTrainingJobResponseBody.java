@@ -30,6 +30,9 @@ public class GetTrainingJobResponseBody extends TeaModel {
     @NameInMap("ComputeResource")
     private ComputeResource computeResource;
 
+    @NameInMap("ExperimentConfig")
+    private ExperimentConfig experimentConfig;
+
     @NameInMap("GmtCreateTime")
     private String gmtCreateTime;
 
@@ -115,6 +118,7 @@ public class GetTrainingJobResponseBody extends TeaModel {
         this.algorithmSpec = builder.algorithmSpec;
         this.algorithmVersion = builder.algorithmVersion;
         this.computeResource = builder.computeResource;
+        this.experimentConfig = builder.experimentConfig;
         this.gmtCreateTime = builder.gmtCreateTime;
         this.gmtModifiedTime = builder.gmtModifiedTime;
         this.hyperParameters = builder.hyperParameters;
@@ -191,6 +195,13 @@ public class GetTrainingJobResponseBody extends TeaModel {
      */
     public ComputeResource getComputeResource() {
         return this.computeResource;
+    }
+
+    /**
+     * @return experimentConfig
+     */
+    public ExperimentConfig getExperimentConfig() {
+        return this.experimentConfig;
     }
 
     /**
@@ -382,6 +393,7 @@ public class GetTrainingJobResponseBody extends TeaModel {
         private AlgorithmSpec algorithmSpec; 
         private String algorithmVersion; 
         private ComputeResource computeResource; 
+        private ExperimentConfig experimentConfig; 
         private String gmtCreateTime; 
         private String gmtModifiedTime; 
         private java.util.List < HyperParameters> hyperParameters; 
@@ -454,6 +466,14 @@ public class GetTrainingJobResponseBody extends TeaModel {
          */
         public Builder computeResource(ComputeResource computeResource) {
             this.computeResource = computeResource;
+            return this;
+        }
+
+        /**
+         * ExperimentConfig.
+         */
+        public Builder experimentConfig(ExperimentConfig experimentConfig) {
+            this.experimentConfig = experimentConfig;
             return this;
         }
 
@@ -908,6 +928,67 @@ public class GetTrainingJobResponseBody extends TeaModel {
 
             public ComputeResource build() {
                 return new ComputeResource(this);
+            } 
+
+        } 
+
+    }
+    public static class ExperimentConfig extends TeaModel {
+        @NameInMap("ExperimentId")
+        private String experimentId;
+
+        @NameInMap("ExperimentName")
+        private String experimentName;
+
+        private ExperimentConfig(Builder builder) {
+            this.experimentId = builder.experimentId;
+            this.experimentName = builder.experimentName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ExperimentConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return experimentId
+         */
+        public String getExperimentId() {
+            return this.experimentId;
+        }
+
+        /**
+         * @return experimentName
+         */
+        public String getExperimentName() {
+            return this.experimentName;
+        }
+
+        public static final class Builder {
+            private String experimentId; 
+            private String experimentName; 
+
+            /**
+             * ExperimentId.
+             */
+            public Builder experimentId(String experimentId) {
+                this.experimentId = experimentId;
+                return this;
+            }
+
+            /**
+             * ExperimentName.
+             */
+            public Builder experimentName(String experimentName) {
+                this.experimentName = experimentName;
+                return this;
+            }
+
+            public ExperimentConfig build() {
+                return new ExperimentConfig(this);
             } 
 
         } 
