@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.aligenieip_1_0;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.aligenieip_1_0.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -21,6 +22,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddCartoonResponse> addCartoon(AddCartoonRequest request);
 
     CompletableFuture<AddCustomQAResponse> addCustomQA(AddCustomQARequest request);
+
+    CompletableFuture<AddCustomQAV2Response> addCustomQAV2(AddCustomQAV2Request request);
 
     CompletableFuture<AddMessageTemplateResponse> addMessageTemplate(AddMessageTemplateRequest request);
 
@@ -158,7 +161,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<PageGetHotelRoomDevicesResponse> pageGetHotelRoomDevices(PageGetHotelRoomDevicesRequest request);
 
+    CompletableFuture<PmsEventReportResponse> pmsEventReport(PmsEventReportRequest request);
+
     CompletableFuture<PushHotelMessageResponse> pushHotelMessage(PushHotelMessageRequest request);
+
+    CompletableFuture<PushVoiceBoxCommandsResponse> pushVoiceBoxCommands(PushVoiceBoxCommandsRequest request);
+
+    CompletableFuture<PushWelcomeResponse> pushWelcome(PushWelcomeRequest request);
 
     CompletableFuture<PushWelcomeTextAndMusicResponse> pushWelcomeTextAndMusic(PushWelcomeTextAndMusicRequest request);
 

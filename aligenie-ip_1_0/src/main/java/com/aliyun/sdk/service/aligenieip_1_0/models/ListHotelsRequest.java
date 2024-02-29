@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListHotelsRequest extends Request {
     @Query
+    @NameInMap("HotelRequest")
+    private HotelRequest hotelRequest;
+
+    @Query
     @NameInMap("Page")
     @Validation(required = true)
     private Page page;
@@ -24,6 +28,7 @@ public class ListHotelsRequest extends Request {
 
     private ListHotelsRequest(Builder builder) {
         super(builder);
+        this.hotelRequest = builder.hotelRequest;
         this.page = builder.page;
         this.status = builder.status;
     }
@@ -42,6 +47,13 @@ public class ListHotelsRequest extends Request {
     }
 
     /**
+     * @return hotelRequest
+     */
+    public HotelRequest getHotelRequest() {
+        return this.hotelRequest;
+    }
+
+    /**
      * @return page
      */
     public Page getPage() {
@@ -56,6 +68,7 @@ public class ListHotelsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListHotelsRequest, Builder> {
+        private HotelRequest hotelRequest; 
         private Page page; 
         private Integer status; 
 
@@ -65,9 +78,20 @@ public class ListHotelsRequest extends Request {
 
         private Builder(ListHotelsRequest request) {
             super(request);
+            this.hotelRequest = request.hotelRequest;
             this.page = request.page;
             this.status = request.status;
         } 
+
+        /**
+         * HotelRequest.
+         */
+        public Builder hotelRequest(HotelRequest hotelRequest) {
+            String hotelRequestShrink = shrink(hotelRequest, "HotelRequest", "json");
+            this.putQueryParameter("HotelRequest", hotelRequestShrink);
+            this.hotelRequest = hotelRequest;
+            return this;
+        }
 
         /**
          * Page.
@@ -95,6 +119,47 @@ public class ListHotelsRequest extends Request {
 
     } 
 
+    public static class HotelRequest extends TeaModel {
+        @NameInMap("HotelId")
+        private String hotelId;
+
+        private HotelRequest(Builder builder) {
+            this.hotelId = builder.hotelId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static HotelRequest create() {
+            return builder().build();
+        }
+
+        /**
+         * @return hotelId
+         */
+        public String getHotelId() {
+            return this.hotelId;
+        }
+
+        public static final class Builder {
+            private String hotelId; 
+
+            /**
+             * HotelId.
+             */
+            public Builder hotelId(String hotelId) {
+                this.hotelId = hotelId;
+                return this;
+            }
+
+            public HotelRequest build() {
+                return new HotelRequest(this);
+            } 
+
+        } 
+
+    }
     public static class Page extends TeaModel {
         @NameInMap("PageNumber")
         @Validation(required = true)
