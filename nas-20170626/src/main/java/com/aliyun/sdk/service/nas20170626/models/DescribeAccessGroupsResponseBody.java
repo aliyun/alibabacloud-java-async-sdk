@@ -144,8 +144,14 @@ public class DescribeAccessGroupsResponseBody extends TeaModel {
         @NameInMap("Description")
         private String description;
 
+        @NameInMap("FileSystemType")
+        private String fileSystemType;
+
         @NameInMap("MountTargetCount")
         private Integer mountTargetCount;
+
+        @NameInMap("RegionId")
+        private String regionId;
 
         @NameInMap("RuleCount")
         private Integer ruleCount;
@@ -155,7 +161,9 @@ public class DescribeAccessGroupsResponseBody extends TeaModel {
             this.accessGroupType = builder.accessGroupType;
             this.createTime = builder.createTime;
             this.description = builder.description;
+            this.fileSystemType = builder.fileSystemType;
             this.mountTargetCount = builder.mountTargetCount;
+            this.regionId = builder.regionId;
             this.ruleCount = builder.ruleCount;
         }
 
@@ -196,10 +204,24 @@ public class DescribeAccessGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return fileSystemType
+         */
+        public String getFileSystemType() {
+            return this.fileSystemType;
+        }
+
+        /**
          * @return mountTargetCount
          */
         public Integer getMountTargetCount() {
             return this.mountTargetCount;
+        }
+
+        /**
+         * @return regionId
+         */
+        public String getRegionId() {
+            return this.regionId;
         }
 
         /**
@@ -214,7 +236,9 @@ public class DescribeAccessGroupsResponseBody extends TeaModel {
             private String accessGroupType; 
             private String createTime; 
             private String description; 
+            private String fileSystemType; 
             private Integer mountTargetCount; 
+            private String regionId; 
             private Integer ruleCount; 
 
             /**
@@ -250,10 +274,26 @@ public class DescribeAccessGroupsResponseBody extends TeaModel {
             }
 
             /**
+             * FileSystemType.
+             */
+            public Builder fileSystemType(String fileSystemType) {
+                this.fileSystemType = fileSystemType;
+                return this;
+            }
+
+            /**
              * The number of mount targets to which the permission group is attached.
              */
             public Builder mountTargetCount(Integer mountTargetCount) {
                 this.mountTargetCount = mountTargetCount;
+                return this;
+            }
+
+            /**
+             * RegionId.
+             */
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
                 return this;
             }
 

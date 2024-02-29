@@ -92,6 +92,9 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
     } 
 
     public static class Task extends TeaModel {
+        @NameInMap("ConflictPolicy")
+        private String conflictPolicy;
+
         @NameInMap("CreateTime")
         private String createTime;
 
@@ -100,6 +103,9 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
 
         @NameInMap("DataType")
         private String dataType;
+
+        @NameInMap("Directory")
+        private String directory;
 
         @NameInMap("EndTime")
         private String endTime;
@@ -138,9 +144,11 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
         private String taskId;
 
         private Task(Builder builder) {
+            this.conflictPolicy = builder.conflictPolicy;
             this.createTime = builder.createTime;
             this.dataFlowId = builder.dataFlowId;
             this.dataType = builder.dataType;
+            this.directory = builder.directory;
             this.endTime = builder.endTime;
             this.fileSystemPath = builder.fileSystemPath;
             this.filesystemId = builder.filesystemId;
@@ -164,6 +172,13 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
         }
 
         /**
+         * @return conflictPolicy
+         */
+        public String getConflictPolicy() {
+            return this.conflictPolicy;
+        }
+
+        /**
          * @return createTime
          */
         public String getCreateTime() {
@@ -182,6 +197,13 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
          */
         public String getDataType() {
             return this.dataType;
+        }
+
+        /**
+         * @return directory
+         */
+        public String getDirectory() {
+            return this.directory;
         }
 
         /**
@@ -269,9 +291,11 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String conflictPolicy; 
             private String createTime; 
             private String dataFlowId; 
             private String dataType; 
+            private String directory; 
             private String endTime; 
             private String fileSystemPath; 
             private String filesystemId; 
@@ -284,6 +308,14 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
             private String status; 
             private String taskAction; 
             private String taskId; 
+
+            /**
+             * ConflictPolicy.
+             */
+            public Builder conflictPolicy(String conflictPolicy) {
+                this.conflictPolicy = conflictPolicy;
+                return this;
+            }
 
             /**
              * The time when the task was created.
@@ -311,6 +343,14 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
              */
             public Builder dataType(String dataType) {
                 this.dataType = dataType;
+                return this;
+            }
+
+            /**
+             * Directory.
+             */
+            public Builder directory(String directory) {
+                this.directory = directory;
                 return this;
             }
 

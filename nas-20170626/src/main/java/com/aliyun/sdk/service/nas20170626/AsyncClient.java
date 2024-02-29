@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.nas20170626;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.nas20170626.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 

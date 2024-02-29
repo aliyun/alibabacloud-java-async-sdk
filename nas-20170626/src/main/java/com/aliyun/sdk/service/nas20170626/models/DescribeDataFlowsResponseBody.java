@@ -222,6 +222,10 @@ public class DescribeDataFlowsResponseBody extends TeaModel {
         @NameInMap("SourceStorage")
         private String sourceStorage;
 
+        @NameInMap("SourceStoragePath")
+        @Validation(maxLength = 1024)
+        private String sourceStoragePath;
+
         @NameInMap("Status")
         private String status;
 
@@ -245,6 +249,7 @@ public class DescribeDataFlowsResponseBody extends TeaModel {
             this.fsetId = builder.fsetId;
             this.sourceSecurityType = builder.sourceSecurityType;
             this.sourceStorage = builder.sourceStorage;
+            this.sourceStoragePath = builder.sourceStoragePath;
             this.status = builder.status;
             this.throughput = builder.throughput;
             this.updateTime = builder.updateTime;
@@ -350,6 +355,13 @@ public class DescribeDataFlowsResponseBody extends TeaModel {
         }
 
         /**
+         * @return sourceStoragePath
+         */
+        public String getSourceStoragePath() {
+            return this.sourceStoragePath;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -384,6 +396,7 @@ public class DescribeDataFlowsResponseBody extends TeaModel {
             private String fsetId; 
             private String sourceSecurityType; 
             private String sourceStorage; 
+            private String sourceStoragePath; 
             private String status; 
             private Long throughput; 
             private String updateTime; 
@@ -537,6 +550,14 @@ public class DescribeDataFlowsResponseBody extends TeaModel {
              */
             public Builder sourceStorage(String sourceStorage) {
                 this.sourceStorage = sourceStorage;
+                return this;
+            }
+
+            /**
+             * 源端存储内的访问路径。
+             */
+            public Builder sourceStoragePath(String sourceStoragePath) {
+                this.sourceStoragePath = sourceStoragePath;
                 return this;
             }
 

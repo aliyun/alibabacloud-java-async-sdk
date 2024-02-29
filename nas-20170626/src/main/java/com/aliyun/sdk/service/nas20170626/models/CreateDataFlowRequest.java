@@ -44,8 +44,12 @@ public class CreateDataFlowRequest extends Request {
     private String fileSystemId;
 
     @Query
+    @NameInMap("FileSystemPath")
+    @Validation(maxLength = 1023, minLength = 1)
+    private String fileSystemPath;
+
+    @Query
     @NameInMap("FsetId")
-    @Validation(required = true)
     private String fsetId;
 
     @Query
@@ -54,12 +58,16 @@ public class CreateDataFlowRequest extends Request {
 
     @Query
     @NameInMap("SourceStorage")
-    @Validation(required = true, maxLength = 128, minLength = 8)
+    @Validation(required = true, maxLength = 128)
     private String sourceStorage;
 
     @Query
+    @NameInMap("SourceStoragePath")
+    @Validation(maxLength = 1023, minLength = 1)
+    private String sourceStoragePath;
+
+    @Query
     @NameInMap("Throughput")
-    @Validation(required = true)
     private Long throughput;
 
     private CreateDataFlowRequest(Builder builder) {
@@ -71,9 +79,11 @@ public class CreateDataFlowRequest extends Request {
         this.description = builder.description;
         this.dryRun = builder.dryRun;
         this.fileSystemId = builder.fileSystemId;
+        this.fileSystemPath = builder.fileSystemPath;
         this.fsetId = builder.fsetId;
         this.sourceSecurityType = builder.sourceSecurityType;
         this.sourceStorage = builder.sourceStorage;
+        this.sourceStoragePath = builder.sourceStoragePath;
         this.throughput = builder.throughput;
     }
 
@@ -140,6 +150,13 @@ public class CreateDataFlowRequest extends Request {
     }
 
     /**
+     * @return fileSystemPath
+     */
+    public String getFileSystemPath() {
+        return this.fileSystemPath;
+    }
+
+    /**
      * @return fsetId
      */
     public String getFsetId() {
@@ -161,6 +178,13 @@ public class CreateDataFlowRequest extends Request {
     }
 
     /**
+     * @return sourceStoragePath
+     */
+    public String getSourceStoragePath() {
+        return this.sourceStoragePath;
+    }
+
+    /**
      * @return throughput
      */
     public Long getThroughput() {
@@ -175,9 +199,11 @@ public class CreateDataFlowRequest extends Request {
         private String description; 
         private Boolean dryRun; 
         private String fileSystemId; 
+        private String fileSystemPath; 
         private String fsetId; 
         private String sourceSecurityType; 
         private String sourceStorage; 
+        private String sourceStoragePath; 
         private Long throughput; 
 
         private Builder() {
@@ -193,9 +219,11 @@ public class CreateDataFlowRequest extends Request {
             this.description = request.description;
             this.dryRun = request.dryRun;
             this.fileSystemId = request.fileSystemId;
+            this.fileSystemPath = request.fileSystemPath;
             this.fsetId = request.fsetId;
             this.sourceSecurityType = request.sourceSecurityType;
             this.sourceStorage = request.sourceStorage;
+            this.sourceStoragePath = request.sourceStoragePath;
             this.throughput = request.throughput;
         } 
 
@@ -290,6 +318,15 @@ public class CreateDataFlowRequest extends Request {
         }
 
         /**
+         * FileSystemPath.
+         */
+        public Builder fileSystemPath(String fileSystemPath) {
+            this.putQueryParameter("FileSystemPath", fileSystemPath);
+            this.fileSystemPath = fileSystemPath;
+            return this;
+        }
+
+        /**
          * The fileset ID.
          */
         public Builder fsetId(String fsetId) {
@@ -331,6 +368,15 @@ public class CreateDataFlowRequest extends Request {
         public Builder sourceStorage(String sourceStorage) {
             this.putQueryParameter("SourceStorage", sourceStorage);
             this.sourceStorage = sourceStorage;
+            return this;
+        }
+
+        /**
+         * SourceStoragePath.
+         */
+        public Builder sourceStoragePath(String sourceStoragePath) {
+            this.putQueryParameter("SourceStoragePath", sourceStoragePath);
+            this.sourceStoragePath = sourceStoragePath;
             return this;
         }
 

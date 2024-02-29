@@ -17,6 +17,10 @@ public class CreateDataFlowTaskRequest extends Request {
     private String clientToken;
 
     @Query
+    @NameInMap("ConflictPolicy")
+    private String conflictPolicy;
+
+    @Query
     @NameInMap("DataFlowId")
     @Validation(required = true)
     private String dataFlowId;
@@ -27,6 +31,7 @@ public class CreateDataFlowTaskRequest extends Request {
 
     @Query
     @NameInMap("Directory")
+    @Validation(maxLength = 1023)
     private String directory;
 
     @Query
@@ -53,6 +58,7 @@ public class CreateDataFlowTaskRequest extends Request {
     private CreateDataFlowTaskRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
+        this.conflictPolicy = builder.conflictPolicy;
         this.dataFlowId = builder.dataFlowId;
         this.dataType = builder.dataType;
         this.directory = builder.directory;
@@ -81,6 +87,13 @@ public class CreateDataFlowTaskRequest extends Request {
      */
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    /**
+     * @return conflictPolicy
+     */
+    public String getConflictPolicy() {
+        return this.conflictPolicy;
     }
 
     /**
@@ -141,6 +154,7 @@ public class CreateDataFlowTaskRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateDataFlowTaskRequest, Builder> {
         private String clientToken; 
+        private String conflictPolicy; 
         private String dataFlowId; 
         private String dataType; 
         private String directory; 
@@ -157,6 +171,7 @@ public class CreateDataFlowTaskRequest extends Request {
         private Builder(CreateDataFlowTaskRequest request) {
             super(request);
             this.clientToken = request.clientToken;
+            this.conflictPolicy = request.conflictPolicy;
             this.dataFlowId = request.dataFlowId;
             this.dataType = request.dataType;
             this.directory = request.directory;
@@ -178,6 +193,15 @@ public class CreateDataFlowTaskRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * ConflictPolicy.
+         */
+        public Builder conflictPolicy(String conflictPolicy) {
+            this.putQueryParameter("ConflictPolicy", conflictPolicy);
+            this.conflictPolicy = conflictPolicy;
             return this;
         }
 

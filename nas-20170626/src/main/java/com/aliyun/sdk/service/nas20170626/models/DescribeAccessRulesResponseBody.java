@@ -132,8 +132,14 @@ public class DescribeAccessRulesResponseBody extends TeaModel {
     } 
 
     public static class AccessRule extends TeaModel {
+        @NameInMap("AccessGroupName")
+        private String accessGroupName;
+
         @NameInMap("AccessRuleId")
         private String accessRuleId;
+
+        @NameInMap("FileSystemType")
+        private String fileSystemType;
 
         @NameInMap("Ipv6SourceCidrIp")
         private String ipv6SourceCidrIp;
@@ -144,6 +150,9 @@ public class DescribeAccessRulesResponseBody extends TeaModel {
         @NameInMap("RWAccess")
         private String RWAccess;
 
+        @NameInMap("RegionId")
+        private String regionId;
+
         @NameInMap("SourceCidrIp")
         private String sourceCidrIp;
 
@@ -151,10 +160,13 @@ public class DescribeAccessRulesResponseBody extends TeaModel {
         private String userAccess;
 
         private AccessRule(Builder builder) {
+            this.accessGroupName = builder.accessGroupName;
             this.accessRuleId = builder.accessRuleId;
+            this.fileSystemType = builder.fileSystemType;
             this.ipv6SourceCidrIp = builder.ipv6SourceCidrIp;
             this.priority = builder.priority;
             this.RWAccess = builder.RWAccess;
+            this.regionId = builder.regionId;
             this.sourceCidrIp = builder.sourceCidrIp;
             this.userAccess = builder.userAccess;
         }
@@ -168,10 +180,24 @@ public class DescribeAccessRulesResponseBody extends TeaModel {
         }
 
         /**
+         * @return accessGroupName
+         */
+        public String getAccessGroupName() {
+            return this.accessGroupName;
+        }
+
+        /**
          * @return accessRuleId
          */
         public String getAccessRuleId() {
             return this.accessRuleId;
+        }
+
+        /**
+         * @return fileSystemType
+         */
+        public String getFileSystemType() {
+            return this.fileSystemType;
         }
 
         /**
@@ -196,6 +222,13 @@ public class DescribeAccessRulesResponseBody extends TeaModel {
         }
 
         /**
+         * @return regionId
+         */
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        /**
          * @return sourceCidrIp
          */
         public String getSourceCidrIp() {
@@ -210,18 +243,37 @@ public class DescribeAccessRulesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String accessGroupName; 
             private String accessRuleId; 
+            private String fileSystemType; 
             private String ipv6SourceCidrIp; 
             private Integer priority; 
             private String RWAccess; 
+            private String regionId; 
             private String sourceCidrIp; 
             private String userAccess; 
+
+            /**
+             * AccessGroupName.
+             */
+            public Builder accessGroupName(String accessGroupName) {
+                this.accessGroupName = accessGroupName;
+                return this;
+            }
 
             /**
              * The ID of the rule.
              */
             public Builder accessRuleId(String accessRuleId) {
                 this.accessRuleId = accessRuleId;
+                return this;
+            }
+
+            /**
+             * FileSystemType.
+             */
+            public Builder fileSystemType(String fileSystemType) {
+                this.fileSystemType = fileSystemType;
                 return this;
             }
 
@@ -257,6 +309,14 @@ public class DescribeAccessRulesResponseBody extends TeaModel {
              */
             public Builder RWAccess(String RWAccess) {
                 this.RWAccess = RWAccess;
+                return this;
+            }
+
+            /**
+             * RegionId.
+             */
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
                 return this;
             }
 
