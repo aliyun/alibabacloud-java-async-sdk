@@ -23,6 +23,10 @@ public class DescribeDBClusterPerformanceRequest extends Request {
     private String endTime;
 
     @Query
+    @NameInMap("Interval")
+    private String interval;
+
+    @Query
     @NameInMap("Key")
     @Validation(required = true)
     private String key;
@@ -36,6 +40,7 @@ public class DescribeDBClusterPerformanceRequest extends Request {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
         this.endTime = builder.endTime;
+        this.interval = builder.interval;
         this.key = builder.key;
         this.startTime = builder.startTime;
     }
@@ -68,6 +73,13 @@ public class DescribeDBClusterPerformanceRequest extends Request {
     }
 
     /**
+     * @return interval
+     */
+    public String getInterval() {
+        return this.interval;
+    }
+
+    /**
      * @return key
      */
     public String getKey() {
@@ -84,6 +96,7 @@ public class DescribeDBClusterPerformanceRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeDBClusterPerformanceRequest, Builder> {
         private String DBClusterId; 
         private String endTime; 
+        private String interval; 
         private String key; 
         private String startTime; 
 
@@ -95,6 +108,7 @@ public class DescribeDBClusterPerformanceRequest extends Request {
             super(request);
             this.DBClusterId = request.DBClusterId;
             this.endTime = request.endTime;
+            this.interval = request.interval;
             this.key = request.key;
             this.startTime = request.startTime;
         } 
@@ -114,6 +128,15 @@ public class DescribeDBClusterPerformanceRequest extends Request {
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
             this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * Interval.
+         */
+        public Builder interval(String interval) {
+            this.putQueryParameter("Interval", interval);
+            this.interval = interval;
             return this;
         }
 

@@ -208,6 +208,18 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
         @NameInMap("IsEqual")
         private String isEqual;
 
+        @NameInMap("IsInstancePolarDBKey")
+        private String isInstancePolarDBKey;
+
+        @NameInMap("IsInstanceRdsKey")
+        private String isInstanceRdsKey;
+
+        @NameInMap("IsPolarDBKey")
+        private String isPolarDBKey;
+
+        @NameInMap("IsRdsKey")
+        private String isRdsKey;
+
         @NameInMap("distParameterDescription")
         private String distParameterDescription;
 
@@ -234,6 +246,10 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
 
         private ParametersParameters(Builder builder) {
             this.isEqual = builder.isEqual;
+            this.isInstancePolarDBKey = builder.isInstancePolarDBKey;
+            this.isInstanceRdsKey = builder.isInstanceRdsKey;
+            this.isPolarDBKey = builder.isPolarDBKey;
+            this.isRdsKey = builder.isRdsKey;
             this.distParameterDescription = builder.distParameterDescription;
             this.distParameterName = builder.distParameterName;
             this.distParameterOptional = builder.distParameterOptional;
@@ -257,6 +273,34 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
          */
         public String getIsEqual() {
             return this.isEqual;
+        }
+
+        /**
+         * @return isInstancePolarDBKey
+         */
+        public String getIsInstancePolarDBKey() {
+            return this.isInstancePolarDBKey;
+        }
+
+        /**
+         * @return isInstanceRdsKey
+         */
+        public String getIsInstanceRdsKey() {
+            return this.isInstanceRdsKey;
+        }
+
+        /**
+         * @return isPolarDBKey
+         */
+        public String getIsPolarDBKey() {
+            return this.isPolarDBKey;
+        }
+
+        /**
+         * @return isRdsKey
+         */
+        public String getIsRdsKey() {
+            return this.isRdsKey;
         }
 
         /**
@@ -317,6 +361,10 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
 
         public static final class Builder {
             private String isEqual; 
+            private String isInstancePolarDBKey; 
+            private String isInstanceRdsKey; 
+            private String isPolarDBKey; 
+            private String isRdsKey; 
             private String distParameterDescription; 
             private String distParameterName; 
             private String distParameterOptional; 
@@ -331,6 +379,38 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
              */
             public Builder isEqual(String isEqual) {
                 this.isEqual = isEqual;
+                return this;
+            }
+
+            /**
+             * IsInstancePolarDBKey.
+             */
+            public Builder isInstancePolarDBKey(String isInstancePolarDBKey) {
+                this.isInstancePolarDBKey = isInstancePolarDBKey;
+                return this;
+            }
+
+            /**
+             * IsInstanceRdsKey.
+             */
+            public Builder isInstanceRdsKey(String isInstanceRdsKey) {
+                this.isInstanceRdsKey = isInstanceRdsKey;
+                return this;
+            }
+
+            /**
+             * IsPolarDBKey.
+             */
+            public Builder isPolarDBKey(String isPolarDBKey) {
+                this.isPolarDBKey = isPolarDBKey;
+                return this;
+            }
+
+            /**
+             * IsRdsKey.
+             */
+            public Builder isRdsKey(String isRdsKey) {
+                this.isRdsKey = isRdsKey;
                 return this;
             }
 
