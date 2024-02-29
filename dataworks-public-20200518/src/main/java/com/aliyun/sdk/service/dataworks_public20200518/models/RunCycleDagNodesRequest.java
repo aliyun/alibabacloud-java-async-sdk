@@ -14,8 +14,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class RunCycleDagNodesRequest extends Request {
     @Host
     @NameInMap("RegionId")
-    @Validation(required = true)
     private String regionId;
+
+    @Body
+    @NameInMap("AlertNoticeType")
+    private String alertNoticeType;
+
+    @Body
+    @NameInMap("AlertType")
+    private String alertType;
 
     @Body
     @NameInMap("BizBeginTime")
@@ -24,6 +31,11 @@ public class RunCycleDagNodesRequest extends Request {
     @Body
     @NameInMap("BizEndTime")
     private String bizEndTime;
+
+    @Body
+    @NameInMap("ConcurrentRuns")
+    @Validation(maximum = 10, minimum = 2)
+    private Integer concurrentRuns;
 
     @Body
     @NameInMap("EndBizDate")
@@ -75,8 +87,11 @@ public class RunCycleDagNodesRequest extends Request {
     private RunCycleDagNodesRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.alertNoticeType = builder.alertNoticeType;
+        this.alertType = builder.alertType;
         this.bizBeginTime = builder.bizBeginTime;
         this.bizEndTime = builder.bizEndTime;
+        this.concurrentRuns = builder.concurrentRuns;
         this.endBizDate = builder.endBizDate;
         this.excludeNodeIds = builder.excludeNodeIds;
         this.includeNodeIds = builder.includeNodeIds;
@@ -110,6 +125,20 @@ public class RunCycleDagNodesRequest extends Request {
     }
 
     /**
+     * @return alertNoticeType
+     */
+    public String getAlertNoticeType() {
+        return this.alertNoticeType;
+    }
+
+    /**
+     * @return alertType
+     */
+    public String getAlertType() {
+        return this.alertType;
+    }
+
+    /**
      * @return bizBeginTime
      */
     public String getBizBeginTime() {
@@ -121,6 +150,13 @@ public class RunCycleDagNodesRequest extends Request {
      */
     public String getBizEndTime() {
         return this.bizEndTime;
+    }
+
+    /**
+     * @return concurrentRuns
+     */
+    public Integer getConcurrentRuns() {
+        return this.concurrentRuns;
     }
 
     /**
@@ -195,8 +231,11 @@ public class RunCycleDagNodesRequest extends Request {
 
     public static final class Builder extends Request.Builder<RunCycleDagNodesRequest, Builder> {
         private String regionId; 
+        private String alertNoticeType; 
+        private String alertType; 
         private String bizBeginTime; 
         private String bizEndTime; 
+        private Integer concurrentRuns; 
         private String endBizDate; 
         private String excludeNodeIds; 
         private String includeNodeIds; 
@@ -215,8 +254,11 @@ public class RunCycleDagNodesRequest extends Request {
         private Builder(RunCycleDagNodesRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.alertNoticeType = request.alertNoticeType;
+            this.alertType = request.alertType;
             this.bizBeginTime = request.bizBeginTime;
             this.bizEndTime = request.bizEndTime;
+            this.concurrentRuns = request.concurrentRuns;
             this.endBizDate = request.endBizDate;
             this.excludeNodeIds = request.excludeNodeIds;
             this.includeNodeIds = request.includeNodeIds;
@@ -239,6 +281,24 @@ public class RunCycleDagNodesRequest extends Request {
         }
 
         /**
+         * AlertNoticeType.
+         */
+        public Builder alertNoticeType(String alertNoticeType) {
+            this.putBodyParameter("AlertNoticeType", alertNoticeType);
+            this.alertNoticeType = alertNoticeType;
+            return this;
+        }
+
+        /**
+         * AlertType.
+         */
+        public Builder alertType(String alertType) {
+            this.putBodyParameter("AlertType", alertType);
+            this.alertType = alertType;
+            return this;
+        }
+
+        /**
          * The time when the node started to run. This parameter is required only for auto triggered nodes that are scheduled by hour. Specify the value in the HH:mm:ss format. Valid values: 00:00:00 to 23:59:59.
          */
         public Builder bizBeginTime(String bizBeginTime) {
@@ -253,6 +313,15 @@ public class RunCycleDagNodesRequest extends Request {
         public Builder bizEndTime(String bizEndTime) {
             this.putBodyParameter("BizEndTime", bizEndTime);
             this.bizEndTime = bizEndTime;
+            return this;
+        }
+
+        /**
+         * ConcurrentRuns.
+         */
+        public Builder concurrentRuns(Integer concurrentRuns) {
+            this.putBodyParameter("ConcurrentRuns", concurrentRuns);
+            this.concurrentRuns = concurrentRuns;
             return this;
         }
 

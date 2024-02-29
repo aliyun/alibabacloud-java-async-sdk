@@ -13,16 +13,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetDataSourceMetaResponse extends Response {
     @NameInMap("headers")
-    @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    private Integer statusCode;
+
     @NameInMap("body")
-    @Validation(required = true)
     private GetDataSourceMetaResponseBody body;
 
     private GetDataSourceMetaResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +45,13 @@ public class GetDataSourceMetaResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public GetDataSourceMetaResponseBody getBody() {
@@ -52,6 +61,8 @@ public class GetDataSourceMetaResponse extends Response {
     public interface Builder extends Response.Builder<GetDataSourceMetaResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(GetDataSourceMetaResponseBody body);
 
@@ -64,6 +75,7 @@ public class GetDataSourceMetaResponse extends Response {
             extends Response.BuilderImpl<GetDataSourceMetaResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private GetDataSourceMetaResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +85,7 @@ public class GetDataSourceMetaResponse extends Response {
         private BuilderImpl(GetDataSourceMetaResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +95,15 @@ public class GetDataSourceMetaResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

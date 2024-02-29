@@ -14,7 +14,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListDataSourcesRequest extends Request {
     @Host
     @NameInMap("RegionId")
-    @Validation(required = true)
     private String regionId;
 
     @Query

@@ -272,6 +272,47 @@ public class UpdateDIJobRequest extends Request {
         } 
 
     }
+    public static class CycleScheduleSettings extends TeaModel {
+        @NameInMap("ScheduleParameters")
+        private String scheduleParameters;
+
+        private CycleScheduleSettings(Builder builder) {
+            this.scheduleParameters = builder.scheduleParameters;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CycleScheduleSettings create() {
+            return builder().build();
+        }
+
+        /**
+         * @return scheduleParameters
+         */
+        public String getScheduleParameters() {
+            return this.scheduleParameters;
+        }
+
+        public static final class Builder {
+            private String scheduleParameters; 
+
+            /**
+             * ScheduleParameters.
+             */
+            public Builder scheduleParameters(String scheduleParameters) {
+                this.scheduleParameters = scheduleParameters;
+                return this;
+            }
+
+            public CycleScheduleSettings build() {
+                return new CycleScheduleSettings(this);
+            } 
+
+        } 
+
+    }
     public static class DdlHandlingSettings extends TeaModel {
         @NameInMap("Action")
         private String action;
@@ -395,8 +436,14 @@ public class UpdateDIJobRequest extends Request {
 
     }
     public static class JobSettings extends TeaModel {
+        @NameInMap("ChannelSettings")
+        private String channelSettings;
+
         @NameInMap("ColumnDataTypeSettings")
         private java.util.List < ColumnDataTypeSettings> columnDataTypeSettings;
+
+        @NameInMap("CycleScheduleSettings")
+        private CycleScheduleSettings cycleScheduleSettings;
 
         @NameInMap("DdlHandlingSettings")
         private java.util.List < DdlHandlingSettings> ddlHandlingSettings;
@@ -405,7 +452,9 @@ public class UpdateDIJobRequest extends Request {
         private java.util.List < RuntimeSettings> runtimeSettings;
 
         private JobSettings(Builder builder) {
+            this.channelSettings = builder.channelSettings;
             this.columnDataTypeSettings = builder.columnDataTypeSettings;
+            this.cycleScheduleSettings = builder.cycleScheduleSettings;
             this.ddlHandlingSettings = builder.ddlHandlingSettings;
             this.runtimeSettings = builder.runtimeSettings;
         }
@@ -419,10 +468,24 @@ public class UpdateDIJobRequest extends Request {
         }
 
         /**
+         * @return channelSettings
+         */
+        public String getChannelSettings() {
+            return this.channelSettings;
+        }
+
+        /**
          * @return columnDataTypeSettings
          */
         public java.util.List < ColumnDataTypeSettings> getColumnDataTypeSettings() {
             return this.columnDataTypeSettings;
+        }
+
+        /**
+         * @return cycleScheduleSettings
+         */
+        public CycleScheduleSettings getCycleScheduleSettings() {
+            return this.cycleScheduleSettings;
         }
 
         /**
@@ -440,15 +503,33 @@ public class UpdateDIJobRequest extends Request {
         }
 
         public static final class Builder {
+            private String channelSettings; 
             private java.util.List < ColumnDataTypeSettings> columnDataTypeSettings; 
+            private CycleScheduleSettings cycleScheduleSettings; 
             private java.util.List < DdlHandlingSettings> ddlHandlingSettings; 
             private java.util.List < RuntimeSettings> runtimeSettings; 
+
+            /**
+             * ChannelSettings.
+             */
+            public Builder channelSettings(String channelSettings) {
+                this.channelSettings = channelSettings;
+                return this;
+            }
 
             /**
              * ColumnDataTypeSettings.
              */
             public Builder columnDataTypeSettings(java.util.List < ColumnDataTypeSettings> columnDataTypeSettings) {
                 this.columnDataTypeSettings = columnDataTypeSettings;
+                return this;
+            }
+
+            /**
+             * CycleScheduleSettings.
+             */
+            public Builder cycleScheduleSettings(CycleScheduleSettings cycleScheduleSettings) {
+                this.cycleScheduleSettings = cycleScheduleSettings;
                 return this;
             }
 

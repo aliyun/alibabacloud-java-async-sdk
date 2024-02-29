@@ -397,7 +397,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
         private Long endTime;
 
         @NameInMap("EntityId")
-        private Integer entityId;
+        private Long entityId;
 
         @NameInMap("ExpectValue")
         private Float expectValue;
@@ -412,7 +412,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
         private Boolean fixedCheck;
 
         @NameInMap("Id")
-        private Integer id;
+        private Long id;
 
         @NameInMap("IsPrediction")
         private Boolean isPrediction;
@@ -442,7 +442,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
         private String resultString;
 
         @NameInMap("RuleId")
-        private Integer ruleId;
+        private Long ruleId;
 
         @NameInMap("RuleName")
         private String ruleName;
@@ -630,7 +630,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
         /**
          * @return entityId
          */
-        public Integer getEntityId() {
+        public Long getEntityId() {
             return this.entityId;
         }
 
@@ -665,7 +665,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
         /**
          * @return id
          */
-        public Integer getId() {
+        public Long getId() {
             return this.id;
         }
 
@@ -735,7 +735,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
         /**
          * @return ruleId
          */
-        public Integer getRuleId() {
+        public Long getRuleId() {
             return this.ruleId;
         }
 
@@ -831,12 +831,12 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
             private String dateType; 
             private Boolean discreteCheck; 
             private Long endTime; 
-            private Integer entityId; 
+            private Long entityId; 
             private Float expectValue; 
             private String externalId; 
             private String externalType; 
             private Boolean fixedCheck; 
-            private Integer id; 
+            private Long id; 
             private Boolean isPrediction; 
             private Float lowerValue; 
             private String matchExpression; 
@@ -846,7 +846,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
             private String property; 
             private java.util.List < ReferenceValue> referenceValue; 
             private String resultString; 
-            private Integer ruleId; 
+            private Long ruleId; 
             private String ruleName; 
             private java.util.List < SampleValue> sampleValue; 
             private String tableName; 
@@ -982,7 +982,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
             /**
              * The ID of the monitoring template.
              */
-            public Builder entityId(Integer entityId) {
+            public Builder entityId(Long entityId) {
                 this.entityId = entityId;
                 return this;
             }
@@ -1022,7 +1022,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
             /**
              * The check value.
              */
-            public Builder id(Integer id) {
+            public Builder id(Long id) {
                 this.id = id;
                 return this;
             }
@@ -1111,7 +1111,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
             /**
              * The upper limit of the predicted result. The value of this parameter is automatically generated based on the threshold that you specified.
              */
-            public Builder ruleId(Integer ruleId) {
+            public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
                 return this;
             }

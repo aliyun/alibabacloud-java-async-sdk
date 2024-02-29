@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.dataworks_public20200518;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.dataworks_public20200518.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -206,6 +207,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<GenerateDISyncTaskConfigForUpdatingResponse> generateDISyncTaskConfigForUpdating(GenerateDISyncTaskConfigForUpdatingRequest request);
+
+    CompletableFuture<GetAlertMessageResponse> getAlertMessage(GetAlertMessageRequest request);
 
     CompletableFuture<GetBaselineResponse> getBaseline(GetBaselineRequest request);
 

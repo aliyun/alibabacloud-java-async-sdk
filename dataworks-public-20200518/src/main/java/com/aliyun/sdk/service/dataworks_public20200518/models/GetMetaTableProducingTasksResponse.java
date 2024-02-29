@@ -13,16 +13,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetMetaTableProducingTasksResponse extends Response {
     @NameInMap("headers")
-    @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    private Integer statusCode;
+
     @NameInMap("body")
-    @Validation(required = true)
     private GetMetaTableProducingTasksResponseBody body;
 
     private GetMetaTableProducingTasksResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +45,13 @@ public class GetMetaTableProducingTasksResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public GetMetaTableProducingTasksResponseBody getBody() {
@@ -52,6 +61,8 @@ public class GetMetaTableProducingTasksResponse extends Response {
     public interface Builder extends Response.Builder<GetMetaTableProducingTasksResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(GetMetaTableProducingTasksResponseBody body);
 
@@ -64,6 +75,7 @@ public class GetMetaTableProducingTasksResponse extends Response {
             extends Response.BuilderImpl<GetMetaTableProducingTasksResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private GetMetaTableProducingTasksResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +85,7 @@ public class GetMetaTableProducingTasksResponse extends Response {
         private BuilderImpl(GetMetaTableProducingTasksResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +95,15 @@ public class GetMetaTableProducingTasksResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

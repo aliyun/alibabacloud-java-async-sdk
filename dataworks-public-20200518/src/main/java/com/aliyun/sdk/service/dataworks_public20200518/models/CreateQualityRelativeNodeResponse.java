@@ -13,16 +13,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateQualityRelativeNodeResponse extends Response {
     @NameInMap("headers")
-    @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    private Integer statusCode;
+
     @NameInMap("body")
-    @Validation(required = true)
     private CreateQualityRelativeNodeResponseBody body;
 
     private CreateQualityRelativeNodeResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +45,13 @@ public class CreateQualityRelativeNodeResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public CreateQualityRelativeNodeResponseBody getBody() {
@@ -52,6 +61,8 @@ public class CreateQualityRelativeNodeResponse extends Response {
     public interface Builder extends Response.Builder<CreateQualityRelativeNodeResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(CreateQualityRelativeNodeResponseBody body);
 
@@ -64,6 +75,7 @@ public class CreateQualityRelativeNodeResponse extends Response {
             extends Response.BuilderImpl<CreateQualityRelativeNodeResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private CreateQualityRelativeNodeResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +85,7 @@ public class CreateQualityRelativeNodeResponse extends Response {
         private BuilderImpl(CreateQualityRelativeNodeResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +95,15 @@ public class CreateQualityRelativeNodeResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

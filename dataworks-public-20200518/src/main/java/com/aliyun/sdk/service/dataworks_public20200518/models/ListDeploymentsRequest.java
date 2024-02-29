@@ -18,7 +18,6 @@ public class ListDeploymentsRequest extends Request {
 
     @Host
     @NameInMap("RegionId")
-    @Validation(required = true)
     private String regionId;
 
     @Body

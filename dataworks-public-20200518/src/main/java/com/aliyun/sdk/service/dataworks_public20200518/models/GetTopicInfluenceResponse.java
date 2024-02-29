@@ -13,16 +13,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetTopicInfluenceResponse extends Response {
     @NameInMap("headers")
-    @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    private Integer statusCode;
+
     @NameInMap("body")
-    @Validation(required = true)
     private GetTopicInfluenceResponseBody body;
 
     private GetTopicInfluenceResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +45,13 @@ public class GetTopicInfluenceResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public GetTopicInfluenceResponseBody getBody() {
@@ -52,6 +61,8 @@ public class GetTopicInfluenceResponse extends Response {
     public interface Builder extends Response.Builder<GetTopicInfluenceResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(GetTopicInfluenceResponseBody body);
 
@@ -64,6 +75,7 @@ public class GetTopicInfluenceResponse extends Response {
             extends Response.BuilderImpl<GetTopicInfluenceResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private GetTopicInfluenceResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +85,7 @@ public class GetTopicInfluenceResponse extends Response {
         private BuilderImpl(GetTopicInfluenceResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +95,15 @@ public class GetTopicInfluenceResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

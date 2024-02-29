@@ -14,7 +14,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class CreateDIJobRequest extends Request {
     @Host
     @NameInMap("RegionId")
-    @Validation(required = true)
     private String regionId;
 
     @Body
@@ -497,6 +496,67 @@ public class CreateDIJobRequest extends Request {
         } 
 
     }
+    public static class CycleScheduleSettings extends TeaModel {
+        @NameInMap("CycleMigrationType")
+        private String cycleMigrationType;
+
+        @NameInMap("ScheduleParameters")
+        private String scheduleParameters;
+
+        private CycleScheduleSettings(Builder builder) {
+            this.cycleMigrationType = builder.cycleMigrationType;
+            this.scheduleParameters = builder.scheduleParameters;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CycleScheduleSettings create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cycleMigrationType
+         */
+        public String getCycleMigrationType() {
+            return this.cycleMigrationType;
+        }
+
+        /**
+         * @return scheduleParameters
+         */
+        public String getScheduleParameters() {
+            return this.scheduleParameters;
+        }
+
+        public static final class Builder {
+            private String cycleMigrationType; 
+            private String scheduleParameters; 
+
+            /**
+             * CycleMigrationType.
+             */
+            public Builder cycleMigrationType(String cycleMigrationType) {
+                this.cycleMigrationType = cycleMigrationType;
+                return this;
+            }
+
+            /**
+             * ScheduleParameters.
+             */
+            public Builder scheduleParameters(String scheduleParameters) {
+                this.scheduleParameters = scheduleParameters;
+                return this;
+            }
+
+            public CycleScheduleSettings build() {
+                return new CycleScheduleSettings(this);
+            } 
+
+        } 
+
+    }
     public static class DdlHandlingSettings extends TeaModel {
         @NameInMap("Action")
         private String action;
@@ -553,6 +613,67 @@ public class CreateDIJobRequest extends Request {
 
             public DdlHandlingSettings build() {
                 return new DdlHandlingSettings(this);
+            } 
+
+        } 
+
+    }
+    public static class ImportRuleSettings extends TeaModel {
+        @NameInMap("FileId")
+        private String fileId;
+
+        @NameInMap("Source")
+        private String source;
+
+        private ImportRuleSettings(Builder builder) {
+            this.fileId = builder.fileId;
+            this.source = builder.source;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ImportRuleSettings create() {
+            return builder().build();
+        }
+
+        /**
+         * @return fileId
+         */
+        public String getFileId() {
+            return this.fileId;
+        }
+
+        /**
+         * @return source
+         */
+        public String getSource() {
+            return this.source;
+        }
+
+        public static final class Builder {
+            private String fileId; 
+            private String source; 
+
+            /**
+             * FileId.
+             */
+            public Builder fileId(String fileId) {
+                this.fileId = fileId;
+                return this;
+            }
+
+            /**
+             * Source.
+             */
+            public Builder source(String source) {
+                this.source = source;
+                return this;
+            }
+
+            public ImportRuleSettings build() {
+                return new ImportRuleSettings(this);
             } 
 
         } 
@@ -620,18 +741,30 @@ public class CreateDIJobRequest extends Request {
 
     }
     public static class JobSettings extends TeaModel {
+        @NameInMap("ChannelSettings")
+        private String channelSettings;
+
         @NameInMap("ColumnDataTypeSettings")
         private java.util.List < ColumnDataTypeSettings> columnDataTypeSettings;
 
+        @NameInMap("CycleScheduleSettings")
+        private CycleScheduleSettings cycleScheduleSettings;
+
         @NameInMap("DdlHandlingSettings")
         private java.util.List < DdlHandlingSettings> ddlHandlingSettings;
+
+        @NameInMap("ImportRuleSettings")
+        private ImportRuleSettings importRuleSettings;
 
         @NameInMap("RuntimeSettings")
         private java.util.List < RuntimeSettings> runtimeSettings;
 
         private JobSettings(Builder builder) {
+            this.channelSettings = builder.channelSettings;
             this.columnDataTypeSettings = builder.columnDataTypeSettings;
+            this.cycleScheduleSettings = builder.cycleScheduleSettings;
             this.ddlHandlingSettings = builder.ddlHandlingSettings;
+            this.importRuleSettings = builder.importRuleSettings;
             this.runtimeSettings = builder.runtimeSettings;
         }
 
@@ -644,10 +777,24 @@ public class CreateDIJobRequest extends Request {
         }
 
         /**
+         * @return channelSettings
+         */
+        public String getChannelSettings() {
+            return this.channelSettings;
+        }
+
+        /**
          * @return columnDataTypeSettings
          */
         public java.util.List < ColumnDataTypeSettings> getColumnDataTypeSettings() {
             return this.columnDataTypeSettings;
+        }
+
+        /**
+         * @return cycleScheduleSettings
+         */
+        public CycleScheduleSettings getCycleScheduleSettings() {
+            return this.cycleScheduleSettings;
         }
 
         /**
@@ -658,6 +805,13 @@ public class CreateDIJobRequest extends Request {
         }
 
         /**
+         * @return importRuleSettings
+         */
+        public ImportRuleSettings getImportRuleSettings() {
+            return this.importRuleSettings;
+        }
+
+        /**
          * @return runtimeSettings
          */
         public java.util.List < RuntimeSettings> getRuntimeSettings() {
@@ -665,9 +819,20 @@ public class CreateDIJobRequest extends Request {
         }
 
         public static final class Builder {
+            private String channelSettings; 
             private java.util.List < ColumnDataTypeSettings> columnDataTypeSettings; 
+            private CycleScheduleSettings cycleScheduleSettings; 
             private java.util.List < DdlHandlingSettings> ddlHandlingSettings; 
+            private ImportRuleSettings importRuleSettings; 
             private java.util.List < RuntimeSettings> runtimeSettings; 
+
+            /**
+             * ChannelSettings.
+             */
+            public Builder channelSettings(String channelSettings) {
+                this.channelSettings = channelSettings;
+                return this;
+            }
 
             /**
              * ColumnDataTypeSettings.
@@ -678,10 +843,26 @@ public class CreateDIJobRequest extends Request {
             }
 
             /**
+             * CycleScheduleSettings.
+             */
+            public Builder cycleScheduleSettings(CycleScheduleSettings cycleScheduleSettings) {
+                this.cycleScheduleSettings = cycleScheduleSettings;
+                return this;
+            }
+
+            /**
              * DdlHandlingSettings.
              */
             public Builder ddlHandlingSettings(java.util.List < DdlHandlingSettings> ddlHandlingSettings) {
                 this.ddlHandlingSettings = ddlHandlingSettings;
+                return this;
+            }
+
+            /**
+             * ImportRuleSettings.
+             */
+            public Builder importRuleSettings(ImportRuleSettings importRuleSettings) {
+                this.importRuleSettings = importRuleSettings;
                 return this;
             }
 

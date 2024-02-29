@@ -24,7 +24,7 @@ public class ListQualityResultsByEntityRequest extends Request {
     @Body
     @NameInMap("EntityId")
     @Validation(required = true, maximum = 2147483647, minimum = 1)
-    private Integer entityId;
+    private Long entityId;
 
     @Body
     @NameInMap("PageNumber")
@@ -92,7 +92,7 @@ public class ListQualityResultsByEntityRequest extends Request {
     /**
      * @return entityId
      */
-    public Integer getEntityId() {
+    public Long getEntityId() {
         return this.entityId;
     }
 
@@ -134,7 +134,7 @@ public class ListQualityResultsByEntityRequest extends Request {
     public static final class Builder extends Request.Builder<ListQualityResultsByEntityRequest, Builder> {
         private String regionId; 
         private String endDate; 
-        private Integer entityId; 
+        private Long entityId; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private Long projectId; 
@@ -178,7 +178,7 @@ public class ListQualityResultsByEntityRequest extends Request {
         /**
          * The number of entries to return on each page. Default value: 10. Maximum value: 100.
          */
-        public Builder entityId(Integer entityId) {
+        public Builder entityId(Long entityId) {
             this.putBodyParameter("EntityId", entityId);
             this.entityId = entityId;
             return this;

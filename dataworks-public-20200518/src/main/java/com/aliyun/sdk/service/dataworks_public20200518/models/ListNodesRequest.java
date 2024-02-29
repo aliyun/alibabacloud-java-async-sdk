@@ -14,7 +14,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListNodesRequest extends Request {
     @Host
     @NameInMap("RegionId")
-    @Validation(required = true)
     private String regionId;
 
     @Body
@@ -52,6 +51,10 @@ public class ListNodesRequest extends Request {
     @Validation(required = true)
     private Long projectId;
 
+    @Body
+    @NameInMap("SchedulerType")
+    private String schedulerType;
+
     private ListNodesRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -63,6 +66,7 @@ public class ListNodesRequest extends Request {
         this.programType = builder.programType;
         this.projectEnv = builder.projectEnv;
         this.projectId = builder.projectId;
+        this.schedulerType = builder.schedulerType;
     }
 
     public static Builder builder() {
@@ -141,6 +145,13 @@ public class ListNodesRequest extends Request {
         return this.projectId;
     }
 
+    /**
+     * @return schedulerType
+     */
+    public String getSchedulerType() {
+        return this.schedulerType;
+    }
+
     public static final class Builder extends Request.Builder<ListNodesRequest, Builder> {
         private String regionId; 
         private String bizName; 
@@ -151,6 +162,7 @@ public class ListNodesRequest extends Request {
         private String programType; 
         private String projectEnv; 
         private Long projectId; 
+        private String schedulerType; 
 
         private Builder() {
             super();
@@ -167,6 +179,7 @@ public class ListNodesRequest extends Request {
             this.programType = request.programType;
             this.projectEnv = request.projectEnv;
             this.projectId = request.projectId;
+            this.schedulerType = request.schedulerType;
         } 
 
         /**
@@ -247,6 +260,15 @@ public class ListNodesRequest extends Request {
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
             this.projectId = projectId;
+            return this;
+        }
+
+        /**
+         * SchedulerType.
+         */
+        public Builder schedulerType(String schedulerType) {
+            this.putBodyParameter("SchedulerType", schedulerType);
+            this.schedulerType = schedulerType;
             return this;
         }
 

@@ -169,7 +169,7 @@ public class ListQualityRulesResponseBody extends TeaModel {
         private String criticalThreshold;
 
         @NameInMap("EntityId")
-        private Integer entityId;
+        private Long entityId;
 
         @NameInMap("ExpectValue")
         private String expectValue;
@@ -184,7 +184,7 @@ public class ListQualityRulesResponseBody extends TeaModel {
         private String historyWarningThreshold;
 
         @NameInMap("Id")
-        private Integer id;
+        private Long id;
 
         @NameInMap("MatchExpression")
         private String matchExpression;
@@ -211,7 +211,7 @@ public class ListQualityRulesResponseBody extends TeaModel {
         private String propertyKey;
 
         @NameInMap("RuleCheckerRelationId")
-        private Integer ruleCheckerRelationId;
+        private Long ruleCheckerRelationId;
 
         @NameInMap("RuleName")
         private String ruleName;
@@ -302,7 +302,7 @@ public class ListQualityRulesResponseBody extends TeaModel {
         /**
          * @return entityId
          */
-        public Integer getEntityId() {
+        public Long getEntityId() {
             return this.entityId;
         }
 
@@ -337,7 +337,7 @@ public class ListQualityRulesResponseBody extends TeaModel {
         /**
          * @return id
          */
-        public Integer getId() {
+        public Long getId() {
             return this.id;
         }
 
@@ -400,7 +400,7 @@ public class ListQualityRulesResponseBody extends TeaModel {
         /**
          * @return ruleCheckerRelationId
          */
-        public Integer getRuleCheckerRelationId() {
+        public Long getRuleCheckerRelationId() {
             return this.ruleCheckerRelationId;
         }
 
@@ -458,12 +458,12 @@ public class ListQualityRulesResponseBody extends TeaModel {
             private Integer checkerId; 
             private String comment; 
             private String criticalThreshold; 
-            private Integer entityId; 
+            private Long entityId; 
             private String expectValue; 
             private Boolean fixCheck; 
             private String historyCriticalThreshold; 
             private String historyWarningThreshold; 
-            private Integer id; 
+            private Long id; 
             private String matchExpression; 
             private Integer methodId; 
             private String methodName; 
@@ -472,7 +472,7 @@ public class ListQualityRulesResponseBody extends TeaModel {
             private String projectName; 
             private String property; 
             private String propertyKey; 
-            private Integer ruleCheckerRelationId; 
+            private Long ruleCheckerRelationId; 
             private String ruleName; 
             private Integer ruleType; 
             private String tableName; 
@@ -523,7 +523,7 @@ public class ListQualityRulesResponseBody extends TeaModel {
             /**
              * The ID of the partition filter expression.
              */
-            public Builder entityId(Integer entityId) {
+            public Builder entityId(Long entityId) {
                 this.entityId = entityId;
                 return this;
             }
@@ -563,7 +563,7 @@ public class ListQualityRulesResponseBody extends TeaModel {
             /**
              * The ID of the monitoring rule.
              */
-            public Builder id(Integer id) {
+            public Builder id(Long id) {
                 this.id = id;
                 return this;
             }
@@ -635,7 +635,7 @@ public class ListQualityRulesResponseBody extends TeaModel {
             /**
              * The ID of the node that is associated with the partition filter expression.
              */
-            public Builder ruleCheckerRelationId(Integer ruleCheckerRelationId) {
+            public Builder ruleCheckerRelationId(Long ruleCheckerRelationId) {
                 this.ruleCheckerRelationId = ruleCheckerRelationId;
                 return this;
             }
