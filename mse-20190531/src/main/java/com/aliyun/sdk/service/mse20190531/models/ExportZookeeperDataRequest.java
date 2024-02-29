@@ -123,7 +123,7 @@ public class ExportZookeeperDataRequest extends Request {
         }
 
         /**
-         * The type of the object that you want to export. Valid values:
+         * The type of the object that is exported. Valid values:
          * <p>
          * 
          * *   transactionLog: transaction logs
@@ -136,7 +136,7 @@ public class ExportZookeeperDataRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

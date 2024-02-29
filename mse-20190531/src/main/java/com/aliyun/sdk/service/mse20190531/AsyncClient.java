@@ -75,6 +75,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateFlowRuleResponse> createFlowRule(CreateFlowRuleRequest request);
 
+    CompletableFuture<CreateIsolationRuleResponse> createIsolationRule(CreateIsolationRuleRequest request);
+
     /**
       * @deprecated
       *
@@ -134,6 +136,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteGatewayServiceVersionResponse> deleteGatewayServiceVersion(DeleteGatewayServiceVersionRequest request);
 
     CompletableFuture<DeleteGatewaySlbResponse> deleteGatewaySlb(DeleteGatewaySlbRequest request);
+
+    CompletableFuture<DeleteIsolationRulesResponse> deleteIsolationRules(DeleteIsolationRulesRequest request);
 
     CompletableFuture<DeleteMigrationTaskResponse> deleteMigrationTask(DeleteMigrationTaskRequest request);
 
@@ -370,6 +374,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListInstanceCountResponse> listInstanceCount(ListInstanceCountRequest request);
 
+    CompletableFuture<ListIsolationRulesResponse> listIsolationRules(ListIsolationRulesRequest request);
+
     /**
       * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
       *
@@ -542,6 +548,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateGatewaySpecResponse> updateGatewaySpec(UpdateGatewaySpecRequest request);
 
     CompletableFuture<UpdateImageResponse> updateImage(UpdateImageRequest request);
+
+    CompletableFuture<UpdateIsolationRuleResponse> updateIsolationRule(UpdateIsolationRuleRequest request);
 
     CompletableFuture<UpdateMessageQueueRouteResponse> updateMessageQueueRoute(UpdateMessageQueueRouteRequest request);
 
