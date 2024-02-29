@@ -72,6 +72,9 @@ public class GetStackResponseBody extends TeaModel {
     @NameInMap("ResourceProgress")
     private ResourceProgress resourceProgress;
 
+    @NameInMap("RollbackFailedRootReason")
+    private String rollbackFailedRootReason;
+
     @NameInMap("RootStackId")
     private String rootStackId;
 
@@ -144,6 +147,7 @@ public class GetStackResponseBody extends TeaModel {
         this.requestId = builder.requestId;
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceProgress = builder.resourceProgress;
+        this.rollbackFailedRootReason = builder.rollbackFailedRootReason;
         this.rootStackId = builder.rootStackId;
         this.serviceManaged = builder.serviceManaged;
         this.serviceName = builder.serviceName;
@@ -312,6 +316,13 @@ public class GetStackResponseBody extends TeaModel {
     }
 
     /**
+     * @return rollbackFailedRootReason
+     */
+    public String getRollbackFailedRootReason() {
+        return this.rollbackFailedRootReason;
+    }
+
+    /**
      * @return rootStackId
      */
     public String getRootStackId() {
@@ -451,6 +462,7 @@ public class GetStackResponseBody extends TeaModel {
         private String requestId; 
         private String resourceGroupId; 
         private ResourceProgress resourceProgress; 
+        private String rollbackFailedRootReason; 
         private String rootStackId; 
         private Boolean serviceManaged; 
         private String serviceName; 
@@ -655,6 +667,14 @@ public class GetStackResponseBody extends TeaModel {
          */
         public Builder resourceProgress(ResourceProgress resourceProgress) {
             this.resourceProgress = resourceProgress;
+            return this;
+        }
+
+        /**
+         * RollbackFailedRootReason.
+         */
+        public Builder rollbackFailedRootReason(String rollbackFailedRootReason) {
+            this.rollbackFailedRootReason = rollbackFailedRootReason;
             return this;
         }
 
