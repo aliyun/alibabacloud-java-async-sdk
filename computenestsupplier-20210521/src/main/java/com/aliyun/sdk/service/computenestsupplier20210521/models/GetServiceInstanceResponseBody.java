@@ -27,6 +27,9 @@ public class GetServiceInstanceResponseBody extends TeaModel {
     @NameInMap("EndTime")
     private String endTime;
 
+    @NameInMap("GrafanaDashBoardUrl")
+    private String grafanaDashBoardUrl;
+
     @NameInMap("IsOperated")
     private Boolean isOperated;
 
@@ -114,6 +117,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         this.enableInstanceOps = builder.enableInstanceOps;
         this.enableUserPrometheus = builder.enableUserPrometheus;
         this.endTime = builder.endTime;
+        this.grafanaDashBoardUrl = builder.grafanaDashBoardUrl;
         this.isOperated = builder.isOperated;
         this.licenseMetadata = builder.licenseMetadata;
         this.name = builder.name;
@@ -184,6 +188,13 @@ public class GetServiceInstanceResponseBody extends TeaModel {
      */
     public String getEndTime() {
         return this.endTime;
+    }
+
+    /**
+     * @return grafanaDashBoardUrl
+     */
+    public String getGrafanaDashBoardUrl() {
+        return this.grafanaDashBoardUrl;
     }
 
     /**
@@ -381,6 +392,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         private Boolean enableInstanceOps; 
         private Boolean enableUserPrometheus; 
         private String endTime; 
+        private String grafanaDashBoardUrl; 
         private Boolean isOperated; 
         private String licenseMetadata; 
         private String name; 
@@ -446,6 +458,14 @@ public class GetServiceInstanceResponseBody extends TeaModel {
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * GrafanaDashBoardUrl.
+         */
+        public Builder grafanaDashBoardUrl(String grafanaDashBoardUrl) {
+            this.grafanaDashBoardUrl = grafanaDashBoardUrl;
             return this;
         }
 
