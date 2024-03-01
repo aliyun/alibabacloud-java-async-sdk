@@ -98,7 +98,7 @@ public class DescribeCustomLineResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The code of the custom line. The code is used when you configure a resolution record.
+         * The code of the custom line.
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class DescribeCustomLineResponseBody extends TeaModel {
         }
 
         /**
-         * The domain name for which the custom line is configured.
+         * The domain name.
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -114,7 +114,7 @@ public class DescribeCustomLineResponseBody extends TeaModel {
         }
 
         /**
-         * The unique ID of the custom line.
+         * The ID of the custom line.
          */
         public Builder id(Long id) {
             this.id = id;
@@ -122,7 +122,7 @@ public class DescribeCustomLineResponseBody extends TeaModel {
         }
 
         /**
-         * The list of CIDR blocks.
+         * The CIDR blocks. Separate IP addresses with a hyphen (-). Enter a CIDR block in each row. You can enter 1 to 50 CIDR blocks at a time. If a CIDR block contains only one IP address, enter the IP address in the format of IP1-IP1. Different CIDR blocks cannot be overlapped.
          */
         public Builder ipSegmentList(java.util.List < IpSegmentList> ipSegmentList) {
             this.ipSegmentList = ipSegmentList;
@@ -138,7 +138,7 @@ public class DescribeCustomLineResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -190,7 +190,7 @@ public class DescribeCustomLineResponseBody extends TeaModel {
             private String startIp; 
 
             /**
-             * The end IP address.
+             * The end IP address of the CIDR block.
              */
             public Builder endIp(String endIp) {
                 this.endIp = endIp;
@@ -198,7 +198,7 @@ public class DescribeCustomLineResponseBody extends TeaModel {
             }
 
             /**
-             * The start IP address.
+             * The start IP address of the CIDR block.
              */
             public Builder startIp(String startIp) {
                 this.startIp = startIp;

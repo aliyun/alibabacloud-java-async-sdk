@@ -50,7 +50,7 @@ public class DescribeSupportLinesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The list of Alibaba Cloud DNS lines.
+         * 云解析线路列表。
          */
         public Builder recordLines(RecordLines recordLines) {
             this.recordLines = recordLines;
@@ -58,7 +58,7 @@ public class DescribeSupportLinesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * 请求ID。
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,7 +134,7 @@ public class DescribeSupportLinesResponseBody extends TeaModel {
             private String lineName; 
 
             /**
-             * The code of the parent line. Leave it blank if there is no parent line.
+             * 2021-12-06T02:47:26.000+0000
              */
             public Builder fatherCode(String fatherCode) {
                 this.fatherCode = fatherCode;
@@ -142,7 +142,7 @@ public class DescribeSupportLinesResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the child line.
+             * 子线路Code。
              */
             public Builder lineCode(String lineCode) {
                 this.lineCode = lineCode;
@@ -150,7 +150,7 @@ public class DescribeSupportLinesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the parent line.
+             * 父线路展示名称。
              */
             public Builder lineDisplayName(String lineDisplayName) {
                 this.lineDisplayName = lineDisplayName;
@@ -158,7 +158,7 @@ public class DescribeSupportLinesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the child line.
+             * 子线路展示名称。
              */
             public Builder lineName(String lineName) {
                 this.lineName = lineName;

@@ -167,7 +167,11 @@ public class DescribeDomainResolveStatisticsSummaryRequest extends Request {
         } 
 
         /**
-         * The order in which you want to sort the query results. Valid values: DESC and ASC. DESC indicates that the query results are sorted in descending order. ASC indicates that the query results are sorted in ascending order.
+         * The order in which you want to sort the returned entries. Valid values:
+         * <p>
+         * 
+         * *   DESC: the descending order
+         * *   ASC: the ascending order
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);
@@ -185,7 +189,7 @@ public class DescribeDomainResolveStatisticsSummaryRequest extends Request {
         }
 
         /**
-         * The keyword. The Keyword parameter must be used together with the SearchMode parameter.
+         * The keyword. The Keyword parameter is used together with the SearchMode parameter.
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -194,7 +198,7 @@ public class DescribeDomainResolveStatisticsSummaryRequest extends Request {
         }
 
         /**
-         * The language used. Valid values: zh, en, and ja.
+         * The language. Valid values: zh, en, and ja.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -224,7 +228,8 @@ public class DescribeDomainResolveStatisticsSummaryRequest extends Request {
          * The search mode of the keyword. Valid values:
          * <p>
          * 
-         * LIKE and EXACT. LIKE is the default value and indicates the fuzzy search mode. EXACT indicates the exact match mode.
+         * *   LIKE (default): fuzzy search
+         * *   EXACT: exact search
          */
         public Builder searchMode(String searchMode) {
             this.putQueryParameter("SearchMode", searchMode);
@@ -242,7 +247,16 @@ public class DescribeDomainResolveStatisticsSummaryRequest extends Request {
         }
 
         /**
-         * The threshold for the number of resolution requests. You can query the paid domain names at the specified quantity level of resolution requests and query the number of resolution requests. For example, if you set this parameter to 100, you can obtain data about the paid domain names with less than 100 resolution requests. If you do not specify this parameter, the data about the paid domain names that have resolution requests is obtained. If you set this parameter to a value less than 0, the data about all paid domain names is obtained. If you set this parameter to 0, the data about the paid domain names that do not have resolution requests is obtained. If you set this parameter to a value greater than 0, the data about the paid domain names whose number of resolution requests is less than or equal to the value of this parameter is obtained.
+         * The threshold for the number of Domain Name System (DNS) requests. You can query the domain names at the specified quantity level of DNS requests and query the number of DNS requests for each domain name.
+         * <p>
+         * 
+         * If you do not specify this parameter, the data about the domain names that have DNS requests is obtained.
+         * 
+         * If you set this parameter to a value less than 0, the data about all domain names is obtained.
+         * 
+         * If you set this parameter to 0, the data about the domain names that do not have DNS requests is obtained.
+         * 
+         * If you set this parameter to a value greater than 0, the data about the domain names whose number of DNS requests is less than or equal to the value of this parameter is obtained.
          */
         public Builder threshold(Long threshold) {
             this.putQueryParameter("Threshold", threshold);

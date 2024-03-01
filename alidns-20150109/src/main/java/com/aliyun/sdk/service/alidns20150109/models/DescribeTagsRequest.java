@@ -106,7 +106,7 @@ public class DescribeTagsRequest extends Request {
         }
 
         /**
-         * The page number to return. Default value: 1.
+         * The page number. Pages start from page **1**. Default value: **1**.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);

@@ -50,7 +50,7 @@ public class OperateBatchDomainResponseBody extends TeaModel {
         private Long taskId; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class OperateBatchDomainResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The task ID.
          */
         public Builder taskId(Long taskId) {
             this.taskId = taskId;

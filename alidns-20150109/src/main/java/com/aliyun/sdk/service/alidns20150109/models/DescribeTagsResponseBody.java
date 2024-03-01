@@ -86,7 +86,7 @@ public class DescribeTagsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The returned page number. Default value: 1.
+         * The page number. Pages start from page **1**. Default value: **1**.
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class DescribeTagsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page. Default value: 200.
+         * The number of entries per page. Default value: 200.
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class DescribeTagsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeTagsResponseBody extends TeaModel {
         }
 
         /**
-         * The list of tags.
+         * The tags added to the resource.
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.tags = tags;
@@ -118,7 +118,7 @@ public class DescribeTagsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of tags returned.
+         * The total number of entries returned.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -170,7 +170,7 @@ public class DescribeTagsResponseBody extends TeaModel {
             private java.util.List < String > values; 
 
             /**
-             * The key of the tag.
+             * The key of tag N added to the resource.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -178,7 +178,7 @@ public class DescribeTagsResponseBody extends TeaModel {
             }
 
             /**
-             * Values.
+             * The values of tags added to the resource.
              */
             public Builder values(java.util.List < String > values) {
                 this.values = values;

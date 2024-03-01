@@ -85,7 +85,7 @@ public class GetTxtRecordForVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * The host record.
+         * The hostname.
          */
         public Builder rr(String rr) {
             this.rr = rr;
@@ -93,7 +93,7 @@ public class GetTxtRecordForVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -101,7 +101,7 @@ public class GetTxtRecordForVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * The value of the DNS record.
+         * The record value.
          * <p>
          * 
          * >  The validity period is three days.

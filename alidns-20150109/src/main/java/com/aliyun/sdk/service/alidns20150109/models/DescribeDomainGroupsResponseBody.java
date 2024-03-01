@@ -86,7 +86,7 @@ public class DescribeDomainGroupsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The list of domain name groups.
+         * The domain name groups.
          */
         public Builder domainGroups(DomainGroups domainGroups) {
             this.domainGroups = domainGroups;
@@ -94,7 +94,7 @@ public class DescribeDomainGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The page number. Pages start from page **1**. Default value: **1**.
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeDomainGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of entries per page. Valid values: **1 to 100**. Default value: **20**.
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeDomainGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeDomainGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of domain name groups.
+         * The total number of entries returned.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -190,7 +190,11 @@ public class DescribeDomainGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the domain name group.
+             * The ID of the domain name group. Valid values:
+             * <p>
+             * 
+             * *   defaultGroup: the default group
+             * *   If an empty string is returned, it indicates the group that contains all domain names.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;

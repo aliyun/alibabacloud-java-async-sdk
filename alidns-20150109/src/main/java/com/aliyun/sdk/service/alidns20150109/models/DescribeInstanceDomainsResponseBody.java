@@ -98,7 +98,7 @@ public class DescribeInstanceDomainsResponseBody extends TeaModel {
         private Integer totalPages; 
 
         /**
-         * InstanceDomains.
+         * The domain names that are bound to the Alibaba Cloud DNS instance.
          */
         public Builder instanceDomains(java.util.List < InstanceDomains> instanceDomains) {
             this.instanceDomains = instanceDomains;
@@ -106,7 +106,7 @@ public class DescribeInstanceDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number. Pages start from page **1**. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,7 +114,7 @@ public class DescribeInstanceDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Valid values: **1 to 100**. Default value: **20**.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -202,7 +202,7 @@ public class DescribeInstanceDomainsResponseBody extends TeaModel {
             private String domainName; 
 
             /**
-             * CreateTime.
+             * The time when the instance was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -210,7 +210,7 @@ public class DescribeInstanceDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTimestamp.
+             * The time when the instance was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -218,7 +218,7 @@ public class DescribeInstanceDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * DomainName.
+             * The domain name.
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;

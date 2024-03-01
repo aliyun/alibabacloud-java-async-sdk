@@ -69,7 +69,7 @@ public class DescribeDomainDnssecInfoRequest extends Request {
         } 
 
         /**
-         * The domain name for which DNSSEC configurations to query.
+         * The domain name.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -78,7 +78,7 @@ public class DescribeDomainDnssecInfoRequest extends Request {
         }
 
         /**
-         * The language in which you want the values of some response parameters to be returned. These response parameters support multiple languages, such as the region parameter. Default value: en. Valid values: en, zh, and ja.
+         * The language.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

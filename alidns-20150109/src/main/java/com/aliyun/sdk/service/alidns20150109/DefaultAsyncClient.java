@@ -119,8 +119,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can check whether a domain name is valid based on the following topic:
-      * [Domain name validity](https://www.alibabacloud.com/help/zh/doc-detail/67788.htm)
+      * For more information about how to check whether a domain name is valid, see
+      * [Domain name validity](https://www.alibabacloud.com/help/zh/doc-detail/67788.htm).
       *
      */
     @Override
@@ -235,6 +235,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * A paid Alibaba Cloud DNS instance whose ID starts with dns is an instance of the new version. You can call this API operation to bind multiple domain names to the instance. If the upper limit is exceeded, an error message is returned.\\
+      * A paid Alibaba Cloud DNS instance whose ID does not start with dns is an instance of the old version. You can call this API operation to bind only one domain name to the instance. However, if the instance is already bound to a domain name, you must unbind the original domain name from the instance and bind the desired domain name to the instance.
+      *
+     */
     @Override
     public CompletableFuture<BindInstanceDomainsResponse> bindInstanceDomains(BindInstanceDomainsRequest request) {
         try {
@@ -249,6 +254,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You can specify GroupId to move a domain name to a specific domain name group. You can move the domain name to the group that contains all domain names or the default group.
+      *
+     */
     @Override
     public CompletableFuture<ChangeDomainGroupResponse> changeDomainGroup(ChangeDomainGroupRequest request) {
         try {
@@ -379,11 +388,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * *   Given the unique nature of a HiChina domain name, you are not allowed to delete the HiChina domain name by calling the Alibaba Cloud DNS API.
-      * *   If the system prompts that a domain name does not exist, it is an unregistered domain name, it does not exist under the account, or its format in the request parameters is incorrect.
-      *
-     */
     @Override
     public CompletableFuture<DeleteDomainResponse> deleteDomain(DeleteDomainRequest request) {
         try {
@@ -399,7 +403,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * >  A domain name group can be deleted only when it contains no domain names. The default group cannot be deleted.
+      * >  The default group cannot be deleted.
       *
      */
     @Override
@@ -505,7 +509,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * **Before you call this operation, make sure that the batch operation task is complete.
+      * Before you call this operation, make sure that the batch operation task is complete.
       *
      */
     @Override
@@ -1328,6 +1332,20 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
+    public CompletableFuture<DescribeInternetDnsLogsResponse> describeInternetDnsLogs(DescribeInternetDnsLogsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeInternetDnsLogs").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeInternetDnsLogsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeInternetDnsLogsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
     public CompletableFuture<DescribeIspFlushCacheInstancesResponse> describeIspFlushCacheInstances(DescribeIspFlushCacheInstancesRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -1667,6 +1685,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * For more information about the difference between primary domain names and subdomain names, see
+      * [Subdomain levels](https://www.alibabacloud.com/help/zh/faq-detail/39803.htm). For example, if you enter `www.abc.com`, abc.com is obtained.
+      *
+     */
     @Override
     public CompletableFuture<GetMainDomainNameResponse> getMainDomainName(GetMainDomainNameRequest request) {
         try {
@@ -1763,6 +1786,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Scenario: You need to execute a large number of tasks related to DNS resolution and you do not have high requirements for efficiency.
+      *
+     */
     @Override
     public CompletableFuture<OperateBatchDomainResponse> operateBatchDomain(OperateBatchDomainRequest request) {
         try {
@@ -1847,6 +1874,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * To retrieve a domain name, you must verify a text (TXT) record. Therefore, before you call this API operation to retrieve a domain name, call the [GetTxtRecordForVerify](https://www.alibabacloud.com/help/zh/alibaba-cloud-dns/latest/generating-a-txt-record) operation to generate a TXT record.
+      *
+     */
     @Override
     public CompletableFuture<RetrieveDomainResponse> retrieveDomain(RetrieveDomainRequest request) {
         try {
@@ -2033,6 +2064,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * A paid Alibaba Cloud DNS instance whose ID starts with dns is an instance of the new version. You can call an API operation to bind multiple domain names to the instance. If the upper limit is exceeded, an error message is returned.\\
+      * A paid Alibaba Cloud DNS instance whose ID does not start with dns is an instance of the old version. You can call an API operation to bind only one domain name to the instance. However, if the instance that you want to bind to the desired domain name is already bound to a domain name, you can call this operation to unbind the original domain name from the instance and then bind the desired domain name to the instance.
+      *
+     */
     @Override
     public CompletableFuture<UnbindInstanceDomainsResponse> unbindInstanceDomains(UnbindInstanceDomainsRequest request) {
         try {
@@ -2076,8 +2112,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * In each CIDR block, the end IP address must be greater than or equal to the start IP address.
-      * The CIDR blocks that are specified for all custom lines of a domain name cannot intersect.
+      * In each CIDR block, the end IP address must be greater than or equal to the start IP address.\\
+      * The CIDR blocks that are specified for all custom lines of a domain name cannot be overlapped.
       *
      */
     @Override

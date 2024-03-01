@@ -84,7 +84,7 @@ public class MoveDomainResourceGroupRequest extends Request {
         } 
 
         /**
-         * The language of some returned parameters. Default value: en. Valid values: en, zh, and ja.
+         * The language of the values of specific response parameters. Default value: en. Valid values: en, zh, and ja.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -93,7 +93,7 @@ public class MoveDomainResourceGroupRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * The ID of the new resource group.
          */
         public Builder newResourceGroupId(String newResourceGroupId) {
             this.putQueryParameter("NewResourceGroupId", newResourceGroupId);
@@ -102,7 +102,7 @@ public class MoveDomainResourceGroupRequest extends Request {
         }
 
         /**
-         * The domain name.
+         * The resource ID. If Tag is left empty, ResourceId is required.
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);

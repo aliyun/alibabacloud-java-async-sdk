@@ -502,7 +502,11 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         }
 
         /**
-         * SubDomain.
+         * Indicates whether the queried domain name is a hosted subdomain name. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder subDomain(Boolean subDomain) {
             this.subDomain = subDomain;
@@ -676,7 +680,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
             private String lineName; 
 
             /**
-             * The code of the parent line. This parameter is left empty if the line has no parent line.
+             * The code of the parent line. This parameter is not returned if the line has no parent line.
              */
             public Builder fatherCode(String fatherCode) {
                 this.fatherCode = fatherCode;

@@ -58,7 +58,7 @@ public class DescribeDomainStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The DNS requests.
+         * The statistics on the Domain Name System (DNS) requests.
          */
         public Builder statistics(Statistics statistics) {
             this.statistics = statistics;
@@ -130,7 +130,7 @@ public class DescribeDomainStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * DomainName.
+             * The domain name.
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -138,7 +138,7 @@ public class DescribeDomainStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The statistical timestamp. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * The statistical timestamp. Unit: milliseconds. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;

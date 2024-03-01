@@ -84,7 +84,7 @@ public class AddDomainBackupRequest extends Request {
         } 
 
         /**
-         * The domain name for which you want to create a backup task.
+         * The domain name.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);

@@ -86,7 +86,7 @@ public class DescribeSubDomainRecordsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The list of DNS records returned.
+         * The returned DNS records.
          */
         public Builder domainRecords(DomainRecords domainRecords) {
             this.domainRecords = domainRecords;
@@ -94,7 +94,7 @@ public class DescribeSubDomainRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of the returned page.
+         * The page number. Pages start from page **1**. Default value: **1**.
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeSubDomainRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of entries per page.
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeSubDomainRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeSubDomainRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of DNS records returned.
+         * The total number of entries returned.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -298,7 +298,7 @@ public class DescribeSubDomainRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The resolution line.
+             * The DNS resolution line.
              */
             public Builder line(String line) {
                 this.line = line;
@@ -306,7 +306,7 @@ public class DescribeSubDomainRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the DNS record is locked.
+             * The lock status of the DNS record.
              */
             public Builder locked(Boolean locked) {
                 this.locked = locked;
@@ -314,7 +314,7 @@ public class DescribeSubDomainRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The priority of the MX record.
+             * The priority of the mail exchanger (MX) record.
              */
             public Builder priority(Long priority) {
                 this.priority = priority;
@@ -354,7 +354,7 @@ public class DescribeSubDomainRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The Time-to-Live (TTL) of the DNS record.
+             * The time-to-live (TTL) of the DNS record.
              */
             public Builder TTL(Long TTL) {
                 this.TTL = TTL;

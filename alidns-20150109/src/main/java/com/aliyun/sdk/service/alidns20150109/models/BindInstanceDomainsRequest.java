@@ -84,10 +84,10 @@ public class BindInstanceDomainsRequest extends Request {
         } 
 
         /**
-         * The list of domain names.
+         * The domain names.
          * <p>
          * 
-         * >  Separate multiple domain names with commas (,). A maximum of 100 domain names can be entered.
+         * >  Separate multiple domain names with commas (,). Up to 100 domain names can be entered.
          */
         public Builder domainNames(String domainNames) {
             this.putQueryParameter("DomainNames", domainNames);
@@ -96,7 +96,7 @@ public class BindInstanceDomainsRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -105,7 +105,7 @@ public class BindInstanceDomainsRequest extends Request {
         }
 
         /**
-         * The language type.
+         * The language.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

@@ -83,7 +83,7 @@ public class UpdateDnsCacheDomainRemarkRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * The domain name.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -92,7 +92,7 @@ public class UpdateDnsCacheDomainRemarkRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -101,7 +101,7 @@ public class UpdateDnsCacheDomainRemarkRequest extends Request {
         }
 
         /**
-         * Remark.
+         * The remarks. The remarks can be up to 50 characters in length and can contain only letters, digits, periods (.), underscores (\_), and hyphens (-).
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);

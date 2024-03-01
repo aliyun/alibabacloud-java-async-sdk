@@ -110,7 +110,7 @@ public class AddDomainResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The Domain Name System (DNS) servers that resolve the domain name.
+         * The Domain Name System (DNS) servers configured for the domain name.
          */
         public Builder dnsServers(DnsServers dnsServers) {
             this.dnsServers = dnsServers;
@@ -158,7 +158,7 @@ public class AddDomainResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -98,7 +98,7 @@ public class UpdateDNSSLBWeightRequest extends Request {
         } 
 
         /**
-         * The language of the domain name.
+         * The language.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -116,7 +116,7 @@ public class UpdateDNSSLBWeightRequest extends Request {
         }
 
         /**
-         * The IP address of the client that you use to change the weight.
+         * The IP address of the client.
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);
@@ -125,7 +125,7 @@ public class UpdateDNSSLBWeightRequest extends Request {
         }
 
         /**
-         * The updated weight of the DNS record. Valid values: `1 to 100`.
+         * The weight of the DNS record that you want to specify. Valid values: `1 to 100`.
          */
         public Builder weight(Integer weight) {
             this.putQueryParameter("Weight", weight);

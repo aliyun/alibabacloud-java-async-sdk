@@ -86,7 +86,7 @@ public class DescribeDNSSLBSubDomainsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The page number of the returned page.
+         * The page number. Pages start from page **1**. Default value: **1**.
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class DescribeDNSSLBSubDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of subdomains returned.
+         * The number of entries per page. Valid values: **1 to 100**. Default value: **20**.
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class DescribeDNSSLBSubDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeDNSSLBSubDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the subdomains.
+         * The subdomains for which weighted round-robin is enabled.
          */
         public Builder slbSubDomains(SlbSubDomains slbSubDomains) {
             this.slbSubDomains = slbSubDomains;
@@ -118,7 +118,7 @@ public class DescribeDNSSLBSubDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of domain name groups.
+         * The total number of entries returned.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -170,7 +170,7 @@ public class DescribeDNSSLBSubDomainsResponseBody extends TeaModel {
             private Boolean open; 
 
             /**
-             * Line.
+             * The DNS resolution line. The line can be China Telecom, China Mobile, and China Unicom.
              */
             public Builder line(String line) {
                 this.line = line;
@@ -178,7 +178,11 @@ public class DescribeDNSSLBSubDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * Open.
+             * Indicates whether weighted round-robin is enabled for the line. Valid values:
+             * <p>
+             * 
+             * *   **true** (default): Weighted round-robin is enabled.
+             * *   **false**: Weighted round-robin is disabled.
              */
             public Builder open(Boolean open) {
                 this.open = open;
@@ -308,7 +312,7 @@ public class DescribeDNSSLBSubDomainsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * LineAlgorithms.
+             * The lines for which weighted round-robin is enabled.
              */
             public Builder lineAlgorithms(LineAlgorithms lineAlgorithms) {
                 this.lineAlgorithms = lineAlgorithms;
@@ -332,7 +336,7 @@ public class DescribeDNSSLBSubDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The subdomain.
+             * The subdomain name.
              */
             public Builder subDomain(String subDomain) {
                 this.subDomain = subDomain;
@@ -340,7 +344,7 @@ public class DescribeDNSSLBSubDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the DNS record that supports weighted round-robin. Valid values: A, AAAA, and CNAME.
+             * The type of the Domain Name System (DNS) record that supports weighted round-robin. Valid values: A, AAAA, and CNAME.
              */
             public Builder type(String type) {
                 this.type = type;

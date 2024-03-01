@@ -74,7 +74,7 @@ public class DescribeGtmAccessStrategyAvailableConfigResponseBody extends TeaMod
         private Boolean suggestSetDefaultLine; 
 
         /**
-         * The returned list of address pools.
+         * The address pools.
          */
         public Builder addrPools(AddrPools addrPools) {
             this.addrPools = addrPools;
@@ -82,7 +82,7 @@ public class DescribeGtmAccessStrategyAvailableConfigResponseBody extends TeaMod
         }
 
         /**
-         * The returned lines of access regions.
+         * The Domain Name System (DNS) request sources.
          */
         public Builder lines(Lines lines) {
             this.lines = lines;
@@ -90,7 +90,7 @@ public class DescribeGtmAccessStrategyAvailableConfigResponseBody extends TeaMod
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class DescribeGtmAccessStrategyAvailableConfigResponseBody extends TeaMod
         }
 
         /**
-         * SuggestSetDefaultLine.
+         * Indicates whether the global line is recommended.
          */
         public Builder suggestSetDefaultLine(Boolean suggestSetDefaultLine) {
             this.suggestSetDefaultLine = suggestSetDefaultLine;
@@ -300,7 +300,7 @@ public class DescribeGtmAccessStrategyAvailableConfigResponseBody extends TeaMod
             private String status; 
 
             /**
-             * The code of the parent line for the access region. If no parent line exists, leave this parameter blank.
+             * The code of the parent line. No value is returned if no parent line exists.
              */
             public Builder fatherCode(String fatherCode) {
                 this.fatherCode = fatherCode;
@@ -308,7 +308,7 @@ public class DescribeGtmAccessStrategyAvailableConfigResponseBody extends TeaMod
             }
 
             /**
-             * The code of the access region group.
+             * The group number of the DNS request source.
              */
             public Builder groupCode(String groupCode) {
                 this.groupCode = groupCode;
@@ -316,7 +316,7 @@ public class DescribeGtmAccessStrategyAvailableConfigResponseBody extends TeaMod
             }
 
             /**
-             * The name of the access region group.
+             * The group name of the DNS request source.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -324,7 +324,7 @@ public class DescribeGtmAccessStrategyAvailableConfigResponseBody extends TeaMod
             }
 
             /**
-             * The code for the line of the access region.
+             * The code of the DNS request source.
              */
             public Builder lineCode(String lineCode) {
                 this.lineCode = lineCode;
@@ -332,7 +332,7 @@ public class DescribeGtmAccessStrategyAvailableConfigResponseBody extends TeaMod
             }
 
             /**
-             * The name for the line of the access region.
+             * The name of the DNS request source.
              */
             public Builder lineName(String lineName) {
                 this.lineName = lineName;
@@ -340,11 +340,11 @@ public class DescribeGtmAccessStrategyAvailableConfigResponseBody extends TeaMod
             }
 
             /**
-             * The current status of the line. Valid values:
+             * The state of the line. Valid values:
              * <p>
              * 
-             * - **FORBIDDEN**: Unavailable
-             * - **OPTIONAL**: Availabe
+             * *   **FORBIDDEN**: The line is unavailable.
+             * *   **OPTIONAL**: The line is available.
              */
             public Builder status(String status) {
                 this.status = status;

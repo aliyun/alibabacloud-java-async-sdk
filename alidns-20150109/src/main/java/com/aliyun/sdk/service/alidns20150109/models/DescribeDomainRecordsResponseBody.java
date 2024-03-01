@@ -86,7 +86,7 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The returned DNS records.
+         * The returned Domain Name System (DNS) records.
          */
         public Builder domainRecords(DomainRecords domainRecords) {
             this.domainRecords = domainRecords;
@@ -314,7 +314,7 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
             private Integer weight; 
 
             /**
-             * CreateTimestamp.
+             * The time when the DNS record was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since 00:00:00 UTC on January 1, 1970.
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -370,7 +370,7 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The description.
+             * The description of the DNS record.
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -386,7 +386,7 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The time-to-live (TTL) of the cached data. Unit: seconds.
+             * The time-to-live (TTL) of the cached DNS record. Unit: seconds.
              */
             public Builder TTL(Long TTL) {
                 this.TTL = TTL;
@@ -402,7 +402,7 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTimestamp.
+             * The time when the DNS record was updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since 00:00:00 UTC on January 1, 1970.
              */
             public Builder updateTimestamp(Long updateTimestamp) {
                 this.updateTimestamp = updateTimestamp;

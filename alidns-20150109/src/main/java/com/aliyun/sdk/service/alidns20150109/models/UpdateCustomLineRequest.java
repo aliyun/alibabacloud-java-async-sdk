@@ -97,7 +97,7 @@ public class UpdateCustomLineRequest extends Request {
         } 
 
         /**
-         * IpSegment.
+         * The CIDR blocks. Separate IP addresses with a hyphen (-). Enter a CIDR block in each row. You can enter 1 to 50 CIDR blocks at a time. If a CIDR block contains only one IP address, enter the IP address in the format of IP1-IP1. Different CIDR blocks cannot be overlapped.
          */
         public Builder ipSegment(java.util.List < IpSegment> ipSegment) {
             this.putQueryParameter("IpSegment", ipSegment);
@@ -106,7 +106,7 @@ public class UpdateCustomLineRequest extends Request {
         }
 
         /**
-         * The language type.
+         * The language.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -124,7 +124,7 @@ public class UpdateCustomLineRequest extends Request {
         }
 
         /**
-         * The new name of the custom line.
+         * The name of the custom line. The name must be 1 to 20 characters in length and can contain letters, digits, hyphens (-), and underscores (\_).
          */
         public Builder lineName(String lineName) {
             this.putQueryParameter("LineName", lineName);

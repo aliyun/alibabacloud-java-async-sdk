@@ -458,7 +458,11 @@ public class DescribeDnsProductInstanceResponseBody extends TeaModel {
         private String versionName; 
 
         /**
-         * AutoRenewal.
+         * The auto-renewal status of the instance. Valid values:
+         * <p>
+         * 
+         * *   **true**: Auto-renewal is enabled.
+         * *   **false**: Auto-renewal is disabled.
          */
         public Builder autoRenewal(Boolean autoRenewal) {
             this.autoRenewal = autoRenewal;

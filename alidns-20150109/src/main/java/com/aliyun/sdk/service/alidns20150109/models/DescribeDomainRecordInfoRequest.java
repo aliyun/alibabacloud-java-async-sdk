@@ -83,7 +83,7 @@ public class DescribeDomainRecordInfoRequest extends Request {
         } 
 
         /**
-         * The language type.
+         * The language.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -95,7 +95,7 @@ public class DescribeDomainRecordInfoRequest extends Request {
          * The ID of the DNS record.
          * <p>
          * 
-         * This parameter is returned when you add a DNS record or when you query the list of DNS records.
+         * This parameter is returned when you add a DNS record or when you query a list of DNS records.
          */
         public Builder recordId(String recordId) {
             this.putQueryParameter("RecordId", recordId);

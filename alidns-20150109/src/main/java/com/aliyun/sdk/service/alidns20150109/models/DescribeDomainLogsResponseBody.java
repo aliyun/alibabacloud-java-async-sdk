@@ -86,7 +86,7 @@ public class DescribeDomainLogsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The details about the operation logs that are queried.
+         * The operation logs.
          */
         public Builder domainLogs(DomainLogs domainLogs) {
             this.domainLogs = domainLogs;
@@ -94,7 +94,7 @@ public class DescribeDomainLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The page number.
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeDomainLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of operation logs returned per page.
+         * The number of entries per page.
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeDomainLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeDomainLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of operation logs returned.
+         * The total number of entries returned.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -230,7 +230,7 @@ public class DescribeDomainLogsResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * The operation performed.
+             * The operation.
              */
             public Builder action(String action) {
                 this.action = action;
@@ -238,7 +238,7 @@ public class DescribeDomainLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the operation was performed.
+             * The time when the operation is performed. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
              */
             public Builder actionTime(String actionTime) {
                 this.actionTime = actionTime;
@@ -246,7 +246,7 @@ public class DescribeDomainLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The UNIX timestamp that indicates when the operation was performed.
+             * The time when the operation was performed. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder actionTimestamp(Long actionTimestamp) {
                 this.actionTimestamp = actionTimestamp;
@@ -254,7 +254,7 @@ public class DescribeDomainLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address from which the operation was performed.
+             * The IP address of the operator.
              */
             public Builder clientIp(String clientIp) {
                 this.clientIp = clientIp;
@@ -278,7 +278,7 @@ public class DescribeDomainLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the zone.
+             * The ID of the private zone.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

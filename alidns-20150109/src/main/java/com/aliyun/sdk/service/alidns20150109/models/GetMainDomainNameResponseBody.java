@@ -90,7 +90,7 @@ public class GetMainDomainNameResponseBody extends TeaModel {
         }
 
         /**
-         * The host record.
+         * The hostname.
          */
         public Builder rr(String rr) {
             this.rr = rr;
@@ -98,7 +98,7 @@ public class GetMainDomainNameResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

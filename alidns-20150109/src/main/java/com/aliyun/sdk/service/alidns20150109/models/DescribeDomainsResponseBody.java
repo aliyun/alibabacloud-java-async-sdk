@@ -86,7 +86,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The list of domain names queried by this operation.
+         * The domain names.
          */
         public Builder domains(Domains domains) {
             this.domains = domains;
@@ -211,7 +211,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag added to the resource.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -219,7 +219,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the tag added to the resource.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -541,7 +541,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
             private String versionName; 
 
             /**
-             * Indicates whether the domain name is an Alibaba Cloud HiChina domain name.
+             * Indicates whether the domain name was registered in Alibaba Cloud.
              */
             public Builder aliDomain(Boolean aliDomain) {
                 this.aliDomain = aliDomain;
@@ -549,7 +549,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the domain name was added.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -557,7 +557,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTimestamp.
+             * The time when the domain name was added. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -565,7 +565,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The list of DNS servers of the domain name in the DNS system.
+             * The names of the DNS servers configured for the domain name.
              */
             public Builder dnsServers(DnsServers dnsServers) {
                 this.dnsServers = dnsServers;
@@ -613,7 +613,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The expiration time of the instance.
+             * The time when the Alibaba Cloud DNS instance expires.
              */
             public Builder instanceEndTime(String instanceEndTime) {
                 this.instanceEndTime = instanceEndTime;
@@ -621,7 +621,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the instance expired.
+             * Indicates whether the Alibaba Cloud DNS instance expires.
              */
             public Builder instanceExpired(Boolean instanceExpired) {
                 this.instanceExpired = instanceExpired;
@@ -637,7 +637,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The punycode is returned for Chinese domain names and is left blank for English domain names.
+             * The Punycode for the domain name. This parameter is returned only for Chinese domain names.
              */
             public Builder punyCode(String punyCode) {
                 this.punyCode = punyCode;
@@ -645,7 +645,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of DNS records of the domain name.
+             * The number of Domain Name System (DNS) records added for the domain name.
              */
             public Builder recordCount(Long recordCount) {
                 this.recordCount = recordCount;
@@ -661,7 +661,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The description.
+             * The description of the domain name.
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -669,7 +669,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group to which the domain name belongs.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -677,7 +677,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether to query the starmark of the domain name.
+             * Indicates whether the domain name was added to favorites.
              */
             public Builder starmark(Boolean starmark) {
                 this.starmark = starmark;
@@ -685,7 +685,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tags added to the resource.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -693,7 +693,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The version code of the Alibaba Cloud DNS instance.
+             * The edition code of Alibaba Cloud DNS.
              */
             public Builder versionCode(String versionCode) {
                 this.versionCode = versionCode;
@@ -701,7 +701,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The version name of the Alibaba Cloud DNS instance.
+             * The edition of Alibaba Cloud DNS.
              */
             public Builder versionName(String versionName) {
                 this.versionName = versionName;

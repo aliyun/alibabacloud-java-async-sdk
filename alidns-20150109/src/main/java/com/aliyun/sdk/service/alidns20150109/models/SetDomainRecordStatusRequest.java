@@ -98,7 +98,7 @@ public class SetDomainRecordStatusRequest extends Request {
         } 
 
         /**
-         * The language type.
+         * The language.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -116,11 +116,11 @@ public class SetDomainRecordStatusRequest extends Request {
         }
 
         /**
-         * The status of the DNS record. Valid values:
+         * The state of the DNS record. Valid values:
          * <p>
          * 
-         * *   **Enable**: enables resolution.
-         * *   **Disable**: suspends resolution.
+         * *   **Enable**: enables the DNS record.
+         * *   **Disable**: disables the DNS record.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

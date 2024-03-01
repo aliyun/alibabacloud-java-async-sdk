@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.alidns20150109;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.alidns20150109.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -38,8 +39,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddDnsGtmMonitorResponse> addDnsGtmMonitor(AddDnsGtmMonitorRequest request);
 
     /**
-      * You can check whether a domain name is valid based on the following topic:
-      * [Domain name validity](https://www.alibabacloud.com/help/zh/doc-detail/67788.htm)
+      * For more information about how to check whether a domain name is valid, see
+      * [Domain name validity](https://www.alibabacloud.com/help/zh/doc-detail/67788.htm).
       *
      */
     CompletableFuture<AddDomainResponse> addDomain(AddDomainRequest request);
@@ -58,8 +59,17 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AddGtmRecoveryPlanResponse> addGtmRecoveryPlan(AddGtmRecoveryPlanRequest request);
 
+    /**
+      * A paid Alibaba Cloud DNS instance whose ID starts with dns is an instance of the new version. You can call this API operation to bind multiple domain names to the instance. If the upper limit is exceeded, an error message is returned.\\
+      * A paid Alibaba Cloud DNS instance whose ID does not start with dns is an instance of the old version. You can call this API operation to bind only one domain name to the instance. However, if the instance is already bound to a domain name, you must unbind the original domain name from the instance and bind the desired domain name to the instance.
+      *
+     */
     CompletableFuture<BindInstanceDomainsResponse> bindInstanceDomains(BindInstanceDomainsRequest request);
 
+    /**
+      * You can specify GroupId to move a domain name to a specific domain name group. You can move the domain name to the group that contains all domain names or the default group.
+      *
+     */
     CompletableFuture<ChangeDomainGroupResponse> changeDomainGroup(ChangeDomainGroupRequest request);
 
     /**
@@ -82,15 +92,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteDnsGtmAddressPoolResponse> deleteDnsGtmAddressPool(DeleteDnsGtmAddressPoolRequest request);
 
-    /**
-      * *   Given the unique nature of a HiChina domain name, you are not allowed to delete the HiChina domain name by calling the Alibaba Cloud DNS API.
-      * *   If the system prompts that a domain name does not exist, it is an unregistered domain name, it does not exist under the account, or its format in the request parameters is incorrect.
-      *
-     */
     CompletableFuture<DeleteDomainResponse> deleteDomain(DeleteDomainRequest request);
 
     /**
-      * >  A domain name group can be deleted only when it contains no domain names. The default group cannot be deleted.
+      * >  The default group cannot be deleted.
       *
      */
     CompletableFuture<DeleteDomainGroupResponse> deleteDomainGroup(DeleteDomainGroupRequest request);
@@ -112,7 +117,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeBatchResultCountResponse> describeBatchResultCount(DescribeBatchResultCountRequest request);
 
     /**
-      * **Before you call this operation, make sure that the batch operation task is complete.
+      * Before you call this operation, make sure that the batch operation task is complete.
       *
      */
     CompletableFuture<DescribeBatchResultDetailResponse> describeBatchResultDetail(DescribeBatchResultDetailRequest request);
@@ -262,6 +267,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeInstanceDomainsResponse> describeInstanceDomains(DescribeInstanceDomainsRequest request);
 
+    CompletableFuture<DescribeInternetDnsLogsResponse> describeInternetDnsLogs(DescribeInternetDnsLogsRequest request);
+
     CompletableFuture<DescribeIspFlushCacheInstancesResponse> describeIspFlushCacheInstances(DescribeIspFlushCacheInstancesRequest request);
 
     CompletableFuture<DescribeIspFlushCacheRemainQuotaResponse> describeIspFlushCacheRemainQuota(DescribeIspFlushCacheRemainQuotaRequest request);
@@ -314,6 +321,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ExecuteGtmRecoveryPlanResponse> executeGtmRecoveryPlan(ExecuteGtmRecoveryPlanRequest request);
 
+    /**
+      * For more information about the difference between primary domain names and subdomain names, see
+      * [Subdomain levels](https://www.alibabacloud.com/help/zh/faq-detail/39803.htm). For example, if you enter `www.abc.com`, abc.com is obtained.
+      *
+     */
     CompletableFuture<GetMainDomainNameResponse> getMainDomainName(GetMainDomainNameRequest request);
 
     CompletableFuture<GetTxtRecordForVerifyResponse> getTxtRecordForVerify(GetTxtRecordForVerifyRequest request);
@@ -338,6 +350,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<MoveGtmResourceGroupResponse> moveGtmResourceGroup(MoveGtmResourceGroupRequest request);
 
+    /**
+      * Scenario: You need to execute a large number of tasks related to DNS resolution and you do not have high requirements for efficiency.
+      *
+     */
     CompletableFuture<OperateBatchDomainResponse> operateBatchDomain(OperateBatchDomainRequest request);
 
     CompletableFuture<PausePdnsServiceResponse> pausePdnsService(PausePdnsServiceRequest request);
@@ -350,6 +366,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ResumePdnsServiceResponse> resumePdnsService(ResumePdnsServiceRequest request);
 
+    /**
+      * To retrieve a domain name, you must verify a text (TXT) record. Therefore, before you call this API operation to retrieve a domain name, call the [GetTxtRecordForVerify](https://www.alibabacloud.com/help/zh/alibaba-cloud-dns/latest/generating-a-txt-record) operation to generate a TXT record.
+      *
+     */
     CompletableFuture<RetrieveDomainResponse> retrieveDomain(RetrieveDomainRequest request);
 
     CompletableFuture<RollbackGtmRecoveryPlanResponse> rollbackGtmRecoveryPlan(RollbackGtmRecoveryPlanRequest request);
@@ -380,6 +400,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<TransferDomainResponse> transferDomain(TransferDomainRequest request);
 
+    /**
+      * A paid Alibaba Cloud DNS instance whose ID starts with dns is an instance of the new version. You can call an API operation to bind multiple domain names to the instance. If the upper limit is exceeded, an error message is returned.\\
+      * A paid Alibaba Cloud DNS instance whose ID does not start with dns is an instance of the old version. You can call an API operation to bind only one domain name to the instance. However, if the instance that you want to bind to the desired domain name is already bound to a domain name, you can call this operation to unbind the original domain name from the instance and then bind the desired domain name to the instance.
+      *
+     */
     CompletableFuture<UnbindInstanceDomainsResponse> unbindInstanceDomains(UnbindInstanceDomainsRequest request);
 
     CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);
@@ -387,8 +412,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateAppKeyStateResponse> updateAppKeyState(UpdateAppKeyStateRequest request);
 
     /**
-      * In each CIDR block, the end IP address must be greater than or equal to the start IP address.
-      * The CIDR blocks that are specified for all custom lines of a domain name cannot intersect.
+      * In each CIDR block, the end IP address must be greater than or equal to the start IP address.\\
+      * The CIDR blocks that are specified for all custom lines of a domain name cannot be overlapped.
       *
      */
     CompletableFuture<UpdateCustomLineResponse> updateCustomLine(UpdateCustomLineRequest request);

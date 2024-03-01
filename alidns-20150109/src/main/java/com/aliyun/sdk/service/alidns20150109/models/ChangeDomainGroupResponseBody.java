@@ -62,7 +62,7 @@ public class ChangeDomainGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the target domain name group.
+         * The ID of the destination domain name group.
          */
         public Builder groupId(String groupId) {
             this.groupId = groupId;
@@ -70,7 +70,7 @@ public class ChangeDomainGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the target domain name group.
+         * The name of the destination domain name group.
          */
         public Builder groupName(String groupName) {
             this.groupName = groupName;
@@ -78,7 +78,7 @@ public class ChangeDomainGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

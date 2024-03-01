@@ -181,7 +181,7 @@ public class AddDomainRecordRequest extends Request {
         }
 
         /**
-         * The language type.
+         * The language.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -190,7 +190,10 @@ public class AddDomainRecordRequest extends Request {
         }
 
         /**
-         * The resolution line. Default value: **default**.
+         * The DNS resolution line. Default value: **default**. For more information, see
+         * <p>
+         * 
+         * [DNS lines](https://www.alibabacloud.com/help/zh/doc-detail/29807.htm).
          */
         public Builder line(String line) {
             this.putQueryParameter("Line", line);
@@ -199,7 +202,7 @@ public class AddDomainRecordRequest extends Request {
         }
 
         /**
-         * The priority of an MX-type DNS record. Valid values: `[1,50]`.
+         * The priority of the mail exchanger (MX) record. Valid values: `1 to 50`.
          * <p>
          * 
          * This parameter must be specified if the type of the DNS record is MX. A smaller value indicates a higher priority.
@@ -211,10 +214,10 @@ public class AddDomainRecordRequest extends Request {
         }
 
         /**
-         * The host record.
+         * The hostname.
          * <p>
          * 
-         * For example, to resolve @.example.com, you must set RR to an at sign (@) instead of leaving it blank.
+         * For example, if you want to resolve @.example.com, you must set RR to an at sign (@) instead of leaving it empty.
          */
         public Builder rr(String rr) {
             this.putQueryParameter("RR", rr);
@@ -223,7 +226,10 @@ public class AddDomainRecordRequest extends Request {
         }
 
         /**
-         * The TTL of the resolution. Default value: 600. Unit: seconds.
+         * The time-to-live (TTL) of the DNS record. Default value: 600. Unit: seconds. For more information, see
+         * <p>
+         * 
+         * [TTL definition](https://www.alibabacloud.com/help/zh/doc-detail/29806.htm).
          */
         public Builder TTL(Long TTL) {
             this.putQueryParameter("TTL", TTL);
@@ -232,10 +238,10 @@ public class AddDomainRecordRequest extends Request {
         }
 
         /**
-         * The type of the DNS record. DNS record types
+         * The type of the DNS record. For more information, see
          * <p>
          * 
-         * [dns records types](https://www.alibabacloud.com/help/en/alibaba-cloud-dns/latest/dns-record-types)
+         * [DNS record types](https://www.alibabacloud.com/help/zh/doc-detail/29805.htm).
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -253,7 +259,7 @@ public class AddDomainRecordRequest extends Request {
         }
 
         /**
-         * The value of the DNS record.
+         * The record value.
          */
         public Builder value(String value) {
             this.putQueryParameter("Value", value);

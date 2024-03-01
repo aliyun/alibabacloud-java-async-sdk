@@ -92,7 +92,13 @@ public class ChangeDomainGroupRequest extends Request {
         }
 
         /**
-         * The ID of the target domain name group.
+         * The ID of the destination domain name group.
+         * <p>
+         * 
+         * *   If you do not specify GroupId, the domain name is moved to the default group.
+         * *   If you set GroupId to an empty string, the domain name is moved to the default group.
+         * *   If you set GroupId to defaultGroup, the domain name is moved to the default group.
+         * *   If you do not set GroupId to one of the preceding values and set GroupId to an existing group ID, the domain name is moved to the existing group. If you set GroupId to a group ID that does not exist, the domain name remains in the original group.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -101,7 +107,7 @@ public class ChangeDomainGroupRequest extends Request {
         }
 
         /**
-         * The language type.
+         * The language.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

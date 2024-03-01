@@ -82,7 +82,7 @@ public class DescribeSupportLinesRequest extends Request {
         } 
 
         /**
-         * The domain name.
+         * 域名名称。
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -91,7 +91,7 @@ public class DescribeSupportLinesRequest extends Request {
         }
 
         /**
-         * The language type.
+         * 语言。
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -100,7 +100,7 @@ public class DescribeSupportLinesRequest extends Request {
         }
 
         /**
-         * The IP address of the client.
+         * 用户端IP。
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

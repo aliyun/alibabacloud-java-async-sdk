@@ -136,7 +136,11 @@ public class DescribeRecordStatisticsRequest extends Request {
         }
 
         /**
-         * DomainType.
+         * The type of the domain name. The parameter value is not case-sensitive. Valid values:
+         * <p>
+         * 
+         * *   PUBLIC (default): hosted public domain name
+         * *   CACHE: cache-accelerated domain name
          */
         public Builder domainType(String domainType) {
             this.putQueryParameter("DomainType", domainType);
@@ -145,10 +149,10 @@ public class DescribeRecordStatisticsRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Specify the time in the **YYYY-MM-DD** format.
+         * The end date of the query. Specify the end date in the **YYYY-MM-DD** format.
          * <p>
          * 
-         * The default value is the day when you perform the operation.
+         * The default value is the day when you query the data.
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -157,7 +161,7 @@ public class DescribeRecordStatisticsRequest extends Request {
         }
 
         /**
-         * The language type.
+         * The language.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -166,10 +170,7 @@ public class DescribeRecordStatisticsRequest extends Request {
         }
 
         /**
-         * The DNS record.
-         * <p>
-         * 
-         * The host record. For example, to resolve `www.dns-exmaple.com`, you must set Rr to www.
+         * The hostname. If you want to resolve the subdomain name www.dns-exmaple.top, set this parameter to www.
          */
         public Builder rr(String rr) {
             this.putQueryParameter("Rr", rr);
@@ -178,10 +179,14 @@ public class DescribeRecordStatisticsRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the **YYYY-MM-DD** format.
+         * The start date of the query. Specify the start date in the **YYYY-MM-DD** format.
          * <p>
          * 
-         * You can only query DNS records of the last 90 days.
+         * You can only query the DNS records within the last 90 days.``
+         * 
+         * If the time range is less than or equal to seven days, data is returned on an hourly basis.````
+         * 
+         * If the time range is greater than seven days, data is returned on a daily basis.````
          */
         public Builder startDate(String startDate) {
             this.putQueryParameter("StartDate", startDate);

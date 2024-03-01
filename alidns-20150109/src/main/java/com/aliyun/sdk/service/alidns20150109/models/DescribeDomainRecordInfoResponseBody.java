@@ -250,7 +250,7 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The resolution line.
+         * The DNS resolution line.
          */
         public Builder line(String line) {
             this.line = line;
@@ -258,7 +258,7 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The lock status of the DNS record. Valid values: true and false.
+         * The lock state of the DNS record. Valid values: **true and false**.
          */
         public Builder locked(Boolean locked) {
             this.locked = locked;
@@ -266,7 +266,7 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The priority of the MX-type DNS record.
+         * The priority of the mail exchanger (MX) record.
          */
         public Builder priority(Long priority) {
             this.priority = priority;
@@ -274,7 +274,7 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The punycode is only returned for Chinese domain names.
+         * The Punycode for the domain name. This parameter is returned only for Chinese domain names.
          */
         public Builder punyCode(String punyCode) {
             this.punyCode = punyCode;
@@ -282,7 +282,7 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The host record.
+         * The hostname.
          */
         public Builder rr(String rr) {
             this.rr = rr;
@@ -298,7 +298,7 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The remark of the DNS record.
+         * The description of your DNS record.
          */
         public Builder remark(String remark) {
             this.remark = remark;
@@ -306,7 +306,7 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -314,7 +314,7 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the DNS record. Valid values: Enable and Disable.
+         * The state of the DNS records. Valid values: **Enable and Disable**.
          */
         public Builder status(String status) {
             this.status = status;
@@ -322,7 +322,7 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The TTL of the resolution.
+         * The time-to-live (TTL) of the DNS record.
          */
         public Builder TTL(Long TTL) {
             this.TTL = TTL;
@@ -338,7 +338,7 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The value of the DNS record.
+         * The record value.
          */
         public Builder value(String value) {
             this.value = value;

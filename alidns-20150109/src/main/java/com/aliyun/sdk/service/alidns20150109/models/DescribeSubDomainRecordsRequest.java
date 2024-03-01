@@ -172,7 +172,7 @@ public class DescribeSubDomainRecordsRequest extends Request {
         }
 
         /**
-         * The resolution line.
+         * The DNS resolution line.
          */
         public Builder line(String line) {
             this.putQueryParameter("Line", line);
@@ -181,7 +181,7 @@ public class DescribeSubDomainRecordsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page **1**. Default value: **1**.
+         * The page number. Pages start from page **1**. Default value: **1**.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -190,7 +190,7 @@ public class DescribeSubDomainRecordsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: **500**. Default value: **20**.
+         * The number of entries per page. Valid values: **1 to 100**. Default value: **20**.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -199,14 +199,10 @@ public class DescribeSubDomainRecordsRequest extends Request {
         }
 
         /**
-         * The subdomain. For example, assume that the SubDomain parameter is set to a.www.example.com.
+         * If you set SubDomain to `a.www.example.com` and leave
          * <p>
          * 
-         * If the DomainName parameter is empty, the DNS records of the subdomain whose domain name is example.com and hostname is "a.www" are queried.
-         * 
-         * If the DomainName parameter is set to www.example.com, the DNS records of the subdomain whose domain name is www.example.com and hostname is "a" are queried.
-         * 
-         * If the DomainName parameter is set to a.www.example.com, the DNS records of the subdomain whose domain name is a.www.example.com and hostname is "@" are queried.
+         * DomainName empty, the system returns the DNS records that contain the hostname `a.www` for the domain name example.com. If you set SubDomain to a.www.example.com and set DomainName to www.example.com, the system returns the DNS records that contain the hostname `a` for the domain name www.example.com. If you set SubDomain to a.www.example.com and set DomainName to a.www.example.com, the system returns the DNS records that contain the hostname `@` for the domain name a.www.example.com.
          */
         public Builder subDomain(String subDomain) {
             this.putQueryParameter("SubDomain", subDomain);
@@ -215,10 +211,10 @@ public class DescribeSubDomainRecordsRequest extends Request {
         }
 
         /**
-         * The type of DNS records to query. If you do not specify this parameter, all types of DNS records corresponding to the subdomain are returned.
+         * The type of DNS records. If you do not specify this parameter, all types of DNS records for the subdomain name are returned.
          * <p>
          * 
-         * DNS record types include **A, MX, CNAME, TXT, REDIRECT_URL, FORWORD_URL, NS, AAAA, and SRV**. The value is not case-sensitive.
+         * Valid values: **A, MX, CNAME, TXT, REDIRECT_URL, FORWORD_URL, NS, AAAA, and SRV**.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

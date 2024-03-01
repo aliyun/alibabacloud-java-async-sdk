@@ -122,7 +122,7 @@ public class DescribeDomainStatisticsSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The list of query volume records.
+         * The statistics on the Domain Name System (DNS) requests.
          */
         public Builder statistics(Statistics statistics) {
             this.statistics = statistics;
@@ -214,7 +214,7 @@ public class DescribeDomainStatisticsSummaryResponseBody extends TeaModel {
             private String resolveAnalysisStatus; 
 
             /**
-             * The number of queries.
+             * The number of DNS requests.
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -230,7 +230,12 @@ public class DescribeDomainStatisticsSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * DomainType.
+             * The type of the domain name. The parameter value is not case-sensitive. Valid values:
+             * <p>
+             * 
+             * PUBLIC (default): hosted public domain name
+             * 
+             * CACHE: cache-accelerated domain name
              */
             public Builder domainType(String domainType) {
                 this.domainType = domainType;

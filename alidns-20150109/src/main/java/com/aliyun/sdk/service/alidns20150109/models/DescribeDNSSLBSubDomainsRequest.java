@@ -126,7 +126,7 @@ public class DescribeDNSSLBSubDomainsRequest extends Request {
         } 
 
         /**
-         * The domain name whose subdomains you want to query.
+         * The domain name.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -135,7 +135,7 @@ public class DescribeDNSSLBSubDomainsRequest extends Request {
         }
 
         /**
-         * The language of the domain name.
+         * The language.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -144,7 +144,7 @@ public class DescribeDNSSLBSubDomainsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page **1**. Default value: **1**.
+         * The page number. Pages start from page **1**. Default value: **1**.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -153,7 +153,7 @@ public class DescribeDNSSLBSubDomainsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: **100**. Default value: **20**.
+         * The number of entries per page. Valid values: **1 to 100**. Default value: **20**.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -162,7 +162,7 @@ public class DescribeDNSSLBSubDomainsRequest extends Request {
         }
 
         /**
-         * Rr.
+         * The hostname.
          */
         public Builder rr(String rr) {
             this.putQueryParameter("Rr", rr);
@@ -171,7 +171,7 @@ public class DescribeDNSSLBSubDomainsRequest extends Request {
         }
 
         /**
-         * The IP address of the client that you use to query subdomains.
+         * The IP address of the client.
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

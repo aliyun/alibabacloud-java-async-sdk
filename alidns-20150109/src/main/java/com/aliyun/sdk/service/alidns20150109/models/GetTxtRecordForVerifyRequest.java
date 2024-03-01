@@ -92,7 +92,7 @@ public class GetTxtRecordForVerifyRequest extends Request {
         }
 
         /**
-         * The language type.
+         * The language.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -101,10 +101,10 @@ public class GetTxtRecordForVerifyRequest extends Request {
         }
 
         /**
-         * The function verified by using the TXT record. Valid values:
+         * The feature verified by using the TXT record. Valid values:
          * <p>
          * 
-         * *   ADD_SUBDOMAIN
+         * *   ADD_SUB_DOMAIN
          * *   RETRIEVAL
          */
         public Builder type(String type) {

@@ -97,7 +97,7 @@ public class DescribeDnsCacheDomainsRequest extends Request {
         } 
 
         /**
-         * Keyword.
+         * The keyword for searches in "%KeyWord%" mode. The value is not case-sensitive.
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -106,7 +106,7 @@ public class DescribeDnsCacheDomainsRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -115,7 +115,7 @@ public class DescribeDnsCacheDomainsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number. Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -124,7 +124,7 @@ public class DescribeDnsCacheDomainsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Valid values: **1 to 100**. Default value: **20**.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);

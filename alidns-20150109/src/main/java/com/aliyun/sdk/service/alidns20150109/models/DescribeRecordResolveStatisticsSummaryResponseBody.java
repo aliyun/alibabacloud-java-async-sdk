@@ -98,7 +98,7 @@ public class DescribeRecordResolveStatisticsSummaryResponseBody extends TeaModel
         private Integer totalPages; 
 
         /**
-         * The page number of the returned page.
+         * The page number. Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -106,7 +106,7 @@ public class DescribeRecordResolveStatisticsSummaryResponseBody extends TeaModel
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of entries per page. Valid values: **1 to 500**. Default value: **20**.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -214,7 +214,7 @@ public class DescribeRecordResolveStatisticsSummaryResponseBody extends TeaModel
             private String subDomain; 
 
             /**
-             * The number of resolution requests.
+             * The number of DNS requests.
              */
             public Builder count(String count) {
                 this.count = count;
@@ -222,7 +222,7 @@ public class DescribeRecordResolveStatisticsSummaryResponseBody extends TeaModel
             }
 
             /**
-             * The domain name.
+             * The subdomain name.
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -230,7 +230,11 @@ public class DescribeRecordResolveStatisticsSummaryResponseBody extends TeaModel
             }
 
             /**
-             * The type of the domain name. Valid values: PUBLIC and CACHE. PUBLIC indicates an authoritative domain name. CACHE indicates a cache-accelerated domain name.
+             * The type of the domain name. The parameter value is not case-sensitive. Valid values:
+             * <p>
+             * 
+             * *   PUBLIC (default): hosted public domain name
+             * *   CACHE: cache-accelerated domain name
              */
             public Builder domainType(String domainType) {
                 this.domainType = domainType;
@@ -238,7 +242,7 @@ public class DescribeRecordResolveStatisticsSummaryResponseBody extends TeaModel
             }
 
             /**
-             * 子域名
+             * The subdomain.
              */
             public Builder subDomain(String subDomain) {
                 this.subDomain = subDomain;

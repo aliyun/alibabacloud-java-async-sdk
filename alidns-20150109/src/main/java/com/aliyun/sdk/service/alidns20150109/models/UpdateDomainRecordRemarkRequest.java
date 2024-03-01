@@ -97,7 +97,7 @@ public class UpdateDomainRecordRemarkRequest extends Request {
         } 
 
         /**
-         * The language type.
+         * The language.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -115,7 +115,7 @@ public class UpdateDomainRecordRemarkRequest extends Request {
         }
 
         /**
-         * The description of your DNS record.
+         * The description of the DNS record.
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);

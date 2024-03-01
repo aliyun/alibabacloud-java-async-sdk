@@ -140,7 +140,7 @@ public class DescribeTransferDomainsRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * Specifies the domain name for which you want to view the transfer record.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -149,7 +149,7 @@ public class DescribeTransferDomainsRequest extends Request {
         }
 
         /**
-         * FromUserId.
+         * The user ID from which the domain name was transferred to the current account.
          */
         public Builder fromUserId(Long fromUserId) {
             this.putQueryParameter("FromUserId", fromUserId);
@@ -158,7 +158,7 @@ public class DescribeTransferDomainsRequest extends Request {
         }
 
         /**
-         * The language type.
+         * The language.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -167,7 +167,7 @@ public class DescribeTransferDomainsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1. Default value: 1.
+         * The page number. Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -176,7 +176,7 @@ public class DescribeTransferDomainsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: 100. Default value: 20.
+         * The number of entries per page. Valid values: 1 to 100. Default value: 20.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -185,7 +185,7 @@ public class DescribeTransferDomainsRequest extends Request {
         }
 
         /**
-         * TargetUserId.
+         * The user ID to which the domain name was transferred from the current account.
          */
         public Builder targetUserId(Long targetUserId) {
             this.putQueryParameter("TargetUserId", targetUserId);
@@ -197,8 +197,8 @@ public class DescribeTransferDomainsRequest extends Request {
          * The transfer type. Valid values:
          * <p>
          * 
-         * *   IN: transferred to this account.
-         * *   OUT: transferred from this account.
+         * *   IN: The domain name was transferred to the current account.
+         * *   OUT: The domain name was transferred from the current account.
          */
         public Builder transferType(String transferType) {
             this.putQueryParameter("TransferType", transferType);

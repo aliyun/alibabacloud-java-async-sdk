@@ -146,7 +146,7 @@ public class DescribeDomainDnssecInfoResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * The algorithm configured in a DNSSEC record. This parameter is returned if DNSSEC is enabled.
+         * The algorithm type. This parameter is returned if DNSSEC is enabled.
          */
         public Builder algorithm(String algorithm) {
             this.algorithm = algorithm;
@@ -154,7 +154,7 @@ public class DescribeDomainDnssecInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The digest configured in a DNSSEC record. This parameter is returned if DNSSEC is enabled.
+         * The digest. This parameter is returned if DNSSEC is enabled.
          */
         public Builder digest(String digest) {
             this.digest = digest;
@@ -162,7 +162,7 @@ public class DescribeDomainDnssecInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The digest type configured in a DNSSEC record. This parameter is returned if DNSSEC is enabled.
+         * The digest type. This parameter is returned if DNSSEC is enabled.
          */
         public Builder digestType(String digestType) {
             this.digestType = digestType;
@@ -170,7 +170,7 @@ public class DescribeDomainDnssecInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The domain name that is queried.
+         * The domain name.
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -178,7 +178,7 @@ public class DescribeDomainDnssecInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The DS record. This parameter is returned if DNSSEC is enabled.
+         * The delegation signer (DS) record. This parameter is returned if DNSSEC is enabled.
          */
         public Builder dsRecord(String dsRecord) {
             this.dsRecord = dsRecord;
@@ -186,7 +186,7 @@ public class DescribeDomainDnssecInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The flag of a DNSSEC record. This parameter is returned if DNSSEC is enabled.
+         * The flag. This parameter is returned if DNSSEC is enabled.
          */
         public Builder flags(String flags) {
             this.flags = flags;
@@ -194,7 +194,7 @@ public class DescribeDomainDnssecInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The key tag of a DNSSEC record. This parameter is returned if DNSSEC is enabled.
+         * The key tag. This parameter is returned if DNSSEC is enabled.
          */
         public Builder keyTag(String keyTag) {
             this.keyTag = keyTag;
@@ -202,7 +202,7 @@ public class DescribeDomainDnssecInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The public key for a DNSSEC record. This parameter is returned if DNSSEC is enabled.
+         * The public key. This parameter is returned if DNSSEC is enabled.
          */
         public Builder publicKey(String publicKey) {
             this.publicKey = publicKey;
@@ -210,7 +210,7 @@ public class DescribeDomainDnssecInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -218,11 +218,11 @@ public class DescribeDomainDnssecInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether DNSSEC is enabled for the specified domain name.
+         * The state of the DNSSEC. Valid values:
          * <p>
          * 
-         * *   ON: DNSSEC is enabled.
-         * *   OFF: DNSSEC is disabled.
+         * *   ON
+         * *   OFF
          */
         public Builder status(String status) {
             this.status = status;

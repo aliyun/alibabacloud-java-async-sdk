@@ -50,7 +50,7 @@ public class DescribeRecordStatisticsResponseBody extends TeaModel {
         private Statistics statistics; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeRecordStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The list of query volume records.
+         * The statistics on the DNS requests.
          */
         public Builder statistics(Statistics statistics) {
             this.statistics = statistics;
@@ -110,7 +110,7 @@ public class DescribeRecordStatisticsResponseBody extends TeaModel {
             private Long timestamp; 
 
             /**
-             * The number of queries.
+             * The number of DNS requests.
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -118,7 +118,7 @@ public class DescribeRecordStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The UNIX timestamp representing the collection time.
+             * The statistical timestamp. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;

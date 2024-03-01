@@ -62,7 +62,7 @@ public class UnbindInstanceDomainsResponseBody extends TeaModel {
         private Integer successCount; 
 
         /**
-         * The number of domain names that failed to be unbound.
+         * The number of domain names that failed to be unbound from the instance.
          */
         public Builder failedCount(Integer failedCount) {
             this.failedCount = failedCount;
@@ -70,7 +70,7 @@ public class UnbindInstanceDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class UnbindInstanceDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of domain names that have been unbound.
+         * The number of domain names that are unbound from the instance.
          */
         public Builder successCount(Integer successCount) {
             this.successCount = successCount;
