@@ -25,6 +25,10 @@ public class ModifyTrFirewallV2RoutePolicyScopeRequest extends Request {
     private String lang;
 
     @Query
+    @NameInMap("ShouldRecover")
+    private String shouldRecover;
+
+    @Query
     @NameInMap("SrcCandidateList")
     private java.util.List < SrcCandidateList> srcCandidateList;
 
@@ -37,6 +41,7 @@ public class ModifyTrFirewallV2RoutePolicyScopeRequest extends Request {
         this.destCandidateList = builder.destCandidateList;
         this.firewallId = builder.firewallId;
         this.lang = builder.lang;
+        this.shouldRecover = builder.shouldRecover;
         this.srcCandidateList = builder.srcCandidateList;
         this.trFirewallRoutePolicyId = builder.trFirewallRoutePolicyId;
     }
@@ -76,6 +81,13 @@ public class ModifyTrFirewallV2RoutePolicyScopeRequest extends Request {
     }
 
     /**
+     * @return shouldRecover
+     */
+    public String getShouldRecover() {
+        return this.shouldRecover;
+    }
+
+    /**
      * @return srcCandidateList
      */
     public java.util.List < SrcCandidateList> getSrcCandidateList() {
@@ -93,6 +105,7 @@ public class ModifyTrFirewallV2RoutePolicyScopeRequest extends Request {
         private java.util.List < DestCandidateList> destCandidateList; 
         private String firewallId; 
         private String lang; 
+        private String shouldRecover; 
         private java.util.List < SrcCandidateList> srcCandidateList; 
         private String trFirewallRoutePolicyId; 
 
@@ -105,6 +118,7 @@ public class ModifyTrFirewallV2RoutePolicyScopeRequest extends Request {
             this.destCandidateList = request.destCandidateList;
             this.firewallId = request.firewallId;
             this.lang = request.lang;
+            this.shouldRecover = request.shouldRecover;
             this.srcCandidateList = request.srcCandidateList;
             this.trFirewallRoutePolicyId = request.trFirewallRoutePolicyId;
         } 
@@ -134,6 +148,15 @@ public class ModifyTrFirewallV2RoutePolicyScopeRequest extends Request {
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
             this.lang = lang;
+            return this;
+        }
+
+        /**
+         * ShouldRecover.
+         */
+        public Builder shouldRecover(String shouldRecover) {
+            this.putQueryParameter("ShouldRecover", shouldRecover);
+            this.shouldRecover = shouldRecover;
             return this;
         }
 

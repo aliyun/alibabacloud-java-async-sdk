@@ -62,7 +62,7 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The destination IP addresses in outbound connections.
+         * The IP addresses in outbound connections.
          */
         public Builder dstIPList(java.util.List < DstIPList> dstIPList) {
             this.dstIPList = dstIPList;
@@ -191,7 +191,7 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             private Integer port; 
 
             /**
-             * The application type in the access control policy. Valid values:
+             * The application type used in the access control policy. Valid values:
              * <p>
              * 
              * *   **FTP**
@@ -210,7 +210,7 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
              * *   **SSL**
              * *   **VNC**
              * 
-             * >  The value of this parameter depends on the value of Proto. If you set Proto to TCP, you can set ApplicationNameList to any valid value. If you specify both ApplicationNameList and ApplicationName, only the value of ApplicationNameList is used.
+             * >  The value of this parameter depends on the value of the Proto parameter. If you set Proto to TCP, you can set ApplicationNameList to any valid value. If you configure both ApplicationNameList and ApplicationName, only the value of ApplicationNameList is used.
              */
             public Builder applicationName(String applicationName) {
                 this.applicationName = applicationName;
@@ -218,7 +218,7 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             }
 
             /**
-             * The port of the application.
+             * The application port.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -645,8 +645,8 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
              * Indicates whether an access control policy is configured. Valid values:
              * <p>
              * 
-             * *   **Uncovered**: No access control policies are configured.
-             * *   **FullCoverage**: An access control policy is configured.
+             * *   **Uncovered**: no
+             * *   **FullCoverage**: yes
              */
             public Builder aclCoverage(String aclCoverage) {
                 this.aclCoverage = aclCoverage;
@@ -654,7 +654,7 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             }
 
             /**
-             * The suggestion in an access control policy.
+             * The suggestion to configure an access control policy.
              */
             public Builder aclRecommendDetail(String aclRecommendDetail) {
                 this.aclRecommendDetail = aclRecommendDetail;
@@ -662,10 +662,10 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the access control policy. Valid values:
+             * The status of the access control policy. Valid values:
              * <p>
              * 
-             * *   **Normal**: healthy
+             * *   **normal**: healthy
              * *   **Abnormal**: unhealthy
              */
             public Builder aclStatus(String aclStatus) {
@@ -682,7 +682,7 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of application ports.
+             * The application ports.
              */
             public Builder applicationPortList(java.util.List < ApplicationPortList> applicationPortList) {
                 this.applicationPortList = applicationPortList;
@@ -703,7 +703,7 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the service to which the destination IP address belongs. Valid values:
+             * The ID of the service type. Valid values:
              * <p>
              * 
              * *   **Aliyun**: Alibaba Cloud services
@@ -719,7 +719,7 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
              * <p>
              * 
              * *   **Alibaba Cloud services**
-             * *   **third-party services**
+             * *   **Third-party services**
              */
             public Builder categoryName(String categoryName) {
                 this.categoryName = categoryName;
@@ -727,7 +727,7 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             }
 
             /**
-             * The destination IP address in the outbound connection that is initiated to access a domain name.
+             * The destination IP addresses in outbound connections.
              */
             public Builder dstIP(String dstIP) {
                 this.dstIP = dstIP;
@@ -746,8 +746,8 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
              * Indicates whether an access control policy is configured. Valid values:
              * <p>
              * 
-             * *   **true**: yes
-             * *   **false**: no
+             * *   **true**
+             * *   **false**
              */
             public Builder hasAcl(String hasAcl) {
                 this.hasAcl = hasAcl;
@@ -758,8 +758,8 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
              * Indicates whether an access control policy is recommended. Valid values:
              * <p>
              * 
-             * *   **true**: yes
-             * *   **false**: no
+             * *   **true**
+             * *   **false**
              */
             public Builder hasAclRecommend(Boolean hasAclRecommend) {
                 this.hasAclRecommend = hasAclRecommend;
@@ -778,8 +778,8 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
              * Indicates whether the destination IP address is added to a whitelist. Valid values:
              * <p>
              * 
-             * *   **true**: added
-             * *   **false**: not added
+             * *   **true**
+             * *   **false**
              */
             public Builder isMarkNormal(Boolean isMarkNormal) {
                 this.isMarkNormal = isMarkNormal;
@@ -848,7 +848,7 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             }
 
             /**
-             * The total volume of traffic. Unit: bytes.
+             * The total traffic. Unit: bytes
              */
             public Builder totalBytes(String totalBytes) {
                 this.totalBytes = totalBytes;

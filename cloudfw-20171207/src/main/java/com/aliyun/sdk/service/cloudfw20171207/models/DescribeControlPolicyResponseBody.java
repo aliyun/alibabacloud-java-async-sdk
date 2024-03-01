@@ -102,7 +102,7 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The details about the access control policy.
+         * The information about the access control policies.
          */
         public Builder policys(java.util.List < Policys> policys) {
             this.policys = policys;
@@ -591,7 +591,7 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The unique ID of the access control policy.
+             * The UUID of the access control policy.
              */
             public Builder aclUuid(String aclUuid) {
                 this.aclUuid = aclUuid;
@@ -607,7 +607,7 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the application that the access control policy supports. Valid values:
+             * The application type supported by the access control policy. We recommend that you specify ApplicationNameList. Valid values:
              * <p>
              * 
              * *   **FTP**
@@ -632,7 +632,7 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The names of applications.
+             * The application names.
              */
             public Builder applicationNameList(java.util.List < String > applicationNameList) {
                 this.applicationNameList = applicationNameList;
@@ -640,7 +640,7 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The time at which the access control policy was created.
+             * The time when the access control policy was created.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -692,7 +692,7 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The destination address in the access control policy. The value of this parameter depends on the value of the DestinationType parameter. Valid values:
+             * The destination address in the access control policy. The value of this parameter varies based on the value of DestinationType. Valid values:
              * <p>
              * 
              * *   If **DestinationType** is set to **net**, the value of Destination is a CIDR block. Example: 192.0.XX.XX/24.
@@ -732,10 +732,10 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
              * The type of the destination address in the access control policy. Valid values:
              * <p>
              * 
-             * *   **net**: destination CIDR block
-             * *   **group**: destination address book
-             * *   **domain**: destination domain name
-             * *   **location**: destination location
+             * *   **net**: CIDR block
+             * *   **group**: address book
+             * *   **domain**: domain name
+             * *   **location**: location
              */
             public Builder destinationType(String destinationType) {
                 this.destinationType = destinationType;
@@ -763,7 +763,7 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the DNS resolution result. The value is a UNIX timestamp. Unit: seconds.
+             * The time when the Domain Name System (DNS) resolution was performed. The value is a timestamp. Unit: seconds.
              */
             public Builder dnsResultTime(Long dnsResultTime) {
                 this.dnsResultTime = dnsResultTime;
@@ -771,7 +771,10 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The time when the access control policy stops taking effect. The value is a timestamp. Unit: seconds. The end time must be on the hour or on the half hour, and at least 30 minutes later than the start time.
+             * <p>
+             * 
+             * >  If RepeatType is set to Permanent, this parameter is left empty. If RepeatType is set to None, Daily, Weekly, or Monthly, this parameter must be specified.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -779,7 +782,7 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the access control policy was last hit. The value is a UNIX timestamp. Unit: seconds.
+             * The time when the access control policy was last hit. The value is a timestamp. Unit: seconds.
              */
             public Builder hitLastTime(Long hitLastTime) {
                 this.hitLastTime = hitLastTime;
@@ -795,7 +798,7 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The IP version of the address in the access control policy. Valid values:
+             * The IP version used in the access control policy. Valid values:
              * <p>
              * 
              * *   **4**: IPv4
@@ -807,7 +810,7 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The time at which the access control policy was modified.
+             * The time when the access control policy was modified.
              */
             public Builder modifyTime(Long modifyTime) {
                 this.modifyTime = modifyTime;
@@ -818,7 +821,7 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
              * The priority of the access control policy.
              * <p>
              * 
-             * The priority value starts from 1. A small priority value indicates a high priority.
+             * The priority value starts from 1. A smaller priority value indicates a higher priority.
              */
             public Builder order(Integer order) {
                 this.order = order;
@@ -826,7 +829,7 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the protocol in the access control policy. Valid values:
+             * The protocol type in the access control policy. Valid values:
              * <p>
              * 
              * *   **ANY**
@@ -840,11 +843,11 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the access control policy is enabled. By default, an access control policy is enabled after it is created. Valid values:
+             * The status of the access control policy. By default, an access control policy is enabled after it is created. Valid values:
              * <p>
              * 
-             * *   **true**: The access control policy is enabled.
-             * *   **false**: The access control policy is disabled.
+             * *   **true**: enabled
+             * *   **false**: disabled
              */
             public Builder release(String release) {
                 this.release = release;
@@ -852,7 +855,17 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * RepeatDays.
+             * The days of a week or of a month on which the access control policy takes effect.
+             * <p>
+             * 
+             * *   If RepeatType is set to `Permanent`, `None`, or `Daily`, this parameter is left empty. Example: \[].
+             * *   If RepeatType is set to Weekly, this parameter must be specified. Example: \[0, 6].
+             * 
+             * >  If RepeatType is set to Weekly, the fields in the value of RepeatDays cannot be repeated.
+             * 
+             * *   If RepeatType is set to `Monthly`, this parameter must be specified. Example: \[1, 31].
+             * 
+             * >  If RepeatType is set to Monthly, the fields in the value of RepeatDays cannot be repeated.
              */
             public Builder repeatDays(java.util.List < Long > repeatDays) {
                 this.repeatDays = repeatDays;
@@ -860,7 +873,10 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * RepeatEndTime.
+             * The point in time when the recurrence ends. Example: 23:30. The value must be on the hour or on the half hour, and at least 30 minutes later than the start time.
+             * <p>
+             * 
+             * >  If RepeatType is set to Permanent or None, this parameter is left empty. If RepeatType is set to Daily, Weekly, or Monthly, this parameter must be specified.
              */
             public Builder repeatEndTime(String repeatEndTime) {
                 this.repeatEndTime = repeatEndTime;
@@ -868,7 +884,10 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * RepeatStartTime.
+             * The point in time when the recurrence starts. Example: 08:00. The value must be on the hour or on the half hour, and at least 30 minutes earlier than the end time.
+             * <p>
+             * 
+             * >  If RepeatType is set to Permanent or None, this parameter is left empty. If RepeatType is set to Daily, Weekly, or Monthly, this parameter must be specified.
              */
             public Builder repeatStartTime(String repeatStartTime) {
                 this.repeatStartTime = repeatStartTime;
@@ -876,7 +895,14 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * RepeatType.
+             * The recurrence type based on which the access control policy takes effect. Valid values:
+             * <p>
+             * 
+             * *   **Permanent** (default): The policy always takes effect.
+             * *   **None**: The policy takes effect for only once.
+             * *   **Daily**: The policy takes effect on a daily basis.
+             * *   **Weekly**: The policy takes effect on a weekly basis.
+             * *   **Monthly**: The policy takes effect on a monthly basis.
              */
             public Builder repeatType(String repeatType) {
                 this.repeatType = repeatType;
@@ -923,9 +949,9 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
              * The type of the source address in the access control policy. Valid values:
              * <p>
              * 
-             * *   **net**: source CIDR block
-             * *   **group**: source address book
-             * *   **location**: source location
+             * *   **net**: CIDR block
+             * *   **group**: address book
+             * *   **location**: location
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -933,10 +959,7 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The total quota consumed by the returned access control policies, which is the sum of the quota consumed by each policy.
-             * <p>
-             * 
-             * Quota that is consumed by an access control policy = Number of source CIDR blocks × Number of destination CIDR blocks, destination locations, or IP addresses that are resolved from destination domain names × Number of applications × Number of ports.
+             * The total quota consumed by the returned access control policies, which is the sum of the quota consumed by each policy. The quota that is consumed by an access control policy is calculated by using the following formula: Quota that is consumed by an access control policy = Number of source addresses (number of CIDR blocks or regions) × Number of destination addresses (number of CIDR blocks, regions, or domain names) × Number of port ranges × Number of applications.
              */
             public Builder spreadCnt(Integer spreadCnt) {
                 this.spreadCnt = spreadCnt;
@@ -944,7 +967,10 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The time when the access control policy starts to take effect. The value is a timestamp. Unit: seconds. The start time must be on the hour or on the half hour, and at least 30 minutes earlier than the end time.
+             * <p>
+             * 
+             * >  If RepeatType is set to Permanent, this parameter is left empty. If RepeatType is set to None, Daily, Weekly, or Monthly, this parameter must be specified.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;

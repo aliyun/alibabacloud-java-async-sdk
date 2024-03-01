@@ -315,7 +315,7 @@ public class DescribeOutgoingDestinationIPRequest extends Request {
          * The language of the content within the response. Valid values:
          * <p>
          * 
-         * *   **zh**: Chinese (default)
+         * *   **zh** (default): Chinese
          * *   **en**: English
          */
         public Builder lang(String lang) {
@@ -325,11 +325,11 @@ public class DescribeOutgoingDestinationIPRequest extends Request {
         }
 
         /**
-         * The order in which you want to sort the queried information. Valid values:
+         * The method that is used to sort the results. Valid values:
          * <p>
          * 
          * *   **asc**: the ascending order.
-         * *   **desc**: the descending order. This is the default value.
+         * *   **desc** (default): the descending order.
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -377,10 +377,10 @@ public class DescribeOutgoingDestinationIPRequest extends Request {
         }
 
         /**
-         * The field based on which you want to sort the queried information. Valid values:
+         * The field based on which you want to sort the query results. Valid values:
          * <p>
          * 
-         * *   **SessionCount**: the number of requests. This is the default value.
+         * *   **SessionCount** (default): the number of requests.
          * *   **TotalBytes**: the total volume of traffic.
          */
         public Builder sort(String sort) {

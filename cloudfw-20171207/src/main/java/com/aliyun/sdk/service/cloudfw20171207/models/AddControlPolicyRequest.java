@@ -550,7 +550,10 @@ public class AddControlPolicyRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The time when the access control policy stops taking effect. The value is a UNIX timestamp. Unit: seconds. The value must be on the hour or on the half hour, and at least 30 minutes later than the start time.
+         * <p>
+         * 
+         * >  If you set RepeatType to Permanent, leave this parameter empty. If you set RepeatType to None, Daily, Weekly, or Monthly, you must specify this parameter.
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -624,7 +627,17 @@ public class AddControlPolicyRequest extends Request {
         }
 
         /**
-         * RepeatDays.
+         * The days of a week or of a month on which the access control policy takes effect.
+         * <p>
+         * 
+         * *   If you set RepeatType to `Permanent`, `None`, or `Daily`, leave this parameter empty. Example: \[].
+         * *   If you set RepeatType to Weekly, you must specify this parameter. Example: \[0, 6].
+         * 
+         * >  If you set RepeatType to Weekly, the fields in the value of this parameter cannot be repeated.
+         * 
+         * *   If you set RepeatType to `Monthly`, you must specify this parameter. Example: \[1, 31].
+         * 
+         * >  If you set RepeatType to Monthly, the fields in the value of this parameter cannot be repeated.
          */
         public Builder repeatDays(java.util.List < Long > repeatDays) {
             this.putQueryParameter("RepeatDays", repeatDays);
@@ -633,7 +646,10 @@ public class AddControlPolicyRequest extends Request {
         }
 
         /**
-         * RepeatEndTime.
+         * The point in time when the recurrence ends. Example: 23:30. The end time must be on the hour or on the half hour, and at least 30 minutes later than the start time.
+         * <p>
+         * 
+         * >  If you set RepeatType to Permanent or None, leave this parameter empty. If you set RepeatType to Daily, Weekly, or Monthly, you must specify this parameter.
          */
         public Builder repeatEndTime(String repeatEndTime) {
             this.putQueryParameter("RepeatEndTime", repeatEndTime);
@@ -642,7 +658,10 @@ public class AddControlPolicyRequest extends Request {
         }
 
         /**
-         * RepeatStartTime.
+         * The point in time when the recurrence starts. Example: 08:00. The start time must be on the hour or on the half hour, and at least 30 minutes earlier than the end time.
+         * <p>
+         * 
+         * >  If you set RepeatType to Permanent or None, leave this parameter empty. If you set RepeatType to Daily, Weekly, or Monthly, you must specify this parameter.
          */
         public Builder repeatStartTime(String repeatStartTime) {
             this.putQueryParameter("RepeatStartTime", repeatStartTime);
@@ -651,7 +670,14 @@ public class AddControlPolicyRequest extends Request {
         }
 
         /**
-         * RepeatType.
+         * The recurrence type for the access control policy to take effect. Valid values:
+         * <p>
+         * 
+         * *   **Permanent** (default): The policy always takes effect.
+         * *   **None**: The policy takes effect for only once.
+         * *   **Daily**: The policy takes effect on a daily basis.
+         * *   **Weekly**: The policy takes effect on a weekly basis.
+         * *   **Monthly**: The policy takes effect on a monthly basis.
          */
         public Builder repeatType(String repeatType) {
             this.putQueryParameter("RepeatType", repeatType);
@@ -705,7 +731,10 @@ public class AddControlPolicyRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The time when the access control policy starts to take effect. The value is a UNIX timestamp. Unit: seconds. The value must be on the hour or on the half hour, and at least 30 minutes earlier than the end time.
+         * <p>
+         * 
+         * >  If you set RepeatType to Permanent, leave this parameter empty. If you set RepeatType to None, Daily, Weekly, or Monthly, you must specify this parameter.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

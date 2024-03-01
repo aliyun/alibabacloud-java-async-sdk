@@ -110,7 +110,7 @@ public class DescribeVpcFirewallAclGroupListRequest extends Request {
          * 
          * *   **notconfigured**: VPC firewalls are not configured.
          * *   **configured**: VPC firewalls are configured.
-         * *   If this parameter is left empty, all policy groups of access control policies are queried.
+         * *   If you do not specify this parameter, the access control policies of all VPC firewalls are queried.
          */
         public Builder firewallConfigureStatus(String firewallConfigureStatus) {
             this.putQueryParameter("FirewallConfigureStatus", firewallConfigureStatus);

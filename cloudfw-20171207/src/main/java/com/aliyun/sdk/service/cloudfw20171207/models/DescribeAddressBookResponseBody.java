@@ -94,7 +94,7 @@ public class DescribeAddressBookResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the current page.
+         * The page number.
          */
         public Builder pageNo(String pageNo) {
             this.pageNo = pageNo;
@@ -102,7 +102,7 @@ public class DescribeAddressBookResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of entries per page.
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeAddressBookResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -346,8 +346,8 @@ public class DescribeAddressBookResponseBody extends TeaModel {
              * Indicates whether the public IP addresses of ECS instances are automatically added to the address book if the instances match the specified tags. The setting takes effect on both newly purchased ECS instances whose tag settings are complete and ECS instances whose tag settings are modified. Valid values:
              * <p>
              * 
-             * * **1**: yes
-             * * **0**: no
+             * *   **1**: yes
+             * *   **0**: no
              */
             public Builder autoAddTagEcs(Integer autoAddTagEcs) {
                 this.autoAddTagEcs = autoAddTagEcs;
@@ -374,12 +374,12 @@ public class DescribeAddressBookResponseBody extends TeaModel {
              * The type of the address book. Valid values:
              * <p>
              * 
-             * * **ip**: IP address book
-             * * **domain**: domain address book
-             * * **port**: port address book
-             * * **tag**: ECS tag-based address book
-             * * **allCloud**: cloud service address book
-             * * **threat**: threat intelligence address book
+             * *   **ip**: IP address book
+             * *   **domain**: domain address book
+             * *   **port**: port address book
+             * *   **tag**: ECS tag-based address book
+             * *   **allCloud**: cloud service address book
+             * *   **threat**: threat intelligence address book
              */
             public Builder groupType(String groupType) {
                 this.groupType = groupType;
@@ -387,7 +387,7 @@ public class DescribeAddressBookResponseBody extends TeaModel {
             }
 
             /**
-             * The unique ID of the address book.
+             * The UUID of the address book.
              */
             public Builder groupUuid(String groupUuid) {
                 this.groupUuid = groupUuid;
@@ -414,8 +414,8 @@ public class DescribeAddressBookResponseBody extends TeaModel {
              * The logical relationship among ECS tags. Valid values:
              * <p>
              * 
-             * * **and**: Only the public IP addresses of ECS instances that match all the specified tags can be added to the address book.
-             * * **or**: The public IP addresses of ECS instances that match any of the specified tags can be added to the address book.
+             * *   **and**: Only the public IP addresses of ECS instances that match all the specified tags can be added to the address book.
+             * *   **or**: The public IP addresses of ECS instances that match any of the specified tags can be added to the address book.
              */
             public Builder tagRelation(String tagRelation) {
                 this.tagRelation = tagRelation;

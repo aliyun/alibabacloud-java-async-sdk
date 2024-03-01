@@ -133,7 +133,7 @@ public class DescribeAddressBookRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * The page number.
          * <p>
          * 
          * Pages start from page 1. Default value: 1.
@@ -148,14 +148,14 @@ public class DescribeAddressBookRequest extends Request {
          * The type of the address book. Valid values:
          * <p>
          * 
-         * * **ip**: IP address book
-         * * **domain**: domain address book
-         * * **port**: port address book
-         * * **tag**: Elastic Compute Service (ECS) tag-based address book
-         * * **allCloud**: cloud service address book
-         * * **threat**: threat intelligence address book
+         * *   **ip**: IP address book
+         * *   **domain**: domain address book
+         * *   **port**: port address book
+         * *   **tag**: Elastic Compute Service (ECS) tag-based address book
+         * *   **allCloud**: cloud service address book
+         * *   **threat**: threat intelligence address book
          * 
-         * > If you do not specify a type, the domain address books and ECS tag-based address books are queried.
+         * >  If you do not specify a type, the domain address books and ECS tag-based address books are queried.
          */
         public Builder groupType(String groupType) {
             this.putQueryParameter("GroupType", groupType);
@@ -167,8 +167,8 @@ public class DescribeAddressBookRequest extends Request {
          * The language of the content within the request. Valid values:
          * <p>
          * 
-         * * **zh**: Chinese (default)
-         * * **en**: English
+         * *   **zh** (default): Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -177,7 +177,7 @@ public class DescribeAddressBookRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The number of entries per page.
          * <p>
          * 
          * Default value: 10. Maximum value: 50.

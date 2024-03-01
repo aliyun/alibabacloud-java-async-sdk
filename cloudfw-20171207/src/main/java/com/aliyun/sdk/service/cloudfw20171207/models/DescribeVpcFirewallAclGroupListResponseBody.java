@@ -62,7 +62,7 @@ public class DescribeVpcFirewallAclGroupListResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * An array that consists of the information about the policy group.
+         * The information about the policy groups.
          */
         public Builder aclGroupList(java.util.List < AclGroupList> aclGroupList) {
             this.aclGroupList = aclGroupList;
@@ -175,7 +175,7 @@ public class DescribeVpcFirewallAclGroupListResponseBody extends TeaModel {
              * 
              *     Example: cen-ervw0g12b5jbw\*\*\*\*
              * 
-             * *   If the VPC firewall is used to protect an Express Connect circuit, the value of this parameter is the ID of the VPC firewall instance.
+             * *   If the VPC firewall is used to protect an Express Connect circuit, the value of this parameter is the instance ID of the VPC firewall.
              * 
              *     Example: vfw-a42bbb7b887148c9\*\*\*\*
              */
@@ -189,7 +189,7 @@ public class DescribeVpcFirewallAclGroupListResponseBody extends TeaModel {
              * <p>
              * 
              * *   If the VPC firewall is used to protect a CEN instance, the value of this parameter is the name of the CEN instance.
-             * *   If the VPC firewall is used to protect an Express Connect circuit, the value of this parameter is the name of the VPC firewall instance.
+             * *   If the VPC firewall is used to protect an Express Connect circuit, the value of this parameter is the instance name of the VPC firewall.
              */
             public Builder aclGroupName(String aclGroupName) {
                 this.aclGroupName = aclGroupName;
@@ -197,7 +197,7 @@ public class DescribeVpcFirewallAclGroupListResponseBody extends TeaModel {
             }
 
             /**
-             * AclRuleCount.
+             * The number of access control policies in the policy group.
              */
             public Builder aclRuleCount(Integer aclRuleCount) {
                 this.aclRuleCount = aclRuleCount;
@@ -205,7 +205,10 @@ public class DescribeVpcFirewallAclGroupListResponseBody extends TeaModel {
             }
 
             /**
-             * IsDefault.
+             * 是否是默认防火墙。取值：
+             * <p>
+             * - **true**：是默认防火墙。
+             * - **false**：不是默认防火墙。
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;

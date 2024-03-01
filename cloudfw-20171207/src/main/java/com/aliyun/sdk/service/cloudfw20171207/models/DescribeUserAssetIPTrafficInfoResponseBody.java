@@ -134,7 +134,7 @@ public class DescribeUserAssetIPTrafficInfoResponseBody extends TeaModel {
         private Long startTime; 
 
         /**
-         * The end of the time range that is queried. The value is a UNIX timestamp. Unit: seconds.
+         * The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.
          */
         public Builder endTime(Long endTime) {
             this.endTime = endTime;
@@ -150,7 +150,7 @@ public class DescribeUserAssetIPTrafficInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The network throughput, which indicates the inbound packet rate. Unit: packets per second (pps).
+         * The inbound network throughput, which indicates the number of packets that are sent inbound per second. Unit: packets per second (pps).
          */
         public Builder inPps(Long inPps) {
             this.inPps = inPps;
@@ -158,7 +158,7 @@ public class DescribeUserAssetIPTrafficInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The number of new connections.
+         * The new connection creation rate.
          */
         public Builder newConn(Long newConn) {
             this.newConn = newConn;
@@ -174,7 +174,7 @@ public class DescribeUserAssetIPTrafficInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The network throughput, which indicates the outbound packet rate. Unit: pps.
+         * The outbound network throughput, which indicates the number of packets that are sent outbound per second. Unit: pps.
          */
         public Builder outPps(Long outPps) {
             this.outPps = outPps;
@@ -182,7 +182,7 @@ public class DescribeUserAssetIPTrafficInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -198,7 +198,7 @@ public class DescribeUserAssetIPTrafficInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The beginning of the time range that is queried. The value is a UNIX timestamp. Unit: seconds.
+         * The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.
          */
         public Builder startTime(Long startTime) {
             this.startTime = startTime;

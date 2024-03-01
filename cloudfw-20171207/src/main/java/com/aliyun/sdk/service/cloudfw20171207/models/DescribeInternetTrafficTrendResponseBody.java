@@ -538,7 +538,7 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * The total inbound and outbound network throughput, which indicates the number of bits that are sent inbound per second. Unit: bit/s.
+             * The total outbound and inbound network throughput, which indicates the total number of bits that are sent inbound and outbound per second. Unit: bit/s.
              */
             public Builder totalBps(Long totalBps) {
                 this.totalBps = totalBps;

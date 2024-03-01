@@ -173,11 +173,11 @@ public class AddAddressBookRequest extends Request {
          * The addresses that you want to add to the address book. Separate multiple addresses with commas (,).
          * <p>
          * 
-         * > If you set GroupType to `ip`, `port` or `domain`, you must specify the AddressList parameter.
-         * >
-         * > * If you set GroupType to `ip`, you must add IP addresses to the address book. Example: 192.0.XX.XX/32, 192.0.XX.XX/24.
-         * > * If you set GroupType to `port`, you must add port numbers or port ranges to the address book. Example: 80, 100/200.
-         * > * If you set GroupType to `domain`, you must add domain names to the address book. Example: example.com, aliyundoc.com.
+         * >  If you set GroupType to `ip`, `port`, or `domain`, you must specify the AddressList parameter.
+         * 
+         * *   If you set GroupType to `ip`, you must add IP addresses to the address book. Example: 192.0.XX.XX/32, 192.0.XX.XX/24.
+         * *   If you set GroupType to `port`, you must add port numbers or port ranges to the address book. Example: 80, 100/200.
+         * *   If you set GroupType to `domain`, you must add domain names to the address book. Example: example.com, aliyundoc.com.
          */
         public Builder addressList(String addressList) {
             this.putQueryParameter("AddressList", addressList);
@@ -190,7 +190,7 @@ public class AddAddressBookRequest extends Request {
          * <p>
          * 
          * *   **1**: yes
-         * *   **0**: no (default)
+         * *   **0** (default): no
          */
         public Builder autoAddTagEcs(String autoAddTagEcs) {
             this.putQueryParameter("AutoAddTagEcs", autoAddTagEcs);
@@ -220,10 +220,10 @@ public class AddAddressBookRequest extends Request {
          * The type of the address book. Valid values:
          * <p>
          * 
-         * * **ip**: IP address book
-         * * **domain**: domain address book
-         * * **port**: port address book
-         * * **tag**: ECS tag-based address book
+         * *   **ip**: IP address book
+         * *   **domain**: domain address book
+         * *   **port**: port address book
+         * *   **tag**: ECS tag-based address book
          */
         public Builder groupType(String groupType) {
             this.putQueryParameter("GroupType", groupType);
@@ -235,7 +235,7 @@ public class AddAddressBookRequest extends Request {
          * The language of the content within the response. Valid values:
          * <p>
          * 
-         * *   **zh**: Chinese (default)
+         * *   **zh** (default): Chinese
          * *   **en**: English
          */
         public Builder lang(String lang) {
@@ -266,7 +266,7 @@ public class AddAddressBookRequest extends Request {
          * The logical relation among the ECS tags that you want to match. Valid values:
          * <p>
          * 
-         * *   **and**: Only the public IP addresses of ECS instances that match all the specified tags can be added to the address book. This is the default value.
+         * *   **and** (default): Only the public IP addresses of ECS instances that match all the specified tags can be added to the address book.
          * *   **or**: The public IP addresses of ECS instances that match one of the specified tags can be added to the address book.
          */
         public Builder tagRelation(String tagRelation) {
@@ -321,7 +321,7 @@ public class AddAddressBookRequest extends Request {
             private String tagValue; 
 
             /**
-             * The key of the tag.
+             * The key of the ECS tag.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -329,7 +329,7 @@ public class AddAddressBookRequest extends Request {
             }
 
             /**
-             * The value of the tag.
+             * The value of the ECS tag.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

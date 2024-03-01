@@ -96,7 +96,7 @@ public class DescribeUserAssetIPTrafficInfoRequest extends Request {
          * The language of the content within the response. Valid values:
          * <p>
          * 
-         * *   **zh**: Chinese (default)
+         * *   **zh** (default): Chinese
          * *   **en**: English
          */
         public Builder lang(String lang) {
@@ -106,7 +106,7 @@ public class DescribeUserAssetIPTrafficInfoRequest extends Request {
         }
 
         /**
-         * The point in time to query. The value is a UNIX timestamp. Unit: seconds.
+         * The time range to query. The value is a UNIX timestamp. Unit: seconds.
          */
         public Builder trafficTime(String trafficTime) {
             this.putQueryParameter("TrafficTime", trafficTime);
