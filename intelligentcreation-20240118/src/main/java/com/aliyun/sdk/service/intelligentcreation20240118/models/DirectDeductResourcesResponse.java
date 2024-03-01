@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DirectDeductResourceResponse} extends {@link TeaModel}
+ * {@link DirectDeductResourcesResponse} extends {@link TeaModel}
  *
- * <p>DirectDeductResourceResponse</p>
+ * <p>DirectDeductResourcesResponse</p>
  */
-public class DirectDeductResourceResponse extends Response {
+public class DirectDeductResourcesResponse extends Response {
     @NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -21,14 +21,14 @@ public class DirectDeductResourceResponse extends Response {
     @NameInMap("body")
     private DirectDeductResourceResult body;
 
-    private DirectDeductResourceResponse(BuilderImpl builder) {
+    private DirectDeductResourcesResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DirectDeductResourceResponse create() {
+    public static DirectDeductResourcesResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -58,7 +58,7 @@ public class DirectDeductResourceResponse extends Response {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DirectDeductResourceResponse, Builder> {
+    public interface Builder extends Response.Builder<DirectDeductResourcesResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
@@ -67,12 +67,12 @@ public class DirectDeductResourceResponse extends Response {
         Builder body(DirectDeductResourceResult body);
 
         @Override
-        DirectDeductResourceResponse build();
+        DirectDeductResourcesResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DirectDeductResourceResponse, Builder>
+            extends Response.BuilderImpl<DirectDeductResourcesResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
@@ -82,7 +82,7 @@ public class DirectDeductResourceResponse extends Response {
             super();
         } 
 
-        private BuilderImpl(DirectDeductResourceResponse response) {
+        private BuilderImpl(DirectDeductResourcesResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -117,8 +117,8 @@ public class DirectDeductResourceResponse extends Response {
         }
 
         @Override
-        public DirectDeductResourceResponse build() {
-            return new DirectDeductResourceResponse(this);
+        public DirectDeductResourcesResponse build() {
+            return new DirectDeductResourcesResponse(this);
         } 
 
     } 

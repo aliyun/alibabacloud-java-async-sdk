@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DirectDeductResourceResponse} extends {@link TeaModel}
+ * {@link ExpectDeductResourcesResponse} extends {@link TeaModel}
  *
- * <p>DirectDeductResourceResponse</p>
+ * <p>ExpectDeductResourcesResponse</p>
  */
-public class DirectDeductResourceResponse extends Response {
+public class ExpectDeductResourcesResponse extends Response {
     @NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -19,16 +19,16 @@ public class DirectDeductResourceResponse extends Response {
     private Integer statusCode;
 
     @NameInMap("body")
-    private DirectDeductResourceResult body;
+    private ExpectDeductResourceResult body;
 
-    private DirectDeductResourceResponse(BuilderImpl builder) {
+    private ExpectDeductResourcesResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DirectDeductResourceResponse create() {
+    public static ExpectDeductResourcesResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +54,35 @@ public class DirectDeductResourceResponse extends Response {
     /**
      * @return body
      */
-    public DirectDeductResourceResult getBody() {
+    public ExpectDeductResourceResult getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DirectDeductResourceResponse, Builder> {
+    public interface Builder extends Response.Builder<ExpectDeductResourcesResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DirectDeductResourceResult body);
+        Builder body(ExpectDeductResourceResult body);
 
         @Override
-        DirectDeductResourceResponse build();
+        ExpectDeductResourcesResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DirectDeductResourceResponse, Builder>
+            extends Response.BuilderImpl<ExpectDeductResourcesResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private DirectDeductResourceResult body; 
+        private ExpectDeductResourceResult body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DirectDeductResourceResponse response) {
+        private BuilderImpl(ExpectDeductResourcesResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +111,14 @@ public class DirectDeductResourceResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DirectDeductResourceResult body) {
+        public Builder body(ExpectDeductResourceResult body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DirectDeductResourceResponse build() {
-            return new DirectDeductResourceResponse(this);
+        public ExpectDeductResourcesResponse build() {
+            return new ExpectDeductResourcesResponse(this);
         } 
 
     } 
