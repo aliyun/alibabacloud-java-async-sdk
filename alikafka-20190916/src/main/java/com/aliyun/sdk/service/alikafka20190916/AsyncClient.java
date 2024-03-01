@@ -63,6 +63,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeSaslUsersResponse> describeSaslUsers(DescribeSaslUsersRequest request);
 
+    CompletableFuture<EnableAutoGroupCreationResponse> enableAutoGroupCreation(EnableAutoGroupCreationRequest request);
+
+    CompletableFuture<EnableAutoTopicCreationResponse> enableAutoTopicCreation(EnableAutoTopicCreationRequest request);
+
     CompletableFuture<GetAllInstanceIdListResponse> getAllInstanceIdList(GetAllInstanceIdListRequest request);
 
     CompletableFuture<GetAllowedIpListResponse> getAllowedIpList(GetAllowedIpListRequest request);
