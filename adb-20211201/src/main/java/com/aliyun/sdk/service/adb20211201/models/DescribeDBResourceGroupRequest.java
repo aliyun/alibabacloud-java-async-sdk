@@ -26,6 +26,10 @@ public class DescribeDBResourceGroupRequest extends Request {
     private String groupType;
 
     @Query
+    @NameInMap("RegionId")
+    private String regionId;
+
+    @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -34,6 +38,7 @@ public class DescribeDBResourceGroupRequest extends Request {
         this.DBClusterId = builder.DBClusterId;
         this.groupName = builder.groupName;
         this.groupType = builder.groupType;
+        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
     }
 
@@ -72,6 +77,13 @@ public class DescribeDBResourceGroupRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -82,6 +94,7 @@ public class DescribeDBResourceGroupRequest extends Request {
         private String DBClusterId; 
         private String groupName; 
         private String groupType; 
+        private String regionId; 
         private String resourceOwnerAccount; 
 
         private Builder() {
@@ -93,6 +106,7 @@ public class DescribeDBResourceGroupRequest extends Request {
             this.DBClusterId = request.DBClusterId;
             this.groupName = request.groupName;
             this.groupType = request.groupType;
+            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
         } 
 
@@ -129,6 +143,15 @@ public class DescribeDBResourceGroupRequest extends Request {
         public Builder groupType(String groupType) {
             this.putQueryParameter("GroupType", groupType);
             this.groupType = groupType;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 

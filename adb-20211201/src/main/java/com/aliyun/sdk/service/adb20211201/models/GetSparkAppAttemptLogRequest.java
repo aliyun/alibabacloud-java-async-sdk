@@ -119,7 +119,7 @@ public class GetSparkAppAttemptLogRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The log offset.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -128,7 +128,7 @@ public class GetSparkAppAttemptLogRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
