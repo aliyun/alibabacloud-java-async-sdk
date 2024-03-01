@@ -48,6 +48,9 @@ public class CreateEventResponseBody extends TeaModel {
     @NameInMap("requestId")
     private String requestId;
 
+    @NameInMap("richTextDescription")
+    private RichTextDescription richTextDescription;
+
     @NameInMap("start")
     private Start start;
 
@@ -73,6 +76,7 @@ public class CreateEventResponseBody extends TeaModel {
         this.recurrence = builder.recurrence;
         this.reminders = builder.reminders;
         this.requestId = builder.requestId;
+        this.richTextDescription = builder.richTextDescription;
         this.start = builder.start;
         this.summary = builder.summary;
         this.uiConfigs = builder.uiConfigs;
@@ -172,6 +176,13 @@ public class CreateEventResponseBody extends TeaModel {
     }
 
     /**
+     * @return richTextDescription
+     */
+    public RichTextDescription getRichTextDescription() {
+        return this.richTextDescription;
+    }
+
+    /**
      * @return start
      */
     public Start getStart() {
@@ -212,6 +223,7 @@ public class CreateEventResponseBody extends TeaModel {
         private Recurrence recurrence; 
         private java.util.List < Reminders> reminders; 
         private String requestId; 
+        private RichTextDescription richTextDescription; 
         private Start start; 
         private String summary; 
         private java.util.List < UiConfigs> uiConfigs; 
@@ -310,6 +322,14 @@ public class CreateEventResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * richTextDescription.
+         */
+        public Builder richTextDescription(RichTextDescription richTextDescription) {
+            this.richTextDescription = richTextDescription;
             return this;
         }
 
@@ -1095,6 +1115,47 @@ public class CreateEventResponseBody extends TeaModel {
 
             public Reminders build() {
                 return new Reminders(this);
+            } 
+
+        } 
+
+    }
+    public static class RichTextDescription extends TeaModel {
+        @NameInMap("text")
+        private String text;
+
+        private RichTextDescription(Builder builder) {
+            this.text = builder.text;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RichTextDescription create() {
+            return builder().build();
+        }
+
+        /**
+         * @return text
+         */
+        public String getText() {
+            return this.text;
+        }
+
+        public static final class Builder {
+            private String text; 
+
+            /**
+             * text.
+             */
+            public Builder text(String text) {
+                this.text = text;
+                return this;
+            }
+
+            public RichTextDescription build() {
+                return new RichTextDescription(this);
             } 
 
         } 

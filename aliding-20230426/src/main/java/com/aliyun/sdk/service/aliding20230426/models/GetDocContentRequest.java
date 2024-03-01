@@ -29,12 +29,18 @@ public class GetDocContentRequest extends Request {
     @NameInMap("TenantContext")
     private TenantContext tenantContext;
 
+    @Body
+    @NameInMap("userToken")
+    @Validation(required = true)
+    private String userToken;
+
     private GetDocContentRequest(Builder builder) {
         super(builder);
         this.accountContext = builder.accountContext;
         this.dentryUuid = builder.dentryUuid;
         this.targetFormat = builder.targetFormat;
         this.tenantContext = builder.tenantContext;
+        this.userToken = builder.userToken;
     }
 
     public static Builder builder() {
@@ -78,11 +84,19 @@ public class GetDocContentRequest extends Request {
         return this.tenantContext;
     }
 
+    /**
+     * @return userToken
+     */
+    public String getUserToken() {
+        return this.userToken;
+    }
+
     public static final class Builder extends Request.Builder<GetDocContentRequest, Builder> {
         private AccountContext accountContext; 
         private String dentryUuid; 
         private String targetFormat; 
         private TenantContext tenantContext; 
+        private String userToken; 
 
         private Builder() {
             super();
@@ -94,6 +108,7 @@ public class GetDocContentRequest extends Request {
             this.dentryUuid = request.dentryUuid;
             this.targetFormat = request.targetFormat;
             this.tenantContext = request.tenantContext;
+            this.userToken = request.userToken;
         } 
 
         /**
@@ -134,6 +149,15 @@ public class GetDocContentRequest extends Request {
             return this;
         }
 
+        /**
+         * userToken.
+         */
+        public Builder userToken(String userToken) {
+            this.putBodyParameter("userToken", userToken);
+            this.userToken = userToken;
+            return this;
+        }
+
         @Override
         public GetDocContentRequest build() {
             return new GetDocContentRequest(this);
@@ -142,11 +166,12 @@ public class GetDocContentRequest extends Request {
     } 
 
     public static class AccountContext extends TeaModel {
-        @NameInMap("userToken")
-        private String userToken;
+        @NameInMap("accountId")
+        @Validation(required = true)
+        private String accountId;
 
         private AccountContext(Builder builder) {
-            this.userToken = builder.userToken;
+            this.accountId = builder.accountId;
         }
 
         public static Builder builder() {
@@ -158,20 +183,20 @@ public class GetDocContentRequest extends Request {
         }
 
         /**
-         * @return userToken
+         * @return accountId
          */
-        public String getUserToken() {
-            return this.userToken;
+        public String getAccountId() {
+            return this.accountId;
         }
 
         public static final class Builder {
-            private String userToken; 
+            private String accountId; 
 
             /**
-             * userToken.
+             * accountId.
              */
-            public Builder userToken(String userToken) {
-                this.userToken = userToken;
+            public Builder accountId(String accountId) {
+                this.accountId = accountId;
                 return this;
             }
 

@@ -53,6 +53,10 @@ public class CreateEventRequest extends Request {
     private java.util.List < Reminders> reminders;
 
     @Body
+    @NameInMap("RichTextDescription")
+    private RichTextDescription richTextDescription;
+
+    @Body
     @NameInMap("Summary")
     @Validation(required = true)
     private String summary;
@@ -83,6 +87,7 @@ public class CreateEventRequest extends Request {
         this.onlineMeetingInfo = builder.onlineMeetingInfo;
         this.recurrence = builder.recurrence;
         this.reminders = builder.reminders;
+        this.richTextDescription = builder.richTextDescription;
         this.summary = builder.summary;
         this.uiConfigs = builder.uiConfigs;
         this.calendarId = builder.calendarId;
@@ -173,6 +178,13 @@ public class CreateEventRequest extends Request {
     }
 
     /**
+     * @return richTextDescription
+     */
+    public RichTextDescription getRichTextDescription() {
+        return this.richTextDescription;
+    }
+
+    /**
      * @return summary
      */
     public String getSummary() {
@@ -211,6 +223,7 @@ public class CreateEventRequest extends Request {
         private OnlineMeetingInfo onlineMeetingInfo; 
         private Recurrence recurrence; 
         private java.util.List < Reminders> reminders; 
+        private RichTextDescription richTextDescription; 
         private String summary; 
         private java.util.List < UiConfigs> uiConfigs; 
         private String calendarId; 
@@ -232,6 +245,7 @@ public class CreateEventRequest extends Request {
             this.onlineMeetingInfo = request.onlineMeetingInfo;
             this.recurrence = request.recurrence;
             this.reminders = request.reminders;
+            this.richTextDescription = request.richTextDescription;
             this.summary = request.summary;
             this.uiConfigs = request.uiConfigs;
             this.calendarId = request.calendarId;
@@ -333,6 +347,16 @@ public class CreateEventRequest extends Request {
             String remindersShrink = shrink(reminders, "Reminders", "json");
             this.putBodyParameter("Reminders", remindersShrink);
             this.reminders = reminders;
+            return this;
+        }
+
+        /**
+         * RichTextDescription.
+         */
+        public Builder richTextDescription(RichTextDescription richTextDescription) {
+            String richTextDescriptionShrink = shrink(richTextDescription, "RichTextDescription", "json");
+            this.putBodyParameter("RichTextDescription", richTextDescriptionShrink);
+            this.richTextDescription = richTextDescription;
             return this;
         }
 
@@ -966,6 +990,47 @@ public class CreateEventRequest extends Request {
 
             public Reminders build() {
                 return new Reminders(this);
+            } 
+
+        } 
+
+    }
+    public static class RichTextDescription extends TeaModel {
+        @NameInMap("text")
+        private String text;
+
+        private RichTextDescription(Builder builder) {
+            this.text = builder.text;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RichTextDescription create() {
+            return builder().build();
+        }
+
+        /**
+         * @return text
+         */
+        public String getText() {
+            return this.text;
+        }
+
+        public static final class Builder {
+            private String text; 
+
+            /**
+             * text.
+             */
+            public Builder text(String text) {
+                this.text = text;
+                return this;
+            }
+
+            public RichTextDescription build() {
+                return new RichTextDescription(this);
             } 
 
         } 
