@@ -952,6 +952,9 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
 
     }
     public static class ApiHTTP extends TeaModel {
+        @NameInMap("CheckCert")
+        private Boolean checkCert;
+
         @NameInMap("ConnectTimeout")
         private Long connectTimeout;
 
@@ -971,6 +974,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
         private Long timeout;
 
         private ApiHTTP(Builder builder) {
+            this.checkCert = builder.checkCert;
             this.connectTimeout = builder.connectTimeout;
             this.method = builder.method;
             this.requestBody = builder.requestBody;
@@ -985,6 +989,13 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
 
         public static ApiHTTP create() {
             return builder().build();
+        }
+
+        /**
+         * @return checkCert
+         */
+        public Boolean getCheckCert() {
+            return this.checkCert;
         }
 
         /**
@@ -1030,12 +1041,21 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
         }
 
         public static final class Builder {
+            private Boolean checkCert; 
             private Long connectTimeout; 
             private String method; 
             private RequestBody requestBody; 
             private java.util.Map < String, String > requestHeaders; 
             private String targetUrl; 
             private Long timeout; 
+
+            /**
+             * CheckCert.
+             */
+            public Builder checkCert(Boolean checkCert) {
+                this.checkCert = checkCert;
+                return this;
+            }
 
             /**
              * The connection timeout period. Unit: milliseconds. Default value: 5000. Minimum value: 1000. Maximum value: 300000.
