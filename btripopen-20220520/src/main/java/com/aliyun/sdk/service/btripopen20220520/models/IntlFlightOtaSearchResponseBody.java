@@ -2437,6 +2437,9 @@ public class IntlFlightOtaSearchResponseBody extends TeaModel {
         @NameInMap("item_id")
         private String itemId;
 
+        @NameInMap("item_type")
+        private String itemType;
+
         @NameInMap("shopping_item_map")
         private java.util.Map < String, ModuleItemListShoppingItemMapValue > shoppingItemMap;
 
@@ -2450,6 +2453,7 @@ public class IntlFlightOtaSearchResponseBody extends TeaModel {
             this.agreementPriceCodes = builder.agreementPriceCodes;
             this.flightRuleInfoList = builder.flightRuleInfoList;
             this.itemId = builder.itemId;
+            this.itemType = builder.itemType;
             this.shoppingItemMap = builder.shoppingItemMap;
             this.subItemPositionMap = builder.subItemPositionMap;
             this.subItems = builder.subItems;
@@ -2485,6 +2489,13 @@ public class IntlFlightOtaSearchResponseBody extends TeaModel {
         }
 
         /**
+         * @return itemType
+         */
+        public String getItemType() {
+            return this.itemType;
+        }
+
+        /**
          * @return shoppingItemMap
          */
         public java.util.Map < String, ModuleItemListShoppingItemMapValue > getShoppingItemMap() {
@@ -2509,6 +2520,7 @@ public class IntlFlightOtaSearchResponseBody extends TeaModel {
             private java.util.List < String > agreementPriceCodes; 
             private java.util.List < FlightRuleInfoList> flightRuleInfoList; 
             private String itemId; 
+            private String itemType; 
             private java.util.Map < String, ModuleItemListShoppingItemMapValue > shoppingItemMap; 
             private java.util.Map < String, java.util.List<ModuleItemListSubItemPositionMapValue>> subItemPositionMap; 
             private java.util.List < SubItems> subItems; 
@@ -2534,6 +2546,14 @@ public class IntlFlightOtaSearchResponseBody extends TeaModel {
              */
             public Builder itemId(String itemId) {
                 this.itemId = itemId;
+                return this;
+            }
+
+            /**
+             * item_type.
+             */
+            public Builder itemType(String itemType) {
+                this.itemType = itemType;
                 return this;
             }
 

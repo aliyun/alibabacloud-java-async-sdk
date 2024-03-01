@@ -155,11 +155,15 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
         @NameInMap("agreement_price_codes")
         private java.util.List < String > agreementPriceCodes;
 
+        @NameInMap("item_type")
+        private String itemType;
+
         @NameInMap("shopping_item_map")
         private java.util.Map < String, ModuleFlightItemListBestPriceItemShoppingItemMapValue > shoppingItemMap;
 
         private BestPriceItem(Builder builder) {
             this.agreementPriceCodes = builder.agreementPriceCodes;
+            this.itemType = builder.itemType;
             this.shoppingItemMap = builder.shoppingItemMap;
         }
 
@@ -179,6 +183,13 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
         }
 
         /**
+         * @return itemType
+         */
+        public String getItemType() {
+            return this.itemType;
+        }
+
+        /**
          * @return shoppingItemMap
          */
         public java.util.Map < String, ModuleFlightItemListBestPriceItemShoppingItemMapValue > getShoppingItemMap() {
@@ -187,6 +198,7 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List < String > agreementPriceCodes; 
+            private String itemType; 
             private java.util.Map < String, ModuleFlightItemListBestPriceItemShoppingItemMapValue > shoppingItemMap; 
 
             /**
@@ -194,6 +206,14 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
              */
             public Builder agreementPriceCodes(java.util.List < String > agreementPriceCodes) {
                 this.agreementPriceCodes = agreementPriceCodes;
+                return this;
+            }
+
+            /**
+             * item_type.
+             */
+            public Builder itemType(String itemType) {
+                this.itemType = itemType;
                 return this;
             }
 
