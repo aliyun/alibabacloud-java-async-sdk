@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.aimiaobi20230801;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.aimiaobi20230801.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -34,7 +35,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<FetchImageTaskResponse> fetchImageTask(FetchImageTaskRequest request);
 
+    CompletableFuture<GenerateFileUrlByKeyResponse> generateFileUrlByKey(GenerateFileUrlByKeyRequest request);
+
     CompletableFuture<GenerateImageTaskResponse> generateImageTask(GenerateImageTaskRequest request);
+
+    CompletableFuture<GenerateUploadConfigResponse> generateUploadConfig(GenerateUploadConfigRequest request);
 
     CompletableFuture<GenerateViewPointResponse> generateViewPoint(GenerateViewPointRequest request);
 
@@ -65,6 +70,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SaveDataSourceOrderConfigResponse> saveDataSourceOrderConfig(SaveDataSourceOrderConfigRequest request);
 
     CompletableFuture<SaveMaterialDocumentResponse> saveMaterialDocument(SaveMaterialDocumentRequest request);
+
+    CompletableFuture<SearchNewsResponse> searchNews(SearchNewsRequest request);
 
     CompletableFuture<SubmitAsyncTaskResponse> submitAsyncTask(SubmitAsyncTaskRequest request);
 

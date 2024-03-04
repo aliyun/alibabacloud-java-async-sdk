@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DeleteMaterialByIdResponse} extends {@link TeaModel}
+ * {@link GenerateUploadConfigResponse} extends {@link TeaModel}
  *
- * <p>DeleteMaterialByIdResponse</p>
+ * <p>GenerateUploadConfigResponse</p>
  */
-public class DeleteMaterialByIdResponse extends Response {
+public class GenerateUploadConfigResponse extends Response {
     @NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -19,16 +19,16 @@ public class DeleteMaterialByIdResponse extends Response {
     private Integer statusCode;
 
     @NameInMap("body")
-    private DeleteMaterialByIdResponseBody body;
+    private GenerateUploadConfigResponseBody body;
 
-    private DeleteMaterialByIdResponse(BuilderImpl builder) {
+    private GenerateUploadConfigResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DeleteMaterialByIdResponse create() {
+    public static GenerateUploadConfigResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +54,35 @@ public class DeleteMaterialByIdResponse extends Response {
     /**
      * @return body
      */
-    public DeleteMaterialByIdResponseBody getBody() {
+    public GenerateUploadConfigResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DeleteMaterialByIdResponse, Builder> {
+    public interface Builder extends Response.Builder<GenerateUploadConfigResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DeleteMaterialByIdResponseBody body);
+        Builder body(GenerateUploadConfigResponseBody body);
 
         @Override
-        DeleteMaterialByIdResponse build();
+        GenerateUploadConfigResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DeleteMaterialByIdResponse, Builder>
+            extends Response.BuilderImpl<GenerateUploadConfigResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private DeleteMaterialByIdResponseBody body; 
+        private GenerateUploadConfigResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DeleteMaterialByIdResponse response) {
+        private BuilderImpl(GenerateUploadConfigResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +111,14 @@ public class DeleteMaterialByIdResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DeleteMaterialByIdResponseBody body) {
+        public Builder body(GenerateUploadConfigResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DeleteMaterialByIdResponse build() {
-            return new DeleteMaterialByIdResponse(this);
+        public GenerateUploadConfigResponse build() {
+            return new GenerateUploadConfigResponse(this);
         } 
 
     } 
