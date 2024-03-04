@@ -12,7 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreatePublicIpAddressPoolResponseBody</p>
  */
 public class CreatePublicIpAddressPoolResponseBody extends TeaModel {
+    @NameInMap("PublicIpAddressPoolId")
+    private String publicIpAddressPoolId;
+
     @NameInMap("PulbicIpAddressPoolId")
+    @Deprecated
     private String pulbicIpAddressPoolId;
 
     @NameInMap("RequestId")
@@ -22,6 +26,7 @@ public class CreatePublicIpAddressPoolResponseBody extends TeaModel {
     private String resourceGroupId;
 
     private CreatePublicIpAddressPoolResponseBody(Builder builder) {
+        this.publicIpAddressPoolId = builder.publicIpAddressPoolId;
         this.pulbicIpAddressPoolId = builder.pulbicIpAddressPoolId;
         this.requestId = builder.requestId;
         this.resourceGroupId = builder.resourceGroupId;
@@ -33,6 +38,13 @@ public class CreatePublicIpAddressPoolResponseBody extends TeaModel {
 
     public static CreatePublicIpAddressPoolResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return publicIpAddressPoolId
+     */
+    public String getPublicIpAddressPoolId() {
+        return this.publicIpAddressPoolId;
     }
 
     /**
@@ -57,9 +69,18 @@ public class CreatePublicIpAddressPoolResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String publicIpAddressPoolId; 
         private String pulbicIpAddressPoolId; 
         private String requestId; 
         private String resourceGroupId; 
+
+        /**
+         * PublicIpAddressPoolId.
+         */
+        public Builder publicIpAddressPoolId(String publicIpAddressPoolId) {
+            this.publicIpAddressPoolId = publicIpAddressPoolId;
+            return this;
+        }
 
         /**
          * The ID of the IP address pool.

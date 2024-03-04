@@ -588,7 +588,7 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
             }
 
             /**
-             * The route origin. Valid values：
+             * The route origin. Valid values:
              * <p>
              * * **RoutePropagation**: The route is created by a dynamic propagation source.
              * * **SystemCreate**: The route is created by the system.
