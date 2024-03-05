@@ -120,7 +120,7 @@ public class UpdateClusterVolumesRequest extends Request {
             private String name; 
 
             /**
-             * The node type on which the additional mounted file system N is mounted. Valid values:
+             * The node type on which the additional mounted file system is mounted. Valid values:
              * <p>
              * 
              * *   Manager: management node
@@ -274,7 +274,7 @@ public class UpdateClusterVolumesRequest extends Request {
             private String volumeType; 
 
             /**
-             * The queue name of the additional mounted file system N.
+             * The queue name of the attached mounted file system.
              */
             public Builder jobQueue(String jobQueue) {
                 this.jobQueue = jobQueue;
@@ -282,7 +282,7 @@ public class UpdateClusterVolumesRequest extends Request {
             }
 
             /**
-             * The on-premises mount directory for the additional mounted file system N.
+             * The on-premises mount directory for the additional mounted file system.
              */
             public Builder localDirectory(String localDirectory) {
                 this.localDirectory = localDirectory;
@@ -290,7 +290,7 @@ public class UpdateClusterVolumesRequest extends Request {
             }
 
             /**
-             * The storage location of the additional mounted file system N. Valid values:
+             * The storage location of the attached mounted file system. Valid values:
              * <p>
              * 
              * *   OnPremise: The cluster is deployed on a hybrid cloud.
@@ -302,7 +302,7 @@ public class UpdateClusterVolumesRequest extends Request {
             }
 
             /**
-             * The remote directory to be mounted by the additional mounted file system N.
+             * The remote directory to be mounted by the additional mounted file system.
              */
             public Builder remoteDirectory(String remoteDirectory) {
                 this.remoteDirectory = remoteDirectory;
@@ -318,7 +318,7 @@ public class UpdateClusterVolumesRequest extends Request {
             }
 
             /**
-             * The ID of the additional mounted file system N.
+             * The ID of the additional mounted file system.
              */
             public Builder volumeId(String volumeId) {
                 this.volumeId = volumeId;
@@ -326,7 +326,7 @@ public class UpdateClusterVolumesRequest extends Request {
             }
 
             /**
-             * VolumeMountOption.
+             * The mount option of the attached mounted file system.
              */
             public Builder volumeMountOption(String volumeMountOption) {
                 this.volumeMountOption = volumeMountOption;
@@ -334,7 +334,7 @@ public class UpdateClusterVolumesRequest extends Request {
             }
 
             /**
-             * The domain name of the mount target for the additional mounted file system N.
+             * The domain name of the mount target for the additional mounted file system.
              */
             public Builder volumeMountpoint(String volumeMountpoint) {
                 this.volumeMountpoint = volumeMountpoint;
@@ -342,7 +342,7 @@ public class UpdateClusterVolumesRequest extends Request {
             }
 
             /**
-             * The protocol type of the additional mounted file system N. Valid values:
+             * The protocol type of the additional mounted file system. Valid values:
              * <p>
              * 
              * *   NFS
@@ -354,10 +354,7 @@ public class UpdateClusterVolumesRequest extends Request {
             }
 
             /**
-             * The type of the additional mounted file system N. Currently, only NAS is supported.
-             * <p>
-             * 
-             * Valid values of N: 1 to 10.
+             * The type of the additional mounted file system. Only NAS is supported.
              */
             public Builder volumeType(String volumeType) {
                 this.volumeType = volumeType;

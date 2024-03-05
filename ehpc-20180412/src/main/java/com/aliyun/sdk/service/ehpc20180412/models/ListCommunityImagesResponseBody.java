@@ -50,7 +50,7 @@ public class ListCommunityImagesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The list of community images, including custom images and shared images.
+         * The list of custom images and shared images that are supported by the E-HPC.
          */
         public Builder images(Images images) {
             this.images = images;
@@ -58,7 +58,7 @@ public class ListCommunityImagesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +146,7 @@ public class ListCommunityImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag of the OS image.
+             * The operating system tag of the image.
              */
             public Builder osTag(String osTag) {
                 this.osTag = osTag;
@@ -285,7 +285,7 @@ public class ListCommunityImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag of the OS image.
+             * The operating system tag of the image.
              */
             public Builder osTag(String osTag) {
                 this.osTag = osTag;
@@ -293,7 +293,7 @@ public class ListCommunityImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The operating system.
+             * The OS.
              */
             public Builder platform(String platform) {
                 this.platform = platform;
@@ -502,7 +502,7 @@ public class ListCommunityImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the image.
+             * The image ID.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -510,7 +510,7 @@ public class ListCommunityImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the image.
+             * The image name.
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -518,7 +518,7 @@ public class ListCommunityImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the image. Valid values:
+             * The image type. Valid values:
              * <p>
              * 
              * *   self: custom image
@@ -559,7 +559,7 @@ public class ListCommunityImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The Alibaba Cloud Marketplace product code of the image.
+             * The product code in Alibaba Cloud Marketplace.
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -587,13 +587,13 @@ public class ListCommunityImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the image. Valid values:
+             * The state of the image. Valid values:
              * <p>
              * 
-             * *   UnAvailable: The image is unavailable.
-             * *   Available: The image is available.
-             * *   Creating: The image is being created.
-             * *   CreateFailed: The image failed to be created.
+             * *   UnAvailable
+             * *   Available
+             * *   Creating
+             * *   CreateFailed
              */
             public Builder status(String status) {
                 this.status = status;

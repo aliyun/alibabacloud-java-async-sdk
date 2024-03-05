@@ -123,6 +123,10 @@ public class ApplyNodesRequest extends Request {
     private Integer targetCapacity;
 
     @Query
+    @NameInMap("UserData")
+    private String userData;
+
+    @Query
     @NameInMap("ZoneInfos")
     @Validation(required = true)
     private java.util.List < ZoneInfos> zoneInfos;
@@ -155,6 +159,7 @@ public class ApplyNodesRequest extends Request {
         this.systemDiskType = builder.systemDiskType;
         this.tag = builder.tag;
         this.targetCapacity = builder.targetCapacity;
+        this.userData = builder.userData;
         this.zoneInfos = builder.zoneInfos;
     }
 
@@ -354,6 +359,13 @@ public class ApplyNodesRequest extends Request {
     }
 
     /**
+     * @return userData
+     */
+    public String getUserData() {
+        return this.userData;
+    }
+
+    /**
      * @return zoneInfos
      */
     public java.util.List < ZoneInfos> getZoneInfos() {
@@ -387,6 +399,7 @@ public class ApplyNodesRequest extends Request {
         private String systemDiskType; 
         private java.util.List < Tag> tag; 
         private Integer targetCapacity; 
+        private String userData; 
         private java.util.List < ZoneInfos> zoneInfos; 
 
         private Builder() {
@@ -421,6 +434,7 @@ public class ApplyNodesRequest extends Request {
             this.systemDiskType = request.systemDiskType;
             this.tag = request.tag;
             this.targetCapacity = request.targetCapacity;
+            this.userData = request.userData;
             this.zoneInfos = request.zoneInfos;
         } 
 
@@ -431,7 +445,7 @@ public class ApplyNodesRequest extends Request {
          * *   true: A public IP address is allocated to the compute nodes.
          * *   false: A public IP address is not allocated to the compute nodes.
          * 
-         * Default value: false
+         * Default value: false.
          */
         public Builder allocatePublicAddress(Boolean allocatePublicAddress) {
             this.putQueryParameter("AllocatePublicAddress", allocatePublicAddress);
@@ -440,7 +454,7 @@ public class ApplyNodesRequest extends Request {
         }
 
         /**
-         * The ID of the cluster.
+         * The ID of the E-HPC cluster.
          * <p>
          * 
          * You can call the [ListClusters](~~87126~~) operation to query the cluster ID.
@@ -455,7 +469,7 @@ public class ApplyNodesRequest extends Request {
          * The maximum hourly price of the compute nodes. The value is a floating-point number that supports up to three decimal places. The parameter takes effect only when ComputeSpotStrategy is set to SpotWithPriceLimit.
          * <p>
          * 
-         * If ComputeSpotPriceLimit and InstanceTypeModel.N.MaxPrice are specified at the same time, compute nodes are created based on the smaller value of these parameters.
+         * If ComputeSpotPriceLimit and InstanceTypeModel.N.MaxPrice are specified at the same time, compute nodes are created based on the smaller value of the two parameters.
          */
         public Builder computeSpotPriceLimit(Float computeSpotPriceLimit) {
             this.putQueryParameter("ComputeSpotPriceLimit", computeSpotPriceLimit);
@@ -467,11 +481,11 @@ public class ApplyNodesRequest extends Request {
          * The preemption policy of the compute nodes. Valid values:
          * <p>
          * 
-         * *   NoSpot: The compute nodes use the pay-as-you-go billing method.
+         * *   NoSpot: The compute nodes are pay-as-you-go instances.
          * *   SpotWithPriceLimit: The compute nodes are preemptible instances that have a user-defined maximum hourly price.
          * *   SpotAsPriceGo: The compute nodes are preemptible instances for which the market price at the time of purchase is used as the bid price.
          * 
-         * Default value: NoSpot
+         * Default value: NoSpot.
          */
         public Builder computeSpotStrategy(String computeSpotStrategy) {
             this.putQueryParameter("ComputeSpotStrategy", computeSpotStrategy);
@@ -483,7 +497,7 @@ public class ApplyNodesRequest extends Request {
          * The number of vCPUs. The parameter is required when the ResourceAmountType parameter is set to Cores.
          * <p>
          * 
-         * You can set Cores, vCPU, and Memory to query node specifications. For example, you can query the available compute nodes that have 2 vCPUs and 16 GB of memory by setting vCPU to 2 and Memory to 16. You can also query compute nodes by zone. Query results are sorted by price.
+         * You can set vCPU and Memory to query node specifications. For example, you can query the available compute nodes that have 2 vCPUs and 16 GB of memory by setting vCPU to 2 and Memory to 16. You can also query compute nodes by node specification and zone. Query results are sorted by price. The nodes that have the lowest price are created.
          */
         public Builder cores(Integer cores) {
             this.putQueryParameter("Cores", cores);
@@ -527,11 +541,11 @@ public class ApplyNodesRequest extends Request {
          * The level of the instance family. The parameter takes effect only when Cores and Memory are specified. Valid values:
          * <p>
          * 
-         * *   EntryLevel.
-         * *   EnterpriseLevel.
-         * *   CreditEntryLevel. For more information, see [What are burstable instances?](~~59977~~)
+         * *   EntryLevel
+         * *   EnterpriseLevel
+         * *   CreditEntryLevel For more information, see [Overview of burstable instances](~~59977~~).
          * 
-         * Default value: EnterpriseLevel
+         * Default value: EnterpriseLevel.
          */
         public Builder instanceFamilyLevel(String instanceFamilyLevel) {
             this.putQueryParameter("InstanceFamilyLevel", instanceFamilyLevel);
@@ -540,7 +554,7 @@ public class ApplyNodesRequest extends Request {
         }
 
         /**
-         * InstanceTypeModel.
+         * The information about the preemptible instance.
          */
         public Builder instanceTypeModel(java.util.List < InstanceTypeModel> instanceTypeModel) {
             this.putQueryParameter("InstanceTypeModel", instanceTypeModel);
@@ -566,7 +580,7 @@ public class ApplyNodesRequest extends Request {
          * <p>
          * 
          * *   If the purchased outbound public bandwidth is less than or equal to 10 Mbit/s, the valid values of the parameter are 1 to 10 and the default value is 10.
-         * *   If the purchased outbound public bandwidth is greater than 10 Mbit/s, the valid values of this parameter are 1 to the amount of the outbound bandwidth that is purchased.
+         * *   If the purchased outbound public bandwidth is greater than 10 Mbit/s, the valid values of this parameter are 1 to the amount of the outbound bandwidth that is purchased. The default value is the value of the InternetMaxBandWidthOut parameter.
          */
         public Builder internetMaxBandWidthIn(Integer internetMaxBandWidthIn) {
             this.putQueryParameter("InternetMaxBandWidthIn", internetMaxBandWidthIn);
@@ -578,7 +592,7 @@ public class ApplyNodesRequest extends Request {
          * The maximum outbound public bandwidth. Unit: Mbit/s. Valid values: 0 to 100.
          * <p>
          * 
-         * Default value: 0
+         * Default value: 0.
          */
         public Builder internetMaxBandWidthOut(Integer internetMaxBandWidthOut) {
             this.putQueryParameter("InternetMaxBandWidthOut", internetMaxBandWidthOut);
@@ -590,7 +604,7 @@ public class ApplyNodesRequest extends Request {
          * The interval between two consecutive batches. Valid values: 60 to 600. Unit: seconds.
          * <p>
          * 
-         * Default value: 60
+         * Default value: 60.
          */
         public Builder interval(Integer interval) {
             this.putQueryParameter("Interval", interval);
@@ -614,7 +628,7 @@ public class ApplyNodesRequest extends Request {
          * The memory capacity. The parameter is required when the ResourceAmountType parameter is set to Cores. Unit: GB.
          * <p>
          * 
-         * You can set Cores, vCPU, and Memory to query node specifications. For example, you can query the available compute nodes that have 2 vCPUs and 16 GB of memory by setting vCPU to 2 and Memory to 16. You can also query compute nodes by zone. Query results are sorted by price.
+         * You can set vCPU and Memory to query node specifications. For example, you can query the available compute nodes that have 2 vCPUs and 16 GB of memory by setting vCPU to 2 and Memory to 16. You can also query compute nodes by node specification and zone. Query results are sorted by price. The nodes that have the lowest price are created.
          */
         public Builder memory(Integer memory) {
             this.putQueryParameter("Memory", memory);
@@ -626,7 +640,7 @@ public class ApplyNodesRequest extends Request {
          * The application policy of the preemptible nodes. Valid values:
          * <p>
          * 
-         * *   LowPriceResourcePlanning: Preemptible nodes are created based on the unit prices of vCPUs in ascending order. Preemptible nodes are created first when preemptible instance types are specified.
+         * *   LowPriceResourcePlanning: Preemptible nodes are created based on the unit prices of vCPUs in ascending order. Preemptible nodes are created first when multiple preemptible instance types are specified.
          * *   CapacityOptResourcePlanning: Preemptible nodes are created based on the prices and release rates in ascending order.
          * *   CustomizedResourcePlanning: Nodes are added based on the predefined value of the ZoneIds.N parameter. Instances of a zone that has a higher priority are used first.
          */
@@ -637,13 +651,13 @@ public class ApplyNodesRequest extends Request {
         }
 
         /**
-         * The type of the resource to be added. Valid values:
+         * The type of the resource that you want to add. Valid values:
          * <p>
          * 
-         * *   Instances: compute node
+         * *   Instances: the ECS instances that are used as compute nodes
          * *   Cores: vCPU and memory
          * 
-         * Default value: Instances
+         * Default value: Instances.
          */
         public Builder resourceAmountType(String resourceAmountType) {
             this.putQueryParameter("ResourceAmountType", resourceAmountType);
@@ -655,7 +669,7 @@ public class ApplyNodesRequest extends Request {
          * The total number of batches to create nodes. Valid values: 1 to 10.
          * <p>
          * 
-         * Default value: 1
+         * Default value: 1.
          */
         public Builder round(Integer round) {
             this.putQueryParameter("Round", round);
@@ -668,9 +682,9 @@ public class ApplyNodesRequest extends Request {
          * <p>
          * 
          * *   true: Check the inventory of the resources. Compute nodes are created based on the value of the TargetCapacity parameter only when the available resources are sufficient. Otherwise, no compute nodes are created.
-         * *   false: Check the inventory of the resources. Compute nodes are created only when the available resources are sufficient. However, some compute nodes may fail to be created because resources become insufficient after the inventory is checked.
+         * *   false: Check the inventory of the resources. Compute nodes are created only when the available resources are sufficient. However, some compute nodes may fail to be created because resources become insufficient after the inventory query.
          * 
-         * Default value: false
+         * Default value: false.
          */
         public Builder strictResourceProvision(Boolean strictResourceProvision) {
             this.putQueryParameter("StrictResourceProvision", strictResourceProvision);
@@ -685,11 +699,11 @@ public class ApplyNodesRequest extends Request {
          * *   true: If the available resources are fewer than the resources that you want to add, no compute nodes are created and an error is returned. If the available resources are more than the resources that you want to add, the following cases may occur:
          * 
          *     *   If StrictResourceProvision is set to true, check the inventory of the resources. Compute nodes are created based on the value of the TargetCapacity parameter only when the available resources are sufficient. Otherwise, no compute nodes are created.
-         *     *   If StrictResourceProvision is set to false, check the inventory of the resources. Compute nodes are created only when the available resources are sufficient. However, some compute nodes may fail to be created because resources become insufficient after the inventory is checked.
+         *     *   If StrictResourceProvision is set to false, check the inventory of the resources. Compute nodes are created only when the available resources are sufficient. However, some compute nodes may fail to be created because resources become insufficient after the inventory query.
          * 
          * *   false: If the available resources are insufficient, compute nodes are created based on the inventory of the resources.
          * 
-         * Default value: true
+         * Default value: true.
          */
         public Builder strictSatisfiedTargetCapacity(Boolean strictSatisfiedTargetCapacity) {
             this.putQueryParameter("StrictSatisfiedTargetCapacity", strictSatisfiedTargetCapacity);
@@ -698,17 +712,15 @@ public class ApplyNodesRequest extends Request {
         }
 
         /**
-         * The performance level of the ESSD used as the system disk. Valid values:
+         * The performance level of the ESSD that you want to use as the system disk. Valid values:
          * <p>
          * 
          * *   PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.
-         * *   PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.
+         * *   PL1: A single ESSD can deliver up to 50,000 IOPS of random read/write.
          * *   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.
          * *   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.
          * 
-         * Default value: PL0
-         * 
-         * For more information, see [ESSDs](~~122389~~).
+         * Default value: PL0. For more information, see [ESSDs](~~122389~~).
          */
         public Builder systemDiskLevel(String systemDiskLevel) {
             this.putQueryParameter("SystemDiskLevel", systemDiskLevel);
@@ -720,9 +732,9 @@ public class ApplyNodesRequest extends Request {
          * The size of the system disk. Unit: GB.
          * <p>
          * 
-         * Valid values: 40 to 500
+         * Valid values: 40 to 500.
          * 
-         * Default value: 40
+         * Default value: 40.
          */
         public Builder systemDiskSize(Integer systemDiskSize) {
             this.putQueryParameter("SystemDiskSize", systemDiskSize);
@@ -734,9 +746,9 @@ public class ApplyNodesRequest extends Request {
          * The type of the system disk. Valid values:
          * <p>
          * 
-         * *   cloud_efficiency: ultra disk.
-         * *   cloud_ssd: SSD.
-         * *   cloud_essd: ESSD.
+         * *   cloud_efficiency: ultra disk
+         * *   cloud_ssd: SSD
+         * *   cloud_essd: enhanced SSD (ESSD)
          * *   cloud: basic disk. Disks of this type are retired.
          */
         public Builder systemDiskType(String systemDiskType) {
@@ -746,7 +758,7 @@ public class ApplyNodesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tag to add to the instance.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -755,7 +767,7 @@ public class ApplyNodesRequest extends Request {
         }
 
         /**
-         * The number of the resource that you want to add. The specific number depends on the value of the ResourceAmountType parameter:
+         * The amount of the resource that you want to add. The specific number depends on the value of the ResourceAmountType parameter:
          * <p>
          * 
          * *   If ResourceAmountType is set to Instance, the value range of TargetCapacity is 1 to 200.
@@ -768,7 +780,16 @@ public class ApplyNodesRequest extends Request {
         }
 
         /**
-         * ZoneInfos.
+         * UserData.
+         */
+        public Builder userData(String userData) {
+            this.putQueryParameter("UserData", userData);
+            this.userData = userData;
+            return this;
+        }
+
+        /**
+         * The details of the zones. You can specify up to 10 zones.
          */
         public Builder zoneInfos(java.util.List < ZoneInfos> zoneInfos) {
             this.putQueryParameter("ZoneInfos", zoneInfos);
@@ -834,10 +855,10 @@ public class ApplyNodesRequest extends Request {
             private String targetImageId; 
 
             /**
-             * The instance type of the compute node. The default value is the instance type that was specified when you created the cluster or the last time when you added compute nodes.
+             * The instance type of the compute node. The default value is the instance type that was specified when you created the cluster or the last time you added compute nodes.
              * <p>
              * 
-             * Valid values of N: 1 to 10
+             * Valid values of N: 1 to 10.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -850,7 +871,7 @@ public class ApplyNodesRequest extends Request {
              * 
              * The parameter takes effect only when ComputeSpotStrategy is set to SpotWithPriceLimit.
              * 
-             * Valid values of N: 1 to 10
+             * Valid values of N: 1 to 10.
              */
             public Builder maxPrice(Float maxPrice) {
                 this.maxPrice = maxPrice;
@@ -861,7 +882,7 @@ public class ApplyNodesRequest extends Request {
              * The image ID of the compute node. You must select a Windows image.
              * <p>
              * 
-             * Valid values of N: 1 to 10
+             * Valid values of N: 1 to 10.
              */
             public Builder targetImageId(String targetImageId) {
                 this.targetImageId = targetImageId;
@@ -914,10 +935,10 @@ public class ApplyNodesRequest extends Request {
             private String value; 
 
             /**
-             * The tag key of the compute node that you want to attach. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain http:// or https://.
+             * The tag key of the compute node that you want to add. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain http:// or https://.
              * <p>
              * 
-             * Valid values of N: 1 to 10
+             * Valid values of N: 1 to 10.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -925,10 +946,10 @@ public class ApplyNodesRequest extends Request {
             }
 
             /**
-             * The tag value of the compute node that you want to add. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with acs: or contain http:// or https://.
+             * The tag value of the compute node that you want to add. You can specify 1 to 20 tag values. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with acs: or contain http:// or https://.
              * <p>
              * 
-             * Valid values of N: 1 to 10
+             * Valid values of N: 1 to 10.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -989,7 +1010,7 @@ public class ApplyNodesRequest extends Request {
             }
 
             /**
-             * The ID of the zone to which the cluster belongs. Valid values of N: 1 to 10.
+             * The ID of the zone to which the node belongs. Valid values of N: 1 to 10.
              * <p>
              * 
              * >  Each zone ID must be unique.

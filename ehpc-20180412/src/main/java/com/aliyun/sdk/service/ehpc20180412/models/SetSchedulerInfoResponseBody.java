@@ -50,7 +50,7 @@ public class SetSchedulerInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The response message.
+         * The data returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -58,7 +58,7 @@ public class SetSchedulerInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

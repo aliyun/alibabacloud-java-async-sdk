@@ -50,7 +50,7 @@ public class ListNodesNoPagingResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about nodes.
+         * The list of nodes.
          */
         public Builder nodes(Nodes nodes) {
             this.nodes = nodes;
@@ -58,7 +58,7 @@ public class ListNodesNoPagingResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +146,7 @@ public class ListNodesNoPagingResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The name of the node.
+             * The node name.
              */
             public Builder hostName(String hostName) {
                 this.hostName = hostName;
@@ -154,7 +154,7 @@ public class ListNodesNoPagingResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node.
+             * The node ID.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -162,7 +162,7 @@ public class ListNodesNoPagingResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the image.
+             * The image ID.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -170,7 +170,7 @@ public class ListNodesNoPagingResponseBody extends TeaModel {
             }
 
             /**
-             * The instance type of the node.
+             * The node type.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -182,7 +182,7 @@ public class ListNodesNoPagingResponseBody extends TeaModel {
              * <p>
              * 
              * *   uninit: The node is being installed.
-             * *   exception: An exception has occurred on the node.
+             * *   exception: An exception occurred on the node.
              * *   running: The node is running.
              * *   initing: The node is being initialized.
              * *   releasing: The node is being released.

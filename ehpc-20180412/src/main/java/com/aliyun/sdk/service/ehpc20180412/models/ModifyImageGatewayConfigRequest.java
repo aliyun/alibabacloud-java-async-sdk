@@ -253,7 +253,7 @@ public class ModifyImageGatewayConfigRequest extends Request {
         }
 
         /**
-         * The timeout period for pulling images.
+         * The timeout period for pulling images. Unit: seconds.
          */
         public Builder pullUpdateTimeout(Integer pullUpdateTimeout) {
             this.putQueryParameter("PullUpdateTimeout", pullUpdateTimeout);

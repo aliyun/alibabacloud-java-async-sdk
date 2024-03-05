@@ -50,7 +50,7 @@ public class InspectImageResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The status of the image.
+         * The state of the container image.
          */
         public Builder imageStatus(ImageStatus imageStatus) {
             this.imageStatus = imageStatus;
@@ -58,7 +58,7 @@ public class InspectImageResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

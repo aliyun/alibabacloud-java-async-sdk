@@ -110,7 +110,7 @@ public class ListNodesByQueueResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -604,10 +604,10 @@ public class ListNodesByQueueResponseBody extends TeaModel {
             }
 
             /**
-             * The mode in which the node was added. Valid values:
+             * The mode in which the node is created. Valid values:
              * <p>
              * 
-             * *   manual: The node was manually added.
+             * *   manual: The node is manually added.
              * *   autoscale: The node is automatically added.
              */
             public Builder createMode(String createMode) {
@@ -640,7 +640,7 @@ public class ListNodesByQueueResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the node.
+             * The node name.
              */
             public Builder hostName(String hostName) {
                 this.hostName = hostName;
@@ -656,7 +656,7 @@ public class ListNodesByQueueResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ECS instance.
+             * The ID of the instance.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -664,7 +664,7 @@ public class ListNodesByQueueResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the image.
+             * The image ID.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -697,8 +697,8 @@ public class ListNodesByQueueResponseBody extends TeaModel {
              * The location where the node is deployed. Valid values:
              * <p>
              * 
-             * *   OnPremise: The node is deployed on a hybrid cloud.
-             * *   PublicCloud: The node is deployed on a public cloud.
+             * *   OnPremise: The cluster is deployed on a hybrid cloud.
+             * *   PublicCloud: The cluster is deployed on a public cloud.
              */
             public Builder location(String location) {
                 this.location = location;
@@ -709,10 +709,10 @@ public class ListNodesByQueueResponseBody extends TeaModel {
              * The reason why the node is locked. Valid values:
              * <p>
              * 
-             * *   financial: The node is locked due to overdue payments.
-             * *   security: The node is locked due to security reasons.
-             * *   recycling: The preemptible node is locked and pending release.
-             * *   dedicatedhostfinancial: The node is locked due to the overdue payments of the dedicated host.
+             * *   financial: The instance is locked due to overdue payments.
+             * *   security: The node is locked for security reasons.
+             * *   recycling: The preemptible instance is locked and pending release.
+             * *   dedicatedhostfinancial: The ECS instance is locked due to overdue payments of the dedicated host.
              * 
              * By default, an empty string is returned.
              */
@@ -730,7 +730,7 @@ public class ListNodesByQueueResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -738,12 +738,12 @@ public class ListNodesByQueueResponseBody extends TeaModel {
             }
 
             /**
-             * The preemption policy for the Elastic Compute Service (ECS) instance. Valid values:
+             * The preemption policy of the instance. Valid values:
              * <p>
              * 
-             * *   NoSpot: applies to regular pay-as-you-go instances.
-             * *   SpotWithPriceLimit: The instances of the compute node are preemptible instances. These types of instances have a specified maximum hourly price.
-             * *   SpotAsPriceGo: The instances of the compute node are preemptible instances. The price of these instances is based on the current market price.
+             * *   NoSpot: The instance is created as a pay-as-you-go instance.
+             * *   SpotWithPriceLimit: The instance is created as a preemptible instance with a user-defined maximum hourly price.
+             * *   SpotAsPriceGo: The instance is created as a preemptible instance for which the market price at the time of purchase is automatically used as the bid price.
              */
             public Builder spotStrategy(String spotStrategy) {
                 this.spotStrategy = spotStrategy;
@@ -765,8 +765,8 @@ public class ListNodesByQueueResponseBody extends TeaModel {
              * *   uninit: The node is not initialized.
              * *   init: The node is being initialized.
              * *   ready: The node is ready.
-             * *   running: The node is running.
-             * *   exception: An exception has occurred on the node.
+             * *   running: The cluster is running.
+             * *   exception: An exception occurred on the node.
              * *   untracking: The node is not added to the cluster.
              */
             public Builder status(String status) {
@@ -791,7 +791,7 @@ public class ListNodesByQueueResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch.
+             * The vSwitch ID.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -807,7 +807,7 @@ public class ListNodesByQueueResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the virtual private cloud (VPC).
+             * The VPC ID of the node.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -815,7 +815,7 @@ public class ListNodesByQueueResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the zone.
+             * The zone ID of the node.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

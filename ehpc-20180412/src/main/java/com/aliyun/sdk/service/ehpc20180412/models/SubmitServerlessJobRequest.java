@@ -270,9 +270,7 @@ public class SubmitServerlessJobRequest extends Request {
          * The configuration of the array job.
          * <p>
          * 
-         * > 
-         * 
-         * *   The index value of an array job is passed to the serverless job container by using the environment variable **EHPC_JOB_ARRAY_INDEX** to allow access to the array job from business programs.
+         * >  The value of an array job index is passed to a serverless job container through the environment variable `EHPC_ARRAY_TASK_ID`. Users can access the container from business programs.
          */
         public Builder arrayProperties(ArrayProperties arrayProperties) {
             String arrayPropertiesShrink = shrink(arrayProperties, "ArrayProperties", "json");
@@ -503,7 +501,7 @@ public class SubmitServerlessJobRequest extends Request {
             }
 
             /**
-             * The starting value of the array job index. Valid values: 0 to 4999.
+             * The start value of the array job index. Valid values: 0 to 4999.
              */
             public Builder indexStart(Long indexStart) {
                 this.indexStart = indexStart;
@@ -514,7 +512,7 @@ public class SubmitServerlessJobRequest extends Request {
              * The interval of the array job index.
              * <p>
              * 
-             * >  If the IndexStart of the array job is set to 1, IndexEnd is set to 5, and IndexStep is set to 2, the array job contains three subtasks. The subtask indexes are 1, 3, and 5.
+             * >  If the array job property is IndexStart=1,IndexEnd=5, and IndexStep=2, the array job contains three subtasks. The values of the subtask indexes are 1,3, and 5.
              */
             public Builder indexStep(Long indexStep) {
                 this.indexStep = indexStep;
@@ -567,7 +565,7 @@ public class SubmitServerlessJobRequest extends Request {
             private String value; 
 
             /**
-             * 环境变量名。长度为1~128位。格式要求：[0-9a-zA-Z]，以及下划线，不能以数字开头。
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -640,12 +638,7 @@ public class SubmitServerlessJobRequest extends Request {
             private String mountPath; 
 
             /**
-             * 使用FlexVolume插件挂载数据卷时的驱动类型。取值范围如下：
-             * <p>
-             * 
-             * alicloud/nas：挂载NAS。
-             * 
-             * alicloud/oss：挂载OSS。
+             * FlexVolumeDriver.
              */
             public Builder flexVolumeDriver(String flexVolumeDriver) {
                 this.flexVolumeDriver = flexVolumeDriver;
@@ -653,7 +646,7 @@ public class SubmitServerlessJobRequest extends Request {
             }
 
             /**
-             * FlexVolume对象选项列表。为KV形式，采用JSON传递。
+             * FlexVolumeOptions.
              */
             public Builder flexVolumeOptions(String flexVolumeOptions) {
                 this.flexVolumeOptions = flexVolumeOptions;

@@ -72,7 +72,7 @@ public class DeleteClusterRequest extends Request {
          * The ID of the cluster.
          * <p>
          * 
-         * You can call the [ListClusters](~~87116~~) operation to query the cluster ID.
+         * You can call the [ListClusters](~~87116~~) operation to obtain cluster IDs.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -84,7 +84,7 @@ public class DeleteClusterRequest extends Request {
          * Specifies whether to release Elastic Compute Service (ECS) instances that are created by using Elastic High Performance Computing (E-HPC).
          * <p>
          * 
-         * Default value: true
+         * Default value: true.
          */
         public Builder releaseInstance(String releaseInstance) {
             this.putQueryParameter("ReleaseInstance", releaseInstance);

@@ -144,6 +144,9 @@ public class ListClustersMetaResponseBody extends TeaModel {
         @NameInMap("Description")
         private String description;
 
+        @NameInMap("EhpcVersion")
+        private String ehpcVersion;
+
         @NameInMap("HasPlugin")
         private Boolean hasPlugin;
 
@@ -176,6 +179,7 @@ public class ListClustersMetaResponseBody extends TeaModel {
             this.clientVersion = builder.clientVersion;
             this.deployMode = builder.deployMode;
             this.description = builder.description;
+            this.ehpcVersion = builder.ehpcVersion;
             this.hasPlugin = builder.hasPlugin;
             this.id = builder.id;
             this.isComputeEss = builder.isComputeEss;
@@ -221,6 +225,13 @@ public class ListClustersMetaResponseBody extends TeaModel {
          */
         public String getDescription() {
             return this.description;
+        }
+
+        /**
+         * @return ehpcVersion
+         */
+        public String getEhpcVersion() {
+            return this.ehpcVersion;
         }
 
         /**
@@ -291,6 +302,7 @@ public class ListClustersMetaResponseBody extends TeaModel {
             private String clientVersion; 
             private String deployMode; 
             private String description; 
+            private String ehpcVersion; 
             private Boolean hasPlugin; 
             private String id; 
             private Boolean isComputeEss; 
@@ -340,6 +352,14 @@ public class ListClustersMetaResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * The version of E-HPC.
+             */
+            public Builder ehpcVersion(String ehpcVersion) {
+                this.ehpcVersion = ehpcVersion;
                 return this;
             }
 

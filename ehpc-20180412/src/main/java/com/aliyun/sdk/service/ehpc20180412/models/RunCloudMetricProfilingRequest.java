@@ -127,7 +127,7 @@ public class RunCloudMetricProfilingRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * The ID of the E-HPC cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -139,9 +139,9 @@ public class RunCloudMetricProfilingRequest extends Request {
          * The duration of the profiling process. Unit: seconds.
          * <p>
          * 
-         * Value values: 10 to 300
+         * Value values: 10 to 300.
          * 
-         * Default value: 30
+         * Default value: 30.
          */
         public Builder duration(Integer duration) {
             this.putQueryParameter("Duration", duration);
@@ -150,12 +150,10 @@ public class RunCloudMetricProfilingRequest extends Request {
         }
 
         /**
-         * The sampling frequency. Unit: Hz
+         * The sampling frequency. Unit: Hz. Valid values: 1 to 2000.
          * <p>
          * 
-         * Valid values: 1 to 2000
-         * 
-         * Default value: 2000
+         * Default value: 2000.
          */
         public Builder freq(Integer freq) {
             this.putQueryParameter("Freq", freq);
@@ -164,7 +162,7 @@ public class RunCloudMetricProfilingRequest extends Request {
         }
 
         /**
-         * The name of the host.
+         * The hostname.
          */
         public Builder hostName(String hostName) {
             this.putQueryParameter("HostName", hostName);
@@ -182,7 +180,7 @@ public class RunCloudMetricProfilingRequest extends Request {
         }
 
         /**
-         * The ID of the region where the cluster resides.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

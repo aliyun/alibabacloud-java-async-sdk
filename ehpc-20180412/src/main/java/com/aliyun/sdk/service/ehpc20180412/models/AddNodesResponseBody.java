@@ -62,7 +62,7 @@ public class AddNodesResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * InstanceIds.
+         * The instance IDs.
          */
         public Builder instanceIds(InstanceIds instanceIds) {
             this.instanceIds = instanceIds;

@@ -13,16 +13,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListSoftwaresResponse extends Response {
     @NameInMap("headers")
-    @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    private Integer statusCode;
+
     @NameInMap("body")
-    @Validation(required = true)
     private ListSoftwaresResponseBody body;
 
     private ListSoftwaresResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +45,13 @@ public class ListSoftwaresResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public ListSoftwaresResponseBody getBody() {
@@ -52,6 +61,8 @@ public class ListSoftwaresResponse extends Response {
     public interface Builder extends Response.Builder<ListSoftwaresResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(ListSoftwaresResponseBody body);
 
@@ -64,6 +75,7 @@ public class ListSoftwaresResponse extends Response {
             extends Response.BuilderImpl<ListSoftwaresResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private ListSoftwaresResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +85,7 @@ public class ListSoftwaresResponse extends Response {
         private BuilderImpl(ListSoftwaresResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +95,15 @@ public class ListSoftwaresResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

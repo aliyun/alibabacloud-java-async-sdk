@@ -302,7 +302,7 @@ public class SetAutoScaleConfigRequest extends Request {
         }
 
         /**
-         * DnsConfig.
+         * The Domain Name System (DNS) settings.
          */
         public Builder dnsConfig(String dnsConfig) {
             this.putQueryParameter("DnsConfig", dnsConfig);
@@ -1146,7 +1146,9 @@ public class SetAutoScaleConfigRequest extends Request {
             private Integer systemDiskSize; 
 
             /**
-             * AutoMinNodesPerCycle.
+             * Automatic Configuration of the Minimum Node Number for Each Scale-out.
+             * <p>
+             * If you set this parameter to true, the minimum number of nodes for each scale-out is equal to the number of nodes required by the job. The maximum number is 99.
              */
             public Builder autoMinNodesPerCycle(Boolean autoMinNodesPerCycle) {
                 this.autoMinNodesPerCycle = autoMinNodesPerCycle;

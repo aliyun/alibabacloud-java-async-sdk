@@ -491,7 +491,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             private ValueFrom valueFrom; 
 
             /**
-             * The key of the environment variable.
+             * The name of the environment variable.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -782,7 +782,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum number of consecutive failures that must occur for the probe to be considered failed. Default value: 3.
+             * The minimum number of consecutive failures that must occur for the probe to be considered as failed. Default value: 3.
              */
             public Builder failureThreshold(Long failureThreshold) {
                 this.failureThreshold = failureThreshold;
@@ -798,7 +798,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of seconds between the time when the startup of the container ends and the time when the check starts.
+             * The number of seconds after the container is started and before a liveness probe is initiated.
              */
             public Builder initialDelaySeconds(Long initialDelaySeconds) {
                 this.initialDelaySeconds = initialDelaySeconds;
@@ -814,7 +814,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum number of consecutive successes for the probe to be considered successful after having failed. Default value: 1. Set the value to 1.
+             * The minimum number of consecutive successes that must occur for the check to be considered successful. Default value: 1. Set the value to 1.
              */
             public Builder successThreshold(Long successThreshold) {
                 this.successThreshold = successThreshold;
@@ -830,7 +830,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The timeout period of a readiness probe. Default value: 1. Minimum value: 1. Unit: seconds.
+             * The timeout period of the check. Default value: 1. Minimum value: 1.
              */
             public Builder timeoutSeconds(Long timeoutSeconds) {
                 this.timeoutSeconds = timeoutSeconds;
@@ -1352,7 +1352,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum number of consecutive failures that must occur for the check to be considered failure. Default value: 3.
+             * The minimum number of consecutive failures that must occur for the check to be considered as failed. Default value: 3.
              */
             public Builder failureThreshold(Long failureThreshold) {
                 this.failureThreshold = failureThreshold;
@@ -1368,7 +1368,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of seconds between the time when the startup of the container ends and the time when the check starts.
+             * The number of seconds after the container is started and before a liveness probe is initiated.
              */
             public Builder initialDelaySeconds(Long initialDelaySeconds) {
                 this.initialDelaySeconds = initialDelaySeconds;
@@ -1376,7 +1376,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The interval at which the check is performed. Unit: seconds. Default value: 10. Minimum value: 1.
+             * The interval at which the container is checked. Unit: seconds. Default value: 10. Minimum value: 1.
              */
             public Builder periodSeconds(Long periodSeconds) {
                 this.periodSeconds = periodSeconds;
@@ -1384,7 +1384,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum number of consecutive successes that must occur for the check to be considered successful. Default value: 1. Set the value to 1.
+             * The minimum number of consecutive successes for a failed liveness probe to be considered successful. Default value: 1. Set the value to 1.
              */
             public Builder successThreshold(Long successThreshold) {
                 this.successThreshold = successThreshold;
@@ -1522,7 +1522,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The UID that is used to run the entry point of the container process.
+             * The user ID (UID) that is used to run the entry point of the container process.
              */
             public Builder runAsUser(Long runAsUser) {
                 this.runAsUser = runAsUser;
@@ -1957,7 +1957,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of vCPUs of the container.
+             * The number of vCPUs.
              */
             public Builder cpu(Float cpu) {
                 this.cpu = cpu;
@@ -1997,7 +1997,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The policy for image pulling. Valid values:
+             * The policy to pull images. Valid values:
              * <p>
              * 
              * *   Always: Each time instances are created, image pulling is performed.
@@ -2082,7 +2082,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the container allocates buffer resources to standard input streams when the container runs. If you do not specify this parameter, an EOF error may occur when standard input streams in the init container are read. Default value: false.
+             * Indicates whether the container allocates buffer resources to standard input streams when the container runs. If you do not specify this parameter, an end-of-file (EOF) error may occur when standard input streams in the container are read. Default value: false.
              */
             public Builder stdin(Boolean stdin) {
                 this.stdin = stdin;
@@ -2090,7 +2090,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the container runtime closes the stdin channel after the stdin channel has been opened by a single attach session. If stdin is true, the stdin stream remains open across multiple attach sessions. If StdinOnce is set to true, stdin is opened on container start, remains empty until the first client attaches to stdin, and then is open and receives data until the client disconnects. When the client disconnects, stdin is closed and remains closed until the container is restarted.
+             * Indicates whether the container runtime closes the stdin channel after the stdin channel has been opened by a single attach session. If stdin is true, the stdin stream remains open across multiple attach sessions. If StdinOnce is set to true, stdin is opened on container start, but remains empty until the first client attaches to stdin, and then remains open and receives data until the client disconnects. When the client disconnects, stdin is closed and remains closed until the container is restarted.
              */
             public Builder stdinOnce(Boolean stdinOnce) {
                 this.stdinOnce = stdinOnce;
@@ -2503,7 +2503,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the object to which the event belongs.
+             * The name of the category to which the event belongs.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2584,7 +2584,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the host.
+             * The IP address.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -2733,7 +2733,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The message of the event.
+             * The message about the event.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -2917,7 +2917,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             private EnvironmentVarsValueFrom valueFrom; 
 
             /**
-             * The key of the environment variable.
+             * The name of the environment variable.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -3686,7 +3686,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The image of the container.
+             * The image.
              */
             public Builder image(String image) {
                 this.image = image;
@@ -3694,7 +3694,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The policy for image pulling.
+             * The policy to pull images.
              */
             public Builder imagePullPolicy(String imagePullPolicy) {
                 this.imagePullPolicy = imagePullPolicy;
@@ -4089,7 +4089,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The file system type of the disk volume.
+             * The type of the volume.
              */
             public Builder diskVolumeFsType(String diskVolumeFsType) {
                 this.diskVolumeFsType = diskVolumeFsType;
@@ -4097,11 +4097,11 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The storage media of emptyDir volume N. This parameter is empty by default, which indicates that the node file system is used as the storage media. Valid values:
+             * The storage media for the emptyDir volume. This parameter is empty by default, which indicates that the node file system is used as the storage media. Valid values:
              * <p>
              * 
              * *   Memory: uses memory as the storage media.
-             * *   LocalRaid0: forms local disks into RAID 0. This value is applicable only to scenarios in which an elastic container instance that has local disks mounted is created. For more information, see [Create an elastic container instance that has local disks mounted](~~114664~~).
+             * *   LocalRaid0: forms local disks into RAID 0. This value is valid only if an elastic container instance that has local disks mounted is created. For more information, see [Create an elastic container instance that has local disks mounted](~~114664~~).
              */
             public Builder emptyDirVolumeMedium(String emptyDirVolumeMedium) {
                 this.emptyDirVolumeMedium = emptyDirVolumeMedium;
@@ -4141,7 +4141,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The path to the NFS volume.
+             * The path of the Network File System (NFS) volume.
              */
             public Builder NFSVolumePath(String NFSVolumePath) {
                 this.NFSVolumePath = NFSVolumePath;
@@ -4157,7 +4157,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint of the server when you set the Type parameter to NFSVolume.
+             * The endpoint of the server if you set Type to NFSVolume.
              */
             public Builder NFSVolumeServer(String NFSVolumeServer) {
                 this.NFSVolumeServer = NFSVolumeServer;
@@ -4752,7 +4752,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance failed to run due to overdue payments. The beginning of the time range to query. Specify the time in the RFC 3339 standard. The time must be in UTC.
+             * The time when the instance failed to run due to overdue payments. The time follows the RFC 3339 standard and must be in UTC.
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -4816,7 +4816,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The memory size of the instance. Unit: GiB.
+             * The memory size of the elastic container instance. Unit: GiB.
              */
             public Builder memory(Float memory) {
                 this.memory = memory;
@@ -4840,7 +4840,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group to which the instance belongs. If you do not specify a resource group when you create an elastic container instance, the system automatically adds the instance to the default resource group in your account.
+             * The ID of the resource group to which the cluster belongs. If you do not specify a resource group when you create an elastic container instance, the system automatically adds the instance to the default resource group in your account.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -4853,7 +4853,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
              * 
              * *   Always: Always restarts the instance if a container in the instance exits upon termination.
              * *   Never: Never restarts the instance if a container in the instance exits upon termination.
-             * *   OnFailure: Restarts the instance only if a container in the instance exists upon failure with a status code of non-zero.
+             * *   OnFailure: Restarts the instance when the last start failed.
              */
             public Builder restartPolicy(String restartPolicy) {
                 this.restartPolicy = restartPolicy;
@@ -4861,7 +4861,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the security group to which the instances belong.
+             * The ID of the security group.
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -4872,7 +4872,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
              * The maximum hourly price for the preemptible instance.
              * <p>
              * 
-             * This parameter is returned only if you set SpotStrategy to SpotWithPriceLimit.
+             * This parameter is returned only if you set the SpotStrategy parameter to SpotWithPriceLimit.
              */
             public Builder spotPriceLimit(Float spotPriceLimit) {
                 this.spotPriceLimit = spotPriceLimit;
@@ -4880,12 +4880,12 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The bidding policy for the instance. Valid values:
+             * The bidding policy of the instance. Valid values:
              * <p>
              * 
-             * *   NoSpot: The node is a regular pay-as-you-go instance.
-             * *   SpotWithPriceLimit: The node is a preemptible instance that has a user-defined maximum hourly price.
-             * *   SpotAsPriceGo: The node is a preemptible instance for which the market price at the time of purchase is automatically used as the bidding price.
+             * *   NoSpot: The instance is a regular pay-as-you-go instance.
+             * *   SpotWithPriceLimit: The instance is a preemptible instance that has a user-defined maximum hourly price.
+             * *   SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is automatically used as the bidding price.
              */
             public Builder spotStrategy(String spotStrategy) {
                 this.spotStrategy = spotStrategy;
@@ -4893,7 +4893,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the instance. Valid value:
+             * The status of the instance. Valid values:
              * <p>
              * 
              * *   Pending: The instance is being started.
@@ -4913,7 +4913,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when all containers exited on success. The beginning of the time range to query. Specify the time in the RFC 3339 standard. The time must be in UTC.
+             * The time when all containers exited on success. The time follows the RFC 3339 standard and must be in UTC.
              */
             public Builder succeededTime(String succeededTime) {
                 this.succeededTime = succeededTime;
@@ -4977,7 +4977,7 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC to which the elastic container instances belong.
+             * The ID of the virtual private cloud (VPC) to which the elastic container instance belongs.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
