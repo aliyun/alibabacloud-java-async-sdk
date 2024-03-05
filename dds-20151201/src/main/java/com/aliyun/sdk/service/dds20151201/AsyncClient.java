@@ -170,6 +170,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeBackupPolicyResponse> describeBackupPolicy(DescribeBackupPolicyRequest request);
 
+    CompletableFuture<DescribeBackupTasksResponse> describeBackupTasks(DescribeBackupTasksRequest request);
+
     CompletableFuture<DescribeBackupsResponse> describeBackups(DescribeBackupsRequest request);
 
     /**
@@ -258,6 +260,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<DescribeInstanceAutoRenewalAttributeResponse> describeInstanceAutoRenewalAttribute(DescribeInstanceAutoRenewalAttributeRequest request);
+
+    CompletableFuture<DescribeInstanceRecoverTimeResponse> describeInstanceRecoverTime(DescribeInstanceRecoverTimeRequest request);
 
     CompletableFuture<DescribeKernelReleaseNotesResponse> describeKernelReleaseNotes(DescribeKernelReleaseNotesRequest request);
 
