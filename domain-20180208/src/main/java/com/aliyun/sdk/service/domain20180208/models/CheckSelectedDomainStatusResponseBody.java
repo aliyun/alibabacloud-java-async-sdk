@@ -141,6 +141,9 @@ public class CheckSelectedDomainStatusResponseBody extends TeaModel {
         @NameInMap("EndTime")
         private Long endTime;
 
+        @NameInMap("Premium")
+        private Boolean premium;
+
         @NameInMap("Price")
         private Double price;
 
@@ -151,6 +154,7 @@ public class CheckSelectedDomainStatusResponseBody extends TeaModel {
             this.deadDate = builder.deadDate;
             this.domain = builder.domain;
             this.endTime = builder.endTime;
+            this.premium = builder.premium;
             this.price = builder.price;
             this.regDate = builder.regDate;
         }
@@ -185,6 +189,13 @@ public class CheckSelectedDomainStatusResponseBody extends TeaModel {
         }
 
         /**
+         * @return premium
+         */
+        public Boolean getPremium() {
+            return this.premium;
+        }
+
+        /**
          * @return price
          */
         public Double getPrice() {
@@ -202,6 +213,7 @@ public class CheckSelectedDomainStatusResponseBody extends TeaModel {
             private Long deadDate; 
             private String domain; 
             private Long endTime; 
+            private Boolean premium; 
             private Double price; 
             private Long regDate; 
 
@@ -226,6 +238,14 @@ public class CheckSelectedDomainStatusResponseBody extends TeaModel {
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
+                return this;
+            }
+
+            /**
+             * Premium.
+             */
+            public Builder premium(Boolean premium) {
+                this.premium = premium;
                 return this;
             }
 

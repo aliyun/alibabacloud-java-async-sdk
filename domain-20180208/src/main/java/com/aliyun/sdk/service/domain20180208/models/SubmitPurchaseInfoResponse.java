@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link QueryBookingDomainInfoResponse} extends {@link TeaModel}
+ * {@link SubmitPurchaseInfoResponse} extends {@link TeaModel}
  *
- * <p>QueryBookingDomainInfoResponse</p>
+ * <p>SubmitPurchaseInfoResponse</p>
  */
-public class QueryBookingDomainInfoResponse extends Response {
+public class SubmitPurchaseInfoResponse extends Response {
     @NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -19,16 +19,16 @@ public class QueryBookingDomainInfoResponse extends Response {
     private Integer statusCode;
 
     @NameInMap("body")
-    private QueryBookingDomainInfoResponseBody body;
+    private SubmitPurchaseInfoResponseBody body;
 
-    private QueryBookingDomainInfoResponse(BuilderImpl builder) {
+    private SubmitPurchaseInfoResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static QueryBookingDomainInfoResponse create() {
+    public static SubmitPurchaseInfoResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +54,35 @@ public class QueryBookingDomainInfoResponse extends Response {
     /**
      * @return body
      */
-    public QueryBookingDomainInfoResponseBody getBody() {
+    public SubmitPurchaseInfoResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<QueryBookingDomainInfoResponse, Builder> {
+    public interface Builder extends Response.Builder<SubmitPurchaseInfoResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(QueryBookingDomainInfoResponseBody body);
+        Builder body(SubmitPurchaseInfoResponseBody body);
 
         @Override
-        QueryBookingDomainInfoResponse build();
+        SubmitPurchaseInfoResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<QueryBookingDomainInfoResponse, Builder>
+            extends Response.BuilderImpl<SubmitPurchaseInfoResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private QueryBookingDomainInfoResponseBody body; 
+        private SubmitPurchaseInfoResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(QueryBookingDomainInfoResponse response) {
+        private BuilderImpl(SubmitPurchaseInfoResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +111,14 @@ public class QueryBookingDomainInfoResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(QueryBookingDomainInfoResponseBody body) {
+        public Builder body(SubmitPurchaseInfoResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public QueryBookingDomainInfoResponse build() {
-            return new QueryBookingDomainInfoResponse(this);
+        public SubmitPurchaseInfoResponse build() {
+            return new SubmitPurchaseInfoResponse(this);
         } 
 
     } 

@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.domain20180208;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.domain20180208.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -69,6 +70,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ReserveIntlDomainResponse> reserveIntlDomain(ReserveIntlDomainRequest request);
 
     CompletableFuture<SelectedDomainListResponse> selectedDomainList(SelectedDomainListRequest request);
+
+    CompletableFuture<SubmitPurchaseInfoResponse> submitPurchaseInfo(SubmitPurchaseInfoRequest request);
 
     CompletableFuture<UpdatePartnerReservePriceResponse> updatePartnerReservePrice(UpdatePartnerReservePriceRequest request);
 
