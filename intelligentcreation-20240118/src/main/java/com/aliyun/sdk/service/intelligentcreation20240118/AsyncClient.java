@@ -23,6 +23,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ActualDeductResourcesResponse> actualDeductResources(ActualDeductResourcesRequest request);
 
+    CompletableFuture<CopywritingQAResponse> copywritingQA(CopywritingQARequest request);
+
     CompletableFuture<DirectDeductResourceResponse> directDeductResource(DirectDeductResourceRequest request);
 
     CompletableFuture<DirectDeductResourcesResponse> directDeductResources(DirectDeductResourcesRequest request);
@@ -32,5 +34,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ExpectDeductResourcesResponse> expectDeductResources(ExpectDeductResourcesRequest request);
 
     CompletableFuture<GetRemainResourceResponse> getRemainResource(GetRemainResourceRequest request);
+
+    CompletableFuture<SubmitBulletQuestionsResponse> submitBulletQuestions(SubmitBulletQuestionsRequest request);
 
 }
