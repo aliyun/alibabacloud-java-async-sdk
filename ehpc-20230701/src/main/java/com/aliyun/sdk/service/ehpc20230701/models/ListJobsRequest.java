@@ -141,6 +141,9 @@ public class ListJobsRequest extends Request {
     } 
 
     public static class Filter extends TeaModel {
+        @NameInMap("JobId")
+        private String jobId;
+
         @NameInMap("JobName")
         private String jobName;
 
@@ -154,6 +157,7 @@ public class ListJobsRequest extends Request {
         private Integer timeCreatedBefore;
 
         private Filter(Builder builder) {
+            this.jobId = builder.jobId;
             this.jobName = builder.jobName;
             this.status = builder.status;
             this.timeCreatedAfter = builder.timeCreatedAfter;
@@ -166,6 +170,13 @@ public class ListJobsRequest extends Request {
 
         public static Filter create() {
             return builder().build();
+        }
+
+        /**
+         * @return jobId
+         */
+        public String getJobId() {
+            return this.jobId;
         }
 
         /**
@@ -197,10 +208,19 @@ public class ListJobsRequest extends Request {
         }
 
         public static final class Builder {
+            private String jobId; 
             private String jobName; 
             private String status; 
             private Integer timeCreatedAfter; 
             private Integer timeCreatedBefore; 
+
+            /**
+             * JobId.
+             */
+            public Builder jobId(String jobId) {
+                this.jobId = jobId;
+                return this;
+            }
 
             /**
              * JobName.

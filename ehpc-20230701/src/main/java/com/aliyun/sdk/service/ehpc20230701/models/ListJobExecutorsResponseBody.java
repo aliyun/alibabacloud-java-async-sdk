@@ -190,6 +190,9 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         @NameInMap("Status")
         private String status;
 
+        @NameInMap("StatusReason")
+        private String statusReason;
+
         private Executors(Builder builder) {
             this.arrayIndex = builder.arrayIndex;
             this.createTime = builder.createTime;
@@ -197,6 +200,7 @@ public class ListJobExecutorsResponseBody extends TeaModel {
             this.hostName = builder.hostName;
             this.ipAddress = builder.ipAddress;
             this.status = builder.status;
+            this.statusReason = builder.statusReason;
         }
 
         public static Builder builder() {
@@ -249,6 +253,13 @@ public class ListJobExecutorsResponseBody extends TeaModel {
             return this.status;
         }
 
+        /**
+         * @return statusReason
+         */
+        public String getStatusReason() {
+            return this.statusReason;
+        }
+
         public static final class Builder {
             private Integer arrayIndex; 
             private String createTime; 
@@ -256,6 +267,7 @@ public class ListJobExecutorsResponseBody extends TeaModel {
             private java.util.List < String > hostName; 
             private java.util.List < String > ipAddress; 
             private String status; 
+            private String statusReason; 
 
             /**
              * ArrayIndex.
@@ -302,6 +314,14 @@ public class ListJobExecutorsResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * StatusReason.
+             */
+            public Builder statusReason(String statusReason) {
+                this.statusReason = statusReason;
                 return this;
             }
 

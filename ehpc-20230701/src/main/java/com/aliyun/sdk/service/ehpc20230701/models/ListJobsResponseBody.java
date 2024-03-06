@@ -135,6 +135,9 @@ public class ListJobsResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         private String createTime;
 
+        @NameInMap("EndTime")
+        private String endTime;
+
         @NameInMap("ExecutorCount")
         private Integer executorCount;
 
@@ -150,6 +153,9 @@ public class ListJobsResponseBody extends TeaModel {
         @NameInMap("OwnerUid")
         private String ownerUid;
 
+        @NameInMap("StartTime")
+        private String startTime;
+
         @NameInMap("Status")
         private String status;
 
@@ -158,11 +164,13 @@ public class ListJobsResponseBody extends TeaModel {
 
         private JobList(Builder builder) {
             this.createTime = builder.createTime;
+            this.endTime = builder.endTime;
             this.executorCount = builder.executorCount;
             this.jobDescription = builder.jobDescription;
             this.jobId = builder.jobId;
             this.jobName = builder.jobName;
             this.ownerUid = builder.ownerUid;
+            this.startTime = builder.startTime;
             this.status = builder.status;
             this.taskCount = builder.taskCount;
         }
@@ -180,6 +188,13 @@ public class ListJobsResponseBody extends TeaModel {
          */
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        /**
+         * @return endTime
+         */
+        public String getEndTime() {
+            return this.endTime;
         }
 
         /**
@@ -218,6 +233,13 @@ public class ListJobsResponseBody extends TeaModel {
         }
 
         /**
+         * @return startTime
+         */
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -233,11 +255,13 @@ public class ListJobsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String createTime; 
+            private String endTime; 
             private Integer executorCount; 
             private String jobDescription; 
             private String jobId; 
             private String jobName; 
             private String ownerUid; 
+            private String startTime; 
             private String status; 
             private Integer taskCount; 
 
@@ -246,6 +270,14 @@ public class ListJobsResponseBody extends TeaModel {
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * EndTime.
+             */
+            public Builder endTime(String endTime) {
+                this.endTime = endTime;
                 return this;
             }
 
@@ -286,6 +318,14 @@ public class ListJobsResponseBody extends TeaModel {
              */
             public Builder ownerUid(String ownerUid) {
                 this.ownerUid = ownerUid;
+                return this;
+            }
+
+            /**
+             * StartTime.
+             */
+            public Builder startTime(String startTime) {
+                this.startTime = startTime;
                 return this;
             }
 

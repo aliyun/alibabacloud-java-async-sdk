@@ -883,8 +883,14 @@ public class GetJobResponseBody extends TeaModel {
 
     }
     public static class JobInfo extends TeaModel {
+        @NameInMap("CreateTime")
+        private String createTime;
+
         @NameInMap("DeploymentPolicy")
         private DeploymentPolicy deploymentPolicy;
+
+        @NameInMap("EndTime")
+        private String endTime;
 
         @NameInMap("JobDescription")
         private String jobDescription;
@@ -895,14 +901,24 @@ public class GetJobResponseBody extends TeaModel {
         @NameInMap("JobName")
         private String jobName;
 
+        @NameInMap("StartTime")
+        private String startTime;
+
+        @NameInMap("Status")
+        private String status;
+
         @NameInMap("Tasks")
         private java.util.List < Tasks> tasks;
 
         private JobInfo(Builder builder) {
+            this.createTime = builder.createTime;
             this.deploymentPolicy = builder.deploymentPolicy;
+            this.endTime = builder.endTime;
             this.jobDescription = builder.jobDescription;
             this.jobId = builder.jobId;
             this.jobName = builder.jobName;
+            this.startTime = builder.startTime;
+            this.status = builder.status;
             this.tasks = builder.tasks;
         }
 
@@ -915,10 +931,24 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
+         * @return createTime
+         */
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        /**
          * @return deploymentPolicy
          */
         public DeploymentPolicy getDeploymentPolicy() {
             return this.deploymentPolicy;
+        }
+
+        /**
+         * @return endTime
+         */
+        public String getEndTime() {
+            return this.endTime;
         }
 
         /**
@@ -943,6 +973,20 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
+         * @return startTime
+         */
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
          * @return tasks
          */
         public java.util.List < Tasks> getTasks() {
@@ -950,17 +994,37 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String createTime; 
             private DeploymentPolicy deploymentPolicy; 
+            private String endTime; 
             private String jobDescription; 
             private String jobId; 
             private String jobName; 
+            private String startTime; 
+            private String status; 
             private java.util.List < Tasks> tasks; 
+
+            /**
+             * CreateTime.
+             */
+            public Builder createTime(String createTime) {
+                this.createTime = createTime;
+                return this;
+            }
 
             /**
              * DeploymentPolicy.
              */
             public Builder deploymentPolicy(DeploymentPolicy deploymentPolicy) {
                 this.deploymentPolicy = deploymentPolicy;
+                return this;
+            }
+
+            /**
+             * EndTime.
+             */
+            public Builder endTime(String endTime) {
+                this.endTime = endTime;
                 return this;
             }
 
@@ -985,6 +1049,22 @@ public class GetJobResponseBody extends TeaModel {
              */
             public Builder jobName(String jobName) {
                 this.jobName = jobName;
+                return this;
+            }
+
+            /**
+             * StartTime.
+             */
+            public Builder startTime(String startTime) {
+                this.startTime = startTime;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
                 return this;
             }
 
