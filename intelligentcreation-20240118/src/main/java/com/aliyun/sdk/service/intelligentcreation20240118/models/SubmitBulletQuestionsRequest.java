@@ -150,12 +150,16 @@ public class SubmitBulletQuestionsRequest extends Request {
         @Validation(required = true)
         private String id;
 
+        @NameInMap("time")
+        private Long time;
+
         @NameInMap("username")
         private String username;
 
         private Questions(Builder builder) {
             this.content = builder.content;
             this.id = builder.id;
+            this.time = builder.time;
             this.username = builder.username;
         }
 
@@ -182,6 +186,13 @@ public class SubmitBulletQuestionsRequest extends Request {
         }
 
         /**
+         * @return time
+         */
+        public Long getTime() {
+            return this.time;
+        }
+
+        /**
          * @return username
          */
         public String getUsername() {
@@ -191,6 +202,7 @@ public class SubmitBulletQuestionsRequest extends Request {
         public static final class Builder {
             private String content; 
             private String id; 
+            private Long time; 
             private String username; 
 
             /**
@@ -206,6 +218,14 @@ public class SubmitBulletQuestionsRequest extends Request {
              */
             public Builder id(String id) {
                 this.id = id;
+                return this;
+            }
+
+            /**
+             * time.
+             */
+            public Builder time(Long time) {
+                this.time = time;
                 return this;
             }
 

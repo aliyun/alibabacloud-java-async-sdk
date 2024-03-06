@@ -18,7 +18,12 @@ public class CopywritingQARequest extends Request {
     private String accountId;
 
     @Query
+    @NameInMap("histories")
+    private java.util.List < Histories> histories;
+
+    @Query
     @NameInMap("history")
+    @Deprecated
     private History history;
 
     @Query
@@ -41,6 +46,7 @@ public class CopywritingQARequest extends Request {
     private CopywritingQARequest(Builder builder) {
         super(builder);
         this.accountId = builder.accountId;
+        this.histories = builder.histories;
         this.history = builder.history;
         this.question = builder.question;
         this.sessionId = builder.sessionId;
@@ -66,6 +72,13 @@ public class CopywritingQARequest extends Request {
      */
     public String getAccountId() {
         return this.accountId;
+    }
+
+    /**
+     * @return histories
+     */
+    public java.util.List < Histories> getHistories() {
+        return this.histories;
     }
 
     /**
@@ -105,6 +118,7 @@ public class CopywritingQARequest extends Request {
 
     public static final class Builder extends Request.Builder<CopywritingQARequest, Builder> {
         private String accountId; 
+        private java.util.List < Histories> histories; 
         private History history; 
         private String question; 
         private String sessionId; 
@@ -118,6 +132,7 @@ public class CopywritingQARequest extends Request {
         private Builder(CopywritingQARequest request) {
             super(request);
             this.accountId = request.accountId;
+            this.histories = request.histories;
             this.history = request.history;
             this.question = request.question;
             this.sessionId = request.sessionId;
@@ -131,6 +146,16 @@ public class CopywritingQARequest extends Request {
         public Builder accountId(String accountId) {
             this.putQueryParameter("accountId", accountId);
             this.accountId = accountId;
+            return this;
+        }
+
+        /**
+         * histories.
+         */
+        public Builder histories(java.util.List < Histories> histories) {
+            String historiesShrink = shrink(histories, "histories", "json");
+            this.putQueryParameter("histories", historiesShrink);
+            this.histories = histories;
             return this;
         }
 
@@ -187,13 +212,74 @@ public class CopywritingQARequest extends Request {
 
     } 
 
-    public static class History extends TeaModel {
+    public static class Histories extends TeaModel {
         @NameInMap("bot")
         @Validation(required = true)
         private String bot;
 
         @NameInMap("user")
         @Validation(required = true)
+        private String user;
+
+        private Histories(Builder builder) {
+            this.bot = builder.bot;
+            this.user = builder.user;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Histories create() {
+            return builder().build();
+        }
+
+        /**
+         * @return bot
+         */
+        public String getBot() {
+            return this.bot;
+        }
+
+        /**
+         * @return user
+         */
+        public String getUser() {
+            return this.user;
+        }
+
+        public static final class Builder {
+            private String bot; 
+            private String user; 
+
+            /**
+             * bot.
+             */
+            public Builder bot(String bot) {
+                this.bot = bot;
+                return this;
+            }
+
+            /**
+             * user.
+             */
+            public Builder user(String user) {
+                this.user = user;
+                return this;
+            }
+
+            public Histories build() {
+                return new Histories(this);
+            } 
+
+        } 
+
+    }
+    public static class History extends TeaModel {
+        @NameInMap("bot")
+        private String bot;
+
+        @NameInMap("user")
         private String user;
 
         private History(Builder builder) {
