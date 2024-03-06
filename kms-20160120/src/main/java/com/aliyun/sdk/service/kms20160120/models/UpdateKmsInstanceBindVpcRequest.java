@@ -70,7 +70,15 @@ public class UpdateKmsInstanceBindVpcRequest extends Request {
         } 
 
         /**
-         * BindVpcs.
+         * The VPC configuration. The configuration of each VPC contains the following content:
+         * <p>
+         * 
+         * *   VpcId: the ID of the VPC.
+         * *   VSwitchId: the vSwitch in the VPC.
+         * *   RegionID: the ID of the region to which the VPC belongs.
+         * *   VpcOwnerId: the Alibaba Cloud account to which the VPC belongs.
+         * 
+         * Format: `[{"VpcId":"${VpcId}","VSwitchId":"${VSwitchId}","RegionId":"${RegionId}","VpcOwnerId":${VpcOwnerId}},..]`.
          */
         public Builder bindVpcs(String bindVpcs) {
             this.putQueryParameter("BindVpcs", bindVpcs);
@@ -79,7 +87,7 @@ public class UpdateKmsInstanceBindVpcRequest extends Request {
         }
 
         /**
-         * KmsInstanceId.
+         * The ID of the KMS instance.
          */
         public Builder kmsInstanceId(String kmsInstanceId) {
             this.putQueryParameter("KmsInstanceId", kmsInstanceId);

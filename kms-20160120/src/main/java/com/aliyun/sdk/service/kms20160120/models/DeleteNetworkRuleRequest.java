@@ -55,7 +55,7 @@ public class DeleteNetworkRuleRequest extends Request {
         } 
 
         /**
-         * Name.
+         * The name of the network access rule that you want to delete.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

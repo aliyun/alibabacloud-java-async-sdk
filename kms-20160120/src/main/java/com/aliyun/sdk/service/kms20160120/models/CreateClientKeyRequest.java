@@ -98,7 +98,7 @@ public class CreateClientKeyRequest extends Request {
         } 
 
         /**
-         * AapName.
+         * The operation that you want to perform. Set the value to **CreateClientKey**.
          */
         public Builder aapName(String aapName) {
             this.putQueryParameter("AapName", aapName);
@@ -107,7 +107,10 @@ public class CreateClientKeyRequest extends Request {
         }
 
         /**
-         * NotAfter.
+         * The encryption password of the client key.
+         * <p>
+         * 
+         * The password must be 8 to 64 characters in length and must contain at least two of the following types: digits, letters, and special characters. Special characters include `~ ! @ # $ % ^ & * ? _ -`.
          */
         public Builder notAfter(String notAfter) {
             this.putQueryParameter("NotAfter", notAfter);
@@ -116,7 +119,15 @@ public class CreateClientKeyRequest extends Request {
         }
 
         /**
-         * NotBefore.
+         * The end of the validity period of the client key.
+         * <p>
+         * 
+         * Specify the time in the ISO 8601 standard. The time must be in UTC. The time must be in the yyyy-MM-ddTHH:mm:ssZ format.
+         * 
+         * > 
+         * 
+         * *   If you do not configure NotAfter, the default value is the time when the client key was created plus five years.
+         * *   If you configure NotAfter, you must configure NotBefore.
          */
         public Builder notBefore(String notBefore) {
             this.putQueryParameter("NotBefore", notBefore);
@@ -125,7 +136,7 @@ public class CreateClientKeyRequest extends Request {
         }
 
         /**
-         * Password.
+         * The name of the AAP.
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);

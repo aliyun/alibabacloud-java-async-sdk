@@ -50,7 +50,7 @@ public class ListClientKeysResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ClientKeys.
+         * A list of client keys.
          */
         public Builder clientKeys(java.util.List < ClientKeys> clientKeys) {
             this.clientKeys = clientKeys;
@@ -58,7 +58,7 @@ public class ListClientKeysResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -182,7 +182,7 @@ public class ListClientKeysResponseBody extends TeaModel {
             private String publicKeyData; 
 
             /**
-             * AapName.
+             * The name of the AAP.
              */
             public Builder aapName(String aapName) {
                 this.aapName = aapName;
@@ -190,7 +190,7 @@ public class ListClientKeysResponseBody extends TeaModel {
             }
 
             /**
-             * ClientKeyId.
+             * The ID of the client key.
              */
             public Builder clientKeyId(String clientKeyId) {
                 this.clientKeyId = clientKeyId;
@@ -198,7 +198,7 @@ public class ListClientKeysResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the client key was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -206,7 +206,7 @@ public class ListClientKeysResponseBody extends TeaModel {
             }
 
             /**
-             * KeyAlgorithm.
+             * The private key algorithm of the client key.
              */
             public Builder keyAlgorithm(String keyAlgorithm) {
                 this.keyAlgorithm = keyAlgorithm;
@@ -214,7 +214,10 @@ public class ListClientKeysResponseBody extends TeaModel {
             }
 
             /**
-             * KeyOrigin.
+             * The provider of the client key.
+             * <p>
+             * 
+             * Currently, only KMS is supported. The value is fixed as KMS_PROVIDED.
              */
             public Builder keyOrigin(String keyOrigin) {
                 this.keyOrigin = keyOrigin;
@@ -222,7 +225,7 @@ public class ListClientKeysResponseBody extends TeaModel {
             }
 
             /**
-             * NotAfter.
+             * The end of the validity period of the client key.
              */
             public Builder notAfter(String notAfter) {
                 this.notAfter = notAfter;
@@ -230,7 +233,7 @@ public class ListClientKeysResponseBody extends TeaModel {
             }
 
             /**
-             * NotBefore.
+             * The beginning of the validity period of the client key.
              */
             public Builder notBefore(String notBefore) {
                 this.notBefore = notBefore;
@@ -238,7 +241,7 @@ public class ListClientKeysResponseBody extends TeaModel {
             }
 
             /**
-             * PublicKeyData.
+             * The public key of the client key.
              */
             public Builder publicKeyData(String publicKeyData) {
                 this.publicKeyData = publicKeyData;

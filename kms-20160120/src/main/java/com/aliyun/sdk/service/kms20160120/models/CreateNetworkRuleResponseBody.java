@@ -98,7 +98,7 @@ public class CreateNetworkRuleResponseBody extends TeaModel {
         private String type; 
 
         /**
-         * Arn.
+         * The ARN of the access control rule.
          */
         public Builder arn(String arn) {
             this.arn = arn;
@@ -106,7 +106,7 @@ public class CreateNetworkRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * The description.
          */
         public Builder description(String description) {
             this.description = description;
@@ -114,7 +114,7 @@ public class CreateNetworkRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * The name of the access control rule.
          */
         public Builder name(String name) {
             this.name = name;
@@ -122,7 +122,7 @@ public class CreateNetworkRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class CreateNetworkRuleResponseBody extends TeaModel {
         }
 
         /**
-         * SourcePrivateIp.
+         * The private IP address or private CIDR block.
          */
         public Builder sourcePrivateIp(String sourcePrivateIp) {
             this.sourcePrivateIp = sourcePrivateIp;
@@ -138,7 +138,7 @@ public class CreateNetworkRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Type.
+         * The network type.
          */
         public Builder type(String type) {
             this.type = type;

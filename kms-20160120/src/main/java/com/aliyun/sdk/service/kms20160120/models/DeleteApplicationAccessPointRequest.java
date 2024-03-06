@@ -55,7 +55,7 @@ public class DeleteApplicationAccessPointRequest extends Request {
         } 
 
         /**
-         * Name.
+         * The name of the AAP that you want to delete.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

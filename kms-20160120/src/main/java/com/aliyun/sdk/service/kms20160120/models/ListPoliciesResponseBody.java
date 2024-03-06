@@ -86,7 +86,7 @@ public class ListPoliciesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class ListPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class ListPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * Policies.
+         * A list of permission policies.
          */
         public Builder policies(Policies policies) {
             this.policies = policies;
@@ -110,7 +110,7 @@ public class ListPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -158,7 +158,7 @@ public class ListPoliciesResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * Name.
+             * The name of the permission policy.
              */
             public Builder name(String name) {
                 this.name = name;

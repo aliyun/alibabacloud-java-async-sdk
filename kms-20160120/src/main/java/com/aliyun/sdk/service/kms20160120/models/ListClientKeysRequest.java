@@ -54,7 +54,7 @@ public class ListClientKeysRequest extends Request {
         } 
 
         /**
-         * AapName.
+         * The name of the application access point (AAP).
          */
         public Builder aapName(String aapName) {
             this.putQueryParameter("AapName", aapName);

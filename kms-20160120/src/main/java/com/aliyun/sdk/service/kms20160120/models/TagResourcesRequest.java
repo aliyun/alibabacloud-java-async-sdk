@@ -100,7 +100,10 @@ public class TagResourcesRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * The region ID of the resource.
+         * <p>
+         * 
+         * >  You can call the [DescribeRegions](~~601478~~) to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -109,7 +112,10 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The IDs of the resources to which you want to add tags. You can enter a maximum of 50 resource IDs.
+         * <p>
+         * 
+         * Enter multiple resource IDs in the `["ResourceId. 1","ResourceId. 2",...]` format.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -118,7 +124,11 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of the resource to which you want to add tags. Valid values:
+         * <p>
+         * 
+         * *   key
+         * *   secret
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -127,7 +137,10 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * A list of tags. You can enter up to 20 tags.
+         * <p>
+         * 
+         * A tag consists of a key-value pair. Enter multiple tags in the `[{"Key":"key1","Value":"value1"},{"Key":"key2","Value":"value2"},..]` format.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -181,7 +194,14 @@ public class TagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag. A tag consists of a key-value pair.
+             * <p>
+             * 
+             * You can enter up to 20 tags. Enter multiple tags in the `[{"Key":"key1","Value":"value1"},{"Key":"key2","Value":"value2"},..]` format.
+             * 
+             * Each key can be up to 128 characters in length and can contain letters, digits, forward slashes (/), backslashes (\\), underscores (\_), hyphens (-), periods (.), plus signs (+), equal signs (=), colons (:), and at signs (@).
+             * 
+             * >  The key cannot start with aliyun or acs:.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -189,7 +209,12 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the tag. A tag consists of a key-value pair.
+             * <p>
+             * 
+             * You can enter up to 20 tags. Enter multiple tags in the `[{"Key":"key1","Value":"value1"},{"Key":"key2","Value":"value2"},..]` format.
+             * 
+             * Each value can be up to 128 characters in length and can contain letters, digits, forward slashes (/), backslashes (\\), underscores (\_), hyphens (-), periods (.), plus signs (+), equal signs (=), colons (:), and at signs (@).
              */
             public Builder value(String value) {
                 this.value = value;

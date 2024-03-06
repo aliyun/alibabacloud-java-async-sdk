@@ -86,7 +86,7 @@ public class ListNetworkRulesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * NetworkRules.
+         * A list of access control rules.
          */
         public Builder networkRules(NetworkRules networkRules) {
             this.networkRules = networkRules;
@@ -94,7 +94,7 @@ public class ListNetworkRulesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class ListNetworkRulesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class ListNetworkRulesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListNetworkRulesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -170,7 +170,7 @@ public class ListNetworkRulesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Name.
+             * The name of the access control rule.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -178,7 +178,7 @@ public class ListNetworkRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The network type. The value is fixed as Private. Self-managed applications can access KMS instances only over a private virtual private cloud (VPC).
              */
             public Builder type(String type) {
                 this.type = type;

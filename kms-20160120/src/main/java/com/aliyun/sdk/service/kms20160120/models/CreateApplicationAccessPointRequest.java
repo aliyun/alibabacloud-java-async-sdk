@@ -98,7 +98,7 @@ public class CreateApplicationAccessPointRequest extends Request {
         } 
 
         /**
-         * AuthenticationMethod.
+         * The authentication method. Currently, only ClientKey is supported.
          */
         public Builder authenticationMethod(String authenticationMethod) {
             this.putQueryParameter("AuthenticationMethod", authenticationMethod);
@@ -107,7 +107,7 @@ public class CreateApplicationAccessPointRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the AAP.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -116,7 +116,7 @@ public class CreateApplicationAccessPointRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the AAP.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -125,7 +125,10 @@ public class CreateApplicationAccessPointRequest extends Request {
         }
 
         /**
-         * Policies.
+         * The permission policy.
+         * <p>
+         * 
+         * > You can bind up to three permission policies to each AAP.
          */
         public Builder policies(String policies) {
             this.putQueryParameter("Policies", policies);

@@ -127,7 +127,10 @@ public class CreatePolicyRequest extends Request {
         } 
 
         /**
-         * AccessControlRules.
+         * The name of the access control rule.
+         * <p>
+         * 
+         * > For more information about how to query created access control rules, see [ListNetworkRules](~~2539433~~).
          */
         public Builder accessControlRules(String accessControlRules) {
             this.putQueryParameter("AccessControlRules", accessControlRules);
@@ -136,7 +139,7 @@ public class CreatePolicyRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -145,7 +148,7 @@ public class CreatePolicyRequest extends Request {
         }
 
         /**
-         * KmsInstance.
+         * The scope of the permission policy. You need to specify the KMS instance that you want to access.
          */
         public Builder kmsInstance(String kmsInstance) {
             this.putQueryParameter("KmsInstance", kmsInstance);
@@ -154,7 +157,7 @@ public class CreatePolicyRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the permission policy.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -163,7 +166,13 @@ public class CreatePolicyRequest extends Request {
         }
 
         /**
-         * Permissions.
+         * The operations that can be performed. Valid values:
+         * <p>
+         * 
+         * *   RbacPermission/Template/CryptoServiceKeyUser: allows you to perform cryptographic operations.
+         * *   RbacPermission/Template/CryptoServiceSecretUser: allows you to perform secret-related operations.
+         * 
+         * You can select both.
          */
         public Builder permissions(String permissions) {
             this.putQueryParameter("Permissions", permissions);
@@ -172,7 +181,11 @@ public class CreatePolicyRequest extends Request {
         }
 
         /**
-         * Resources.
+         * The key and secret that are allowed to access.
+         * <p>
+         * 
+         * *   Key: Enter a key in the `key/${KeyId}` format. To allow access to all keys of a KMS instance, enter key/\*.
+         * *   Secret: Enter a secret in the `secret/${SecretName}` format. To allow access to all secrets of a KMS instance, enter secret/\*.
          */
         public Builder resources(String resources) {
             this.putQueryParameter("Resources", resources);

@@ -55,7 +55,7 @@ public class DeleteClientKeyRequest extends Request {
         } 
 
         /**
-         * ClientKeyId.
+         * The ID of the client key.
          */
         public Builder clientKeyId(String clientKeyId) {
             this.putQueryParameter("ClientKeyId", clientKeyId);

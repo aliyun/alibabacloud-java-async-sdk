@@ -55,7 +55,7 @@ public class GetKmsInstanceRequest extends Request {
         } 
 
         /**
-         * KmsInstanceId.
+         * The ID of the KMS instance that you want to query.
          */
         public Builder kmsInstanceId(String kmsInstanceId) {
             this.putQueryParameter("KmsInstanceId", kmsInstanceId);

@@ -122,7 +122,7 @@ public class DescribePolicyResponseBody extends TeaModel {
         private java.util.List < String > resources; 
 
         /**
-         * AccessControlRules.
+         * The network access rule that is associated with the permission policy.
          */
         public Builder accessControlRules(String accessControlRules) {
             this.accessControlRules = accessControlRules;
@@ -130,7 +130,7 @@ public class DescribePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Arn.
+         * The Alibaba Cloud Resource Name (ARN) of the permission policy.
          */
         public Builder arn(String arn) {
             this.arn = arn;
@@ -138,7 +138,7 @@ public class DescribePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * The description.
          */
         public Builder description(String description) {
             this.description = description;
@@ -146,7 +146,7 @@ public class DescribePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * KmsInstance.
+         * The scope of the permission policy.
          */
         public Builder kmsInstance(String kmsInstance) {
             this.kmsInstance = kmsInstance;
@@ -154,7 +154,7 @@ public class DescribePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * The name of the permission policy.
          */
         public Builder name(String name) {
             this.name = name;
@@ -162,7 +162,7 @@ public class DescribePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Permissions.
+         * A list of operations that can be performed.
          */
         public Builder permissions(java.util.List < String > permissions) {
             this.permissions = permissions;
@@ -170,7 +170,7 @@ public class DescribePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -178,7 +178,7 @@ public class DescribePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Resources.
+         * A list of keys and secrets that are allowed to access.
          */
         public Builder resources(java.util.List < String > resources) {
             this.resources = resources;

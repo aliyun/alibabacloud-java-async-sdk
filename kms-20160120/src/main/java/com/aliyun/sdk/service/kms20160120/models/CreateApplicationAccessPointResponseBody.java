@@ -98,7 +98,7 @@ public class CreateApplicationAccessPointResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Arn.
+         * The Alibaba Cloud Resource Name (ARN) of the AAP.
          */
         public Builder arn(String arn) {
             this.arn = arn;
@@ -106,7 +106,7 @@ public class CreateApplicationAccessPointResponseBody extends TeaModel {
         }
 
         /**
-         * AuthenticationMethod.
+         * The authentication method.
          */
         public Builder authenticationMethod(String authenticationMethod) {
             this.authenticationMethod = authenticationMethod;
@@ -114,7 +114,7 @@ public class CreateApplicationAccessPointResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * The description of the AAP.
          */
         public Builder description(String description) {
             this.description = description;
@@ -122,7 +122,7 @@ public class CreateApplicationAccessPointResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * The name of the AAP.
          */
         public Builder name(String name) {
             this.name = name;
@@ -130,7 +130,7 @@ public class CreateApplicationAccessPointResponseBody extends TeaModel {
         }
 
         /**
-         * Policies.
+         * The permission policy.
          */
         public Builder policies(String policies) {
             this.policies = policies;
@@ -138,7 +138,7 @@ public class CreateApplicationAccessPointResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

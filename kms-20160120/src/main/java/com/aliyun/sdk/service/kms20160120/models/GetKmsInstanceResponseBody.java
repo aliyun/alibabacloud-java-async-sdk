@@ -50,7 +50,7 @@ public class GetKmsInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * KmsInstance.
+         * The details of the KMS instance.
          */
         public Builder kmsInstance(KmsInstance kmsInstance) {
             this.kmsInstance = kmsInstance;
@@ -58,7 +58,7 @@ public class GetKmsInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,7 +134,7 @@ public class GetKmsInstanceResponseBody extends TeaModel {
             private String vpcOwnerId; 
 
             /**
-             * RegionId.
+             * The region to which the VPC belongs.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -142,7 +142,7 @@ public class GetKmsInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * The vSwitch in the VPC.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -150,7 +150,7 @@ public class GetKmsInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * The ID of the VPC.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -158,7 +158,7 @@ public class GetKmsInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * VpcOwnerId.
+             * The Alibaba Cloud account to which the VPC belongs.
              */
             public Builder vpcOwnerId(String vpcOwnerId) {
                 this.vpcOwnerId = vpcOwnerId;
@@ -408,7 +408,10 @@ public class GetKmsInstanceResponseBody extends TeaModel {
             private String zoneIds; 
 
             /**
-             * BindVpcs.
+             * A list of associated VPCs.
+             * <p>
+             * 
+             * >  If your self-managed applications are deployed in multiple VPCs in the same region, you can associate VPCs with the KMS instance beyond the VPC that you specify when you enable the KMS instance. The VPCs can belong to the same Alibaba Cloud account or different Alibaba Cloud accounts. After the configuration is complete, self-managed applications in the VPCs can access the specified KMS instance.
              */
             public Builder bindVpcs(BindVpcs bindVpcs) {
                 this.bindVpcs = bindVpcs;
@@ -416,7 +419,7 @@ public class GetKmsInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * CaCertificateChainPem.
+             * The content of the certificate authority (CA) certificate of the KMS instance.
              */
             public Builder caCertificateChainPem(String caCertificateChainPem) {
                 this.caCertificateChainPem = caCertificateChainPem;
@@ -424,7 +427,7 @@ public class GetKmsInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the KMS instance is created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -432,7 +435,7 @@ public class GetKmsInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * EndDate.
+             * The expiration time of the KMS instance.
              */
             public Builder endDate(String endDate) {
                 this.endDate = endDate;
@@ -440,7 +443,7 @@ public class GetKmsInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the KMS instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -448,7 +451,7 @@ public class GetKmsInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * The name of the KMS instance.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -456,7 +459,7 @@ public class GetKmsInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * KeyNum.
+             * The number of keys that can be created for the KMS instance.
              */
             public Builder keyNum(Long keyNum) {
                 this.keyNum = keyNum;
@@ -464,7 +467,7 @@ public class GetKmsInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * SecretNum.
+             * The number of secrets that can be created for the KMS instance.
              */
             public Builder secretNum(String secretNum) {
                 this.secretNum = secretNum;
@@ -472,7 +475,7 @@ public class GetKmsInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Spec.
+             * The computing performance of the KMS instance.
              */
             public Builder spec(Long spec) {
                 this.spec = spec;
@@ -480,7 +483,7 @@ public class GetKmsInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * StartDate.
+             * The time when the KMS instance is enabled.
              */
             public Builder startDate(String startDate) {
                 this.startDate = startDate;
@@ -488,7 +491,14 @@ public class GetKmsInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the KMS instance. Valid values:
+             * <p>
+             * 
+             * *   Uninitialized: The KMS instance is not enabled.
+             * *   Connecting: The KMS instance is being connected.
+             * *   Connected: The KMS instance is enabled.
+             * *   Disconnected: The KMS instance is disconnected.
+             * *   Error: The KMS instance is abnormal.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -496,7 +506,7 @@ public class GetKmsInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * The virtual private cloud (VPC) with which the KMS instance is associated.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -504,7 +514,7 @@ public class GetKmsInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * VpcNum.
+             * The access management quota for the KMS instance.
              */
             public Builder vpcNum(Long vpcNum) {
                 this.vpcNum = vpcNum;
@@ -512,7 +522,7 @@ public class GetKmsInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * VswitchIds.
+             * The vSwitch in the VPC.
              */
             public Builder vswitchIds(String vswitchIds) {
                 this.vswitchIds = vswitchIds;
@@ -520,7 +530,7 @@ public class GetKmsInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneIds.
+             * The zone with which the KMS instance is associated.
              */
             public Builder zoneIds(String zoneIds) {
                 this.zoneIds = zoneIds;

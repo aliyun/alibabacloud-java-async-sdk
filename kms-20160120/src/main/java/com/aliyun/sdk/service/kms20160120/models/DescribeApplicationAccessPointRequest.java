@@ -55,7 +55,7 @@ public class DescribeApplicationAccessPointRequest extends Request {
         } 
 
         /**
-         * Name.
+         * The name of the AAP that you want to query.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

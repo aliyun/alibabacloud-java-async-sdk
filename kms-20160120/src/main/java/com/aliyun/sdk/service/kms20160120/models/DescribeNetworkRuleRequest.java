@@ -55,7 +55,7 @@ public class DescribeNetworkRuleRequest extends Request {
         } 
 
         /**
-         * Name.
+         * The name of the access control rule that you want to query.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

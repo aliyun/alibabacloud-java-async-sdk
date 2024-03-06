@@ -83,7 +83,7 @@ public class UpdateApplicationAccessPointRequest extends Request {
         } 
 
         /**
-         * Description.
+         * The description.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -92,7 +92,7 @@ public class UpdateApplicationAccessPointRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the AAP that you want to update.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -101,7 +101,9 @@ public class UpdateApplicationAccessPointRequest extends Request {
         }
 
         /**
-         * Policies.
+         * The permission policy that you want to update.
+         * <p>
+         * > You can associate up to three permission policies with each AAP.
          */
         public Builder policies(String policies) {
             this.putQueryParameter("Policies", policies);

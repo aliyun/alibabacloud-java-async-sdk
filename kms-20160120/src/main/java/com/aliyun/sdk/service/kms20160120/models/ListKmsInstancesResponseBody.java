@@ -86,7 +86,7 @@ public class ListKmsInstancesResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * KmsInstances.
+         * A list of KMS instances.
          */
         public Builder kmsInstances(KmsInstances kmsInstances) {
             this.kmsInstances = kmsInstances;
@@ -94,7 +94,7 @@ public class ListKmsInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class ListKmsInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class ListKmsInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListKmsInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of KMS instances.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -170,7 +170,7 @@ public class ListKmsInstancesResponseBody extends TeaModel {
             private String kmsInstanceId; 
 
             /**
-             * KmsInstanceArn.
+             * The ARN of the KMS instance.
              */
             public Builder kmsInstanceArn(String kmsInstanceArn) {
                 this.kmsInstanceArn = kmsInstanceArn;
@@ -178,7 +178,7 @@ public class ListKmsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * KmsInstanceId.
+             * The ID of the KMS instance.
              */
             public Builder kmsInstanceId(String kmsInstanceId) {
                 this.kmsInstanceId = kmsInstanceId;

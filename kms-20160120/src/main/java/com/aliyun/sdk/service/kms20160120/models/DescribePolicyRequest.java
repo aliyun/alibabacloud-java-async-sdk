@@ -55,7 +55,7 @@ public class DescribePolicyRequest extends Request {
         } 
 
         /**
-         * Name.
+         * The name of the permission policy that you want to query.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
