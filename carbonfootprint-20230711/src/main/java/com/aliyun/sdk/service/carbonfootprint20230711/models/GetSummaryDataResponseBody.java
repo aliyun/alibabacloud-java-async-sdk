@@ -72,6 +72,12 @@ public class GetSummaryDataResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
+        @NameInMap("AircraftConsumptionConversion")
+        private String aircraftConsumptionConversion;
+
+        @NameInMap("CarConsumptionConversion")
+        private String carConsumptionConversion;
+
         @NameInMap("LastMonthConsumptionConversion")
         private String lastMonthConsumptionConversion;
 
@@ -93,7 +99,12 @@ public class GetSummaryDataResponseBody extends TeaModel {
         @NameInMap("TotalCarbonConsumptionConversion")
         private String totalCarbonConsumptionConversion;
 
+        @NameInMap("TreeConsumptionConversion")
+        private String treeConsumptionConversion;
+
         private Data(Builder builder) {
+            this.aircraftConsumptionConversion = builder.aircraftConsumptionConversion;
+            this.carConsumptionConversion = builder.carConsumptionConversion;
             this.lastMonthConsumptionConversion = builder.lastMonthConsumptionConversion;
             this.lastYearConsumptionConversion = builder.lastYearConsumptionConversion;
             this.lastYearConsumptionConversionSum = builder.lastYearConsumptionConversionSum;
@@ -101,6 +112,7 @@ public class GetSummaryDataResponseBody extends TeaModel {
             this.thisMonthConsumptionConversion = builder.thisMonthConsumptionConversion;
             this.thisYearConsumptionConversion = builder.thisYearConsumptionConversion;
             this.totalCarbonConsumptionConversion = builder.totalCarbonConsumptionConversion;
+            this.treeConsumptionConversion = builder.treeConsumptionConversion;
         }
 
         public static Builder builder() {
@@ -109,6 +121,20 @@ public class GetSummaryDataResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return aircraftConsumptionConversion
+         */
+        public String getAircraftConsumptionConversion() {
+            return this.aircraftConsumptionConversion;
+        }
+
+        /**
+         * @return carConsumptionConversion
+         */
+        public String getCarConsumptionConversion() {
+            return this.carConsumptionConversion;
         }
 
         /**
@@ -160,7 +186,16 @@ public class GetSummaryDataResponseBody extends TeaModel {
             return this.totalCarbonConsumptionConversion;
         }
 
+        /**
+         * @return treeConsumptionConversion
+         */
+        public String getTreeConsumptionConversion() {
+            return this.treeConsumptionConversion;
+        }
+
         public static final class Builder {
+            private String aircraftConsumptionConversion; 
+            private String carConsumptionConversion; 
             private String lastMonthConsumptionConversion; 
             private String lastYearConsumptionConversion; 
             private String lastYearConsumptionConversionSum; 
@@ -168,6 +203,23 @@ public class GetSummaryDataResponseBody extends TeaModel {
             private String thisMonthConsumptionConversion; 
             private String thisYearConsumptionConversion; 
             private String totalCarbonConsumptionConversion; 
+            private String treeConsumptionConversion; 
+
+            /**
+             * AircraftConsumptionConversion.
+             */
+            public Builder aircraftConsumptionConversion(String aircraftConsumptionConversion) {
+                this.aircraftConsumptionConversion = aircraftConsumptionConversion;
+                return this;
+            }
+
+            /**
+             * CarConsumptionConversion.
+             */
+            public Builder carConsumptionConversion(String carConsumptionConversion) {
+                this.carConsumptionConversion = carConsumptionConversion;
+                return this;
+            }
 
             /**
              * LastMonthConsumptionConversion.
@@ -222,6 +274,14 @@ public class GetSummaryDataResponseBody extends TeaModel {
              */
             public Builder totalCarbonConsumptionConversion(String totalCarbonConsumptionConversion) {
                 this.totalCarbonConsumptionConversion = totalCarbonConsumptionConversion;
+                return this;
+            }
+
+            /**
+             * TreeConsumptionConversion.
+             */
+            public Builder treeConsumptionConversion(String treeConsumptionConversion) {
+                this.treeConsumptionConversion = treeConsumptionConversion;
                 return this;
             }
 

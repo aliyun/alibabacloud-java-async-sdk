@@ -24,11 +24,16 @@ public class GetSummaryDataRequest extends Request {
     @NameInMap("StartTime")
     private String startTime;
 
+    @Query
+    @NameInMap("Uids")
+    private java.util.List < String > uids;
+
     private GetSummaryDataRequest(Builder builder) {
         super(builder);
         this.endTime = builder.endTime;
         this.group = builder.group;
         this.startTime = builder.startTime;
+        this.uids = builder.uids;
     }
 
     public static Builder builder() {
@@ -65,10 +70,18 @@ public class GetSummaryDataRequest extends Request {
         return this.startTime;
     }
 
+    /**
+     * @return uids
+     */
+    public java.util.List < String > getUids() {
+        return this.uids;
+    }
+
     public static final class Builder extends Request.Builder<GetSummaryDataRequest, Builder> {
         private String endTime; 
         private String group; 
         private String startTime; 
+        private java.util.List < String > uids; 
 
         private Builder() {
             super();
@@ -79,6 +92,7 @@ public class GetSummaryDataRequest extends Request {
             this.endTime = request.endTime;
             this.group = request.group;
             this.startTime = request.startTime;
+            this.uids = request.uids;
         } 
 
         /**
@@ -105,6 +119,16 @@ public class GetSummaryDataRequest extends Request {
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
             this.startTime = startTime;
+            return this;
+        }
+
+        /**
+         * Uids.
+         */
+        public Builder uids(java.util.List < String > uids) {
+            String uidsShrink = shrink(uids, "Uids", "json");
+            this.putQueryParameter("Uids", uidsShrink);
+            this.uids = uids;
             return this;
         }
 
