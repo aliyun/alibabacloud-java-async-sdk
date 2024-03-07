@@ -21,4 +21,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateHpoExperimentResponse> createHpoExperiment(CreateHpoExperimentRequest request);
 
+    CompletableFuture<ListHpoExperimentsResponse> listHpoExperiments(ListHpoExperimentsRequest request);
+
 }
