@@ -17,6 +17,10 @@ public class QueryCarbonTrackRequest extends Request {
     private String endTime;
 
     @Query
+    @NameInMap("FilterRDAccount")
+    private Integer filterRDAccount;
+
+    @Query
     @NameInMap("Group")
     private String group;
 
@@ -24,11 +28,17 @@ public class QueryCarbonTrackRequest extends Request {
     @NameInMap("StartTime")
     private String startTime;
 
+    @Query
+    @NameInMap("Uids")
+    private java.util.List < String > uids;
+
     private QueryCarbonTrackRequest(Builder builder) {
         super(builder);
         this.endTime = builder.endTime;
+        this.filterRDAccount = builder.filterRDAccount;
         this.group = builder.group;
         this.startTime = builder.startTime;
+        this.uids = builder.uids;
     }
 
     public static Builder builder() {
@@ -52,6 +62,13 @@ public class QueryCarbonTrackRequest extends Request {
     }
 
     /**
+     * @return filterRDAccount
+     */
+    public Integer getFilterRDAccount() {
+        return this.filterRDAccount;
+    }
+
+    /**
      * @return group
      */
     public String getGroup() {
@@ -65,10 +82,19 @@ public class QueryCarbonTrackRequest extends Request {
         return this.startTime;
     }
 
+    /**
+     * @return uids
+     */
+    public java.util.List < String > getUids() {
+        return this.uids;
+    }
+
     public static final class Builder extends Request.Builder<QueryCarbonTrackRequest, Builder> {
         private String endTime; 
+        private Integer filterRDAccount; 
         private String group; 
         private String startTime; 
+        private java.util.List < String > uids; 
 
         private Builder() {
             super();
@@ -77,8 +103,10 @@ public class QueryCarbonTrackRequest extends Request {
         private Builder(QueryCarbonTrackRequest request) {
             super(request);
             this.endTime = request.endTime;
+            this.filterRDAccount = request.filterRDAccount;
             this.group = request.group;
             this.startTime = request.startTime;
+            this.uids = request.uids;
         } 
 
         /**
@@ -87,6 +115,15 @@ public class QueryCarbonTrackRequest extends Request {
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
             this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * FilterRDAccount.
+         */
+        public Builder filterRDAccount(Integer filterRDAccount) {
+            this.putQueryParameter("FilterRDAccount", filterRDAccount);
+            this.filterRDAccount = filterRDAccount;
             return this;
         }
 
@@ -105,6 +142,16 @@ public class QueryCarbonTrackRequest extends Request {
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
             this.startTime = startTime;
+            return this;
+        }
+
+        /**
+         * Uids.
+         */
+        public Builder uids(java.util.List < String > uids) {
+            String uidsShrink = shrink(uids, "Uids", "json");
+            this.putQueryParameter("Uids", uidsShrink);
+            this.uids = uids;
             return this;
         }
 
