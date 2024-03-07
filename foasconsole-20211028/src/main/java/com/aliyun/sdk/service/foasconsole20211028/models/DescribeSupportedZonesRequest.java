@@ -13,11 +13,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeSupportedZonesRequest extends Request {
     @Query
+    @NameInMap("ArchitectureType")
+    private String architectureType;
+
+    @Query
     @NameInMap("Region")
     private String region;
 
     private DescribeSupportedZonesRequest(Builder builder) {
         super(builder);
+        this.architectureType = builder.architectureType;
         this.region = builder.region;
     }
 
@@ -35,6 +40,13 @@ public class DescribeSupportedZonesRequest extends Request {
     }
 
     /**
+     * @return architectureType
+     */
+    public String getArchitectureType() {
+        return this.architectureType;
+    }
+
+    /**
      * @return region
      */
     public String getRegion() {
@@ -42,6 +54,7 @@ public class DescribeSupportedZonesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeSupportedZonesRequest, Builder> {
+        private String architectureType; 
         private String region; 
 
         private Builder() {
@@ -50,8 +63,18 @@ public class DescribeSupportedZonesRequest extends Request {
 
         private Builder(DescribeSupportedZonesRequest request) {
             super(request);
+            this.architectureType = request.architectureType;
             this.region = request.region;
         } 
+
+        /**
+         * ArchitectureType.
+         */
+        public Builder architectureType(String architectureType) {
+            this.putQueryParameter("ArchitectureType", architectureType);
+            this.architectureType = architectureType;
+            return this;
+        }
 
         /**
          * Region.

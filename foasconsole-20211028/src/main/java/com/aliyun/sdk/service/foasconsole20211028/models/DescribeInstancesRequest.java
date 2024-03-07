@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeInstancesRequest extends Request {
     @Query
+    @NameInMap("ArchitectureType")
+    private String architectureType;
+
+    @Query
     @NameInMap("ChargeType")
     private String chargeType;
 
@@ -34,16 +38,22 @@ public class DescribeInstancesRequest extends Request {
     private String region;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("Tags")
     private java.util.List < Tags> tags;
 
     private DescribeInstancesRequest(Builder builder) {
         super(builder);
+        this.architectureType = builder.architectureType;
         this.chargeType = builder.chargeType;
         this.instanceId = builder.instanceId;
         this.pageIndex = builder.pageIndex;
         this.pageSize = builder.pageSize;
         this.region = builder.region;
+        this.resourceGroupId = builder.resourceGroupId;
         this.tags = builder.tags;
     }
 
@@ -58,6 +68,13 @@ public class DescribeInstancesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return architectureType
+     */
+    public String getArchitectureType() {
+        return this.architectureType;
     }
 
     /**
@@ -96,6 +113,13 @@ public class DescribeInstancesRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return tags
      */
     public java.util.List < Tags> getTags() {
@@ -103,11 +127,13 @@ public class DescribeInstancesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeInstancesRequest, Builder> {
+        private String architectureType; 
         private String chargeType; 
         private String instanceId; 
         private Integer pageIndex; 
         private Integer pageSize; 
         private String region; 
+        private String resourceGroupId; 
         private java.util.List < Tags> tags; 
 
         private Builder() {
@@ -116,13 +142,24 @@ public class DescribeInstancesRequest extends Request {
 
         private Builder(DescribeInstancesRequest request) {
             super(request);
+            this.architectureType = request.architectureType;
             this.chargeType = request.chargeType;
             this.instanceId = request.instanceId;
             this.pageIndex = request.pageIndex;
             this.pageSize = request.pageSize;
             this.region = request.region;
+            this.resourceGroupId = request.resourceGroupId;
             this.tags = request.tags;
         } 
+
+        /**
+         * ArchitectureType.
+         */
+        public Builder architectureType(String architectureType) {
+            this.putQueryParameter("ArchitectureType", architectureType);
+            this.architectureType = architectureType;
+            return this;
+        }
 
         /**
          * ChargeType.
@@ -166,6 +203,15 @@ public class DescribeInstancesRequest extends Request {
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
             this.region = region;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

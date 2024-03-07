@@ -13,6 +13,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyPrepayInstanceSpecRequest extends Request {
     @Body
+    @NameInMap("Ha")
+    private Boolean ha;
+
+    @Body
+    @NameInMap("HaResourceSpec")
+    private HaResourceSpec haResourceSpec;
+
+    @Body
+    @NameInMap("HaVSwitchIds")
+    private java.util.List < String > haVSwitchIds;
+
+    @Body
+    @NameInMap("HaZoneId")
+    private String haZoneId;
+
+    @Body
     @NameInMap("InstanceId")
     @Validation(required = true)
     private String instanceId;
@@ -29,6 +45,10 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
 
     private ModifyPrepayInstanceSpecRequest(Builder builder) {
         super(builder);
+        this.ha = builder.ha;
+        this.haResourceSpec = builder.haResourceSpec;
+        this.haVSwitchIds = builder.haVSwitchIds;
+        this.haZoneId = builder.haZoneId;
         this.instanceId = builder.instanceId;
         this.region = builder.region;
         this.resourceSpec = builder.resourceSpec;
@@ -45,6 +65,34 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return ha
+     */
+    public Boolean getHa() {
+        return this.ha;
+    }
+
+    /**
+     * @return haResourceSpec
+     */
+    public HaResourceSpec getHaResourceSpec() {
+        return this.haResourceSpec;
+    }
+
+    /**
+     * @return haVSwitchIds
+     */
+    public java.util.List < String > getHaVSwitchIds() {
+        return this.haVSwitchIds;
+    }
+
+    /**
+     * @return haZoneId
+     */
+    public String getHaZoneId() {
+        return this.haZoneId;
     }
 
     /**
@@ -69,6 +117,10 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyPrepayInstanceSpecRequest, Builder> {
+        private Boolean ha; 
+        private HaResourceSpec haResourceSpec; 
+        private java.util.List < String > haVSwitchIds; 
+        private String haZoneId; 
         private String instanceId; 
         private String region; 
         private ResourceSpec resourceSpec; 
@@ -79,10 +131,52 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
 
         private Builder(ModifyPrepayInstanceSpecRequest request) {
             super(request);
+            this.ha = request.ha;
+            this.haResourceSpec = request.haResourceSpec;
+            this.haVSwitchIds = request.haVSwitchIds;
+            this.haZoneId = request.haZoneId;
             this.instanceId = request.instanceId;
             this.region = request.region;
             this.resourceSpec = request.resourceSpec;
         } 
+
+        /**
+         * Ha.
+         */
+        public Builder ha(Boolean ha) {
+            this.putBodyParameter("Ha", ha);
+            this.ha = ha;
+            return this;
+        }
+
+        /**
+         * HaResourceSpec.
+         */
+        public Builder haResourceSpec(HaResourceSpec haResourceSpec) {
+            String haResourceSpecShrink = shrink(haResourceSpec, "HaResourceSpec", "json");
+            this.putBodyParameter("HaResourceSpec", haResourceSpecShrink);
+            this.haResourceSpec = haResourceSpec;
+            return this;
+        }
+
+        /**
+         * HaVSwitchIds.
+         */
+        public Builder haVSwitchIds(java.util.List < String > haVSwitchIds) {
+            String haVSwitchIdsShrink = shrink(haVSwitchIds, "HaVSwitchIds", "json");
+            this.putBodyParameter("HaVSwitchIds", haVSwitchIdsShrink);
+            this.haVSwitchIds = haVSwitchIds;
+            return this;
+        }
+
+        /**
+         * HaZoneId.
+         */
+        public Builder haZoneId(String haZoneId) {
+            this.putBodyParameter("HaZoneId", haZoneId);
+            this.haZoneId = haZoneId;
+            return this;
+        }
 
         /**
          * InstanceId.
@@ -119,6 +213,67 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
 
     } 
 
+    public static class HaResourceSpec extends TeaModel {
+        @NameInMap("Cpu")
+        private Integer cpu;
+
+        @NameInMap("MemoryGB")
+        private Integer memoryGB;
+
+        private HaResourceSpec(Builder builder) {
+            this.cpu = builder.cpu;
+            this.memoryGB = builder.memoryGB;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static HaResourceSpec create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cpu
+         */
+        public Integer getCpu() {
+            return this.cpu;
+        }
+
+        /**
+         * @return memoryGB
+         */
+        public Integer getMemoryGB() {
+            return this.memoryGB;
+        }
+
+        public static final class Builder {
+            private Integer cpu; 
+            private Integer memoryGB; 
+
+            /**
+             * Cpu.
+             */
+            public Builder cpu(Integer cpu) {
+                this.cpu = cpu;
+                return this;
+            }
+
+            /**
+             * MemoryGB.
+             */
+            public Builder memoryGB(Integer memoryGB) {
+                this.memoryGB = memoryGB;
+                return this;
+            }
+
+            public HaResourceSpec build() {
+                return new HaResourceSpec(this);
+            } 
+
+        } 
+
+    }
     public static class ResourceSpec extends TeaModel {
         @NameInMap("Cpu")
         @Validation(required = true)

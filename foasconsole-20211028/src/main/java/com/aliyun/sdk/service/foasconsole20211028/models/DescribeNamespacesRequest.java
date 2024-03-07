@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeNamespacesRequest extends Request {
     @Query
+    @NameInMap("Ha")
+    private Boolean ha;
+
+    @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
     private String instanceId;
@@ -40,6 +44,7 @@ public class DescribeNamespacesRequest extends Request {
 
     private DescribeNamespacesRequest(Builder builder) {
         super(builder);
+        this.ha = builder.ha;
         this.instanceId = builder.instanceId;
         this.namespace = builder.namespace;
         this.pageIndex = builder.pageIndex;
@@ -59,6 +64,13 @@ public class DescribeNamespacesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return ha
+     */
+    public Boolean getHa() {
+        return this.ha;
     }
 
     /**
@@ -104,6 +116,7 @@ public class DescribeNamespacesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeNamespacesRequest, Builder> {
+        private Boolean ha; 
         private String instanceId; 
         private String namespace; 
         private Integer pageIndex; 
@@ -117,6 +130,7 @@ public class DescribeNamespacesRequest extends Request {
 
         private Builder(DescribeNamespacesRequest request) {
             super(request);
+            this.ha = request.ha;
             this.instanceId = request.instanceId;
             this.namespace = request.namespace;
             this.pageIndex = request.pageIndex;
@@ -124,6 +138,15 @@ public class DescribeNamespacesRequest extends Request {
             this.region = request.region;
             this.tags = request.tags;
         } 
+
+        /**
+         * Ha.
+         */
+        public Builder ha(Boolean ha) {
+            this.putQueryParameter("Ha", ha);
+            this.ha = ha;
+            return this;
+        }
 
         /**
          * InstanceId.

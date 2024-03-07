@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateNamespaceRequest extends Request {
     @Body
+    @NameInMap("Ha")
+    private Boolean ha;
+
+    @Body
     @NameInMap("InstanceId")
     @Validation(required = true)
     private String instanceId;
@@ -33,6 +37,7 @@ public class CreateNamespaceRequest extends Request {
 
     private CreateNamespaceRequest(Builder builder) {
         super(builder);
+        this.ha = builder.ha;
         this.instanceId = builder.instanceId;
         this.namespace = builder.namespace;
         this.region = builder.region;
@@ -50,6 +55,13 @@ public class CreateNamespaceRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return ha
+     */
+    public Boolean getHa() {
+        return this.ha;
     }
 
     /**
@@ -81,6 +93,7 @@ public class CreateNamespaceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateNamespaceRequest, Builder> {
+        private Boolean ha; 
         private String instanceId; 
         private String namespace; 
         private String region; 
@@ -92,11 +105,21 @@ public class CreateNamespaceRequest extends Request {
 
         private Builder(CreateNamespaceRequest request) {
             super(request);
+            this.ha = request.ha;
             this.instanceId = request.instanceId;
             this.namespace = request.namespace;
             this.region = request.region;
             this.resourceSpec = request.resourceSpec;
         } 
+
+        /**
+         * Ha.
+         */
+        public Builder ha(Boolean ha) {
+            this.putBodyParameter("Ha", ha);
+            this.ha = ha;
+            return this;
+        }
 
         /**
          * InstanceId.

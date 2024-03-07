@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateInstanceRequest extends Request {
     @Body
+    @NameInMap("ArchitectureType")
+    private String architectureType;
+
+    @Body
     @NameInMap("AutoRenew")
     private Boolean autoRenew;
 
@@ -26,9 +30,33 @@ public class CreateInstanceRequest extends Request {
     private Integer duration;
 
     @Body
+    @NameInMap("Extra")
+    private String extra;
+
+    @Body
+    @NameInMap("Ha")
+    private Boolean ha;
+
+    @Body
+    @NameInMap("HaResourceSpec")
+    private HaResourceSpec haResourceSpec;
+
+    @Body
+    @NameInMap("HaVSwitchIds")
+    private java.util.List < String > haVSwitchIds;
+
+    @Body
+    @NameInMap("HaZoneId")
+    private String haZoneId;
+
+    @Body
     @NameInMap("InstanceName")
     @Validation(required = true)
     private String instanceName;
+
+    @Body
+    @NameInMap("MonitorType")
+    private String monitorType;
 
     @Body
     @NameInMap("PricingCycle")
@@ -44,6 +72,10 @@ public class CreateInstanceRequest extends Request {
     private String region;
 
     @Body
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Body
     @NameInMap("ResourceSpec")
     private ResourceSpec resourceSpec;
 
@@ -51,6 +83,10 @@ public class CreateInstanceRequest extends Request {
     @NameInMap("Storage")
     @Validation(required = true)
     private Storage storage;
+
+    @Body
+    @NameInMap("UsePromotionCode")
+    private Boolean usePromotionCode;
 
     @Body
     @NameInMap("VSwitchIds")
@@ -69,15 +105,24 @@ public class CreateInstanceRequest extends Request {
 
     private CreateInstanceRequest(Builder builder) {
         super(builder);
+        this.architectureType = builder.architectureType;
         this.autoRenew = builder.autoRenew;
         this.chargeType = builder.chargeType;
         this.duration = builder.duration;
+        this.extra = builder.extra;
+        this.ha = builder.ha;
+        this.haResourceSpec = builder.haResourceSpec;
+        this.haVSwitchIds = builder.haVSwitchIds;
+        this.haZoneId = builder.haZoneId;
         this.instanceName = builder.instanceName;
+        this.monitorType = builder.monitorType;
         this.pricingCycle = builder.pricingCycle;
         this.promotionCode = builder.promotionCode;
         this.region = builder.region;
+        this.resourceGroupId = builder.resourceGroupId;
         this.resourceSpec = builder.resourceSpec;
         this.storage = builder.storage;
+        this.usePromotionCode = builder.usePromotionCode;
         this.vSwitchIds = builder.vSwitchIds;
         this.vpcId = builder.vpcId;
         this.zoneId = builder.zoneId;
@@ -94,6 +139,13 @@ public class CreateInstanceRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return architectureType
+     */
+    public String getArchitectureType() {
+        return this.architectureType;
     }
 
     /**
@@ -118,10 +170,52 @@ public class CreateInstanceRequest extends Request {
     }
 
     /**
+     * @return extra
+     */
+    public String getExtra() {
+        return this.extra;
+    }
+
+    /**
+     * @return ha
+     */
+    public Boolean getHa() {
+        return this.ha;
+    }
+
+    /**
+     * @return haResourceSpec
+     */
+    public HaResourceSpec getHaResourceSpec() {
+        return this.haResourceSpec;
+    }
+
+    /**
+     * @return haVSwitchIds
+     */
+    public java.util.List < String > getHaVSwitchIds() {
+        return this.haVSwitchIds;
+    }
+
+    /**
+     * @return haZoneId
+     */
+    public String getHaZoneId() {
+        return this.haZoneId;
+    }
+
+    /**
      * @return instanceName
      */
     public String getInstanceName() {
         return this.instanceName;
+    }
+
+    /**
+     * @return monitorType
+     */
+    public String getMonitorType() {
+        return this.monitorType;
     }
 
     /**
@@ -146,6 +240,13 @@ public class CreateInstanceRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return resourceSpec
      */
     public ResourceSpec getResourceSpec() {
@@ -157,6 +258,13 @@ public class CreateInstanceRequest extends Request {
      */
     public Storage getStorage() {
         return this.storage;
+    }
+
+    /**
+     * @return usePromotionCode
+     */
+    public Boolean getUsePromotionCode() {
+        return this.usePromotionCode;
     }
 
     /**
@@ -181,15 +289,24 @@ public class CreateInstanceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateInstanceRequest, Builder> {
+        private String architectureType; 
         private Boolean autoRenew; 
         private String chargeType; 
         private Integer duration; 
+        private String extra; 
+        private Boolean ha; 
+        private HaResourceSpec haResourceSpec; 
+        private java.util.List < String > haVSwitchIds; 
+        private String haZoneId; 
         private String instanceName; 
+        private String monitorType; 
         private String pricingCycle; 
         private String promotionCode; 
         private String region; 
+        private String resourceGroupId; 
         private ResourceSpec resourceSpec; 
         private Storage storage; 
+        private Boolean usePromotionCode; 
         private java.util.List < String > vSwitchIds; 
         private String vpcId; 
         private String zoneId; 
@@ -200,19 +317,37 @@ public class CreateInstanceRequest extends Request {
 
         private Builder(CreateInstanceRequest request) {
             super(request);
+            this.architectureType = request.architectureType;
             this.autoRenew = request.autoRenew;
             this.chargeType = request.chargeType;
             this.duration = request.duration;
+            this.extra = request.extra;
+            this.ha = request.ha;
+            this.haResourceSpec = request.haResourceSpec;
+            this.haVSwitchIds = request.haVSwitchIds;
+            this.haZoneId = request.haZoneId;
             this.instanceName = request.instanceName;
+            this.monitorType = request.monitorType;
             this.pricingCycle = request.pricingCycle;
             this.promotionCode = request.promotionCode;
             this.region = request.region;
+            this.resourceGroupId = request.resourceGroupId;
             this.resourceSpec = request.resourceSpec;
             this.storage = request.storage;
+            this.usePromotionCode = request.usePromotionCode;
             this.vSwitchIds = request.vSwitchIds;
             this.vpcId = request.vpcId;
             this.zoneId = request.zoneId;
         } 
+
+        /**
+         * ArchitectureType.
+         */
+        public Builder architectureType(String architectureType) {
+            this.putBodyParameter("ArchitectureType", architectureType);
+            this.architectureType = architectureType;
+            return this;
+        }
 
         /**
          * AutoRenew.
@@ -242,11 +377,67 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
+         * Extra.
+         */
+        public Builder extra(String extra) {
+            this.putBodyParameter("Extra", extra);
+            this.extra = extra;
+            return this;
+        }
+
+        /**
+         * Ha.
+         */
+        public Builder ha(Boolean ha) {
+            this.putBodyParameter("Ha", ha);
+            this.ha = ha;
+            return this;
+        }
+
+        /**
+         * HaResourceSpec.
+         */
+        public Builder haResourceSpec(HaResourceSpec haResourceSpec) {
+            String haResourceSpecShrink = shrink(haResourceSpec, "HaResourceSpec", "json");
+            this.putBodyParameter("HaResourceSpec", haResourceSpecShrink);
+            this.haResourceSpec = haResourceSpec;
+            return this;
+        }
+
+        /**
+         * HaVSwitchIds.
+         */
+        public Builder haVSwitchIds(java.util.List < String > haVSwitchIds) {
+            String haVSwitchIdsShrink = shrink(haVSwitchIds, "HaVSwitchIds", "json");
+            this.putBodyParameter("HaVSwitchIds", haVSwitchIdsShrink);
+            this.haVSwitchIds = haVSwitchIds;
+            return this;
+        }
+
+        /**
+         * HaZoneId.
+         */
+        public Builder haZoneId(String haZoneId) {
+            this.putBodyParameter("HaZoneId", haZoneId);
+            this.haZoneId = haZoneId;
+            return this;
+        }
+
+        /**
          * InstanceName.
          */
         public Builder instanceName(String instanceName) {
             this.putBodyParameter("InstanceName", instanceName);
             this.instanceName = instanceName;
+            return this;
+        }
+
+        /**
+         * MonitorType.
+         */
+        public Builder monitorType(String monitorType) {
+            this.putBodyParameter("MonitorType", monitorType);
+            this.monitorType = monitorType;
             return this;
         }
 
@@ -278,6 +469,15 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putBodyParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
          * ResourceSpec.
          */
         public Builder resourceSpec(ResourceSpec resourceSpec) {
@@ -294,6 +494,15 @@ public class CreateInstanceRequest extends Request {
             String storageShrink = shrink(storage, "Storage", "json");
             this.putBodyParameter("Storage", storageShrink);
             this.storage = storage;
+            return this;
+        }
+
+        /**
+         * UsePromotionCode.
+         */
+        public Builder usePromotionCode(Boolean usePromotionCode) {
+            this.putBodyParameter("UsePromotionCode", usePromotionCode);
+            this.usePromotionCode = usePromotionCode;
             return this;
         }
 
@@ -332,6 +541,67 @@ public class CreateInstanceRequest extends Request {
 
     } 
 
+    public static class HaResourceSpec extends TeaModel {
+        @NameInMap("Cpu")
+        private Integer cpu;
+
+        @NameInMap("MemoryGB")
+        private Integer memoryGB;
+
+        private HaResourceSpec(Builder builder) {
+            this.cpu = builder.cpu;
+            this.memoryGB = builder.memoryGB;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static HaResourceSpec create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cpu
+         */
+        public Integer getCpu() {
+            return this.cpu;
+        }
+
+        /**
+         * @return memoryGB
+         */
+        public Integer getMemoryGB() {
+            return this.memoryGB;
+        }
+
+        public static final class Builder {
+            private Integer cpu; 
+            private Integer memoryGB; 
+
+            /**
+             * Cpu.
+             */
+            public Builder cpu(Integer cpu) {
+                this.cpu = cpu;
+                return this;
+            }
+
+            /**
+             * MemoryGB.
+             */
+            public Builder memoryGB(Integer memoryGB) {
+                this.memoryGB = memoryGB;
+                return this;
+            }
+
+            public HaResourceSpec build() {
+                return new HaResourceSpec(this);
+            } 
+
+        } 
+
+    }
     public static class ResourceSpec extends TeaModel {
         @NameInMap("Cpu")
         private Integer cpu;

@@ -171,6 +171,130 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     } 
 
+    public static class HaResourceSpec extends TeaModel {
+        @NameInMap("Cpu")
+        private Integer cpu;
+
+        @NameInMap("MemoryGB")
+        private Integer memoryGB;
+
+        private HaResourceSpec(Builder builder) {
+            this.cpu = builder.cpu;
+            this.memoryGB = builder.memoryGB;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static HaResourceSpec create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cpu
+         */
+        public Integer getCpu() {
+            return this.cpu;
+        }
+
+        /**
+         * @return memoryGB
+         */
+        public Integer getMemoryGB() {
+            return this.memoryGB;
+        }
+
+        public static final class Builder {
+            private Integer cpu; 
+            private Integer memoryGB; 
+
+            /**
+             * Cpu.
+             */
+            public Builder cpu(Integer cpu) {
+                this.cpu = cpu;
+                return this;
+            }
+
+            /**
+             * MemoryGB.
+             */
+            public Builder memoryGB(Integer memoryGB) {
+                this.memoryGB = memoryGB;
+                return this;
+            }
+
+            public HaResourceSpec build() {
+                return new HaResourceSpec(this);
+            } 
+
+        } 
+
+    }
+    public static class HostAliases extends TeaModel {
+        @NameInMap("HostNames")
+        @Validation(required = true)
+        private java.util.List < String > hostNames;
+
+        @NameInMap("Ip")
+        @Validation(required = true)
+        private String ip;
+
+        private HostAliases(Builder builder) {
+            this.hostNames = builder.hostNames;
+            this.ip = builder.ip;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static HostAliases create() {
+            return builder().build();
+        }
+
+        /**
+         * @return hostNames
+         */
+        public java.util.List < String > getHostNames() {
+            return this.hostNames;
+        }
+
+        /**
+         * @return ip
+         */
+        public String getIp() {
+            return this.ip;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > hostNames; 
+            private String ip; 
+
+            /**
+             * HostNames.
+             */
+            public Builder hostNames(java.util.List < String > hostNames) {
+                this.hostNames = hostNames;
+                return this;
+            }
+
+            /**
+             * Ip.
+             */
+            public Builder ip(String ip) {
+                this.ip = ip;
+                return this;
+            }
+
+            public HostAliases build() {
+                return new HostAliases(this);
+            } 
+
+        } 
+
+    }
     public static class ResourceSpec extends TeaModel {
         @NameInMap("Cpu")
         private Integer cpu;
@@ -376,17 +500,42 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     }
     public static class Instances extends TeaModel {
+        @NameInMap("ArchitectureType")
+        private String architectureType;
+
+        @NameInMap("AskClusterId")
+        private String askClusterId;
+
         @NameInMap("ChargeType")
         private String chargeType;
 
         @NameInMap("ClusterStatus")
         private String clusterStatus;
 
+        @NameInMap("Ha")
+        private Boolean ha;
+
+        @NameInMap("HaResourceSpec")
+        private HaResourceSpec haResourceSpec;
+
+        @NameInMap("HaVSwitchIds")
+        private java.util.List < String > haVSwitchIds;
+
+        @NameInMap("HaZoneId")
+        private String haZoneId;
+
+        @NameInMap("HostAliases")
+        @Validation(required = true)
+        private java.util.List < HostAliases> hostAliases;
+
         @NameInMap("InstanceId")
         private String instanceId;
 
         @NameInMap("InstanceName")
         private String instanceName;
+
+        @NameInMap("MonitorType")
+        private String monitorType;
 
         @NameInMap("OrderState")
         private String orderState;
@@ -399,6 +548,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
         @NameInMap("ResourceExpiredTime")
         private Long resourceExpiredTime;
+
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
 
         @NameInMap("ResourceId")
         private String resourceId;
@@ -425,14 +577,23 @@ public class DescribeInstancesResponseBody extends TeaModel {
         private String zoneId;
 
         private Instances(Builder builder) {
+            this.architectureType = builder.architectureType;
+            this.askClusterId = builder.askClusterId;
             this.chargeType = builder.chargeType;
             this.clusterStatus = builder.clusterStatus;
+            this.ha = builder.ha;
+            this.haResourceSpec = builder.haResourceSpec;
+            this.haVSwitchIds = builder.haVSwitchIds;
+            this.haZoneId = builder.haZoneId;
+            this.hostAliases = builder.hostAliases;
             this.instanceId = builder.instanceId;
             this.instanceName = builder.instanceName;
+            this.monitorType = builder.monitorType;
             this.orderState = builder.orderState;
             this.region = builder.region;
             this.resourceCreateTime = builder.resourceCreateTime;
             this.resourceExpiredTime = builder.resourceExpiredTime;
+            this.resourceGroupId = builder.resourceGroupId;
             this.resourceId = builder.resourceId;
             this.resourceSpec = builder.resourceSpec;
             this.storage = builder.storage;
@@ -452,6 +613,20 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return architectureType
+         */
+        public String getArchitectureType() {
+            return this.architectureType;
+        }
+
+        /**
+         * @return askClusterId
+         */
+        public String getAskClusterId() {
+            return this.askClusterId;
+        }
+
+        /**
          * @return chargeType
          */
         public String getChargeType() {
@@ -466,6 +641,41 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return ha
+         */
+        public Boolean getHa() {
+            return this.ha;
+        }
+
+        /**
+         * @return haResourceSpec
+         */
+        public HaResourceSpec getHaResourceSpec() {
+            return this.haResourceSpec;
+        }
+
+        /**
+         * @return haVSwitchIds
+         */
+        public java.util.List < String > getHaVSwitchIds() {
+            return this.haVSwitchIds;
+        }
+
+        /**
+         * @return haZoneId
+         */
+        public String getHaZoneId() {
+            return this.haZoneId;
+        }
+
+        /**
+         * @return hostAliases
+         */
+        public java.util.List < HostAliases> getHostAliases() {
+            return this.hostAliases;
+        }
+
+        /**
          * @return instanceId
          */
         public String getInstanceId() {
@@ -477,6 +687,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
          */
         public String getInstanceName() {
             return this.instanceName;
+        }
+
+        /**
+         * @return monitorType
+         */
+        public String getMonitorType() {
+            return this.monitorType;
         }
 
         /**
@@ -505,6 +722,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
          */
         public Long getResourceExpiredTime() {
             return this.resourceExpiredTime;
+        }
+
+        /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         /**
@@ -564,14 +788,23 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String architectureType; 
+            private String askClusterId; 
             private String chargeType; 
             private String clusterStatus; 
+            private Boolean ha; 
+            private HaResourceSpec haResourceSpec; 
+            private java.util.List < String > haVSwitchIds; 
+            private String haZoneId; 
+            private java.util.List < HostAliases> hostAliases; 
             private String instanceId; 
             private String instanceName; 
+            private String monitorType; 
             private String orderState; 
             private String region; 
             private Long resourceCreateTime; 
             private Long resourceExpiredTime; 
+            private String resourceGroupId; 
             private String resourceId; 
             private ResourceSpec resourceSpec; 
             private Storage storage; 
@@ -580,6 +813,22 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private java.util.List < String > vSwitchIds; 
             private String vpcId; 
             private String zoneId; 
+
+            /**
+             * ArchitectureType.
+             */
+            public Builder architectureType(String architectureType) {
+                this.architectureType = architectureType;
+                return this;
+            }
+
+            /**
+             * AskClusterId.
+             */
+            public Builder askClusterId(String askClusterId) {
+                this.askClusterId = askClusterId;
+                return this;
+            }
 
             /**
              * ChargeType.
@@ -598,6 +847,46 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
+             * Ha.
+             */
+            public Builder ha(Boolean ha) {
+                this.ha = ha;
+                return this;
+            }
+
+            /**
+             * HaResourceSpec.
+             */
+            public Builder haResourceSpec(HaResourceSpec haResourceSpec) {
+                this.haResourceSpec = haResourceSpec;
+                return this;
+            }
+
+            /**
+             * HaVSwitchIds.
+             */
+            public Builder haVSwitchIds(java.util.List < String > haVSwitchIds) {
+                this.haVSwitchIds = haVSwitchIds;
+                return this;
+            }
+
+            /**
+             * HaZoneId.
+             */
+            public Builder haZoneId(String haZoneId) {
+                this.haZoneId = haZoneId;
+                return this;
+            }
+
+            /**
+             * HostAliases.
+             */
+            public Builder hostAliases(java.util.List < HostAliases> hostAliases) {
+                this.hostAliases = hostAliases;
+                return this;
+            }
+
+            /**
              * InstanceId.
              */
             public Builder instanceId(String instanceId) {
@@ -610,6 +899,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
+                return this;
+            }
+
+            /**
+             * MonitorType.
+             */
+            public Builder monitorType(String monitorType) {
+                this.monitorType = monitorType;
                 return this;
             }
 
@@ -642,6 +939,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
              */
             public Builder resourceExpiredTime(Long resourceExpiredTime) {
                 this.resourceExpiredTime = resourceExpiredTime;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 
