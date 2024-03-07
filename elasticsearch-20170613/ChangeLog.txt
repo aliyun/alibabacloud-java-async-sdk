@@ -1,3 +1,6 @@
+2024-03-07 Version: 1.1.8
+- Generated java-async 2017-06-13 for elasticsearch.
+
 2024-02-21 Version: 1.1.7
 - Generated java-async 2017-06-13 for elasticsearch.
 
