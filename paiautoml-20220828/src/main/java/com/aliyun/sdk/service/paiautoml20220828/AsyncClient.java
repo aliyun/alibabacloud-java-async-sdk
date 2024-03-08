@@ -21,6 +21,22 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateHpoExperimentResponse> createHpoExperiment(CreateHpoExperimentRequest request);
 
+    CompletableFuture<DeleteHpoExperimentResponse> deleteHpoExperiment(DeleteHpoExperimentRequest request);
+
+    CompletableFuture<GetHpoExperimentResponse> getHpoExperiment(GetHpoExperimentRequest request);
+
+    CompletableFuture<GetHpoTrialResponse> getHpoTrial(GetHpoTrialRequest request);
+
     CompletableFuture<ListHpoExperimentsResponse> listHpoExperiments(ListHpoExperimentsRequest request);
+
+    CompletableFuture<ListHpoTrialLogsResponse> listHpoTrialLogs(ListHpoTrialLogsRequest request);
+
+    CompletableFuture<ListHpoTrialsResponse> listHpoTrials(ListHpoTrialsRequest request);
+
+    CompletableFuture<RestartHpoTrialsResponse> restartHpoTrials(RestartHpoTrialsRequest request);
+
+    CompletableFuture<StopHpoExperimentResponse> stopHpoExperiment(StopHpoExperimentRequest request);
+
+    CompletableFuture<StopHpoTrialsResponse> stopHpoTrials(StopHpoTrialsRequest request);
 
 }
