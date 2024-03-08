@@ -115,9 +115,6 @@ public class DescribeAppStreamingOutTemplatesResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("EnableVad")
-        private Boolean enableVad;
-
         @NameInMap("LayoutIds")
         private java.util.List < String > layoutIds;
 
@@ -132,7 +129,6 @@ public class DescribeAppStreamingOutTemplatesResponseBody extends TeaModel {
 
         private Templates(Builder builder) {
             this.createTime = builder.createTime;
-            this.enableVad = builder.enableVad;
             this.layoutIds = builder.layoutIds;
             this.mediaEncode = builder.mediaEncode;
             this.name = builder.name;
@@ -152,13 +148,6 @@ public class DescribeAppStreamingOutTemplatesResponseBody extends TeaModel {
          */
         public String getCreateTime() {
             return this.createTime;
-        }
-
-        /**
-         * @return enableVad
-         */
-        public Boolean getEnableVad() {
-            return this.enableVad;
         }
 
         /**
@@ -191,7 +180,6 @@ public class DescribeAppStreamingOutTemplatesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String createTime; 
-            private Boolean enableVad; 
             private java.util.List < String > layoutIds; 
             private Integer mediaEncode; 
             private String name; 
@@ -202,14 +190,6 @@ public class DescribeAppStreamingOutTemplatesResponseBody extends TeaModel {
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
-                return this;
-            }
-
-            /**
-             * EnableVad.
-             */
-            public Builder enableVad(Boolean enableVad) {
-                this.enableVad = enableVad;
                 return this;
             }
 

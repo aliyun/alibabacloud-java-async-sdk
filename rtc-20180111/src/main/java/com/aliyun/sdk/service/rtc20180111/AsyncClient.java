@@ -73,8 +73,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeChannelUsersResponse> describeChannelUsers(DescribeChannelUsersRequest request);
 
-    CompletableFuture<DescribeChannelsResponse> describeChannels(DescribeChannelsRequest request);
-
     CompletableFuture<DescribeEndPointEventListResponse> describeEndPointEventList(DescribeEndPointEventListRequest request);
 
     CompletableFuture<DescribeEndPointMetricDataResponse> describeEndPointMetricData(DescribeEndPointMetricDataRequest request);

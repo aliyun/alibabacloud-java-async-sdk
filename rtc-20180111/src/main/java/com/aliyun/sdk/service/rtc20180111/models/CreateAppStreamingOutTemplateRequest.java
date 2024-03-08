@@ -96,9 +96,6 @@ public class CreateAppStreamingOutTemplateRequest extends Request {
     } 
 
     public static class StreamingOutTemplate extends TeaModel {
-        @NameInMap("EnableVad")
-        private Boolean enableVad;
-
         @NameInMap("LayoutIds")
         @Validation(required = true)
         private java.util.List < String > layoutIds;
@@ -112,7 +109,6 @@ public class CreateAppStreamingOutTemplateRequest extends Request {
         private String name;
 
         private StreamingOutTemplate(Builder builder) {
-            this.enableVad = builder.enableVad;
             this.layoutIds = builder.layoutIds;
             this.mediaEncode = builder.mediaEncode;
             this.name = builder.name;
@@ -124,13 +120,6 @@ public class CreateAppStreamingOutTemplateRequest extends Request {
 
         public static StreamingOutTemplate create() {
             return builder().build();
-        }
-
-        /**
-         * @return enableVad
-         */
-        public Boolean getEnableVad() {
-            return this.enableVad;
         }
 
         /**
@@ -155,18 +144,9 @@ public class CreateAppStreamingOutTemplateRequest extends Request {
         }
 
         public static final class Builder {
-            private Boolean enableVad; 
             private java.util.List < String > layoutIds; 
             private Integer mediaEncode; 
             private String name; 
-
-            /**
-             * EnableVad.
-             */
-            public Builder enableVad(Boolean enableVad) {
-                this.enableVad = enableVad;
-                return this;
-            }
 
             /**
              * LayoutIds.

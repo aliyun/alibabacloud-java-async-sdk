@@ -24,7 +24,7 @@ public class StopCloudRecordRequest extends Request {
 
     @Query
     @NameInMap("TaskId")
-    @Validation(required = true)
+    @Validation(required = true, maxLength = 55, minLength = 1)
     private String taskId;
 
     private StopCloudRecordRequest(Builder builder) {

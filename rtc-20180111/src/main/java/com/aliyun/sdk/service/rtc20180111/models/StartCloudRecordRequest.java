@@ -14,10 +14,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class StartCloudRecordRequest extends Request {
     @Query
     @NameInMap("AppId")
+    @Validation(required = true)
     private String appId;
 
     @Query
     @NameInMap("ChannelId")
+    @Validation(required = true)
     private String channelId;
 
     @Query
@@ -26,14 +28,17 @@ public class StartCloudRecordRequest extends Request {
 
     @Query
     @NameInMap("StorageConfig")
+    @Validation(required = true)
     private StorageConfig storageConfig;
 
     @Query
     @NameInMap("TaskId")
+    @Validation(maxLength = 55, minLength = 1)
     private String taskId;
 
     @Query
     @NameInMap("TemplateId")
+    @Validation(required = true, maxLength = 128, minLength = 1)
     private String templateId;
 
     private StartCloudRecordRequest(Builder builder) {
@@ -186,17 +191,14 @@ public class StartCloudRecordRequest extends Request {
 
     public static class Panes extends TeaModel {
         @NameInMap("PaneId")
-        private String paneId;
-
-        @NameInMap("Source")
-        private String source;
+        @Validation(required = true)
+        private Integer paneId;
 
         @NameInMap("SourceType")
         private String sourceType;
 
         private Panes(Builder builder) {
             this.paneId = builder.paneId;
-            this.source = builder.source;
             this.sourceType = builder.sourceType;
         }
 
@@ -211,15 +213,8 @@ public class StartCloudRecordRequest extends Request {
         /**
          * @return paneId
          */
-        public String getPaneId() {
+        public Integer getPaneId() {
             return this.paneId;
-        }
-
-        /**
-         * @return source
-         */
-        public String getSource() {
-            return this.source;
         }
 
         /**
@@ -230,23 +225,14 @@ public class StartCloudRecordRequest extends Request {
         }
 
         public static final class Builder {
-            private String paneId; 
-            private String source; 
+            private Integer paneId; 
             private String sourceType; 
 
             /**
              * paneId
              */
-            public Builder paneId(String paneId) {
+            public Builder paneId(Integer paneId) {
                 this.paneId = paneId;
-                return this;
-            }
-
-            /**
-             * source
-             */
-            public Builder source(String source) {
-                this.source = source;
                 return this;
             }
 
@@ -267,18 +253,23 @@ public class StartCloudRecordRequest extends Request {
     }
     public static class StorageConfig extends TeaModel {
         @NameInMap("AccessKey")
+        @Validation(required = true)
         private String accessKey;
 
         @NameInMap("Bucket")
+        @Validation(required = true)
         private String bucket;
 
         @NameInMap("Region")
+        @Validation(required = true)
         private Integer region;
 
         @NameInMap("SecretKey")
+        @Validation(required = true)
         private String secretKey;
 
         @NameInMap("Vendor")
+        @Validation(required = true, minimum = 1)
         private Integer vendor;
 
         private StorageConfig(Builder builder) {
