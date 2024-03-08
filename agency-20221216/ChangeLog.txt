@@ -1,3 +1,6 @@
+2024-03-08 Version: 1.0.9
+- Generated java-async 2022-12-16 for Agency.
+
 2024-02-27 Version: 1.0.8
 - Generated java-async 2022-12-16 for Agency.
 
