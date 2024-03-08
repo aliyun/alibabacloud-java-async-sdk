@@ -29,6 +29,10 @@ public class QueryCarbonTrackRequest extends Request {
     private String startTime;
 
     @Query
+    @NameInMap("TopNum")
+    private Integer topNum;
+
+    @Query
     @NameInMap("Uids")
     private java.util.List < String > uids;
 
@@ -38,6 +42,7 @@ public class QueryCarbonTrackRequest extends Request {
         this.filterRDAccount = builder.filterRDAccount;
         this.group = builder.group;
         this.startTime = builder.startTime;
+        this.topNum = builder.topNum;
         this.uids = builder.uids;
     }
 
@@ -83,6 +88,13 @@ public class QueryCarbonTrackRequest extends Request {
     }
 
     /**
+     * @return topNum
+     */
+    public Integer getTopNum() {
+        return this.topNum;
+    }
+
+    /**
      * @return uids
      */
     public java.util.List < String > getUids() {
@@ -94,6 +106,7 @@ public class QueryCarbonTrackRequest extends Request {
         private Integer filterRDAccount; 
         private String group; 
         private String startTime; 
+        private Integer topNum; 
         private java.util.List < String > uids; 
 
         private Builder() {
@@ -106,6 +119,7 @@ public class QueryCarbonTrackRequest extends Request {
             this.filterRDAccount = request.filterRDAccount;
             this.group = request.group;
             this.startTime = request.startTime;
+            this.topNum = request.topNum;
             this.uids = request.uids;
         } 
 
@@ -142,6 +156,15 @@ public class QueryCarbonTrackRequest extends Request {
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
             this.startTime = startTime;
+            return this;
+        }
+
+        /**
+         * TopNum.
+         */
+        public Builder topNum(Integer topNum) {
+            this.putQueryParameter("TopNum", topNum);
+            this.topNum = topNum;
             return this;
         }
 
