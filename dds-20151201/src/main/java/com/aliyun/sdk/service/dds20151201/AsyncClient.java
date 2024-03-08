@@ -170,6 +170,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeBackupPolicyResponse> describeBackupPolicy(DescribeBackupPolicyRequest request);
 
+    CompletableFuture<DescribeBackupStorageResponse> describeBackupStorage(DescribeBackupStorageRequest request);
+
     CompletableFuture<DescribeBackupTasksResponse> describeBackupTasks(DescribeBackupTasksRequest request);
 
     CompletableFuture<DescribeBackupsResponse> describeBackups(DescribeBackupsRequest request);
