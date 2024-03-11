@@ -35,6 +35,10 @@ public class SendMessageWithTemplateRequest extends Request {
     @Validation(required = true)
     private String to;
 
+    @Query
+    @NameInMap("ValidityPeriod")
+    private Long validityPeriod;
+
     private SendMessageWithTemplateRequest(Builder builder) {
         super(builder);
         this.from = builder.from;
@@ -42,6 +46,7 @@ public class SendMessageWithTemplateRequest extends Request {
         this.templateCode = builder.templateCode;
         this.templateParam = builder.templateParam;
         this.to = builder.to;
+        this.validityPeriod = builder.validityPeriod;
     }
 
     public static Builder builder() {
@@ -92,12 +97,20 @@ public class SendMessageWithTemplateRequest extends Request {
         return this.to;
     }
 
+    /**
+     * @return validityPeriod
+     */
+    public Long getValidityPeriod() {
+        return this.validityPeriod;
+    }
+
     public static final class Builder extends Request.Builder<SendMessageWithTemplateRequest, Builder> {
         private String from; 
         private String smsUpExtendCode; 
         private String templateCode; 
         private String templateParam; 
         private String to; 
+        private Long validityPeriod; 
 
         private Builder() {
             super();
@@ -110,6 +123,7 @@ public class SendMessageWithTemplateRequest extends Request {
             this.templateCode = request.templateCode;
             this.templateParam = request.templateParam;
             this.to = request.to;
+            this.validityPeriod = request.validityPeriod;
         } 
 
         /**
@@ -157,6 +171,15 @@ public class SendMessageWithTemplateRequest extends Request {
         public Builder to(String to) {
             this.putQueryParameter("To", to);
             this.to = to;
+            return this;
+        }
+
+        /**
+         * The validity period of the message.
+         */
+        public Builder validityPeriod(Long validityPeriod) {
+            this.putQueryParameter("ValidityPeriod", validityPeriod);
+            this.validityPeriod = validityPeriod;
             return this;
         }
 

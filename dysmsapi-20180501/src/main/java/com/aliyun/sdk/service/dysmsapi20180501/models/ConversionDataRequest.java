@@ -81,7 +81,7 @@ public class ConversionDataRequest extends Request {
         }
 
         /**
-         * Timestamp of the conversion rate observation should be a Unix timestamp, millisecond-level long integer.
+         * Timestamp of the conversion rate observation should be a Unix timestamp, a millisecond-level long integer.
          * <p>
          * 
          * >  If this field is not specified: the current timestamp is the default.

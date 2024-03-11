@@ -34,6 +34,10 @@ public class BatchSendMessageToGlobeRequest extends Request {
     @NameInMap("Type")
     private String type;
 
+    @Query
+    @NameInMap("ValidityPeriod")
+    private Long validityPeriod;
+
     private BatchSendMessageToGlobeRequest(Builder builder) {
         super(builder);
         this.from = builder.from;
@@ -41,6 +45,7 @@ public class BatchSendMessageToGlobeRequest extends Request {
         this.taskId = builder.taskId;
         this.to = builder.to;
         this.type = builder.type;
+        this.validityPeriod = builder.validityPeriod;
     }
 
     public static Builder builder() {
@@ -91,12 +96,20 @@ public class BatchSendMessageToGlobeRequest extends Request {
         return this.type;
     }
 
+    /**
+     * @return validityPeriod
+     */
+    public Long getValidityPeriod() {
+        return this.validityPeriod;
+    }
+
     public static final class Builder extends Request.Builder<BatchSendMessageToGlobeRequest, Builder> {
         private String from; 
         private String message; 
         private String taskId; 
         private String to; 
         private String type; 
+        private Long validityPeriod; 
 
         private Builder() {
             super();
@@ -109,6 +122,7 @@ public class BatchSendMessageToGlobeRequest extends Request {
             this.taskId = request.taskId;
             this.to = request.to;
             this.type = request.type;
+            this.validityPeriod = request.validityPeriod;
         } 
 
         /**
@@ -160,6 +174,15 @@ public class BatchSendMessageToGlobeRequest extends Request {
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
             this.type = type;
+            return this;
+        }
+
+        /**
+         * The validity period of the message. Unit: seconds.
+         */
+        public Builder validityPeriod(Long validityPeriod) {
+            this.putQueryParameter("ValidityPeriod", validityPeriod);
+            this.validityPeriod = validityPeriod;
             return this;
         }
 

@@ -30,12 +30,17 @@ public class SendMessageToGlobeRequest extends Request {
     @Validation(required = true)
     private String to;
 
+    @Query
+    @NameInMap("ValidityPeriod")
+    private Long validityPeriod;
+
     private SendMessageToGlobeRequest(Builder builder) {
         super(builder);
         this.from = builder.from;
         this.message = builder.message;
         this.taskId = builder.taskId;
         this.to = builder.to;
+        this.validityPeriod = builder.validityPeriod;
     }
 
     public static Builder builder() {
@@ -79,11 +84,19 @@ public class SendMessageToGlobeRequest extends Request {
         return this.to;
     }
 
+    /**
+     * @return validityPeriod
+     */
+    public Long getValidityPeriod() {
+        return this.validityPeriod;
+    }
+
     public static final class Builder extends Request.Builder<SendMessageToGlobeRequest, Builder> {
         private String from; 
         private String message; 
         private String taskId; 
         private String to; 
+        private Long validityPeriod; 
 
         private Builder() {
             super();
@@ -95,6 +108,7 @@ public class SendMessageToGlobeRequest extends Request {
             this.message = request.message;
             this.taskId = request.taskId;
             this.to = request.to;
+            this.validityPeriod = request.validityPeriod;
         } 
 
         /**
@@ -129,10 +143,21 @@ public class SendMessageToGlobeRequest extends Request {
          * <p>
          * 
          * For more information, see [Dialing codes](https://www.alibabacloud.com/help/zh/short-message-service/latest/dialing-codes).
+         * 
+         * >  You cannot call the SendMessageToGlobe operation to send messages to the Chinese mainland.
          */
         public Builder to(String to) {
             this.putQueryParameter("To", to);
             this.to = to;
+            return this;
+        }
+
+        /**
+         * The validity period of the message. Unit: seconds.
+         */
+        public Builder validityPeriod(Long validityPeriod) {
+            this.putQueryParameter("ValidityPeriod", validityPeriod);
+            this.validityPeriod = validityPeriod;
             return this;
         }
 
