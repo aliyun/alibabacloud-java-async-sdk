@@ -1,3 +1,6 @@
+2024-03-11 Version: 1.0.4
+- Generated java-async 2020-06-29 for alinlp.
+
 2024-01-23 Version: 1.0.3
 - Generated java-async 2020-06-29 for alinlp.
 
