@@ -36,6 +36,10 @@ public class QueryCarbonTrackRequest extends Request {
     @NameInMap("Uids")
     private java.util.List < String > uids;
 
+    @Query
+    @NameInMap("UseCode")
+    private Integer useCode;
+
     private QueryCarbonTrackRequest(Builder builder) {
         super(builder);
         this.endTime = builder.endTime;
@@ -44,6 +48,7 @@ public class QueryCarbonTrackRequest extends Request {
         this.startTime = builder.startTime;
         this.topNum = builder.topNum;
         this.uids = builder.uids;
+        this.useCode = builder.useCode;
     }
 
     public static Builder builder() {
@@ -101,6 +106,13 @@ public class QueryCarbonTrackRequest extends Request {
         return this.uids;
     }
 
+    /**
+     * @return useCode
+     */
+    public Integer getUseCode() {
+        return this.useCode;
+    }
+
     public static final class Builder extends Request.Builder<QueryCarbonTrackRequest, Builder> {
         private String endTime; 
         private Integer filterRDAccount; 
@@ -108,6 +120,7 @@ public class QueryCarbonTrackRequest extends Request {
         private String startTime; 
         private Integer topNum; 
         private java.util.List < String > uids; 
+        private Integer useCode; 
 
         private Builder() {
             super();
@@ -121,6 +134,7 @@ public class QueryCarbonTrackRequest extends Request {
             this.startTime = request.startTime;
             this.topNum = request.topNum;
             this.uids = request.uids;
+            this.useCode = request.useCode;
         } 
 
         /**
@@ -175,6 +189,15 @@ public class QueryCarbonTrackRequest extends Request {
             String uidsShrink = shrink(uids, "Uids", "json");
             this.putQueryParameter("Uids", uidsShrink);
             this.uids = uids;
+            return this;
+        }
+
+        /**
+         * UseCode.
+         */
+        public Builder useCode(Integer useCode) {
+            this.putQueryParameter("UseCode", useCode);
+            this.useCode = useCode;
             return this;
         }
 
