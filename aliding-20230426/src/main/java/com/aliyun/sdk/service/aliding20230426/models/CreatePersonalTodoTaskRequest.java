@@ -238,11 +238,12 @@ public class CreatePersonalTodoTaskRequest extends Request {
     } 
 
     public static class AccountContext extends TeaModel {
-        @NameInMap("userToken")
-        private String userToken;
+        @NameInMap("accountId")
+        @Validation(required = true)
+        private String accountId;
 
         private AccountContext(Builder builder) {
-            this.userToken = builder.userToken;
+            this.accountId = builder.accountId;
         }
 
         public static Builder builder() {
@@ -254,20 +255,20 @@ public class CreatePersonalTodoTaskRequest extends Request {
         }
 
         /**
-         * @return userToken
+         * @return accountId
          */
-        public String getUserToken() {
-            return this.userToken;
+        public String getAccountId() {
+            return this.accountId;
         }
 
         public static final class Builder {
-            private String userToken; 
+            private String accountId; 
 
             /**
-             * userToken.
+             * accountId.
              */
-            public Builder userToken(String userToken) {
-                this.userToken = userToken;
+            public Builder accountId(String accountId) {
+                this.accountId = accountId;
                 return this;
             }
 
