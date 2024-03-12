@@ -343,6 +343,9 @@ public class GetUserResponseBody extends TeaModel {
         @NameInMap("PhoneRegion")
         private String phoneRegion;
 
+        @NameInMap("PreferredLanguage")
+        private String preferredLanguage;
+
         @NameInMap("PrimaryOrganizationalUnitId")
         private String primaryOrganizationalUnitId;
 
@@ -387,6 +390,7 @@ public class GetUserResponseBody extends TeaModel {
             this.phoneNumber = builder.phoneNumber;
             this.phoneNumberVerified = builder.phoneNumberVerified;
             this.phoneRegion = builder.phoneRegion;
+            this.preferredLanguage = builder.preferredLanguage;
             this.primaryOrganizationalUnitId = builder.primaryOrganizationalUnitId;
             this.registerTime = builder.registerTime;
             this.status = builder.status;
@@ -519,6 +523,13 @@ public class GetUserResponseBody extends TeaModel {
         }
 
         /**
+         * @return preferredLanguage
+         */
+        public String getPreferredLanguage() {
+            return this.preferredLanguage;
+        }
+
+        /**
          * @return primaryOrganizationalUnitId
          */
         public String getPrimaryOrganizationalUnitId() {
@@ -598,6 +609,7 @@ public class GetUserResponseBody extends TeaModel {
             private String phoneNumber; 
             private Boolean phoneNumberVerified; 
             private String phoneRegion; 
+            private String preferredLanguage; 
             private String primaryOrganizationalUnitId; 
             private Long registerTime; 
             private String status; 
@@ -738,6 +750,14 @@ public class GetUserResponseBody extends TeaModel {
              */
             public Builder phoneRegion(String phoneRegion) {
                 this.phoneRegion = phoneRegion;
+                return this;
+            }
+
+            /**
+             * PreferredLanguage.
+             */
+            public Builder preferredLanguage(String preferredLanguage) {
+                this.preferredLanguage = preferredLanguage;
                 return this;
             }
 

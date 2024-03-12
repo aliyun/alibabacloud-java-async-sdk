@@ -101,6 +101,9 @@ public class ListApplicationsResponseBody extends TeaModel {
         @NameInMap("ApplicationSourceType")
         private String applicationSourceType;
 
+        @NameInMap("ApplicationTemplateId")
+        private String applicationTemplateId;
+
         @NameInMap("ClientId")
         private String clientId;
 
@@ -138,6 +141,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             this.applicationId = builder.applicationId;
             this.applicationName = builder.applicationName;
             this.applicationSourceType = builder.applicationSourceType;
+            this.applicationTemplateId = builder.applicationTemplateId;
             this.clientId = builder.clientId;
             this.createTime = builder.createTime;
             this.description = builder.description;
@@ -178,6 +182,13 @@ public class ListApplicationsResponseBody extends TeaModel {
          */
         public String getApplicationSourceType() {
             return this.applicationSourceType;
+        }
+
+        /**
+         * @return applicationTemplateId
+         */
+        public String getApplicationTemplateId() {
+            return this.applicationTemplateId;
         }
 
         /**
@@ -261,6 +272,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             private String applicationId; 
             private String applicationName; 
             private String applicationSourceType; 
+            private String applicationTemplateId; 
             private String clientId; 
             private Long createTime; 
             private String description; 
@@ -298,6 +310,14 @@ public class ListApplicationsResponseBody extends TeaModel {
              */
             public Builder applicationSourceType(String applicationSourceType) {
                 this.applicationSourceType = applicationSourceType;
+                return this;
+            }
+
+            /**
+             * 应用模板ID
+             */
+            public Builder applicationTemplateId(String applicationTemplateId) {
+                this.applicationTemplateId = applicationTemplateId;
                 return this;
             }
 
