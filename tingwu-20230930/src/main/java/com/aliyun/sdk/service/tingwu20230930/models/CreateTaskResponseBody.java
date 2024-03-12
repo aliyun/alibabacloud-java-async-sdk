@@ -112,6 +112,9 @@ public class CreateTaskResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
+        @NameInMap("MeetingJoinUrl")
+        private String meetingJoinUrl;
+
         @NameInMap("TaskId")
         private String taskId;
 
@@ -119,6 +122,7 @@ public class CreateTaskResponseBody extends TeaModel {
         private String taskKey;
 
         private Data(Builder builder) {
+            this.meetingJoinUrl = builder.meetingJoinUrl;
             this.taskId = builder.taskId;
             this.taskKey = builder.taskKey;
         }
@@ -129,6 +133,13 @@ public class CreateTaskResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return meetingJoinUrl
+         */
+        public String getMeetingJoinUrl() {
+            return this.meetingJoinUrl;
         }
 
         /**
@@ -146,8 +157,17 @@ public class CreateTaskResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String meetingJoinUrl; 
             private String taskId; 
             private String taskKey; 
+
+            /**
+             * MeetingJoinUrl.
+             */
+            public Builder meetingJoinUrl(String meetingJoinUrl) {
+                this.meetingJoinUrl = meetingJoinUrl;
+                return this;
+            }
 
             /**
              * TaskId.
