@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ListTagResourcesResponse} extends {@link TeaModel}
+ * {@link SendFileResponse} extends {@link TeaModel}
  *
- * <p>ListTagResourcesResponse</p>
+ * <p>SendFileResponse</p>
  */
-public class ListTagResourcesResponse extends Response {
+public class SendFileResponse extends Response {
     @NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -19,16 +19,16 @@ public class ListTagResourcesResponse extends Response {
     private Integer statusCode;
 
     @NameInMap("body")
-    private ListTagResourcesResponseBody body;
+    private SendFileResponseBody body;
 
-    private ListTagResourcesResponse(BuilderImpl builder) {
+    private SendFileResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static ListTagResourcesResponse create() {
+    public static SendFileResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +54,35 @@ public class ListTagResourcesResponse extends Response {
     /**
      * @return body
      */
-    public ListTagResourcesResponseBody getBody() {
+    public SendFileResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<ListTagResourcesResponse, Builder> {
+    public interface Builder extends Response.Builder<SendFileResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(ListTagResourcesResponseBody body);
+        Builder body(SendFileResponseBody body);
 
         @Override
-        ListTagResourcesResponse build();
+        SendFileResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<ListTagResourcesResponse, Builder>
+            extends Response.BuilderImpl<SendFileResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private ListTagResourcesResponseBody body; 
+        private SendFileResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(ListTagResourcesResponse response) {
+        private BuilderImpl(SendFileResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +111,14 @@ public class ListTagResourcesResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(ListTagResourcesResponseBody body) {
+        public Builder body(SendFileResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public ListTagResourcesResponse build() {
-            return new ListTagResourcesResponse(this);
+        public SendFileResponse build() {
+            return new SendFileResponse(this);
         } 
 
     } 

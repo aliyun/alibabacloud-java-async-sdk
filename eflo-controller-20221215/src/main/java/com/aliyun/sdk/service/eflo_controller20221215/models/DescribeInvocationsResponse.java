@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ListTagResourcesResponse} extends {@link TeaModel}
+ * {@link DescribeInvocationsResponse} extends {@link TeaModel}
  *
- * <p>ListTagResourcesResponse</p>
+ * <p>DescribeInvocationsResponse</p>
  */
-public class ListTagResourcesResponse extends Response {
+public class DescribeInvocationsResponse extends Response {
     @NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -19,16 +19,16 @@ public class ListTagResourcesResponse extends Response {
     private Integer statusCode;
 
     @NameInMap("body")
-    private ListTagResourcesResponseBody body;
+    private DescribeInvocationsResponseBody body;
 
-    private ListTagResourcesResponse(BuilderImpl builder) {
+    private DescribeInvocationsResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static ListTagResourcesResponse create() {
+    public static DescribeInvocationsResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +54,35 @@ public class ListTagResourcesResponse extends Response {
     /**
      * @return body
      */
-    public ListTagResourcesResponseBody getBody() {
+    public DescribeInvocationsResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<ListTagResourcesResponse, Builder> {
+    public interface Builder extends Response.Builder<DescribeInvocationsResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(ListTagResourcesResponseBody body);
+        Builder body(DescribeInvocationsResponseBody body);
 
         @Override
-        ListTagResourcesResponse build();
+        DescribeInvocationsResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<ListTagResourcesResponse, Builder>
+            extends Response.BuilderImpl<DescribeInvocationsResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private ListTagResourcesResponseBody body; 
+        private DescribeInvocationsResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(ListTagResourcesResponse response) {
+        private BuilderImpl(DescribeInvocationsResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +111,14 @@ public class ListTagResourcesResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(ListTagResourcesResponseBody body) {
+        public Builder body(DescribeInvocationsResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public ListTagResourcesResponse build() {
-            return new ListTagResourcesResponse(this);
+        public DescribeInvocationsResponse build() {
+            return new DescribeInvocationsResponse(this);
         } 
 
     } 
