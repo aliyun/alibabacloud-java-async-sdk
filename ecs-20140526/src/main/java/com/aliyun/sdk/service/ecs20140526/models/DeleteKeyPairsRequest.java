@@ -135,7 +135,10 @@ public class DeleteKeyPairsRequest extends Request {
         }
 
         /**
-         * The names of SSH key pairs. The value can be a JSON array that consists of up to 100 key pair names. Separate multiple key pair names with commas (,).
+         * The names of SSH key pairs. The value can be a JSON array that consists of up to 100 SSH key pair names. Separate the names with commas (,).
+         * <p>
+         * 
+         * >  Before you delete an SSH key pair, you can call the [DescribeKeyPairs](~~51773~~) operation to query existing key pairs.
          */
         public Builder keyPairNames(String keyPairNames) {
             this.putQueryParameter("KeyPairNames", keyPairNames);

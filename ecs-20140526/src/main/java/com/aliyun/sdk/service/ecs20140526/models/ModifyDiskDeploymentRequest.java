@@ -190,7 +190,10 @@ public class ModifyDiskDeploymentRequest extends Request {
         }
 
         /**
-         * DiskCategory.
+         * The new disk category. The parameter can be used only when you migrate a disk between dedicated block storage clusters. Only ESSDs can be created in dedicated block storage clusters. Set this parameter to cloud_essd.
+         * <p>
+         * 
+         * This parameter is empty by default, which indicates that the disk category is not changed.
          */
         public Builder diskCategory(String diskCategory) {
             this.putQueryParameter("DiskCategory", diskCategory);
@@ -199,7 +202,7 @@ public class ModifyDiskDeploymentRequest extends Request {
         }
 
         /**
-         * DiskId.
+         * The ID of the disk.
          */
         public Builder diskId(String diskId) {
             this.putQueryParameter("DiskId", diskId);
@@ -208,7 +211,13 @@ public class ModifyDiskDeploymentRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
+         * <p>
+         * 
+         * *   true: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, service limits, and unavailable ECS resources. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.
+         * *   false: performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
+         * 
+         * Default value: false.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -235,7 +244,13 @@ public class ModifyDiskDeploymentRequest extends Request {
         }
 
         /**
-         * PerformanceLevel.
+         * The new performance level of the ESSD. The parameter can be used only when you migrate data between dedicated block storage clusters. Valid values:
+         * <p>
+         * 
+         * *   PL0: A single ESSD can deliver up to 10000 random read/write IOPS.
+         * *   PL1: A single ESSD can deliver up to 50000 random read/write IOPS.
+         * 
+         * This parameter is empty by default, which indicates that the performance level is not modified.
          */
         public Builder performanceLevel(String performanceLevel) {
             this.putQueryParameter("PerformanceLevel", performanceLevel);
@@ -262,7 +277,13 @@ public class ModifyDiskDeploymentRequest extends Request {
         }
 
         /**
-         * StorageClusterId.
+         * The ID of the dedicated block storage cluster.
+         * <p>
+         * 
+         * *   When you migrate a disk to a dedicated block storage cluster, the StorageClusterId parameter must be specified.
+         * *   When you migrate a disk to a public block storage cluster, the StorageClusterId parameter must be left empty.
+         * 
+         * This parameter is empty by default, which indicates that the disk is migrated to a public block storage cluster.
          */
         public Builder storageClusterId(String storageClusterId) {
             this.putQueryParameter("StorageClusterId", storageClusterId);

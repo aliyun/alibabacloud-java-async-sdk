@@ -54,6 +54,10 @@ public class StartTerminalSessionRequest extends Request {
     @NameInMap("TargetServer")
     private String targetServer;
 
+    @Query
+    @NameInMap("Username")
+    private String username;
+
     private StartTerminalSessionRequest(Builder builder) {
         super(builder);
         this.sourceRegionId = builder.sourceRegionId;
@@ -66,6 +70,7 @@ public class StartTerminalSessionRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.targetServer = builder.targetServer;
+        this.username = builder.username;
     }
 
     public static Builder builder() {
@@ -151,6 +156,13 @@ public class StartTerminalSessionRequest extends Request {
         return this.targetServer;
     }
 
+    /**
+     * @return username
+     */
+    public String getUsername() {
+        return this.username;
+    }
+
     public static final class Builder extends Request.Builder<StartTerminalSessionRequest, Builder> {
         private String sourceRegionId; 
         private String commandLine; 
@@ -162,6 +174,7 @@ public class StartTerminalSessionRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String targetServer; 
+        private String username; 
 
         private Builder() {
             super();
@@ -179,6 +192,7 @@ public class StartTerminalSessionRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.targetServer = request.targetServer;
+            this.username = request.username;
         } 
 
         /**
@@ -277,6 +291,15 @@ public class StartTerminalSessionRequest extends Request {
         public Builder targetServer(String targetServer) {
             this.putQueryParameter("TargetServer", targetServer);
             this.targetServer = targetServer;
+            return this;
+        }
+
+        /**
+         * Username.
+         */
+        public Builder username(String username) {
+            this.putQueryParameter("Username", username);
+            this.username = username;
             return this;
         }
 

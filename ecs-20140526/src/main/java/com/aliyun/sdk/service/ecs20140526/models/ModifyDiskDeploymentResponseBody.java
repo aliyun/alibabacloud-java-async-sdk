@@ -50,7 +50,7 @@ public class ModifyDiskDeploymentResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ModifyDiskDeploymentResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * The ID of the disk migration task.
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

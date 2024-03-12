@@ -286,7 +286,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         }
 
         /**
-         * > 该参数正在邀测中，暂未开放使用。
+         * The IPv4 prefixes assigned to the ENI.
          */
         public Builder ipv4PrefixSets(Ipv4PrefixSets ipv4PrefixSets) {
             this.ipv4PrefixSets = ipv4PrefixSets;
@@ -294,7 +294,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         }
 
         /**
-         * > 该参数正在邀测中，暂未开放使用。
+         * The IPv6 prefixes assigned to the ENI.
          */
         public Builder ipv6PrefixSets(Ipv6PrefixSets ipv6PrefixSets) {
             this.ipv6PrefixSets = ipv6PrefixSets;
@@ -478,7 +478,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
             private String ipv4Prefix; 
 
             /**
-             * > 该参数正在邀测中，暂未开放使用。
+             * The IPv4 prefix assigned to the ENI.
              */
             public Builder ipv4Prefix(String ipv4Prefix) {
                 this.ipv4Prefix = ipv4Prefix;
@@ -560,7 +560,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
             private String ipv6Prefix; 
 
             /**
-             * > 该参数正在邀测中，暂未开放使用。
+             * The IPv6 prefix assigned to the ENI.
              */
             public Builder ipv6Prefix(String ipv6Prefix) {
                 this.ipv6Prefix = ipv6Prefix;
@@ -744,7 +744,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address of the instance to which the ENI is attached.
+             * The private IP address of the instance.
              */
             public Builder privateIpAddress(String privateIpAddress) {
                 this.privateIpAddress = privateIpAddress;
@@ -879,7 +879,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The tag key of the ENI.
+             * The tag key.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -887,7 +887,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value of the ENI.
+             * The tag value.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
