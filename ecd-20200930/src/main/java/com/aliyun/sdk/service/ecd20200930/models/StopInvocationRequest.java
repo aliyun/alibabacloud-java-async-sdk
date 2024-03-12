@@ -84,7 +84,7 @@ public class StopInvocationRequest extends Request {
         } 
 
         /**
-         * StopInvocation
+         * The ID of cloud desktop N. Valid values of N: 1 to 50.
          */
         public Builder desktopId(java.util.List < String > desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -93,7 +93,7 @@ public class StopInvocationRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to StopInvocation.
+         * The ID of the execution.
          */
         public Builder invokeId(String invokeId) {
             this.putQueryParameter("InvokeId", invokeId);
@@ -102,7 +102,7 @@ public class StopInvocationRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -50,7 +50,7 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details about the cloud desktops.
+         * Details of the cloud desktops.
          */
         public Builder desktops(java.util.List < Desktops> desktops) {
             this.desktops = desktops;
@@ -194,7 +194,7 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
             private String startTime; 
 
             /**
-             * The connection status of the end user. Valid values:
+             * The connection status of the user. Valid values:
              * <p>
              * 
              * *   Connected
@@ -206,7 +206,7 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The current version of the cloud desktop.
+             * The current image version of the cloud desktop.
              */
             public Builder currentAppVersion(String currentAppVersion) {
                 this.currentAppVersion = currentAppVersion;
@@ -214,7 +214,7 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The cloud desktop ID.
+             * The ID of the cloud desktop.
              */
             public Builder desktopId(String desktopId) {
                 this.desktopId = desktopId;
@@ -222,17 +222,17 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the cloud desktop. Valid values:
+             * The state of the cloud desktop. Valid values:
              * <p>
              * 
-             * *   Pending
-             * *   Starting
-             * *   Running
-             * *   Stopping
-             * *   Stopped
-             * *   Expired
-             * *   Deleted
-             * *   Failed
+             * *   Pending: The cloud desktop is being created.
+             * *   Starting: The cloud desktop is being started.
+             * *   Running: The cloud desktop is running.
+             * *   Stopping: The cloud desktop is being stopped.
+             * *   Stopped: The cloud desktop is stopped.
+             * *   Expired: The cloud desktop is expired.
+             * *   Deleted: The cloud desktop is deleted.
+             * *   Failed: Failed to create the cloud desktop.
              */
             public Builder desktopStatus(String desktopStatus) {
                 this.desktopStatus = desktopStatus;
@@ -240,7 +240,7 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The flag that is used to manage the cloud desktop.
+             * The information about flags that are used to manage cloud desktops.
              */
             public Builder managementFlag(java.util.List < String > managementFlag) {
                 this.managementFlag = managementFlag;

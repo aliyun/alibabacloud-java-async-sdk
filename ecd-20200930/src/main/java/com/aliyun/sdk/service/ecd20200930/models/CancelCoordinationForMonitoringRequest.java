@@ -98,7 +98,7 @@ public class CancelCoordinationForMonitoringRequest extends Request {
         } 
 
         /**
-         * CoIds.
+         * The IDs of stream collaboration tasks.
          */
         public Builder coIds(java.util.List < String > coIds) {
             this.putQueryParameter("CoIds", coIds);
@@ -107,7 +107,7 @@ public class CancelCoordinationForMonitoringRequest extends Request {
         }
 
         /**
-         * EndUserId.
+         * The ID of the end user that initiates stream collaboration. If the initiator is the administrator, skip this parameter.
          */
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -116,7 +116,7 @@ public class CancelCoordinationForMonitoringRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID. You can call the [DescribeRegions](~~436773~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -125,7 +125,20 @@ public class CancelCoordinationForMonitoringRequest extends Request {
         }
 
         /**
-         * UserType.
+         * The type of the user.
+         * <p>
+         * 
+         * Valid value:
+         * 
+         * *   <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     TENANT_ADMIN
+         * 
+         *     <!-- -->
+         * 
+         *     : administrator.
          */
         public Builder userType(String userType) {
             this.putQueryParameter("UserType", userType);

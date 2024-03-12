@@ -24,11 +24,17 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
     @NameInMap("DomainName")
     private String domainName;
 
+    @NameInMap("ErrorCode")
+    private String errorCode;
+
     @NameInMap("MaxSize")
     private String maxSize;
 
     @NameInMap("OfficeSiteType")
     private String officeSiteType;
+
+    @NameInMap("OrderId")
+    private String orderId;
 
     @NameInMap("RequestId")
     private String requestId;
@@ -38,8 +44,10 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
         this.cdsName = builder.cdsName;
         this.cenId = builder.cenId;
         this.domainName = builder.domainName;
+        this.errorCode = builder.errorCode;
         this.maxSize = builder.maxSize;
         this.officeSiteType = builder.officeSiteType;
+        this.orderId = builder.orderId;
         this.requestId = builder.requestId;
     }
 
@@ -80,6 +88,13 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
     }
 
     /**
+     * @return errorCode
+     */
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    /**
      * @return maxSize
      */
     public String getMaxSize() {
@@ -94,6 +109,13 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
     }
 
     /**
+     * @return orderId
+     */
+    public String getOrderId() {
+        return this.orderId;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -105,8 +127,10 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
         private String cdsName; 
         private String cenId; 
         private String domainName; 
+        private String errorCode; 
         private String maxSize; 
         private String officeSiteType; 
+        private String orderId; 
         private String requestId; 
 
         /**
@@ -142,6 +166,14 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
         }
 
         /**
+         * ErrorCode.
+         */
+        public Builder errorCode(String errorCode) {
+            this.errorCode = errorCode;
+            return this;
+        }
+
+        /**
          * The maximum capacity of each instance in Cloud Drive Service. Unit: GiB
          */
         public Builder maxSize(String maxSize) {
@@ -154,6 +186,14 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
          */
         public Builder officeSiteType(String officeSiteType) {
             this.officeSiteType = officeSiteType;
+            return this;
+        }
+
+        /**
+         * OrderId.
+         */
+        public Builder orderId(String orderId) {
+            this.orderId = orderId;
             return this;
         }
 

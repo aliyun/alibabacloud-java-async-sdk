@@ -114,7 +114,7 @@ public class CopyImageRequest extends Request {
         } 
 
         /**
-         * DestinationDescription.
+         * The description of the image copy. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
          */
         public Builder destinationDescription(String destinationDescription) {
             this.putQueryParameter("DestinationDescription", destinationDescription);
@@ -123,7 +123,7 @@ public class CopyImageRequest extends Request {
         }
 
         /**
-         * DestinationImageName.
+         * The name of the image copy. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `acs:` or `aliyun`. The name cannot contain `http://` or `https://`. The name can contain letters, digits, periods (.), colons (:), underscores (\_), and hyphens (-).
          */
         public Builder destinationImageName(String destinationImageName) {
             this.putQueryParameter("DestinationImageName", destinationImageName);
@@ -132,7 +132,7 @@ public class CopyImageRequest extends Request {
         }
 
         /**
-         * DestinationRegionId.
+         * The destination region to which you want to copy the image.
          */
         public Builder destinationRegionId(String destinationRegionId) {
             this.putQueryParameter("DestinationRegionId", destinationRegionId);
@@ -141,7 +141,7 @@ public class CopyImageRequest extends Request {
         }
 
         /**
-         * ImageId.
+         * The ID of the image that is copied to the destination region.
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -150,7 +150,7 @@ public class CopyImageRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region. You can call the [DescribeRegions](~~DescribeRegions~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

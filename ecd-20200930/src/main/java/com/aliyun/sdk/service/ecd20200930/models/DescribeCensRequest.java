@@ -83,7 +83,9 @@ public class DescribeCensRequest extends Request {
         } 
 
         /**
-         * Details about CEN instances.
+         * The page number.\
+         * <p>
+         * Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -92,10 +94,9 @@ public class DescribeCensRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * The number of entries per page.\
          * <p>
-         * 
-         * Default value: 1.
+         * Default value: 50.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -104,7 +105,7 @@ public class DescribeCensRequest extends Request {
         }
 
         /**
-         * The ID of the bandwidth plan that is associated with the CEN instance.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

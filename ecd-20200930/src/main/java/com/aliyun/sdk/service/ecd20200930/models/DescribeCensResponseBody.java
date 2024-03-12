@@ -86,7 +86,7 @@ public class DescribeCensResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The level of CIDR block overlapping. Valid value: REDUCED. This value indicates that the CIDR blocks can overlap with each other but must not be the same.
+         * Details of the CEN instances.
          */
         public Builder cens(java.util.List < Cens> cens) {
             this.cens = cens;
@@ -94,12 +94,7 @@ public class DescribeCensResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the CEN instance. Valid values:
-         * <p>
-         * 
-         * *   Creating: The CEN instance is being created.
-         * *   Active: The CEN instance is running.
-         * *   Deleting: The CEN instance is being deleted.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -107,7 +102,7 @@ public class DescribeCensResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the CEN instance.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -115,7 +110,7 @@ public class DescribeCensResponseBody extends TeaModel {
         }
 
         /**
-         * The operation that you want to perform. Set the value to DescribeCens.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -123,7 +118,7 @@ public class DescribeCensResponseBody extends TeaModel {
         }
 
         /**
-         * The IDs of the bandwidth plans that are associated with the CEN instance.
+         * The total number of CEN instances returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -163,7 +158,7 @@ public class DescribeCensResponseBody extends TeaModel {
             private String packageId; 
 
             /**
-             * PackageId.
+             * The ID of the bandwidth plan that is associated with the CEN instance.
              */
             public Builder packageId(String packageId) {
                 this.packageId = packageId;
@@ -216,7 +211,7 @@ public class DescribeCensResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * DescribeCens
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -224,7 +219,7 @@ public class DescribeCensResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -361,7 +356,7 @@ public class DescribeCensResponseBody extends TeaModel {
             private java.util.List < Tags> tags; 
 
             /**
-             * The number of entries returned per page.
+             * The ID of the CEN instance.
              */
             public Builder cenId(String cenId) {
                 this.cenId = cenId;
@@ -369,7 +364,7 @@ public class DescribeCensResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value of the CEN instance.
+             * The time when the CEN instance was created.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -377,7 +372,7 @@ public class DescribeCensResponseBody extends TeaModel {
             }
 
             /**
-             * The tag key of the CEN instance.
+             * The description of the CEN instance.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -385,10 +380,12 @@ public class DescribeCensResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether IPv6 is supported. Valid value: DISABLED. This value indicates that IPv6 is not supported.
+             * Indicates whether IPv6 is supported. A value of DISABLED indicates that IPv6 is not supported.
              * <p>
              * 
-             * >  IPv6 is not supported.
+             * **
+             * 
+             * **Description** IPv6 is not supported.
              */
             public Builder ipv6Level(String ipv6Level) {
                 this.ipv6Level = ipv6Level;
@@ -396,7 +393,7 @@ public class DescribeCensResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request.
+             * The name of the CEN instance.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -404,7 +401,7 @@ public class DescribeCensResponseBody extends TeaModel {
             }
 
             /**
-             * PackageIds.
+             * The IDs of the bandwidth plans that are associated with the CEN instance.
              */
             public Builder packageIds(java.util.List < PackageIds> packageIds) {
                 this.packageIds = packageIds;
@@ -412,7 +409,7 @@ public class DescribeCensResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the CEN instance.
+             * The level of CIDR block overlapping. If REDUCED returns, the CIDR blocks can overlap with each other but must not be the same.
              */
             public Builder protectionLevel(String protectionLevel) {
                 this.protectionLevel = protectionLevel;
@@ -420,7 +417,12 @@ public class DescribeCensResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * The status of the CEN instance. Valid values:
+             * <p>
+             * 
+             * *   Creating
+             * *   Active
+             * *   Deleting
              */
             public Builder status(String status) {
                 this.status = status;
@@ -428,7 +430,7 @@ public class DescribeCensResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the CEN instance.
+             * The tags of the CEN instance.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
