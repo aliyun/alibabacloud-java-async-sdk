@@ -7,14 +7,13 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ListEnrolledAccountsRequest} extends {@link RequestModel}
+ * {@link ListAccountFactoryBaselinesRequest} extends {@link RequestModel}
  *
- * <p>ListEnrolledAccountsRequest</p>
+ * <p>ListAccountFactoryBaselinesRequest</p>
  */
-public class ListEnrolledAccountsRequest extends Request {
+public class ListAccountFactoryBaselinesRequest extends Request {
     @Query
     @NameInMap("MaxResults")
-    @Validation(maximum = 100, minimum = 1)
     private Integer maxResults;
 
     @Query
@@ -25,7 +24,7 @@ public class ListEnrolledAccountsRequest extends Request {
     @NameInMap("RegionId")
     private String regionId;
 
-    private ListEnrolledAccountsRequest(Builder builder) {
+    private ListAccountFactoryBaselinesRequest(Builder builder) {
         super(builder);
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
@@ -36,7 +35,7 @@ public class ListEnrolledAccountsRequest extends Request {
         return new Builder();
     }
 
-    public static ListEnrolledAccountsRequest create() {
+    public static ListAccountFactoryBaselinesRequest create() {
         return builder().build();
     }
 
@@ -66,7 +65,7 @@ public class ListEnrolledAccountsRequest extends Request {
         return this.regionId;
     }
 
-    public static final class Builder extends Request.Builder<ListEnrolledAccountsRequest, Builder> {
+    public static final class Builder extends Request.Builder<ListAccountFactoryBaselinesRequest, Builder> {
         private Integer maxResults; 
         private String nextToken; 
         private String regionId; 
@@ -75,7 +74,7 @@ public class ListEnrolledAccountsRequest extends Request {
             super();
         } 
 
-        private Builder(ListEnrolledAccountsRequest request) {
+        private Builder(ListAccountFactoryBaselinesRequest request) {
             super(request);
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
@@ -104,7 +103,7 @@ public class ListEnrolledAccountsRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * RegionId
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -113,8 +112,8 @@ public class ListEnrolledAccountsRequest extends Request {
         }
 
         @Override
-        public ListEnrolledAccountsRequest build() {
-            return new ListEnrolledAccountsRequest(this);
+        public ListAccountFactoryBaselinesRequest build() {
+            return new ListAccountFactoryBaselinesRequest(this);
         } 
 
     } 

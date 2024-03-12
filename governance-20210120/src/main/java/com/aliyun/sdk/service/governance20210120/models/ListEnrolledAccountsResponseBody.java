@@ -62,7 +62,7 @@ public class ListEnrolledAccountsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 账号列表
+         * The accounts.
          */
         public Builder enrolledAccounts(java.util.List < EnrolledAccounts> enrolledAccounts) {
             this.enrolledAccounts = enrolledAccounts;
@@ -70,7 +70,7 @@ public class ListEnrolledAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * 查询返回结果下一页的令牌
+         * The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -78,7 +78,7 @@ public class ListEnrolledAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -94,6 +94,9 @@ public class ListEnrolledAccountsResponseBody extends TeaModel {
     public static class EnrolledAccounts extends TeaModel {
         @NameInMap("AccountUid")
         private Long accountUid;
+
+        @NameInMap("BaselineId")
+        private String baselineId;
 
         @NameInMap("CreateTime")
         private String createTime;
@@ -115,6 +118,7 @@ public class ListEnrolledAccountsResponseBody extends TeaModel {
 
         private EnrolledAccounts(Builder builder) {
             this.accountUid = builder.accountUid;
+            this.baselineId = builder.baselineId;
             this.createTime = builder.createTime;
             this.displayName = builder.displayName;
             this.folderId = builder.folderId;
@@ -136,6 +140,13 @@ public class ListEnrolledAccountsResponseBody extends TeaModel {
          */
         public Long getAccountUid() {
             return this.accountUid;
+        }
+
+        /**
+         * @return baselineId
+         */
+        public String getBaselineId() {
+            return this.baselineId;
         }
 
         /**
@@ -182,6 +193,7 @@ public class ListEnrolledAccountsResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long accountUid; 
+            private String baselineId; 
             private String createTime; 
             private String displayName; 
             private String folderId; 
@@ -190,7 +202,7 @@ public class ListEnrolledAccountsResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * 账号ID
+             * The account ID.
              */
             public Builder accountUid(Long accountUid) {
                 this.accountUid = accountUid;
@@ -198,7 +210,15 @@ public class ListEnrolledAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * 创建时间
+             * The baseline ID.
+             */
+            public Builder baselineId(String baselineId) {
+                this.baselineId = baselineId;
+                return this;
+            }
+
+            /**
+             * The time at which the account was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -206,7 +226,7 @@ public class ListEnrolledAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * 账号显示名称
+             * The display name of the account.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -214,7 +234,7 @@ public class ListEnrolledAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * 父资源夹ID
+             * The ID of the parent folder.
              */
             public Builder folderId(String folderId) {
                 this.folderId = folderId;
@@ -222,7 +242,7 @@ public class ListEnrolledAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * 结算账号ID
+             * The ID of the billing account.
              */
             public Builder payerAccountUid(Long payerAccountUid) {
                 this.payerAccountUid = payerAccountUid;
@@ -230,7 +250,15 @@ public class ListEnrolledAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * 创建状态
+             * The creation status of the account. Valid values:
+             * <p>
+             * 
+             * *   Pending: The account is waiting to be created.
+             * *   Running: The account is being created.
+             * *   Finished: The account is created.
+             * *   Failed: The account failed to be created.
+             * *   Scheduling: The account is being scheduled.
+             * *   ScheduleFailed: The account failed to be scheduled.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -238,7 +266,7 @@ public class ListEnrolledAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * 更新时间
+             * The time when the information about the account was updated.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

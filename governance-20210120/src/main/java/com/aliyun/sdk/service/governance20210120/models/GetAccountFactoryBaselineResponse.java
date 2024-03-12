@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link EnrollAccountResponse} extends {@link TeaModel}
+ * {@link GetAccountFactoryBaselineResponse} extends {@link TeaModel}
  *
- * <p>EnrollAccountResponse</p>
+ * <p>GetAccountFactoryBaselineResponse</p>
  */
-public class EnrollAccountResponse extends Response {
+public class GetAccountFactoryBaselineResponse extends Response {
     @NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -19,16 +19,16 @@ public class EnrollAccountResponse extends Response {
     private Integer statusCode;
 
     @NameInMap("body")
-    private EnrollAccountResponseBody body;
+    private GetAccountFactoryBaselineResponseBody body;
 
-    private EnrollAccountResponse(BuilderImpl builder) {
+    private GetAccountFactoryBaselineResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static EnrollAccountResponse create() {
+    public static GetAccountFactoryBaselineResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +54,35 @@ public class EnrollAccountResponse extends Response {
     /**
      * @return body
      */
-    public EnrollAccountResponseBody getBody() {
+    public GetAccountFactoryBaselineResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<EnrollAccountResponse, Builder> {
+    public interface Builder extends Response.Builder<GetAccountFactoryBaselineResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(EnrollAccountResponseBody body);
+        Builder body(GetAccountFactoryBaselineResponseBody body);
 
         @Override
-        EnrollAccountResponse build();
+        GetAccountFactoryBaselineResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<EnrollAccountResponse, Builder>
+            extends Response.BuilderImpl<GetAccountFactoryBaselineResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private EnrollAccountResponseBody body; 
+        private GetAccountFactoryBaselineResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(EnrollAccountResponse response) {
+        private BuilderImpl(GetAccountFactoryBaselineResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +111,14 @@ public class EnrollAccountResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(EnrollAccountResponseBody body) {
+        public Builder body(GetAccountFactoryBaselineResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public EnrollAccountResponse build() {
-            return new EnrollAccountResponse(this);
+        public GetAccountFactoryBaselineResponse build() {
+            return new GetAccountFactoryBaselineResponse(this);
         } 
 
     } 

@@ -50,7 +50,7 @@ public class EnrollAccountResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 注册账号ID
+         * The account ID.
          */
         public Builder accountUid(Long accountUid) {
             this.accountUid = accountUid;
@@ -58,7 +58,7 @@ public class EnrollAccountResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

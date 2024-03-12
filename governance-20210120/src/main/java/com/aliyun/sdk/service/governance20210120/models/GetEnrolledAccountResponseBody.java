@@ -15,6 +15,12 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
     @NameInMap("AccountUid")
     private Long accountUid;
 
+    @NameInMap("BaselineId")
+    private String baselineId;
+
+    @NameInMap("BaselineItems")
+    private java.util.List < BaselineItems> baselineItems;
+
     @NameInMap("CreateTime")
     private String createTime;
 
@@ -53,6 +59,8 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
 
     private GetEnrolledAccountResponseBody(Builder builder) {
         this.accountUid = builder.accountUid;
+        this.baselineId = builder.baselineId;
+        this.baselineItems = builder.baselineItems;
         this.createTime = builder.createTime;
         this.displayName = builder.displayName;
         this.errorInfo = builder.errorInfo;
@@ -80,6 +88,20 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
      */
     public Long getAccountUid() {
         return this.accountUid;
+    }
+
+    /**
+     * @return baselineId
+     */
+    public String getBaselineId() {
+        return this.baselineId;
+    }
+
+    /**
+     * @return baselineItems
+     */
+    public java.util.List < BaselineItems> getBaselineItems() {
+        return this.baselineItems;
     }
 
     /**
@@ -168,6 +190,8 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
 
     public static final class Builder {
         private Long accountUid; 
+        private String baselineId; 
+        private java.util.List < BaselineItems> baselineItems; 
         private String createTime; 
         private String displayName; 
         private ErrorInfo errorInfo; 
@@ -182,7 +206,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         private String updateTime; 
 
         /**
-         * 账号ID
+         * The account ID.
          */
         public Builder accountUid(Long accountUid) {
             this.accountUid = accountUid;
@@ -190,7 +214,23 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         }
 
         /**
-         * 创建时间
+         * The ID of the baseline that was applied to the account.
+         */
+        public Builder baselineId(String baselineId) {
+            this.baselineId = baselineId;
+            return this;
+        }
+
+        /**
+         * BaselineItems.
+         */
+        public Builder baselineItems(java.util.List < BaselineItems> baselineItems) {
+            this.baselineItems = baselineItems;
+            return this;
+        }
+
+        /**
+         * The time at which the account was created.
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -198,7 +238,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         }
 
         /**
-         * 账号显示名称
+         * The display name of the account.
          */
         public Builder displayName(String displayName) {
             this.displayName = displayName;
@@ -206,7 +246,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         }
 
         /**
-         * 错误信息
+         * The error message returned.
          */
         public Builder errorInfo(ErrorInfo errorInfo) {
             this.errorInfo = errorInfo;
@@ -214,7 +254,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         }
 
         /**
-         * 父资源夹ID
+         * The ID of the parent folder.
          */
         public Builder folderId(String folderId) {
             this.folderId = folderId;
@@ -222,7 +262,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         }
 
         /**
-         * 是否初始化完成
+         * Indicates whether the account was initialized.
          */
         public Builder initialized(Boolean initialized) {
             this.initialized = initialized;
@@ -230,7 +270,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         }
 
         /**
-         * 注册账号时的输入参数
+         * The input parameters that are used when you enrolled the account.
          */
         public Builder inputs(Inputs inputs) {
             this.inputs = inputs;
@@ -238,7 +278,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         }
 
         /**
-         * 所属的Master账号ID
+         * The ID of the master account to which the account belongs.
          */
         public Builder masterAccountUid(Long masterAccountUid) {
             this.masterAccountUid = masterAccountUid;
@@ -246,7 +286,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         }
 
         /**
-         * 结算账号ID
+         * The ID of the billing account.
          */
         public Builder payerAccountUid(Long payerAccountUid) {
             this.payerAccountUid = payerAccountUid;
@@ -254,7 +294,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         }
 
         /**
-         * 基线实施进度
+         * The progress of applying the account baseline to the account.
          */
         public Builder progress(java.util.List < Progress> progress) {
             this.progress = progress;
@@ -262,7 +302,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -270,7 +310,15 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         }
 
         /**
-         * 账号注册状态
+         * The creation status of the account. Valid values:
+         * <p>
+         * 
+         * *   Pending: The account is waiting to be created.
+         * *   Running: The account is being created.
+         * *   Finished: The account is created.
+         * *   Failed: The account failed to be created.
+         * *   Scheduling: The account is being scheduled.
+         * *   ScheduleFailed: The account failed to be scheduled.
          */
         public Builder status(String status) {
             this.status = status;
@@ -278,7 +326,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         }
 
         /**
-         * 更新时间
+         * The time when the information about the account was updated.
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;
@@ -291,107 +339,6 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
 
     } 
 
-    public static class ErrorInfo extends TeaModel {
-        @NameInMap("Code")
-        private String code;
-
-        @NameInMap("Message")
-        private String message;
-
-        @NameInMap("Recommend")
-        private String recommend;
-
-        @NameInMap("RequestId")
-        private String requestId;
-
-        private ErrorInfo(Builder builder) {
-            this.code = builder.code;
-            this.message = builder.message;
-            this.recommend = builder.recommend;
-            this.requestId = builder.requestId;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static ErrorInfo create() {
-            return builder().build();
-        }
-
-        /**
-         * @return code
-         */
-        public String getCode() {
-            return this.code;
-        }
-
-        /**
-         * @return message
-         */
-        public String getMessage() {
-            return this.message;
-        }
-
-        /**
-         * @return recommend
-         */
-        public String getRecommend() {
-            return this.recommend;
-        }
-
-        /**
-         * @return requestId
-         */
-        public String getRequestId() {
-            return this.requestId;
-        }
-
-        public static final class Builder {
-            private String code; 
-            private String message; 
-            private String recommend; 
-            private String requestId; 
-
-            /**
-             * 错误码
-             */
-            public Builder code(String code) {
-                this.code = code;
-                return this;
-            }
-
-            /**
-             * 错误信息
-             */
-            public Builder message(String message) {
-                this.message = message;
-                return this;
-            }
-
-            /**
-             * 错误处理建议
-             */
-            public Builder recommend(String recommend) {
-                this.recommend = recommend;
-                return this;
-            }
-
-            /**
-             * 请求ID
-             */
-            public Builder requestId(String requestId) {
-                this.requestId = requestId;
-                return this;
-            }
-
-            public ErrorInfo build() {
-                return new ErrorInfo(this);
-            } 
-
-        } 
-
-    }
     public static class BaselineItems extends TeaModel {
         @NameInMap("Config")
         private String config;
@@ -455,7 +402,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * 基线项配置
+             * Config.
              */
             public Builder config(String config) {
                 this.config = config;
@@ -463,7 +410,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
             }
 
             /**
-             * 基线项名称
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -471,7 +418,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
             }
 
             /**
-             * 是否跳过基线项
+             * Skip.
              */
             public Builder skip(Boolean skip) {
                 this.skip = skip;
@@ -479,7 +426,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
             }
 
             /**
-             * 基线项版本
+             * Version.
              */
             public Builder version(String version) {
                 this.version = version;
@@ -493,6 +440,208 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         } 
 
     }
+    public static class ErrorInfo extends TeaModel {
+        @NameInMap("Code")
+        private String code;
+
+        @NameInMap("Message")
+        private String message;
+
+        @NameInMap("Recommend")
+        private String recommend;
+
+        @NameInMap("RequestId")
+        private String requestId;
+
+        private ErrorInfo(Builder builder) {
+            this.code = builder.code;
+            this.message = builder.message;
+            this.recommend = builder.recommend;
+            this.requestId = builder.requestId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ErrorInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return code
+         */
+        public String getCode() {
+            return this.code;
+        }
+
+        /**
+         * @return message
+         */
+        public String getMessage() {
+            return this.message;
+        }
+
+        /**
+         * @return recommend
+         */
+        public String getRecommend() {
+            return this.recommend;
+        }
+
+        /**
+         * @return requestId
+         */
+        public String getRequestId() {
+            return this.requestId;
+        }
+
+        public static final class Builder {
+            private String code; 
+            private String message; 
+            private String recommend; 
+            private String requestId; 
+
+            /**
+             * The error code returned.
+             */
+            public Builder code(String code) {
+                this.code = code;
+                return this;
+            }
+
+            /**
+             * The error message returned.
+             */
+            public Builder message(String message) {
+                this.message = message;
+                return this;
+            }
+
+            /**
+             * The suggestions that are used to resolve the issue.
+             */
+            public Builder recommend(String recommend) {
+                this.recommend = recommend;
+                return this;
+            }
+
+            /**
+             * The request ID.
+             */
+            public Builder requestId(String requestId) {
+                this.requestId = requestId;
+                return this;
+            }
+
+            public ErrorInfo build() {
+                return new ErrorInfo(this);
+            } 
+
+        } 
+
+    }
+    public static class InputsBaselineItems extends TeaModel {
+        @NameInMap("Config")
+        private String config;
+
+        @NameInMap("Name")
+        private String name;
+
+        @NameInMap("Skip")
+        private Boolean skip;
+
+        @NameInMap("Version")
+        private String version;
+
+        private InputsBaselineItems(Builder builder) {
+            this.config = builder.config;
+            this.name = builder.name;
+            this.skip = builder.skip;
+            this.version = builder.version;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static InputsBaselineItems create() {
+            return builder().build();
+        }
+
+        /**
+         * @return config
+         */
+        public String getConfig() {
+            return this.config;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return skip
+         */
+        public Boolean getSkip() {
+            return this.skip;
+        }
+
+        /**
+         * @return version
+         */
+        public String getVersion() {
+            return this.version;
+        }
+
+        public static final class Builder {
+            private String config; 
+            private String name; 
+            private Boolean skip; 
+            private String version; 
+
+            /**
+             * The configurations of the baseline item.
+             */
+            public Builder config(String config) {
+                this.config = config;
+                return this;
+            }
+
+            /**
+             * The name of the baseline item.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * Indicates whether to skip the baseline item.
+             */
+            public Builder skip(Boolean skip) {
+                this.skip = skip;
+                return this;
+            }
+
+            /**
+             * The version of the baseline item.
+             */
+            public Builder version(String version) {
+                this.version = version;
+                return this;
+            }
+
+            public InputsBaselineItems build() {
+                return new InputsBaselineItems(this);
+            } 
+
+        } 
+
+    }
     public static class Inputs extends TeaModel {
         @NameInMap("AccountNamePrefix")
         private String accountNamePrefix;
@@ -501,7 +650,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         private Long accountUid;
 
         @NameInMap("BaselineItems")
-        private java.util.List < BaselineItems> baselineItems;
+        private java.util.List < InputsBaselineItems> baselineItems;
 
         @NameInMap("DisplayName")
         private String displayName;
@@ -546,7 +695,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         /**
          * @return baselineItems
          */
-        public java.util.List < BaselineItems> getBaselineItems() {
+        public java.util.List < InputsBaselineItems> getBaselineItems() {
             return this.baselineItems;
         }
 
@@ -574,13 +723,13 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         public static final class Builder {
             private String accountNamePrefix; 
             private Long accountUid; 
-            private java.util.List < BaselineItems> baselineItems; 
+            private java.util.List < InputsBaselineItems> baselineItems; 
             private String displayName; 
             private String folderId; 
             private Long payerAccountUid; 
 
             /**
-             * 账号名称前缀
+             * The prefix for the account name of the member.
              */
             public Builder accountNamePrefix(String accountNamePrefix) {
                 this.accountNamePrefix = accountNamePrefix;
@@ -588,7 +737,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
             }
 
             /**
-             * 账号ID
+             * The account ID.
              */
             public Builder accountUid(Long accountUid) {
                 this.accountUid = accountUid;
@@ -596,15 +745,15 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
             }
 
             /**
-             * 基线项配置数组
+             * An array that contains baseline items.
              */
-            public Builder baselineItems(java.util.List < BaselineItems> baselineItems) {
+            public Builder baselineItems(java.util.List < InputsBaselineItems> baselineItems) {
                 this.baselineItems = baselineItems;
                 return this;
             }
 
             /**
-             * 账号展示名称
+             * The display name of the account.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -612,7 +761,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
             }
 
             /**
-             * 父资源夹ID
+             * The ID of the parent folder.
              */
             public Builder folderId(String folderId) {
                 this.folderId = folderId;
@@ -620,7 +769,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
             }
 
             /**
-             * 结算账号ID
+             * The ID of the billing account.
              */
             public Builder payerAccountUid(Long payerAccountUid) {
                 this.payerAccountUid = payerAccountUid;
@@ -673,7 +822,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * 基线项名称
+             * The name of the baseline item.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -681,7 +830,13 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
             }
 
             /**
-             * 基线项实施状态
+             * The status of applying the account baseline to the account. Valid values:
+             * <p>
+             * 
+             * *   Pending: The account is waiting to be created.
+             * *   Running: The account baseline is being applied to the account.
+             * *   Finished: The account baseline is applied to the account.
+             * *   Failed: The account baseline failed to be applied to the account.
              */
             public Builder status(String status) {
                 this.status = status;

@@ -7,23 +7,22 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetEnrolledAccountRequest} extends {@link RequestModel}
+ * {@link GetAccountFactoryBaselineRequest} extends {@link RequestModel}
  *
- * <p>GetEnrolledAccountRequest</p>
+ * <p>GetAccountFactoryBaselineRequest</p>
  */
-public class GetEnrolledAccountRequest extends Request {
+public class GetAccountFactoryBaselineRequest extends Request {
     @Query
-    @NameInMap("AccountUid")
-    @Validation(required = true)
-    private Long accountUid;
+    @NameInMap("BaselineId")
+    private String baselineId;
 
     @Query
     @NameInMap("RegionId")
     private String regionId;
 
-    private GetEnrolledAccountRequest(Builder builder) {
+    private GetAccountFactoryBaselineRequest(Builder builder) {
         super(builder);
-        this.accountUid = builder.accountUid;
+        this.baselineId = builder.baselineId;
         this.regionId = builder.regionId;
     }
 
@@ -31,7 +30,7 @@ public class GetEnrolledAccountRequest extends Request {
         return new Builder();
     }
 
-    public static GetEnrolledAccountRequest create() {
+    public static GetAccountFactoryBaselineRequest create() {
         return builder().build();
     }
 
@@ -41,10 +40,10 @@ public class GetEnrolledAccountRequest extends Request {
     }
 
     /**
-     * @return accountUid
+     * @return baselineId
      */
-    public Long getAccountUid() {
-        return this.accountUid;
+    public String getBaselineId() {
+        return this.baselineId;
     }
 
     /**
@@ -54,26 +53,26 @@ public class GetEnrolledAccountRequest extends Request {
         return this.regionId;
     }
 
-    public static final class Builder extends Request.Builder<GetEnrolledAccountRequest, Builder> {
-        private Long accountUid; 
+    public static final class Builder extends Request.Builder<GetAccountFactoryBaselineRequest, Builder> {
+        private String baselineId; 
         private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetEnrolledAccountRequest request) {
+        private Builder(GetAccountFactoryBaselineRequest request) {
             super(request);
-            this.accountUid = request.accountUid;
+            this.baselineId = request.baselineId;
             this.regionId = request.regionId;
         } 
 
         /**
-         * The account ID.
+         * The baseline ID.
          */
-        public Builder accountUid(Long accountUid) {
-            this.putQueryParameter("AccountUid", accountUid);
-            this.accountUid = accountUid;
+        public Builder baselineId(String baselineId) {
+            this.putQueryParameter("BaselineId", baselineId);
+            this.baselineId = baselineId;
             return this;
         }
 
@@ -87,8 +86,8 @@ public class GetEnrolledAccountRequest extends Request {
         }
 
         @Override
-        public GetEnrolledAccountRequest build() {
-            return new GetEnrolledAccountRequest(this);
+        public GetAccountFactoryBaselineRequest build() {
+            return new GetAccountFactoryBaselineRequest(this);
         } 
 
     } 
