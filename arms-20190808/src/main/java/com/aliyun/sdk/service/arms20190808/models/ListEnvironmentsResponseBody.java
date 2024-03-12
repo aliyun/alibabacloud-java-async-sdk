@@ -86,7 +86,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Status code: 200 indicates success.
+         * The HTTP status code. The status code 200 indicates that the request was successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * The returned struct.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -110,7 +110,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,11 +118,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   `true`
-         * *   `false`
+         * Indicates whether the request was successful. Valid values: true and false.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -198,7 +194,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * Alias of Addon.
+             * The alias of the add-on.
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -206,7 +202,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * Description of Addon.
+             * The description of the add-on.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -214,7 +210,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * Icon of Addon.
+             * The URL of the icon.
              */
             public Builder icon(String icon) {
                 this.icon = icon;
@@ -222,7 +218,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * Name of Addon.
+             * The name of the add-on.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -299,7 +295,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * Alias of Feature.
+             * The alias of the feature.
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -307,7 +303,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * Description of Feature.
+             * The description of the feature.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -315,7 +311,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * Icon address.
+             * The URL of the feature icon.
              */
             public Builder icon(String icon) {
                 this.icon = icon;
@@ -323,7 +319,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * Name of Feature.
+             * The name of the feature.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -376,7 +372,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Tag key.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -384,7 +380,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * Tag value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -689,7 +685,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             private String userId; 
 
             /**
-             * Addon list.
+             * The queried add-ons.
              */
             public Builder addons(java.util.List < Addons> addons) {
                 this.addons = addons;
@@ -697,7 +693,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * Id of the resource to be bound.
+             * The ID of the resource associated with the environment, such as the ACK cluster ID or VPC ID.
              */
             public Builder bindResourceId(String bindResourceId) {
                 this.bindResourceId = bindResourceId;
@@ -705,7 +701,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * Profile of the resource to be bound.
+             * The profile of the resource.
              */
             public Builder bindResourceProfile(String bindResourceProfile) {
                 this.bindResourceProfile = bindResourceProfile;
@@ -713,7 +709,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * Type of the resource to be bound.
+             * The resource type.
              */
             public Builder bindResourceType(String bindResourceType) {
                 this.bindResourceType = bindResourceType;
@@ -721,7 +717,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * Bound Vpc IP Cidr.
+             * The CIDR block that is bound to the VPC.
              */
             public Builder bindVpcCidr(String bindVpcCidr) {
                 this.bindVpcCidr = bindVpcCidr;
@@ -729,7 +725,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * Create time.
+             * The time when the VPC was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -737,7 +733,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * Created User ID.
+             * The ID of the user that created the VPC.
              */
             public Builder createdUserId(String createdUserId) {
                 this.createdUserId = createdUserId;
@@ -745,7 +741,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * Environment ID.
+             * The ID of the environment instance.
              */
             public Builder environmentId(String environmentId) {
                 this.environmentId = environmentId;
@@ -753,7 +749,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * Environment name.
+             * The name of the environment.
              */
             public Builder environmentName(String environmentName) {
                 this.environmentName = environmentName;
@@ -761,7 +757,12 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * Environment type.
+             * The type of the environment. Valid values:
+             * <p>
+             * 
+             * *   CS: Container Service for Kubernetes (ACK)
+             * *   ECS: Elastic Compute Service (ECS)
+             * *   Cloud: cloud service
              */
             public Builder environmentType(String environmentType) {
                 this.environmentType = environmentType;
@@ -769,7 +770,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * Featyre list.
+             * The features.
              */
             public Builder features(java.util.List < Features> features) {
                 this.features = features;
@@ -777,7 +778,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * Grafana datasource UID.
+             * The unique ID of the Grafana data source.
              */
             public Builder grafanaDatasourceUid(String grafanaDatasourceUid) {
                 this.grafanaDatasourceUid = grafanaDatasourceUid;
@@ -785,7 +786,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * Grafana folder title.
+             * The name of the Grafana directory.
              */
             public Builder grafanaFolderTitle(String grafanaFolderTitle) {
                 this.grafanaFolderTitle = grafanaFolderTitle;
@@ -793,7 +794,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * Grafana folder UID.
+             * The unique ID of the Grafana directory.
              */
             public Builder grafanaFolderUid(String grafanaFolderUid) {
                 this.grafanaFolderUid = grafanaFolderUid;
@@ -801,7 +802,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * Latest Release create time.
+             * The time when the add-on was last created.
              */
             public Builder latestReleaseCreateTime(String latestReleaseCreateTime) {
                 this.latestReleaseCreateTime = latestReleaseCreateTime;
@@ -809,7 +810,11 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * ManagedType.
+             * type of managed: 
+             * <p>
+             * - none: not managed. default value of prometheus for ACK.
+             * - agent: managed agent. default value of  promehtues for ASK/ACS/AckOne.
+             * - agent-exproter: maanged agent and exporter. default of prometheus for Cloud.
              */
             public Builder managedType(String managedType) {
                 this.managedType = managedType;
@@ -817,7 +822,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * Prometheus ID.
+             * The ID of the Prometheus service.
              */
             public Builder prometheusId(Long prometheusId) {
                 this.prometheusId = prometheusId;
@@ -825,7 +830,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * Prometheus instance ID.
+             * The ID of the Prometheus instance.
              */
             public Builder prometheusInstanceId(String prometheusInstanceId) {
                 this.prometheusInstanceId = prometheusInstanceId;
@@ -833,7 +838,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -841,7 +846,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * Number of Release.
+             * The number of installed add-ons.
              */
             public Builder releaseCount(Integer releaseCount) {
                 this.releaseCount = releaseCount;
@@ -857,7 +862,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * The tags of the environment resource.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -865,7 +870,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * User ID.
+             * The user ID.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -918,7 +923,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * Environment list.
+             * The queried environments.
              */
             public Builder environments(java.util.List < Environments> environments) {
                 this.environments = environments;
@@ -926,7 +931,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * The total number of returned entries.
              */
             public Builder total(Long total) {
                 this.total = total;

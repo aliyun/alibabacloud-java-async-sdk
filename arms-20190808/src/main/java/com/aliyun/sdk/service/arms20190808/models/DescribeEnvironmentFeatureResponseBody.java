@@ -86,7 +86,7 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Status code: 200 indicates success.
+         * The HTTP status code. The status code 200 indicates that the request was successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
         }
 
         /**
-         * The return data.
+         * The returned struct.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,11 +118,7 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
-         * <p>
-         * 
-         * *   `true`: successful
-         * *   `false`: failed
+         * Indicates whether the request was successful. Valid values: true and false.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -282,7 +278,7 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * Alias of Feature.
+             * The alias of the feature.
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -290,7 +286,7 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
             }
 
             /**
-             * Config of Feature.
+             * The configuration of the feature.
              */
             public Builder config(java.util.Map < String, String > config) {
                 this.config = config;
@@ -298,7 +294,7 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
             }
 
             /**
-             * Description of Feature.
+             * The description of the feature.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -306,7 +302,7 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
             }
 
             /**
-             * Environment ID.
+             * The environment ID.
              */
             public Builder environmentId(String environmentId) {
                 this.environmentId = environmentId;
@@ -314,7 +310,7 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
             }
 
             /**
-             * Icon address.
+             * The URL of the icon.
              */
             public Builder icon(String icon) {
                 this.icon = icon;
@@ -322,7 +318,7 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
             }
 
             /**
-             * Lanuage.
+             * The language.
              */
             public Builder language(String language) {
                 this.language = language;
@@ -330,7 +326,7 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
             }
 
             /**
-             * This is the latest version of Feature.
+             * The latest version number.
              */
             public Builder latestVersion(String latestVersion) {
                 this.latestVersion = latestVersion;
@@ -346,7 +342,7 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
             }
 
             /**
-             * Name of Feature.
+             * The name of the feature.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -354,7 +350,7 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
             }
 
             /**
-             * Installation status of Feature.
+             * The status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -362,7 +358,7 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
             }
 
             /**
-             * Version of Feature.
+             * The version number.
              */
             public Builder version(String version) {
                 this.version = version;
@@ -427,7 +423,7 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * Container parameters.
+             * The container parameters.
              */
             public Builder args(java.util.List < String > args) {
                 this.args = args;
@@ -435,7 +431,7 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
             }
 
             /**
-             * Container image.
+             * The image of the container.
              */
             public Builder image(String image) {
                 this.image = image;
@@ -443,7 +439,7 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
             }
 
             /**
-             * Name of the container.
+             * The name of the container.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -520,7 +516,7 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * Feature container list.
+             * The containers of the feature.
              */
             public Builder featureContainers(java.util.List < FeatureContainers> featureContainers) {
                 this.featureContainers = featureContainers;
@@ -528,7 +524,7 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
             }
 
             /**
-             * K8s resource name of the Feature.
+             * The Kubernetes resource name of the feature.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -536,7 +532,7 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
             }
 
             /**
-             * Namespace.
+             * The namespace.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -544,11 +540,12 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
             }
 
             /**
-             * Running status.
+             * The status of the agent. Valid values:
              * <p>
-             * - Success: Running normal
-             * - Failed: Running exception
-             * - Not Found: Not installed
+             * 
+             * *   Success: The agent is running.
+             * *   Failed: The agent failed to run.
+             * *   Not Found: The agent is not installed.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -601,7 +598,7 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
             private FeatureStatus featureStatus; 
 
             /**
-             * Feature Installation information.
+             * The installation information of the feature.
              */
             public Builder feature(Feature feature) {
                 this.feature = feature;
@@ -609,7 +606,7 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
             }
 
             /**
-             * Running status of the Feature.
+             * The status of the feature.
              */
             public Builder featureStatus(FeatureStatus featureStatus) {
                 this.featureStatus = featureStatus;

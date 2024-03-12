@@ -84,7 +84,7 @@ public class DescribeEnvironmentFeatureRequest extends Request {
         } 
 
         /**
-         * Environment ID.
+         * The environment ID.
          */
         public Builder environmentId(String environmentId) {
             this.putQueryParameter("EnvironmentId", environmentId);
@@ -93,7 +93,26 @@ public class DescribeEnvironmentFeatureRequest extends Request {
         }
 
         /**
-         * Name of Feature.
+         * The name of the feature.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   app-agent-pilot
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   metric-agent
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder featureName(String featureName) {
             this.putQueryParameter("FeatureName", featureName);

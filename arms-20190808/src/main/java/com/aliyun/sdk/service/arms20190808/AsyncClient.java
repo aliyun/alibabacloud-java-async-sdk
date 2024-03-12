@@ -425,6 +425,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListSilencePoliciesResponse> listSilencePolicies(ListSilencePoliciesRequest request);
 
+    CompletableFuture<ListSyntheticDetailResponse> listSyntheticDetail(ListSyntheticDetailRequest request);
+
     CompletableFuture<ListTimingSyntheticTasksResponse> listTimingSyntheticTasks(ListTimingSyntheticTasksRequest request);
 
     CompletableFuture<ListTraceAppsResponse> listTraceApps(ListTraceAppsRequest request);

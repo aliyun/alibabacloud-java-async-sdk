@@ -124,7 +124,7 @@ public class ListEnvironmentsRequest extends Request {
         } 
 
         /**
-         * Name of Addon.
+         * The add-on name. You must specify at least one of the AddonName and EnvironmentType parameters.
          */
         public Builder addonName(String addonName) {
             this.putQueryParameter("AddonName", addonName);
@@ -133,7 +133,7 @@ public class ListEnvironmentsRequest extends Request {
         }
 
         /**
-         * BindResourceId.
+         * 绑定的资源ID。
          */
         public Builder bindResourceId(String bindResourceId) {
             this.putQueryParameter("BindResourceId", bindResourceId);
@@ -142,7 +142,46 @@ public class ListEnvironmentsRequest extends Request {
         }
 
         /**
-         * Environment type, AddonName or EnvironmentType must be at least one.
+         * The environment type. You must specify at least one of the AddonName and EnvironmentType parameters.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   CS
+         * 
+         *     <!-- -->
+         * 
+         *     :
+         * 
+         *     <!-- -->
+         * 
+         *     Container Service for Kubernetes (ACK)
+         * 
+         *     <!-- -->
+         * 
+         * *   ECS
+         * 
+         *     <!-- -->
+         * 
+         *     :
+         * 
+         *     <!-- -->
+         * 
+         *     Elastic Compute Service (ECS)
+         * 
+         *     <!-- -->
+         * 
+         * *   Cloud
+         * 
+         *     <!-- -->
+         * 
+         *     :
+         * 
+         *     <!-- -->
+         * 
+         *     cloud service
+         * 
+         *     <!-- -->
          */
         public Builder environmentType(String environmentType) {
             this.putQueryParameter("EnvironmentType", environmentType);
@@ -169,7 +208,7 @@ public class ListEnvironmentsRequest extends Request {
         }
 
         /**
-         * Resource tag list.
+         * The tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             String tagShrink = shrink(tag, "Tag", "json");
@@ -224,7 +263,7 @@ public class ListEnvironmentsRequest extends Request {
             private String value; 
 
             /**
-             * Tag key.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -232,7 +271,7 @@ public class ListEnvironmentsRequest extends Request {
             }
 
             /**
-             * Tag value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;
