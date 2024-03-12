@@ -1,3 +1,6 @@
+2024-03-12 Version: 1.0.10
+- Generated java-async 2024-01-18 for IntelligentCreation.
+
 2024-03-08 Version: 1.0.9
 - Generated java-async 2024-01-18 for IntelligentCreation.
 
