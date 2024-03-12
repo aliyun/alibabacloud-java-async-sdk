@@ -21,15 +21,21 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CancelAsyncTaskResponse> cancelAsyncTask(CancelAsyncTaskRequest request);
 
+    CompletableFuture<ClearIntervenesResponse> clearIntervenes(ClearIntervenesRequest request);
+
     CompletableFuture<CreateGeneratedContentResponse> createGeneratedContent(CreateGeneratedContentRequest request);
 
     CompletableFuture<CreateTokenResponse> createToken(CreateTokenRequest request);
 
     CompletableFuture<DeleteGeneratedContentResponse> deleteGeneratedContent(DeleteGeneratedContentRequest request);
 
+    CompletableFuture<DeleteInterveneRuleResponse> deleteInterveneRule(DeleteInterveneRuleRequest request);
+
     CompletableFuture<DeleteMaterialByIdResponse> deleteMaterialById(DeleteMaterialByIdRequest request);
 
     CompletableFuture<ExportGeneratedContentResponse> exportGeneratedContent(ExportGeneratedContentRequest request);
+
+    CompletableFuture<ExportIntervenesResponse> exportIntervenes(ExportIntervenesRequest request);
 
     CompletableFuture<FeedbackDialogueResponse> feedbackDialogue(FeedbackDialogueRequest request);
 
@@ -47,9 +53,25 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetGeneratedContentResponse> getGeneratedContent(GetGeneratedContentRequest request);
 
+    CompletableFuture<GetInterveneGlobalReplyResponse> getInterveneGlobalReply(GetInterveneGlobalReplyRequest request);
+
+    CompletableFuture<GetInterveneImportTaskInfoResponse> getInterveneImportTaskInfo(GetInterveneImportTaskInfoRequest request);
+
+    CompletableFuture<GetInterveneRuleDetailResponse> getInterveneRuleDetail(GetInterveneRuleDetailRequest request);
+
+    CompletableFuture<GetInterveneTemplateFileUrlResponse> getInterveneTemplateFileUrl(GetInterveneTemplateFileUrlRequest request);
+
     CompletableFuture<GetMaterialByIdResponse> getMaterialById(GetMaterialByIdRequest request);
 
     CompletableFuture<GetPropertiesResponse> getProperties(GetPropertiesRequest request);
+
+    CompletableFuture<ImportInterveneFileResponse> importInterveneFile(ImportInterveneFileRequest request);
+
+    CompletableFuture<ImportInterveneFileAsyncResponse> importInterveneFileAsync(ImportInterveneFileAsyncRequest request);
+
+    CompletableFuture<InsertInterveneGlobalReplyResponse> insertInterveneGlobalReply(InsertInterveneGlobalReplyRequest request);
+
+    CompletableFuture<InsertInterveneRuleResponse> insertInterveneRule(InsertInterveneRuleRequest request);
 
     CompletableFuture<ListAsyncTasksResponse> listAsyncTasks(ListAsyncTasksRequest request);
 
@@ -60,6 +82,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListGeneratedContentsResponse> listGeneratedContents(ListGeneratedContentsRequest request);
 
     CompletableFuture<ListHotNewsWithTypeResponse> listHotNewsWithType(ListHotNewsWithTypeRequest request);
+
+    CompletableFuture<ListInterveneCntResponse> listInterveneCnt(ListInterveneCntRequest request);
+
+    CompletableFuture<ListInterveneImportTasksResponse> listInterveneImportTasks(ListInterveneImportTasksRequest request);
+
+    CompletableFuture<ListInterveneRulesResponse> listInterveneRules(ListInterveneRulesRequest request);
+
+    CompletableFuture<ListIntervenesResponse> listIntervenes(ListIntervenesRequest request);
 
     CompletableFuture<ListMaterialDocumentsResponse> listMaterialDocuments(ListMaterialDocumentsRequest request);
 
