@@ -536,9 +536,13 @@ public class CreateJobRequest extends Request {
         @NameInMap("PrologScript")
         private String prologScript;
 
+        @NameInMap("Script")
+        private String script;
+
         private Vm(Builder builder) {
             this.image = builder.image;
             this.prologScript = builder.prologScript;
+            this.script = builder.script;
         }
 
         public static Builder builder() {
@@ -563,9 +567,17 @@ public class CreateJobRequest extends Request {
             return this.prologScript;
         }
 
+        /**
+         * @return script
+         */
+        public String getScript() {
+            return this.script;
+        }
+
         public static final class Builder {
             private String image; 
             private String prologScript; 
+            private String script; 
 
             /**
              * Image.
@@ -580,6 +592,14 @@ public class CreateJobRequest extends Request {
              */
             public Builder prologScript(String prologScript) {
                 this.prologScript = prologScript;
+                return this;
+            }
+
+            /**
+             * Script.
+             */
+            public Builder script(String script) {
+                this.script = script;
                 return this;
             }
 

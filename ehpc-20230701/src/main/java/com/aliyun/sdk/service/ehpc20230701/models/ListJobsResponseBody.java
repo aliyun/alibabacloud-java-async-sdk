@@ -162,6 +162,9 @@ public class ListJobsResponseBody extends TeaModel {
         @NameInMap("TaskCount")
         private Integer taskCount;
 
+        @NameInMap("TaskSustainable")
+        private Boolean taskSustainable;
+
         private JobList(Builder builder) {
             this.createTime = builder.createTime;
             this.endTime = builder.endTime;
@@ -173,6 +176,7 @@ public class ListJobsResponseBody extends TeaModel {
             this.startTime = builder.startTime;
             this.status = builder.status;
             this.taskCount = builder.taskCount;
+            this.taskSustainable = builder.taskSustainable;
         }
 
         public static Builder builder() {
@@ -253,6 +257,13 @@ public class ListJobsResponseBody extends TeaModel {
             return this.taskCount;
         }
 
+        /**
+         * @return taskSustainable
+         */
+        public Boolean getTaskSustainable() {
+            return this.taskSustainable;
+        }
+
         public static final class Builder {
             private String createTime; 
             private String endTime; 
@@ -264,6 +275,7 @@ public class ListJobsResponseBody extends TeaModel {
             private String startTime; 
             private String status; 
             private Integer taskCount; 
+            private Boolean taskSustainable; 
 
             /**
              * CreateTime.
@@ -342,6 +354,14 @@ public class ListJobsResponseBody extends TeaModel {
              */
             public Builder taskCount(Integer taskCount) {
                 this.taskCount = taskCount;
+                return this;
+            }
+
+            /**
+             * TaskSustainable.
+             */
+            public Builder taskSustainable(Boolean taskSustainable) {
+                this.taskSustainable = taskSustainable;
                 return this;
             }
 
