@@ -142,7 +142,7 @@ public class ReleaseInstanceRequest extends Request {
         } 
 
         /**
-         * InstanceIds.
+         * The ID of the instance. Separate multiple IDs with commas (,). A maximum of 100 IDs can be specified.
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -160,7 +160,7 @@ public class ReleaseInstanceRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * The code of the service.
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -169,7 +169,7 @@ public class ReleaseInstanceRequest extends Request {
         }
 
         /**
-         * ProductType.
+         * The type of the service.
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);
@@ -178,7 +178,7 @@ public class ReleaseInstanceRequest extends Request {
         }
 
         /**
-         * Region.
+         * The region in which the instance resides.
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -187,7 +187,14 @@ public class ReleaseInstanceRequest extends Request {
         }
 
         /**
-         * RenewStatus.
+         * The method that is used to renew the instance. Valid values:
+         * <p>
+         * 
+         * AutoRenewal: automatically renews the instance.
+         * 
+         * ManualRenewal: manually renews the instance.
+         * 
+         * NotRenewal: does not renew the instance.
          */
         public Builder renewStatus(String renewStatus) {
             this.putQueryParameter("RenewStatus", renewStatus);
@@ -196,7 +203,12 @@ public class ReleaseInstanceRequest extends Request {
         }
 
         /**
-         * SubscriptionType.
+         * The billing method. Valid values:
+         * <p>
+         * 
+         * Subscription: the subscription billing method.
+         * 
+         * PayAsYouGo: the pay-as-you-go billing method.
          */
         public Builder subscriptionType(String subscriptionType) {
             this.putQueryParameter("SubscriptionType", subscriptionType);

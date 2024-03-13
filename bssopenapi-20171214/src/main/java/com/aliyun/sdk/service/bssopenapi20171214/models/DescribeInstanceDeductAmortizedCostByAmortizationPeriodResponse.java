@@ -13,15 +13,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeInstanceDeductAmortizedCostByAmortizationPeriodResponse extends Response {
     @NameInMap("headers")
-    @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     private Integer statusCode;
 
     @NameInMap("body")
-    @Validation(required = true)
     private DescribeInstanceDeductAmortizedCostByAmortizationPeriodResponseBody body;
 
     private DescribeInstanceDeductAmortizedCostByAmortizationPeriodResponse(BuilderImpl builder) {

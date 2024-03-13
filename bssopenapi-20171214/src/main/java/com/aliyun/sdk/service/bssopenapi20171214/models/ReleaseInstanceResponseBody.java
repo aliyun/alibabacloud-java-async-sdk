@@ -86,7 +86,7 @@ public class ReleaseInstanceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class ReleaseInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * data
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class ReleaseInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The description of the execution result.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class ReleaseInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which can be used for troubleshooting.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,10 @@ public class ReleaseInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * A value of true indicates that the execution is complete.
+         * <p>
+         * 
+         * A value of false indicates that an error occurs during the execution.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -170,7 +173,7 @@ public class ReleaseInstanceResponseBody extends TeaModel {
             private Boolean releaseResult; 
 
             /**
-             * HostId.
+             * The site of the execution host.
              */
             public Builder hostId(String hostId) {
                 this.hostId = hostId;
@@ -178,7 +181,7 @@ public class ReleaseInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ReleaseResult.
+             * Indicates whether the instance is released.
              */
             public Builder releaseResult(Boolean releaseResult) {
                 this.releaseResult = releaseResult;

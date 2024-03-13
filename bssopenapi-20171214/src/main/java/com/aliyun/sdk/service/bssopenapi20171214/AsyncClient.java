@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.bssopenapi20171214;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.bssopenapi20171214.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -167,7 +168,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
       * 1.  **Check the information about unsubscription and confirm the unsubscription terms and refundable amount. The resource that is unsubscribed cannot be restored.**
       * 2.  Refunds are applicable only for the actual paid amount. Vouchers used for the purchase are non-refundable.
-      * 3.  For more information, see [Rules for unsubscribing from resources](https://help.aliyun.com/knowledge_detail/116043.html?spm=a2c81.e1d666e.app.2.62ae11271Kd6iM).
+      * 3.  For more information, see [Rules for unsubscribing from resources](https://www.alibabacloud.com/help/zh/user-center/user-guide/refund-rules).
       *
      */
     CompletableFuture<InquiryPriceRefundInstanceResponse> inquiryPriceRefundInstance(InquiryPriceRefundInstanceRequest request);
@@ -181,7 +182,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryAccountBalanceResponse> queryAccountBalance(QueryAccountBalanceRequest request);
 
     /**
-      * ##
       * Before you call this operation, take note of the following items:
       * *   Account bills are summarized based on instance bills. In most cases, the account bills do not include the data generated on the last day of the specified period.
       * *   You can query the data generated in June 2020 or later for Cloud Communications services. However, the query results do not include the data of Alibaba Cloud Domains.
@@ -300,14 +300,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
       * 1.  Refunds are applicable only for the actual paid amount. Vouchers used for the purchase are non-refundable.
       * 2.  Check the information about unsubscription and confirm the unsubscription terms and refundable amount. The resource that is unsubscribed cannot be restored.
-      * 3.  For more information, see [Rules for unsubscribing from resources](https://help.aliyun.com/knowledge_detail/116043.html?spm=a2c81.e1d666e.app.2.62ae11271Kd6iM).
+      * 3.  For more information, see [Rules for unsubscribing from resources](https://www.alibabacloud.com/help/zh/user-center/user-guide/refund-rules).
       *
      */
     CompletableFuture<RefundInstanceResponse> refundInstance(RefundInstanceRequest request);
 
     /**
-      * A value of true indicates that the execution is complete.
-      * A value of false indicates that an error occurs during the execution.
+      * This operation is provided for only VNOs to release instances. If a non-specific VNO calls this operation, the request is blocked.
       *
      */
     CompletableFuture<ReleaseInstanceResponse> releaseInstance(ReleaseInstanceRequest request);
@@ -320,11 +319,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<RenewResourcePackageResponse> renewResourcePackage(RenewResourcePackageRequest request);
 
-    CompletableFuture<SaveUserCreditResponse> saveUserCredit(SaveUserCreditRequest request);
-
     CompletableFuture<SetAllExpirationDayResponse> setAllExpirationDay(SetAllExpirationDayRequest request);
-
-    CompletableFuture<SetCreditLabelActionResponse> setCreditLabelAction(SetCreditLabelActionRequest request);
 
     CompletableFuture<SetRenewalResponse> setRenewal(SetRenewalRequest request);
 

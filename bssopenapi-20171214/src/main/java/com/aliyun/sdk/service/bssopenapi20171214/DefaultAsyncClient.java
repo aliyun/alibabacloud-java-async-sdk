@@ -739,7 +739,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
       * 1.  **Check the information about unsubscription and confirm the unsubscription terms and refundable amount. The resource that is unsubscribed cannot be restored.**
       * 2.  Refunds are applicable only for the actual paid amount. Vouchers used for the purchase are non-refundable.
-      * 3.  For more information, see [Rules for unsubscribing from resources](https://help.aliyun.com/knowledge_detail/116043.html?spm=a2c81.e1d666e.app.2.62ae11271Kd6iM).
+      * 3.  For more information, see [Rules for unsubscribing from resources](https://www.alibabacloud.com/help/zh/user-center/user-guide/refund-rules).
       *
      */
     @Override
@@ -813,7 +813,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ##
       * Before you call this operation, take note of the following items:
       * *   Account bills are summarized based on instance bills. In most cases, the account bills do not include the data generated on the last day of the specified period.
       * *   You can query the data generated in June 2020 or later for Cloud Communications services. However, the query results do not include the data of Alibaba Cloud Domains.
@@ -1376,7 +1375,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
       * 1.  Refunds are applicable only for the actual paid amount. Vouchers used for the purchase are non-refundable.
       * 2.  Check the information about unsubscription and confirm the unsubscription terms and refundable amount. The resource that is unsubscribed cannot be restored.
-      * 3.  For more information, see [Rules for unsubscribing from resources](https://help.aliyun.com/knowledge_detail/116043.html?spm=a2c81.e1d666e.app.2.62ae11271Kd6iM).
+      * 3.  For more information, see [Rules for unsubscribing from resources](https://www.alibabacloud.com/help/zh/user-center/user-guide/refund-rules).
       *
      */
     @Override
@@ -1394,8 +1393,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * A value of true indicates that the execution is complete.
-      * A value of false indicates that an error occurs during the execution.
+      * This operation is provided for only VNOs to release instances. If a non-specific VNO calls this operation, the request is blocked.
       *
      */
     @Override
@@ -1469,20 +1467,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
-    public CompletableFuture<SaveUserCreditResponse> saveUserCredit(SaveUserCreditRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SaveUserCredit").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SaveUserCreditResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<SaveUserCreditResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
     public CompletableFuture<SetAllExpirationDayResponse> setAllExpirationDay(SetAllExpirationDayRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -1491,20 +1475,6 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<SetAllExpirationDayResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<SetCreditLabelActionResponse> setCreditLabelAction(SetCreditLabelActionRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SetCreditLabelAction").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SetCreditLabelActionResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<SetCreditLabelActionResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

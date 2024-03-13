@@ -570,7 +570,7 @@ public class QueryAccountBillResponseBody extends TeaModel {
              * The code of the service.
              * <p>
              * 
-             * >A value is returned only if the **IsGroupByProduct** parameter is set to true.
+             * > A value is returned only if the **IsGroupByProduct** parameter is set to true.
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;

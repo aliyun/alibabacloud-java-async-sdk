@@ -23,6 +23,7 @@ public class SetRenewalRequest extends Request {
 
     @Query
     @NameInMap("ProductCode")
+    @Validation(required = true)
     private String productCode;
 
     @Query
