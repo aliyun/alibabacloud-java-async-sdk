@@ -19,6 +19,7 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
 
     @Query
     @NameInMap("ApplicationNameList")
+    @Validation(required = true)
     private java.util.List < String > applicationNameList;
 
     @Query
@@ -50,6 +51,7 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
 
     @Query
     @NameInMap("Direction")
+    @Validation(required = true)
     private String direction;
 
     @Query

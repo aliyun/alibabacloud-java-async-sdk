@@ -401,7 +401,7 @@ public class ModifyControlPolicyRequest extends Request {
          * *   **Memcache**
          * *   **SSL**
          * 
-         * >  The value ANY** indicates all types of applications.
+         * >  The value *ANY* indicates all types of applications.
          */
         public Builder applicationName(String applicationName) {
             this.putQueryParameter("ApplicationName", applicationName);
@@ -535,7 +535,7 @@ public class ModifyControlPolicyRequest extends Request {
          * *   **UDP**
          * *   **ICMP**
          * 
-         * >  The value ANY** indicates all types of applications.
+         * >  The value *ANY* indicates all types of applications.
          */
         public Builder proto(String proto) {
             this.putQueryParameter("Proto", proto);

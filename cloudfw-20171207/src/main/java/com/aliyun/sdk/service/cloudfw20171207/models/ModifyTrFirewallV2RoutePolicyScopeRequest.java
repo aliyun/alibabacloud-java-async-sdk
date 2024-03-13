@@ -18,6 +18,7 @@ public class ModifyTrFirewallV2RoutePolicyScopeRequest extends Request {
 
     @Query
     @NameInMap("FirewallId")
+    @Validation(required = true)
     private String firewallId;
 
     @Query
@@ -34,6 +35,7 @@ public class ModifyTrFirewallV2RoutePolicyScopeRequest extends Request {
 
     @Query
     @NameInMap("TrFirewallRoutePolicyId")
+    @Validation(required = true)
     private String trFirewallRoutePolicyId;
 
     private ModifyTrFirewallV2RoutePolicyScopeRequest(Builder builder) {

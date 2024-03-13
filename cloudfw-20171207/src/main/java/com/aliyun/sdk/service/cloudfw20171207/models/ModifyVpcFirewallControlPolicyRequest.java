@@ -390,7 +390,7 @@ public class ModifyVpcFirewallControlPolicyRequest extends Request {
          * 
          * Valid values:
          * 
-         * *   ANY
+         * *   ANY: all application types
          * *   FTP
          * *   HTTP
          * *   HTTPS
@@ -405,7 +405,6 @@ public class ModifyVpcFirewallControlPolicyRequest extends Request {
          * *   MongoDB
          * *   Memcache
          * *   SSL
-         * *   ANY: all application types
          */
         public Builder applicationName(String applicationName) {
             this.putQueryParameter("ApplicationName", applicationName);

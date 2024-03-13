@@ -14,6 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DescribeNatFirewallPolicyPriorUsedRequest extends Request {
     @Query
     @NameInMap("Direction")
+    @Validation(required = true)
     private String direction;
 
     @Query

@@ -74,7 +74,7 @@ public class CreateDownloadTaskResponseBody extends TeaModel {
         private String taskName; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -82,7 +82,16 @@ public class CreateDownloadTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The status of the task. Valid values:
+         * <p>
+         * 
+         * finish: You can query the task to obtain the download link of the file.
+         * 
+         * start
+         * 
+         * error
+         * 
+         * expire: The task file is invalid and cannot be downloaded.
          */
         public Builder status(String status) {
             this.status = status;
@@ -90,7 +99,7 @@ public class CreateDownloadTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * The unique ID of the task.
          */
         public Builder taskId(Long taskId) {
             this.taskId = taskId;
@@ -98,7 +107,7 @@ public class CreateDownloadTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TaskName.
+         * The name of the file download task.
          */
         public Builder taskName(String taskName) {
             this.taskName = taskName;

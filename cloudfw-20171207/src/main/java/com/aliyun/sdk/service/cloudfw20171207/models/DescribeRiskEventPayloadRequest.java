@@ -48,6 +48,7 @@ public class DescribeRiskEventPayloadRequest extends Request {
 
     @Query
     @NameInMap("UUID")
+    @Validation(required = true)
     private String UUID;
 
     private DescribeRiskEventPayloadRequest(Builder builder) {

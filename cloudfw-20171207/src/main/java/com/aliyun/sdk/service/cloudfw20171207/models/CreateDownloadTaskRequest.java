@@ -68,7 +68,13 @@ public class CreateDownloadTaskRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * The language of the content within the response.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   **zh**: Chinese (default)
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -77,7 +83,7 @@ public class CreateDownloadTaskRequest extends Request {
         }
 
         /**
-         * TaskData.
+         * The query condition of the download task.
          */
         public Builder taskData(String taskData) {
             this.putQueryParameter("TaskData", taskData);

@@ -261,7 +261,7 @@ public class DescribeVpcFirewallListRequest extends Request {
          * The number of entries to return on each page.
          * <p>
          * 
-         * Default value: **10**.**** Maximum value: **50**.
+         * Default value: **10**. Maximum value: **50**.
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);

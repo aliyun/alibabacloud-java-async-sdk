@@ -19,6 +19,7 @@ public class DeleteNatFirewallControlPolicyRequest extends Request {
 
     @Query
     @NameInMap("Direction")
+    @Validation(required = true)
     private String direction;
 
     @Query

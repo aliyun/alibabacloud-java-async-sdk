@@ -32,6 +32,7 @@ public class ModifyNatFirewallControlPolicyPositionRequest extends Request {
 
     @Query
     @NameInMap("NewOrder")
+    @Validation(required = true)
     private Integer newOrder;
 
     private ModifyNatFirewallControlPolicyPositionRequest(Builder builder) {
