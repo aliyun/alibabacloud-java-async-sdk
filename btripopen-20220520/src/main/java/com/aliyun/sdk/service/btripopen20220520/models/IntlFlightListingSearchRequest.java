@@ -35,6 +35,10 @@ public class IntlFlightListingSearchRequest extends Request {
     private String isvName;
 
     @Query
+    @NameInMap("language")
+    private String language;
+
+    @Query
     @NameInMap("need_share_flight")
     private Boolean needShareFlight;
 
@@ -85,6 +89,7 @@ public class IntlFlightListingSearchRequest extends Request {
         this.cabinType = builder.cabinType;
         this.directOnly = builder.directOnly;
         this.isvName = builder.isvName;
+        this.language = builder.language;
         this.needShareFlight = builder.needShareFlight;
         this.outWheelSearch = builder.outWheelSearch;
         this.queryRecordId = builder.queryRecordId;
@@ -143,6 +148,13 @@ public class IntlFlightListingSearchRequest extends Request {
      */
     public String getIsvName() {
         return this.isvName;
+    }
+
+    /**
+     * @return language
+     */
+    public String getLanguage() {
+        return this.language;
     }
 
     /**
@@ -221,6 +233,7 @@ public class IntlFlightListingSearchRequest extends Request {
         private Integer cabinType; 
         private Boolean directOnly; 
         private String isvName; 
+        private String language; 
         private Boolean needShareFlight; 
         private Boolean outWheelSearch; 
         private String queryRecordId; 
@@ -243,6 +256,7 @@ public class IntlFlightListingSearchRequest extends Request {
             this.cabinType = request.cabinType;
             this.directOnly = request.directOnly;
             this.isvName = request.isvName;
+            this.language = request.language;
             this.needShareFlight = request.needShareFlight;
             this.outWheelSearch = request.outWheelSearch;
             this.queryRecordId = request.queryRecordId;
@@ -297,6 +311,15 @@ public class IntlFlightListingSearchRequest extends Request {
         public Builder isvName(String isvName) {
             this.putQueryParameter("isv_name", isvName);
             this.isvName = isvName;
+            return this;
+        }
+
+        /**
+         * language.
+         */
+        public Builder language(String language) {
+            this.putQueryParameter("language", language);
+            this.language = language;
             return this;
         }
 

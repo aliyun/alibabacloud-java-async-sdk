@@ -30,6 +30,10 @@ public class IntlFlightOtaItemDetailRequest extends Request {
     private String isvName;
 
     @Query
+    @NameInMap("language")
+    private String language;
+
+    @Query
     @NameInMap("supplier_code")
     private String supplierCode;
 
@@ -43,6 +47,7 @@ public class IntlFlightOtaItemDetailRequest extends Request {
         this.btripUserId = builder.btripUserId;
         this.buyerName = builder.buyerName;
         this.isvName = builder.isvName;
+        this.language = builder.language;
         this.supplierCode = builder.supplierCode;
         this.xAcsBtripCorpToken = builder.xAcsBtripCorpToken;
     }
@@ -89,6 +94,13 @@ public class IntlFlightOtaItemDetailRequest extends Request {
     }
 
     /**
+     * @return language
+     */
+    public String getLanguage() {
+        return this.language;
+    }
+
+    /**
      * @return supplierCode
      */
     public String getSupplierCode() {
@@ -107,6 +119,7 @@ public class IntlFlightOtaItemDetailRequest extends Request {
         private String btripUserId; 
         private String buyerName; 
         private String isvName; 
+        private String language; 
         private String supplierCode; 
         private String xAcsBtripCorpToken; 
 
@@ -120,6 +133,7 @@ public class IntlFlightOtaItemDetailRequest extends Request {
             this.btripUserId = request.btripUserId;
             this.buyerName = request.buyerName;
             this.isvName = request.isvName;
+            this.language = request.language;
             this.supplierCode = request.supplierCode;
             this.xAcsBtripCorpToken = request.xAcsBtripCorpToken;
         } 
@@ -157,6 +171,15 @@ public class IntlFlightOtaItemDetailRequest extends Request {
         public Builder isvName(String isvName) {
             this.putQueryParameter("isv_name", isvName);
             this.isvName = isvName;
+            return this;
+        }
+
+        /**
+         * language.
+         */
+        public Builder language(String language) {
+            this.putQueryParameter("language", language);
+            this.language = language;
             return this;
         }
 

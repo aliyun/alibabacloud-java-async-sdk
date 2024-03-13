@@ -34,6 +34,10 @@ public class IntlFlightOtaSearchRequest extends Request {
     private String isvName;
 
     @Query
+    @NameInMap("language")
+    private String language;
+
+    @Query
     @NameInMap("need_share_flight")
     private Boolean needShareFlight;
 
@@ -66,6 +70,7 @@ public class IntlFlightOtaSearchRequest extends Request {
         this.cabinType = builder.cabinType;
         this.directOnly = builder.directOnly;
         this.isvName = builder.isvName;
+        this.language = builder.language;
         this.needShareFlight = builder.needShareFlight;
         this.searchJourneys = builder.searchJourneys;
         this.searchPassengerList = builder.searchPassengerList;
@@ -123,6 +128,13 @@ public class IntlFlightOtaSearchRequest extends Request {
     }
 
     /**
+     * @return language
+     */
+    public String getLanguage() {
+        return this.language;
+    }
+
+    /**
      * @return needShareFlight
      */
     public Boolean getNeedShareFlight() {
@@ -170,6 +182,7 @@ public class IntlFlightOtaSearchRequest extends Request {
         private Integer cabinType; 
         private Boolean directOnly; 
         private String isvName; 
+        private String language; 
         private Boolean needShareFlight; 
         private java.util.List < SearchJourneys> searchJourneys; 
         private java.util.List < SearchPassengerList> searchPassengerList; 
@@ -188,6 +201,7 @@ public class IntlFlightOtaSearchRequest extends Request {
             this.cabinType = request.cabinType;
             this.directOnly = request.directOnly;
             this.isvName = request.isvName;
+            this.language = request.language;
             this.needShareFlight = request.needShareFlight;
             this.searchJourneys = request.searchJourneys;
             this.searchPassengerList = request.searchPassengerList;
@@ -238,6 +252,15 @@ public class IntlFlightOtaSearchRequest extends Request {
         public Builder isvName(String isvName) {
             this.putQueryParameter("isv_name", isvName);
             this.isvName = isvName;
+            return this;
+        }
+
+        /**
+         * language.
+         */
+        public Builder language(String language) {
+            this.putQueryParameter("language", language);
+            this.language = language;
             return this;
         }
 
