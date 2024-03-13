@@ -20,6 +20,9 @@ public class ExpectDeductResourceCmd extends TeaModel {
     @Validation(required = true)
     private Long cost;
 
+    @NameInMap("deductScene")
+    private String deductScene;
+
     @NameInMap("extraInfo")
     private String extraInfo;
 
@@ -41,6 +44,7 @@ public class ExpectDeductResourceCmd extends TeaModel {
     private ExpectDeductResourceCmd(Builder builder) {
         this.accountId = builder.accountId;
         this.cost = builder.cost;
+        this.deductScene = builder.deductScene;
         this.extraInfo = builder.extraInfo;
         this.idempotentId = builder.idempotentId;
         this.resourceType = builder.resourceType;
@@ -68,6 +72,13 @@ public class ExpectDeductResourceCmd extends TeaModel {
      */
     public Long getCost() {
         return this.cost;
+    }
+
+    /**
+     * @return deductScene
+     */
+    public String getDeductScene() {
+        return this.deductScene;
     }
 
     /**
@@ -108,6 +119,7 @@ public class ExpectDeductResourceCmd extends TeaModel {
     public static final class Builder {
         private String accountId; 
         private Long cost; 
+        private String deductScene; 
         private String extraInfo; 
         private String idempotentId; 
         private Long resourceType; 
@@ -127,6 +139,14 @@ public class ExpectDeductResourceCmd extends TeaModel {
          */
         public Builder cost(Long cost) {
             this.cost = cost;
+            return this;
+        }
+
+        /**
+         * deductScene.
+         */
+        public Builder deductScene(String deductScene) {
+            this.deductScene = deductScene;
             return this;
         }
 

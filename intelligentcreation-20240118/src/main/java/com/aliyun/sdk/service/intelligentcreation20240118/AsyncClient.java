@@ -27,6 +27,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CopywritingQAV1Response> copywritingQAV1(CopywritingQAV1Request request);
 
+    CompletableFuture<DeleteDigitalVideoResponse> deleteDigitalVideo(DeleteDigitalVideoRequest request);
+
     CompletableFuture<DirectDeductResourceResponse> directDeductResource(DirectDeductResourceRequest request);
 
     CompletableFuture<DirectDeductResourcesResponse> directDeductResources(DirectDeductResourcesRequest request);
