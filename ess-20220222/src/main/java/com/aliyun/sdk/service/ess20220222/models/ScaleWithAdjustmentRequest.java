@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ScaleWithAdjustmentRequest extends Request {
     @Query
+    @NameInMap("ActivityMetadata")
+    private String activityMetadata;
+
+    @Query
     @NameInMap("AdjustmentType")
     @Validation(required = true)
     private String adjustmentType;
@@ -25,6 +29,10 @@ public class ScaleWithAdjustmentRequest extends Request {
     @Query
     @NameInMap("ClientToken")
     private String clientToken;
+
+    @Query
+    @NameInMap("LifecycleHookContext")
+    private LifecycleHookContext lifecycleHookContext;
 
     @Query
     @NameInMap("MinAdjustmentMagnitude")
@@ -53,9 +61,11 @@ public class ScaleWithAdjustmentRequest extends Request {
 
     private ScaleWithAdjustmentRequest(Builder builder) {
         super(builder);
+        this.activityMetadata = builder.activityMetadata;
         this.adjustmentType = builder.adjustmentType;
         this.adjustmentValue = builder.adjustmentValue;
         this.clientToken = builder.clientToken;
+        this.lifecycleHookContext = builder.lifecycleHookContext;
         this.minAdjustmentMagnitude = builder.minAdjustmentMagnitude;
         this.overrides = builder.overrides;
         this.ownerId = builder.ownerId;
@@ -78,6 +88,13 @@ public class ScaleWithAdjustmentRequest extends Request {
     }
 
     /**
+     * @return activityMetadata
+     */
+    public String getActivityMetadata() {
+        return this.activityMetadata;
+    }
+
+    /**
      * @return adjustmentType
      */
     public String getAdjustmentType() {
@@ -96,6 +113,13 @@ public class ScaleWithAdjustmentRequest extends Request {
      */
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    /**
+     * @return lifecycleHookContext
+     */
+    public LifecycleHookContext getLifecycleHookContext() {
+        return this.lifecycleHookContext;
     }
 
     /**
@@ -141,9 +165,11 @@ public class ScaleWithAdjustmentRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ScaleWithAdjustmentRequest, Builder> {
+        private String activityMetadata; 
         private String adjustmentType; 
         private Integer adjustmentValue; 
         private String clientToken; 
+        private LifecycleHookContext lifecycleHookContext; 
         private Integer minAdjustmentMagnitude; 
         private Overrides overrides; 
         private Long ownerId; 
@@ -157,9 +183,11 @@ public class ScaleWithAdjustmentRequest extends Request {
 
         private Builder(ScaleWithAdjustmentRequest request) {
             super(request);
+            this.activityMetadata = request.activityMetadata;
             this.adjustmentType = request.adjustmentType;
             this.adjustmentValue = request.adjustmentValue;
             this.clientToken = request.clientToken;
+            this.lifecycleHookContext = request.lifecycleHookContext;
             this.minAdjustmentMagnitude = request.minAdjustmentMagnitude;
             this.overrides = request.overrides;
             this.ownerId = request.ownerId;
@@ -167,6 +195,15 @@ public class ScaleWithAdjustmentRequest extends Request {
             this.scalingGroupId = request.scalingGroupId;
             this.syncActivity = request.syncActivity;
         } 
+
+        /**
+         * ActivityMetadata.
+         */
+        public Builder activityMetadata(String activityMetadata) {
+            this.putQueryParameter("ActivityMetadata", activityMetadata);
+            this.activityMetadata = activityMetadata;
+            return this;
+        }
 
         /**
          * The type of the scaling policy. Valid values:
@@ -202,6 +239,16 @@ public class ScaleWithAdjustmentRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * LifecycleHookContext.
+         */
+        public Builder lifecycleHookContext(LifecycleHookContext lifecycleHookContext) {
+            String lifecycleHookContextShrink = shrink(lifecycleHookContext, "LifecycleHookContext", "json");
+            this.putQueryParameter("LifecycleHookContext", lifecycleHookContextShrink);
+            this.lifecycleHookContext = lifecycleHookContext;
             return this;
         }
 
@@ -275,6 +322,67 @@ public class ScaleWithAdjustmentRequest extends Request {
 
     } 
 
+    public static class LifecycleHookContext extends TeaModel {
+        @NameInMap("DisableLifecycleHook")
+        private Boolean disableLifecycleHook;
+
+        @NameInMap("IgnoredLifecycleHookIds")
+        private java.util.List < String > ignoredLifecycleHookIds;
+
+        private LifecycleHookContext(Builder builder) {
+            this.disableLifecycleHook = builder.disableLifecycleHook;
+            this.ignoredLifecycleHookIds = builder.ignoredLifecycleHookIds;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static LifecycleHookContext create() {
+            return builder().build();
+        }
+
+        /**
+         * @return disableLifecycleHook
+         */
+        public Boolean getDisableLifecycleHook() {
+            return this.disableLifecycleHook;
+        }
+
+        /**
+         * @return ignoredLifecycleHookIds
+         */
+        public java.util.List < String > getIgnoredLifecycleHookIds() {
+            return this.ignoredLifecycleHookIds;
+        }
+
+        public static final class Builder {
+            private Boolean disableLifecycleHook; 
+            private java.util.List < String > ignoredLifecycleHookIds; 
+
+            /**
+             * DisableLifecycleHook.
+             */
+            public Builder disableLifecycleHook(Boolean disableLifecycleHook) {
+                this.disableLifecycleHook = disableLifecycleHook;
+                return this;
+            }
+
+            /**
+             * IgnoredLifecycleHookIds.
+             */
+            public Builder ignoredLifecycleHookIds(java.util.List < String > ignoredLifecycleHookIds) {
+                this.ignoredLifecycleHookIds = ignoredLifecycleHookIds;
+                return this;
+            }
+
+            public LifecycleHookContext build() {
+                return new LifecycleHookContext(this);
+            } 
+
+        } 
+
+    }
     public static class EnvironmentVars extends TeaModel {
         @NameInMap("Key")
         private String key;

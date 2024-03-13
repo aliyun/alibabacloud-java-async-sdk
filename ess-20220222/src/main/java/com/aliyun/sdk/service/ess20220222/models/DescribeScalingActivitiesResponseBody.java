@@ -131,7 +131,71 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
 
     } 
 
+    public static class LifecycleHookContext extends TeaModel {
+        @NameInMap("DisableLifecycleHook")
+        private Boolean disableLifecycleHook;
+
+        @NameInMap("IgnoredLifecycleHookIds")
+        private java.util.List < String > ignoredLifecycleHookIds;
+
+        private LifecycleHookContext(Builder builder) {
+            this.disableLifecycleHook = builder.disableLifecycleHook;
+            this.ignoredLifecycleHookIds = builder.ignoredLifecycleHookIds;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static LifecycleHookContext create() {
+            return builder().build();
+        }
+
+        /**
+         * @return disableLifecycleHook
+         */
+        public Boolean getDisableLifecycleHook() {
+            return this.disableLifecycleHook;
+        }
+
+        /**
+         * @return ignoredLifecycleHookIds
+         */
+        public java.util.List < String > getIgnoredLifecycleHookIds() {
+            return this.ignoredLifecycleHookIds;
+        }
+
+        public static final class Builder {
+            private Boolean disableLifecycleHook; 
+            private java.util.List < String > ignoredLifecycleHookIds; 
+
+            /**
+             * DisableLifecycleHook.
+             */
+            public Builder disableLifecycleHook(Boolean disableLifecycleHook) {
+                this.disableLifecycleHook = disableLifecycleHook;
+                return this;
+            }
+
+            /**
+             * IgnoredLifecycleHookIds.
+             */
+            public Builder ignoredLifecycleHookIds(java.util.List < String > ignoredLifecycleHookIds) {
+                this.ignoredLifecycleHookIds = ignoredLifecycleHookIds;
+                return this;
+            }
+
+            public LifecycleHookContext build() {
+                return new LifecycleHookContext(this);
+            } 
+
+        } 
+
+    }
     public static class ScalingActivities extends TeaModel {
+        @NameInMap("ActivityMetadata")
+        private String activityMetadata;
+
         @NameInMap("AttachedCapacity")
         private String attachedCapacity;
 
@@ -167,6 +231,9 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
 
         @NameInMap("ErrorMessage")
         private String errorMessage;
+
+        @NameInMap("LifecycleHookContext")
+        private LifecycleHookContext lifecycleHookContext;
 
         @NameInMap("Progress")
         private Integer progress;
@@ -204,7 +271,14 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
         @NameInMap("TotalCapacity")
         private String totalCapacity;
 
+        @NameInMap("TriggerSourceId")
+        private String triggerSourceId;
+
+        @NameInMap("TriggerSourceType")
+        private String triggerSourceType;
+
         private ScalingActivities(Builder builder) {
+            this.activityMetadata = builder.activityMetadata;
             this.attachedCapacity = builder.attachedCapacity;
             this.autoCreatedCapacity = builder.autoCreatedCapacity;
             this.cause = builder.cause;
@@ -217,6 +291,7 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
             this.endTime = builder.endTime;
             this.errorCode = builder.errorCode;
             this.errorMessage = builder.errorMessage;
+            this.lifecycleHookContext = builder.lifecycleHookContext;
             this.progress = builder.progress;
             this.scalingActivityId = builder.scalingActivityId;
             this.scalingGroupId = builder.scalingGroupId;
@@ -229,6 +304,8 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
             this.stoppedCapacity = builder.stoppedCapacity;
             this.stoppedInstances = builder.stoppedInstances;
             this.totalCapacity = builder.totalCapacity;
+            this.triggerSourceId = builder.triggerSourceId;
+            this.triggerSourceType = builder.triggerSourceType;
         }
 
         public static Builder builder() {
@@ -237,6 +314,13 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
 
         public static ScalingActivities create() {
             return builder().build();
+        }
+
+        /**
+         * @return activityMetadata
+         */
+        public String getActivityMetadata() {
+            return this.activityMetadata;
         }
 
         /**
@@ -324,6 +408,13 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
         }
 
         /**
+         * @return lifecycleHookContext
+         */
+        public LifecycleHookContext getLifecycleHookContext() {
+            return this.lifecycleHookContext;
+        }
+
+        /**
          * @return progress
          */
         public Integer getProgress() {
@@ -407,7 +498,22 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
             return this.totalCapacity;
         }
 
+        /**
+         * @return triggerSourceId
+         */
+        public String getTriggerSourceId() {
+            return this.triggerSourceId;
+        }
+
+        /**
+         * @return triggerSourceType
+         */
+        public String getTriggerSourceType() {
+            return this.triggerSourceType;
+        }
+
         public static final class Builder {
+            private String activityMetadata; 
             private String attachedCapacity; 
             private String autoCreatedCapacity; 
             private String cause; 
@@ -420,6 +526,7 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
             private String endTime; 
             private String errorCode; 
             private String errorMessage; 
+            private LifecycleHookContext lifecycleHookContext; 
             private Integer progress; 
             private String scalingActivityId; 
             private String scalingGroupId; 
@@ -432,6 +539,16 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
             private Integer stoppedCapacity; 
             private java.util.List < String > stoppedInstances; 
             private String totalCapacity; 
+            private String triggerSourceId; 
+            private String triggerSourceType; 
+
+            /**
+             * ActivityMetadata.
+             */
+            public Builder activityMetadata(String activityMetadata) {
+                this.activityMetadata = activityMetadata;
+                return this;
+            }
 
             /**
              * The total number of instances that were manually added to the scaling group after the scaling activity was complete.
@@ -526,6 +643,14 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
+                return this;
+            }
+
+            /**
+             * LifecycleHookContext.
+             */
+            public Builder lifecycleHookContext(LifecycleHookContext lifecycleHookContext) {
+                this.lifecycleHookContext = lifecycleHookContext;
                 return this;
             }
 
@@ -632,6 +757,22 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
              */
             public Builder totalCapacity(String totalCapacity) {
                 this.totalCapacity = totalCapacity;
+                return this;
+            }
+
+            /**
+             * TriggerSourceId.
+             */
+            public Builder triggerSourceId(String triggerSourceId) {
+                this.triggerSourceId = triggerSourceId;
+                return this;
+            }
+
+            /**
+             * TriggerSourceType.
+             */
+            public Builder triggerSourceType(String triggerSourceType) {
+                this.triggerSourceType = triggerSourceType;
                 return this;
             }
 
