@@ -870,6 +870,9 @@ public class HotelOrderQueryResponseBody extends TeaModel {
         @NameInMap("itinerary_id")
         private String itineraryId;
 
+        @NameInMap("occupant_type")
+        private Integer occupantType;
+
         @NameInMap("project_code")
         private String projectCode;
 
@@ -903,6 +906,7 @@ public class HotelOrderQueryResponseBody extends TeaModel {
             this.costCenterName = builder.costCenterName;
             this.costCenterNumber = builder.costCenterNumber;
             this.itineraryId = builder.itineraryId;
+            this.occupantType = builder.occupantType;
             this.projectCode = builder.projectCode;
             this.projectId = builder.projectId;
             this.projectTitle = builder.projectTitle;
@@ -955,6 +959,13 @@ public class HotelOrderQueryResponseBody extends TeaModel {
          */
         public String getItineraryId() {
             return this.itineraryId;
+        }
+
+        /**
+         * @return occupantType
+         */
+        public Integer getOccupantType() {
+            return this.occupantType;
         }
 
         /**
@@ -1026,6 +1037,7 @@ public class HotelOrderQueryResponseBody extends TeaModel {
             private String costCenterName; 
             private String costCenterNumber; 
             private String itineraryId; 
+            private Integer occupantType; 
             private String projectCode; 
             private Long projectId; 
             private String projectTitle; 
@@ -1073,6 +1085,14 @@ public class HotelOrderQueryResponseBody extends TeaModel {
              */
             public Builder itineraryId(String itineraryId) {
                 this.itineraryId = itineraryId;
+                return this;
+            }
+
+            /**
+             * occupant_type.
+             */
+            public Builder occupantType(Integer occupantType) {
+                this.occupantType = occupantType;
                 return this;
             }
 
