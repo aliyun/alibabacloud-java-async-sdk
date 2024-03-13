@@ -145,7 +145,7 @@ public class DeleteAclRequest extends Request {
         } 
 
         /**
-         * The type of operation allowed by the ACL. Valid values:
+         * The operation type. Valid values:
          * <p>
          * 
          * *   **Write**

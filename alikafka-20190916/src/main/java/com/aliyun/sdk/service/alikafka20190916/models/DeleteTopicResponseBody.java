@@ -74,7 +74,7 @@ public class DeleteTopicResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.
+         * The HTTP status code. The status code 200 indicates that the request is successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -90,7 +90,7 @@ public class DeleteTopicResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

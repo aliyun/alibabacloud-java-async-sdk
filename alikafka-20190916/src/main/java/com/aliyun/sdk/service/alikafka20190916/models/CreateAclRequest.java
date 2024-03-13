@@ -145,13 +145,13 @@ public class CreateAclRequest extends Request {
         } 
 
         /**
-         * The type of operation allowed by the ACL. Valid values:
+         * The operation type. Valid values:
          * <p>
          * 
-         * *   **Write**: data writes.
-         * *   **Read**: data reads.
-         * *   **Describe**: reads of **transaction IDs**.
-         * *   **IdempotentWrite**: idempotent data writes to **clusters**.
+         * *   **Write**: data writes
+         * *   **Read**: data reads
+         * *   **Describe**: reads of transaction IDs****
+         * *   **IdempotentWrite**: idempotent data writes to clusters****
          */
         public Builder aclOperationType(String aclOperationType) {
             this.putQueryParameter("AclOperationType", aclOperationType);
@@ -189,9 +189,9 @@ public class CreateAclRequest extends Request {
          * The resource type. Valid values:
          * <p>
          * 
-         * *   **Topic**: topic
-         * *   **Group**: consumer group
-         * *   **Cluster**: cluster
+         * *   **Topic**
+         * *   **Group**
+         * *   **Cluster**
          * *   **TransactionalId**: transaction
          */
         public Builder aclResourceType(String aclResourceType) {

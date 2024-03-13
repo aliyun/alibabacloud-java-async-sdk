@@ -710,6 +710,12 @@ public class GetInstanceListResponseBody extends TeaModel {
         @NameInMap("RegionId")
         private String regionId;
 
+        @NameInMap("ReservedPublishCapacity")
+        private Integer reservedPublishCapacity;
+
+        @NameInMap("ReservedSubscribeCapacity")
+        private Integer reservedSubscribeCapacity;
+
         @NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
@@ -780,6 +786,8 @@ public class GetInstanceListResponseBody extends TeaModel {
             this.name = builder.name;
             this.paidType = builder.paidType;
             this.regionId = builder.regionId;
+            this.reservedPublishCapacity = builder.reservedPublishCapacity;
+            this.reservedSubscribeCapacity = builder.reservedSubscribeCapacity;
             this.resourceGroupId = builder.resourceGroupId;
             this.saslDomainEndpoint = builder.saslDomainEndpoint;
             this.securityGroup = builder.securityGroup;
@@ -934,6 +942,20 @@ public class GetInstanceListResponseBody extends TeaModel {
         }
 
         /**
+         * @return reservedPublishCapacity
+         */
+        public Integer getReservedPublishCapacity() {
+            return this.reservedPublishCapacity;
+        }
+
+        /**
+         * @return reservedSubscribeCapacity
+         */
+        public Integer getReservedSubscribeCapacity() {
+            return this.reservedSubscribeCapacity;
+        }
+
+        /**
          * @return resourceGroupId
          */
         public String getResourceGroupId() {
@@ -1071,6 +1093,8 @@ public class GetInstanceListResponseBody extends TeaModel {
             private String name; 
             private Integer paidType; 
             private String regionId; 
+            private Integer reservedPublishCapacity; 
+            private Integer reservedSubscribeCapacity; 
             private String resourceGroupId; 
             private String saslDomainEndpoint; 
             private String securityGroup; 
@@ -1250,6 +1274,22 @@ public class GetInstanceListResponseBody extends TeaModel {
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * ReservedPublishCapacity.
+             */
+            public Builder reservedPublishCapacity(Integer reservedPublishCapacity) {
+                this.reservedPublishCapacity = reservedPublishCapacity;
+                return this;
+            }
+
+            /**
+             * ReservedSubscribeCapacity.
+             */
+            public Builder reservedSubscribeCapacity(Integer reservedSubscribeCapacity) {
+                this.reservedSubscribeCapacity = reservedSubscribeCapacity;
                 return this;
             }
 

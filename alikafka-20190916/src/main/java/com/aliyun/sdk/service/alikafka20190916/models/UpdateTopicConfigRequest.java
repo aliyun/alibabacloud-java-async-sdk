@@ -115,7 +115,13 @@ public class UpdateTopicConfigRequest extends Request {
         } 
 
         /**
-         * Config.
+         * The key of the topic configuration.
+         * <p>
+         * 
+         * *   Valid values: retention.hours, max.message.bytes, and replications.
+         * *   retention.hours specifies the message retention period.
+         * *   max.message.bytes specifies the maximum size of a sent message.
+         * *   replications specifies the number of topic replicas.
          */
         public Builder config(String config) {
             this.putQueryParameter("Config", config);
@@ -124,7 +130,7 @@ public class UpdateTopicConfigRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -133,7 +139,7 @@ public class UpdateTopicConfigRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the instance resides.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -142,7 +148,7 @@ public class UpdateTopicConfigRequest extends Request {
         }
 
         /**
-         * Topic.
+         * The topic name.
          */
         public Builder topic(String topic) {
             this.putQueryParameter("Topic", topic);
@@ -151,7 +157,12 @@ public class UpdateTopicConfigRequest extends Request {
         }
 
         /**
-         * Value.
+         * The value of the topic configuration.
+         * <p>
+         * 
+         * *   retention.hours specifies the message retention period. The value is a string. Valid values: 24 to 8760.
+         * *   max.message.bytes specifies the maximum size of a sent message. The value is a string. Valid values: 1048576 to 10485760.
+         * *   replications specifies the number of topic replicas. The value is a string. Valid values: 1 to 3.
          */
         public Builder value(String value) {
             this.putQueryParameter("Value", value);

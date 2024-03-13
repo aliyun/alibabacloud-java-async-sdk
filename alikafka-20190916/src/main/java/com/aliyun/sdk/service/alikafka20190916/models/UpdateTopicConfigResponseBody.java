@@ -86,7 +86,7 @@ public class UpdateTopicConfigResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code. If the request is successful, 200 is returned.
          */
         public Builder code(Long code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class UpdateTopicConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The returned data.
          */
         public Builder data(String data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class UpdateTopicConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class UpdateTopicConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class UpdateTopicConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;

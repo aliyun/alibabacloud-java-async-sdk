@@ -198,10 +198,11 @@ public class UpdateConsumerOffsetRequest extends Request {
         }
 
         /**
-         * The point in time when message consumption starts. The value of this parameter is a UNIX timestamp. Unit: milliseconds. The value of this parameter must be **less than 0** or **within the retention period of the consumer offset**. This parameter takes effect only if you set resetType to timestamp.
+         * The point in time when message consumption starts. The value of this parameter is a UNIX timestamp in milliseconds. The value of this parameter must be **less than 0** or **within the retention period of the consumer offset**. This parameter takes effect only if you set resetType to timestamp.
          * <p>
          * 
-         * **If you want to reset the consumer offset to the latest offset, specify a value that is less than 0. Recommended value: -1.
+         * *   If you want to reset the consumer offset to the latest offset, set this parameter to -1.
+         * *   If you want to reset the consumer offset to the earliest offset, set this parameter to -2.
          */
         public Builder time(String time) {
             this.putQueryParameter("Time", time);

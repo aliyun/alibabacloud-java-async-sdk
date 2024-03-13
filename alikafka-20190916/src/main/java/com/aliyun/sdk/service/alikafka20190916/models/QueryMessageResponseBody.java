@@ -86,7 +86,7 @@ public class QueryMessageResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The returned HTTP status code. If the request is successful, 200 is returned.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class QueryMessageResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -102,7 +102,7 @@ public class QueryMessageResponseBody extends TeaModel {
         }
 
         /**
-         * MessageList.
+         * The messages.
          */
         public Builder messageList(java.util.List < MessageList> messageList) {
             this.messageList = messageList;
@@ -110,7 +110,7 @@ public class QueryMessageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class QueryMessageResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -314,7 +318,7 @@ public class QueryMessageResponseBody extends TeaModel {
             private Boolean valueTruncated; 
 
             /**
-             * Checksum.
+             * The check value of the chaincode.
              */
             public Builder checksum(Long checksum) {
                 this.checksum = checksum;
@@ -322,7 +326,7 @@ public class QueryMessageResponseBody extends TeaModel {
             }
 
             /**
-             * Key.
+             * The message key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -330,7 +334,7 @@ public class QueryMessageResponseBody extends TeaModel {
             }
 
             /**
-             * KeyTruncated.
+             * Indicates whether the key is truncated.
              */
             public Builder keyTruncated(Boolean keyTruncated) {
                 this.keyTruncated = keyTruncated;
@@ -338,7 +342,7 @@ public class QueryMessageResponseBody extends TeaModel {
             }
 
             /**
-             * Offset.
+             * The consumer offset of the partition.
              */
             public Builder offset(Long offset) {
                 this.offset = offset;
@@ -346,7 +350,7 @@ public class QueryMessageResponseBody extends TeaModel {
             }
 
             /**
-             * Partition.
+             * The partition ID.
              */
             public Builder partition(Long partition) {
                 this.partition = partition;
@@ -354,7 +358,7 @@ public class QueryMessageResponseBody extends TeaModel {
             }
 
             /**
-             * SerializedKeySize.
+             * The size of the key after serialization. Unit: bytes.
              */
             public Builder serializedKeySize(Integer serializedKeySize) {
                 this.serializedKeySize = serializedKeySize;
@@ -362,7 +366,7 @@ public class QueryMessageResponseBody extends TeaModel {
             }
 
             /**
-             * SerializedValueSize.
+             * The size of the value after serialization. Unit: bytes.
              */
             public Builder serializedValueSize(Integer serializedValueSize) {
                 this.serializedValueSize = serializedValueSize;
@@ -370,7 +374,7 @@ public class QueryMessageResponseBody extends TeaModel {
             }
 
             /**
-             * Timestamp.
+             * The time when the message was created. The value of this parameter is a UNIX timestamp in milliseconds.
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -378,7 +382,7 @@ public class QueryMessageResponseBody extends TeaModel {
             }
 
             /**
-             * TimestampType.
+             * The time type.
              */
             public Builder timestampType(String timestampType) {
                 this.timestampType = timestampType;
@@ -386,7 +390,7 @@ public class QueryMessageResponseBody extends TeaModel {
             }
 
             /**
-             * Topic.
+             * The topic name.
              */
             public Builder topic(String topic) {
                 this.topic = topic;
@@ -394,7 +398,10 @@ public class QueryMessageResponseBody extends TeaModel {
             }
 
             /**
-             * TruncatedKeySize.
+             * The truncated size of the message key. Unit: bytes.
+             * <p>
+             * 
+             * *   A message is truncated only if the message exceeds 10 MB in size.
              */
             public Builder truncatedKeySize(Integer truncatedKeySize) {
                 this.truncatedKeySize = truncatedKeySize;
@@ -402,7 +409,10 @@ public class QueryMessageResponseBody extends TeaModel {
             }
 
             /**
-             * TruncatedValueSize.
+             * The truncated size of the message value. Unit: bytes.
+             * <p>
+             * 
+             * *   A message is truncated only if the message exceeds 10 MB in size.
              */
             public Builder truncatedValueSize(Integer truncatedValueSize) {
                 this.truncatedValueSize = truncatedValueSize;
@@ -410,7 +420,7 @@ public class QueryMessageResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The message value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -418,7 +428,7 @@ public class QueryMessageResponseBody extends TeaModel {
             }
 
             /**
-             * ValueTruncated.
+             * Indicates whether the value is truncated.
              */
             public Builder valueTruncated(Boolean valueTruncated) {
                 this.valueTruncated = valueTruncated;

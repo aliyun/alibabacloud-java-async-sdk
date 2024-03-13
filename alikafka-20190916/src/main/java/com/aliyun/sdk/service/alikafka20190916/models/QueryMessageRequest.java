@@ -142,7 +142,7 @@ public class QueryMessageRequest extends Request {
         } 
 
         /**
-         * BeginTime.
+         * The beginning of the time range to query. The value of this parameter is a UNIX timestamp in milliseconds.
          */
         public Builder beginTime(Long beginTime) {
             this.putQueryParameter("BeginTime", beginTime);
@@ -151,7 +151,7 @@ public class QueryMessageRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -160,7 +160,7 @@ public class QueryMessageRequest extends Request {
         }
 
         /**
-         * Offset.
+         * The consumer offset of the partition.
          */
         public Builder offset(String offset) {
             this.putQueryParameter("Offset", offset);
@@ -169,7 +169,7 @@ public class QueryMessageRequest extends Request {
         }
 
         /**
-         * Partition.
+         * The partition ID.
          */
         public Builder partition(String partition) {
             this.putQueryParameter("Partition", partition);
@@ -178,7 +178,11 @@ public class QueryMessageRequest extends Request {
         }
 
         /**
-         * QueryType.
+         * The query type. Valid values:
+         * <p>
+         * 
+         * *   byOffset: queries messages by offset. If you select this value, you must configure Partition and Offset.
+         * *   byTimestamp: queries messages by time. If you select this value, you must configure BeginTime.
          */
         public Builder queryType(String queryType) {
             this.putQueryParameter("QueryType", queryType);
@@ -187,7 +191,7 @@ public class QueryMessageRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the resource resides.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -196,7 +200,7 @@ public class QueryMessageRequest extends Request {
         }
 
         /**
-         * Topic.
+         * The topic name.
          */
         public Builder topic(String topic) {
             this.putQueryParameter("Topic", topic);
