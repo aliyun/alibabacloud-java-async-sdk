@@ -17,6 +17,10 @@ public class ResetDesktopsRequest extends Request {
     private String desktopGroupId;
 
     @Query
+    @NameInMap("DesktopGroupIds")
+    private java.util.List < String > desktopGroupIds;
+
+    @Query
     @NameInMap("DesktopId")
     private java.util.List < String > desktopId;
 
@@ -34,6 +38,10 @@ public class ResetDesktopsRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ResetScope")
+    private String resetScope;
+
+    @Query
     @NameInMap("ResetType")
     @Validation(required = true)
     private String resetType;
@@ -41,10 +49,12 @@ public class ResetDesktopsRequest extends Request {
     private ResetDesktopsRequest(Builder builder) {
         super(builder);
         this.desktopGroupId = builder.desktopGroupId;
+        this.desktopGroupIds = builder.desktopGroupIds;
         this.desktopId = builder.desktopId;
         this.imageId = builder.imageId;
         this.payType = builder.payType;
         this.regionId = builder.regionId;
+        this.resetScope = builder.resetScope;
         this.resetType = builder.resetType;
     }
 
@@ -66,6 +76,13 @@ public class ResetDesktopsRequest extends Request {
      */
     public String getDesktopGroupId() {
         return this.desktopGroupId;
+    }
+
+    /**
+     * @return desktopGroupIds
+     */
+    public java.util.List < String > getDesktopGroupIds() {
+        return this.desktopGroupIds;
     }
 
     /**
@@ -97,6 +114,13 @@ public class ResetDesktopsRequest extends Request {
     }
 
     /**
+     * @return resetScope
+     */
+    public String getResetScope() {
+        return this.resetScope;
+    }
+
+    /**
      * @return resetType
      */
     public String getResetType() {
@@ -105,10 +129,12 @@ public class ResetDesktopsRequest extends Request {
 
     public static final class Builder extends Request.Builder<ResetDesktopsRequest, Builder> {
         private String desktopGroupId; 
+        private java.util.List < String > desktopGroupIds; 
         private java.util.List < String > desktopId; 
         private String imageId; 
         private String payType; 
         private String regionId; 
+        private String resetScope; 
         private String resetType; 
 
         private Builder() {
@@ -118,10 +144,12 @@ public class ResetDesktopsRequest extends Request {
         private Builder(ResetDesktopsRequest request) {
             super(request);
             this.desktopGroupId = request.desktopGroupId;
+            this.desktopGroupIds = request.desktopGroupIds;
             this.desktopId = request.desktopId;
             this.imageId = request.imageId;
             this.payType = request.payType;
             this.regionId = request.regionId;
+            this.resetScope = request.resetScope;
             this.resetType = request.resetType;
         } 
 
@@ -131,6 +159,15 @@ public class ResetDesktopsRequest extends Request {
         public Builder desktopGroupId(String desktopGroupId) {
             this.putQueryParameter("DesktopGroupId", desktopGroupId);
             this.desktopGroupId = desktopGroupId;
+            return this;
+        }
+
+        /**
+         * DesktopGroupIds.
+         */
+        public Builder desktopGroupIds(java.util.List < String > desktopGroupIds) {
+            this.putQueryParameter("DesktopGroupIds", desktopGroupIds);
+            this.desktopGroupIds = desktopGroupIds;
             return this;
         }
 
@@ -170,6 +207,15 @@ public class ResetDesktopsRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResetScope.
+         */
+        public Builder resetScope(String resetScope) {
+            this.putQueryParameter("ResetScope", resetScope);
+            this.resetScope = resetScope;
             return this;
         }
 
