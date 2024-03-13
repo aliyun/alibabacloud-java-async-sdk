@@ -112,6 +112,9 @@ public class AIGCFaceVerifyResponseBody extends TeaModel {
     } 
 
     public static class ResultObject extends TeaModel {
+        @NameInMap("CertifyId")
+        private String certifyId;
+
         @NameInMap("Result")
         private String result;
 
@@ -119,6 +122,7 @@ public class AIGCFaceVerifyResponseBody extends TeaModel {
         private String score;
 
         private ResultObject(Builder builder) {
+            this.certifyId = builder.certifyId;
             this.result = builder.result;
             this.score = builder.score;
         }
@@ -129,6 +133,13 @@ public class AIGCFaceVerifyResponseBody extends TeaModel {
 
         public static ResultObject create() {
             return builder().build();
+        }
+
+        /**
+         * @return certifyId
+         */
+        public String getCertifyId() {
+            return this.certifyId;
         }
 
         /**
@@ -146,8 +157,17 @@ public class AIGCFaceVerifyResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String certifyId; 
             private String result; 
             private String score; 
+
+            /**
+             * CertifyId.
+             */
+            public Builder certifyId(String certifyId) {
+                this.certifyId = certifyId;
+                return this;
+            }
 
             /**
              * Result.
