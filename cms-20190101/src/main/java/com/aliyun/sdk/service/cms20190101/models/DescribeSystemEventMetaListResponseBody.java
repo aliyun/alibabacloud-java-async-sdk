@@ -105,7 +105,7 @@ public class DescribeSystemEventMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;

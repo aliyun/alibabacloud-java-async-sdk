@@ -1345,6 +1345,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
       * ### [](#)Limits
       * Each API operation can be called up to 50 times per second. An Alibaba Cloud account and the RAM users within the account share the quota.
+      * >  If `Throttling.User` or `Request was denied due to user flow control` is returned when you call an API operation, the API operation is throttled. For more information about how to handle the issue, see [How do I handle the throttling of a query API?](~~2615031~~)
       * ### [](#)Precautions
       * The storage duration of the monitoring data of each cloud service is related to the `Period` parameter (statistical period). A larger value of the `Period` parameter indicates that the monitoring data is distributed in a larger time range and the storage duration of the monitoring data is longer. The following list describes the specific relationships:
       * *   If the value of the `Period` parameter is less than 60 seconds, the storage duration is seven days.
@@ -1913,7 +1914,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This topic provides an example on how to query the number of times that a system event occurred for Elastic Compute Service (`ECS`). The returned result indicates that the number of times that the specified system event occurred is 3.
+      * ### [](#)Background information
+      * You can call the [DescribeSystemEventMetaList](~~114972~~) operation to query the cloud services supported by CloudMonitor and their system events.
+      * ### [](#)Description
+      * This topic provides an example on how to query the number of times that a system event of `Elastic Compute Service (ECS)` has occurred. The returned result shows that the specified system event has occurred three times.
       *
      */
     @Override
@@ -2602,8 +2606,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Limit
+      * # [](#)Limits
       * This operation supports only Message Service (MNS) resources.
+      * # [](#)Usage notes
+      * This topic provides an example on how to associate a resource with an alert rule whose ID is `ae06917_75a8c43178ab66****`. In this example, the Alibaba Cloud Resource Name (ARN) of the resource is `acs:mns:cn-hangzhou:120886317861****:/queues/test/message` for an alert rule and the ID of the resource for which alerts are triggered is `1`. The response indicates that the resource is associated with the specified alert rule.
       *
      */
     @Override

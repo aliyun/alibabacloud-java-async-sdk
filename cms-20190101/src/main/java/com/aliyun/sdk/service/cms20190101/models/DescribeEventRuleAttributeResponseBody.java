@@ -259,7 +259,7 @@ public class DescribeEventRuleAttributeResponseBody extends TeaModel {
             private String relation; 
 
             /**
-             * 事件匹配的关键字列表。
+             * The keywords that are used to match events.
              */
             public Builder keywords(Keywords keywords) {
                 this.keywords = keywords;
@@ -267,11 +267,11 @@ public class DescribeEventRuleAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * 多个关键字的条件。取值：
+             * The relationship between multiple keywords in a condition. Valid values:
              * <p>
              * 
-             * - OR： 多个关键字之间或的关系。
-             * - NOT：不包含关键字。表示匹配非关键字列表中的所有事件。
+             * *   OR: The relationship between keywords is OR.
+             * *   NOT: The keyword is excluded. The value NOT indicates that all events that do not contain the keywords are matched.
              */
             public Builder relation(String relation) {
                 this.relation = relation;
@@ -515,7 +515,7 @@ public class DescribeEventRuleAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * 过滤关键词。
+             * The keyword for filtering.
              */
             public Builder keywordFilterObj(KeywordFilterObj keywordFilterObj) {
                 this.keywordFilterObj = keywordFilterObj;
@@ -547,7 +547,7 @@ public class DescribeEventRuleAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * 按照SQL过滤日志。如果符合条件，则触发报警。
+             * Indicates that logs are filtered based on the specified SQL statement. If the specified conditions are met, an alert is triggered.
              */
             public Builder SQLFilter(String SQLFilter) {
                 this.SQLFilter = SQLFilter;

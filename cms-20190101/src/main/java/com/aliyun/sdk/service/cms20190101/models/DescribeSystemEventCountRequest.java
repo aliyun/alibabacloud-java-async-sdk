@@ -166,7 +166,7 @@ public class DescribeSystemEventCountRequest extends Request {
         } 
 
         /**
-         * The timestamp that specifies the end of the time range to query. Unit: milliseconds.
+         * The end of the time range to query. Unit: milliseconds.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -224,7 +224,7 @@ public class DescribeSystemEventCountRequest extends Request {
         }
 
         /**
-         * The name of the cloud service in which the system event occurred.
+         * The name of the cloud service.
          * <p>
          * 
          * You can call the DescribeSystemEventMetaList operation to obtain the value of the response parameter `Product`. The value of the Product parameter indicates the names of all cloud services in which the system events of your Alibaba Cloud account occurred. For more information, see [DescribeSystemEventMetaList](~~114972~~).
@@ -236,7 +236,7 @@ public class DescribeSystemEventCountRequest extends Request {
         }
 
         /**
-         * The keywords that are used to search for the system event. You can use a logical operator to connect keywords. Valid values:
+         * The keywords that are used to search for the system event. Valid values:
          * <p>
          * 
          * *   If you want to search for the system event whose content contains a and b, set the value to `a and b`.
@@ -249,7 +249,7 @@ public class DescribeSystemEventCountRequest extends Request {
         }
 
         /**
-         * The timestamp that specifies the start of the time range to query. Unit: milliseconds.
+         * The beginning of the time range to query. Unit: milliseconds.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

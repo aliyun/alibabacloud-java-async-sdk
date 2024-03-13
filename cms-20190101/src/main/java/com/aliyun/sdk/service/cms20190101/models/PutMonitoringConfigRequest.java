@@ -68,11 +68,7 @@ public class PutMonitoringConfigRequest extends Request {
         } 
 
         /**
-         * Specifies whether to automatically install the CloudMonitor agent on existing Elastic Compute Service (ECS) instances. Valid values:
-         * <p>
-         * 
-         * *   true (default value)
-         * *   false
+         * This parameter is deprecated.
          */
         public Builder autoInstall(Boolean autoInstall) {
             this.putQueryParameter("AutoInstall", autoInstall);
@@ -84,8 +80,8 @@ public class PutMonitoringConfigRequest extends Request {
          * Specifies whether to automatically install the CloudMonitor agent on new ECS instances. Valid values:
          * <p>
          * 
-         * *   true (default value)
-         * *   false
+         * *   true (default): The CloudMonitor agent is automatically installed on new ECS instances.
+         * *   false: The CloudMonitor agent is not automatically installed on new ECS instances.
          */
         public Builder enableInstallAgentNewECS(Boolean enableInstallAgentNewECS) {
             this.putQueryParameter("EnableInstallAgentNewECS", enableInstallAgentNewECS);

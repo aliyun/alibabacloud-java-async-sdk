@@ -101,7 +101,7 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
          * The HTTP status code.
          * <p>
          * 
-         * >  The value 200 indicates that the call was successful.
+         * >  The status code 200 indicates that the request was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -109,7 +109,7 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +117,7 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -125,11 +125,11 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful. Valid values:
+         * Indicates whether the request was successful. Valid values:
          * <p>
          * 
-         * *   true: The call was successful.
-         * *   false: The call failed.
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -251,11 +251,11 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
              * The name of the metric. Valid values:
              * <p>
              * 
-             * *   HttpStatus: HTTP status code
-             * *   HttpLatency: HTTP response time
-             * *   TelnetStatus: Telnet status code
-             * *   TelnetLatency: Telnet response time
-             * *   PingLostRate: Ping packet loss rate
+             * *   HttpStatus
+             * *   HttpLatency
+             * *   TelnetStatus
+             * *   TelnetLatency
+             * *   PingLostRate
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -404,7 +404,16 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
             private String level; 
 
             /**
-             * Arn.
+             * The Alibaba Cloud Resource Name (ARN) of the resource.
+             * <p>
+             * 
+             * Format: `arn:acs:${Service}:${Region}:${Account}:${ResourceType}/${ResourceId}`. Fields:
+             * 
+             * *   Service: the service code
+             * *   Region: the region ID
+             * *   Account: the ID of the Alibaba Cloud account
+             * *   ResourceType: the resource type
+             * *   ResourceId: the resource ID
              */
             public Builder arn(String arn) {
                 this.arn = arn;
@@ -412,7 +421,7 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the resource.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -420,7 +429,7 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
             }
 
             /**
-             * JsonParams.
+             * The JSON-formatted parameters of the alert callback.
              */
             public Builder jsonParams(String jsonParams) {
                 this.jsonParams = jsonParams;
@@ -428,7 +437,12 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
             }
 
             /**
-             * Level.
+             * The alert level. Valid values:
+             * <p>
+             * 
+             * *   INFO
+             * *   WARN
+             * *   CRITICAL
              */
             public Builder level(String level) {
                 this.level = level;
@@ -635,7 +649,7 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
             }
 
             /**
-             * TargetList.
+             * The monitored resources.
              */
             public Builder targetList(TargetList targetList) {
                 this.targetList = targetList;
@@ -1106,7 +1120,7 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the availability monitoring task. Valid values:
+             * The task type. Valid values:
              * <p>
              * 
              * *   PING

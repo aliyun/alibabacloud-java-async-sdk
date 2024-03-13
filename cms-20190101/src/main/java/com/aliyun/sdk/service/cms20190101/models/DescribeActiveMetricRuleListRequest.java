@@ -55,20 +55,10 @@ public class DescribeActiveMetricRuleListRequest extends Request {
         } 
 
         /**
-         * The abbreviation of the service name. The following services support one-click alert:
+         * The abbreviation of the cloud service that supports initiative alert rules.
          * <p>
          * 
-         * *   ecs: Elastic Compute Service (ECS)
-         * *   rds: ApsaraDB for RDS
-         * *   slb: Server Load Balancer (SLB)
-         * *   redis_standard: ApsaraDB for Redis of the standard architecture
-         * *   redis_sharding: ApsaraDB for Redis of the cluster architecture
-         * *   redis_splitrw: ApsaraDB for Redis of the read/write splitting architecture
-         * *   mongodb: ApsaraDB for MongoDB of the replica set architecture
-         * *   mongodb_sharding: ApsaraDB for MongoDB of the sharded cluster architecture
-         * *   hbase: ApsaraDB for HBase
-         * *   elasticsearch: Elasticsearch
-         * *   opensearch: Open Search
+         * For more information about how to obtain the name of a cloud service, see [DescribeProductsOfActiveMetricRule](~~114930~~).
          */
         public Builder product(String product) {
             this.putQueryParameter("Product", product);

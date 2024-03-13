@@ -55,7 +55,7 @@ public class DescribeMonitorGroupDynamicRulesRequest extends Request {
         } 
 
         /**
-         * The ID of application group.
+         * The ID of the application group.
          */
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);

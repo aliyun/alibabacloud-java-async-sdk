@@ -631,7 +631,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             private Integer quotaUsed; 
 
             /**
-             * The total quota of alert text messages.
+             * The total quota of alert text messages. Unit: messages.
              */
             public Builder quotaLimit(Integer quotaLimit) {
                 this.quotaLimit = quotaLimit;
@@ -639,7 +639,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The quota of alert text messages in your resource plan.
+             * The quota of alert text messages in your resource plan. Unit: messages.
              */
             public Builder quotaPackage(Integer quotaPackage) {
                 this.quotaPackage = quotaPackage;
@@ -647,7 +647,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             }
 
             /**
-             * The used quota of alert text messages in your resource plan.
+             * The used quota of alert text messages in your resource plan. Unit: messages.
              */
             public Builder quotaUsed(Integer quotaUsed) {
                 this.quotaUsed = quotaUsed;

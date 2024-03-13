@@ -122,9 +122,8 @@ public class DescribeEventRuleListRequest extends Request {
          * Specifies whether to enable the event-triggered alert rule. Valid values:
          * <p>
          * 
-         * true (default)
-         * 
-         * false
+         * - true (default)
+         * - false
          */
         public Builder isEnable(Boolean isEnable) {
             this.putQueryParameter("IsEnable", isEnable);

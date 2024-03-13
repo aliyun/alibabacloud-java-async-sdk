@@ -86,10 +86,10 @@ public class DescribeMonitorGroupDynamicRulesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code.
+         * The responses code.
          * <p>
          * 
-         * >  The value 200 indicates that the call was successful.
+         * >  The status code 200 indicates that the request was successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -97,7 +97,7 @@ public class DescribeMonitorGroupDynamicRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -105,7 +105,7 @@ public class DescribeMonitorGroupDynamicRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -113,7 +113,7 @@ public class DescribeMonitorGroupDynamicRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The resources that is associated with the application group.
+         * The resources that are associated with the application group.
          */
         public Builder resource(Resource resource) {
             this.resource = resource;
@@ -121,7 +121,11 @@ public class DescribeMonitorGroupDynamicRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -188,9 +192,9 @@ public class DescribeMonitorGroupDynamicRulesResponseBody extends TeaModel {
              * The method that is used to filter the instances. Valid values:
              * <p>
              * 
-             * *   contains: includes a specified element
-             * *   startWith: specifies a prefix
-             * *   endWith: specifies a suffix
+             * *   contains: contains
+             * *   startWith: starts with a prefix
+             * *   endWith: ends with a suffix
              */
             public Builder function(String function) {
                 this.function = function;
@@ -198,7 +202,7 @@ public class DescribeMonitorGroupDynamicRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance.
+             * The instance name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -325,11 +329,11 @@ public class DescribeMonitorGroupDynamicRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The filtering condition. Valid values:
+             * The filter condition. Valid values:
              * <p>
              * 
-             * *   and: queries the instances that meet all alert rules
-             * *   or: queries the instances that meet any alert rule
+             * *   and: queries the instances that meet all alert rules.
+             * *   or: queries the instances that meet any alert rule.
              */
             public Builder filterRelation(String filterRelation) {
                 this.filterRelation = filterRelation;
@@ -378,7 +382,7 @@ public class DescribeMonitorGroupDynamicRulesResponseBody extends TeaModel {
             private java.util.List < ResourceResource> resource; 
 
             /**
-             * The resources that is associated with the application group.
+             * The resources that are associated with the application group.
              */
             public Builder resource(java.util.List < ResourceResource> resource) {
                 this.resource = resource;

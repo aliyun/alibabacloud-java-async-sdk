@@ -86,10 +86,10 @@ public class DescribeSystemEventCountResponseBody extends TeaModel {
         private SystemEventCounts systemEventCounts; 
 
         /**
-         * The HTTP status code.
+         * The HTTP status codes.
          * <p>
          * 
-         * >  The status code 200 indicates that the call was successful.
+         * >  The status code 200 indicates that the request was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -97,7 +97,10 @@ public class DescribeSystemEventCountResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
+         * <p>
+         * 
+         * If the request was successful, a success message is returned. If the request failed, an error message is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -105,7 +108,7 @@ public class DescribeSystemEventCountResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -113,11 +116,11 @@ public class DescribeSystemEventCountResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful. Valid values:
+         * Indicates whether the request was successful. Valid values:
          * <p>
          * 
-         * *   true: The call was successful.
-         * *   false: The call failed.
+         * *   true
+         * *   false
          */
         public Builder success(String success) {
             this.success = success;
@@ -330,7 +333,7 @@ public class DescribeSystemEventCountResponseBody extends TeaModel {
             }
 
             /**
-             * The number of times that the system event occurred.
+             * The number of times that the system event has occurred.
              */
             public Builder num(Long num) {
                 this.num = num;
@@ -346,7 +349,7 @@ public class DescribeSystemEventCountResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -354,7 +357,7 @@ public class DescribeSystemEventCountResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource.
+             * The resource ID.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -370,7 +373,7 @@ public class DescribeSystemEventCountResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the system event occurred. Unit: milliseconds.
+             * The time when the system event occurred. The value is a timestamp. Unit: milliseconds.
              */
             public Builder time(Long time) {
                 this.time = time;

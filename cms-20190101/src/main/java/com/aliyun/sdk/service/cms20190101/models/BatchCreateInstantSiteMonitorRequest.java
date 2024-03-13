@@ -55,7 +55,10 @@ public class BatchCreateInstantSiteMonitorRequest extends Request {
         } 
 
         /**
-         * TaskList.
+         * The site monitoring tasks.
+         * <p>
+         * 
+         * >  You must create at least one site monitoring task. You must specify all of the `Address`, `TaskName`, and `TaskType` parameters in each request.
          */
         public Builder taskList(java.util.List < TaskList> taskList) {
             this.putQueryParameter("TaskList", taskList);

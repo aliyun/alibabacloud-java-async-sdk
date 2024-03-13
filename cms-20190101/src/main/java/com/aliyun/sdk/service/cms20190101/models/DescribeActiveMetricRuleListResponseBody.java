@@ -98,7 +98,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The details of the alert rules.
+         * The details of the alert rules. The result is in the same structure as that returned by the DescribeMetricRuleList operation.
          */
         public Builder alertList(AlertList alertList) {
             this.alertList = alertList;
@@ -109,7 +109,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
          * The HTTP status code.
          * <p>
          * 
-         * >  The status code 200 indicates that the call was successful.
+         * >  The status code 200 indicates that the request was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -133,7 +133,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,11 +141,11 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful. Valid values:
+         * Indicates whether the request was successful. Valid values:
          * <p>
          * 
-         * *   true: The call was successful.
-         * *   false: The call failed.
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -221,7 +221,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             private String times; 
 
             /**
-             * The comparison operator of the threshold for critical-level alerts. Valid values:
+             * The operator that is used to compare the metric value with the threshold for Critical-level alerts. Valid values:
              * <p>
              * 
              * *   GreaterThanOrEqualToThreshold: greater than or equal to the threshold
@@ -242,7 +242,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The statistical aggregation method for critical-level alerts.
+             * The statistical methods for Critical-level alerts.
              */
             public Builder statistics(String statistics) {
                 this.statistics = statistics;
@@ -250,7 +250,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The threshold for critical-level alerts.
+             * The threshold for Critical-level alerts.
              */
             public Builder threshold(String threshold) {
                 this.threshold = threshold;
@@ -335,7 +335,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             private String times; 
 
             /**
-             * The comparison operator of the threshold for info-level alerts. Valid values:
+             * The operator that is used to compare the metric value with the threshold for Info-level alerts. Valid values:
              * <p>
              * 
              * *   GreaterThanOrEqualToThreshold: greater than or equal to the threshold
@@ -356,7 +356,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The statistical aggregation method for info-level alerts.
+             * The statistical methods for Info-level alerts.
              */
             public Builder statistics(String statistics) {
                 this.statistics = statistics;
@@ -364,7 +364,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The threshold for info-level alerts.
+             * The threshold for Info-level alerts.
              */
             public Builder threshold(String threshold) {
                 this.threshold = threshold;
@@ -372,7 +372,10 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The consecutive number of times for which the metric value meets the alert condition before an info-level alert is triggered.
+             * The consecutive number of times
+             * <p>
+             * 
+             * for which the metric value meets the alert condition before an Info-level alert is triggered.
              */
             public Builder times(String times) {
                 this.times = times;
@@ -449,7 +452,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             private String times; 
 
             /**
-             * The comparison operator of the threshold for critical-level alerts. Valid values:
+             * The operator that is used to compare the metric value with the threshold for Warn-level alerts. Valid values:
              * <p>
              * 
              * *   GreaterThanOrEqualToThreshold: greater than or equal to the threshold
@@ -470,7 +473,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The statistical aggregation method for warn-level alerts.
+             * The statistical methods for Warn-level alerts.
              */
             public Builder statistics(String statistics) {
                 this.statistics = statistics;
@@ -478,7 +481,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The threshold of warn-level alerts.
+             * The threshold for Warn-level alerts.
              */
             public Builder threshold(String threshold) {
                 this.threshold = threshold;
@@ -486,7 +489,10 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The consecutive number of times for which the metric value meets the alert condition before a warn-level alert is triggered.
+             * The consecutive number of times
+             * <p>
+             * 
+             * for which the metric value meets the alert condition before a Warn-level alert is triggered.
              */
             public Builder times(String times) {
                 this.times = times;
@@ -551,7 +557,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             private Warn warn; 
 
             /**
-             * The condition for triggering critical-level alerts.
+             * The trigger condition for Critical-level alerts.
              */
             public Builder critical(Critical critical) {
                 this.critical = critical;
@@ -559,7 +565,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The condition for triggering info-level alerts.
+             * The conditions for triggering Info-level alerts.
              */
             public Builder info(Info info) {
                 this.info = info;
@@ -567,7 +573,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The condition for triggering warn-level alerts.
+             * The conditions for triggering Warn-level alerts.
              */
             public Builder warn(Warn warn) {
                 this.warn = warn;
@@ -791,9 +797,9 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
              * The status of the alert rule. Valid values:
              * <p>
              * 
-             * *   OK: The alert rule has no active alert.
-             * *   ALARM: The alert rule has at least one active alert.
-             * *   INSUFFICIENT_DATA: The alert rule has no data.
+             * *   OK: The alert rule has no active alerts.
+             * *   ALARM: The alert rule has active alerts.
+             * *   INSUFFICIENT_DATA: No data is found.
              */
             public Builder alertState(String alertState) {
                 this.alertState = alertState;
@@ -801,7 +807,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The alert group that receives alert notifications.
+             * The alert contact group.
              */
             public Builder contactGroups(String contactGroups) {
                 this.contactGroups = contactGroups;
@@ -809,16 +815,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The dimensions that specify the resources for which you want to query monitoring data.
-             * <p>
-             * 
-             * The value is a collection of key-value pairs. A typical key-value pair is `instanceId:XXXXXX`.
-             * 
-             * The key and value must be 1 to 64 bytes in length, respectively. Excessive bytes are truncated from the string.
-             * 
-             * The key and value can contain letters, digits, periods (.), hyphens (-), underscores (\_), forward slashes (/), and backslashes (\\).
-             * 
-             * >  Dimensions must be organized in a JSON string and follow the required order.
+             * The monitoring data of the specified resource.
              */
             public Builder dimensions(String dimensions) {
                 this.dimensions = dimensions;
@@ -854,7 +851,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * MailSubject.
+             * The subject of the alert notification email.
              */
             public Builder mailSubject(String mailSubject) {
                 this.mailSubject = mailSubject;
@@ -870,7 +867,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace of the service. For more information, see [Appendix 1: Metrics](~~163515~~).
+             * The namespace of the Alibaba Cloud service.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -886,7 +883,10 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The aggregation period of the monitoring data. Unit: seconds. The default value is the minimum aggregation period, indicating that the metric is polled at the highest frequency. Typically, you do not need to specify the minimum aggregation period.
+             * The aggregation period of monitoring data.
+             * <p>
+             * 
+             * Unit: seconds.
              */
             public Builder period(String period) {
                 this.period = period;
@@ -894,7 +894,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The resources that are associated with the alert rule. A one-click alert rule is associated with all resources. The return value is fixed.
+             * The resources that are associated with the alert rule.
              */
             public Builder resources(String resources) {
                 this.resources = resources;
@@ -918,7 +918,10 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The mute period during which new alerts are not sent even if the trigger conditions are met. Unit: seconds. Default value: 86400.
+             * The mute period during which new alerts are not sent even if the trigger conditions are met.
+             * <p>
+             * 
+             * Unit: seconds.
              */
             public Builder silenceTime(String silenceTime) {
                 this.silenceTime = silenceTime;
@@ -1204,7 +1207,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The alert group that receives alert notifications.
+             * The alert contact group.
              */
             public Builder contactGroups(String contactGroups) {
                 this.contactGroups = contactGroups;
@@ -1224,7 +1227,10 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The beginning of the time period during which the alert rule is effective. Unit: hours. For example, the value 23 indicates `23:59:59`.
+             * The end of the time period during which the alert rule is effective.
+             * <p>
+             * 
+             * Unit: hours. For example, the value 23 indicates `23:59:59`.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -1240,7 +1246,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * The metric name.
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -1248,7 +1254,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace of the service. For more information, see [Appendix 1: Metrics](~~163515~~).
+             * The namespace of the cloud service.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -1256,7 +1262,10 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The aggregation period of the monitoring data. Unit: seconds. The default value is the minimum aggregation period, indicating that the metric is polled at the highest frequency. Typically, you do not need to specify the minimum aggregation period.
+             * The aggregation period of monitoring data.
+             * <p>
+             * 
+             * Unit: seconds.
              */
             public Builder period(String period) {
                 this.period = period;
@@ -1280,7 +1289,10 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The mute period during which new alerts are not sent even if the trigger conditions are met. Unit: seconds. Default value: 86400.
+             * The mute period during which new alerts are not sent even if the trigger conditions are met.
+             * <p>
+             * 
+             * Unit: seconds.
              */
             public Builder silenceTime(String silenceTime) {
                 this.silenceTime = silenceTime;
@@ -1288,7 +1300,10 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The end of the time period during which the alert rule is effective. Unit: hours. For example, the value 00 indicates `00:00:00`.
+             * The beginning of the time period during which the alert rule is effective.
+             * <p>
+             * 
+             * Unit: hours. For example, the value 00 indicates `00:00:00`.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -1304,7 +1319,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The statistical aggregation method.
+             * The statistical method.
              */
             public Builder statistics(String statistics) {
                 this.statistics = statistics;
@@ -1312,7 +1327,7 @@ public class DescribeActiveMetricRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The threshold of the metric value.
+             * The alert threshold.
              */
             public Builder threshold(String threshold) {
                 this.threshold = threshold;

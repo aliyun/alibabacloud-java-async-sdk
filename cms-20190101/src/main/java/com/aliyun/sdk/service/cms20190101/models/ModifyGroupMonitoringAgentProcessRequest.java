@@ -99,7 +99,7 @@ public class ModifyGroupMonitoringAgentProcessRequest extends Request {
         } 
 
         /**
-         * AlertConfig.
+         * The alert rule configurations.
          */
         public Builder alertConfig(java.util.List < AlertConfig> alertConfig) {
             this.putQueryParameter("AlertConfig", alertConfig);
@@ -216,10 +216,15 @@ public class ModifyGroupMonitoringAgentProcessRequest extends Request {
              * 
              * Format: `acs:{Service name abbreviation}:{regionId}:{userId}:/{Resource type}/{Resource name}/message`. Example: `acs:mns:cn-hangzhou:120886317861****:/queues/test123/message`. Fields:
              * 
-             * *   {Service name abbreviation}: the abbreviation of the service name. Valid value: mns.
-             * *   {userId}: the ID of the Alibaba Cloud account.
-             * *   {regionId}: the region ID of the message queue or topic.
-             * *   {Resource type}`: the type of the resource for which alerts are triggered. Valid values: - **queues** - **topics** {Resource name}: the name of the resource. - If the resource type is set to **queues**, the resource name is the name of the message queue. - If the resource type is set to **topics**, the resource name is the name of the topic.`
+             * - {Service name abbreviation}: the abbreviation of the service name. Valid value: mns.
+             * - {userId}: the ID of the Alibaba Cloud account.
+             * - {regionId}: the region ID of the message queue or topic.
+             * - {Resource type}: the type of the resource for which alerts are triggered. Valid values: 
+             *     - **queues** 
+             *     - **topics** 
+             * - {Resourcename}: the name of the resource. 
+             *   - If the resource type is set to **queues**, the resource name is the name of the message queue. 
+             *   - If the resource type is set to **topics**, the resource name is the name of the topic.`
              */
             public Builder arn(String arn) {
                 this.arn = arn;
@@ -478,7 +483,7 @@ public class ModifyGroupMonitoringAgentProcessRequest extends Request {
             }
 
             /**
-             * TargetList.
+             * The alert trigger.
              */
             public Builder targetList(java.util.List < TargetList> targetList) {
                 this.targetList = targetList;

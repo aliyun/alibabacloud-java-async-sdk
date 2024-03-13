@@ -297,7 +297,7 @@ public class DescribeSystemEventAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The event ID.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -313,7 +313,7 @@ public class DescribeSystemEventAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The severity level of the alert. Valid values:
+             * The level of the event. Valid values:
              * <p>
              * 
              * *   CRITICAL

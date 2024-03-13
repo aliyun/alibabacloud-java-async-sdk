@@ -228,7 +228,7 @@ public class PutLogMonitorRequest extends Request {
         } 
 
         /**
-         * Aggregates.
+         * The aggregation logic.
          */
         public Builder aggregates(java.util.List < Aggregates> aggregates) {
             this.putQueryParameter("Aggregates", aggregates);

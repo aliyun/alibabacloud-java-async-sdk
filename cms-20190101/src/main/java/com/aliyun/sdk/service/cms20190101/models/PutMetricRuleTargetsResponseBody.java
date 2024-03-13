@@ -89,7 +89,7 @@ public class PutMetricRuleTargetsResponseBody extends TeaModel {
          * The HTTP status code.
          * <p>
          * 
-         * >  The status code 200 indicates that the call was successful.
+         * >  The status code 200 indicates that the request was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -105,7 +105,7 @@ public class PutMetricRuleTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * The error message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -113,7 +113,7 @@ public class PutMetricRuleTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,11 +121,11 @@ public class PutMetricRuleTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful. Valid values:
+         * Indicates whether the request was successful. Valid values:
          * <p>
          * 
-         * *   true: The call was successful.
-         * *   false: The call failed.
+         * *   true: The request was successful.
+         * *   false: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -195,9 +195,20 @@ public class PutMetricRuleTargetsResponseBody extends TeaModel {
              * Format: `acs:{Service name abbreviation}:{regionId}:{userId}:/{Resource type}/{Resource name}/message`. Example: `acs:mns:cn-hangzhou:120886317861****:/queues/test123/message`. Fields:
              * 
              * *   {Service name abbreviation}: the abbreviation of the service name. Valid value: mns.
+             * 
              * *   {userId}: the ID of the Alibaba Cloud account.
+             * 
              * *   {regionId}: the region ID of the message queue or topic.
-             * *   {Resource type}`: the type of the resource for which alerts are triggered. Valid values: - **queues** - **topics** {Resource name}: the name of the resource. - If the resource type is set to **queues**, the resource name is the name of the message queue. - If the resource type is set to **topics**, the resource name is the name of the topic.`
+             * 
+             * *   {Resource type}: the type of the resource that triggers the alert. Valid values:
+             * 
+             *     *   **queues**
+             *     *   **topics**
+             * 
+             * *   {Resource name}: the resource name.
+             * 
+             *     *   If the resource type is **queues**, the resource name is the queue name.
+             *     *   If the resource type is **topics**, the resource name is the topic name.
              */
             public Builder arn(String arn) {
                 this.arn = arn;
@@ -213,12 +224,12 @@ public class PutMetricRuleTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * The level of the alert. Valid values:
+             * The alert level. Valid values:
              * <p>
              * 
-             * *   INFO: information
-             * *   WARN: warning
-             * *   CRITICAL: critical
+             * *   INFO
+             * *   WARN
+             * *   CRITICAL
              */
             public Builder level(String level) {
                 this.level = level;

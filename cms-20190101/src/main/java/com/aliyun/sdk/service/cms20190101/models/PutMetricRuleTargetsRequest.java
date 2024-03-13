@@ -82,7 +82,7 @@ public class PutMetricRuleTargetsRequest extends Request {
         }
 
         /**
-         * Targets.
+         * None.
          */
         public Builder targets(java.util.List < Targets> targets) {
             this.putQueryParameter("Targets", targets);
@@ -162,7 +162,7 @@ public class PutMetricRuleTargetsRequest extends Request {
             private String level; 
 
             /**
-             * The ARN of the resource.
+             * The Alibaba Cloud Resource Name (ARN) of the resource.
              * <p>
              * 
              * For information about how to obtain the ARN of a resource, see [DescribeMetricRuleTargets](~~121592~~).
@@ -170,9 +170,20 @@ public class PutMetricRuleTargetsRequest extends Request {
              * Format: `acs:{Service name abbreviation}:{regionId}:{userId}:/{Resource type}/{Resource name}/message`. Example: `acs:mns:cn-hangzhou:120886317861****:/queues/test123/message`. Fields:
              * 
              * *   {Service name abbreviation}: the abbreviation of the service name. Valid value: mns.
+             * 
              * *   {userId}: the ID of the Alibaba Cloud account.
+             * 
              * *   {regionId}: the region ID of the message queue or topic.
-             * *   {Resource type}`: the type of the resource for which alerts are triggered. Valid values: - **queues** - **topics** {Resource name}: the name of the resource. - If the resource type is set to **queues**, the resource name is the name of the message queue. - If the resource type is set to **topics**, the resource name is the name of the topic.`
+             * 
+             * *   {Resource type}: the type of the resource that triggers the alert. Valid values:
+             * 
+             *     *   **queues**
+             *     *   **topics**
+             * 
+             * *   {Resource name}: the resource name.
+             * 
+             *     *   If the resource type is **queues**, the resource name is the queue name.
+             *     *   If the resource type is **topics**, the resource name is the topic name.
              */
             public Builder arn(String arn) {
                 this.arn = arn;
@@ -191,7 +202,7 @@ public class PutMetricRuleTargetsRequest extends Request {
             }
 
             /**
-             * The parameters of the alert callback. The parameters are in the JSON format.
+             * The parameters of the alert callback. Specify the parameters in the JSON format.
              */
             public Builder jsonParams(String jsonParams) {
                 this.jsonParams = jsonParams;
@@ -199,12 +210,12 @@ public class PutMetricRuleTargetsRequest extends Request {
             }
 
             /**
-             * The level of the alert. Valid values:
+             * The alert level. Valid values:
              * <p>
              * 
-             * *   INFO: information
-             * *   WARN: warning
-             * *   CRITICAL: critical
+             * *   INFO
+             * *   WARN
+             * *   CRITICAL
              */
             public Builder level(String level) {
                 this.level = level;

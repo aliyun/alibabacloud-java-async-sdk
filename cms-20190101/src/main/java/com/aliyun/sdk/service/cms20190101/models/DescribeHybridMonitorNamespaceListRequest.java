@@ -110,7 +110,7 @@ public class DescribeHybridMonitorNamespaceListRequest extends Request {
         } 
 
         /**
-         * The keyword that is used to search for namespaces.
+         * The search keyword.
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -122,7 +122,7 @@ public class DescribeHybridMonitorNamespaceListRequest extends Request {
          * The name of the namespace.
          * <p>
          * 
-         * The name can contain uppercase letters, lowercase letters, digits, and hyphens (-).
+         * The name can contain letters, digits, and hyphens (-).
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -131,10 +131,10 @@ public class DescribeHybridMonitorNamespaceListRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * The page number.
          * <p>
          * 
-         * Pages start from page 1. Default value: 1.
+         * Page numbers start from 1. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -143,10 +143,10 @@ public class DescribeHybridMonitorNamespaceListRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The number of entries per page.
          * <p>
          * 
-         * A minimum of 1 entry can be returned on each page. Default value: 10.
+         * Page numbers start from 1. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -159,7 +159,7 @@ public class DescribeHybridMonitorNamespaceListRequest extends Request {
          * <p>
          * 
          * *   true
-         * *   false (default value)
+         * *   false (default)
          */
         public Builder showTaskStatistic(Boolean showTaskStatistic) {
             this.putQueryParameter("ShowTaskStatistic", showTaskStatistic);

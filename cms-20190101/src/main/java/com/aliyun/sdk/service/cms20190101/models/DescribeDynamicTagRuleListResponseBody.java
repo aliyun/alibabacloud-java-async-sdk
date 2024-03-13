@@ -372,6 +372,47 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
         } 
 
     }
+    public static class TagValueBlacklist extends TeaModel {
+        @NameInMap("TagValueBlacklist")
+        private java.util.List < String > tagValueBlacklist;
+
+        private TagValueBlacklist(Builder builder) {
+            this.tagValueBlacklist = builder.tagValueBlacklist;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TagValueBlacklist create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagValueBlacklist
+         */
+        public java.util.List < String > getTagValueBlacklist() {
+            return this.tagValueBlacklist;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > tagValueBlacklist; 
+
+            /**
+             * TagValueBlacklist.
+             */
+            public Builder tagValueBlacklist(java.util.List < String > tagValueBlacklist) {
+                this.tagValueBlacklist = tagValueBlacklist;
+                return this;
+            }
+
+            public TagValueBlacklist build() {
+                return new TagValueBlacklist(this);
+            } 
+
+        } 
+
+    }
     public static class TemplateIdList extends TeaModel {
         @NameInMap("TemplateIdList")
         private java.util.List < String > templateIdList;
@@ -435,6 +476,9 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
         @NameInMap("TagKey")
         private String tagKey;
 
+        @NameInMap("TagValueBlacklist")
+        private TagValueBlacklist tagValueBlacklist;
+
         @NameInMap("TemplateIdList")
         private TemplateIdList templateIdList;
 
@@ -446,6 +490,7 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
             this.regionId = builder.regionId;
             this.status = builder.status;
             this.tagKey = builder.tagKey;
+            this.tagValueBlacklist = builder.tagValueBlacklist;
             this.templateIdList = builder.templateIdList;
         }
 
@@ -507,6 +552,13 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
         }
 
         /**
+         * @return tagValueBlacklist
+         */
+        public TagValueBlacklist getTagValueBlacklist() {
+            return this.tagValueBlacklist;
+        }
+
+        /**
          * @return templateIdList
          */
         public TemplateIdList getTemplateIdList() {
@@ -521,6 +573,7 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
             private String regionId; 
             private String status; 
             private String tagKey; 
+            private TagValueBlacklist tagValueBlacklist; 
             private TemplateIdList templateIdList; 
 
             /**
@@ -586,6 +639,14 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * TagValueBlacklist.
+             */
+            public Builder tagValueBlacklist(TagValueBlacklist tagValueBlacklist) {
+                this.tagValueBlacklist = tagValueBlacklist;
                 return this;
             }
 

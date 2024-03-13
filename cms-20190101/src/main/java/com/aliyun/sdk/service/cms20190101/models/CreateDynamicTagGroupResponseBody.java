@@ -86,10 +86,10 @@ public class CreateDynamicTagGroupResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code.
+         * The HTTP status code.
          * <p>
          * 
-         * > The status code 200 indicates that the request was successful.
+         * >  The status code 200 indicates that the call is successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -113,7 +113,7 @@ public class CreateDynamicTagGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,11 +121,11 @@ public class CreateDynamicTagGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
+         * Indicates whether the call is successful. Valid values:
          * <p>
          * 
-         * *   true
-         * *   false
+         * *   true: The call is successful.
+         * *   false: The call fails.
          */
         public Builder success(Boolean success) {
             this.success = success;

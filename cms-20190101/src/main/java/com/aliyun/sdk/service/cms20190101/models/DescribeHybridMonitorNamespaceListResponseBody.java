@@ -122,7 +122,7 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
         private Integer total; 
 
         /**
-         * The returned message.
+         * The response code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -138,7 +138,7 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -146,7 +146,7 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -154,7 +154,7 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -162,7 +162,7 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,11 +170,11 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful. Valid values:
+         * Indicates whether the request was successful. Valid values:
          * <p>
          * 
-         * *   true: The call was successful.
-         * *   false: The call failed.
+         * *   true
+         * *   false
          */
         public Builder success(String success) {
             this.success = success;
@@ -182,7 +182,7 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * The total number of entries returned.
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -242,7 +242,7 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
             }
 
             /**
-             * The interval at which metrics are collected.
+             * The collection period of the metric.
              * <p>
              * 
              * Unit: seconds.
@@ -298,7 +298,7 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
             private String namespace; 
 
             /**
-             * The list of metrics for the Alibaba Cloud service.
+             * The metrics for the Alibaba Cloud service.
              */
             public Builder metricList(java.util.List < MetricList> metricList) {
                 this.metricList = metricList;
@@ -371,7 +371,7 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
             private String YAMLConfig; 
 
             /**
-             * The list of namespaces.
+             * The namespaces.
              */
             public Builder namespaceList(java.util.List < NamespaceList> namespaceList) {
                 this.namespaceList = namespaceList;
@@ -387,7 +387,12 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
             }
 
             /**
-             * YAMLConfig.
+             * The configuration file of the Alibaba Cloud service that you want to monitor by using Hybrid Cloud Monitoring.
+             * <p>
+             * 
+             * *   namespace: the namespace of the Alibaba Cloud service.
+             * *   metric_list: the metrics of the Alibaba Cloud service.
+             * *   dimension: the resources of the Alibaba Cloud service that you want to monitor by using Hybrid Cloud Monitoring. If you do not specify a dimension, all resources of the Alibaba Cloud service are monitored.
              */
             public Builder YAMLConfig(String YAMLConfig) {
                 this.YAMLConfig = YAMLConfig;
@@ -452,7 +457,10 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
             private String spec; 
 
             /**
-             * NamespaceRegion.
+             * The region where the metric data is stored.
+             * <p>
+             * 
+             * >  This parameter is returned if you select `m_prom_user` for `NamespaceType` when you create a namespace.
              */
             public Builder namespaceRegion(String namespaceRegion) {
                 this.namespaceRegion = namespaceRegion;
@@ -460,7 +468,10 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
             }
 
             /**
-             * SLSProject.
+             * The project where the metric data is located.
+             * <p>
+             * 
+             * >  This parameter is returned if you select `m_prom_user` for `NamespaceType` when you create a namespace.
              */
             public Builder SLSProject(String SLSProject) {
                 this.SLSProject = SLSProject;
@@ -471,12 +482,12 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
              * The data retention period. Valid values:
              * <p>
              * 
-             * *   cms.s1.large: Data is stored for 15 days.
-             * *   cms.s1.xlarge: Data is stored for 32 days.
-             * *   cms.s1.2xlarge: Data is stored for 63 days.
-             * *   cms.s1.3xlarge: Data is stored for 93 days.
-             * *   cms.s1.6xlarge: Data is stored for 185 days.
-             * *   cms.s1.12xlarge: Data is stored for 376 days.
+             * *   cms.s1.large (Retention Period 15 Days)
+             * *   cms.s1.xlarge (Retention Period 32 Days)
+             * *   cms.s1.2xlarge (Retention Period 63 Days)
+             * *   cms.s1.3xlarge (Retention Period 93 Days)
+             * *   cms.s1.6xlarge (Retention Period 185 Days)
+             * *   cms.s1.12xlarge (Retention Period 367 Days)
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -696,7 +707,11 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
             }
 
             /**
-             * NamespaceType.
+             * The storage scheme of metric data. Valid values:
+             * <p>
+             * 
+             * *   m_prom_user: The metric data is stored in Simple Log Service.
+             * *   m_prom_pool: The metric data is stored in the storage space provided by CloudMonitor.
              */
             public Builder namespaceType(String namespaceType) {
                 this.namespaceType = namespaceType;

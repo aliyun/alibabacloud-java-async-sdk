@@ -144,10 +144,10 @@ public class CreateHybridMonitorNamespaceRequest extends Request {
          * The storage scheme of metric data. Valid values:
          * <p>
          * 
-         * *   m_prom_pool: The metric data is stored in Simple Log Service.
-         * *   m_prometheus: The metric data is stored in the storage space provided by CloudMonitor.
+         * *   m_prom_user: The metric data is stored in Simple Log Service.
+         * *   m_prom_pool: The metric data is stored in the private storage space provided by CloudMonitor.
          * 
-         * >  For more information about the storage schemes of metric data, see [Storage schemes of metric data in Hybrid Cloud Monitoring](~~2594921~~).
+         * >  For more information about the storage schemes of metric data, see [Data storage schemes for Hybrid Cloud Monitoring](~~2594921~~).
          */
         public Builder namespaceType(String namespaceType) {
             this.putQueryParameter("NamespaceType", namespaceType);

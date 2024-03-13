@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ApplyMetricRuleTemplateRequest extends Request {
     @Query
+    @NameInMap("AppendMode")
+    private String appendMode;
+
+    @Query
     @NameInMap("ApplyMode")
     private String applyMode;
 
@@ -48,6 +52,7 @@ public class ApplyMetricRuleTemplateRequest extends Request {
 
     private ApplyMetricRuleTemplateRequest(Builder builder) {
         super(builder);
+        this.appendMode = builder.appendMode;
         this.applyMode = builder.applyMode;
         this.enableEndTime = builder.enableEndTime;
         this.enableStartTime = builder.enableStartTime;
@@ -69,6 +74,13 @@ public class ApplyMetricRuleTemplateRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return appendMode
+     */
+    public String getAppendMode() {
+        return this.appendMode;
     }
 
     /**
@@ -128,6 +140,7 @@ public class ApplyMetricRuleTemplateRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ApplyMetricRuleTemplateRequest, Builder> {
+        private String appendMode; 
         private String applyMode; 
         private Long enableEndTime; 
         private Long enableStartTime; 
@@ -143,6 +156,7 @@ public class ApplyMetricRuleTemplateRequest extends Request {
 
         private Builder(ApplyMetricRuleTemplateRequest request) {
             super(request);
+            this.appendMode = request.appendMode;
             this.applyMode = request.applyMode;
             this.enableEndTime = request.enableEndTime;
             this.enableStartTime = request.enableStartTime;
@@ -152,6 +166,15 @@ public class ApplyMetricRuleTemplateRequest extends Request {
             this.templateIds = request.templateIds;
             this.webhook = request.webhook;
         } 
+
+        /**
+         * AppendMode.
+         */
+        public Builder appendMode(String appendMode) {
+            this.putQueryParameter("AppendMode", appendMode);
+            this.appendMode = appendMode;
+            return this;
+        }
 
         /**
          * The mode in which the alert template is applied. Valid values:

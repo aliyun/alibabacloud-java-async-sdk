@@ -86,10 +86,10 @@ public class DescribeSystemEventHistogramResponseBody extends TeaModel {
         private SystemEventHistograms systemEventHistograms; 
 
         /**
-         * The HTTP status code.
+         * The response code.
          * <p>
          * 
-         * >  The status code 200 indicates that the call was successful.
+         * >  The status code 200 indicates that the request was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -97,7 +97,7 @@ public class DescribeSystemEventHistogramResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -105,7 +105,7 @@ public class DescribeSystemEventHistogramResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -113,7 +113,7 @@ public class DescribeSystemEventHistogramResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful. The value true indicates a success. The value false indicates a failure.
+         * Indicates whether the request was successful. Valid values: true: The request was successful. false: The request failed.
          */
         public Builder success(String success) {
             this.success = success;
@@ -121,7 +121,7 @@ public class DescribeSystemEventHistogramResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the number of times that the system event occurred during each interval of a time period.
+         * The information about the number of times the system event occurred during each interval of a time period.
          */
         public Builder systemEventHistograms(SystemEventHistograms systemEventHistograms) {
             this.systemEventHistograms = systemEventHistograms;
@@ -185,7 +185,7 @@ public class DescribeSystemEventHistogramResponseBody extends TeaModel {
             private Long startTime; 
 
             /**
-             * The number of times that the system event occurred.
+             * The number of times the system event occurred.
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -193,10 +193,10 @@ public class DescribeSystemEventHistogramResponseBody extends TeaModel {
             }
 
             /**
-             * The end of an interval.
+             * The end time.
              * <p>
              * 
-             * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+             * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -204,10 +204,10 @@ public class DescribeSystemEventHistogramResponseBody extends TeaModel {
             }
 
             /**
-             * The beginning of an interval.
+             * The start time.
              * <p>
              * 
-             * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+             * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;

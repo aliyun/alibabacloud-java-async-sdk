@@ -166,10 +166,10 @@ public class DescribeSystemEventHistogramRequest extends Request {
         } 
 
         /**
-         * The end of the time range to query.
+         * The end time.
          * <p>
          * 
-         * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+         * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -178,10 +178,10 @@ public class DescribeSystemEventHistogramRequest extends Request {
         }
 
         /**
-         * The type of the system event.
+         * The event type.
          * <p>
          * 
-         * >  You can call the [DescribeSystemEventMetaList](~~114972~~) operation to view the types of system events.
+         * >  You can call the [DescribeSystemEventMetaList](~~114972~~) operation to query the types of system events.
          */
         public Builder eventType(String eventType) {
             this.putQueryParameter("EventType", eventType);
@@ -199,7 +199,7 @@ public class DescribeSystemEventHistogramRequest extends Request {
         }
 
         /**
-         * The level of the system event. Valid values:
+         * The level of the event. Valid values:
          * <p>
          * 
          * *   CRITICAL
@@ -213,10 +213,10 @@ public class DescribeSystemEventHistogramRequest extends Request {
         }
 
         /**
-         * The name of the system event.
+         * The event name.
          * <p>
          * 
-         * >  You can call the [DescribeSystemEventMetaList](~~114972~~) operation to view the names of system events.
+         * >  You can call the [DescribeSystemEventMetaList](~~114972~~) operation to query the names of system events.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -228,7 +228,7 @@ public class DescribeSystemEventHistogramRequest extends Request {
          * The abbreviation of the service name.
          * <p>
          * 
-         * >  You can call the [DescribeSystemEventMetaList](~~114972~~) operation to view the abbreviations of service names.
+         * >  You can call the [DescribeSystemEventMetaList](~~114972~~) operation to query the abbreviations of service names.
          */
         public Builder product(String product) {
             this.putQueryParameter("Product", product);
@@ -237,11 +237,11 @@ public class DescribeSystemEventHistogramRequest extends Request {
         }
 
         /**
-         * The keywords contained in the content of the system event to query. You can use a logical operator between keywords. Examples:
+         * The keywords that are used to search for the system event. Valid values:
          * <p>
          * 
-         * *   If you need to query the system event whose content contains a and b, set the value to `a and b`.
-         * *   If you need to query the system event whose content contains a or b, set the value to `a or b`.
+         * *   If you want to search for the system event whose content contains a and b, set the value to `a and b`.
+         * *   If you want to search for the system event whose content contains a or b, set the value to `a or b`.
          */
         public Builder searchKeywords(String searchKeywords) {
             this.putQueryParameter("SearchKeywords", searchKeywords);
@@ -250,10 +250,10 @@ public class DescribeSystemEventHistogramRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query.
+         * The start time.
          * <p>
          * 
-         * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+         * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -262,10 +262,10 @@ public class DescribeSystemEventHistogramRequest extends Request {
         }
 
         /**
-         * The status of the system event.
+         * The event status.
          * <p>
          * 
-         * >  You can call the [DescribeSystemEventMetaList](~~114972~~) operation to view the statuses of system events.
+         * >  You can call the [DescribeSystemEventMetaList](~~114972~~) operation to query the status of system events.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

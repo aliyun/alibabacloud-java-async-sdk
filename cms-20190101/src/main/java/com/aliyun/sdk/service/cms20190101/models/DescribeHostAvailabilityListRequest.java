@@ -151,7 +151,7 @@ public class DescribeHostAvailabilityListRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * The page number.
          * <p>
          * 
          * Pages start from page 1. Default value: 1.
@@ -163,10 +163,10 @@ public class DescribeHostAvailabilityListRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The number of entries per page.
          * <p>
          * 
-         * Default value: 10.
+         * Minimum value: 1. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
