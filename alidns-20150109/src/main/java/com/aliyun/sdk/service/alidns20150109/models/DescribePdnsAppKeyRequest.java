@@ -17,12 +17,17 @@ public class DescribePdnsAppKeyRequest extends Request {
     private String appKeyId;
 
     @Query
+    @NameInMap("AuthCode")
+    private String authCode;
+
+    @Query
     @NameInMap("Lang")
     private String lang;
 
     private DescribePdnsAppKeyRequest(Builder builder) {
         super(builder);
         this.appKeyId = builder.appKeyId;
+        this.authCode = builder.authCode;
         this.lang = builder.lang;
     }
 
@@ -47,6 +52,13 @@ public class DescribePdnsAppKeyRequest extends Request {
     }
 
     /**
+     * @return authCode
+     */
+    public String getAuthCode() {
+        return this.authCode;
+    }
+
+    /**
      * @return lang
      */
     public String getLang() {
@@ -55,6 +67,7 @@ public class DescribePdnsAppKeyRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribePdnsAppKeyRequest, Builder> {
         private String appKeyId; 
+        private String authCode; 
         private String lang; 
 
         private Builder() {
@@ -64,6 +77,7 @@ public class DescribePdnsAppKeyRequest extends Request {
         private Builder(DescribePdnsAppKeyRequest request) {
             super(request);
             this.appKeyId = request.appKeyId;
+            this.authCode = request.authCode;
             this.lang = request.lang;
         } 
 
@@ -73,6 +87,15 @@ public class DescribePdnsAppKeyRequest extends Request {
         public Builder appKeyId(String appKeyId) {
             this.putQueryParameter("AppKeyId", appKeyId);
             this.appKeyId = appKeyId;
+            return this;
+        }
+
+        /**
+         * AuthCode.
+         */
+        public Builder authCode(String authCode) {
+            this.putQueryParameter("AuthCode", authCode);
+            this.authCode = authCode;
             return this;
         }
 

@@ -81,6 +81,9 @@ public class DescribePdnsAppKeyResponseBody extends TeaModel {
         @NameInMap("CreateDate")
         private String createDate;
 
+        @NameInMap("CreateTimestamp")
+        private Long createTimestamp;
+
         @NameInMap("State")
         private String state;
 
@@ -88,6 +91,7 @@ public class DescribePdnsAppKeyResponseBody extends TeaModel {
             this.appKeyId = builder.appKeyId;
             this.appKeySecret = builder.appKeySecret;
             this.createDate = builder.createDate;
+            this.createTimestamp = builder.createTimestamp;
             this.state = builder.state;
         }
 
@@ -121,6 +125,13 @@ public class DescribePdnsAppKeyResponseBody extends TeaModel {
         }
 
         /**
+         * @return createTimestamp
+         */
+        public Long getCreateTimestamp() {
+            return this.createTimestamp;
+        }
+
+        /**
          * @return state
          */
         public String getState() {
@@ -131,6 +142,7 @@ public class DescribePdnsAppKeyResponseBody extends TeaModel {
             private String appKeyId; 
             private String appKeySecret; 
             private String createDate; 
+            private Long createTimestamp; 
             private String state; 
 
             /**
@@ -154,6 +166,14 @@ public class DescribePdnsAppKeyResponseBody extends TeaModel {
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
+                return this;
+            }
+
+            /**
+             * CreateTimestamp.
+             */
+            public Builder createTimestamp(Long createTimestamp) {
+                this.createTimestamp = createTimestamp;
                 return this;
             }
 
