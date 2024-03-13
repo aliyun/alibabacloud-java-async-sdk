@@ -104,6 +104,9 @@ public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
         @NameInMap("Status")
         private Integer status;
 
+        @NameInMap("Subject")
+        private String subject;
+
         @NameInMap("ToAddress")
         private String toAddress;
 
@@ -115,6 +118,7 @@ public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
             this.lastUpdateTime = builder.lastUpdateTime;
             this.message = builder.message;
             this.status = builder.status;
+            this.subject = builder.subject;
             this.toAddress = builder.toAddress;
             this.utcLastUpdateTime = builder.utcLastUpdateTime;
         }
@@ -156,6 +160,13 @@ public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
         }
 
         /**
+         * @return subject
+         */
+        public String getSubject() {
+            return this.subject;
+        }
+
+        /**
          * @return toAddress
          */
         public String getToAddress() {
@@ -174,6 +185,7 @@ public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
             private String lastUpdateTime; 
             private String message; 
             private Integer status; 
+            private String subject; 
             private String toAddress; 
             private String utcLastUpdateTime; 
 
@@ -206,6 +218,14 @@ public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
              */
             public Builder status(Integer status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * Subject.
+             */
+            public Builder subject(String subject) {
+                this.subject = subject;
                 return this;
             }
 
