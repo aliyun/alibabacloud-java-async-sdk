@@ -69,7 +69,10 @@ public class DescribeExposedInstanceDetailRequest extends Request {
         } 
 
         /**
-         * ResourceDirectoryAccountId.
+         * The Alibaba Cloud account ID of the member in the resource directory.
+         * <p>
+         * 
+         * >  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to query the account ID.
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
@@ -81,7 +84,7 @@ public class DescribeExposedInstanceDetailRequest extends Request {
          * The UUID of the server that is exposed on the Internet.
          * <p>
          * 
-         * > You can call the [DescribeExposedInstanceList](~~DescribeExposedInstanceList~~) operation to query the UUIDs of servers.
+         * >  You can call the [DescribeExposedInstanceList](~~198153~~) operation to query the UUIDs of servers.
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

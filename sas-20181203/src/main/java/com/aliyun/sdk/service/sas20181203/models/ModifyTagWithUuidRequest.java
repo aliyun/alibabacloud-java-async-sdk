@@ -111,7 +111,11 @@ public class ModifyTagWithUuidRequest extends Request {
         } 
 
         /**
-         * MachineTypes.
+         * The type of the asset to query. If you do not specify this parameter, the tags of all asset types are queried. Valid values:
+         * <p>
+         * 
+         * *   **ecs**: server
+         * *   **cloud_product**: Alibaba Cloud service
          */
         public Builder machineTypes(String machineTypes) {
             this.putQueryParameter("MachineTypes", machineTypes);
@@ -120,7 +124,10 @@ public class ModifyTagWithUuidRequest extends Request {
         }
 
         /**
-         * TagId.
+         * The ID of the tag that you want to manage.
+         * <p>
+         * 
+         * >  You can call the [DescribeGroupedTags](~~DescribeGroupedTags~~) operation to query the IDs of tags.
          */
         public Builder tagId(String tagId) {
             this.putQueryParameter("TagId", tagId);
@@ -129,7 +136,10 @@ public class ModifyTagWithUuidRequest extends Request {
         }
 
         /**
-         * TagList.
+         * The names of the tags that you want to manage. Separate multiple tag names with commas (,).
+         * <p>
+         * 
+         * >  You can call the [DescribeGroupedTags](~~DescribeGroupedTags~~) operation to query the names of tags.
          */
         public Builder tagList(String tagList) {
             this.putQueryParameter("TagList", tagList);
@@ -138,7 +148,20 @@ public class ModifyTagWithUuidRequest extends Request {
         }
 
         /**
-         * Target.
+         * The details of the server for which you want to manage the tag. The value of this parameter is in the JSON format and contains the following fields:
+         * <p>
+         * 
+         * *   **Target**: the UUID of the server that you want to add or remove.
+         * 
+         * *   **targetType**: the method by which the server is added. Valid values:
+         * 
+         *     *   **uuid**: by server
+         *     *   **groupId**: by server group
+         * 
+         * *   **flag**: the operation that you want to perform on the server. Valid values:
+         * 
+         *     *   **del**: removes the tag from the server.
+         *     *   **add**: adds the tag to the server.
          */
         public Builder target(String target) {
             this.putQueryParameter("Target", target);
@@ -147,7 +170,10 @@ public class ModifyTagWithUuidRequest extends Request {
         }
 
         /**
-         * UuidList.
+         * The UUIDs of the servers.
+         * <p>
+         * 
+         * >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
          */
         public Builder uuidList(String uuidList) {
             this.putQueryParameter("UuidList", uuidList);

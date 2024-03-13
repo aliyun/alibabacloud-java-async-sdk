@@ -62,7 +62,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the container assets returned.
+         * The information about the container.
          */
         public Builder groupedContainerInstanceList(java.util.List < GroupedContainerInstanceList> groupedContainerInstanceList) {
             this.groupedContainerInstanceList = groupedContainerInstanceList;
@@ -430,7 +430,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             private Integer vulCount; 
 
             /**
-             * The number of alerts that are detected from the current pod, application, namespace, or cluster.
+             * The number of alerts that are detected for the current pod, application, namespace, or cluster.
              */
             public Builder alarmCount(Integer alarmCount) {
                 this.alarmCount = alarmCount;
@@ -438,7 +438,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The application name.
+             * The name of the application.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -446,7 +446,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The cluster ID.
+             * The ID of the cluster.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -467,7 +467,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
              * 
              * *   **Kubernetes**: dedicated Kubernetes cluster.
              * *   **ManagedKubernetes**: standard managed cluster (edge cluster).
-             * *   **Ask**: standard serverless cluster.
+             * *   **Ask**: serverless Kubernetes (ASK) cluster.
              */
             public Builder clusterType(String clusterType) {
                 this.clusterType = clusterType;
@@ -475,7 +475,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp generated when the cluster was created. Unit: milliseconds.
+             * The time when the cluster was created. Unit: milliseconds.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -489,8 +489,8 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
              * *   **running**: The cluster is running.
              * *   **stopped**: The cluster is stopped.
              * *   **deleted**: The cluster is deleted.
-             * *   **delete_failed**: The cluster fails to be deleted.
-             * *   **failed**: The cluster fails to be created.
+             * *   **delete_failed**: The cluster failed to be deleted.
+             * *   **failed**: The cluster failed to be created.
              */
             public Builder custerState(String custerState) {
                 this.custerState = custerState;
@@ -498,7 +498,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of baseline risks that are detected on the current pod, application, namespace, or cluster.
+             * The number of baseline risks that are detected for the current pod, application, namespace, or cluster.
              */
             public Builder hcCount(Integer hcCount) {
                 this.hcCount = hcCount;
@@ -514,7 +514,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The image of the container.
+             * The container image.
              */
             public Builder image(String image) {
                 this.image = image;
@@ -562,7 +562,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of pods, applications, clusters, or namespaces that is returned.
+             * The number of pods, applications, clusters, or namespaces.
              */
             public Builder instanceCount(Integer instanceCount) {
                 this.instanceCount = instanceCount;
@@ -570,7 +570,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the server instance.
+             * The ID of the server.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -602,7 +602,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region in which the instance resides.
+             * The region ID of the instance.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -610,7 +610,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of potential risky instances.
+             * The number of at-risk instances.
              */
             public Builder riskInstanceCount(Integer riskInstanceCount) {
                 this.riskInstanceCount = riskInstanceCount;
@@ -643,7 +643,11 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * SyncOpen.
+             * Indicates whether the synchronization of cluster audit logs is enabled. Valid values:
+             * <p>
+             * 
+             * *   **0**: disabled.
+             * *   **1**: enabled.
              */
             public Builder syncOpen(Integer syncOpen) {
                 this.syncOpen = syncOpen;
@@ -651,7 +655,11 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * SyncStatus.
+             * The status of the synchronization of cluster audit logs. Valid values:
+             * <p>
+             * 
+             * *   **0**: The synchronization failed.
+             * *   **1**: The synchronization is successful.
              */
             public Builder syncStatus(Integer syncStatus) {
                 this.syncStatus = syncStatus;
@@ -659,7 +667,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of vulnerabilities that are detected from the current pod, application, namespace, or cluster.
+             * The number of vulnerabilities that are detected for the current pod, application, namespace, or cluster.
              */
             public Builder vulCount(Integer vulCount) {
                 this.vulCount = vulCount;

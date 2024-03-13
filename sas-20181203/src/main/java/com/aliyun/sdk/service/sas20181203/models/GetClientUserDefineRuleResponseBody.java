@@ -78,6 +78,9 @@ public class GetClientUserDefineRuleResponseBody extends TeaModel {
         @NameInMap("Cmdline")
         private String cmdline;
 
+        @NameInMap("Domain")
+        private String domain;
+
         @NameInMap("FilePath")
         private String filePath;
 
@@ -132,6 +135,7 @@ public class GetClientUserDefineRuleResponseBody extends TeaModel {
         private UserDefineRuleDetail(Builder builder) {
             this.actionType = builder.actionType;
             this.cmdline = builder.cmdline;
+            this.domain = builder.domain;
             this.filePath = builder.filePath;
             this.gmtCreate = builder.gmtCreate;
             this.gmtModified = builder.gmtModified;
@@ -171,6 +175,13 @@ public class GetClientUserDefineRuleResponseBody extends TeaModel {
          */
         public String getCmdline() {
             return this.cmdline;
+        }
+
+        /**
+         * @return domain
+         */
+        public String getDomain() {
+            return this.domain;
         }
 
         /**
@@ -295,6 +306,7 @@ public class GetClientUserDefineRuleResponseBody extends TeaModel {
         public static final class Builder {
             private String actionType; 
             private String cmdline; 
+            private String domain; 
             private String filePath; 
             private Long gmtCreate; 
             private Long gmtModified; 
@@ -330,6 +342,14 @@ public class GetClientUserDefineRuleResponseBody extends TeaModel {
              */
             public Builder cmdline(String cmdline) {
                 this.cmdline = cmdline;
+                return this;
+            }
+
+            /**
+             * The domain name.
+             */
+            public Builder domain(String domain) {
+                this.domain = domain;
                 return this;
             }
 

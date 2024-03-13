@@ -22,6 +22,10 @@ public class ModifyClientUserDefineRuleRequest extends Request {
     private String cmdline;
 
     @Query
+    @NameInMap("Domain")
+    private String domain;
+
+    @Query
     @NameInMap("FilePath")
     private String filePath;
 
@@ -86,6 +90,7 @@ public class ModifyClientUserDefineRuleRequest extends Request {
         super(builder);
         this.actionType = builder.actionType;
         this.cmdline = builder.cmdline;
+        this.domain = builder.domain;
         this.filePath = builder.filePath;
         this.ip = builder.ip;
         this.id = builder.id;
@@ -128,6 +133,13 @@ public class ModifyClientUserDefineRuleRequest extends Request {
      */
     public String getCmdline() {
         return this.cmdline;
+    }
+
+    /**
+     * @return domain
+     */
+    public String getDomain() {
+        return this.domain;
     }
 
     /**
@@ -238,6 +250,7 @@ public class ModifyClientUserDefineRuleRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyClientUserDefineRuleRequest, Builder> {
         private Integer actionType; 
         private String cmdline; 
+        private String domain; 
         private String filePath; 
         private String ip; 
         private Long id; 
@@ -262,6 +275,7 @@ public class ModifyClientUserDefineRuleRequest extends Request {
             super(request);
             this.actionType = request.actionType;
             this.cmdline = request.cmdline;
+            this.domain = request.domain;
             this.filePath = request.filePath;
             this.ip = request.ip;
             this.id = request.id;
@@ -298,6 +312,15 @@ public class ModifyClientUserDefineRuleRequest extends Request {
         public Builder cmdline(String cmdline) {
             this.putQueryParameter("Cmdline", cmdline);
             this.cmdline = cmdline;
+            return this;
+        }
+
+        /**
+         * The domain name.
+         */
+        public Builder domain(String domain) {
+            this.putQueryParameter("Domain", domain);
+            this.domain = domain;
             return this;
         }
 
