@@ -62,6 +62,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateCsrResponse> createCsr(CreateCsrRequest request);
 
+    CompletableFuture<CreateDeploymentJobResponse> createDeploymentJob(CreateDeploymentJobRequest request);
+
     CompletableFuture<CreateWHClientCertificateResponse> createWHClientCertificate(CreateWHClientCertificateRequest request);
 
     CompletableFuture<DecryptResponse> decrypt(DecryptRequest request);
@@ -76,6 +78,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteCsrResponse> deleteCsr(DeleteCsrRequest request);
 
+    CompletableFuture<DeleteDeploymentJobResponse> deleteDeploymentJob(DeleteDeploymentJobRequest request);
+
     CompletableFuture<DeletePCACertResponse> deletePCACert(DeletePCACertRequest request);
 
     /**
@@ -84,12 +88,16 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DeleteUserCertificateResponse> deleteUserCertificate(DeleteUserCertificateRequest request);
 
+    CompletableFuture<DeleteWorkerResourceResponse> deleteWorkerResource(DeleteWorkerResourceRequest request);
+
     /**
       * If you do not complete the verification of the domain name ownership after you submit a certificate application, you can call this operation to obtain the information that is required to complete the verification. You can complete the verification of the domain name ownership based on the data returned. If you use the DNS verification method, you must complete the verification on the management platform of the domain name. If you use the file verification method, you must complete the verification on the DNS server.
       * The certificate authority (CA) reviews your certificate application only after you complete the verification of the domain name ownership. After the CA approves your certificate application, the CA issues the certificate. If a certificate is issued, you can call this operation to obtain the CA certificate and private key of the certificate.
       *
      */
     CompletableFuture<DescribeCertificateStateResponse> describeCertificateState(DescribeCertificateStateRequest request);
+
+    CompletableFuture<DescribeDeploymentJobStatusResponse> describeDeploymentJobStatus(DescribeDeploymentJobStatusRequest request);
 
     CompletableFuture<DescribePackageStateResponse> describePackageState(DescribePackageStateRequest request);
 
@@ -113,7 +121,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListCertWarehouseResponse> listCertWarehouse(ListCertWarehouseRequest request);
 
+    CompletableFuture<ListCloudResourcesResponse> listCloudResources(ListCloudResourcesRequest request);
+
     CompletableFuture<ListCsrResponse> listCsr(ListCsrRequest request);
+
+    CompletableFuture<ListDeploymentJobResponse> listDeploymentJob(ListDeploymentJobRequest request);
+
+    CompletableFuture<ListDeploymentJobCertResponse> listDeploymentJobCert(ListDeploymentJobCertRequest request);
+
+    CompletableFuture<ListDeploymentJobResourceResponse> listDeploymentJobResource(ListDeploymentJobResourceRequest request);
 
     /**
       * You can call the ListUserCertificateOrder operation to query the certificates or certificate orders of users. If you set OrderType to CERT or UPLOAD, certificates are returned. If you set OrderType to CPACK or BUY, certificate orders are returned.
@@ -135,6 +151,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SignResponse> sign(SignRequest request);
 
     CompletableFuture<UpdateCsrResponse> updateCsr(UpdateCsrRequest request);
+
+    CompletableFuture<UpdateDeploymentJobResponse> updateDeploymentJob(UpdateDeploymentJobRequest request);
+
+    CompletableFuture<UpdateDeploymentJobStatusResponse> updateDeploymentJobStatus(UpdateDeploymentJobStatusRequest request);
+
+    CompletableFuture<UpdateWorkerResourceStatusResponse> updateWorkerResourceStatus(UpdateWorkerResourceStatusRequest request);
 
     CompletableFuture<UploadCsrResponse> uploadCsr(UploadCsrRequest request);
 
