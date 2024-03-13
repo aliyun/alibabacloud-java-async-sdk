@@ -27,6 +27,10 @@ public class DescribeDBNodePerformanceRequest extends Request {
     private String endTime;
 
     @Query
+    @NameInMap("Interval")
+    private String interval;
+
+    @Query
     @NameInMap("Key")
     @Validation(required = true)
     private String key;
@@ -41,6 +45,7 @@ public class DescribeDBNodePerformanceRequest extends Request {
         this.DBClusterId = builder.DBClusterId;
         this.DBNodeId = builder.DBNodeId;
         this.endTime = builder.endTime;
+        this.interval = builder.interval;
         this.key = builder.key;
         this.startTime = builder.startTime;
     }
@@ -80,6 +85,13 @@ public class DescribeDBNodePerformanceRequest extends Request {
     }
 
     /**
+     * @return interval
+     */
+    public String getInterval() {
+        return this.interval;
+    }
+
+    /**
      * @return key
      */
     public String getKey() {
@@ -97,6 +109,7 @@ public class DescribeDBNodePerformanceRequest extends Request {
         private String DBClusterId; 
         private String DBNodeId; 
         private String endTime; 
+        private String interval; 
         private String key; 
         private String startTime; 
 
@@ -109,6 +122,7 @@ public class DescribeDBNodePerformanceRequest extends Request {
             this.DBClusterId = request.DBClusterId;
             this.DBNodeId = request.DBNodeId;
             this.endTime = request.endTime;
+            this.interval = request.interval;
             this.key = request.key;
             this.startTime = request.startTime;
         } 
@@ -137,6 +151,15 @@ public class DescribeDBNodePerformanceRequest extends Request {
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
             this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * Interval.
+         */
+        public Builder interval(String interval) {
+            this.putQueryParameter("Interval", interval);
+            this.interval = interval;
             return this;
         }
 

@@ -36,6 +36,10 @@ public class ModifyAccountPasswordRequest extends Request {
     private Long ownerId;
 
     @Query
+    @NameInMap("PasswordType")
+    private String passwordType;
+
+    @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -50,6 +54,7 @@ public class ModifyAccountPasswordRequest extends Request {
         this.newAccountPassword = builder.newAccountPassword;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.passwordType = builder.passwordType;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
     }
@@ -103,6 +108,13 @@ public class ModifyAccountPasswordRequest extends Request {
     }
 
     /**
+     * @return passwordType
+     */
+    public String getPasswordType() {
+        return this.passwordType;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -122,6 +134,7 @@ public class ModifyAccountPasswordRequest extends Request {
         private String newAccountPassword; 
         private String ownerAccount; 
         private Long ownerId; 
+        private String passwordType; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
 
@@ -136,6 +149,7 @@ public class ModifyAccountPasswordRequest extends Request {
             this.newAccountPassword = request.newAccountPassword;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.passwordType = request.passwordType;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
         } 
@@ -187,6 +201,15 @@ public class ModifyAccountPasswordRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * PasswordType.
+         */
+        public Builder passwordType(String passwordType) {
+            this.putQueryParameter("PasswordType", passwordType);
+            this.passwordType = passwordType;
             return this;
         }
 
