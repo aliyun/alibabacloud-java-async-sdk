@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ListApmMetadataResponse} extends {@link TeaModel}
+ * {@link ListScriptsResponse} extends {@link TeaModel}
  *
- * <p>ListApmMetadataResponse</p>
+ * <p>ListScriptsResponse</p>
  */
-public class ListApmMetadataResponse extends Response {
+public class ListScriptsResponse extends Response {
     @NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -19,16 +19,16 @@ public class ListApmMetadataResponse extends Response {
     private Integer statusCode;
 
     @NameInMap("body")
-    private ListApmMetadataResponseBody body;
+    private ListScriptsResponseBody body;
 
-    private ListApmMetadataResponse(BuilderImpl builder) {
+    private ListScriptsResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static ListApmMetadataResponse create() {
+    public static ListScriptsResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +54,35 @@ public class ListApmMetadataResponse extends Response {
     /**
      * @return body
      */
-    public ListApmMetadataResponseBody getBody() {
+    public ListScriptsResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<ListApmMetadataResponse, Builder> {
+    public interface Builder extends Response.Builder<ListScriptsResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(ListApmMetadataResponseBody body);
+        Builder body(ListScriptsResponseBody body);
 
         @Override
-        ListApmMetadataResponse build();
+        ListScriptsResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<ListApmMetadataResponse, Builder>
+            extends Response.BuilderImpl<ListScriptsResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private ListApmMetadataResponseBody body; 
+        private ListScriptsResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(ListApmMetadataResponse response) {
+        private BuilderImpl(ListScriptsResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +111,14 @@ public class ListApmMetadataResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(ListApmMetadataResponseBody body) {
+        public Builder body(ListScriptsResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public ListApmMetadataResponse build() {
-            return new ListApmMetadataResponse(this);
+        public ListScriptsResponse build() {
+            return new ListScriptsResponse(this);
         } 
 
     } 

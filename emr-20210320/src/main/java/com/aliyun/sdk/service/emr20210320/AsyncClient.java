@@ -28,20 +28,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateNodeGroupResponse> createNodeGroup(CreateNodeGroupRequest request);
 
     /**
-      * Currently we only support taihao platform
-      *
-     */
-    CompletableFuture<CreateReportResponse> createReport(CreateReportRequest request);
-
-    /**
       * 缩容节点。
       *
      */
     CompletableFuture<DecreaseNodesResponse> decreaseNodes(DecreaseNodesRequest request);
 
     CompletableFuture<DeleteClusterResponse> deleteCluster(DeleteClusterRequest request);
-
-    CompletableFuture<GetApmDataResponse> getApmData(GetApmDataRequest request);
 
     /**
       * 查询应用详情。
@@ -62,12 +54,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetAutoScalingPolicyResponse> getAutoScalingPolicy(GetAutoScalingPolicyRequest request);
 
     CompletableFuture<GetClusterResponse> getCluster(GetClusterRequest request);
-
-    /**
-      * 获取集群克隆详情。
-      *
-     */
-    CompletableFuture<GetClusterCloneMetaResponse> getClusterCloneMeta(GetClusterCloneMetaRequest request);
 
     /**
       * get one doctor analysis app
@@ -168,8 +154,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<IncreaseNodesResponse> increaseNodes(IncreaseNodesRequest request);
 
     CompletableFuture<JoinResourceGroupResponse> joinResourceGroup(JoinResourceGroupRequest request);
-
-    CompletableFuture<ListApmMetadataResponse> listApmMetadata(ListApmMetadataRequest request);
 
     /**
       * 查询应用配置。
@@ -281,6 +265,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<ListReleaseVersionsResponse> listReleaseVersions(ListReleaseVersionsRequest request);
 
+    /**
+      * 查询集群脚本。
+      *
+     */
+    CompletableFuture<ListScriptsResponse> listScripts(ListScriptsRequest request);
+
     CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
 
     /**
@@ -288,10 +278,6 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<PutAutoScalingPolicyResponse> putAutoScalingPolicy(PutAutoScalingPolicyRequest request);
-
-    CompletableFuture<QueryApmComponentsResponse> queryApmComponents(QueryApmComponentsRequest request);
-
-    CompletableFuture<QueryApmGrafanaDataResponse> queryApmGrafanaData(QueryApmGrafanaDataRequest request);
 
     CompletableFuture<RemoveAutoScalingPolicyResponse> removeAutoScalingPolicy(RemoveAutoScalingPolicyRequest request);
 
