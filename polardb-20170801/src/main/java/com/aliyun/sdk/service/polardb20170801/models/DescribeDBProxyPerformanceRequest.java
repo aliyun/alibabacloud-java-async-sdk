@@ -40,6 +40,10 @@ public class DescribeDBProxyPerformanceRequest extends Request {
     @Validation(required = true)
     private String startTime;
 
+    @Query
+    @NameInMap("Type")
+    private String type;
+
     private DescribeDBProxyPerformanceRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
@@ -48,6 +52,7 @@ public class DescribeDBProxyPerformanceRequest extends Request {
         this.interval = builder.interval;
         this.key = builder.key;
         this.startTime = builder.startTime;
+        this.type = builder.type;
     }
 
     public static Builder builder() {
@@ -105,6 +110,13 @@ public class DescribeDBProxyPerformanceRequest extends Request {
         return this.startTime;
     }
 
+    /**
+     * @return type
+     */
+    public String getType() {
+        return this.type;
+    }
+
     public static final class Builder extends Request.Builder<DescribeDBProxyPerformanceRequest, Builder> {
         private String DBClusterId; 
         private String DBEndpointId; 
@@ -112,6 +124,7 @@ public class DescribeDBProxyPerformanceRequest extends Request {
         private String interval; 
         private String key; 
         private String startTime; 
+        private String type; 
 
         private Builder() {
             super();
@@ -125,6 +138,7 @@ public class DescribeDBProxyPerformanceRequest extends Request {
             this.interval = request.interval;
             this.key = request.key;
             this.startTime = request.startTime;
+            this.type = request.type;
         } 
 
         /**
@@ -178,6 +192,15 @@ public class DescribeDBProxyPerformanceRequest extends Request {
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
             this.startTime = startTime;
+            return this;
+        }
+
+        /**
+         * Type.
+         */
+        public Builder type(String type) {
+            this.putQueryParameter("Type", type);
+            this.type = type;
             return this;
         }
 
