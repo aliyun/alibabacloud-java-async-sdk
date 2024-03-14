@@ -18,6 +18,10 @@ public class UpdateAccountRequest extends Request {
     private String accountId;
 
     @Query
+    @NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @Query
     @NameInMap("NewAccountType")
     private String newAccountType;
 
@@ -28,6 +32,7 @@ public class UpdateAccountRequest extends Request {
     private UpdateAccountRequest(Builder builder) {
         super(builder);
         this.accountId = builder.accountId;
+        this.dryRun = builder.dryRun;
         this.newAccountType = builder.newAccountType;
         this.newDisplayName = builder.newDisplayName;
     }
@@ -53,6 +58,13 @@ public class UpdateAccountRequest extends Request {
     }
 
     /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    /**
      * @return newAccountType
      */
     public String getNewAccountType() {
@@ -68,6 +80,7 @@ public class UpdateAccountRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateAccountRequest, Builder> {
         private String accountId; 
+        private Boolean dryRun; 
         private String newAccountType; 
         private String newDisplayName; 
 
@@ -78,6 +91,7 @@ public class UpdateAccountRequest extends Request {
         private Builder(UpdateAccountRequest request) {
             super(request);
             this.accountId = request.accountId;
+            this.dryRun = request.dryRun;
             this.newAccountType = request.newAccountType;
             this.newDisplayName = request.newDisplayName;
         } 
@@ -88,6 +102,15 @@ public class UpdateAccountRequest extends Request {
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);
             this.accountId = accountId;
+            return this;
+        }
+
+        /**
+         * DryRun.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 

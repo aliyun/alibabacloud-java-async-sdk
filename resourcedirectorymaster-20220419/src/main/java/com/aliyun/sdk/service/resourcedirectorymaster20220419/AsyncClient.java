@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.resourcedirectorymaster20220419;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.resourcedirectorymaster20220419.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -118,7 +119,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DetachControlPolicyResponse> detachControlPolicy(DetachControlPolicyRequest request);
 
     /**
-      * The ID of the request.
+      * After you disable the Control Policy feature, the system automatically detaches all access control policies that are attached to folders and members. The system does not delete these access control policies, but you cannot attach them to folders or members again.
+      * > If you disable the Control Policy feature, the permissions of all folders and members in your resource directory are affected. Therefore, proceed with caution.
       *
      */
     CompletableFuture<DisableControlPolicyResponse> disableControlPolicy(DisableControlPolicyRequest request);

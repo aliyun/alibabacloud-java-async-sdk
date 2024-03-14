@@ -240,6 +240,9 @@ public class ListAccountsForParentResponseBody extends TeaModel {
         @NameInMap("AccountName")
         private String accountName;
 
+        @NameInMap("DeletionStatus")
+        private String deletionStatus;
+
         @NameInMap("DisplayName")
         private String displayName;
 
@@ -270,6 +273,7 @@ public class ListAccountsForParentResponseBody extends TeaModel {
         private Account(Builder builder) {
             this.accountId = builder.accountId;
             this.accountName = builder.accountName;
+            this.deletionStatus = builder.deletionStatus;
             this.displayName = builder.displayName;
             this.folderId = builder.folderId;
             this.joinMethod = builder.joinMethod;
@@ -301,6 +305,13 @@ public class ListAccountsForParentResponseBody extends TeaModel {
          */
         public String getAccountName() {
             return this.accountName;
+        }
+
+        /**
+         * @return deletionStatus
+         */
+        public String getDeletionStatus() {
+            return this.deletionStatus;
         }
 
         /**
@@ -369,6 +380,7 @@ public class ListAccountsForParentResponseBody extends TeaModel {
         public static final class Builder {
             private String accountId; 
             private String accountName; 
+            private String deletionStatus; 
             private String displayName; 
             private String folderId; 
             private String joinMethod; 
@@ -392,6 +404,14 @@ public class ListAccountsForParentResponseBody extends TeaModel {
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
+                return this;
+            }
+
+            /**
+             * DeletionStatus.
+             */
+            public Builder deletionStatus(String deletionStatus) {
+                this.deletionStatus = deletionStatus;
                 return this;
             }
 

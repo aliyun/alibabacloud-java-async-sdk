@@ -22,6 +22,10 @@ public class CreateResourceAccountRequest extends Request {
     private String displayName;
 
     @Query
+    @NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @Query
     @NameInMap("ParentFolderId")
     private String parentFolderId;
 
@@ -41,6 +45,7 @@ public class CreateResourceAccountRequest extends Request {
         super(builder);
         this.accountNamePrefix = builder.accountNamePrefix;
         this.displayName = builder.displayName;
+        this.dryRun = builder.dryRun;
         this.parentFolderId = builder.parentFolderId;
         this.payerAccountId = builder.payerAccountId;
         this.resellAccountType = builder.resellAccountType;
@@ -75,6 +80,13 @@ public class CreateResourceAccountRequest extends Request {
     }
 
     /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    /**
      * @return parentFolderId
      */
     public String getParentFolderId() {
@@ -105,6 +117,7 @@ public class CreateResourceAccountRequest extends Request {
     public static final class Builder extends Request.Builder<CreateResourceAccountRequest, Builder> {
         private String accountNamePrefix; 
         private String displayName; 
+        private Boolean dryRun; 
         private String parentFolderId; 
         private String payerAccountId; 
         private String resellAccountType; 
@@ -118,6 +131,7 @@ public class CreateResourceAccountRequest extends Request {
             super(request);
             this.accountNamePrefix = request.accountNamePrefix;
             this.displayName = request.displayName;
+            this.dryRun = request.dryRun;
             this.parentFolderId = request.parentFolderId;
             this.payerAccountId = request.payerAccountId;
             this.resellAccountType = request.resellAccountType;
@@ -155,6 +169,15 @@ public class CreateResourceAccountRequest extends Request {
         public Builder displayName(String displayName) {
             this.putQueryParameter("DisplayName", displayName);
             this.displayName = displayName;
+            return this;
+        }
+
+        /**
+         * DryRun.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 

@@ -111,7 +111,11 @@ public class EnableResourceDirectoryRequest extends Request {
         } 
 
         /**
-         * DryRun.
+         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
+         * <p>
+         * 
+         * *   **true**: performs only a dry run.
+         * *   **false** (default): performs a dry run and performs the actual request.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);

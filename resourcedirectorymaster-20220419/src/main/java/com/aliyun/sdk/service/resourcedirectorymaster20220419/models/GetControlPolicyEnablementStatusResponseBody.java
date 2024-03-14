@@ -50,7 +50,13 @@ public class GetControlPolicyEnablementStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * EnablementStatus.
+         * The status of the Control Policy feature. Valid values:
+         * <p>
+         * 
+         * *   Enabled: The feature is enabled.
+         * *   PendingEnable: The feature is being enabled.
+         * *   Disabled: The feature is disabled.
+         * *   PendingDisable: The feature is being disabled.
          */
         public Builder enablementStatus(String enablementStatus) {
             this.enablementStatus = enablementStatus;
@@ -58,7 +64,7 @@ public class GetControlPolicyEnablementStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
