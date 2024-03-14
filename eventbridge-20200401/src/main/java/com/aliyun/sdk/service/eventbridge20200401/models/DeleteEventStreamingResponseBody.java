@@ -13,7 +13,7 @@ import com.aliyun.sdk.gateway.eventbridge.models.*;
  */
 public class DeleteEventStreamingResponseBody extends TeaModel {
     @NameInMap("Code")
-    private Boolean code;
+    private String code;
 
     @NameInMap("Message")
     private String message;
@@ -42,7 +42,7 @@ public class DeleteEventStreamingResponseBody extends TeaModel {
     /**
      * @return code
      */
-    public Boolean getCode() {
+    public String getCode() {
         return this.code;
     }
 
@@ -68,7 +68,7 @@ public class DeleteEventStreamingResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private Boolean code; 
+        private String code; 
         private String message; 
         private String requestId; 
         private Boolean success; 
@@ -76,7 +76,7 @@ public class DeleteEventStreamingResponseBody extends TeaModel {
         /**
          * The returned response code. The value Success indicates that the request is successful.
          */
-        public Builder code(Boolean code) {
+        public Builder code(String code) {
             this.code = code;
             return this;
         }

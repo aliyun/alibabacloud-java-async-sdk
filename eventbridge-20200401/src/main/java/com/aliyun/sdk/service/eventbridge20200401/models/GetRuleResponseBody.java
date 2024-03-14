@@ -86,7 +86,7 @@ public class GetRuleResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The returned response code. The value Success indicates that the request is successful.
+         * The response code. The value Success indicates that the request is successful. Other values indicate that the request failed. For a list of error codes, see Error codes.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +118,7 @@ public class GetRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the operation is successful. Valid values: true and false.
+         * Indicates whether the operation is successful. If the operation is successful, the value true is returned.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -158,7 +158,7 @@ public class GetRuleResponseBody extends TeaModel {
             private String arn; 
 
             /**
-             * The Alibaba Cloud Resource Name (ARN) of the event source.
+             * The Alibaba Cloud Resource Name (ARN) of the dead-letter queue.
              */
             public Builder arn(String arn) {
                 this.arn = arn;
@@ -235,7 +235,7 @@ public class GetRuleResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The format that is used by the event target parameter. For more information, see [Limits.](https://www.alibabacloud.com/help/en/eventbridge/latest/limits)
+             * The method that is used to deliver events to the event target. For more information, see [Limits](~~163289~~).
              */
             public Builder form(String form) {
                 this.form = form;
@@ -243,7 +243,7 @@ public class GetRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The resource parameter of the event target. For more information, see [Limits.](https://www.alibabacloud.com/help/en/eventbridge/latest/limits)
+             * The resource key of the event target. For more information, see [Limits](~~163289~~).
              */
             public Builder resourceKey(String resourceKey) {
                 this.resourceKey = resourceKey;
@@ -251,7 +251,7 @@ public class GetRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The template that is used by the event target parameter.
+             * The template based on which events are delivered to the event target.
              */
             public Builder template(String template) {
                 this.template = template;
@@ -259,7 +259,7 @@ public class GetRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the event target parameter.
+             * The event target.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -396,7 +396,7 @@ public class GetRuleResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The ID of the custom event target.
+             * The dead-letter queue.
              */
             public Builder deadLetterQueue(DeadLetterQueue deadLetterQueue) {
                 this.deadLetterQueue = deadLetterQueue;
@@ -420,7 +420,7 @@ public class GetRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorsTolerance.
+             * The fault tolerance policy. Valid values: ALL: Fault tolerance is allowed. If an error occurs in an event, event processing is not blocked. If the event fails to be sent after the maximum number of retries specified by the retry policy is reached, the event is delivered to the dead-letter queue or discarded based on your configurations. NONE: Fault tolerance is not allowed. If an error occurs in an event and the event fails to be sent after the maximum number of retries specified by the retry policy is reached, event processing is blocked.
              */
             public Builder errorsTolerance(String errorsTolerance) {
                 this.errorsTolerance = errorsTolerance;
@@ -428,7 +428,7 @@ public class GetRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the custom event target.
+             * The ID of the event target.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -444,7 +444,7 @@ public class GetRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The retry policy that is used to push events. Valid values: BACKOFF_RETRY: backoff retry. If an event failed to be pushed, it can be retried up to three times. The interval between two consecutive retries is a random value from 10 to 20. Unit: seconds. EXPONENTIAL_DECAY_RETRY: exponential decay retry. If an event failed to be pushed, it can be retried up to 176 times. The interval between two consecutive retries exponentially increases to 512 seconds, and the total retry time is one day. The specific retry intervals are 1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 512, ..., and 512 seconds. The interval of 512 seconds is used for 167 retries.
+             * The retry policy that is used to push failed events. Valid values: BACKOFF_RETRY: backoff retry. A failed event can be retried up to three times. The interval between two consecutive retries is a random value between 10 seconds and 20 seconds. EXPONENTIAL_DECAY_RETRY: exponential decay retry. A failed event can be retried up to 176 times. The interval between two consecutive retries exponentially increases to a maximum of 512 seconds. The total retry time is 1 day. The specific retry intervals are 1, 2, 4, 8, 16, 32, 64, 128, 256, and 512 seconds. The interval of 512 seconds is used for 167 retries.
              */
             public Builder pushRetryStrategy(String pushRetryStrategy) {
                 this.pushRetryStrategy = pushRetryStrategy;
@@ -460,7 +460,7 @@ public class GetRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the event target. For more information, see [Event target parameters.](https://www.alibabacloud.com/help/en/eventbridge/latest/event-target-parameters)
+             * The type of the event target. For more information, see [Event target parameters](~~185887~~).
              */
             public Builder type(String type) {
                 this.type = type;
