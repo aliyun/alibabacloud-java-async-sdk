@@ -66,6 +66,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     @NameInMap("ResourceCpu")
     private Long resourceCpu;
 
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
     @NameInMap("Status")
     private String status;
 
@@ -94,6 +97,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         this.objectStoreSize = builder.objectStoreSize;
         this.requestId = builder.requestId;
         this.resourceCpu = builder.resourceCpu;
+        this.resourceGroupId = builder.resourceGroupId;
         this.status = builder.status;
         this.storageSize = builder.storageSize;
         this.subDomain = builder.subDomain;
@@ -234,6 +238,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return status
      */
     public String getStatus() {
@@ -273,6 +284,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         private Long objectStoreSize; 
         private String requestId; 
         private Long resourceCpu; 
+        private String resourceGroupId; 
         private String status; 
         private Long storageSize; 
         private String subDomain; 
@@ -418,6 +430,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          */
         public Builder resourceCpu(Long resourceCpu) {
             this.resourceCpu = resourceCpu;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 
