@@ -169,6 +169,9 @@ public class CreateTaskRequest extends Request {
         @NameInMap("Format")
         private String format;
 
+        @NameInMap("MultipleStreamsEnabled")
+        private Boolean multipleStreamsEnabled;
+
         @NameInMap("ProgressiveCallbacksEnabled")
         private Boolean progressiveCallbacksEnabled;
 
@@ -188,6 +191,7 @@ public class CreateTaskRequest extends Request {
         private Input(Builder builder) {
             this.fileUrl = builder.fileUrl;
             this.format = builder.format;
+            this.multipleStreamsEnabled = builder.multipleStreamsEnabled;
             this.progressiveCallbacksEnabled = builder.progressiveCallbacksEnabled;
             this.sampleRate = builder.sampleRate;
             this.sourceLanguage = builder.sourceLanguage;
@@ -215,6 +219,13 @@ public class CreateTaskRequest extends Request {
          */
         public String getFormat() {
             return this.format;
+        }
+
+        /**
+         * @return multipleStreamsEnabled
+         */
+        public Boolean getMultipleStreamsEnabled() {
+            return this.multipleStreamsEnabled;
         }
 
         /**
@@ -255,6 +266,7 @@ public class CreateTaskRequest extends Request {
         public static final class Builder {
             private String fileUrl; 
             private String format; 
+            private Boolean multipleStreamsEnabled; 
             private Boolean progressiveCallbacksEnabled; 
             private Integer sampleRate; 
             private String sourceLanguage; 
@@ -274,6 +286,14 @@ public class CreateTaskRequest extends Request {
              */
             public Builder format(String format) {
                 this.format = format;
+                return this;
+            }
+
+            /**
+             * MultipleStreamsEnabled.
+             */
+            public Builder multipleStreamsEnabled(Boolean multipleStreamsEnabled) {
+                this.multipleStreamsEnabled = multipleStreamsEnabled;
                 return this;
             }
 
@@ -549,6 +569,9 @@ public class CreateTaskRequest extends Request {
 
     }
     public static class Transcription extends TeaModel {
+        @NameInMap("AdditionalStreamOutputLevel")
+        private Integer additionalStreamOutputLevel;
+
         @NameInMap("AudioEventDetectionEnabled")
         private Boolean audioEventDetectionEnabled;
 
@@ -565,6 +588,7 @@ public class CreateTaskRequest extends Request {
         private String phraseId;
 
         private Transcription(Builder builder) {
+            this.additionalStreamOutputLevel = builder.additionalStreamOutputLevel;
             this.audioEventDetectionEnabled = builder.audioEventDetectionEnabled;
             this.diarization = builder.diarization;
             this.diarizationEnabled = builder.diarizationEnabled;
@@ -578,6 +602,13 @@ public class CreateTaskRequest extends Request {
 
         public static Transcription create() {
             return builder().build();
+        }
+
+        /**
+         * @return additionalStreamOutputLevel
+         */
+        public Integer getAdditionalStreamOutputLevel() {
+            return this.additionalStreamOutputLevel;
         }
 
         /**
@@ -616,11 +647,20 @@ public class CreateTaskRequest extends Request {
         }
 
         public static final class Builder {
+            private Integer additionalStreamOutputLevel; 
             private Boolean audioEventDetectionEnabled; 
             private Diarization diarization; 
             private Boolean diarizationEnabled; 
             private Integer outputLevel; 
             private String phraseId; 
+
+            /**
+             * AdditionalStreamOutputLevel.
+             */
+            public Builder additionalStreamOutputLevel(Integer additionalStreamOutputLevel) {
+                this.additionalStreamOutputLevel = additionalStreamOutputLevel;
+                return this;
+            }
 
             /**
              * AudioEventDetectionEnabled.
@@ -670,6 +710,9 @@ public class CreateTaskRequest extends Request {
 
     }
     public static class Translation extends TeaModel {
+        @NameInMap("AdditionalStreamOutputLevel")
+        private Integer additionalStreamOutputLevel;
+
         @NameInMap("OutputLevel")
         private Integer outputLevel;
 
@@ -677,6 +720,7 @@ public class CreateTaskRequest extends Request {
         private java.util.List < String > targetLanguages;
 
         private Translation(Builder builder) {
+            this.additionalStreamOutputLevel = builder.additionalStreamOutputLevel;
             this.outputLevel = builder.outputLevel;
             this.targetLanguages = builder.targetLanguages;
         }
@@ -687,6 +731,13 @@ public class CreateTaskRequest extends Request {
 
         public static Translation create() {
             return builder().build();
+        }
+
+        /**
+         * @return additionalStreamOutputLevel
+         */
+        public Integer getAdditionalStreamOutputLevel() {
+            return this.additionalStreamOutputLevel;
         }
 
         /**
@@ -704,8 +755,17 @@ public class CreateTaskRequest extends Request {
         }
 
         public static final class Builder {
+            private Integer additionalStreamOutputLevel; 
             private Integer outputLevel; 
             private java.util.List < String > targetLanguages; 
+
+            /**
+             * AdditionalStreamOutputLevel.
+             */
+            public Builder additionalStreamOutputLevel(Integer additionalStreamOutputLevel) {
+                this.additionalStreamOutputLevel = additionalStreamOutputLevel;
+                return this;
+            }
 
             /**
              * OutputLevel.
