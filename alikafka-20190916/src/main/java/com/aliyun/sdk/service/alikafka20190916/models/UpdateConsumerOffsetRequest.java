@@ -37,7 +37,6 @@ public class UpdateConsumerOffsetRequest extends Request {
 
     @Query
     @NameInMap("Time")
-    @Validation(required = true)
     private String time;
 
     @Query

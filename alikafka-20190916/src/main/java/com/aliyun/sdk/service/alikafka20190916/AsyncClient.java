@@ -101,11 +101,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<ReleaseInstanceResponse> releaseInstance(ReleaseInstanceRequest request);
 
+    CompletableFuture<ReopenInstanceResponse> reopenInstance(ReopenInstanceRequest request);
+
     /**
       * >  You can call this operation up to twice per second.
       *
      */
     CompletableFuture<StartInstanceResponse> startInstance(StartInstanceRequest request);
+
+    CompletableFuture<StopInstanceResponse> stopInstance(StopInstanceRequest request);
 
     CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
 
