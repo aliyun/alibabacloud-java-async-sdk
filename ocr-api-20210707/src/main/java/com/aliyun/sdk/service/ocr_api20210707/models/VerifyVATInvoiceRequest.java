@@ -22,6 +22,10 @@ public class VerifyVATInvoiceRequest extends Request {
     private String invoiceDate;
 
     @Query
+    @NameInMap("InvoiceKind")
+    private Integer invoiceKind;
+
+    @Query
     @NameInMap("InvoiceNo")
     @Validation(required = true)
     private String invoiceNo;
@@ -38,6 +42,7 @@ public class VerifyVATInvoiceRequest extends Request {
         super(builder);
         this.invoiceCode = builder.invoiceCode;
         this.invoiceDate = builder.invoiceDate;
+        this.invoiceKind = builder.invoiceKind;
         this.invoiceNo = builder.invoiceNo;
         this.invoiceSum = builder.invoiceSum;
         this.verifyCode = builder.verifyCode;
@@ -71,6 +76,13 @@ public class VerifyVATInvoiceRequest extends Request {
     }
 
     /**
+     * @return invoiceKind
+     */
+    public Integer getInvoiceKind() {
+        return this.invoiceKind;
+    }
+
+    /**
      * @return invoiceNo
      */
     public String getInvoiceNo() {
@@ -94,6 +106,7 @@ public class VerifyVATInvoiceRequest extends Request {
     public static final class Builder extends Request.Builder<VerifyVATInvoiceRequest, Builder> {
         private String invoiceCode; 
         private String invoiceDate; 
+        private Integer invoiceKind; 
         private String invoiceNo; 
         private String invoiceSum; 
         private String verifyCode; 
@@ -106,6 +119,7 @@ public class VerifyVATInvoiceRequest extends Request {
             super(request);
             this.invoiceCode = request.invoiceCode;
             this.invoiceDate = request.invoiceDate;
+            this.invoiceKind = request.invoiceKind;
             this.invoiceNo = request.invoiceNo;
             this.invoiceSum = request.invoiceSum;
             this.verifyCode = request.verifyCode;
@@ -126,6 +140,15 @@ public class VerifyVATInvoiceRequest extends Request {
         public Builder invoiceDate(String invoiceDate) {
             this.putQueryParameter("InvoiceDate", invoiceDate);
             this.invoiceDate = invoiceDate;
+            return this;
+        }
+
+        /**
+         * InvoiceKind.
+         */
+        public Builder invoiceKind(Integer invoiceKind) {
+            this.putQueryParameter("InvoiceKind", invoiceKind);
+            this.invoiceKind = invoiceKind;
             return this;
         }
 
