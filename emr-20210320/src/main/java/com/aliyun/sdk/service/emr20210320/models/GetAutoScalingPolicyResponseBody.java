@@ -145,6 +145,9 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
         @NameInMap("MetricsTrigger")
         private MetricsTrigger metricsTrigger;
 
+        @NameInMap("MinAdjustmentValue")
+        private Integer minAdjustmentValue;
+
         @NameInMap("RuleName")
         private String ruleName;
 
@@ -159,6 +162,7 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
             this.adjustmentType = builder.adjustmentType;
             this.adjustmentValue = builder.adjustmentValue;
             this.metricsTrigger = builder.metricsTrigger;
+            this.minAdjustmentValue = builder.minAdjustmentValue;
             this.ruleName = builder.ruleName;
             this.timeTrigger = builder.timeTrigger;
             this.triggerType = builder.triggerType;
@@ -201,6 +205,13 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
         }
 
         /**
+         * @return minAdjustmentValue
+         */
+        public Integer getMinAdjustmentValue() {
+            return this.minAdjustmentValue;
+        }
+
+        /**
          * @return ruleName
          */
         public String getRuleName() {
@@ -226,6 +237,7 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
             private String adjustmentType; 
             private Integer adjustmentValue; 
             private MetricsTrigger metricsTrigger; 
+            private Integer minAdjustmentValue; 
             private String ruleName; 
             private TimeTrigger timeTrigger; 
             private String triggerType; 
@@ -263,6 +275,14 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
              */
             public Builder metricsTrigger(MetricsTrigger metricsTrigger) {
                 this.metricsTrigger = metricsTrigger;
+                return this;
+            }
+
+            /**
+             * MinAdjustmentValue.
+             */
+            public Builder minAdjustmentValue(Integer minAdjustmentValue) {
+                this.minAdjustmentValue = minAdjustmentValue;
                 return this;
             }
 

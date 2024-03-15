@@ -47,10 +47,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<GetAutoScalingActivityResponse> getAutoScalingActivity(GetAutoScalingActivityRequest request);
 
-    /**
-      * 获取弹性伸缩策略信息。
-      *
-     */
     CompletableFuture<GetAutoScalingPolicyResponse> getAutoScalingPolicy(GetAutoScalingPolicyRequest request);
 
     CompletableFuture<GetClusterResponse> getCluster(GetClusterRequest request);

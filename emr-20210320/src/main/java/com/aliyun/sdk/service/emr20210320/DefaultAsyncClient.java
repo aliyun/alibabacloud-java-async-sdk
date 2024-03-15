@@ -149,10 +149,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * 获取弹性伸缩策略信息。
-      *
-     */
     @Override
     public CompletableFuture<GetAutoScalingPolicyResponse> getAutoScalingPolicy(GetAutoScalingPolicyRequest request) {
         try {
