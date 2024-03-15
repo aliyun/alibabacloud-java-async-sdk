@@ -13,11 +13,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DeleteJobsRequest extends Request {
     @Query
+    @NameInMap("ExecutorIds")
+    private java.util.List < String > executorIds;
+
+    @Query
     @NameInMap("JobSpec")
     private java.util.List < JobSpec> jobSpec;
 
     private DeleteJobsRequest(Builder builder) {
         super(builder);
+        this.executorIds = builder.executorIds;
         this.jobSpec = builder.jobSpec;
     }
 
@@ -35,6 +40,13 @@ public class DeleteJobsRequest extends Request {
     }
 
     /**
+     * @return executorIds
+     */
+    public java.util.List < String > getExecutorIds() {
+        return this.executorIds;
+    }
+
+    /**
      * @return jobSpec
      */
     public java.util.List < JobSpec> getJobSpec() {
@@ -42,6 +54,7 @@ public class DeleteJobsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteJobsRequest, Builder> {
+        private java.util.List < String > executorIds; 
         private java.util.List < JobSpec> jobSpec; 
 
         private Builder() {
@@ -50,8 +63,19 @@ public class DeleteJobsRequest extends Request {
 
         private Builder(DeleteJobsRequest request) {
             super(request);
+            this.executorIds = request.executorIds;
             this.jobSpec = request.jobSpec;
         } 
+
+        /**
+         * ExecutorIds.
+         */
+        public Builder executorIds(java.util.List < String > executorIds) {
+            String executorIdsShrink = shrink(executorIds, "ExecutorIds", "json");
+            this.putQueryParameter("ExecutorIds", executorIdsShrink);
+            this.executorIds = executorIds;
+            return this;
+        }
 
         /**
          * JobSpec.

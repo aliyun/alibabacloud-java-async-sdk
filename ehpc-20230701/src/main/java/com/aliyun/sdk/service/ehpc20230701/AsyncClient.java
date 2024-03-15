@@ -29,6 +29,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetJobResponse> getJob(GetJobRequest request);
 
+    CompletableFuture<ListExecutorsResponse> listExecutors(ListExecutorsRequest request);
+
     CompletableFuture<ListImagesResponse> listImages(ListImagesRequest request);
 
     CompletableFuture<ListJobExecutorsResponse> listJobExecutors(ListJobExecutorsRequest request);
