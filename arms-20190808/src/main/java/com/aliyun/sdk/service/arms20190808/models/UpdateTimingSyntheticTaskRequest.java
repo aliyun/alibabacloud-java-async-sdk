@@ -961,6 +961,9 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
         @NameInMap("Method")
         private String method;
 
+        @NameInMap("ProtocolAlpnProtocol")
+        private Integer protocolAlpnProtocol;
+
         @NameInMap("RequestBody")
         private RequestBody requestBody;
 
@@ -977,6 +980,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             this.checkCert = builder.checkCert;
             this.connectTimeout = builder.connectTimeout;
             this.method = builder.method;
+            this.protocolAlpnProtocol = builder.protocolAlpnProtocol;
             this.requestBody = builder.requestBody;
             this.requestHeaders = builder.requestHeaders;
             this.targetUrl = builder.targetUrl;
@@ -1013,6 +1017,13 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
         }
 
         /**
+         * @return protocolAlpnProtocol
+         */
+        public Integer getProtocolAlpnProtocol() {
+            return this.protocolAlpnProtocol;
+        }
+
+        /**
          * @return requestBody
          */
         public RequestBody getRequestBody() {
@@ -1044,6 +1055,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             private Boolean checkCert; 
             private Long connectTimeout; 
             private String method; 
+            private Integer protocolAlpnProtocol; 
             private RequestBody requestBody; 
             private java.util.Map < String, String > requestHeaders; 
             private String targetUrl; 
@@ -1074,6 +1086,14 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
              */
             public Builder method(String method) {
                 this.method = method;
+                return this;
+            }
+
+            /**
+             * ProtocolAlpnProtocol.
+             */
+            public Builder protocolAlpnProtocol(Integer protocolAlpnProtocol) {
+                this.protocolAlpnProtocol = protocolAlpnProtocol;
                 return this;
             }
 

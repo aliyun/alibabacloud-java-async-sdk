@@ -98,7 +98,7 @@ public class GetMultipleTraceRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * The time when the trace ends. The value is a timestamp. Unit: milliseconds.
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -107,7 +107,7 @@ public class GetMultipleTraceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -116,7 +116,7 @@ public class GetMultipleTraceRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The start time of the trace. The value is a timestamp. Unit: milliseconds.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -125,7 +125,7 @@ public class GetMultipleTraceRequest extends Request {
         }
 
         /**
-         * TraceIDs.
+         * The trace IDs.
          */
         public Builder traceIDs(java.util.List < String > traceIDs) {
             this.putQueryParameter("TraceIDs", traceIDs);

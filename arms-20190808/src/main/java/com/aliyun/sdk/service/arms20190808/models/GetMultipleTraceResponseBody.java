@@ -50,7 +50,7 @@ public class GetMultipleTraceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * MultiCallChainInfos.
+         * The details of traces.
          */
         public Builder multiCallChainInfos(java.util.List < MultiCallChainInfos> multiCallChainInfos) {
             this.multiCallChainInfos = multiCallChainInfos;
@@ -58,7 +58,7 @@ public class GetMultipleTraceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class GetMultipleTraceResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -118,7 +118,7 @@ public class GetMultipleTraceResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the tag.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -171,7 +171,7 @@ public class GetMultipleTraceResponseBody extends TeaModel {
             private Long timestamp; 
 
             /**
-             * TagEntryList.
+             * The tags of the trace.
              */
             public Builder tagEntryList(java.util.List < TagEntryList> tagEntryList) {
                 this.tagEntryList = tagEntryList;
@@ -179,7 +179,7 @@ public class GetMultipleTraceResponseBody extends TeaModel {
             }
 
             /**
-             * Timestamp.
+             * The time when the log was generated. The value is a timestamp.
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -232,7 +232,7 @@ public class GetMultipleTraceResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -240,7 +240,7 @@ public class GetMultipleTraceResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the tag.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -437,7 +437,7 @@ public class GetMultipleTraceResponseBody extends TeaModel {
             private String traceID; 
 
             /**
-             * Duration.
+             * The amount of time consumed by the trace. Unit: milliseconds.
              */
             public Builder duration(Long duration) {
                 this.duration = duration;
@@ -445,7 +445,11 @@ public class GetMultipleTraceResponseBody extends TeaModel {
             }
 
             /**
-             * HaveStack.
+             * Indicates whether a method stack was provided.
+             * <p>
+             * 
+             * *   `true`: A method stack was provided.
+             * *   `false`: No method stack was provided.
              */
             public Builder haveStack(Boolean haveStack) {
                 this.haveStack = haveStack;
@@ -453,7 +457,7 @@ public class GetMultipleTraceResponseBody extends TeaModel {
             }
 
             /**
-             * LogEventList.
+             * The log events in the trace.
              */
             public Builder logEventList(java.util.List < LogEventList> logEventList) {
                 this.logEventList = logEventList;
@@ -461,7 +465,7 @@ public class GetMultipleTraceResponseBody extends TeaModel {
             }
 
             /**
-             * OperationName.
+             * The name of the traced span.
              */
             public Builder operationName(String operationName) {
                 this.operationName = operationName;
@@ -469,7 +473,7 @@ public class GetMultipleTraceResponseBody extends TeaModel {
             }
 
             /**
-             * ParentSpanId.
+             * The ID of the parent span.
              */
             public Builder parentSpanId(String parentSpanId) {
                 this.parentSpanId = parentSpanId;
@@ -477,7 +481,7 @@ public class GetMultipleTraceResponseBody extends TeaModel {
             }
 
             /**
-             * ResultCode.
+             * The status code returned.
              */
             public Builder resultCode(String resultCode) {
                 this.resultCode = resultCode;
@@ -485,7 +489,7 @@ public class GetMultipleTraceResponseBody extends TeaModel {
             }
 
             /**
-             * RpcId.
+             * RPC ID
              */
             public Builder rpcId(String rpcId) {
                 this.rpcId = rpcId;
@@ -493,7 +497,31 @@ public class GetMultipleTraceResponseBody extends TeaModel {
             }
 
             /**
-             * RpcType.
+             * The type of the remote procedure call (RPC) mode.
+             * <p>
+             * 
+             * *   0: HTTP entry
+             * *   25: HTTP call
+             * *   1: High-speed Service Framework (HSF) call
+             * *   2: HSF provision
+             * *   40: on-premises API call
+             * *   60: MySQL call
+             * *   62: Oracle call
+             * *   63: PostgreSQL call
+             * *   70: Redis call
+             * *   4: Taobao Distributed Data Layer (TDDL) call
+             * *   5: Tair call
+             * *   13: MetaQ message sending
+             * *   252: MetaQ message receiving
+             * *   3: notification sending
+             * *   254: notification receiving
+             * *   7: Apache Dubbo call
+             * *   8: Apache Dubbo provision
+             * *   19: SOFARPC call
+             * *   18: SOFARPC provision
+             * *   11: Distributed Service Framework (DSF) call
+             * *   12: DSF provision
+             * *   \-1: unknown call
              */
             public Builder rpcType(Integer rpcType) {
                 this.rpcType = rpcType;
@@ -501,7 +529,7 @@ public class GetMultipleTraceResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceIp.
+             * The IP address of the host where the application resides.
              */
             public Builder serviceIp(String serviceIp) {
                 this.serviceIp = serviceIp;
@@ -509,7 +537,7 @@ public class GetMultipleTraceResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceName.
+             * The name of the application.
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -517,7 +545,7 @@ public class GetMultipleTraceResponseBody extends TeaModel {
             }
 
             /**
-             * SpanId.
+             * The span ID.
              */
             public Builder spanId(String spanId) {
                 this.spanId = spanId;
@@ -525,7 +553,7 @@ public class GetMultipleTraceResponseBody extends TeaModel {
             }
 
             /**
-             * TagEntryList.
+             * The tags of the trace.
              */
             public Builder tagEntryList(java.util.List < SpansTagEntryList> tagEntryList) {
                 this.tagEntryList = tagEntryList;
@@ -533,7 +561,7 @@ public class GetMultipleTraceResponseBody extends TeaModel {
             }
 
             /**
-             * Timestamp.
+             * The timestamp.
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -541,7 +569,7 @@ public class GetMultipleTraceResponseBody extends TeaModel {
             }
 
             /**
-             * TraceID.
+             * The trace ID.
              */
             public Builder traceID(String traceID) {
                 this.traceID = traceID;
@@ -594,7 +622,7 @@ public class GetMultipleTraceResponseBody extends TeaModel {
             private String traceID; 
 
             /**
-             * Spans.
+             * The details of the trace.
              */
             public Builder spans(java.util.List < Spans> spans) {
                 this.spans = spans;
@@ -602,7 +630,7 @@ public class GetMultipleTraceResponseBody extends TeaModel {
             }
 
             /**
-             * TraceID.
+             * The trace ID.
              */
             public Builder traceID(String traceID) {
                 this.traceID = traceID;
