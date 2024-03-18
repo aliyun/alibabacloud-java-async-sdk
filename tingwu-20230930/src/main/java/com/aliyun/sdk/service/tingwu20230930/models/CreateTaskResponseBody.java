@@ -121,10 +121,14 @@ public class CreateTaskResponseBody extends TeaModel {
         @NameInMap("TaskKey")
         private String taskKey;
 
+        @NameInMap("TaskStatus")
+        private String taskStatus;
+
         private Data(Builder builder) {
             this.meetingJoinUrl = builder.meetingJoinUrl;
             this.taskId = builder.taskId;
             this.taskKey = builder.taskKey;
+            this.taskStatus = builder.taskStatus;
         }
 
         public static Builder builder() {
@@ -156,10 +160,18 @@ public class CreateTaskResponseBody extends TeaModel {
             return this.taskKey;
         }
 
+        /**
+         * @return taskStatus
+         */
+        public String getTaskStatus() {
+            return this.taskStatus;
+        }
+
         public static final class Builder {
             private String meetingJoinUrl; 
             private String taskId; 
             private String taskKey; 
+            private String taskStatus; 
 
             /**
              * MeetingJoinUrl.
@@ -182,6 +194,14 @@ public class CreateTaskResponseBody extends TeaModel {
              */
             public Builder taskKey(String taskKey) {
                 this.taskKey = taskKey;
+                return this;
+            }
+
+            /**
+             * TaskStatus.
+             */
+            public Builder taskStatus(String taskStatus) {
+                this.taskStatus = taskStatus;
                 return this;
             }
 

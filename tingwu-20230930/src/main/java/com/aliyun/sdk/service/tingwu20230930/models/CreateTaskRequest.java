@@ -344,6 +344,47 @@ public class CreateTaskRequest extends Request {
         } 
 
     }
+    public static class ExtraParams extends TeaModel {
+        @NameInMap("NfixEnabled")
+        private Boolean nfixEnabled;
+
+        private ExtraParams(Builder builder) {
+            this.nfixEnabled = builder.nfixEnabled;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ExtraParams create() {
+            return builder().build();
+        }
+
+        /**
+         * @return nfixEnabled
+         */
+        public Boolean getNfixEnabled() {
+            return this.nfixEnabled;
+        }
+
+        public static final class Builder {
+            private Boolean nfixEnabled; 
+
+            /**
+             * NfixEnabled.
+             */
+            public Builder nfixEnabled(Boolean nfixEnabled) {
+                this.nfixEnabled = nfixEnabled;
+                return this;
+            }
+
+            public ExtraParams build() {
+                return new ExtraParams(this);
+            } 
+
+        } 
+
+    }
     public static class MeetingAssistance extends TeaModel {
         @NameInMap("Types")
         private java.util.List < String > types;
@@ -794,6 +835,9 @@ public class CreateTaskRequest extends Request {
         @NameInMap("AutoChaptersEnabled")
         private Boolean autoChaptersEnabled;
 
+        @NameInMap("ExtraParams")
+        private ExtraParams extraParams;
+
         @NameInMap("MeetingAssistance")
         private MeetingAssistance meetingAssistance;
 
@@ -826,6 +870,7 @@ public class CreateTaskRequest extends Request {
 
         private Parameters(Builder builder) {
             this.autoChaptersEnabled = builder.autoChaptersEnabled;
+            this.extraParams = builder.extraParams;
             this.meetingAssistance = builder.meetingAssistance;
             this.meetingAssistanceEnabled = builder.meetingAssistanceEnabled;
             this.pptExtractionEnabled = builder.pptExtractionEnabled;
@@ -851,6 +896,13 @@ public class CreateTaskRequest extends Request {
          */
         public Boolean getAutoChaptersEnabled() {
             return this.autoChaptersEnabled;
+        }
+
+        /**
+         * @return extraParams
+         */
+        public ExtraParams getExtraParams() {
+            return this.extraParams;
         }
 
         /**
@@ -925,6 +977,7 @@ public class CreateTaskRequest extends Request {
 
         public static final class Builder {
             private Boolean autoChaptersEnabled; 
+            private ExtraParams extraParams; 
             private MeetingAssistance meetingAssistance; 
             private Boolean meetingAssistanceEnabled; 
             private Boolean pptExtractionEnabled; 
@@ -941,6 +994,14 @@ public class CreateTaskRequest extends Request {
              */
             public Builder autoChaptersEnabled(Boolean autoChaptersEnabled) {
                 this.autoChaptersEnabled = autoChaptersEnabled;
+                return this;
+            }
+
+            /**
+             * ExtraParams.
+             */
+            public Builder extraParams(ExtraParams extraParams) {
+                this.extraParams = extraParams;
                 return this;
             }
 
