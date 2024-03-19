@@ -30,6 +30,9 @@ public class GetTrainingJobResponseBody extends TeaModel {
     @NameInMap("ComputeResource")
     private ComputeResource computeResource;
 
+    @NameInMap("Duration")
+    private Long duration;
+
     @NameInMap("ExperimentConfig")
     private ExperimentConfig experimentConfig;
 
@@ -118,6 +121,7 @@ public class GetTrainingJobResponseBody extends TeaModel {
         this.algorithmSpec = builder.algorithmSpec;
         this.algorithmVersion = builder.algorithmVersion;
         this.computeResource = builder.computeResource;
+        this.duration = builder.duration;
         this.experimentConfig = builder.experimentConfig;
         this.gmtCreateTime = builder.gmtCreateTime;
         this.gmtModifiedTime = builder.gmtModifiedTime;
@@ -195,6 +199,13 @@ public class GetTrainingJobResponseBody extends TeaModel {
      */
     public ComputeResource getComputeResource() {
         return this.computeResource;
+    }
+
+    /**
+     * @return duration
+     */
+    public Long getDuration() {
+        return this.duration;
     }
 
     /**
@@ -393,6 +404,7 @@ public class GetTrainingJobResponseBody extends TeaModel {
         private AlgorithmSpec algorithmSpec; 
         private String algorithmVersion; 
         private ComputeResource computeResource; 
+        private Long duration; 
         private ExperimentConfig experimentConfig; 
         private String gmtCreateTime; 
         private String gmtModifiedTime; 
@@ -466,6 +478,14 @@ public class GetTrainingJobResponseBody extends TeaModel {
          */
         public Builder computeResource(ComputeResource computeResource) {
             this.computeResource = computeResource;
+            return this;
+        }
+
+        /**
+         * Duration.
+         */
+        public Builder duration(Long duration) {
+            this.duration = duration;
             return this;
         }
 

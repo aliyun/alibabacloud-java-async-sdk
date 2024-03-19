@@ -12,11 +12,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueueInfo</p>
  */
 public class QueueInfo extends TeaModel {
+    @NameInMap("Code")
+    private String code;
+
+    @NameInMap("CodeType")
+    private String codeType;
+
+    @NameInMap("GmtDequeuedTime")
+    private String gmtDequeuedTime;
+
     @NameInMap("GmtEnqueuedTime")
     private String gmtEnqueuedTime;
 
     @NameInMap("GmtPositionModifiedTime")
     private String gmtPositionModifiedTime;
+
+    @NameInMap("Name")
+    private String name;
 
     @NameInMap("Position")
     private Long position;
@@ -30,6 +42,21 @@ public class QueueInfo extends TeaModel {
     @NameInMap("QuotaId")
     private String quotaId;
 
+    @NameInMap("Reason")
+    private String reason;
+
+    @NameInMap("Resource")
+    private ResourceAmount resource;
+
+    @NameInMap("Status")
+    private String status;
+
+    @NameInMap("SubStatus")
+    private String subStatus;
+
+    @NameInMap("UserId")
+    private String userId;
+
     @NameInMap("WorkloadId")
     private String workloadId;
 
@@ -40,12 +67,21 @@ public class QueueInfo extends TeaModel {
     private String workspaceId;
 
     private QueueInfo(Builder builder) {
+        this.code = builder.code;
+        this.codeType = builder.codeType;
+        this.gmtDequeuedTime = builder.gmtDequeuedTime;
         this.gmtEnqueuedTime = builder.gmtEnqueuedTime;
         this.gmtPositionModifiedTime = builder.gmtPositionModifiedTime;
+        this.name = builder.name;
         this.position = builder.position;
         this.priority = builder.priority;
         this.queueStrategy = builder.queueStrategy;
         this.quotaId = builder.quotaId;
+        this.reason = builder.reason;
+        this.resource = builder.resource;
+        this.status = builder.status;
+        this.subStatus = builder.subStatus;
+        this.userId = builder.userId;
         this.workloadId = builder.workloadId;
         this.workloadType = builder.workloadType;
         this.workspaceId = builder.workspaceId;
@@ -60,6 +96,27 @@ public class QueueInfo extends TeaModel {
     }
 
     /**
+     * @return code
+     */
+    public String getCode() {
+        return this.code;
+    }
+
+    /**
+     * @return codeType
+     */
+    public String getCodeType() {
+        return this.codeType;
+    }
+
+    /**
+     * @return gmtDequeuedTime
+     */
+    public String getGmtDequeuedTime() {
+        return this.gmtDequeuedTime;
+    }
+
+    /**
      * @return gmtEnqueuedTime
      */
     public String getGmtEnqueuedTime() {
@@ -71,6 +128,13 @@ public class QueueInfo extends TeaModel {
      */
     public String getGmtPositionModifiedTime() {
         return this.gmtPositionModifiedTime;
+    }
+
+    /**
+     * @return name
+     */
+    public String getName() {
+        return this.name;
     }
 
     /**
@@ -102,6 +166,41 @@ public class QueueInfo extends TeaModel {
     }
 
     /**
+     * @return reason
+     */
+    public String getReason() {
+        return this.reason;
+    }
+
+    /**
+     * @return resource
+     */
+    public ResourceAmount getResource() {
+        return this.resource;
+    }
+
+    /**
+     * @return status
+     */
+    public String getStatus() {
+        return this.status;
+    }
+
+    /**
+     * @return subStatus
+     */
+    public String getSubStatus() {
+        return this.subStatus;
+    }
+
+    /**
+     * @return userId
+     */
+    public String getUserId() {
+        return this.userId;
+    }
+
+    /**
      * @return workloadId
      */
     public String getWorkloadId() {
@@ -123,15 +222,48 @@ public class QueueInfo extends TeaModel {
     }
 
     public static final class Builder {
+        private String code; 
+        private String codeType; 
+        private String gmtDequeuedTime; 
         private String gmtEnqueuedTime; 
         private String gmtPositionModifiedTime; 
+        private String name; 
         private Long position; 
         private Long priority; 
         private String queueStrategy; 
         private String quotaId; 
+        private String reason; 
+        private ResourceAmount resource; 
+        private String status; 
+        private String subStatus; 
+        private String userId; 
         private String workloadId; 
         private String workloadType; 
         private String workspaceId; 
+
+        /**
+         * Code.
+         */
+        public Builder code(String code) {
+            this.code = code;
+            return this;
+        }
+
+        /**
+         * CodeType.
+         */
+        public Builder codeType(String codeType) {
+            this.codeType = codeType;
+            return this;
+        }
+
+        /**
+         * GmtDequeuedTime.
+         */
+        public Builder gmtDequeuedTime(String gmtDequeuedTime) {
+            this.gmtDequeuedTime = gmtDequeuedTime;
+            return this;
+        }
 
         /**
          * GmtEnqueuedTime.
@@ -146,6 +278,14 @@ public class QueueInfo extends TeaModel {
          */
         public Builder gmtPositionModifiedTime(String gmtPositionModifiedTime) {
             this.gmtPositionModifiedTime = gmtPositionModifiedTime;
+            return this;
+        }
+
+        /**
+         * Name.
+         */
+        public Builder name(String name) {
+            this.name = name;
             return this;
         }
 
@@ -178,6 +318,46 @@ public class QueueInfo extends TeaModel {
          */
         public Builder quotaId(String quotaId) {
             this.quotaId = quotaId;
+            return this;
+        }
+
+        /**
+         * Reason.
+         */
+        public Builder reason(String reason) {
+            this.reason = reason;
+            return this;
+        }
+
+        /**
+         * Resource.
+         */
+        public Builder resource(ResourceAmount resource) {
+            this.resource = resource;
+            return this;
+        }
+
+        /**
+         * Status.
+         */
+        public Builder status(String status) {
+            this.status = status;
+            return this;
+        }
+
+        /**
+         * SubStatus.
+         */
+        public Builder subStatus(String subStatus) {
+            this.subStatus = subStatus;
+            return this;
+        }
+
+        /**
+         * UserId.
+         */
+        public Builder userId(String userId) {
+            this.userId = userId;
             return this;
         }
 

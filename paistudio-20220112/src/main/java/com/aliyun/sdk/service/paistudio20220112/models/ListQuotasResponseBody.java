@@ -18,9 +18,13 @@ public class ListQuotasResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("TotalCount")
+    private Integer totalCount;
+
     private ListQuotasResponseBody(Builder builder) {
         this.quotas = builder.quotas;
         this.requestId = builder.requestId;
+        this.totalCount = builder.totalCount;
     }
 
     public static Builder builder() {
@@ -45,9 +49,17 @@ public class ListQuotasResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return totalCount
+     */
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public static final class Builder {
         private java.util.List < Quota > quotas; 
         private String requestId; 
+        private Integer totalCount; 
 
         /**
          * Quotas.
@@ -62,6 +74,14 @@ public class ListQuotasResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(Integer totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
 

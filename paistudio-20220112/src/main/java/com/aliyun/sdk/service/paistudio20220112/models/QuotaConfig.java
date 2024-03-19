@@ -21,6 +21,9 @@ public class QuotaConfig extends TeaModel {
     @NameInMap("DefaultGPUDriver")
     private String defaultGPUDriver;
 
+    @NameInMap("ResourceSpecs")
+    private java.util.List < WorkspaceSpecs > resourceSpecs;
+
     @NameInMap("SupportGPUDrivers")
     private java.util.List < String > supportGPUDrivers;
 
@@ -34,6 +37,7 @@ public class QuotaConfig extends TeaModel {
         this.ACS = builder.ACS;
         this.clusterId = builder.clusterId;
         this.defaultGPUDriver = builder.defaultGPUDriver;
+        this.resourceSpecs = builder.resourceSpecs;
         this.supportGPUDrivers = builder.supportGPUDrivers;
         this.supportRDMA = builder.supportRDMA;
         this.userVpc = builder.userVpc;
@@ -69,6 +73,13 @@ public class QuotaConfig extends TeaModel {
     }
 
     /**
+     * @return resourceSpecs
+     */
+    public java.util.List < WorkspaceSpecs > getResourceSpecs() {
+        return this.resourceSpecs;
+    }
+
+    /**
      * @return supportGPUDrivers
      */
     public java.util.List < String > getSupportGPUDrivers() {
@@ -93,6 +104,7 @@ public class QuotaConfig extends TeaModel {
         private ACS ACS; 
         private String clusterId; 
         private String defaultGPUDriver; 
+        private java.util.List < WorkspaceSpecs > resourceSpecs; 
         private java.util.List < String > supportGPUDrivers; 
         private Boolean supportRDMA; 
         private UserVpc userVpc; 
@@ -118,6 +130,14 @@ public class QuotaConfig extends TeaModel {
          */
         public Builder defaultGPUDriver(String defaultGPUDriver) {
             this.defaultGPUDriver = defaultGPUDriver;
+            return this;
+        }
+
+        /**
+         * ResourceSpecs.
+         */
+        public Builder resourceSpecs(java.util.List < WorkspaceSpecs > resourceSpecs) {
+            this.resourceSpecs = resourceSpecs;
             return this;
         }
 
