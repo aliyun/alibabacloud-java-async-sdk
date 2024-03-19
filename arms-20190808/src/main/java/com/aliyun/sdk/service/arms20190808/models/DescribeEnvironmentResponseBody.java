@@ -206,6 +206,9 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
         @NameInMap("EnvironmentType")
         private String environmentType;
 
+        @NameInMap("FeePackage")
+        private String feePackage;
+
         @NameInMap("GrafaDataSourceName")
         private String grafaDataSourceName;
 
@@ -257,6 +260,7 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
             this.environmentName = builder.environmentName;
             this.environmentSubType = builder.environmentSubType;
             this.environmentType = builder.environmentType;
+            this.feePackage = builder.feePackage;
             this.grafaDataSourceName = builder.grafaDataSourceName;
             this.grafanaDatasourceUid = builder.grafanaDatasourceUid;
             this.grafanaFolderTitle = builder.grafanaFolderTitle;
@@ -355,6 +359,13 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
          */
         public String getEnvironmentType() {
             return this.environmentType;
+        }
+
+        /**
+         * @return feePackage
+         */
+        public String getFeePackage() {
+            return this.feePackage;
         }
 
         /**
@@ -460,6 +471,7 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
             private String environmentName; 
             private String environmentSubType; 
             private String environmentType; 
+            private String feePackage; 
             private String grafaDataSourceName; 
             private String grafanaDatasourceUid; 
             private String grafanaFolderTitle; 
@@ -568,6 +580,14 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
              */
             public Builder environmentType(String environmentType) {
                 this.environmentType = environmentType;
+                return this;
+            }
+
+            /**
+             * FeePackage.
+             */
+            public Builder feePackage(String feePackage) {
+                this.feePackage = feePackage;
                 return this;
             }
 

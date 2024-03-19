@@ -37,6 +37,10 @@ public class CreateEnvironmentRequest extends Request {
     private String environmentType;
 
     @Query
+    @NameInMap("FeePackage")
+    private String feePackage;
+
+    @Query
     @NameInMap("ManagedType")
     private String managedType;
 
@@ -64,6 +68,7 @@ public class CreateEnvironmentRequest extends Request {
         this.environmentName = builder.environmentName;
         this.environmentSubType = builder.environmentSubType;
         this.environmentType = builder.environmentType;
+        this.feePackage = builder.feePackage;
         this.managedType = builder.managedType;
         this.prometheusInstanceId = builder.prometheusInstanceId;
         this.regionId = builder.regionId;
@@ -120,6 +125,13 @@ public class CreateEnvironmentRequest extends Request {
     }
 
     /**
+     * @return feePackage
+     */
+    public String getFeePackage() {
+        return this.feePackage;
+    }
+
+    /**
      * @return managedType
      */
     public String getManagedType() {
@@ -160,6 +172,7 @@ public class CreateEnvironmentRequest extends Request {
         private String environmentName; 
         private String environmentSubType; 
         private String environmentType; 
+        private String feePackage; 
         private String managedType; 
         private String prometheusInstanceId; 
         private String regionId; 
@@ -177,6 +190,7 @@ public class CreateEnvironmentRequest extends Request {
             this.environmentName = request.environmentName;
             this.environmentSubType = request.environmentSubType;
             this.environmentType = request.environmentType;
+            this.feePackage = request.feePackage;
             this.managedType = request.managedType;
             this.prometheusInstanceId = request.prometheusInstanceId;
             this.regionId = request.regionId;
@@ -236,6 +250,15 @@ public class CreateEnvironmentRequest extends Request {
         public Builder environmentType(String environmentType) {
             this.putQueryParameter("EnvironmentType", environmentType);
             this.environmentType = environmentType;
+            return this;
+        }
+
+        /**
+         * FeePackage.
+         */
+        public Builder feePackage(String feePackage) {
+            this.putQueryParameter("FeePackage", feePackage);
+            this.feePackage = feePackage;
             return this;
         }
 

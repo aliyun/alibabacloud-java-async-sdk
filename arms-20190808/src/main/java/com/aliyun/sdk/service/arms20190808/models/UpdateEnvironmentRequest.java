@@ -23,8 +23,11 @@ public class UpdateEnvironmentRequest extends Request {
 
     @Query
     @NameInMap("EnvironmentName")
-    @Validation(required = true)
     private String environmentName;
+
+    @Query
+    @NameInMap("FeePackage")
+    private String feePackage;
 
     @Query
     @NameInMap("RegionId")
@@ -36,6 +39,7 @@ public class UpdateEnvironmentRequest extends Request {
         this.aliyunLang = builder.aliyunLang;
         this.environmentId = builder.environmentId;
         this.environmentName = builder.environmentName;
+        this.feePackage = builder.feePackage;
         this.regionId = builder.regionId;
     }
 
@@ -74,6 +78,13 @@ public class UpdateEnvironmentRequest extends Request {
     }
 
     /**
+     * @return feePackage
+     */
+    public String getFeePackage() {
+        return this.feePackage;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -84,6 +95,7 @@ public class UpdateEnvironmentRequest extends Request {
         private String aliyunLang; 
         private String environmentId; 
         private String environmentName; 
+        private String feePackage; 
         private String regionId; 
 
         private Builder() {
@@ -95,6 +107,7 @@ public class UpdateEnvironmentRequest extends Request {
             this.aliyunLang = request.aliyunLang;
             this.environmentId = request.environmentId;
             this.environmentName = request.environmentName;
+            this.feePackage = request.feePackage;
             this.regionId = request.regionId;
         } 
 
@@ -122,6 +135,15 @@ public class UpdateEnvironmentRequest extends Request {
         public Builder environmentName(String environmentName) {
             this.putQueryParameter("EnvironmentName", environmentName);
             this.environmentName = environmentName;
+            return this;
+        }
+
+        /**
+         * FeePackage.
+         */
+        public Builder feePackage(String feePackage) {
+            this.putQueryParameter("FeePackage", feePackage);
+            this.feePackage = feePackage;
             return this;
         }
 
