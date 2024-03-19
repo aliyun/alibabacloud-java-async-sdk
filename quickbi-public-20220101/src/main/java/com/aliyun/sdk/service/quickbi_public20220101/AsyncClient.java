@@ -111,6 +111,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListFavoriteReportsResponse> listFavoriteReports(ListFavoriteReportsRequest request);
 
+    CompletableFuture<ListOrganizationRoleUsersResponse> listOrganizationRoleUsers(ListOrganizationRoleUsersRequest request);
+
+    CompletableFuture<ListOrganizationRolesResponse> listOrganizationRoles(ListOrganizationRolesRequest request);
+
     CompletableFuture<ListPortalMenuAuthorizationResponse> listPortalMenuAuthorization(ListPortalMenuAuthorizationRequest request);
 
     CompletableFuture<ListPortalMenusResponse> listPortalMenus(ListPortalMenusRequest request);
@@ -120,6 +124,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListSharedReportsResponse> listSharedReports(ListSharedReportsRequest request);
 
     CompletableFuture<ListUserGroupsByUserIdResponse> listUserGroupsByUserId(ListUserGroupsByUserIdRequest request);
+
+    CompletableFuture<ListWorkspaceRoleUsersResponse> listWorkspaceRoleUsers(ListWorkspaceRoleUsersRequest request);
+
+    CompletableFuture<ListWorkspaceRolesResponse> listWorkspaceRoles(ListWorkspaceRolesRequest request);
 
     CompletableFuture<ModifyApiDatasourceParametersResponse> modifyApiDatasourceParameters(ModifyApiDatasourceParametersRequest request);
 
@@ -150,6 +158,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryEmbeddedInfoResponse> queryEmbeddedInfo(QueryEmbeddedInfoRequest request);
 
     CompletableFuture<QueryEmbeddedStatusResponse> queryEmbeddedStatus(QueryEmbeddedStatusRequest request);
+
+    CompletableFuture<QueryOrganizationRoleConfigResponse> queryOrganizationRoleConfig(QueryOrganizationRoleConfigRequest request);
 
     CompletableFuture<QueryOrganizationWorkspaceListResponse> queryOrganizationWorkspaceList(QueryOrganizationWorkspaceListRequest request);
 
@@ -186,6 +196,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryWorksByOrganizationResponse> queryWorksByOrganization(QueryWorksByOrganizationRequest request);
 
     CompletableFuture<QueryWorksByWorkspaceResponse> queryWorksByWorkspace(QueryWorksByWorkspaceRequest request);
+
+    CompletableFuture<QueryWorkspaceRoleConfigResponse> queryWorkspaceRoleConfig(QueryWorkspaceRoleConfigRequest request);
 
     CompletableFuture<QueryWorkspaceUserListResponse> queryWorkspaceUserList(QueryWorkspaceUserListRequest request);
 
