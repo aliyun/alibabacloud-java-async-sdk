@@ -21,6 +21,10 @@ public class RunClusterCheckRequest extends Request {
     private java.util.Map < String, String > options;
 
     @Body
+    @NameInMap("target")
+    private String target;
+
+    @Body
     @NameInMap("type")
     @Validation(required = true)
     private String type;
@@ -29,6 +33,7 @@ public class RunClusterCheckRequest extends Request {
         super(builder);
         this.clusterId = builder.clusterId;
         this.options = builder.options;
+        this.target = builder.target;
         this.type = builder.type;
     }
 
@@ -60,6 +65,13 @@ public class RunClusterCheckRequest extends Request {
     }
 
     /**
+     * @return target
+     */
+    public String getTarget() {
+        return this.target;
+    }
+
+    /**
      * @return type
      */
     public String getType() {
@@ -69,6 +81,7 @@ public class RunClusterCheckRequest extends Request {
     public static final class Builder extends Request.Builder<RunClusterCheckRequest, Builder> {
         private String clusterId; 
         private java.util.Map < String, String > options; 
+        private String target; 
         private String type; 
 
         private Builder() {
@@ -79,6 +92,7 @@ public class RunClusterCheckRequest extends Request {
             super(request);
             this.clusterId = request.clusterId;
             this.options = request.options;
+            this.target = request.target;
             this.type = request.type;
         } 
 
@@ -97,6 +111,15 @@ public class RunClusterCheckRequest extends Request {
         public Builder options(java.util.Map < String, String > options) {
             this.putBodyParameter("options", options);
             this.options = options;
+            return this;
+        }
+
+        /**
+         * target.
+         */
+        public Builder target(String target) {
+            this.putBodyParameter("target", target);
+            this.target = target;
             return this;
         }
 

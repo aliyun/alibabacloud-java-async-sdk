@@ -388,6 +388,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<UpdateTemplateResponse> updateTemplate(UpdateTemplateRequest request);
 
+    CompletableFuture<UpdateUserPermissionsResponse> updateUserPermissions(UpdateUserPermissionsRequest request);
+
     CompletableFuture<UpgradeClusterResponse> upgradeCluster(UpgradeClusterRequest request);
 
     CompletableFuture<UpgradeClusterAddonsResponse> upgradeClusterAddons(UpgradeClusterAddonsRequest request);

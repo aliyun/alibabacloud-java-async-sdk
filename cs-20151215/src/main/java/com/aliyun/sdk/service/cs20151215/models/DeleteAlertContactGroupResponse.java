@@ -18,10 +18,14 @@ public class DeleteAlertContactGroupResponse extends Response {
     @NameInMap("statusCode")
     private Integer statusCode;
 
+    @NameInMap("body")
+    private java.util.List < DeleteAlertContactGroupResponseBody> body;
+
     private DeleteAlertContactGroupResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
+        this.body = builder.body;
     }
 
     public static DeleteAlertContactGroupResponse create() {
@@ -47,11 +51,20 @@ public class DeleteAlertContactGroupResponse extends Response {
         return this.statusCode;
     }
 
+    /**
+     * @return body
+     */
+    public java.util.List < DeleteAlertContactGroupResponseBody> getBody() {
+        return this.body;
+    }
+
     public interface Builder extends Response.Builder<DeleteAlertContactGroupResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
+
+        Builder body(java.util.List < DeleteAlertContactGroupResponseBody> body);
 
         @Override
         DeleteAlertContactGroupResponse build();
@@ -63,6 +76,7 @@ public class DeleteAlertContactGroupResponse extends Response {
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
+        private java.util.List < DeleteAlertContactGroupResponseBody> body; 
 
         private BuilderImpl() {
             super();
@@ -72,6 +86,7 @@ public class DeleteAlertContactGroupResponse extends Response {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
+            this.body = response.body;
         } 
 
         /**
@@ -92,6 +107,15 @@ public class DeleteAlertContactGroupResponse extends Response {
             return this;
         }
 
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(java.util.List < DeleteAlertContactGroupResponseBody> body) {
+            this.body = body;
+            return this;
+        }
+
         @Override
         public DeleteAlertContactGroupResponse build() {
             return new DeleteAlertContactGroupResponse(this);
@@ -99,4 +123,85 @@ public class DeleteAlertContactGroupResponse extends Response {
 
     } 
 
+    public static class DeleteAlertContactGroupResponseBody extends TeaModel {
+        @NameInMap("status")
+        private Boolean status;
+
+        @NameInMap("msg")
+        private String msg;
+
+        @NameInMap("contact_group_id")
+        private String contactGroupId;
+
+        private DeleteAlertContactGroupResponseBody(Builder builder) {
+            this.status = builder.status;
+            this.msg = builder.msg;
+            this.contactGroupId = builder.contactGroupId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DeleteAlertContactGroupResponseBody create() {
+            return builder().build();
+        }
+
+        /**
+         * @return status
+         */
+        public Boolean getStatus() {
+            return this.status;
+        }
+
+        /**
+         * @return msg
+         */
+        public String getMsg() {
+            return this.msg;
+        }
+
+        /**
+         * @return contactGroupId
+         */
+        public String getContactGroupId() {
+            return this.contactGroupId;
+        }
+
+        public static final class Builder {
+            private Boolean status; 
+            private String msg; 
+            private String contactGroupId; 
+
+            /**
+             * status.
+             */
+            public Builder status(Boolean status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * msg.
+             */
+            public Builder msg(String msg) {
+                this.msg = msg;
+                return this;
+            }
+
+            /**
+             * contact_group_id.
+             */
+            public Builder contactGroupId(String contactGroupId) {
+                this.contactGroupId = contactGroupId;
+                return this;
+            }
+
+            public DeleteAlertContactGroupResponseBody build() {
+                return new DeleteAlertContactGroupResponseBody(this);
+            } 
+
+        } 
+
+    }
 }

@@ -17,12 +17,17 @@ public class ListClusterChecksRequest extends Request {
     private String clusterId;
 
     @Query
+    @NameInMap("target")
+    private String target;
+
+    @Query
     @NameInMap("type")
     private String type;
 
     private ListClusterChecksRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
+        this.target = builder.target;
         this.type = builder.type;
     }
 
@@ -47,6 +52,13 @@ public class ListClusterChecksRequest extends Request {
     }
 
     /**
+     * @return target
+     */
+    public String getTarget() {
+        return this.target;
+    }
+
+    /**
      * @return type
      */
     public String getType() {
@@ -55,6 +67,7 @@ public class ListClusterChecksRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListClusterChecksRequest, Builder> {
         private String clusterId; 
+        private String target; 
         private String type; 
 
         private Builder() {
@@ -64,6 +77,7 @@ public class ListClusterChecksRequest extends Request {
         private Builder(ListClusterChecksRequest request) {
             super(request);
             this.clusterId = request.clusterId;
+            this.target = request.target;
             this.type = request.type;
         } 
 
@@ -73,6 +87,15 @@ public class ListClusterChecksRequest extends Request {
         public Builder clusterId(String clusterId) {
             this.putPathParameter("cluster_id", clusterId);
             this.clusterId = clusterId;
+            return this;
+        }
+
+        /**
+         * target.
+         */
+        public Builder target(String target) {
+            this.putQueryParameter("target", target);
+            this.target = target;
             return this;
         }
 

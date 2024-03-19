@@ -12,8 +12,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteAlertContactRequest</p>
  */
 public class DeleteAlertContactRequest extends Request {
+    @Query
+    @NameInMap("contact_ids")
+    private java.util.List < Long > contactIds;
+
     private DeleteAlertContactRequest(Builder builder) {
         super(builder);
+        this.contactIds = builder.contactIds;
     }
 
     public static Builder builder() {
@@ -29,7 +34,15 @@ public class DeleteAlertContactRequest extends Request {
         return new Builder(this);
     }
 
+    /**
+     * @return contactIds
+     */
+    public java.util.List < Long > getContactIds() {
+        return this.contactIds;
+    }
+
     public static final class Builder extends Request.Builder<DeleteAlertContactRequest, Builder> {
+        private java.util.List < Long > contactIds; 
 
         private Builder() {
             super();
@@ -37,7 +50,18 @@ public class DeleteAlertContactRequest extends Request {
 
         private Builder(DeleteAlertContactRequest request) {
             super(request);
+            this.contactIds = request.contactIds;
         } 
+
+        /**
+         * contact_ids.
+         */
+        public Builder contactIds(java.util.List < Long > contactIds) {
+            String contactIdsShrink = shrink(contactIds, "contact_ids", "json");
+            this.putQueryParameter("contact_ids", contactIdsShrink);
+            this.contactIds = contactIds;
+            return this;
+        }
 
         @Override
         public DeleteAlertContactRequest build() {

@@ -204,6 +204,148 @@ public class DescribeClusterResourcesResponse extends Response {
         } 
 
     }
+    public static class AssociatedObject extends TeaModel {
+        @NameInMap("kind")
+        private String kind;
+
+        @NameInMap("namespace")
+        private String namespace;
+
+        @NameInMap("name")
+        private String name;
+
+        private AssociatedObject(Builder builder) {
+            this.kind = builder.kind;
+            this.namespace = builder.namespace;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AssociatedObject create() {
+            return builder().build();
+        }
+
+        /**
+         * @return kind
+         */
+        public String getKind() {
+            return this.kind;
+        }
+
+        /**
+         * @return namespace
+         */
+        public String getNamespace() {
+            return this.namespace;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private String kind; 
+            private String namespace; 
+            private String name; 
+
+            /**
+             * kind.
+             */
+            public Builder kind(String kind) {
+                this.kind = kind;
+                return this;
+            }
+
+            /**
+             * namespace.
+             */
+            public Builder namespace(String namespace) {
+                this.namespace = namespace;
+                return this;
+            }
+
+            /**
+             * name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public AssociatedObject build() {
+                return new AssociatedObject(this);
+            } 
+
+        } 
+
+    }
+    public static class DeleteBehavior extends TeaModel {
+        @NameInMap("delete_by_default")
+        private Boolean deleteByDefault;
+
+        @NameInMap("changeable")
+        private Boolean changeable;
+
+        private DeleteBehavior(Builder builder) {
+            this.deleteByDefault = builder.deleteByDefault;
+            this.changeable = builder.changeable;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DeleteBehavior create() {
+            return builder().build();
+        }
+
+        /**
+         * @return deleteByDefault
+         */
+        public Boolean getDeleteByDefault() {
+            return this.deleteByDefault;
+        }
+
+        /**
+         * @return changeable
+         */
+        public Boolean getChangeable() {
+            return this.changeable;
+        }
+
+        public static final class Builder {
+            private Boolean deleteByDefault; 
+            private Boolean changeable; 
+
+            /**
+             * delete_by_default.
+             */
+            public Builder deleteByDefault(Boolean deleteByDefault) {
+                this.deleteByDefault = deleteByDefault;
+                return this;
+            }
+
+            /**
+             * changeable.
+             */
+            public Builder changeable(Boolean changeable) {
+                this.changeable = changeable;
+                return this;
+            }
+
+            public DeleteBehavior build() {
+                return new DeleteBehavior(this);
+            } 
+
+        } 
+
+    }
     public static class DescribeClusterResourcesResponseBody extends TeaModel {
         @NameInMap("cluster_id")
         private String clusterId;
@@ -229,6 +371,18 @@ public class DescribeClusterResourcesResponse extends Response {
         @NameInMap("dependencies")
         private java.util.List < Dependencies> dependencies;
 
+        @NameInMap("associated_object")
+        private AssociatedObject associatedObject;
+
+        @NameInMap("delete_behavior")
+        private DeleteBehavior deleteBehavior;
+
+        @NameInMap("creator_type")
+        private String creatorType;
+
+        @NameInMap("extra_info")
+        private java.util.Map < String, ? > extraInfo;
+
         private DescribeClusterResourcesResponseBody(Builder builder) {
             this.clusterId = builder.clusterId;
             this.created = builder.created;
@@ -238,6 +392,10 @@ public class DescribeClusterResourcesResponse extends Response {
             this.state = builder.state;
             this.autoCreate = builder.autoCreate;
             this.dependencies = builder.dependencies;
+            this.associatedObject = builder.associatedObject;
+            this.deleteBehavior = builder.deleteBehavior;
+            this.creatorType = builder.creatorType;
+            this.extraInfo = builder.extraInfo;
         }
 
         public static Builder builder() {
@@ -304,6 +462,34 @@ public class DescribeClusterResourcesResponse extends Response {
             return this.dependencies;
         }
 
+        /**
+         * @return associatedObject
+         */
+        public AssociatedObject getAssociatedObject() {
+            return this.associatedObject;
+        }
+
+        /**
+         * @return deleteBehavior
+         */
+        public DeleteBehavior getDeleteBehavior() {
+            return this.deleteBehavior;
+        }
+
+        /**
+         * @return creatorType
+         */
+        public String getCreatorType() {
+            return this.creatorType;
+        }
+
+        /**
+         * @return extraInfo
+         */
+        public java.util.Map < String, ? > getExtraInfo() {
+            return this.extraInfo;
+        }
+
         public static final class Builder {
             private String clusterId; 
             private String created; 
@@ -313,6 +499,10 @@ public class DescribeClusterResourcesResponse extends Response {
             private String state; 
             private Long autoCreate; 
             private java.util.List < Dependencies> dependencies; 
+            private AssociatedObject associatedObject; 
+            private DeleteBehavior deleteBehavior; 
+            private String creatorType; 
+            private java.util.Map < String, ? > extraInfo; 
 
             /**
              * The cluster ID.
@@ -389,6 +579,38 @@ public class DescribeClusterResourcesResponse extends Response {
              */
             public Builder dependencies(java.util.List < Dependencies> dependencies) {
                 this.dependencies = dependencies;
+                return this;
+            }
+
+            /**
+             * associated_object.
+             */
+            public Builder associatedObject(AssociatedObject associatedObject) {
+                this.associatedObject = associatedObject;
+                return this;
+            }
+
+            /**
+             * delete_behavior.
+             */
+            public Builder deleteBehavior(DeleteBehavior deleteBehavior) {
+                this.deleteBehavior = deleteBehavior;
+                return this;
+            }
+
+            /**
+             * creator_type.
+             */
+            public Builder creatorType(String creatorType) {
+                this.creatorType = creatorType;
+                return this;
+            }
+
+            /**
+             * extra_info.
+             */
+            public Builder extraInfo(java.util.Map < String, ? > extraInfo) {
+                this.extraInfo = extraInfo;
                 return this;
             }
 

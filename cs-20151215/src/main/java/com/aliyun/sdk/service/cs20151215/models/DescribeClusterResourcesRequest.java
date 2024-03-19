@@ -17,9 +17,14 @@ public class DescribeClusterResourcesRequest extends Request {
     @Validation(required = true)
     private String clusterId;
 
+    @Query
+    @NameInMap("with_addon_resources")
+    private Boolean withAddonResources;
+
     private DescribeClusterResourcesRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
+        this.withAddonResources = builder.withAddonResources;
     }
 
     public static Builder builder() {
@@ -42,8 +47,16 @@ public class DescribeClusterResourcesRequest extends Request {
         return this.clusterId;
     }
 
+    /**
+     * @return withAddonResources
+     */
+    public Boolean getWithAddonResources() {
+        return this.withAddonResources;
+    }
+
     public static final class Builder extends Request.Builder<DescribeClusterResourcesRequest, Builder> {
         private String clusterId; 
+        private Boolean withAddonResources; 
 
         private Builder() {
             super();
@@ -52,6 +65,7 @@ public class DescribeClusterResourcesRequest extends Request {
         private Builder(DescribeClusterResourcesRequest request) {
             super(request);
             this.clusterId = request.clusterId;
+            this.withAddonResources = request.withAddonResources;
         } 
 
         /**
@@ -65,6 +79,15 @@ public class DescribeClusterResourcesRequest extends Request {
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
             this.clusterId = clusterId;
+            return this;
+        }
+
+        /**
+         * with_addon_resources.
+         */
+        public Builder withAddonResources(Boolean withAddonResources) {
+            this.putQueryParameter("with_addon_resources", withAddonResources);
+            this.withAddonResources = withAddonResources;
             return this;
         }
 
