@@ -197,4 +197,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<UpdateTableMetaResponse> updateTableMeta(UpdateTableMetaRequest request);
 
+    CompletableFuture<UploadRecommendationDataResponse> uploadRecommendationData(UploadRecommendationDataRequest request);
+
 }
