@@ -57,8 +57,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ForceDeleteExpressConnectRouterResponse> forceDeleteExpressConnectRouter(ForceDeleteExpressConnectRouterRequest request);
 
-    CompletableFuture<GetExpressConnectRouterResponse> getExpressConnectRouter(GetExpressConnectRouterRequest request);
-
     CompletableFuture<GrantInstanceToExpressConnectRouterResponse> grantInstanceToExpressConnectRouter(GrantInstanceToExpressConnectRouterRequest request);
 
     CompletableFuture<ListExpressConnectRouterSupportedRegionResponse> listExpressConnectRouterSupportedRegion(ListExpressConnectRouterSupportedRegionRequest request);
