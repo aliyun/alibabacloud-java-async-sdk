@@ -38,7 +38,7 @@ public class UnRegisterDeviceCredentialResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * The unique ID that the system generates for the request. This parameter is a common parameter.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

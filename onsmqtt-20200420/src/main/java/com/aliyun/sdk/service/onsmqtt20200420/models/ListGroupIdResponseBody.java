@@ -50,7 +50,7 @@ public class ListGroupIdResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The details of a queried group.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class ListGroupIdResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID. This parameter is a common parameter.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +146,7 @@ public class ListGroupIdResponseBody extends TeaModel {
             private Long updateTime; 
 
             /**
-             * CreateTime.
+             * The time when the group was created.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -154,7 +154,7 @@ public class ListGroupIdResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * The queried group that belongs to the ApsaraMQ for MQTT instance.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -162,7 +162,11 @@ public class ListGroupIdResponseBody extends TeaModel {
             }
 
             /**
-             * IndependentNaming.
+             * Indicates whether a separate namespace is configured for the ApsaraMQ for MQTT instance. Valid values:
+             * <p>
+             * 
+             * *   **true**: A separate namespace is configured for the ApsaraMQ for MQTT instance. Resource names must be unique within an ApsaraMQ for MQTT instance but can be the same across ApsaraMQ for MQTT instances.
+             * *   **false**: No separate namespace is configured for the ApsaraMQ for MQTT instance. Resource names must be globally unique within an ApsaraMQ for MQTT instance and across ApsaraMQ for MQTT instances.
              */
             public Builder independentNaming(Boolean independentNaming) {
                 this.independentNaming = independentNaming;
@@ -170,7 +174,7 @@ public class ListGroupIdResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the ApsaraMQ for MQTT instance to which the group belongs.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -178,7 +182,7 @@ public class ListGroupIdResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The time when the group was last updated.
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

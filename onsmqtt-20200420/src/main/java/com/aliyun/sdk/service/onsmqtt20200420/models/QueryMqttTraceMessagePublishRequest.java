@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryMqttTraceMessagePublishRequest</p>
  */
 public class QueryMqttTraceMessagePublishRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("BeginTime")
     @Validation(required = true)
@@ -37,19 +41,14 @@ public class QueryMqttTraceMessagePublishRequest extends Request {
     @Validation(required = true)
     private String msgId;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     private QueryMqttTraceMessagePublishRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.beginTime = builder.beginTime;
         this.endTime = builder.endTime;
         this.instanceId = builder.instanceId;
         this.mqttRegionId = builder.mqttRegionId;
         this.msgId = builder.msgId;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -63,6 +62,13 @@ public class QueryMqttTraceMessagePublishRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -100,37 +106,39 @@ public class QueryMqttTraceMessagePublishRequest extends Request {
         return this.msgId;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<QueryMqttTraceMessagePublishRequest, Builder> {
+        private String regionId; 
         private Long beginTime; 
         private Long endTime; 
         private String instanceId; 
         private String mqttRegionId; 
         private String msgId; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(QueryMqttTraceMessagePublishRequest response) {
-            super(response);
-            this.beginTime = response.beginTime;
-            this.endTime = response.endTime;
-            this.instanceId = response.instanceId;
-            this.mqttRegionId = response.mqttRegionId;
-            this.msgId = response.msgId;
-            this.regionId = response.regionId;
+        private Builder(QueryMqttTraceMessagePublishRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.beginTime = request.beginTime;
+            this.endTime = request.endTime;
+            this.instanceId = request.instanceId;
+            this.mqttRegionId = request.mqttRegionId;
+            this.msgId = request.msgId;
         } 
 
         /**
-         * BeginTime.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The beginning of the time range to query. The value of this parameter is a UNIX timestamp in milliseconds.
          */
         public Builder beginTime(Long beginTime) {
             this.putQueryParameter("BeginTime", beginTime);
@@ -139,7 +147,7 @@ public class QueryMqttTraceMessagePublishRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. The value of this parameter is a UNIX timestamp in milliseconds.
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -148,7 +156,7 @@ public class QueryMqttTraceMessagePublishRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the ApsaraMQ for MQTT instance. The ID must be consistent with the ID of the instance that the ApsaraMQ for MQTT client uses. You can view the instance ID in the **Basic Information** section on the **Instance Details** page that corresponds to the instance in the ApsaraMQ for MQTT console.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -157,7 +165,7 @@ public class QueryMqttTraceMessagePublishRequest extends Request {
         }
 
         /**
-         * MqttRegionId.
+         * The ID of the region where the ApsaraMQ for MQTT instance resides. For more information, see [Endpoints](~~181438~~).
          */
         public Builder mqttRegionId(String mqttRegionId) {
             this.putQueryParameter("MqttRegionId", mqttRegionId);
@@ -166,20 +174,11 @@ public class QueryMqttTraceMessagePublishRequest extends Request {
         }
 
         /**
-         * MsgId.
+         * The message ID.
          */
         public Builder msgId(String msgId) {
             this.putQueryParameter("MsgId", msgId);
             this.msgId = msgId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

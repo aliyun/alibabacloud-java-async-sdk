@@ -50,7 +50,7 @@ public class BatchQuerySessionByClientIdsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * OnlineStatusList.
+         * The status list of all queried ApsaraMQ for MQTT clients.
          */
         public Builder onlineStatusList(java.util.List < OnlineStatusList> onlineStatusList) {
             this.onlineStatusList = onlineStatusList;
@@ -58,7 +58,7 @@ public class BatchQuerySessionByClientIdsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID. This parameter is a common parameter.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class BatchQuerySessionByClientIdsResponseBody extends TeaModel {
             private Boolean onlineStatus; 
 
             /**
-             * ClientId.
+             * The ID of the ApsaraMQ for MQTT client. For more information about client IDs, see [Terms](~~42420~~).
              */
             public Builder clientId(String clientId) {
                 this.clientId = clientId;
@@ -118,7 +118,11 @@ public class BatchQuerySessionByClientIdsResponseBody extends TeaModel {
             }
 
             /**
-             * OnlineStatus.
+             * Indicates whether the ApsaraMQ for MQTT client is online. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder onlineStatus(Boolean onlineStatus) {
                 this.onlineStatus = onlineStatus;

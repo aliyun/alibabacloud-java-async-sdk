@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryMqttTraceDeviceRequest</p>
  */
 public class QueryMqttTraceDeviceRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("BeginTime")
     @Validation(required = true)
@@ -47,17 +51,13 @@ public class QueryMqttTraceDeviceRequest extends Request {
     @Validation(required = true, maximum = 2147483647)
     private Integer pageSize;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     @Query
     @NameInMap("Reverse")
     private Boolean reverse;
 
     private QueryMqttTraceDeviceRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.beginTime = builder.beginTime;
         this.clientId = builder.clientId;
         this.currentPage = builder.currentPage;
@@ -65,7 +65,6 @@ public class QueryMqttTraceDeviceRequest extends Request {
         this.instanceId = builder.instanceId;
         this.mqttRegionId = builder.mqttRegionId;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
         this.reverse = builder.reverse;
     }
 
@@ -80,6 +79,13 @@ public class QueryMqttTraceDeviceRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -132,13 +138,6 @@ public class QueryMqttTraceDeviceRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return reverse
      */
     public Boolean getReverse() {
@@ -146,6 +145,7 @@ public class QueryMqttTraceDeviceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<QueryMqttTraceDeviceRequest, Builder> {
+        private String regionId; 
         private Long beginTime; 
         private String clientId; 
         private Integer currentPage; 
@@ -153,88 +153,24 @@ public class QueryMqttTraceDeviceRequest extends Request {
         private String instanceId; 
         private String mqttRegionId; 
         private Integer pageSize; 
-        private String regionId; 
         private Boolean reverse; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(QueryMqttTraceDeviceRequest response) {
-            super(response);
-            this.beginTime = response.beginTime;
-            this.clientId = response.clientId;
-            this.currentPage = response.currentPage;
-            this.endTime = response.endTime;
-            this.instanceId = response.instanceId;
-            this.mqttRegionId = response.mqttRegionId;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.reverse = response.reverse;
+        private Builder(QueryMqttTraceDeviceRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.beginTime = request.beginTime;
+            this.clientId = request.clientId;
+            this.currentPage = request.currentPage;
+            this.endTime = request.endTime;
+            this.instanceId = request.instanceId;
+            this.mqttRegionId = request.mqttRegionId;
+            this.pageSize = request.pageSize;
+            this.reverse = request.reverse;
         } 
-
-        /**
-         * BeginTime.
-         */
-        public Builder beginTime(Long beginTime) {
-            this.putQueryParameter("BeginTime", beginTime);
-            this.beginTime = beginTime;
-            return this;
-        }
-
-        /**
-         * ClientId.
-         */
-        public Builder clientId(String clientId) {
-            this.putQueryParameter("ClientId", clientId);
-            this.clientId = clientId;
-            return this;
-        }
-
-        /**
-         * CurrentPage.
-         */
-        public Builder currentPage(Integer currentPage) {
-            this.putQueryParameter("CurrentPage", currentPage);
-            this.currentPage = currentPage;
-            return this;
-        }
-
-        /**
-         * EndTime.
-         */
-        public Builder endTime(Long endTime) {
-            this.putQueryParameter("EndTime", endTime);
-            this.endTime = endTime;
-            return this;
-        }
-
-        /**
-         * InstanceId.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * MqttRegionId.
-         */
-        public Builder mqttRegionId(String mqttRegionId) {
-            this.putQueryParameter("MqttRegionId", mqttRegionId);
-            this.mqttRegionId = mqttRegionId;
-            return this;
-        }
-
-        /**
-         * PageSize.
-         */
-        public Builder pageSize(Integer pageSize) {
-            this.putQueryParameter("PageSize", pageSize);
-            this.pageSize = pageSize;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -246,7 +182,76 @@ public class QueryMqttTraceDeviceRequest extends Request {
         }
 
         /**
-         * Reverse.
+         * The beginning of the time range to query. The value of this parameter is a UNIX timestamp in milliseconds.
+         */
+        public Builder beginTime(Long beginTime) {
+            this.putQueryParameter("BeginTime", beginTime);
+            this.beginTime = beginTime;
+            return this;
+        }
+
+        /**
+         * The client ID of the device whose trace you want to query.
+         */
+        public Builder clientId(String clientId) {
+            this.putQueryParameter("ClientId", clientId);
+            this.clientId = clientId;
+            return this;
+        }
+
+        /**
+         * The number of the page to return. Pages start from page 1. If the input parameter value is greater than the total number of pages, the returned result is empty.
+         */
+        public Builder currentPage(Integer currentPage) {
+            this.putQueryParameter("CurrentPage", currentPage);
+            this.currentPage = currentPage;
+            return this;
+        }
+
+        /**
+         * The end of the time range to query. The value of this parameter is a UNIX timestamp in milliseconds.
+         */
+        public Builder endTime(Long endTime) {
+            this.putQueryParameter("EndTime", endTime);
+            this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * The ID of the ApsaraMQ for MQTT instance. The ID must be consistent with the ID of the instance that the ApsaraMQ for MQTT client uses. You can view the instance ID in the **Basic Information** section on the **Instance Details** page that corresponds to the instance in the ApsaraMQ for MQTT console.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * The ID of the region where the ApsaraMQ for MQTT instance resides. For more information, see [Endpoints](~~181438~~).
+         */
+        public Builder mqttRegionId(String mqttRegionId) {
+            this.putQueryParameter("MqttRegionId", mqttRegionId);
+            this.mqttRegionId = mqttRegionId;
+            return this;
+        }
+
+        /**
+         * The number of entries to return on each page. Valid values: 1 to 100.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * Specifies whether the returned results are displayed in reverse chronological order. Valid values:
+         * <p>
+         * 
+         * *   **true**: The returned results are displayed in reverse time order of actions on the device. This means that the information about the latest action on the device is displayed as the first entry and the information about the earliest action on the device is displayed as the last entry.
+         * *   **false**: The returned results are displayed in time order of actions on the device. This means that the information about the earliest action on the device is displayed as the first entry and the information about the latest action on the device is displayed as the last entry.
+         * 
+         * If you do not specify this parameter, the returned results are displayed in time order of actions on the device by default.
          */
         public Builder reverse(Boolean reverse) {
             this.putQueryParameter("Reverse", reverse);

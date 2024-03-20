@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SendMessageRequest</p>
  */
 public class SendMessageRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
@@ -27,17 +31,12 @@ public class SendMessageRequest extends Request {
     @Validation(required = true)
     private String payload;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     private SendMessageRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
         this.mqttTopic = builder.mqttTopic;
         this.payload = builder.payload;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -51,6 +50,13 @@ public class SendMessageRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -74,33 +80,35 @@ public class SendMessageRequest extends Request {
         return this.payload;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<SendMessageRequest, Builder> {
+        private String regionId; 
         private String instanceId; 
         private String mqttTopic; 
         private String payload; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(SendMessageRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.mqttTopic = response.mqttTopic;
-            this.payload = response.payload;
-            this.regionId = response.regionId;
+        private Builder(SendMessageRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.instanceId = request.instanceId;
+            this.mqttTopic = request.mqttTopic;
+            this.payload = request.payload;
         } 
 
         /**
-         * InstanceId.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The ID of the ApsaraMQ for MQTT instance. The ID must be consistent with the ID of the instance that the ApsaraMQ for MQTT client uses. You can view the instance ID in the **Basic Information** section on the **Instance Details** page that corresponds to the instance in the [ApsaraMQ for MQTT console](https://mqtt.console.aliyun.com).
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -109,7 +117,7 @@ public class SendMessageRequest extends Request {
         }
 
         /**
-         * MqttTopic.
+         * The topic to which you want to send a message on the ApsaraMQ for MQTT instance.
          */
         public Builder mqttTopic(String mqttTopic) {
             this.putQueryParameter("MqttTopic", mqttTopic);
@@ -118,20 +126,11 @@ public class SendMessageRequest extends Request {
         }
 
         /**
-         * Payload.
+         * The message content, which is the payload of the message. We recommend that you encode the content in Base64 to prevent non-printable characters from being transmitted.
          */
         public Builder payload(String payload) {
             this.putQueryParameter("Payload", payload);
             this.payload = payload;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

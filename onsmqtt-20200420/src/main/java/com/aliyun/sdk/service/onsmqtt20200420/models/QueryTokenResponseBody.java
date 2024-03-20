@@ -50,7 +50,7 @@ public class QueryTokenResponseBody extends TeaModel {
         private Boolean tokenStatus; 
 
         /**
-         * RequestId.
+         * The unique ID that the system generates for the request. This parameter is a common parameter.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,11 @@ public class QueryTokenResponseBody extends TeaModel {
         }
 
         /**
-         * TokenStatus.
+         * The status of the queried token. Valid values:
+         * <p>
+         * 
+         * *   **true**: indicates the token is valid.
+         * *   **false**: indicates the token is invalid.
          */
         public Builder tokenStatus(Boolean tokenStatus) {
             this.tokenStatus = tokenStatus;

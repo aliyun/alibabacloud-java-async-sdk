@@ -50,7 +50,7 @@ public class RegisterDeviceCredentialResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DeviceCredential.
+         * The access credential of the device.
          */
         public Builder deviceCredential(DeviceCredential deviceCredential) {
             this.deviceCredential = deviceCredential;
@@ -58,7 +58,7 @@ public class RegisterDeviceCredentialResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID. This parameter is a common parameter.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,7 @@ public class RegisterDeviceCredentialResponseBody extends TeaModel {
             private Long updateTime; 
 
             /**
-             * ClientId.
+             * The client ID of the device.
              */
             public Builder clientId(String clientId) {
                 this.clientId = clientId;
@@ -166,7 +166,7 @@ public class RegisterDeviceCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The timestamp that indicates when the access credential of the device was created. Unit: milliseconds.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -174,7 +174,7 @@ public class RegisterDeviceCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceAccessKeyId.
+             * The AccessKey ID of the device.
              */
             public Builder deviceAccessKeyId(String deviceAccessKeyId) {
                 this.deviceAccessKeyId = deviceAccessKeyId;
@@ -182,7 +182,7 @@ public class RegisterDeviceCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceAccessKeySecret.
+             * The AccessKey secret of the device.
              */
             public Builder deviceAccessKeySecret(String deviceAccessKeySecret) {
                 this.deviceAccessKeySecret = deviceAccessKeySecret;
@@ -190,7 +190,7 @@ public class RegisterDeviceCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the ApsaraMQ for MQTT instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -198,7 +198,7 @@ public class RegisterDeviceCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The timestamp that indicates when the access credential of the device was last updated. Unit: milliseconds.
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

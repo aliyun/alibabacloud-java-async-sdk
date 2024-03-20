@@ -49,13 +49,13 @@ public class ListGroupIdRequest extends Request {
             super();
         } 
 
-        private Builder(ListGroupIdRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
+        private Builder(ListGroupIdRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
         } 
 
         /**
-         * InstanceId.
+         * The ID of the ApsaraMQ for MQTT instance whose groups you want to query.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

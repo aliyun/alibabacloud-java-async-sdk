@@ -50,7 +50,7 @@ public class ApplyTokenResponseBody extends TeaModel {
         private String token; 
 
         /**
-         * RequestId.
+         * The request ID. This parameter is a common parameter.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,10 @@ public class ApplyTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Token.
+         * The token that is returned by the ApsaraMQ for MQTT broker.
+         * <p>
+         * 
+         * >  Do not assume the length, format, or rule of the token to return. The actual returned token shall prevail.
          */
         public Builder token(String token) {
             this.token = token;

@@ -12,15 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryTokenRequest</p>
  */
 public class QueryTokenRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
     private String instanceId;
-
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
 
     @Query
     @NameInMap("Token")
@@ -29,8 +28,8 @@ public class QueryTokenRequest extends Request {
 
     private QueryTokenRequest(Builder builder) {
         super(builder);
-        this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
+        this.instanceId = builder.instanceId;
         this.token = builder.token;
     }
 
@@ -48,17 +47,17 @@ public class QueryTokenRequest extends Request {
     }
 
     /**
-     * @return instanceId
-     */
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     /**
@@ -69,29 +68,20 @@ public class QueryTokenRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<QueryTokenRequest, Builder> {
-        private String instanceId; 
         private String regionId; 
+        private String instanceId; 
         private String token; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(QueryTokenRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
-            this.token = response.token;
+        private Builder(QueryTokenRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.instanceId = request.instanceId;
+            this.token = request.token;
         } 
-
-        /**
-         * InstanceId.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -103,7 +93,16 @@ public class QueryTokenRequest extends Request {
         }
 
         /**
-         * Token.
+         * The ID of the ApsaraMQ for MQTT instance. The ID must be consistent with the ID of the instance that the ApsaraMQ for MQTT client uses. You can obtain the instance ID on the **Instance Details** page that corresponds to the instance in the [ApsaraMQ for MQTT console](https://mqtt.console.aliyun.com/).
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * The token that you want to query.
          */
         public Builder token(String token) {
             this.putQueryParameter("Token", token);

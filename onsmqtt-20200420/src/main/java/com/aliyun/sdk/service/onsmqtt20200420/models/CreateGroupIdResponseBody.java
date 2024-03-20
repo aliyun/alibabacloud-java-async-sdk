@@ -38,7 +38,7 @@ public class CreateGroupIdResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * The request ID. This parameter is a common parameter.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

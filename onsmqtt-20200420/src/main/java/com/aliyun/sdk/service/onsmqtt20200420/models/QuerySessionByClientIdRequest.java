@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QuerySessionByClientIdRequest</p>
  */
 public class QuerySessionByClientIdRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("ClientId")
     @Validation(required = true)
@@ -22,16 +26,11 @@ public class QuerySessionByClientIdRequest extends Request {
     @Validation(required = true)
     private String instanceId;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     private QuerySessionByClientIdRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.clientId = builder.clientId;
         this.instanceId = builder.instanceId;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -48,6 +47,13 @@ public class QuerySessionByClientIdRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return clientId
      */
     public String getClientId() {
@@ -61,31 +67,33 @@ public class QuerySessionByClientIdRequest extends Request {
         return this.instanceId;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<QuerySessionByClientIdRequest, Builder> {
+        private String regionId; 
         private String clientId; 
         private String instanceId; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(QuerySessionByClientIdRequest response) {
-            super(response);
-            this.clientId = response.clientId;
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
+        private Builder(QuerySessionByClientIdRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.clientId = request.clientId;
+            this.instanceId = request.instanceId;
         } 
 
         /**
-         * ClientId.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The ID of the ApsaraMQ for MQTT client that you want to query.
          */
         public Builder clientId(String clientId) {
             this.putQueryParameter("ClientId", clientId);
@@ -94,20 +102,11 @@ public class QuerySessionByClientIdRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the ApsaraMQ for MQTT instance. The ID must be consistent with the ID of the instance that the ApsaraMQ for MQTT client uses. You can obtain the instance ID on the **Instance Details** page that corresponds to the instance in the [ApsaraMQ for MQTT console](https://mqtt.console.aliyun.com).
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

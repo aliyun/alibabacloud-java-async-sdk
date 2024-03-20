@@ -50,7 +50,7 @@ public class SendMessageResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * MsgId.
+         * The unique message ID that is returned by the ApsaraMQ for MQTT broker after the message is sent.
          */
         public Builder msgId(String msgId) {
             this.msgId = msgId;
@@ -58,7 +58,7 @@ public class SendMessageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The unique ID that the system generates for the request. This parameter is a common parameter.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

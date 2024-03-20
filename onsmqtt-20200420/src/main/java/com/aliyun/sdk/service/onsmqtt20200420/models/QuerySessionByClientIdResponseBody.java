@@ -50,7 +50,11 @@ public class QuerySessionByClientIdResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * OnlineStatus.
+         * Indicates whether the ApsaraMQ for MQTT client is connected to the ApsaraMQ for MQTT broker. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder onlineStatus(Boolean onlineStatus) {
             this.onlineStatus = onlineStatus;
@@ -58,7 +62,7 @@ public class QuerySessionByClientIdResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID. This parameter is a common parameter.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

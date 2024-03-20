@@ -86,7 +86,7 @@ public class QueryMqttTraceDeviceResponseBody extends TeaModel {
         private Long total; 
 
         /**
-         * CurrentPage.
+         * The page number of the returned page.
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -94,7 +94,7 @@ public class QueryMqttTraceDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * DeviceInfoList.
+         * The details of the action on the device.
          */
         public Builder deviceInfoList(java.util.List < DeviceInfoList> deviceInfoList) {
             this.deviceInfoList = deviceInfoList;
@@ -102,7 +102,7 @@ public class QueryMqttTraceDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class QueryMqttTraceDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID. You can use the ID to troubleshoot issues. This parameter is a common parameter.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class QueryMqttTraceDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * The total number of returned actions on the device.
          */
         public Builder total(Long total) {
             this.total = total;
@@ -206,7 +206,12 @@ public class QueryMqttTraceDeviceResponseBody extends TeaModel {
             private String time; 
 
             /**
-             * Action.
+             * The action on the device. Valid values:
+             * <p>
+             * 
+             * *   **connect**: The ApsaraMQ for MQTT client requests a connection to the ApsaraMQ for MQTT broker.
+             * *   **close**: The TCP connection is closed.
+             * *   **disconnect**: The ApsaraMQ for MQTT client requests a disconnection from the ApsaraMQ for MQTT broker.
              */
             public Builder action(String action) {
                 this.action = action;
@@ -214,7 +219,12 @@ public class QueryMqttTraceDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * ActionCode.
+             * The returned code for the action on the device. Valid values:
+             * <p>
+             * 
+             * *   **mqtt.trace.action.connect**: This value is returned if the value of Action is **connect**.
+             * *   **mqtt.trace.action.close**: This value is returned if the value of Action is **close**.
+             * *   **mqtt.trace.action.disconnect**: This value is returned if the value of Action is **disconnect**.
              */
             public Builder actionCode(String actionCode) {
                 this.actionCode = actionCode;
@@ -222,7 +232,18 @@ public class QueryMqttTraceDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * ActionInfo.
+             * The returned information for the action on the device. Valid values:
+             * <p>
+             * 
+             * *   **accepted**: The ApsaraMQ for MQTT broker accepts the connection request from the ApsaraMQ for MQTT client.
+             * *   **not authorized**: The TCP connection is closed because the permission verification of the client to access the instance fails.
+             * *   **clientId conflict**: The TCP connection is closed due to a conflict in the ID of the ApsaraMQ for MQTT client.
+             * *   **resource auth failed**: The TCP connection is closed because the permission verification for the ApsaraMQ for MQTT client to access the topic or group fails.
+             * *   **no heart**: The TCP connection is closed because no heartbeat is detected on the client.
+             * *   **closed by client**: The TCP connection is closed because an exception occurs on the client.
+             * *   **disconnected by client**: The client requests a disconnection.
+             * *   **invalid param**: The TCP connection is closed due to invalid request parameters.
+             * *   **Socket IOException**: The TCP connection is closed due to network jitter or packet loss.
              */
             public Builder actionInfo(String actionInfo) {
                 this.actionInfo = actionInfo;
@@ -230,7 +251,7 @@ public class QueryMqttTraceDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * ChannelId.
+             * The connection ID.
              */
             public Builder channelId(String channelId) {
                 this.channelId = channelId;
@@ -238,7 +259,7 @@ public class QueryMqttTraceDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * Time.
+             * The time when the action occurred on the device.
              */
             public Builder time(String time) {
                 this.time = time;

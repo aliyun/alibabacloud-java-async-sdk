@@ -86,7 +86,7 @@ public class QueryMqttTraceMessageSubscribeResponseBody extends TeaModel {
         private Long total; 
 
         /**
-         * CurrentPage.
+         * The page number of the returned page.
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -94,7 +94,7 @@ public class QueryMqttTraceMessageSubscribeResponseBody extends TeaModel {
         }
 
         /**
-         * MessageTraceLists.
+         * The delivery trace of the queried message.
          */
         public Builder messageTraceLists(java.util.List < MessageTraceLists> messageTraceLists) {
             this.messageTraceLists = messageTraceLists;
@@ -102,7 +102,7 @@ public class QueryMqttTraceMessageSubscribeResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class QueryMqttTraceMessageSubscribeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The unique ID that the system generates for the request. You can use the ID to troubleshoot issues. This parameter is a common parameter.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class QueryMqttTraceMessageSubscribeResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * The returned delivery traces.
          */
         public Builder total(Long total) {
             this.total = total;
@@ -218,7 +218,11 @@ public class QueryMqttTraceMessageSubscribeResponseBody extends TeaModel {
             private String time; 
 
             /**
-             * Action.
+             * The action on the message. Valid values:
+             * <p>
+             * 
+             * *   **sub**: The ApsaraMQ for MQTT client subscribes to the message.
+             * *   **push_offline**: The ApsaraMQ for MQTT broker pushes the offline message to the ApsaraMQ for MQTT client.
              */
             public Builder action(String action) {
                 this.action = action;
@@ -226,7 +230,11 @@ public class QueryMqttTraceMessageSubscribeResponseBody extends TeaModel {
             }
 
             /**
-             * ActionCode.
+             * The code returned for the action on the message. Valid values:
+             * <p>
+             * 
+             * *   **mqtt.trace.action.msg.sub**: The value that is returned if the value of Action is **sub**.
+             * *   **mqtt.trace.action.msg.push.offline**: The value that is returned if the value of Action is **push_offline**.
              */
             public Builder actionCode(String actionCode) {
                 this.actionCode = actionCode;
@@ -234,7 +242,11 @@ public class QueryMqttTraceMessageSubscribeResponseBody extends TeaModel {
             }
 
             /**
-             * ActionInfo.
+             * The returned information for the action on the message. Valid values:
+             * <p>
+             * 
+             * *   **Push To Mqtt Client**: The value that is returned if the value of Action is **sub**.
+             * *   **Push Offline Msg To Mqtt Client**: The value that is returned if the value of Action is **push_offline**.
              */
             public Builder actionInfo(String actionInfo) {
                 this.actionInfo = actionInfo;
@@ -242,7 +254,7 @@ public class QueryMqttTraceMessageSubscribeResponseBody extends TeaModel {
             }
 
             /**
-             * ClientId.
+             * The ID of the client that subscribes to the message.
              */
             public Builder clientId(String clientId) {
                 this.clientId = clientId;
@@ -250,7 +262,7 @@ public class QueryMqttTraceMessageSubscribeResponseBody extends TeaModel {
             }
 
             /**
-             * MsgId.
+             * The message ID.
              */
             public Builder msgId(String msgId) {
                 this.msgId = msgId;
@@ -258,7 +270,7 @@ public class QueryMqttTraceMessageSubscribeResponseBody extends TeaModel {
             }
 
             /**
-             * Time.
+             * The time when the message was delivered.
              */
             public Builder time(String time) {
                 this.time = time;

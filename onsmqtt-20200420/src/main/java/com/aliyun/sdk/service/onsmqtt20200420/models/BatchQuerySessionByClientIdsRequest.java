@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BatchQuerySessionByClientIdsRequest</p>
  */
 public class BatchQuerySessionByClientIdsRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("ClientIdList")
     @Validation(required = true)
@@ -22,16 +26,11 @@ public class BatchQuerySessionByClientIdsRequest extends Request {
     @Validation(required = true)
     private String instanceId;
 
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
-
     private BatchQuerySessionByClientIdsRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.clientIdList = builder.clientIdList;
         this.instanceId = builder.instanceId;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -48,6 +47,13 @@ public class BatchQuerySessionByClientIdsRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return clientIdList
      */
     public java.util.List < String > getClientIdList() {
@@ -61,31 +67,33 @@ public class BatchQuerySessionByClientIdsRequest extends Request {
         return this.instanceId;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<BatchQuerySessionByClientIdsRequest, Builder> {
+        private String regionId; 
         private java.util.List < String > clientIdList; 
         private String instanceId; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(BatchQuerySessionByClientIdsRequest response) {
-            super(response);
-            this.clientIdList = response.clientIdList;
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
+        private Builder(BatchQuerySessionByClientIdsRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.clientIdList = request.clientIdList;
+            this.instanceId = request.instanceId;
         } 
 
         /**
-         * ClientIdList.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The ApsaraMQ for MQTT clients.
          */
         public Builder clientIdList(java.util.List < String > clientIdList) {
             this.putQueryParameter("ClientIdList", clientIdList);
@@ -94,20 +102,11 @@ public class BatchQuerySessionByClientIdsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the ApsaraMQ for MQTT instance. The ID must be consistent with the ID of the instance that the ApsaraMQ for MQTT client uses. You can obtain the instance ID on the **Instance Details** page that corresponds to the instance in the [ApsaraMQ for MQTT console](https://mqtt.console.aliyun.com).
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 
