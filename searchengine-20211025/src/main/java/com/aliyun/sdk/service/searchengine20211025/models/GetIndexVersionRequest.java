@@ -70,7 +70,7 @@ public class GetIndexVersionRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * The ID of the instance
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -79,7 +79,7 @@ public class GetIndexVersionRequest extends Request {
         }
 
         /**
-         * clusterName.
+         * The name of the cluster
          */
         public Builder clusterName(String clusterName) {
             this.putPathParameter("clusterName", clusterName);

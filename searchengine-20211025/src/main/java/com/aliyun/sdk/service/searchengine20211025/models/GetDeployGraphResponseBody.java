@@ -58,7 +58,7 @@ public class GetDeployGraphResponseBody extends TeaModel {
         }
 
         /**
-         * result.
+         * The result returned
          */
         public Builder result(Result result) {
             this.result = result;
@@ -662,7 +662,7 @@ public class GetDeployGraphResponseBody extends TeaModel {
             private java.util.List < ZoneMetas> zoneMetas; 
 
             /**
-             * indexMetas.
+             * 索引元信息
              */
             public Builder indexMetas(java.util.List < IndexMetas> indexMetas) {
                 this.indexMetas = indexMetas;
@@ -670,7 +670,7 @@ public class GetDeployGraphResponseBody extends TeaModel {
             }
 
             /**
-             * onlineMaster.
+             * 在线集群元信息
              */
             public Builder onlineMaster(java.util.List < OnlineMaster> onlineMaster) {
                 this.onlineMaster = onlineMaster;
@@ -678,7 +678,7 @@ public class GetDeployGraphResponseBody extends TeaModel {
             }
 
             /**
-             * tableIndexRelation.
+             * 数据源和索引关联关系
              */
             public Builder tableIndexRelation(java.util.Map < String, java.util.List<String>> tableIndexRelation) {
                 this.tableIndexRelation = tableIndexRelation;
@@ -686,7 +686,7 @@ public class GetDeployGraphResponseBody extends TeaModel {
             }
 
             /**
-             * tableMetas.
+             * 数据源元信息
              */
             public Builder tableMetas(java.util.List < TableMetas> tableMetas) {
                 this.tableMetas = tableMetas;
@@ -694,7 +694,7 @@ public class GetDeployGraphResponseBody extends TeaModel {
             }
 
             /**
-             * zoneIndexRelation.
+             * zone和索引关联关系
              */
             public Builder zoneIndexRelation(java.util.Map < String, java.util.List<String>> zoneIndexRelation) {
                 this.zoneIndexRelation = zoneIndexRelation;
@@ -702,7 +702,7 @@ public class GetDeployGraphResponseBody extends TeaModel {
             }
 
             /**
-             * zoneMetas.
+             * zone元信息
              */
             public Builder zoneMetas(java.util.List < ZoneMetas> zoneMetas) {
                 this.zoneMetas = zoneMetas;

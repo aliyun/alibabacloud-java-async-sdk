@@ -83,7 +83,7 @@ public class ListQueryResultRequest extends Request {
         } 
 
         /**
-         * Queries the query result.
+         * The ID of the instance
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -92,7 +92,7 @@ public class ListQueryResultRequest extends Request {
         }
 
         /**
-         * 353490
+         * The query statement
          */
         public Builder query(String query) {
             this.putQueryParameter("query", query);
@@ -101,7 +101,7 @@ public class ListQueryResultRequest extends Request {
         }
 
         /**
-         * sql.
+         * The SQL statement that is executed in the query
          */
         public Builder sql(String sql) {
             this.putQueryParameter("sql", sql);

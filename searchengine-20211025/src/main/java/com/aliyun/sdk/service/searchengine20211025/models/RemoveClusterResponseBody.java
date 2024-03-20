@@ -58,7 +58,7 @@ public class RemoveClusterResponseBody extends TeaModel {
         }
 
         /**
-         * result.
+         * The result
          */
         public Builder result(java.util.Map < String, ? > result) {
             this.result = result;

@@ -50,7 +50,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * The ID of the request.
+         * The ID of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The result returned.
+         * The result returned
          */
         public Builder result(Result result) {
             this.result = result;
@@ -218,7 +218,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * The billing method of the instance.
+             * The billing method
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -226,7 +226,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The service code.
+             * The product code
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -234,7 +234,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance was created.
+             * The time when the instance was created
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -242,7 +242,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the instance.
+             * The description of the instance
              */
             public Builder description(String description) {
                 this.description = description;
@@ -250,7 +250,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance expires.
+             * The time when the instance expires
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -258,7 +258,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether an overdue payment is involved.
+             * Indicates whether an overdue payment is involved
              */
             public Builder inDebt(Boolean inDebt) {
                 this.inDebt = inDebt;
@@ -266,7 +266,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * The ID of the resource
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -274,7 +274,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The lock mode of the instance.
+             * The lock status
              */
             public Builder lockMode(String lockMode) {
                 this.lockMode = lockMode;
@@ -282,7 +282,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * The ID of the resource group
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -290,7 +290,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the instance.
+             * The status of the instance
              */
             public Builder status(String status) {
                 this.status = status;
@@ -298,7 +298,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance was last updated.
+             * The time when the instance was last updated
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

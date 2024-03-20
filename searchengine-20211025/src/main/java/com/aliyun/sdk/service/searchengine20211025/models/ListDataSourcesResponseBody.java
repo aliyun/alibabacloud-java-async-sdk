@@ -50,14 +50,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * ## Method
-         * <p>
-         * 
-         * `GET`
-         * 
-         * ## URI
-         * 
-         * `/openapi/ha3/instances/{instanceId}/data-sources`
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -65,7 +58,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The returned results.
+         * The result returned.
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -165,7 +158,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The data sources deployed in offline mode.
+             * The data center where the data source is deployed in offline mode.
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -173,7 +166,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The indexes.
+             * The information about indexes.
              */
             public Builder indexes(java.util.List < String > indexes) {
                 this.indexes = indexes;
@@ -181,7 +174,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the full data of the data source was last queried.
+             * The time when an index for full data was last built.
              */
             public Builder lastFulTime(Long lastFulTime) {
                 this.lastFulTime = lastFulTime;
@@ -197,7 +190,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the data source.
+             * The state of the data source.
              */
             public Builder status(String status) {
                 this.status = status;

@@ -58,7 +58,7 @@ public class GetDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the data source.
+         * The list of information about the data source
          */
         public Builder result(Result result) {
             this.result = result;
@@ -158,7 +158,7 @@ public class GetDataSourceResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * domain.
+             * The data center where the data source is deployed in offline mode
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -166,7 +166,7 @@ public class GetDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * indexes.
+             * The list of index information
              */
             public Builder indexes(java.util.List < String > indexes) {
                 this.indexes = indexes;
@@ -174,7 +174,7 @@ public class GetDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * lastFulTime.
+             * The time when an index for full data was last built
              */
             public Builder lastFulTime(Long lastFulTime) {
                 this.lastFulTime = lastFulTime;
@@ -182,7 +182,7 @@ public class GetDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * The name of the data source
              */
             public Builder name(String name) {
                 this.name = name;
@@ -190,7 +190,7 @@ public class GetDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * The state of the data source
              */
             public Builder status(String status) {
                 this.status = status;
@@ -198,7 +198,7 @@ public class GetDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the data source.
+             * The type of the data source
              */
             public Builder type(String type) {
                 this.type = type;

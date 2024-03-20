@@ -85,7 +85,7 @@ public class DeleteIndexVersionRequest extends Request {
         } 
 
         /**
-         * WB01240825
+         * The ID of the instance
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -94,7 +94,7 @@ public class DeleteIndexVersionRequest extends Request {
         }
 
         /**
-         * indexName.
+         * The name of the index
          */
         public Builder indexName(String indexName) {
             this.putPathParameter("indexName", indexName);
@@ -103,7 +103,7 @@ public class DeleteIndexVersionRequest extends Request {
         }
 
         /**
-         * versionName.
+         * The name of the version
          */
         public Builder versionName(String versionName) {
             this.putPathParameter("versionName", versionName);

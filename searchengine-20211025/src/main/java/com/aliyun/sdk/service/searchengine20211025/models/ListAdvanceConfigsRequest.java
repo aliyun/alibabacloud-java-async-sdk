@@ -97,7 +97,7 @@ public class ListAdvanceConfigsRequest extends Request {
         } 
 
         /**
-         * Obtains a list of advanced configurations.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -124,7 +124,7 @@ public class ListAdvanceConfigsRequest extends Request {
         }
 
         /**
-         * type.
+         * The type of the advanced configurations. Valid values: online and offline. - online The default value is offline.
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);

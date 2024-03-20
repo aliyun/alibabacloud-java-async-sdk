@@ -50,7 +50,7 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * requestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * result.
+         * The list of advanced configurations.
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -134,7 +134,7 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * fullPathName.
+             * The name of the absolute path.
              */
             public Builder fullPathName(String fullPathName) {
                 this.fullPathName = fullPathName;
@@ -142,7 +142,7 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * isDir.
+             * Indicates whether it is a directory. Valid values: true and false. true indicates that it is a directory, and false indicates that it is not a directory.
              */
             public Builder isDir(Boolean isDir) {
                 this.isDir = isDir;
@@ -150,7 +150,7 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * isTemplate.
+             * Indicates whether it is a template. Valid values: true and false. true indicates that it is a directory, and false indicates that it is not a directory.
              */
             public Builder isTemplate(Boolean isTemplate) {
                 this.isTemplate = isTemplate;
@@ -158,7 +158,7 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * The name of the file.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -271,7 +271,7 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
             private Long updateTime; 
 
             /**
-             * 配置内容 http，git 请求时不为空
+             * content.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -279,7 +279,7 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * 配置内容的类型 (FILE, GIT, HTTP, ODPS)
+             * contentType.
              */
             public Builder contentType(String contentType) {
                 this.contentType = contentType;
@@ -287,7 +287,7 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * desc.
+             * The description.
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -295,7 +295,7 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * files.
+             * The list of file names.
              */
             public Builder files(java.util.List < Files> files) {
                 this.files = files;
@@ -303,7 +303,7 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * The name of the advanced configuration.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -311,7 +311,7 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * The state of the advanced configuration. Valid values: drafting, used, unused, and trash. drafting indicates that the advanced configuration is a draft. used indicates that the advanced configuration is in use. unused indicates that the advanced configuration is unused. trash indicates that the advanced configuration is being deleted.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -319,7 +319,7 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * updateTime.
+             * The update time.
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

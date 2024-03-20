@@ -50,7 +50,7 @@ public class GetInstanceResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * requestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the instance.
+         * The result returned.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -110,7 +110,7 @@ public class GetInstanceResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * key.
+             * 标签键
              */
             public Builder key(String key) {
                 this.key = key;
@@ -118,7 +118,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * value.
+             * 标签值
              */
             public Builder value(String value) {
                 this.value = value;
@@ -291,7 +291,7 @@ public class GetInstanceResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * 付费类型
+             * The billing method.
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -299,7 +299,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 商品code
+             * The product code.
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -307,7 +307,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 代表创建时间的资源属性字段
+             * The time when the instance was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -315,7 +315,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request.
+             * The description of the instance.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -323,7 +323,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * WB01240825
+             * The expiration time.
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -331,7 +331,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 是否欠费
+             * Indicates whether an overdue payment is involved.
              */
             public Builder inDebt(Boolean inDebt) {
                 this.inDebt = inDebt;
@@ -339,7 +339,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 代表资源一级ID的资源属性字段
+             * The ID of the resource.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -347,7 +347,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 锁定状态
+             * The lock status.
              */
             public Builder lockMode(String lockMode) {
                 this.lockMode = lockMode;
@@ -355,57 +355,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ### Sample responses
-             * <p>
-             * 
-             * **Sample success responses**
-             * 
-             *     {
-             *       "requestId": "90D6B8F5-FE97-4509-9AAB-367836C51818",
-             *       "result": 
-             *       {
-             *         "instanceId":"fadsfsafs",
-             *         "inDebt":true,
-             *         "lockMode":"Unlock",
-             *         "expiredTime":"asdfas",
-             *         "updateTime":"dfasf",
-             *         "createTime":"dfasf",
-             *         "resourceGroupId":"resourceGroupID",
-             *         "commodityCode":"commodityCode",
-             *         "chargeType":"POSYPAY",
-             *         "description":"this is description",
-             *         "apiVersion": "tisplus/v1",
-             *         "network": {
-             *           "vSwitchId": "vswitch_id_xxx",
-             *           "vpcId": "vpc_id_xxx",	  
-             *         },
-             *         "userName": "user",
-             *         "spec": {
-             *           "searchResource": {
-             *             "disk": 50,
-             *             "mem": 8,
-             *             "cpu": 2,
-             *             "nodeCount": 2
-             *           },
-             *           "qrsResource": {
-             *             "disk": 50,
-             *             "mem": 8,
-             *             "cpu": 2,
-             *             "nodeCount": 2
-             *           }
-             *         },
-             *        "status": "INIT",
-             *       }
-             *     }
-             * 
-             * **Sample error responses**
-             * 
-             *     {
-             *       "requestId": "BD1EA715-DF6F-06C2-004C-C1FA0D3A9820",
-             *       "httpCode": 404,
-             *       "code": "App.NotFound",
-             *       "message": "App not found"
-             *     }
+             * The ID of the resource group.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -413,7 +363,13 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * The status of the instance. Valid values:
+             * <p>
+             * 
+             * *   INIT: being initialized
+             * *   WAIT_CONFIG: to be configured
+             * *   CONFIG_UPDATING: configuration taking effect
+             * *   READY: normal
              */
             public Builder status(String status) {
                 this.status = status;
@@ -421,7 +377,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * tags.
+             * 标签。
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -429,7 +385,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 更新时间
+             * The time when the instance was last updated.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

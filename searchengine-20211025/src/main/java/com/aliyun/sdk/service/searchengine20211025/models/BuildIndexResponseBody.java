@@ -50,7 +50,7 @@ public class BuildIndexResponseBody extends TeaModel {
         private java.util.Map < String, ? > result; 
 
         /**
-         * The ID of the request.
+         * id of request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class BuildIndexResponseBody extends TeaModel {
         }
 
         /**
-         * The result returned.
+         * The list of clusters
          */
         public Builder result(java.util.Map < String, ? > result) {
             this.result = result;

@@ -98,19 +98,7 @@ public class ModifyDataSourceRequest extends Request {
         } 
 
         /**
-         * ## Sample responses
-         * <p>
-         * 
-         * ### Success responses
-         * 
-         * ```json
-         * {
-         * 	"requestId": "0A6EB64B-B4C8-CF02-810F-E660812972FF",
-         *     "result": []
-         * }
-         * ```
-         * 
-         * For more information, see [Response struct](~~465311~~).
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -119,7 +107,7 @@ public class ModifyDataSourceRequest extends Request {
         }
 
         /**
-         * WB01240825
+         * The name of the data source.
          */
         public Builder dataSourceName(String dataSourceName) {
             this.putPathParameter("dataSourceName", dataSourceName);
@@ -128,7 +116,7 @@ public class ModifyDataSourceRequest extends Request {
         }
 
         /**
-         * The information about the index
+         * The request body.
          */
         public Builder body(java.util.Map < String, ? > body) {
             this.putBodyParameter("body", body);
@@ -137,7 +125,7 @@ public class ModifyDataSourceRequest extends Request {
         }
 
         /**
-         * The ID of the request
+         * Specifies whether the data source is created by using the dryRun feature. This parameter only checks whether the data source is valid. Valid values: true and false. true indicates that the data source is created by using the dryRun feature, and false indicates that the data source is not created by using the dryRun feature.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("dryRun", dryRun);

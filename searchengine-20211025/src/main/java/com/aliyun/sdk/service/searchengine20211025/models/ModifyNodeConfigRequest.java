@@ -30,6 +30,10 @@ public class ModifyNodeConfigRequest extends Request {
     private Integer dataFragmentNumber;
 
     @Body
+    @NameInMap("flowRatio")
+    private Integer flowRatio;
+
+    @Body
     @NameInMap("minServicePercent")
     private Integer minServicePercent;
 
@@ -61,6 +65,7 @@ public class ModifyNodeConfigRequest extends Request {
         this.active = builder.active;
         this.dataDuplicateNumber = builder.dataDuplicateNumber;
         this.dataFragmentNumber = builder.dataFragmentNumber;
+        this.flowRatio = builder.flowRatio;
         this.minServicePercent = builder.minServicePercent;
         this.published = builder.published;
         this.clusterName = builder.clusterName;
@@ -111,6 +116,13 @@ public class ModifyNodeConfigRequest extends Request {
     }
 
     /**
+     * @return flowRatio
+     */
+    public Integer getFlowRatio() {
+        return this.flowRatio;
+    }
+
+    /**
      * @return minServicePercent
      */
     public Integer getMinServicePercent() {
@@ -157,6 +169,7 @@ public class ModifyNodeConfigRequest extends Request {
         private Boolean active; 
         private Integer dataDuplicateNumber; 
         private Integer dataFragmentNumber; 
+        private Integer flowRatio; 
         private Integer minServicePercent; 
         private Boolean published; 
         private String clusterName; 
@@ -174,6 +187,7 @@ public class ModifyNodeConfigRequest extends Request {
             this.active = request.active;
             this.dataDuplicateNumber = request.dataDuplicateNumber;
             this.dataFragmentNumber = request.dataFragmentNumber;
+            this.flowRatio = request.flowRatio;
             this.minServicePercent = request.minServicePercent;
             this.published = request.published;
             this.clusterName = request.clusterName;
@@ -219,6 +233,15 @@ public class ModifyNodeConfigRequest extends Request {
         }
 
         /**
+         * flowRatio.
+         */
+        public Builder flowRatio(Integer flowRatio) {
+            this.putBodyParameter("flowRatio", flowRatio);
+            this.flowRatio = flowRatio;
+            return this;
+        }
+
+        /**
          * minServicePercent.
          */
         public Builder minServicePercent(Integer minServicePercent) {
@@ -237,7 +260,7 @@ public class ModifyNodeConfigRequest extends Request {
         }
 
         /**
-         * The ID of the cluster.
+         * The name of the cluster.
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("clusterName", clusterName);
@@ -246,7 +269,7 @@ public class ModifyNodeConfigRequest extends Request {
         }
 
         /**
-         * The parameters in the request body.
+         * The name of the data source. Valid values: search and not_search. search indicates to search data. not_search indicates not to search data.
          */
         public Builder dataSourceName(String dataSourceName) {
             this.putQueryParameter("dataSourceName", dataSourceName);
@@ -255,7 +278,7 @@ public class ModifyNodeConfigRequest extends Request {
         }
 
         /**
-         * The name of the cluster.
+         * The original name of the node.
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);
@@ -264,7 +287,14 @@ public class ModifyNodeConfigRequest extends Request {
         }
 
         /**
-         * The original name of the node.
+         * The type of the algorithm. Valid values: pop, cp, hot, hint, and suggest.
+         * <p>
+         * 
+         * *   pop indicates the popularity model.
+         * *   cp indicates the category prediction model.
+         * *   hot indicates the top search model.
+         * *   hint indicates the hint model.
+         * *   suggest indicates the drop-down suggestion model.
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);

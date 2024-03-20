@@ -70,7 +70,7 @@ public class ListInstanceSpecsRequest extends Request {
         } 
 
         /**
-         * The ID of the instance
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -79,7 +79,7 @@ public class ListInstanceSpecsRequest extends Request {
         }
 
         /**
-         * The node type. Valid values: qrs, search, index, and cluster. qrs specifies an Query Result Searcher (QRS) worker, search specifies a searcher worker, index specifies an index node, and cluster specifies a cluster.
+         * The node type. Valid values: qrs, search, index, and cluster. qrs indicates a query node, search indicates a data node, index indicates an index node, and cluster indicates a cluster.
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);

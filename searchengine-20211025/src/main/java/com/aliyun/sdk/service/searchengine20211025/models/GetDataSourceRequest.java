@@ -68,10 +68,7 @@ public class GetDataSourceRequest extends Request {
         } 
 
         /**
-         * ### Sample requests
-         * <p>
-         * 
-         * `GET /openapi/ha3/instances/ha3_instances_id/data-sources/my_data_source`
+         * The ID of the instance
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -80,36 +77,7 @@ public class GetDataSourceRequest extends Request {
         }
 
         /**
-         * ### Sample responses
-         * <p>
-         * 
-         *     {
-         *       "requestId": "0A6EB64B-B4C8-CF02-810F-E660812972FF",
-         *       "result": {
-         *         "name": "data_source_name",
-         *         "type": "odps",
-         *         "domain": "test",  // The data center of the data source that is deployed in offline mode    
-         *         "indexes": [
-         *           "index1",
-         *           "index2"
-         *         ],
-         *         "partitions": [
-         *           "ds=2020",
-         *           "ds=2021"
-         *         ],
-         *         "lastFulTime": 1628502036000,
-         *         "config":{
-         *           "accessKey": "xxx",
-         *           "accessSecret": "xxxs",
-         *           "project":"xxxx",
-         *           "table":"xxx",
-         *           "partition":"xxxx"
-         *         },
-         *         "autoBuildIndex": true,
-         *         "status": "new"	   // The state of the data source. new indicates that the data source is being created, publish indicates that the data source is normal, and trash indicates that the data source is being deleted.
-         *        
-         *       }
-         *     }
+         * The name of the data source
          */
         public Builder dataSourceName(String dataSourceName) {
             this.putPathParameter("dataSourceName", dataSourceName);

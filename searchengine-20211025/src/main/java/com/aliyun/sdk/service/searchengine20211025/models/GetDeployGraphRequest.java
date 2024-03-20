@@ -54,7 +54,7 @@ public class GetDeployGraphRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * The ID of the instance
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);

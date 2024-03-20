@@ -70,7 +70,7 @@ public class ListDataSourceSchemasRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * The ID of the instance
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -79,7 +79,7 @@ public class ListDataSourceSchemasRequest extends Request {
         }
 
         /**
-         * dataSourceName.
+         * The name of the data source
          */
         public Builder dataSourceName(String dataSourceName) {
             this.putPathParameter("dataSourceName", dataSourceName);

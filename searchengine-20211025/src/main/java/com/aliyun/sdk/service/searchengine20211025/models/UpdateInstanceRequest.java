@@ -105,7 +105,7 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * The information about the instance type.
+         * A list of instance-related specifications.
          */
         public Builder components(java.util.List < Components> components) {
             this.putBodyParameter("components", components);
@@ -123,7 +123,7 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * The type of the order. Valid values: UPGRADE and DOWNGRADE. UPGRADE indicates the instance type is to be upgraded. DOWNGRADE indicates the instance type is to be downgraded.
+         * Valid values: UPGRADE and DOWNGRADE. UPGRADE indicates to upgrade the instance specifications. DOWNGRADE indicates to downgrade the instance specifications.
          */
         public Builder orderType(String orderType) {
             this.putBodyParameter("orderType", orderType);
@@ -177,7 +177,7 @@ public class UpdateInstanceRequest extends Request {
             private String value; 
 
             /**
-             * The name of the specification. The value must be the same as the name of a parameter on the buy page.
+             * The specification code, which must be consistent with the values of the corresponding module parameters.
              */
             public Builder code(String code) {
                 this.code = code;

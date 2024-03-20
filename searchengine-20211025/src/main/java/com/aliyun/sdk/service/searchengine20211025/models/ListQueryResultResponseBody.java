@@ -38,7 +38,7 @@ public class ListQueryResultResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * requestId.
+         * The ID of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

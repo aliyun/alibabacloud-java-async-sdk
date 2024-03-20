@@ -50,7 +50,7 @@ public class ListAdvanceConfigDirResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * requestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ListAdvanceConfigDirResponseBody extends TeaModel {
         }
 
         /**
-         * result.
+         * The file list in the advanced configuration directory.
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -134,7 +134,7 @@ public class ListAdvanceConfigDirResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * fullPathName.
+             * The name of the absolute path.
              */
             public Builder fullPathName(String fullPathName) {
                 this.fullPathName = fullPathName;
@@ -142,7 +142,7 @@ public class ListAdvanceConfigDirResponseBody extends TeaModel {
             }
 
             /**
-             * isDir.
+             * Indicates whether it is a directory. Valid values: true and false. true indicates that it is a directory, and false indicates that it is not a directory.
              */
             public Builder isDir(Boolean isDir) {
                 this.isDir = isDir;
@@ -150,7 +150,7 @@ public class ListAdvanceConfigDirResponseBody extends TeaModel {
             }
 
             /**
-             * isTemplate.
+             * Indicates whether it is a template. Valid values: **true** and **false**. true indicates that it is a template, and false indicates that it is not a template.
              */
             public Builder isTemplate(Boolean isTemplate) {
                 this.isTemplate = isTemplate;
@@ -158,7 +158,7 @@ public class ListAdvanceConfigDirResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * The name of the cluster.
              */
             public Builder name(String name) {
                 this.name = name;

@@ -58,7 +58,7 @@ public class ListClusterTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The date when the task was completed.
+         * The information about the index.
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -110,7 +110,7 @@ public class ListClusterTasksResponseBody extends TeaModel {
             private String tagLevel; 
 
             /**
-             * msg.
+             * The content of the tag.
              */
             public Builder msg(String msg) {
                 this.msg = msg;
@@ -118,7 +118,7 @@ public class ListClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * tagLevel.
+             * The level of the tag.
              */
             public Builder tagLevel(String tagLevel) {
                 this.tagLevel = tagLevel;
@@ -195,7 +195,7 @@ public class ListClusterTasksResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * finishDate.
+             * The date when the task was completed.
              */
             public Builder finishDate(String finishDate) {
                 this.finishDate = finishDate;
@@ -203,7 +203,7 @@ public class ListClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * index.
+             * The sequence number of the task.
              */
             public Builder index(Long index) {
                 this.index = index;
@@ -211,7 +211,7 @@ public class ListClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * The name of the task.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -219,7 +219,7 @@ public class ListClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * The status of the task.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -380,7 +380,7 @@ public class ListClusterTasksResponseBody extends TeaModel {
             private String user; 
 
             /**
-             * extraAttribute.
+             * The additional attributes of the card.
              */
             public Builder extraAttribute(String extraAttribute) {
                 this.extraAttribute = extraAttribute;
@@ -388,7 +388,7 @@ public class ListClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * field3.
+             * The field3 field that is passed through when you create a state machine.
              */
             public Builder field3(String field3) {
                 this.field3 = field3;
@@ -404,18 +404,7 @@ public class ListClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ### Method
-             * <p>
-             * 
-             * ```java
-             * GET
-             * ```
-             * 
-             * ### URI
-             * 
-             * ```java
-             * /openapi/ha3/instances/{instanceId}/cluster-tasks
-             * ```
+             * Indicates whether the change is a data source task change or a cluster task change.
              */
             public Builder groupType(String groupType) {
                 this.groupType = groupType;
@@ -423,7 +412,7 @@ public class ListClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Displays cluster tasks .
+             * The task name on the card.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -431,7 +420,7 @@ public class ListClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * The overall status of FSM.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -439,7 +428,7 @@ public class ListClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * tags.
+             * The status tag of the progress bar chart.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -447,7 +436,7 @@ public class ListClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * taskNodes.
+             * The information about the task.
              */
             public Builder taskNodes(java.util.List < TaskNodes> taskNodes) {
                 this.taskNodes = taskNodes;
@@ -455,7 +444,7 @@ public class ListClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * time.
+             * The timestamp of the task on the card.
              */
             public Builder time(String time) {
                 this.time = time;
@@ -463,7 +452,7 @@ public class ListClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * The type of the task on the card.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -471,7 +460,7 @@ public class ListClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * user.
+             * The user who triggered the FSM process.
              */
             public Builder user(String user) {
                 this.user = user;

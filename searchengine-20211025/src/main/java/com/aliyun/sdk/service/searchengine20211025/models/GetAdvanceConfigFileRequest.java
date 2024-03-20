@@ -85,7 +85,7 @@ public class GetAdvanceConfigFileRequest extends Request {
         } 
 
         /**
-         * Obtains the information in a specified advanced configuration file.
+         * The ID of the instance
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -94,7 +94,7 @@ public class GetAdvanceConfigFileRequest extends Request {
         }
 
         /**
-         * configName.
+         * The name of the configuration
          */
         public Builder configName(String configName) {
             this.putPathParameter("configName", configName);
@@ -103,7 +103,7 @@ public class GetAdvanceConfigFileRequest extends Request {
         }
 
         /**
-         * fileName.
+         * The name of the file
          */
         public Builder fileName(String fileName) {
             this.putQueryParameter("fileName", fileName);

@@ -58,7 +58,7 @@ public class DeleteIndexResponseBody extends TeaModel {
         }
 
         /**
-         * result.
+         * The information about the index
          */
         public Builder result(java.util.Map < String, ? > result) {
             this.result = result;

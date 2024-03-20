@@ -55,7 +55,7 @@ public class ListDataSourceTasksRequest extends Request {
         } 
 
         /**
-         * The sequence number of the task.
+         * The ID of the instance
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);

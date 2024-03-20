@@ -55,7 +55,7 @@ public class ListClustersRequest extends Request {
         } 
 
         /**
-         * Queries the list of clusters.
+         * The ID of the instance
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);

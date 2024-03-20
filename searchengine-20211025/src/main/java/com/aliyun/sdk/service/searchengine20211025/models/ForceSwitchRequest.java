@@ -70,7 +70,7 @@ public class ForceSwitchRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
+         * The ID of the instance
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -79,7 +79,7 @@ public class ForceSwitchRequest extends Request {
         }
 
         /**
-         * The ID of the task.
+         * The ID of the FSM task
          */
         public Builder fsmId(String fsmId) {
             this.putPathParameter("fsmId", fsmId);

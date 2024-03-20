@@ -85,7 +85,7 @@ public class ListOnlineConfigsRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * The ID of the instance
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -94,7 +94,7 @@ public class ListOnlineConfigsRequest extends Request {
         }
 
         /**
-         * nodeName.
+         * The name of the node
          */
         public Builder nodeName(String nodeName) {
             this.putPathParameter("nodeName", nodeName);
@@ -103,7 +103,7 @@ public class ListOnlineConfigsRequest extends Request {
         }
 
         /**
-         * domain.
+         * The name of the domain
          */
         public Builder domain(String domain) {
             this.putQueryParameter("domain", domain);

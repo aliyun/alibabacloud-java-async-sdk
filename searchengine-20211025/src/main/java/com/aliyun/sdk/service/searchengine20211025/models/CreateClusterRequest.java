@@ -125,7 +125,7 @@ public class CreateClusterRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
+         * The ID of the instance
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -134,7 +134,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to automatically balance the load between QRS workers.
+         * The remarks of the query node
          */
         public Builder autoLoad(Boolean autoLoad) {
             this.putBodyParameter("autoLoad", autoLoad);
@@ -143,7 +143,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The information about Searcher workers.
+         * The description of the data node
          */
         public Builder dataNode(DataNode dataNode) {
             this.putBodyParameter("dataNode", dataNode);
@@ -152,7 +152,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The description of the cluster.
+         * The description of the cluster
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -161,7 +161,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The name of the cluster.
+         * The name of the node
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -170,7 +170,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The information about Query Result Searcher (QRS) workers.
+         * The description of the query node
          */
         public Builder queryNode(QueryNode queryNode) {
             this.putBodyParameter("queryNode", queryNode);
@@ -212,7 +212,7 @@ public class CreateClusterRequest extends Request {
             private Integer number; 
 
             /**
-             * The number of Searcher workers.
+             * The number of data nodes
              */
             public Builder number(Integer number) {
                 this.number = number;
@@ -253,7 +253,7 @@ public class CreateClusterRequest extends Request {
             private Integer number; 
 
             /**
-             * The number of QRS workers.
+             * The number of nodes to query
              */
             public Builder number(Integer number) {
                 this.number = number;

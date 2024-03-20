@@ -58,7 +58,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The configuration progress. Unit: percentage.
+         * The result set.
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -146,7 +146,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             private Integer totalSize; 
 
             /**
-             * configUpdateTime.
+             * The time when the cluster was updated.
              */
             public Builder configUpdateTime(String configUpdateTime) {
                 this.configUpdateTime = configUpdateTime;
@@ -154,7 +154,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * donePercent.
+             * The overall progress.
              */
             public Builder donePercent(Integer donePercent) {
                 this.donePercent = donePercent;
@@ -162,7 +162,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * doneSize.
+             * The number of nodes that are configured.
              */
             public Builder doneSize(Integer doneSize) {
                 this.doneSize = doneSize;
@@ -170,7 +170,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * The name of the cluster.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -178,7 +178,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * totalSize.
+             * The total number of nodes that you specify when you create the cluster.
              */
             public Builder totalSize(Integer totalSize) {
                 this.totalSize = totalSize;
@@ -231,7 +231,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             private Long version; 
 
             /**
-             * configMetaName.
+             * The name of the index configuration.
              */
             public Builder configMetaName(String configMetaName) {
                 this.configMetaName = configMetaName;
@@ -239,7 +239,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * version.
+             * The version number.
              */
             public Builder version(Long version) {
                 this.version = version;
@@ -292,7 +292,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             private Long version; 
 
             /**
-             * configMetaName.
+             * The name of the index configuration.
              */
             public Builder configMetaName(String configMetaName) {
                 this.configMetaName = configMetaName;
@@ -300,7 +300,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * version.
+             * The version of the index template.
              */
             public Builder version(Long version) {
                 this.version = version;
@@ -521,7 +521,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             private Integer totalSize; 
 
             /**
-             * advanceConfigInfo.
+             * The information about advanced configurations.
              */
             public Builder advanceConfigInfo(AdvanceConfigInfo advanceConfigInfo) {
                 this.advanceConfigInfo = advanceConfigInfo;
@@ -529,7 +529,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * deployFailedWorker.
+             * The name of the worker that failed because of a deployment failure.
              */
             public Builder deployFailedWorker(java.util.List < String > deployFailedWorker) {
                 this.deployFailedWorker = deployFailedWorker;
@@ -537,7 +537,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * docSize.
+             * The storage capacity. Unit: GB.
              */
             public Builder docSize(Integer docSize) {
                 this.docSize = docSize;
@@ -545,7 +545,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * donePercent.
+             * The overall progress.
              */
             public Builder donePercent(Integer donePercent) {
                 this.donePercent = donePercent;
@@ -553,7 +553,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * doneSize.
+             * The number of nodes that are configured.
              */
             public Builder doneSize(Integer doneSize) {
                 this.doneSize = doneSize;
@@ -561,7 +561,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * errorMsg.
+             * The error message.
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -569,7 +569,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * fullUpdateTime.
+             * The time when the full data was updated.
              */
             public Builder fullUpdateTime(String fullUpdateTime) {
                 this.fullUpdateTime = fullUpdateTime;
@@ -577,7 +577,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * fullVersion.
+             * The full version.
              */
             public Builder fullVersion(Long fullVersion) {
                 this.fullVersion = fullVersion;
@@ -585,7 +585,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * incUpdateTime.
+             * The time when the incremental data was updated.
              */
             public Builder incUpdateTime(String incUpdateTime) {
                 this.incUpdateTime = incUpdateTime;
@@ -593,7 +593,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * incVersion.
+             * The incremental version.
              */
             public Builder incVersion(Long incVersion) {
                 this.incVersion = incVersion;
@@ -601,7 +601,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * indexConfigInfo.
+             * The configuration information of the index.
              */
             public Builder indexConfigInfo(IndexConfigInfo indexConfigInfo) {
                 this.indexConfigInfo = indexConfigInfo;
@@ -609,7 +609,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * indexSize.
+             * The size of the index.
              */
             public Builder indexSize(Long indexSize) {
                 this.indexSize = indexSize;
@@ -617,7 +617,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * lackDiskWorker.
+             * The name of the worker that failed because of insufficient disk space.
              */
             public Builder lackDiskWorker(java.util.List < String > lackDiskWorker) {
                 this.lackDiskWorker = lackDiskWorker;
@@ -625,7 +625,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * lackMemWorker.
+             * The name of the worker that failed because of insufficient memory.
              */
             public Builder lackMemWorker(java.util.List < String > lackMemWorker) {
                 this.lackMemWorker = lackMemWorker;
@@ -633,7 +633,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * The name of the node.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -641,7 +641,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * totalSize.
+             * The total number of nodes that you specify when you create the cluster.
              */
             public Builder totalSize(Integer totalSize) {
                 this.totalSize = totalSize;
@@ -718,7 +718,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             private Integer totalSize; 
 
             /**
-             * donePercent.
+             * The overall progress.
              */
             public Builder donePercent(Integer donePercent) {
                 this.donePercent = donePercent;
@@ -726,7 +726,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * doneSize.
+             * The number of nodes being processed in the cluster.
              */
             public Builder doneSize(Integer doneSize) {
                 this.doneSize = doneSize;
@@ -734,7 +734,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * The name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -742,7 +742,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * totalSize.
+             * The total number of nodes in the cluster.
              */
             public Builder totalSize(Integer totalSize) {
                 this.totalSize = totalSize;
@@ -807,7 +807,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             private ServiceStatus serviceStatus; 
 
             /**
-             * configStatusList.
+             * The configuration status list.
              */
             public Builder configStatusList(java.util.List < ConfigStatusList> configStatusList) {
                 this.configStatusList = configStatusList;
@@ -815,7 +815,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * dataStatusList.
+             * The dataStatusList.
              */
             public Builder dataStatusList(java.util.List < DataStatusList> dataStatusList) {
                 this.dataStatusList = dataStatusList;
@@ -823,7 +823,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * serviceStatus.
+             * The service status.
              */
             public Builder serviceStatus(ServiceStatus serviceStatus) {
                 this.serviceStatus = serviceStatus;
@@ -912,7 +912,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             private Integer totalSize; 
 
             /**
-             * configUpdateTime
+             * The time when the cluster was updated.
              */
             public Builder configUpdateTime(String configUpdateTime) {
                 this.configUpdateTime = configUpdateTime;
@@ -920,7 +920,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * donePercent
+             * The progress.
              */
             public Builder donePercent(Integer donePercent) {
                 this.donePercent = donePercent;
@@ -928,7 +928,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * doneSize
+             * The number of nodes that are configured.
              */
             public Builder doneSize(Integer doneSize) {
                 this.doneSize = doneSize;
@@ -936,7 +936,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * name
+             * The name of the cluster.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -944,7 +944,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * totalSize
+             * The total number of nodes that you specify when you create the cluster.
              */
             public Builder totalSize(Integer totalSize) {
                 this.totalSize = totalSize;
@@ -1021,7 +1021,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             private Integer totalSize; 
 
             /**
-             * donePercent
+             * The progress.
              */
             public Builder donePercent(Integer donePercent) {
                 this.donePercent = donePercent;
@@ -1029,7 +1029,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * doneSize
+             * The number of nodes that are configured.
              */
             public Builder doneSize(Integer doneSize) {
                 this.doneSize = doneSize;
@@ -1045,7 +1045,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * totalSize
+             * The total number of nodes that you specify when you create the cluster.
              */
             public Builder totalSize(Integer totalSize) {
                 this.totalSize = totalSize;
@@ -1098,7 +1098,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             private QueryNodeServiceStatus serviceStatus; 
 
             /**
-             * configStatusList
+             * The dataStatusList.
              */
             public Builder configStatusList(java.util.List < QueryNodeConfigStatusList> configStatusList) {
                 this.configStatusList = configStatusList;
@@ -1106,7 +1106,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * serviceStatus
+             * The service status.
              */
             public Builder serviceStatus(QueryNodeServiceStatus serviceStatus) {
                 this.serviceStatus = serviceStatus;
@@ -1171,7 +1171,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             private QueryNode queryNode; 
 
             /**
-             * The name of the cluster
+             * The name of the cluster.
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -1179,7 +1179,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * dataNodes
+             * The information about the data node.
              */
             public Builder dataNodes(java.util.List < DataNodes> dataNodes) {
                 this.dataNodes = dataNodes;
@@ -1187,7 +1187,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The specifications of the query node.
+             * The information about the query node.
              */
             public Builder queryNode(QueryNode queryNode) {
                 this.queryNode = queryNode;

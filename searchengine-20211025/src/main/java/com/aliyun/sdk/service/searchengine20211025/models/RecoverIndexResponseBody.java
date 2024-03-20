@@ -50,7 +50,7 @@ public class RecoverIndexResponseBody extends TeaModel {
         private java.util.Map < String, ? > result; 
 
         /**
-         * id of request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class RecoverIndexResponseBody extends TeaModel {
         }
 
         /**
-         * Map
+         * The result returned by data search.
          */
         public Builder result(java.util.Map < String, ? > result) {
             this.result = result;

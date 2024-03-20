@@ -129,7 +129,7 @@ public class ModifyIndexPartitionRequest extends Request {
         }
 
         /**
-         * The information about each index.
+         * The name of the data center.
          */
         public Builder domainName(String domainName) {
             this.putBodyParameter("domainName", domainName);
@@ -138,7 +138,7 @@ public class ModifyIndexPartitionRequest extends Request {
         }
 
         /**
-         * The name of the data center.
+         * The primary key of generation.
          */
         public Builder generation(Long generation) {
             this.putBodyParameter("generation", generation);
@@ -147,7 +147,7 @@ public class ModifyIndexPartitionRequest extends Request {
         }
 
         /**
-         * The number of shards of the index.
+         * The information about shards of the index.
          */
         public Builder indexInfos(java.util.List < IndexInfos> indexInfos) {
             this.putBodyParameter("indexInfos", indexInfos);
@@ -213,7 +213,7 @@ public class ModifyIndexPartitionRequest extends Request {
             private Integer partitionCount; 
 
             /**
-             * auditing
+             * The name of the index.
              */
             public Builder indexName(String indexName) {
                 this.indexName = indexName;
@@ -221,7 +221,7 @@ public class ModifyIndexPartitionRequest extends Request {
             }
 
             /**
-             * The parameters in the request body.
+             * The number of concurrency. The default value is 1.
              */
             public Builder parallelNum(Integer parallelNum) {
                 this.parallelNum = parallelNum;

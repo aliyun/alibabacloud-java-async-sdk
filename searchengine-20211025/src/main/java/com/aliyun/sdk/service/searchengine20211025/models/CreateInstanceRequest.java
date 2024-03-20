@@ -82,7 +82,7 @@ public class CreateInstanceRequest extends Request {
         } 
 
         /**
-         * The billing method of the instance. Valid values: PREPAY and POSTPAY. PREPAY: subscription. If you set this parameter to PREPAY, make sure that your Alibaba Cloud account supports balance payment or credit payment. Otherwise, the system returns the InvalidPayMethod error message. In addition, you must specify the paymentInfo parameter. POSTPAY: pay-as-you-go. This billing method is not supported.
+         * The billing method of the instance. Valid values: PREPAY and POSTPAY. PREPAY indicates the instance is a subscription instance. When you set this parameter to PREPAY, make sure that your Alibaba Cloud account supports balance payment or credit card payment. Otherwise, the system returns the InvalidPayMethod error message. If you set this parameter to PREPAY, you must also specify the paymentInfo parameter. POSTPAY indicates that the instance is a pay-as-you-go instance. This billing method is not supported.
          */
         public Builder chargeType(String chargeType) {
             this.putBodyParameter("chargeType", chargeType);
@@ -91,7 +91,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The specifications of the instance.
+         * A list of instance-related specifications.
          */
         public Builder components(java.util.List < Components> components) {
             this.putBodyParameter("components", components);
@@ -100,7 +100,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The information about billing.
+         * The billing information.
          */
         public Builder order(Order order) {
             this.putBodyParameter("order", order);
@@ -154,7 +154,7 @@ public class CreateInstanceRequest extends Request {
             private String value; 
 
             /**
-             * The name of the specification. The value must be the same as the name of a parameter on the buy page.
+             * The specification code, which must be consistent with values of the corresponding module parameters.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -162,7 +162,7 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * The value of the specification.
+             * Values that you specify for the corresponding module components on the buy page.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -235,7 +235,7 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * The billing cycle. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, and 12.
+             * The billing duration. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, and 12.
              */
             public Builder duration(Long duration) {
                 this.duration = duration;
@@ -243,7 +243,7 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * The unit of the billing cycle. Valid values: Month and Year.
+             * The unit of the billing duration. Valid values: Month and Year.
              */
             public Builder pricingCycle(String pricingCycle) {
                 this.pricingCycle = pricingCycle;

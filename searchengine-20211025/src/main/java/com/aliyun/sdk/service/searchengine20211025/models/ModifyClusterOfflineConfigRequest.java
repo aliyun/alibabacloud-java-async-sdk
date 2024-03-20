@@ -190,7 +190,7 @@ public class ModifyClusterOfflineConfigRequest extends Request {
         }
 
         /**
-         * The reindexing method. Valid values: api: API data source. indexRecover: data recovery through indexing.
+         * The mode of reindexing. Valid values: api and indexRecover. api indicates to push incremental data to a data source by calling the API operations. indexRecover indicates that the data source is restored from the index.
          */
         public Builder buildMode(String buildMode) {
             this.putBodyParameter("buildMode", buildMode);
@@ -208,7 +208,7 @@ public class ModifyClusterOfflineConfigRequest extends Request {
         }
 
         /**
-         * dataSourceName.
+         * The name of the data source.
          */
         public Builder dataSourceName(String dataSourceName) {
             this.putBodyParameter("dataSourceName", dataSourceName);
@@ -217,7 +217,7 @@ public class ModifyClusterOfflineConfigRequest extends Request {
         }
 
         /**
-         * The type of the data source. Valid values: odps: MaxCompute. swift: Swift. unKnow: unknown type.
+         * The type of the data source. Valid values: odps, swift, saro, and unKnow.
          */
         public Builder dataSourceType(String dataSourceType) {
             this.putBodyParameter("dataSourceType", dataSourceType);
@@ -226,7 +226,7 @@ public class ModifyClusterOfflineConfigRequest extends Request {
         }
 
         /**
-         * This parameter is required if the API data source experiences full indexing.
+         * This parameter is required when index building by using API data sources is triggered.
          */
         public Builder dataTimeSec(Integer dataTimeSec) {
             this.putBodyParameter("dataTimeSec", dataTimeSec);
@@ -235,7 +235,7 @@ public class ModifyClusterOfflineConfigRequest extends Request {
         }
 
         /**
-         * The domain in which the data source is deployed.
+         * The domain where the data source is deployed.
          */
         public Builder domain(String domain) {
             this.putBodyParameter("domain", domain);
@@ -244,7 +244,7 @@ public class ModifyClusterOfflineConfigRequest extends Request {
         }
 
         /**
-         * The ID of the backward data delivery.
+         * The data restoration version.
          */
         public Builder generation(Long generation) {
             this.putBodyParameter("generation", generation);
@@ -253,7 +253,7 @@ public class ModifyClusterOfflineConfigRequest extends Request {
         }
 
         /**
-         * This parameter is required if the MaxCompute data source experiences full indexing.
+         * This parameter is required when index building for full data in a MaxCompute data source is triggered.
          */
         public Builder partition(String partition) {
             this.putBodyParameter("partition", partition);

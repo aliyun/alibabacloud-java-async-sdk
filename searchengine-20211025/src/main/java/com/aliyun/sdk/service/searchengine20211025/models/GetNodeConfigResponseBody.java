@@ -58,7 +58,7 @@ public class GetNodeConfigResponseBody extends TeaModel {
         }
 
         /**
-         * result.
+         * The result set.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -81,6 +81,9 @@ public class GetNodeConfigResponseBody extends TeaModel {
         @NameInMap("dataFragmentNumber")
         private Integer dataFragmentNumber;
 
+        @NameInMap("flowRatio")
+        private Integer flowRatio;
+
         @NameInMap("minServicePercent")
         private Integer minServicePercent;
 
@@ -91,6 +94,7 @@ public class GetNodeConfigResponseBody extends TeaModel {
             this.active = builder.active;
             this.dataDuplicateNumber = builder.dataDuplicateNumber;
             this.dataFragmentNumber = builder.dataFragmentNumber;
+            this.flowRatio = builder.flowRatio;
             this.minServicePercent = builder.minServicePercent;
             this.published = builder.published;
         }
@@ -125,6 +129,13 @@ public class GetNodeConfigResponseBody extends TeaModel {
         }
 
         /**
+         * @return flowRatio
+         */
+        public Integer getFlowRatio() {
+            return this.flowRatio;
+        }
+
+        /**
          * @return minServicePercent
          */
         public Integer getMinServicePercent() {
@@ -142,11 +153,12 @@ public class GetNodeConfigResponseBody extends TeaModel {
             private Boolean active; 
             private Integer dataDuplicateNumber; 
             private Integer dataFragmentNumber; 
+            private Integer flowRatio; 
             private Integer minServicePercent; 
             private Boolean published; 
 
             /**
-             * active.
+             * Indicates whether the expression is the default one.
              */
             public Builder active(Boolean active) {
                 this.active = active;
@@ -154,7 +166,7 @@ public class GetNodeConfigResponseBody extends TeaModel {
             }
 
             /**
-             * dataDuplicateNumber.
+             * The number of data replicas.
              */
             public Builder dataDuplicateNumber(Integer dataDuplicateNumber) {
                 this.dataDuplicateNumber = dataDuplicateNumber;
@@ -162,7 +174,7 @@ public class GetNodeConfigResponseBody extends TeaModel {
             }
 
             /**
-             * dataFragmentNumber.
+             * The number of data shards.
              */
             public Builder dataFragmentNumber(Integer dataFragmentNumber) {
                 this.dataFragmentNumber = dataFragmentNumber;
@@ -170,7 +182,15 @@ public class GetNodeConfigResponseBody extends TeaModel {
             }
 
             /**
-             * minServicePercent.
+             * flowRatio.
+             */
+            public Builder flowRatio(Integer flowRatio) {
+                this.flowRatio = flowRatio;
+                return this;
+            }
+
+            /**
+             * The minimum service ratio.
              */
             public Builder minServicePercent(Integer minServicePercent) {
                 this.minServicePercent = minServicePercent;
@@ -178,7 +198,7 @@ public class GetNodeConfigResponseBody extends TeaModel {
             }
 
             /**
-             * published.
+             * Indicates whether the node is associated with the cluster.
              */
             public Builder published(Boolean published) {
                 this.published = published;

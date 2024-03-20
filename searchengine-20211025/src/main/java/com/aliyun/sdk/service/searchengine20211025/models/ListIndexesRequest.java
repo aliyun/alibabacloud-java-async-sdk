@@ -69,7 +69,7 @@ public class ListIndexesRequest extends Request {
         } 
 
         /**
-         * Indicates whether it is a template.
+         * The ID of the instance
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -78,7 +78,7 @@ public class ListIndexesRequest extends Request {
         }
 
         /**
-         * newMode.
+         * 是否为新版本控制台页面
          */
         public Builder newMode(Boolean newMode) {
             this.putQueryParameter("newMode", newMode);

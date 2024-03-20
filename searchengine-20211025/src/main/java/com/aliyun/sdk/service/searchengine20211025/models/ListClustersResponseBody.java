@@ -58,7 +58,7 @@ public class ListClustersResponseBody extends TeaModel {
         }
 
         /**
-         * result.
+         * The list of clusters.
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -122,7 +122,7 @@ public class ListClustersResponseBody extends TeaModel {
             private Integer partition; 
 
             /**
-             * name.
+             * The name of the node.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -130,7 +130,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * number.
+             * The number of nodes.
              */
             public Builder number(Integer number) {
                 this.number = number;
@@ -138,7 +138,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * partition.
+             * The partition ID of the node.
              */
             public Builder partition(Integer partition) {
                 this.partition = partition;
@@ -203,7 +203,7 @@ public class ListClustersResponseBody extends TeaModel {
             private Integer partition; 
 
             /**
-             * name.
+             * The name of the node.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -211,7 +211,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * number.
+             * The number of nodes.
              */
             public Builder number(Integer number) {
                 this.number = number;
@@ -219,7 +219,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * partition.
+             * The number o replicas.
              */
             public Builder partition(Integer partition) {
                 this.partition = partition;
@@ -416,7 +416,7 @@ public class ListClustersResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * configUpdateTime.
+             * The time when the configuration was updated.
              */
             public Builder configUpdateTime(String configUpdateTime) {
                 this.configUpdateTime = configUpdateTime;
@@ -424,7 +424,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * currentAdvanceConfigVersion.
+             * The effective advanced version.
              */
             public Builder currentAdvanceConfigVersion(String currentAdvanceConfigVersion) {
                 this.currentAdvanceConfigVersion = currentAdvanceConfigVersion;
@@ -440,7 +440,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * currentOnlineConfigVersion.
+             * The effective online configuration version.
              */
             public Builder currentOnlineConfigVersion(String currentOnlineConfigVersion) {
                 this.currentOnlineConfigVersion = currentOnlineConfigVersion;
@@ -456,7 +456,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * dataNode.
+             * The information about the node in the cluster.
              */
             public Builder dataNode(DataNode dataNode) {
                 this.dataNode = dataNode;
@@ -464,7 +464,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * The description of the cluster.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -472,7 +472,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * latestAdvanceConfigVersion.
+             * The latest advanced configuration version.
              */
             public Builder latestAdvanceConfigVersion(String latestAdvanceConfigVersion) {
                 this.latestAdvanceConfigVersion = latestAdvanceConfigVersion;
@@ -488,7 +488,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * latestOnlineConfigVersion.
+             * The latest online configuration version.
              */
             public Builder latestOnlineConfigVersion(String latestOnlineConfigVersion) {
                 this.latestOnlineConfigVersion = latestOnlineConfigVersion;
@@ -504,7 +504,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * The name of the cluster.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -512,7 +512,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * queryNode.
+             * The query node of the cluster.
              */
             public Builder queryNode(QueryNode queryNode) {
                 this.queryNode = queryNode;
@@ -520,7 +520,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * The status of the cluster. Valid values: running, starting, stopping, and stopped. running indicates the cluster is running, starting indicates the cluster is starting, stopping indicates the cluster is stopping, and stopped indicates the cluster has stopped.
              */
             public Builder status(String status) {
                 this.status = status;

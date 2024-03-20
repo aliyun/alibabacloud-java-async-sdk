@@ -162,7 +162,7 @@ public class BuildIndexRequest extends Request {
         }
 
         /**
-         * The mode in which reindexing is performed.
+         * The reindexing mode.
          */
         public Builder buildMode(String buildMode) {
             this.putBodyParameter("buildMode", buildMode);
@@ -189,7 +189,7 @@ public class BuildIndexRequest extends Request {
         }
 
         /**
-         * The timestamp in seconds. This parameter is required if you import data from the data source by calling API operations.
+         * The timestamp in seconds. It is of the INT type. This parameter is required for the API-pushed data source.
          */
         public Builder dataTimeSec(Integer dataTimeSec) {
             this.putBodyParameter("dataTimeSec", dataTimeSec);
@@ -198,7 +198,7 @@ public class BuildIndexRequest extends Request {
         }
 
         /**
-         * The data center in which the data source resides.
+         * The data center where the data source is deployed.
          */
         public Builder domain(String domain) {
             this.putBodyParameter("domain", domain);
@@ -207,7 +207,7 @@ public class BuildIndexRequest extends Request {
         }
 
         /**
-         * The ID of the generation.
+         * The data restoration version.
          */
         public Builder generation(Long generation) {
             this.putBodyParameter("generation", generation);
@@ -216,7 +216,7 @@ public class BuildIndexRequest extends Request {
         }
 
         /**
-         * The data partition. This parameter is required if the dataSourceType parameter is set to odps.
+         * This parameter is required for the odps data source.
          */
         public Builder partition(String partition) {
             this.putBodyParameter("partition", partition);

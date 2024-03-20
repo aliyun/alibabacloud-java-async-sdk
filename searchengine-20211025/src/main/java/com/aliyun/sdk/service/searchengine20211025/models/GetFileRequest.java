@@ -100,14 +100,7 @@ public class GetFileRequest extends Request {
         } 
 
         /**
-         * ## Method
-         * <p>
-         * 
-         *     GET
-         * 
-         * ## URI
-         * 
-         *     /openapi/ha3/instances/{instanceId}/indexes/{indexName}/versions/{versionName}/file?fileName=/root/test.txt
+         * The ID of the instance
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -116,22 +109,7 @@ public class GetFileRequest extends Request {
         }
 
         /**
-         * ## Sample responses
-         * <p>
-         * 
-         * Success responses
-         * 
-         *     {
-         *       "requestId": "e1eef569-1ff7-4bf8-acf7-1cecca9894ce",
-         *       "result": {
-         *         "name":"version1",  // The file name
-         *         "fullPathName": "/root/version1",   // The name of the full path
-         *         "dataSource": "odps1", // The data source
-         *         "partition": 1,  // The number of shards
-         *         "isDir": false, // Indicates whether it is a directory.
-         *         "content": ""
-         *       }
-         *     }
+         * The name of the index
          */
         public Builder indexName(String indexName) {
             this.putPathParameter("indexName", indexName);
@@ -140,7 +118,7 @@ public class GetFileRequest extends Request {
         }
 
         /**
-         * versionName.
+         * The name of the version
          */
         public Builder versionName(String versionName) {
             this.putPathParameter("versionName", versionName);
@@ -149,7 +127,7 @@ public class GetFileRequest extends Request {
         }
 
         /**
-         * fileName.
+         * The name of the file in full path
          */
         public Builder fileName(String fileName) {
             this.putQueryParameter("fileName", fileName);

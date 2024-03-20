@@ -50,7 +50,7 @@ public class CreateDataSourceResponseBody extends TeaModel {
         private java.util.Map < String, ? > result; 
 
         /**
-         * requestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

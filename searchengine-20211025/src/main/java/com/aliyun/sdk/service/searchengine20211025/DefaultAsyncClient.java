@@ -81,10 +81,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * The result returned
-      *
-     */
     @Override
     public CompletableFuture<CreateDataSourceResponse> createDataSource(CreateDataSourceRequest request) {
         try {
@@ -188,7 +184,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The information about the index
+      * ## Method
+      *     DELETE
+      * ## URI
+      *     /openapi/ha3/instances/{instanceId}/indexes/{indexName}?dataSource=xxx
       *
      */
     @Override
@@ -206,7 +205,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The result
+      * ## Method
+      *     DELETE
+      * ## URI
+      *     /openapi/ha3/instances/{instanceId}/indexes/{indexName}/versions/{versionName}
       *
      */
     @Override
@@ -224,7 +226,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The result returned
+      * ### Method
+      * `DELETE`
+      * ### URI
+      * `/openapi/ha3/instances/{instanceId}`
       *
      */
     @Override
@@ -287,6 +292,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ## Method
+      *     GET
+      * ## URI
+      *     /openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/file?fileName={fileName}
+      *
+     */
     @Override
     public CompletableFuture<GetAdvanceConfigFileResponse> getAdvanceConfigFile(GetAdvanceConfigFileRequest request) {
         try {
@@ -322,6 +334,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### Method
+      * GET
+      * ### URI
+      * /openapi/ha3/instances/{instanceId}/cluster-run-time-info
+      *
+     */
     @Override
     public CompletableFuture<GetClusterRunTimeInfoResponse> getClusterRunTimeInfo(GetClusterRunTimeInfoRequest request) {
         try {
@@ -336,6 +355,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### Method
+      * `GET`
+      * ### URI
+      * `/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}`
+      *
+     */
     @Override
     public CompletableFuture<GetDataSourceResponse> getDataSource(GetDataSourceRequest request) {
         try {
@@ -365,9 +391,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ### Sample requests
+      * ## Method
+      * GET
+      * ## URI
       * ```java
-      * GET /openapi/ha3/instances/{instanceId}/deploy-graph
+      * /openapi/ha3/instances/{instanceId}/deploy-graph
       * ```
       *
      */
@@ -385,6 +413,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ## Method
+      *     GET
+      * ## URI
+      *     /openapi/ha3/instances/{instanceId}/indexes/{indexName}/versions/{versionName}/file?fileName=/root/test.txt
+      *
+     */
     @Override
     public CompletableFuture<GetFileResponse> getFile(GetFileRequest request) {
         try {
@@ -414,9 +449,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Examples
-      * Sample requests
-      *     GET  /openapi/ha3/instances/ha3_instance_id_1/clusters/cluster1/index-version
+      * ## Method
+      *     GET
+      * ## URI
+      *     /openapi/ha3/instances/{instanceId}/clusters/{clusterName}/index-version
       *
      */
     @Override
@@ -434,7 +470,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The billing method.
+      * ### Method
+      * `GET`
+      * ### URI
+      * `/openapi/ha3/instances/{instanceId}`
       *
      */
     @Override
@@ -466,8 +505,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Sample requests
-      * `GET /openapi/ha3/instances/ose-test1/advanced-configs`
+      * ## Method
+      * `GET`
+      * ## URI
+      * `/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/dir?dirName={dirName}`
       *
      */
     @Override
@@ -485,7 +526,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * http
+      * ## Sample requests
+      * `GET /openapi/ha3/instances/ose-test1/advanced-configs`
       *
      */
     @Override
@@ -503,10 +545,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ### Sample requests
-      * ```java
-      * GET /openapi/ha3/instances/ha3_instance_name/cluster-names
-      * ```
+      * ### Method
+      * GET
+      * ### URI
+      * /openapi/ha3/instances/{instanceId}/cluster-names
       *
      */
     @Override
@@ -523,6 +565,17 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### Method
+      * ```java
+      * GET
+      * ```
+      * ### URI
+      * ```java
+      * /openapi/ha3/instances/{instanceId}/cluster-tasks
+      * ```
+      *
+     */
     @Override
     public CompletableFuture<ListClusterTasksResponse> listClusterTasks(ListClusterTasksRequest request) {
         try {
@@ -538,7 +591,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * http
+      * ### Method
+      * ```java
+      * GET
+      * ```
+      * ### URI
+      * ```java
+      * /openapi/ha3/instances/{instanceId}/clusters
+      * ```
       *
      */
     @Override
@@ -556,7 +616,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Obtains the schema information of a specified data source.
+      * ## Method
+      * `GET`
+      * ## URI
+      * `/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/schemas`
       *
      */
     @Override
@@ -573,6 +636,17 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### Method
+      * ```java
+      * GET
+      * ```
+      * ### URI
+      * ```java
+      * /openapi/ha3/instances/{instanceId}/data-source-tasks
+      * ```
+      *
+     */
     @Override
     public CompletableFuture<ListDataSourceTasksResponse> listDataSourceTasks(ListDataSourceTasksRequest request) {
         try {
@@ -587,6 +661,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ## Method
+      * `GET`
+      * ## URI
+      * `/openapi/ha3/instances/{instanceId}/data-sources`
+      *
+     */
     @Override
     public CompletableFuture<ListDataSourcesResponse> listDataSources(ListDataSourcesRequest request) {
         try {
@@ -622,6 +703,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ## Method
+      *     GET
+      * ## URI
+      *     /openapi/ha3/instances/{instanceId}/indexes
+      *
+     */
     @Override
     public CompletableFuture<ListIndexesResponse> listIndexes(ListIndexesRequest request) {
         try {
@@ -658,7 +746,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Indicates whether an overdue payment is involved
+      * ### Method
+      * `GET`
+      * ### URI
+      * `/openapi/[code]/instances`
       *
      */
     @Override
@@ -676,9 +767,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * \\### Sample requests
+      * ### Method
       * ```java
-      * GET  /openapi/ha3/instances/ha-test1/node/ihome_searcher/online-configs?domain=pre_ea120
+      * GET
+      * ```
+      * ### URI
+      * ```java
+      * /openapi/ha3/instances/{instanceId}/node/{nodeName}/online-configs?domain={domain}
       * ```
       *
      */
@@ -697,7 +792,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The ID of the instance
+      * ### Method
+      * `GET`
+      * ### URI
+      * `/openapi/ha3/instances/{instanceId}/query?query=xxxx`
       *
      */
     @Override
@@ -759,7 +857,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
       * ## Request syntax
       *     PUT /openapi/ha3/instances/{instanceId}/cluster-offline-config
-      *     ...
       *
      */
     @Override
@@ -798,7 +895,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The result returned
+      * ## Method
+      * `PUT`
+      * ## URI
+      * `/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}`
       *
      */
     @Override
@@ -816,14 +916,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ### Method
-      * ~~~
-      * PUT
-      * ~~~
-      * ### URI
-      * ~~~
-      * /openapi/ha3/instances/{instanceId}/indexes/{indexName}/versions/{versionName}/file?fileName=/root/test.txt
-      * ~~~
+      * ## Method
+      *     PUT
+      * ## URI
+      *     /openapi/ha3/instances/{instanceId}/indexes/{indexName}/versions/{versionName}/file?fileName=/root/test.txt
       *
      */
     @Override
@@ -841,7 +937,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The information about each index.
+      * ### Method
+      * `PUT`
+      * ### URI
+      * `/openapi/ha3/instances/{instanceId}/index-partition`
       *
      */
     @Override
@@ -881,13 +980,13 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
       * ### Method
-      *  ~~~
+      * ```java
       * PUT
-      * ~~~
+      * ```
       * ### URI
-      * ~~~
+      * ```java
       * /openapi/ha3/instances/{instanceId}/node-config?type=qrs&name=test
-      * ~~~
+      * ```
       *
      */
     @Override
@@ -976,7 +1075,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The information about the index
+      * ## Method
+      *     POST
+      * ## URI
+      *     /openapi/ha3/instances/{instanceId}/indexes/{indexName}/actions/publish
       *
      */
     @Override
@@ -1015,7 +1117,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The result
+      * ### Method
+      * ```java
+      * DELETE
+      * ```
+      * ### URI
+      * ```java
+      * /openapi/ha3/instances/{instanceId}/clusters/{clusterName}
+      * ```
       *
      */
     @Override
@@ -1033,7 +1142,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The information about the index
+      * ### Method
+      * ```java
+      * PUT
+      * ```
+      * ### URI
+      * ```java
+      * /openapi/ha3/instances/{instanceId}/stop-task/{fsmId}
+      * ```
       *
      */
     @Override

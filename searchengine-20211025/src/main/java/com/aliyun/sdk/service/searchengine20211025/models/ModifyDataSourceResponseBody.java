@@ -50,7 +50,7 @@ public class ModifyDataSourceResponseBody extends TeaModel {
         private java.util.Map < String, ? > result; 
 
         /**
-         * id of request
+         * The ID of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ModifyDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The schema information.
+         * The result returned
          */
         public Builder result(java.util.Map < String, ? > result) {
             this.result = result;

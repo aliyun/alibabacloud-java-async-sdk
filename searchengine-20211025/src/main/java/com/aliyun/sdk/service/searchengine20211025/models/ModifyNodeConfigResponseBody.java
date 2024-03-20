@@ -58,7 +58,7 @@ public class ModifyNodeConfigResponseBody extends TeaModel {
         }
 
         /**
-         * auditing
+         * The information about the index
          */
         public Builder result(java.util.Map < String, ? > result) {
             this.result = result;

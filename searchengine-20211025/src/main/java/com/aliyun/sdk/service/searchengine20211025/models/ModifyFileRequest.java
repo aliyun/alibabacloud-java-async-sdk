@@ -155,7 +155,7 @@ public class ModifyFileRequest extends Request {
         }
 
         /**
-         * The parameters in the request body
+         * The content of the file.
          */
         public Builder content(String content) {
             this.putBodyParameter("content", content);
@@ -164,7 +164,7 @@ public class ModifyFileRequest extends Request {
         }
 
         /**
-         * auditing
+         * The data partition. This parameter is required if the dataSourceType parameter is set to odps.
          */
         public Builder partition(Integer partition) {
             this.putBodyParameter("partition", partition);
@@ -173,7 +173,7 @@ public class ModifyFileRequest extends Request {
         }
 
         /**
-         * ha-cn-tl32m2c4u01@ha-cn-tl32m2c4u01_00@bj_vpc_domain_1@automobile_vector@index_config_edit
+         * The name of the file in the full path
          */
         public Builder fileName(String fileName) {
             this.putQueryParameter("fileName", fileName);

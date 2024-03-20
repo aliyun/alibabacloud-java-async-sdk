@@ -58,7 +58,7 @@ public class GetIndexVersionResponseBody extends TeaModel {
         }
 
         /**
-         * result.
+         * The list of cluster details
          */
         public Builder result(Result result) {
             this.result = result;
@@ -134,7 +134,7 @@ public class GetIndexVersionResponseBody extends TeaModel {
             private java.util.List < Long > versions; 
 
             /**
-             * buildDeployId.
+             * The ID of the index deployed in offline mode
              */
             public Builder buildDeployId(String buildDeployId) {
                 this.buildDeployId = buildDeployId;
@@ -150,7 +150,7 @@ public class GetIndexVersionResponseBody extends TeaModel {
             }
 
             /**
-             * indexName.
+             * The name of the index table
              */
             public Builder indexName(String indexName) {
                 this.indexName = indexName;
@@ -158,7 +158,7 @@ public class GetIndexVersionResponseBody extends TeaModel {
             }
 
             /**
-             * versions.
+             * The version of the index
              */
             public Builder versions(java.util.List < Long > versions) {
                 this.versions = versions;
@@ -211,7 +211,7 @@ public class GetIndexVersionResponseBody extends TeaModel {
             private java.util.List < IndexVersions> indexVersions; 
 
             /**
-             * cluster.
+             * The name of the cluster
              */
             public Builder cluster(String cluster) {
                 this.cluster = cluster;
@@ -219,7 +219,7 @@ public class GetIndexVersionResponseBody extends TeaModel {
             }
 
             /**
-             * indexVersions.
+             * The time when the cluster was updated
              */
             public Builder indexVersions(java.util.List < IndexVersions> indexVersions) {
                 this.indexVersions = indexVersions;

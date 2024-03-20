@@ -62,7 +62,7 @@ public class ListInstancesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * requestId.
+         * The ID of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * totalCount.
+         * The total number of entries returned
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -142,7 +142,7 @@ public class ListInstancesResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * 353490
+             * The access point of the gateway
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -150,82 +150,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ### Sample responses
-             * <p>
-             * 
-             * **Sample success responses**
-             * 
-             *     {
-             *         "requestId": "90D6B8F5-FE97-4509-9AAB-367836C51818",
-             *         "result": [
-             *             {
-             *                 "instanceId": "igraph-cn-xxxxxx1",
-             *                 "spec": {
-             *                     "password": "passwd",
-             *                     "searchResource": {
-             *                         "disk": 50,
-             *                         "mem": 8,
-             *                         "cpu": 2,
-             *                         "nodeCount": 2
-             *                     },
-             *                     "instanceName": "testInstance",
-             *                     "vSwitchId": "vswitch_id_xxx",
-             *                     "vpcId": "vpc_id_xxx",
-             *                     "qrsResource": {
-             *                         "disk": 50,
-             *                         "mem": 8,
-             *                         "cpu": 2,
-             *                         "nodeCount": 2
-             *                     },
-             *                     "region": "cn-hangzhou",
-             *                     "userName": "user"
-             *                 },
-             *                 "status": {
-             *                     "phase": "PENDING",
-             *                     "instancePhase": "INIT",
-             *                     "createSuccess": false
-             *                 }
-             *             },
-             *             {
-             *                 "instanceId": "igraph-cn-xxxxxx2",
-             *                 "spec": {
-             *                     "password": "passwd",
-             *                     "searchResource": {
-             *                         "disk": 50,
-             *                         "mem": 8,
-             *                         "cpu": 2,
-             *                         "nodeCount": 2
-             *                     },
-             *                     "instanceName": "testInstance",
-             *                     "vSwitchId": "vswitch_id_xxx",
-             *                     "vpcId": "vpc_id_xxx",
-             *                     "qrsResource": {
-             *                         "disk": 50,
-             *                         "mem": 8,
-             *                         "cpu": 2,
-             *                         "nodeCount": 2
-             *                     },
-             *                     "region": "cn-hangzhou",
-             *                     "userName": "user"
-             *                 },
-             *                 "status": {
-             *                     "phase": "PENDING",
-             *                     "instancePhase": "INIT",
-             *                     "createSuccess": false
-             *                 }
-             *             }
-             *         ],
-             *         "totalCount": 20
-             *     }
-             * 
-             * **Sample error responses**
-             * 
-             *     {
-             *       "requestId": "BD1EA715-DF6F-06C2-004C-C1FA0D3A9820",
-             *       "httpCode": 404,
-             *       "code": "App.NotFound",
-             *       "message": "App not found"
-             *     }
+             * The ID of the virtual switch
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -233,7 +158,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Queries instances.
+             * The ID of the Virtual Private Cloud (VPC) network
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -286,7 +211,7 @@ public class ListInstancesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * key.
+             * The key of the tag.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -294,7 +219,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * value.
+             * The value of the tag.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -479,7 +404,7 @@ public class ListInstancesResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * The ID of the resource group to which the instance belongs.
+             * The billing method
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -487,7 +412,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned
+             * The product code
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -495,7 +420,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Havenask instance
+             * The time when the instance was created
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -503,7 +428,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the virtual switch
+             * The description of the instance
              */
             public Builder description(String description) {
                 this.description = description;
@@ -511,7 +436,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Virtual Private Cloud (VPC) network
+             * The expiration time
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -519,7 +444,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request
+             * Indicates whether an overdue payment is involved
              */
             public Builder inDebt(Boolean inDebt) {
                 this.inDebt = inDebt;
@@ -527,7 +452,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The access point of the gateway
+             * The ID of the resource
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -535,7 +460,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Emergency test
+             * The lock status
              */
             public Builder lockMode(String lockMode) {
                 this.lockMode = lockMode;
@@ -543,7 +468,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The lock status
+             * Information about the instance of the network search engine
              */
             public Builder network(Network network) {
                 this.network = network;
@@ -551,7 +476,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries to return on each page. Valid values: 1 to 50. Default value: 10.
+             * The ID of the resource group
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -559,7 +484,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The expiration time
+             * The status of the instance
              */
             public Builder status(String status) {
                 this.status = status;
@@ -567,7 +492,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * tags.
+             * The result returned.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;

@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.searchengine20211025;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.searchengine20211025.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -36,10 +37,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<CreateClusterResponse> createCluster(CreateClusterRequest request);
 
-    /**
-      * The result returned
-      *
-     */
     CompletableFuture<CreateDataSourceResponse> createDataSource(CreateDataSourceRequest request);
 
     /**
@@ -83,19 +80,28 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteDataSourceResponse> deleteDataSource(DeleteDataSourceRequest request);
 
     /**
-      * The information about the index
+      * ## Method
+      *     DELETE
+      * ## URI
+      *     /openapi/ha3/instances/{instanceId}/indexes/{indexName}?dataSource=xxx
       *
      */
     CompletableFuture<DeleteIndexResponse> deleteIndex(DeleteIndexRequest request);
 
     /**
-      * The result
+      * ## Method
+      *     DELETE
+      * ## URI
+      *     /openapi/ha3/instances/{instanceId}/indexes/{indexName}/versions/{versionName}
       *
      */
     CompletableFuture<DeleteIndexVersionResponse> deleteIndexVersion(DeleteIndexVersionRequest request);
 
     /**
-      * The result returned
+      * ### Method
+      * `DELETE`
+      * ### URI
+      * `/openapi/ha3/instances/{instanceId}`
       *
      */
     CompletableFuture<DeleteInstanceResponse> deleteInstance(DeleteInstanceRequest request);
@@ -122,6 +128,13 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<GetAdvanceConfigResponse> getAdvanceConfig(GetAdvanceConfigRequest request);
 
+    /**
+      * ## Method
+      *     GET
+      * ## URI
+      *     /openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/file?fileName={fileName}
+      *
+     */
     CompletableFuture<GetAdvanceConfigFileResponse> getAdvanceConfigFile(GetAdvanceConfigFileRequest request);
 
     /**
@@ -133,35 +146,62 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<GetClusterResponse> getCluster(GetClusterRequest request);
 
+    /**
+      * ### Method
+      * GET
+      * ### URI
+      * /openapi/ha3/instances/{instanceId}/cluster-run-time-info
+      *
+     */
     CompletableFuture<GetClusterRunTimeInfoResponse> getClusterRunTimeInfo(GetClusterRunTimeInfoRequest request);
 
+    /**
+      * ### Method
+      * `GET`
+      * ### URI
+      * `/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}`
+      *
+     */
     CompletableFuture<GetDataSourceResponse> getDataSource(GetDataSourceRequest request);
 
     CompletableFuture<GetDataSourceDeployResponse> getDataSourceDeploy(GetDataSourceDeployRequest request);
 
     /**
-      * ### Sample requests
+      * ## Method
+      * GET
+      * ## URI
       * ```java
-      * GET /openapi/ha3/instances/{instanceId}/deploy-graph
+      * /openapi/ha3/instances/{instanceId}/deploy-graph
       * ```
       *
      */
     CompletableFuture<GetDeployGraphResponse> getDeployGraph(GetDeployGraphRequest request);
 
+    /**
+      * ## Method
+      *     GET
+      * ## URI
+      *     /openapi/ha3/instances/{instanceId}/indexes/{indexName}/versions/{versionName}/file?fileName=/root/test.txt
+      *
+     */
     CompletableFuture<GetFileResponse> getFile(GetFileRequest request);
 
     CompletableFuture<GetIndexResponse> getIndex(GetIndexRequest request);
 
     /**
-      * ## Examples
-      * Sample requests
-      *     GET  /openapi/ha3/instances/ha3_instance_id_1/clusters/cluster1/index-version
+      * ## Method
+      *     GET
+      * ## URI
+      *     /openapi/ha3/instances/{instanceId}/clusters/{clusterName}/index-version
       *
      */
     CompletableFuture<GetIndexVersionResponse> getIndexVersion(GetIndexVersionRequest request);
 
     /**
-      * The billing method.
+      * ### Method
+      * `GET`
+      * ### URI
+      * `/openapi/ha3/instances/{instanceId}`
       *
      */
     CompletableFuture<GetInstanceResponse> getInstance(GetInstanceRequest request);
@@ -169,43 +209,85 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetNodeConfigResponse> getNodeConfig(GetNodeConfigRequest request);
 
     /**
-      * ## Sample requests
-      * `GET /openapi/ha3/instances/ose-test1/advanced-configs`
+      * ## Method
+      * `GET`
+      * ## URI
+      * `/openapi/ha3/instances/{instanceId}/advanced-configs/{configName}/dir?dirName={dirName}`
       *
      */
     CompletableFuture<ListAdvanceConfigDirResponse> listAdvanceConfigDir(ListAdvanceConfigDirRequest request);
 
     /**
-      * http
+      * ## Sample requests
+      * `GET /openapi/ha3/instances/ose-test1/advanced-configs`
       *
      */
     CompletableFuture<ListAdvanceConfigsResponse> listAdvanceConfigs(ListAdvanceConfigsRequest request);
 
     /**
-      * ### Sample requests
-      * ```java
-      * GET /openapi/ha3/instances/ha3_instance_name/cluster-names
-      * ```
+      * ### Method
+      * GET
+      * ### URI
+      * /openapi/ha3/instances/{instanceId}/cluster-names
       *
      */
     CompletableFuture<ListClusterNamesResponse> listClusterNames(ListClusterNamesRequest request);
 
+    /**
+      * ### Method
+      * ```java
+      * GET
+      * ```
+      * ### URI
+      * ```java
+      * /openapi/ha3/instances/{instanceId}/cluster-tasks
+      * ```
+      *
+     */
     CompletableFuture<ListClusterTasksResponse> listClusterTasks(ListClusterTasksRequest request);
 
     /**
-      * http
+      * ### Method
+      * ```java
+      * GET
+      * ```
+      * ### URI
+      * ```java
+      * /openapi/ha3/instances/{instanceId}/clusters
+      * ```
       *
      */
     CompletableFuture<ListClustersResponse> listClusters(ListClustersRequest request);
 
     /**
-      * Obtains the schema information of a specified data source.
+      * ## Method
+      * `GET`
+      * ## URI
+      * `/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/schemas`
       *
      */
     CompletableFuture<ListDataSourceSchemasResponse> listDataSourceSchemas(ListDataSourceSchemasRequest request);
 
+    /**
+      * ### Method
+      * ```java
+      * GET
+      * ```
+      * ### URI
+      * ```java
+      * /openapi/ha3/instances/{instanceId}/data-source-tasks
+      * ```
+      *
+     */
     CompletableFuture<ListDataSourceTasksResponse> listDataSourceTasks(ListDataSourceTasksRequest request);
 
+    /**
+      * ## Method
+      * `GET`
+      * ## URI
+      * `/openapi/ha3/instances/{instanceId}/data-sources`
+      *
+     */
     CompletableFuture<ListDataSourcesResponse> listDataSources(ListDataSourcesRequest request);
 
     /**
@@ -217,6 +299,13 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<ListDateSourceGenerationsResponse> listDateSourceGenerations(ListDateSourceGenerationsRequest request);
 
+    /**
+      * ## Method
+      *     GET
+      * ## URI
+      *     /openapi/ha3/instances/{instanceId}/indexes
+      *
+     */
     CompletableFuture<ListIndexesResponse> listIndexes(ListIndexesRequest request);
 
     /**
@@ -229,22 +318,32 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListInstanceSpecsResponse> listInstanceSpecs(ListInstanceSpecsRequest request);
 
     /**
-      * Indicates whether an overdue payment is involved
+      * ### Method
+      * `GET`
+      * ### URI
+      * `/openapi/[code]/instances`
       *
      */
     CompletableFuture<ListInstancesResponse> listInstances(ListInstancesRequest request);
 
     /**
-      * \\### Sample requests
+      * ### Method
       * ```java
-      * GET  /openapi/ha3/instances/ha-test1/node/ihome_searcher/online-configs?domain=pre_ea120
+      * GET
+      * ```
+      * ### URI
+      * ```java
+      * /openapi/ha3/instances/{instanceId}/node/{nodeName}/online-configs?domain={domain}
       * ```
       *
      */
     CompletableFuture<ListOnlineConfigsResponse> listOnlineConfigs(ListOnlineConfigsRequest request);
 
     /**
-      * The ID of the instance
+      * ### Method
+      * `GET`
+      * ### URI
+      * `/openapi/ha3/instances/{instanceId}/query?query=xxxx`
       *
      */
     CompletableFuture<ListQueryResultResponse> listQueryResult(ListQueryResultRequest request);
@@ -270,7 +369,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
       * ## Request syntax
       *     PUT /openapi/ha3/instances/{instanceId}/cluster-offline-config
-      *     ...
       *
      */
     CompletableFuture<ModifyClusterOfflineConfigResponse> modifyClusterOfflineConfig(ModifyClusterOfflineConfigRequest request);
@@ -285,26 +383,28 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyClusterOnlineConfigResponse> modifyClusterOnlineConfig(ModifyClusterOnlineConfigRequest request);
 
     /**
-      * The result returned
+      * ## Method
+      * `PUT`
+      * ## URI
+      * `/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}`
       *
      */
     CompletableFuture<ModifyDataSourceResponse> modifyDataSource(ModifyDataSourceRequest request);
 
     /**
-      * ### Method
-      * ~~~
-      * PUT
-      * ~~~
-      * ### URI
-      * ~~~
-      * /openapi/ha3/instances/{instanceId}/indexes/{indexName}/versions/{versionName}/file?fileName=/root/test.txt
-      * ~~~
+      * ## Method
+      *     PUT
+      * ## URI
+      *     /openapi/ha3/instances/{instanceId}/indexes/{indexName}/versions/{versionName}/file?fileName=/root/test.txt
       *
      */
     CompletableFuture<ModifyFileResponse> modifyFile(ModifyFileRequest request);
 
     /**
-      * The information about each index.
+      * ### Method
+      * `PUT`
+      * ### URI
+      * `/openapi/ha3/instances/{instanceId}/index-partition`
       *
      */
     CompletableFuture<ModifyIndexPartitionResponse> modifyIndexPartition(ModifyIndexPartitionRequest request);
@@ -320,13 +420,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
       * ### Method
-      *  ~~~
+      * ```java
       * PUT
-      * ~~~
+      * ```
       * ### URI
-      * ~~~
+      * ```java
       * /openapi/ha3/instances/{instanceId}/node-config?type=qrs&name=test
-      * ~~~
+      * ```
       *
      */
     CompletableFuture<ModifyNodeConfigResponse> modifyNodeConfig(ModifyNodeConfigRequest request);
@@ -367,7 +467,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<PublishAdvanceConfigResponse> publishAdvanceConfig(PublishAdvanceConfigRequest request);
 
     /**
-      * The information about the index
+      * ## Method
+      *     POST
+      * ## URI
+      *     /openapi/ha3/instances/{instanceId}/indexes/{indexName}/actions/publish
       *
      */
     CompletableFuture<PublishIndexVersionResponse> publishIndexVersion(PublishIndexVersionRequest request);
@@ -382,13 +485,27 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RecoverIndexResponse> recoverIndex(RecoverIndexRequest request);
 
     /**
-      * The result
+      * ### Method
+      * ```java
+      * DELETE
+      * ```
+      * ### URI
+      * ```java
+      * /openapi/ha3/instances/{instanceId}/clusters/{clusterName}
+      * ```
       *
      */
     CompletableFuture<RemoveClusterResponse> removeCluster(RemoveClusterRequest request);
 
     /**
-      * The information about the index
+      * ### Method
+      * ```java
+      * PUT
+      * ```
+      * ### URI
+      * ```java
+      * /openapi/ha3/instances/{instanceId}/stop-task/{fsmId}
+      * ```
       *
      */
     CompletableFuture<StopTaskResponse> stopTask(StopTaskRequest request);

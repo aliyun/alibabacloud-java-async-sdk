@@ -50,7 +50,7 @@ public class DeleteInstanceResponseBody extends TeaModel {
         private java.util.Map < String, ? > result; 
 
         /**
-         * requestId.
+         * The ID of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DeleteInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * result.
+         * The result returned
          */
         public Builder result(java.util.Map < String, ? > result) {
             this.result = result;

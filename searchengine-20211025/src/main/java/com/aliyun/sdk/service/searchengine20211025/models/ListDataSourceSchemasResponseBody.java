@@ -50,7 +50,7 @@ public class ListDataSourceSchemasResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * requestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ListDataSourceSchemasResponseBody extends TeaModel {
         }
 
         /**
-         * result.
+         * The result returned.
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -122,7 +122,7 @@ public class ListDataSourceSchemasResponseBody extends TeaModel {
             private Boolean isPrimaryKeySorted; 
 
             /**
-             * hasPrimaryKeyAttribute.
+             * Indicates whether it has the primary key property. **true** indicates that it has the primary key property, and **false** indicates that it does not have the primary key property.
              */
             public Builder hasPrimaryKeyAttribute(Boolean hasPrimaryKeyAttribute) {
                 this.hasPrimaryKeyAttribute = hasPrimaryKeyAttribute;
@@ -130,7 +130,7 @@ public class ListDataSourceSchemasResponseBody extends TeaModel {
             }
 
             /**
-             * isPrimaryKey.
+             * Indicates whether it is the primary key. Valid values: true and false. **true** indicates that it is the primary key, and **false** indicates that it is not the primary key.
              */
             public Builder isPrimaryKey(Boolean isPrimaryKey) {
                 this.isPrimaryKey = isPrimaryKey;
@@ -138,7 +138,7 @@ public class ListDataSourceSchemasResponseBody extends TeaModel {
             }
 
             /**
-             * isPrimaryKeySorted.
+             * Indicates whether data is sorted based on the primary key. Valid values: true and false. **true** indicates that data is sorted based on the primary key, and **false** indicates that data is not sorted based on the primary key.
              */
             public Builder isPrimaryKeySorted(Boolean isPrimaryKeySorted) {
                 this.isPrimaryKeySorted = isPrimaryKeySorted;
@@ -251,7 +251,7 @@ public class ListDataSourceSchemasResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * addIndex.
+             * Indicates whether the index properties are added. Valid values: true and false. **true** indicates that the index properties are added, and **false** indicates that the index properties are not added.
              */
             public Builder addIndex(Boolean addIndex) {
                 this.addIndex = addIndex;
@@ -259,7 +259,7 @@ public class ListDataSourceSchemasResponseBody extends TeaModel {
             }
 
             /**
-             * attribute.
+             * Indicates whether it is an attribute field. Valid values: true and false. **true** indicates that it is an attribute field, and **false** indicates that it is not an attribute field.
              */
             public Builder attribute(Boolean attribute) {
                 this.attribute = attribute;
@@ -267,7 +267,7 @@ public class ListDataSourceSchemasResponseBody extends TeaModel {
             }
 
             /**
-             * custom.
+             * Indicates whether it is a custom field. Valid values: true and false. **true** indicates that it is a custom field, and **false** indicates that it is not a custom field.
              */
             public Builder custom(Boolean custom) {
                 this.custom = custom;
@@ -275,7 +275,7 @@ public class ListDataSourceSchemasResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * The name of the field.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -283,7 +283,7 @@ public class ListDataSourceSchemasResponseBody extends TeaModel {
             }
 
             /**
-             * primaryKey.
+             * The primary key.
              */
             public Builder primaryKey(PrimaryKey primaryKey) {
                 this.primaryKey = primaryKey;
@@ -291,7 +291,7 @@ public class ListDataSourceSchemasResponseBody extends TeaModel {
             }
 
             /**
-             * summary.
+             * Indicates whether the information can be displayed. Valid values: true and false. **true** indicates that the information can be displayed, and **false** indicates that the information cannot be displayed.
              */
             public Builder summary(Boolean summary) {
                 this.summary = summary;
@@ -299,7 +299,7 @@ public class ListDataSourceSchemasResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * The type of the field.
              */
             public Builder type(String type) {
                 this.type = type;

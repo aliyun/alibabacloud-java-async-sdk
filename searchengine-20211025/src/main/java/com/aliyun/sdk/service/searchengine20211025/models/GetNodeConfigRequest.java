@@ -97,32 +97,7 @@ public class GetNodeConfigRequest extends Request {
         } 
 
         /**
-         * ### Sample responses
-         * <p>
-         * 
-         * Success responses ﻿
-         * 
-         * ```java
-         * {
-         * ﻿
-         *   "requestId": "0A6EB64B-B4C8-CF02-810F-E660812972FF",
-         * ﻿
-         *   "result": {
-         * ﻿
-         *     "dataFragmentNumber":1,
-         * ﻿
-         *     "dataDuplicateNumber":1,
-         * ﻿
-         *     "minServicePercent":20,
-         * ﻿
-         *     "published":true,
-         * ﻿
-         *     "active": true  // Indicates whether the online configurations have taken effect.
-         * ﻿
-         *   }
-         * ﻿
-         * }
-         * ```
+         * The ID of the instance
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -131,7 +106,7 @@ public class GetNodeConfigRequest extends Request {
         }
 
         /**
-         * clusterName.
+         * The name of the cluster
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("clusterName", clusterName);
@@ -140,7 +115,7 @@ public class GetNodeConfigRequest extends Request {
         }
 
         /**
-         * name.
+         * The name of the cluster.
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);
@@ -149,7 +124,7 @@ public class GetNodeConfigRequest extends Request {
         }
 
         /**
-         * type.
+         * The type of the node. Valid values: qrs, search, index, and cluster. qrs indicates a query node, search indicates a data node, index indicates an index node, and cluster indicates a cluster node.
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);

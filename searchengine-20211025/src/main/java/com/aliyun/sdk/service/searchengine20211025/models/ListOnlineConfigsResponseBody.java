@@ -110,7 +110,7 @@ public class ListOnlineConfigsResponseBody extends TeaModel {
             private String indexName; 
 
             /**
-             * config.
+             * The configuration information
              */
             public Builder config(String config) {
                 this.config = config;
@@ -118,7 +118,7 @@ public class ListOnlineConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * indexName.
+             * The name of the index
              */
             public Builder indexName(String indexName) {
                 this.indexName = indexName;

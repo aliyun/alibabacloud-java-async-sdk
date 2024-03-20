@@ -50,7 +50,7 @@ public class ModifyClusterOfflineConfigResponseBody extends TeaModel {
         private java.util.Map < String, ? > result; 
 
         /**
-         * The ID of the request.
+         * The ID of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ModifyClusterOfflineConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The result of the request.
+         * The result
          */
         public Builder result(java.util.Map < String, ? > result) {
             this.result = result;

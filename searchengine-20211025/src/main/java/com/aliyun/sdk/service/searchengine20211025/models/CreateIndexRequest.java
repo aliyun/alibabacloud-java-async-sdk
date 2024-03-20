@@ -185,7 +185,7 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * Optional. The data source, which can be MaxCompute, Message Service (MNS), Realtime Compute for Apache Flink, or StreamCompute.
+         * The data source type. Valid values: odps, mns, flink, and streaming. This parameter can be ignored.
          */
         public Builder dataSource(String dataSource) {
             this.putBodyParameter("dataSource", dataSource);
@@ -194,7 +194,7 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * dataSourceInfo.
+         * 数据源相关信息 （向量检索版新版本必填）
          */
         public Builder dataSourceInfo(DataSourceInfo dataSourceInfo) {
             this.putBodyParameter("dataSourceInfo", dataSourceInfo);
@@ -203,7 +203,7 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * The data center in which the data source resides.
+         * The data center where the data source is deployed.
          */
         public Builder domain(String domain) {
             this.putBodyParameter("domain", domain);
@@ -212,7 +212,10 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * extend.
+         * 字段配置的扩展的内容
+         * <p>
+         * key: 向量字段(vector)、
+         * 需embeding字段(embeding)
          */
         public Builder extend(java.util.Map < String, ? > extend) {
             this.putBodyParameter("extend", extend);
@@ -239,7 +242,7 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * dryRun.
+         * 是否dryRun创建（仅校验数据源是否合法）。取值：-true 是 -false 否
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("dryRun", dryRun);
@@ -261,11 +264,23 @@ public class CreateIndexRequest extends Request {
         @NameInMap("accessSecret")
         private String accessSecret;
 
+        @NameInMap("bucket")
+        private String bucket;
+
         @NameInMap("endpoint")
         private String endpoint;
 
+        @NameInMap("namespace")
+        private String namespace;
+
+        @NameInMap("ossPath")
+        private String ossPath;
+
         @NameInMap("partition")
         private String partition;
+
+        @NameInMap("path")
+        private String path;
 
         @NameInMap("project")
         private String project;
@@ -276,8 +291,12 @@ public class CreateIndexRequest extends Request {
         private Config(Builder builder) {
             this.accessKey = builder.accessKey;
             this.accessSecret = builder.accessSecret;
+            this.bucket = builder.bucket;
             this.endpoint = builder.endpoint;
+            this.namespace = builder.namespace;
+            this.ossPath = builder.ossPath;
             this.partition = builder.partition;
+            this.path = builder.path;
             this.project = builder.project;
             this.table = builder.table;
         }
@@ -305,6 +324,13 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
+         * @return bucket
+         */
+        public String getBucket() {
+            return this.bucket;
+        }
+
+        /**
          * @return endpoint
          */
         public String getEndpoint() {
@@ -312,10 +338,31 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
+         * @return namespace
+         */
+        public String getNamespace() {
+            return this.namespace;
+        }
+
+        /**
+         * @return ossPath
+         */
+        public String getOssPath() {
+            return this.ossPath;
+        }
+
+        /**
          * @return partition
          */
         public String getPartition() {
             return this.partition;
+        }
+
+        /**
+         * @return path
+         */
+        public String getPath() {
+            return this.path;
         }
 
         /**
@@ -335,13 +382,17 @@ public class CreateIndexRequest extends Request {
         public static final class Builder {
             private String accessKey; 
             private String accessSecret; 
+            private String bucket; 
             private String endpoint; 
+            private String namespace; 
+            private String ossPath; 
             private String partition; 
+            private String path; 
             private String project; 
             private String table; 
 
             /**
-             * accessKey.
+             * odps数据源ak
              */
             public Builder accessKey(String accessKey) {
                 this.accessKey = accessKey;
@@ -349,7 +400,7 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * accessSecret.
+             * odps数据源ak secret
              */
             public Builder accessSecret(String accessSecret) {
                 this.accessSecret = accessSecret;
@@ -357,7 +408,15 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * endpoint.
+             * bucket.
+             */
+            public Builder bucket(String bucket) {
+                this.bucket = bucket;
+                return this;
+            }
+
+            /**
+             * odps数据源的endpoint, oss数据源的endpoint
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -365,7 +424,23 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * The data partition.
+             * namespace.
+             */
+            public Builder namespace(String namespace) {
+                this.namespace = namespace;
+                return this;
+            }
+
+            /**
+             * ossPath.
+             */
+            public Builder ossPath(String ossPath) {
+                this.ossPath = ossPath;
+                return this;
+            }
+
+            /**
+             * 数据源为odps时必填
              */
             public Builder partition(String partition) {
                 this.partition = partition;
@@ -373,7 +448,15 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * project.
+             * path.
+             */
+            public Builder path(String path) {
+                this.path = path;
+                return this;
+            }
+
+            /**
+             * odps数据源项目名称
              */
             public Builder project(String project) {
                 this.project = project;
@@ -381,7 +464,7 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * table.
+             * 表名称
              */
             public Builder table(String table) {
                 this.table = table;
@@ -395,6 +478,67 @@ public class CreateIndexRequest extends Request {
         } 
 
     }
+    public static class SaroConfig extends TeaModel {
+        @NameInMap("namespace")
+        private String namespace;
+
+        @NameInMap("tableName")
+        private String tableName;
+
+        private SaroConfig(Builder builder) {
+            this.namespace = builder.namespace;
+            this.tableName = builder.tableName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SaroConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return namespace
+         */
+        public String getNamespace() {
+            return this.namespace;
+        }
+
+        /**
+         * @return tableName
+         */
+        public String getTableName() {
+            return this.tableName;
+        }
+
+        public static final class Builder {
+            private String namespace; 
+            private String tableName; 
+
+            /**
+             * namespace.
+             */
+            public Builder namespace(String namespace) {
+                this.namespace = namespace;
+                return this;
+            }
+
+            /**
+             * tableName.
+             */
+            public Builder tableName(String tableName) {
+                this.tableName = tableName;
+                return this;
+            }
+
+            public SaroConfig build() {
+                return new SaroConfig(this);
+            } 
+
+        } 
+
+    }
     public static class DataSourceInfo extends TeaModel {
         @NameInMap("autoBuildIndex")
         private Boolean autoBuildIndex;
@@ -402,8 +546,20 @@ public class CreateIndexRequest extends Request {
         @NameInMap("config")
         private Config config;
 
+        @NameInMap("dataTimeSec")
+        private Integer dataTimeSec;
+
+        @NameInMap("domain")
+        private String domain;
+
+        @NameInMap("name")
+        private String name;
+
         @NameInMap("processPartitionCount")
         private Integer processPartitionCount;
+
+        @NameInMap("saroConfig")
+        private SaroConfig saroConfig;
 
         @NameInMap("type")
         private String type;
@@ -411,7 +567,11 @@ public class CreateIndexRequest extends Request {
         private DataSourceInfo(Builder builder) {
             this.autoBuildIndex = builder.autoBuildIndex;
             this.config = builder.config;
+            this.dataTimeSec = builder.dataTimeSec;
+            this.domain = builder.domain;
+            this.name = builder.name;
             this.processPartitionCount = builder.processPartitionCount;
+            this.saroConfig = builder.saroConfig;
             this.type = builder.type;
         }
 
@@ -438,10 +598,38 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
+         * @return dataTimeSec
+         */
+        public Integer getDataTimeSec() {
+            return this.dataTimeSec;
+        }
+
+        /**
+         * @return domain
+         */
+        public String getDomain() {
+            return this.domain;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
          * @return processPartitionCount
          */
         public Integer getProcessPartitionCount() {
             return this.processPartitionCount;
+        }
+
+        /**
+         * @return saroConfig
+         */
+        public SaroConfig getSaroConfig() {
+            return this.saroConfig;
         }
 
         /**
@@ -454,11 +642,15 @@ public class CreateIndexRequest extends Request {
         public static final class Builder {
             private Boolean autoBuildIndex; 
             private Config config; 
+            private Integer dataTimeSec; 
+            private String domain; 
+            private String name; 
             private Integer processPartitionCount; 
+            private SaroConfig saroConfig; 
             private String type; 
 
             /**
-             * autoBuildIndex.
+             * 是否开启自动全量
              */
             public Builder autoBuildIndex(Boolean autoBuildIndex) {
                 this.autoBuildIndex = autoBuildIndex;
@@ -466,7 +658,7 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * config.
+             * odps相关
              */
             public Builder config(Config config) {
                 this.config = config;
@@ -474,7 +666,31 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * processPartitionCount.
+             * dataTimeSec.
+             */
+            public Builder dataTimeSec(Integer dataTimeSec) {
+                this.dataTimeSec = dataTimeSec;
+                return this;
+            }
+
+            /**
+             * The data center where the data source is deployed.
+             */
+            public Builder domain(String domain) {
+                this.domain = domain;
+                return this;
+            }
+
+            /**
+             * The name of the index.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * 数据更新资源数
              */
             public Builder processPartitionCount(Integer processPartitionCount) {
                 this.processPartitionCount = processPartitionCount;
@@ -482,7 +698,20 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * type.
+             * saroConfig.
+             */
+            public Builder saroConfig(SaroConfig saroConfig) {
+                this.saroConfig = saroConfig;
+                return this;
+            }
+
+            /**
+             * 数据源类型
+             * <p>
+             * odps
+             * swift
+             * saro
+             * oss
              */
             public Builder type(String type) {
                 this.type = type;

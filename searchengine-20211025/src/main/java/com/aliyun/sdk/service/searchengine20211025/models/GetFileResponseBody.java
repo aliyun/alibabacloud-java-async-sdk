@@ -58,7 +58,7 @@ public class GetFileResponseBody extends TeaModel {
         }
 
         /**
-         * result.
+         * The information about the index.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -158,7 +158,7 @@ public class GetFileResponseBody extends TeaModel {
             private Long partition; 
 
             /**
-             * content.
+             * The content of the file.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -166,7 +166,7 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * dataSource.
+             * The data source.
              */
             public Builder dataSource(String dataSource) {
                 this.dataSource = dataSource;
@@ -174,7 +174,7 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * fullPathName.
+             * The name of the full path.
              */
             public Builder fullPathName(String fullPathName) {
                 this.fullPathName = fullPathName;
@@ -182,7 +182,7 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * isDir.
+             * Indicates whether it is a directory.
              */
             public Builder isDir(Boolean isDir) {
                 this.isDir = isDir;
@@ -190,7 +190,7 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * The name of the file.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -198,7 +198,7 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * partition.
+             * The number of shards.
              */
             public Builder partition(Long partition) {
                 this.partition = partition;

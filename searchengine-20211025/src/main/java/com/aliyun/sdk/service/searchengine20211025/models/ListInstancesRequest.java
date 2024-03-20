@@ -138,7 +138,7 @@ public class ListInstancesRequest extends Request {
         } 
 
         /**
-         * The description of the instance
+         * The description of the instance. You can use this description to filter instances. Fuzzy match is supported.
          */
         public Builder description(String description) {
             this.putQueryParameter("description", description);
@@ -147,7 +147,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * 实例类型，vector(向量索引版)，engine(召回引擎版)
+         * The Instance type, vector (vector index version),engine (recall engine version)
          */
         public Builder edition(String edition) {
             this.putQueryParameter("edition", edition);
@@ -156,7 +156,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * The time when the instance was created
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("instanceId", instanceId);
@@ -165,7 +165,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * The status of the instance
+         * The number of the page to return. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -174,7 +174,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * The description of the instance. You can use this description to filter instances. Fuzzy match is supported.
+         * The number of entries to return on each page. Valid values: 1 to 50. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -183,7 +183,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: 1.
+         * The ID of the resource group to which the instance belongs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("resourceGroupId", resourceGroupId);
@@ -192,7 +192,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * tags.
+         * The tag dictionary.
          */
         public Builder tags(java.util.List < Tags> tags) {
             String tagsShrink = shrink(tags, "tags", "json");
@@ -247,7 +247,7 @@ public class ListInstancesRequest extends Request {
             private String value; 
 
             /**
-             * key.
+             * The key of the tag.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -255,7 +255,7 @@ public class ListInstancesRequest extends Request {
             }
 
             /**
-             * value.
+             * The value of the tag.
              */
             public Builder value(String value) {
                 this.value = value;

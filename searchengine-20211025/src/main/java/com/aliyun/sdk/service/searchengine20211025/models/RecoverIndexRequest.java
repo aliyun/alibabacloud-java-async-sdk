@@ -120,7 +120,7 @@ public class RecoverIndexRequest extends Request {
         }
 
         /**
-         * buildDeployId
+         * The ID of the index deployed in offline mode.
          */
         public Builder buildDeployId(Integer buildDeployId) {
             this.putBodyParameter("buildDeployId", buildDeployId);
@@ -138,7 +138,7 @@ public class RecoverIndexRequest extends Request {
         }
 
         /**
-         * generation
+         * The primary key of generation.
          */
         public Builder generation(String generation) {
             this.putBodyParameter("generation", generation);
