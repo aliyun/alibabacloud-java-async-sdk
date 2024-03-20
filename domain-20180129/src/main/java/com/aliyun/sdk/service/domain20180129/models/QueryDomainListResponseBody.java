@@ -294,6 +294,9 @@ public class QueryDomainListResponseBody extends TeaModel {
 
     }
     public static class Domain extends TeaModel {
+        @NameInMap("Ccompany")
+        private String ccompany;
+
         @NameInMap("DomainAuditStatus")
         private String domainAuditStatus;
 
@@ -352,6 +355,7 @@ public class QueryDomainListResponseBody extends TeaModel {
         private DomainTag tag;
 
         private Domain(Builder builder) {
+            this.ccompany = builder.ccompany;
             this.domainAuditStatus = builder.domainAuditStatus;
             this.domainGroupId = builder.domainGroupId;
             this.domainGroupName = builder.domainGroupName;
@@ -379,6 +383,13 @@ public class QueryDomainListResponseBody extends TeaModel {
 
         public static Domain create() {
             return builder().build();
+        }
+
+        /**
+         * @return ccompany
+         */
+        public String getCcompany() {
+            return this.ccompany;
         }
 
         /**
@@ -515,6 +526,7 @@ public class QueryDomainListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String ccompany; 
             private String domainAuditStatus; 
             private String domainGroupId; 
             private String domainGroupName; 
@@ -534,6 +546,14 @@ public class QueryDomainListResponseBody extends TeaModel {
             private String remark; 
             private String resourceGroupId; 
             private DomainTag tag; 
+
+            /**
+             * Ccompany.
+             */
+            public Builder ccompany(String ccompany) {
+                this.ccompany = ccompany;
+                return this;
+            }
 
             /**
              * DomainAuditStatus.

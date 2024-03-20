@@ -170,7 +170,7 @@ public class DomainSpecialBizCancelResponseBody extends TeaModel {
         private Boolean synchro; 
 
         /**
-         * AllowRetry.
+         * Indicates whether retries are allowed.
          */
         public Builder allowRetry(Boolean allowRetry) {
             this.allowRetry = allowRetry;
@@ -178,7 +178,7 @@ public class DomainSpecialBizCancelResponseBody extends TeaModel {
         }
 
         /**
-         * AppName.
+         * The name of the application for which the error code is returned.
          */
         public Builder appName(String appName) {
             this.appName = appName;
@@ -186,7 +186,7 @@ public class DomainSpecialBizCancelResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicCode.
+         * The dynamic error code.
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -194,7 +194,7 @@ public class DomainSpecialBizCancelResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * The dynamic error message.
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -202,7 +202,7 @@ public class DomainSpecialBizCancelResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorArgs.
+         * The array of error parameters that are returned.
          */
         public Builder errorArgs(java.util.List < ? > errorArgs) {
             this.errorArgs = errorArgs;
@@ -210,7 +210,7 @@ public class DomainSpecialBizCancelResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -218,7 +218,7 @@ public class DomainSpecialBizCancelResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMsg.
+         * The error message.
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -226,7 +226,7 @@ public class DomainSpecialBizCancelResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code that is directly returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -234,7 +234,7 @@ public class DomainSpecialBizCancelResponseBody extends TeaModel {
         }
 
         /**
-         * Module.
+         * The returned data.
          */
         public Builder module(Object module) {
             this.module = module;
@@ -242,7 +242,7 @@ public class DomainSpecialBizCancelResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -250,7 +250,7 @@ public class DomainSpecialBizCancelResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful. Valid values: true and false.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -258,7 +258,7 @@ public class DomainSpecialBizCancelResponseBody extends TeaModel {
         }
 
         /**
-         * Synchro.
+         * Indicates whether to perform synchronous processing.
          */
         public Builder synchro(Boolean synchro) {
             this.synchro = synchro;

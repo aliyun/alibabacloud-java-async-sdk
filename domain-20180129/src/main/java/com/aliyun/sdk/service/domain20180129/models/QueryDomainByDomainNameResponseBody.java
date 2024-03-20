@@ -434,7 +434,7 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
         private String zhRegistrantOrganization; 
 
         /**
-         * DnsList.
+         * The Domain Name System (DNS) servers of the domain name.
          */
         public Builder dnsList(DnsList dnsList) {
             this.dnsList = dnsList;
@@ -442,7 +442,7 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
         }
 
         /**
-         * DomainGroupId.
+         * The ID of the domain name group. You can call the [QueryDomainGroupList](~~69362~~) operation to query the ID of the domain name group.
          */
         public Builder domainGroupId(Long domainGroupId) {
             this.domainGroupId = domainGroupId;
@@ -450,7 +450,7 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
         }
 
         /**
-         * DomainGroupName.
+         * The name of the domain name group.
          */
         public Builder domainGroupName(String domainGroupName) {
             this.domainGroupName = domainGroupName;
@@ -458,7 +458,7 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
         }
 
         /**
-         * DomainName.
+         * The domain name.
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -466,7 +466,7 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
         }
 
         /**
-         * DomainNameProxyService.
+         * Indicates whether privacy protection is enabled for the domain name.
          */
         public Builder domainNameProxyService(Boolean domainNameProxyService) {
             this.domainNameProxyService = domainNameProxyService;
@@ -474,7 +474,13 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
         }
 
         /**
-         * DomainNameVerificationStatus.
+         * The status of name auditing for the domain name. Valid values:
+         * <p>
+         * 
+         * *   **NONAUDIT**: The name auditing for the domain name is not performed.
+         * *   **SUCCEED**: The name auditing for the domain name is successful.
+         * *   **FAILED**: The name auditing for the domain name fails.
+         * *   **AUDITING**: The name auditing for the domain name is in progress.
          */
         public Builder domainNameVerificationStatus(String domainNameVerificationStatus) {
             this.domainNameVerificationStatus = domainNameVerificationStatus;
@@ -482,7 +488,12 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
         }
 
         /**
-         * DomainStatus.
+         * The status of the domain name. Valid values:
+         * <p>
+         * 
+         * *   1: The domain name needs to be renewed.
+         * *   2: The domain name needs to be redeemed.
+         * *   3: The domain name is normal.
          */
         public Builder domainStatus(String domainStatus) {
             this.domainStatus = domainStatus;
@@ -490,7 +501,12 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
         }
 
         /**
-         * DomainType.
+         * The type of the domain name. Valid values:
+         * <p>
+         * 
+         * *   New gTLD
+         * *   gTLD
+         * *   ccTLD
          */
         public Builder domainType(String domainType) {
             this.domainType = domainType;
@@ -498,7 +514,7 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
         }
 
         /**
-         * Email.
+         * The email address of the domain name registrant.
          */
         public Builder email(String email) {
             this.email = email;
@@ -506,7 +522,7 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
         }
 
         /**
-         * EmailVerificationClientHold.
+         * Indicates whether the domain name is in the ClientHold state.
          */
         public Builder emailVerificationClientHold(Boolean emailVerificationClientHold) {
             this.emailVerificationClientHold = emailVerificationClientHold;
@@ -514,7 +530,11 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
         }
 
         /**
-         * EmailVerificationStatus.
+         * Indicates whether the email address passes verification. Valid values:
+         * <p>
+         * 
+         * *   **0**: The email address fails the verification.
+         * *   **1**: The email address passes the verification.
          */
         public Builder emailVerificationStatus(Integer emailVerificationStatus) {
             this.emailVerificationStatus = emailVerificationStatus;
@@ -522,7 +542,7 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
         }
 
         /**
-         * ExpirationCurrDateDiff.
+         * The number of days from the expiration date of the domain name to the current date.
          */
         public Builder expirationCurrDateDiff(Integer expirationCurrDateDiff) {
             this.expirationCurrDateDiff = expirationCurrDateDiff;
@@ -530,7 +550,7 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
         }
 
         /**
-         * ExpirationDate.
+         * The expiration date.
          */
         public Builder expirationDate(String expirationDate) {
             this.expirationDate = expirationDate;
@@ -538,7 +558,7 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
         }
 
         /**
-         * ExpirationDateLong.
+         * The timestamp generated when the domain name expired.
          */
         public Builder expirationDateLong(Long expirationDateLong) {
             this.expirationDateLong = expirationDateLong;
@@ -546,7 +566,11 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
         }
 
         /**
-         * ExpirationDateStatus.
+         * Indicates whether the domain name expires. Valid values:
+         * <p>
+         * 
+         * *   **1**: The domain name does not expire.
+         * *   **2**: The domain name expires.
          */
         public Builder expirationDateStatus(String expirationDateStatus) {
             this.expirationDateStatus = expirationDateStatus;
@@ -554,7 +578,7 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * The instance ID of the domain name.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -562,7 +586,7 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
         }
 
         /**
-         * Premium.
+         * Indicates whether the domain name is a premium domain name.
          */
         public Builder premium(Boolean premium) {
             this.premium = premium;
@@ -570,7 +594,13 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
         }
 
         /**
-         * RealNameStatus.
+         * The status of real-name verification for the domain name. Valid values:
+         * <p>
+         * 
+         * *   **NONAUDIT**: The real-name verification is not performed.
+         * *   **SUCCEED**: The real-name verification is successful.
+         * *   **FAILED**: The real-name verification fails.
+         * *   **AUDITING**: The real-name verification is in progress.
          */
         public Builder realNameStatus(String realNameStatus) {
             this.realNameStatus = realNameStatus;
@@ -578,7 +608,7 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
         }
 
         /**
-         * RegistrantName.
+         * The name of the contact.
          */
         public Builder registrantName(String registrantName) {
             this.registrantName = registrantName;
@@ -586,7 +616,7 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
         }
 
         /**
-         * RegistrantOrganization.
+         * The registrant of the domain name.
          */
         public Builder registrantOrganization(String registrantOrganization) {
             this.registrantOrganization = registrantOrganization;
@@ -594,7 +624,11 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
         }
 
         /**
-         * RegistrantType.
+         * The type of contact who registers the domain name. Valid values:
+         * <p>
+         * 
+         * *   **1**: individual.
+         * *   **2**: enterprise.
          */
         public Builder registrantType(String registrantType) {
             this.registrantType = registrantType;
@@ -602,7 +636,11 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
         }
 
         /**
-         * RegistrantUpdatingStatus.
+         * The status of the information about the domain name registrant. Valid values:
+         * <p>
+         * 
+         * *   **PENDING**: The information about the domain name registrant is being modified.
+         * *   **NORMAL**: normal.
          */
         public Builder registrantUpdatingStatus(String registrantUpdatingStatus) {
             this.registrantUpdatingStatus = registrantUpdatingStatus;
@@ -610,7 +648,7 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
         }
 
         /**
-         * RegistrationDate.
+         * The time when the domain name was registered.
          */
         public Builder registrationDate(String registrationDate) {
             this.registrationDate = registrationDate;
@@ -618,7 +656,7 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
         }
 
         /**
-         * RegistrationDateLong.
+         * The timestamp generated when the domain name was registered.
          */
         public Builder registrationDateLong(Long registrationDateLong) {
             this.registrationDateLong = registrationDateLong;
@@ -626,7 +664,7 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
         }
 
         /**
-         * Remark.
+         * The remarks on the domain name.
          */
         public Builder remark(String remark) {
             this.remark = remark;
@@ -634,7 +672,7 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -642,7 +680,7 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -650,7 +688,7 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
         }
 
         /**
-         * Tag.
+         * The tags.
          */
         public Builder tag(Tag tag) {
             this.tag = tag;
@@ -658,7 +696,11 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
         }
 
         /**
-         * TransferOutStatus.
+         * The transfer status of the domain name. Valid values:
+         * <p>
+         * 
+         * *   **NORMAL**: The domain name is normal.
+         * *   **PENDING**: The domain name is being transferred out from Alibaba Cloud.
          */
         public Builder transferOutStatus(String transferOutStatus) {
             this.transferOutStatus = transferOutStatus;
@@ -666,7 +708,12 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
         }
 
         /**
-         * TransferProhibitionLock.
+         * The status of the transfer lock for the domain name. Valid values:
+         * <p>
+         * 
+         * *   **NONE_SETTING**: No transfer lock is configured.
+         * *   **OPEN**: The transfer lock is enabled.
+         * *   **CLOSE**: The transfer lock is disabled.
          */
         public Builder transferProhibitionLock(String transferProhibitionLock) {
             this.transferProhibitionLock = transferProhibitionLock;
@@ -674,7 +721,12 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
         }
 
         /**
-         * UpdateProhibitionLock.
+         * The status of the security lock for the domain name. Valid values:
+         * <p>
+         * 
+         * *   **NONE_SETTING**: No security lock is configured.
+         * *   **OPEN**: The security lock is enabled.
+         * *   **CLOSE**: The security lock is disabled.
          */
         public Builder updateProhibitionLock(String updateProhibitionLock) {
             this.updateProhibitionLock = updateProhibitionLock;
@@ -682,7 +734,7 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
         }
 
         /**
-         * UserId.
+         * The user ID.
          */
         public Builder userId(String userId) {
             this.userId = userId;
@@ -690,7 +742,7 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
         }
 
         /**
-         * ZhRegistrantName.
+         * The Chinese name of the domain name contact.
          */
         public Builder zhRegistrantName(String zhRegistrantName) {
             this.zhRegistrantName = zhRegistrantName;
@@ -698,7 +750,7 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
         }
 
         /**
-         * ZhRegistrantOrganization.
+         * The Chinese name of the domain name registrant.
          */
         public Builder zhRegistrantOrganization(String zhRegistrantOrganization) {
             this.zhRegistrantOrganization = zhRegistrantOrganization;
@@ -791,7 +843,7 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
             private String vaue; 
 
             /**
-             * Key.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -799,7 +851,7 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
             }
 
             /**
-             * Vaue.
+             * The tag value.
              */
             public Builder vaue(String vaue) {
                 this.vaue = vaue;
@@ -840,7 +892,7 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
             private java.util.List < TagTag> tag; 
 
             /**
-             * Tag.
+             * The tags.
              */
             public Builder tag(java.util.List < TagTag> tag) {
                 this.tag = tag;

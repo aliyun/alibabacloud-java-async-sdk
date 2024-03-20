@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class QueryDomainListRequest extends Request {
     @Query
+    @NameInMap("Ccompany")
+    private String ccompany;
+
+    @Query
     @NameInMap("DomainGroupId")
     private String domainGroupId;
 
@@ -80,6 +84,7 @@ public class QueryDomainListRequest extends Request {
 
     private QueryDomainListRequest(Builder builder) {
         super(builder);
+        this.ccompany = builder.ccompany;
         this.domainGroupId = builder.domainGroupId;
         this.domainName = builder.domainName;
         this.endExpirationDate = builder.endExpirationDate;
@@ -109,6 +114,13 @@ public class QueryDomainListRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return ccompany
+     */
+    public String getCcompany() {
+        return this.ccompany;
     }
 
     /**
@@ -224,6 +236,7 @@ public class QueryDomainListRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<QueryDomainListRequest, Builder> {
+        private String ccompany; 
         private String domainGroupId; 
         private String domainName; 
         private Long endExpirationDate; 
@@ -247,6 +260,7 @@ public class QueryDomainListRequest extends Request {
 
         private Builder(QueryDomainListRequest request) {
             super(request);
+            this.ccompany = request.ccompany;
             this.domainGroupId = request.domainGroupId;
             this.domainName = request.domainName;
             this.endExpirationDate = request.endExpirationDate;
@@ -264,6 +278,15 @@ public class QueryDomainListRequest extends Request {
             this.tag = request.tag;
             this.userClientIp = request.userClientIp;
         } 
+
+        /**
+         * Ccompany.
+         */
+        public Builder ccompany(String ccompany) {
+            this.putQueryParameter("Ccompany", ccompany);
+            this.ccompany = ccompany;
+            return this;
+        }
 
         /**
          * DomainGroupId.

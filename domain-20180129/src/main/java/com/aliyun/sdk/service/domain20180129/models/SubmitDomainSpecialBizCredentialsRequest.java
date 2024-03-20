@@ -96,7 +96,7 @@ public class SubmitDomainSpecialBizCredentialsRequest extends Request {
         } 
 
         /**
-         * BizId.
+         * The business ID.
          */
         public Builder bizId(Long bizId) {
             this.putBodyParameter("BizId", bizId);
@@ -105,7 +105,7 @@ public class SubmitDomainSpecialBizCredentialsRequest extends Request {
         }
 
         /**
-         * Credentials.
+         * The certificate information.
          */
         public Builder credentials(String credentials) {
             this.putBodyParameter("Credentials", credentials);
@@ -114,7 +114,7 @@ public class SubmitDomainSpecialBizCredentialsRequest extends Request {
         }
 
         /**
-         * Extend.
+         * The extended information.
          */
         public Builder extend(String extend) {
             this.putBodyParameter("Extend", extend);
@@ -123,7 +123,7 @@ public class SubmitDomainSpecialBizCredentialsRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * The IP address of the client.
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

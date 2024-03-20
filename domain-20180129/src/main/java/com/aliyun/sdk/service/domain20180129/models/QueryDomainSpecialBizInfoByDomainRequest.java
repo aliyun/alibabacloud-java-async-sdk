@@ -84,7 +84,7 @@ public class QueryDomainSpecialBizInfoByDomainRequest extends Request {
         } 
 
         /**
-         * BizType.
+         * The business type.
          */
         public Builder bizType(String bizType) {
             this.putBodyParameter("BizType", bizType);
@@ -93,7 +93,7 @@ public class QueryDomainSpecialBizInfoByDomainRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * The domain name.
          */
         public Builder domainName(String domainName) {
             this.putBodyParameter("DomainName", domainName);
@@ -102,7 +102,7 @@ public class QueryDomainSpecialBizInfoByDomainRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * The IP address of the client.
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

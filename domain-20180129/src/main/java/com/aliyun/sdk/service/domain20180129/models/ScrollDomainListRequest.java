@@ -363,7 +363,7 @@ public class ScrollDomainListRequest extends Request {
         } 
 
         /**
-         * DomainGroupId.
+         * The ID of the domain name group. You can call the [QueryDomainGroupList](https://help.aliyun.com/document_detail/69362.html) operation to obtain the ID of the domain name group.
          */
         public Builder domainGroupId(Long domainGroupId) {
             this.putQueryParameter("DomainGroupId", domainGroupId);
@@ -372,7 +372,18 @@ public class ScrollDomainListRequest extends Request {
         }
 
         /**
-         * DomainStatus.
+         * The status of the domain name. Valid values:
+         * <p>
+         * 
+         * *   **0**: All.
+         * *   **1**: The domain name needs to be renewed.
+         * *   **2**: The domain name needs to be redeemed.
+         * *   **3**: The domain name is normal.
+         * *   **4**: The domain name is being transferred from Alibaba Cloud.
+         * *   **5**: The information about the domain name registrant is being modified.
+         * *   **6**: Real-name verification is not performed on the domain name.
+         * *   **7**: Real-name verification for the domain name fails. Real-name reverification is required.
+         * *   **8**: The domain name is being reviewed.
          */
         public Builder domainStatus(Integer domainStatus) {
             this.putQueryParameter("DomainStatus", domainStatus);
@@ -381,7 +392,7 @@ public class ScrollDomainListRequest extends Request {
         }
 
         /**
-         * EndExpirationDate.
+         * The end of the time range to query domain names based on expiration dates. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
          */
         public Builder endExpirationDate(Long endExpirationDate) {
             this.putQueryParameter("EndExpirationDate", endExpirationDate);
@@ -390,7 +401,7 @@ public class ScrollDomainListRequest extends Request {
         }
 
         /**
-         * EndLength.
+         * The end of domain name length to query.
          */
         public Builder endLength(Integer endLength) {
             this.putQueryParameter("EndLength", endLength);
@@ -399,7 +410,7 @@ public class ScrollDomainListRequest extends Request {
         }
 
         /**
-         * EndRegistrationDate.
+         * The end of the time range to query domain names based on registration dates. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
          */
         public Builder endRegistrationDate(Long endRegistrationDate) {
             this.putQueryParameter("EndRegistrationDate", endRegistrationDate);
@@ -408,7 +419,7 @@ public class ScrollDomainListRequest extends Request {
         }
 
         /**
-         * Excluded.
+         * The keyword that is used to exclude domain names.
          */
         public Builder excluded(String excluded) {
             this.putQueryParameter("Excluded", excluded);
@@ -417,7 +428,7 @@ public class ScrollDomainListRequest extends Request {
         }
 
         /**
-         * ExcludedPrefix.
+         * Specifies whether to exclude the prefix keyword.
          */
         public Builder excludedPrefix(Boolean excludedPrefix) {
             this.putQueryParameter("ExcludedPrefix", excludedPrefix);
@@ -426,7 +437,7 @@ public class ScrollDomainListRequest extends Request {
         }
 
         /**
-         * ExcludedSuffix.
+         * Specifies whether to exclude the suffix keyword.
          */
         public Builder excludedSuffix(Boolean excludedSuffix) {
             this.putQueryParameter("ExcludedSuffix", excludedSuffix);
@@ -435,7 +446,7 @@ public class ScrollDomainListRequest extends Request {
         }
 
         /**
-         * Form.
+         * The composition of the domain name.
          */
         public Builder form(Integer form) {
             this.putQueryParameter("Form", form);
@@ -444,7 +455,7 @@ public class ScrollDomainListRequest extends Request {
         }
 
         /**
-         * KeyWord.
+         * The keyword.
          */
         public Builder keyWord(String keyWord) {
             this.putQueryParameter("KeyWord", keyWord);
@@ -453,7 +464,7 @@ public class ScrollDomainListRequest extends Request {
         }
 
         /**
-         * KeyWordPrefix.
+         * Specifies whether the keyword is the prefix.
          */
         public Builder keyWordPrefix(Boolean keyWordPrefix) {
             this.putQueryParameter("KeyWordPrefix", keyWordPrefix);
@@ -462,7 +473,7 @@ public class ScrollDomainListRequest extends Request {
         }
 
         /**
-         * KeyWordSuffix.
+         * Specifies whether the keyword is the suffix.
          */
         public Builder keyWordSuffix(Boolean keyWordSuffix) {
             this.putQueryParameter("KeyWordSuffix", keyWordSuffix);
@@ -471,7 +482,13 @@ public class ScrollDomainListRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the error message to return if the request fails. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese.
+         * *   **en**: English.
+         * 
+         * Default value: **en**.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -480,7 +497,7 @@ public class ScrollDomainListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -489,7 +506,13 @@ public class ScrollDomainListRequest extends Request {
         }
 
         /**
-         * ProductDomainType.
+         * The type of the domain name. Valid values:
+         * <p>
+         * 
+         * *   **New gTLD**
+         * *   **gTLD**
+         * *   **ccTLD**
+         * *   **other**
          */
         public Builder productDomainType(String productDomainType) {
             this.putQueryParameter("ProductDomainType", productDomainType);
@@ -498,7 +521,7 @@ public class ScrollDomainListRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -507,7 +530,7 @@ public class ScrollDomainListRequest extends Request {
         }
 
         /**
-         * ScrollId.
+         * The scroll ID. This parameter is a technical parameter.
          */
         public Builder scrollId(String scrollId) {
             this.putQueryParameter("ScrollId", scrollId);
@@ -516,7 +539,7 @@ public class ScrollDomainListRequest extends Request {
         }
 
         /**
-         * StartExpirationDate.
+         * The beginning of the time range to query domain names based on expiration dates. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
          */
         public Builder startExpirationDate(Long startExpirationDate) {
             this.putQueryParameter("StartExpirationDate", startExpirationDate);
@@ -525,7 +548,7 @@ public class ScrollDomainListRequest extends Request {
         }
 
         /**
-         * StartLength.
+         * The start of the domain name length to query.
          */
         public Builder startLength(Integer startLength) {
             this.putQueryParameter("StartLength", startLength);
@@ -534,7 +557,7 @@ public class ScrollDomainListRequest extends Request {
         }
 
         /**
-         * StartRegistrationDate.
+         * The beginning of the time range to query domain names based on registration dates. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
          */
         public Builder startRegistrationDate(Long startRegistrationDate) {
             this.putQueryParameter("StartRegistrationDate", startRegistrationDate);
@@ -543,7 +566,7 @@ public class ScrollDomainListRequest extends Request {
         }
 
         /**
-         * Suffixs.
+         * The suffixes of domain names to be queried. Separate multiple suffixes with commas (,).
          */
         public Builder suffixs(String suffixs) {
             this.putQueryParameter("Suffixs", suffixs);
@@ -552,7 +575,14 @@ public class ScrollDomainListRequest extends Request {
         }
 
         /**
-         * TradeType.
+         * The publishing status of the domain name. Valid values:
+         * <p>
+         * 
+         * *   **2**: The domain name is published at a fixed price.
+         * *   **3**: The domain name is published with the price negotiable.
+         * *   **4**: The domain name is published for bidding.
+         * *   **6**: The domain name is published with price push.
+         * *   **-1**: The domain name is not published.
          */
         public Builder tradeType(Integer tradeType) {
             this.putQueryParameter("TradeType", tradeType);
@@ -561,7 +591,7 @@ public class ScrollDomainListRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * The IP address of the client. Set the value to **127.0.0.1**.
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

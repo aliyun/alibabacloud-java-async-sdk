@@ -68,7 +68,7 @@ public class QueryDomainSpecialBizDetailRequest extends Request {
         } 
 
         /**
-         * BizId.
+         * The business ID.
          */
         public Builder bizId(Long bizId) {
             this.putBodyParameter("BizId", bizId);
@@ -77,7 +77,7 @@ public class QueryDomainSpecialBizDetailRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * The IP address of the client.
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

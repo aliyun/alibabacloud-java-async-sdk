@@ -83,7 +83,7 @@ public class QueryDomainByDomainNameRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * The domain name.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -92,7 +92,13 @@ public class QueryDomainByDomainNameRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the error message to return if the request fails. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese.
+         * *   **en**: English.
+         * 
+         * Default value: **en**.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -101,7 +107,7 @@ public class QueryDomainByDomainNameRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * The IP address of the client.
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

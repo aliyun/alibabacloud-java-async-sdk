@@ -98,7 +98,11 @@ public class CancelDomainVerificationRequest extends Request {
         } 
 
         /**
-         * ActionType.
+         * The action type. Valid values:
+         * <p>
+         * 
+         * *   **DOMAINAUDIT**: review a domain name review.
+         * *   **AUDITCONTACT**: review a contact.
          */
         public Builder actionType(String actionType) {
             this.putQueryParameter("ActionType", actionType);
@@ -107,7 +111,7 @@ public class CancelDomainVerificationRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * Thee instance ID of the domain name. You can call the [QueryDomainList](~~67712~~) operation to query the instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -116,7 +120,13 @@ public class CancelDomainVerificationRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the error message to return if the request fails. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese.
+         * *   **en**: English.
+         * 
+         * Default value: **en**.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -125,7 +135,7 @@ public class CancelDomainVerificationRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * The IP address of the client. Set the value to **127.0.0.1**.
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

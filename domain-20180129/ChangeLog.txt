@@ -1,3 +1,6 @@
+2024-03-20 Version: 1.0.4
+- Generated java-async 2018-01-29 for Domain.
+
 2024-01-25 Version: 1.0.3
 - Generated java-async 2018-01-29 for Domain.
 

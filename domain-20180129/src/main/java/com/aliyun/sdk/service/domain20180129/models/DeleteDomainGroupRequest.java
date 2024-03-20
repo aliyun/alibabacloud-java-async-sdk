@@ -14,6 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DeleteDomainGroupRequest extends Request {
     @Query
     @NameInMap("DomainGroupId")
+    @Validation(required = true)
     private Long domainGroupId;
 
     @Query
