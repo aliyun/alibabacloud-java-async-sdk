@@ -17,6 +17,10 @@ public class ReleaseNodePrivateNetworkAddressRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ConnectionType")
+    private String connectionType;
+
+    @Query
     @NameInMap("DBInstanceId")
     @Validation(required = true)
     private String DBInstanceId;
@@ -49,6 +53,7 @@ public class ReleaseNodePrivateNetworkAddressRequest extends Request {
     private ReleaseNodePrivateNetworkAddressRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.connectionType = builder.connectionType;
         this.DBInstanceId = builder.DBInstanceId;
         this.networkType = builder.networkType;
         this.nodeId = builder.nodeId;
@@ -76,6 +81,13 @@ public class ReleaseNodePrivateNetworkAddressRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return connectionType
+     */
+    public String getConnectionType() {
+        return this.connectionType;
     }
 
     /**
@@ -129,6 +141,7 @@ public class ReleaseNodePrivateNetworkAddressRequest extends Request {
 
     public static final class Builder extends Request.Builder<ReleaseNodePrivateNetworkAddressRequest, Builder> {
         private String regionId; 
+        private String connectionType; 
         private String DBInstanceId; 
         private String networkType; 
         private String nodeId; 
@@ -144,6 +157,7 @@ public class ReleaseNodePrivateNetworkAddressRequest extends Request {
         private Builder(ReleaseNodePrivateNetworkAddressRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.connectionType = request.connectionType;
             this.DBInstanceId = request.DBInstanceId;
             this.networkType = request.networkType;
             this.nodeId = request.nodeId;
@@ -159,6 +173,15 @@ public class ReleaseNodePrivateNetworkAddressRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ConnectionType.
+         */
+        public Builder connectionType(String connectionType) {
+            this.putQueryParameter("ConnectionType", connectionType);
+            this.connectionType = connectionType;
             return this;
         }
 

@@ -1209,8 +1209,11 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
       * Before you call this operation, make sure that the instance meets the following requirements:
+      * *   The instance is a replica set instance or a sharded cluster instance that uses local disks.
       * *   The billing method of the instance is subscription.
       * *   The instance has expired and is in the **Locking** state.
+      * **
+      * **Warning** Data cannot be restored after the instance is destroyed. Proceed with caution.
       *
      */
     @Override
@@ -1310,6 +1313,20 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ModifyAccountDescriptionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<ModifyActiveOperationTasksResponse> modifyActiveOperationTasks(ModifyActiveOperationTasksRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyActiveOperationTasks").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyActiveOperationTasksResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyActiveOperationTasksResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1780,8 +1797,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing) of ApsaraDB for MongoDB before you call this operation.
-      * This parameter is only applicable to Subscription instances.
+      * Make sure that you fully understand the billing methods and pricing of ApsaraDB for MongoDB before you call this operation. For more information about the pricing of ApsaraDB for MongoDB, visit the [pricing tab of the product buy page](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing).
+      * This operation is only applicable to instances that use the subscription billing method.
       *
      */
     @Override

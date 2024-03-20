@@ -349,8 +349,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
       * Before you call this operation, make sure that the instance meets the following requirements:
+      * *   The instance is a replica set instance or a sharded cluster instance that uses local disks.
       * *   The billing method of the instance is subscription.
       * *   The instance has expired and is in the **Locking** state.
+      * **
+      * **Warning** Data cannot be restored after the instance is destroyed. Proceed with caution.
       *
      */
     CompletableFuture<DestroyInstanceResponse> destroyInstance(DestroyInstanceRequest request);
@@ -382,6 +385,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<MigrateToOtherZoneResponse> migrateToOtherZone(MigrateToOtherZoneRequest request);
 
     CompletableFuture<ModifyAccountDescriptionResponse> modifyAccountDescription(ModifyAccountDescriptionRequest request);
+
+    CompletableFuture<ModifyActiveOperationTasksResponse> modifyActiveOperationTasks(ModifyActiveOperationTasksRequest request);
 
     /**
       * *   The instance must be in the running state when you call this operation.
@@ -536,8 +541,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ReleasePublicNetworkAddressResponse> releasePublicNetworkAddress(ReleasePublicNetworkAddressRequest request);
 
     /**
-      * Make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing) of ApsaraDB for MongoDB before you call this operation.
-      * This parameter is only applicable to Subscription instances.
+      * Make sure that you fully understand the billing methods and pricing of ApsaraDB for MongoDB before you call this operation. For more information about the pricing of ApsaraDB for MongoDB, visit the [pricing tab of the product buy page](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing).
+      * This operation is only applicable to instances that use the subscription billing method.
       *
      */
     CompletableFuture<RenewDBInstanceResponse> renewDBInstance(RenewDBInstanceRequest request);

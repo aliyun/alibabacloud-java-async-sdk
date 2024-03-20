@@ -7,27 +7,19 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ReleasePublicNetworkAddressRequest} extends {@link RequestModel}
+ * {@link ModifyActiveOperationTasksRequest} extends {@link RequestModel}
  *
- * <p>ReleasePublicNetworkAddressRequest</p>
+ * <p>ModifyActiveOperationTasksRequest</p>
  */
-public class ReleasePublicNetworkAddressRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
+public class ModifyActiveOperationTasksRequest extends Request {
     @Query
-    @NameInMap("ConnectionType")
-    private String connectionType;
-
-    @Query
-    @NameInMap("DBInstanceId")
+    @NameInMap("Ids")
     @Validation(required = true)
-    private String DBInstanceId;
+    private String ids;
 
     @Query
-    @NameInMap("NodeId")
-    private String nodeId;
+    @NameInMap("ImmediateStart")
+    private Integer immediateStart;
 
     @Query
     @NameInMap("OwnerAccount")
@@ -45,23 +37,27 @@ public class ReleasePublicNetworkAddressRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    private ReleasePublicNetworkAddressRequest(Builder builder) {
+    @Query
+    @NameInMap("SwitchTime")
+    @Validation(required = true)
+    private String switchTime;
+
+    private ModifyActiveOperationTasksRequest(Builder builder) {
         super(builder);
-        this.regionId = builder.regionId;
-        this.connectionType = builder.connectionType;
-        this.DBInstanceId = builder.DBInstanceId;
-        this.nodeId = builder.nodeId;
+        this.ids = builder.ids;
+        this.immediateStart = builder.immediateStart;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.switchTime = builder.switchTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ReleasePublicNetworkAddressRequest create() {
+    public static ModifyActiveOperationTasksRequest create() {
         return builder().build();
     }
 
@@ -71,31 +67,17 @@ public class ReleasePublicNetworkAddressRequest extends Request {
     }
 
     /**
-     * @return regionId
+     * @return ids
      */
-    public String getRegionId() {
-        return this.regionId;
+    public String getIds() {
+        return this.ids;
     }
 
     /**
-     * @return connectionType
+     * @return immediateStart
      */
-    public String getConnectionType() {
-        return this.connectionType;
-    }
-
-    /**
-     * @return DBInstanceId
-     */
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
-    }
-
-    /**
-     * @return nodeId
-     */
-    public String getNodeId() {
-        return this.nodeId;
+    public Integer getImmediateStart() {
+        return this.immediateStart;
     }
 
     /**
@@ -126,72 +108,52 @@ public class ReleasePublicNetworkAddressRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    public static final class Builder extends Request.Builder<ReleasePublicNetworkAddressRequest, Builder> {
-        private String regionId; 
-        private String connectionType; 
-        private String DBInstanceId; 
-        private String nodeId; 
+    /**
+     * @return switchTime
+     */
+    public String getSwitchTime() {
+        return this.switchTime;
+    }
+
+    public static final class Builder extends Request.Builder<ModifyActiveOperationTasksRequest, Builder> {
+        private String ids; 
+        private Integer immediateStart; 
         private String ownerAccount; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String switchTime; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ReleasePublicNetworkAddressRequest request) {
+        private Builder(ModifyActiveOperationTasksRequest request) {
             super(request);
-            this.regionId = request.regionId;
-            this.connectionType = request.connectionType;
-            this.DBInstanceId = request.DBInstanceId;
-            this.nodeId = request.nodeId;
+            this.ids = request.ids;
+            this.immediateStart = request.immediateStart;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.switchTime = request.switchTime;
         } 
 
         /**
-         * RegionId.
+         * Ids.
          */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
+        public Builder ids(String ids) {
+            this.putQueryParameter("Ids", ids);
+            this.ids = ids;
             return this;
         }
 
         /**
-         * ConnectionType.
+         * ImmediateStart.
          */
-        public Builder connectionType(String connectionType) {
-            this.putQueryParameter("ConnectionType", connectionType);
-            this.connectionType = connectionType;
-            return this;
-        }
-
-        /**
-         * The instance ID.
-         * <p>
-         * 
-         * >  If you set this parameter to the ID of a sharded cluster instance, you must also specify the **NodeId** parameter.
-         */
-        public Builder DBInstanceId(String DBInstanceId) {
-            this.putQueryParameter("DBInstanceId", DBInstanceId);
-            this.DBInstanceId = DBInstanceId;
-            return this;
-        }
-
-        /**
-         * The ID of the mongos, shard, or Configserver node in the sharded cluster instance.
-         * <p>
-         * 
-         * > *   This parameter is valid only if you set the **DBInstanceId** parameter to the ID of a sharded cluster instance.
-         * > *   You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to view the ID of the mongos, shard, or Configserver node.
-         */
-        public Builder nodeId(String nodeId) {
-            this.putQueryParameter("NodeId", nodeId);
-            this.nodeId = nodeId;
+        public Builder immediateStart(Integer immediateStart) {
+            this.putQueryParameter("ImmediateStart", immediateStart);
+            this.immediateStart = immediateStart;
             return this;
         }
 
@@ -231,9 +193,18 @@ public class ReleasePublicNetworkAddressRequest extends Request {
             return this;
         }
 
+        /**
+         * SwitchTime.
+         */
+        public Builder switchTime(String switchTime) {
+            this.putQueryParameter("SwitchTime", switchTime);
+            this.switchTime = switchTime;
+            return this;
+        }
+
         @Override
-        public ReleasePublicNetworkAddressRequest build() {
-            return new ReleasePublicNetworkAddressRequest(this);
+        public ModifyActiveOperationTasksRequest build() {
+            return new ModifyActiveOperationTasksRequest(this);
         } 
 
     } 

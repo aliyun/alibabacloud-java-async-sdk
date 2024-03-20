@@ -7,19 +7,19 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link RenewDBInstanceResponseBody} extends {@link TeaModel}
+ * {@link ModifyActiveOperationTasksResponseBody} extends {@link TeaModel}
  *
- * <p>RenewDBInstanceResponseBody</p>
+ * <p>ModifyActiveOperationTasksResponseBody</p>
  */
-public class RenewDBInstanceResponseBody extends TeaModel {
-    @NameInMap("OrderId")
-    private String orderId;
+public class ModifyActiveOperationTasksResponseBody extends TeaModel {
+    @NameInMap("Ids")
+    private String ids;
 
     @NameInMap("RequestId")
     private String requestId;
 
-    private RenewDBInstanceResponseBody(Builder builder) {
-        this.orderId = builder.orderId;
+    private ModifyActiveOperationTasksResponseBody(Builder builder) {
+        this.ids = builder.ids;
         this.requestId = builder.requestId;
     }
 
@@ -27,15 +27,15 @@ public class RenewDBInstanceResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static RenewDBInstanceResponseBody create() {
+    public static ModifyActiveOperationTasksResponseBody create() {
         return builder().build();
     }
 
     /**
-     * @return orderId
+     * @return ids
      */
-    public String getOrderId() {
-        return this.orderId;
+    public String getIds() {
+        return this.ids;
     }
 
     /**
@@ -46,27 +46,27 @@ public class RenewDBInstanceResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String orderId; 
+        private String ids; 
         private String requestId; 
 
         /**
-         * The ID of the order.
+         * Ids.
          */
-        public Builder orderId(String orderId) {
-            this.orderId = orderId;
+        public Builder ids(String ids) {
+            this.ids = ids;
             return this;
         }
 
         /**
-         * The request ID.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public RenewDBInstanceResponseBody build() {
-            return new RenewDBInstanceResponseBody(this);
+        public ModifyActiveOperationTasksResponseBody build() {
+            return new ModifyActiveOperationTasksResponseBody(this);
         } 
 
     } 
