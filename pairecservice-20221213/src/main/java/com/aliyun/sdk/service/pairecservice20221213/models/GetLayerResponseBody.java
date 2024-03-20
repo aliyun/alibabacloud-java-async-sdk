@@ -15,6 +15,9 @@ public class GetLayerResponseBody extends TeaModel {
     @NameInMap("Description")
     private String description;
 
+    @NameInMap("GmtCreateTime")
+    private String gmtCreateTime;
+
     @NameInMap("LaboratoryId")
     private String laboratoryId;
 
@@ -24,14 +27,19 @@ public class GetLayerResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("ResidualFlow")
+    private Long residualFlow;
+
     @NameInMap("SceneId")
     private String sceneId;
 
     private GetLayerResponseBody(Builder builder) {
         this.description = builder.description;
+        this.gmtCreateTime = builder.gmtCreateTime;
         this.laboratoryId = builder.laboratoryId;
         this.name = builder.name;
         this.requestId = builder.requestId;
+        this.residualFlow = builder.residualFlow;
         this.sceneId = builder.sceneId;
     }
 
@@ -48,6 +56,13 @@ public class GetLayerResponseBody extends TeaModel {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return gmtCreateTime
+     */
+    public String getGmtCreateTime() {
+        return this.gmtCreateTime;
     }
 
     /**
@@ -72,6 +87,13 @@ public class GetLayerResponseBody extends TeaModel {
     }
 
     /**
+     * @return residualFlow
+     */
+    public Long getResidualFlow() {
+        return this.residualFlow;
+    }
+
+    /**
      * @return sceneId
      */
     public String getSceneId() {
@@ -80,9 +102,11 @@ public class GetLayerResponseBody extends TeaModel {
 
     public static final class Builder {
         private String description; 
+        private String gmtCreateTime; 
         private String laboratoryId; 
         private String name; 
         private String requestId; 
+        private Long residualFlow; 
         private String sceneId; 
 
         /**
@@ -90,6 +114,14 @@ public class GetLayerResponseBody extends TeaModel {
          */
         public Builder description(String description) {
             this.description = description;
+            return this;
+        }
+
+        /**
+         * GmtCreateTime.
+         */
+        public Builder gmtCreateTime(String gmtCreateTime) {
+            this.gmtCreateTime = gmtCreateTime;
             return this;
         }
 
@@ -114,6 +146,14 @@ public class GetLayerResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * ResidualFlow.
+         */
+        public Builder residualFlow(Long residualFlow) {
+            this.residualFlow = residualFlow;
             return this;
         }
 

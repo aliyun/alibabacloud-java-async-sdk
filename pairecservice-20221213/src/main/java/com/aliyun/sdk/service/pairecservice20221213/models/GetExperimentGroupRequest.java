@@ -17,6 +17,10 @@ public class GetExperimentGroupRequest extends Request {
     @Validation(required = true)
     private String experimentGroupId;
 
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
@@ -25,6 +29,7 @@ public class GetExperimentGroupRequest extends Request {
     private GetExperimentGroupRequest(Builder builder) {
         super(builder);
         this.experimentGroupId = builder.experimentGroupId;
+        this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
     }
 
@@ -49,6 +54,13 @@ public class GetExperimentGroupRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -57,6 +69,7 @@ public class GetExperimentGroupRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetExperimentGroupRequest, Builder> {
         private String experimentGroupId; 
+        private String regionId; 
         private String instanceId; 
 
         private Builder() {
@@ -66,6 +79,7 @@ public class GetExperimentGroupRequest extends Request {
         private Builder(GetExperimentGroupRequest request) {
             super(request);
             this.experimentGroupId = request.experimentGroupId;
+            this.regionId = request.regionId;
             this.instanceId = request.instanceId;
         } 
 
@@ -75,6 +89,15 @@ public class GetExperimentGroupRequest extends Request {
         public Builder experimentGroupId(String experimentGroupId) {
             this.putPathParameter("ExperimentGroupId", experimentGroupId);
             this.experimentGroupId = experimentGroupId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 

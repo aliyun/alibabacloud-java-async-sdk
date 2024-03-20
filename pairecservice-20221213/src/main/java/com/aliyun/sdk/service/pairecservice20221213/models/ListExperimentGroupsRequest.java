@@ -22,6 +22,10 @@ public class ListExperimentGroupsRequest extends Request {
     private String layerId;
 
     @Query
+    @NameInMap("RegionId")
+    private String regionId;
+
+    @Query
     @NameInMap("Status")
     private String status;
 
@@ -29,6 +33,7 @@ public class ListExperimentGroupsRequest extends Request {
         super(builder);
         this.instanceId = builder.instanceId;
         this.layerId = builder.layerId;
+        this.regionId = builder.regionId;
         this.status = builder.status;
     }
 
@@ -60,6 +65,13 @@ public class ListExperimentGroupsRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return status
      */
     public String getStatus() {
@@ -69,6 +81,7 @@ public class ListExperimentGroupsRequest extends Request {
     public static final class Builder extends Request.Builder<ListExperimentGroupsRequest, Builder> {
         private String instanceId; 
         private String layerId; 
+        private String regionId; 
         private String status; 
 
         private Builder() {
@@ -79,6 +92,7 @@ public class ListExperimentGroupsRequest extends Request {
             super(request);
             this.instanceId = request.instanceId;
             this.layerId = request.layerId;
+            this.regionId = request.regionId;
             this.status = request.status;
         } 
 
@@ -97,6 +111,15 @@ public class ListExperimentGroupsRequest extends Request {
         public Builder layerId(String layerId) {
             this.putQueryParameter("LayerId", layerId);
             this.layerId = layerId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 

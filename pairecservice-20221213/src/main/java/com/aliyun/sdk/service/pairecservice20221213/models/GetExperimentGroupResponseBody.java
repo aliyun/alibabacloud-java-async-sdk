@@ -18,6 +18,9 @@ public class GetExperimentGroupResponseBody extends TeaModel {
     @NameInMap("CrowdId")
     private String crowdId;
 
+    @NameInMap("CrowdTargetType")
+    private String crowdTargetType;
+
     @NameInMap("DebugCrowdId")
     private String debugCrowdId;
 
@@ -36,6 +39,9 @@ public class GetExperimentGroupResponseBody extends TeaModel {
     @NameInMap("Filter")
     private String filter;
 
+    @NameInMap("HoldingBuckets")
+    private String holdingBuckets;
+
     @NameInMap("LaboratoryId")
     private String laboratoryId;
 
@@ -50,6 +56,9 @@ public class GetExperimentGroupResponseBody extends TeaModel {
 
     @NameInMap("Owner")
     private String owner;
+
+    @NameInMap("RandomFlow")
+    private Long randomFlow;
 
     @NameInMap("RequestId")
     private String requestId;
@@ -66,17 +75,20 @@ public class GetExperimentGroupResponseBody extends TeaModel {
     private GetExperimentGroupResponseBody(Builder builder) {
         this.config = builder.config;
         this.crowdId = builder.crowdId;
+        this.crowdTargetType = builder.crowdTargetType;
         this.debugCrowdId = builder.debugCrowdId;
         this.debugUsers = builder.debugUsers;
         this.description = builder.description;
         this.distributionTimeDuration = builder.distributionTimeDuration;
         this.distributionType = builder.distributionType;
         this.filter = builder.filter;
+        this.holdingBuckets = builder.holdingBuckets;
         this.laboratoryId = builder.laboratoryId;
         this.layerId = builder.layerId;
         this.name = builder.name;
         this.needAA = builder.needAA;
         this.owner = builder.owner;
+        this.randomFlow = builder.randomFlow;
         this.requestId = builder.requestId;
         this.reservedBuckets = builder.reservedBuckets;
         this.sceneId = builder.sceneId;
@@ -103,6 +115,13 @@ public class GetExperimentGroupResponseBody extends TeaModel {
      */
     public String getCrowdId() {
         return this.crowdId;
+    }
+
+    /**
+     * @return crowdTargetType
+     */
+    public String getCrowdTargetType() {
+        return this.crowdTargetType;
     }
 
     /**
@@ -148,6 +167,13 @@ public class GetExperimentGroupResponseBody extends TeaModel {
     }
 
     /**
+     * @return holdingBuckets
+     */
+    public String getHoldingBuckets() {
+        return this.holdingBuckets;
+    }
+
+    /**
      * @return laboratoryId
      */
     public String getLaboratoryId() {
@@ -183,6 +209,13 @@ public class GetExperimentGroupResponseBody extends TeaModel {
     }
 
     /**
+     * @return randomFlow
+     */
+    public Long getRandomFlow() {
+        return this.randomFlow;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -213,17 +246,20 @@ public class GetExperimentGroupResponseBody extends TeaModel {
     public static final class Builder {
         private String config; 
         private String crowdId; 
+        private String crowdTargetType; 
         private String debugCrowdId; 
         private String debugUsers; 
         private String description; 
         private Integer distributionTimeDuration; 
         private String distributionType; 
         private String filter; 
+        private String holdingBuckets; 
         private String laboratoryId; 
         private String layerId; 
         private String name; 
         private Boolean needAA; 
         private String owner; 
+        private Long randomFlow; 
         private String requestId; 
         private String reservedBuckets; 
         private String sceneId; 
@@ -242,6 +278,14 @@ public class GetExperimentGroupResponseBody extends TeaModel {
          */
         public Builder crowdId(String crowdId) {
             this.crowdId = crowdId;
+            return this;
+        }
+
+        /**
+         * CrowdTargetType.
+         */
+        public Builder crowdTargetType(String crowdTargetType) {
+            this.crowdTargetType = crowdTargetType;
             return this;
         }
 
@@ -294,6 +338,14 @@ public class GetExperimentGroupResponseBody extends TeaModel {
         }
 
         /**
+         * HoldingBuckets.
+         */
+        public Builder holdingBuckets(String holdingBuckets) {
+            this.holdingBuckets = holdingBuckets;
+            return this;
+        }
+
+        /**
          * LaboratoryId.
          */
         public Builder laboratoryId(String laboratoryId) {
@@ -330,6 +382,14 @@ public class GetExperimentGroupResponseBody extends TeaModel {
          */
         public Builder owner(String owner) {
             this.owner = owner;
+            return this;
+        }
+
+        /**
+         * RandomFlow.
+         */
+        public Builder randomFlow(Long randomFlow) {
+            this.randomFlow = randomFlow;
             return this;
         }
 

@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListLayersRequest</p>
  */
 public class ListLayersRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
@@ -24,6 +28,7 @@ public class ListLayersRequest extends Request {
 
     private ListLayersRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
         this.laboratoryId = builder.laboratoryId;
     }
@@ -42,6 +47,13 @@ public class ListLayersRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -56,6 +68,7 @@ public class ListLayersRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListLayersRequest, Builder> {
+        private String regionId; 
         private String instanceId; 
         private String laboratoryId; 
 
@@ -65,9 +78,19 @@ public class ListLayersRequest extends Request {
 
         private Builder(ListLayersRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.instanceId = request.instanceId;
             this.laboratoryId = request.laboratoryId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * InstanceId.

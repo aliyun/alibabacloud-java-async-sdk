@@ -17,6 +17,10 @@ public class UpdateExperimentGroupRequest extends Request {
     @Validation(required = true)
     private String experimentGroupId;
 
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Body
     @NameInMap("Config")
     private String config;
@@ -24,6 +28,10 @@ public class UpdateExperimentGroupRequest extends Request {
     @Body
     @NameInMap("CrowdId")
     private String crowdId;
+
+    @Body
+    @NameInMap("CrowdTargetType")
+    private String crowdTargetType;
 
     @Body
     @NameInMap("DebugCrowdId")
@@ -70,14 +78,20 @@ public class UpdateExperimentGroupRequest extends Request {
     private Boolean needAA;
 
     @Body
+    @NameInMap("RandomFlow")
+    private Long randomFlow;
+
+    @Body
     @NameInMap("ReservcedBuckets")
     private String reservcedBuckets;
 
     private UpdateExperimentGroupRequest(Builder builder) {
         super(builder);
         this.experimentGroupId = builder.experimentGroupId;
+        this.regionId = builder.regionId;
         this.config = builder.config;
         this.crowdId = builder.crowdId;
+        this.crowdTargetType = builder.crowdTargetType;
         this.debugCrowdId = builder.debugCrowdId;
         this.debugUsers = builder.debugUsers;
         this.description = builder.description;
@@ -88,6 +102,7 @@ public class UpdateExperimentGroupRequest extends Request {
         this.layerId = builder.layerId;
         this.name = builder.name;
         this.needAA = builder.needAA;
+        this.randomFlow = builder.randomFlow;
         this.reservcedBuckets = builder.reservcedBuckets;
     }
 
@@ -112,6 +127,13 @@ public class UpdateExperimentGroupRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return config
      */
     public String getConfig() {
@@ -123,6 +145,13 @@ public class UpdateExperimentGroupRequest extends Request {
      */
     public String getCrowdId() {
         return this.crowdId;
+    }
+
+    /**
+     * @return crowdTargetType
+     */
+    public String getCrowdTargetType() {
+        return this.crowdTargetType;
     }
 
     /**
@@ -196,6 +225,13 @@ public class UpdateExperimentGroupRequest extends Request {
     }
 
     /**
+     * @return randomFlow
+     */
+    public Long getRandomFlow() {
+        return this.randomFlow;
+    }
+
+    /**
      * @return reservcedBuckets
      */
     public String getReservcedBuckets() {
@@ -204,8 +240,10 @@ public class UpdateExperimentGroupRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateExperimentGroupRequest, Builder> {
         private String experimentGroupId; 
+        private String regionId; 
         private String config; 
         private String crowdId; 
+        private String crowdTargetType; 
         private String debugCrowdId; 
         private String debugUsers; 
         private String description; 
@@ -216,6 +254,7 @@ public class UpdateExperimentGroupRequest extends Request {
         private String layerId; 
         private String name; 
         private Boolean needAA; 
+        private Long randomFlow; 
         private String reservcedBuckets; 
 
         private Builder() {
@@ -225,8 +264,10 @@ public class UpdateExperimentGroupRequest extends Request {
         private Builder(UpdateExperimentGroupRequest request) {
             super(request);
             this.experimentGroupId = request.experimentGroupId;
+            this.regionId = request.regionId;
             this.config = request.config;
             this.crowdId = request.crowdId;
+            this.crowdTargetType = request.crowdTargetType;
             this.debugCrowdId = request.debugCrowdId;
             this.debugUsers = request.debugUsers;
             this.description = request.description;
@@ -237,6 +278,7 @@ public class UpdateExperimentGroupRequest extends Request {
             this.layerId = request.layerId;
             this.name = request.name;
             this.needAA = request.needAA;
+            this.randomFlow = request.randomFlow;
             this.reservcedBuckets = request.reservcedBuckets;
         } 
 
@@ -246,6 +288,15 @@ public class UpdateExperimentGroupRequest extends Request {
         public Builder experimentGroupId(String experimentGroupId) {
             this.putPathParameter("ExperimentGroupId", experimentGroupId);
             this.experimentGroupId = experimentGroupId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 
@@ -264,6 +315,15 @@ public class UpdateExperimentGroupRequest extends Request {
         public Builder crowdId(String crowdId) {
             this.putBodyParameter("CrowdId", crowdId);
             this.crowdId = crowdId;
+            return this;
+        }
+
+        /**
+         * CrowdTargetType.
+         */
+        public Builder crowdTargetType(String crowdTargetType) {
+            this.putBodyParameter("CrowdTargetType", crowdTargetType);
+            this.crowdTargetType = crowdTargetType;
             return this;
         }
 
@@ -354,6 +414,15 @@ public class UpdateExperimentGroupRequest extends Request {
         public Builder needAA(Boolean needAA) {
             this.putBodyParameter("NeedAA", needAA);
             this.needAA = needAA;
+            return this;
+        }
+
+        /**
+         * RandomFlow.
+         */
+        public Builder randomFlow(Long randomFlow) {
+            this.putBodyParameter("RandomFlow", randomFlow);
+            this.randomFlow = randomFlow;
             return this;
         }
 
