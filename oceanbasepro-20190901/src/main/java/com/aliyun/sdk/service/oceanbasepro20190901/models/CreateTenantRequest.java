@@ -271,7 +271,7 @@ public class CreateTenantRequest extends Request {
         /**
          * The character set.    
          * <p>
-         * For more information, see DescribeCharset.
+         * For more information, see [DescribeCharset](https://www.alibabacloud.com/help/en/apsaradb-for-oceanbase/latest/api-oceanbasepro-2019-09-01-describecharset).
          */
         public Builder charset(String charset) {
             this.putBodyParameter("Charset", charset);
@@ -356,7 +356,7 @@ public class CreateTenantRequest extends Request {
          * The tenant mode.    
          * <p>
          * Valid values: Oracle and MySQL.   
-         * For more information, see [DescribeInstanceTenantModes](~~410354~~).
+         * For more information, see [DescribeInstanceTenantModes](https://www.alibabacloud.com/help/en/apsaradb-for-oceanbase/latest/api-oceanbasepro-2019-09-01-describeinstancetenantmodes).
          */
         public Builder tenantMode(String tenantMode) {
             this.putBodyParameter("TenantMode", tenantMode);

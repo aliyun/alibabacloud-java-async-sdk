@@ -21,6 +21,10 @@ public class ListProjectsRequest extends Request {
     private java.util.List < String > labelIds;
 
     @Body
+    @NameInMap("NeedRelatedInfo")
+    private Boolean needRelatedInfo;
+
+    @Body
     @NameInMap("Order")
     private String order;
 
@@ -65,6 +69,7 @@ public class ListProjectsRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.labelIds = builder.labelIds;
+        this.needRelatedInfo = builder.needRelatedInfo;
         this.order = builder.order;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -102,6 +107,13 @@ public class ListProjectsRequest extends Request {
      */
     public java.util.List < String > getLabelIds() {
         return this.labelIds;
+    }
+
+    /**
+     * @return needRelatedInfo
+     */
+    public Boolean getNeedRelatedInfo() {
+        return this.needRelatedInfo;
     }
 
     /**
@@ -177,6 +189,7 @@ public class ListProjectsRequest extends Request {
     public static final class Builder extends Request.Builder<ListProjectsRequest, Builder> {
         private String regionId; 
         private java.util.List < String > labelIds; 
+        private Boolean needRelatedInfo; 
         private String order; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -196,6 +209,7 @@ public class ListProjectsRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.labelIds = request.labelIds;
+            this.needRelatedInfo = request.needRelatedInfo;
             this.order = request.order;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
@@ -224,6 +238,15 @@ public class ListProjectsRequest extends Request {
             String labelIdsShrink = shrink(labelIds, "LabelIds", "json");
             this.putBodyParameter("LabelIds", labelIdsShrink);
             this.labelIds = labelIds;
+            return this;
+        }
+
+        /**
+         * NeedRelatedInfo.
+         */
+        public Builder needRelatedInfo(Boolean needRelatedInfo) {
+            this.putBodyParameter("NeedRelatedInfo", needRelatedInfo);
+            this.needRelatedInfo = needRelatedInfo;
             return this;
         }
 

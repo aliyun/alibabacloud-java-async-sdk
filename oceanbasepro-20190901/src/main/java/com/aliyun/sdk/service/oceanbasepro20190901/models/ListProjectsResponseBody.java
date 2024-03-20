@@ -2884,6 +2884,307 @@ public class ListProjectsResponseBody extends TeaModel {
         } 
 
     }
+    public static class WorkerGradeInfo extends TeaModel {
+        @NameInMap("AutoRenewal")
+        private Boolean autoRenewal;
+
+        @NameInMap("ChargeType")
+        private String chargeType;
+
+        @NameInMap("DestRegion")
+        private String destRegion;
+
+        @NameInMap("DestType")
+        private String destType;
+
+        @NameInMap("EndTime")
+        private String endTime;
+
+        @NameInMap("Expired")
+        private Boolean expired;
+
+        @NameInMap("GmtCreate")
+        private String gmtCreate;
+
+        @NameInMap("Grade")
+        private String grade;
+
+        @NameInMap("Id")
+        private String id;
+
+        @NameInMap("Name")
+        private String name;
+
+        @NameInMap("SourceRegion")
+        private String sourceRegion;
+
+        @NameInMap("SourceType")
+        private String sourceType;
+
+        @NameInMap("Spec")
+        private String spec;
+
+        @NameInMap("SpecName")
+        private String specName;
+
+        private WorkerGradeInfo(Builder builder) {
+            this.autoRenewal = builder.autoRenewal;
+            this.chargeType = builder.chargeType;
+            this.destRegion = builder.destRegion;
+            this.destType = builder.destType;
+            this.endTime = builder.endTime;
+            this.expired = builder.expired;
+            this.gmtCreate = builder.gmtCreate;
+            this.grade = builder.grade;
+            this.id = builder.id;
+            this.name = builder.name;
+            this.sourceRegion = builder.sourceRegion;
+            this.sourceType = builder.sourceType;
+            this.spec = builder.spec;
+            this.specName = builder.specName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static WorkerGradeInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return autoRenewal
+         */
+        public Boolean getAutoRenewal() {
+            return this.autoRenewal;
+        }
+
+        /**
+         * @return chargeType
+         */
+        public String getChargeType() {
+            return this.chargeType;
+        }
+
+        /**
+         * @return destRegion
+         */
+        public String getDestRegion() {
+            return this.destRegion;
+        }
+
+        /**
+         * @return destType
+         */
+        public String getDestType() {
+            return this.destType;
+        }
+
+        /**
+         * @return endTime
+         */
+        public String getEndTime() {
+            return this.endTime;
+        }
+
+        /**
+         * @return expired
+         */
+        public Boolean getExpired() {
+            return this.expired;
+        }
+
+        /**
+         * @return gmtCreate
+         */
+        public String getGmtCreate() {
+            return this.gmtCreate;
+        }
+
+        /**
+         * @return grade
+         */
+        public String getGrade() {
+            return this.grade;
+        }
+
+        /**
+         * @return id
+         */
+        public String getId() {
+            return this.id;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return sourceRegion
+         */
+        public String getSourceRegion() {
+            return this.sourceRegion;
+        }
+
+        /**
+         * @return sourceType
+         */
+        public String getSourceType() {
+            return this.sourceType;
+        }
+
+        /**
+         * @return spec
+         */
+        public String getSpec() {
+            return this.spec;
+        }
+
+        /**
+         * @return specName
+         */
+        public String getSpecName() {
+            return this.specName;
+        }
+
+        public static final class Builder {
+            private Boolean autoRenewal; 
+            private String chargeType; 
+            private String destRegion; 
+            private String destType; 
+            private String endTime; 
+            private Boolean expired; 
+            private String gmtCreate; 
+            private String grade; 
+            private String id; 
+            private String name; 
+            private String sourceRegion; 
+            private String sourceType; 
+            private String spec; 
+            private String specName; 
+
+            /**
+             * AutoRenewal.
+             */
+            public Builder autoRenewal(Boolean autoRenewal) {
+                this.autoRenewal = autoRenewal;
+                return this;
+            }
+
+            /**
+             * ChargeType.
+             */
+            public Builder chargeType(String chargeType) {
+                this.chargeType = chargeType;
+                return this;
+            }
+
+            /**
+             * DestRegion.
+             */
+            public Builder destRegion(String destRegion) {
+                this.destRegion = destRegion;
+                return this;
+            }
+
+            /**
+             * DestType.
+             */
+            public Builder destType(String destType) {
+                this.destType = destType;
+                return this;
+            }
+
+            /**
+             * EndTime.
+             */
+            public Builder endTime(String endTime) {
+                this.endTime = endTime;
+                return this;
+            }
+
+            /**
+             * Expired.
+             */
+            public Builder expired(Boolean expired) {
+                this.expired = expired;
+                return this;
+            }
+
+            /**
+             * GmtCreate.
+             */
+            public Builder gmtCreate(String gmtCreate) {
+                this.gmtCreate = gmtCreate;
+                return this;
+            }
+
+            /**
+             * Grade.
+             */
+            public Builder grade(String grade) {
+                this.grade = grade;
+                return this;
+            }
+
+            /**
+             * Id.
+             */
+            public Builder id(String id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * SourceRegion.
+             */
+            public Builder sourceRegion(String sourceRegion) {
+                this.sourceRegion = sourceRegion;
+                return this;
+            }
+
+            /**
+             * SourceType.
+             */
+            public Builder sourceType(String sourceType) {
+                this.sourceType = sourceType;
+                return this;
+            }
+
+            /**
+             * Spec.
+             */
+            public Builder spec(String spec) {
+                this.spec = spec;
+                return this;
+            }
+
+            /**
+             * SpecName.
+             */
+            public Builder specName(String specName) {
+                this.specName = specName;
+                return this;
+            }
+
+            public WorkerGradeInfo build() {
+                return new WorkerGradeInfo(this);
+            } 
+
+        } 
+
+    }
     public static class Data extends TeaModel {
         @NameInMap("AlarmStats")
         private AlarmStats alarmStats;
@@ -2987,6 +3288,9 @@ public class ListProjectsResponseBody extends TeaModel {
         @NameInMap("WorkerGradeId")
         private String workerGradeId;
 
+        @NameInMap("WorkerGradeInfo")
+        private WorkerGradeInfo workerGradeInfo;
+
         private Data(Builder builder) {
             this.alarmStats = builder.alarmStats;
             this.commonTransferConfig = builder.commonTransferConfig;
@@ -3022,6 +3326,7 @@ public class ListProjectsResponseBody extends TeaModel {
             this.transferMapping = builder.transferMapping;
             this.type = builder.type;
             this.workerGradeId = builder.workerGradeId;
+            this.workerGradeInfo = builder.workerGradeInfo;
         }
 
         public static Builder builder() {
@@ -3270,6 +3575,13 @@ public class ListProjectsResponseBody extends TeaModel {
             return this.workerGradeId;
         }
 
+        /**
+         * @return workerGradeInfo
+         */
+        public WorkerGradeInfo getWorkerGradeInfo() {
+            return this.workerGradeInfo;
+        }
+
         public static final class Builder {
             private AlarmStats alarmStats; 
             private CommonTransferConfig commonTransferConfig; 
@@ -3305,6 +3617,7 @@ public class ListProjectsResponseBody extends TeaModel {
             private TransferMapping transferMapping; 
             private String type; 
             private String workerGradeId; 
+            private WorkerGradeInfo workerGradeInfo; 
 
             /**
              * AlarmStats.
@@ -3575,6 +3888,14 @@ public class ListProjectsResponseBody extends TeaModel {
              */
             public Builder workerGradeId(String workerGradeId) {
                 this.workerGradeId = workerGradeId;
+                return this;
+            }
+
+            /**
+             * WorkerGradeInfo.
+             */
+            public Builder workerGradeInfo(WorkerGradeInfo workerGradeInfo) {
+                this.workerGradeInfo = workerGradeInfo;
                 return this;
             }
 

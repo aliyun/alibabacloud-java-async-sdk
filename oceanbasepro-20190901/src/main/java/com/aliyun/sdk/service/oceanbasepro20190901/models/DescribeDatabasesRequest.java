@@ -172,7 +172,7 @@ public class DescribeDatabasesRequest extends Request {
         }
 
         /**
-         * Instance ID.
+         * The ID of the cluster.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -223,9 +223,10 @@ public class DescribeDatabasesRequest extends Request {
         }
 
         /**
-         * Specifies whether to return the information of tables in the database.   
+         * Specifies whether to return the information about tables in the database.
          * <p>
-         * Default value: false.
+         * Default value: false. 
+         * > The operation may time out if the database contains a large number of tables.
          */
         public Builder withTables(Boolean withTables) {
             this.putBodyParameter("WithTables", withTables);

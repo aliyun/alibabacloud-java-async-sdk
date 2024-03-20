@@ -50,7 +50,7 @@ public class DescribeBackupSetDownloadLinkResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class DescribeBackupSetDownloadLinkResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -182,7 +182,7 @@ public class DescribeBackupSetDownloadLinkResponseBody extends TeaModel {
             private String urlExpiredTime; 
 
             /**
-             * BackupRestorableTime.
+             * The restorable time of the backup set.
              */
             public Builder backupRestorableTime(String backupRestorableTime) {
                 this.backupRestorableTime = backupRestorableTime;
@@ -190,7 +190,7 @@ public class DescribeBackupSetDownloadLinkResponseBody extends TeaModel {
             }
 
             /**
-             * BackupSetId.
+             * The ID of the target backup set.
              */
             public Builder backupSetId(String backupSetId) {
                 this.backupSetId = backupSetId;
@@ -198,7 +198,7 @@ public class DescribeBackupSetDownloadLinkResponseBody extends TeaModel {
             }
 
             /**
-             * DownloadTaskCreateTime.
+             * The time when the download task corresponding to the target backup set was created.
              */
             public Builder downloadTaskCreateTime(String downloadTaskCreateTime) {
                 this.downloadTaskCreateTime = downloadTaskCreateTime;
@@ -206,7 +206,7 @@ public class DescribeBackupSetDownloadLinkResponseBody extends TeaModel {
             }
 
             /**
-             * DownloadTaskId.
+             * The ID of the download task corresponding to the target backup set.
              */
             public Builder downloadTaskId(Long downloadTaskId) {
                 this.downloadTaskId = downloadTaskId;
@@ -214,7 +214,7 @@ public class DescribeBackupSetDownloadLinkResponseBody extends TeaModel {
             }
 
             /**
-             * DownloadTaskStatus.
+             * The status of the download task corresponding to the target backup set.
              */
             public Builder downloadTaskStatus(String downloadTaskStatus) {
                 this.downloadTaskStatus = downloadTaskStatus;
@@ -222,7 +222,7 @@ public class DescribeBackupSetDownloadLinkResponseBody extends TeaModel {
             }
 
             /**
-             * InternalUrl.
+             * The internal URL.
              */
             public Builder internalUrl(String internalUrl) {
                 this.internalUrl = internalUrl;
@@ -230,7 +230,7 @@ public class DescribeBackupSetDownloadLinkResponseBody extends TeaModel {
             }
 
             /**
-             * UrlAliveTime.
+             * The validity period of the URL, in seconds.
              */
             public Builder urlAliveTime(Long urlAliveTime) {
                 this.urlAliveTime = urlAliveTime;
@@ -238,7 +238,7 @@ public class DescribeBackupSetDownloadLinkResponseBody extends TeaModel {
             }
 
             /**
-             * UrlExpiredTime.
+             * The expiration time of the URL.
              */
             public Builder urlExpiredTime(String urlExpiredTime) {
                 this.urlExpiredTime = urlExpiredTime;

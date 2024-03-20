@@ -70,7 +70,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -225,7 +225,10 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the account. Valid values:  - Admin: the super administrator account. - Normal: a general account.
+             * The type of the account. Valid values:  
+             * <p>
+             * - Admin: the super administrator account. 
+             * - Normal: a general account.
              */
             public Builder userType(String userType) {
                 this.userType = userType;
@@ -438,7 +441,9 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The actual data size, in GB.
+             * The actual data size, in GB. 
+             * <p>
+             * ><notice>This parameter is no longer used in later versions. RequiredSize is used instead.></notice>
              */
             public Builder dataSize(Double dataSize) {
                 this.dataSize = dataSize;
@@ -478,7 +483,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cluster.
+             * The ID of the cluster to which the tenant belongs.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -505,7 +510,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the database tables.
+             * The list of database tables.
              */
             public Builder tables(java.util.List < Tables> tables) {
                 this.tables = tables;
@@ -521,7 +526,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * Tenant name.
+             * The name of the tenant.
              */
             public Builder tenantName(String tenantName) {
                 this.tenantName = tenantName;
@@ -529,7 +534,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The accounts that have privileges on the database.
+             * The list of accounts that are granted privileges on this database.
              */
             public Builder users(java.util.List < Users> users) {
                 this.users = users;

@@ -93,7 +93,7 @@ public class DescribeBackupSetDownloadLinkRequest extends Request {
         }
 
         /**
-         * DownloadTaskId.
+         * The ID of the download task corresponding to the target backup set.
          */
         public Builder downloadTaskId(String downloadTaskId) {
             this.putBodyParameter("DownloadTaskId", downloadTaskId);
@@ -102,7 +102,7 @@ public class DescribeBackupSetDownloadLinkRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the OceanBase cluster.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);

@@ -45,6 +45,11 @@ public class CreateProjectRequest extends Request {
     private FullTransferConfig fullTransferConfig;
 
     @Body
+    @NameInMap("Id")
+    @Validation(required = true)
+    private String id;
+
+    @Body
     @NameInMap("IncrTransferConfig")
     private IncrTransferConfig incrTransferConfig;
 
@@ -104,6 +109,7 @@ public class CreateProjectRequest extends Request {
         this.enableReverseIncrTransfer = builder.enableReverseIncrTransfer;
         this.enableStructTransfer = builder.enableStructTransfer;
         this.fullTransferConfig = builder.fullTransferConfig;
+        this.id = builder.id;
         this.incrTransferConfig = builder.incrTransferConfig;
         this.labelIds = builder.labelIds;
         this.name = builder.name;
@@ -184,6 +190,13 @@ public class CreateProjectRequest extends Request {
      */
     public FullTransferConfig getFullTransferConfig() {
         return this.fullTransferConfig;
+    }
+
+    /**
+     * @return id
+     */
+    public String getId() {
+        return this.id;
     }
 
     /**
@@ -272,6 +285,7 @@ public class CreateProjectRequest extends Request {
         private Boolean enableReverseIncrTransfer; 
         private Boolean enableStructTransfer; 
         private FullTransferConfig fullTransferConfig; 
+        private String id; 
         private IncrTransferConfig incrTransferConfig; 
         private java.util.List < String > labelIds; 
         private String name; 
@@ -298,6 +312,7 @@ public class CreateProjectRequest extends Request {
             this.enableReverseIncrTransfer = request.enableReverseIncrTransfer;
             this.enableStructTransfer = request.enableStructTransfer;
             this.fullTransferConfig = request.fullTransferConfig;
+            this.id = request.id;
             this.incrTransferConfig = request.incrTransferConfig;
             this.labelIds = request.labelIds;
             this.name = request.name;
@@ -382,6 +397,15 @@ public class CreateProjectRequest extends Request {
             String fullTransferConfigShrink = shrink(fullTransferConfig, "FullTransferConfig", "json");
             this.putBodyParameter("FullTransferConfig", fullTransferConfigShrink);
             this.fullTransferConfig = fullTransferConfig;
+            return this;
+        }
+
+        /**
+         * Id.
+         */
+        public Builder id(String id) {
+            this.putBodyParameter("Id", id);
+            this.id = id;
             return this;
         }
 
