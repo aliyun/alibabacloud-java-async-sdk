@@ -956,6 +956,167 @@ public class ChatResponseBody extends TeaModel {
         } 
 
     }
+    public static class VoiceStrategy extends TeaModel {
+        @NameInMap("AsrMaxEndSilence")
+        private String asrMaxEndSilence;
+
+        @NameInMap("CollectNumber")
+        private Boolean collectNumber;
+
+        @NameInMap("HangUp")
+        private Boolean hangUp;
+
+        @NameInMap("Interruptible")
+        private Boolean interruptible;
+
+        @NameInMap("MaxDigits")
+        private Long maxDigits;
+
+        @NameInMap("ReplyTimeout")
+        private Long replyTimeout;
+
+        @NameInMap("Terminator")
+        private String terminator;
+
+        private VoiceStrategy(Builder builder) {
+            this.asrMaxEndSilence = builder.asrMaxEndSilence;
+            this.collectNumber = builder.collectNumber;
+            this.hangUp = builder.hangUp;
+            this.interruptible = builder.interruptible;
+            this.maxDigits = builder.maxDigits;
+            this.replyTimeout = builder.replyTimeout;
+            this.terminator = builder.terminator;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VoiceStrategy create() {
+            return builder().build();
+        }
+
+        /**
+         * @return asrMaxEndSilence
+         */
+        public String getAsrMaxEndSilence() {
+            return this.asrMaxEndSilence;
+        }
+
+        /**
+         * @return collectNumber
+         */
+        public Boolean getCollectNumber() {
+            return this.collectNumber;
+        }
+
+        /**
+         * @return hangUp
+         */
+        public Boolean getHangUp() {
+            return this.hangUp;
+        }
+
+        /**
+         * @return interruptible
+         */
+        public Boolean getInterruptible() {
+            return this.interruptible;
+        }
+
+        /**
+         * @return maxDigits
+         */
+        public Long getMaxDigits() {
+            return this.maxDigits;
+        }
+
+        /**
+         * @return replyTimeout
+         */
+        public Long getReplyTimeout() {
+            return this.replyTimeout;
+        }
+
+        /**
+         * @return terminator
+         */
+        public String getTerminator() {
+            return this.terminator;
+        }
+
+        public static final class Builder {
+            private String asrMaxEndSilence; 
+            private Boolean collectNumber; 
+            private Boolean hangUp; 
+            private Boolean interruptible; 
+            private Long maxDigits; 
+            private Long replyTimeout; 
+            private String terminator; 
+
+            /**
+             * AsrMaxEndSilence.
+             */
+            public Builder asrMaxEndSilence(String asrMaxEndSilence) {
+                this.asrMaxEndSilence = asrMaxEndSilence;
+                return this;
+            }
+
+            /**
+             * CollectNumber.
+             */
+            public Builder collectNumber(Boolean collectNumber) {
+                this.collectNumber = collectNumber;
+                return this;
+            }
+
+            /**
+             * HangUp.
+             */
+            public Builder hangUp(Boolean hangUp) {
+                this.hangUp = hangUp;
+                return this;
+            }
+
+            /**
+             * Interruptible.
+             */
+            public Builder interruptible(Boolean interruptible) {
+                this.interruptible = interruptible;
+                return this;
+            }
+
+            /**
+             * MaxDigits.
+             */
+            public Builder maxDigits(Long maxDigits) {
+                this.maxDigits = maxDigits;
+                return this;
+            }
+
+            /**
+             * ReplyTimeout.
+             */
+            public Builder replyTimeout(Long replyTimeout) {
+                this.replyTimeout = replyTimeout;
+                return this;
+            }
+
+            /**
+             * Terminator.
+             */
+            public Builder terminator(String terminator) {
+                this.terminator = terminator;
+                return this;
+            }
+
+            public VoiceStrategy build() {
+                return new VoiceStrategy(this);
+            } 
+
+        } 
+
+    }
     public static class Messages extends TeaModel {
         @NameInMap("AnswerSource")
         private String answerSource;
@@ -978,6 +1139,9 @@ public class ChatResponseBody extends TeaModel {
         @NameInMap("Type")
         private String type;
 
+        @NameInMap("VoiceStrategy")
+        private VoiceStrategy voiceStrategy;
+
         @NameInMap("VoiceTitle")
         private String voiceTitle;
 
@@ -989,6 +1153,7 @@ public class ChatResponseBody extends TeaModel {
             this.text = builder.text;
             this.title = builder.title;
             this.type = builder.type;
+            this.voiceStrategy = builder.voiceStrategy;
             this.voiceTitle = builder.voiceTitle;
         }
 
@@ -1050,6 +1215,13 @@ public class ChatResponseBody extends TeaModel {
         }
 
         /**
+         * @return voiceStrategy
+         */
+        public VoiceStrategy getVoiceStrategy() {
+            return this.voiceStrategy;
+        }
+
+        /**
          * @return voiceTitle
          */
         public String getVoiceTitle() {
@@ -1064,6 +1236,7 @@ public class ChatResponseBody extends TeaModel {
             private Text text; 
             private String title; 
             private String type; 
+            private VoiceStrategy voiceStrategy; 
             private String voiceTitle; 
 
             /**
@@ -1119,6 +1292,14 @@ public class ChatResponseBody extends TeaModel {
              */
             public Builder type(String type) {
                 this.type = type;
+                return this;
+            }
+
+            /**
+             * VoiceStrategy.
+             */
+            public Builder voiceStrategy(VoiceStrategy voiceStrategy) {
+                this.voiceStrategy = voiceStrategy;
                 return this;
             }
 
