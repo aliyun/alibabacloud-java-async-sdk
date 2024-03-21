@@ -22,10 +22,15 @@ public class GetModelFeatureFGFeatureRequest extends Request {
     @Validation(required = true)
     private String modelFeatureId;
 
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     private GetModelFeatureFGFeatureRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
         this.modelFeatureId = builder.modelFeatureId;
+        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -55,9 +60,17 @@ public class GetModelFeatureFGFeatureRequest extends Request {
         return this.modelFeatureId;
     }
 
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public static final class Builder extends Request.Builder<GetModelFeatureFGFeatureRequest, Builder> {
         private String instanceId; 
         private String modelFeatureId; 
+        private String regionId; 
 
         private Builder() {
             super();
@@ -67,6 +80,7 @@ public class GetModelFeatureFGFeatureRequest extends Request {
             super(request);
             this.instanceId = request.instanceId;
             this.modelFeatureId = request.modelFeatureId;
+            this.regionId = request.regionId;
         } 
 
         /**
@@ -84,6 +98,15 @@ public class GetModelFeatureFGFeatureRequest extends Request {
         public Builder modelFeatureId(String modelFeatureId) {
             this.putPathParameter("ModelFeatureId", modelFeatureId);
             this.modelFeatureId = modelFeatureId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 

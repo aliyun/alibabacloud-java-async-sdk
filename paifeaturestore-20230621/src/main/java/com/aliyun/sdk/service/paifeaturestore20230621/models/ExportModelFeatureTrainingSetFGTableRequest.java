@@ -22,6 +22,10 @@ public class ExportModelFeatureTrainingSetFGTableRequest extends Request {
     @Validation(required = true)
     private String modelFeatureId;
 
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Body
     @NameInMap("TrainingSetFgConfig")
     @Validation(required = true)
@@ -31,6 +35,7 @@ public class ExportModelFeatureTrainingSetFGTableRequest extends Request {
         super(builder);
         this.instanceId = builder.instanceId;
         this.modelFeatureId = builder.modelFeatureId;
+        this.regionId = builder.regionId;
         this.trainingSetFgConfig = builder.trainingSetFgConfig;
     }
 
@@ -62,6 +67,13 @@ public class ExportModelFeatureTrainingSetFGTableRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return trainingSetFgConfig
      */
     public TrainingSetFgConfig getTrainingSetFgConfig() {
@@ -71,6 +83,7 @@ public class ExportModelFeatureTrainingSetFGTableRequest extends Request {
     public static final class Builder extends Request.Builder<ExportModelFeatureTrainingSetFGTableRequest, Builder> {
         private String instanceId; 
         private String modelFeatureId; 
+        private String regionId; 
         private TrainingSetFgConfig trainingSetFgConfig; 
 
         private Builder() {
@@ -81,6 +94,7 @@ public class ExportModelFeatureTrainingSetFGTableRequest extends Request {
             super(request);
             this.instanceId = request.instanceId;
             this.modelFeatureId = request.modelFeatureId;
+            this.regionId = request.regionId;
             this.trainingSetFgConfig = request.trainingSetFgConfig;
         } 
 
@@ -99,6 +113,15 @@ public class ExportModelFeatureTrainingSetFGTableRequest extends Request {
         public Builder modelFeatureId(String modelFeatureId) {
             this.putPathParameter("ModelFeatureId", modelFeatureId);
             this.modelFeatureId = modelFeatureId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 
