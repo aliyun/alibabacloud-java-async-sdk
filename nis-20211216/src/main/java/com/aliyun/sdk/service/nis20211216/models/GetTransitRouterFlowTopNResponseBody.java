@@ -310,7 +310,7 @@ public class GetTransitRouterFlowTopNResponseBody extends TeaModel {
             }
 
             /**
-             * The remote region where the remote IP address resides.
+             * The remote region where the **remote IP address** resides.
              */
             public Builder otherRegion(String otherRegion) {
                 this.otherRegion = otherRegion;
@@ -358,7 +358,7 @@ public class GetTransitRouterFlowTopNResponseBody extends TeaModel {
             }
 
             /**
-             * The local region where the local IP address resides.
+             * The local region where the **local IP address** resides.
              */
             public Builder thisRegion(String thisRegion) {
                 this.thisRegion = thisRegion;

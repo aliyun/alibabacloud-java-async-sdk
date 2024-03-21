@@ -12,10 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteNetworkReachableAnalysisResponseBody</p>
  */
 public class DeleteNetworkReachableAnalysisResponseBody extends TeaModel {
+    @NameInMap("Data")
+    private Boolean data;
+
     @NameInMap("RequestId")
     private String requestId;
 
     private DeleteNetworkReachableAnalysisResponseBody(Builder builder) {
+        this.data = builder.data;
         this.requestId = builder.requestId;
     }
 
@@ -28,6 +32,13 @@ public class DeleteNetworkReachableAnalysisResponseBody extends TeaModel {
     }
 
     /**
+     * @return data
+     */
+    public Boolean getData() {
+        return this.data;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -35,7 +46,16 @@ public class DeleteNetworkReachableAnalysisResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private Boolean data; 
         private String requestId; 
+
+        /**
+         * Data.
+         */
+        public Builder data(Boolean data) {
+            this.data = data;
+            return this;
+        }
 
         /**
          * The request ID.

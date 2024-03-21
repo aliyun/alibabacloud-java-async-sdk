@@ -280,7 +280,7 @@ public class CreateNetworkPathRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The resource group ID.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

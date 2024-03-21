@@ -369,7 +369,7 @@ public class GetInternetTupleRequest extends Request {
          * The local Internet service provider (ISP).
          * <p>
          * 
-         * > In most cases, the value is Alibaba or Alibaba Cloud.
+         * >  In most cases, the value is Alibaba or Alibaba Cloud.
          */
         public Builder cloudIsp(String cloudIsp) {
             this.putQueryParameter("CloudIsp", cloudIsp);
@@ -381,7 +381,7 @@ public class GetInternetTupleRequest extends Request {
          * The local port.
          * <p>
          * 
-         * >  This parameter is required only if you set the **TupleType** parameter to **5**.
+         * >  This parameter is required only if you set GroupBy to CloudPort.
          */
         public Builder cloudPort(String cloudPort) {
             this.putQueryParameter("CloudPort", cloudPort);
@@ -431,7 +431,28 @@ public class GetInternetTupleRequest extends Request {
         }
 
         /**
-         * The metric for data ranking. Default value: **ByteCount**. This value specifies that data is ranked by traffic volume.
+         * The metric for data ranking. Default value: **ByteCount**. This value indicates that Internet traffic data is ranked by traffic volume.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   Rtt
+         * *   ByteCount
+         * *   PacketCount
+         * *   InByteCount
+         * *   OutByteCount
+         * *   InPacketCount
+         * *   OutPacketCount
+         * *   InRetranCount
+         * *   OutRetranCount
+         * *   InDupAckCount
+         * *   OutDupAckCount
+         * *   InOutOrderCount
+         * *   OutOutOrderCount
+         * *   RetranCount
+         * *   OutOrderCount
+         * *   DupAckCount
+         * *   RetransmitRate
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -443,7 +464,7 @@ public class GetInternetTupleRequest extends Request {
          * The remote city.
          * <p>
          * 
-         * > This parameter is required only if you set **TupleType** to **5**.
+         * >  This parameter is required only if you set **TupleType** to **2** or **5**.
          */
         public Builder otherCity(String otherCity) {
             this.putQueryParameter("OtherCity", otherCity);
@@ -455,7 +476,7 @@ public class GetInternetTupleRequest extends Request {
          * The remote country.
          * <p>
          * 
-         * > This parameter is required only if you set **TupleType** to **5**.
+         * >  This parameter is required only if you set **TupleType** to **2** or **5**.
          */
         public Builder otherCountry(String otherCountry) {
             this.putQueryParameter("OtherCountry", otherCountry);
@@ -534,7 +555,7 @@ public class GetInternetTupleRequest extends Request {
         }
 
         /**
-         * Specifies top-N traffic data to display. Default value: **10**. This value specifies to display top-10 traffic data by default.
+         * Specifies top-N traffic data to display. Default value: **10**. This value specifies to display top-10 traffic data by default. Max value: **100**.
          */
         public Builder topN(Integer topN) {
             this.putQueryParameter("TopN", topN);
@@ -560,7 +581,7 @@ public class GetInternetTupleRequest extends Request {
          * Specifies whether to enable the multi-account management feature. Default value: **false**. This value specifies that the multi-account management feature is disabled.
          * <p>
          * 
-         * >  By default, the multi-account management feature is not available. If you want to use this feature, contact your customer business manager to apply for permissions.
+         * >  By default, the multi-account management feature is not available. If you want to use this feature, contact your account manager to apply for permissions.
          */
         public Builder useMultiAccount(Boolean useMultiAccount) {
             this.putQueryParameter("UseMultiAccount", useMultiAccount);

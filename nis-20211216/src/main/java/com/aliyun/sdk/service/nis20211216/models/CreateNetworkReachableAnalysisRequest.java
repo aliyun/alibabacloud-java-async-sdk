@@ -83,7 +83,7 @@ public class CreateNetworkReachableAnalysisRequest extends Request {
         } 
 
         /**
-         * The ID of the network path. You can call the **CreateNetworkPath** operation to obtain the ID of the network path.
+         * The ID of the network path. You can call the [CreateNetworkPath](~~2366522~~) operation to obtain the ID of the network path.
          */
         public Builder networkPathId(String networkPathId) {
             this.putQueryParameter("NetworkPathId", networkPathId);
@@ -155,7 +155,7 @@ public class CreateNetworkReachableAnalysisRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N to add to the resource. The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.
+             * The key of the tag to add to the resource. The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.
              * <p>
              * 
              * You can add up to 20 tags in each call.
@@ -166,10 +166,10 @@ public class CreateNetworkReachableAnalysisRequest extends Request {
             }
 
             /**
-             * The value of tag N to add to the resource. You can specify up to 20 tag values. The tag value can be an empty string.
+             * The value of the tag to add to the resource. The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `acs:` or `aliyun`. The tag value can be an empty string.
              * <p>
              * 
-             * The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.
+             * You can add up to 20 tag values in each call.
              */
             public Builder value(String value) {
                 this.value = value;

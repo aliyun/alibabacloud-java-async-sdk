@@ -297,7 +297,7 @@ public class GetTransitRouterFlowTopNRequest extends Request {
         } 
 
         /**
-         * The IDs of member accounts.
+         * The IDs of the member accounts.
          */
         public Builder accountIds(java.util.List < Long > accountIds) {
             String accountIdsShrink = shrink(accountIds, "AccountIds", "json");
@@ -337,8 +337,8 @@ public class GetTransitRouterFlowTopNRequest extends Request {
          * The direction of the inter-region traffic in the local regions or for the local IP addresses. Valid values:
          * <p>
          * 
-         * *   in: inbound traffic
-         * *   out: outbound traffic
+         * *   **in**: inbound traffic
+         * *   **out**: outbound traffic
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);
@@ -359,13 +359,13 @@ public class GetTransitRouterFlowTopNRequest extends Request {
          * The dimension for ranking inter-region traffic data. The value of this parameter is case-sensitive. Valid values:
          * <p>
          * 
-         * *   1Tuple: queries the rankings of inter-region traffic data for the local regions, Cloud Enterprise Network (CEN) instances, and IP addresses.
-         * *   2Tuple: queries the rankings of inter-region traffic data for the local and remote regions, and the local and remote IP addresses.
-         * *   5Tuple: queries the rankings of inter-region traffic data for the local and remote IP addresses, local and remote ports, and protocols in use.
-         * *   Cen: queries the rankings of inter-region traffic data for CEN instances.
-         * *   RegionPair: queries the rankings of inter-region traffic data for the local and remote regions.
-         * *   Port: queries the rankings of inter-region traffic data for the local and remote ports.
-         * *   Protocol: queries the rankings of inter-region traffic data for the protocols in use.
+         * *   **1Tuple**: queries the rankings of inter-region traffic data for the local regions, Cloud Enterprise Network (CEN) instances, and IP addresses.
+         * *   **2Tuple**: queries the rankings of inter-region traffic data for the local and remote regions, and the local and remote IP addresses.
+         * *   **5Tuple**: queries the rankings of inter-region traffic data for the local and remote IP addresses, local and remote ports, and protocols.
+         * *   **Cen**: queries the rankings of inter-region traffic data for CEN instances.
+         * *   **RegionPair**: queries the rankings of inter-region traffic data for the local and remote regions.
+         * *   **Port**: queries the rankings of inter-region traffic data for the local and remote ports.
+         * *   **Protocol**: queries the rankings of inter-region traffic data for the protocols.
          */
         public Builder groupBy(String groupBy) {
             this.putQueryParameter("GroupBy", groupBy);
@@ -413,7 +413,7 @@ public class GetTransitRouterFlowTopNRequest extends Request {
          * The protocol number.
          * <p>
          * 
-         * >  All protocols are supported. This parameter is required only if you set GroupBy to 5Tuple or Protocol.
+         * >  All protocols are supported. This parameter is required only if you set **GroupBy** to **5Tuple** or **Protocol**.
          */
         public Builder protocol(String protocol) {
             this.putQueryParameter("Protocol", protocol);
@@ -425,8 +425,8 @@ public class GetTransitRouterFlowTopNRequest extends Request {
          * The order for ranking inter-region traffic data. Valid values:
          * <p>
          * 
-         * *   desc: descending order
-         * *   asc: ascending order
+         * *   **desc**: descending order
+         * *   **asc**: ascending order
          */
         public Builder sort(String sort) {
             this.putQueryParameter("Sort", sort);

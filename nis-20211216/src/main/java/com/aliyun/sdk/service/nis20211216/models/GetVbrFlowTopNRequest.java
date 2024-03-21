@@ -347,7 +347,7 @@ public class GetVbrFlowTopNRequest extends Request {
          * The local port.
          * <p>
          * 
-         * >  This parameter is required only if you set GroupBy to CloudPort.
+         * >  This parameter is required only if you set **GroupBy** to **CloudPort**.
          */
         public Builder cloudPort(String cloudPort) {
             this.putQueryParameter("CloudPort", cloudPort);
@@ -359,8 +359,8 @@ public class GetVbrFlowTopNRequest extends Request {
          * The direction of the hybrid cloud traffic in the local regions or for the local IP addresses. Valid values:
          * <p>
          * 
-         * *   in: traffic from a data center to Alibaba Cloud
-         * *   out: traffic from Alibaba Cloud to a data center
+         * *   **in**: traffic from a data center to Alibaba Cloud
+         * *   **out**: traffic from Alibaba Cloud to a data center
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);
@@ -381,12 +381,12 @@ public class GetVbrFlowTopNRequest extends Request {
          * The dimension for ranking hybrid cloud traffic data. The value of this parameter is case-sensitive. Valid values:
          * <p>
          * 
-         * *   1Tuple: queries the rankings of hybrid cloud traffic data for the Cloud Enterprise Network (CEN) instances, CEN connections, virtual border routers (VBRs), and IP addresses.
-         * *   2Tuple: queries the rankings of hybrid cloud traffic data for the local and remote IP addresses.
-         * *   5Tuple: queries the rankings of hybrid cloud traffic data for the local and remote IP addresses, local and remote ports, and protocols.
-         * *   CloudPort: queries the rankings of hybrid cloud traffic data for the local ports.
-         * *   OtherPort: queries the rankings of hybrid cloud traffic data for the remote ports.
-         * *   Protocol: queries the rankings of hybrid cloud traffic data for the protocols.
+         * *   **1Tuple**: queries the rankings of hybrid cloud traffic data for the Cloud Enterprise Network (CEN) instances, CEN connections, virtual border routers (VBRs), and IP addresses.
+         * *   **2Tuple**: queries the rankings of hybrid cloud traffic data for the local and remote IP addresses.
+         * *   **5Tuple**: queries the rankings of hybrid cloud traffic data for the local and remote IP addresses, local and remote ports, and protocols.
+         * *   **CloudPort**: queries the rankings of hybrid cloud traffic data for the local ports.
+         * *   **OtherPort**: queries the rankings of hybrid cloud traffic data for the remote ports.
+         * *   **Protocol**: queries the rankings of hybrid cloud traffic data for the protocols.
          */
         public Builder groupBy(String groupBy) {
             this.putQueryParameter("GroupBy", groupBy);
@@ -416,7 +416,7 @@ public class GetVbrFlowTopNRequest extends Request {
          * The remote port.
          * <p>
          * 
-         * >  This parameter is required only if you set GroupBy to OtherPort.
+         * >  This parameter is required only if you set **GroupBy** to **OtherPort**.
          */
         public Builder otherPort(String otherPort) {
             this.putQueryParameter("OtherPort", otherPort);
@@ -428,7 +428,7 @@ public class GetVbrFlowTopNRequest extends Request {
          * The protocol number.
          * <p>
          * 
-         * >  All protocols are supported. This parameter is required only if you set GroupBy to 5Tuple or Protocol.
+         * >  All protocols are supported. This parameter is required only if you set **GroupBy** to **5Tuple** or **Protocol**.
          */
         public Builder protocol(String protocol) {
             this.putQueryParameter("Protocol", protocol);
@@ -449,8 +449,8 @@ public class GetVbrFlowTopNRequest extends Request {
          * The order for ranking hybrid cloud traffic data. Valid values:
          * <p>
          * 
-         * *   desc: descending order
-         * *   asc: ascending order
+         * *   **desc**: descending order
+         * *   **asc**: ascending order
          */
         public Builder sort(String sort) {
             this.putQueryParameter("Sort", sort);
