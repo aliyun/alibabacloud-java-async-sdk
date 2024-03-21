@@ -375,6 +375,47 @@ public class DescribeInstancesResponseBody extends TeaModel {
         } 
 
     }
+    public static class PrivateDnsList extends TeaModel {
+        @NameInMap("PrivateDns")
+        private java.util.List < String > privateDns;
+
+        private PrivateDnsList(Builder builder) {
+            this.privateDns = builder.privateDns;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PrivateDnsList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return privateDns
+         */
+        public java.util.List < String > getPrivateDns() {
+            return this.privateDns;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > privateDns; 
+
+            /**
+             * PrivateDns.
+             */
+            public Builder privateDns(java.util.List < String > privateDns) {
+                this.privateDns = privateDns;
+                return this;
+            }
+
+            public PrivateDnsList build() {
+                return new PrivateDnsList(this);
+            } 
+
+        } 
+
+    }
     public static class InstanceAttribute extends TeaModel {
         @NameInMap("AclId")
         private String aclId;
@@ -466,6 +507,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("NetworkInterfaceAttributes")
         private NetworkInterfaceAttributes networkInterfaceAttributes;
 
+        @NameInMap("PrivateDnsList")
+        private PrivateDnsList privateDnsList;
+
         @NameInMap("RegionId")
         private String regionId;
 
@@ -530,6 +574,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             this.maintainEndTime = builder.maintainEndTime;
             this.maintainStartTime = builder.maintainStartTime;
             this.networkInterfaceAttributes = builder.networkInterfaceAttributes;
+            this.privateDnsList = builder.privateDnsList;
             this.regionId = builder.regionId;
             this.status = builder.status;
             this.supportIpv6 = builder.supportIpv6;
@@ -762,6 +807,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return privateDnsList
+         */
+        public PrivateDnsList getPrivateDnsList() {
+            return this.privateDnsList;
+        }
+
+        /**
          * @return regionId
          */
         public String getRegionId() {
@@ -869,6 +921,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String maintainEndTime; 
             private String maintainStartTime; 
             private NetworkInterfaceAttributes networkInterfaceAttributes; 
+            private PrivateDnsList privateDnsList; 
             private String regionId; 
             private String status; 
             private Boolean supportIpv6; 
@@ -1124,6 +1177,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
              */
             public Builder networkInterfaceAttributes(NetworkInterfaceAttributes networkInterfaceAttributes) {
                 this.networkInterfaceAttributes = networkInterfaceAttributes;
+                return this;
+            }
+
+            /**
+             * PrivateDnsList.
+             */
+            public Builder privateDnsList(PrivateDnsList privateDnsList) {
+                this.privateDnsList = privateDnsList;
                 return this;
             }
 

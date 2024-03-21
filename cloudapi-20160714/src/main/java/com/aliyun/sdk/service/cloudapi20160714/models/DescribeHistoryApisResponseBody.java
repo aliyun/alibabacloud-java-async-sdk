@@ -156,6 +156,9 @@ public class DescribeHistoryApisResponseBody extends TeaModel {
         @NameInMap("RegionId")
         private String regionId;
 
+        @NameInMap("StageAlias")
+        private String stageAlias;
+
         @NameInMap("StageName")
         private String stageName;
 
@@ -171,6 +174,7 @@ public class DescribeHistoryApisResponseBody extends TeaModel {
             this.groupName = builder.groupName;
             this.historyVersion = builder.historyVersion;
             this.regionId = builder.regionId;
+            this.stageAlias = builder.stageAlias;
             this.stageName = builder.stageName;
             this.status = builder.status;
         }
@@ -240,6 +244,13 @@ public class DescribeHistoryApisResponseBody extends TeaModel {
         }
 
         /**
+         * @return stageAlias
+         */
+        public String getStageAlias() {
+            return this.stageAlias;
+        }
+
+        /**
          * @return stageName
          */
         public String getStageName() {
@@ -262,6 +273,7 @@ public class DescribeHistoryApisResponseBody extends TeaModel {
             private String groupName; 
             private String historyVersion; 
             private String regionId; 
+            private String stageAlias; 
             private String stageName; 
             private String status; 
 
@@ -326,6 +338,14 @@ public class DescribeHistoryApisResponseBody extends TeaModel {
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * StageAlias.
+             */
+            public Builder stageAlias(String stageAlias) {
+                this.stageAlias = stageAlias;
                 return this;
             }
 

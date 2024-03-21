@@ -167,7 +167,7 @@ public class DescribeApisWithStageNameIntegratedByAppRequest extends Request {
         } 
 
         /**
-         * ApiName.
+         * The API name.
          */
         public Builder apiName(String apiName) {
             this.putQueryParameter("ApiName", apiName);
@@ -176,7 +176,7 @@ public class DescribeApisWithStageNameIntegratedByAppRequest extends Request {
         }
 
         /**
-         * ApiUid.
+         * The API ID.
          */
         public Builder apiUid(String apiUid) {
             this.putQueryParameter("ApiUid", apiUid);
@@ -185,7 +185,7 @@ public class DescribeApisWithStageNameIntegratedByAppRequest extends Request {
         }
 
         /**
-         * AppId.
+         * The application ID.
          */
         public Builder appId(Long appId) {
             this.putQueryParameter("AppId", appId);
@@ -194,7 +194,7 @@ public class DescribeApisWithStageNameIntegratedByAppRequest extends Request {
         }
 
         /**
-         * Description.
+         * The API description. The description can be up to 200 characters in length.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -203,7 +203,7 @@ public class DescribeApisWithStageNameIntegratedByAppRequest extends Request {
         }
 
         /**
-         * Method.
+         * The request HTTP method of the API.
          */
         public Builder method(String method) {
             this.putQueryParameter("Method", method);
@@ -212,7 +212,7 @@ public class DescribeApisWithStageNameIntegratedByAppRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number of the page to return.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -221,7 +221,7 @@ public class DescribeApisWithStageNameIntegratedByAppRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -230,7 +230,7 @@ public class DescribeApisWithStageNameIntegratedByAppRequest extends Request {
         }
 
         /**
-         * Path.
+         * The request path of the API.
          */
         public Builder path(String path) {
             this.putQueryParameter("Path", path);

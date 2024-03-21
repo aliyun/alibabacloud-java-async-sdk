@@ -154,7 +154,7 @@ public class DescribeApiHistoryRequest extends Request {
          * 
          * *   **RELEASE**
          * *   **TEST**: the test environment
-         * *   PRE: the pre-release environment
+         * *   **PRE**: the pre-release environment
          */
         public Builder stageName(String stageName) {
             this.putQueryParameter("StageName", stageName);

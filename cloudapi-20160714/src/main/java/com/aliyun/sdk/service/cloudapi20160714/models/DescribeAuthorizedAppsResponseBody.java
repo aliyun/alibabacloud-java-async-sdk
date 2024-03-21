@@ -153,6 +153,9 @@ public class DescribeAuthorizedAppsResponseBody extends TeaModel {
         @NameInMap("Operator")
         private String operator;
 
+        @NameInMap("StageAlias")
+        private String stageAlias;
+
         @NameInMap("StageName")
         private String stageName;
 
@@ -164,6 +167,7 @@ public class DescribeAuthorizedAppsResponseBody extends TeaModel {
             this.authorizedTime = builder.authorizedTime;
             this.description = builder.description;
             this.operator = builder.operator;
+            this.stageAlias = builder.stageAlias;
             this.stageName = builder.stageName;
         }
 
@@ -225,6 +229,13 @@ public class DescribeAuthorizedAppsResponseBody extends TeaModel {
         }
 
         /**
+         * @return stageAlias
+         */
+        public String getStageAlias() {
+            return this.stageAlias;
+        }
+
+        /**
          * @return stageName
          */
         public String getStageName() {
@@ -239,6 +250,7 @@ public class DescribeAuthorizedAppsResponseBody extends TeaModel {
             private String authorizedTime; 
             private String description; 
             private String operator; 
+            private String stageAlias; 
             private String stageName; 
 
             /**
@@ -302,6 +314,14 @@ public class DescribeAuthorizedAppsResponseBody extends TeaModel {
              */
             public Builder operator(String operator) {
                 this.operator = operator;
+                return this;
+            }
+
+            /**
+             * StageAlias.
+             */
+            public Builder stageAlias(String stageAlias) {
+                this.stageAlias = stageAlias;
                 return this;
             }
 

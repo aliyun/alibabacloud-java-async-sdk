@@ -86,7 +86,7 @@ public class DescribeDatasetListResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * DatasetInfoList.
+         * The returned dataset information. It is an array consisting of datasetinfo.
          */
         public Builder datasetInfoList(java.util.List < DatasetInfoList> datasetInfoList) {
             this.datasetInfoList = datasetInfoList;
@@ -94,7 +94,7 @@ public class DescribeDatasetListResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeDatasetListResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeDatasetListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeDatasetListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -170,7 +170,7 @@ public class DescribeDatasetListResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -178,7 +178,7 @@ public class DescribeDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -287,7 +287,7 @@ public class DescribeDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the dataset.
+             * The dataset ID.
              */
             public Builder datasetId(String datasetId) {
                 this.datasetId = datasetId;
@@ -295,7 +295,7 @@ public class DescribeDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the dataset.
+             * The dataset name.
              */
             public Builder datasetName(String datasetName) {
                 this.datasetName = datasetName;
@@ -303,11 +303,11 @@ public class DescribeDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the dataset. Valid values:
+             * The dataset type. Valid values:
              * <p>
              * 
-             * *   JWT_BLOCKING: a JSON Web Token (JWT) blacklist
-             * *   IP_WHITELIST_CIDR: an IP address whitelist
+             * *   JWT_BLOCKING : a JSON Web Token (JWT) blacklist
+             * *   IP_WHITELIST_CIDR : an IP address whitelist
              * *   PARAMETER_ACCESS: a list of parameters for parameter-based access control
              */
             public Builder datasetType(String datasetType) {
@@ -324,7 +324,7 @@ public class DescribeDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tags of the dataset.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;

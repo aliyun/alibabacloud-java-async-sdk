@@ -641,8 +641,8 @@ public class DescribeDeployedApiResponseBody extends TeaModel {
          * Specifies whether to make the API public. Valid values:
          * <p>
          * 
-         * *   **PUBLIC: Make the API public. If you set this parameter to PUBLIC, this API is displayed on the APIs page for all users after the API is published to the production environment.**
-         * *   **PRIVATE: Make the API private. Private APIs are not displayed in the Alibaba Cloud Marketplace after the API group to which they belong is made available.
+         * *   **PUBLIC**: Make the API public. If you set this parameter to PUBLIC, this API is displayed on the APIs page for all users after the API is published to the production environment.**
+         * *   **PRIVATE**: Make the API private. Private APIs are not displayed in the Alibaba Cloud Marketplace after the API group to which they belong is made available.
          */
         public Builder visibility(String visibility) {
             this.visibility = visibility;
@@ -1876,7 +1876,7 @@ public class DescribeDeployedApiResponseBody extends TeaModel {
             }
 
             /**
-             * HasChild.
+             * Specifies whether a subnode exists.
              */
             public Builder hasChild(Boolean hasChild) {
                 this.hasChild = hasChild;
@@ -1884,7 +1884,7 @@ public class DescribeDeployedApiResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the result.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -1892,7 +1892,7 @@ public class DescribeDeployedApiResponseBody extends TeaModel {
             }
 
             /**
-             * Key.
+             * The primary key of the result.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1908,7 +1908,7 @@ public class DescribeDeployedApiResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the result.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1916,7 +1916,7 @@ public class DescribeDeployedApiResponseBody extends TeaModel {
             }
 
             /**
-             * Pid.
+             * The ID of the parent node.
              */
             public Builder pid(String pid) {
                 this.pid = pid;
@@ -1924,7 +1924,7 @@ public class DescribeDeployedApiResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the result.
              */
             public Builder type(String type) {
                 this.type = type;

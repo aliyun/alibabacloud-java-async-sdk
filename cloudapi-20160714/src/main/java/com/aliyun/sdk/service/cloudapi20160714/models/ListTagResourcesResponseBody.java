@@ -65,7 +65,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
          * The token that determines the start point of the next query.
          * <p>
          * 
-         * A NextToken value of \*\*-1\*\* indicates that a next query does not exist.
+         * A NextToken value of -1 indicates that a next query does not exist.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;

@@ -111,6 +111,9 @@ public class DescribeApiResponseBody extends TeaModel {
     @NameInMap("SystemParameters")
     private SystemParameters systemParameters;
 
+    @NameInMap("TagList")
+    private TagList tagList;
+
     @NameInMap("Visibility")
     private String visibility;
 
@@ -151,6 +154,7 @@ public class DescribeApiResponseBody extends TeaModel {
         this.serviceParameters = builder.serviceParameters;
         this.serviceParametersMap = builder.serviceParametersMap;
         this.systemParameters = builder.systemParameters;
+        this.tagList = builder.tagList;
         this.visibility = builder.visibility;
         this.webSocketApiType = builder.webSocketApiType;
     }
@@ -395,6 +399,13 @@ public class DescribeApiResponseBody extends TeaModel {
     }
 
     /**
+     * @return tagList
+     */
+    public TagList getTagList() {
+        return this.tagList;
+    }
+
+    /**
      * @return visibility
      */
     public String getVisibility() {
@@ -442,6 +453,7 @@ public class DescribeApiResponseBody extends TeaModel {
         private ServiceParameters serviceParameters; 
         private ServiceParametersMap serviceParametersMap; 
         private SystemParameters systemParameters; 
+        private TagList tagList; 
         private String visibility; 
         private String webSocketApiType; 
 
@@ -738,6 +750,14 @@ public class DescribeApiResponseBody extends TeaModel {
          */
         public Builder systemParameters(SystemParameters systemParameters) {
             this.systemParameters = systemParameters;
+            return this;
+        }
+
+        /**
+         * TagList.
+         */
+        public Builder tagList(TagList tagList) {
+            this.tagList = tagList;
             return this;
         }
 
@@ -3548,6 +3568,108 @@ public class DescribeApiResponseBody extends TeaModel {
 
             public SystemParameters build() {
                 return new SystemParameters(this);
+            } 
+
+        } 
+
+    }
+    public static class Tag extends TeaModel {
+        @NameInMap("TagKey")
+        private String tagKey;
+
+        @NameInMap("TagValue")
+        private String tagValue;
+
+        private Tag(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            /**
+             * TagKey.
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * TagValue.
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
+    public static class TagList extends TeaModel {
+        @NameInMap("Tag")
+        private java.util.List < Tag> tag;
+
+        private TagList(Builder builder) {
+            this.tag = builder.tag;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TagList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tag
+         */
+        public java.util.List < Tag> getTag() {
+            return this.tag;
+        }
+
+        public static final class Builder {
+            private java.util.List < Tag> tag; 
+
+            /**
+             * Tag.
+             */
+            public Builder tag(java.util.List < Tag> tag) {
+                this.tag = tag;
+                return this;
+            }
+
+            public TagList build() {
+                return new TagList(this);
             } 
 
         } 

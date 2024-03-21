@@ -42,7 +42,7 @@ public class ModifyApiRequest extends Request {
     @NameInMap("BackendId")
     private String backendId;
 
-    @Query
+    @Body
     @NameInMap("ConstantParameters")
     private String constantParameters;
 
@@ -54,11 +54,11 @@ public class ModifyApiRequest extends Request {
     @NameInMap("DisableInternet")
     private Boolean disableInternet;
 
-    @Query
+    @Body
     @NameInMap("ErrorCodeSamples")
     private String errorCodeSamples;
 
-    @Query
+    @Body
     @NameInMap("FailResultSample")
     private String failResultSample;
 
@@ -79,7 +79,7 @@ public class ModifyApiRequest extends Request {
     @Validation(required = true)
     private String requestConfig;
 
-    @Query
+    @Body
     @NameInMap("RequestParameters")
     private String requestParameters;
 
@@ -87,11 +87,11 @@ public class ModifyApiRequest extends Request {
     @NameInMap("ResultBodyModel")
     private String resultBodyModel;
 
-    @Query
+    @Body
     @NameInMap("ResultDescriptions")
     private String resultDescriptions;
 
-    @Query
+    @Body
     @NameInMap("ResultSample")
     private String resultSample;
 
@@ -108,15 +108,15 @@ public class ModifyApiRequest extends Request {
     @Validation(required = true)
     private String serviceConfig;
 
-    @Query
+    @Body
     @NameInMap("ServiceParameters")
     private String serviceParameters;
 
-    @Query
+    @Body
     @NameInMap("ServiceParametersMap")
     private String serviceParametersMap;
 
-    @Query
+    @Body
     @NameInMap("SystemParameters")
     private String systemParameters;
 
@@ -506,10 +506,10 @@ public class ModifyApiRequest extends Request {
         }
 
         /**
-         * The parameters of API requests sent by API Gateway to the backend service.
+         * ConstantParameters.
          */
         public Builder constantParameters(String constantParameters) {
-            this.putQueryParameter("ConstantParameters", constantParameters);
+            this.putBodyParameter("ConstantParameters", constantParameters);
             this.constantParameters = constantParameters;
             return this;
         }
@@ -539,19 +539,19 @@ public class ModifyApiRequest extends Request {
         }
 
         /**
-         * The returned description of the API.
+         * ErrorCodeSamples.
          */
         public Builder errorCodeSamples(String errorCodeSamples) {
-            this.putQueryParameter("ErrorCodeSamples", errorCodeSamples);
+            this.putBodyParameter("ErrorCodeSamples", errorCodeSamples);
             this.errorCodeSamples = errorCodeSamples;
             return this;
         }
 
         /**
-         * The sample error codes returned by the backend service.
+         * FailResultSample.
          */
         public Builder failResultSample(String failResultSample) {
-            this.putQueryParameter("FailResultSample", failResultSample);
+            this.putBodyParameter("FailResultSample", failResultSample);
             this.failResultSample = failResultSample;
             return this;
         }
@@ -601,10 +601,10 @@ public class ModifyApiRequest extends Request {
         }
 
         /**
-         * System parameter
+         * RequestParameters.
          */
         public Builder requestParameters(String requestParameters) {
-            this.putQueryParameter("RequestParameters", requestParameters);
+            this.putBodyParameter("RequestParameters", requestParameters);
             this.requestParameters = requestParameters;
             return this;
         }
@@ -621,19 +621,19 @@ public class ModifyApiRequest extends Request {
         }
 
         /**
-         * The configuration items of the third-party OpenID Connect authentication method.
+         * ResultDescriptions.
          */
         public Builder resultDescriptions(String resultDescriptions) {
-            this.putQueryParameter("ResultDescriptions", resultDescriptions);
+            this.putBodyParameter("ResultDescriptions", resultDescriptions);
             this.resultDescriptions = resultDescriptions;
             return this;
         }
 
         /**
-         * The sample error response from the backend service.
+         * ResultSample.
          */
         public Builder resultSample(String resultSample) {
-            this.putQueryParameter("ResultSample", resultSample);
+            this.putBodyParameter("ResultSample", resultSample);
             this.resultSample = resultSample;
             return this;
         }
@@ -666,28 +666,28 @@ public class ModifyApiRequest extends Request {
         }
 
         /**
-         * The mappings between parameters of requests sent by the consumer to API Gateway and parameters of requests sent by API Gateway to the backend service.
+         * ServiceParameters.
          */
         public Builder serviceParameters(String serviceParameters) {
-            this.putQueryParameter("ServiceParameters", serviceParameters);
+            this.putBodyParameter("ServiceParameters", serviceParameters);
             this.serviceParameters = serviceParameters;
             return this;
         }
 
         /**
-         * The format of the response from the backend service. Valid values: JSON, TEXT, BINARY, XML, and HTML. This value is used only to generate documents. It does not affect the returned results.
+         * ServiceParametersMap.
          */
         public Builder serviceParametersMap(String serviceParametersMap) {
-            this.putQueryParameter("ServiceParametersMap", serviceParametersMap);
+            this.putBodyParameter("ServiceParametersMap", serviceParametersMap);
             this.serviceParametersMap = serviceParametersMap;
             return this;
         }
 
         /**
-         * Constant parameter
+         * SystemParameters.
          */
         public Builder systemParameters(String systemParameters) {
-            this.putQueryParameter("SystemParameters", systemParameters);
+            this.putBodyParameter("SystemParameters", systemParameters);
             this.systemParameters = systemParameters;
             return this;
         }

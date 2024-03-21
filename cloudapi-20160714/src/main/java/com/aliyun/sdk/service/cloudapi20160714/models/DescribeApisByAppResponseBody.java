@@ -168,6 +168,9 @@ public class DescribeApisByAppResponseBody extends TeaModel {
         @NameInMap("RegionId")
         private String regionId;
 
+        @NameInMap("StageAlias")
+        private String stageAlias;
+
         @NameInMap("StageName")
         private String stageName;
 
@@ -184,6 +187,7 @@ public class DescribeApisByAppResponseBody extends TeaModel {
             this.operator = builder.operator;
             this.path = builder.path;
             this.regionId = builder.regionId;
+            this.stageAlias = builder.stageAlias;
             this.stageName = builder.stageName;
         }
 
@@ -280,6 +284,13 @@ public class DescribeApisByAppResponseBody extends TeaModel {
         }
 
         /**
+         * @return stageAlias
+         */
+        public String getStageAlias() {
+            return this.stageAlias;
+        }
+
+        /**
          * @return stageName
          */
         public String getStageName() {
@@ -299,6 +310,7 @@ public class DescribeApisByAppResponseBody extends TeaModel {
             private String operator; 
             private String path; 
             private String regionId; 
+            private String stageAlias; 
             private String stageName; 
 
             /**
@@ -394,6 +406,14 @@ public class DescribeApisByAppResponseBody extends TeaModel {
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * StageAlias.
+             */
+            public Builder stageAlias(String stageAlias) {
+                this.stageAlias = stageAlias;
                 return this;
             }
 

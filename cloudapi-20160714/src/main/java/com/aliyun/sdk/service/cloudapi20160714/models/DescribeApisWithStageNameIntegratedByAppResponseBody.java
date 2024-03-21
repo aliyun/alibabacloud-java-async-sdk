@@ -94,7 +94,7 @@ public class DescribeApisWithStageNameIntegratedByAppResponseBody extends TeaMod
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeApisWithStageNameIntegratedByAppResponseBody extends TeaMod
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeApisWithStageNameIntegratedByAppResponseBody extends TeaMod
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeApisWithStageNameIntegratedByAppResponseBody extends TeaMod
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -346,7 +346,7 @@ public class DescribeApisWithStageNameIntegratedByAppResponseBody extends TeaMod
             }
 
             /**
-             * The request HTTP method for the API.
+             * The request HTTP method of the API.
              */
             public Builder method(String method) {
                 this.method = method;
@@ -357,8 +357,8 @@ public class DescribeApisWithStageNameIntegratedByAppResponseBody extends TeaMod
              * The authorizer. Valid values:
              * <p>
              * 
-             * *   **PROVIDER:**: the API owner
-             * *   **CONSUMER:**: the API caller
+             * *   **PROVIDER:** the API owner
+             * *   **CONSUMER:** the API caller
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -366,7 +366,7 @@ public class DescribeApisWithStageNameIntegratedByAppResponseBody extends TeaMod
             }
 
             /**
-             * The API request path.
+             * The request path of the API.
              */
             public Builder path(String path) {
                 this.path = path;

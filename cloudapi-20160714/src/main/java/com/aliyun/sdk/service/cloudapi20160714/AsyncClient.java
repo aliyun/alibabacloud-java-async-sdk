@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.cloudapi20160714;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.cloudapi20160714.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -276,7 +277,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeApiResponse> describeApi(DescribeApiRequest request);
 
     /**
-      * *   For API callers, the specified API must be a public or authorized private API that has been published to a runtime environment.****************
+      * *   For API callers, the specified API must be a public or authorized private API that has been published to a runtime environment.
       * *   When you call this operation as an API caller, the service information, parameter definitions, and other details of the API you specify are returned.
       * *   When you call this operation as an API provider, the definition of the specified API running in the specified runtime environment is returned. The returned definition takes effect in the runtime environment, and may be different from the definition of the API you modify.
       * *   Before you call this operation as an API provider, ensure that the API to be queried is a public one or that your application has been authorized to call the API, because authentication on API callers is required.
@@ -624,7 +625,7 @@ public interface AsyncClient extends SdkAutoCloseable {
       * *   You can also specify Tag.N.Key to query the visible keys of a specified key in a region.
       * *   At least one of ResourceId.N, Tag.N.Key, and Tag.N.Value exists.
       * *   You can query tags of the same type or different types in a single operation.
-      * *   You can query all your user tags and visible system tags.
+      * *   You can query all your user types and visible system tags.
       *
      */
     CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);

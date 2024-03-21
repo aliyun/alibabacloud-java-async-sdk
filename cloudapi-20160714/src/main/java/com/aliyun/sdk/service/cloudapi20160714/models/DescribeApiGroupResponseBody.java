@@ -713,6 +713,9 @@ public class DescribeApiGroupResponseBody extends TeaModel {
     } 
 
     public static class DomainItem extends TeaModel {
+        @NameInMap("BindStageAlias")
+        private String bindStageAlias;
+
         @NameInMap("BindStageName")
         private String bindStageName;
 
@@ -756,6 +759,7 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         private String wildcardDomainPatterns;
 
         private DomainItem(Builder builder) {
+            this.bindStageAlias = builder.bindStageAlias;
             this.bindStageName = builder.bindStageName;
             this.certificateId = builder.certificateId;
             this.certificateName = builder.certificateName;
@@ -778,6 +782,13 @@ public class DescribeApiGroupResponseBody extends TeaModel {
 
         public static DomainItem create() {
             return builder().build();
+        }
+
+        /**
+         * @return bindStageAlias
+         */
+        public String getBindStageAlias() {
+            return this.bindStageAlias;
         }
 
         /**
@@ -879,6 +890,7 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String bindStageAlias; 
             private String bindStageName; 
             private String certificateId; 
             private String certificateName; 
@@ -893,6 +905,14 @@ public class DescribeApiGroupResponseBody extends TeaModel {
             private String domainWebSocketStatus; 
             private Boolean isHttpRedirectToHttps; 
             private String wildcardDomainPatterns; 
+
+            /**
+             * BindStageAlias.
+             */
+            public Builder bindStageAlias(String bindStageAlias) {
+                this.bindStageAlias = bindStageAlias;
+                return this;
+            }
 
             /**
              * The environment in which the associated API group runs.

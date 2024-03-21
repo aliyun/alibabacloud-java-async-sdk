@@ -722,12 +722,12 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * The environment to which the API is published.
+         * The environment in which the API is requested. Valid values:
          * <p>
          * 
-         * *   **RELEASE**
-         * *   **PRE: the pre-release environment**
-         * *   **TEST.
+         * *   **RELEASE**: the production environment
+         * *   **PRE**: the pre-release environment
+         * *   **TEST**: the test environment
          */
         public Builder stageName(String stageName) {
             this.stageName = stageName;
@@ -754,8 +754,8 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
          * Specifies whether to make the API public. Valid values:
          * <p>
          * 
-         * *   **PUBLIC: Make the API public. If you set this parameter to PUBLIC, this API is displayed on the APIs page for all users after the API is published to the production environment.**
-         * *   **PRIVATE: Make the API private. Private APIs are not displayed in the Alibaba Cloud Marketplace after the API group to which they belong is made available.
+         * *   **PUBLIC**: Make the API public. If you set this parameter to PUBLIC, this API is displayed on the APIs page for all users after the API is published to the production environment.
+         * *   **PRIVATE**: Make the API private. Private APIs are not displayed in the Alibaba Cloud Marketplace after the API group to which they belong is made available.
          */
         public Builder visibility(String visibility) {
             this.visibility = visibility;
@@ -2716,7 +2716,16 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
             private String ossRegionId; 
 
             /**
-             * Action.
+             * The operation options on OSS. Valid values:
+             * <p>
+             * 
+             * *   GetObject
+             * *   PostObject
+             * *   DeleteObject
+             * *   PutObject
+             * *   HeadObject
+             * *   GetObjectMeta
+             * *   AppendObject
              */
             public Builder action(String action) {
                 this.action = action;
@@ -2732,7 +2741,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The primary key of the result.
+             * The stored object or folder path.
              */
             public Builder key(String key) {
                 this.key = key;
