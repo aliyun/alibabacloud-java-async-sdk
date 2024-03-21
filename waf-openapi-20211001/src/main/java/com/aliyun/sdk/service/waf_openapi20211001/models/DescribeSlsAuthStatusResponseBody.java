@@ -7,23 +7,27 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ModifyDefenseRuleResponseBody} extends {@link TeaModel}
+ * {@link DescribeSlsAuthStatusResponseBody} extends {@link TeaModel}
  *
- * <p>ModifyDefenseRuleResponseBody</p>
+ * <p>DescribeSlsAuthStatusResponseBody</p>
  */
-public class ModifyDefenseRuleResponseBody extends TeaModel {
+public class DescribeSlsAuthStatusResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
-    private ModifyDefenseRuleResponseBody(Builder builder) {
+    @NameInMap("Status")
+    private Boolean status;
+
+    private DescribeSlsAuthStatusResponseBody(Builder builder) {
         this.requestId = builder.requestId;
+        this.status = builder.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ModifyDefenseRuleResponseBody create() {
+    public static DescribeSlsAuthStatusResponseBody create() {
         return builder().build();
     }
 
@@ -34,19 +38,35 @@ public class ModifyDefenseRuleResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return status
+     */
+    public Boolean getStatus() {
+        return this.status;
+    }
+
     public static final class Builder {
         private String requestId; 
+        private Boolean status; 
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public ModifyDefenseRuleResponseBody build() {
-            return new ModifyDefenseRuleResponseBody(this);
+        /**
+         * Status.
+         */
+        public Builder status(Boolean status) {
+            this.status = status;
+            return this;
+        }
+
+        public DescribeSlsAuthStatusResponseBody build() {
+            return new DescribeSlsAuthStatusResponseBody(this);
         } 
 
     } 

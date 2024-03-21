@@ -695,7 +695,11 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SM2AccessOnly.
+             * Indicates whether only SM certificate-based clients can access the domain name. This parameter is returned only if the value of SM2Enabled is true. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder sM2AccessOnly(Boolean sM2AccessOnly) {
                 this.sM2AccessOnly = sM2AccessOnly;
@@ -703,7 +707,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SM2CertId.
+             * The ID of the SM certificate that is added. This parameter is returned only if the value of SM2Enabled is true.
              */
             public Builder sM2CertId(Boolean sM2CertId) {
                 this.sM2CertId = sM2CertId;
@@ -711,7 +715,11 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SM2Enabled.
+             * Indicates whether SM certificate-based verification is enabled. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder sM2Enabled(Boolean sM2Enabled) {
                 this.sM2Enabled = sM2Enabled;
@@ -839,7 +847,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The key of the custom header field.
+             * The custom header field.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1175,7 +1183,11 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * XffProto.
+             * Indicates whether the X-Forward-For-Proto header is used to identify the protocol used by WAF to forward requests to the origin server. Valid values:
+             * <p>
+             * 
+             * *   **true** (default)
+             * *   **false**
              */
             public Builder xffProto(Boolean xffProto) {
                 this.xffProto = xffProto;

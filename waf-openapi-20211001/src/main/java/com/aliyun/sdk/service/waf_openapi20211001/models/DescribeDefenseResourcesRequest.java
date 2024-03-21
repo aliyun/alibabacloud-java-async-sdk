@@ -38,10 +38,6 @@ public class DescribeDefenseResourcesRequest extends Request {
     private String resourceManagerResourceGroupId;
 
     @Query
-    @NameInMap("SourceIp")
-    private String sourceIp;
-
-    @Query
     @NameInMap("Tag")
     private java.util.List < Tag> tag;
 
@@ -53,7 +49,6 @@ public class DescribeDefenseResourcesRequest extends Request {
         this.query = builder.query;
         this.regionId = builder.regionId;
         this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
-        this.sourceIp = builder.sourceIp;
         this.tag = builder.tag;
     }
 
@@ -113,13 +108,6 @@ public class DescribeDefenseResourcesRequest extends Request {
     }
 
     /**
-     * @return sourceIp
-     */
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
-    /**
      * @return tag
      */
     public java.util.List < Tag> getTag() {
@@ -133,7 +121,6 @@ public class DescribeDefenseResourcesRequest extends Request {
         private String query; 
         private String regionId; 
         private String resourceManagerResourceGroupId; 
-        private String sourceIp; 
         private java.util.List < Tag> tag; 
 
         private Builder() {
@@ -148,7 +135,6 @@ public class DescribeDefenseResourcesRequest extends Request {
             this.query = request.query;
             this.regionId = request.regionId;
             this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
-            this.sourceIp = request.sourceIp;
             this.tag = request.tag;
         } 
 
@@ -213,15 +199,6 @@ public class DescribeDefenseResourcesRequest extends Request {
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
             this.resourceManagerResourceGroupId = resourceManagerResourceGroupId;
-            return this;
-        }
-
-        /**
-         * The source IP address of the request. The value of this parameter is specified by the system.
-         */
-        public Builder sourceIp(String sourceIp) {
-            this.putQueryParameter("SourceIp", sourceIp);
-            this.sourceIp = sourceIp;
             return this;
         }
 

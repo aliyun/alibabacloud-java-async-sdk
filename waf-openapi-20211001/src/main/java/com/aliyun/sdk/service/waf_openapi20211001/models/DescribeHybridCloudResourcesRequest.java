@@ -46,10 +46,6 @@ public class DescribeHybridCloudResourcesRequest extends Request {
     @NameInMap("ResourceManagerResourceGroupId")
     private String resourceManagerResourceGroupId;
 
-    @Query
-    @NameInMap("SourceIp")
-    private String sourceIp;
-
     private DescribeHybridCloudResourcesRequest(Builder builder) {
         super(builder);
         this.backend = builder.backend;
@@ -60,7 +56,6 @@ public class DescribeHybridCloudResourcesRequest extends Request {
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
         this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
-        this.sourceIp = builder.sourceIp;
     }
 
     public static Builder builder() {
@@ -132,13 +127,6 @@ public class DescribeHybridCloudResourcesRequest extends Request {
         return this.resourceManagerResourceGroupId;
     }
 
-    /**
-     * @return sourceIp
-     */
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
     public static final class Builder extends Request.Builder<DescribeHybridCloudResourcesRequest, Builder> {
         private String backend; 
         private Boolean cnameEnabled; 
@@ -148,7 +136,6 @@ public class DescribeHybridCloudResourcesRequest extends Request {
         private Long pageSize; 
         private String regionId; 
         private String resourceManagerResourceGroupId; 
-        private String sourceIp; 
 
         private Builder() {
             super();
@@ -164,7 +151,6 @@ public class DescribeHybridCloudResourcesRequest extends Request {
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
             this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
-            this.sourceIp = request.sourceIp;
         } 
 
         /**
@@ -247,15 +233,6 @@ public class DescribeHybridCloudResourcesRequest extends Request {
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
             this.resourceManagerResourceGroupId = resourceManagerResourceGroupId;
-            return this;
-        }
-
-        /**
-         * The source IP address of the request. The system specifies this parameter.
-         */
-        public Builder sourceIp(String sourceIp) {
-            this.putQueryParameter("SourceIp", sourceIp);
-            this.sourceIp = sourceIp;
             return this;
         }
 

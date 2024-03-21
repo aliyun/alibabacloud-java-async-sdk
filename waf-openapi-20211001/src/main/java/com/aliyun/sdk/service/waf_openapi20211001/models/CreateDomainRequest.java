@@ -45,10 +45,6 @@ public class CreateDomainRequest extends Request {
     @NameInMap("ResourceManagerResourceGroupId")
     private String resourceManagerResourceGroupId;
 
-    @Query
-    @NameInMap("SourceIp")
-    private String sourceIp;
-
     private CreateDomainRequest(Builder builder) {
         super(builder);
         this.accessType = builder.accessType;
@@ -58,7 +54,6 @@ public class CreateDomainRequest extends Request {
         this.redirect = builder.redirect;
         this.regionId = builder.regionId;
         this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
-        this.sourceIp = builder.sourceIp;
     }
 
     public static Builder builder() {
@@ -123,13 +118,6 @@ public class CreateDomainRequest extends Request {
         return this.resourceManagerResourceGroupId;
     }
 
-    /**
-     * @return sourceIp
-     */
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
     public static final class Builder extends Request.Builder<CreateDomainRequest, Builder> {
         private String accessType; 
         private String domain; 
@@ -138,7 +126,6 @@ public class CreateDomainRequest extends Request {
         private Redirect redirect; 
         private String regionId; 
         private String resourceManagerResourceGroupId; 
-        private String sourceIp; 
 
         private Builder() {
             super();
@@ -153,7 +140,6 @@ public class CreateDomainRequest extends Request {
             this.redirect = request.redirect;
             this.regionId = request.regionId;
             this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
-            this.sourceIp = request.sourceIp;
         } 
 
         /**
@@ -229,15 +215,6 @@ public class CreateDomainRequest extends Request {
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
             this.resourceManagerResourceGroupId = resourceManagerResourceGroupId;
-            return this;
-        }
-
-        /**
-         * The source IP address of the request. You do not need to specify this parameter. It is automatically obtained by the system.
-         */
-        public Builder sourceIp(String sourceIp) {
-            this.putQueryParameter("SourceIp", sourceIp);
-            this.sourceIp = sourceIp;
             return this;
         }
 
@@ -691,7 +668,7 @@ public class CreateDomainRequest extends Request {
             private String value; 
 
             /**
-             * The key of the custom header field.
+             * The custom header field.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -946,7 +923,7 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * The connection timeout period. Unit: seconds. Valid values: 1 to 3600.
+             * The timeout period of connections. Unit: seconds. Valid values: 1 to 3600.
              */
             public Builder connectTimeout(Integer connectTimeout) {
                 this.connectTimeout = connectTimeout;
@@ -981,7 +958,7 @@ public class CreateDomainRequest extends Request {
              * The number of reused persistent connections. Valid values: 60 to 1000.
              * <p>
              * 
-             * > This parameter specifies the number of reused persistent connections after you enable the persistent connection feature.
+             * >  This parameter specifies the number of reused persistent connections after you enable the persistent connection feature.
              */
             public Builder keepaliveRequests(Integer keepaliveRequests) {
                 this.keepaliveRequests = keepaliveRequests;
@@ -989,10 +966,10 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * The timeout period of persistent connections that are in the Idle state. Valid values: 1 to 60. Default value: 15. Unit: seconds.
+             * The timeout period of idle persistent connections. Valid values: 1 to 60. Default value: 15. Unit: seconds.
              * <p>
              * 
-             * > This parameter specifies the period of time during which a reused persistent connection is allowed to remain in the Idle state before the persistent connection is released.
+             * >  This parameter specifies the period of time during which a reused persistent connection is allowed to remain in the Idle state before the persistent connection is released.
              */
             public Builder keepaliveTimeout(Integer keepaliveTimeout) {
                 this.keepaliveTimeout = keepaliveTimeout;
@@ -1000,12 +977,12 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * The load balancing algorithm that you want WAF to use to forward requests to the origin server. Valid values:
+             * The load balancing algorithm that you want to use to forward requests to the origin server. Valid values:
              * <p>
              * 
              * *   **iphash**
              * *   **roundRobin**
-             * *   **leastTime**. You can select this value only if you set **ProtectionResource** to **gslb**.
+             * *   **leastTime** You can set the parameter to this value only if you set **ProtectionResource** to **gslb**.
              */
             public Builder loadbalance(String loadbalance) {
                 this.loadbalance = loadbalance;
@@ -1013,7 +990,7 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * The read timeout period. Unit: seconds. Valid values: 1 to 3600.
+             * The timeout period of read connections. Unit: seconds. Valid values: 1 to 3600.
              */
             public Builder readTimeout(Integer readTimeout) {
                 this.readTimeout = readTimeout;
@@ -1021,10 +998,10 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * The key-value pairs that you want to use to label the requests that pass through the WAF instance.
+             * The custom header field that you want to use to label requests that are processed by WAF.
              * <p>
              * 
-             * WAF automatically adds the key-value pairs to request headers. This way, the backend service can identify requests that pass through WAF.
+             * When a request passes through WAF, the custom header field is automatically used to label the request. This way, the backend service can identify requests that are processed by WAF.
              */
             public Builder requestHeaders(java.util.List < RequestHeaders> requestHeaders) {
                 this.requestHeaders = requestHeaders;
@@ -1032,7 +1009,7 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * Specifies whether WAF retries to forward requests when the requests fail to be forwarded to the origin server. Valid values:
+             * Specifies whether WAF retries forwarding requests to the origin server when the requests fail to be forwarded to the origin server. Valid values:
              * <p>
              * 
              * *   **true** (default)
@@ -1044,12 +1021,12 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * The forwarding rules that you want to configure for the domain name that you want to add to WAF in hybrid cloud mode. Set the value to a string that consists of JSON arrays. Each element in a JSON array is a JSON struct that contains the following fields:
+             * The forwarding rules that you want to configure for the domain name that you want to add to WAF in hybrid cloud mode. This parameter is a string that consists of JSON arrays. Each element in a JSON array is a JSON struct that contains the following fields:
              * <p>
              * 
-             * *   **rs:** The back-to-origin IP addresses or CNAMEs. The value must be of the ARRAY type.
-             * *   **location:** The name of the protection node. The value must be of the STRING type.
-             * *   **locationId:** The ID of the protection node. The value must be of the LONG type.
+             * *   **rs**: the back-to-origin IP addresses or CNAMEs. The value must be of the ARRAY type.
+             * *   **location**: the name of the protection node. The value must be of the STRING type.
+             * *   **locationId**: the ID of the protection node. The value must be of the LONG type.
              */
             public Builder routingRules(String routingRules) {
                 this.routingRules = routingRules;
@@ -1069,10 +1046,10 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * The value of the SNI field. If you do not specify this parameter, the **Host** field value in the request header is used. If you want WAF to use an SNI field value that is different from the Host field value in back-to-origin requests, you can specify a custom value for the SNI field.
+             * The value of the SNI field. If you do not specify this parameter, the value of the **Host** field is automatically used. This parameter is optional. If you want WAF to use an SNI field value that is different from the Host field value in back-to-origin requests, you can specify a custom value for the SNI field.
              * <p>
              * 
-             * > You must specify this parameter only if you set **SniEnabled** to **true**.
+             * >  This parameter is required only if you set **SniEnalbed** to **true**.
              */
             public Builder sniHost(String sniHost) {
                 this.sniHost = sniHost;
@@ -1080,7 +1057,7 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * The write timeout period. Unit: seconds. Valid values: 1 to 3600.
+             * The timeout period of write connections. Unit: seconds. Valid values: 1 to 3600.
              */
             public Builder writeTimeout(Integer writeTimeout) {
                 this.writeTimeout = writeTimeout;

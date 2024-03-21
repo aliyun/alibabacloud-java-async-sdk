@@ -35,10 +35,6 @@ public class DeleteDomainRequest extends Request {
     @Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("SourceIp")
-    private String sourceIp;
-
     private DeleteDomainRequest(Builder builder) {
         super(builder);
         this.accessType = builder.accessType;
@@ -46,7 +42,6 @@ public class DeleteDomainRequest extends Request {
         this.domainId = builder.domainId;
         this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
-        this.sourceIp = builder.sourceIp;
     }
 
     public static Builder builder() {
@@ -97,20 +92,12 @@ public class DeleteDomainRequest extends Request {
         return this.regionId;
     }
 
-    /**
-     * @return sourceIp
-     */
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
     public static final class Builder extends Request.Builder<DeleteDomainRequest, Builder> {
         private String accessType; 
         private String domain; 
         private String domainId; 
         private String instanceId; 
         private String regionId; 
-        private String sourceIp; 
 
         private Builder() {
             super();
@@ -123,7 +110,6 @@ public class DeleteDomainRequest extends Request {
             this.domainId = request.domainId;
             this.instanceId = request.instanceId;
             this.regionId = request.regionId;
-            this.sourceIp = request.sourceIp;
         } 
 
         /**
@@ -179,15 +165,6 @@ public class DeleteDomainRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The source IP address of the request. The value of this parameter is specified by the system.
-         */
-        public Builder sourceIp(String sourceIp) {
-            this.putQueryParameter("SourceIp", sourceIp);
-            this.sourceIp = sourceIp;
             return this;
         }
 

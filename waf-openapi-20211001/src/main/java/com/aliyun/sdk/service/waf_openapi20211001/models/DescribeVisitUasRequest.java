@@ -133,7 +133,11 @@ public class DescribeVisitUasRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region where the WAF instance resides. Valid values:
+         * <p>
+         * 
+         * *   **cn-hangzhou:** the Chinese mainland
+         * *   **ap-southeast-1:** outside the Chinese mainland.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

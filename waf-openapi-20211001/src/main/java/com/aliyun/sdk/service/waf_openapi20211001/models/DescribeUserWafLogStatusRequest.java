@@ -7,16 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeDomainDetailRequest} extends {@link RequestModel}
+ * {@link DescribeUserWafLogStatusRequest} extends {@link RequestModel}
  *
- * <p>DescribeDomainDetailRequest</p>
+ * <p>DescribeUserWafLogStatusRequest</p>
  */
-public class DescribeDomainDetailRequest extends Request {
-    @Query
-    @NameInMap("Domain")
-    @Validation(required = true)
-    private String domain;
-
+public class DescribeUserWafLogStatusRequest extends Request {
     @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
@@ -26,31 +21,28 @@ public class DescribeDomainDetailRequest extends Request {
     @NameInMap("RegionId")
     private String regionId;
 
-    private DescribeDomainDetailRequest(Builder builder) {
+    @Query
+    @NameInMap("ResourceManagerResourceGroupId")
+    private String resourceManagerResourceGroupId;
+
+    private DescribeUserWafLogStatusRequest(Builder builder) {
         super(builder);
-        this.domain = builder.domain;
         this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
+        this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DescribeDomainDetailRequest create() {
+    public static DescribeUserWafLogStatusRequest create() {
         return builder().build();
     }
 
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return domain
-     */
-    public String getDomain() {
-        return this.domain;
     }
 
     /**
@@ -67,36 +59,31 @@ public class DescribeDomainDetailRequest extends Request {
         return this.regionId;
     }
 
-    public static final class Builder extends Request.Builder<DescribeDomainDetailRequest, Builder> {
-        private String domain; 
+    /**
+     * @return resourceManagerResourceGroupId
+     */
+    public String getResourceManagerResourceGroupId() {
+        return this.resourceManagerResourceGroupId;
+    }
+
+    public static final class Builder extends Request.Builder<DescribeUserWafLogStatusRequest, Builder> {
         private String instanceId; 
         private String regionId; 
+        private String resourceManagerResourceGroupId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeDomainDetailRequest request) {
+        private Builder(DescribeUserWafLogStatusRequest request) {
             super(request);
-            this.domain = request.domain;
             this.instanceId = request.instanceId;
             this.regionId = request.regionId;
+            this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
         } 
 
         /**
-         * The domain name that you want to query.
-         */
-        public Builder domain(String domain) {
-            this.putQueryParameter("Domain", domain);
-            this.domain = domain;
-            return this;
-        }
-
-        /**
-         * The ID of the WAF instance.
-         * <p>
-         * 
-         * >  You can call the [DescribeInstance](~~433756~~) operation to obtain the ID of the WAF instance.
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -105,11 +92,7 @@ public class DescribeDomainDetailRequest extends Request {
         }
 
         /**
-         * The region where the WAF instance resides. Valid values:
-         * <p>
-         * 
-         * *   **cn-hangzhou:** the Chinese mainland.
-         * *   **ap-southeast-1:** outside the Chinese mainland.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -117,9 +100,18 @@ public class DescribeDomainDetailRequest extends Request {
             return this;
         }
 
+        /**
+         * ResourceManagerResourceGroupId.
+         */
+        public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
+            this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
+            this.resourceManagerResourceGroupId = resourceManagerResourceGroupId;
+            return this;
+        }
+
         @Override
-        public DescribeDomainDetailRequest build() {
-            return new DescribeDomainDetailRequest(this);
+        public DescribeUserWafLogStatusRequest build() {
+            return new DescribeUserWafLogStatusRequest(this);
         } 
 
     } 

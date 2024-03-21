@@ -41,10 +41,6 @@ public class ModifyDomainRequest extends Request {
     @Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("SourceIp")
-    private String sourceIp;
-
     private ModifyDomainRequest(Builder builder) {
         super(builder);
         this.accessType = builder.accessType;
@@ -53,7 +49,6 @@ public class ModifyDomainRequest extends Request {
         this.listen = builder.listen;
         this.redirect = builder.redirect;
         this.regionId = builder.regionId;
-        this.sourceIp = builder.sourceIp;
     }
 
     public static Builder builder() {
@@ -111,13 +106,6 @@ public class ModifyDomainRequest extends Request {
         return this.regionId;
     }
 
-    /**
-     * @return sourceIp
-     */
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
     public static final class Builder extends Request.Builder<ModifyDomainRequest, Builder> {
         private String accessType; 
         private String domain; 
@@ -125,7 +113,6 @@ public class ModifyDomainRequest extends Request {
         private Listen listen; 
         private Redirect redirect; 
         private String regionId; 
-        private String sourceIp; 
 
         private Builder() {
             super();
@@ -139,7 +126,6 @@ public class ModifyDomainRequest extends Request {
             this.listen = request.listen;
             this.redirect = request.redirect;
             this.regionId = request.regionId;
-            this.sourceIp = request.sourceIp;
         } 
 
         /**
@@ -206,15 +192,6 @@ public class ModifyDomainRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The source IP address of the request. The value of this parameter is specified by the system.
-         */
-        public Builder sourceIp(String sourceIp) {
-            this.putQueryParameter("SourceIp", sourceIp);
-            this.sourceIp = sourceIp;
             return this;
         }
 

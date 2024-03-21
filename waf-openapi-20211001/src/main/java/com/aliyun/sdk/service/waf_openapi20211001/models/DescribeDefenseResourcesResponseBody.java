@@ -116,6 +116,9 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
         @NameInMap("GmtModified")
         private Long gmtModified;
 
+        @NameInMap("OwnerUserId")
+        private String ownerUserId;
+
         @NameInMap("Pattern")
         private String pattern;
 
@@ -146,6 +149,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             this.detail = builder.detail;
             this.gmtCreate = builder.gmtCreate;
             this.gmtModified = builder.gmtModified;
+            this.ownerUserId = builder.ownerUserId;
             this.pattern = builder.pattern;
             this.product = builder.product;
             this.resource = builder.resource;
@@ -220,6 +224,13 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
         }
 
         /**
+         * @return ownerUserId
+         */
+        public String getOwnerUserId() {
+            return this.ownerUserId;
+        }
+
+        /**
          * @return pattern
          */
         public String getPattern() {
@@ -277,6 +288,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             private java.util.Map < String, ? > detail; 
             private Long gmtCreate; 
             private Long gmtModified; 
+            private String ownerUserId; 
             private String pattern; 
             private String product; 
             private String resource; 
@@ -298,7 +310,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the secure attribute of the tracking cookie.
+             * The status of the secure attribute in the tracking cookie.
              * <p>
              * 
              * *   **0:** disabled.
@@ -310,7 +322,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the secure attribute of the slider verification cookie.
+             * The status of the slider CAPTCHA cookie.
              * <p>
              * 
              * *   **0:** disabled.
@@ -322,7 +334,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The custom XFF headers that are used to identify the originating IP addresses of clients. If the value of XffStatus is 1 and CustomHeaders is left empty, the first IP address in the XFF header is the originating IP address of the client.
+             * The custom XFF headers that are used to identify the originating IP addresses of clients. If the value of XffStatus is 1 and CustomHeaders is left empty, the first IP addresses in the XFF headers are used as the originating IP addresses of clients.
              */
             public Builder customHeaders(java.util.List < String > customHeaders) {
                 this.customHeaders = customHeaders;
@@ -338,7 +350,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the protected object. Different key-value pairs in a map indicate different properties of the protected object.
+             * The details of the protected object. Different key-value pairs indicate different attributes of the protected object.
              */
             public Builder detail(java.util.Map < String, ? > detail) {
                 this.detail = detail;
@@ -346,7 +358,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time of the protected object. Unit: seconds.
+             * The time when the protected object was created. Unit: milliseconds.
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -354,7 +366,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The most recent modification time of the protected object. Unit: seconds.
+             * The time when the protected object was modified. Unit: milliseconds.
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -362,7 +374,15 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The protection pattern.
+             * OwnerUserId.
+             */
+            public Builder ownerUserId(String ownerUserId) {
+                this.ownerUserId = ownerUserId;
+                return this;
+            }
+
+            /**
+             * The pattern in which the protected object is protected.
              */
             public Builder pattern(String pattern) {
                 this.pattern = pattern;
@@ -394,7 +414,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * The ID of the Alibaba Cloud resource group.
              */
             public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
                 this.resourceManagerResourceGroupId = resourceManagerResourceGroupId;
@@ -410,7 +430,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the X-Forwarded-For (XFF) header is used.
+             * Indicates whether the X-Forwarded-For (XFF) proxy feature is enabled for the protected object.
              */
             public Builder xffStatus(Integer xffStatus) {
                 this.xffStatus = xffStatus;
