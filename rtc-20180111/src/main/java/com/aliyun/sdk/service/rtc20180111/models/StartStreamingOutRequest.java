@@ -14,10 +14,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class StartStreamingOutRequest extends Request {
     @Query
     @NameInMap("AppId")
+    @Validation(required = true)
     private String appId;
 
     @Query
     @NameInMap("ChannelId")
+    @Validation(required = true)
     private String channelId;
 
     @Query
@@ -26,14 +28,17 @@ public class StartStreamingOutRequest extends Request {
 
     @Query
     @NameInMap("TaskId")
+    @Validation(maxLength = 55, minLength = 1)
     private String taskId;
 
     @Query
     @NameInMap("TemplateId")
+    @Validation(required = true, maxLength = 128, minLength = 1)
     private String templateId;
 
     @Query
     @NameInMap("Url")
+    @Validation(required = true)
     private String url;
 
     private StartStreamingOutRequest(Builder builder) {
@@ -189,16 +194,11 @@ public class StartStreamingOutRequest extends Request {
         @Validation(required = true)
         private String paneId;
 
-        @NameInMap("Source")
-        @Validation(required = true)
-        private String source;
-
         @NameInMap("SourceType")
         private String sourceType;
 
         private Panes(Builder builder) {
             this.paneId = builder.paneId;
-            this.source = builder.source;
             this.sourceType = builder.sourceType;
         }
 
@@ -218,13 +218,6 @@ public class StartStreamingOutRequest extends Request {
         }
 
         /**
-         * @return source
-         */
-        public String getSource() {
-            return this.source;
-        }
-
-        /**
          * @return sourceType
          */
         public String getSourceType() {
@@ -233,7 +226,6 @@ public class StartStreamingOutRequest extends Request {
 
         public static final class Builder {
             private String paneId; 
-            private String source; 
             private String sourceType; 
 
             /**
@@ -241,14 +233,6 @@ public class StartStreamingOutRequest extends Request {
              */
             public Builder paneId(String paneId) {
                 this.paneId = paneId;
-                return this;
-            }
-
-            /**
-             * Source.
-             */
-            public Builder source(String source) {
-                this.source = source;
                 return this;
             }
 

@@ -24,7 +24,7 @@ public class StopStreamingOutRequest extends Request {
 
     @Query
     @NameInMap("TaskId")
-    @Validation(required = true)
+    @Validation(required = true, maxLength = 55, minLength = 1)
     private String taskId;
 
     private StopStreamingOutRequest(Builder builder) {
