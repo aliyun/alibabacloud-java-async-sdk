@@ -86,7 +86,7 @@ public class DescribeDcdnWafGroupsResponseBody extends TeaModel {
         private java.util.List < WafGroups> wafGroups; 
 
         /**
-         * PageNumber.
+         * The page number of the returned page. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class DescribeDcdnWafGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: **20**.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class DescribeDcdnWafGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeDcdnWafGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The number of WAF rule groups.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -118,7 +118,7 @@ public class DescribeDcdnWafGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * WafGroups.
+         * The list of WAF rule groups.
          */
         public Builder wafGroups(java.util.List < WafGroups> wafGroups) {
             this.wafGroups = wafGroups;
@@ -182,7 +182,7 @@ public class DescribeDcdnWafGroupsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Id.
+             * The ID of the policy.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -190,7 +190,7 @@ public class DescribeDcdnWafGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the policy.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -198,7 +198,11 @@ public class DescribeDcdnWafGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the policy. Valid values:
+             * <p>
+             * 
+             * *   **custom**: a custom policy
+             * *   **default**: the default policy
              */
             public Builder type(String type) {
                 this.type = type;
@@ -311,7 +315,7 @@ public class DescribeDcdnWafGroupsResponseBody extends TeaModel {
             private Long templateId; 
 
             /**
-             * GmtModified.
+             * The time when the WAF rule group was modified.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -319,7 +323,7 @@ public class DescribeDcdnWafGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the custom WAF rule group.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -327,7 +331,7 @@ public class DescribeDcdnWafGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the WAF rule.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -335,7 +339,7 @@ public class DescribeDcdnWafGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Policies.
+             * The policy that is associated with the WAF rule group.
              */
             public Builder policies(java.util.List < Policies> policies) {
                 this.policies = policies;
@@ -343,7 +347,7 @@ public class DescribeDcdnWafGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * RuleCount.
+             * The number of WAF rules.
              */
             public Builder ruleCount(Integer ruleCount) {
                 this.ruleCount = ruleCount;
@@ -351,7 +355,11 @@ public class DescribeDcdnWafGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Subscribe.
+             * Indicates whether to enable subscription. Valid values:
+             * <p>
+             * 
+             * *   **on**
+             * *   **off**
              */
             public Builder subscribe(String subscribe) {
                 this.subscribe = subscribe;
@@ -359,7 +367,7 @@ public class DescribeDcdnWafGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * The ID of the template.
              */
             public Builder templateId(Long templateId) {
                 this.templateId = templateId;

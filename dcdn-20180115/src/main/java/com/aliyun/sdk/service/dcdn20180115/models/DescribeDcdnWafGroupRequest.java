@@ -127,7 +127,7 @@ public class DescribeDcdnWafGroupRequest extends Request {
         } 
 
         /**
-         * Id.
+         * The ID of the WAF rule group. You can query the ID by calling the [DescribeDcdnWafGroups](~~DescribeDcdnWafGroups~~) operation.
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -136,7 +136,11 @@ public class DescribeDcdnWafGroupRequest extends Request {
         }
 
         /**
-         * Language.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   **en**: English
+         * *    **zh**: Chinese
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -145,7 +149,7 @@ public class DescribeDcdnWafGroupRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -154,7 +158,7 @@ public class DescribeDcdnWafGroupRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: **20**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -163,7 +167,12 @@ public class DescribeDcdnWafGroupRequest extends Request {
         }
 
         /**
-         * QueryArgs.
+         * The query conditions. The value needs to be a JSON string in the following format: Format:
+         * <p>
+         * 
+         * `QueryArgs={"PolicyIds":"IDs of protection policies","RuleIds":"IDs of protection rules","RuleNameLike":"Names of protection rules","DomainNames":"Protected domain names","DefenseScenes":"waf_group","RuleStatus":"on","OrderBy":"GmtModified","Desc":"false"}`
+         * 
+         * > If you do not specify this parameter, all protection rules are queried.
          */
         public Builder queryArgs(String queryArgs) {
             this.putQueryParameter("QueryArgs", queryArgs);
@@ -172,7 +181,11 @@ public class DescribeDcdnWafGroupRequest extends Request {
         }
 
         /**
-         * Scope.
+         * The range of the rule group to be queried.
+         * <p>
+         * 
+         * *   **in**: rules in the rule group are returned.
+         * *  **out**: rules that are in the full rule set but are not in the rule group are returned.
          */
         public Builder scope(String scope) {
             this.putQueryParameter("Scope", scope);

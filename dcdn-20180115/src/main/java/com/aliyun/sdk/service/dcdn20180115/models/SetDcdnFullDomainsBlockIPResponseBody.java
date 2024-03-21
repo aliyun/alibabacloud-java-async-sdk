@@ -63,6 +63,9 @@ public class SetDcdnFullDomainsBlockIPResponseBody extends TeaModel {
 
         /**
          * The response code.
+         * <p>
+         * 
+         * If the value of Code is not 0, specific required parameters are missing or the parameter format is invalid.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -70,7 +73,7 @@ public class SetDcdnFullDomainsBlockIPResponseBody extends TeaModel {
         }
 
         /**
-         * The status code that indicates the result.
+         * The response message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -78,7 +81,7 @@ public class SetDcdnFullDomainsBlockIPResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.dcdn20180115;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.dcdn20180115.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -19,11 +20,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
-      * > 
-      * *   Dynamic Content Delivery Network (DCDN) is activated.
-      * *   Internet content provider (ICP) filing is complete for the accelerated domain name.
-      * *   If the content of the origin server is not stored on Alibaba Cloud, the content must be reviewed. After you submit the request, the review is complete by the end of the following business day.
-      * *   You can call this operation up to 30 times per second per account.
+      * > *   Dynamic Content Delivery Network (DCDN) is activated.
+      * > *   Internet content provider (ICP) filing is complete for the accelerated domain name.
+      * > *   If the content of the origin server is not stored on Alibaba Cloud, the content must be reviewed. After you submit the request, the review is complete by the end of the following business day.
+      * > *   You can call this operation up to 30 times per second per account.
       *
      */
     CompletableFuture<AddDcdnDomainResponse> addDcdnDomain(AddDcdnDomainRequest request);
@@ -132,6 +132,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<CommitStagingRoutineCodeResponse> commitStagingRoutineCode(CommitStagingRoutineCodeRequest request);
+
+    CompletableFuture<CreateDcdnCertificateSigningRequestResponse> createDcdnCertificateSigningRequest(CreateDcdnCertificateSigningRequestRequest request);
 
     /**
       * > You can call this operation up to three times per second per account.
@@ -720,7 +722,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
       * * You can call this operation up to 10 times per second per account.
       * * Usage data includes traffic (measured in bytes), bandwidth values (measured in bit/s), and the number of requests.
-      * **Time granularity**:
+      * **Time granularity**
       * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
       * |Time granularity|Maximum time range per query|Historical data available|Data delay|
       * |---|---|---|---|
@@ -817,6 +819,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DescribeDcdnIpInfoResponse> describeDcdnIpInfo(DescribeDcdnIpInfoRequest request);
 
+    /**
+      * >  This operation can be called globally up to 50 times per second. This operation can be called up to 10 times per second per account.
+      *
+     */
     CompletableFuture<DescribeDcdnIpaDomainCidrResponse> describeDcdnIpaDomainCidr(DescribeDcdnIpaDomainCidrRequest request);
 
     /**
@@ -1041,6 +1047,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DescribeDcdnUserTagsResponse> describeDcdnUserTags(DescribeDcdnUserTagsRequest request);
 
+    /**
+      * You can call this operation up to 30 times per second per account.
+      *
+     */
     CompletableFuture<DescribeDcdnUserVipsByDomainResponse> describeDcdnUserVipsByDomain(DescribeDcdnUserVipsByDomainRequest request);
 
     /**
@@ -1171,6 +1181,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeHighlightInfoResponse> describeHighlightInfo(DescribeHighlightInfoRequest request);
 
+    /**
+      * * You can call this operation up to 5 times per second per account.
+      * * The usage data indicates the number of requests.
+      * **Time granularity:** This operation supports only the time granularity of 1 hour.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |1 hour|31 days|90 days|3 to 4 hours|
+      *
+     */
     CompletableFuture<DescribeKvUsageDataResponse> describeKvUsageData(DescribeKvUsageDataRequest request);
 
     CompletableFuture<DescribeRDDomainConfigResponse> describeRDDomainConfig(DescribeRDDomainConfigRequest request);
@@ -1354,6 +1373,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<RefreshDcdnObjectCachesResponse> refreshDcdnObjectCaches(RefreshDcdnObjectCachesRequest request);
 
+    /**
+      * *   DCDN supports POST requests in which parameters are sent as a form.
+      * *   Related operation: such as [RefreshDcdnObjectCaches](~~130620~~).
+      * *   By default, each Alibaba Cloud account can refresh content from a maximum of 10,000 URLs and 100 directories including subdirectories per day.
+      * *   You can specify up to 1,000 URLs or 100 directories that you want to refresh in each request.
+      * *   You can refresh a maximum of 1,000 URLs per minute for each domain name.
+      * *   You can call this operation up to 30 times per second per account.
+      *
+     */
     CompletableFuture<RefreshErObjectCachesResponse> refreshErObjectCaches(RefreshErObjectCachesRequest request);
 
     /**
@@ -1361,6 +1389,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<RollbackDcdnStagingConfigResponse> rollbackDcdnStagingConfig(RollbackDcdnStagingConfigRequest request);
+
+    CompletableFuture<SetDcdnDomainCSRCertificateResponse> setDcdnDomainCSRCertificate(SetDcdnDomainCSRCertificateRequest request);
 
     /**
       * @deprecated
@@ -1384,7 +1414,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SetDcdnDomainStagingConfigResponse> setDcdnDomainStagingConfig(SetDcdnDomainStagingConfigRequest request);
 
     /**
-      * > You can call this operation up to 10 times per second per account.
+      * >  You can call this operation to block or unblock a large number of IP addresses or CIDR blocks. You can block or unblock up to 1,000 IP addresses or CIDR blocks in a request.
       *
      */
     CompletableFuture<SetDcdnFullDomainsBlockIPResponse> setDcdnFullDomainsBlockIP(SetDcdnFullDomainsBlockIPRequest request);

@@ -139,7 +139,13 @@ public class DescribeKvUsageDataRequest extends Request {
         } 
 
         /**
-         * AccessType.
+         * The request method. If the parameter is empty, data about all methods is returned. Valid values:
+         * <p>
+         * 
+         * *   **get**
+         * *   **put**
+         * *   **list**
+         * *   **delete**
          */
         public Builder accessType(String accessType) {
             this.putQueryParameter("AccessType", accessType);
@@ -148,7 +154,7 @@ public class DescribeKvUsageDataRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -157,7 +163,7 @@ public class DescribeKvUsageDataRequest extends Request {
         }
 
         /**
-         * Field.
+         * The type of the request data. Set the value to **acc**.
          */
         public Builder field(String field) {
             this.putQueryParameter("Field", field);
@@ -166,7 +172,10 @@ public class DescribeKvUsageDataRequest extends Request {
         }
 
         /**
-         * NamespaceId.
+         * The namespace ID. If the parameter is empty, data about all namespaces is returned.
+         * <p>
+         * 
+         * You can specify a maximum number of 30 namespace IDs and separate them with commas (,).
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
@@ -175,7 +184,13 @@ public class DescribeKvUsageDataRequest extends Request {
         }
 
         /**
-         * ResponseType.
+         * The type of the response data. Valid values:
+         * <p>
+         * 
+         * *   **detail**: detailed data
+         * *   **total**: summary data
+         * 
+         * Default value: **detail**.
          */
         public Builder responseType(String responseType) {
             this.putQueryParameter("ResponseType", responseType);
@@ -184,7 +199,14 @@ public class DescribeKvUsageDataRequest extends Request {
         }
 
         /**
-         * SplitBy.
+         * The key that is used to group data. Valid values: **type** and **namespace**.
+         * <p>
+         * 
+         * *   **type**: Data is grouped by time. The data in the last 5 minutes is returned.
+         * *   **namespace**: Data is grouped by namespace and is not padded with zeros.
+         * *   Default value: **type**.
+         * 
+         * If **ResponseType** is set to **total**, data to return is not grouped by **namespace** but by **type**.
          */
         public Builder splitBy(String splitBy) {
             this.putQueryParameter("SplitBy", splitBy);
@@ -193,7 +215,10 @@ public class DescribeKvUsageDataRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <p>
+         * 
+         * The minimum data granularity is 1 hour. If you do not specify this parameter, the data in the last seven days is returned.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

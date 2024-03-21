@@ -50,7 +50,7 @@ public class DescribeDcdnIpaDomainCidrResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Cidr.
+         * The back-to-origin IPv4 and IPv6 CIDR blocks.
          */
         public Builder cidr(java.util.List < String > cidr) {
             this.cidr = cidr;
@@ -58,7 +58,7 @@ public class DescribeDcdnIpaDomainCidrResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

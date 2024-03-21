@@ -86,7 +86,7 @@ public class DescribeDdosAllEventListResponseBody extends TeaModel {
         private Long total; 
 
         /**
-         * DataList.
+         * The list of events.
          */
         public Builder dataList(java.util.List < DataList> dataList) {
             this.dataList = dataList;
@@ -94,7 +94,7 @@ public class DescribeDdosAllEventListResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeDdosAllEventListResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned on each page. Default value: **10**. Valid values: 5, 10, and 20.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeDdosAllEventListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeDdosAllEventListResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * The total number of entries returned.
          */
         public Builder total(Long total) {
             this.total = total;
@@ -254,7 +254,7 @@ public class DescribeDdosAllEventListResponseBody extends TeaModel {
             private String target; 
 
             /**
-             * Bps.
+             * The peak attack traffic of volumetric attacks. Unit: bit/s.
              */
             public Builder bps(Long bps) {
                 this.bps = bps;
@@ -262,7 +262,7 @@ public class DescribeDdosAllEventListResponseBody extends TeaModel {
             }
 
             /**
-             * Cps.
+             * The peak of connection flood attacks. Unit: connections per seconds (CPS).
              */
             public Builder cps(Long cps) {
                 this.cps = cps;
@@ -270,7 +270,7 @@ public class DescribeDdosAllEventListResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The end of the time range during which data was queried. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -278,7 +278,7 @@ public class DescribeDdosAllEventListResponseBody extends TeaModel {
             }
 
             /**
-             * EventId.
+             * The event ID.
              */
             public Builder eventId(String eventId) {
                 this.eventId = eventId;
@@ -286,7 +286,13 @@ public class DescribeDdosAllEventListResponseBody extends TeaModel {
             }
 
             /**
-             * EventType.
+             * The type of the DDoS attack event that was queried. Valid values:
+             * <p>
+             * 
+             * *   **web-cc**: web resource exhaustion attacks
+             * *   **cc**: connection flood attacks
+             * *   **traffic**: volumetric attacks
+             * *   If you do not configure this parameter, DDoS attack events of all types are queried.
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -294,7 +300,7 @@ public class DescribeDdosAllEventListResponseBody extends TeaModel {
             }
 
             /**
-             * Pps.
+             * The peak attack traffic of volumetric attacks. Unit: packets per second (PPS).
              */
             public Builder pps(Long pps) {
                 this.pps = pps;
@@ -302,7 +308,7 @@ public class DescribeDdosAllEventListResponseBody extends TeaModel {
             }
 
             /**
-             * Qps.
+             * The peak of web resource exhaustion attacks. Unit: queries per second (QPS).
              */
             public Builder qps(Long qps) {
                 this.qps = qps;
@@ -310,7 +316,7 @@ public class DescribeDdosAllEventListResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The beginning of the time range during which data was queried. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -318,7 +324,7 @@ public class DescribeDdosAllEventListResponseBody extends TeaModel {
             }
 
             /**
-             * Target.
+             * The attack target.
              */
             public Builder target(String target) {
                 this.target = target;

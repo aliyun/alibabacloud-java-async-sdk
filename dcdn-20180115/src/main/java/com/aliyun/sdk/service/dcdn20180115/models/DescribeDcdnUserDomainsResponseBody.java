@@ -564,12 +564,7 @@ public class DescribeDcdnUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * 场景。支持：
-             * <p>
-             * - **apiscene**：API加速。
-             * - **webservicescene**：网站业务加速。
-             * - **staticscene**：视频、图文类加速。
-             * - **（空）**：没有场景。
+             * Scene.
              */
             public Builder scene(String scene) {
                 this.scene = scene;

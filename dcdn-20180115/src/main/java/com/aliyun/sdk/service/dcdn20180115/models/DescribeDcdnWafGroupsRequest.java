@@ -96,7 +96,11 @@ public class DescribeDcdnWafGroupsRequest extends Request {
         } 
 
         /**
-         * Language.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *  **en**: English
+         * *   **zh**: Chinese
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -105,7 +109,7 @@ public class DescribeDcdnWafGroupsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -114,7 +118,7 @@ public class DescribeDcdnWafGroupsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: **20**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -123,7 +127,10 @@ public class DescribeDcdnWafGroupsRequest extends Request {
         }
 
         /**
-         * QueryArgs.
+         * The query conditions. The value is a string in the JSON format. Format: `QueryArgs={"PolicyIds":"IDs of protection policies","RuleIds":"IDs of the protection rules","RuleNameLike":"Names of the protection rule","DomainNames":"Protected domain names","DefenseScenes":"waf_group","RuleStatus":"on","OrderBy":"GmtModified","Desc":"false"}`
+         * <p>
+         * 
+         * > If you do not specify this parameter, all protection rules are queried.
          */
         public Builder queryArgs(String queryArgs) {
             this.putQueryParameter("QueryArgs", queryArgs);

@@ -206,7 +206,7 @@ public class DescribeDcdnDdosServiceResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * ChangingAffectTime.
+         * The time when the renewed service takes effect. The time is displayed in UTC.
          */
         public Builder changingAffectTime(String changingAffectTime) {
             this.changingAffectTime = changingAffectTime;
@@ -214,7 +214,12 @@ public class DescribeDcdnDdosServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ChangingChargeType.
+         * The metering method after the configuration changes Valid values:
+         * <p>
+         * 
+         * *   **PayByBandwidth**
+         * *   **PayByTraffic**
+         * *   **PayByBandwidth95**
          */
         public Builder changingChargeType(String changingChargeType) {
             this.changingChargeType = changingChargeType;
@@ -222,7 +227,7 @@ public class DescribeDcdnDdosServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ChangingDomianNum.
+         * The number of protected domain names.
          */
         public Builder changingDomianNum(Integer changingDomianNum) {
             this.changingDomianNum = changingDomianNum;
@@ -230,7 +235,13 @@ public class DescribeDcdnDdosServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ChangingEdition.
+         * The protection edition for which the configuration changes take effect. Valid values:
+         * <p>
+         * 
+         * *   **poc**: POC Edition
+         * *   **basic**: Basic Edition
+         * *   **insurance**: Insurance Edition
+         * *   **unlimited**: Unlimited Edition
          */
         public Builder changingEdition(String changingEdition) {
             this.changingEdition = changingEdition;
@@ -238,7 +249,7 @@ public class DescribeDcdnDdosServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ChangingProtectNum.
+         * The number of mitigation sessions with configuration changes.
          */
         public Builder changingProtectNum(Integer changingProtectNum) {
             this.changingProtectNum = changingProtectNum;
@@ -246,7 +257,12 @@ public class DescribeDcdnDdosServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ChargeType.
+         * The billing method. Valid values:
+         * <p>
+         * 
+         * *   **PayByBandwidth**
+         * *   **PayByTraffic**
+         * *   **PayByBandwidth95**
          */
         public Builder chargeType(String chargeType) {
             this.chargeType = chargeType;
@@ -254,7 +270,7 @@ public class DescribeDcdnDdosServiceResponseBody extends TeaModel {
         }
 
         /**
-         * DomianNum.
+         * The number of protected domain names.
          */
         public Builder domianNum(Integer domianNum) {
             this.domianNum = domianNum;
@@ -262,7 +278,13 @@ public class DescribeDcdnDdosServiceResponseBody extends TeaModel {
         }
 
         /**
-         * Edition.
+         * The protection edition. Valid values:
+         * <p>
+         * 
+         * *   **poc**: POC Edition
+         * *   **basic**: Basic Edition
+         * *   **insurance**: Insurance Edition
+         * *   **unlimited**: Unlimited Edition
          */
         public Builder edition(String edition) {
             this.edition = edition;
@@ -270,7 +292,11 @@ public class DescribeDcdnDdosServiceResponseBody extends TeaModel {
         }
 
         /**
-         * Enabled.
+         * The activation status of the service. Valid values:
+         * <p>
+         * 
+         * *   **on**
+         * *   **off**
          */
         public Builder enabled(String enabled) {
             this.enabled = enabled;
@@ -278,7 +304,7 @@ public class DescribeDcdnDdosServiceResponseBody extends TeaModel {
         }
 
         /**
-         * EndingTime.
+         * The service expiration time.
          */
         public Builder endingTime(String endingTime) {
             this.endingTime = endingTime;
@@ -286,7 +312,7 @@ public class DescribeDcdnDdosServiceResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -294,7 +320,7 @@ public class DescribeDcdnDdosServiceResponseBody extends TeaModel {
         }
 
         /**
-         * OpeningTime.
+         * The time when the service was enabled.
          */
         public Builder openingTime(String openingTime) {
             this.openingTime = openingTime;
@@ -302,7 +328,7 @@ public class DescribeDcdnDdosServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ProtectNum.
+         * The number of mitigation sessions.
          */
         public Builder protectNum(Integer protectNum) {
             this.protectNum = protectNum;
@@ -310,7 +336,7 @@ public class DescribeDcdnDdosServiceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -318,7 +344,13 @@ public class DescribeDcdnDdosServiceResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The status of the service. Valid values:
+         * <p>
+         * 
+         * *   **Normal**
+         * *   **WaitForExpire**
+         * *   **expired**
+         * *   **Released**
          */
         public Builder status(String status) {
             this.status = status;

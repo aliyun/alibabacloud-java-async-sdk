@@ -62,7 +62,11 @@ public class GetDcdnKvStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Complete.
+         * Specifies whether the configured key has taken effect on all points of presence (POPs).
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder complete(Boolean complete) {
             this.complete = complete;
@@ -70,7 +74,7 @@ public class GetDcdnKvStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Expire.
+         * The timeout period of the configured key. The value is an absolute timestamp, such as 2023-09-11T15:39:44+08:00. This parameter is not returned if the key is permanently stored.
          */
         public Builder expire(String expire) {
             this.expire = expire;
@@ -78,7 +82,7 @@ public class GetDcdnKvStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

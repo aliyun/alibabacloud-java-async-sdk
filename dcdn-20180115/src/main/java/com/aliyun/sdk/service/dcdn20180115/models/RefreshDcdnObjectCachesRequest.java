@@ -111,7 +111,11 @@ public class RefreshDcdnObjectCachesRequest extends Request {
         } 
 
         /**
-         * Force.
+         * Specifies whether to refresh resources in a directory if the resources are different from the resources in the same directory in the origin server. Default value: false.
+         * <p>
+         * 
+         * *   **true**: refresh all resources in the directory.
+         * *   **false**: refresh the changed resources in the directory.
          */
         public Builder force(Boolean force) {
             this.putQueryParameter("Force", force);

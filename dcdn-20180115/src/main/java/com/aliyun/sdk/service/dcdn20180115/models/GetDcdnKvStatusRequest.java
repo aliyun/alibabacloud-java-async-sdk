@@ -70,7 +70,7 @@ public class GetDcdnKvStatusRequest extends Request {
         } 
 
         /**
-         * Key.
+         * The name of the key that you want to query.
          */
         public Builder key(String key) {
             this.putQueryParameter("Key", key);
@@ -79,7 +79,7 @@ public class GetDcdnKvStatusRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The name of the namespace.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);

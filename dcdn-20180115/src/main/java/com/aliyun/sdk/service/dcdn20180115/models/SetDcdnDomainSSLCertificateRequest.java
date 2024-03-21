@@ -245,7 +245,7 @@ public class SetDcdnDomainSSLCertificateRequest extends Request {
         }
 
         /**
-         * Env.
+         * Specifies whether the certificate is issued in canary releases. If you set this parameter to **staging**, the certificate is issued in canary releases. If you do not specify this parameter or set this parameter to other values, the certificate is officially issued.
          */
         public Builder env(String env) {
             this.putQueryParameter("Env", env);

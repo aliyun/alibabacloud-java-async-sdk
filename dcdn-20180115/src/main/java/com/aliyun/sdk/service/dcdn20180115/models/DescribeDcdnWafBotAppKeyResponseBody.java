@@ -50,7 +50,7 @@ public class DescribeDcdnWafBotAppKeyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AppKey.
+         * The SDK authentication key for the Alibaba Cloud account.
          */
         public Builder appKey(String appKey) {
             this.appKey = appKey;
@@ -58,7 +58,7 @@ public class DescribeDcdnWafBotAppKeyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

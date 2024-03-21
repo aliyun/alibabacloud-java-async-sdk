@@ -50,7 +50,7 @@ public class CreateDcdnWafGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Id.
+         * The ID of the created WAF rule group.
          */
         public Builder id(Long id) {
             this.id = id;
@@ -58,7 +58,7 @@ public class CreateDcdnWafGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -51,7 +51,7 @@ public class DescribeDcdnDomainsBySourceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DomainInfo.
+         * The information about each origin server and the corresponding domain names.
          */
         public Builder domainInfo(java.util.List < DomainInfo> domainInfo) {
             this.domainInfo = domainInfo;
@@ -59,7 +59,7 @@ public class DescribeDcdnDomainsBySourceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +159,7 @@ public class DescribeDcdnDomainsBySourceResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * CreateTime.
+             * The creation time.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -167,7 +167,7 @@ public class DescribeDcdnDomainsBySourceResponseBody extends TeaModel {
             }
 
             /**
-             * CNAME。
+             * The CNAME record assigned to the domain name.
              */
             public Builder domainCname(String domainCname) {
                 this.domainCname = domainCname;
@@ -175,7 +175,7 @@ public class DescribeDcdnDomainsBySourceResponseBody extends TeaModel {
             }
 
             /**
-             * DomainName.
+             * The accelerated domain name.
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -183,7 +183,11 @@ public class DescribeDcdnDomainsBySourceResponseBody extends TeaModel {
             }
 
             /**
-             * DomainType.
+             * The workload type of the accelerated domain name. Valid value:
+             * <p>
+             * 
+             * *   **ipa**: layer 4 acceleration
+             * *   **dynamic**: layer 7 acceleration
              */
             public Builder domainType(String domainType) {
                 this.domainType = domainType;
@@ -191,7 +195,15 @@ public class DescribeDcdnDomainsBySourceResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the domain name. Valid value:
+             * <p>
+             * 
+             * *   **applying**: The domain name is under review.
+             * *   **configuring**: The domain name is being configured.
+             * *   **online**: The domain name is working as expected.
+             * *   **stopping**: The domain name is being stopped.
+             * *   **offline**: The domain name is disabled.
+             * *   **disabling**: The domain name is being removed.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -199,7 +211,7 @@ public class DescribeDcdnDomainsBySourceResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The time when the domain name was updated.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -252,7 +264,7 @@ public class DescribeDcdnDomainsBySourceResponseBody extends TeaModel {
             private String source; 
 
             /**
-             * DomainList.
+             * The information about the domain names.
              */
             public Builder domainList(java.util.List < DomainList> domainList) {
                 this.domainList = domainList;
@@ -260,7 +272,7 @@ public class DescribeDcdnDomainsBySourceResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * The origin server.
              */
             public Builder source(String source) {
                 this.source = source;

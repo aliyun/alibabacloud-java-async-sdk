@@ -62,7 +62,7 @@ public class BatchPutDcdnKvResponseBody extends TeaModel {
         private java.util.List < String > successKeys; 
 
         /**
-         * FailKeys.
+         * The keys that failed to be written.
          */
         public Builder failKeys(java.util.List < String > failKeys) {
             this.failKeys = failKeys;
@@ -70,7 +70,7 @@ public class BatchPutDcdnKvResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class BatchPutDcdnKvResponseBody extends TeaModel {
         }
 
         /**
-         * SuccessKeys.
+         * The keys that were written.
          */
         public Builder successKeys(java.util.List < String > successKeys) {
             this.successKeys = successKeys;

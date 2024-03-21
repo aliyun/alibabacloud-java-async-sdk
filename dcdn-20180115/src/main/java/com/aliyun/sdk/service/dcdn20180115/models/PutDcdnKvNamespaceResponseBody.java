@@ -13,6 +13,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class PutDcdnKvNamespaceResponseBody extends TeaModel {
     @NameInMap("Description")
+    @Validation(maxLength = 1024)
     private String description;
 
     @NameInMap("Namespace")

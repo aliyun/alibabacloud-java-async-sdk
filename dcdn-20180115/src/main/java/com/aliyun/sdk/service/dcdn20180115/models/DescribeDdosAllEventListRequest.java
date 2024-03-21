@@ -112,7 +112,7 @@ public class DescribeDdosAllEventListRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. The end time must be later than the start time. The maximum time range is 31 days.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -121,12 +121,12 @@ public class DescribeDdosAllEventListRequest extends Request {
         }
 
         /**
-         * The type of the DDoS attack event that was queried. Valid values:
+         * The type of the DDoS attack event to be queried. Valid values:
          * <p>
          * 
-         * *   *   **web-cc**: web resource exhaustion attacks
-         * *   *   **cc**: connection flood attacks
-         * *   *   **traffic**: volumetric attacks
+         *  *   **web-cc**: resource exhaustion attacks
+         *  *   **cc**: connection flood attacks
+         *  *   **traffic**: volumetric attacks
          * 
          * If you do not configure this parameter, DDoS attack events of all types are queried.
          */
@@ -137,7 +137,7 @@ public class DescribeDdosAllEventListRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number. Default value: 1. Value range: 1 to 10,000.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -155,7 +155,7 @@ public class DescribeDdosAllEventListRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

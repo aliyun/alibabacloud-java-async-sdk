@@ -124,7 +124,7 @@ public class DescribeDcdnSSLCertificateListRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * The accelerated domain secured by the SSL certificate. HTTPS secure acceleration is enabled for the accelerated domain name.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -142,7 +142,7 @@ public class DescribeDcdnSSLCertificateListRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page. Default value: 1.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -151,7 +151,7 @@ public class DescribeDcdnSSLCertificateListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The maximum number of entries to return on each page. Valid values: **1 to 1000**.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -160,7 +160,7 @@ public class DescribeDcdnSSLCertificateListRequest extends Request {
         }
 
         /**
-         * SearchKeyword.
+         * The keyword that is used to query the certificate.
          */
         public Builder searchKeyword(String searchKeyword) {
             this.putQueryParameter("SearchKeyword", searchKeyword);

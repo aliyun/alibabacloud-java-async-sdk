@@ -50,7 +50,7 @@ public class DescribeEncryptRoutineUidResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Content.
+         * The returned ciphertext, which contains the Alibaba Cloud account ID, timestamp, and time to live (TTL).
          */
         public Builder content(String content) {
             this.content = content;
@@ -58,7 +58,7 @@ public class DescribeEncryptRoutineUidResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

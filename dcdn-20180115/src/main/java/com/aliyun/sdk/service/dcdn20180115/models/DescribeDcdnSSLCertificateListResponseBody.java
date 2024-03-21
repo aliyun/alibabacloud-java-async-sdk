@@ -50,7 +50,7 @@ public class DescribeDcdnSSLCertificateListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * CertificateListModel.
+         * The list of certificates.
          */
         public Builder certificateListModel(CertificateListModel certificateListModel) {
             this.certificateListModel = certificateListModel;
@@ -58,7 +58,7 @@ public class DescribeDcdnSSLCertificateListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +170,7 @@ public class DescribeDcdnSSLCertificateListResponseBody extends TeaModel {
             private Long lastTime; 
 
             /**
-             * CertId.
+             * The ID of the certificate.
              */
             public Builder certId(Long certId) {
                 this.certId = certId;
@@ -178,7 +178,7 @@ public class DescribeDcdnSSLCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * CertName.
+             * The name of the certificate.
              */
             public Builder certName(String certName) {
                 this.certName = certName;
@@ -186,7 +186,7 @@ public class DescribeDcdnSSLCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * CertRegion.
+             * The region ID of the certificate. Valid values: **cn-hangzhou** and **ap-southeast-1**. Default value: **cn-hangzhou**.
              */
             public Builder certRegion(String certRegion) {
                 this.certRegion = certRegion;
@@ -194,7 +194,7 @@ public class DescribeDcdnSSLCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * Common.
+             * The Common Name (CN) attribute of the certificate. In most cases, the CN is a domain name.
              */
             public Builder common(String common) {
                 this.common = common;
@@ -202,7 +202,7 @@ public class DescribeDcdnSSLCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * Fingerprint.
+             * The fingerprint of the certificate.
              */
             public Builder fingerprint(String fingerprint) {
                 this.fingerprint = fingerprint;
@@ -210,7 +210,7 @@ public class DescribeDcdnSSLCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * Issuer.
+             * The certificate authority (CA) that issued the certificate.
              */
             public Builder issuer(String issuer) {
                 this.issuer = issuer;
@@ -218,7 +218,7 @@ public class DescribeDcdnSSLCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * LastTime.
+             * The time when the certificate was last modified. Unit: milliseconds.
              */
             public Builder lastTime(Long lastTime) {
                 this.lastTime = lastTime;
@@ -336,7 +336,7 @@ public class DescribeDcdnSSLCertificateListResponseBody extends TeaModel {
             private Long pageSize; 
 
             /**
-             * CertList.
+             * Details about each certificate.
              */
             public Builder certList(CertList certList) {
                 this.certList = certList;
@@ -344,7 +344,7 @@ public class DescribeDcdnSSLCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * Count.
+             * The number of certificates.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -352,7 +352,7 @@ public class DescribeDcdnSSLCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * The page number. Pages start from page 1. Default value: 1.
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -360,7 +360,7 @@ public class DescribeDcdnSSLCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries per page. Valid values: an integer from 1 to 1000.
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;

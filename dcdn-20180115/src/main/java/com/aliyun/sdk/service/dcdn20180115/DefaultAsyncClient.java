@@ -95,11 +95,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > 
-      * *   Dynamic Content Delivery Network (DCDN) is activated.
-      * *   Internet content provider (ICP) filing is complete for the accelerated domain name.
-      * *   If the content of the origin server is not stored on Alibaba Cloud, the content must be reviewed. After you submit the request, the review is complete by the end of the following business day.
-      * *   You can call this operation up to 30 times per second per account.
+      * > *   Dynamic Content Delivery Network (DCDN) is activated.
+      * > *   Internet content provider (ICP) filing is complete for the accelerated domain name.
+      * > *   If the content of the origin server is not stored on Alibaba Cloud, the content must be reviewed. After you submit the request, the review is complete by the end of the following business day.
+      * > *   You can call this operation up to 30 times per second per account.
       *
      */
     @Override
@@ -396,6 +395,20 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CommitStagingRoutineCodeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<CreateDcdnCertificateSigningRequestResponse> createDcdnCertificateSigningRequest(CreateDcdnCertificateSigningRequestRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateDcdnCertificateSigningRequest").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateDcdnCertificateSigningRequestResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateDcdnCertificateSigningRequestResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1852,7 +1865,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
       * * You can call this operation up to 10 times per second per account.
       * * Usage data includes traffic (measured in bytes), bandwidth values (measured in bit/s), and the number of requests.
-      * **Time granularity**:
+      * **Time granularity**
       * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
       * |Time granularity|Maximum time range per query|Historical data available|Data delay|
       * |---|---|---|---|
@@ -2081,6 +2094,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * >  This operation can be called globally up to 50 times per second. This operation can be called up to 10 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnIpaDomainCidrResponse> describeDcdnIpaDomainCidr(DescribeDcdnIpaDomainCidrRequest request) {
         try {
@@ -2809,6 +2826,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You can call this operation up to 30 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnUserVipsByDomainResponse> describeDcdnUserVipsByDomain(DescribeDcdnUserVipsByDomainRequest request) {
         try {
@@ -3251,6 +3272,15 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * * You can call this operation up to 5 times per second per account.
+      * * The usage data indicates the number of requests.
+      * **Time granularity:** This operation supports only the time granularity of 1 hour.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |1 hour|31 days|90 days|3 to 4 hours|
+      *
+     */
     @Override
     public CompletableFuture<DescribeKvUsageDataResponse> describeKvUsageData(DescribeKvUsageDataRequest request) {
         try {
@@ -3794,6 +3824,15 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * *   DCDN supports POST requests in which parameters are sent as a form.
+      * *   Related operation: such as [RefreshDcdnObjectCaches](~~130620~~).
+      * *   By default, each Alibaba Cloud account can refresh content from a maximum of 10,000 URLs and 100 directories including subdirectories per day.
+      * *   You can specify up to 1,000 URLs or 100 directories that you want to refresh in each request.
+      * *   You can refresh a maximum of 1,000 URLs per minute for each domain name.
+      * *   You can call this operation up to 30 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<RefreshErObjectCachesResponse> refreshErObjectCaches(RefreshErObjectCachesRequest request) {
         try {
@@ -3821,6 +3860,20 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<RollbackDcdnStagingConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<SetDcdnDomainCSRCertificateResponse> setDcdnDomainCSRCertificate(SetDcdnDomainCSRCertificateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SetDcdnDomainCSRCertificate").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SetDcdnDomainCSRCertificateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SetDcdnDomainCSRCertificateResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -3896,7 +3949,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > You can call this operation up to 10 times per second per account.
+      * >  You can call this operation to block or unblock a large number of IP addresses or CIDR blocks. You can block or unblock up to 1,000 IP addresses or CIDR blocks in a request.
       *
      */
     @Override

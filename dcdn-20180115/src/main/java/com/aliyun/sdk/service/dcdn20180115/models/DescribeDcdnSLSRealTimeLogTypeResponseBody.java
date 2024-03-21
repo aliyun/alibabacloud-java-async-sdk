@@ -50,7 +50,7 @@ public class DescribeDcdnSLSRealTimeLogTypeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Content.
+         * The returned results.
          */
         public Builder content(Content content) {
             this.content = content;
@@ -58,7 +58,7 @@ public class DescribeDcdnSLSRealTimeLogTypeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,12 @@ public class DescribeDcdnSLSRealTimeLogTypeResponseBody extends TeaModel {
             private String desc; 
 
             /**
-             * BusinessType.
+             * The type of real-time logs. Valid values:
+             * <p>
+             * 
+             * *   **dcdn_log_access_l1**: access logs.
+             * *   **dcdn_log_er**: EdgeRoutine logs
+             * *   **dcdn_log_waf**: WAF interception logs
              */
             public Builder businessType(String businessType) {
                 this.businessType = businessType;
@@ -118,7 +123,7 @@ public class DescribeDcdnSLSRealTimeLogTypeResponseBody extends TeaModel {
             }
 
             /**
-             * Desc.
+             * The description of the real-time log type.
              */
             public Builder desc(String desc) {
                 this.desc = desc;

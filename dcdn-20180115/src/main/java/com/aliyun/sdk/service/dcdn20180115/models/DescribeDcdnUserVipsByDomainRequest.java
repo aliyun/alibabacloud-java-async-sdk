@@ -69,7 +69,11 @@ public class DescribeDcdnUserVipsByDomainRequest extends Request {
         } 
 
         /**
-         * Available.
+         * Specifies whether to query the virtual IP addresses of only healthy POPs. Valid value:
+         * <p>
+         * 
+         * *   **on**: queries healthy VIPs.
+         * *   **off**: queries all VIPs.
          */
         public Builder available(String available) {
             this.putQueryParameter("Available", available);
@@ -78,7 +82,10 @@ public class DescribeDcdnUserVipsByDomainRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * The accelerated domain name. You can specify only one domain name.
+         * <p>
+         * 
+         * Enumeration values: example.com
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);

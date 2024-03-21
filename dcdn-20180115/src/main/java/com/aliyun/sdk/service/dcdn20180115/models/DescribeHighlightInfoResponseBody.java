@@ -50,7 +50,7 @@ public class DescribeHighlightInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DataModule.
+         * The model of the highlighted data.
          */
         public Builder dataModule(java.util.List < DataModule> dataModule) {
             this.dataModule = dataModule;
@@ -58,7 +58,7 @@ public class DescribeHighlightInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class DescribeHighlightInfoResponseBody extends TeaModel {
             private String raw; 
 
             /**
-             * Hit.
+             * The highlighted data.
              */
             public Builder hit(String hit) {
                 this.hit = hit;
@@ -130,7 +130,7 @@ public class DescribeHighlightInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Key.
+             * The type of the highlight data.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -138,7 +138,7 @@ public class DescribeHighlightInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Raw.
+             * Complete data.
              */
             public Builder raw(String raw) {
                 this.raw = raw;

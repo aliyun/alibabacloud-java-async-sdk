@@ -54,7 +54,7 @@ public class DeleteDcdnWafGroupRequest extends Request {
         } 
 
         /**
-         * Id.
+         * The ID of the custom WAF rule group.
          */
         public Builder id(Long id) {
             this.putBodyParameter("Id", id);

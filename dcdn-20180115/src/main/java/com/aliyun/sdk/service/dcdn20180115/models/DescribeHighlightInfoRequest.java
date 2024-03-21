@@ -99,7 +99,7 @@ public class DescribeHighlightInfoRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * The end of the time range to query. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -108,7 +108,11 @@ public class DescribeHighlightInfoRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The access language. Valid values:
+         * <p>
+         * 
+         * *   **en-US** (default): English
+         * *   **zh-CN**: Chinese
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -117,7 +121,7 @@ public class DescribeHighlightInfoRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -126,7 +130,7 @@ public class DescribeHighlightInfoRequest extends Request {
         }
 
         /**
-         * TraceId.
+         * The ID of the trace.
          */
         public Builder traceId(String traceId) {
             this.putQueryParameter("TraceId", traceId);

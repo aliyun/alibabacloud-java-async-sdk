@@ -21,6 +21,9 @@ public class DescribeDcdnKvNamespaceResponseBody extends TeaModel {
     @NameInMap("Description")
     private String description;
 
+    @NameInMap("Mode")
+    private String mode;
+
     @NameInMap("Namespace")
     private String namespace;
 
@@ -37,6 +40,7 @@ public class DescribeDcdnKvNamespaceResponseBody extends TeaModel {
         this.capacityString = builder.capacityString;
         this.capacityUsedString = builder.capacityUsedString;
         this.description = builder.description;
+        this.mode = builder.mode;
         this.namespace = builder.namespace;
         this.namespaceId = builder.namespaceId;
         this.requestId = builder.requestId;
@@ -73,6 +77,13 @@ public class DescribeDcdnKvNamespaceResponseBody extends TeaModel {
     }
 
     /**
+     * @return mode
+     */
+    public String getMode() {
+        return this.mode;
+    }
+
+    /**
      * @return namespace
      */
     public String getNamespace() {
@@ -104,6 +115,7 @@ public class DescribeDcdnKvNamespaceResponseBody extends TeaModel {
         private String capacityString; 
         private String capacityUsedString; 
         private String description; 
+        private String mode; 
         private String namespace; 
         private String namespaceId; 
         private String requestId; 
@@ -130,6 +142,14 @@ public class DescribeDcdnKvNamespaceResponseBody extends TeaModel {
          */
         public Builder description(String description) {
             this.description = description;
+            return this;
+        }
+
+        /**
+         * Mode.
+         */
+        public Builder mode(String mode) {
+            this.mode = mode;
             return this;
         }
 

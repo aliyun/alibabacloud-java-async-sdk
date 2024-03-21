@@ -70,7 +70,7 @@ public class BatchPutDcdnKvRequest extends Request {
         } 
 
         /**
-         * KvList.
+         * The key-value pairs. The key-value pairs can be up to 2 MB in size.
          */
         public Builder kvList(java.util.List < KvList> kvList) {
             String kvListShrink = shrink(kvList, "KvList", "json");
@@ -80,7 +80,7 @@ public class BatchPutDcdnKvRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The name of the namespace.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -160,7 +160,7 @@ public class BatchPutDcdnKvRequest extends Request {
             private String value; 
 
             /**
-             * Expiration.
+             * The expiration time. The value is a timestamp in seconds. The expiration time cannot be earlier than the current time. If you specify Expiration and ExpirationTtl, only ExpirationTtl takes effect.
              */
             public Builder expiration(Long expiration) {
                 this.expiration = expiration;
@@ -168,7 +168,7 @@ public class BatchPutDcdnKvRequest extends Request {
             }
 
             /**
-             * ExpirationTtl.
+             * The relative expiration time. Unit: seconds. If you specify Expiration and ExpirationTtl, only ExpirationTtl takes effect.
              */
             public Builder expirationTtl(Long expirationTtl) {
                 this.expirationTtl = expirationTtl;
@@ -176,7 +176,7 @@ public class BatchPutDcdnKvRequest extends Request {
             }
 
             /**
-             * Key.
+             * The key. The key can be up to 512 characters in length and cannot contain spaces.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -184,7 +184,7 @@ public class BatchPutDcdnKvRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value.
              */
             public Builder value(String value) {
                 this.value = value;

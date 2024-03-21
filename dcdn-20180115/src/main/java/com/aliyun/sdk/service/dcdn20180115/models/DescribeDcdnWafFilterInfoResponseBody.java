@@ -110,7 +110,7 @@ public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
             private String pattern; 
 
             /**
-             * The error message returned because no items match the regular expression.
+             * The error message returned when no items match the regular expression.
              */
             public Builder errMsg(String errMsg) {
                 this.errMsg = errMsg;
@@ -231,7 +231,13 @@ public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Attributes.
+             * The configurable attributes, which are bit-field variables that are shown in the following list.\
+             * <p>
+             * For example, 1(00000001) indicates that case sensitivity can be enabled and stream match cannot be enabled, and 3(00000011) indicates that case sensitivity and stream match can be enabled.
+             * 
+             * *   Bit (low to high) - Description
+             * *   1 - Case sensitivity
+             * *   2 - Stream match
              */
             public Builder attributes(Integer attributes) {
                 this.attributes = attributes;
@@ -247,10 +253,10 @@ public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of match contents that can be returned. The value of this parameter varies based on the value of the Type parameter. Valid values:
+             * The maximum number of match items that can be returned. The value of this parameter varies based on the value of the Type parameter. Valid values:
              * <p>
              * 
-             * *   If **multi** is returned for the Type parameter, the value of this parameter indicates the maximum number of match contents.
+             * *   If **multi** is returned for the Type parameter, the value of this parameter indicates the maximum number of match items.
              * *   If **single** is returned for the Type parameter, the value of this parameter is 1.
              * *   If **none** is returned for the Type parameter, the value of this parameter is 0.
              */
@@ -260,7 +266,7 @@ public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The regular expression.
+             * The information about the regular expression.
              */
             public Builder regexp(Regexp regexp) {
                 this.regexp = regexp;
@@ -276,7 +282,7 @@ public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The tips that are displayed in the match content.
+             * The tips that are displayed in the match item.
              */
             public Builder tip(String tip) {
                 this.tip = tip;
@@ -284,12 +290,12 @@ public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The number of match contents. Valid values:
+             * The number of match items. Valid values:
              * <p>
              * 
-             * *   multi: multiple match contents
-             * *   single: one match content
-             * *   none: no match contents
+             * *   multi: You can specify multiple match items.
+             * *   single: You can specify only a match item.
+             * *   none: no match items.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -362,7 +368,7 @@ public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The logical operator.
+             * The information about the logical symbol.
              */
             public Builder logicalSymbol(java.util.List < LogicalSymbol> logicalSymbol) {
                 this.logicalSymbol = logicalSymbol;

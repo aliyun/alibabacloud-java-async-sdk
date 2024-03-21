@@ -74,7 +74,7 @@ public class DescribeKvUsageDataResponseBody extends TeaModel {
         private String startTime; 
 
         /**
-         * EndTime.
+         * The end of the time range during which data was queried.
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -82,7 +82,7 @@ public class DescribeKvUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * KvUsageData.
+         * The detailed usage data.
          */
         public Builder kvUsageData(java.util.List < KvUsageData> kvUsageData) {
             this.kvUsageData = kvUsageData;
@@ -90,7 +90,7 @@ public class DescribeKvUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class DescribeKvUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range during which data was queried.
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -174,7 +174,7 @@ public class DescribeKvUsageDataResponseBody extends TeaModel {
             private String timeStamp; 
 
             /**
-             * Acc.
+             * The number of visits.
              */
             public Builder acc(Long acc) {
                 this.acc = acc;
@@ -182,7 +182,7 @@ public class DescribeKvUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * AccessType.
+             * The request method. This parameter is returned only if **SplitBy** is set to **type**.
              */
             public Builder accessType(String accessType) {
                 this.accessType = accessType;
@@ -190,7 +190,7 @@ public class DescribeKvUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * NamespaceId.
+             * The ID of the namespace. This parameter is returned only if **SplitBy** is set to **namespace**.
              */
             public Builder namespaceId(String namespaceId) {
                 this.namespaceId = namespaceId;
@@ -198,7 +198,7 @@ public class DescribeKvUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * TimeStamp.
+             * The timestamp of the data returned.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;

@@ -138,7 +138,7 @@ public class DescribeDcdnDomainUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * The accelerated domain name.
+         * The accelerated domain name that was queried.
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -170,7 +170,7 @@ public class DescribeDcdnDomainUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the content returned.
+         * The type of the returned data.
          */
         public Builder type(String type) {
             this.type = type;
@@ -178,7 +178,7 @@ public class DescribeDcdnDomainUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * The network traffic that was collected at each interval.
+         * The traffic that was collected at each interval.
          */
         public Builder usageDataPerInterval(UsageDataPerInterval usageDataPerInterval) {
             this.usageDataPerInterval = usageDataPerInterval;
@@ -265,7 +265,7 @@ public class DescribeDcdnDomainUsageDataResponseBody extends TeaModel {
              * The data usage in a specific scenario.
              * <p>
              * 
-             * > SpecialValue indicates the data usage in a specific scenario. If no special billable item is specified, ignore this parameter.
+             * >  This parameter indicates the data usage in a specific scenario. If no special billable item is specified, ignore this parameter.
              */
             public Builder specialValue(String specialValue) {
                 this.specialValue = specialValue;
@@ -281,7 +281,7 @@ public class DescribeDcdnDomainUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of resource usage.
+             * The usage.
              */
             public Builder value(String value) {
                 this.value = value;

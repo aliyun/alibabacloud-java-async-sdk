@@ -55,7 +55,7 @@ public class DescribeDcdnOriginSiteHealthStatusRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * The accelerated domain name. You can specify only one domain name in each request.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);

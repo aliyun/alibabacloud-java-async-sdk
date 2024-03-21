@@ -50,7 +50,7 @@ public class DescribeDcdnWafDefaultRulesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Content.
+         * The configurations of the rule.
          */
         public Builder content(java.util.List < Content> content) {
             this.content = content;
@@ -58,7 +58,7 @@ public class DescribeDcdnWafDefaultRulesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +146,12 @@ public class DescribeDcdnWafDefaultRulesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Action.
+             * The default action of the rule. Valid values:
+             * <p>
+             * 
+             * *   **monitor**: monitors requests.
+             * *   **deny**: denies requests.
+             * *   **block**: blocks requests.
              */
             public Builder action(String action) {
                 this.action = action;
@@ -154,7 +159,7 @@ public class DescribeDcdnWafDefaultRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Config.
+             * The default configuration of the rule.
              */
             public Builder config(String config) {
                 this.config = config;
@@ -162,7 +167,7 @@ public class DescribeDcdnWafDefaultRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The default name of the rule.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -170,7 +175,11 @@ public class DescribeDcdnWafDefaultRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The default status of the rule. Valid values:
+             * <p>
+             * 
+             * *   **on**
+             * *   **off**
              */
             public Builder status(String status) {
                 this.status = status;
@@ -178,7 +187,13 @@ public class DescribeDcdnWafDefaultRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The rule type. Valid values:
+             * <p>
+             * 
+             * *   **waf_group**: basic web protection
+             * *   **high_frequency**: high-frequency scanning blocking
+             * *   **directory_traversal**: directory traversal blocking
+             * *   **scan_tools**: scanner blocking
              */
             public Builder type(String type) {
                 this.type = type;
@@ -231,7 +246,11 @@ public class DescribeDcdnWafDefaultRulesResponseBody extends TeaModel {
             private java.util.List < Rules> rules; 
 
             /**
-             * DefenseScene.
+             * The protection scenario. Valid values:
+             * <p>
+             * 
+             * *   **waf_group**: basic web protection
+             * *   **anti_scan**: scan protection
              */
             public Builder defenseScene(String defenseScene) {
                 this.defenseScene = defenseScene;
@@ -239,7 +258,7 @@ public class DescribeDcdnWafDefaultRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Rules.
+             * The configurations of the rule.
              */
             public Builder rules(java.util.List < Rules> rules) {
                 this.rules = rules;

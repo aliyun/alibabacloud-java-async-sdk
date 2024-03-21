@@ -55,7 +55,7 @@ public class DescribeRoutineRelatedDomainsRequest extends Request {
         } 
 
         /**
-         * Name.
+         * The name of the routine. The name is unique in the same account.
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);

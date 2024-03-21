@@ -134,7 +134,7 @@ public class DescribeDcdnWafGroupResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Id.
+         * The ID of the custom WAF rule group.
          */
         public Builder id(Long id) {
             this.id = id;
@@ -142,7 +142,7 @@ public class DescribeDcdnWafGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * The name of the WAF rule group.
          */
         public Builder name(String name) {
             this.name = name;
@@ -150,7 +150,7 @@ public class DescribeDcdnWafGroupResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the page returned.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -158,7 +158,7 @@ public class DescribeDcdnWafGroupResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: **20**.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -166,7 +166,7 @@ public class DescribeDcdnWafGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -174,7 +174,7 @@ public class DescribeDcdnWafGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Rules.
+         * The configurations of the rule.
          */
         public Builder rules(java.util.List < Rules> rules) {
             this.rules = rules;
@@ -182,7 +182,11 @@ public class DescribeDcdnWafGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Subscribe.
+         * Indicates whether to enable subscription. Valid values:
+         * <p>
+         * 
+         * *   **on:**
+         * *   **off**
          */
         public Builder subscribe(String subscribe) {
             this.subscribe = subscribe;
@@ -190,7 +194,7 @@ public class DescribeDcdnWafGroupResponseBody extends TeaModel {
         }
 
         /**
-         * TemplateId.
+         * The ID of the template.
          */
         public Builder templateId(Long templateId) {
             this.templateId = templateId;
@@ -198,7 +202,7 @@ public class DescribeDcdnWafGroupResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of rules that are filtered out.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -334,7 +338,34 @@ public class DescribeDcdnWafGroupResponseBody extends TeaModel {
             private Integer riskLevel; 
 
             /**
-             * ApplicationType.
+             * The type of the application. Valid values:
+             * <p>
+             * 
+             * *   **0**: Common
+             * *   **1**: WordPress
+             * *   **2**: DedeCMS
+             * *   **3**: Discuz
+             * *   **4**: PHP CMS
+             * *   **5**: ECShop
+             * *   **6**: ShopEX
+             * *   **7**: Drupal
+             * *   **8**: Joomla
+             * *   **9**: MetInfo
+             * *   **10**: Struts2
+             * *   **11**: Spring Boot
+             * *   **12**: JBoss
+             * *   **13**: WebLogic
+             * *   **14**: WebSphere
+             * *   **15**: Tomcat
+             * *   **16**: Elastic Search
+             * *   **18**: ThinkPHP
+             * *   **19**: Fastjson
+             * *   **20**: ImageMagick
+             * *   **21**: PHPWind
+             * *   **22**: phpMyAdmin
+             * *   **23**: Resin
+             * *   **24**: IIS
+             * *   **99**: Others
              */
             public Builder applicationType(Integer applicationType) {
                 this.applicationType = applicationType;
@@ -342,7 +373,7 @@ public class DescribeDcdnWafGroupResponseBody extends TeaModel {
             }
 
             /**
-             * CVE ID。
+             * The Common Vulnerabilities and Exposures (CVE) ID of the related vulnerability.
              */
             public Builder cveId(String cveId) {
                 this.cveId = cveId;
@@ -350,7 +381,7 @@ public class DescribeDcdnWafGroupResponseBody extends TeaModel {
             }
 
             /**
-             * CveUrl.
+             * The CVE link.
              */
             public Builder cveUrl(String cveUrl) {
                 this.cveUrl = cveUrl;
@@ -358,7 +389,7 @@ public class DescribeDcdnWafGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the WAF rule.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -366,7 +397,7 @@ public class DescribeDcdnWafGroupResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The time when the rule was modified.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -374,7 +405,7 @@ public class DescribeDcdnWafGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the custom WAF rule.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -382,7 +413,7 @@ public class DescribeDcdnWafGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the WAF rule.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -390,7 +421,19 @@ public class DescribeDcdnWafGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ProtectionType.
+             * Protection type Valid values:
+             * <p>
+             * 
+             * *   **11**: SQL injection
+             * *   **12**: cross-site scripting (XSS)
+             * *   **13**: code execution
+             * *   **14**: carriage return line feeds (CRLF)
+             * *   **15**: local file inclusion
+             * *   **16**: remote file inclusion
+             * *   **17**: webshells
+             * *   **19**: cross-site request forgery
+             * *   **20**: others
+             * *   **21**: SEMA
              */
             public Builder protectionType(Integer protectionType) {
                 this.protectionType = protectionType;
@@ -398,7 +441,12 @@ public class DescribeDcdnWafGroupResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevel.
+             * The risk level of the resources that do not comply with the managed rule. Valid values:
+             * <p>
+             * 
+             * *   **1**: high risk
+             * *   **2**: medium risk
+             * *   **3**: low risk
              */
             public Builder riskLevel(Integer riskLevel) {
                 this.riskLevel = riskLevel;

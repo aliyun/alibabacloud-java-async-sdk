@@ -193,7 +193,7 @@ public class DescribeDcdnDomainDetailResponseBody extends TeaModel {
              * The type of the origin server. Valid values:
              * <p>
              * 
-             * *   **ipaddr**: an origin IP address
+             * *   **ipaddr**: an IP address
              * *   **domain**: an origin domain name
              * *   **oss**: the domain name of an Object Storage Service (OSS) bucket
              */
@@ -203,7 +203,7 @@ public class DescribeDcdnDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The weight of the origin server if multiple origin servers have been specified.
+             * The weight of the origin server if multiple origin servers are specified.
              */
             public Builder weight(String weight) {
                 this.weight = weight;
@@ -469,7 +469,12 @@ public class DescribeDcdnDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * FunctionType.
+             * Computing service type. Valid values:
+             * <p>
+             * 
+             * *   **routine**
+             * *   **image**
+             * *   **cloudFunction**
              */
             public Builder functionType(String functionType) {
                 this.functionType = functionType;
@@ -521,7 +526,13 @@ public class DescribeDcdnDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Scene.
+             * Acceleration scenario. Valid values:
+             * <p>
+             * 
+             * *   **apiscene**: API acceleration.
+             * *   **webservicescene**: website acceleration.
+             * *   **staticscene**: video, image, and text acceleration.
+             * *   **an empty string**: no acceleration scenario is used.
              */
             public Builder scene(String scene) {
                 this.scene = scene;

@@ -54,7 +54,7 @@ public class DeleteDcdnUserConfigRequest extends Request {
         } 
 
         /**
-         * FunctionName.
+         * The name of the user feature that you want to delete. Currently, only DCDN Web Application Firewall (WAF) can be deleted. Default value: waf.
          */
         public Builder functionName(String functionName) {
             this.putQueryParameter("FunctionName", functionName);

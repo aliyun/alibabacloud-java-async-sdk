@@ -54,7 +54,7 @@ public class DescribeDcdnWafDefaultRulesRequest extends Request {
         } 
 
         /**
-         * QueryArgs.
+         * The query conditions. The value is a string in the JSON format. Format: `QueryArgs={"DefenseScene":"anti_scan"}`
          */
         public Builder queryArgs(String queryArgs) {
             this.putQueryParameter("QueryArgs", queryArgs);

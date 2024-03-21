@@ -98,10 +98,7 @@ public class SetDcdnFullDomainsBlockIPRequest extends Request {
         } 
 
         /**
-         * The blocking period. Unit: seconds.
-         * <p>
-         * 
-         * > If you set the **OperationType** parameter to **unblock**, you do not need to set this parameter.
+         * The duration for which IP addresses or CIDR blocks are blocked. Unit: seconds. The value **0** specifies that IP addresses or CIDR blocks are permanently blocked. This parameter is available only if you set **OperationType** to **block**.
          */
         public Builder blockInterval(Integer blockInterval) {
             this.putBodyParameter("BlockInterval", blockInterval);
@@ -110,7 +107,7 @@ public class SetDcdnFullDomainsBlockIPRequest extends Request {
         }
 
         /**
-         * The IP addresses that are blocked or unblocked. Separate multiple IP addresses with commas (,). You can specify up to 1,000 IP addresses.
+         * The IP addresses that you want to block or unblock. Separate multiple IP addresses with commas (,). You can specify up to 1,000 IP addresses.
          */
         public Builder IPList(String IPList) {
             this.putBodyParameter("IPList", IPList);
@@ -119,7 +116,7 @@ public class SetDcdnFullDomainsBlockIPRequest extends Request {
         }
 
         /**
-         * The action. Valid values:
+         * The action that you want to perform. Valid values:
          * <p>
          * 
          * *   **block**
@@ -132,7 +129,12 @@ public class SetDcdnFullDomainsBlockIPRequest extends Request {
         }
 
         /**
-         * UpdateType.
+         * The type of the blocking duration. This parameter is available only if you set **OperationType** to **block**. Valid values:
+         * <p>
+         * 
+         * *   **cover**: the blocking duration that is specified in the request takes effect.
+         * *   **uncover**: the longer one of the blocking duration that is specified in the request and the remaining blocking duration takes effect.
+         * *   Default value: cover.
          */
         public Builder updateType(String updateType) {
             this.putBodyParameter("UpdateType", updateType);

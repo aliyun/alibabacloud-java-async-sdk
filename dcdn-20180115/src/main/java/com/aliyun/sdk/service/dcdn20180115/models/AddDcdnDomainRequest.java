@@ -230,7 +230,12 @@ public class AddDcdnDomainRequest extends Request {
         }
 
         /**
-         * FunctionType.
+         * Computing service type. Valid values:
+         * <p>
+         * 
+         * *   **routine**
+         * *   **image**
+         * *   **cloudFunction**
          */
         public Builder functionType(String functionType) {
             this.putQueryParameter("FunctionType", functionType);
@@ -266,7 +271,13 @@ public class AddDcdnDomainRequest extends Request {
         }
 
         /**
-         * Scene.
+         * The Acceleration scen. Supported:
+         * <p>
+         * 
+         * * apiscene:API acceleration.
+         * * webservicescene: accelerate website business.
+         * * staticscene: video and graphic acceleration.
+         * * (Empty): no scene.
          */
         public Builder scene(String scene) {
             this.putQueryParameter("Scene", scene);
