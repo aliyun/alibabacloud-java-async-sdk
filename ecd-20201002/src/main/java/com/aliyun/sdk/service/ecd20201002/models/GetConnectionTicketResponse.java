@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link EncryptPasswordResponse} extends {@link TeaModel}
+ * {@link GetConnectionTicketResponse} extends {@link TeaModel}
  *
- * <p>EncryptPasswordResponse</p>
+ * <p>GetConnectionTicketResponse</p>
  */
-public class EncryptPasswordResponse extends Response {
+public class GetConnectionTicketResponse extends Response {
     @NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -19,16 +19,16 @@ public class EncryptPasswordResponse extends Response {
     private Integer statusCode;
 
     @NameInMap("body")
-    private EncryptPasswordResponseBody body;
+    private GetConnectionTicketResponseBody body;
 
-    private EncryptPasswordResponse(BuilderImpl builder) {
+    private GetConnectionTicketResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static EncryptPasswordResponse create() {
+    public static GetConnectionTicketResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +54,35 @@ public class EncryptPasswordResponse extends Response {
     /**
      * @return body
      */
-    public EncryptPasswordResponseBody getBody() {
+    public GetConnectionTicketResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<EncryptPasswordResponse, Builder> {
+    public interface Builder extends Response.Builder<GetConnectionTicketResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(EncryptPasswordResponseBody body);
+        Builder body(GetConnectionTicketResponseBody body);
 
         @Override
-        EncryptPasswordResponse build();
+        GetConnectionTicketResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<EncryptPasswordResponse, Builder>
+            extends Response.BuilderImpl<GetConnectionTicketResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private EncryptPasswordResponseBody body; 
+        private GetConnectionTicketResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(EncryptPasswordResponse response) {
+        private BuilderImpl(GetConnectionTicketResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +111,14 @@ public class EncryptPasswordResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(EncryptPasswordResponseBody body) {
+        public Builder body(GetConnectionTicketResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public EncryptPasswordResponse build() {
-            return new EncryptPasswordResponse(this);
+        public GetConnectionTicketResponse build() {
+            return new GetConnectionTicketResponse(this);
         } 
 
     } 

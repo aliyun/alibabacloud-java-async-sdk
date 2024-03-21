@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.ecd20201002;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.ecd20201002.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -40,13 +41,19 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetCloudDriveServiceMountTokenResponse> getCloudDriveServiceMountToken(GetCloudDriveServiceMountTokenRequest request);
 
+    CompletableFuture<GetConnectionTicketResponse> getConnectionTicket(GetConnectionTicketRequest request);
+
     CompletableFuture<GetLoginTokenResponse> getLoginToken(GetLoginTokenRequest request);
 
     CompletableFuture<IsKeepAliveResponse> isKeepAlive(IsKeepAliveRequest request);
 
+    CompletableFuture<QueryEdsAgentReportConfigResponse> queryEdsAgentReportConfig(QueryEdsAgentReportConfigRequest request);
+
     CompletableFuture<RebootDesktopsResponse> rebootDesktops(RebootDesktopsRequest request);
 
     CompletableFuture<RefreshLoginTokenResponse> refreshLoginToken(RefreshLoginTokenRequest request);
+
+    CompletableFuture<ReportEdsAgentInfoResponse> reportEdsAgentInfo(ReportEdsAgentInfoRequest request);
 
     CompletableFuture<ReportSessionStatusResponse> reportSessionStatus(ReportSessionStatusRequest request);
 

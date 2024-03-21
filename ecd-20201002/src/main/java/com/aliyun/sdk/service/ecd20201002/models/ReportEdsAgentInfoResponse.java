@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link EncryptPasswordResponse} extends {@link TeaModel}
+ * {@link ReportEdsAgentInfoResponse} extends {@link TeaModel}
  *
- * <p>EncryptPasswordResponse</p>
+ * <p>ReportEdsAgentInfoResponse</p>
  */
-public class EncryptPasswordResponse extends Response {
+public class ReportEdsAgentInfoResponse extends Response {
     @NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -19,16 +19,16 @@ public class EncryptPasswordResponse extends Response {
     private Integer statusCode;
 
     @NameInMap("body")
-    private EncryptPasswordResponseBody body;
+    private ReportEdsAgentInfoResponseBody body;
 
-    private EncryptPasswordResponse(BuilderImpl builder) {
+    private ReportEdsAgentInfoResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static EncryptPasswordResponse create() {
+    public static ReportEdsAgentInfoResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +54,35 @@ public class EncryptPasswordResponse extends Response {
     /**
      * @return body
      */
-    public EncryptPasswordResponseBody getBody() {
+    public ReportEdsAgentInfoResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<EncryptPasswordResponse, Builder> {
+    public interface Builder extends Response.Builder<ReportEdsAgentInfoResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(EncryptPasswordResponseBody body);
+        Builder body(ReportEdsAgentInfoResponseBody body);
 
         @Override
-        EncryptPasswordResponse build();
+        ReportEdsAgentInfoResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<EncryptPasswordResponse, Builder>
+            extends Response.BuilderImpl<ReportEdsAgentInfoResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private EncryptPasswordResponseBody body; 
+        private ReportEdsAgentInfoResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(EncryptPasswordResponse response) {
+        private BuilderImpl(ReportEdsAgentInfoResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +111,14 @@ public class EncryptPasswordResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(EncryptPasswordResponseBody body) {
+        public Builder body(ReportEdsAgentInfoResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public EncryptPasswordResponse build() {
-            return new EncryptPasswordResponse(this);
+        public ReportEdsAgentInfoResponse build() {
+            return new ReportEdsAgentInfoResponse(this);
         } 
 
     } 
