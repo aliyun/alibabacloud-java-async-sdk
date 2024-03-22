@@ -21,6 +21,10 @@ public class CreateDiagnosticRequest extends Request {
     private String diagnosticType;
 
     @Query
+    @NameInMap("Lang")
+    private String lang;
+
+    @Query
     @NameInMap("Product")
     private String product;
 
@@ -28,6 +32,7 @@ public class CreateDiagnosticRequest extends Request {
         super(builder);
         this.diagnosticKey = builder.diagnosticKey;
         this.diagnosticType = builder.diagnosticType;
+        this.lang = builder.lang;
         this.product = builder.product;
     }
 
@@ -59,6 +64,13 @@ public class CreateDiagnosticRequest extends Request {
     }
 
     /**
+     * @return lang
+     */
+    public String getLang() {
+        return this.lang;
+    }
+
+    /**
      * @return product
      */
     public String getProduct() {
@@ -68,6 +80,7 @@ public class CreateDiagnosticRequest extends Request {
     public static final class Builder extends Request.Builder<CreateDiagnosticRequest, Builder> {
         private String diagnosticKey; 
         private String diagnosticType; 
+        private String lang; 
         private String product; 
 
         private Builder() {
@@ -78,6 +91,7 @@ public class CreateDiagnosticRequest extends Request {
             super(request);
             this.diagnosticKey = request.diagnosticKey;
             this.diagnosticType = request.diagnosticType;
+            this.lang = request.lang;
             this.product = request.product;
         } 
 
@@ -96,6 +110,15 @@ public class CreateDiagnosticRequest extends Request {
         public Builder diagnosticType(String diagnosticType) {
             this.putQueryParameter("DiagnosticType", diagnosticType);
             this.diagnosticType = diagnosticType;
+            return this;
+        }
+
+        /**
+         * Lang.
+         */
+        public Builder lang(String lang) {
+            this.putQueryParameter("Lang", lang);
+            this.lang = lang;
             return this;
         }
 

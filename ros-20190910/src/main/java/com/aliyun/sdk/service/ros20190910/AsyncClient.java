@@ -196,7 +196,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetServiceProvisionsResponse> getServiceProvisions(GetServiceProvisionsRequest request);
 
     /**
-      * In this topic, the information about a stack whose ID is `c754d2a4-28f1-46df-b557-9586173a****` is queried. The stack is deployed in the China (Hangzhou) region.
+      * In this example, the information about a stack whose ID is `c754d2a4-28f1-46df-b557-9586173a****` in the China (Hangzhou) region is queried.
       *
      */
     CompletableFuture<GetStackResponse> getStack(GetStackRequest request);
