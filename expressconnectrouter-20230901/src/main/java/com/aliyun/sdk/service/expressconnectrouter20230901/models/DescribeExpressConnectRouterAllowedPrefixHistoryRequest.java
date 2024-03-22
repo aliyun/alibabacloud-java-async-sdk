@@ -13,8 +13,8 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeExpressConnectRouterAllowedPrefixHistoryRequest extends Request {
     @Body
-    @NameInMap("AssociatonId")
-    private String associatonId;
+    @NameInMap("AssociationId")
+    private String associationId;
 
     @Body
     @NameInMap("ClientToken")
@@ -39,7 +39,7 @@ public class DescribeExpressConnectRouterAllowedPrefixHistoryRequest extends Req
 
     private DescribeExpressConnectRouterAllowedPrefixHistoryRequest(Builder builder) {
         super(builder);
-        this.associatonId = builder.associatonId;
+        this.associationId = builder.associationId;
         this.clientToken = builder.clientToken;
         this.dryRun = builder.dryRun;
         this.ecrId = builder.ecrId;
@@ -61,10 +61,10 @@ public class DescribeExpressConnectRouterAllowedPrefixHistoryRequest extends Req
     }
 
     /**
-     * @return associatonId
+     * @return associationId
      */
-    public String getAssociatonId() {
-        return this.associatonId;
+    public String getAssociationId() {
+        return this.associationId;
     }
 
     /**
@@ -103,7 +103,7 @@ public class DescribeExpressConnectRouterAllowedPrefixHistoryRequest extends Req
     }
 
     public static final class Builder extends Request.Builder<DescribeExpressConnectRouterAllowedPrefixHistoryRequest, Builder> {
-        private String associatonId; 
+        private String associationId; 
         private String clientToken; 
         private Boolean dryRun; 
         private String ecrId; 
@@ -116,7 +116,7 @@ public class DescribeExpressConnectRouterAllowedPrefixHistoryRequest extends Req
 
         private Builder(DescribeExpressConnectRouterAllowedPrefixHistoryRequest request) {
             super(request);
-            this.associatonId = request.associatonId;
+            this.associationId = request.associationId;
             this.clientToken = request.clientToken;
             this.dryRun = request.dryRun;
             this.ecrId = request.ecrId;
@@ -125,11 +125,11 @@ public class DescribeExpressConnectRouterAllowedPrefixHistoryRequest extends Req
         } 
 
         /**
-         * AssociatonId.
+         * AssociationId.
          */
-        public Builder associatonId(String associatonId) {
-            this.putBodyParameter("AssociatonId", associatonId);
-            this.associatonId = associatonId;
+        public Builder associationId(String associationId) {
+            this.putBodyParameter("AssociationId", associationId);
+            this.associationId = associationId;
             return this;
         }
 
