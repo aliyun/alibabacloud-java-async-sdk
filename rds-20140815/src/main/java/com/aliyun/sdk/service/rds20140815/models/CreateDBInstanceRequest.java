@@ -877,7 +877,7 @@ public class CreateDBInstanceRequest extends Request {
          * *   **masterUsername**: The username of the administrator account. The username can contain lowercase letters, digits, and underscores (\_). It must start with a letter and end with a letter or digit. It can be up to 63 characters in length and cannot start with pg.
          * *   **masterUserPassword**: The password of the administrator account. The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. It must be 8 to 32 characters in length. The password can contain any of the following characters: `! @ # $ % ^ & * ( ) _ + - =`.
          * 
-         * > : This parameter applies only to ApsaraDB RDS for PostgreSQL instances. For more information about Babelfish for ApsaraDB RDS for PostgreSQL, see [Introduction to Babelfish](~~428613~~).
+         * > This parameter applies only to ApsaraDB RDS for PostgreSQL instances. For more information about Babelfish for ApsaraDB RDS for PostgreSQL, see [Introduction to Babelfish](~~428613~~).
          */
         public Builder babelfishConfig(String babelfishConfig) {
             this.putQueryParameter("BabelfishConfig", babelfishConfig);
@@ -895,7 +895,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * A reserved parameter. You do not need to specify this parameter.
+         * An invalid parameter. You do not need to specify this parameter.
          */
         public Builder burstingEnabled(Boolean burstingEnabled) {
             this.putQueryParameter("BurstingEnabled", burstingEnabled);
@@ -996,7 +996,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * The instance type of the instance. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~).
+         * The instance type of the instance. You can specify a standard instance type or an economy instance type. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~).
          * <p>
          * 
          * To create a serverless instance, set this parameter to one of the following values:
@@ -1185,15 +1185,15 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * The database engine version of the instance.
+         * The database engine version of the instance. Valid values:
          * <p>
          * 
          * *   Regular instance
          * 
          *     *   Valid values when you set Engine to MySQL: **5.5**, **5.6**, **5.7**, and **8.0**
-         *     *   Valid values if you set Engine to SQLServer: **08r2\_ent_ha** (cloud disks, discontinued), **2008r2** (local disks, discontinued), **2012** (SQL Server EE Basic), **2012\_ent_ha**, **2012\_std_ha**, **2012\_web**, **2014\_ent_ha**, **2014\_std_ha**, **2016\_ent_ha**, **2016\_std_ha**, **2016\_web**, **2017\_ent**, **2017\_std_ha**, **2017\_web**, **2019\_ent**, **2019\_std_ha**, **2019\_web**, **2022\_ent**, **2022\_std_ha**, and **2022\_web**
+         *     *   Valid values when you set Engine to SQLServer: **08r2\_ent_ha** (cloud disks, discontinued), **2008r2** (local disks, discontinued), **2012** (SQL Server EE Basic), **2012\_ent_ha**, **2012\_std_ha**, **2012\_web**, **2014\_ent_ha**, **2014\_std_ha**, **2016\_ent_ha**, **2016\_std_ha**, **2016\_web**, **2017\_ent**, **2017\_std_ha**, **2017\_web**, **2019\_ent**, **2019\_std_ha**, **2019\_web**, **2022\_ent**, **2022\_std_ha**, and **2022\_web**
          *     *   Valid values when you set Engine to PostgreSQL: **10.0**, **11.0**, **12.0**, **13.0**, **14.0**, **15.0**, and **16.0**
-         *     *   Valid values when you set the Engine parameter to MariaDB: **10.3**
+         *     *   Valid value if you set the Engine parameter to MariaDB: **10.3**
          * 
          * *   Serverless instance
          * 
@@ -1205,7 +1205,7 @@ public class CreateDBInstanceRequest extends Request {
          * 
          * *   ApsaraDB RDS for MariaDB does not support serverless instances.
          * 
-         * *   RDS instances that run SQL Server, `_ent` specifies SQL Server EE (Always On), `_ent_ha` specifies SQL Server EE, `_std_ha` specifies SQL Server SE, and `_web` specifies SQL Server Web.
+         * *   RDS instances that run SQL Server: `_ent` specifies SQL Server EE (Always On), `_ent_ha` specifies SQL Server EE, `_std_ha` specifies SQL Server SE, and `_web` specifies SQL Server Web.
          * 
          * *   RDS instances that run SQL Server 2014 are not available for purchase on the international site (alibabacloud.com).
          * 
@@ -1235,7 +1235,13 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * A reserved parameter. You do not need to specify this parameter.
+         * Specifies whether to enable the I/O acceleration feature. Valid values:
+         * <p>
+         * 
+         * *   1: The feature is enabled.
+         * *   0: The feature is disabled.
+         * 
+         * >  For more information about the I/O acceleration feature of general enhanced SSDs (ESSDs), see [Introduction](~~2527067~~).
          */
         public Builder ioAccelerationEnabled(String ioAccelerationEnabled) {
             this.putQueryParameter("IoAccelerationEnabled", ioAccelerationEnabled);
@@ -1689,7 +1695,7 @@ public class CreateDBInstanceRequest extends Request {
              * The minimum value of RCUs. Valid values:
              * <p>
              * 
-             * *   Serverless ApsaraDB RDS for MySQL instances: **0.5 to 32**. Only integers are supported.
+             * *   Serverless ApsaraDB RDS for MySQL instances: **0.5 to 32**.
              * *   Serverless ApsaraDB RDS for SQL Server instances: **2 to 8**. Only integers are supported.
              * *   Serverless ApsaraDB RDS for PostgreSQL instances: **0.5 to 14**
              * 
@@ -1707,11 +1713,8 @@ public class CreateDBInstanceRequest extends Request {
              * *   **true**
              * *   **false** (default)
              * 
-             * > 
-             * 
-             * *   This parameter is required only for serverless instances that run MySQL and PostgreSQL. If you set this parameter to true, a service interruption that lasts approximately 30 to 120 seconds occurs during forced scaling. Process with caution.
-             * 
-             * *   The RCU scaling for a serverless instance immediately takes effect. In some cases, such as the execution of large transactions, the scaling does not immediately take effect. In this case, you can enable this feature to forcefully scale the RCUs of the instance.
+             * > *   This parameter is required only for serverless instances that run MySQL and PostgreSQL. If you set this parameter to true, a service interruption that lasts approximately 30 to 120 seconds occurs during forced scaling. Process with caution.
+             * > *   The RCU scaling for a serverless instance immediately takes effect. In some cases, such as the execution of large transactions, the scaling does not immediately take effect. In this case, you can enable this feature to forcefully scale the RCUs of the instance.
              */
             public Builder switchForce(Boolean switchForce) {
                 this.switchForce = switchForce;

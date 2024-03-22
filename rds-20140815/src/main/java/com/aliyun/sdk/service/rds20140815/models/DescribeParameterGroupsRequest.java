@@ -125,7 +125,11 @@ public class DescribeParameterGroupsRequest extends Request {
         } 
 
         /**
-         * EnableDetail.
+         * Specifies whether to return the parameter overview.
+         * <p>
+         * 
+         * *   **false** (default): The parameter overview is returned.
+         * *   **true**: The parameter overview is not returned.
          */
         public Builder enableDetail(Boolean enableDetail) {
             this.putQueryParameter("EnableDetail", enableDetail);

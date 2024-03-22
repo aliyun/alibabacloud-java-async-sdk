@@ -577,7 +577,7 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         }
 
         /**
-         * This parameter is reserved. You do not need to specify this parameter.
+         * An invalid parameter. You do not need to specify this parameter.
          */
         public Builder burstingEnabled(Boolean burstingEnabled) {
             this.putQueryParameter("BurstingEnabled", burstingEnabled);

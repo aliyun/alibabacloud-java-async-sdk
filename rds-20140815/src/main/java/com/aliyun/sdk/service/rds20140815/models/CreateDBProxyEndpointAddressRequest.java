@@ -184,7 +184,7 @@ public class CreateDBProxyEndpointAddressRequest extends Request {
         } 
 
         /**
-         * The prefix of the proxy endpoint. Enter a custom prefix.
+         * The prefix of the proxy endpoint Enter a custom prefix.
          */
         public Builder connectionStringPrefix(String connectionStringPrefix) {
             this.putQueryParameter("ConnectionStringPrefix", connectionStringPrefix);
@@ -267,7 +267,7 @@ public class CreateDBProxyEndpointAddressRequest extends Request {
         }
 
         /**
-         * The ID of the VPC to which the proxy endpoint belongs. You can call the DescribeDBInstanceAttribute operation to query the VPC ID.
+         * The ID of the VPC to which the proxy endpoint belongs. You can call the DescribeDBInstanceAttribute operation to query the information.
          * <p>
          * 
          * >  This parameter must be specified when **DBProxyConnectStringNetType** is set to **VPC**.

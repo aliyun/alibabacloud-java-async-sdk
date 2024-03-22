@@ -426,11 +426,15 @@ public class PreCheckCreateOrderForCreateDBNodesRequest extends Request {
         @NameInMap("classCode")
         private String classCode;
 
+        @NameInMap("vswId")
+        private String vswId;
+
         @NameInMap("zoneId")
         private String zoneId;
 
         private DBNode(Builder builder) {
             this.classCode = builder.classCode;
+            this.vswId = builder.vswId;
             this.zoneId = builder.zoneId;
         }
 
@@ -450,6 +454,13 @@ public class PreCheckCreateOrderForCreateDBNodesRequest extends Request {
         }
 
         /**
+         * @return vswId
+         */
+        public String getVswId() {
+            return this.vswId;
+        }
+
+        /**
          * @return zoneId
          */
         public String getZoneId() {
@@ -458,6 +469,7 @@ public class PreCheckCreateOrderForCreateDBNodesRequest extends Request {
 
         public static final class Builder {
             private String classCode; 
+            private String vswId; 
             private String zoneId; 
 
             /**
@@ -465,6 +477,14 @@ public class PreCheckCreateOrderForCreateDBNodesRequest extends Request {
              */
             public Builder classCode(String classCode) {
                 this.classCode = classCode;
+                return this;
+            }
+
+            /**
+             * vswId.
+             */
+            public Builder vswId(String vswId) {
+                this.vswId = vswId;
                 return this;
             }
 
