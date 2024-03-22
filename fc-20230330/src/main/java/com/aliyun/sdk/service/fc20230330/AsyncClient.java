@@ -103,6 +103,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListProvisionConfigsResponse> listProvisionConfigs(ListProvisionConfigsRequest request);
 
+    CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
+
     /**
       * @deprecated
       *
@@ -129,11 +131,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<TagResourceResponse> tagResource(TagResourceRequest request);
 
+    CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
+
     /**
       * @deprecated
       *
      */
     CompletableFuture<UntagResourceResponse> untagResource(UntagResourceRequest request);
+
+    CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);
 
     CompletableFuture<UpdateAliasResponse> updateAlias(UpdateAliasRequest request);
 
