@@ -117,6 +117,9 @@ public class DescribePlaybookResponseBody extends TeaModel {
         @NameInMap("Taskflow")
         private String taskflow;
 
+        @NameInMap("TaskflowType")
+        private String taskflowType;
+
         private Playbook(Builder builder) {
             this.creator = builder.creator;
             this.description = builder.description;
@@ -133,6 +136,7 @@ public class DescribePlaybookResponseBody extends TeaModel {
             this.playbookUuid = builder.playbookUuid;
             this.successExeNum = builder.successExeNum;
             this.taskflow = builder.taskflow;
+            this.taskflowType = builder.taskflowType;
         }
 
         public static Builder builder() {
@@ -248,6 +252,13 @@ public class DescribePlaybookResponseBody extends TeaModel {
             return this.taskflow;
         }
 
+        /**
+         * @return taskflowType
+         */
+        public String getTaskflowType() {
+            return this.taskflowType;
+        }
+
         public static final class Builder {
             private String creator; 
             private String description; 
@@ -264,6 +275,7 @@ public class DescribePlaybookResponseBody extends TeaModel {
             private String playbookUuid; 
             private Integer successExeNum; 
             private String taskflow; 
+            private String taskflowType; 
 
             /**
              * The ID of the Alibaba Cloud account that is used to create the playbook.
@@ -393,6 +405,14 @@ public class DescribePlaybookResponseBody extends TeaModel {
              */
             public Builder taskflow(String taskflow) {
                 this.taskflow = taskflow;
+                return this;
+            }
+
+            /**
+             * TaskflowType.
+             */
+            public Builder taskflowType(String taskflowType) {
+                this.taskflowType = taskflowType;
                 return this;
             }
 

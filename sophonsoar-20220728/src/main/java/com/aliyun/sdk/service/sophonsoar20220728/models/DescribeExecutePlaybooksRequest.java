@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeExecutePlaybooksRequest extends Request {
     @Query
+    @NameInMap("InputMode")
+    private String inputMode;
+
+    @Query
     @NameInMap("Lang")
     private String lang;
 
@@ -30,6 +34,7 @@ public class DescribeExecutePlaybooksRequest extends Request {
 
     private DescribeExecutePlaybooksRequest(Builder builder) {
         super(builder);
+        this.inputMode = builder.inputMode;
         this.lang = builder.lang;
         this.paramType = builder.paramType;
         this.playbookName = builder.playbookName;
@@ -47,6 +52,13 @@ public class DescribeExecutePlaybooksRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return inputMode
+     */
+    public String getInputMode() {
+        return this.inputMode;
     }
 
     /**
@@ -78,6 +90,7 @@ public class DescribeExecutePlaybooksRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeExecutePlaybooksRequest, Builder> {
+        private String inputMode; 
         private String lang; 
         private String paramType; 
         private String playbookName; 
@@ -89,11 +102,26 @@ public class DescribeExecutePlaybooksRequest extends Request {
 
         private Builder(DescribeExecutePlaybooksRequest request) {
             super(request);
+            this.inputMode = request.inputMode;
             this.lang = request.lang;
             this.paramType = request.paramType;
             this.playbookName = request.playbookName;
             this.uuid = request.uuid;
         } 
+
+        /**
+         * The entity type of the script input parameter. When you want to query multiple entity types, separate them with commas.
+         * <p>
+         * - **ip**: IP entity.
+         * - **file**: file entity.
+         * - **process**: process entity.
+         * - **incident**: incident entity.
+         */
+        public Builder inputMode(String inputMode) {
+            this.putQueryParameter("InputMode", inputMode);
+            this.inputMode = inputMode;
+            return this;
+        }
 
         /**
          * The language of the content within the request and the response. Valid values:

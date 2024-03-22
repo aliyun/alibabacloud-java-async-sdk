@@ -127,7 +127,7 @@ public class ModifyPlaybookInputOutputRequest extends Request {
         } 
 
         /**
-         * ExeConfig.
+         * The executed mode of a playbook. The value is a JSON array.
          */
         public Builder exeConfig(String exeConfig) {
             this.putBodyParameter("ExeConfig", exeConfig);

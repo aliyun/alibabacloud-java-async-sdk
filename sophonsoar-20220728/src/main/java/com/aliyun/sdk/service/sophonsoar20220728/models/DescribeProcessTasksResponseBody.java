@@ -221,6 +221,15 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
         @NameInMap("YunCode")
         private String yunCode;
 
+        @NameInMap("errCode")
+        private String errCode;
+
+        @NameInMap("errMsg")
+        private String errMsg;
+
+        @NameInMap("errTip")
+        private String errTip;
+
         private ProcessTasks(Builder builder) {
             this.creator = builder.creator;
             this.entityName = builder.entityName;
@@ -238,6 +247,9 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
             this.taskId = builder.taskId;
             this.taskStatus = builder.taskStatus;
             this.yunCode = builder.yunCode;
+            this.errCode = builder.errCode;
+            this.errMsg = builder.errMsg;
+            this.errTip = builder.errTip;
         }
 
         public static Builder builder() {
@@ -360,6 +372,27 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
             return this.yunCode;
         }
 
+        /**
+         * @return errCode
+         */
+        public String getErrCode() {
+            return this.errCode;
+        }
+
+        /**
+         * @return errMsg
+         */
+        public String getErrMsg() {
+            return this.errMsg;
+        }
+
+        /**
+         * @return errTip
+         */
+        public String getErrTip() {
+            return this.errTip;
+        }
+
         public static final class Builder {
             private String creator; 
             private String entityName; 
@@ -377,6 +410,9 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
             private String taskId; 
             private Integer taskStatus; 
             private String yunCode; 
+            private String errCode; 
+            private String errMsg; 
+            private String errTip; 
 
             /**
              * The ID of the Alibaba Cloud account that is used to submit the handling task.
@@ -503,6 +539,30 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
              */
             public Builder yunCode(String yunCode) {
                 this.yunCode = yunCode;
+                return this;
+            }
+
+            /**
+             * errCode.
+             */
+            public Builder errCode(String errCode) {
+                this.errCode = errCode;
+                return this;
+            }
+
+            /**
+             * errMsg.
+             */
+            public Builder errMsg(String errMsg) {
+                this.errMsg = errMsg;
+                return this;
+            }
+
+            /**
+             * errTip.
+             */
+            public Builder errTip(String errTip) {
+                this.errTip = errTip;
                 return this;
             }
 
