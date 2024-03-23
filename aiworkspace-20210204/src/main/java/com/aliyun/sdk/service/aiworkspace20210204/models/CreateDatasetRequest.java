@@ -48,6 +48,10 @@ public class CreateDatasetRequest extends Request {
     private String property;
 
     @Body
+    @NameInMap("Provider")
+    private String provider;
+
+    @Body
     @NameInMap("ProviderType")
     private String providerType;
 
@@ -78,6 +82,7 @@ public class CreateDatasetRequest extends Request {
         this.name = builder.name;
         this.options = builder.options;
         this.property = builder.property;
+        this.provider = builder.provider;
         this.providerType = builder.providerType;
         this.sourceId = builder.sourceId;
         this.sourceType = builder.sourceType;
@@ -155,6 +160,13 @@ public class CreateDatasetRequest extends Request {
     }
 
     /**
+     * @return provider
+     */
+    public String getProvider() {
+        return this.provider;
+    }
+
+    /**
      * @return providerType
      */
     public String getProviderType() {
@@ -198,6 +210,7 @@ public class CreateDatasetRequest extends Request {
         private String name; 
         private String options; 
         private String property; 
+        private String provider; 
         private String providerType; 
         private String sourceId; 
         private String sourceType; 
@@ -218,6 +231,7 @@ public class CreateDatasetRequest extends Request {
             this.name = request.name;
             this.options = request.options;
             this.property = request.property;
+            this.provider = request.provider;
             this.providerType = request.providerType;
             this.sourceId = request.sourceId;
             this.sourceType = request.sourceType;
@@ -294,6 +308,15 @@ public class CreateDatasetRequest extends Request {
         public Builder property(String property) {
             this.putBodyParameter("Property", property);
             this.property = property;
+            return this;
+        }
+
+        /**
+         * Provider.
+         */
+        public Builder provider(String provider) {
+            this.putBodyParameter("Provider", provider);
+            this.provider = provider;
             return this;
         }
 

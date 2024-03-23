@@ -30,12 +30,17 @@ public class GetPermissionRequest extends Request {
     @NameInMap("Creator")
     private String creator;
 
+    @Query
+    @NameInMap("Resource")
+    private String resource;
+
     private GetPermissionRequest(Builder builder) {
         super(builder);
         this.workspaceId = builder.workspaceId;
         this.permissionCode = builder.permissionCode;
         this.accessibility = builder.accessibility;
         this.creator = builder.creator;
+        this.resource = builder.resource;
     }
 
     public static Builder builder() {
@@ -79,11 +84,19 @@ public class GetPermissionRequest extends Request {
         return this.creator;
     }
 
+    /**
+     * @return resource
+     */
+    public String getResource() {
+        return this.resource;
+    }
+
     public static final class Builder extends Request.Builder<GetPermissionRequest, Builder> {
         private String workspaceId; 
         private String permissionCode; 
         private String accessibility; 
         private String creator; 
+        private String resource; 
 
         private Builder() {
             super();
@@ -95,6 +108,7 @@ public class GetPermissionRequest extends Request {
             this.permissionCode = request.permissionCode;
             this.accessibility = request.accessibility;
             this.creator = request.creator;
+            this.resource = request.resource;
         } 
 
         /**
@@ -130,6 +144,15 @@ public class GetPermissionRequest extends Request {
         public Builder creator(String creator) {
             this.putQueryParameter("Creator", creator);
             this.creator = creator;
+            return this;
+        }
+
+        /**
+         * Resource.
+         */
+        public Builder resource(String resource) {
+            this.putQueryParameter("Resource", resource);
+            this.resource = resource;
             return this;
         }
 
