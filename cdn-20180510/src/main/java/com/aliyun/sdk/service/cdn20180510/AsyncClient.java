@@ -1151,6 +1151,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<PushObjectCacheResponse> pushObjectCache(PushObjectCacheRequest request);
 
+    CompletableFuture<RefreshObjectCacheByCacheTagResponse> refreshObjectCacheByCacheTag(RefreshObjectCacheByCacheTagRequest request);
+
     /**
       * *   Alibaba Cloud CDN supports POST requests in which parameters are sent as a form.
       * *   You can call the [RefreshObjectCaches](~~91164~~) operation to refresh content and call the [PushObjectCache](~~91161~~) operation to prefetch content.
