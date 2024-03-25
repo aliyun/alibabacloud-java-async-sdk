@@ -23,4 +23,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<BackendCallSignalResponse> backendCallSignal(BackendCallSignalRequest request);
 
+    CompletableFuture<GroupCallResponse> groupCall(GroupCallRequest request);
+
+    CompletableFuture<SignalCallResponse> signalCall(SignalCallRequest request);
+
 }
