@@ -50,7 +50,7 @@ public class DeleteSparkTemplateResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The result returned.
+         * The returned result.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class DeleteSparkTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,11 +98,11 @@ public class DeleteSparkTemplateResponseBody extends TeaModel {
             private Boolean succeeded; 
 
             /**
-             * Indicates whether the template is deleted. Valid values:
+             * Indicates whether the request was successful. Valid values:
              * <p>
              * 
-             * *   **true**: The template is deleted.
-             * *   **false**: The template fails to be deleted.
+             * *   **True**
+             * *   **False**
              */
             public Builder succeeded(Boolean succeeded) {
                 this.succeeded = succeeded;

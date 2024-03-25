@@ -79,11 +79,14 @@ public class DeleteSparkTemplateRequest extends Request {
         }
 
         /**
-         * The ID of the directory or application to which the template belongs.
+         * The directory ID of the template files that you want to delete.
          * <p>
          * 
-         * > *   You can call the [GetSparkTemplateFullTree](~~456205~~) operation to query the directory ID or application ID.
-         * > *   If you specify a directory ID, the entire directory is deleted.
+         * > 
+         * 
+         * *   You can call the [GetSparkTemplateFullTree](~~456205~~) operation to query the directory ID of template files.
+         * 
+         * *   When you specify a directory ID, the directory and all template files that are included in the directory are deleted.
          */
         public Builder id(Long id) {
             this.putBodyParameter("Id", id);

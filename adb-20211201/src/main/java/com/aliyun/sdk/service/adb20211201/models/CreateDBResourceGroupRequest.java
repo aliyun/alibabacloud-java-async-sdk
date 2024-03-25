@@ -59,6 +59,10 @@ public class CreateDBResourceGroupRequest extends Request {
     @NameInMap("RegionId")
     private String regionId;
 
+    @Query
+    @NameInMap("Rules")
+    private java.util.List < Rules> rules;
+
     private CreateDBResourceGroupRequest(Builder builder) {
         super(builder);
         this.clusterMode = builder.clusterMode;
@@ -72,6 +76,7 @@ public class CreateDBResourceGroupRequest extends Request {
         this.minClusterCount = builder.minClusterCount;
         this.minComputeResource = builder.minComputeResource;
         this.regionId = builder.regionId;
+        this.rules = builder.rules;
     }
 
     public static Builder builder() {
@@ -164,6 +169,13 @@ public class CreateDBResourceGroupRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return rules
+     */
+    public java.util.List < Rules> getRules() {
+        return this.rules;
+    }
+
     public static final class Builder extends Request.Builder<CreateDBResourceGroupRequest, Builder> {
         private String clusterMode; 
         private String clusterSizeResource; 
@@ -176,6 +188,7 @@ public class CreateDBResourceGroupRequest extends Request {
         private Integer minClusterCount; 
         private String minComputeResource; 
         private String regionId; 
+        private java.util.List < Rules> rules; 
 
         private Builder() {
             super();
@@ -194,6 +207,7 @@ public class CreateDBResourceGroupRequest extends Request {
             this.minClusterCount = request.minClusterCount;
             this.minComputeResource = request.minComputeResource;
             this.regionId = request.regionId;
+            this.rules = request.rules;
         } 
 
         /**
@@ -317,6 +331,16 @@ public class CreateDBResourceGroupRequest extends Request {
             return this;
         }
 
+        /**
+         * Rules.
+         */
+        public Builder rules(java.util.List < Rules> rules) {
+            String rulesShrink = shrink(rules, "Rules", "json");
+            this.putQueryParameter("Rules", rulesShrink);
+            this.rules = rules;
+            return this;
+        }
+
         @Override
         public CreateDBResourceGroupRequest build() {
             return new CreateDBResourceGroupRequest(this);
@@ -324,4 +348,90 @@ public class CreateDBResourceGroupRequest extends Request {
 
     } 
 
+    public static class Rules extends TeaModel {
+        @NameInMap("GroupName")
+        private String groupName;
+
+        @NameInMap("QueryTime")
+        private String queryTime;
+
+        @NameInMap("TargetGroupName")
+        private String targetGroupName;
+
+        private Rules(Builder builder) {
+            this.groupName = builder.groupName;
+            this.queryTime = builder.queryTime;
+            this.targetGroupName = builder.targetGroupName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Rules create() {
+            return builder().build();
+        }
+
+        /**
+         * @return groupName
+         */
+        public String getGroupName() {
+            return this.groupName;
+        }
+
+        /**
+         * @return queryTime
+         */
+        public String getQueryTime() {
+            return this.queryTime;
+        }
+
+        /**
+         * @return targetGroupName
+         */
+        public String getTargetGroupName() {
+            return this.targetGroupName;
+        }
+
+        public static final class Builder {
+            private String groupName; 
+            private String queryTime; 
+            private String targetGroupName; 
+
+            /**
+             * The name of the resource group.
+             * <p>
+             * 
+             * *   The name can be up to 255 characters in length.
+             * *   The name must start with a letter or a digit.
+             * *   The name can contain letters, digits, hyphens (\_), and underscores (\_).
+             */
+            public Builder groupName(String groupName) {
+                this.groupName = groupName;
+                return this;
+            }
+
+            /**
+             * QueryTime.
+             */
+            public Builder queryTime(String queryTime) {
+                this.queryTime = queryTime;
+                return this;
+            }
+
+            /**
+             * TargetGroupName.
+             */
+            public Builder targetGroupName(String targetGroupName) {
+                this.targetGroupName = targetGroupName;
+                return this;
+            }
+
+            public Rules build() {
+                return new Rules(this);
+            } 
+
+        } 
+
+    }
 }

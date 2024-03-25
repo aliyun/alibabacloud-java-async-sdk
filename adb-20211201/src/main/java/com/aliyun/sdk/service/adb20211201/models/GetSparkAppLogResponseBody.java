@@ -150,7 +150,7 @@ public class GetSparkAppLogResponseBody extends TeaModel {
             }
 
             /**
-             * LogSize.
+             * The number of log entries. A value of 0 indicates that no valid logs are returned.
              */
             public Builder logSize(Integer logSize) {
                 this.logSize = logSize;

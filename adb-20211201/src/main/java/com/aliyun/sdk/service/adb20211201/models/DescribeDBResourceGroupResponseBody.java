@@ -71,6 +71,87 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
 
     } 
 
+    public static class Rules extends TeaModel {
+        @NameInMap("GroupName")
+        private String groupName;
+
+        @NameInMap("QueryTime")
+        private String queryTime;
+
+        @NameInMap("TargetGroupName")
+        private String targetGroupName;
+
+        private Rules(Builder builder) {
+            this.groupName = builder.groupName;
+            this.queryTime = builder.queryTime;
+            this.targetGroupName = builder.targetGroupName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Rules create() {
+            return builder().build();
+        }
+
+        /**
+         * @return groupName
+         */
+        public String getGroupName() {
+            return this.groupName;
+        }
+
+        /**
+         * @return queryTime
+         */
+        public String getQueryTime() {
+            return this.queryTime;
+        }
+
+        /**
+         * @return targetGroupName
+         */
+        public String getTargetGroupName() {
+            return this.targetGroupName;
+        }
+
+        public static final class Builder {
+            private String groupName; 
+            private String queryTime; 
+            private String targetGroupName; 
+
+            /**
+             * GroupName.
+             */
+            public Builder groupName(String groupName) {
+                this.groupName = groupName;
+                return this;
+            }
+
+            /**
+             * QueryTime.
+             */
+            public Builder queryTime(String queryTime) {
+                this.queryTime = queryTime;
+                return this;
+            }
+
+            /**
+             * TargetGroupName.
+             */
+            public Builder targetGroupName(String targetGroupName) {
+                this.targetGroupName = targetGroupName;
+                return this;
+            }
+
+            public Rules build() {
+                return new Rules(this);
+            } 
+
+        } 
+
+    }
     public static class GroupsInfo extends TeaModel {
         @NameInMap("ClusterMode")
         private String clusterMode;
@@ -108,6 +189,9 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         @NameInMap("MinComputeResource")
         private String minComputeResource;
 
+        @NameInMap("Rules")
+        private java.util.List < Rules> rules;
+
         @NameInMap("RunningClusterCount")
         private Integer runningClusterCount;
 
@@ -130,6 +214,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             this.maxComputeResource = builder.maxComputeResource;
             this.minClusterCount = builder.minClusterCount;
             this.minComputeResource = builder.minComputeResource;
+            this.rules = builder.rules;
             this.runningClusterCount = builder.runningClusterCount;
             this.status = builder.status;
             this.updateTime = builder.updateTime;
@@ -228,6 +313,13 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         }
 
         /**
+         * @return rules
+         */
+        public java.util.List < Rules> getRules() {
+            return this.rules;
+        }
+
+        /**
          * @return runningClusterCount
          */
         public Integer getRunningClusterCount() {
@@ -261,6 +353,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             private String maxComputeResource; 
             private Integer minClusterCount; 
             private String minComputeResource; 
+            private java.util.List < Rules> rules; 
             private Integer runningClusterCount; 
             private String status; 
             private String updateTime; 
@@ -364,6 +457,14 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
              */
             public Builder minComputeResource(String minComputeResource) {
                 this.minComputeResource = minComputeResource;
+                return this;
+            }
+
+            /**
+             * Rules.
+             */
+            public Builder rules(java.util.List < Rules> rules) {
+                this.rules = rules;
                 return this;
             }
 
