@@ -1,3 +1,6 @@
+2024-03-25 Version: 1.0.2
+- Generated java-async 2020-04-20 for OnsMqtt.
+
 2024-03-20 Version: 1.0.1
 - Generated java-async 2020-04-20 for OnsMqtt.
 
