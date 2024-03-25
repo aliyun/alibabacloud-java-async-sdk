@@ -1,3 +1,6 @@
+2024-03-25 Version: 4.0.6
+- Generated java-async 2015-12-01 for Dds.
+
 2024-03-20 Version: 4.0.5
 - Generated java-async 2015-12-01 for Dds.
 

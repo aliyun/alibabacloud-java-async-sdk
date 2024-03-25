@@ -147,7 +147,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         private String backupEndTime;
 
         @NameInMap("BackupId")
-        private Integer backupId;
+        private Long backupId;
 
         @NameInMap("BackupIntranetDownloadURL")
         private String backupIntranetDownloadURL;
@@ -220,7 +220,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         /**
          * @return backupId
          */
-        public Integer getBackupId() {
+        public Long getBackupId() {
             return this.backupId;
         }
 
@@ -284,7 +284,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             private String backupDBNames; 
             private String backupDownloadURL; 
             private String backupEndTime; 
-            private Integer backupId; 
+            private Long backupId; 
             private String backupIntranetDownloadURL; 
             private Long backupJobId; 
             private String backupMethod; 
@@ -321,7 +321,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             /**
              * The ID of the backup set.
              */
-            public Builder backupId(Integer backupId) {
+            public Builder backupId(Long backupId) {
                 this.backupId = backupId;
                 return this;
             }
