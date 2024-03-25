@@ -173,6 +173,9 @@ public class QueryBrokerDemandResponseBody extends TeaModel {
         @NameInMap("Description")
         private String description;
 
+        @NameInMap("Email")
+        private String email;
+
         @NameInMap("Mobile")
         private String mobile;
 
@@ -214,6 +217,7 @@ public class QueryBrokerDemandResponseBody extends TeaModel {
             this.demandDomain = builder.demandDomain;
             this.demandPrice = builder.demandPrice;
             this.description = builder.description;
+            this.email = builder.email;
             this.mobile = builder.mobile;
             this.orderType = builder.orderType;
             this.partnerDomain = builder.partnerDomain;
@@ -282,6 +286,13 @@ public class QueryBrokerDemandResponseBody extends TeaModel {
          */
         public String getDescription() {
             return this.description;
+        }
+
+        /**
+         * @return email
+         */
+        public String getEmail() {
+            return this.email;
         }
 
         /**
@@ -369,6 +380,7 @@ public class QueryBrokerDemandResponseBody extends TeaModel {
             private String demandDomain; 
             private Float demandPrice; 
             private String description; 
+            private String email; 
             private String mobile; 
             private Integer orderType; 
             private String partnerDomain; 
@@ -434,6 +446,14 @@ public class QueryBrokerDemandResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * Email.
+             */
+            public Builder email(String email) {
+                this.email = email;
                 return this;
             }
 
