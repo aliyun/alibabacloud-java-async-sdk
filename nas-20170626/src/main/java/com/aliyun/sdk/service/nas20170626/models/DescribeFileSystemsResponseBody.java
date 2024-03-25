@@ -1042,6 +1042,9 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         @NameInMap("Ldap")
         private Ldap ldap;
 
+        @NameInMap("MeteredArchiveSize")
+        private Long meteredArchiveSize;
+
         @NameInMap("MeteredIASize")
         private Long meteredIASize;
 
@@ -1094,6 +1097,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             this.fileSystemType = builder.fileSystemType;
             this.KMSKeyId = builder.KMSKeyId;
             this.ldap = builder.ldap;
+            this.meteredArchiveSize = builder.meteredArchiveSize;
             this.meteredIASize = builder.meteredIASize;
             this.meteredSize = builder.meteredSize;
             this.mountTargets = builder.mountTargets;
@@ -1202,6 +1206,13 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         }
 
         /**
+         * @return meteredArchiveSize
+         */
+        public Long getMeteredArchiveSize() {
+            return this.meteredArchiveSize;
+        }
+
+        /**
          * @return meteredIASize
          */
         public Long getMeteredIASize() {
@@ -1305,6 +1316,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             private String fileSystemType; 
             private String KMSKeyId; 
             private Ldap ldap; 
+            private Long meteredArchiveSize; 
             private Long meteredIASize; 
             private Long meteredSize; 
             private MountTargets mountTargets; 
@@ -1444,6 +1456,14 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
              */
             public Builder ldap(Ldap ldap) {
                 this.ldap = ldap;
+                return this;
+            }
+
+            /**
+             * MeteredArchiveSize.
+             */
+            public Builder meteredArchiveSize(Long meteredArchiveSize) {
+                this.meteredArchiveSize = meteredArchiveSize;
                 return this;
             }
 

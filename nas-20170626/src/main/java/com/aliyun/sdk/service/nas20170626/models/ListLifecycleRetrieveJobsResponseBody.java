@@ -153,6 +153,9 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
         @NameInMap("Status")
         private String status;
 
+        @NameInMap("StorageType")
+        private String storageType;
+
         @NameInMap("UpdateTime")
         private String updateTime;
 
@@ -164,6 +167,7 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
             this.paths = builder.paths;
             this.retrievedFileCount = builder.retrievedFileCount;
             this.status = builder.status;
+            this.storageType = builder.storageType;
             this.updateTime = builder.updateTime;
         }
 
@@ -225,6 +229,13 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
         }
 
         /**
+         * @return storageType
+         */
+        public String getStorageType() {
+            return this.storageType;
+        }
+
+        /**
          * @return updateTime
          */
         public String getUpdateTime() {
@@ -239,6 +250,7 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
             private java.util.List < String > paths; 
             private Long retrievedFileCount; 
             private String status; 
+            private String storageType; 
             private String updateTime; 
 
             /**
@@ -303,6 +315,14 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * StorageType.
+             */
+            public Builder storageType(String storageType) {
+                this.storageType = storageType;
                 return this;
             }
 

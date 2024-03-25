@@ -1,0 +1,97 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.nas20170626.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link DeleteAccessPointRequest} extends {@link RequestModel}
+ *
+ * <p>DeleteAccessPointRequest</p>
+ */
+public class DeleteAccessPointRequest extends Request {
+    @Query
+    @NameInMap("AccessPointId")
+    @Validation(required = true)
+    private String accessPointId;
+
+    @Query
+    @NameInMap("FileSystemId")
+    @Validation(required = true, maxLength = 64, minLength = 3)
+    private String fileSystemId;
+
+    private DeleteAccessPointRequest(Builder builder) {
+        super(builder);
+        this.accessPointId = builder.accessPointId;
+        this.fileSystemId = builder.fileSystemId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static DeleteAccessPointRequest create() {
+        return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return accessPointId
+     */
+    public String getAccessPointId() {
+        return this.accessPointId;
+    }
+
+    /**
+     * @return fileSystemId
+     */
+    public String getFileSystemId() {
+        return this.fileSystemId;
+    }
+
+    public static final class Builder extends Request.Builder<DeleteAccessPointRequest, Builder> {
+        private String accessPointId; 
+        private String fileSystemId; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(DeleteAccessPointRequest request) {
+            super(request);
+            this.accessPointId = request.accessPointId;
+            this.fileSystemId = request.fileSystemId;
+        } 
+
+        /**
+         * AccessPointId.
+         */
+        public Builder accessPointId(String accessPointId) {
+            this.putQueryParameter("AccessPointId", accessPointId);
+            this.accessPointId = accessPointId;
+            return this;
+        }
+
+        /**
+         * FileSystemId.
+         */
+        public Builder fileSystemId(String fileSystemId) {
+            this.putQueryParameter("FileSystemId", fileSystemId);
+            this.fileSystemId = fileSystemId;
+            return this;
+        }
+
+        @Override
+        public DeleteAccessPointRequest build() {
+            return new DeleteAccessPointRequest(this);
+        } 
+
+    } 
+
+}

@@ -29,12 +29,17 @@ public class ListLifecycleRetrieveJobsRequest extends Request {
     @NameInMap("Status")
     private String status;
 
+    @Query
+    @NameInMap("StorageType")
+    private String storageType;
+
     private ListLifecycleRetrieveJobsRequest(Builder builder) {
         super(builder);
         this.fileSystemId = builder.fileSystemId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.status = builder.status;
+        this.storageType = builder.storageType;
     }
 
     public static Builder builder() {
@@ -78,11 +83,19 @@ public class ListLifecycleRetrieveJobsRequest extends Request {
         return this.status;
     }
 
+    /**
+     * @return storageType
+     */
+    public String getStorageType() {
+        return this.storageType;
+    }
+
     public static final class Builder extends Request.Builder<ListLifecycleRetrieveJobsRequest, Builder> {
         private String fileSystemId; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String status; 
+        private String storageType; 
 
         private Builder() {
             super();
@@ -94,6 +107,7 @@ public class ListLifecycleRetrieveJobsRequest extends Request {
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.status = request.status;
+            this.storageType = request.storageType;
         } 
 
         /**
@@ -143,6 +157,15 @@ public class ListLifecycleRetrieveJobsRequest extends Request {
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
             this.status = status;
+            return this;
+        }
+
+        /**
+         * StorageType.
+         */
+        public Builder storageType(String storageType) {
+            this.putQueryParameter("StorageType", storageType);
+            this.storageType = storageType;
             return this;
         }
 

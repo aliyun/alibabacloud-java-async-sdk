@@ -114,6 +114,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateAccessGroupResponse> createAccessGroup(CreateAccessGroupRequest request);
 
+    CompletableFuture<CreateAccessPointResponse> createAccessPoint(CreateAccessPointRequest request);
+
     CompletableFuture<CreateAccessRuleResponse> createAccessRule(CreateAccessRuleRequest request);
 
     /**
@@ -180,6 +182,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<CreateDataFlowTaskResponse> createDataFlowTask(CreateDataFlowTaskRequest request);
+
+    CompletableFuture<CreateDirResponse> createDir(CreateDirRequest request);
 
     /**
       * *   This operation is only available to some users.
@@ -300,6 +304,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DeleteAccessGroupResponse> deleteAccessGroup(DeleteAccessGroupRequest request);
 
+    CompletableFuture<DeleteAccessPointResponse> deleteAccessPoint(DeleteAccessPointRequest request);
+
     /**
       * Rules in the default permission group (DEFAULT_VPC_GROUP_NAME) cannot be deleted.
       *
@@ -375,6 +381,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteSnapshotResponse> deleteSnapshot(DeleteSnapshotRequest request);
 
     CompletableFuture<DescribeAccessGroupsResponse> describeAccessGroups(DescribeAccessGroupsRequest request);
+
+    CompletableFuture<DescribeAccessPointResponse> describeAccessPoint(DescribeAccessPointRequest request);
+
+    CompletableFuture<DescribeAccessPointsResponse> describeAccessPoints(DescribeAccessPointsRequest request);
 
     CompletableFuture<DescribeAccessRulesResponse> describeAccessRules(DescribeAccessRulesRequest request);
 
@@ -548,6 +558,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<ModifyAccessGroupResponse> modifyAccessGroup(ModifyAccessGroupRequest request);
+
+    CompletableFuture<ModifyAccessPointResponse> modifyAccessPoint(ModifyAccessPointRequest request);
 
     /**
       * The rules in the default permission group (DEFAULT_VPC_GROUP_NAME) cannot be modified.

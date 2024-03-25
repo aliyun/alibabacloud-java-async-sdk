@@ -78,6 +78,9 @@ public class GetDirectoryOrFilePropertiesResponseBody extends TeaModel {
         @NameInMap("CTime")
         private String cTime;
 
+        @NameInMap("HasArchiveFile")
+        private Boolean hasArchiveFile;
+
         @NameInMap("HasInfrequentAccessFile")
         private Boolean hasInfrequentAccessFile;
 
@@ -105,6 +108,7 @@ public class GetDirectoryOrFilePropertiesResponseBody extends TeaModel {
         private Entry(Builder builder) {
             this.aTime = builder.aTime;
             this.cTime = builder.cTime;
+            this.hasArchiveFile = builder.hasArchiveFile;
             this.hasInfrequentAccessFile = builder.hasInfrequentAccessFile;
             this.inode = builder.inode;
             this.mTime = builder.mTime;
@@ -135,6 +139,13 @@ public class GetDirectoryOrFilePropertiesResponseBody extends TeaModel {
          */
         public String getCTime() {
             return this.cTime;
+        }
+
+        /**
+         * @return hasArchiveFile
+         */
+        public Boolean getHasArchiveFile() {
+            return this.hasArchiveFile;
         }
 
         /**
@@ -196,6 +207,7 @@ public class GetDirectoryOrFilePropertiesResponseBody extends TeaModel {
         public static final class Builder {
             private String aTime; 
             private String cTime; 
+            private Boolean hasArchiveFile; 
             private Boolean hasInfrequentAccessFile; 
             private String inode; 
             private String mTime; 
@@ -228,6 +240,14 @@ public class GetDirectoryOrFilePropertiesResponseBody extends TeaModel {
              */
             public Builder cTime(String cTime) {
                 this.cTime = cTime;
+                return this;
+            }
+
+            /**
+             * HasArchiveFile.
+             */
+            public Builder hasArchiveFile(Boolean hasArchiveFile) {
+                this.hasArchiveFile = hasArchiveFile;
                 return this;
             }
 

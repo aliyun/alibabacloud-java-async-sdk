@@ -29,12 +29,17 @@ public class DescribeLifecyclePoliciesRequest extends Request {
     @Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
 
+    @Query
+    @NameInMap("StorageType")
+    private String storageType;
+
     private DescribeLifecyclePoliciesRequest(Builder builder) {
         super(builder);
         this.fileSystemId = builder.fileSystemId;
         this.lifecyclePolicyName = builder.lifecyclePolicyName;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.storageType = builder.storageType;
     }
 
     public static Builder builder() {
@@ -78,11 +83,19 @@ public class DescribeLifecyclePoliciesRequest extends Request {
         return this.pageSize;
     }
 
+    /**
+     * @return storageType
+     */
+    public String getStorageType() {
+        return this.storageType;
+    }
+
     public static final class Builder extends Request.Builder<DescribeLifecyclePoliciesRequest, Builder> {
         private String fileSystemId; 
         private String lifecyclePolicyName; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String storageType; 
 
         private Builder() {
             super();
@@ -94,6 +107,7 @@ public class DescribeLifecyclePoliciesRequest extends Request {
             this.lifecyclePolicyName = request.lifecyclePolicyName;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.storageType = request.storageType;
         } 
 
         /**
@@ -140,6 +154,15 @@ public class DescribeLifecyclePoliciesRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * StorageType.
+         */
+        public Builder storageType(String storageType) {
+            this.putQueryParameter("StorageType", storageType);
+            this.storageType = storageType;
             return this;
         }
 

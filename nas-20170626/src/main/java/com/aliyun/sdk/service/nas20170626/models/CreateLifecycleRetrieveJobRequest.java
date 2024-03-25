@@ -22,10 +22,15 @@ public class CreateLifecycleRetrieveJobRequest extends Request {
     @Validation(required = true)
     private java.util.List < String > paths;
 
+    @Query
+    @NameInMap("StorageType")
+    private String storageType;
+
     private CreateLifecycleRetrieveJobRequest(Builder builder) {
         super(builder);
         this.fileSystemId = builder.fileSystemId;
         this.paths = builder.paths;
+        this.storageType = builder.storageType;
     }
 
     public static Builder builder() {
@@ -55,9 +60,17 @@ public class CreateLifecycleRetrieveJobRequest extends Request {
         return this.paths;
     }
 
+    /**
+     * @return storageType
+     */
+    public String getStorageType() {
+        return this.storageType;
+    }
+
     public static final class Builder extends Request.Builder<CreateLifecycleRetrieveJobRequest, Builder> {
         private String fileSystemId; 
         private java.util.List < String > paths; 
+        private String storageType; 
 
         private Builder() {
             super();
@@ -67,6 +80,7 @@ public class CreateLifecycleRetrieveJobRequest extends Request {
             super(request);
             this.fileSystemId = request.fileSystemId;
             this.paths = request.paths;
+            this.storageType = request.storageType;
         } 
 
         /**
@@ -84,6 +98,15 @@ public class CreateLifecycleRetrieveJobRequest extends Request {
         public Builder paths(java.util.List < String > paths) {
             this.putQueryParameter("Paths", paths);
             this.paths = paths;
+            return this;
+        }
+
+        /**
+         * StorageType.
+         */
+        public Builder storageType(String storageType) {
+            this.putQueryParameter("StorageType", storageType);
+            this.storageType = storageType;
             return this;
         }
 

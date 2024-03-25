@@ -101,6 +101,9 @@ public class ListDirectoriesAndFilesResponseBody extends TeaModel {
         @NameInMap("FileId")
         private String fileId;
 
+        @NameInMap("HasArchiveFile")
+        private String hasArchiveFile;
+
         @NameInMap("HasInfrequentAccessFile")
         private Boolean hasInfrequentAccessFile;
 
@@ -132,6 +135,7 @@ public class ListDirectoriesAndFilesResponseBody extends TeaModel {
             this.atime = builder.atime;
             this.ctime = builder.ctime;
             this.fileId = builder.fileId;
+            this.hasArchiveFile = builder.hasArchiveFile;
             this.hasInfrequentAccessFile = builder.hasInfrequentAccessFile;
             this.inode = builder.inode;
             this.mtime = builder.mtime;
@@ -170,6 +174,13 @@ public class ListDirectoriesAndFilesResponseBody extends TeaModel {
          */
         public String getFileId() {
             return this.fileId;
+        }
+
+        /**
+         * @return hasArchiveFile
+         */
+        public String getHasArchiveFile() {
+            return this.hasArchiveFile;
         }
 
         /**
@@ -239,6 +250,7 @@ public class ListDirectoriesAndFilesResponseBody extends TeaModel {
             private String atime; 
             private String ctime; 
             private String fileId; 
+            private String hasArchiveFile; 
             private Boolean hasInfrequentAccessFile; 
             private String inode; 
             private String mtime; 
@@ -280,6 +292,14 @@ public class ListDirectoriesAndFilesResponseBody extends TeaModel {
              */
             public Builder fileId(String fileId) {
                 this.fileId = fileId;
+                return this;
+            }
+
+            /**
+             * HasArchiveFile.
+             */
+            public Builder hasArchiveFile(String hasArchiveFile) {
+                this.hasArchiveFile = hasArchiveFile;
                 return this;
             }
 
