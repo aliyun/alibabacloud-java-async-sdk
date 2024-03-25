@@ -161,10 +161,14 @@ public class ListPtsSceneResponseBody extends TeaModel {
         @NameInMap("SceneName")
         private String sceneName;
 
+        @NameInMap("Status")
+        private String status;
+
         private SceneViewList(Builder builder) {
             this.createTime = builder.createTime;
             this.sceneId = builder.sceneId;
             this.sceneName = builder.sceneName;
+            this.status = builder.status;
         }
 
         public static Builder builder() {
@@ -196,10 +200,18 @@ public class ListPtsSceneResponseBody extends TeaModel {
             return this.sceneName;
         }
 
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
         public static final class Builder {
             private String createTime; 
             private String sceneId; 
             private String sceneName; 
+            private String status; 
 
             /**
              * CreateTime.
@@ -222,6 +234,14 @@ public class ListPtsSceneResponseBody extends TeaModel {
              */
             public Builder sceneName(String sceneName) {
                 this.sceneName = sceneName;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
                 return this;
             }
 
