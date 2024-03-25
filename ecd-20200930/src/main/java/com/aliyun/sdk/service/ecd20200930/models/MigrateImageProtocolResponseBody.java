@@ -50,7 +50,7 @@ public class MigrateImageProtocolResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * FailedIds.
+         * The IDs of images whose protocols fail to be migrated.
          */
         public Builder failedIds(java.util.List < String > failedIds) {
             this.failedIds = failedIds;
@@ -58,7 +58,7 @@ public class MigrateImageProtocolResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

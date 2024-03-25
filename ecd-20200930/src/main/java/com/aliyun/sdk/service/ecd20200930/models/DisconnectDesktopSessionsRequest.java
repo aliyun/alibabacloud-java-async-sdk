@@ -84,7 +84,7 @@ public class DisconnectDesktopSessionsRequest extends Request {
         } 
 
         /**
-         * PreCheck.
+         * Specifies whether to perform precheck. If you perform precheck, the system does not disconnect from desktop sessions. Only the sessions that do not meet specific conditions are returned.
          */
         public Builder preCheck(Boolean preCheck) {
             this.putQueryParameter("PreCheck", preCheck);
@@ -93,7 +93,7 @@ public class DisconnectDesktopSessionsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -102,7 +102,7 @@ public class DisconnectDesktopSessionsRequest extends Request {
         }
 
         /**
-         * Sessions.
+         * The session details.
          */
         public Builder sessions(java.util.List < Sessions> sessions) {
             this.putQueryParameter("Sessions", sessions);
@@ -156,7 +156,7 @@ public class DisconnectDesktopSessionsRequest extends Request {
             private String endUserId; 
 
             /**
-             * DesktopId.
+             * The cloud desktop ID.
              */
             public Builder desktopId(String desktopId) {
                 this.desktopId = desktopId;
@@ -164,7 +164,7 @@ public class DisconnectDesktopSessionsRequest extends Request {
             }
 
             /**
-             * EndUserId.
+             * The end user ID.
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;

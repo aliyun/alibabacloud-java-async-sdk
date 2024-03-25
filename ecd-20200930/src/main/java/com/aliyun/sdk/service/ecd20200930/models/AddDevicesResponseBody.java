@@ -12,10 +12,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddDevicesResponseBody</p>
  */
 public class AddDevicesResponseBody extends TeaModel {
+    @NameInMap("Code")
+    private String code;
+
+    @NameInMap("Message")
+    private String message;
+
     @NameInMap("RequestId")
     private String requestId;
 
     private AddDevicesResponseBody(Builder builder) {
+        this.code = builder.code;
+        this.message = builder.message;
         this.requestId = builder.requestId;
     }
 
@@ -28,6 +36,20 @@ public class AddDevicesResponseBody extends TeaModel {
     }
 
     /**
+     * @return code
+     */
+    public String getCode() {
+        return this.code;
+    }
+
+    /**
+     * @return message
+     */
+    public String getMessage() {
+        return this.message;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -35,7 +57,25 @@ public class AddDevicesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String code; 
+        private String message; 
         private String requestId; 
+
+        /**
+         * Code.
+         */
+        public Builder code(String code) {
+            this.code = code;
+            return this;
+        }
+
+        /**
+         * Message.
+         */
+        public Builder message(String message) {
+            this.message = message;
+            return this;
+        }
 
         /**
          * The ID of the request.

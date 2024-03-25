@@ -84,7 +84,7 @@ public class MigrateImageProtocolRequest extends Request {
         } 
 
         /**
-         * ImageId.
+         * The image IDs.
          */
         public Builder imageId(java.util.List < String > imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -93,7 +93,7 @@ public class MigrateImageProtocolRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -102,7 +102,7 @@ public class MigrateImageProtocolRequest extends Request {
         }
 
         /**
-         * TargetProtocolType.
+         * The protocol of the image. Valid value: ASP.
          */
         public Builder targetProtocolType(String targetProtocolType) {
             this.putQueryParameter("TargetProtocolType", targetProtocolType);
