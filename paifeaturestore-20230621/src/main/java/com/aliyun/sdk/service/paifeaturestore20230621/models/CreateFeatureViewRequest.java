@@ -74,6 +74,10 @@ public class CreateFeatureViewRequest extends Request {
     @Validation(required = true)
     private String writeMethod;
 
+    @Body
+    @NameInMap("WriteToFeatureDB")
+    private Boolean writeToFeatureDB;
+
     private CreateFeatureViewRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
@@ -90,6 +94,7 @@ public class CreateFeatureViewRequest extends Request {
         this.tags = builder.tags;
         this.type = builder.type;
         this.writeMethod = builder.writeMethod;
+        this.writeToFeatureDB = builder.writeToFeatureDB;
     }
 
     public static Builder builder() {
@@ -203,6 +208,13 @@ public class CreateFeatureViewRequest extends Request {
         return this.writeMethod;
     }
 
+    /**
+     * @return writeToFeatureDB
+     */
+    public Boolean getWriteToFeatureDB() {
+        return this.writeToFeatureDB;
+    }
+
     public static final class Builder extends Request.Builder<CreateFeatureViewRequest, Builder> {
         private String instanceId; 
         private String regionId; 
@@ -218,6 +230,7 @@ public class CreateFeatureViewRequest extends Request {
         private java.util.List < String > tags; 
         private String type; 
         private String writeMethod; 
+        private Boolean writeToFeatureDB; 
 
         private Builder() {
             super();
@@ -239,6 +252,7 @@ public class CreateFeatureViewRequest extends Request {
             this.tags = request.tags;
             this.type = request.type;
             this.writeMethod = request.writeMethod;
+            this.writeToFeatureDB = request.writeToFeatureDB;
         } 
 
         /**
@@ -364,6 +378,15 @@ public class CreateFeatureViewRequest extends Request {
         public Builder writeMethod(String writeMethod) {
             this.putBodyParameter("WriteMethod", writeMethod);
             this.writeMethod = writeMethod;
+            return this;
+        }
+
+        /**
+         * WriteToFeatureDB.
+         */
+        public Builder writeToFeatureDB(Boolean writeToFeatureDB) {
+            this.putBodyParameter("WriteToFeatureDB", writeToFeatureDB);
+            this.writeToFeatureDB = writeToFeatureDB;
             return this;
         }
 

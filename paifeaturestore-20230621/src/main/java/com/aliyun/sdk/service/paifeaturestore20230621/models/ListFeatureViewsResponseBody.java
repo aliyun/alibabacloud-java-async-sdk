@@ -131,6 +131,9 @@ public class ListFeatureViewsResponseBody extends TeaModel {
         @NameInMap("Type")
         private String type;
 
+        @NameInMap("WriteToFeatureDB")
+        private Boolean writeToFeatureDB;
+
         private FeatureViews(Builder builder) {
             this.featureEntityName = builder.featureEntityName;
             this.featureViewId = builder.featureViewId;
@@ -145,6 +148,7 @@ public class ListFeatureViewsResponseBody extends TeaModel {
             this.registerTable = builder.registerTable;
             this.TTL = builder.TTL;
             this.type = builder.type;
+            this.writeToFeatureDB = builder.writeToFeatureDB;
         }
 
         public static Builder builder() {
@@ -246,6 +250,13 @@ public class ListFeatureViewsResponseBody extends TeaModel {
             return this.type;
         }
 
+        /**
+         * @return writeToFeatureDB
+         */
+        public Boolean getWriteToFeatureDB() {
+            return this.writeToFeatureDB;
+        }
+
         public static final class Builder {
             private String featureEntityName; 
             private String featureViewId; 
@@ -260,6 +271,7 @@ public class ListFeatureViewsResponseBody extends TeaModel {
             private String registerTable; 
             private Integer TTL; 
             private String type; 
+            private Boolean writeToFeatureDB; 
 
             /**
              * FeatureEntityName.
@@ -362,6 +374,14 @@ public class ListFeatureViewsResponseBody extends TeaModel {
              */
             public Builder type(String type) {
                 this.type = type;
+                return this;
+            }
+
+            /**
+             * WriteToFeatureDB.
+             */
+            public Builder writeToFeatureDB(Boolean writeToFeatureDB) {
+                this.writeToFeatureDB = writeToFeatureDB;
                 return this;
             }
 

@@ -81,6 +81,9 @@ public class GetFeatureViewResponseBody extends TeaModel {
     @NameInMap("WriteMethod")
     private String writeMethod;
 
+    @NameInMap("WriteToFeatureDB")
+    private Boolean writeToFeatureDB;
+
     private GetFeatureViewResponseBody(Builder builder) {
         this.config = builder.config;
         this.featureEntityId = builder.featureEntityId;
@@ -105,6 +108,7 @@ public class GetFeatureViewResponseBody extends TeaModel {
         this.tags = builder.tags;
         this.type = builder.type;
         this.writeMethod = builder.writeMethod;
+        this.writeToFeatureDB = builder.writeToFeatureDB;
     }
 
     public static Builder builder() {
@@ -276,6 +280,13 @@ public class GetFeatureViewResponseBody extends TeaModel {
         return this.writeMethod;
     }
 
+    /**
+     * @return writeToFeatureDB
+     */
+    public Boolean getWriteToFeatureDB() {
+        return this.writeToFeatureDB;
+    }
+
     public static final class Builder {
         private String config; 
         private String featureEntityId; 
@@ -300,6 +311,7 @@ public class GetFeatureViewResponseBody extends TeaModel {
         private java.util.List < String > tags; 
         private String type; 
         private String writeMethod; 
+        private Boolean writeToFeatureDB; 
 
         /**
          * Config.
@@ -482,6 +494,14 @@ public class GetFeatureViewResponseBody extends TeaModel {
          */
         public Builder writeMethod(String writeMethod) {
             this.writeMethod = writeMethod;
+            return this;
+        }
+
+        /**
+         * WriteToFeatureDB.
+         */
+        public Builder writeToFeatureDB(Boolean writeToFeatureDB) {
+            this.writeToFeatureDB = writeToFeatureDB;
             return this;
         }
 
