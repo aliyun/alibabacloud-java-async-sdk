@@ -187,7 +187,7 @@ public class MoveResourceGroupRequest extends Request {
          * <p>
          * 
          * *   **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-         * *   **false:**: performs a dry run and sends the request.
+         * *   **false:** performs a dry run and sends the request.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);

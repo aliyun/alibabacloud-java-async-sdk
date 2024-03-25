@@ -217,9 +217,6 @@ public class RemoveTraficMatchRuleFromTrafficMarkingPolicyRequest extends Reques
 
         /**
          * The ID of the traffic classification rule.
-         * <p>
-         * 
-         * You can specify at most 20 traffic classification rules.
          */
         public Builder trafficMarkRuleIds(java.util.List < String > trafficMarkRuleIds) {
             this.putQueryParameter("TrafficMarkRuleIds", trafficMarkRuleIds);

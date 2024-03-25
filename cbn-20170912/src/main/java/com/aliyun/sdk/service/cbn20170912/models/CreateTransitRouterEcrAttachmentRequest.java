@@ -7,22 +7,31 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreateCenRequest} extends {@link RequestModel}
+ * {@link CreateTransitRouterEcrAttachmentRequest} extends {@link RequestModel}
  *
- * <p>CreateCenRequest</p>
+ * <p>CreateTransitRouterEcrAttachmentRequest</p>
  */
-public class CreateCenRequest extends Request {
+public class CreateTransitRouterEcrAttachmentRequest extends Request {
+    @Query
+    @NameInMap("CenId")
+    private String cenId;
+
     @Query
     @NameInMap("ClientToken")
     private String clientToken;
 
     @Query
-    @NameInMap("Description")
-    private String description;
+    @NameInMap("DryRun")
+    private Boolean dryRun;
 
     @Query
-    @NameInMap("Name")
-    private String name;
+    @NameInMap("EcrId")
+    @Validation(required = true)
+    private String ecrId;
+
+    @Query
+    @NameInMap("EcrOwnerId")
+    private Long ecrOwnerId;
 
     @Query
     @NameInMap("OwnerAccount")
@@ -33,8 +42,8 @@ public class CreateCenRequest extends Request {
     private Long ownerId;
 
     @Query
-    @NameInMap("ProtectionLevel")
-    private String protectionLevel;
+    @NameInMap("RegionId")
+    private String regionId;
 
     @Query
     @NameInMap("ResourceOwnerAccount")
@@ -48,30 +57,54 @@ public class CreateCenRequest extends Request {
     @NameInMap("Tag")
     private java.util.List < Tag> tag;
 
-    private CreateCenRequest(Builder builder) {
+    @Query
+    @NameInMap("TransitRouterAttachmentDescription")
+    private String transitRouterAttachmentDescription;
+
+    @Query
+    @NameInMap("TransitRouterAttachmentName")
+    private String transitRouterAttachmentName;
+
+    @Query
+    @NameInMap("TransitRouterId")
+    private String transitRouterId;
+
+    private CreateTransitRouterEcrAttachmentRequest(Builder builder) {
         super(builder);
+        this.cenId = builder.cenId;
         this.clientToken = builder.clientToken;
-        this.description = builder.description;
-        this.name = builder.name;
+        this.dryRun = builder.dryRun;
+        this.ecrId = builder.ecrId;
+        this.ecrOwnerId = builder.ecrOwnerId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
-        this.protectionLevel = builder.protectionLevel;
+        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.tag = builder.tag;
+        this.transitRouterAttachmentDescription = builder.transitRouterAttachmentDescription;
+        this.transitRouterAttachmentName = builder.transitRouterAttachmentName;
+        this.transitRouterId = builder.transitRouterId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static CreateCenRequest create() {
+    public static CreateTransitRouterEcrAttachmentRequest create() {
         return builder().build();
     }
 
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return cenId
+     */
+    public String getCenId() {
+        return this.cenId;
     }
 
     /**
@@ -82,17 +115,24 @@ public class CreateCenRequest extends Request {
     }
 
     /**
-     * @return description
+     * @return dryRun
      */
-    public String getDescription() {
-        return this.description;
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
-     * @return name
+     * @return ecrId
      */
-    public String getName() {
-        return this.name;
+    public String getEcrId() {
+        return this.ecrId;
+    }
+
+    /**
+     * @return ecrOwnerId
+     */
+    public Long getEcrOwnerId() {
+        return this.ecrOwnerId;
     }
 
     /**
@@ -110,10 +150,10 @@ public class CreateCenRequest extends Request {
     }
 
     /**
-     * @return protectionLevel
+     * @return regionId
      */
-    public String getProtectionLevel() {
-        return this.protectionLevel;
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -137,41 +177,76 @@ public class CreateCenRequest extends Request {
         return this.tag;
     }
 
-    public static final class Builder extends Request.Builder<CreateCenRequest, Builder> {
+    /**
+     * @return transitRouterAttachmentDescription
+     */
+    public String getTransitRouterAttachmentDescription() {
+        return this.transitRouterAttachmentDescription;
+    }
+
+    /**
+     * @return transitRouterAttachmentName
+     */
+    public String getTransitRouterAttachmentName() {
+        return this.transitRouterAttachmentName;
+    }
+
+    /**
+     * @return transitRouterId
+     */
+    public String getTransitRouterId() {
+        return this.transitRouterId;
+    }
+
+    public static final class Builder extends Request.Builder<CreateTransitRouterEcrAttachmentRequest, Builder> {
+        private String cenId; 
         private String clientToken; 
-        private String description; 
-        private String name; 
+        private Boolean dryRun; 
+        private String ecrId; 
+        private Long ecrOwnerId; 
         private String ownerAccount; 
         private Long ownerId; 
-        private String protectionLevel; 
+        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private java.util.List < Tag> tag; 
+        private String transitRouterAttachmentDescription; 
+        private String transitRouterAttachmentName; 
+        private String transitRouterId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateCenRequest request) {
+        private Builder(CreateTransitRouterEcrAttachmentRequest request) {
             super(request);
+            this.cenId = request.cenId;
             this.clientToken = request.clientToken;
-            this.description = request.description;
-            this.name = request.name;
+            this.dryRun = request.dryRun;
+            this.ecrId = request.ecrId;
+            this.ecrOwnerId = request.ecrOwnerId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
-            this.protectionLevel = request.protectionLevel;
+            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.tag = request.tag;
+            this.transitRouterAttachmentDescription = request.transitRouterAttachmentDescription;
+            this.transitRouterAttachmentName = request.transitRouterAttachmentName;
+            this.transitRouterId = request.transitRouterId;
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
-         * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * CenId.
+         */
+        public Builder cenId(String cenId) {
+            this.putQueryParameter("CenId", cenId);
+            this.cenId = cenId;
+            return this;
+        }
+
+        /**
+         * ClientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -180,26 +255,29 @@ public class CreateCenRequest extends Request {
         }
 
         /**
-         * The description of the CEN instance.
-         * <p>
-         * 
-         * The description can be empty or 1 to 256 characters in length and cannot start with http:// or https://.
+         * DryRun.
          */
-        public Builder description(String description) {
-            this.putQueryParameter("Description", description);
-            this.description = description;
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 
         /**
-         * The name of the CEN instance.
-         * <p>
-         * 
-         * The name can be empty or 1 to 128 characters in length and cannot start with http:// or https://.
+         * EcrId.
          */
-        public Builder name(String name) {
-            this.putQueryParameter("Name", name);
-            this.name = name;
+        public Builder ecrId(String ecrId) {
+            this.putQueryParameter("EcrId", ecrId);
+            this.ecrId = ecrId;
+            return this;
+        }
+
+        /**
+         * EcrOwnerId.
+         */
+        public Builder ecrOwnerId(Long ecrOwnerId) {
+            this.putQueryParameter("EcrOwnerId", ecrOwnerId);
+            this.ecrOwnerId = ecrOwnerId;
             return this;
         }
 
@@ -222,14 +300,11 @@ public class CreateCenRequest extends Request {
         }
 
         /**
-         * The level of CIDR block overlapping.
-         * <p>
-         * 
-         * Set the value to **REDUCED** (default). This value specifies that CIDR blocks can overlap but cannot be the same.
+         * RegionId.
          */
-        public Builder protectionLevel(String protectionLevel) {
-            this.putQueryParameter("ProtectionLevel", protectionLevel);
-            this.protectionLevel = protectionLevel;
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 
@@ -252,10 +327,7 @@ public class CreateCenRequest extends Request {
         }
 
         /**
-         * The tags.
-         * <p>
-         * 
-         * You can specify up to 20 tags in each call.
+         * Tag.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -263,9 +335,36 @@ public class CreateCenRequest extends Request {
             return this;
         }
 
+        /**
+         * TransitRouterAttachmentDescription.
+         */
+        public Builder transitRouterAttachmentDescription(String transitRouterAttachmentDescription) {
+            this.putQueryParameter("TransitRouterAttachmentDescription", transitRouterAttachmentDescription);
+            this.transitRouterAttachmentDescription = transitRouterAttachmentDescription;
+            return this;
+        }
+
+        /**
+         * TransitRouterAttachmentName.
+         */
+        public Builder transitRouterAttachmentName(String transitRouterAttachmentName) {
+            this.putQueryParameter("TransitRouterAttachmentName", transitRouterAttachmentName);
+            this.transitRouterAttachmentName = transitRouterAttachmentName;
+            return this;
+        }
+
+        /**
+         * TransitRouterId.
+         */
+        public Builder transitRouterId(String transitRouterId) {
+            this.putQueryParameter("TransitRouterId", transitRouterId);
+            this.transitRouterId = transitRouterId;
+            return this;
+        }
+
         @Override
-        public CreateCenRequest build() {
-            return new CreateCenRequest(this);
+        public CreateTransitRouterEcrAttachmentRequest build() {
+            return new CreateTransitRouterEcrAttachmentRequest(this);
         } 
 
     } 
@@ -309,12 +408,7 @@ public class CreateCenRequest extends Request {
             private String value; 
 
             /**
-             * The tag key.
-             * <p>
-             * 
-             * The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
-             * 
-             * You can specify up to 20 tag keys.
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -322,12 +416,7 @@ public class CreateCenRequest extends Request {
             }
 
             /**
-             * The tag value.
-             * <p>
-             * 
-             * The tag value can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
-             * 
-             * Each tag key must have a unique tag value. You can specify up to 20 tag values in each call.
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

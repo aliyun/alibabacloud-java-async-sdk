@@ -221,10 +221,7 @@ public class RegisterTransitRouterMulticastGroupSourcesRequest extends Request {
         }
 
         /**
-         * The IDs of ENIs.
-         * <p>
-         * 
-         * >  This parameter is required.
+         * The IDs of the ENIs.
          */
         public Builder networkInterfaceIds(java.util.List < String > networkInterfaceIds) {
             this.putQueryParameter("NetworkInterfaceIds", networkInterfaceIds);

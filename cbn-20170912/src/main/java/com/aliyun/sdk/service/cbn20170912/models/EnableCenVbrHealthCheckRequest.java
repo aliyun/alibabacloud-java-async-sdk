@@ -251,7 +251,10 @@ public class EnableCenVbrHealthCheckRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the health check.
+         * <p>
+         * 
+         * The description must be 1 to 256 characters in length, and cannot start with `http://` or `https://`.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);

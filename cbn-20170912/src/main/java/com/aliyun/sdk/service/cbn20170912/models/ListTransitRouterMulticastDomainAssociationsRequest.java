@@ -317,10 +317,7 @@ public class ListTransitRouterMulticastDomainAssociationsRequest extends Request
         }
 
         /**
-         * The vSwitch IDs.
-         * <p>
-         * 
-         * You can specify at most 20 IDs.
+         * The IDs of vSwitches.
          */
         public Builder vSwitchIds(java.util.List < String > vSwitchIds) {
             this.putQueryParameter("VSwitchIds", vSwitchIds);

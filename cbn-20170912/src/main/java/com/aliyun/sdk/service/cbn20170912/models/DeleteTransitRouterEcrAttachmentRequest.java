@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DeleteTransitRouterVbrAttachmentRequest} extends {@link RequestModel}
+ * {@link DeleteTransitRouterEcrAttachmentRequest} extends {@link RequestModel}
  *
- * <p>DeleteTransitRouterVbrAttachmentRequest</p>
+ * <p>DeleteTransitRouterEcrAttachmentRequest</p>
  */
-public class DeleteTransitRouterVbrAttachmentRequest extends Request {
+public class DeleteTransitRouterEcrAttachmentRequest extends Request {
     @Query
     @NameInMap("ClientToken")
     private String clientToken;
@@ -45,7 +45,7 @@ public class DeleteTransitRouterVbrAttachmentRequest extends Request {
     @Validation(required = true)
     private String transitRouterAttachmentId;
 
-    private DeleteTransitRouterVbrAttachmentRequest(Builder builder) {
+    private DeleteTransitRouterEcrAttachmentRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
         this.dryRun = builder.dryRun;
@@ -61,7 +61,7 @@ public class DeleteTransitRouterVbrAttachmentRequest extends Request {
         return new Builder();
     }
 
-    public static DeleteTransitRouterVbrAttachmentRequest create() {
+    public static DeleteTransitRouterEcrAttachmentRequest create() {
         return builder().build();
     }
 
@@ -126,7 +126,7 @@ public class DeleteTransitRouterVbrAttachmentRequest extends Request {
         return this.transitRouterAttachmentId;
     }
 
-    public static final class Builder extends Request.Builder<DeleteTransitRouterVbrAttachmentRequest, Builder> {
+    public static final class Builder extends Request.Builder<DeleteTransitRouterEcrAttachmentRequest, Builder> {
         private String clientToken; 
         private Boolean dryRun; 
         private Boolean force; 
@@ -140,7 +140,7 @@ public class DeleteTransitRouterVbrAttachmentRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteTransitRouterVbrAttachmentRequest request) {
+        private Builder(DeleteTransitRouterEcrAttachmentRequest request) {
             super(request);
             this.clientToken = request.clientToken;
             this.dryRun = request.dryRun;
@@ -153,12 +153,7 @@ public class DeleteTransitRouterVbrAttachmentRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
-         * 
-         * You can use the client to generate the value, but you must make sure that it is unique among all requests. The client token can contain only ASCII characters.
-         * 
-         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
+         * ClientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -167,11 +162,7 @@ public class DeleteTransitRouterVbrAttachmentRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform a dry run. Default values:
-         * <p>
-         * 
-         * *   **false** (default): performs a dry run and sends the request.
-         * *   **true**: performs a dry run. The system checks the required parameters and the request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, the system returns the ID of the request.
+         * DryRun.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -180,11 +171,7 @@ public class DeleteTransitRouterVbrAttachmentRequest extends Request {
         }
 
         /**
-         * Specifies whether to forcibly delete the VBR connection. Valid values:
-         * <p>
-         * 
-         * *   **false** (default): checks for dependency resources, such as associated forwarding correlations and route learning policies before the VBR connection is deleted. If such resources exist, the VBR connection is not deleted and an error message is returned.
-         * *   **true**: deletes all dependency resources along with the VBR connection.
+         * Force.
          */
         public Builder force(Boolean force) {
             this.putQueryParameter("Force", force);
@@ -229,7 +216,7 @@ public class DeleteTransitRouterVbrAttachmentRequest extends Request {
         }
 
         /**
-         * The ID of the VBR connection.
+         * TransitRouterAttachmentId.
          */
         public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
             this.putQueryParameter("TransitRouterAttachmentId", transitRouterAttachmentId);
@@ -238,8 +225,8 @@ public class DeleteTransitRouterVbrAttachmentRequest extends Request {
         }
 
         @Override
-        public DeleteTransitRouterVbrAttachmentRequest build() {
-            return new DeleteTransitRouterVbrAttachmentRequest(this);
+        public DeleteTransitRouterEcrAttachmentRequest build() {
+            return new DeleteTransitRouterEcrAttachmentRequest(this);
         } 
 
     } 

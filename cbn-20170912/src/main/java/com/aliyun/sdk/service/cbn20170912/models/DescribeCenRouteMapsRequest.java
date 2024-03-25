@@ -195,7 +195,7 @@ public class DescribeCenRouteMapsRequest extends Request {
         } 
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * The ID of the Cloud Enterprise Network (CEN) instance.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -204,11 +204,10 @@ public class DescribeCenRouteMapsRequest extends Request {
         }
 
         /**
-         * The match method that is used to match routes based on the AS path.
+         * The region ID of the routing policy.
          * <p>
          * 
-         * *   **Include**: fuzzy match. A route is a match if the AS path of the route overlaps with the AS path specified in the match condition.
-         * *   **Complete**: exact match. A route is a match only if the AS path of the route is the same as the AS path specified in the match condition.
+         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
          */
         public Builder cenRegionId(String cenRegionId) {
             this.putQueryParameter("CenRegionId", cenRegionId);
@@ -235,7 +234,7 @@ public class DescribeCenRouteMapsRequest extends Request {
         }
 
         /**
-         * The route table ID of the transit router with which the routing policy is associated.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -244,10 +243,7 @@ public class DescribeCenRouteMapsRequest extends Request {
         }
 
         /**
-         * The IDs of the destination network instances to which the routes belong.
-         * <p>
-         * 
-         * >  The destination network instance IDs are valid only when the routing policy is applied to scenarios where routes are advertised from the gateway in the current region to network instances in the current region.
+         * The number of entries to return on each page. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -274,11 +270,7 @@ public class DescribeCenRouteMapsRequest extends Request {
         }
 
         /**
-         * Indicates whether the destination network instance IDs are excluded.
-         * <p>
-         * 
-         * *   **false** (default): A route is a match if its destination network instance ID is in the list specified by **DestinationInstanceIds.N**.
-         * *   **true**: A route is a match if its destination network instance ID is not in the list specified by **DestinationInstanceIds.N**.
+         * The routing policy ID.
          */
         public Builder routeMapId(String routeMapId) {
             this.putQueryParameter("RouteMapId", routeMapId);
@@ -287,7 +279,7 @@ public class DescribeCenRouteMapsRequest extends Request {
         }
 
         /**
-         * The priority of the routing policy that you want to associate with the current one.
+         * The route table ID of the transit router with which the routing policy is associated.
          */
         public Builder transitRouterRouteTableId(String transitRouterRouteTableId) {
             this.putQueryParameter("TransitRouterRouteTableId", transitRouterRouteTableId);
@@ -296,11 +288,16 @@ public class DescribeCenRouteMapsRequest extends Request {
         }
 
         /**
-         * The match method that is used to match routes based on the community.
+         * The direction in which the routing policy is applied. Valid values:
          * <p>
          * 
-         * *   **Include**: fuzzy match. A route is a match if the community of the route overlaps with the community specified in the match condition.
-         * *   **Complete**: exact match. A route is a match only if the community of the route is the same as the community specified in the match condition.
+         * *   **RegionIn**: Routes are advertised to the gateways in the regions that are connected by the CEN instance.
+         * 
+         * For example, routes are advertised from network instances deployed in the current region or other regions to the gateway deployed in the current region.
+         * 
+         * *   **RegionOut**: Routes are advertised from the gateways in the regions that are connected by the CEN instance.
+         * 
+         * For example, routes are advertised from the gateway deployed in the current region to network instances deployed in the current region, or to gateways deployed in other regions.
          */
         public Builder transmitDirection(String transmitDirection) {
             this.putQueryParameter("TransmitDirection", transmitDirection);

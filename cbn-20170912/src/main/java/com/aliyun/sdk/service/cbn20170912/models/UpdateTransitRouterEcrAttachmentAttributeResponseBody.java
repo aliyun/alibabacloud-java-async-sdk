@@ -7,15 +7,15 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ReplaceTransitRouterRouteTableAssociationResponseBody} extends {@link TeaModel}
+ * {@link UpdateTransitRouterEcrAttachmentAttributeResponseBody} extends {@link TeaModel}
  *
- * <p>ReplaceTransitRouterRouteTableAssociationResponseBody</p>
+ * <p>UpdateTransitRouterEcrAttachmentAttributeResponseBody</p>
  */
-public class ReplaceTransitRouterRouteTableAssociationResponseBody extends TeaModel {
+public class UpdateTransitRouterEcrAttachmentAttributeResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
-    private ReplaceTransitRouterRouteTableAssociationResponseBody(Builder builder) {
+    private UpdateTransitRouterEcrAttachmentAttributeResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -23,7 +23,7 @@ public class ReplaceTransitRouterRouteTableAssociationResponseBody extends TeaMo
         return new Builder();
     }
 
-    public static ReplaceTransitRouterRouteTableAssociationResponseBody create() {
+    public static UpdateTransitRouterEcrAttachmentAttributeResponseBody create() {
         return builder().build();
     }
 
@@ -38,15 +38,15 @@ public class ReplaceTransitRouterRouteTableAssociationResponseBody extends TeaMo
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public ReplaceTransitRouterRouteTableAssociationResponseBody build() {
-            return new ReplaceTransitRouterRouteTableAssociationResponseBody(this);
+        public UpdateTransitRouterEcrAttachmentAttributeResponseBody build() {
+            return new UpdateTransitRouterEcrAttachmentAttributeResponseBody(this);
         } 
 
     } 

@@ -200,7 +200,7 @@ public class DescribeGrantRulesToResourceResponseBody extends TeaModel {
             private String orderType; 
 
             /**
-             * The CEN instance ID.
+             * The ID of the CEN instance.
              */
             public Builder cenId(String cenId) {
                 this.cenId = cenId;
@@ -216,7 +216,7 @@ public class DescribeGrantRulesToResourceResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The timestamp when the permissions were granted. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;

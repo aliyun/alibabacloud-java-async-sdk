@@ -118,7 +118,7 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
         }
 
         /**
-         * The queried VBR connections.
+         * A list of VBR connections.
          */
         public Builder transitRouterAttachments(java.util.List < TransitRouterAttachments> transitRouterAttachments) {
             this.transitRouterAttachments = transitRouterAttachments;
@@ -375,11 +375,11 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
             private String vbrRegionId; 
 
             /**
-             * Indicates whether the Enterprise Edition transit router automatically advertises routes to the VBR. Valid values:
+             * Indicates whether the Enterprise Edition transit router is allowed to automatically advertise routes to the VBR. Valid values:
              * <p>
              * 
-             * *   **false** (default): no
-             * *   **true**: yes
+             * *   **false** (default)
+             * *   **true**
              */
             public Builder autoPublishRouteEnabled(Boolean autoPublishRouteEnabled) {
                 this.autoPublishRouteEnabled = autoPublishRouteEnabled;
@@ -395,10 +395,10 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the VBR connection was established.
+             * The time when the VBR connection was created.
              * <p>
              * 
-             * The time follows the ISO8601 standard in the YYYY-MM-DDThh:mmZ format. The time is displayed in UTC.
+             * The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -406,7 +406,11 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * OrderType.
+             * The entity that pays the fees of the network instance. Valid values:
+             * <p>
+             * 
+             * *   **PayByCenOwner**: the Alibaba Cloud account that owns the CEN instance.
+             * *   **PayByResourceOwner**: the Alibaba Cloud account that owns the network instance.
              */
             public Builder orderType(String orderType) {
                 this.orderType = orderType;
@@ -417,10 +421,10 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
              * The type of resource to which the transit router is connected. Valid values:
              * <p>
              * 
-             * *   **VPC**: VPC
-             * *   **CCN**: Cloud Connect Network (CCN) instance
-             * *   **VBR**: VBR
-             * *   **TR**: transit router
+             * *   **VPC**
+             * *   **CCN**
+             * *   **VBR**
+             * *   **TR**
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -431,10 +435,10 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
              * The status of the VBR connection. Valid values:
              * <p>
              * 
-             * *   **Attached**: The VBR connection is created on the transit router.
-             * *   **Attaching**: The VBR connection is being created on the transit router.
-             * *   **Detaching**: The VBR connection is being deleted from the transit router.
-             * *   **Detached**: The VBR connection is deleted from the transit router.
+             * *   **Attached**
+             * *   **Attaching**
+             * *   **Detaching**
+             * *   **Detached**
              */
             public Builder status(String status) {
                 this.status = status;
@@ -442,7 +446,7 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The tags.
+             * A list of tags.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -474,7 +478,7 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Enterprise Edition transit router.
+             * The description of the Enterprise Edition transit router.
              */
             public Builder transitRouterId(String transitRouterId) {
                 this.transitRouterId = transitRouterId;
@@ -490,7 +494,7 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the account to which the VBR belongs.
+             * The ID of the Alibaba Cloud account to which the VBR belongs.
              */
             public Builder vbrOwnerId(Long vbrOwnerId) {
                 this.vbrOwnerId = vbrOwnerId;

@@ -369,7 +369,7 @@ public class UpdateTransitRouterPeerAttachmentAttributeRequest extends Request {
          * The new description of the inter-region connection.
          * <p>
          * 
-         * The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with `http://` or `https://`.
+         * This parameter is optional. If you enter a description, it must be 1 to 256 characters in length, and cannot start with http:// or https://.
          */
         public Builder transitRouterAttachmentDescription(String transitRouterAttachmentDescription) {
             this.putQueryParameter("TransitRouterAttachmentDescription", transitRouterAttachmentDescription);
@@ -390,7 +390,7 @@ public class UpdateTransitRouterPeerAttachmentAttributeRequest extends Request {
          * The new name of the inter-region connection.
          * <p>
          * 
-         * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
+         * The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.
          */
         public Builder transitRouterAttachmentName(String transitRouterAttachmentName) {
             this.putQueryParameter("TransitRouterAttachmentName", transitRouterAttachmentName);

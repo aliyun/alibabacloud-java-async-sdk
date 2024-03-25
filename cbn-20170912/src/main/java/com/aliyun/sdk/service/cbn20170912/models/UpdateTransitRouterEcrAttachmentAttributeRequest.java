@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DeleteTransitRouterVbrAttachmentRequest} extends {@link RequestModel}
+ * {@link UpdateTransitRouterEcrAttachmentAttributeRequest} extends {@link RequestModel}
  *
- * <p>DeleteTransitRouterVbrAttachmentRequest</p>
+ * <p>UpdateTransitRouterEcrAttachmentAttributeRequest</p>
  */
-public class DeleteTransitRouterVbrAttachmentRequest extends Request {
+public class UpdateTransitRouterEcrAttachmentAttributeRequest extends Request {
     @Query
     @NameInMap("ClientToken")
     private String clientToken;
@@ -19,10 +19,6 @@ public class DeleteTransitRouterVbrAttachmentRequest extends Request {
     @Query
     @NameInMap("DryRun")
     private Boolean dryRun;
-
-    @Query
-    @NameInMap("Force")
-    private Boolean force;
 
     @Query
     @NameInMap("OwnerAccount")
@@ -41,27 +37,36 @@ public class DeleteTransitRouterVbrAttachmentRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
+    @NameInMap("TransitRouterAttachmentDescription")
+    private String transitRouterAttachmentDescription;
+
+    @Query
     @NameInMap("TransitRouterAttachmentId")
     @Validation(required = true)
     private String transitRouterAttachmentId;
 
-    private DeleteTransitRouterVbrAttachmentRequest(Builder builder) {
+    @Query
+    @NameInMap("TransitRouterAttachmentName")
+    private String transitRouterAttachmentName;
+
+    private UpdateTransitRouterEcrAttachmentAttributeRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
         this.dryRun = builder.dryRun;
-        this.force = builder.force;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.transitRouterAttachmentDescription = builder.transitRouterAttachmentDescription;
         this.transitRouterAttachmentId = builder.transitRouterAttachmentId;
+        this.transitRouterAttachmentName = builder.transitRouterAttachmentName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DeleteTransitRouterVbrAttachmentRequest create() {
+    public static UpdateTransitRouterEcrAttachmentAttributeRequest create() {
         return builder().build();
     }
 
@@ -82,13 +87,6 @@ public class DeleteTransitRouterVbrAttachmentRequest extends Request {
      */
     public Boolean getDryRun() {
         return this.dryRun;
-    }
-
-    /**
-     * @return force
-     */
-    public Boolean getForce() {
-        return this.force;
     }
 
     /**
@@ -120,45 +118,56 @@ public class DeleteTransitRouterVbrAttachmentRequest extends Request {
     }
 
     /**
+     * @return transitRouterAttachmentDescription
+     */
+    public String getTransitRouterAttachmentDescription() {
+        return this.transitRouterAttachmentDescription;
+    }
+
+    /**
      * @return transitRouterAttachmentId
      */
     public String getTransitRouterAttachmentId() {
         return this.transitRouterAttachmentId;
     }
 
-    public static final class Builder extends Request.Builder<DeleteTransitRouterVbrAttachmentRequest, Builder> {
+    /**
+     * @return transitRouterAttachmentName
+     */
+    public String getTransitRouterAttachmentName() {
+        return this.transitRouterAttachmentName;
+    }
+
+    public static final class Builder extends Request.Builder<UpdateTransitRouterEcrAttachmentAttributeRequest, Builder> {
         private String clientToken; 
         private Boolean dryRun; 
-        private Boolean force; 
         private String ownerAccount; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String transitRouterAttachmentDescription; 
         private String transitRouterAttachmentId; 
+        private String transitRouterAttachmentName; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DeleteTransitRouterVbrAttachmentRequest request) {
+        private Builder(UpdateTransitRouterEcrAttachmentAttributeRequest request) {
             super(request);
             this.clientToken = request.clientToken;
             this.dryRun = request.dryRun;
-            this.force = request.force;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.transitRouterAttachmentDescription = request.transitRouterAttachmentDescription;
             this.transitRouterAttachmentId = request.transitRouterAttachmentId;
+            this.transitRouterAttachmentName = request.transitRouterAttachmentName;
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
-         * 
-         * You can use the client to generate the value, but you must make sure that it is unique among all requests. The client token can contain only ASCII characters.
-         * 
-         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
+         * ClientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -167,28 +176,11 @@ public class DeleteTransitRouterVbrAttachmentRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform a dry run. Default values:
-         * <p>
-         * 
-         * *   **false** (default): performs a dry run and sends the request.
-         * *   **true**: performs a dry run. The system checks the required parameters and the request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, the system returns the ID of the request.
+         * DryRun.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
             this.dryRun = dryRun;
-            return this;
-        }
-
-        /**
-         * Specifies whether to forcibly delete the VBR connection. Valid values:
-         * <p>
-         * 
-         * *   **false** (default): checks for dependency resources, such as associated forwarding correlations and route learning policies before the VBR connection is deleted. If such resources exist, the VBR connection is not deleted and an error message is returned.
-         * *   **true**: deletes all dependency resources along with the VBR connection.
-         */
-        public Builder force(Boolean force) {
-            this.putQueryParameter("Force", force);
-            this.force = force;
             return this;
         }
 
@@ -229,7 +221,16 @@ public class DeleteTransitRouterVbrAttachmentRequest extends Request {
         }
 
         /**
-         * The ID of the VBR connection.
+         * TransitRouterAttachmentDescription.
+         */
+        public Builder transitRouterAttachmentDescription(String transitRouterAttachmentDescription) {
+            this.putQueryParameter("TransitRouterAttachmentDescription", transitRouterAttachmentDescription);
+            this.transitRouterAttachmentDescription = transitRouterAttachmentDescription;
+            return this;
+        }
+
+        /**
+         * TransitRouterAttachmentId.
          */
         public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
             this.putQueryParameter("TransitRouterAttachmentId", transitRouterAttachmentId);
@@ -237,9 +238,18 @@ public class DeleteTransitRouterVbrAttachmentRequest extends Request {
             return this;
         }
 
+        /**
+         * TransitRouterAttachmentName.
+         */
+        public Builder transitRouterAttachmentName(String transitRouterAttachmentName) {
+            this.putQueryParameter("TransitRouterAttachmentName", transitRouterAttachmentName);
+            this.transitRouterAttachmentName = transitRouterAttachmentName;
+            return this;
+        }
+
         @Override
-        public DeleteTransitRouterVbrAttachmentRequest build() {
-            return new DeleteTransitRouterVbrAttachmentRequest(this);
+        public UpdateTransitRouterEcrAttachmentAttributeRequest build() {
+            return new UpdateTransitRouterEcrAttachmentAttributeRequest(this);
         } 
 
     } 

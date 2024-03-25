@@ -248,7 +248,7 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
             private String orderType; 
 
             /**
-             * The CEN instance ID.
+             * The ID of the CEN instance.
              */
             public Builder cenId(String cenId) {
                 this.cenId = cenId;
@@ -264,7 +264,7 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
             }
 
             /**
-             * The network instance ID.
+             * The ID of the network instance.
              */
             public Builder childInstanceId(String childInstanceId) {
                 this.childInstanceId = childInstanceId;
@@ -291,10 +291,10 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
              * The type of the network instance. Valid values:
              * <p>
              * 
-             * *   **VPC**
-             * *   **VBR**
-             * *   **CCN**
-             * *   **VPN**
+             * *   **VPC**: VPC
+             * *   **VBR**: VBR
+             * *   **CCN**: CCN instance
+             * *   **VPN**: IPsec-VPN connection
              */
             public Builder childInstanceType(String childInstanceType) {
                 this.childInstanceType = childInstanceType;
@@ -302,7 +302,10 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the permissions were granted to the CEN instance.
+             * <p>
+             * 
+             * The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
