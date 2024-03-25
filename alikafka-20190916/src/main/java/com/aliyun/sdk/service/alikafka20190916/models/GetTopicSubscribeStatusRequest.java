@@ -85,7 +85,10 @@ public class GetTopicSubscribeStatusRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The instance ID.
+         * <p>
+         * 
+         * You can call the [GetInstanceList](~~437663~~) operation to query instances.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -94,7 +97,7 @@ public class GetTopicSubscribeStatusRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -103,7 +106,10 @@ public class GetTopicSubscribeStatusRequest extends Request {
         }
 
         /**
-         * Topic.
+         * The topic name.
+         * <p>
+         * 
+         * You can call the [GetTopicList](~~437677~~) operation to query topics.
          */
         public Builder topic(String topic) {
             this.putQueryParameter("Topic", topic);

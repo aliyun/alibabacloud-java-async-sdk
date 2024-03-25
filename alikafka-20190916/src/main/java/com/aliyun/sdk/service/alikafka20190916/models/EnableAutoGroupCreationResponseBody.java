@@ -74,7 +74,10 @@ public class EnableAutoGroupCreationResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The returned HTTP status code.
+         * <p>
+         * 
+         * If the value **200** is returned, the request is successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +85,7 @@ public class EnableAutoGroupCreationResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +93,7 @@ public class EnableAutoGroupCreationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +101,7 @@ public class EnableAutoGroupCreationResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;

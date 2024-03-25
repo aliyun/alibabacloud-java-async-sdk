@@ -18,8 +18,14 @@ public class GetConsumerListResponseBody extends TeaModel {
     @NameInMap("ConsumerList")
     private ConsumerList consumerList;
 
+    @NameInMap("CurrentPage")
+    private Integer currentPage;
+
     @NameInMap("Message")
     private String message;
+
+    @NameInMap("PageSize")
+    private Integer pageSize;
 
     @NameInMap("RequestId")
     private String requestId;
@@ -27,12 +33,18 @@ public class GetConsumerListResponseBody extends TeaModel {
     @NameInMap("Success")
     private Boolean success;
 
+    @NameInMap("Total")
+    private Long total;
+
     private GetConsumerListResponseBody(Builder builder) {
         this.code = builder.code;
         this.consumerList = builder.consumerList;
+        this.currentPage = builder.currentPage;
         this.message = builder.message;
+        this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
         this.success = builder.success;
+        this.total = builder.total;
     }
 
     public static Builder builder() {
@@ -58,10 +70,24 @@ public class GetConsumerListResponseBody extends TeaModel {
     }
 
     /**
+     * @return currentPage
+     */
+    public Integer getCurrentPage() {
+        return this.currentPage;
+    }
+
+    /**
      * @return message
      */
     public String getMessage() {
         return this.message;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     /**
@@ -78,12 +104,22 @@ public class GetConsumerListResponseBody extends TeaModel {
         return this.success;
     }
 
+    /**
+     * @return total
+     */
+    public Long getTotal() {
+        return this.total;
+    }
+
     public static final class Builder {
         private Integer code; 
         private ConsumerList consumerList; 
+        private Integer currentPage; 
         private String message; 
+        private Integer pageSize; 
         private String requestId; 
         private Boolean success; 
+        private Long total; 
 
         /**
          * The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.
@@ -102,10 +138,26 @@ public class GetConsumerListResponseBody extends TeaModel {
         }
 
         /**
+         * CurrentPage.
+         */
+        public Builder currentPage(Integer currentPage) {
+            this.currentPage = currentPage;
+            return this;
+        }
+
+        /**
          * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
+            return this;
+        }
+
+        /**
+         * PageSize.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.pageSize = pageSize;
             return this;
         }
 
@@ -122,6 +174,14 @@ public class GetConsumerListResponseBody extends TeaModel {
          */
         public Builder success(Boolean success) {
             this.success = success;
+            return this;
+        }
+
+        /**
+         * Total.
+         */
+        public Builder total(Long total) {
+            this.total = total;
             return this;
         }
 

@@ -94,7 +94,7 @@ public class GetInstanceListResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the instance.
+         * The instances.
          */
         public Builder instanceList(InstanceList instanceList) {
             this.instanceList = instanceList;
@@ -761,6 +761,9 @@ public class GetInstanceListResponseBody extends TeaModel {
         @NameInMap("VSwitchId")
         private String vSwitchId;
 
+        @NameInMap("ViewInstanceStatusCode")
+        private Integer viewInstanceStatusCode;
+
         @NameInMap("VpcId")
         private String vpcId;
 
@@ -803,6 +806,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             this.usedPartitionCount = builder.usedPartitionCount;
             this.usedTopicCount = builder.usedTopicCount;
             this.vSwitchId = builder.vSwitchId;
+            this.viewInstanceStatusCode = builder.viewInstanceStatusCode;
             this.vpcId = builder.vpcId;
             this.zoneId = builder.zoneId;
         }
@@ -1061,6 +1065,13 @@ public class GetInstanceListResponseBody extends TeaModel {
         }
 
         /**
+         * @return viewInstanceStatusCode
+         */
+        public Integer getViewInstanceStatusCode() {
+            return this.viewInstanceStatusCode;
+        }
+
+        /**
          * @return vpcId
          */
         public String getVpcId() {
@@ -1110,6 +1121,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             private Integer usedPartitionCount; 
             private Integer usedTopicCount; 
             private String vSwitchId; 
+            private Integer viewInstanceStatusCode; 
             private String vpcId; 
             private String zoneId; 
 
@@ -1141,8 +1153,8 @@ public class GetInstanceListResponseBody extends TeaModel {
              * The type of the network in which the instance is deployed. Valid values:
              * <p>
              * 
-             * *   **4**: the Internet and VPCs
-             * *   **5**: VPCs
+             * *   **4**: Internet and VPC
+             * *   **5**: VPC
              */
             public Builder deployType(Integer deployType) {
                 this.deployType = deployType;
@@ -1150,7 +1162,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The disk size of the instance. Unit: GB
+             * The disk size. Unit: GB.
              */
             public Builder diskSize(Integer diskSize) {
                 this.diskSize = diskSize;
@@ -1234,7 +1246,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the key that is used for disk encryption in the region where the instance resides.
+             * The ID of the key that is used for disk encryption in the region where the instance is deployed.
              */
             public Builder kmsKeyId(String kmsKeyId) {
                 this.kmsKeyId = kmsKeyId;
@@ -1242,7 +1254,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The retention period of messages on the instance. Unit: hours.
+             * The retention period of messages in the instance. Unit: hours.
              */
             public Builder msgRetain(Integer msgRetain) {
                 this.msgRetain = msgRetain;
@@ -1261,8 +1273,8 @@ public class GetInstanceListResponseBody extends TeaModel {
              * The billing method of the instance. Valid values:
              * <p>
              * 
-             * *   **0**: the subscription billing method
-             * *   **1**: the pay-as-you-go billing method
+             * *   **0**: subscription
+             * *   **1**: pay-as-you-go
              */
             public Builder paidType(Integer paidType) {
                 this.paidType = paidType;
@@ -1314,11 +1326,11 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The security group to which the instance belongs.
+             * The security group of the instance.
              * <p>
              * 
              * *   If the instance is deployed by using the ApsaraMQ for Kafka console or calling the [StartInstance](~~157786~~) operation without a security group configured, no value is returned.
-             * *   If the instance is deployed by calling the [StartInstance](~~157786~~) operation with a security group configured, the return value is the configured security group.
+             * *   If the instance is deployed by calling the [StartInstance](~~157786~~) operation with a security group configured, the returned value is the configured security group.
              */
             public Builder securityGroup(String securityGroup) {
                 this.securityGroup = securityGroup;
@@ -1326,7 +1338,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the instance. Valid values:
+             * The instance status. Valid values:
              * <p>
              * 
              * *   **0**: pending
@@ -1401,7 +1413,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of topics that can be created on the instance.
+             * The maximum number of topics on the instance.
              */
             public Builder topicNumLimit(Integer topicNumLimit) {
                 this.topicNumLimit = topicNumLimit;
@@ -1417,7 +1429,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of used consumer groups.
+             * The number of used groups.
              */
             public Builder usedGroupCount(Integer usedGroupCount) {
                 this.usedGroupCount = usedGroupCount;
@@ -1449,7 +1461,15 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the virtual private cloud (VPC) in which the instance is deployed.
+             * ViewInstanceStatusCode.
+             */
+            public Builder viewInstanceStatusCode(Integer viewInstanceStatusCode) {
+                this.viewInstanceStatusCode = viewInstanceStatusCode;
+                return this;
+            }
+
+            /**
+             * The virtual private cloud (VPC) ID.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

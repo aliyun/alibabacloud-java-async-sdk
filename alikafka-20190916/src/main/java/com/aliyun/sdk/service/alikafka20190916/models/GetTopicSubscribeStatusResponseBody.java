@@ -86,7 +86,7 @@ public class GetTopicSubscribeStatusResponseBody extends TeaModel {
         private TopicSubscribeStatus topicSubscribeStatus; 
 
         /**
-         * Code.
+         * The HTTP status code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class GetTopicSubscribeStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -102,7 +102,7 @@ public class GetTopicSubscribeStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class GetTopicSubscribeStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -118,7 +118,7 @@ public class GetTopicSubscribeStatusResponseBody extends TeaModel {
         }
 
         /**
-         * TopicSubscribeStatus.
+         * The subscription details.
          */
         public Builder topicSubscribeStatus(TopicSubscribeStatus topicSubscribeStatus) {
             this.topicSubscribeStatus = topicSubscribeStatus;
@@ -170,7 +170,7 @@ public class GetTopicSubscribeStatusResponseBody extends TeaModel {
             private String topic; 
 
             /**
-             * ConsumerGroups.
+             * The groups that subscribe to the topic.
              */
             public Builder consumerGroups(java.util.List < String > consumerGroups) {
                 this.consumerGroups = consumerGroups;
@@ -178,7 +178,7 @@ public class GetTopicSubscribeStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Topic.
+             * The topic name.
              */
             public Builder topic(String topic) {
                 this.topic = topic;

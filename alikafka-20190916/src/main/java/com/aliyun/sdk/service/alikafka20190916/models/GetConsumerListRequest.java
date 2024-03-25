@@ -17,9 +17,17 @@ public class GetConsumerListRequest extends Request {
     private String consumerId;
 
     @Query
+    @NameInMap("CurrentPage")
+    private Integer currentPage;
+
+    @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
     private String instanceId;
+
+    @Query
+    @NameInMap("PageSize")
+    private Integer pageSize;
 
     @Query
     @NameInMap("RegionId")
@@ -29,7 +37,9 @@ public class GetConsumerListRequest extends Request {
     private GetConsumerListRequest(Builder builder) {
         super(builder);
         this.consumerId = builder.consumerId;
+        this.currentPage = builder.currentPage;
         this.instanceId = builder.instanceId;
+        this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
     }
 
@@ -54,10 +64,24 @@ public class GetConsumerListRequest extends Request {
     }
 
     /**
+     * @return currentPage
+     */
+    public Integer getCurrentPage() {
+        return this.currentPage;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     /**
@@ -69,7 +93,9 @@ public class GetConsumerListRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetConsumerListRequest, Builder> {
         private String consumerId; 
+        private Integer currentPage; 
         private String instanceId; 
+        private Integer pageSize; 
         private String regionId; 
 
         private Builder() {
@@ -79,7 +105,9 @@ public class GetConsumerListRequest extends Request {
         private Builder(GetConsumerListRequest request) {
             super(request);
             this.consumerId = request.consumerId;
+            this.currentPage = request.currentPage;
             this.instanceId = request.instanceId;
+            this.pageSize = request.pageSize;
             this.regionId = request.regionId;
         } 
 
@@ -93,11 +121,29 @@ public class GetConsumerListRequest extends Request {
         }
 
         /**
+         * CurrentPage.
+         */
+        public Builder currentPage(Integer currentPage) {
+            this.putQueryParameter("CurrentPage", currentPage);
+            this.currentPage = currentPage;
+            return this;
+        }
+
+        /**
          * The ID of the instance to which the consumer group belongs.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * PageSize.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
             return this;
         }
 

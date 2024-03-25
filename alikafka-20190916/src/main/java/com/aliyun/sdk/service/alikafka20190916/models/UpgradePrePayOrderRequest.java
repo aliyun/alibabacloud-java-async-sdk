@@ -18,7 +18,6 @@ public class UpgradePrePayOrderRequest extends Request {
 
     @Query
     @NameInMap("DiskSize")
-    @Validation(required = true)
     private Integer diskSize;
 
     @Query

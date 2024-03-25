@@ -85,7 +85,11 @@ public class EnableAutoGroupCreationRequest extends Request {
         } 
 
         /**
-         * Enable.
+         * Specify whether to enable the flexible group creation feature. Valid values:
+         * <p>
+         * 
+         * *   **true**: enables the flexible group creation feature.
+         * *   **false**: disabled the flexible group creation feature.
          */
         public Builder enable(Boolean enable) {
             this.putQueryParameter("Enable", enable);
@@ -94,7 +98,10 @@ public class EnableAutoGroupCreationRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The instance ID.
+         * <p>
+         * 
+         * You can call the [GetInstanceList](~~437663~~) operation to query instances.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -103,7 +110,7 @@ public class EnableAutoGroupCreationRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -99,7 +99,7 @@ public class EnableAutoTopicCreationRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -108,7 +108,12 @@ public class EnableAutoTopicCreationRequest extends Request {
         }
 
         /**
-         * Operate.
+         * The operation that you want to perform. Valid values:
+         * <p>
+         * 
+         * *   enable: enables the automatic topic creation feature.
+         * *   disable: disables the automatic topic creation feature.
+         * *   updatePartition: changes the number of partitions in topics that are automatically created.
          */
         public Builder operate(String operate) {
             this.putQueryParameter("Operate", operate);
@@ -117,7 +122,10 @@ public class EnableAutoTopicCreationRequest extends Request {
         }
 
         /**
-         * PartitionNum.
+         * The changed number of partitions in topics that are automatically created.
+         * <p>
+         * 
+         * This parameter takes effect only if you set Operate to updatePartition.
          */
         public Builder partitionNum(Long partitionNum) {
             this.putQueryParameter("PartitionNum", partitionNum);
@@ -126,7 +134,7 @@ public class EnableAutoTopicCreationRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

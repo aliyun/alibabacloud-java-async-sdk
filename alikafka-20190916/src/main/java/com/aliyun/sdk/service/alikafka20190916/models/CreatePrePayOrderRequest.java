@@ -18,18 +18,19 @@ public class CreatePrePayOrderRequest extends Request {
 
     @Query
     @NameInMap("DeployType")
-    @Validation(required = true)
     private Integer deployType;
 
     @Query
     @NameInMap("DiskSize")
-    @Validation(required = true)
     private Integer diskSize;
 
     @Query
     @NameInMap("DiskType")
-    @Validation(required = true)
     private String diskType;
+
+    @Query
+    @NameInMap("Duration")
+    private Integer duration;
 
     @Query
     @NameInMap("EipMax")
@@ -42,6 +43,10 @@ public class CreatePrePayOrderRequest extends Request {
     @Query
     @NameInMap("IoMaxSpec")
     private String ioMaxSpec;
+
+    @Query
+    @NameInMap("PaidType")
+    private Integer paidType;
 
     @Query
     @NameInMap("PartitionNum")
@@ -74,9 +79,11 @@ public class CreatePrePayOrderRequest extends Request {
         this.deployType = builder.deployType;
         this.diskSize = builder.diskSize;
         this.diskType = builder.diskType;
+        this.duration = builder.duration;
         this.eipMax = builder.eipMax;
         this.ioMax = builder.ioMax;
         this.ioMaxSpec = builder.ioMaxSpec;
+        this.paidType = builder.paidType;
         this.partitionNum = builder.partitionNum;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
@@ -127,6 +134,13 @@ public class CreatePrePayOrderRequest extends Request {
     }
 
     /**
+     * @return duration
+     */
+    public Integer getDuration() {
+        return this.duration;
+    }
+
+    /**
      * @return eipMax
      */
     public Integer getEipMax() {
@@ -145,6 +159,13 @@ public class CreatePrePayOrderRequest extends Request {
      */
     public String getIoMaxSpec() {
         return this.ioMaxSpec;
+    }
+
+    /**
+     * @return paidType
+     */
+    public Integer getPaidType() {
+        return this.paidType;
     }
 
     /**
@@ -194,9 +215,11 @@ public class CreatePrePayOrderRequest extends Request {
         private Integer deployType; 
         private Integer diskSize; 
         private String diskType; 
+        private Integer duration; 
         private Integer eipMax; 
         private Integer ioMax; 
         private String ioMaxSpec; 
+        private Integer paidType; 
         private Integer partitionNum; 
         private String regionId; 
         private String resourceGroupId; 
@@ -214,9 +237,11 @@ public class CreatePrePayOrderRequest extends Request {
             this.deployType = request.deployType;
             this.diskSize = request.diskSize;
             this.diskType = request.diskType;
+            this.duration = request.duration;
             this.eipMax = request.eipMax;
             this.ioMax = request.ioMax;
             this.ioMaxSpec = request.ioMaxSpec;
+            this.paidType = request.paidType;
             this.partitionNum = request.partitionNum;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
@@ -274,6 +299,15 @@ public class CreatePrePayOrderRequest extends Request {
         }
 
         /**
+         * Duration.
+         */
+        public Builder duration(Integer duration) {
+            this.putQueryParameter("Duration", duration);
+            this.duration = duration;
+            return this;
+        }
+
+        /**
          * The Internet traffic for the instance.
          * <p>
          * 
@@ -309,6 +343,15 @@ public class CreatePrePayOrderRequest extends Request {
         public Builder ioMaxSpec(String ioMaxSpec) {
             this.putQueryParameter("IoMaxSpec", ioMaxSpec);
             this.ioMaxSpec = ioMaxSpec;
+            return this;
+        }
+
+        /**
+         * PaidType.
+         */
+        public Builder paidType(Integer paidType) {
+            this.putQueryParameter("PaidType", paidType);
+            this.paidType = paidType;
             return this;
         }
 
