@@ -29,6 +29,10 @@ public class DescribeInstanceSourcesRequest extends Request {
     private String engineType;
 
     @Query
+    @NameInMap("FeatureType")
+    private Integer featureType;
+
+    @Query
     @NameInMap("InstanceId")
     private String instanceId;
 
@@ -66,6 +70,7 @@ public class DescribeInstanceSourcesRequest extends Request {
         this.authStatus = builder.authStatus;
         this.currentPage = builder.currentPage;
         this.engineType = builder.engineType;
+        this.featureType = builder.featureType;
         this.instanceId = builder.instanceId;
         this.lang = builder.lang;
         this.pageSize = builder.pageSize;
@@ -115,6 +120,13 @@ public class DescribeInstanceSourcesRequest extends Request {
      */
     public String getEngineType() {
         return this.engineType;
+    }
+
+    /**
+     * @return featureType
+     */
+    public Integer getFeatureType() {
+        return this.featureType;
     }
 
     /**
@@ -178,6 +190,7 @@ public class DescribeInstanceSourcesRequest extends Request {
         private Integer authStatus; 
         private Integer currentPage; 
         private String engineType; 
+        private Integer featureType; 
         private String instanceId; 
         private String lang; 
         private Integer pageSize; 
@@ -197,6 +210,7 @@ public class DescribeInstanceSourcesRequest extends Request {
             this.authStatus = request.authStatus;
             this.currentPage = request.currentPage;
             this.engineType = request.engineType;
+            this.featureType = request.featureType;
             this.instanceId = request.instanceId;
             this.lang = request.lang;
             this.pageSize = request.pageSize;
@@ -248,6 +262,15 @@ public class DescribeInstanceSourcesRequest extends Request {
         public Builder engineType(String engineType) {
             this.putQueryParameter("EngineType", engineType);
             this.engineType = engineType;
+            return this;
+        }
+
+        /**
+         * FeatureType.
+         */
+        public Builder featureType(Integer featureType) {
+            this.putQueryParameter("FeatureType", featureType);
+            this.featureType = featureType;
             return this;
         }
 

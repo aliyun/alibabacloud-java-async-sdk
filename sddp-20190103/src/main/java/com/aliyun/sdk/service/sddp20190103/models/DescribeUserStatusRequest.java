@@ -13,11 +13,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeUserStatusRequest extends Request {
     @Query
+    @NameInMap("FeatureType")
+    private Integer featureType;
+
+    @Query
     @NameInMap("Lang")
     private String lang;
 
     private DescribeUserStatusRequest(Builder builder) {
         super(builder);
+        this.featureType = builder.featureType;
         this.lang = builder.lang;
     }
 
@@ -35,6 +40,13 @@ public class DescribeUserStatusRequest extends Request {
     }
 
     /**
+     * @return featureType
+     */
+    public Integer getFeatureType() {
+        return this.featureType;
+    }
+
+    /**
      * @return lang
      */
     public String getLang() {
@@ -42,6 +54,7 @@ public class DescribeUserStatusRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeUserStatusRequest, Builder> {
+        private Integer featureType; 
         private String lang; 
 
         private Builder() {
@@ -50,8 +63,18 @@ public class DescribeUserStatusRequest extends Request {
 
         private Builder(DescribeUserStatusRequest request) {
             super(request);
+            this.featureType = request.featureType;
             this.lang = request.lang;
         } 
+
+        /**
+         * This parameter is deprecated.
+         */
+        public Builder featureType(Integer featureType) {
+            this.putQueryParameter("FeatureType", featureType);
+            this.featureType = featureType;
+            return this;
+        }
 
         /**
          * The language of the content within the request and response. Valid values:

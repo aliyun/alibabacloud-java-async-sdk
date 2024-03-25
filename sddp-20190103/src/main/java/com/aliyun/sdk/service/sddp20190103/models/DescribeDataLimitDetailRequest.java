@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDataLimitDetailRequest extends Request {
     @Query
+    @NameInMap("FeatureType")
+    private Integer featureType;
+
+    @Query
     @NameInMap("Id")
     @Validation(required = true)
     private Long id;
@@ -27,6 +31,7 @@ public class DescribeDataLimitDetailRequest extends Request {
 
     private DescribeDataLimitDetailRequest(Builder builder) {
         super(builder);
+        this.featureType = builder.featureType;
         this.id = builder.id;
         this.lang = builder.lang;
         this.networkType = builder.networkType;
@@ -43,6 +48,13 @@ public class DescribeDataLimitDetailRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return featureType
+     */
+    public Integer getFeatureType() {
+        return this.featureType;
     }
 
     /**
@@ -67,6 +79,7 @@ public class DescribeDataLimitDetailRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeDataLimitDetailRequest, Builder> {
+        private Integer featureType; 
         private Long id; 
         private String lang; 
         private Integer networkType; 
@@ -77,10 +90,20 @@ public class DescribeDataLimitDetailRequest extends Request {
 
         private Builder(DescribeDataLimitDetailRequest request) {
             super(request);
+            this.featureType = request.featureType;
             this.id = request.id;
             this.lang = request.lang;
             this.networkType = request.networkType;
         } 
+
+        /**
+         * FeatureType.
+         */
+        public Builder featureType(Integer featureType) {
+            this.putQueryParameter("FeatureType", featureType);
+            this.featureType = featureType;
+            return this;
+        }
 
         /**
          * The unique ID of the data asset that you want to query.

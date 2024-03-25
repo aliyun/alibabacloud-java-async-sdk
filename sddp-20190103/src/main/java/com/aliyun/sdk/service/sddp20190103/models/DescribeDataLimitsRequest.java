@@ -41,6 +41,10 @@ public class DescribeDataLimitsRequest extends Request {
     private String engineType;
 
     @Query
+    @NameInMap("FeatureType")
+    private Integer featureType;
+
+    @Query
     @NameInMap("Lang")
     private String lang;
 
@@ -73,6 +77,7 @@ public class DescribeDataLimitsRequest extends Request {
         this.enable = builder.enable;
         this.endTime = builder.endTime;
         this.engineType = builder.engineType;
+        this.featureType = builder.featureType;
         this.lang = builder.lang;
         this.pageSize = builder.pageSize;
         this.parentId = builder.parentId;
@@ -144,6 +149,13 @@ public class DescribeDataLimitsRequest extends Request {
     }
 
     /**
+     * @return featureType
+     */
+    public Integer getFeatureType() {
+        return this.featureType;
+    }
+
+    /**
      * @return lang
      */
     public String getLang() {
@@ -193,6 +205,7 @@ public class DescribeDataLimitsRequest extends Request {
         private Integer enable; 
         private Long endTime; 
         private String engineType; 
+        private Integer featureType; 
         private String lang; 
         private Integer pageSize; 
         private String parentId; 
@@ -213,6 +226,7 @@ public class DescribeDataLimitsRequest extends Request {
             this.enable = request.enable;
             this.endTime = request.endTime;
             this.engineType = request.engineType;
+            this.featureType = request.featureType;
             this.lang = request.lang;
             this.pageSize = request.pageSize;
             this.parentId = request.parentId;
@@ -300,6 +314,15 @@ public class DescribeDataLimitsRequest extends Request {
         public Builder engineType(String engineType) {
             this.putQueryParameter("EngineType", engineType);
             this.engineType = engineType;
+            return this;
+        }
+
+        /**
+         * FeatureType.
+         */
+        public Builder featureType(Integer featureType) {
+            this.putQueryParameter("FeatureType", featureType);
+            this.featureType = featureType;
             return this;
         }
 

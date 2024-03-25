@@ -21,6 +21,10 @@ public class DescribeDataObjectsRequest extends Request {
     private Long domainId;
 
     @Query
+    @NameInMap("FeatureType")
+    private Integer featureType;
+
+    @Query
     @NameInMap("FileCategoryCode")
     private Long fileCategoryCode;
 
@@ -77,6 +81,7 @@ public class DescribeDataObjectsRequest extends Request {
         super(builder);
         this.currentPage = builder.currentPage;
         this.domainId = builder.domainId;
+        this.featureType = builder.featureType;
         this.fileCategoryCode = builder.fileCategoryCode;
         this.fileType = builder.fileType;
         this.instanceId = builder.instanceId;
@@ -117,6 +122,13 @@ public class DescribeDataObjectsRequest extends Request {
      */
     public Long getDomainId() {
         return this.domainId;
+    }
+
+    /**
+     * @return featureType
+     */
+    public Integer getFeatureType() {
+        return this.featureType;
     }
 
     /**
@@ -213,6 +225,7 @@ public class DescribeDataObjectsRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeDataObjectsRequest, Builder> {
         private Integer currentPage; 
         private Long domainId; 
+        private Integer featureType; 
         private Long fileCategoryCode; 
         private Long fileType; 
         private String instanceId; 
@@ -235,6 +248,7 @@ public class DescribeDataObjectsRequest extends Request {
             super(request);
             this.currentPage = request.currentPage;
             this.domainId = request.domainId;
+            this.featureType = request.featureType;
             this.fileCategoryCode = request.fileCategoryCode;
             this.fileType = request.fileType;
             this.instanceId = request.instanceId;
@@ -265,6 +279,15 @@ public class DescribeDataObjectsRequest extends Request {
         public Builder domainId(Long domainId) {
             this.putQueryParameter("DomainId", domainId);
             this.domainId = domainId;
+            return this;
+        }
+
+        /**
+         * FeatureType.
+         */
+        public Builder featureType(Integer featureType) {
+            this.putQueryParameter("FeatureType", featureType);
+            this.featureType = featureType;
             return this;
         }
 

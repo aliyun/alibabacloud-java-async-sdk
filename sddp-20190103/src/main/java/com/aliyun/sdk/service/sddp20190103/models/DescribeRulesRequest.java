@@ -29,6 +29,10 @@ public class DescribeRulesRequest extends Request {
     private Integer customType;
 
     @Query
+    @NameInMap("FeatureType")
+    private Integer featureType;
+
+    @Query
     @NameInMap("GroupId")
     private String groupId;
 
@@ -86,6 +90,7 @@ public class DescribeRulesRequest extends Request {
         this.contentCategory = builder.contentCategory;
         this.currentPage = builder.currentPage;
         this.customType = builder.customType;
+        this.featureType = builder.featureType;
         this.groupId = builder.groupId;
         this.keywordCompatible = builder.keywordCompatible;
         this.lang = builder.lang;
@@ -140,6 +145,13 @@ public class DescribeRulesRequest extends Request {
      */
     public Integer getCustomType() {
         return this.customType;
+    }
+
+    /**
+     * @return featureType
+     */
+    public Integer getFeatureType() {
+        return this.featureType;
     }
 
     /**
@@ -238,6 +250,7 @@ public class DescribeRulesRequest extends Request {
         private Integer contentCategory; 
         private Integer currentPage; 
         private Integer customType; 
+        private Integer featureType; 
         private String groupId; 
         private Boolean keywordCompatible; 
         private String lang; 
@@ -262,6 +275,7 @@ public class DescribeRulesRequest extends Request {
             this.contentCategory = request.contentCategory;
             this.currentPage = request.currentPage;
             this.customType = request.customType;
+            this.featureType = request.featureType;
             this.groupId = request.groupId;
             this.keywordCompatible = request.keywordCompatible;
             this.lang = request.lang;
@@ -318,6 +332,15 @@ public class DescribeRulesRequest extends Request {
         public Builder customType(Integer customType) {
             this.putQueryParameter("CustomType", customType);
             this.customType = customType;
+            return this;
+        }
+
+        /**
+         * This parameter is deprecated.
+         */
+        public Builder featureType(Integer featureType) {
+            this.putQueryParameter("FeatureType", featureType);
+            this.featureType = featureType;
             return this;
         }
 

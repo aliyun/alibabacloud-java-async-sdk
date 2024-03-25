@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyReportTaskStatusRequest extends Request {
     @Query
+    @NameInMap("FeatureType")
+    private Integer featureType;
+
+    @Query
     @NameInMap("Lang")
     private String lang;
 
@@ -22,6 +26,7 @@ public class ModifyReportTaskStatusRequest extends Request {
 
     private ModifyReportTaskStatusRequest(Builder builder) {
         super(builder);
+        this.featureType = builder.featureType;
         this.lang = builder.lang;
         this.reportTaskStatus = builder.reportTaskStatus;
     }
@@ -40,6 +45,13 @@ public class ModifyReportTaskStatusRequest extends Request {
     }
 
     /**
+     * @return featureType
+     */
+    public Integer getFeatureType() {
+        return this.featureType;
+    }
+
+    /**
      * @return lang
      */
     public String getLang() {
@@ -54,6 +66,7 @@ public class ModifyReportTaskStatusRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyReportTaskStatusRequest, Builder> {
+        private Integer featureType; 
         private String lang; 
         private Integer reportTaskStatus; 
 
@@ -63,9 +76,19 @@ public class ModifyReportTaskStatusRequest extends Request {
 
         private Builder(ModifyReportTaskStatusRequest request) {
             super(request);
+            this.featureType = request.featureType;
             this.lang = request.lang;
             this.reportTaskStatus = request.reportTaskStatus;
         } 
+
+        /**
+         * This parameter is deprecated.
+         */
+        public Builder featureType(Integer featureType) {
+            this.putQueryParameter("FeatureType", featureType);
+            this.featureType = featureType;
+            return this;
+        }
 
         /**
          * The language of the content within the request and response. Default value: **zh_cn**. Valid values:

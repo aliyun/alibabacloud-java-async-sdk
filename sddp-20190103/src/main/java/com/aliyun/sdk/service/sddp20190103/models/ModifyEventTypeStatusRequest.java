@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyEventTypeStatusRequest extends Request {
     @Query
+    @NameInMap("FeatureType")
+    private Integer featureType;
+
+    @Query
     @NameInMap("Lang")
     private String lang;
 
@@ -22,6 +26,7 @@ public class ModifyEventTypeStatusRequest extends Request {
 
     private ModifyEventTypeStatusRequest(Builder builder) {
         super(builder);
+        this.featureType = builder.featureType;
         this.lang = builder.lang;
         this.subTypeIds = builder.subTypeIds;
     }
@@ -40,6 +45,13 @@ public class ModifyEventTypeStatusRequest extends Request {
     }
 
     /**
+     * @return featureType
+     */
+    public Integer getFeatureType() {
+        return this.featureType;
+    }
+
+    /**
      * @return lang
      */
     public String getLang() {
@@ -54,6 +66,7 @@ public class ModifyEventTypeStatusRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyEventTypeStatusRequest, Builder> {
+        private Integer featureType; 
         private String lang; 
         private String subTypeIds; 
 
@@ -63,9 +76,19 @@ public class ModifyEventTypeStatusRequest extends Request {
 
         private Builder(ModifyEventTypeStatusRequest request) {
             super(request);
+            this.featureType = request.featureType;
             this.lang = request.lang;
             this.subTypeIds = request.subTypeIds;
         } 
+
+        /**
+         * FeatureType.
+         */
+        public Builder featureType(Integer featureType) {
+            this.putQueryParameter("FeatureType", featureType);
+            this.featureType = featureType;
+            return this;
+        }
 
         /**
          * The language of the content within the request and response. Valid values: **zh** and **en**. The value zh indicates Chinese, and the value en indicates English.
