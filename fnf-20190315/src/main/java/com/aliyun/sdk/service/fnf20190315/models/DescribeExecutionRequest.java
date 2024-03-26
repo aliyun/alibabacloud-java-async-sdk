@@ -23,10 +23,6 @@ public class DescribeExecutionRequest extends Request {
     private String flowName;
 
     @Query
-    @NameInMap("RequestId")
-    private String requestId;
-
-    @Query
     @NameInMap("WaitTimeSeconds")
     private Integer waitTimeSeconds;
 
@@ -34,7 +30,6 @@ public class DescribeExecutionRequest extends Request {
         super(builder);
         this.executionName = builder.executionName;
         this.flowName = builder.flowName;
-        this.requestId = builder.requestId;
         this.waitTimeSeconds = builder.waitTimeSeconds;
     }
 
@@ -66,13 +61,6 @@ public class DescribeExecutionRequest extends Request {
     }
 
     /**
-     * @return requestId
-     */
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    /**
      * @return waitTimeSeconds
      */
     public Integer getWaitTimeSeconds() {
@@ -82,7 +70,6 @@ public class DescribeExecutionRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeExecutionRequest, Builder> {
         private String executionName; 
         private String flowName; 
-        private String requestId; 
         private Integer waitTimeSeconds; 
 
         private Builder() {
@@ -93,12 +80,11 @@ public class DescribeExecutionRequest extends Request {
             super(request);
             this.executionName = request.executionName;
             this.flowName = request.flowName;
-            this.requestId = request.requestId;
             this.waitTimeSeconds = request.waitTimeSeconds;
         } 
 
         /**
-         * The name of the execution, which is unique within a flow. Configure this parameter based on the following rules:
+         * The name of the execution, which is unique within a flow. Set this parameter based on the following rules:
          * <p>
          * 
          * *   The name can contain letters, digits, underscores (\_), and hyphens (-).
@@ -113,7 +99,7 @@ public class DescribeExecutionRequest extends Request {
         }
 
         /**
-         * The name of the flow. The name is unique within the region and cannot be modified after the flow is created. Configure this parameter based on the following rules:
+         * The name of the flow. The name is unique within the region and cannot be modified after the flow is created. Set this parameter based on the following rules:
          * <p>
          * 
          * *   The name can contain letters, digits, underscores (\_), and hyphens (-).
@@ -124,15 +110,6 @@ public class DescribeExecutionRequest extends Request {
         public Builder flowName(String flowName) {
             this.putQueryParameter("FlowName", flowName);
             this.flowName = flowName;
-            return this;
-        }
-
-        /**
-         * The request ID. If you specify this parameter, the system uses this value as the ID of the request. If you do not specify this parameter, the system generates a value at random.
-         */
-        public Builder requestId(String requestId) {
-            this.putQueryParameter("RequestId", requestId);
-            this.requestId = requestId;
             return this;
         }
 

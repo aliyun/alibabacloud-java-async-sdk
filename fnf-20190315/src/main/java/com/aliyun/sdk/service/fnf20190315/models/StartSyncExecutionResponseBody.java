@@ -134,7 +134,7 @@ public class StartSyncExecutionResponseBody extends TeaModel {
         private String stoppedTime; 
 
         /**
-         * ErrorCode.
+         * The error code that is returned if the execution failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -142,7 +142,7 @@ public class StartSyncExecutionResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message that indicates the execution timed out.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -150,7 +150,7 @@ public class StartSyncExecutionResponseBody extends TeaModel {
         }
 
         /**
-         * FlowName.
+         * The name of the flow.
          */
         public Builder flowName(String flowName) {
             this.flowName = flowName;
@@ -158,7 +158,7 @@ public class StartSyncExecutionResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * The name of the execution.
          */
         public Builder name(String name) {
             this.name = name;
@@ -166,7 +166,7 @@ public class StartSyncExecutionResponseBody extends TeaModel {
         }
 
         /**
-         * Output.
+         * The output of the execution, which is in the JSON format.
          */
         public Builder output(String output) {
             this.output = output;
@@ -174,7 +174,7 @@ public class StartSyncExecutionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -182,7 +182,7 @@ public class StartSyncExecutionResponseBody extends TeaModel {
         }
 
         /**
-         * StartedTime.
+         * The time when the execution started.
          */
         public Builder startedTime(String startedTime) {
             this.startedTime = startedTime;
@@ -190,7 +190,15 @@ public class StartSyncExecutionResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The status of the execution. Valid values:
+         * <p>
+         * 
+         * *   **Starting**
+         * *   **Running**
+         * *   **Stopped**
+         * *   **Succeeded**
+         * *   **Failed**
+         * *   **TimedOut**
          */
         public Builder status(String status) {
             this.status = status;
@@ -198,7 +206,7 @@ public class StartSyncExecutionResponseBody extends TeaModel {
         }
 
         /**
-         * StoppedTime.
+         * The time when the execution stopped.
          */
         public Builder stoppedTime(String stoppedTime) {
             this.stoppedTime = stoppedTime;

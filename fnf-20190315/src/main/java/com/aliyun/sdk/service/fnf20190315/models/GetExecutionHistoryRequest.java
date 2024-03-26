@@ -30,17 +30,12 @@ public class GetExecutionHistoryRequest extends Request {
     @NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("RequestId")
-    private String requestId;
-
     private GetExecutionHistoryRequest(Builder builder) {
         super(builder);
         this.executionName = builder.executionName;
         this.flowName = builder.flowName;
         this.limit = builder.limit;
         this.nextToken = builder.nextToken;
-        this.requestId = builder.requestId;
     }
 
     public static Builder builder() {
@@ -84,19 +79,11 @@ public class GetExecutionHistoryRequest extends Request {
         return this.nextToken;
     }
 
-    /**
-     * @return requestId
-     */
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public static final class Builder extends Request.Builder<GetExecutionHistoryRequest, Builder> {
         private String executionName; 
         private String flowName; 
         private Integer limit; 
         private String nextToken; 
-        private String requestId; 
 
         private Builder() {
             super();
@@ -108,11 +95,10 @@ public class GetExecutionHistoryRequest extends Request {
             this.flowName = request.flowName;
             this.limit = request.limit;
             this.nextToken = request.nextToken;
-            this.requestId = request.requestId;
         } 
 
         /**
-         * The name of the execution, which is unique within a flow. Configure this parameter based on the following rules:
+         * The name of the execution, which is unique within a flow. The name must meet the following conventions:
          * <p>
          * 
          * *   The name can contain letters, digits, underscores (\_), and hyphens (-).
@@ -127,7 +113,7 @@ public class GetExecutionHistoryRequest extends Request {
         }
 
         /**
-         * The name of the flow. The name is unique within the region and cannot be modified after the flow is created. Configure this parameter based on the following rules:
+         * The name of the flow. The name must be unique within the region and cannot be modified after the flow is created. The name must meet the following conventions:
          * <p>
          * 
          * *   The name can contain letters, digits, underscores (\_), and hyphens (-).
@@ -156,15 +142,6 @@ public class GetExecutionHistoryRequest extends Request {
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
             this.nextToken = nextToken;
-            return this;
-        }
-
-        /**
-         * The request ID. If you specify this parameter, the system uses this value as the ID of the request. If you do not specify this parameter, the system generates a value at random.
-         */
-        public Builder requestId(String requestId) {
-            this.putQueryParameter("RequestId", requestId);
-            this.requestId = requestId;
             return this;
         }
 

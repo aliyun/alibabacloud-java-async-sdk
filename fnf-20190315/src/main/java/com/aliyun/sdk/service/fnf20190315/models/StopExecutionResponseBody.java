@@ -190,9 +190,10 @@ public class StopExecutionResponseBody extends TeaModel {
         }
 
         /**
-         * The execution state. Valid values:
+         * The execution status. Valid values:
          * <p>
          * 
+         * *   **Starting**
          * *   **Running**
          * *   **Stopped**
          * *   **Succeeded**

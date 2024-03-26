@@ -154,7 +154,7 @@ public class CreateFlowResponseBody extends TeaModel {
         }
 
         /**
-         * The definition of the flow.
+         * Considering compatibility, the system supports two flow definition specifications.
          */
         public Builder definition(String definition) {
             this.definition = definition;
@@ -170,7 +170,7 @@ public class CreateFlowResponseBody extends TeaModel {
         }
 
         /**
-         * The execution mode or the enumeration type. Valid values: Express and Standard. The value Standard indicates an empty string.
+         * The execution mode. Valid values: Express and Standard. Considering compatibility, an empty string is equivalent to the Standard execution mode.
          */
         public Builder executionMode(String executionMode) {
             this.executionMode = executionMode;
@@ -210,7 +210,7 @@ public class CreateFlowResponseBody extends TeaModel {
         }
 
         /**
-         * The ARN of the RAM role.
+         * The Alibaba Cloud resource name (ARN) of the authorized role on which the execution of the flow relies. During the execution of the flow, CloudFlow assumes the role to call API operations of relevant services.
          */
         public Builder roleArn(String roleArn) {
             this.roleArn = roleArn;
@@ -219,6 +219,17 @@ public class CreateFlowResponseBody extends TeaModel {
 
         /**
          * The type of the flow.
+         * <p>
+         * 
+         * Valid value:
+         * 
+         * *   FDL
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder type(String type) {
             this.type = type;

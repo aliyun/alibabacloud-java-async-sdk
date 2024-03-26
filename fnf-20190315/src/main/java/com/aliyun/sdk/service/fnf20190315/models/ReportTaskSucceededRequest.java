@@ -18,10 +18,6 @@ public class ReportTaskSucceededRequest extends Request {
     private String output;
 
     @Query
-    @NameInMap("RequestId")
-    private String requestId;
-
-    @Query
     @NameInMap("TaskToken")
     @Validation(required = true)
     private String taskToken;
@@ -29,7 +25,6 @@ public class ReportTaskSucceededRequest extends Request {
     private ReportTaskSucceededRequest(Builder builder) {
         super(builder);
         this.output = builder.output;
-        this.requestId = builder.requestId;
         this.taskToken = builder.taskToken;
     }
 
@@ -54,13 +49,6 @@ public class ReportTaskSucceededRequest extends Request {
     }
 
     /**
-     * @return requestId
-     */
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    /**
      * @return taskToken
      */
     public String getTaskToken() {
@@ -69,7 +57,6 @@ public class ReportTaskSucceededRequest extends Request {
 
     public static final class Builder extends Request.Builder<ReportTaskSucceededRequest, Builder> {
         private String output; 
-        private String requestId; 
         private String taskToken; 
 
         private Builder() {
@@ -79,7 +66,6 @@ public class ReportTaskSucceededRequest extends Request {
         private Builder(ReportTaskSucceededRequest request) {
             super(request);
             this.output = request.output;
-            this.requestId = request.requestId;
             this.taskToken = request.taskToken;
         } 
 
@@ -89,15 +75,6 @@ public class ReportTaskSucceededRequest extends Request {
         public Builder output(String output) {
             this.putBodyParameter("Output", output);
             this.output = output;
-            return this;
-        }
-
-        /**
-         * The request ID. If you specify this parameter, the system uses this value as the ID of the request. If you do not specify this parameter, the system generates a value at random.
-         */
-        public Builder requestId(String requestId) {
-            this.putQueryParameter("RequestId", requestId);
-            this.requestId = requestId;
             return this;
         }
 

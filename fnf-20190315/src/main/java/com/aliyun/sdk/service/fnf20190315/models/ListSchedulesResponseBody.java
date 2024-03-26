@@ -210,7 +210,7 @@ public class ListSchedulesResponseBody extends TeaModel {
             }
 
             /**
-             * The CRON expression of the scheduled task.
+             * The cron expression of the scheduled task.
              */
             public Builder cronExpression(String cronExpression) {
                 this.cronExpression = cronExpression;

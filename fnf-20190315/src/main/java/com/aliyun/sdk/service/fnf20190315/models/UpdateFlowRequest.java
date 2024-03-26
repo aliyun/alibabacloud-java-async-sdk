@@ -25,10 +25,6 @@ public class UpdateFlowRequest extends Request {
     @Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("RequestId")
-    private String requestId;
-
     @Body
     @NameInMap("RoleArn")
     private String roleArn;
@@ -42,7 +38,6 @@ public class UpdateFlowRequest extends Request {
         this.definition = builder.definition;
         this.description = builder.description;
         this.name = builder.name;
-        this.requestId = builder.requestId;
         this.roleArn = builder.roleArn;
         this.type = builder.type;
     }
@@ -82,13 +77,6 @@ public class UpdateFlowRequest extends Request {
     }
 
     /**
-     * @return requestId
-     */
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    /**
      * @return roleArn
      */
     public String getRoleArn() {
@@ -106,7 +94,6 @@ public class UpdateFlowRequest extends Request {
         private String definition; 
         private String description; 
         private String name; 
-        private String requestId; 
         private String roleArn; 
         private String type; 
 
@@ -119,13 +106,12 @@ public class UpdateFlowRequest extends Request {
             this.definition = request.definition;
             this.description = request.description;
             this.name = request.name;
-            this.requestId = request.requestId;
             this.roleArn = request.roleArn;
             this.type = request.type;
         } 
 
         /**
-         * The definition of the flow. The definition must comply with the Flow Definition Language (FDL) syntax.
+         * The flow definition, which follows the flow definition language (FDL) syntax standard. Considering compatibility, the system supports the two flow definition specifications.
          */
         public Builder definition(String definition) {
             this.putBodyParameter("Definition", definition);
@@ -143,7 +129,7 @@ public class UpdateFlowRequest extends Request {
         }
 
         /**
-         * The name of the flow. The name is unique within the region and cannot be modified after the time-based schedule is created. Configure this parameter based on the following rules:
+         * The name of the flow. The name must be unique within the region and cannot be modified after the flow is created. The name must meet the following conventions:
          * <p>
          * 
          * *   The name can contain letters, digits, underscores (\_), and hyphens (-).
@@ -158,16 +144,7 @@ public class UpdateFlowRequest extends Request {
         }
 
         /**
-         * The request ID. If you specify this parameter, the system uses this value as the ID of the request. If you do not specify this parameter, the system generates a value at random.
-         */
-        public Builder requestId(String requestId) {
-            this.putQueryParameter("RequestId", requestId);
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * The Alibaba Cloud resource name (ARN) of the specified Resource Access Management (RAM) role that Serverless Workflow assumes to invoke resources when the task is executed.
+         * The Alibaba Cloud resource name (ARN) of the authorized role on which the execution of the flow relies. During the execution of the flow, the flow execution engine assumes the role to call API operations of relevant services.
          */
         public Builder roleArn(String roleArn) {
             this.putBodyParameter("RoleArn", roleArn);

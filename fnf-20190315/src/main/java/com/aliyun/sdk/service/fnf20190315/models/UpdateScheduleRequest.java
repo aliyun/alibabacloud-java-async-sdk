@@ -33,10 +33,6 @@ public class UpdateScheduleRequest extends Request {
     @NameInMap("Payload")
     private String payload;
 
-    @Query
-    @NameInMap("RequestId")
-    private String requestId;
-
     @Body
     @NameInMap("ScheduleName")
     @Validation(required = true)
@@ -49,7 +45,6 @@ public class UpdateScheduleRequest extends Request {
         this.enable = builder.enable;
         this.flowName = builder.flowName;
         this.payload = builder.payload;
-        this.requestId = builder.requestId;
         this.scheduleName = builder.scheduleName;
     }
 
@@ -102,13 +97,6 @@ public class UpdateScheduleRequest extends Request {
     }
 
     /**
-     * @return requestId
-     */
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    /**
      * @return scheduleName
      */
     public String getScheduleName() {
@@ -121,7 +109,6 @@ public class UpdateScheduleRequest extends Request {
         private Boolean enable; 
         private String flowName; 
         private String payload; 
-        private String requestId; 
         private String scheduleName; 
 
         private Builder() {
@@ -135,7 +122,6 @@ public class UpdateScheduleRequest extends Request {
             this.enable = request.enable;
             this.flowName = request.flowName;
             this.payload = request.payload;
-            this.requestId = request.requestId;
             this.scheduleName = request.scheduleName;
         } 
 
@@ -171,7 +157,7 @@ public class UpdateScheduleRequest extends Request {
         }
 
         /**
-         * The name of the flow that is associated with the time-based schedule. The name is unique within the region and cannot be modified after the time-based schedule is created. Configure this parameter based on the following rules:
+         * The name of the flow that is associated with the time-based schedule. The name must be unique within the region and cannot be modified after the time-based schedule is created. The name must meet the following conventions:
          * <p>
          * 
          * *   The name can contain letters, digits, underscores (\_), and hyphens (-).
@@ -195,16 +181,7 @@ public class UpdateScheduleRequest extends Request {
         }
 
         /**
-         * The request ID. If you specify this parameter, the system uses this value as the ID of the request. If you do not specify this parameter, the system generates a value at random.
-         */
-        public Builder requestId(String requestId) {
-            this.putQueryParameter("RequestId", requestId);
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * The name of the time-based schedule. Configure this parameter based on the following rules:
+         * The name of the time-based schedule. The name must meet the following conventions:
          * <p>
          * 
          * *   The name can contain letters, digits, underscores (\_), and hyphens (-).

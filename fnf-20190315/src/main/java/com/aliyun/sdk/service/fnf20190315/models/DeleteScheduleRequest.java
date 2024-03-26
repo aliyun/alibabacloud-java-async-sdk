@@ -18,10 +18,6 @@ public class DeleteScheduleRequest extends Request {
     private String flowName;
 
     @Query
-    @NameInMap("RequestId")
-    private String requestId;
-
-    @Query
     @NameInMap("ScheduleName")
     @Validation(required = true)
     private String scheduleName;
@@ -29,7 +25,6 @@ public class DeleteScheduleRequest extends Request {
     private DeleteScheduleRequest(Builder builder) {
         super(builder);
         this.flowName = builder.flowName;
-        this.requestId = builder.requestId;
         this.scheduleName = builder.scheduleName;
     }
 
@@ -54,13 +49,6 @@ public class DeleteScheduleRequest extends Request {
     }
 
     /**
-     * @return requestId
-     */
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    /**
      * @return scheduleName
      */
     public String getScheduleName() {
@@ -69,7 +57,6 @@ public class DeleteScheduleRequest extends Request {
 
     public static final class Builder extends Request.Builder<DeleteScheduleRequest, Builder> {
         private String flowName; 
-        private String requestId; 
         private String scheduleName; 
 
         private Builder() {
@@ -79,12 +66,11 @@ public class DeleteScheduleRequest extends Request {
         private Builder(DeleteScheduleRequest request) {
             super(request);
             this.flowName = request.flowName;
-            this.requestId = request.requestId;
             this.scheduleName = request.scheduleName;
         } 
 
         /**
-         * The name of the flow that is associated with the time-based schedule. The name is unique within the region and cannot be modified after the time-based schedule is created. Configure this parameter based on the following rules:
+         * The name of the flow that is associated with the time-based schedule. The name must be unique within the region and cannot be modified after the time-based schedule is created. The name must meet the following conventions:
          * <p>
          * 
          * *   The name can contain letters, digits, underscores (\_), and hyphens (-).
@@ -99,16 +85,7 @@ public class DeleteScheduleRequest extends Request {
         }
 
         /**
-         * The request ID. If you specify this parameter, the system uses this value as the ID of the request. If you do not specify this parameter, the system generates a value at random.
-         */
-        public Builder requestId(String requestId) {
-            this.putQueryParameter("RequestId", requestId);
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * The name of the time-based schedule. Configure this parameter based on the following rules:
+         * The name of the time-based schedule. The name must meet the following conventions:
          * <p>
          * 
          * *   The name can contain letters, digits, underscores (\_), and hyphens (-).
