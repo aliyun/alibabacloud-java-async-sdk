@@ -15,6 +15,9 @@ public class NodeGroupConfig extends TeaModel {
     @NameInMap("AdditionalSecurityGroupIds")
     private java.util.List < String > additionalSecurityGroupIds;
 
+    @NameInMap("ComponentTags")
+    private java.util.List < String > componentTags;
+
     @NameInMap("CostOptimizedConfig")
     private CostOptimizedConfig costOptimizedConfig;
 
@@ -69,6 +72,7 @@ public class NodeGroupConfig extends TeaModel {
 
     private NodeGroupConfig(Builder builder) {
         this.additionalSecurityGroupIds = builder.additionalSecurityGroupIds;
+        this.componentTags = builder.componentTags;
         this.costOptimizedConfig = builder.costOptimizedConfig;
         this.dataDisks = builder.dataDisks;
         this.deploymentSetStrategy = builder.deploymentSetStrategy;
@@ -101,6 +105,13 @@ public class NodeGroupConfig extends TeaModel {
      */
     public java.util.List < String > getAdditionalSecurityGroupIds() {
         return this.additionalSecurityGroupIds;
+    }
+
+    /**
+     * @return componentTags
+     */
+    public java.util.List < String > getComponentTags() {
+        return this.componentTags;
     }
 
     /**
@@ -224,6 +235,7 @@ public class NodeGroupConfig extends TeaModel {
 
     public static final class Builder {
         private java.util.List < String > additionalSecurityGroupIds; 
+        private java.util.List < String > componentTags; 
         private CostOptimizedConfig costOptimizedConfig; 
         private java.util.List < DataDisk > dataDisks; 
         private String deploymentSetStrategy; 
@@ -247,6 +259,14 @@ public class NodeGroupConfig extends TeaModel {
          */
         public Builder additionalSecurityGroupIds(java.util.List < String > additionalSecurityGroupIds) {
             this.additionalSecurityGroupIds = additionalSecurityGroupIds;
+            return this;
+        }
+
+        /**
+         * ComponentTags.
+         */
+        public Builder componentTags(java.util.List < String > componentTags) {
+            this.componentTags = componentTags;
             return this;
         }
 
