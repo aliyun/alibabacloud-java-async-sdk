@@ -1065,7 +1065,11 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * XffProto.
+             * Indicates whether the X-Forward-For-Proto header is used to identify the protocol used by WAF to forward requests to the origin server. Valid values:
+             * <p>
+             * 
+             * *   **true** (default)
+             * *   **false**
              */
             public Builder xffProto(Boolean xffProto) {
                 this.xffProto = xffProto;

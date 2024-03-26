@@ -74,7 +74,31 @@ public class DescribeUserWafLogStatusResponseBody extends TeaModel {
         private Long statusUpdateTime; 
 
         /**
-         * LogRegionId.
+         * The ID of the region where WAF logs are stored. Valid values:
+         * <p>
+         * 
+         * *   **cn-hangzhou**: China (Hangzhou).
+         * *   **cn-beijing**: China (Beijing).
+         * *   **cn-hongkong**: China (Hong Kong).
+         * *   **ap-southeast-1**: Singapore.
+         * *   **ap-southeast-2**: Australia (Sydney).
+         * *   **ap-southeast-3**: Malaysia (Kuala Lumpur).
+         * *   **ap-southeast-5**: Indonesia (Jakarta).
+         * *   **ap-southeast-6**: Philippines (Manila).
+         * *   **ap-southeast-7**: Thailand (Bangkok).
+         * *   **me-east-1**: UAE (Dubai).
+         * *   **eu-central-1**: Germany (Frankfurt).
+         * *   **us-east-1**: US (Virginia).
+         * *   **us-west-1**: US (Silicon Valley).
+         * *   **ap-northeast-1**: Japan (Tokyo).
+         * *   **ap-northeast-2**: South Korea (Seoul).
+         * *   **ap-south-1**: India (Mumbai).
+         * *   **eu-west-1**: UK (London).
+         * *   **cn-hangzhou-finance**: China East 1 Finance.
+         * *   **cn-shanghai-finance-1**: China East 2 Finance.
+         * *   **cn-shenzhen-finance**: China South 1 Finance.
+         * 
+         * >  The China East 1 Finance, China East 2 Finance, and China South 1 Finance regions are available only for Alibaba Finance Cloud users. Alibaba Finance Cloud users are also limited to storing logs within these specific regions.
          */
         public Builder logRegionId(String logRegionId) {
             this.logRegionId = logRegionId;
@@ -82,7 +106,14 @@ public class DescribeUserWafLogStatusResponseBody extends TeaModel {
         }
 
         /**
-         * LogStatus.
+         * The status of WAF logs.
+         * <p>
+         * 
+         * *   **initializing**
+         * *   **initialize_failed**
+         * *   **normal**
+         * *   **releasing**
+         * *   **release_failed**
          */
         public Builder logStatus(String logStatus) {
             this.logStatus = logStatus;
@@ -90,7 +121,7 @@ public class DescribeUserWafLogStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +129,7 @@ public class DescribeUserWafLogStatusResponseBody extends TeaModel {
         }
 
         /**
-         * StatusUpdateTime.
+         * The time when the log status was modified. Unit: milliseconds.
          */
         public Builder statusUpdateTime(Long statusUpdateTime) {
             this.statusUpdateTime = statusUpdateTime;

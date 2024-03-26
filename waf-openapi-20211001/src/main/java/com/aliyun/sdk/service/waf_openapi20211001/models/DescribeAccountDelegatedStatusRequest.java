@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeUserWafLogStatusRequest} extends {@link RequestModel}
+ * {@link DescribeAccountDelegatedStatusRequest} extends {@link RequestModel}
  *
- * <p>DescribeUserWafLogStatusRequest</p>
+ * <p>DescribeAccountDelegatedStatusRequest</p>
  */
-public class DescribeUserWafLogStatusRequest extends Request {
+public class DescribeAccountDelegatedStatusRequest extends Request {
     @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
@@ -25,7 +25,7 @@ public class DescribeUserWafLogStatusRequest extends Request {
     @NameInMap("ResourceManagerResourceGroupId")
     private String resourceManagerResourceGroupId;
 
-    private DescribeUserWafLogStatusRequest(Builder builder) {
+    private DescribeAccountDelegatedStatusRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
@@ -36,7 +36,7 @@ public class DescribeUserWafLogStatusRequest extends Request {
         return new Builder();
     }
 
-    public static DescribeUserWafLogStatusRequest create() {
+    public static DescribeAccountDelegatedStatusRequest create() {
         return builder().build();
     }
 
@@ -66,7 +66,7 @@ public class DescribeUserWafLogStatusRequest extends Request {
         return this.resourceManagerResourceGroupId;
     }
 
-    public static final class Builder extends Request.Builder<DescribeUserWafLogStatusRequest, Builder> {
+    public static final class Builder extends Request.Builder<DescribeAccountDelegatedStatusRequest, Builder> {
         private String instanceId; 
         private String regionId; 
         private String resourceManagerResourceGroupId; 
@@ -75,7 +75,7 @@ public class DescribeUserWafLogStatusRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeUserWafLogStatusRequest request) {
+        private Builder(DescribeAccountDelegatedStatusRequest request) {
             super(request);
             this.instanceId = request.instanceId;
             this.regionId = request.regionId;
@@ -83,10 +83,7 @@ public class DescribeUserWafLogStatusRequest extends Request {
         } 
 
         /**
-         * The ID of the WAF instance.
-         * <p>
-         * 
-         * > You can call the [DescribeInstance](~~433756~~) operation to query the ID of the WAF instance.
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -95,11 +92,7 @@ public class DescribeUserWafLogStatusRequest extends Request {
         }
 
         /**
-         * The region where the WAF instance is deployed. Valid values:
-         * <p>
-         * 
-         * *   **cn-hangzhou**: Chinese mainland.
-         * *   **ap-southeast-1**: outside the Chinese mainland.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -108,7 +101,7 @@ public class DescribeUserWafLogStatusRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud resource group.
+         * ResourceManagerResourceGroupId.
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
@@ -117,8 +110,8 @@ public class DescribeUserWafLogStatusRequest extends Request {
         }
 
         @Override
-        public DescribeUserWafLogStatusRequest build() {
-            return new DescribeUserWafLogStatusRequest(this);
+        public DescribeAccountDelegatedStatusRequest build() {
+            return new DescribeAccountDelegatedStatusRequest(this);
         } 
 
     } 

@@ -7,28 +7,44 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeUserWafLogStatusRequest} extends {@link RequestModel}
+ * {@link DescribeResourceInstanceCertsRequest} extends {@link RequestModel}
  *
- * <p>DescribeUserWafLogStatusRequest</p>
+ * <p>DescribeResourceInstanceCertsRequest</p>
  */
-public class DescribeUserWafLogStatusRequest extends Request {
+public class DescribeResourceInstanceCertsRequest extends Request {
     @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
     private String instanceId;
 
     @Query
+    @NameInMap("PageNumber")
+    private Long pageNumber;
+
+    @Query
+    @NameInMap("PageSize")
+    @Validation(maximum = 1000)
+    private Long pageSize;
+
+    @Query
     @NameInMap("RegionId")
     private String regionId;
+
+    @Query
+    @NameInMap("ResourceInstanceId")
+    private String resourceInstanceId;
 
     @Query
     @NameInMap("ResourceManagerResourceGroupId")
     private String resourceManagerResourceGroupId;
 
-    private DescribeUserWafLogStatusRequest(Builder builder) {
+    private DescribeResourceInstanceCertsRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
+        this.pageNumber = builder.pageNumber;
+        this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
+        this.resourceInstanceId = builder.resourceInstanceId;
         this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
     }
 
@@ -36,7 +52,7 @@ public class DescribeUserWafLogStatusRequest extends Request {
         return new Builder();
     }
 
-    public static DescribeUserWafLogStatusRequest create() {
+    public static DescribeResourceInstanceCertsRequest create() {
         return builder().build();
     }
 
@@ -53,10 +69,31 @@ public class DescribeUserWafLogStatusRequest extends Request {
     }
 
     /**
+     * @return pageNumber
+     */
+    public Long getPageNumber() {
+        return this.pageNumber;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Long getPageSize() {
+        return this.pageSize;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return resourceInstanceId
+     */
+    public String getResourceInstanceId() {
+        return this.resourceInstanceId;
     }
 
     /**
@@ -66,27 +103,30 @@ public class DescribeUserWafLogStatusRequest extends Request {
         return this.resourceManagerResourceGroupId;
     }
 
-    public static final class Builder extends Request.Builder<DescribeUserWafLogStatusRequest, Builder> {
+    public static final class Builder extends Request.Builder<DescribeResourceInstanceCertsRequest, Builder> {
         private String instanceId; 
+        private Long pageNumber; 
+        private Long pageSize; 
         private String regionId; 
+        private String resourceInstanceId; 
         private String resourceManagerResourceGroupId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeUserWafLogStatusRequest request) {
+        private Builder(DescribeResourceInstanceCertsRequest request) {
             super(request);
             this.instanceId = request.instanceId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
             this.regionId = request.regionId;
+            this.resourceInstanceId = request.resourceInstanceId;
             this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
         } 
 
         /**
-         * The ID of the WAF instance.
-         * <p>
-         * 
-         * > You can call the [DescribeInstance](~~433756~~) operation to query the ID of the WAF instance.
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -95,11 +135,25 @@ public class DescribeUserWafLogStatusRequest extends Request {
         }
 
         /**
-         * The region where the WAF instance is deployed. Valid values:
-         * <p>
-         * 
-         * *   **cn-hangzhou**: Chinese mainland.
-         * *   **ap-southeast-1**: outside the Chinese mainland.
+         * PageNumber.
+         */
+        public Builder pageNumber(Long pageNumber) {
+            this.putQueryParameter("PageNumber", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * PageSize.
+         */
+        public Builder pageSize(Long pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -108,7 +162,16 @@ public class DescribeUserWafLogStatusRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud resource group.
+         * ResourceInstanceId.
+         */
+        public Builder resourceInstanceId(String resourceInstanceId) {
+            this.putQueryParameter("ResourceInstanceId", resourceInstanceId);
+            this.resourceInstanceId = resourceInstanceId;
+            return this;
+        }
+
+        /**
+         * ResourceManagerResourceGroupId.
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
@@ -117,8 +180,8 @@ public class DescribeUserWafLogStatusRequest extends Request {
         }
 
         @Override
-        public DescribeUserWafLogStatusRequest build() {
-            return new DescribeUserWafLogStatusRequest(this);
+        public DescribeResourceInstanceCertsRequest build() {
+            return new DescribeResourceInstanceCertsRequest(this);
         } 
 
     } 

@@ -98,7 +98,7 @@ public class DescribeSlsLogStoreResponseBody extends TeaModel {
         private Long used; 
 
         /**
-         * LogStoreName.
+         * The name of the Logstore.
          */
         public Builder logStoreName(String logStoreName) {
             this.logStoreName = logStoreName;
@@ -106,7 +106,7 @@ public class DescribeSlsLogStoreResponseBody extends TeaModel {
         }
 
         /**
-         * ProjectName.
+         * The name of the Simple Log Service project.
          */
         public Builder projectName(String projectName) {
             this.projectName = projectName;
@@ -114,7 +114,7 @@ public class DescribeSlsLogStoreResponseBody extends TeaModel {
         }
 
         /**
-         * Quota.
+         * The capacity of the Logstore. Unit: bytes.
          */
         public Builder quota(Long quota) {
             this.quota = quota;
@@ -122,7 +122,7 @@ public class DescribeSlsLogStoreResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class DescribeSlsLogStoreResponseBody extends TeaModel {
         }
 
         /**
-         * Ttl.
+         * The storage duration of the Logstore. Unit: days.
          */
         public Builder ttl(Integer ttl) {
             this.ttl = ttl;
@@ -138,7 +138,7 @@ public class DescribeSlsLogStoreResponseBody extends TeaModel {
         }
 
         /**
-         * Used.
+         * The used capacity of the Logstore. Unit: bytes.
          */
         public Builder used(Long used) {
             this.used = used;

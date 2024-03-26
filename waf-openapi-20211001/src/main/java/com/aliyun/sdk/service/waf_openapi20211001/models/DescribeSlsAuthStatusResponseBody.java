@@ -50,7 +50,7 @@ public class DescribeSlsAuthStatusResponseBody extends TeaModel {
         private Boolean status; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,11 @@ public class DescribeSlsAuthStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * Indicates whether WAF is authorized to access Logstores. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder status(Boolean status) {
             this.status = status;

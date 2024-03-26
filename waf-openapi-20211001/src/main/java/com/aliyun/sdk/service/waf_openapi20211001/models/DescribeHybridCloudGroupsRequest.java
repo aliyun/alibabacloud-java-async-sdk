@@ -189,7 +189,7 @@ public class DescribeHybridCloudGroupsRequest extends Request {
         }
 
         /**
-         * The name of the hybrid cloud node group that you want to query.
+         * The name of the node group that you want to query.
          */
         public Builder groupName(Integer groupName) {
             this.putQueryParameter("GroupName", groupName);

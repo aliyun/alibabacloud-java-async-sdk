@@ -62,7 +62,7 @@ public class DescribeDefenseTemplatesResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class DescribeDefenseTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * Templates.
+         * The protection templates.
          */
         public Builder templates(java.util.List < Templates> templates) {
             this.templates = templates;
@@ -78,7 +78,7 @@ public class DescribeDefenseTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -214,7 +214,19 @@ public class DescribeDefenseTemplatesResponseBody extends TeaModel {
             private String templateType; 
 
             /**
-             * DefenseScene.
+             * The scenario in which the protection template is used.
+             * <p>
+             * 
+             * *   **waf_group**: basic protection.
+             * *   **antiscan**: scan protection.
+             * *   **ip_blacklist**: IP address blacklist.
+             * *   **custom_acl**: custom rule.
+             * *   **whitelist**: whitelist.
+             * *   **region_block**: region blacklist.
+             * *   **custom_response**: custom response.
+             * *   **cc**: HTTP flood protection.
+             * *   **tamperproof**: website tamper-proofing.
+             * *   **dlp**: data leakage prevention.
              */
             public Builder defenseScene(String defenseScene) {
                 this.defenseScene = defenseScene;
@@ -222,7 +234,12 @@ public class DescribeDefenseTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * DefenseSubScene.
+             * The sub-scenario in which the protection template is used. Valid values:
+             * <p>
+             * 
+             * *   **web**: bot management for website protection.
+             * *   **app**: bot management for app protection.
+             * *   **basic**: bot management for basic protection.
              */
             public Builder defenseSubScene(String defenseSubScene) {
                 this.defenseSubScene = defenseSubScene;
@@ -230,7 +247,7 @@ public class DescribeDefenseTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the protection template.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -238,7 +255,7 @@ public class DescribeDefenseTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The time when the protection template was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -246,7 +263,7 @@ public class DescribeDefenseTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * The ID of the protection template.
              */
             public Builder templateId(Long templateId) {
                 this.templateId = templateId;
@@ -254,7 +271,7 @@ public class DescribeDefenseTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateName.
+             * The name of the protection template.
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -262,7 +279,7 @@ public class DescribeDefenseTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateOrigin.
+             * The origin of the protection template. The value custom indicates that the protection template is a custom template created by the user.
              */
             public Builder templateOrigin(String templateOrigin) {
                 this.templateOrigin = templateOrigin;
@@ -270,7 +287,11 @@ public class DescribeDefenseTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateStatus.
+             * The status of the protection template. Valid values:
+             * <p>
+             * 
+             * *   **0**: disabled.
+             * *   **1**: enabled.
              */
             public Builder templateStatus(Integer templateStatus) {
                 this.templateStatus = templateStatus;
@@ -278,7 +299,11 @@ public class DescribeDefenseTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateType.
+             * The type of the protection template. Valid values:
+             * <p>
+             * 
+             * *   **user_default**: default template.
+             * *   **user_custom**: custom template.
              */
             public Builder templateType(String templateType) {
                 this.templateType = templateType;

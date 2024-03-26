@@ -7,15 +7,20 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeUserWafLogStatusRequest} extends {@link RequestModel}
+ * {@link DeleteMemberAccountRequest} extends {@link RequestModel}
  *
- * <p>DescribeUserWafLogStatusRequest</p>
+ * <p>DeleteMemberAccountRequest</p>
  */
-public class DescribeUserWafLogStatusRequest extends Request {
+public class DeleteMemberAccountRequest extends Request {
     @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
     private String instanceId;
+
+    @Query
+    @NameInMap("MemberAccountId")
+    @Validation(required = true)
+    private String memberAccountId;
 
     @Query
     @NameInMap("RegionId")
@@ -25,18 +30,24 @@ public class DescribeUserWafLogStatusRequest extends Request {
     @NameInMap("ResourceManagerResourceGroupId")
     private String resourceManagerResourceGroupId;
 
-    private DescribeUserWafLogStatusRequest(Builder builder) {
+    @Query
+    @NameInMap("SourceIp")
+    private String sourceIp;
+
+    private DeleteMemberAccountRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
+        this.memberAccountId = builder.memberAccountId;
         this.regionId = builder.regionId;
         this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
+        this.sourceIp = builder.sourceIp;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DescribeUserWafLogStatusRequest create() {
+    public static DeleteMemberAccountRequest create() {
         return builder().build();
     }
 
@@ -53,6 +64,13 @@ public class DescribeUserWafLogStatusRequest extends Request {
     }
 
     /**
+     * @return memberAccountId
+     */
+    public String getMemberAccountId() {
+        return this.memberAccountId;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -66,27 +84,35 @@ public class DescribeUserWafLogStatusRequest extends Request {
         return this.resourceManagerResourceGroupId;
     }
 
-    public static final class Builder extends Request.Builder<DescribeUserWafLogStatusRequest, Builder> {
+    /**
+     * @return sourceIp
+     */
+    public String getSourceIp() {
+        return this.sourceIp;
+    }
+
+    public static final class Builder extends Request.Builder<DeleteMemberAccountRequest, Builder> {
         private String instanceId; 
+        private String memberAccountId; 
         private String regionId; 
         private String resourceManagerResourceGroupId; 
+        private String sourceIp; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeUserWafLogStatusRequest request) {
+        private Builder(DeleteMemberAccountRequest request) {
             super(request);
             this.instanceId = request.instanceId;
+            this.memberAccountId = request.memberAccountId;
             this.regionId = request.regionId;
             this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
+            this.sourceIp = request.sourceIp;
         } 
 
         /**
-         * The ID of the WAF instance.
-         * <p>
-         * 
-         * > You can call the [DescribeInstance](~~433756~~) operation to query the ID of the WAF instance.
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -95,11 +121,16 @@ public class DescribeUserWafLogStatusRequest extends Request {
         }
 
         /**
-         * The region where the WAF instance is deployed. Valid values:
-         * <p>
-         * 
-         * *   **cn-hangzhou**: Chinese mainland.
-         * *   **ap-southeast-1**: outside the Chinese mainland.
+         * MemberAccountId.
+         */
+        public Builder memberAccountId(String memberAccountId) {
+            this.putQueryParameter("MemberAccountId", memberAccountId);
+            this.memberAccountId = memberAccountId;
+            return this;
+        }
+
+        /**
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -108,7 +139,7 @@ public class DescribeUserWafLogStatusRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud resource group.
+         * ResourceManagerResourceGroupId.
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
@@ -116,9 +147,18 @@ public class DescribeUserWafLogStatusRequest extends Request {
             return this;
         }
 
+        /**
+         * SourceIp.
+         */
+        public Builder sourceIp(String sourceIp) {
+            this.putQueryParameter("SourceIp", sourceIp);
+            this.sourceIp = sourceIp;
+            return this;
+        }
+
         @Override
-        public DescribeUserWafLogStatusRequest build() {
-            return new DescribeUserWafLogStatusRequest(this);
+        public DeleteMemberAccountRequest build() {
+            return new DeleteMemberAccountRequest(this);
         } 
 
     } 

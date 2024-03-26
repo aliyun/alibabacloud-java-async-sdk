@@ -62,7 +62,7 @@ public class DescribeHybridCloudGroupsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The hybrid cloud node groups.
+         * The node groups.
          */
         public Builder groups(java.util.List < Groups> groups) {
             this.groups = groups;
@@ -238,7 +238,10 @@ public class DescribeHybridCloudGroupsResponseBody extends TeaModel {
             private String remark; 
 
             /**
-             * BackSourceMark.
+             * The back-to-origin mark of the protected cluster. The value is in the {ISP name}-{Continent name}-{City name}-{Back-to-origin identifier} format. The back-to-origin identifier is optional.
+             * <p>
+             * 
+             * >  For more information about ISP names, continent names, city names, and back-to-origin identifiers, see the following sections.
              */
             public Builder backSourceMark(String backSourceMark) {
                 this.backSourceMark = backSourceMark;
@@ -246,7 +249,10 @@ public class DescribeHybridCloudGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ContinentsValue.
+             * The continent code of the protected cluster.
+             * <p>
+             * 
+             * >  For more information about continent codes, see Continent codes in this topic.
              */
             public Builder continentsValue(Integer continentsValue) {
                 this.continentsValue = continentsValue;
@@ -254,7 +260,7 @@ public class DescribeHybridCloudGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the hybrid cloud node group.
+             * The ID of the node group.
              */
             public Builder groupId(Integer groupId) {
                 this.groupId = groupId;
@@ -262,7 +268,7 @@ public class DescribeHybridCloudGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the hybrid cloud node group.
+             * The name of the node group.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -270,7 +276,7 @@ public class DescribeHybridCloudGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the hybrid cloud node group. Valid values:
+             * The type of the node group. Valid values:
              * <p>
              * 
              * *   **protect**
@@ -284,7 +290,7 @@ public class DescribeHybridCloudGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the server for load balancing.
+             * The IP address of the server used for load balancing.
              */
             public Builder loadBalanceIp(String loadBalanceIp) {
                 this.loadBalanceIp = loadBalanceIp;
@@ -300,7 +306,10 @@ public class DescribeHybridCloudGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * OperatorValue.
+             * The ISP code of the protected cluster.
+             * <p>
+             * 
+             * >  For more information about ISP codes, see ISP codes in this topic.
              */
             public Builder operatorValue(Integer operatorValue) {
                 this.operatorValue = operatorValue;
@@ -316,7 +325,10 @@ public class DescribeHybridCloudGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionCodeValue.
+             * The city code of the protected cluster.
+             * <p>
+             * 
+             * >  For more information about city codes, see City codes in this topic.
              */
             public Builder regionCodeValue(Integer regionCodeValue) {
                 this.regionCodeValue = regionCodeValue;
@@ -324,7 +336,7 @@ public class DescribeHybridCloudGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the hybrid cloud node group.
+             * The description of the node group.
              */
             public Builder remark(String remark) {
                 this.remark = remark;

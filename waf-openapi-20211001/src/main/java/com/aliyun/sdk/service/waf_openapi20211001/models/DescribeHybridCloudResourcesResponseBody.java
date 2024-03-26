@@ -370,7 +370,11 @@ public class DescribeHybridCloudResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * IPv6Enabled.
+             * Specifies whether to enable IPv6. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder iPv6Enabled(Boolean iPv6Enabled) {
                 this.iPv6Enabled = iPv6Enabled;

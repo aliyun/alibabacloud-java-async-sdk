@@ -195,7 +195,19 @@ public class DescribeDefenseTemplatesRequest extends Request {
         } 
 
         /**
-         * DefenseScene.
+         * The scenario in which the protection template is used.
+         * <p>
+         * 
+         * *   **waf_group**: basic protection.
+         * *   **antiscan**: scan protection.
+         * *   **ip_blacklist**: IP address blacklist.
+         * *   **custom_acl**: custom rule.
+         * *   **whitelist**: whitelist.
+         * *   **region_block**: region blacklist.
+         * *   **custom_response**: custom response.
+         * *   **cc**: HTTP flood protection.
+         * *   **tamperproof**: website tamper-proofing.
+         * *   **dlp**: data leakage prevention.
          */
         public Builder defenseScene(String defenseScene) {
             this.putQueryParameter("DefenseScene", defenseScene);
@@ -204,7 +216,12 @@ public class DescribeDefenseTemplatesRequest extends Request {
         }
 
         /**
-         * DefenseSubScene.
+         * The sub-scenario in which the protection template is used. Valid values:
+         * <p>
+         * 
+         * *   **web**: bot management for website protection.
+         * *   **app**: bot management for app protection.
+         * *   **basic**: bot management for basic protection.
          */
         public Builder defenseSubScene(String defenseSubScene) {
             this.putQueryParameter("DefenseSubScene", defenseSubScene);
@@ -213,7 +230,10 @@ public class DescribeDefenseTemplatesRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the Web Application Firewall (WAF) instance.
+         * <p>
+         * 
+         * > You can call the [DescribeInstance](~~433756~~) operation to query the ID of the WAF instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -222,7 +242,7 @@ public class DescribeDefenseTemplatesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -231,7 +251,7 @@ public class DescribeDefenseTemplatesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Default value: **20**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -240,7 +260,11 @@ public class DescribeDefenseTemplatesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region in which the WAF instance is deployed. Valid values:
+         * <p>
+         * 
+         * *   **cn-hangzhou**: Chinese mainland.
+         * *   **ap-southeast-1**: outside the Chinese mainland.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -249,7 +273,10 @@ public class DescribeDefenseTemplatesRequest extends Request {
         }
 
         /**
-         * Resource.
+         * The name of the protected object or protected object group.
+         * <p>
+         * 
+         * >  If you specify ResourceType, you must specify this parameter.
          */
         public Builder resource(String resource) {
             this.putQueryParameter("Resource", resource);
@@ -258,7 +285,7 @@ public class DescribeDefenseTemplatesRequest extends Request {
         }
 
         /**
-         * ResourceManagerResourceGroupId.
+         * The ID of the Alibaba Cloud resource group.
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
@@ -267,7 +294,13 @@ public class DescribeDefenseTemplatesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of the protected resource. Valid values:
+         * <p>
+         * 
+         * *   **single**: protected object. This is the default value.
+         * *   **group**: protected object group.
+         * 
+         * >  If you specify Resource, you must specify this parameter.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -276,7 +309,7 @@ public class DescribeDefenseTemplatesRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * The ID of the protection template.
          */
         public Builder templateId(Long templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -285,7 +318,11 @@ public class DescribeDefenseTemplatesRequest extends Request {
         }
 
         /**
-         * TemplateType.
+         * The type of the protection template. Valid values:
+         * <p>
+         * 
+         * *   **user_default**: default template.
+         * *   **user_custom**: custom template.
          */
         public Builder templateType(String templateType) {
             this.putQueryParameter("TemplateType", templateType);
