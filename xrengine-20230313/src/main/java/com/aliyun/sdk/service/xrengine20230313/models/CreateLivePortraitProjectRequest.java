@@ -25,6 +25,10 @@ public class CreateLivePortraitProjectRequest extends Request {
     private String content;
 
     @Body
+    @NameInMap("CustomParams")
+    private String customParams;
+
+    @Body
     @NameInMap("ImageId")
     private String imageId;
 
@@ -42,6 +46,7 @@ public class CreateLivePortraitProjectRequest extends Request {
 
     @Body
     @NameInMap("LightModel")
+    @Deprecated
     private Boolean lightModel;
 
     @Body
@@ -75,6 +80,7 @@ public class CreateLivePortraitProjectRequest extends Request {
         this.audioId = builder.audioId;
         this.audioUrl = builder.audioUrl;
         this.content = builder.content;
+        this.customParams = builder.customParams;
         this.imageId = builder.imageId;
         this.imageUrl = builder.imageUrl;
         this.intro = builder.intro;
@@ -120,6 +126,13 @@ public class CreateLivePortraitProjectRequest extends Request {
      */
     public String getContent() {
         return this.content;
+    }
+
+    /**
+     * @return customParams
+     */
+    public String getCustomParams() {
+        return this.customParams;
     }
 
     /**
@@ -203,6 +216,7 @@ public class CreateLivePortraitProjectRequest extends Request {
         private String audioId; 
         private String audioUrl; 
         private String content; 
+        private String customParams; 
         private String imageId; 
         private String imageUrl; 
         private String intro; 
@@ -224,6 +238,7 @@ public class CreateLivePortraitProjectRequest extends Request {
             this.audioId = request.audioId;
             this.audioUrl = request.audioUrl;
             this.content = request.content;
+            this.customParams = request.customParams;
             this.imageId = request.imageId;
             this.imageUrl = request.imageUrl;
             this.intro = request.intro;
@@ -261,6 +276,15 @@ public class CreateLivePortraitProjectRequest extends Request {
         public Builder content(String content) {
             this.putBodyParameter("Content", content);
             this.content = content;
+            return this;
+        }
+
+        /**
+         * CustomParams.
+         */
+        public Builder customParams(String customParams) {
+            this.putBodyParameter("CustomParams", customParams);
+            this.customParams = customParams;
             return this;
         }
 
