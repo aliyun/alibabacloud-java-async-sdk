@@ -287,6 +287,9 @@ public class DescribeExpressConnectRouterChildInstanceResponseBody extends TeaMo
         @NameInMap("ChildInstanceType")
         private String childInstanceType;
 
+        @NameInMap("EcrId")
+        private String ecrId;
+
         @NameInMap("GmtCreate")
         private String gmtCreate;
 
@@ -308,6 +311,7 @@ public class DescribeExpressConnectRouterChildInstanceResponseBody extends TeaMo
             this.childInstanceOwnerId = builder.childInstanceOwnerId;
             this.childInstanceRegionId = builder.childInstanceRegionId;
             this.childInstanceType = builder.childInstanceType;
+            this.ecrId = builder.ecrId;
             this.gmtCreate = builder.gmtCreate;
             this.gmtModified = builder.gmtModified;
             this.ownerId = builder.ownerId;
@@ -359,6 +363,13 @@ public class DescribeExpressConnectRouterChildInstanceResponseBody extends TeaMo
         }
 
         /**
+         * @return ecrId
+         */
+        public String getEcrId() {
+            return this.ecrId;
+        }
+
+        /**
          * @return gmtCreate
          */
         public String getGmtCreate() {
@@ -399,6 +410,7 @@ public class DescribeExpressConnectRouterChildInstanceResponseBody extends TeaMo
             private Long childInstanceOwnerId; 
             private String childInstanceRegionId; 
             private String childInstanceType; 
+            private String ecrId; 
             private String gmtCreate; 
             private String gmtModified; 
             private Long ownerId; 
@@ -442,6 +454,14 @@ public class DescribeExpressConnectRouterChildInstanceResponseBody extends TeaMo
              */
             public Builder childInstanceType(String childInstanceType) {
                 this.childInstanceType = childInstanceType;
+                return this;
+            }
+
+            /**
+             * EcrId.
+             */
+            public Builder ecrId(String ecrId) {
+                this.ecrId = ecrId;
                 return this;
             }
 

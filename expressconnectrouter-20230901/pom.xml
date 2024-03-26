@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>alibabacloud-expressconnectrouter20230901</artifactId>
-  <version>3.0.0</version>
+  <version>3.0.1</version>
   <packaging>jar</packaging>
   <name>alibabacloud-expressconnectrouter20230901</name>
   <description>Alibaba Cloud ExpressConnectRouter (20230901) Async SDK for Java
