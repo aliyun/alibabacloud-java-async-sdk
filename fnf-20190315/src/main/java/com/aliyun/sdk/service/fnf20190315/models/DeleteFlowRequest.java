@@ -12,7 +12,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteFlowRequest</p>
  */
 public class DeleteFlowRequest extends Request {
-    @Query
+    @Body
     @NameInMap("Name")
     @Validation(required = true)
     private String name;
@@ -55,10 +55,10 @@ public class DeleteFlowRequest extends Request {
         } 
 
         /**
-         * The name of the flow. The name can contain only letters, digits, underscores (\_), and hyphens (-). It cannot start with a digit or a hyphen (-). It must be 1 to 128 characters in length.
+         * Name.
          */
         public Builder name(String name) {
-            this.putQueryParameter("Name", name);
+            this.putBodyParameter("Name", name);
             this.name = name;
             return this;
         }

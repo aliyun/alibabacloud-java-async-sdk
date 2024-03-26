@@ -12,12 +12,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteScheduleRequest</p>
  */
 public class DeleteScheduleRequest extends Request {
-    @Query
+    @Body
     @NameInMap("FlowName")
     @Validation(required = true)
     private String flowName;
 
-    @Query
+    @Body
     @NameInMap("ScheduleName")
     @Validation(required = true)
     private String scheduleName;
@@ -70,31 +70,19 @@ public class DeleteScheduleRequest extends Request {
         } 
 
         /**
-         * The name of the flow that is associated with the time-based schedule. The name must be unique within the region and cannot be modified after the time-based schedule is created. The name must meet the following conventions:
-         * <p>
-         * 
-         * *   The name can contain letters, digits, underscores (\_), and hyphens (-).
-         * *   The name must start with a letter or an underscore (\_).
-         * *   The name is case-sensitive.
-         * *   The name must be 1 to 128 characters in length.
+         * FlowName.
          */
         public Builder flowName(String flowName) {
-            this.putQueryParameter("FlowName", flowName);
+            this.putBodyParameter("FlowName", flowName);
             this.flowName = flowName;
             return this;
         }
 
         /**
-         * The name of the time-based schedule. The name must meet the following conventions:
-         * <p>
-         * 
-         * *   The name can contain letters, digits, underscores (\_), and hyphens (-).
-         * *   The name must start with a letter or an underscore (\_).
-         * *   The name is case-sensitive.
-         * *   The name must be 1 to 128 characters in length.
+         * ScheduleName.
          */
         public Builder scheduleName(String scheduleName) {
-            this.putQueryParameter("ScheduleName", scheduleName);
+            this.putBodyParameter("ScheduleName", scheduleName);
             this.scheduleName = scheduleName;
             return this;
         }
