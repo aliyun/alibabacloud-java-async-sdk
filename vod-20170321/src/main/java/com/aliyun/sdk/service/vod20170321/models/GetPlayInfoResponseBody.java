@@ -382,7 +382,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
             private Long width; 
 
             /**
-             * The color depth. This value must be an integer.
+             * The color depth. This value is an integer.
              */
             public Builder bitDepth(Integer bitDepth) {
                 this.bitDepth = bitDepth;
@@ -398,7 +398,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the audio or video stream was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The time when the audio or video stream was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -426,7 +426,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The duration of the media stream. Unit: seconds.
+             * The duration of the media stream. Unit: seconds. 86,400 seconds is equivalent to 24 hours.
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -532,7 +532,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The update time. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The time when the audio or video file was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder modificationTime(String modificationTime) {
                 this.modificationTime = modificationTime;
@@ -837,7 +837,18 @@ public class GetPlayInfoResponseBody extends TeaModel {
             }
 
             /**
-             * StorageClass.
+             * The storage class of the audio or video file. Valid values:
+             * <p>
+             * 
+             * *   **Standard**: All media resources are stored as Standard objects.
+             * *   **IA**: All media resources are stored as IA objects.
+             * *   **Archive**: All media resources are stored as Archive objects.
+             * *   **ColdArchive**: All media resources are stored as Cold Archive objects.
+             * *   **SourceIA**: Only the source files are IA objects.
+             * *   **SourceArchive**: Only the source files are Archive objects.
+             * *   **SourceColdArchive**: Only the source files are Cold Archive objects.
+             * *   **Changing**: The storage class of the audio or video file is being changed.
+             * *   **SourceChanging**: The storage class of the source file is being changed.
              */
             public Builder storageClass(String storageClass) {
                 this.storageClass = storageClass;

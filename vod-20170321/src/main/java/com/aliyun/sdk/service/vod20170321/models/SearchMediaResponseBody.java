@@ -74,7 +74,7 @@ public class SearchMediaResponseBody extends TeaModel {
         private Long total; 
 
         /**
-         * The AI type.
+         * The information about the media assets.
          */
         public Builder mediaList(java.util.List < MediaList> mediaList) {
             this.mediaList = mediaList;
@@ -344,7 +344,7 @@ public class SearchMediaResponseBody extends TeaModel {
             private Double to; 
 
             /**
-             * The text.
+             * The text content.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -498,7 +498,7 @@ public class SearchMediaResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The AI type.
+             * The AI category.
              */
             public Builder aiCategory(String aiCategory) {
                 this.aiCategory = aiCategory;
@@ -522,7 +522,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the data.
+             * The data status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -623,7 +623,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the parent category.
+             * The ID of the parent node.
              */
             public Builder parentId(Long parentId) {
                 this.parentId = parentId;
@@ -825,7 +825,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the auxiliary media asset was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The time when the auxiliary media asset was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -849,7 +849,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the auxiliary media asset was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The time when the auxiliary media asset was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder modificationTime(String modificationTime) {
                 this.modificationTime = modificationTime;
@@ -860,9 +860,9 @@ public class SearchMediaResponseBody extends TeaModel {
              * The status of the auxiliary media asset. Valid values:
              * <p>
              * 
-             * *   **Uploading**: The auxiliary media asset is being uploaded. This is the initial status.
-             * *   **Normal**: The auxiliary media asset is uploaded.
-             * *   **UploadFail**: The auxiliary media asset fails to be uploaded.
+             * *   **Uploading**
+             * *   **Normal**
+             * *   **UploadFail**
              */
             public Builder status(String status) {
                 this.status = status;
@@ -870,7 +870,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint of the OSS bucket in which the auxiliary media asset is stored.
+             * The region in which the auxiliary media asset is stored.
              */
             public Builder storageLocation(String storageLocation) {
                 this.storageLocation = storageLocation;
@@ -1215,7 +1215,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The category ID of the audio file.
+             * The ID of the category.
              */
             public Builder cateId(Long cateId) {
                 this.cateId = cateId;
@@ -1239,7 +1239,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the audio file was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The time when the audio stream was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -1275,13 +1275,13 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The source. Valid values:
+             * The source of the audio file. Valid values:
              * <p>
              * 
              * *   **general**: The audio file is uploaded by using ApsaraVideo VOD.
              * *   **short_video**: The audio file is uploaded to ApsaraVideo VOD by using the short video SDK. For more information, see [Introduction](~~53407~~).
              * *   **editing**: The audio file is uploaded to ApsaraVideo VOD after online editing and production. For more information, see [ProduceEditingProjectVideo](~~68536~~).
-             * *   **live**: The audio stream is recorded and uploaded as a file to ApsaraVideo VOD.
+             * *   **live**: The audio file is recorded and uploaded as a file to ApsaraVideo VOD.
              */
             public Builder mediaSource(String mediaSource) {
                 this.mediaSource = mediaSource;
@@ -1289,7 +1289,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the audio file was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The time when the audio file was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder modificationTime(String modificationTime) {
                 this.modificationTime = modificationTime;
@@ -1340,7 +1340,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The list of automatic snapshots.
+             * The automatic snapshots.
              */
             public Builder snapshots(java.util.List < String > snapshots) {
                 this.snapshots = snapshots;
@@ -1348,7 +1348,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The list of sprite snapshots.
+             * The sprite snapshots.
              */
             public Builder spriteSnapshots(java.util.List < String > spriteSnapshots) {
                 this.spriteSnapshots = spriteSnapshots;
@@ -1377,9 +1377,9 @@ public class SearchMediaResponseBody extends TeaModel {
              * *   **IA**: All media resources are stored as IA objects.
              * *   **Archive**: All media resources are stored as Archive objects.
              * *   **ColdArchive**: All media resources are stored as Cold Archive objects.
-             * *   **SourceIA**: Only the source files are IA objects.
-             * *   **SourceArchive**: Only the source files are Archive objects.
-             * *   **SourceColdArchive**: Only the source files are Cold Archive objects.
+             * *   **SourceIA**: Only the source file is stored as an IA object.
+             * *   **SourceArchive**: Only the source file is stored as an Archive object.
+             * *   **SourceColdArchive**: Only the source file is stored as a Cold Archive object.
              * *   **Changing**: The storage class is being modified.
              */
             public Builder storageClass(String storageClass) {
@@ -1388,7 +1388,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint of the OSS bucket in which the audio file is stored.
+             * The region in which the audio is stored.
              */
             public Builder storageLocation(String storageLocation) {
                 this.storageLocation = storageLocation;
@@ -1404,7 +1404,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The title of the audio file.
+             * The title of the audio file
              */
             public Builder title(String title) {
                 this.title = title;
@@ -1412,7 +1412,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The transcoding mode. Default value: FastTranscode. Valid values:
+             * The transcoding mode. Valid values:
              * <p>
              * 
              * *   **FastTranscode**: The audio file is immediately transcoded after it is uploaded. You cannot play the file before it is transcoded.
@@ -1598,7 +1598,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The category ID of the image file.
+             * The ID of the category.
              */
             public Builder cateId(Long cateId) {
                 this.cateId = cateId;
@@ -1614,7 +1614,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the image file was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The time when the image was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -1638,7 +1638,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the image file was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The time when the image file was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder modificationTime(String modificationTime) {
                 this.modificationTime = modificationTime;
@@ -1649,9 +1649,9 @@ public class SearchMediaResponseBody extends TeaModel {
              * The status of the image file.
              * <p>
              * 
-             * *   **Uploading**: The image file is being uploaded. This is the initial status.
-             * *   **Normal**: The image file is uploaded.
-             * *   **UploadFail**: The image file fails to be uploaded.
+             * *   **Uploading**
+             * *   **Normal**
+             * *   **UploadFail**
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1659,7 +1659,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint of the OSS bucket in which the image file is stored.
+             * The region in which the image is stored.
              */
             public Builder storageLocation(String storageLocation) {
                 this.storageLocation = storageLocation;
@@ -1996,7 +1996,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The category ID of the video file.
+             * The ID of the category.
              */
             public Builder cateId(Long cateId) {
                 this.cateId = cateId;
@@ -2020,7 +2020,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the video file was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The time when the video file was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -2056,7 +2056,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The source. Valid values:
+             * The source of the video file. Valid values:
              * <p>
              * 
              * *   **general**: The video file is uploaded by using ApsaraVideo VOD.
@@ -2070,7 +2070,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the video file was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The time when the video file was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder modificationTime(String modificationTime) {
                 this.modificationTime = modificationTime;
@@ -2121,7 +2121,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The list of automatic snapshots.
+             * The automatic snapshots.
              */
             public Builder snapshots(java.util.List < String > snapshots) {
                 this.snapshots = snapshots;
@@ -2129,7 +2129,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The list of sprite snapshots.
+             * The sprite snapshots.
              */
             public Builder spriteSnapshots(java.util.List < String > spriteSnapshots) {
                 this.spriteSnapshots = spriteSnapshots;
@@ -2137,7 +2137,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the video file. Valid values:
+             * The status of the file. Valid values:
              * <p>
              * 
              * *   **Uploading**
@@ -2161,10 +2161,11 @@ public class SearchMediaResponseBody extends TeaModel {
              * *   **IA**: All media resources are stored as IA objects.
              * *   **Archive**: All media resources are stored as Archive objects.
              * *   **ColdArchive**: All media resources are stored as Cold Archive objects.
-             * *   **SourceIA**: Only the source files are IA objects.
-             * *   **SourceArchive**: Only the source files are Archive objects.
-             * *   **SourceColdArchive**: Only the source files are Cold Archive objects.
-             * *   **Changing**: The storage class is being modified.
+             * *   **SourceIA**: Only the source file is stored as an IA object.
+             * *   **SourceArchive**: Only the source file is stored as an Archive object.
+             * *   **SourceColdArchive**: Only the source file is stored as a Cold Archive object.
+             * *   **Changing**: The storage class of the video file is being changed.
+             * *   **SourceChanging**: The storage class of the source file is being changed.
              */
             public Builder storageClass(String storageClass) {
                 this.storageClass = storageClass;
@@ -2172,7 +2173,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint of the OSS bucket in which the video file is stored.
+             * The region in which the video is stored.
              */
             public Builder storageLocation(String storageLocation) {
                 this.storageLocation = storageLocation;
@@ -2188,7 +2189,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The title of the video file.
+             * The title of the video.
              */
             public Builder title(String title) {
                 this.title = title;
@@ -2196,7 +2197,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The transcoding mode. Default value: FastTranscode. Valid values:
+             * The transcoding mode. Valid values:
              * <p>
              * 
              * *   **FastTranscode**: The video file is immediately transcoded after it is uploaded. You cannot play the file before it is transcoded.
@@ -2362,7 +2363,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * [Details about auxiliary media assets](~~86991~~).
+             * [The information about the auxiliary media asset](~~86991~~).
              */
             public Builder attachedMedia(AttachedMedia attachedMedia) {
                 this.attachedMedia = attachedMedia;
@@ -2370,7 +2371,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * [Details about audio files](~~86991~~).
+             * [The information about the audio](~~86991~~).
              */
             public Builder audio(Audio audio) {
                 this.audio = audio;
@@ -2378,7 +2379,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the media asset was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The time when the media asset was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -2386,7 +2387,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * [Details about image files](~~86991~~).
+             * [The information about the image](~~86991~~).
              */
             public Builder image(Image image) {
                 this.image = image;
@@ -2394,7 +2395,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the media asset.
+             * The ID of the file.
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;
@@ -2416,7 +2417,7 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
-             * [Details about video files](~~86991~~).
+             * [The information about the video](~~86991~~).
              */
             public Builder video(Video video) {
                 this.video = video;

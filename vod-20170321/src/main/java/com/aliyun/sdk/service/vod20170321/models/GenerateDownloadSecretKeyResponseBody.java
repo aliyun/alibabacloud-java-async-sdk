@@ -50,7 +50,7 @@ public class GenerateDownloadSecretKeyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AppEncryptKey.
+         * The key file for secure download.
          */
         public Builder appEncryptKey(String appEncryptKey) {
             this.appEncryptKey = appEncryptKey;
@@ -58,7 +58,7 @@ public class GenerateDownloadSecretKeyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

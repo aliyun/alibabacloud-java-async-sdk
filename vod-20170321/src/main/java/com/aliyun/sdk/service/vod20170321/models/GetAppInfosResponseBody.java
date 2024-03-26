@@ -82,7 +82,7 @@ public class GetAppInfosResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * The HTTP status code that is returned.
          */
         public Builder code(String code) {
             this.code = code;

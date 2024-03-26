@@ -112,7 +112,13 @@ public class UpdateMediaStorageClassRequest extends Request {
         } 
 
         /**
-         * AllowUpdateWithoutTimeLimit.
+         * Specifies whether to change the storage class of a media asset that is stored for less than the minimum storage duration. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
+         * 
+         * >  If you forcibly change the storage class of a media asset that is stored for less than the minimum storage duration, additional data retrieval fees are incurred.
          */
         public Builder allowUpdateWithoutTimeLimit(Boolean allowUpdateWithoutTimeLimit) {
             this.putQueryParameter("AllowUpdateWithoutTimeLimit", allowUpdateWithoutTimeLimit);
@@ -162,7 +168,7 @@ public class UpdateMediaStorageClassRequest extends Request {
         }
 
         /**
-         * The storage class to which you want to modify. Valid values:
+         * The storage class. Valid values:
          * <p>
          * 
          * *   **Standard**

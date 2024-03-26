@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeVodTranscodeDataRequest extends Request {
     @Query
+    @NameInMap("AppId")
+    private String appId;
+
+    @Query
     @NameInMap("EndTime")
     @Validation(required = true)
     private String endTime;
@@ -44,6 +48,7 @@ public class DescribeVodTranscodeDataRequest extends Request {
 
     private DescribeVodTranscodeDataRequest(Builder builder) {
         super(builder);
+        this.appId = builder.appId;
         this.endTime = builder.endTime;
         this.interval = builder.interval;
         this.ownerId = builder.ownerId;
@@ -64,6 +69,13 @@ public class DescribeVodTranscodeDataRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return appId
+     */
+    public String getAppId() {
+        return this.appId;
     }
 
     /**
@@ -116,6 +128,7 @@ public class DescribeVodTranscodeDataRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeVodTranscodeDataRequest, Builder> {
+        private String appId; 
         private String endTime; 
         private String interval; 
         private Long ownerId; 
@@ -130,6 +143,7 @@ public class DescribeVodTranscodeDataRequest extends Request {
 
         private Builder(DescribeVodTranscodeDataRequest request) {
             super(request);
+            this.appId = request.appId;
             this.endTime = request.endTime;
             this.interval = request.interval;
             this.ownerId = request.ownerId;
@@ -138,6 +152,15 @@ public class DescribeVodTranscodeDataRequest extends Request {
             this.startTime = request.startTime;
             this.storage = request.storage;
         } 
+
+        /**
+         * AppId.
+         */
+        public Builder appId(String appId) {
+            this.putQueryParameter("AppId", appId);
+            this.appId = appId;
+            return this;
+        }
 
         /**
          * The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.

@@ -97,11 +97,11 @@ public class UpdateTranscodeTemplateGroupRequest extends Request {
         } 
 
         /**
-         * The lock status of the template group. Valid values:
+         * The lock status of the transcoding template group. Valid values:
          * <p>
          * 
-         * *   **Enabled**: The template group is locked.
-         * *   **Disabled**: The template group is not locked.
+         * *   **Enabled**: The transcoding template group is locked and cannot be modified.
+         * *   **Disabled** (default): The transcoding template group is not locked.
          */
         public Builder locked(String locked) {
             this.putQueryParameter("Locked", locked);
@@ -113,7 +113,7 @@ public class UpdateTranscodeTemplateGroupRequest extends Request {
          * The name of the transcoding template group.
          * <p>
          * 
-         * *   The name can be up to 128 bytes in length.
+         * *   The name cannot exceed 128 bytes.
          * *   The value must be encoded in UTF-8.
          */
         public Builder name(String name) {
@@ -132,7 +132,7 @@ public class UpdateTranscodeTemplateGroupRequest extends Request {
         }
 
         /**
-         * The configurations of the transcoding template. The value is a JSON-formatted string. For more information about the data structure, see the "TranscodeTemplate" section of the [Basic data types](~~52839~~) topic.
+         * The configurations of the transcoding template. The value must be a JSON string. For more information about the data structure, see [TranscodeTemplate](~~52839~~).
          */
         public Builder transcodeTemplateList(String transcodeTemplateList) {
             this.putQueryParameter("TranscodeTemplateList", transcodeTemplateList);

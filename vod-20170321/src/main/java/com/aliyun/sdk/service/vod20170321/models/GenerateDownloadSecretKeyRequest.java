@@ -112,7 +112,7 @@ public class GenerateDownloadSecretKeyRequest extends Request {
         } 
 
         /**
-         * AppDecryptKey.
+         * A custom string of 16 to 32 characters in length. The string must contain uppercase letters, lowercase letters, and digits.
          */
         public Builder appDecryptKey(String appDecryptKey) {
             this.putQueryParameter("AppDecryptKey", appDecryptKey);
@@ -121,7 +121,14 @@ public class GenerateDownloadSecretKeyRequest extends Request {
         }
 
         /**
-         * AppIdentification.
+         * The unique identifier of the app.
+         * <p>
+         * 
+         * *   Android: the SHA-1 fingerprint of the keystore. The value is a string that contains a colon (:).
+         * *   iOS: the bundle ID of the app.
+         * *   Windows: the serial number in the digital signature certificate.
+         * 
+         * For more information about how to obtain the unique identifier of an app, see [Obtain the unique app identifier](~~86107#section-wtj-9d7-lg2~~).
          */
         public Builder appIdentification(String appIdentification) {
             this.putQueryParameter("AppIdentification", appIdentification);

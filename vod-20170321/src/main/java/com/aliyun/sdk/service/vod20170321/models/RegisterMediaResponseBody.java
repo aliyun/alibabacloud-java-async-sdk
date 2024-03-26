@@ -142,7 +142,7 @@ public class RegisterMediaResponseBody extends TeaModel {
             private Boolean newRegister; 
 
             /**
-             * The OSS URL of the media file.
+             * The URL of the media file.
              */
             public Builder fileURL(String fileURL) {
                 this.fileURL = fileURL;
@@ -150,7 +150,7 @@ public class RegisterMediaResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the media file that is registered with ApsaraVideo VOD. If the registered media file is an audio or video file, the value of the VideoId parameter returned by ApsaraVideo VOD takes effect.
+             * The ID of the media file that is registered with ApsaraVideo VOD. If the registered media file is an audio or video file, the value of this parameter is the same as that of the VideoId parameter.
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;
@@ -158,10 +158,11 @@ public class RegisterMediaResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the media file is newly registered or repeatedly registered. Valid values:  
+             * Indicates whether the media file is newly registered or repeatedly registered. Valid values:
              * <p>
-             * - **true**: The media file is newly registered.
-             * - **false**: The media file is repeatedly registered.
+             * 
+             * *   **true**: The media file is newly registered.
+             * *   **false**: The media file is repeatedly registered.
              */
             public Builder newRegister(Boolean newRegister) {
                 this.newRegister = newRegister;

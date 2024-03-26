@@ -170,12 +170,11 @@ public class DescribeVodDomainUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * The type of content returned. Valid values:
+         * The type of the data. Valid values:
          * <p>
          * 
-         * *   **static**: static content
-         * *   **dynamic**: dynamic requests
-         * *   **all**: all content
+         * *   **bps**: bandwidth
+         * *   **traf**: traffic
          */
         public Builder type(String type) {
             this.type = type;
@@ -235,7 +234,7 @@ public class DescribeVodDomainUsageDataResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The timestamp of the data returned. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The timestamp of the returned data. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;

@@ -130,7 +130,14 @@ public class DeleteVodSpecificConfigRequest extends Request {
         }
 
         /**
-         * Env.
+         * The environment of configuration. 
+         * <p>
+         * 
+         * Value:
+         * 
+         * online: production environment
+         * 
+         * gray: simulation environment
          */
         public Builder env(String env) {
             this.putQueryParameter("Env", env);
