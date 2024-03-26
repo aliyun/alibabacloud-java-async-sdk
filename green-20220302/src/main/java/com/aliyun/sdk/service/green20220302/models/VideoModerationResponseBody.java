@@ -112,10 +112,14 @@ public class VideoModerationResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
+        @NameInMap("DataId")
+        private String dataId;
+
         @NameInMap("TaskId")
         private String taskId;
 
         private Data(Builder builder) {
+            this.dataId = builder.dataId;
             this.taskId = builder.taskId;
         }
 
@@ -128,6 +132,13 @@ public class VideoModerationResponseBody extends TeaModel {
         }
 
         /**
+         * @return dataId
+         */
+        public String getDataId() {
+            return this.dataId;
+        }
+
+        /**
          * @return taskId
          */
         public String getTaskId() {
@@ -135,7 +146,16 @@ public class VideoModerationResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String dataId; 
             private String taskId; 
+
+            /**
+             * DataId.
+             */
+            public Builder dataId(String dataId) {
+                this.dataId = dataId;
+                return this;
+            }
 
             /**
              * TaskId.

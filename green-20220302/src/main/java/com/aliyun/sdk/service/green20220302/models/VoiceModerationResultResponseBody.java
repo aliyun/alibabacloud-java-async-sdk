@@ -373,6 +373,9 @@ public class VoiceModerationResultResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
+        @NameInMap("DataId")
+        private String dataId;
+
         @NameInMap("LiveId")
         private String liveId;
 
@@ -386,6 +389,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
         private String url;
 
         private Data(Builder builder) {
+            this.dataId = builder.dataId;
             this.liveId = builder.liveId;
             this.sliceDetails = builder.sliceDetails;
             this.taskId = builder.taskId;
@@ -398,6 +402,13 @@ public class VoiceModerationResultResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return dataId
+         */
+        public String getDataId() {
+            return this.dataId;
         }
 
         /**
@@ -429,10 +440,19 @@ public class VoiceModerationResultResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String dataId; 
             private String liveId; 
             private java.util.List < SliceDetails> sliceDetails; 
             private String taskId; 
             private String url; 
+
+            /**
+             * DataId.
+             */
+            public Builder dataId(String dataId) {
+                this.dataId = dataId;
+                return this;
+            }
 
             /**
              * LiveId.

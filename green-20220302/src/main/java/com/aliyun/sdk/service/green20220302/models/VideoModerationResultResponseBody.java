@@ -535,6 +535,108 @@ public class VideoModerationResultResponseBody extends TeaModel {
         } 
 
     }
+    public static class CustomImage extends TeaModel {
+        @NameInMap("ImageId")
+        private String imageId;
+
+        @NameInMap("LibId")
+        private String libId;
+
+        private CustomImage(Builder builder) {
+            this.imageId = builder.imageId;
+            this.libId = builder.libId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CustomImage create() {
+            return builder().build();
+        }
+
+        /**
+         * @return imageId
+         */
+        public String getImageId() {
+            return this.imageId;
+        }
+
+        /**
+         * @return libId
+         */
+        public String getLibId() {
+            return this.libId;
+        }
+
+        public static final class Builder {
+            private String imageId; 
+            private String libId; 
+
+            /**
+             * ImageId.
+             */
+            public Builder imageId(String imageId) {
+                this.imageId = imageId;
+                return this;
+            }
+
+            /**
+             * LibId.
+             */
+            public Builder libId(String libId) {
+                this.libId = libId;
+                return this;
+            }
+
+            public CustomImage build() {
+                return new CustomImage(this);
+            } 
+
+        } 
+
+    }
+    public static class PublicFigure extends TeaModel {
+        @NameInMap("FigureId")
+        private String figureId;
+
+        private PublicFigure(Builder builder) {
+            this.figureId = builder.figureId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PublicFigure create() {
+            return builder().build();
+        }
+
+        /**
+         * @return figureId
+         */
+        public String getFigureId() {
+            return this.figureId;
+        }
+
+        public static final class Builder {
+            private String figureId; 
+
+            /**
+             * FigureId.
+             */
+            public Builder figureId(String figureId) {
+                this.figureId = figureId;
+                return this;
+            }
+
+            public PublicFigure build() {
+                return new PublicFigure(this);
+            } 
+
+        } 
+
+    }
     public static class Result extends TeaModel {
         @NameInMap("Confidence")
         private Float confidence;
@@ -597,15 +699,27 @@ public class VideoModerationResultResponseBody extends TeaModel {
 
     }
     public static class Results extends TeaModel {
+        @NameInMap("CustomImage")
+        private java.util.List < CustomImage> customImage;
+
+        @NameInMap("PublicFigure")
+        private java.util.List < PublicFigure> publicFigure;
+
         @NameInMap("Result")
         private java.util.List < Result> result;
 
         @NameInMap("Service")
         private String service;
 
+        @NameInMap("TextInImage")
+        private java.util.Map < String, ? > textInImage;
+
         private Results(Builder builder) {
+            this.customImage = builder.customImage;
+            this.publicFigure = builder.publicFigure;
             this.result = builder.result;
             this.service = builder.service;
+            this.textInImage = builder.textInImage;
         }
 
         public static Builder builder() {
@@ -614,6 +728,20 @@ public class VideoModerationResultResponseBody extends TeaModel {
 
         public static Results create() {
             return builder().build();
+        }
+
+        /**
+         * @return customImage
+         */
+        public java.util.List < CustomImage> getCustomImage() {
+            return this.customImage;
+        }
+
+        /**
+         * @return publicFigure
+         */
+        public java.util.List < PublicFigure> getPublicFigure() {
+            return this.publicFigure;
         }
 
         /**
@@ -630,9 +758,35 @@ public class VideoModerationResultResponseBody extends TeaModel {
             return this.service;
         }
 
+        /**
+         * @return textInImage
+         */
+        public java.util.Map < String, ? > getTextInImage() {
+            return this.textInImage;
+        }
+
         public static final class Builder {
+            private java.util.List < CustomImage> customImage; 
+            private java.util.List < PublicFigure> publicFigure; 
             private java.util.List < Result> result; 
             private String service; 
+            private java.util.Map < String, ? > textInImage; 
+
+            /**
+             * CustomImage.
+             */
+            public Builder customImage(java.util.List < CustomImage> customImage) {
+                this.customImage = customImage;
+                return this;
+            }
+
+            /**
+             * PublicFigure.
+             */
+            public Builder publicFigure(java.util.List < PublicFigure> publicFigure) {
+                this.publicFigure = publicFigure;
+                return this;
+            }
 
             /**
              * Result.
@@ -647,6 +801,14 @@ public class VideoModerationResultResponseBody extends TeaModel {
              */
             public Builder service(String service) {
                 this.service = service;
+                return this;
+            }
+
+            /**
+             * TextInImage.
+             */
+            public Builder textInImage(java.util.Map < String, ? > textInImage) {
+                this.textInImage = textInImage;
                 return this;
             }
 
@@ -852,11 +1014,15 @@ public class VideoModerationResultResponseBody extends TeaModel {
         @NameInMap("LiveId")
         private String liveId;
 
+        @NameInMap("TaskId")
+        private String taskId;
+
         private Data(Builder builder) {
             this.audioResult = builder.audioResult;
             this.dataId = builder.dataId;
             this.frameResult = builder.frameResult;
             this.liveId = builder.liveId;
+            this.taskId = builder.taskId;
         }
 
         public static Builder builder() {
@@ -895,11 +1061,19 @@ public class VideoModerationResultResponseBody extends TeaModel {
             return this.liveId;
         }
 
+        /**
+         * @return taskId
+         */
+        public String getTaskId() {
+            return this.taskId;
+        }
+
         public static final class Builder {
             private AudioResult audioResult; 
             private String dataId; 
             private FrameResult frameResult; 
             private String liveId; 
+            private String taskId; 
 
             /**
              * AudioResult.
@@ -930,6 +1104,14 @@ public class VideoModerationResultResponseBody extends TeaModel {
              */
             public Builder liveId(String liveId) {
                 this.liveId = liveId;
+                return this;
+            }
+
+            /**
+             * TaskId.
+             */
+            public Builder taskId(String taskId) {
+                this.taskId = taskId;
                 return this;
             }
 
