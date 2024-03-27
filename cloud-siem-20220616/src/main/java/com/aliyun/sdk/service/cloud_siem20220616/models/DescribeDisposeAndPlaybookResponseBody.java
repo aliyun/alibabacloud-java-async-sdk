@@ -371,7 +371,7 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * ParamConfig.
+             * The playbook parameters and the corresponding properties.
              */
             public Builder paramConfig(java.util.List < ? > paramConfig) {
                 this.paramConfig = paramConfig;
@@ -556,7 +556,7 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * An array consisting of the codes of playbooks that are recommended for entity handling.
+             * The codes of the playbooks that are recommended for entity handling.
              */
             public Builder opcodeSet(java.util.List < String > opcodeSet) {
                 this.opcodeSet = opcodeSet;
@@ -572,7 +572,7 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * An array consisting of the IDs of the users who can handle objects.
+             * The IDs of the users who can handle objects.
              */
             public Builder scope(java.util.List < ? > scope) {
                 this.scope = scope;
@@ -633,7 +633,7 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * The detailed data
+             * The detailed data.
              */
             public Builder responseData(java.util.List < ResponseData> responseData) {
                 this.responseData = responseData;

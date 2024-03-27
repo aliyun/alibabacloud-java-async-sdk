@@ -266,7 +266,7 @@ public class DescribeOperatorsResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the operator.
+             * The name of the operator.
              */
             public Builder operatorName(String operatorName) {
                 this.operatorName = operatorName;
@@ -274,7 +274,7 @@ public class DescribeOperatorsResponseBody extends TeaModel {
             }
 
             /**
-             * The data types that are supported by the current operator. The data types are separated by commas (,).
+             * The data types that are supported by the operator. The data types are separated by commas (,).
              */
             public Builder supportDataType(String supportDataType) {
                 this.supportDataType = supportDataType;
@@ -282,7 +282,7 @@ public class DescribeOperatorsResponseBody extends TeaModel {
             }
 
             /**
-             * The scenarios that are supported by the operator. Multiple scenarios are separated by commas (,), such as AGGREGATE scenarios. This parameter is empty by default.
+             * The scenarios that are supported by the operator. Multiple scenarios are separated by commas (,), such as AGGREGATE scenarios. By default, this parameter is empty.
              */
             public Builder supportTag(java.util.List < String > supportTag) {
                 this.supportTag = supportTag;

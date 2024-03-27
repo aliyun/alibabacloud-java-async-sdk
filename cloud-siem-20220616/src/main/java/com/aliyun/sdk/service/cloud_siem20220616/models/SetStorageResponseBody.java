@@ -53,8 +53,8 @@ public class SetStorageResponseBody extends TeaModel {
          * Indicates whether the settings are saved. Valid values:
          * <p>
          * 
-         * *   true
-         * *   false
+         * *   true:
+         * *   false:
          */
         public Builder data(Boolean data) {
             this.data = data;

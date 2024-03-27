@@ -122,9 +122,9 @@ public class DescribeDisposeAndPlaybookRequest extends Request {
          * The entity type. Valid values:
          * <p>
          * 
-         * *   ip: IP address
-         * *   process: process
-         * *   file: file
+         * *   ip
+         * *   process
+         * *   file
          */
         public Builder entityType(String entityType) {
             this.putBodyParameter("EntityType", entityType);

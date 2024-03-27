@@ -103,9 +103,9 @@ public class DescribeDataSourceParametersRequest extends Request {
          * The type of the data source. Valid values:
          * <p>
          * 
-         * *   ckafka: Tencent Cloud Kafka (CKafka)
-         * *   obs: Huawei Cloud Object Storage Service (OBS)
-         * *   wafApi: download API of Tencent Cloud Web Application Firewall (WAF)
+         * *   **ckafka**: Tencent Cloud TDMQ for CKafka
+         * *   **obs**: Huawei Cloud Object Storage Service (OBS)
+         * *   **wafApi**: download API of Tencent Cloud Web Application Firewall (WAF)
          */
         public Builder dataSourceType(String dataSourceType) {
             this.putBodyParameter("DataSourceType", dataSourceType);

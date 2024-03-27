@@ -318,8 +318,8 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
              * Indicates whether the edit operation is supported. Valid values:
              * <p>
              * 
-             * *   0: no
-             * *   1: yes
+             * *   **0**
+             * *   **1**
              */
             public Builder canEditted(Integer canEditted) {
                 this.canEditted = canEditted;
@@ -330,9 +330,9 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
              * The code of the cloud service provider. Valid values:
              * <p>
              * 
-             * *   qcloud: Tencent Cloud
-             * *   aliyun: Alibaba Cloud
-             * *   hcloud: Huawei Cloud
+             * *   **qcloud**: Tencent Cloud
+             * *   **aliyun**: Alibaba Cloud
+             * *   **hcloud**: Huawei Cloud
              */
             public Builder cloudCode(String cloudCode) {
                 this.cloudCode = cloudCode;
@@ -343,9 +343,9 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
              * The type of the data source. Valid values:
              * <p>
              * 
-             * *   obs: Huawei Cloud OBS
-             * *   wafApi: download API of Tencent Cloud WAF
-             * *   ckafka: Tencent Cloud CKafka
+             * *   **obs**: Huawei Cloud Object Storage Service (OBS)
+             * *   **wafApi**: download API of Tencent Cloud Web Application Firewall (WAF)
+             * *   **ckafka**: Tencent Cloud TDMQ for CKafka
              */
             public Builder dataSourceType(String dataSourceType) {
                 this.dataSourceType = dataSourceType;
@@ -364,8 +364,8 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
              * Indicates whether the modification operation is forbidden. Valid values:
              * <p>
              * 
-             * *   true
-             * *   false
+             * *   **true**
+             * *   **false**
              */
             public Builder disabled(Boolean disabled) {
                 this.disabled = disabled;
@@ -400,8 +400,8 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
              * The parameter level. Valid values:
              * <p>
              * 
-             * *   1: data source
-             * *   2: log
+             * *   **1**: the parameters of the data source
+             * *   **2**: the parameters of the log
              */
             public Builder paraLevel(Integer paraLevel) {
                 this.paraLevel = paraLevel;
@@ -436,8 +436,8 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
              * Indicates whether the parameter is required. Valid values:
              * <p>
              * 
-             * *   1: yes
-             * *   0: no
+             * *   **1**: required
+             * *   **0**: optional
              */
             public Builder required(Integer required) {
                 this.required = required;
@@ -445,7 +445,7 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The note on the parameter value.
+             * The note for the parameter value.
              */
             public Builder title(String title) {
                 this.title = title;

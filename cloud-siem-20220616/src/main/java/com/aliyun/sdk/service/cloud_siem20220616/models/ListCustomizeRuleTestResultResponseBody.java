@@ -459,7 +459,7 @@ public class ListCustomizeRuleTestResultResponseBody extends TeaModel {
             }
 
             /**
-             * The risk type, which indicates the alert type.
+             * The threat type, which indicates the alert type.
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -467,12 +467,12 @@ public class ListCustomizeRuleTestResultResponseBody extends TeaModel {
             }
 
             /**
-             * The risk level. Valid values:
+             * The threat level. Valid values:
              * <p>
              * 
-             * *   serious: high
-             * *   suspicious: medium
-             * *   remind: low
+             * *   serious: high.
+             * *   suspicious: medium.
+             * *   remind: low.
              */
             public Builder level(String level) {
                 this.level = level;
@@ -515,8 +515,8 @@ public class ListCustomizeRuleTestResultResponseBody extends TeaModel {
              * The status of the alert data. Valid values:
              * <p>
              * 
-             * *   test: business test data
-             * *   online: online data
+             * *   test: business test data.
+             * *   online: online data.
              */
             public Builder onlineStatus(String onlineStatus) {
                 this.onlineStatus = onlineStatus;

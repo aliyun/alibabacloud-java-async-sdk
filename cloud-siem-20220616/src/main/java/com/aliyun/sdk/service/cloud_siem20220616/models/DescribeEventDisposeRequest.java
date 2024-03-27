@@ -115,7 +115,7 @@ public class DescribeEventDisposeRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: 100.
+         * The number of entries to return on each page. Maximum value: 500.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);

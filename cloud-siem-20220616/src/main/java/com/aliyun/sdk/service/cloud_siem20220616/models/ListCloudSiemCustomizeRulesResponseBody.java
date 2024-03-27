@@ -94,7 +94,7 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -121,8 +121,8 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
          * Indicates whether the request was successful. Valid values:
          * <p>
          * 
-         * *   true
-         * *   false
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -495,7 +495,7 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
             private String threatLevel; 
 
             /**
-             * The type of the risk.
+             * The threat type.
              */
             public Builder alertType(String alertType) {
                 this.alertType = alertType;
@@ -503,7 +503,7 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The internal code of the risk type.
+             * The internal code of the threat type.
              */
             public Builder alertTypeMds(String alertTypeMds) {
                 this.alertTypeMds = alertTypeMds;
@@ -519,7 +519,7 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The extended information about event generation. If the value of eventTransferType is allToSingle, the value of this parameter indicates the length and unit of the alert aggregation window. The HTML escape characters are reversed.
+             * The extended information about event generation. If the value of **eventTransferType** is **allToSingle**, the value of this parameter indicates the length and unit of the alert aggregation window. The HTML escape characters are reversed.
              */
             public Builder eventTransferExt(String eventTransferExt) {
                 this.eventTransferExt = eventTransferExt;
@@ -530,8 +530,8 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
              * Indicates whether the system generates an event for the alert. Valid values:
              * <p>
              * 
-             * *   0: no.
-             * *   1: yes.
+             * *   **0**: no.
+             * *   **1**: yes.
              */
             public Builder eventTransferSwitch(Integer eventTransferSwitch) {
                 this.eventTransferSwitch = eventTransferSwitch;
@@ -539,12 +539,12 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The event generation method. Valid values:
+             * The method that is used to generate an event. Valid values:
              * <p>
              * 
-             * *   default: The default method is used.
-             * *   singleToSingle: The system generates an event for each alert.
-             * *   allToSingle: The system generates an event for alerts within a period of time.
+             * *   **default**: The default method is used.
+             * *   **singleToSingle**: The system generates an event for each alert.
+             * *   **allToSingle**: The system generates an event for alerts within a period of time.
              */
             public Builder eventTransferType(String eventTransferType) {
                 this.eventTransferType = eventTransferType;
@@ -616,7 +616,7 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The query condition of the rule in the JSON format. The HTML escape characters are reversed.
+             * The query condition of the rule. The value is in the JSON format. The HTML escape characters are reversed.
              */
             public Builder ruleCondition(String ruleCondition) {
                 this.ruleCondition = ruleCondition;
@@ -632,7 +632,7 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The log aggregation field of the rule. The value is a JSON string. The HTML escape characters are reversed.
+             * The log aggregation field. The value is in the JSON format. The HTML escape characters are reversed.
              */
             public Builder ruleGroup(String ruleGroup) {
                 this.ruleGroup = ruleGroup;
@@ -659,8 +659,8 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
              * The type of the rule. Valid values:
              * <p>
              * 
-             * *   predefine
-             * *   customize
+             * *   **predefine**
+             * *   **customize**
              */
             public Builder ruleType(String ruleType) {
                 this.ruleType = ruleType;
@@ -668,14 +668,14 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The rule status. Valid values:
+             * The status of the rule. Valid values:
              * <p>
              * 
-             * *   0: The rule is in the initial state.
-             * *   10: The simulation data is tested.
-             * *   15: The business data is being tested.
-             * *   20: The business data test ends.
-             * *   100: The rule takes effect.
+             * *   **0**: The rule is in the initial state.
+             * *   **10**: The simulation data is tested.
+             * *   **15**: The business data is being tested.
+             * *   **20**: The business data test is complete.
+             * *   **100**: The rule is in effect.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -686,9 +686,9 @@ public class ListCloudSiemCustomizeRulesResponseBody extends TeaModel {
              * The threat level. Valid values:
              * <p>
              * 
-             * *   serious: high
-             * *   suspicious: medium
-             * *   remind: low
+             * *   **serious**: high-risk.
+             * *   **suspicious**: medium-risk.
+             * *   **remind**: low-risk.
              */
             public Builder threatLevel(String threatLevel) {
                 this.threatLevel = threatLevel;

@@ -116,7 +116,7 @@ public class ListCustomizeRuleTestResultRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Maximum value: 100.
+         * The number of entries per page. Valid values: 1 to 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);

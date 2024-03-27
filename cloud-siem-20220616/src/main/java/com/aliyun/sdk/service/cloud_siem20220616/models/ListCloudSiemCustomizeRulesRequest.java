@@ -241,11 +241,11 @@ public class ListCloudSiemCustomizeRulesRequest extends Request {
         }
 
         /**
-         * The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:
+         * The data management center of the threat analysis feature. Specify this parameter based on the regions in which your assets reside. Valid values:
          * <p>
          * 
-         * *   cn-hangzhou: Your assets reside in regions in China.
-         * *   ap-southeast-1: Your assets reside in regions outside China.
+         * *   **cn-hangzhou**: Your assets reside in regions in China.
+         * *   **ap-southeast-1**: Your assets reside in regions outside China.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -266,8 +266,8 @@ public class ListCloudSiemCustomizeRulesRequest extends Request {
          * The type of the rule. Valid values:
          * <p>
          * 
-         * *   predefine
-         * *   customize
+         * *   **predefine**
+         * *   **customize**
          */
         public Builder ruleType(String ruleType) {
             this.putBodyParameter("RuleType", ruleType);
@@ -288,11 +288,11 @@ public class ListCloudSiemCustomizeRulesRequest extends Request {
          * The status of the rule. Valid values:
          * <p>
          * 
-         * *   0: The rule is in the initial state.
-         * *   10: The simulation data is tested.
-         * *   15: The business data is being tested.
-         * *   20: The business data test ends.
-         * *   100: The rule takes effect.
+         * *   **0**: The rule is in the initial state.
+         * *   **10**: The simulation data is tested.
+         * *   **15**: The business data is being tested.
+         * *   **20**: The business data test is complete.
+         * *   **100**: The rule is in effect.
          */
         public Builder status(Integer status) {
             this.putBodyParameter("Status", status);
@@ -301,12 +301,12 @@ public class ListCloudSiemCustomizeRulesRequest extends Request {
         }
 
         /**
-         * The risk level. The value is a JSON array. Valid values:
+         * The threat level. The value must be a JSON array. Valid values:
          * <p>
          * 
-         * *   serious: high
-         * *   suspicious: medium
-         * *   remind: low
+         * *   **serious**: high-risk.
+         * *   **suspicious**: medium-risk.
+         * *   **remind**: low-risk.
          */
         public Builder threatLevel(java.util.List < String > threatLevel) {
             this.putBodyParameter("ThreatLevel", threatLevel);
