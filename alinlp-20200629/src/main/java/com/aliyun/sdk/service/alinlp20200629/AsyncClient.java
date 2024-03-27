@@ -131,9 +131,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ImportServiceDataResponse> importServiceData(ImportServiceDataRequest request);
 
+    CompletableFuture<ImportServiceDataV2Response> importServiceDataV2(ImportServiceDataV2Request request);
+
     CompletableFuture<InsertCustomResponse> insertCustom(InsertCustomRequest request);
 
     CompletableFuture<OpenAlinlpServiceResponse> openAlinlpService(OpenAlinlpServiceRequest request);
+
+    CompletableFuture<PostISConvRewriterResponse> postISConvRewriter(PostISConvRewriterRequest request);
+
+    CompletableFuture<PostISRetrieveRouterResponse> postISRetrieveRouter(PostISRetrieveRouterRequest request);
 
     CompletableFuture<PostMSConvSearchTokenGeneratedResponse> postMSConvSearchTokenGenerated(PostMSConvSearchTokenGeneratedRequest request);
 
