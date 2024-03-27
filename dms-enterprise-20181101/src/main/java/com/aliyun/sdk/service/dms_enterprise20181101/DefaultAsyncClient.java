@@ -526,6 +526,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+      * You can call this operation only for database instances that are managed in Security Collaboration mode.
       * For more information about the SQL review feature, see [SQL review](~~60374~~).
       *
      */
@@ -2735,6 +2736,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You can call this operation only for database instances that are managed in Security Collaboration mode.
+      *
+     */
     @Override
     public CompletableFuture<PauseDataCorrectSQLJobResponse> pauseDataCorrectSQLJob(PauseDataCorrectSQLJobRequest request) {
         try {

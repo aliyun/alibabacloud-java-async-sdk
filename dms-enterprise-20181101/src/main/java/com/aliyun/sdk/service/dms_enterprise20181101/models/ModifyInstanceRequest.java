@@ -130,6 +130,11 @@ public class ModifyInstanceRequest extends Request {
     private Integer useDsql;
 
     @Query
+    @NameInMap("UseSsl")
+    @Validation(maximum = 1)
+    private Integer useSsl;
+
+    @Query
     @NameInMap("VpcId")
     private String vpcId;
 
@@ -164,6 +169,7 @@ public class ModifyInstanceRequest extends Request {
         this.templateType = builder.templateType;
         this.tid = builder.tid;
         this.useDsql = builder.useDsql;
+        this.useSsl = builder.useSsl;
         this.vpcId = builder.vpcId;
     }
 
@@ -384,6 +390,13 @@ public class ModifyInstanceRequest extends Request {
     }
 
     /**
+     * @return useSsl
+     */
+    public Integer getUseSsl() {
+        return this.useSsl;
+    }
+
+    /**
      * @return vpcId
      */
     public String getVpcId() {
@@ -420,6 +433,7 @@ public class ModifyInstanceRequest extends Request {
         private String templateType; 
         private Long tid; 
         private Integer useDsql; 
+        private Integer useSsl; 
         private String vpcId; 
 
         private Builder() {
@@ -457,6 +471,7 @@ public class ModifyInstanceRequest extends Request {
             this.templateType = request.templateType;
             this.tid = request.tid;
             this.useDsql = request.useDsql;
+            this.useSsl = request.useSsl;
             this.vpcId = request.vpcId;
         } 
 
@@ -718,6 +733,15 @@ public class ModifyInstanceRequest extends Request {
         public Builder useDsql(Integer useDsql) {
             this.putQueryParameter("UseDsql", useDsql);
             this.useDsql = useDsql;
+            return this;
+        }
+
+        /**
+         * UseSsl.
+         */
+        public Builder useSsl(Integer useSsl) {
+            this.putQueryParameter("UseSsl", useSsl);
+            this.useSsl = useSsl;
             return this;
         }
 

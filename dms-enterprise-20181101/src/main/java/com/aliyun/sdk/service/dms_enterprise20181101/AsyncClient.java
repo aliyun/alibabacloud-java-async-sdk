@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.dms_enterprise20181101;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.dms_enterprise20181101.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -157,6 +158,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreatePublishGroupTaskResponse> createPublishGroupTask(CreatePublishGroupTaskRequest request);
 
     /**
+      * You can call this operation only for database instances that are managed in Security Collaboration mode.
       * For more information about the SQL review feature, see [SQL review](~~60374~~).
       *
      */
@@ -590,6 +592,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<OfflineTaskFlowResponse> offlineTaskFlow(OfflineTaskFlowRequest request);
 
+    /**
+      * You can call this operation only for database instances that are managed in Security Collaboration mode.
+      *
+     */
     CompletableFuture<PauseDataCorrectSQLJobResponse> pauseDataCorrectSQLJob(PauseDataCorrectSQLJobRequest request);
 
     CompletableFuture<PreviewWorkflowResponse> previewWorkflow(PreviewWorkflowRequest request);
