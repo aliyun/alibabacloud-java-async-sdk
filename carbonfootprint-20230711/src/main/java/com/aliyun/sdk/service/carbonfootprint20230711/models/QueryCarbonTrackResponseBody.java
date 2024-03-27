@@ -50,7 +50,7 @@ public class QueryCarbonTrackResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The data records.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class QueryCarbonTrackResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,7 @@ public class QueryCarbonTrackResponseBody extends TeaModel {
             private String uid; 
 
             /**
-             * ProductCode.
+             * The service code.
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -166,7 +166,7 @@ public class QueryCarbonTrackResponseBody extends TeaModel {
             }
 
             /**
-             * QuotaValue.
+             * The carbon emissions within the specified time range, in kgCO₂e.
              */
             public Builder quotaValue(Double quotaValue) {
                 this.quotaValue = quotaValue;
@@ -174,7 +174,7 @@ public class QueryCarbonTrackResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * The region in which the cloud service resides.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -182,7 +182,7 @@ public class QueryCarbonTrackResponseBody extends TeaModel {
             }
 
             /**
-             * StatisticsDate.
+             * The date when the statistics are collected, which is a timestamp in milliseconds.
              */
             public Builder statisticsDate(Long statisticsDate) {
                 this.statisticsDate = statisticsDate;
@@ -190,7 +190,7 @@ public class QueryCarbonTrackResponseBody extends TeaModel {
             }
 
             /**
-             * SubUid.
+             * The ID of the RAM user.
              */
             public Builder subUid(String subUid) {
                 this.subUid = subUid;
@@ -198,7 +198,7 @@ public class QueryCarbonTrackResponseBody extends TeaModel {
             }
 
             /**
-             * Uid.
+             * The ID of the Alibaba Cloud account.
              */
             public Builder uid(String uid) {
                 this.uid = uid;

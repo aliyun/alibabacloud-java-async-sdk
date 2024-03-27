@@ -96,7 +96,7 @@ public class GetSummaryDataRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * The end of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format. Example: 2023-02-01 23:59:59.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -105,7 +105,7 @@ public class GetSummaryDataRequest extends Request {
         }
 
         /**
-         * Group.
+         * The statistical dimension. A value of productCode specifies that statistics are collected based on cloud service. A value of region specifies that statistics are collected based on region. A value of subUid specifies that statistics are collected based on Resource Access Management (RAM) user. If you do not specify this parameter, statistics are collected based on Alibaba Cloud account.
          */
         public Builder group(String group) {
             this.putQueryParameter("Group", group);
@@ -114,7 +114,7 @@ public class GetSummaryDataRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format. Example: 2023-01-01 00:00:00.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -123,7 +123,7 @@ public class GetSummaryDataRequest extends Request {
         }
 
         /**
-         * Uids.
+         * The list of Alibaba Cloud account IDs whose data needs to be queried.(used after enabling multi-account management).
          */
         public Builder uids(java.util.List < String > uids) {
             String uidsShrink = shrink(uids, "Uids", "json");

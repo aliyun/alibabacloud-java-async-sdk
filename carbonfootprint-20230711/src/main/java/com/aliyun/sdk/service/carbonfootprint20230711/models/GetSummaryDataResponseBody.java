@@ -50,7 +50,7 @@ public class GetSummaryDataResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class GetSummaryDataResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -206,7 +206,7 @@ public class GetSummaryDataResponseBody extends TeaModel {
             private String treeConsumptionConversion; 
 
             /**
-             * AircraftConsumptionConversion.
+             * Converted aircraft carbon emissions.
              */
             public Builder aircraftConsumptionConversion(String aircraftConsumptionConversion) {
                 this.aircraftConsumptionConversion = aircraftConsumptionConversion;
@@ -214,7 +214,7 @@ public class GetSummaryDataResponseBody extends TeaModel {
             }
 
             /**
-             * CarConsumptionConversion.
+             * Converted car carbon emissions.
              */
             public Builder carConsumptionConversion(String carConsumptionConversion) {
                 this.carConsumptionConversion = carConsumptionConversion;
@@ -222,7 +222,7 @@ public class GetSummaryDataResponseBody extends TeaModel {
             }
 
             /**
-             * LastMonthConsumptionConversion.
+             * The carbon emissions in the previous month, in kgCO₂e.
              */
             public Builder lastMonthConsumptionConversion(String lastMonthConsumptionConversion) {
                 this.lastMonthConsumptionConversion = lastMonthConsumptionConversion;
@@ -230,7 +230,7 @@ public class GetSummaryDataResponseBody extends TeaModel {
             }
 
             /**
-             * LastYearConsumptionConversion.
+             * The carbon emissions in the same month of the previous year, in kgCO₂e.
              */
             public Builder lastYearConsumptionConversion(String lastYearConsumptionConversion) {
                 this.lastYearConsumptionConversion = lastYearConsumptionConversion;
@@ -238,7 +238,7 @@ public class GetSummaryDataResponseBody extends TeaModel {
             }
 
             /**
-             * LastYearConsumptionConversionSum.
+             * The carbon emissions of the previous year, in kgCO₂e.
              */
             public Builder lastYearConsumptionConversionSum(String lastYearConsumptionConversionSum) {
                 this.lastYearConsumptionConversionSum = lastYearConsumptionConversionSum;
@@ -246,7 +246,7 @@ public class GetSummaryDataResponseBody extends TeaModel {
             }
 
             /**
-             * LatestDataTime.
+             * The point in time at which the data is last updated.
              */
             public Builder latestDataTime(String latestDataTime) {
                 this.latestDataTime = latestDataTime;
@@ -254,7 +254,7 @@ public class GetSummaryDataResponseBody extends TeaModel {
             }
 
             /**
-             * ThisMonthConsumptionConversion.
+             * The carbon emissions in this month, in kgCO₂e.
              */
             public Builder thisMonthConsumptionConversion(String thisMonthConsumptionConversion) {
                 this.thisMonthConsumptionConversion = thisMonthConsumptionConversion;
@@ -262,7 +262,7 @@ public class GetSummaryDataResponseBody extends TeaModel {
             }
 
             /**
-             * ThisYearConsumptionConversion.
+             * The carbon emissions in the year of this month, in kgCO₂e.
              */
             public Builder thisYearConsumptionConversion(String thisYearConsumptionConversion) {
                 this.thisYearConsumptionConversion = thisYearConsumptionConversion;
@@ -270,7 +270,7 @@ public class GetSummaryDataResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCarbonConsumptionConversion.
+             * The total carbon emissions within the specified time range, in kgCO₂e.
              */
             public Builder totalCarbonConsumptionConversion(String totalCarbonConsumptionConversion) {
                 this.totalCarbonConsumptionConversion = totalCarbonConsumptionConversion;
@@ -278,7 +278,7 @@ public class GetSummaryDataResponseBody extends TeaModel {
             }
 
             /**
-             * TreeConsumptionConversion.
+             * Converted tree carbon absorption.
              */
             public Builder treeConsumptionConversion(String treeConsumptionConversion) {
                 this.treeConsumptionConversion = treeConsumptionConversion;
