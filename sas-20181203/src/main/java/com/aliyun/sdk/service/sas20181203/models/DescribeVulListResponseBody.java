@@ -337,6 +337,9 @@ public class DescribeVulListResponseBody extends TeaModel {
         @NameInMap("ContainerName")
         private String containerName;
 
+        @NameInMap("ExtendField")
+        private String extendField;
+
         @NameInMap("FullVersion")
         private String fullVersion;
 
@@ -366,6 +369,7 @@ public class DescribeVulListResponseBody extends TeaModel {
 
         private RpmEntityList(Builder builder) {
             this.containerName = builder.containerName;
+            this.extendField = builder.extendField;
             this.fullVersion = builder.fullVersion;
             this.imageName = builder.imageName;
             this.matchDetail = builder.matchDetail;
@@ -390,6 +394,13 @@ public class DescribeVulListResponseBody extends TeaModel {
          */
         public String getContainerName() {
             return this.containerName;
+        }
+
+        /**
+         * @return extendField
+         */
+        public String getExtendField() {
+            return this.extendField;
         }
 
         /**
@@ -457,6 +468,7 @@ public class DescribeVulListResponseBody extends TeaModel {
 
         public static final class Builder {
             private String containerName; 
+            private String extendField; 
             private String fullVersion; 
             private String imageName; 
             private String matchDetail; 
@@ -472,6 +484,14 @@ public class DescribeVulListResponseBody extends TeaModel {
              */
             public Builder containerName(String containerName) {
                 this.containerName = containerName;
+                return this;
+            }
+
+            /**
+             * ExtendField.
+             */
+            public Builder extendField(String extendField) {
+                this.extendField = extendField;
                 return this;
             }
 

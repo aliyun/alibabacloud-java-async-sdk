@@ -342,7 +342,7 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
             }
 
             /**
-             * MeasureSpace.
+             * The volume of detection data, in MB.
              */
             public Builder measureSpace(Long measureSpace) {
                 this.measureSpace = measureSpace;
@@ -358,7 +358,7 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ProgressByProject.
+             * The execution progress of the inspection items.
              */
             public Builder progressByProject(String progressByProject) {
                 this.progressByProject = progressByProject;
@@ -366,7 +366,7 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ReportDownloadUrl.
+             * The download link for the report.
              */
             public Builder reportDownloadUrl(String reportDownloadUrl) {
                 this.reportDownloadUrl = reportDownloadUrl;
@@ -374,7 +374,14 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ReportStatus.
+             * The status of the report. Possible values:
+             * <p>
+             * 
+             * *   **PREPARED**: In preparation.
+             * *   **RUNNING**: In progress.
+             * *   **SUCCESS**: Successful.
+             * *   **TIMEOUT**: Timeout.
+             * *   **FAILED**: Failed.
              */
             public Builder reportStatus(String reportStatus) {
                 this.reportStatus = reportStatus;

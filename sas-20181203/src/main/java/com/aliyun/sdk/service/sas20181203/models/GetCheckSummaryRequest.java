@@ -96,7 +96,7 @@ public class GetCheckSummaryRequest extends Request {
         } 
 
         /**
-         * IsItemStatistic.
+         * Specifies whether to return the statistics of the check items, including the number of check items supported by the system and the number of check items available to you.
          */
         public Builder isItemStatistic(Boolean isItemStatistic) {
             this.putQueryParameter("IsItemStatistic", isItemStatistic);
@@ -127,7 +127,7 @@ public class GetCheckSummaryRequest extends Request {
         }
 
         /**
-         * The service provider (SP) of the cloud asset.
+         * The cloud service providers.
          */
         public Builder vendors(java.util.List < String > vendors) {
             this.putQueryParameter("Vendors", vendors);

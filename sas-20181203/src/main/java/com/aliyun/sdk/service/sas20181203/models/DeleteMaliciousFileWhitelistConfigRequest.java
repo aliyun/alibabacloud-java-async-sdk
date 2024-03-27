@@ -54,7 +54,7 @@ public class DeleteMaliciousFileWhitelistConfigRequest extends Request {
         } 
 
         /**
-         * The ID of the whitelist rule. You can call the [ListMaliciousFileWhitelistConfigs](~~ListMaliciousFileWhitelistConfigs~~) operation to query the IDs of whitelist rules.
+         * The ID of the alert whitelist rule of sensitive files that are detected by using the agentless detection feature. You can call the [ListMaliciousFileWhitelistConfigs](~~ListMaliciousFileWhitelistConfigs~~) operation to query the IDs of alert whitelist rules.
          */
         public Builder configId(Long configId) {
             this.putQueryParameter("ConfigId", configId);

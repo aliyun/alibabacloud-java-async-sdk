@@ -289,6 +289,9 @@ public class ListCheckItemResponseBody extends TeaModel {
         @NameInMap("Description")
         private Description description;
 
+        @NameInMap("EstimatedCount")
+        private Integer estimatedCount;
+
         @NameInMap("InstanceSubType")
         private String instanceSubType;
 
@@ -309,6 +312,7 @@ public class ListCheckItemResponseBody extends TeaModel {
             this.checkShowName = builder.checkShowName;
             this.customConfigs = builder.customConfigs;
             this.description = builder.description;
+            this.estimatedCount = builder.estimatedCount;
             this.instanceSubType = builder.instanceSubType;
             this.instanceType = builder.instanceType;
             this.riskLevel = builder.riskLevel;
@@ -353,6 +357,13 @@ public class ListCheckItemResponseBody extends TeaModel {
         }
 
         /**
+         * @return estimatedCount
+         */
+        public Integer getEstimatedCount() {
+            return this.estimatedCount;
+        }
+
+        /**
          * @return instanceSubType
          */
         public String getInstanceSubType() {
@@ -392,6 +403,7 @@ public class ListCheckItemResponseBody extends TeaModel {
             private String checkShowName; 
             private java.util.List < CustomConfigs> customConfigs; 
             private Description description; 
+            private Integer estimatedCount; 
             private String instanceSubType; 
             private String instanceType; 
             private String riskLevel; 
@@ -427,6 +439,14 @@ public class ListCheckItemResponseBody extends TeaModel {
              */
             public Builder description(Description description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * EstimatedCount.
+             */
+            public Builder estimatedCount(Integer estimatedCount) {
+                this.estimatedCount = estimatedCount;
                 return this;
             }
 

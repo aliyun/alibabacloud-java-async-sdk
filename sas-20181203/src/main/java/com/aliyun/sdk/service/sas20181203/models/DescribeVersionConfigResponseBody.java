@@ -505,7 +505,11 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * AntiRansomwareService.
+         * Switch of anti-ransomware hosting service. Valid values:
+         * <p>
+         * 
+         * *   **0**: off
+         * *   **1**: on
          */
         public Builder antiRansomwareService(Integer antiRansomwareService) {
             this.antiRansomwareService = antiRansomwareService;
@@ -733,7 +737,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The timestamp when Security Center was released. Unit: milliseconds. The value of this parameter is seven days after Security Center expires.
+         * The timestamp when Security Center was expired. Unit: milliseconds. 
          * <p>
          * 
          * >  If you do not renew the subscription within seven days after the expiration date, Security Center of a paid edition is automatically downgraded to Security Center Basic. In this case, you can no longer use the features of the paid edition or view the existing configurations or statistics such as DDoS alerts in Security Center. You must purchase Security Center of a paid edition to use relevant features. For more information, see [Purchase Security Center](~~42308~~).

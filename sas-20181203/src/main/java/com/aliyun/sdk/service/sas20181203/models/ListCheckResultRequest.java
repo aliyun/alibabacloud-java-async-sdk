@@ -38,6 +38,7 @@ public class ListCheckResultRequest extends Request {
 
     @Query
     @NameInMap("PageSize")
+    @Validation(maximum = 100)
     private Integer pageSize;
 
     @Query
@@ -336,7 +337,7 @@ public class ListCheckResultRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
+         * The number of entries per page. Maximum value : 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

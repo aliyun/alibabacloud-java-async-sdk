@@ -97,7 +97,10 @@ public class ExportRecordRequest extends Request {
         } 
 
         /**
-         * ExportFileType.
+         * The type of the file to export. Valid values:
+         * <p>
+         * 
+         * *   **virusScanExport**: The details of the virus scan tasks are exported. This parameter is available and required when ExportType is set to virusScanExport.
          */
         public Builder exportFileType(String exportFileType) {
             this.putQueryParameter("ExportFileType", exportFileType);
@@ -121,12 +124,13 @@ public class ExportRecordRequest extends Request {
          * *   **autorun**: the list of fingerprints for startup items
          * *   **lkm**: the list of fingerprints for kernel modules
          * *   **webserver**: the list of fingerprints for websites
+         * *   **virusScanExport**: the details of the virus scan tasks
          * *   **imageVulExport**: the list of image system vulnerabilities
          * *   **imageBaseLineExport**: the list of check results for image baselines
          * *   **imageAffectedMaliciousExport**: the list of check results for malicious image samples
-         * *   **baseline**: the list of check results for configuration assessment
+         * *   **baselineCspm**: the list of check results for configuration assessment
          * *   **attack**: the list of alert events for attack analysis
-         * *   **accessKey**: the list of alert events that are generated for AccessKey pair leaks
+         * *   **accessKey**: the list of alerts that are generated for AccessKey pair leaks
          */
         public Builder exportType(String exportType) {
             this.putQueryParameter("ExportType", exportType);

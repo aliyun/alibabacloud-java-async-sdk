@@ -74,7 +74,7 @@ public class GetCheckSummaryResponseBody extends TeaModel {
         private java.util.List < Summarys> summarys; 
 
         /**
-         * OverallItemStatistic.
+         * The statistics of the check items.
          */
         public Builder overallItemStatistic(OverallItemStatistic overallItemStatistic) {
             this.overallItemStatistic = overallItemStatistic;
@@ -82,7 +82,7 @@ public class GetCheckSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * overall risk statistics of check items.
+         * The overall risk statistics.
          */
         public Builder overallStatistic(OverallStatistic overallStatistic) {
             this.overallStatistic = overallStatistic;
@@ -98,7 +98,7 @@ public class GetCheckSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the summary information about the configuration checks on cloud services.
+         * The summary information about the configuration checks on cloud services.
          */
         public Builder summarys(java.util.List < Summarys> summarys) {
             this.summarys = summarys;
@@ -150,7 +150,7 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             private Integer resultCount; 
 
             /**
-             * ReleaseCount.
+             * The number of check items supported by the system.
              */
             public Builder releaseCount(Integer releaseCount) {
                 this.releaseCount = releaseCount;
@@ -158,7 +158,7 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * ResultCount.
+             * The number of check items available to you.
              */
             public Builder resultCount(Integer resultCount) {
                 this.resultCount = resultCount;
@@ -387,7 +387,7 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of low-risk check items that failed to pass the check.
+             * The number of medium-risk check items that failed to pass the check.
              */
             public Builder notPassMediumCount(Integer notPassMediumCount) {
                 this.notPassMediumCount = notPassMediumCount;
@@ -395,7 +395,7 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of check items that passed the check.
+             * The number of check items that pass the check.
              */
             public Builder passCount(Integer passCount) {
                 this.passCount = passCount;
@@ -403,7 +403,7 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number off high-risk check items that passed the check.
+             * The number of high-risk check items that pass the check.
              */
             public Builder passHighCount(Integer passHighCount) {
                 this.passHighCount = passHighCount;
@@ -411,7 +411,7 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number off low-risk check items that passed the check.
+             * The number of low-risk check items that pass the check.
              */
             public Builder passLowCount(Integer passLowCount) {
                 this.passLowCount = passLowCount;
@@ -419,7 +419,7 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number off medium-risk check items that passed the check.
+             * The number of medium-risk check items that pass the check.
              */
             public Builder passMediumCount(Integer passMediumCount) {
                 this.passMediumCount = passMediumCount;
@@ -656,7 +656,7 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of check items that passed the check.
+             * The number of check items that pass the check.
              */
             public Builder passCount(Integer passCount) {
                 this.passCount = passCount;
@@ -664,7 +664,7 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number off high-risk check items that passed the check.
+             * The number of high-risk check items that pass the check.
              */
             public Builder passHighCount(Integer passHighCount) {
                 this.passHighCount = passHighCount;
@@ -672,7 +672,7 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number off low-risk check items that passed the check.
+             * The number of low-risk check items that pass the check.
              */
             public Builder passLowCount(Integer passLowCount) {
                 this.passLowCount = passLowCount;
@@ -680,7 +680,7 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number off medium-risk check items that passed the check.
+             * The number of medium-risk check items that pass the check.
              */
             public Builder passMediumCount(Integer passMediumCount) {
                 this.passMediumCount = passMediumCount;
@@ -805,7 +805,7 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             private StandardStatistic standardStatistic; 
 
             /**
-             * The number of risk items.
+             * The number of check items that failed to pass the check.
              */
             public Builder failCount(Integer failCount) {
                 this.failCount = failCount;
@@ -821,7 +821,7 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of check items that passed the check.
+             * The number of check items that pass the check.
              */
             public Builder passCount(Integer passCount) {
                 this.passCount = passCount;
@@ -861,7 +861,7 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Risk statistics of check items within the same standard.
+             * The standard statistics of the check items.
              */
             public Builder standardStatistic(StandardStatistic standardStatistic) {
                 this.standardStatistic = standardStatistic;
@@ -1106,7 +1106,7 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number off high-risk check items that passed the check.
+             * The number of high-risk check items that pass the check.
              */
             public Builder passHighCount(Integer passHighCount) {
                 this.passHighCount = passHighCount;
@@ -1114,7 +1114,7 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number off low-risk check items that passed the check.
+             * The number of low-risk check items that pass the check.
              */
             public Builder passLowCount(Integer passLowCount) {
                 this.passLowCount = passLowCount;
@@ -1122,7 +1122,7 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number off medium-risk check items that passed the check.
+             * The number of medium-risk check items that pass the check.
              */
             public Builder passMediumCount(Integer passMediumCount) {
                 this.passMediumCount = passMediumCount;
@@ -1248,7 +1248,7 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Risk statistics of check items within the same type.
+             * The risk statistics by type.
              */
             public Builder typeStatistic(TypeStatistic typeStatistic) {
                 this.typeStatistic = typeStatistic;
