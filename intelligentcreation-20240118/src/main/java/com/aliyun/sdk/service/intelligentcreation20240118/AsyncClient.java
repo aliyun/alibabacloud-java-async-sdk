@@ -43,4 +43,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<SubmitBulletQuestionsV1Response> submitBulletQuestionsV1(SubmitBulletQuestionsV1Request request);
 
+    CompletableFuture<SyncDigitalVideoResponse> syncDigitalVideo(SyncDigitalVideoRequest request);
+
 }
