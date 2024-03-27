@@ -39,6 +39,7 @@ public class ListWorkflowInstancesRequest extends Request {
 
     @Query
     @NameInMap("workspaceId")
+    @Validation(required = true)
     private Long workspaceId;
 
     private ListWorkflowInstancesRequest(Builder builder) {

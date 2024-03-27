@@ -14,6 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListWorkflowsRequest extends Request {
     @Path
     @NameInMap("projectId")
+    @Validation(required = true)
     private Long projectId;
 
     @Query
@@ -30,6 +31,7 @@ public class ListWorkflowsRequest extends Request {
 
     @Query
     @NameInMap("workspaceId")
+    @Validation(required = true)
     private Long workspaceId;
 
     private ListWorkflowsRequest(Builder builder) {

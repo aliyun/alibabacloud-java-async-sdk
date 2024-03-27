@@ -14,14 +14,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DescribeWorkflowRequest extends Request {
     @Path
     @NameInMap("projectId")
+    @Validation(required = true)
     private Long projectId;
 
     @Path
     @NameInMap("workflowId")
+    @Validation(required = true)
     private Long workflowId;
 
     @Query
     @NameInMap("workspaceId")
+    @Validation(required = true)
     private Long workspaceId;
 
     private DescribeWorkflowRequest(Builder builder) {

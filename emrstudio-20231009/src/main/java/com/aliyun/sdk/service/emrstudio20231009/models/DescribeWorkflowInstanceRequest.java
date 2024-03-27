@@ -19,10 +19,12 @@ public class DescribeWorkflowInstanceRequest extends Request {
 
     @Path
     @NameInMap("workflowInstanceId")
+    @Validation(required = true)
     private Integer workflowInstanceId;
 
     @Query
     @NameInMap("workspaceId")
+    @Validation(required = true)
     private Long workspaceId;
 
     private DescribeWorkflowInstanceRequest(Builder builder) {
