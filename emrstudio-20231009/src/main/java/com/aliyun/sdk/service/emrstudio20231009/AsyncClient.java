@@ -19,6 +19,32 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
+    CompletableFuture<DescribeManualTaskResponse> describeManualTask(DescribeManualTaskRequest request);
+
+    CompletableFuture<DescribeManualTaskInstanceResponse> describeManualTaskInstance(DescribeManualTaskInstanceRequest request);
+
+    CompletableFuture<DescribeProjectResponse> describeProject(DescribeProjectRequest request);
+
+    CompletableFuture<DescribeTaskResponse> describeTask(DescribeTaskRequest request);
+
+    CompletableFuture<DescribeTaskInstanceResponse> describeTaskInstance(DescribeTaskInstanceRequest request);
+
+    CompletableFuture<DescribeWorkflowResponse> describeWorkflow(DescribeWorkflowRequest request);
+
+    CompletableFuture<DescribeWorkflowInstanceResponse> describeWorkflowInstance(DescribeWorkflowInstanceRequest request);
+
+    CompletableFuture<ListManualTaskInstancesResponse> listManualTaskInstances(ListManualTaskInstancesRequest request);
+
+    CompletableFuture<ListManualTasksResponse> listManualTasks(ListManualTasksRequest request);
+
     CompletableFuture<ListProjectsResponse> listProjects(ListProjectsRequest request);
+
+    CompletableFuture<ListTaskInstancesResponse> listTaskInstances(ListTaskInstancesRequest request);
+
+    CompletableFuture<ListTasksResponse> listTasks(ListTasksRequest request);
+
+    CompletableFuture<ListWorkflowInstancesResponse> listWorkflowInstances(ListWorkflowInstancesRequest request);
+
+    CompletableFuture<ListWorkflowsResponse> listWorkflows(ListWorkflowsRequest request);
 
 }
