@@ -78,11 +78,11 @@ public class GetWebHostingConfigResponseBody extends TeaModel {
         @NameInMap("DefaultDomain")
         private String defaultDomain;
 
+        @NameInMap("ErrorHttpStatus")
+        private String errorHttpStatus;
+
         @NameInMap("ErrorPath")
         private String errorPath;
-
-        @NameInMap("HistoryModePath")
-        private String historyModePath;
 
         @NameInMap("IndexPath")
         private String indexPath;
@@ -93,8 +93,8 @@ public class GetWebHostingConfigResponseBody extends TeaModel {
         private Data(Builder builder) {
             this.allowedIps = builder.allowedIps;
             this.defaultDomain = builder.defaultDomain;
+            this.errorHttpStatus = builder.errorHttpStatus;
             this.errorPath = builder.errorPath;
-            this.historyModePath = builder.historyModePath;
             this.indexPath = builder.indexPath;
             this.spaceId = builder.spaceId;
         }
@@ -122,17 +122,17 @@ public class GetWebHostingConfigResponseBody extends TeaModel {
         }
 
         /**
+         * @return errorHttpStatus
+         */
+        public String getErrorHttpStatus() {
+            return this.errorHttpStatus;
+        }
+
+        /**
          * @return errorPath
          */
         public String getErrorPath() {
             return this.errorPath;
-        }
-
-        /**
-         * @return historyModePath
-         */
-        public String getHistoryModePath() {
-            return this.historyModePath;
         }
 
         /**
@@ -152,8 +152,8 @@ public class GetWebHostingConfigResponseBody extends TeaModel {
         public static final class Builder {
             private String allowedIps; 
             private String defaultDomain; 
+            private String errorHttpStatus; 
             private String errorPath; 
-            private String historyModePath; 
             private String indexPath; 
             private String spaceId; 
 
@@ -174,18 +174,18 @@ public class GetWebHostingConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorPath.
+             * ErrorHttpStatus.
              */
-            public Builder errorPath(String errorPath) {
-                this.errorPath = errorPath;
+            public Builder errorHttpStatus(String errorHttpStatus) {
+                this.errorHttpStatus = errorHttpStatus;
                 return this;
             }
 
             /**
-             * HistoryModePath.
+             * ErrorPath.
              */
-            public Builder historyModePath(String historyModePath) {
-                this.historyModePath = historyModePath;
+            public Builder errorPath(String errorPath) {
+                this.errorPath = errorPath;
                 return this;
             }
 

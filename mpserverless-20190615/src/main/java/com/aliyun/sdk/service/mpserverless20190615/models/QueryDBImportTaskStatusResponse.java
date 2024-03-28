@@ -13,16 +13,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class QueryDBImportTaskStatusResponse extends Response {
     @NameInMap("headers")
-    @Validation(required = true)
     private java.util.Map < String, String > headers;
 
+    @NameInMap("statusCode")
+    private Integer statusCode;
+
     @NameInMap("body")
-    @Validation(required = true)
     private QueryDBImportTaskStatusResponseBody body;
 
     private QueryDBImportTaskStatusResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +45,13 @@ public class QueryDBImportTaskStatusResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public QueryDBImportTaskStatusResponseBody getBody() {
@@ -52,6 +61,8 @@ public class QueryDBImportTaskStatusResponse extends Response {
     public interface Builder extends Response.Builder<QueryDBImportTaskStatusResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(QueryDBImportTaskStatusResponseBody body);
 
@@ -64,6 +75,7 @@ public class QueryDBImportTaskStatusResponse extends Response {
             extends Response.BuilderImpl<QueryDBImportTaskStatusResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private QueryDBImportTaskStatusResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +85,7 @@ public class QueryDBImportTaskStatusResponse extends Response {
         private BuilderImpl(QueryDBImportTaskStatusResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +95,15 @@ public class QueryDBImportTaskStatusResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

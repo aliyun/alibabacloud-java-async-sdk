@@ -24,12 +24,12 @@ public class UpdateFunctionRequest extends Request {
 
     @Body
     @NameInMap("InstanceConcurrency")
-    @Validation(maximum = 100, minimum = 1)
+    @Validation(maximum = 20, minimum = 1)
     private Integer instanceConcurrency;
 
     @Body
     @NameInMap("Memory")
-    @Validation(maximum = 3096, minimum = 128)
+    @Validation(maximum = 2048, minimum = 128)
     private Integer memory;
 
     @Body
@@ -48,7 +48,7 @@ public class UpdateFunctionRequest extends Request {
 
     @Body
     @NameInMap("Timeout")
-    @Validation(maximum = 600, minimum = 1)
+    @Validation(maximum = 7200, minimum = 1)
     private Integer timeout;
 
     @Body

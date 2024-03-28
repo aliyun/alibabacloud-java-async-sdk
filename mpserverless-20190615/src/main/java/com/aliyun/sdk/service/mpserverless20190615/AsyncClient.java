@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.mpserverless20190615;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.mpserverless20190615.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -99,8 +100,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetWebHostingStatusResponse> getWebHostingStatus(GetWebHostingStatusRequest request);
 
     CompletableFuture<GetWebHostingUploadCredentialResponse> getWebHostingUploadCredential(GetWebHostingUploadCredentialRequest request);
-
-    CompletableFuture<ListAvailableCertificatesResponse> listAvailableCertificates(ListAvailableCertificatesRequest request);
 
     CompletableFuture<ListCorsDomainsResponse> listCorsDomains(ListCorsDomainsRequest request);
 

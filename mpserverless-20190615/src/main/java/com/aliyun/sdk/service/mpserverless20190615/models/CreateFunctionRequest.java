@@ -19,6 +19,7 @@ public class CreateFunctionRequest extends Request {
 
     @Body
     @NameInMap("Memory")
+    @Validation(maximum = 2048, minimum = 128)
     private Integer memory;
 
     @Body
@@ -37,6 +38,7 @@ public class CreateFunctionRequest extends Request {
 
     @Body
     @NameInMap("Timeout")
+    @Validation(maximum = 7200, minimum = 1)
     private Integer timeout;
 
     private CreateFunctionRequest(Builder builder) {
