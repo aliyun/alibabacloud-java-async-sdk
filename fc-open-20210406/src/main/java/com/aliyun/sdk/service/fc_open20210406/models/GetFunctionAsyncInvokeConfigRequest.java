@@ -171,7 +171,7 @@ public class GetFunctionAsyncInvokeConfigRequest extends Request {
         }
 
         /**
-         * The version or alias of the function.
+         * The version or alias of the service.
          */
         public Builder qualifier(String qualifier) {
             this.putQueryParameter("qualifier", qualifier);

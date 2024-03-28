@@ -24,7 +24,6 @@ public class ListInstancesRequest extends Request {
 
     @Header
     @NameInMap("X-Fc-Account-Id")
-    @Validation(required = true)
     private String xFcAccountId;
 
     @Header

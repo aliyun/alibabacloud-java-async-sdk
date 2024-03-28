@@ -815,7 +815,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The maximum validity period of messages.
+      * StatefulAsyncInvocation specifies the configurations of an asynchronous task. Asynchronous tasks (StatefulAsyncInvocation) allow you to manage the states of asynchronous invocations. The asynchronous task feature is more suitable for task scenarios.
       *
      */
     @Override

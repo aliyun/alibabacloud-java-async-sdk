@@ -126,7 +126,7 @@ public class DeleteFunctionRequest extends Request {
         } 
 
         /**
-         * The name of the service.
+         * The service name.
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("serviceName", serviceName);
@@ -135,7 +135,7 @@ public class DeleteFunctionRequest extends Request {
         }
 
         /**
-         * The name of the function.
+         * The function name.
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -144,7 +144,7 @@ public class DeleteFunctionRequest extends Request {
         }
 
         /**
-         * The ETag value of the resource. This value is used to ensure that the modified resource is consistent with the resource to be modified. The ETag value is returned in the responses of the CREATE, GET, and UPDATE operations.
+         * The header that is used to ensure that the changed resources are consistent with resources to be changed. The value comes from the response of the Create, Get, and Update API operations.
          */
         public Builder ifMatch(String ifMatch) {
             this.putHeaderParameter("If-Match", ifMatch);
@@ -162,7 +162,7 @@ public class DeleteFunctionRequest extends Request {
         }
 
         /**
-         * The time when Function Compute API is called. Specify the time in the **EEE,d MMM yyyy HH:mm:ss GMT** format.
+         * The time when the function is invoked. The value is in the **EEE,d MMM yyyy HH:mm:ss GMT** format.
          */
         public Builder xFcDate(String xFcDate) {
             this.putHeaderParameter("X-Fc-Date", xFcDate);

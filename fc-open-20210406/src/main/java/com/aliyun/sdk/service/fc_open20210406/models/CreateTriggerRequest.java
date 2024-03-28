@@ -267,7 +267,7 @@ public class CreateTriggerRequest extends Request {
         }
 
         /**
-         * The role that is used by the event source such as Object Storage Service (OSS) to invoke the function. For more information, see [Overview](~~53102~~).
+         * The RAM role that is used by the event source such as Object Storage Service (OSS) to invoke the function. For more information, see [Overview](~~53102~~).
          */
         public Builder invocationRole(String invocationRole) {
             this.putBodyParameter("invocationRole", invocationRole);
@@ -285,7 +285,7 @@ public class CreateTriggerRequest extends Request {
         }
 
         /**
-         * The Alibaba Cloud Resource Name (ARN) of the event source for the trigger.
+         * The Alibaba Cloud Resource Name (ARN) of the trigger event source. This parameter is optional for time triggers, HTTP triggers, and EventBridge-based triggers. This parameter is required for other types of triggers.
          */
         public Builder sourceArn(String sourceArn) {
             this.putBodyParameter("sourceArn", sourceArn);
@@ -297,14 +297,14 @@ public class CreateTriggerRequest extends Request {
          * The configurations of the trigger. The configurations vary based on the trigger type. For more information about the format, see the following topics:
          * <p>
          * 
-         * *   Object Storage Service (OSS) trigger: [OSSTriggerConfig](~~415697~~).
-         * *   Simple Log Service trigger: [LogTriggerConfig](~~415694~~).
-         * *   Time trigger: [TimeTriggerConfig](~~415712~~).
-         * *   HTTP trigger: [HTTPTriggerConfig](~~415685~~).
-         * *   Tablestore trigger: Specify the **SourceArn** parameter and leave this parameter empty.
-         * *   Alibaba Cloud CDN event trigger: [CDNEventsTriggerConfig](~~415674~~).
-         * *   Message Service (MNS) topic trigger: [MnsTopicTriggerConfig](~~415695~~).
-         * *   EventBridge triggers: [EventBridgeTriggerConfig](~~2508622~~).
+         * *   OSS triggers: [OSSTriggerConfig](~~415697~~).
+         * *   Simple Log Service triggers: [LogTriggerConfig](~~415694~~).
+         * *   Time triggers: [TimeTriggerConfig](~~415712~~).
+         * *   HTTP triggers: [HTTPTriggerConfig](~~415685~~)
+         * *   Tablestore triggers: Specify the **SourceArnm** parameter and leave this parameter empty.
+         * *   Alibaba Cloud CDN (CDN) event triggers: [CDNEventsTriggerConfig](~~415674~~).
+         * *   Message Service (MNS) topic triggers: [MnsTopicTriggerConfig](~~415695~~).
+         * *   EventBridge-based triggers: [EventBridgeTriggerConfig](~~2508622~~).
          */
         public Builder triggerConfig(String triggerConfig) {
             this.putBodyParameter("triggerConfig", triggerConfig);
@@ -313,7 +313,7 @@ public class CreateTriggerRequest extends Request {
         }
 
         /**
-         * The name of the trigger. The name contains only letters, digits, hyphens (-), and underscores (\_). The name must be 1 to 128 characters in length and cannot start with a digit or hyphen (-).
+         * The name of the trigger. The name contains only letters, digits, hyphens (-), and underscores (\_). The name must be 1 to 128 characters in length and cannot start with a digit or a hyphen (-).
          */
         public Builder triggerName(String triggerName) {
             this.putBodyParameter("triggerName", triggerName);
@@ -325,14 +325,14 @@ public class CreateTriggerRequest extends Request {
          * The type of the trigger. Valid values:
          * <p>
          * 
-         * *   **oss**: OSS event trigger. For more information, see [Overview](~~62922~~).
-         * *   **log**: Simple Log Service trigger. For more information, see [Overview](~~84386~~).
-         * *   **timer**: time trigger. For more information, see [Overview](~~68172~~).
-         * *   **http**: HTTP trigger. For more information, see [Overview](~~71229~~).
-         * *   **tablestore**: Tablestore trigger. For more information, see [Overview](~~100092~~).
-         * *   **cdn_events**: CDN event trigger. For more information, see [Overview](~~73333~~).
-         * *   **mns_topic**: MNS topic trigger. For more information, see [Overview](~~97032~~).
-         * *   **eventbridge**: EventBridge triggers.
+         * *   **oss**: OSS event triggers. For more information, see [Overview of OSS event triggers](~~62922~~).
+         * *   **log**: Simple Log Service triggers. For more information, see [Configure a Simple Log Service trigger](~~84386~~).
+         * *   **timer**: time triggers. For more information, see [Configure a time trigger](~~68172~~).
+         * *   **http**: HTTP triggers. For more information, see [Overview](~~71229~~).
+         * *   **tablestore**: Tablestore triggers. For more information, see [Configure a Tablestore trigger](~~100092~~).
+         * *   **cdn_events**: CDN event triggers. For more information, see [Overview](~~73333~~).
+         * *   **mns_topic**: MNS topic triggers. For more information, see [MNS topic triggers](~~97032~~).
+         * *   **eventbridge**: EventBridge-based triggers.
          */
         public Builder triggerType(String triggerType) {
             this.putBodyParameter("triggerType", triggerType);

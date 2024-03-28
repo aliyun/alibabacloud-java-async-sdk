@@ -182,7 +182,7 @@ public class GetFunctionAsyncInvokeConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The version or alias of the service to which the function belongs.
+         * The version or alias of the service.
          */
         public Builder qualifier(String qualifier) {
             this.qualifier = qualifier;
