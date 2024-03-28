@@ -81,6 +81,9 @@ public class ListAvailableAccelerateAreasResponseBody extends TeaModel {
         @NameInMap("LocalName")
         private String localName;
 
+        @NameInMap("MultiAz")
+        private Boolean multiAz;
+
         @NameInMap("RegionId")
         private String regionId;
 
@@ -91,6 +94,7 @@ public class ListAvailableAccelerateAreasResponseBody extends TeaModel {
             this.chinaMainland = builder.chinaMainland;
             this.ispTypeList = builder.ispTypeList;
             this.localName = builder.localName;
+            this.multiAz = builder.multiAz;
             this.regionId = builder.regionId;
             this.supportIpv6 = builder.supportIpv6;
         }
@@ -125,6 +129,13 @@ public class ListAvailableAccelerateAreasResponseBody extends TeaModel {
         }
 
         /**
+         * @return multiAz
+         */
+        public Boolean getMultiAz() {
+            return this.multiAz;
+        }
+
+        /**
          * @return regionId
          */
         public String getRegionId() {
@@ -142,11 +153,16 @@ public class ListAvailableAccelerateAreasResponseBody extends TeaModel {
             private Boolean chinaMainland; 
             private java.util.List < String > ispTypeList; 
             private String localName; 
+            private Boolean multiAz; 
             private String regionId; 
             private Boolean supportIpv6; 
 
             /**
-             * Whether China Mainland.
+             * Indicates whether the region is in the Chinese mainland. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder chinaMainland(Boolean chinaMainland) {
                 this.chinaMainland = chinaMainland;
@@ -154,22 +170,11 @@ public class ListAvailableAccelerateAreasResponseBody extends TeaModel {
             }
 
             /**
-             * The line types of EIPs in the acceleration region.
+             * The line type of the elastic IP address (EIP) in the acceleration region. Valid values:
              * <p>
              * 
-             * *   **BGP**: BGP (Multi-ISP) lines
-             * *   **BGP_PRO**: BGP (Multi-ISP) Pro lines
-             * 
-             * If you have the permissions to use single-ISP bandwidth, one of the following values may be returned:
-             * 
-             * *   **ChinaTelecom**: China Telecom (single ISP)
-             * *   **ChinaUnicom**: China Unicom (single ISP)
-             * *   **ChinaMobile**: China Mobile (single ISP)
-             * *   **ChinaTelecom_L2**: China Telecom_L2 (single ISP)
-             * *   **ChinaUnicom_L2**: China Unicom_L2 (single ISP)
-             * *   **ChinaMobile_L2**: China Mobile_L2 (single ISP)
-             * 
-             * > Different acceleration regions support different single-ISP BGP lines.
+             * *   **BGP**: BGP (Multi-ISP) lines.
+             * *   **BGP_PRO**: BGP (Multi-ISP) Pro lines.
              */
             public Builder ispTypeList(java.util.List < String > ispTypeList) {
                 this.ispTypeList = ispTypeList;
@@ -177,10 +182,22 @@ public class ListAvailableAccelerateAreasResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the acceleration region.
+             * The acceleration region name.
              */
             public Builder localName(String localName) {
                 this.localName = localName;
+                return this;
+            }
+
+            /**
+             * Indicates whether multiple zones are supported. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
+             */
+            public Builder multiAz(Boolean multiAz) {
+                this.multiAz = multiAz;
                 return this;
             }
 
@@ -193,11 +210,11 @@ public class ListAvailableAccelerateAreasResponseBody extends TeaModel {
             }
 
             /**
-             * Ipv6 supported, Valid values:
+             * Indicates whether IPv6 is supported. Valid values:
              * <p>
              * 
-             * - true
-             * - false
+             * *   **true**
+             * *   **false**
              */
             public Builder supportIpv6(Boolean supportIpv6) {
                 this.supportIpv6 = supportIpv6;
@@ -270,7 +287,7 @@ public class ListAvailableAccelerateAreasResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the acceleration area.
+             * The acceleration area name.
              */
             public Builder localName(String localName) {
                 this.localName = localName;

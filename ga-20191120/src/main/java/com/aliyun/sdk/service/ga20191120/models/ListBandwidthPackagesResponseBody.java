@@ -86,7 +86,7 @@ public class ListBandwidthPackagesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Details about the bandwidth plans.
+         * The details of the bandwidth plans.
          */
         public Builder bandwidthPackages(java.util.List < BandwidthPackages> bandwidthPackages) {
             this.bandwidthPackages = bandwidthPackages;
@@ -423,7 +423,7 @@ public class ListBandwidthPackagesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The ID of the GA instance that is associated with the bandwidth plan.
+             * The IDs of the GA instances that are associated with the bandwidth plans.
              */
             public Builder accelerators(java.util.List < String > accelerators) {
                 this.accelerators = accelerators;
@@ -450,9 +450,9 @@ public class ListBandwidthPackagesResponseBody extends TeaModel {
              * The type of the bandwidth. Valid values:
              * <p>
              * 
-             * *   **Basic**: standard
-             * *   **Enhanced**: enhanced
-             * *   **Advanced**: premium
+             * *   **Basic**
+             * *   **Enhanced**
+             * *   **Advanced**
              */
             public Builder bandwidthType(String bandwidthType) {
                 this.bandwidthType = bandwidthType;
@@ -463,8 +463,8 @@ public class ListBandwidthPackagesResponseBody extends TeaModel {
              * The metering method that is used when you use the pay-as-you-go billing method.
              * <p>
              * 
-             * *   **PayByTraffic**: pay-by-data-transfer
-             * *   **PayBY95**: pay-by-95th-percentile
+             * *   **PayByTraffic**: pay-by-data-transfer.
+             * *   **PayBY95**: pay-by-95th-percentile.
              */
             public Builder billingType(String billingType) {
                 this.billingType = billingType;
@@ -472,10 +472,10 @@ public class ListBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * Area A of the cross-border acceleration bandwidth plan. Only **China-mainland** (the Chinese mainland) is returned.
+             * Area A of the cross-region acceleration bandwidth plan. **China-mainland** is returned.
              * <p>
              * 
-             * This parameter is returned only if you call this operation on the international site (alibabacloud.com).
+             * This parameter is returned only if you call the operation on the international site (alibabacloud.com).
              */
             public Builder cbnGeographicRegionIdA(String cbnGeographicRegionIdA) {
                 this.cbnGeographicRegionIdA = cbnGeographicRegionIdA;
@@ -483,10 +483,10 @@ public class ListBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * Area B of the cross-border acceleration bandwidth plan. Only **Global** (global) is returned.
+             * Area B of the cross-region acceleration bandwidth plan. **Global** is returned.
              * <p>
              * 
-             * This parameter is returned only if you call this operation on the international site (alibabacloud.com).
+             * This parameter is returned only if you call the operation on the international site (alibabacloud.com).
              */
             public Builder cbnGeographicRegionIdB(String cbnGeographicRegionIdB) {
                 this.cbnGeographicRegionIdB = cbnGeographicRegionIdB;
@@ -494,7 +494,11 @@ public class ListBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method of the bandwidth plan. Only **PREPAY** is returned, which indicates the subscription billing method.
+             * The billing method of the bandwidth plan.
+             * <p>
+             * 
+             * *   **PREPAY**: subscription. This is the default value.
+             * *   **POSTPAY**: pay-as-you-go.
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -518,7 +522,7 @@ public class ListBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the bandwidth plan expires.
+             * The expiration time of the bandwidth plan.
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -534,7 +538,7 @@ public class ListBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The percentage of the minimum bandwidth guaranteed if the pay-by-95th-percentile metering method is used.
+             * The percentage of the guaranteed minimum bandwidth if the pay-by-95th-percentile metering method is used.
              */
             public Builder ratio(Integer ratio) {
                 this.ratio = ratio;
@@ -561,13 +565,13 @@ public class ListBandwidthPackagesResponseBody extends TeaModel {
              * The status of the bandwidth plan. Valid values:
              * <p>
              * 
-             * *   **init**: The bandwidth plan is being initialized.
-             * *   **active**: The bandwidth plan is available.
-             * *   **binded**: The bandwidth plan is associated.
-             * *   **binding**: The bandwidth plan is being associated.
-             * *   **unbinding**: The bandwidth plan is being disassociated.
-             * *   **updating**: The bandwidth plan is being updated.
-             * *   **finacialLocked**: The bandwidth plan is locked due to overdue payments.
+             * *   **init:** The bandwidth plan is being initialized.
+             * *   **active:** The bandwidth plan is available.
+             * *   **binded:** The bandwidth plan is associated with a GA instance.
+             * *   **binding:** The bandwidth plan is being associated with a GA instance.
+             * *   **unbinding:** The bandwidth plan is being disassociated from a GA instance.
+             * *   **updating:** The bandwidth plan is being updated.
+             * *   **finacialLocked:** The bandwidth plan is locked due to overdue payments.
              * *   **locked**: The bandwidth plan is locked.
              */
             public Builder state(String state) {
@@ -587,10 +591,10 @@ public class ListBandwidthPackagesResponseBody extends TeaModel {
              * The type of the bandwidth plan. Valid values:
              * <p>
              * 
-             * *   **Basic**: a basic bandwidth plan
-             * *   **CrossDomain**: a cross-border acceleration bandwidth plan
+             * *   **Basic:** a basic bandwidth plan.
+             * *   **CrossDomain:** a cross-region acceleration bandwidth plan.
              * 
-             * If you call this operation on the China site (aliyun.com), only **Basic** is returned.
+             * If you call the operation on the China site (aliyun.com), **Basic** is returned.
              */
             public Builder type(String type) {
                 this.type = type;

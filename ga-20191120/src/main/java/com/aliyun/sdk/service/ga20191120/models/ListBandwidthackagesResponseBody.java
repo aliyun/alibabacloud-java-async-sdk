@@ -86,7 +86,7 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Details about the bandwidth plans.
+         * The details of the bandwidth plans.
          */
         public Builder bandwidthPackages(java.util.List < BandwidthPackages> bandwidthPackages) {
             this.bandwidthPackages = bandwidthPackages;
@@ -351,7 +351,7 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
             private java.util.List < Tags> tags; 
 
             /**
-             * The ID of the GA instance that is associated with the bandwidth plan.
+             * The IDs of the GA instances that are associated with the bandwidth plans.
              */
             public Builder accelerators(java.util.List < String > accelerators) {
                 this.accelerators = accelerators;
@@ -359,7 +359,7 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The bandwidth value of the bandwidth plan. Unit: Mbit/s.
+             * The bandwidth of the bandwidth plan. Unit: Mbit/s.
              */
             public Builder bandwidth(Integer bandwidth) {
                 this.bandwidth = bandwidth;
@@ -375,7 +375,11 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method of the bandwidth plan. Only **PREPAY** is returned, which indicates the subscription billing method.
+             * The billing method of the bandwidth plan. Valid values:
+             * <p>
+             * 
+             * *   **PREPAY**: subscription. This is the default value.
+             * *   **POSTPAY**: pay-as-you-go.
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -383,7 +387,7 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the bandwidth plan was created.
+             * The time when the bandwidth plan was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -399,7 +403,7 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the bandwidth plan expires.
+             * The expiration time of the bandwidth plan.
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -415,7 +419,7 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request.
+             * The request ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -431,17 +435,17 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the bandwidth plan. Valid values:
+             * The status of the bandwidth plan. Valid values:
              * <p>
              * 
-             * *   **init**: The bandwidth plan is being initialized.
-             * *   **active**: The bandwidth plan is available.
-             * *   **binded**: The bandwidth plan is associated with a GA instance.
-             * *   **binding**: The bandwidth plan is being associated.
-             * *   **unbinding**: The bandwidth plan is being disassociated.
-             * *   **updating**: The bandwidth plan is being updated.
-             * *   **finacialLocked**: The bandwidth plan is locked due to overdue payments.
-             * *   **Locked**: The bandwidth plan is locked.
+             * *   **init:** The bandwidth plan is being initialized.
+             * *   **active:** The bandwidth plan is available.
+             * *   **binded:** The bandwidth plan is associated with a GA instance.
+             * *   **binding:** The bandwidth plan is being associated with a GA instance.
+             * *   **unbinding:** The bandwidth plan is being disassociated from a GA instance.
+             * *   **updating:** The bandwidth plan is being updated.
+             * *   **finacialLocked:** The bandwidth plan is locked due to overdue payments.
+             * *   **locked:** The bandwidth plan is locked.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -449,7 +453,7 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the bandwidth plans.
+             * The tag of the bandwidth plan.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;

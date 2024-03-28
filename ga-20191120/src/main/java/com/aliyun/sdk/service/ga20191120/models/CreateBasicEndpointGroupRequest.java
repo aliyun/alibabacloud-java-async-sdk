@@ -181,9 +181,9 @@ public class CreateBasicEndpointGroupRequest extends Request {
          * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among all requests. The token can contain only ASCII characters.
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
          * 
-         * > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -195,7 +195,7 @@ public class CreateBasicEndpointGroupRequest extends Request {
          * The description of the endpoint group.
          * <p>
          * 
-         * The description cannot exceed 256 characters in length and cannot contain `http://` or `https://`.
+         * The description can be up to 200 characters in length and cannot start with `http://` or `https://`.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -213,10 +213,10 @@ public class CreateBasicEndpointGroupRequest extends Request {
         }
 
         /**
-         * The ID of the region where you want to create the endpoint group.
+         * The ID of the region to which the endpoint group belongs.
          * <p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * You can call the [ListAvailableBusiRegions](~~2253223~~) operation to query the region ID.
          */
         public Builder endpointGroupRegion(String endpointGroupRegion) {
             this.putQueryParameter("EndpointGroupRegion", endpointGroupRegion);

@@ -97,8 +97,8 @@ public class DescribeAcceleratorAutoRenewAttributeResponseBody extends TeaModel 
          * Indicates whether auto-renewal is enabled. Valid values:
          * <p>
          * 
-         * *   **true**: enabled
-         * *   **false** (default): disabled
+         * *   **true**
+         * *   **false**
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.autoRenew = autoRenew;
@@ -106,10 +106,7 @@ public class DescribeAcceleratorAutoRenewAttributeResponseBody extends TeaModel 
         }
 
         /**
-         * The auto-renewal duration. Unit: months.
-         * <p>
-         * 
-         * This parameter is returned only if **AutoRenew** is set to **true**.
+         * The auto-renewal duration. Unit: month.
          */
         public Builder autoRenewDuration(Integer autoRenewDuration) {
             this.autoRenewDuration = autoRenewDuration;

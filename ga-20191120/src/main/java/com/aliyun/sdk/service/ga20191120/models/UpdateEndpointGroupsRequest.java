@@ -239,7 +239,7 @@ public class UpdateEndpointGroupsRequest extends Request {
             private Long weight; 
 
             /**
-             * Enter the IP address, domain name, or instance ID based on the value of the Type parameter.
+             * The IP address, domain name, or instance ID based on the value of Type.
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -265,17 +265,16 @@ public class UpdateEndpointGroupsRequest extends Request {
              * *   **Ip:** a custom IP address.
              * *   **PublicIp:** a public IP address provided by Alibaba Cloud.
              * *   **ECS:** an Elastic Compute Service (ECS) instance.
-             * *   **SLB:** a Server Load Balancer (SLB) instance.
+             * *   **SLB:**: a Server Load Balancer (SLB) instance.
              * *   **ALB:** an Application Load Balancer (ALB) instance.
              * *   **OSS:** an Object Storage Service (OSS) bucket.
              * *   **ENI:** an elastic network interface (ENI).
              * *   **NLB:** a Network Load Balancer (NLB) instance.
              * 
-             * > *   If you set this parameter to **ECS** or **SLB** and the AliyunServiceRoleForGaVpcEndpoint service-linked role does not exist, the system automatically creates the service-linked role.
-             * >*   If you set this parameter to **ALB** and the AliyunServiceRoleForGaAlb service-linked role does not exist, the system automatically creates the service-linked role.
-             * >*   If you set this parameter to **OSS** and the AliyunServiceRoleForGaOss service-linked role does not exist, the system automatically creates the service-linked role.
-             * 
-             * For more information, see [Service-linked roles](~~178360~~).
+             * > *   If you set this parameter to **ECS** or **SLB** and the AliyunServiceRoleForGaVpcEndpoint service-linked role does not exist, the system automatically creates the role.
+             * >*   If you set this parameter to **ALB** and the AliyunServiceRoleForGaAlb service-linked role does not exist, the system automatically creates the role.
+             * >*   If you set this parameter to **OSS** and the AliyunServiceRoleForGaOss service-linked role does not exist, the system automatically creates the role.
+             * > >For more information, see [Service-linked roles](~~178360~~).
              */
             public Builder type(String type) {
                 this.type = type;
@@ -288,7 +287,7 @@ public class UpdateEndpointGroupsRequest extends Request {
              * 
              * Valid values: **0** to **255**.
              * 
-             * >  If you set the weight of an endpoint to 0, the GA instance stops distributing traffic to the endpoint.
+             * >  If you set the weight of an endpoint to 0, GA stops distributing traffic to the endpoint. Proceed with caution.
              */
             public Builder weight(Long weight) {
                 this.weight = weight;
@@ -611,7 +610,7 @@ public class UpdateEndpointGroupsRequest extends Request {
             }
 
             /**
-             * The endpoint ID.
+             * The ID of the endpoint.
              */
             public Builder endpointGroupId(String endpointGroupId) {
                 this.endpointGroupId = endpointGroupId;
@@ -637,7 +636,7 @@ public class UpdateEndpointGroupsRequest extends Request {
              * *   **HTTPS**
              * 
              * > *   You can specify this parameter only if the listener that is associated with the endpoint group uses HTTP or HTTPS.
-             * >*   The backend service protocol of an HTTP listener must be HTTP.
+             * > *   The backend service protocol of an HTTP listener must be HTTP.
              */
             public Builder endpointRequestProtocol(String endpointRequestProtocol) {
                 this.endpointRequestProtocol = endpointRequestProtocol;
@@ -657,7 +656,7 @@ public class UpdateEndpointGroupsRequest extends Request {
             }
 
             /**
-             * The interval at which health checks are performed. Unit: seconds. Valid values: **1** to **50**.
+             * The interval between two consecutive health checks. Unit: seconds. Valid values: **1** to **50**.
              */
             public Builder healthCheckIntervalSeconds(Long healthCheckIntervalSeconds) {
                 this.healthCheckIntervalSeconds = healthCheckIntervalSeconds;
@@ -687,9 +686,9 @@ public class UpdateEndpointGroupsRequest extends Request {
              * The protocol over which health check requests are sent. Valid values:
              * <p>
              * 
-             * *   **tcp**
-             * *   **http**
-             * *   **https**
+             * *   **tcp** or **TCP**
+             * *   **http** or **HTTP**
+             * *   **https** or **HTTPS**
              */
             public Builder healthCheckProtocol(String healthCheckProtocol) {
                 this.healthCheckProtocol = healthCheckProtocol;

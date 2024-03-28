@@ -33,6 +33,10 @@ public class UpdateListenerRequest extends Request {
     private String description;
 
     @Query
+    @NameInMap("HttpVersion")
+    private String httpVersion;
+
+    @Query
     @NameInMap("IdleTimeout")
     private Integer idleTimeout;
 
@@ -80,6 +84,7 @@ public class UpdateListenerRequest extends Request {
         this.clientAffinity = builder.clientAffinity;
         this.clientToken = builder.clientToken;
         this.description = builder.description;
+        this.httpVersion = builder.httpVersion;
         this.idleTimeout = builder.idleTimeout;
         this.listenerId = builder.listenerId;
         this.name = builder.name;
@@ -138,6 +143,13 @@ public class UpdateListenerRequest extends Request {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return httpVersion
+     */
+    public String getHttpVersion() {
+        return this.httpVersion;
     }
 
     /**
@@ -216,6 +228,7 @@ public class UpdateListenerRequest extends Request {
         private String clientAffinity; 
         private String clientToken; 
         private String description; 
+        private String httpVersion; 
         private Integer idleTimeout; 
         private String listenerId; 
         private String name; 
@@ -238,6 +251,7 @@ public class UpdateListenerRequest extends Request {
             this.clientAffinity = request.clientAffinity;
             this.clientToken = request.clientToken;
             this.description = request.description;
+            this.httpVersion = request.httpVersion;
             this.idleTimeout = request.idleTimeout;
             this.listenerId = request.listenerId;
             this.name = request.name;
@@ -305,7 +319,28 @@ public class UpdateListenerRequest extends Request {
         }
 
         /**
-         * IdleTimeout.
+         * The maximum version of the HTTP protocol. Valid values:
+         * <p>
+         * 
+         * *   **http3**
+         * *   **http2**
+         * *   **http1.1**
+         * 
+         * >  Only HTTPS listeners support this parameter.
+         */
+        public Builder httpVersion(String httpVersion) {
+            this.putQueryParameter("HttpVersion", httpVersion);
+            this.httpVersion = httpVersion;
+            return this;
+        }
+
+        /**
+         * The timeout period for idle connections. Unit: seconds.
+         * <p>
+         * 
+         * *   TCP: 10-900. Default value: 900. Unit: seconds.
+         * *   UDP: 10-20. Default value: 20. Unit: seconds.
+         * *   HTTP/HTTPS: 1-60. Default value: 15. Unit: seconds.
          */
         public Builder idleTimeout(Integer idleTimeout) {
             this.putQueryParameter("IdleTimeout", idleTimeout);
@@ -388,7 +423,12 @@ public class UpdateListenerRequest extends Request {
         }
 
         /**
-         * RequestTimeout.
+         * The timeout period for HTTP or HTTPS requests.
+         * <p>
+         * 
+         * Valid values: 1 to 180. Default value: 60. Unit: seconds.
+         * 
+         * >  This parameter takes effect only for HTTP or HTTPS listeners. If the backend server does not respond within the timeout period, GA returns an HTTP 504 error code to the client.
          */
         public Builder requestTimeout(Integer requestTimeout) {
             this.putQueryParameter("RequestTimeout", requestTimeout);

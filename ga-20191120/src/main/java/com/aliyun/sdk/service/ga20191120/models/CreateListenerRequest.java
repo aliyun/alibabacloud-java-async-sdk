@@ -42,6 +42,10 @@ public class CreateListenerRequest extends Request {
     private java.util.List < EndpointGroupConfigurations> endpointGroupConfigurations;
 
     @Query
+    @NameInMap("HttpVersion")
+    private String httpVersion;
+
+    @Query
     @NameInMap("IdleTimeout")
     private Integer idleTimeout;
 
@@ -92,6 +96,7 @@ public class CreateListenerRequest extends Request {
         this.customRoutingEndpointGroupConfigurations = builder.customRoutingEndpointGroupConfigurations;
         this.description = builder.description;
         this.endpointGroupConfigurations = builder.endpointGroupConfigurations;
+        this.httpVersion = builder.httpVersion;
         this.idleTimeout = builder.idleTimeout;
         this.name = builder.name;
         this.portRanges = builder.portRanges;
@@ -164,6 +169,13 @@ public class CreateListenerRequest extends Request {
      */
     public java.util.List < EndpointGroupConfigurations> getEndpointGroupConfigurations() {
         return this.endpointGroupConfigurations;
+    }
+
+    /**
+     * @return httpVersion
+     */
+    public String getHttpVersion() {
+        return this.httpVersion;
     }
 
     /**
@@ -244,6 +256,7 @@ public class CreateListenerRequest extends Request {
         private java.util.List < CustomRoutingEndpointGroupConfigurations> customRoutingEndpointGroupConfigurations; 
         private String description; 
         private java.util.List < EndpointGroupConfigurations> endpointGroupConfigurations; 
+        private String httpVersion; 
         private Integer idleTimeout; 
         private String name; 
         private java.util.List < PortRanges> portRanges; 
@@ -268,6 +281,7 @@ public class CreateListenerRequest extends Request {
             this.customRoutingEndpointGroupConfigurations = request.customRoutingEndpointGroupConfigurations;
             this.description = request.description;
             this.endpointGroupConfigurations = request.endpointGroupConfigurations;
+            this.httpVersion = request.httpVersion;
             this.idleTimeout = request.idleTimeout;
             this.name = request.name;
             this.portRanges = request.portRanges;
@@ -359,6 +373,22 @@ public class CreateListenerRequest extends Request {
         public Builder endpointGroupConfigurations(java.util.List < EndpointGroupConfigurations> endpointGroupConfigurations) {
             this.putQueryParameter("EndpointGroupConfigurations", endpointGroupConfigurations);
             this.endpointGroupConfigurations = endpointGroupConfigurations;
+            return this;
+        }
+
+        /**
+         * The maximum version of the HTTP protocol. Valid values:
+         * <p>
+         * 
+         * *   **http3**
+         * *   **http2** (default)
+         * *   **http1.1**
+         * 
+         * >  Only HTTPS listeners support this parameter.
+         */
+        public Builder httpVersion(String httpVersion) {
+            this.putQueryParameter("HttpVersion", httpVersion);
+            this.httpVersion = httpVersion;
             return this;
         }
 

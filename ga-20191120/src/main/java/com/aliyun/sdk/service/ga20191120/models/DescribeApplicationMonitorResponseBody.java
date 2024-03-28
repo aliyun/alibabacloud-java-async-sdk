@@ -294,18 +294,14 @@ public class DescribeApplicationMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * The state of the application monitor task. Valid values:
+         * The status of the origin probing task. Valid values:
          * <p>
          * 
-         * - **init**
-         * 
-         * - **active**
-         * 
-         * - **updating**
-         * 
-         * - **inactive**
-         * 
-         * - **deleting**
+         * *   **init**
+         * *   **active**
+         * *   **updating**
+         * *   **inactive**
+         * *   **deleting**
          */
         public Builder state(String state) {
             this.state = state;
@@ -397,7 +393,7 @@ public class DescribeApplicationMonitorResponseBody extends TeaModel {
             private String ispName; 
 
             /**
-             * The ID of the city where the probe point of the ISP is deployed.
+             * The ID of the city in which the probe point of the ISP is deployed.
              */
             public Builder city(String city) {
                 this.city = city;
@@ -405,7 +401,7 @@ public class DescribeApplicationMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the city where the probe point of the ISP is deployed.
+             * The name of the city in which the probe point of the ISP is deployed.
              */
             public Builder cityName(String cityName) {
                 this.cityName = cityName;

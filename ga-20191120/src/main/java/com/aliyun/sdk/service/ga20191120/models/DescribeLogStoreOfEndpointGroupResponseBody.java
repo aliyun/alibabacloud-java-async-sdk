@@ -146,7 +146,7 @@ public class DescribeLogStoreOfEndpointGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The response parameters.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +170,7 @@ public class DescribeLogStoreOfEndpointGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the region to which the Simple Log Service project belongs.
+         * The region ID of the Simple Log Service project.
          */
         public Builder slsRegionId(String slsRegionId) {
             this.slsRegionId = slsRegionId;
@@ -178,7 +178,11 @@ public class DescribeLogStoreOfEndpointGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the GA instance is associated with the project.
+         * Indicates whether the endpoint group is bound to the Simple Log Service project.
+         * <p>
+         * 
+         * *   **on:** The endpoint group is bound to the Simple Log Service project.
+         * *   **off:** The endpoint group is not bound to the Simple Log Service project.
          */
         public Builder status(String status) {
             this.status = status;

@@ -70,7 +70,12 @@ public class CreateBasicAcceleratorResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the order.
+         * The order ID.
+         * <p>
+         * 
+         * This parameter is returned only if ChargeType is set to PREPAY.
+         * 
+         * If **AutoPay** is set to **false**, go to [Order Center](https://usercenter2-intl.aliyun.com/order/list) to complete the payment after an order is generated.
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;

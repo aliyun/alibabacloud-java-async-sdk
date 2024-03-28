@@ -315,12 +315,11 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
         }
 
         /**
-         * 基础型全球加速实例是否开启跨境线路功能。取值：
+         * Indicates whether cross-border acceleration is enabled for the basic GA instance. Valid values:
          * <p>
          * 
-         * - **true**：开启跨境线路功能，可以加速跨境线路。
-         * 
-         * - **false**：关闭跨境线路功能，不可以加速跨境线路。
+         * *   **true**
+         * *   **false**
          */
         public Builder crossBorderStatus(Boolean crossBorderStatus) {
             this.crossBorderStatus = crossBorderStatus;
@@ -626,7 +625,7 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key of the basic GA instance.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -634,7 +633,7 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value of the basic GA instance.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;

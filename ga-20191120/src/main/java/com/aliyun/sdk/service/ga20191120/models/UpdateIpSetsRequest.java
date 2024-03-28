@@ -135,10 +135,10 @@ public class UpdateIpSetsRequest extends Request {
             private String ipSetId; 
 
             /**
-             * The new bandwidth of the acceleration region. Unit: Mbit/s.
+             * The new bandwidth that you want to allocate to the acceleration regions. Unit: Mbit/s.
              * <p>
              * 
-             * You can specify the bandwidth for up to 100 acceleration regions.
+             * You must allocate at least 2 Mbit/s of bandwidth to each acceleration region. You can specify the bandwidth for up to 100 acceleration regions.
              */
             public Builder bandwidth(Integer bandwidth) {
                 this.bandwidth = bandwidth;
@@ -146,7 +146,7 @@ public class UpdateIpSetsRequest extends Request {
             }
 
             /**
-             * The ID of the acceleration region that you want to modify.
+             * The IDs of the acceleration regions that you want to modify.
              * <p>
              * 
              * You can specify the IDs of up to 100 acceleration regions.

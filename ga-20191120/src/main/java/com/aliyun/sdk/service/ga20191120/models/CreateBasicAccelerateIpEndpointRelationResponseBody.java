@@ -118,10 +118,10 @@ public class CreateBasicAccelerateIpEndpointRelationResponseBody extends TeaMode
         }
 
         /**
-         * The association status between the accelerated IP address and endpoint.
+         * The status of the mapping between the accelerated IP address and the endpoint.
          * <p>
          * 
-         * >  This parameter is not in use and empty.
+         * >  This parameter is not in use.
          */
         public Builder state(String state) {
             this.state = state;

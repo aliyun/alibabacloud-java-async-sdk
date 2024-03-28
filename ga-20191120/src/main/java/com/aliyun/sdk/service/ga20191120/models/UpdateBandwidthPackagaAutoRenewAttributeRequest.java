@@ -139,11 +139,13 @@ public class UpdateBandwidthPackagaAutoRenewAttributeRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable auto-renewal for the bandwidth plan. Valid values:
+         * Specifies whether to enable auto-renewal. Valid values:
          * <p>
          * 
-         * *   **true**: enables auto-renewal.
-         * *   **false** (default): disables auto-renewal.
+         * *   **true**
+         * *   **false** (default)
+         * 
+         * >  You must specify **AutoRenew** or **RenewalStatus**.
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -155,7 +157,7 @@ public class UpdateBandwidthPackagaAutoRenewAttributeRequest extends Request {
          * The auto-renewal duration. Unit: months. Valid values: **1** to **12**.
          * <p>
          * 
-         * > : This parameter takes effect only if **AutoRenew** is set to **true**.
+         * > This parameter takes effect only if **AutoRenew** is set to **true**.
          */
         public Builder autoRenewDuration(Integer autoRenewDuration) {
             this.putQueryParameter("AutoRenewDuration", autoRenewDuration);
@@ -167,9 +169,9 @@ public class UpdateBandwidthPackagaAutoRenewAttributeRequest extends Request {
          * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
          * 
-         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
+         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -213,9 +215,9 @@ public class UpdateBandwidthPackagaAutoRenewAttributeRequest extends Request {
          * 
          * *   **AutoRenewal**: The bandwidth plan is automatically renewed.
          * *   **Normal**: You must manually renew the bandwidth plan.
-         * *   **NotRenewal**: Choose this option if you do not want to renew the bandwidth plan after it expires. The system sends only a non-renewal reminder three days before the expiration date. The system no longer sends notifications to remind you to renew the bandwidth plan. You can change the value of this parameter from NotRenewal to Normal for a bandwidth plan, and then manually renew the bandwidth plan. You can also set the RenewalStatus parameter to **AutoRenewal**.
-         * 
-         * > The **RenewalStatus** parameter takes precedence over the **AutoRenew** parameter. If you do not set **RenewalStatus**, the **AutoRenew** parameter is used by default.
+         * *   **NotRenewal**: The bandwidth plan is not renewed after it expires. The system sends only a non-renewal reminder three days before the expiration date. To renew a bandwidth plan for which you set RenewalStatus to NotRenewal, you can change the value of RenewalStatus from NotRenewal to Normal, and then manually renew the bandwidth plan. You can also set RenewalStatus to **AutoRenewal**.
+         * > *   You must specify **AutoRenew** or **RenewalStatus**.
+         * > *   **RenewalStatus** takes precedence over **AutoRenew**. If you do not specify **RenewalStatus**, **AutoRenew** is used.
          */
         public Builder renewalStatus(String renewalStatus) {
             this.putQueryParameter("RenewalStatus", renewalStatus);

@@ -127,7 +127,7 @@ public class UpdateAcceleratorCrossBorderModeRequest extends Request {
          * The type of transmission network of the GA instance. Valid values:
          * <p>
          * 
-         * *   **bgpPro**: BGP (Multi-ISP) Pro. BGP (Multi-ISP) Pro lines are used for cross-border acceleration. You do not need to perform real-name verification.
+         * *   **bgpPro**: BGP (Multi-ISP) Pro. BGP (Multi-ISP) Pro lines are used for cross-border acceleration. You do not need to complete real-name verification.
          * *   **private**: cross-border Express Connect circuit. Cross-border Express Connect circuits provide better acceleration performance but require real-name verification.
          */
         public Builder crossBorderMode(String crossBorderMode) {

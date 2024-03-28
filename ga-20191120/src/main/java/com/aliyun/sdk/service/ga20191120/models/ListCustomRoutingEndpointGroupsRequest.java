@@ -150,7 +150,12 @@ public class ListCustomRoutingEndpointGroupsRequest extends Request {
         }
 
         /**
-         * AccessLogSwitch.
+         * Specifies whether the access log feature is enabled.
+         * <p>
+         * 
+         * You can set the parameter to **on**.
+         * 
+         * If you leave the parameter empty, all endpoint groups are returned.
          */
         public Builder accessLogSwitch(String accessLogSwitch) {
             this.putQueryParameter("AccessLogSwitch", accessLogSwitch);
@@ -177,7 +182,7 @@ public class ListCustomRoutingEndpointGroupsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * The page number. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -186,7 +191,7 @@ public class ListCustomRoutingEndpointGroupsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
+         * The number of entries per page. Maximum value: **50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

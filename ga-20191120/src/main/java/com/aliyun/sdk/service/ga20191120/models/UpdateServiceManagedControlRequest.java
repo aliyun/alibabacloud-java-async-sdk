@@ -145,10 +145,10 @@ public class UpdateServiceManagedControlRequest extends Request {
         }
 
         /**
-         * The type of the resource whose control mode you want to change. Valid values:
+         * The type of the resource whose control mode you want to change.
          * <p>
          * 
-         * **Accelerator**: standard GA instance.
+         * Set the value to **Accelerator**, which specifies a standard GA instance.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -157,10 +157,10 @@ public class UpdateServiceManagedControlRequest extends Request {
         }
 
         /**
-         * The control mode of the resource. Valid values:
+         * The control mode of the resource.
          * <p>
          * 
-         * **false**: changes the control mode of the resource from managed mode to unmanaged mode.
+         * Set the value to **false**, which changes the control mode of the resource from managed mode to unmanaged mode.
          * 
          * >  You can change the control mode only from managed mode to unmanaged mode.
          */

@@ -250,7 +250,7 @@ public class ListEndpointGroupsRequest extends Request {
         }
 
         /**
-         * The name of the endpoint group.
+         * The tag of the endpoint group.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -304,10 +304,10 @@ public class ListEndpointGroupsRequest extends Request {
             private String value; 
 
             /**
-             * The tag key of the Endpoint Group. The tag key cannot be an empty string.
+             * The tag key of the endpoint group. It cannot be an empty string.
              * <p>
              * 
-             * The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
+             * The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`.
              * 
              * You can specify up to 20 tag keys.
              */
@@ -317,10 +317,10 @@ public class ListEndpointGroupsRequest extends Request {
             }
 
             /**
-             * The tag value of the Endpoint Group. The tag value can be an empty string.
+             * The tag value of the endpoint group. The tag value can be an empty string.
              * <p>
              * 
-             * The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
+             * The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.
              * 
              * You can specify up to 20 tag values.
              */

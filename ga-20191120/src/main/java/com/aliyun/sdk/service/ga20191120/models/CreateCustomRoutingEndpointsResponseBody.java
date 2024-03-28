@@ -58,7 +58,7 @@ public class CreateCustomRoutingEndpointsResponseBody extends TeaModel {
         }
 
         /**
-         * The IDs of the endpoints.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

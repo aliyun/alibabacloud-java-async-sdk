@@ -146,7 +146,7 @@ public class ListAvailableBusiRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * The region name.
+             * The name of the region.
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -154,7 +154,7 @@ public class ListAvailableBusiRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the region is a point of presence (PoP) of Alibaba Cloud. Valid values:
+             * Indicates whether it is a point of presence (PoP) of Alibaba Cloud. Valid values:
              * <p>
              * 
              * *   **true**
@@ -166,7 +166,7 @@ public class ListAvailableBusiRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * The ID of the region.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

@@ -120,9 +120,9 @@ public class CreateBasicAccelerateIpEndpointRelationsRequest extends Request {
          * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
          * 
-         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
+         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -188,7 +188,9 @@ public class CreateBasicAccelerateIpEndpointRelationsRequest extends Request {
              * The IDs of the accelerated IP addresses.
              * <p>
              * 
-             * You can specify at most 20 IP address IDs.
+             * You can call the [ListBasicAccelerateIps](~~2253393~~) operation to query the IDs of the accelerated IP addresses.
+             * 
+             * You can specify up to 20 IP address IDs.
              */
             public Builder accelerateIpId(String accelerateIpId) {
                 this.accelerateIpId = accelerateIpId;
@@ -198,6 +200,8 @@ public class CreateBasicAccelerateIpEndpointRelationsRequest extends Request {
             /**
              * The IDs of the endpoints.
              * <p>
+             * 
+             * You can call the [ListBasicEndpoints](~~2253406~~) to query the IDs of the endpoints.
              * 
              * You can specify up to 20 endpoint IDs.
              */

@@ -127,7 +127,7 @@ public class CreateSpareIpsRequest extends Request {
          * 
          * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
          * 
-         * > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -158,10 +158,10 @@ public class CreateSpareIpsRequest extends Request {
         }
 
         /**
-         * The secondary IP addresses to be created for the CNAME. If an acceleration area of the GA instance become unavailable, GA redirects the access traffic to the secondary IP addresses.
+         * The secondary IP addresses to be created for the CNAME. If an acceleration area of the GA instance becomes unavailable, access traffic is redirected to the secondary IP addresses.
          * <p>
          * 
-         * You can specify up to 2 secondary IP addresses. Separate IP addresses with commas (,).
+         * You can specify up to two secondary IP addresses.
          */
         public Builder spareIps(java.util.List < String > spareIps) {
             this.putQueryParameter("SpareIps", spareIps);

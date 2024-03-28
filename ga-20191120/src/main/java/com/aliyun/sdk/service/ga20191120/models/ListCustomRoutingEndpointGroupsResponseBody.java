@@ -86,7 +86,7 @@ public class ListCustomRoutingEndpointGroupsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The configuration information about the endpoint groups.
+         * The configuration information about the endpoint group.
          */
         public Builder endpointGroups(java.util.List < EndpointGroups> endpointGroups) {
             this.endpointGroups = endpointGroups;
@@ -182,14 +182,15 @@ public class ListCustomRoutingEndpointGroupsResponseBody extends TeaModel {
             private Boolean isManaged; 
 
             /**
-             * Managed policy action name, Valid values:
+             * The name of the action on the managed instance. Valid values:
              * <p>
-             * - Create
-             * - Update
-             * - Delete
-             * - Associate
-             * - UserUnmanaged
-             * - CreateChild
+             * 
+             * *   **Create**
+             * *   **Update**
+             * *   **Delete**
+             * *   **Associate**
+             * *   **UserUnmanaged**
+             * *   **CreateChild**
              */
             public Builder action(String action) {
                 this.action = action;
@@ -197,18 +198,18 @@ public class ListCustomRoutingEndpointGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Sub resource type, Valid values:
+             * The type of the child resource. Valid values:
              * <p>
              * 
-             * - Listener
-             * - IpSet
-             * - EndpointGroup
-             * - ForwardingRule
-             * - Endpoint
-             * - EndpointGroupDestination
-             * - EndpointPolicy
+             * *   **Listener**: listener
+             * *   **IpSet**: acceleration region
+             * *   **EndpointGroup**: endpoint group
+             * *   **ForwardingRule**: forwarding rule
+             * *   **Endpoint**: endpoint
+             * *   **EndpointGroupDestination**: protocol mapping of an endpoint group associated with a custom routing listener
+             * *   **EndpointPolicy**: traffic policy of an endpoint associated with a custom routing listener
              * 
-             * >Only valid when the Action parameter is CreateChild.
+             * >  This parameter takes effect only if **Action** is set to **CreateChild**.
              */
             public Builder childType(String childType) {
                 this.childType = childType;
@@ -216,12 +217,11 @@ public class ListCustomRoutingEndpointGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Is the managed policy action managed, Valid values:
+             * Indicates whether the specified actions are managed.
              * <p>
              * 
-             * - true: The managed policy action is managed, and users do not have permission to perform the operation specified in the Action on the managed instance.
-             * 
-             * - false: The managed policy action is not managed, and users have permission to perform the operation specified in the Action on the managed instance.
+             * *   **true**: Users cannot perform the specified actions on the managed instance.
+             * *   **false**: Users can perform the specified actions on the managed instance.
              */
             public Builder isManaged(Boolean isManaged) {
                 this.isManaged = isManaged;
@@ -418,7 +418,7 @@ public class ListCustomRoutingEndpointGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The list of endpoint group IP addresses.
+             * The endpoint group IP addresses.
              */
             public Builder endpointGroupIpList(java.util.List < String > endpointGroupIpList) {
                 this.endpointGroupIpList = endpointGroupIpList;
@@ -458,10 +458,10 @@ public class ListCustomRoutingEndpointGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The service ID to which the managed instance belongs.
+             * The ID of the service that manages the instance.
              * <p>
              * 
-             * >  Valid only when the ServiceManaged parameter is True.
+             * >  This parameter takes effect only if **ServiceManaged** is set to **True**.
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;
@@ -469,11 +469,11 @@ public class ListCustomRoutingEndpointGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Is it a managed instance. Valid values:
+             * Indicates whether the GA instance is managed. Valid values:
              * <p>
              * 
-             * - true
-             * - false
+             * *   **true**
+             * *   **false**
              */
             public Builder serviceManaged(Boolean serviceManaged) {
                 this.serviceManaged = serviceManaged;
@@ -481,7 +481,14 @@ public class ListCustomRoutingEndpointGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * A list of action policies that users can execute on this managed instance.
+             * The actions that users can perform on the managed instance.
+             * <p>
+             * 
+             * > 
+             * 
+             * *   This parameter takes effect only if **ServiceManaged** is set to **True**.
+             * 
+             * *   Users can perform only specific actions on a managed instance.
              */
             public Builder serviceManagedInfos(java.util.List < ServiceManagedInfos> serviceManagedInfos) {
                 this.serviceManagedInfos = serviceManagedInfos;
@@ -489,13 +496,13 @@ public class ListCustomRoutingEndpointGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the endpoint group.
+             * The status of the endpoint group. Valid values:
              * <p>
              * 
-             * *   **init**: being initialized
-             * *   **active**: running as expected
-             * *   **updating**: being updated
-             * *   **deleting**: being deleted
+             * *   **init**
+             * *   **active**
+             * *   **updating**
+             * *   **deleting**
              */
             public Builder state(String state) {
                 this.state = state;

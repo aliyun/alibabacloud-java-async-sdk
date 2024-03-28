@@ -117,9 +117,9 @@ public class TagResourcesRequest extends Request {
          * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
          * 
-         * > If you do not specify this parameter, the system automatically uses the value of **RequestId** as the value of **ClientToken**. The value of **RequestId** for each API request may be different.
+         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -146,7 +146,7 @@ public class TagResourcesRequest extends Request {
          * *   If you set **ResourceType** to **acl**, set the value of ResourceId to the ID of an ACL.
          * *   If you set **ResourceType** to **endpointgroup**, set the value of ResourceId to the ID of an endpoint group.
          * 
-         * The parameter is required. You can enter up to 50 GA resource IDs.
+         * This parameter is required. You can enter up to 50 GA resource IDs.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -158,11 +158,11 @@ public class TagResourcesRequest extends Request {
          * The type of the resource to which you want to add tags. Valid values:
          * <p>
          * 
-         * *   **accelerator**: a standard GA instance
-         * *   **basicaccelerator**: a basic GA instance
-         * *   **bandwidthpackage**: a bandwidth plan
-         * *   **acl**: an ACL
-         * *   **endpointgroup**: an endpoint group
+         * *   **accelerator:** a standard GA instance.
+         * *   **basicaccelerator:** a basic GA instance.
+         * *   **bandwidthpackage:** a bandwidth plan.
+         * *   **acl:** an ACL.
+         * *   **endpointgroup:** an endpoint group of a standard GA instance. You cannot call the TagResources operation to add tags to an endpoint group of a basic GA instance.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

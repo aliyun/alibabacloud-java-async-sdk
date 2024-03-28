@@ -114,7 +114,10 @@ public class CreateBasicAccelerateIpEndpointRelationRequest extends Request {
         } 
 
         /**
-         * The ID of the accelerated IP address of the basic GA instance.
+         * The ID of the accelerated IP address.
+         * <p>
+         * 
+         * You can call the [ListBasicAccelerateIps](~~2253393~~) operation to query the ID of the accelerated IP address.
          */
         public Builder accelerateIpId(String accelerateIpId) {
             this.putQueryParameter("AccelerateIpId", accelerateIpId);
@@ -135,9 +138,9 @@ public class CreateBasicAccelerateIpEndpointRelationRequest extends Request {
          * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
          * 
-         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
+         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -146,7 +149,10 @@ public class CreateBasicAccelerateIpEndpointRelationRequest extends Request {
         }
 
         /**
-         * The ID of the endpoint that is associated with the basic GA instance.
+         * The ID of the endpoint.
+         * <p>
+         * 
+         * You can call the [ListBasicEndpoints](~~2253406~~) operation to query the ID of the endpoint.
          */
         public Builder endpointId(String endpointId) {
             this.putQueryParameter("EndpointId", endpointId);

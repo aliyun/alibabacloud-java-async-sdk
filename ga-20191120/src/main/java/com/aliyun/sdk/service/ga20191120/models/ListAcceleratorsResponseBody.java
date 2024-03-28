@@ -193,7 +193,7 @@ public class ListAcceleratorsResponseBody extends TeaModel {
              * The bandwidth type that is provided by the basic bandwidth plan. Valid values:
              * <p>
              * 
-             * *   **Basic**.
+             * *   **Basic**
              * *   **Enhanced**
              * *   **Advanced**
              */
@@ -308,7 +308,7 @@ public class ListAcceleratorsResponseBody extends TeaModel {
              * The access mode of the acceleration area. Valid values:
              * <p>
              * 
-             * *   **UserDefine**: custom nearby access mode. You can select acceleration areas and regions based on your business requirements. GA allocates a separate EIP to each acceleration region.
+             * *   **UserDefine**: custom nearby access mode. You can select acceleration areas and regions based on your business requirements. GA allocates a separate elastic IP address (EIP) to each acceleration region.
              * *   **Anycast**: automatic nearby access mode. You do not need to specify an acceleration area. GA allocates an Anycast EIP to multiple regions across the globe. Users can connect to the nearest access point of the Alibaba Cloud global transmission network by sending requests to the Anycast EIP.
              */
             public Builder accessMode(String accessMode) {
@@ -374,7 +374,7 @@ public class ListAcceleratorsResponseBody extends TeaModel {
             private Boolean isManaged; 
 
             /**
-             * The name of the action performed on the managed instance. Valid values:
+             * The name of the action that is performed on the managed instance. Valid values:
              * <p>
              * 
              * *   **Create**
@@ -393,15 +393,15 @@ public class ListAcceleratorsResponseBody extends TeaModel {
              * The type of the child resource. Valid values:
              * <p>
              * 
-             * *   **Listener**: listener
-             * *   **IpSet**: acceleration region
-             * *   **EndpointGroup**: endpoint group
-             * *   **ForwardingRule**: forwarding rule
-             * *   **Endpoint**: endpoint
-             * *   **EndpointGroupDestination**: protocol mapping of an endpoint group associated with a custom routing listener
-             * *   **EndpointPolicy**: traffic policy of an endpoint associated with a custom routing listener
+             * *   **Listener**: listener.
+             * *   **IpSet**: acceleration region.
+             * *   **EndpointGroup**: endpoint group.
+             * *   **ForwardingRule**: forwarding rule.
+             * *   **Endpoint**: endpoint.
+             * *   **EndpointGroupDestination**: protocol mapping of an endpoint group associated with a custom routing listener.
+             * *   **EndpointPolicy**: traffic policy of an endpoint associated with a custom routing listener.
              * 
-             * >  This parameter takes effect only if **Action** is set to **CreateChild**.
+             * >  This parameter takes effect only if the value of **Action** is **CreateChild**.
              */
             public Builder childType(String childType) {
                 this.childType = childType;
@@ -412,8 +412,8 @@ public class ListAcceleratorsResponseBody extends TeaModel {
              * Indicates whether the specified actions are managed. Valid values:
              * <p>
              * 
-             * *   **true**: The specified actions are managed, and you cannot perform the specified actions on the managed instance.
-             * *   **false**: The specified actions are not managed, and you can perform the specified actions on the managed instance.
+             * *   **true**: The specified actions are managed, and users cannot perform the specified actions on the managed instance.
+             * *   **false**: The specified actions are not managed, and users can perform the specified actions on the managed instance.
              */
             public Builder isManaged(Boolean isManaged) {
                 this.isManaged = isManaged;
@@ -835,7 +835,7 @@ public class ListAcceleratorsResponseBody extends TeaModel {
             }
 
             /**
-             * The bandwidth value of the GA instance. Unit: Mbit/s.
+             * The bandwidth of the GA instance. Unit: Mbit/s.
              */
             public Builder bandwidth(Integer bandwidth) {
                 this.bandwidth = bandwidth;
@@ -882,7 +882,8 @@ public class ListAcceleratorsResponseBody extends TeaModel {
              * The type of cross-border acceleration. This parameter is returned for GA instances whose bandwidth metering method is pay-by-data-transfer.
              * <p>
              * 
-             * Only **bpgPro** may be returned, which indicates BGP (Multi-ISP) Pro lines.
+             * *   **bpgPro**: BGP (Multi-ISP) Pro lines.
+             * *   **private**: cross-border Express Connect circuit.
              */
             public Builder crossBorderMode(String crossBorderMode) {
                 this.crossBorderMode = crossBorderMode;
@@ -913,7 +914,7 @@ public class ListAcceleratorsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Anti-DDoS Pro/Premium instance that is associated with the GA instance.
+             * The ID of the Anti-DDoS Pro or Anti-DDOS Premium instance that is associated with the GA instance.
              */
             public Builder ddosId(String ddosId) {
                 this.ddosId = ddosId;
@@ -929,7 +930,7 @@ public class ListAcceleratorsResponseBody extends TeaModel {
             }
 
             /**
-             * The canonical name (CNAME) that is assigned to the GA instance.
+             * The CNAME that is assigned to the GA instance.
              */
             public Builder dnsName(String dnsName) {
                 this.dnsName = dnsName;
@@ -969,7 +970,7 @@ public class ListAcceleratorsResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the GA instance. Only **cn-hangzhou** may be returned.
+             * The ID of the region where GA instance is deployed. Only **cn-hangzhou** may be returned.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -985,7 +986,7 @@ public class ListAcceleratorsResponseBody extends TeaModel {
             }
 
             /**
-             * The CNAME that is used to associate the GA instance with an Anti-DDoS Pro/Premium instance.
+             * The CNAME that is used to associate the GA instance with an Anti-DDoS Pro instance or an Anti-DDOS Premium instance.
              */
             public Builder secondDnsName(String secondDnsName) {
                 this.secondDnsName = secondDnsName;
@@ -993,10 +994,10 @@ public class ListAcceleratorsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the service that manages the GA instance.
+             * The ID of the service that manages the instance.
              * <p>
              * 
-             * >  This parameter takes effect only if **ServiceManaged** is set to **True**.
+             * >  This parameter takes effect only if the value of **ServiceManaged** is **true**.
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;
@@ -1016,12 +1017,10 @@ public class ListAcceleratorsResponseBody extends TeaModel {
             }
 
             /**
-             * The actions that you can perform on the managed instance.
+             * The actions that users can perform on the managed instance.
              * <p>
-             * 
-             * >  This parameter takes effect only if **ServiceManaged** is set to **True**.
-             * 
-             * *   You can perform only specific actions on a managed instance.
+             * > *   This parameter takes effect only if the value of **ServiceManaged** is **true**.
+             * > *   Users can perform only specific actions on a managed instance.
              */
             public Builder serviceManagedInfos(java.util.List < ServiceManagedInfos> serviceManagedInfos) {
                 this.serviceManagedInfos = serviceManagedInfos;
@@ -1032,26 +1031,26 @@ public class ListAcceleratorsResponseBody extends TeaModel {
              * The specification of the GA instance. Valid values:
              * <p>
              * 
-             * *   **1**: Small Ⅰ
-             * *   **2**: Small Ⅱ
-             * *   **3**: Small Ⅲ
-             * *   **5**: Medium Ⅰ
-             * *   **8**: Medium Ⅱ
-             * *   **10**: Medium Ⅲ
-             * *   **20**: Large Ⅰ
-             * *   **30**: Large Ⅱ
-             * *   **40**: Large Ⅲ
-             * *   **50**: Large Ⅳ
-             * *   **60**: Large Ⅴ
-             * *   **70**: Large Ⅵ
-             * *   **80**: Large VⅡ
-             * *   **90**: Large VⅢ
-             * *   **100**: Super Large Ⅰ
-             * *   **200**: Super Large Ⅱ
+             * *   **1**: Small Ⅰ.
+             * *   **2**: Small Ⅱ.
+             * *   **3**: Small Ⅲ.
+             * *   **5**: Medium Ⅰ.
+             * *   **8**: Medium Ⅱ.
+             * *   **10**: Medium Ⅲ.
+             * *   **20**: Large Ⅰ.
+             * *   **30**: Large Ⅱ.
+             * *   **40**: Large Ⅲ.
+             * *   **50**: Large IV.
+             * *   **60**: Large V.
+             * *   **70**: Large VI.
+             * *   **80**: Large VII.
+             * *   **90**: Large VIII.
+             * *   **100**: Super Large Ⅰ.
+             * *   **200**: Super Large Ⅱ.
              * 
              * >  The Large Ⅲ specification and higher specifications are available only to accounts that are added to the whitelist. To use these specifications, contact your Alibaba Cloud account manager.
              * 
-             * Each instance specification provides different capabilities. For more information, see [Instance specifications](~~153127~~).
+             * Different specifications provide different capabilities. For more information, see [Instance specifications](~~153127~~).
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -1062,13 +1061,13 @@ public class ListAcceleratorsResponseBody extends TeaModel {
              * The status of the GA instance. Valid values:
              * <p>
              * 
-             * *   **init**
-             * *   **active**
-             * *   **configuring**
-             * *   **binding**
-             * *   **unbinding**
-             * *   **deleting**
-             * *   **finacialLocked**
+             * *   **init**: The GA instance is being initialized.
+             * *   **active**: The GA instance is available.
+             * *   **configuring**: The GA instance is being configured.
+             * *   **binding**: The GA instance is being associated.
+             * *   **unbinding**: The GA instance is being disassociated.
+             * *   **deleting**: The GA instance is being deleted.
+             * *   **finacialLocked**: The GA instance is locked due to overdue payments.
              */
             public Builder state(String state) {
                 this.state = state;

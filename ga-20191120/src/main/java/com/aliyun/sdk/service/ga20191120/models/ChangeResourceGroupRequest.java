@@ -129,9 +129,6 @@ public class ChangeResourceGroupRequest extends Request {
 
         /**
          * The ID of the new resource group.
-         * <p>
-         * 
-         * >  This parameter is required.
          */
         public Builder newResourceGroupId(String newResourceGroupId) {
             this.putQueryParameter("NewResourceGroupId", newResourceGroupId);
@@ -156,8 +153,6 @@ public class ChangeResourceGroupRequest extends Request {
          * *   If you set **ResourceType** to **basicaccelerator**, set the value of ResourceId to the ID of a basic GA instance.
          * *   If you set **ResourceType** to **bandwidthpackage**, set the value of ResourceId to the ID of a bandwidth plan.
          * *   If you set **ResourceType** to **acl**, set the value of ResourceId to the ID of an access control list (ACL).
-         * 
-         * >  This parameter is required.
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -169,12 +164,10 @@ public class ChangeResourceGroupRequest extends Request {
          * The type of the GA resource. Valid values:
          * <p>
          * 
-         * *   **accelerator**: a standard GA instance
-         * *   **basicaccelerator**: a basic GA instance
-         * *   **bandwidthpackage**: a bandwidth plan
-         * *   **acl**: an ACL
-         * 
-         * >  This parameter is required.
+         * *   **accelerator:** a standard GA instance.
+         * *   **basicaccelerator:** a basic GA instance.
+         * *   **bandwidthpackage:** a bandwidth plan.
+         * *   **acl:** an ACL.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

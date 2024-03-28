@@ -158,10 +158,10 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
         }
 
         /**
-         * The list of coupons.
+         * The details of the coupon.
          * <p>
          * 
-         * >  This parameter is unavailable on the China site (aliyun.com).
+         * >  This parameter does not take effect for accounts registered on the China site (aliyun.com).
          */
         public Builder promotions(java.util.List < Promotions> promotions) {
             this.promotions = promotions;
@@ -305,7 +305,7 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
             }
 
             /**
-             * The discounted price.
+             * The transaction price, which is equal to the original price minus the discount.
              */
             public Builder tradePrice(Double tradePrice) {
                 this.tradePrice = tradePrice;
@@ -397,7 +397,7 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
              * The discounted price.
              * <p>
              * 
-             * >  This parameter is unavailable on the China site (aliyun.com).
+             * >  This parameter does not take effect for accounts registered on the China site (aliyun.com).
              */
             public Builder finalPromFee(Double finalPromFee) {
                 this.finalPromFee = finalPromFee;
@@ -408,7 +408,7 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
              * The code of the discount option.
              * <p>
              * 
-             * >  This parameter is unavailable on the China site (aliyun.com).
+             * >  This parameter does not take effect for accounts registered on the China site (aliyun.com).
              */
             public Builder optionCode(String optionCode) {
                 this.optionCode = optionCode;
@@ -419,7 +419,7 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
              * The sub-type of the discount.
              * <p>
              * 
-             * >  This parameter is unavailable on the China site (aliyun.com).
+             * >  This parameter does not take effect for accounts registered on the China site (aliyun.com).
              */
             public Builder promType(String promType) {
                 this.promType = promType;
@@ -430,7 +430,7 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
              * The ID of the discount item.
              * <p>
              * 
-             * >  This parameter is unavailable on the China site (aliyun.com).
+             * >  This parameter does not take effect for accounts registered on the China site (aliyun.com).
              */
             public Builder promotionId(String promotionId) {
                 this.promotionId = promotionId;
@@ -441,7 +441,7 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
              * The name of the discount item.
              * <p>
              * 
-             * >  This parameter is unavailable on the China site (aliyun.com).
+             * >  This parameter does not take effect for accounts registered on the China site (aliyun.com).
              */
             public Builder promotionName(String promotionName) {
                 this.promotionName = promotionName;
@@ -618,10 +618,10 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
             }
 
             /**
-             * The details about the discount.
+             * The details of the discount.
              * <p>
              * 
-             * >  This parameter is unavailable on the China site (aliyun.com).
+             * >  This parameter does not take effect for accounts registered on the China site (aliyun.com).
              */
             public Builder promDetails(java.util.List < PromDetails> promDetails) {
                 this.promDetails = promDetails;
@@ -637,7 +637,7 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the discount rules.
+             * The IDs of discount rules.
              */
             public Builder ruleIds(java.util.List < Long > ruleIds) {
                 this.ruleIds = ruleIds;
@@ -737,7 +737,7 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
              * The discounted amount.
              * <p>
              * 
-             * >  This parameter is unavailable on the China site (aliyun.com).
+             * >  This parameter does not take effect for accounts registered on the China site (aliyun.com).
              */
             public Builder canPromFee(Double canPromFee) {
                 this.canPromFee = canPromFee;
@@ -745,10 +745,10 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the commodity to which the coupon applies.
+             * The code of the commodity to which the coupon can be applied.
              * <p>
              * 
-             * >  This parameter is unavailable on the China site (aliyun.com).
+             * >  This parameter does not take effect for accounts registered on the China site (aliyun.com).
              */
             public Builder optionCode(String optionCode) {
                 this.optionCode = optionCode;
@@ -759,7 +759,7 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
              * The name of the coupon.
              * <p>
              * 
-             * >  This parameter is unavailable on the China site (aliyun.com).
+             * >  This parameter does not take effect for accounts registered on the China site (aliyun.com).
              */
             public Builder promotionName(String promotionName) {
                 this.promotionName = promotionName;
@@ -767,14 +767,10 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
             }
 
             /**
-             * The coupon code.
+             * The code of the coupon.
              * <p>
-             * 
-             * > 
-             * 
-             * *   `youhuiquan_promotion_option_id_for_blank` indicates coupons that do not apply.
-             * 
-             * *   This parameter is unavailable on the China site (aliyun.com).
+             * > *   `youhuiquan_promotion_option_id_for_blank` indicates coupons that cannot be applied to the commodity.
+             * > *   This parameter does not take effect for accounts registered on the China site (aliyun.com).
              */
             public Builder promotionOptionNo(String promotionOptionNo) {
                 this.promotionOptionNo = promotionOptionNo;
@@ -782,13 +778,13 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether an item is selected. Valid values:
+             * Indicates whether the coupon was selected.
              * <p>
              * 
-             * *   **true**: yes
-             * *   **false**: no
+             * *   **true**
+             * *   **false**
              * 
-             * >  This parameter is unavailable on the China site (aliyun.com).
+             * >  This parameter does not take effect for accounts registered on the China site (aliyun.com).
              */
             public Builder selected(Boolean selected) {
                 this.selected = selected;

@@ -325,7 +325,11 @@ public class DescribeBandwidthPackageResponseBody extends TeaModel {
         }
 
         /**
-         * The billing method of the bandwidth plan. Only **PREPAY** is returned, which indicates the subscription billing method.
+         * The billing method of the bandwidth plan.
+         * <p>
+         * 
+         * *   **PREPAY**: subscription. This is the default value.
+         * *   **POSTPAY**: pay-as-you-go.
          */
         public Builder chargeType(String chargeType) {
             this.chargeType = chargeType;
@@ -481,7 +485,7 @@ public class DescribeBandwidthPackageResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key
+             * The key of tag N that is added to the bandwidth plan.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -489,7 +493,7 @@ public class DescribeBandwidthPackageResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * The value of tag N that is added to the bandwidth plan.
              */
             public Builder value(String value) {
                 this.value = value;

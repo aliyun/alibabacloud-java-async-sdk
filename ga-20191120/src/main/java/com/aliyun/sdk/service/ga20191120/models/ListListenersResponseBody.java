@@ -94,7 +94,7 @@ public class ListListenersResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class ListListenersResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class ListListenersResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +170,7 @@ public class ListListenersResponseBody extends TeaModel {
             private String toPort; 
 
             /**
-             * The start port in the range of ports used by the backend server.
+             * The first port in the range of ports that are used by backend servers.
              */
             public Builder fromPort(String fromPort) {
                 this.fromPort = fromPort;
@@ -178,7 +178,7 @@ public class ListListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The end port in the range of ports used by the backend server.
+             * The last port in the range of ports that are used by backend servers.
              */
             public Builder toPort(String toPort) {
                 this.toPort = toPort;
@@ -239,10 +239,10 @@ public class ListListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the certificate.
+             * The type of the SSL certificate.
              * <p>
              * 
-             * Only **Server** can be returned, which indicates a server certificate.
+             * Only **Server** may be returned, which indicates a server certificate.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -295,7 +295,7 @@ public class ListListenersResponseBody extends TeaModel {
             private Integer toPort; 
 
             /**
-             * The start port in the range of listener ports used to receive and forward requests to endpoints.
+             * The first port in the listener port range that is used to receive and forward requests to endpoints.
              */
             public Builder fromPort(Integer fromPort) {
                 this.fromPort = fromPort;
@@ -303,7 +303,7 @@ public class ListListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The start port in the range of listener ports used to receive and forward requests to endpoints.
+             * The last port in the listener port range that is used to receive and forward requests to endpoints.
              */
             public Builder toPort(Integer toPort) {
                 this.toPort = toPort;
@@ -368,14 +368,15 @@ public class ListListenersResponseBody extends TeaModel {
             private Boolean isManaged; 
 
             /**
-             * Managed policy action name, Valid values:
+             * The name of the action on the managed instance. Valid values:
              * <p>
-             * - Create
-             * - Update
-             * - Delete
-             * - Associate
-             * - UserUnmanaged
-             * - CreateChild
+             * 
+             * *   **Create**
+             * *   **Update**
+             * *   **Delete**
+             * *   **Associate**
+             * *   **UserUnmanaged**
+             * *   **CreateChild**
              */
             public Builder action(String action) {
                 this.action = action;
@@ -383,18 +384,18 @@ public class ListListenersResponseBody extends TeaModel {
             }
 
             /**
-             * Sub resource type, Valid values:
+             * The type of the child resource. Valid values:
              * <p>
              * 
-             * - Listener
-             * - IpSet
-             * - EndpointGroup
-             * - ForwardingRule
-             * - Endpoint
-             * - EndpointGroupDestination
-             * - EndpointPolicy
+             * *   **Listener**: listener.
+             * *   **IpSet**: acceleration region.
+             * *   **EndpointGroup**: endpoint group.
+             * *   **ForwardingRule**: forwarding rule.
+             * *   **Endpoint**: endpoint.
+             * *   **EndpointGroupDestination**: protocol mapping of an endpoint group associated with a custom routing listener.
+             * *   **EndpointPolicy**: traffic policy of an endpoint associated with a custom routing listener.
              * 
-             * >Only valid when the Action parameter is CreateChild.
+             * >  This parameter takes effect only if the value of **Action** is **CreateChild**.
              */
             public Builder childType(String childType) {
                 this.childType = childType;
@@ -402,12 +403,11 @@ public class ListListenersResponseBody extends TeaModel {
             }
 
             /**
-             * Is the managed policy action managed, Valid values:
+             * Indicates whether the specified actions are managed.
              * <p>
              * 
-             * - true: The managed policy action is managed, and users do not have permission to perform the operation specified in the Action on the managed instance.
-             * 
-             * - false: The managed policy action is not managed, and users have permission to perform the operation specified in the Action on the managed instance.
+             * *   **true**: The specified actions are managed, and users cannot perform the specified actions on the managed instance.
+             * *   **false**: The specified actions are not managed, and users can perform the specified actions on the managed instance.
              */
             public Builder isManaged(Boolean isManaged) {
                 this.isManaged = isManaged;
@@ -499,8 +499,8 @@ public class ListListenersResponseBody extends TeaModel {
              * Indicates whether the `GA-AP` header is used to retrieve the information about acceleration regions. Valid values:
              * <p>
              * 
-             * *   **true**: yes
-             * *   **false**: no
+             * *   **true**
+             * *   **false**
              * 
              * >  This parameter is returned only for HTTP and HTTPS listeners.
              */
@@ -513,8 +513,8 @@ public class ListListenersResponseBody extends TeaModel {
              * Indicates whether the `GA-ID` header is used to retrieve the ID of the GA instance. Valid values:
              * <p>
              * 
-             * *   **true**: yes
-             * *   **false**: no
+             * *   **true**
+             * *   **false**
              * 
              * >  This parameter is returned only for HTTP and HTTPS listeners.
              */
@@ -527,8 +527,8 @@ public class ListListenersResponseBody extends TeaModel {
              * Indicates whether the `GA-X-Forward-Port` header is used to retrieve the listener ports of the GA instance. Valid values:
              * <p>
              * 
-             * *   **true**: yes
-             * *   **false**: no
+             * *   **true**
+             * *   **false**
              * 
              * >  This parameter is returned only for HTTP and HTTPS listeners.
              */
@@ -541,8 +541,8 @@ public class ListListenersResponseBody extends TeaModel {
              * Indicates whether the `GA-X-Forward-Proto` header is used to retrieve the listener protocol of the GA instance. Valid values:
              * <p>
              * 
-             * *   **true**: yes
-             * *   **false**: no
+             * *   **true**
+             * *   **false**
              * 
              * >  This parameter is returned only for HTTP and HTTPS listeners.
              */
@@ -555,8 +555,8 @@ public class ListListenersResponseBody extends TeaModel {
              * Indicates whether the `X-Real-IP` header is used to retrieve client IP addresses. Valid values:
              * <p>
              * 
-             * *   **true**: yes
-             * *   **false**: no
+             * *   **true**
+             * *   **false**
              * 
              * >  This parameter is returned only for HTTP and HTTPS listeners.
              */
@@ -590,6 +590,9 @@ public class ListListenersResponseBody extends TeaModel {
 
         @NameInMap("Description")
         private String description;
+
+        @NameInMap("HttpVersion")
+        private String httpVersion;
 
         @NameInMap("IdleTimeout")
         private Integer idleTimeout;
@@ -640,6 +643,7 @@ public class ListListenersResponseBody extends TeaModel {
             this.clientAffinity = builder.clientAffinity;
             this.createTime = builder.createTime;
             this.description = builder.description;
+            this.httpVersion = builder.httpVersion;
             this.idleTimeout = builder.idleTimeout;
             this.listenerId = builder.listenerId;
             this.name = builder.name;
@@ -704,6 +708,13 @@ public class ListListenersResponseBody extends TeaModel {
          */
         public String getDescription() {
             return this.description;
+        }
+
+        /**
+         * @return httpVersion
+         */
+        public String getHttpVersion() {
+            return this.httpVersion;
         }
 
         /**
@@ -811,6 +822,7 @@ public class ListListenersResponseBody extends TeaModel {
             private String clientAffinity; 
             private Long createTime; 
             private String description; 
+            private String httpVersion; 
             private Integer idleTimeout; 
             private String listenerId; 
             private String name; 
@@ -835,7 +847,7 @@ public class ListListenersResponseBody extends TeaModel {
             }
 
             /**
-             * Details about the ports that can be used by the backend server.
+             * The range of ports that are used by backend servers.
              */
             public Builder backendPorts(java.util.List < BackendPorts> backendPorts) {
                 this.backendPorts = backendPorts;
@@ -843,7 +855,7 @@ public class ListListenersResponseBody extends TeaModel {
             }
 
             /**
-             * Details about the SSL certificates.
+             * The information about the SSL certificates.
              */
             public Builder certificates(java.util.List < Certificates> certificates) {
                 this.certificates = certificates;
@@ -854,8 +866,8 @@ public class ListListenersResponseBody extends TeaModel {
              * Indicates whether client affinity is enabled for the listener.
              * <p>
              * 
-             * *   If **NONE** is returned, client affinity is disabled. In this case, requests from the same client may be forwarded to different endpoints.
-             * *   If **SOURCE_IP** is returned, client affinity is enabled. In this case, when a client accesses stateful applications, requests from the same client are always forwarded to the same endpoint regardless of the source port or protocol.
+             * *   If **NONE** is returned, client affinity is disabled. When client affinity is disabled, requests from the same client may be forwarded to different endpoints.
+             * *   If **SOURCE_IP** is returned, client affinity is enabled. When a client accesses stateful applications, requests from the same client are forwarded to the same endpoint regardless of the source port or protocol.
              */
             public Builder clientAffinity(String clientAffinity) {
                 this.clientAffinity = clientAffinity;
@@ -863,7 +875,7 @@ public class ListListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp that indicates that the listener was created. Unit: milliseconds.
+             * The timestamp that indicates when the listener was created. Unit: milliseconds.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -879,7 +891,22 @@ public class ListListenersResponseBody extends TeaModel {
             }
 
             /**
-             * IdleTimeout.
+             * The maximum version of the HTTP protocol. Valid values:
+             * <p>
+             * 
+             * *   **http3**
+             * *   **http2**
+             * *   **http1.1**
+             * 
+             * >  This parameter is returned only for HTTPS listeners.
+             */
+            public Builder httpVersion(String httpVersion) {
+                this.httpVersion = httpVersion;
+                return this;
+            }
+
+            /**
+             * The timeout period of idle connections. Unit: seconds.
              */
             public Builder idleTimeout(Integer idleTimeout) {
                 this.idleTimeout = idleTimeout;
@@ -903,7 +930,7 @@ public class ListListenersResponseBody extends TeaModel {
             }
 
             /**
-             * Details about the listener ports.
+             * The information about the listener ports.
              */
             public Builder portRanges(java.util.List < PortRanges> portRanges) {
                 this.portRanges = portRanges;
@@ -914,10 +941,10 @@ public class ListListenersResponseBody extends TeaModel {
              * The network transmission protocol that is used by the listener. Valid values:
              * <p>
              * 
-             * *   **tcp**: TCP
-             * *   **udp**: UDP
-             * *   **http**: HTTP
-             * *   **https**: HTTPS
+             * *   **tcp**
+             * *   **udp**
+             * *   **http**
+             * *   **https**
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -925,11 +952,11 @@ public class ListListenersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the client IP address preservation feature is enabled. Valid values:
+             * Indicates whether client IP address preservation is enabled. Valid values:
              * <p>
              * 
-             * *   **true**: The client IP address preservation feature is enabled. After client IP addresses are reserved, you can view the source IP addresses of clients over the backend service.
-             * *   **false**: The client IP address preservation feature is disabled.
+             * *   **true**: Client IP address preservation is enabled. This feature allows you to view client IP addresses on backend servers.
+             * *   **false**: Client IP address preservation is disabled.
              */
             public Builder proxyProtocol(Boolean proxyProtocol) {
                 this.proxyProtocol = proxyProtocol;
@@ -937,7 +964,10 @@ public class ListListenersResponseBody extends TeaModel {
             }
 
             /**
-             * RequestTimeout.
+             * The timeout period of HTTP or HTTPS requests. Unit: seconds.
+             * <p>
+             * 
+             * >  This parameter is returned only for HTTP and HTTPS listeners. If no responses are received from the backend server within the timeout period, GA returns an HTTP 504 error code to the client.
              */
             public Builder requestTimeout(Integer requestTimeout) {
                 this.requestTimeout = requestTimeout;
@@ -950,28 +980,28 @@ public class ListListenersResponseBody extends TeaModel {
              * 
              * *   **tls_cipher_policy\_1\_0**
              * 
-             *     *   Supported Transport Layer Security (TLS) versions: TLS 1.0, TLS 1.1, and TLS 1.2
-             *     *   Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA
+             *     *   Supported Transport Layer Security (TLS) versions: TLS 1.0, TLS 1.1, and TLS 1.2.
+             *     *   Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA.
              * 
              * *   **tls_cipher_policy\_1\_1**
              * 
-             *     *   Supported TLS versions: TLS 1.1 and TLS 1.2
-             *     *   Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA
+             *     *   Supported TLS versions: TLS 1.1 and TLS 1.2.
+             *     *   Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA.
              * 
              * *   **tls_cipher_policy\_1\_2**
              * 
-             *     *   Supported TLS version: TLS 1.2
-             *     *   Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA
+             *     *   Supported TLS version: TLS 1.2.
+             *     *   Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA.
              * 
              * *   **tls_cipher_policy\_1\_2\_strict**
              * 
-             *     *   Supported TLS version: TLS 1.2
-             *     *   Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, ECDHE-RSA-AES128-SHA, and ECDHE-RSA-AES256-SHA
+             *     *   Supported TLS version: TLS 1.2.
+             *     *   Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, ECDHE-RSA-AES128-SHA, and ECDHE-RSA-AES256-SHA.
              * 
              * *   **tls_cipher_policy\_1\_2\_strict_with\_1\_3**
              * 
-             *     *   Supported TLS versions: TLS 1.2 and TLS 1.3
-             *     *   Supported cipher suites: TLS_AES\_128\_GCM_SHA256, TLS_AES\_256\_GCM_SHA384, TLS_CHACHA20\_POLY1305\_SHA256, TLS_AES\_128\_CCM_SHA256, TLS_AES\_128\_CCM\_8\_SHA256, ECDHE-ECDSA-AES128-GCM-SHA256, ECDHE-ECDSA-AES256-GCM-SHA384, ECDHE-ECDSA-AES128-SHA256, ECDHE-ECDSA-AES256-SHA384, ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, ECDHE-ECDSA-AES128-SHA, ECDHE-ECDSA-AES256-SHA, ECDHE-RSA-AES128-SHA, and ECDHE-RSA-AES256-SHA
+             *     *   Supported TLS versions: TLS 1.2 and TLS 1.3.
+             *     *   Supported cipher suites: TLS_AES\_128\_GCM_SHA256, TLS_AES\_256\_GCM_SHA384, TLS_CHACHA20\_POLY1305\_SHA256, TLS_AES\_128\_CCM_SHA256, TLS_AES\_128\_CCM\_8\_SHA256, ECDHE-ECDSA-AES128-GCM-SHA256, ECDHE-ECDSA-AES256-GCM-SHA384, ECDHE-ECDSA-AES128-SHA256, ECDHE-ECDSA-AES256-SHA384, ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, ECDHE-ECDSA-AES128-SHA, ECDHE-ECDSA-AES256-SHA, ECDHE-RSA-AES128-SHA, and ECDHE-RSA-AES256-SHA.
              * 
              * >  This parameter is returned only for HTTPS listeners.
              */
@@ -981,10 +1011,10 @@ public class ListListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The service ID to which the managed instance belongs.
+             * The ID of the service that manages the instance.
              * <p>
              * 
-             * >  Valid only when the ServiceManaged parameter is True.
+             * >  This parameter is returned only if the value of **ServiceManaged** is **true**.
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;
@@ -992,11 +1022,11 @@ public class ListListenersResponseBody extends TeaModel {
             }
 
             /**
-             * Is it a managed instance. Valid values:
+             * Indicates whether the instance is managed. Valid values:
              * <p>
              * 
-             * - true
-             * - false
+             * *   **true**
+             * *   **false**
              */
             public Builder serviceManaged(Boolean serviceManaged) {
                 this.serviceManaged = serviceManaged;
@@ -1004,7 +1034,10 @@ public class ListListenersResponseBody extends TeaModel {
             }
 
             /**
-             * A list of action policies that users can execute on this managed instance.
+             * The actions that users can perform on the managed instance.
+             * <p>
+             * > *   This parameter is returned only if the value of **ServiceManaged** is **true**.
+             * > *   Users can perform only specific actions on a managed instance.
              */
             public Builder serviceManagedInfos(java.util.List < ServiceManagedInfos> serviceManagedInfos) {
                 this.serviceManagedInfos = serviceManagedInfos;
@@ -1012,13 +1045,13 @@ public class ListListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the listener. Valid values:
+             * The status of the listener. Valid values:
              * <p>
              * 
-             * *   **active**: The listener is normal.
-             * *   **init**: The listener is being initialized.
-             * *   **updating**: The listener is being configured.
-             * *   **deleting**: The listener is being deleted.
+             * *   **active**
+             * *   **init**
+             * *   **updating**
+             * *   **deleting**
              */
             public Builder state(String state) {
                 this.state = state;
@@ -1029,8 +1062,8 @@ public class ListListenersResponseBody extends TeaModel {
              * The routing type of the listener. Valid values:
              * <p>
              * 
-             * *   **Standard**: intelligent routing
-             * *   **CustomRouting**: custom routing
+             * *   **Standard**: intelligent routing.
+             * *   **CustomRouting**: custom routing.
              */
             public Builder type(String type) {
                 this.type = type;

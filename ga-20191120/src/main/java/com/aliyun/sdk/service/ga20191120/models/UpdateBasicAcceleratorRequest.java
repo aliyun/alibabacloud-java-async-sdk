@@ -123,9 +123,9 @@ public class UpdateBasicAcceleratorRequest extends Request {
          * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          * 
-         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
+         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -135,6 +135,9 @@ public class UpdateBasicAcceleratorRequest extends Request {
 
         /**
          * The description of the basic GA instance.
+         * <p>
+         * 
+         * The description can be up to 200 characters in length and cannot start with `http://` or `https://`.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -146,7 +149,7 @@ public class UpdateBasicAcceleratorRequest extends Request {
          * The name of the basic GA instance.
          * <p>
          * 
-         * The name must be 2 to 128 characters in length and can contain digits, underscores (\_), and hyphens (-). It must start with a letter.
+         * The name must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -155,7 +158,7 @@ public class UpdateBasicAcceleratorRequest extends Request {
         }
 
         /**
-         * The ID of the region to which the basic GA instance belongs. Set the value to **cn-hangzhou**.
+         * The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
