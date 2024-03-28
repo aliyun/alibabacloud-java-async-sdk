@@ -21,6 +21,10 @@ public class ListRepositoriesRequest extends Request {
     private Boolean archived;
 
     @Query
+    @NameInMap("minAccessLevel")
+    private Integer minAccessLevel;
+
+    @Query
     @NameInMap("orderBy")
     private String orderBy;
 
@@ -49,6 +53,7 @@ public class ListRepositoriesRequest extends Request {
         super(builder);
         this.accessToken = builder.accessToken;
         this.archived = builder.archived;
+        this.minAccessLevel = builder.minAccessLevel;
         this.orderBy = builder.orderBy;
         this.organizationId = builder.organizationId;
         this.page = builder.page;
@@ -82,6 +87,13 @@ public class ListRepositoriesRequest extends Request {
      */
     public Boolean getArchived() {
         return this.archived;
+    }
+
+    /**
+     * @return minAccessLevel
+     */
+    public Integer getMinAccessLevel() {
+        return this.minAccessLevel;
     }
 
     /**
@@ -129,6 +141,7 @@ public class ListRepositoriesRequest extends Request {
     public static final class Builder extends Request.Builder<ListRepositoriesRequest, Builder> {
         private String accessToken; 
         private Boolean archived; 
+        private Integer minAccessLevel; 
         private String orderBy; 
         private String organizationId; 
         private Long page; 
@@ -144,6 +157,7 @@ public class ListRepositoriesRequest extends Request {
             super(request);
             this.accessToken = request.accessToken;
             this.archived = request.archived;
+            this.minAccessLevel = request.minAccessLevel;
             this.orderBy = request.orderBy;
             this.organizationId = request.organizationId;
             this.page = request.page;
@@ -167,6 +181,15 @@ public class ListRepositoriesRequest extends Request {
         public Builder archived(Boolean archived) {
             this.putQueryParameter("archived", archived);
             this.archived = archived;
+            return this;
+        }
+
+        /**
+         * minAccessLevel.
+         */
+        public Builder minAccessLevel(Integer minAccessLevel) {
+            this.putQueryParameter("minAccessLevel", minAccessLevel);
+            this.minAccessLevel = minAccessLevel;
             return this;
         }
 

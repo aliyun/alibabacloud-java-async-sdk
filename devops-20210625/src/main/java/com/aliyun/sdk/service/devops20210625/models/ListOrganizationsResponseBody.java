@@ -158,6 +158,12 @@ public class ListOrganizationsResponseBody extends TeaModel {
         @NameInMap("id")
         private Long id;
 
+        @NameInMap("namespaceId")
+        private String namespaceId;
+
+        @NameInMap("organizationAlias")
+        private String organizationAlias;
+
         @NameInMap("organizationId")
         private String organizationId;
 
@@ -170,6 +176,8 @@ public class ListOrganizationsResponseBody extends TeaModel {
         private Result(Builder builder) {
             this.accessLevel = builder.accessLevel;
             this.id = builder.id;
+            this.namespaceId = builder.namespaceId;
+            this.organizationAlias = builder.organizationAlias;
             this.organizationId = builder.organizationId;
             this.organizationName = builder.organizationName;
             this.organizationRole = builder.organizationRole;
@@ -198,6 +206,20 @@ public class ListOrganizationsResponseBody extends TeaModel {
         }
 
         /**
+         * @return namespaceId
+         */
+        public String getNamespaceId() {
+            return this.namespaceId;
+        }
+
+        /**
+         * @return organizationAlias
+         */
+        public String getOrganizationAlias() {
+            return this.organizationAlias;
+        }
+
+        /**
          * @return organizationId
          */
         public String getOrganizationId() {
@@ -221,6 +243,8 @@ public class ListOrganizationsResponseBody extends TeaModel {
         public static final class Builder {
             private Integer accessLevel; 
             private Long id; 
+            private String namespaceId; 
+            private String organizationAlias; 
             private String organizationId; 
             private String organizationName; 
             private String organizationRole; 
@@ -238,6 +262,22 @@ public class ListOrganizationsResponseBody extends TeaModel {
              */
             public Builder id(Long id) {
                 this.id = id;
+                return this;
+            }
+
+            /**
+             * namespaceId.
+             */
+            public Builder namespaceId(String namespaceId) {
+                this.namespaceId = namespaceId;
+                return this;
+            }
+
+            /**
+             * organizationAlias.
+             */
+            public Builder organizationAlias(String organizationAlias) {
+                this.organizationAlias = organizationAlias;
                 return this;
             }
 

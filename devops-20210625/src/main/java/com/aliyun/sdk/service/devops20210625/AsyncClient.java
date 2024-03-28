@@ -35,7 +35,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateCheckRunResponse> createCheckRun(CreateCheckRunRequest request);
 
+    CompletableFuture<CreateCommentResponse> createComment(CreateCommentRequest request);
+
     CompletableFuture<CreateCommitStatusResponse> createCommitStatus(CreateCommitStatusRequest request);
+
+    CompletableFuture<CreateCommitWithMultipleFilesResponse> createCommitWithMultipleFiles(CreateCommitWithMultipleFilesRequest request);
 
     CompletableFuture<CreateDeployKeyResponse> createDeployKey(CreateDeployKeyRequest request);
 
