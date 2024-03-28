@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class SendMessageToGlobeRequest extends Request {
     @Query
+    @NameInMap("ChannelId")
+    private String channelId;
+
+    @Query
     @NameInMap("From")
     private String from;
 
@@ -36,6 +40,7 @@ public class SendMessageToGlobeRequest extends Request {
 
     private SendMessageToGlobeRequest(Builder builder) {
         super(builder);
+        this.channelId = builder.channelId;
         this.from = builder.from;
         this.message = builder.message;
         this.taskId = builder.taskId;
@@ -54,6 +59,13 @@ public class SendMessageToGlobeRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return channelId
+     */
+    public String getChannelId() {
+        return this.channelId;
     }
 
     /**
@@ -92,6 +104,7 @@ public class SendMessageToGlobeRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SendMessageToGlobeRequest, Builder> {
+        private String channelId; 
         private String from; 
         private String message; 
         private String taskId; 
@@ -104,12 +117,22 @@ public class SendMessageToGlobeRequest extends Request {
 
         private Builder(SendMessageToGlobeRequest request) {
             super(request);
+            this.channelId = request.channelId;
             this.from = request.from;
             this.message = request.message;
             this.taskId = request.taskId;
             this.to = request.to;
             this.validityPeriod = request.validityPeriod;
         } 
+
+        /**
+         * ChannelId.
+         */
+        public Builder channelId(String channelId) {
+            this.putQueryParameter("ChannelId", channelId);
+            this.channelId = channelId;
+            return this;
+        }
 
         /**
          * The mobile phone number of the sender. You can also specify a sender ID. The sender ID can contain both letters and digits. If it does, the ID must be between 1 to 11 characters in length. If the sender ID contains only digits, it must be 1 to 15 characters in length.
@@ -142,7 +165,7 @@ public class SendMessageToGlobeRequest extends Request {
          * The mobile phone number to which the message is sent. You must add the dialing code to the beginning of the mobile phone number. Example: 8521245567\*\*\*\*.
          * <p>
          * 
-         * For more information, see [Dialing codes](https://www.alibabacloud.com/help/zh/short-message-service/latest/dialing-codes).
+         * For more information, see [Dialing codes](https://www.alibabacloud.com/help/en/sms/product-overview/dialing-codes?spm=a2c63.p38356.0.0.48b940a1PFYRMz).
          * 
          * >  You cannot call the SendMessageToGlobe operation to send messages to the Chinese mainland.
          */

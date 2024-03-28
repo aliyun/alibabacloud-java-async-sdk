@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class SendMessageWithTemplateRequest extends Request {
     @Query
+    @NameInMap("ChannelId")
+    private String channelId;
+
+    @Query
     @NameInMap("From")
     @Validation(required = true)
     private String from;
@@ -41,6 +45,7 @@ public class SendMessageWithTemplateRequest extends Request {
 
     private SendMessageWithTemplateRequest(Builder builder) {
         super(builder);
+        this.channelId = builder.channelId;
         this.from = builder.from;
         this.smsUpExtendCode = builder.smsUpExtendCode;
         this.templateCode = builder.templateCode;
@@ -60,6 +65,13 @@ public class SendMessageWithTemplateRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return channelId
+     */
+    public String getChannelId() {
+        return this.channelId;
     }
 
     /**
@@ -105,6 +117,7 @@ public class SendMessageWithTemplateRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SendMessageWithTemplateRequest, Builder> {
+        private String channelId; 
         private String from; 
         private String smsUpExtendCode; 
         private String templateCode; 
@@ -118,6 +131,7 @@ public class SendMessageWithTemplateRequest extends Request {
 
         private Builder(SendMessageWithTemplateRequest request) {
             super(request);
+            this.channelId = request.channelId;
             this.from = request.from;
             this.smsUpExtendCode = request.smsUpExtendCode;
             this.templateCode = request.templateCode;
@@ -125,6 +139,15 @@ public class SendMessageWithTemplateRequest extends Request {
             this.to = request.to;
             this.validityPeriod = request.validityPeriod;
         } 
+
+        /**
+         * ChannelId.
+         */
+        public Builder channelId(String channelId) {
+            this.putQueryParameter("ChannelId", channelId);
+            this.channelId = channelId;
+            return this;
+        }
 
         /**
          * The signature. To query the signature, log on to the [Short Message Service (SMS) console](https://sms-intl.console.aliyun.com/overview) and navigate to the **Signatures** tab of the **Go China** page.
