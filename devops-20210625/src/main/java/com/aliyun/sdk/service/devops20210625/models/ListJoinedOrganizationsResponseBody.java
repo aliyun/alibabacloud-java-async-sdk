@@ -135,11 +135,15 @@ public class ListJoinedOrganizationsResponseBody extends TeaModel {
         @NameInMap("id")
         private String id;
 
+        @NameInMap("isOrgAdmin")
+        private Boolean isOrgAdmin;
+
         @NameInMap("name")
         private String name;
 
         private Organizations(Builder builder) {
             this.id = builder.id;
+            this.isOrgAdmin = builder.isOrgAdmin;
             this.name = builder.name;
         }
 
@@ -159,6 +163,13 @@ public class ListJoinedOrganizationsResponseBody extends TeaModel {
         }
 
         /**
+         * @return isOrgAdmin
+         */
+        public Boolean getIsOrgAdmin() {
+            return this.isOrgAdmin;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
@@ -167,6 +178,7 @@ public class ListJoinedOrganizationsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String id; 
+            private Boolean isOrgAdmin; 
             private String name; 
 
             /**
@@ -174,6 +186,14 @@ public class ListJoinedOrganizationsResponseBody extends TeaModel {
              */
             public Builder id(String id) {
                 this.id = id;
+                return this;
+            }
+
+            /**
+             * isOrgAdmin.
+             */
+            public Builder isOrgAdmin(Boolean isOrgAdmin) {
+                this.isOrgAdmin = isOrgAdmin;
                 return this;
             }
 
