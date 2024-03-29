@@ -68,7 +68,7 @@ public class GetUserProvisioningEventRequest extends Request {
         } 
 
         /**
-         * DirectoryId.
+         * The ID of the resource directory.
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -77,7 +77,7 @@ public class GetUserProvisioningEventRequest extends Request {
         }
 
         /**
-         * EventId.
+         * The ID of the RAM user provisioning event.
          */
         public Builder eventId(String eventId) {
             this.putQueryParameter("EventId", eventId);

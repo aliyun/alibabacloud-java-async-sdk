@@ -138,7 +138,7 @@ public class SetPasswordPolicyRequest extends Request {
         } 
 
         /**
-         * DirectoryId.
+         * The ID of the directory.
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -147,7 +147,12 @@ public class SetPasswordPolicyRequest extends Request {
         }
 
         /**
-         * MaxLoginAttempts.
+         * The number of password retries.
+         * <p>
+         * 
+         * If you enter wrong passwords for the specified consecutive times, the account is locked for 1 hour.
+         * 
+         * Valid values: 0 to 32. The value 0 specifies that the number of password retries is not limited.
          */
         public Builder maxLoginAttempts(Integer maxLoginAttempts) {
             this.putQueryParameter("MaxLoginAttempts", maxLoginAttempts);
@@ -156,7 +161,10 @@ public class SetPasswordPolicyRequest extends Request {
         }
 
         /**
-         * MaxPasswordAge.
+         * The validity period of a password.
+         * <p>
+         * 
+         * Valid values: 1 to 120. Unit: days.
          */
         public Builder maxPasswordAge(Integer maxPasswordAge) {
             this.putQueryParameter("MaxPasswordAge", maxPasswordAge);
@@ -165,7 +173,10 @@ public class SetPasswordPolicyRequest extends Request {
         }
 
         /**
-         * MinPasswordDifferentChars.
+         * The minimum number of unique characters in a password.
+         * <p>
+         * 
+         * The minimum value is 0, which specifies that the minimum number of unique characters in a password is not limited. The maximum value is the value of the `MinPasswordLength` parameter.
          */
         public Builder minPasswordDifferentChars(Integer minPasswordDifferentChars) {
             this.putQueryParameter("MinPasswordDifferentChars", minPasswordDifferentChars);
@@ -174,7 +185,10 @@ public class SetPasswordPolicyRequest extends Request {
         }
 
         /**
-         * MinPasswordLength.
+         * The minimum password length.
+         * <p>
+         * 
+         * Valid values: 8 to 32 characters.
          */
         public Builder minPasswordLength(Integer minPasswordLength) {
             this.putQueryParameter("MinPasswordLength", minPasswordLength);
@@ -183,7 +197,11 @@ public class SetPasswordPolicyRequest extends Request {
         }
 
         /**
-         * PasswordNotContainUsername.
+         * Specifies whether a password can contain the username. Valid value:
+         * <p>
+         * 
+         * *   true: A password cannot contain the username.
+         * *   false: A password can contain the username.
          */
         public Builder passwordNotContainUsername(Boolean passwordNotContainUsername) {
             this.putQueryParameter("PasswordNotContainUsername", passwordNotContainUsername);
@@ -192,7 +210,12 @@ public class SetPasswordPolicyRequest extends Request {
         }
 
         /**
-         * PasswordReusePrevention.
+         * The policy for password history check.
+         * <p>
+         * 
+         * The previous N passwords cannot be reused. Valid values of N: 0 to 24. The value 0 specifies that all historical passwords can be reused.
+         * 
+         * >  Passwords that are generated before January 5, 2024 are not counted as historical passwords.
          */
         public Builder passwordReusePrevention(Integer passwordReusePrevention) {
             this.putQueryParameter("PasswordReusePrevention", passwordReusePrevention);

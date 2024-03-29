@@ -68,7 +68,7 @@ public class GetUserProvisioningRdAccountStatisticsRequest extends Request {
         } 
 
         /**
-         * DirectoryId.
+         * The ID of the resource directory.
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -77,7 +77,7 @@ public class GetUserProvisioningRdAccountStatisticsRequest extends Request {
         }
 
         /**
-         * RdMemberId.
+         * The ID of the member in the resource directory.
          */
         public Builder rdMemberId(String rdMemberId) {
             this.putQueryParameter("RdMemberId", rdMemberId);

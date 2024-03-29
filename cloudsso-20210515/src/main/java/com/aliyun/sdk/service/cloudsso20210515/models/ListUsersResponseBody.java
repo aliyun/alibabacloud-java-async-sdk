@@ -158,6 +158,67 @@ public class ListUsersResponseBody extends TeaModel {
 
     } 
 
+    public static class ExternalId extends TeaModel {
+        @NameInMap("Id")
+        private String id;
+
+        @NameInMap("Issuer")
+        private String issuer;
+
+        private ExternalId(Builder builder) {
+            this.id = builder.id;
+            this.issuer = builder.issuer;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ExternalId create() {
+            return builder().build();
+        }
+
+        /**
+         * @return id
+         */
+        public String getId() {
+            return this.id;
+        }
+
+        /**
+         * @return issuer
+         */
+        public String getIssuer() {
+            return this.issuer;
+        }
+
+        public static final class Builder {
+            private String id; 
+            private String issuer; 
+
+            /**
+             * Id.
+             */
+            public Builder id(String id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * Issuer.
+             */
+            public Builder issuer(String issuer) {
+                this.issuer = issuer;
+                return this;
+            }
+
+            public ExternalId build() {
+                return new ExternalId(this);
+            } 
+
+        } 
+
+    }
     public static class Users extends TeaModel {
         @NameInMap("CreateTime")
         private String createTime;
@@ -170,6 +231,9 @@ public class ListUsersResponseBody extends TeaModel {
 
         @NameInMap("Email")
         private String email;
+
+        @NameInMap("ExternalId")
+        private ExternalId externalId;
 
         @NameInMap("FirstName")
         private String firstName;
@@ -197,6 +261,7 @@ public class ListUsersResponseBody extends TeaModel {
             this.description = builder.description;
             this.displayName = builder.displayName;
             this.email = builder.email;
+            this.externalId = builder.externalId;
             this.firstName = builder.firstName;
             this.lastName = builder.lastName;
             this.provisionType = builder.provisionType;
@@ -240,6 +305,13 @@ public class ListUsersResponseBody extends TeaModel {
          */
         public String getEmail() {
             return this.email;
+        }
+
+        /**
+         * @return externalId
+         */
+        public ExternalId getExternalId() {
+            return this.externalId;
         }
 
         /**
@@ -296,6 +368,7 @@ public class ListUsersResponseBody extends TeaModel {
             private String description; 
             private String displayName; 
             private String email; 
+            private ExternalId externalId; 
             private String firstName; 
             private String lastName; 
             private String provisionType; 
@@ -333,6 +406,14 @@ public class ListUsersResponseBody extends TeaModel {
              */
             public Builder email(String email) {
                 this.email = email;
+                return this;
+            }
+
+            /**
+             * ExternalId.
+             */
+            public Builder externalId(ExternalId externalId) {
+                this.externalId = externalId;
                 return this;
             }
 

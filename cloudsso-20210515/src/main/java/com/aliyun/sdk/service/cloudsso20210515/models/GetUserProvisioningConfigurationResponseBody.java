@@ -50,7 +50,7 @@ public class GetUserProvisioningConfigurationResponseBody extends TeaModel {
         private UserProvisioningConfiguration userProvisioningConfiguration; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class GetUserProvisioningConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * UserProvisioningConfiguration.
+         * The global configurations of the RAM user provisioning.
          */
         public Builder userProvisioningConfiguration(UserProvisioningConfiguration userProvisioningConfiguration) {
             this.userProvisioningConfiguration = userProvisioningConfiguration;
@@ -146,7 +146,7 @@ public class GetUserProvisioningConfigurationResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * CreateTime.
+             * The creation time.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -154,7 +154,10 @@ public class GetUserProvisioningConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultLandingPage.
+             * The default URL for a CloudSSO user who logs on to the Alibaba Cloud Management Console.
+             * <p>
+             * 
+             * Default value: https://homenew.console.aliyun.com.
              */
             public Builder defaultLandingPage(String defaultLandingPage) {
                 this.defaultLandingPage = defaultLandingPage;
@@ -162,7 +165,7 @@ public class GetUserProvisioningConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * DirectoryId.
+             * The ID of the resource directory.
              */
             public Builder directoryId(String directoryId) {
                 this.directoryId = directoryId;
@@ -170,7 +173,14 @@ public class GetUserProvisioningConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * SessionDuration.
+             * The duration of the logon session.
+             * <p>
+             * 
+             * Unit: hours.
+             * 
+             * Valid values: 1 to 24.
+             * 
+             * Default value: 6.
              */
             public Builder sessionDuration(Integer sessionDuration) {
                 this.sessionDuration = sessionDuration;
@@ -178,7 +188,7 @@ public class GetUserProvisioningConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The modification time.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

@@ -7,23 +7,27 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link RetryUserProvisioningEventResponseBody} extends {@link TeaModel}
+ * {@link GetUserIdResponseBody} extends {@link TeaModel}
  *
- * <p>RetryUserProvisioningEventResponseBody</p>
+ * <p>GetUserIdResponseBody</p>
  */
-public class RetryUserProvisioningEventResponseBody extends TeaModel {
+public class GetUserIdResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
-    private RetryUserProvisioningEventResponseBody(Builder builder) {
+    @NameInMap("UserId")
+    private String userId;
+
+    private GetUserIdResponseBody(Builder builder) {
         this.requestId = builder.requestId;
+        this.userId = builder.userId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static RetryUserProvisioningEventResponseBody create() {
+    public static GetUserIdResponseBody create() {
         return builder().build();
     }
 
@@ -34,19 +38,35 @@ public class RetryUserProvisioningEventResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return userId
+     */
+    public String getUserId() {
+        return this.userId;
+    }
+
     public static final class Builder {
         private String requestId; 
+        private String userId; 
 
         /**
-         * The request ID.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public RetryUserProvisioningEventResponseBody build() {
-            return new RetryUserProvisioningEventResponseBody(this);
+        /**
+         * UserId.
+         */
+        public Builder userId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+
+        public GetUserIdResponseBody build() {
+            return new GetUserIdResponseBody(this);
         } 
 
     } 

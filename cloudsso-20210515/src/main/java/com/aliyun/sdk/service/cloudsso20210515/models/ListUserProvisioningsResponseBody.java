@@ -98,7 +98,11 @@ public class ListUserProvisioningsResponseBody extends TeaModel {
         private java.util.List < UserProvisionings> userProvisionings; 
 
         /**
-         * IsTruncated.
+         * Indicates whether the queried entries are truncated. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder isTruncated(Boolean isTruncated) {
             this.isTruncated = isTruncated;
@@ -106,7 +110,12 @@ public class ListUserProvisioningsResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * The maximum number of entries per page.
+         * <p>
+         * 
+         * Valid values: 1 to 100.
+         * 
+         * Default value: 10.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -114,7 +123,10 @@ public class ListUserProvisioningsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The token that is used to initiate the next request.
+         * <p>
+         * 
+         * >  This parameter is returned only when the `IsTruncated` parameter is set to `true`.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -122,7 +134,7 @@ public class ListUserProvisioningsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +142,7 @@ public class ListUserProvisioningsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCounts.
+         * The total number of entries returned.
          */
         public Builder totalCounts(Integer totalCounts) {
             this.totalCounts = totalCounts;
@@ -138,7 +150,7 @@ public class ListUserProvisioningsResponseBody extends TeaModel {
         }
 
         /**
-         * UserProvisionings.
+         * The RAM user provisionings.
          */
         public Builder userProvisionings(java.util.List < UserProvisionings> userProvisionings) {
             this.userProvisionings = userProvisionings;
@@ -358,7 +370,7 @@ public class ListUserProvisioningsResponseBody extends TeaModel {
             private String userProvisioningId; 
 
             /**
-             * CreateTime.
+             * The creation time.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -366,7 +378,11 @@ public class ListUserProvisioningsResponseBody extends TeaModel {
             }
 
             /**
-             * DeletionStrategy.
+             * The deletion policy. The policy is used to manage synchronized users when you delete the RAM user provisioning. Valid values:
+             * <p>
+             * 
+             * *   Delete: When you delete the RAM user provisioning, the system deletes the synchronized users.
+             * *   Keep: When you delete the RAM user provisioning, the system retains the synchronized users.
              */
             public Builder deletionStrategy(String deletionStrategy) {
                 this.deletionStrategy = deletionStrategy;
@@ -374,7 +390,7 @@ public class ListUserProvisioningsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -382,7 +398,7 @@ public class ListUserProvisioningsResponseBody extends TeaModel {
             }
 
             /**
-             * DirectoryId.
+             * The ID of the resource directory.
              */
             public Builder directoryId(String directoryId) {
                 this.directoryId = directoryId;
@@ -390,7 +406,11 @@ public class ListUserProvisioningsResponseBody extends TeaModel {
             }
 
             /**
-             * DuplicationStrategy.
+             * The conflict handling policy. The policy is used when a RAM user has the same username as the CloudSSO user who is synchronized to RAM. Valid values:
+             * <p>
+             * 
+             * *   KeepBoth: When a CloudSSO user is synchronized to RAM, if a RAM user who has the same username as the CloudSSO user exists, the system creates a RAM user whose username is the username of the CloudSSO user plus the suffix `_sso`.
+             * *   TakeOver: When a CloudSSO user is synchronized to RAM, if a RAM user who has the same username as the CloudSSO user exists, the system replaces the RAM user with the CloudSSO user.
              */
             public Builder duplicationStrategy(String duplicationStrategy) {
                 this.duplicationStrategy = duplicationStrategy;
@@ -398,7 +418,7 @@ public class ListUserProvisioningsResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerPk.
+             * The ID of the Alibaba Cloud account to which the resource directory belongs.
              */
             public Builder ownerPk(String ownerPk) {
                 this.ownerPk = ownerPk;
@@ -406,7 +426,11 @@ public class ListUserProvisioningsResponseBody extends TeaModel {
             }
 
             /**
-             * PrincipalId.
+             * The identity ID of the RAM user provisioning. Valid values:
+             * <p>
+             * 
+             * *   If `Group` is returned for the `PrincipalType` parameter, the value of this parameter is the ID of a CloudSSO user group (g-\*\*\*\*\*\*\*\*).
+             * *   If `User` is returned for the `PrincipalType` parameter, the value of this parameter is the ID of a CloudSSO user (u-\*\*\*\*\*\*\*\*).
              */
             public Builder principalId(String principalId) {
                 this.principalId = principalId;
@@ -414,7 +438,11 @@ public class ListUserProvisioningsResponseBody extends TeaModel {
             }
 
             /**
-             * PrincipalName.
+             * The identity name of the RAM user provisioning. Valid values:
+             * <p>
+             * 
+             * *   If `Group` is returned for the `PrincipalType` parameter, the value of this parameter is the name of a CloudSSO user group.
+             * *   If `User` is returned for the `PrincipalType` parameter, the value of this parameter is the name of a CloudSSO user.
              */
             public Builder principalName(String principalName) {
                 this.principalName = principalName;
@@ -422,7 +450,11 @@ public class ListUserProvisioningsResponseBody extends TeaModel {
             }
 
             /**
-             * PrincipalType.
+             * The identity type of the RAM user provisioning. Valid values:
+             * <p>
+             * 
+             * *   User: The identity of the RAM user provisioning is a CloudSSO user.
+             * *   Group: The identity of the RAM user provisioning is a CloudSSO user group.
              */
             public Builder principalType(String principalType) {
                 this.principalType = principalType;
@@ -430,7 +462,11 @@ public class ListUserProvisioningsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the RAM user provisioning. Valid values:
+             * <p>
+             * 
+             * *   Enabled
+             * *   Disabled
              */
             public Builder status(String status) {
                 this.status = status;
@@ -438,7 +474,7 @@ public class ListUserProvisioningsResponseBody extends TeaModel {
             }
 
             /**
-             * TargetId.
+             * The ID of the object for which you create the RAM user provisioning. The value is fixed as the ID of the member in the resource directory.
              */
             public Builder targetId(String targetId) {
                 this.targetId = targetId;
@@ -446,7 +482,7 @@ public class ListUserProvisioningsResponseBody extends TeaModel {
             }
 
             /**
-             * TargetName.
+             * The object for which you create the RAM user provisioning. The value is fixed as `RD-Account`.
              */
             public Builder targetName(String targetName) {
                 this.targetName = targetName;
@@ -454,7 +490,7 @@ public class ListUserProvisioningsResponseBody extends TeaModel {
             }
 
             /**
-             * TargetPath.
+             * The path of the resource directory in which you create the RAM user provisioning for the object.
              */
             public Builder targetPath(String targetPath) {
                 this.targetPath = targetPath;
@@ -462,7 +498,7 @@ public class ListUserProvisioningsResponseBody extends TeaModel {
             }
 
             /**
-             * TargetType.
+             * The object for which you create the RAM user provisioning. The value is fixed as `RD-Account`.
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -470,7 +506,7 @@ public class ListUserProvisioningsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The modification time.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -478,7 +514,7 @@ public class ListUserProvisioningsResponseBody extends TeaModel {
             }
 
             /**
-             * UserProvisioningId.
+             * The ID of the RAM user provisioning.
              */
             public Builder userProvisioningId(String userProvisioningId) {
                 this.userProvisioningId = userProvisioningId;

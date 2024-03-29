@@ -50,7 +50,7 @@ public class GetUserProvisioningRdAccountStatisticsResponseBody extends TeaModel
         private UserProvisioningStatistics userProvisioningStatistics; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class GetUserProvisioningRdAccountStatisticsResponseBody extends TeaModel
         }
 
         /**
-         * UserProvisioningStatistics.
+         * The statistics of the RAM user provisioning.
          */
         public Builder userProvisioningStatistics(UserProvisioningStatistics userProvisioningStatistics) {
             this.userProvisioningStatistics = userProvisioningStatistics;
@@ -158,7 +158,7 @@ public class GetUserProvisioningRdAccountStatisticsResponseBody extends TeaModel
             private String type; 
 
             /**
-             * DirectoryId.
+             * The ID of the resource directory.
              */
             public Builder directoryId(String directoryId) {
                 this.directoryId = directoryId;
@@ -166,7 +166,7 @@ public class GetUserProvisioningRdAccountStatisticsResponseBody extends TeaModel
             }
 
             /**
-             * EntityId.
+             * The entity ID, which is the ID of the member in the resource directory.
              */
             public Builder entityId(String entityId) {
                 this.entityId = entityId;
@@ -174,7 +174,7 @@ public class GetUserProvisioningRdAccountStatisticsResponseBody extends TeaModel
             }
 
             /**
-             * FailedEventCount.
+             * The number of failed RAM user provisioning events.
              */
             public Builder failedEventCount(Long failedEventCount) {
                 this.failedEventCount = failedEventCount;
@@ -182,7 +182,7 @@ public class GetUserProvisioningRdAccountStatisticsResponseBody extends TeaModel
             }
 
             /**
-             * LatestAsyncTime.
+             * The time when the RAM user provisioning was last performed.
              */
             public Builder latestAsyncTime(String latestAsyncTime) {
                 this.latestAsyncTime = latestAsyncTime;
@@ -190,7 +190,7 @@ public class GetUserProvisioningRdAccountStatisticsResponseBody extends TeaModel
             }
 
             /**
-             * OwnerPk.
+             * The ID of the Alibaba Cloud account to which the resource directory belongs.
              */
             public Builder ownerPk(String ownerPk) {
                 this.ownerPk = ownerPk;
@@ -198,7 +198,7 @@ public class GetUserProvisioningRdAccountStatisticsResponseBody extends TeaModel
             }
 
             /**
-             * Type.
+             * The entity type. The value is fixed as `RD Account`.
              */
             public Builder type(String type) {
                 this.type = type;

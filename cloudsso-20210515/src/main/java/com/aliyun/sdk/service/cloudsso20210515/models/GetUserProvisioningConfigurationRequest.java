@@ -54,7 +54,7 @@ public class GetUserProvisioningConfigurationRequest extends Request {
         } 
 
         /**
-         * DirectoryId.
+         * The ID of the resource directory.
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);

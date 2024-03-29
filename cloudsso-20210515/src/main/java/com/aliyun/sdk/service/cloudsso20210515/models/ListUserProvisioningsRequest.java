@@ -138,7 +138,7 @@ public class ListUserProvisioningsRequest extends Request {
         } 
 
         /**
-         * DirectoryId.
+         * The ID of the resource directory.
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -147,7 +147,12 @@ public class ListUserProvisioningsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The maximum number of entries per page.
+         * <p>
+         * 
+         * Valid values: 1 to 100.
+         * 
+         * Default value: 10.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -156,7 +161,10 @@ public class ListUserProvisioningsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that is used to initiate the next request. If this is your first time to call this operation, you do not need to specify the `NextToken` parameter.
+         * <p>
+         * 
+         * When you call this operation for the first time, if the total number of entries to return is larger than the value of `MaxResults`, the entries are truncated. The system returns entries based on the value of `MaxResults`, and does not return the excess entries. In this case, the value of the response parameter `IsTruncated` is `true`, and `NextToken` is returned. In the next call, you can use the value of `NextToken` and maintain the settings of the other request parameters to query the excess entries. You can repeat the call until the value of `IsTruncated` becomes `false`. This way, all entries are returned.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -165,7 +173,11 @@ public class ListUserProvisioningsRequest extends Request {
         }
 
         /**
-         * PrincipalId.
+         * The identity ID of the RAM user provisioning. Valid values:
+         * <p>
+         * 
+         * *   If `Group` is returned for the `PrincipalType` parameter, the value of this parameter is the ID of a CloudSSO user group (g-\*\*\*\*\*\*\*\*).
+         * *   If `User` is returned for the `PrincipalType` parameter, the value of this parameter is the ID of a CloudSSO user (u-\*\*\*\*\*\*\*\*).
          */
         public Builder principalId(String principalId) {
             this.putQueryParameter("PrincipalId", principalId);
@@ -174,7 +186,11 @@ public class ListUserProvisioningsRequest extends Request {
         }
 
         /**
-         * PrincipalType.
+         * The identity type of the RAM user provisioning. Valid values:
+         * <p>
+         * 
+         * *   User: The identity of the RAM user provisioning is a CloudSSO user.
+         * *   Group: The identity of the RAM user provisioning is a CloudSSO user group.
          */
         public Builder principalType(String principalType) {
             this.putQueryParameter("PrincipalType", principalType);
@@ -183,7 +199,7 @@ public class ListUserProvisioningsRequest extends Request {
         }
 
         /**
-         * TargetId.
+         * The ID of the object for which you create the RAM user provisioning. The value is fixed as the ID of the member in the resource directory.
          */
         public Builder targetId(String targetId) {
             this.putQueryParameter("TargetId", targetId);
@@ -192,7 +208,7 @@ public class ListUserProvisioningsRequest extends Request {
         }
 
         /**
-         * TargetType.
+         * The object for which you create the RAM user provisioning. The value is fixed as `RD-Account`.
          */
         public Builder targetType(String targetType) {
             this.putQueryParameter("TargetType", targetType);

@@ -271,6 +271,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<GetUserResponse> getUser(GetUserRequest request);
 
+    CompletableFuture<GetUserIdResponse> getUserId(GetUserIdRequest request);
+
     /**
       * This topic provides an example on how to query the MFA setting of the user named `u-00q8wbq42wiltcrk****`. The returned result shows that MFA is enabled for the user.
       *

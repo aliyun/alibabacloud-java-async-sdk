@@ -68,7 +68,7 @@ public class GetUserProvisioningStatisticsRequest extends Request {
         } 
 
         /**
-         * DirectoryId.
+         * The ID of the resource directory.
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -77,7 +77,7 @@ public class GetUserProvisioningStatisticsRequest extends Request {
         }
 
         /**
-         * UserProvisioningId.
+         * The ID of the RAM user provisioning.
          */
         public Builder userProvisioningId(String userProvisioningId) {
             this.putQueryParameter("UserProvisioningId", userProvisioningId);

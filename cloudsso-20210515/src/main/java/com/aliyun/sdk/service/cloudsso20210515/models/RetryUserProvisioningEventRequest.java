@@ -82,7 +82,7 @@ public class RetryUserProvisioningEventRequest extends Request {
         } 
 
         /**
-         * DirectoryId.
+         * The ID of the resource directory.
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -91,7 +91,11 @@ public class RetryUserProvisioningEventRequest extends Request {
         }
 
         /**
-         * DuplicationStrategy.
+         * The conflict handling policy. The policy is used when a RAM user has the same username as the CloudSSO user who is synchronized to RAM. Valid values:
+         * <p>
+         * 
+         * *   KeepBoth: When a CloudSSO user is synchronized to RAM, if a RAM user who has the same username as the CloudSSO user exists, the system creates a RAM user whose username is the username of the CloudSSO user plus the suffix `_sso`.
+         * *   TakeOver: When a CloudSSO user is synchronized to RAM, if a RAM user who has the same username as the CloudSSO user exists, the system replaces the RAM user with the CloudSSO user.
          */
         public Builder duplicationStrategy(String duplicationStrategy) {
             this.putQueryParameter("DuplicationStrategy", duplicationStrategy);
@@ -100,7 +104,7 @@ public class RetryUserProvisioningEventRequest extends Request {
         }
 
         /**
-         * EventId.
+         * The ID of the RAM user provisioning event.
          */
         public Builder eventId(String eventId) {
             this.putQueryParameter("EventId", eventId);

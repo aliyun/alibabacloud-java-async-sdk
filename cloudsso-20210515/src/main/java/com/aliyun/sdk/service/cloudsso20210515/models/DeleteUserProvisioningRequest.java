@@ -82,7 +82,13 @@ public class DeleteUserProvisioningRequest extends Request {
         } 
 
         /**
-         * DeletionStrategy.
+         * The deletion policy. The policy is used to manage synchronized users when you delete the RAM user provisioning. Valid values:
+         * <p>
+         * 
+         * *   Delete: When you delete the RAM user provisioning, the system deletes the synchronized users.
+         * *   Keep: When you delete the RAM user provisioning, the system retains the synchronized users.
+         * 
+         * >  If you do not specify this parameter, the deletion policy that is configured when you create the RAM user provisioning is used.
          */
         public Builder deletionStrategy(String deletionStrategy) {
             this.putQueryParameter("DeletionStrategy", deletionStrategy);
@@ -91,7 +97,7 @@ public class DeleteUserProvisioningRequest extends Request {
         }
 
         /**
-         * DirectoryId.
+         * The ID of the resource directory.
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -100,7 +106,7 @@ public class DeleteUserProvisioningRequest extends Request {
         }
 
         /**
-         * UserProvisioningId.
+         * The ID of the RAM user provisioning.
          */
         public Builder userProvisioningId(String userProvisioningId) {
             this.putQueryParameter("UserProvisioningId", userProvisioningId);

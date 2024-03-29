@@ -82,7 +82,7 @@ public class UpdateUserProvisioningConfigurationRequest extends Request {
         } 
 
         /**
-         * DirectoryId.
+         * The ID of the resource directory.
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -91,7 +91,10 @@ public class UpdateUserProvisioningConfigurationRequest extends Request {
         }
 
         /**
-         * NewDefaultLandingPage.
+         * The new default URL for a CloudSSO user who logs on to the Alibaba Cloud Management Console.
+         * <p>
+         * 
+         * Default value: https://homenew.console.aliyun.com.
          */
         public Builder newDefaultLandingPage(String newDefaultLandingPage) {
             this.putQueryParameter("NewDefaultLandingPage", newDefaultLandingPage);
@@ -100,7 +103,14 @@ public class UpdateUserProvisioningConfigurationRequest extends Request {
         }
 
         /**
-         * NewSessionDuration.
+         * The new duration of the logon session.
+         * <p>
+         * 
+         * Unit: hours.
+         * 
+         * Valid values: 1 to 24.
+         * 
+         * Default value: 6.
          */
         public Builder newSessionDuration(Integer newSessionDuration) {
             this.putQueryParameter("NewSessionDuration", newSessionDuration);
