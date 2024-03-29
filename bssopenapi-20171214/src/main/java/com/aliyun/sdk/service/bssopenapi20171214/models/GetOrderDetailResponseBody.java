@@ -147,6 +147,9 @@ public class GetOrderDetailResponseBody extends TeaModel {
         @NameInMap("Currency")
         private String currency;
 
+        @NameInMap("ExtendInfos")
+        private java.util.Map < String, String > extendInfos;
+
         @NameInMap("InstanceIDs")
         private String instanceIDs;
 
@@ -219,6 +222,7 @@ public class GetOrderDetailResponseBody extends TeaModel {
             this.config = builder.config;
             this.createTime = builder.createTime;
             this.currency = builder.currency;
+            this.extendInfos = builder.extendInfos;
             this.instanceIDs = builder.instanceIDs;
             this.operator = builder.operator;
             this.orderId = builder.orderId;
@@ -284,6 +288,13 @@ public class GetOrderDetailResponseBody extends TeaModel {
          */
         public String getCurrency() {
             return this.currency;
+        }
+
+        /**
+         * @return extendInfos
+         */
+        public java.util.Map < String, String > getExtendInfos() {
+            return this.extendInfos;
         }
 
         /**
@@ -446,6 +457,7 @@ public class GetOrderDetailResponseBody extends TeaModel {
             private String config; 
             private String createTime; 
             private String currency; 
+            private java.util.Map < String, String > extendInfos; 
             private String instanceIDs; 
             private String operator; 
             private String orderId; 
@@ -506,6 +518,14 @@ public class GetOrderDetailResponseBody extends TeaModel {
              */
             public Builder currency(String currency) {
                 this.currency = currency;
+                return this;
+            }
+
+            /**
+             * ExtendInfos.
+             */
+            public Builder extendInfos(java.util.Map < String, String > extendInfos) {
+                this.extendInfos = extendInfos;
                 return this;
             }
 
