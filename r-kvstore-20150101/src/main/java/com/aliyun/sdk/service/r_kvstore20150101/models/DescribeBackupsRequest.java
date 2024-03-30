@@ -18,11 +18,11 @@ public class DescribeBackupsRequest extends Request {
 
     @Query
     @NameInMap("BackupId")
-    private Integer backupId;
+    private Long backupId;
 
     @Query
     @NameInMap("BackupJobId")
-    private Integer backupJobId;
+    private Long backupJobId;
 
     @Query
     @NameInMap("EndTime")
@@ -112,14 +112,14 @@ public class DescribeBackupsRequest extends Request {
     /**
      * @return backupId
      */
-    public Integer getBackupId() {
+    public Long getBackupId() {
         return this.backupId;
     }
 
     /**
      * @return backupJobId
      */
-    public Integer getBackupJobId() {
+    public Long getBackupJobId() {
         return this.backupJobId;
     }
 
@@ -202,8 +202,8 @@ public class DescribeBackupsRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeBackupsRequest, Builder> {
         private String regionId; 
-        private Integer backupId; 
-        private Integer backupJobId; 
+        private Long backupId; 
+        private Long backupJobId; 
         private String endTime; 
         private String instanceId; 
         private String needAof; 
@@ -250,7 +250,7 @@ public class DescribeBackupsRequest extends Request {
         /**
          * The ID of the backup file.
          */
-        public Builder backupId(Integer backupId) {
+        public Builder backupId(Long backupId) {
             this.putQueryParameter("BackupId", backupId);
             this.backupId = backupId;
             return this;
@@ -259,7 +259,7 @@ public class DescribeBackupsRequest extends Request {
         /**
          * BackupJobId.
          */
-        public Builder backupJobId(Integer backupJobId) {
+        public Builder backupJobId(Long backupJobId) {
             this.putQueryParameter("BackupJobId", backupJobId);
             this.backupJobId = backupJobId;
             return this;

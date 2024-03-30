@@ -1059,7 +1059,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * SecurityToken.
+         * 系统自动生成的安全 Token，无需传入
          */
         public Builder securityToken(String securityToken) {
             this.putQueryParameter("SecurityToken", securityToken);

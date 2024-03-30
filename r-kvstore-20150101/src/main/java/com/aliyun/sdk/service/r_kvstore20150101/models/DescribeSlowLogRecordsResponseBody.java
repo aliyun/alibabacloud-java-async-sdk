@@ -150,7 +150,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The slow log entries.
+         * The slow query log entries.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -358,7 +358,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * The database name.
              */
             public Builder DBName(String DBName) {
                 this.DBName = DBName;
@@ -366,7 +366,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database, which serves the same purpose as the **DBName** parameter. We recommend that you use the value of the **DBName** parameter.
+             * The database name. This parameter serves the same purpose as the **DBName** parameter. We recommend that you use the **DBName** parameter.
              */
             public Builder dataBaseName(String dataBaseName) {
                 this.dataBaseName = dataBaseName;

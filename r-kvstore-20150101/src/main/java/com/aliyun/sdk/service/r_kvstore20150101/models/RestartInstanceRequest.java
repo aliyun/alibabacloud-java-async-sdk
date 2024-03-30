@@ -181,13 +181,6 @@ public class RestartInstanceRequest extends Request {
          * 
          * *   **Immediately**: immediately restarts the instance.
          * *   **MaintainTime**: restarts the instance during the maintenance window.
-         * 
-         * Enumeration values:
-         * 
-         * *   0
-         * *   1
-         * *   Immediately
-         * *   MaintainTime
          */
         public Builder effectiveTime(String effectiveTime) {
             this.putQueryParameter("EffectiveTime", effectiveTime);
@@ -196,7 +189,7 @@ public class RestartInstanceRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **RestartInstance**.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -250,7 +243,7 @@ public class RestartInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether to update the instance to the latest minor version when the instance is restarted. Valid values:
+         * Specifies whether to update to the latest minor version when the instance is restarted. Valid values:
          * <p>
          * 
          * *   **true**: updates the minor version.

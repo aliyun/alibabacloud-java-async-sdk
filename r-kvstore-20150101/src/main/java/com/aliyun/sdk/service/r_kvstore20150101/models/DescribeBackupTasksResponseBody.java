@@ -282,7 +282,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
     }
     public static class BackupJobs extends TeaModel {
         @NameInMap("BackupJobID")
-        private Integer backupJobID;
+        private Long backupJobID;
 
         @NameInMap("BackupProgressStatus")
         private String backupProgressStatus;
@@ -323,7 +323,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
         /**
          * @return backupJobID
          */
-        public Integer getBackupJobID() {
+        public Long getBackupJobID() {
             return this.backupJobID;
         }
 
@@ -370,7 +370,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private Integer backupJobID; 
+            private Long backupJobID; 
             private String backupProgressStatus; 
             private String jobMode; 
             private String nodeId; 
@@ -381,7 +381,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
             /**
              * The ID of the backup task.
              */
-            public Builder backupJobID(Integer backupJobID) {
+            public Builder backupJobID(Long backupJobID) {
                 this.backupJobID = backupJobID;
                 return this;
             }

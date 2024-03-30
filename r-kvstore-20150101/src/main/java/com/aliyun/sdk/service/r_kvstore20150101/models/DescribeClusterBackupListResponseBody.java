@@ -122,7 +122,7 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ClusterBackups.
+         * The backup sets of the instance. An instance backup contains the backup sets of all nodes in the instance.
          */
         public Builder clusterBackups(java.util.List < ClusterBackups> clusterBackups) {
             this.clusterBackups = clusterBackups;
@@ -130,7 +130,7 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
         }
 
         /**
-         * FreeSize.
+         * This parameter does not take effect. Ignore this parameter.
          */
         public Builder freeSize(Long freeSize) {
             this.freeSize = freeSize;
@@ -138,7 +138,10 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
         }
 
         /**
-         * FullStorageSize.
+         * The size of the full backup file of the instance. Unit: bytes. Full backups originate from scheduled backups, manual backups, and backups generated during cache analysis.
+         * <p>
+         * 
+         * >  The value of this parameter is independent of the number and size of returned backup sets. Instead, it represents the size of all valid full backups of the instance.
          */
         public Builder fullStorageSize(Long fullStorageSize) {
             this.fullStorageSize = fullStorageSize;
@@ -146,7 +149,10 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
         }
 
         /**
-         * LogStorageSize.
+         * The size of the log backup file of the instance. Unit: bytes. This parameter is valid only when flashback is enabled.
+         * <p>
+         * 
+         * >  The value of this parameter is independent of the number and size of returned backup sets. Instead, it represents the size of all valid log backups of the instance.
          */
         public Builder logStorageSize(Long logStorageSize) {
             this.logStorageSize = logStorageSize;
@@ -218,7 +224,7 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
             private String custinsDbVersion; 
 
             /**
-             * CustinsDbVersion.
+             * The engine version.
              */
             public Builder custinsDbVersion(String custinsDbVersion) {
                 this.custinsDbVersion = custinsDbVersion;
@@ -391,7 +397,7 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
             private String isAvail; 
 
             /**
-             * BackupDownloadURL.
+             * The public download URL of the backup file.
              */
             public Builder backupDownloadURL(String backupDownloadURL) {
                 this.backupDownloadURL = backupDownloadURL;
@@ -399,7 +405,7 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
             }
 
             /**
-             * BackupEndTime.
+             * The end time of the backup. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder backupEndTime(String backupEndTime) {
                 this.backupEndTime = backupEndTime;
@@ -407,7 +413,7 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
             }
 
             /**
-             * BackupId.
+             * The ID of the backup file.
              */
             public Builder backupId(String backupId) {
                 this.backupId = backupId;
@@ -415,7 +421,10 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
             }
 
             /**
-             * BackupIntranetDownloadURL.
+             * The internal download URL of the backup file.
+             * <p>
+             * 
+             * >  You can use this URL to download the backup file from an Elastic Compute Service (ECS) instance that is connected to the ApsaraDB for Redis instance. The ECS instance must belong to the same classic network or reside in the same virtual private cloud (VPC) as the ApsaraDB for Redis instance.
              */
             public Builder backupIntranetDownloadURL(String backupIntranetDownloadURL) {
                 this.backupIntranetDownloadURL = backupIntranetDownloadURL;
@@ -423,7 +432,7 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
             }
 
             /**
-             * BackupName.
+             * The backup name.
              */
             public Builder backupName(String backupName) {
                 this.backupName = backupName;
@@ -431,7 +440,7 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
             }
 
             /**
-             * BackupSize.
+             * The size of the backup file. Unit: bytes.
              */
             public Builder backupSize(String backupSize) {
                 this.backupSize = backupSize;
@@ -439,7 +448,7 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
             }
 
             /**
-             * BackupStartTime.
+             * The start time of the backup. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder backupStartTime(String backupStartTime) {
                 this.backupStartTime = backupStartTime;
@@ -447,7 +456,11 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
             }
 
             /**
-             * BackupStatus.
+             * The status of the backup. Valid values:
+             * <p>
+             * 
+             * *   **OK**
+             * *   **ERROR**
              */
             public Builder backupStatus(String backupStatus) {
                 this.backupStatus = backupStatus;
@@ -455,7 +468,7 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
             }
 
             /**
-             * Engine.
+             * The database engine. The return value is **redis**.
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -463,7 +476,7 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
             }
 
             /**
-             * ExtraInfo.
+             * The additional information.
              */
             public Builder extraInfo(ExtraInfo extraInfo) {
                 this.extraInfo = extraInfo;
@@ -471,7 +484,7 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * The name of the instance.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -479,7 +492,11 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
             }
 
             /**
-             * IsAvail.
+             * Indicates whether the backup set is available. Valid values:
+             * <p>
+             * 
+             * *   **0**: unavailable
+             * *   **1**: available
              */
             public Builder isAvail(String isAvail) {
                 this.isAvail = isAvail;
@@ -628,7 +645,7 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
             private Integer shardClassMemory; 
 
             /**
-             * Backups.
+             * The backup sets of all nodes in the instance.
              */
             public Builder backups(java.util.List < Backups> backups) {
                 this.backups = backups;
@@ -636,7 +653,7 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterBackupEndTime.
+             * The end time of the backup.
              */
             public Builder clusterBackupEndTime(String clusterBackupEndTime) {
                 this.clusterBackupEndTime = clusterBackupEndTime;
@@ -644,7 +661,7 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterBackupId.
+             * The ID of the backup set.
              */
             public Builder clusterBackupId(String clusterBackupId) {
                 this.clusterBackupId = clusterBackupId;
@@ -652,7 +669,7 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterBackupMode.
+             * The backup mode.
              */
             public Builder clusterBackupMode(String clusterBackupMode) {
                 this.clusterBackupMode = clusterBackupMode;
@@ -660,7 +677,7 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterBackupSize.
+             * The size of the backup set.
              */
             public Builder clusterBackupSize(String clusterBackupSize) {
                 this.clusterBackupSize = clusterBackupSize;
@@ -668,7 +685,7 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterBackupStartTime.
+             * The start time of the backup.
              */
             public Builder clusterBackupStartTime(String clusterBackupStartTime) {
                 this.clusterBackupStartTime = clusterBackupStartTime;
@@ -676,7 +693,12 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterBackupStatus.
+             * The status of the backup set.
+             * <p>
+             * 
+             * *   OK
+             * *   RUNNING
+             * *   Failed
              */
             public Builder clusterBackupStatus(String clusterBackupStatus) {
                 this.clusterBackupStatus = clusterBackupStatus;
@@ -684,7 +706,7 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
             }
 
             /**
-             * IsAvail.
+             * Indicates whether the backup set is valid. A value of 0 indicates that node-level backups failed or have not been completed.
              */
             public Builder isAvail(Integer isAvail) {
                 this.isAvail = isAvail;
@@ -692,7 +714,7 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
             }
 
             /**
-             * Progress.
+             * The backup progress. The system displays only the progress of running backup tasks.
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -700,7 +722,7 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
             }
 
             /**
-             * ShardClassMemory.
+             * The memory size of a single node during a full backup. Unit: MB.
              */
             public Builder shardClassMemory(Integer shardClassMemory) {
                 this.shardClassMemory = shardClassMemory;

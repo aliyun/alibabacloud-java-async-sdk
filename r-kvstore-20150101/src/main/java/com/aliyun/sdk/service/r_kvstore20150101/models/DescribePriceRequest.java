@@ -377,7 +377,7 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * The instance type.****
+         * The instance type.
          * <p>
          * 
          * **To view the instance type, perform the following steps:**

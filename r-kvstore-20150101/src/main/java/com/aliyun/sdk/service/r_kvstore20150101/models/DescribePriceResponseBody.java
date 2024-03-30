@@ -273,12 +273,217 @@ public class DescribePriceResponseBody extends TeaModel {
         } 
 
     }
+    public static class OptionIds extends TeaModel {
+        @NameInMap("OptionId")
+        private java.util.List < Long > optionId;
+
+        private OptionIds(Builder builder) {
+            this.optionId = builder.optionId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static OptionIds create() {
+            return builder().build();
+        }
+
+        /**
+         * @return optionId
+         */
+        public java.util.List < Long > getOptionId() {
+            return this.optionId;
+        }
+
+        public static final class Builder {
+            private java.util.List < Long > optionId; 
+
+            /**
+             * OptionId.
+             */
+            public Builder optionId(java.util.List < Long > optionId) {
+                this.optionId = optionId;
+                return this;
+            }
+
+            public OptionIds build() {
+                return new OptionIds(this);
+            } 
+
+        } 
+
+    }
+    public static class ContractActivity extends TeaModel {
+        @NameInMap("ActivityId")
+        private Long activityId;
+
+        @NameInMap("ActivityName")
+        private String activityName;
+
+        @NameInMap("FinalFee")
+        private Double finalFee;
+
+        @NameInMap("FinalPromFee")
+        private Double finalPromFee;
+
+        @NameInMap("OptionCode")
+        private String optionCode;
+
+        @NameInMap("OptionIds")
+        private OptionIds optionIds;
+
+        @NameInMap("ProdFee")
+        private Double prodFee;
+
+        private ContractActivity(Builder builder) {
+            this.activityId = builder.activityId;
+            this.activityName = builder.activityName;
+            this.finalFee = builder.finalFee;
+            this.finalPromFee = builder.finalPromFee;
+            this.optionCode = builder.optionCode;
+            this.optionIds = builder.optionIds;
+            this.prodFee = builder.prodFee;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ContractActivity create() {
+            return builder().build();
+        }
+
+        /**
+         * @return activityId
+         */
+        public Long getActivityId() {
+            return this.activityId;
+        }
+
+        /**
+         * @return activityName
+         */
+        public String getActivityName() {
+            return this.activityName;
+        }
+
+        /**
+         * @return finalFee
+         */
+        public Double getFinalFee() {
+            return this.finalFee;
+        }
+
+        /**
+         * @return finalPromFee
+         */
+        public Double getFinalPromFee() {
+            return this.finalPromFee;
+        }
+
+        /**
+         * @return optionCode
+         */
+        public String getOptionCode() {
+            return this.optionCode;
+        }
+
+        /**
+         * @return optionIds
+         */
+        public OptionIds getOptionIds() {
+            return this.optionIds;
+        }
+
+        /**
+         * @return prodFee
+         */
+        public Double getProdFee() {
+            return this.prodFee;
+        }
+
+        public static final class Builder {
+            private Long activityId; 
+            private String activityName; 
+            private Double finalFee; 
+            private Double finalPromFee; 
+            private String optionCode; 
+            private OptionIds optionIds; 
+            private Double prodFee; 
+
+            /**
+             * ActivityId.
+             */
+            public Builder activityId(Long activityId) {
+                this.activityId = activityId;
+                return this;
+            }
+
+            /**
+             * ActivityName.
+             */
+            public Builder activityName(String activityName) {
+                this.activityName = activityName;
+                return this;
+            }
+
+            /**
+             * FinalFee.
+             */
+            public Builder finalFee(Double finalFee) {
+                this.finalFee = finalFee;
+                return this;
+            }
+
+            /**
+             * FinalPromFee.
+             */
+            public Builder finalPromFee(Double finalPromFee) {
+                this.finalPromFee = finalPromFee;
+                return this;
+            }
+
+            /**
+             * OptionCode.
+             */
+            public Builder optionCode(String optionCode) {
+                this.optionCode = optionCode;
+                return this;
+            }
+
+            /**
+             * OptionIds.
+             */
+            public Builder optionIds(OptionIds optionIds) {
+                this.optionIds = optionIds;
+                return this;
+            }
+
+            /**
+             * ProdFee.
+             */
+            public Builder prodFee(Double prodFee) {
+                this.prodFee = prodFee;
+                return this;
+            }
+
+            public ContractActivity build() {
+                return new ContractActivity(this);
+            } 
+
+        } 
+
+    }
     public static class DepreciateInfo extends TeaModel {
         @NameInMap("CheapRate")
         private Long cheapRate;
 
         @NameInMap("CheapStandAmount")
         private Long cheapStandAmount;
+
+        @NameInMap("ContractActivity")
+        private ContractActivity contractActivity;
 
         @NameInMap("Differential")
         private Long differential;
@@ -304,6 +509,7 @@ public class DescribePriceResponseBody extends TeaModel {
         private DepreciateInfo(Builder builder) {
             this.cheapRate = builder.cheapRate;
             this.cheapStandAmount = builder.cheapStandAmount;
+            this.contractActivity = builder.contractActivity;
             this.differential = builder.differential;
             this.differentialName = builder.differentialName;
             this.isContractActivity = builder.isContractActivity;
@@ -333,6 +539,13 @@ public class DescribePriceResponseBody extends TeaModel {
          */
         public Long getCheapStandAmount() {
             return this.cheapStandAmount;
+        }
+
+        /**
+         * @return contractActivity
+         */
+        public ContractActivity getContractActivity() {
+            return this.contractActivity;
         }
 
         /**
@@ -387,6 +600,7 @@ public class DescribePriceResponseBody extends TeaModel {
         public static final class Builder {
             private Long cheapRate; 
             private Long cheapStandAmount; 
+            private ContractActivity contractActivity; 
             private Long differential; 
             private String differentialName; 
             private Boolean isContractActivity; 
@@ -408,6 +622,14 @@ public class DescribePriceResponseBody extends TeaModel {
              */
             public Builder cheapStandAmount(Long cheapStandAmount) {
                 this.cheapStandAmount = cheapStandAmount;
+                return this;
+            }
+
+            /**
+             * ContractActivity.
+             */
+            public Builder contractActivity(ContractActivity contractActivity) {
+                this.contractActivity = contractActivity;
                 return this;
             }
 
@@ -938,12 +1160,217 @@ public class DescribePriceResponseBody extends TeaModel {
         } 
 
     }
+    public static class ContractActivityOptionIds extends TeaModel {
+        @NameInMap("OptionId")
+        private java.util.List < Long > optionId;
+
+        private ContractActivityOptionIds(Builder builder) {
+            this.optionId = builder.optionId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ContractActivityOptionIds create() {
+            return builder().build();
+        }
+
+        /**
+         * @return optionId
+         */
+        public java.util.List < Long > getOptionId() {
+            return this.optionId;
+        }
+
+        public static final class Builder {
+            private java.util.List < Long > optionId; 
+
+            /**
+             * OptionId.
+             */
+            public Builder optionId(java.util.List < Long > optionId) {
+                this.optionId = optionId;
+                return this;
+            }
+
+            public ContractActivityOptionIds build() {
+                return new ContractActivityOptionIds(this);
+            } 
+
+        } 
+
+    }
+    public static class DepreciateInfoContractActivity extends TeaModel {
+        @NameInMap("ActivityId")
+        private Long activityId;
+
+        @NameInMap("ActivityName")
+        private String activityName;
+
+        @NameInMap("FinalFee")
+        private Double finalFee;
+
+        @NameInMap("FinalPromFee")
+        private Double finalPromFee;
+
+        @NameInMap("OptionCode")
+        private String optionCode;
+
+        @NameInMap("OptionIds")
+        private ContractActivityOptionIds optionIds;
+
+        @NameInMap("ProdFee")
+        private Double prodFee;
+
+        private DepreciateInfoContractActivity(Builder builder) {
+            this.activityId = builder.activityId;
+            this.activityName = builder.activityName;
+            this.finalFee = builder.finalFee;
+            this.finalPromFee = builder.finalPromFee;
+            this.optionCode = builder.optionCode;
+            this.optionIds = builder.optionIds;
+            this.prodFee = builder.prodFee;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DepreciateInfoContractActivity create() {
+            return builder().build();
+        }
+
+        /**
+         * @return activityId
+         */
+        public Long getActivityId() {
+            return this.activityId;
+        }
+
+        /**
+         * @return activityName
+         */
+        public String getActivityName() {
+            return this.activityName;
+        }
+
+        /**
+         * @return finalFee
+         */
+        public Double getFinalFee() {
+            return this.finalFee;
+        }
+
+        /**
+         * @return finalPromFee
+         */
+        public Double getFinalPromFee() {
+            return this.finalPromFee;
+        }
+
+        /**
+         * @return optionCode
+         */
+        public String getOptionCode() {
+            return this.optionCode;
+        }
+
+        /**
+         * @return optionIds
+         */
+        public ContractActivityOptionIds getOptionIds() {
+            return this.optionIds;
+        }
+
+        /**
+         * @return prodFee
+         */
+        public Double getProdFee() {
+            return this.prodFee;
+        }
+
+        public static final class Builder {
+            private Long activityId; 
+            private String activityName; 
+            private Double finalFee; 
+            private Double finalPromFee; 
+            private String optionCode; 
+            private ContractActivityOptionIds optionIds; 
+            private Double prodFee; 
+
+            /**
+             * ActivityId.
+             */
+            public Builder activityId(Long activityId) {
+                this.activityId = activityId;
+                return this;
+            }
+
+            /**
+             * ActivityName.
+             */
+            public Builder activityName(String activityName) {
+                this.activityName = activityName;
+                return this;
+            }
+
+            /**
+             * FinalFee.
+             */
+            public Builder finalFee(Double finalFee) {
+                this.finalFee = finalFee;
+                return this;
+            }
+
+            /**
+             * FinalPromFee.
+             */
+            public Builder finalPromFee(Double finalPromFee) {
+                this.finalPromFee = finalPromFee;
+                return this;
+            }
+
+            /**
+             * OptionCode.
+             */
+            public Builder optionCode(String optionCode) {
+                this.optionCode = optionCode;
+                return this;
+            }
+
+            /**
+             * OptionIds.
+             */
+            public Builder optionIds(ContractActivityOptionIds optionIds) {
+                this.optionIds = optionIds;
+                return this;
+            }
+
+            /**
+             * ProdFee.
+             */
+            public Builder prodFee(Double prodFee) {
+                this.prodFee = prodFee;
+                return this;
+            }
+
+            public DepreciateInfoContractActivity build() {
+                return new DepreciateInfoContractActivity(this);
+            } 
+
+        } 
+
+    }
     public static class SubOrderDepreciateInfo extends TeaModel {
         @NameInMap("CheapRate")
         private Long cheapRate;
 
         @NameInMap("CheapStandAmount")
         private Long cheapStandAmount;
+
+        @NameInMap("ContractActivity")
+        private DepreciateInfoContractActivity contractActivity;
 
         @NameInMap("Differential")
         private Long differential;
@@ -966,6 +1393,7 @@ public class DescribePriceResponseBody extends TeaModel {
         private SubOrderDepreciateInfo(Builder builder) {
             this.cheapRate = builder.cheapRate;
             this.cheapStandAmount = builder.cheapStandAmount;
+            this.contractActivity = builder.contractActivity;
             this.differential = builder.differential;
             this.differentialName = builder.differentialName;
             this.isContractActivity = builder.isContractActivity;
@@ -994,6 +1422,13 @@ public class DescribePriceResponseBody extends TeaModel {
          */
         public Long getCheapStandAmount() {
             return this.cheapStandAmount;
+        }
+
+        /**
+         * @return contractActivity
+         */
+        public DepreciateInfoContractActivity getContractActivity() {
+            return this.contractActivity;
         }
 
         /**
@@ -1041,6 +1476,7 @@ public class DescribePriceResponseBody extends TeaModel {
         public static final class Builder {
             private Long cheapRate; 
             private Long cheapStandAmount; 
+            private DepreciateInfoContractActivity contractActivity; 
             private Long differential; 
             private String differentialName; 
             private Boolean isContractActivity; 
@@ -1061,6 +1497,14 @@ public class DescribePriceResponseBody extends TeaModel {
              */
             public Builder cheapStandAmount(Long cheapStandAmount) {
                 this.cheapStandAmount = cheapStandAmount;
+                return this;
+            }
+
+            /**
+             * ContractActivity.
+             */
+            public Builder contractActivity(DepreciateInfoContractActivity contractActivity) {
+                this.contractActivity = contractActivity;
                 return this;
             }
 
@@ -1262,6 +1706,9 @@ public class DescribePriceResponseBody extends TeaModel {
 
     }
     public static class ModuleInstance extends TeaModel {
+        @NameInMap("ContractActivity")
+        private Boolean contractActivity;
+
         @NameInMap("DiscountFee")
         private Double discountFee;
 
@@ -1293,6 +1740,7 @@ public class DescribePriceResponseBody extends TeaModel {
         private Double totalProductFee;
 
         private ModuleInstance(Builder builder) {
+            this.contractActivity = builder.contractActivity;
             this.discountFee = builder.discountFee;
             this.moduleAttrs = builder.moduleAttrs;
             this.moduleCode = builder.moduleCode;
@@ -1311,6 +1759,13 @@ public class DescribePriceResponseBody extends TeaModel {
 
         public static ModuleInstance create() {
             return builder().build();
+        }
+
+        /**
+         * @return contractActivity
+         */
+        public Boolean getContractActivity() {
+            return this.contractActivity;
         }
 
         /**
@@ -1384,6 +1839,7 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean contractActivity; 
             private Double discountFee; 
             private ModuleAttrs moduleAttrs; 
             private String moduleCode; 
@@ -1394,6 +1850,14 @@ public class DescribePriceResponseBody extends TeaModel {
             private Boolean pricingModule; 
             private Double standPrice; 
             private Double totalProductFee; 
+
+            /**
+             * ContractActivity.
+             */
+            public Builder contractActivity(Boolean contractActivity) {
+                this.contractActivity = contractActivity;
+                return this;
+            }
 
             /**
              * DiscountFee.
@@ -1786,6 +2250,12 @@ public class DescribePriceResponseBody extends TeaModel {
 
     }
     public static class PromDetail extends TeaModel {
+        @NameInMap("ActivityExtInfo")
+        private java.util.Map < String, ? > activityExtInfo;
+
+        @NameInMap("DerivedPromType")
+        private String derivedPromType;
+
         @NameInMap("FinalPromFee")
         private Double finalPromFee;
 
@@ -1795,6 +2265,9 @@ public class DescribePriceResponseBody extends TeaModel {
         @NameInMap("PromType")
         private String promType;
 
+        @NameInMap("PromotionCode")
+        private String promotionCode;
+
         @NameInMap("PromotionId")
         private Long promotionId;
 
@@ -1802,9 +2275,12 @@ public class DescribePriceResponseBody extends TeaModel {
         private String promotionName;
 
         private PromDetail(Builder builder) {
+            this.activityExtInfo = builder.activityExtInfo;
+            this.derivedPromType = builder.derivedPromType;
             this.finalPromFee = builder.finalPromFee;
             this.optionCode = builder.optionCode;
             this.promType = builder.promType;
+            this.promotionCode = builder.promotionCode;
             this.promotionId = builder.promotionId;
             this.promotionName = builder.promotionName;
         }
@@ -1815,6 +2291,20 @@ public class DescribePriceResponseBody extends TeaModel {
 
         public static PromDetail create() {
             return builder().build();
+        }
+
+        /**
+         * @return activityExtInfo
+         */
+        public java.util.Map < String, ? > getActivityExtInfo() {
+            return this.activityExtInfo;
+        }
+
+        /**
+         * @return derivedPromType
+         */
+        public String getDerivedPromType() {
+            return this.derivedPromType;
         }
 
         /**
@@ -1839,6 +2329,13 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
+         * @return promotionCode
+         */
+        public String getPromotionCode() {
+            return this.promotionCode;
+        }
+
+        /**
          * @return promotionId
          */
         public Long getPromotionId() {
@@ -1853,11 +2350,30 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.Map < String, ? > activityExtInfo; 
+            private String derivedPromType; 
             private Double finalPromFee; 
             private String optionCode; 
             private String promType; 
+            private String promotionCode; 
             private Long promotionId; 
             private String promotionName; 
+
+            /**
+             * ActivityExtInfo.
+             */
+            public Builder activityExtInfo(java.util.Map < String, ? > activityExtInfo) {
+                this.activityExtInfo = activityExtInfo;
+                return this;
+            }
+
+            /**
+             * DerivedPromType.
+             */
+            public Builder derivedPromType(String derivedPromType) {
+                this.derivedPromType = derivedPromType;
+                return this;
+            }
 
             /**
              * FinalPromFee.
@@ -1880,6 +2396,14 @@ public class DescribePriceResponseBody extends TeaModel {
              */
             public Builder promType(String promType) {
                 this.promType = promType;
+                return this;
+            }
+
+            /**
+             * PromotionCode.
+             */
+            public Builder promotionCode(String promotionCode) {
+                this.promotionCode = promotionCode;
                 return this;
             }
 
@@ -1989,6 +2513,9 @@ public class DescribePriceResponseBody extends TeaModel {
 
     }
     public static class SubOrder extends TeaModel {
+        @NameInMap("ContractActivity")
+        private Boolean contractActivity;
+
         @NameInMap("DepreciateInfo")
         private SubOrderDepreciateInfo depreciateInfo;
 
@@ -2026,6 +2553,7 @@ public class DescribePriceResponseBody extends TeaModel {
         private String tradeAmount;
 
         private SubOrder(Builder builder) {
+            this.contractActivity = builder.contractActivity;
             this.depreciateInfo = builder.depreciateInfo;
             this.discountAmount = builder.discountAmount;
             this.instanceId = builder.instanceId;
@@ -2046,6 +2574,13 @@ public class DescribePriceResponseBody extends TeaModel {
 
         public static SubOrder create() {
             return builder().build();
+        }
+
+        /**
+         * @return contractActivity
+         */
+        public Boolean getContractActivity() {
+            return this.contractActivity;
         }
 
         /**
@@ -2133,6 +2668,7 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean contractActivity; 
             private SubOrderDepreciateInfo depreciateInfo; 
             private String discountAmount; 
             private String instanceId; 
@@ -2145,6 +2681,14 @@ public class DescribePriceResponseBody extends TeaModel {
             private Long standDiscountPrice; 
             private Long standPrice; 
             private String tradeAmount; 
+
+            /**
+             * ContractActivity.
+             */
+            public Builder contractActivity(Boolean contractActivity) {
+                this.contractActivity = contractActivity;
+                return this;
+            }
 
             /**
              * DepreciateInfo.

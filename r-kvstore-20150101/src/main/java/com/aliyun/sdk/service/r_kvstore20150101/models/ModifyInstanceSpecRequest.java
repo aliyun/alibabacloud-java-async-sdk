@@ -54,6 +54,10 @@ public class ModifyInstanceSpecRequest extends Request {
     private String majorVersion;
 
     @Query
+    @NameInMap("NodeType")
+    private String nodeType;
+
+    @Query
     @NameInMap("OrderType")
     private String orderType;
 
@@ -112,6 +116,7 @@ public class ModifyInstanceSpecRequest extends Request {
         this.instanceClass = builder.instanceClass;
         this.instanceId = builder.instanceId;
         this.majorVersion = builder.majorVersion;
+        this.nodeType = builder.nodeType;
         this.orderType = builder.orderType;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -209,6 +214,13 @@ public class ModifyInstanceSpecRequest extends Request {
     }
 
     /**
+     * @return nodeType
+     */
+    public String getNodeType() {
+        return this.nodeType;
+    }
+
+    /**
      * @return orderType
      */
     public String getOrderType() {
@@ -296,6 +308,7 @@ public class ModifyInstanceSpecRequest extends Request {
         private String instanceClass; 
         private String instanceId; 
         private String majorVersion; 
+        private String nodeType; 
         private String orderType; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -324,6 +337,7 @@ public class ModifyInstanceSpecRequest extends Request {
             this.instanceClass = request.instanceClass;
             this.instanceId = request.instanceId;
             this.majorVersion = request.majorVersion;
+            this.nodeType = request.nodeType;
             this.orderType = request.orderType;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -447,6 +461,15 @@ public class ModifyInstanceSpecRequest extends Request {
         }
 
         /**
+         * NodeType.
+         */
+        public Builder nodeType(String nodeType) {
+            this.putQueryParameter("NodeType", nodeType);
+            this.nodeType = nodeType;
+            return this;
+        }
+
+        /**
          * The change type. This parameter is required when you change the configurations of a subscription instance. Default value: UPGRADE. Valid values:
          * <p>
          * 
@@ -481,7 +504,11 @@ public class ModifyInstanceSpecRequest extends Request {
         }
 
         /**
-         * The number of read-only nodes. This parameter is available only for read/write splitting instances that use cloud disks. Valid values: 1 to 5.
+         * The number of read replicas. Valid values: 0 to 5. This parameter applies only to the following scenarios:
+         * <p>
+         * 
+         * *   If the instance is a standard instance that uses cloud disks, you can set this parameter to a value greater than 0 to enable the read/write splitting architecture.
+         * *   If the instance is a read/write splitting instance that uses cloud disks, you can use this parameter to customize the number of read replicas. You can also set this parameter to 0 to disable the read/write splitting architecture and switch the instance to the standard architecture.
          */
         public Builder readOnlyCount(Integer readOnlyCount) {
             this.putQueryParameter("ReadOnlyCount", readOnlyCount);

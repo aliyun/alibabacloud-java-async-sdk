@@ -218,11 +218,14 @@ public class SwitchNetworkRequest extends Request {
         }
 
         /**
-         * The retention period of the endpoint for the classic network. Valid values: **14**, **30**, **60**, and **120**. Unit: days.
+         * The retention period of the classic network endpoint. Valid values: **14**, **30**, **60**, and **120**. Unit: days.
          * <p>
          * 
-         * > *   This parameter is required when **RetainClassic** is set to **True**.
-         * > *   After you complete the switchover operation, you can also call the [ModifyInstanceNetExpireTime](~~ModifyInstanceNetExpireTime~~) operation to modify the retention period of the endpoint for the classic network.
+         * > 
+         * 
+         * *   This parameter is available and required only when the **RetainClassic** parameter is set to **True**.
+         * 
+         * *   After you complete the switchover operation, you can also call the [ModifyInstanceNetExpireTime](~~61010~~) operation to modify the retention period of the classic network endpoint.
          */
         public Builder classicExpiredDays(String classicExpiredDays) {
             this.putQueryParameter("ClassicExpiredDays", classicExpiredDays);
@@ -231,7 +234,7 @@ public class SwitchNetworkRequest extends Request {
         }
 
         /**
-         * The ID of the instance. You can call the [DescribeInstances](~~DescribeInstances~~) operation to query instance IDs.
+         * The ID of the instance. You can call the [DescribeInstances](~~60933~~) operation to query the ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -276,13 +279,13 @@ public class SwitchNetworkRequest extends Request {
         }
 
         /**
-         * Specifies whether to retain the original endpoint for the classic network after you switch the instance from classic network to VPC. Valid values:
+         * Specifies whether to retain the original classic network endpoint after you switch the instance from classic network to VPC. Default value: False. Valid values:
          * <p>
          * 
-         * *   **True**: retains the original endpoint.
-         * *   **False**: does not retain the original endpoint. This is the default value.
+         * *   **True**: retains the classic network endpoint.
+         * *   **False**: does not retain the classic network endpoint.
          * 
-         * >  This parameter can be used only when the network type of the instance is classic network.
+         * > This parameter is available only when the network type of the instance is classic network.
          */
         public Builder retainClassic(String retainClassic) {
             this.putQueryParameter("RetainClassic", retainClassic);
@@ -309,10 +312,10 @@ public class SwitchNetworkRequest extends Request {
         }
 
         /**
-         * The ID of the vSwitch that belongs to the VPC to which you want to switch. You can call the [DescribeVpcs](~~35739~~) operation to query vSwitch IDs.
+         * The ID of the vSwitch that belongs to the VPC to which you want to switch. You can call the [DescribeVpcs](~~35739~~) operation to query the VPC ID.
          * <p>
          * 
-         * >  The vSwitch and the ApsaraDB for Redis instance must belong to the same zone.
+         * > The vSwitch and the ApsaraDB for Redis instance must be deployed in the same zone.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -321,11 +324,14 @@ public class SwitchNetworkRequest extends Request {
         }
 
         /**
-         * The ID of the VPC to which you want to switch. You can call the [DescribeVpcs](~~35739~~) operation to query VPC IDs.
+         * The ID of the VPC to which you want to switch. You can call the [DescribeVpcs](~~35739~~) operation to query the VPC ID.
          * <p>
          * 
-         * > *   The VPC and the ApsaraDB for Redis instance must be deployed in the same region.
-         * > *   After you set this parameter, you must also set the **VSwitchId** parameter.
+         * > 
+         * 
+         * *   The VPC and the ApsaraDB for Redis instance must be deployed in the same region.
+         * 
+         * *   After you set this parameter, you must also set the **VSwitchId** parameter.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

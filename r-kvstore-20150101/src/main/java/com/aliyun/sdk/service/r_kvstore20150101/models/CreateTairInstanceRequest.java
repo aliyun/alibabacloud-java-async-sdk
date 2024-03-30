@@ -713,7 +713,7 @@ public class CreateTairInstanceRequest extends Request {
         }
 
         /**
-         * 集群备份集ID。
+         * The backup set ID.
          */
         public Builder clusterBackupId(String clusterBackupId) {
             this.putQueryParameter("ClusterBackupId", clusterBackupId);
