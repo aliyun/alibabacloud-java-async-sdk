@@ -201,6 +201,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListAudioFilesResponse> listAudioFiles(ListAudioFilesRequest request);
 
+    CompletableFuture<ListBlacklistCallTaggingsResponse> listBlacklistCallTaggings(ListBlacklistCallTaggingsRequest request);
+
     CompletableFuture<ListBriefSkillGroupsResponse> listBriefSkillGroups(ListBriefSkillGroupsRequest request);
 
     CompletableFuture<ListCallDetailRecordsResponse> listCallDetailRecords(ListCallDetailRecordsRequest request);

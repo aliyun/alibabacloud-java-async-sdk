@@ -35,12 +35,28 @@ public class BlindTransferRequest extends Request {
     private String jobId;
 
     @Query
+    @NameInMap("QueuingOverflowThreshold")
+    private Long queuingOverflowThreshold;
+
+    @Query
+    @NameInMap("QueuingTimeoutSeconds")
+    private Long queuingTimeoutSeconds;
+
+    @Query
+    @NameInMap("RoutingType")
+    private String routingType;
+
+    @Query
     @NameInMap("StrategyName")
     private String strategyName;
 
     @Query
     @NameInMap("StrategyParams")
     private String strategyParams;
+
+    @Query
+    @NameInMap("Tags")
+    private String tags;
 
     @Query
     @NameInMap("TimeoutSeconds")
@@ -71,8 +87,12 @@ public class BlindTransferRequest extends Request {
         this.deviceId = builder.deviceId;
         this.instanceId = builder.instanceId;
         this.jobId = builder.jobId;
+        this.queuingOverflowThreshold = builder.queuingOverflowThreshold;
+        this.queuingTimeoutSeconds = builder.queuingTimeoutSeconds;
+        this.routingType = builder.routingType;
         this.strategyName = builder.strategyName;
         this.strategyParams = builder.strategyParams;
+        this.tags = builder.tags;
         this.timeoutSeconds = builder.timeoutSeconds;
         this.transferee = builder.transferee;
         this.transfereeType = builder.transfereeType;
@@ -129,6 +149,27 @@ public class BlindTransferRequest extends Request {
     }
 
     /**
+     * @return queuingOverflowThreshold
+     */
+    public Long getQueuingOverflowThreshold() {
+        return this.queuingOverflowThreshold;
+    }
+
+    /**
+     * @return queuingTimeoutSeconds
+     */
+    public Long getQueuingTimeoutSeconds() {
+        return this.queuingTimeoutSeconds;
+    }
+
+    /**
+     * @return routingType
+     */
+    public String getRoutingType() {
+        return this.routingType;
+    }
+
+    /**
      * @return strategyName
      */
     public String getStrategyName() {
@@ -140,6 +181,13 @@ public class BlindTransferRequest extends Request {
      */
     public String getStrategyParams() {
         return this.strategyParams;
+    }
+
+    /**
+     * @return tags
+     */
+    public String getTags() {
+        return this.tags;
     }
 
     /**
@@ -183,8 +231,12 @@ public class BlindTransferRequest extends Request {
         private String deviceId; 
         private String instanceId; 
         private String jobId; 
+        private Long queuingOverflowThreshold; 
+        private Long queuingTimeoutSeconds; 
+        private String routingType; 
         private String strategyName; 
         private String strategyParams; 
+        private String tags; 
         private Integer timeoutSeconds; 
         private String transferee; 
         private String transfereeType; 
@@ -202,8 +254,12 @@ public class BlindTransferRequest extends Request {
             this.deviceId = request.deviceId;
             this.instanceId = request.instanceId;
             this.jobId = request.jobId;
+            this.queuingOverflowThreshold = request.queuingOverflowThreshold;
+            this.queuingTimeoutSeconds = request.queuingTimeoutSeconds;
+            this.routingType = request.routingType;
             this.strategyName = request.strategyName;
             this.strategyParams = request.strategyParams;
+            this.tags = request.tags;
             this.timeoutSeconds = request.timeoutSeconds;
             this.transferee = request.transferee;
             this.transfereeType = request.transfereeType;
@@ -257,6 +313,33 @@ public class BlindTransferRequest extends Request {
         }
 
         /**
+         * QueuingOverflowThreshold.
+         */
+        public Builder queuingOverflowThreshold(Long queuingOverflowThreshold) {
+            this.putQueryParameter("QueuingOverflowThreshold", queuingOverflowThreshold);
+            this.queuingOverflowThreshold = queuingOverflowThreshold;
+            return this;
+        }
+
+        /**
+         * QueuingTimeoutSeconds.
+         */
+        public Builder queuingTimeoutSeconds(Long queuingTimeoutSeconds) {
+            this.putQueryParameter("QueuingTimeoutSeconds", queuingTimeoutSeconds);
+            this.queuingTimeoutSeconds = queuingTimeoutSeconds;
+            return this;
+        }
+
+        /**
+         * RoutingType.
+         */
+        public Builder routingType(String routingType) {
+            this.putQueryParameter("RoutingType", routingType);
+            this.routingType = routingType;
+            return this;
+        }
+
+        /**
          * StrategyName.
          */
         public Builder strategyName(String strategyName) {
@@ -271,6 +354,15 @@ public class BlindTransferRequest extends Request {
         public Builder strategyParams(String strategyParams) {
             this.putQueryParameter("StrategyParams", strategyParams);
             this.strategyParams = strategyParams;
+            return this;
+        }
+
+        /**
+         * Tags.
+         */
+        public Builder tags(String tags) {
+            this.putQueryParameter("Tags", tags);
+            this.tags = tags;
             return this;
         }
 
