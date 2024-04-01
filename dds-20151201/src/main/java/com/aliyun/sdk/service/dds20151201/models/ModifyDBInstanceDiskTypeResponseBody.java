@@ -7,22 +7,18 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreateNodeResponseBody} extends {@link TeaModel}
+ * {@link ModifyDBInstanceDiskTypeResponseBody} extends {@link TeaModel}
  *
- * <p>CreateNodeResponseBody</p>
+ * <p>ModifyDBInstanceDiskTypeResponseBody</p>
  */
-public class CreateNodeResponseBody extends TeaModel {
-    @NameInMap("NodeId")
-    private String nodeId;
-
+public class ModifyDBInstanceDiskTypeResponseBody extends TeaModel {
     @NameInMap("OrderId")
     private String orderId;
 
     @NameInMap("RequestId")
     private String requestId;
 
-    private CreateNodeResponseBody(Builder builder) {
-        this.nodeId = builder.nodeId;
+    private ModifyDBInstanceDiskTypeResponseBody(Builder builder) {
         this.orderId = builder.orderId;
         this.requestId = builder.requestId;
     }
@@ -31,15 +27,8 @@ public class CreateNodeResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static CreateNodeResponseBody create() {
+    public static ModifyDBInstanceDiskTypeResponseBody create() {
         return builder().build();
-    }
-
-    /**
-     * @return nodeId
-     */
-    public String getNodeId() {
-        return this.nodeId;
     }
 
     /**
@@ -57,20 +46,11 @@ public class CreateNodeResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String nodeId; 
         private String orderId; 
         private String requestId; 
 
         /**
-         * The node ID.
-         */
-        public Builder nodeId(String nodeId) {
-            this.nodeId = nodeId;
-            return this;
-        }
-
-        /**
-         * The order ID.
+         * OrderId.
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -78,15 +58,15 @@ public class CreateNodeResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public CreateNodeResponseBody build() {
-            return new CreateNodeResponseBody(this);
+        public ModifyDBInstanceDiskTypeResponseBody build() {
+            return new ModifyDBInstanceDiskTypeResponseBody(this);
         } 
 
     } 

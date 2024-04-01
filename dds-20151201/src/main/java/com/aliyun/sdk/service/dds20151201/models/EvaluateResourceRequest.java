@@ -239,7 +239,7 @@ public class EvaluateResourceRequest extends Request {
         } 
 
         /**
-         * The stype of the instance.
+         * The type of the instance.
          * <p>
          * 
          * > This parameter is required when you check whether resources are sufficient for creating or upgrading a replica set instance. For more information about instance types, see [Instance types](~~57141~~).
@@ -272,11 +272,21 @@ public class EvaluateResourceRequest extends Request {
          * The version of the database engine. Valid values:
          * <p>
          * 
+         * *   **7.0**
+         * *   **6.0**
          * *   **5.0**
          * *   **4.4**
          * *   **4.2**
          * *   **4.0**
-         * *   **3.4**
+         * 
+         * <!---->
+         * 
+         * *   3.4
+         * *   4.0
+         * *   4.2
+         * *   4.4
+         * *   5.0
+         * *   6.0
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);

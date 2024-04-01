@@ -64,8 +64,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateGlobalSecurityIPGroupResponse> createGlobalSecurityIPGroup(CreateGlobalSecurityIPGroupRequest request);
 
     /**
-      * Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing) of ApsaraDB for MongoDB.
-      * This operation is applicable only to sharded cluster instances.
+      * Before you call this operation, make sure that you understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing) of ApsaraDB for MongoDB.
+      * This operation applies only to sharded cluster instances.
       *
      */
     CompletableFuture<CreateNodeResponse> createNode(CreateNodeRequest request);
@@ -408,6 +408,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyDBInstanceConnectionStringResponse> modifyDBInstanceConnectionString(ModifyDBInstanceConnectionStringRequest request);
 
     CompletableFuture<ModifyDBInstanceDescriptionResponse> modifyDBInstanceDescription(ModifyDBInstanceDescriptionRequest request);
+
+    CompletableFuture<ModifyDBInstanceDiskTypeResponse> modifyDBInstanceDiskType(ModifyDBInstanceDiskTypeRequest request);
 
     CompletableFuture<ModifyDBInstanceMaintainTimeResponse> modifyDBInstanceMaintainTime(ModifyDBInstanceMaintainTimeRequest request);
 
