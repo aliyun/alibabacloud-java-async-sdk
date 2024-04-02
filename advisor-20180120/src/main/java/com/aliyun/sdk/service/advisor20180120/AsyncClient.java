@@ -29,6 +29,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeAdvisorResourcesResponse> describeAdvisorResources(DescribeAdvisorResourcesRequest request);
 
+    CompletableFuture<DescribeCostCheckAdvicesResponse> describeCostCheckAdvices(DescribeCostCheckAdvicesRequest request);
+
+    CompletableFuture<DescribeCostCheckResultsResponse> describeCostCheckResults(DescribeCostCheckResultsRequest request);
+
     CompletableFuture<GetHistoryAdvicesResponse> getHistoryAdvices(GetHistoryAdvicesRequest request);
 
     CompletableFuture<GetTaskStatusByIdResponse> getTaskStatusById(GetTaskStatusByIdRequest request);
