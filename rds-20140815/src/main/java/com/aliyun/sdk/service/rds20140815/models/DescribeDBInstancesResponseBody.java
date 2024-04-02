@@ -264,11 +264,17 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         @NameInMap("DBInstanceClass")
         private String DBInstanceClass;
 
+        @NameInMap("DBInstanceCpuCores")
+        private String DBInstanceCpuCores;
+
         @NameInMap("DBInstanceDescription")
         private String DBInstanceDescription;
 
         @NameInMap("DBInstanceId")
         private String DBInstanceId;
+
+        @NameInMap("DBInstanceMemory")
+        private String DBInstanceMemory;
 
         @NameInMap("DBInstanceNetType")
         private String DBInstanceNetType;
@@ -402,8 +408,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             this.connectionString = builder.connectionString;
             this.createTime = builder.createTime;
             this.DBInstanceClass = builder.DBInstanceClass;
+            this.DBInstanceCpuCores = builder.DBInstanceCpuCores;
             this.DBInstanceDescription = builder.DBInstanceDescription;
             this.DBInstanceId = builder.DBInstanceId;
+            this.DBInstanceMemory = builder.DBInstanceMemory;
             this.DBInstanceNetType = builder.DBInstanceNetType;
             this.DBInstanceStatus = builder.DBInstanceStatus;
             this.DBInstanceStorageType = builder.DBInstanceStorageType;
@@ -512,6 +520,13 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return DBInstanceCpuCores
+         */
+        public String getDBInstanceCpuCores() {
+            return this.DBInstanceCpuCores;
+        }
+
+        /**
          * @return DBInstanceDescription
          */
         public String getDBInstanceDescription() {
@@ -523,6 +538,13 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
          */
         public String getDBInstanceId() {
             return this.DBInstanceId;
+        }
+
+        /**
+         * @return DBInstanceMemory
+         */
+        public String getDBInstanceMemory() {
+            return this.DBInstanceMemory;
         }
 
         /**
@@ -821,8 +843,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             private String connectionString; 
             private String createTime; 
             private String DBInstanceClass; 
+            private String DBInstanceCpuCores; 
             private String DBInstanceDescription; 
             private String DBInstanceId; 
+            private String DBInstanceMemory; 
             private String DBInstanceNetType; 
             private String DBInstanceStatus; 
             private String DBInstanceStorageType; 
@@ -905,7 +929,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ColdDataEnabled.
+             * A reserved parameter.
              */
             public Builder coldDataEnabled(Boolean coldDataEnabled) {
                 this.coldDataEnabled = coldDataEnabled;
@@ -949,6 +973,14 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
+             * DBInstanceCpuCores.
+             */
+            public Builder DBInstanceCpuCores(String DBInstanceCpuCores) {
+                this.DBInstanceCpuCores = DBInstanceCpuCores;
+                return this;
+            }
+
+            /**
              * The instance description.
              */
             public Builder DBInstanceDescription(String DBInstanceDescription) {
@@ -961,6 +993,14 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
+                return this;
+            }
+
+            /**
+             * DBInstanceMemory.
+             */
+            public Builder DBInstanceMemory(String DBInstanceMemory) {
+                this.DBInstanceMemory = DBInstanceMemory;
                 return this;
             }
 
@@ -1170,7 +1210,11 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * IoAccelerationEnabled.
+             * Whether IO acceleration is enabled. The value has the following meanings:
+             * <p>
+             * 
+             * - 1: enabled
+             * - 0: not enabled
              */
             public Builder ioAccelerationEnabled(String ioAccelerationEnabled) {
                 this.ioAccelerationEnabled = ioAccelerationEnabled;

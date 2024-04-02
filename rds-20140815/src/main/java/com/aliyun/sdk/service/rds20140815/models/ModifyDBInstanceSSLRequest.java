@@ -326,7 +326,7 @@ public class ModifyDBInstanceSSLRequest extends Request {
          * <p>
          * 
          * *   **cert**
-         * *   **perfer**
+         * *   **prefer**
          * *   **verify-ca**
          * *   **verify-full** (supported only when the instance runs PostgreSQL 12 or later)
          */
@@ -350,7 +350,11 @@ public class ModifyDBInstanceSSLRequest extends Request {
         }
 
         /**
-         * Certificate.
+         * User-defined certificate. The custom certificate is in pfx format.
+         * <p>
+         * 
+         * - Public address: `oss-<region ID>.aliyuncs.com:<Bucket name >:< certificate file name (with file suffix)>`
+         * - Intranet address: `oss-<region ID>-internal.aliyuncs.com:<Bucket name >:< certificate file name (with file suffix)>`
          */
         public Builder certificate(String certificate) {
             this.putQueryParameter("Certificate", certificate);
@@ -452,7 +456,7 @@ public class ModifyDBInstanceSSLRequest extends Request {
         }
 
         /**
-         * PassWord.
+         * The password of the certificate.
          */
         public Builder passWord(String passWord) {
             this.putQueryParameter("PassWord", passWord);
@@ -461,11 +465,11 @@ public class ModifyDBInstanceSSLRequest extends Request {
         }
 
         /**
-         * The method that is used to verify the replication permission. This parameter is supported only when the instance runs PostgreSQL with cloud disks. In addition, this parameter is available only when the public key of the CA that issues client certificates is enabled. Valid values:
+         * The method that is used to verify the replication permissions. This parameter is supported only when the instance runs PostgreSQL with cloud disks. In addition, this parameter is available only when the public key of the CA that issues client certificates is enabled. Valid values:
          * <p>
          * 
          * *   **cert**
-         * *   **perfer**
+         * *   **prefer**
          * *   **verify-ca**
          * *   **verify-full** (supported only when the instance runs PostgreSQL 12 or later)
          */

@@ -1235,13 +1235,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the I/O acceleration feature. Valid values:
-         * <p>
-         * 
-         * *   1: The feature is enabled.
-         * *   0: The feature is disabled.
-         * 
-         * >  For more information about the I/O acceleration feature of general enhanced SSDs (ESSDs), see [Introduction](~~2527067~~).
+         * A reserved parameter.
          */
         public Builder ioAccelerationEnabled(String ioAccelerationEnabled) {
             this.putQueryParameter("IoAccelerationEnabled", ioAccelerationEnabled);

@@ -499,7 +499,13 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * EnablePitrProtection.
+         * Whether PITR recovery is enabled at any point in time (the upgraded version of the original log backup). Return value:
+         * <p>
+         * 
+         * - True: Yes
+         * - False: no
+         * 
+         * > Only MySQL instances return this parameter.
          */
         public Builder enablePitrProtection(Boolean enablePitrProtection) {
             this.enablePitrProtection = enablePitrProtection;
@@ -565,7 +571,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * PitrRetentionPeriod.
+         * The number of days to restore at any point in time.
          */
         public Builder pitrRetentionPeriod(Integer pitrRetentionPeriod) {
             this.pitrRetentionPeriod = pitrRetentionPeriod;

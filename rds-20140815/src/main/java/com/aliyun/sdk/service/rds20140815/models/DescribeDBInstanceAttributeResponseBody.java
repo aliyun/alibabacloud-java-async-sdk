@@ -1699,7 +1699,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * An invalid parameter. You can ignore this parameter.
+             * A deprecated parameter. You do not need to specify this parameter.
              */
             public Builder bpeEnabled(String bpeEnabled) {
                 this.bpeEnabled = bpeEnabled;
@@ -1707,7 +1707,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * An invalid parameter. You can ignore this parameter.
+             * An invalid parameter. You do not need to specify this parameter.
              */
             public Builder burstingEnabled(Boolean burstingEnabled) {
                 this.burstingEnabled = burstingEnabled;
@@ -1731,7 +1731,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * A reserved parameter.
+             * A reserved parameter. You do not need to specify this parameter.
              */
             public Builder coldDataEnabled(Boolean coldDataEnabled) {
                 this.coldDataEnabled = coldDataEnabled;
@@ -2155,6 +2155,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * 
              * *   **Postpaid**: pay-as-you-go
              * *   **Prepaid**: subscription
+             * *   **SERVERLESS**
              */
             public Builder payType(String payType) {
                 this.payType = payType;

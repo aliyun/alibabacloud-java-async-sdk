@@ -345,7 +345,7 @@ public class MigrateToOtherZoneRequest extends Request {
         }
 
         /**
-         * A reserved parameter. You do not need to specify this parameter.
+         * A reserved parameter.
          */
         public Builder ioAccelerationEnabled(String ioAccelerationEnabled) {
             this.putQueryParameter("IoAccelerationEnabled", ioAccelerationEnabled);
