@@ -135,6 +135,9 @@ public class DescribeAclsResponseBody extends TeaModel {
         @NameInMap("AclOperationType")
         private String aclOperationType;
 
+        @NameInMap("AclPermissionType")
+        private String aclPermissionType;
+
         @NameInMap("AclResourceName")
         private String aclResourceName;
 
@@ -152,6 +155,7 @@ public class DescribeAclsResponseBody extends TeaModel {
 
         private KafkaAclVO(Builder builder) {
             this.aclOperationType = builder.aclOperationType;
+            this.aclPermissionType = builder.aclPermissionType;
             this.aclResourceName = builder.aclResourceName;
             this.aclResourcePatternType = builder.aclResourcePatternType;
             this.aclResourceType = builder.aclResourceType;
@@ -172,6 +176,13 @@ public class DescribeAclsResponseBody extends TeaModel {
          */
         public String getAclOperationType() {
             return this.aclOperationType;
+        }
+
+        /**
+         * @return aclPermissionType
+         */
+        public String getAclPermissionType() {
+            return this.aclPermissionType;
         }
 
         /**
@@ -211,6 +222,7 @@ public class DescribeAclsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String aclOperationType; 
+            private String aclPermissionType; 
             private String aclResourceName; 
             private String aclResourcePatternType; 
             private String aclResourceType; 
@@ -226,6 +238,14 @@ public class DescribeAclsResponseBody extends TeaModel {
              */
             public Builder aclOperationType(String aclOperationType) {
                 this.aclOperationType = aclOperationType;
+                return this;
+            }
+
+            /**
+             * AclPermissionType.
+             */
+            public Builder aclPermissionType(String aclPermissionType) {
+                this.aclPermissionType = aclPermissionType;
                 return this;
             }
 

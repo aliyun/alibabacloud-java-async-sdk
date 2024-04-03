@@ -132,6 +132,9 @@ public class DescribeSaslUsersResponseBody extends TeaModel {
     } 
 
     public static class SaslUserVO extends TeaModel {
+        @NameInMap("Mechanism")
+        private String mechanism;
+
         @NameInMap("Password")
         private String password;
 
@@ -142,6 +145,7 @@ public class DescribeSaslUsersResponseBody extends TeaModel {
         private String username;
 
         private SaslUserVO(Builder builder) {
+            this.mechanism = builder.mechanism;
             this.password = builder.password;
             this.type = builder.type;
             this.username = builder.username;
@@ -153,6 +157,13 @@ public class DescribeSaslUsersResponseBody extends TeaModel {
 
         public static SaslUserVO create() {
             return builder().build();
+        }
+
+        /**
+         * @return mechanism
+         */
+        public String getMechanism() {
+            return this.mechanism;
         }
 
         /**
@@ -177,9 +188,18 @@ public class DescribeSaslUsersResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String mechanism; 
             private String password; 
             private String type; 
             private String username; 
+
+            /**
+             * Mechanism.
+             */
+            public Builder mechanism(String mechanism) {
+                this.mechanism = mechanism;
+                return this;
+            }
 
             /**
              * The password that is used to access the Elasticsearch cluster.

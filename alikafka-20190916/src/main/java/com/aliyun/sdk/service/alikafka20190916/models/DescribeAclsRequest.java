@@ -13,6 +13,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeAclsRequest extends Request {
     @Query
+    @NameInMap("AclOperationType")
+    private String aclOperationType;
+
+    @Query
+    @NameInMap("AclPermissionType")
+    private String aclPermissionType;
+
+    @Query
     @NameInMap("AclResourceName")
     @Validation(required = true)
     private String aclResourceName;
@@ -25,6 +33,10 @@ public class DescribeAclsRequest extends Request {
     @NameInMap("AclResourceType")
     @Validation(required = true)
     private String aclResourceType;
+
+    @Query
+    @NameInMap("Host")
+    private String host;
 
     @Query
     @NameInMap("InstanceId")
@@ -43,9 +55,12 @@ public class DescribeAclsRequest extends Request {
 
     private DescribeAclsRequest(Builder builder) {
         super(builder);
+        this.aclOperationType = builder.aclOperationType;
+        this.aclPermissionType = builder.aclPermissionType;
         this.aclResourceName = builder.aclResourceName;
         this.aclResourcePatternType = builder.aclResourcePatternType;
         this.aclResourceType = builder.aclResourceType;
+        this.host = builder.host;
         this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
         this.username = builder.username;
@@ -62,6 +77,20 @@ public class DescribeAclsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return aclOperationType
+     */
+    public String getAclOperationType() {
+        return this.aclOperationType;
+    }
+
+    /**
+     * @return aclPermissionType
+     */
+    public String getAclPermissionType() {
+        return this.aclPermissionType;
     }
 
     /**
@@ -86,6 +115,13 @@ public class DescribeAclsRequest extends Request {
     }
 
     /**
+     * @return host
+     */
+    public String getHost() {
+        return this.host;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -107,9 +143,12 @@ public class DescribeAclsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeAclsRequest, Builder> {
+        private String aclOperationType; 
+        private String aclPermissionType; 
         private String aclResourceName; 
         private String aclResourcePatternType; 
         private String aclResourceType; 
+        private String host; 
         private String instanceId; 
         private String regionId; 
         private String username; 
@@ -120,13 +159,34 @@ public class DescribeAclsRequest extends Request {
 
         private Builder(DescribeAclsRequest request) {
             super(request);
+            this.aclOperationType = request.aclOperationType;
+            this.aclPermissionType = request.aclPermissionType;
             this.aclResourceName = request.aclResourceName;
             this.aclResourcePatternType = request.aclResourcePatternType;
             this.aclResourceType = request.aclResourceType;
+            this.host = request.host;
             this.instanceId = request.instanceId;
             this.regionId = request.regionId;
             this.username = request.username;
         } 
+
+        /**
+         * AclOperationType.
+         */
+        public Builder aclOperationType(String aclOperationType) {
+            this.putQueryParameter("AclOperationType", aclOperationType);
+            this.aclOperationType = aclOperationType;
+            return this;
+        }
+
+        /**
+         * AclPermissionType.
+         */
+        public Builder aclPermissionType(String aclPermissionType) {
+            this.putQueryParameter("AclPermissionType", aclPermissionType);
+            this.aclPermissionType = aclPermissionType;
+            return this;
+        }
 
         /**
          * The name or ID of the resource.
@@ -164,6 +224,15 @@ public class DescribeAclsRequest extends Request {
         public Builder aclResourceType(String aclResourceType) {
             this.putQueryParameter("AclResourceType", aclResourceType);
             this.aclResourceType = aclResourceType;
+            return this;
+        }
+
+        /**
+         * Host.
+         */
+        public Builder host(String host) {
+            this.putQueryParameter("Host", host);
+            this.host = host;
             return this;
         }
 

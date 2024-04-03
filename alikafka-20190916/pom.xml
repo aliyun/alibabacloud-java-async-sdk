@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>alibabacloud-alikafka20190916</artifactId>
-  <version>1.0.18</version>
+  <version>1.0.19</version>
   <packaging>jar</packaging>
   <name>alibabacloud-alikafka20190916</name>
   <description>Alibaba Cloud alikafka (20190916) Async SDK for Java

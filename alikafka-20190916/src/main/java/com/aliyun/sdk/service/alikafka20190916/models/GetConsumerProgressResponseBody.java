@@ -131,6 +131,188 @@ public class GetConsumerProgressResponseBody extends TeaModel {
 
     } 
 
+    public static class RebalanceInfoList extends TeaModel {
+        @NameInMap("Generation")
+        private Long generation;
+
+        @NameInMap("GroupId")
+        private String groupId;
+
+        @NameInMap("LastRebalanceTimestamp")
+        private Long lastRebalanceTimestamp;
+
+        @NameInMap("Reason")
+        private String reason;
+
+        @NameInMap("RebalanceSuccess")
+        private Boolean rebalanceSuccess;
+
+        @NameInMap("RebalanceTimeConsuming")
+        private Long rebalanceTimeConsuming;
+
+        private RebalanceInfoList(Builder builder) {
+            this.generation = builder.generation;
+            this.groupId = builder.groupId;
+            this.lastRebalanceTimestamp = builder.lastRebalanceTimestamp;
+            this.reason = builder.reason;
+            this.rebalanceSuccess = builder.rebalanceSuccess;
+            this.rebalanceTimeConsuming = builder.rebalanceTimeConsuming;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RebalanceInfoList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return generation
+         */
+        public Long getGeneration() {
+            return this.generation;
+        }
+
+        /**
+         * @return groupId
+         */
+        public String getGroupId() {
+            return this.groupId;
+        }
+
+        /**
+         * @return lastRebalanceTimestamp
+         */
+        public Long getLastRebalanceTimestamp() {
+            return this.lastRebalanceTimestamp;
+        }
+
+        /**
+         * @return reason
+         */
+        public String getReason() {
+            return this.reason;
+        }
+
+        /**
+         * @return rebalanceSuccess
+         */
+        public Boolean getRebalanceSuccess() {
+            return this.rebalanceSuccess;
+        }
+
+        /**
+         * @return rebalanceTimeConsuming
+         */
+        public Long getRebalanceTimeConsuming() {
+            return this.rebalanceTimeConsuming;
+        }
+
+        public static final class Builder {
+            private Long generation; 
+            private String groupId; 
+            private Long lastRebalanceTimestamp; 
+            private String reason; 
+            private Boolean rebalanceSuccess; 
+            private Long rebalanceTimeConsuming; 
+
+            /**
+             * Generation.
+             */
+            public Builder generation(Long generation) {
+                this.generation = generation;
+                return this;
+            }
+
+            /**
+             * GroupId.
+             */
+            public Builder groupId(String groupId) {
+                this.groupId = groupId;
+                return this;
+            }
+
+            /**
+             * LastRebalanceTimestamp.
+             */
+            public Builder lastRebalanceTimestamp(Long lastRebalanceTimestamp) {
+                this.lastRebalanceTimestamp = lastRebalanceTimestamp;
+                return this;
+            }
+
+            /**
+             * Reason.
+             */
+            public Builder reason(String reason) {
+                this.reason = reason;
+                return this;
+            }
+
+            /**
+             * RebalanceSuccess.
+             */
+            public Builder rebalanceSuccess(Boolean rebalanceSuccess) {
+                this.rebalanceSuccess = rebalanceSuccess;
+                return this;
+            }
+
+            /**
+             * RebalanceTimeConsuming.
+             */
+            public Builder rebalanceTimeConsuming(Long rebalanceTimeConsuming) {
+                this.rebalanceTimeConsuming = rebalanceTimeConsuming;
+                return this;
+            }
+
+            public RebalanceInfoList build() {
+                return new RebalanceInfoList(this);
+            } 
+
+        } 
+
+    }
+    public static class ConsumerProgressRebalanceInfoList extends TeaModel {
+        @NameInMap("RebalanceInfoList")
+        private java.util.List < RebalanceInfoList> rebalanceInfoList;
+
+        private ConsumerProgressRebalanceInfoList(Builder builder) {
+            this.rebalanceInfoList = builder.rebalanceInfoList;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ConsumerProgressRebalanceInfoList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return rebalanceInfoList
+         */
+        public java.util.List < RebalanceInfoList> getRebalanceInfoList() {
+            return this.rebalanceInfoList;
+        }
+
+        public static final class Builder {
+            private java.util.List < RebalanceInfoList> rebalanceInfoList; 
+
+            /**
+             * RebalanceInfoList.
+             */
+            public Builder rebalanceInfoList(java.util.List < RebalanceInfoList> rebalanceInfoList) {
+                this.rebalanceInfoList = rebalanceInfoList;
+                return this;
+            }
+
+            public ConsumerProgressRebalanceInfoList build() {
+                return new ConsumerProgressRebalanceInfoList(this);
+            } 
+
+        } 
+
+    }
     public static class OffsetList extends TeaModel {
         @NameInMap("BrokerOffset")
         private Long brokerOffset;
@@ -419,6 +601,9 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         @NameInMap("LastTimestamp")
         private Long lastTimestamp;
 
+        @NameInMap("RebalanceInfoList")
+        private ConsumerProgressRebalanceInfoList rebalanceInfoList;
+
         @NameInMap("TopicList")
         private ConsumerProgressTopicList topicList;
 
@@ -427,6 +612,7 @@ public class GetConsumerProgressResponseBody extends TeaModel {
 
         private ConsumerProgress(Builder builder) {
             this.lastTimestamp = builder.lastTimestamp;
+            this.rebalanceInfoList = builder.rebalanceInfoList;
             this.topicList = builder.topicList;
             this.totalDiff = builder.totalDiff;
         }
@@ -447,6 +633,13 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         }
 
         /**
+         * @return rebalanceInfoList
+         */
+        public ConsumerProgressRebalanceInfoList getRebalanceInfoList() {
+            return this.rebalanceInfoList;
+        }
+
+        /**
          * @return topicList
          */
         public ConsumerProgressTopicList getTopicList() {
@@ -462,6 +655,7 @@ public class GetConsumerProgressResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long lastTimestamp; 
+            private ConsumerProgressRebalanceInfoList rebalanceInfoList; 
             private ConsumerProgressTopicList topicList; 
             private Long totalDiff; 
 
@@ -470,6 +664,14 @@ public class GetConsumerProgressResponseBody extends TeaModel {
              */
             public Builder lastTimestamp(Long lastTimestamp) {
                 this.lastTimestamp = lastTimestamp;
+                return this;
+            }
+
+            /**
+             * RebalanceInfoList.
+             */
+            public Builder rebalanceInfoList(ConsumerProgressRebalanceInfoList rebalanceInfoList) {
+                this.rebalanceInfoList = rebalanceInfoList;
                 return this;
             }
 

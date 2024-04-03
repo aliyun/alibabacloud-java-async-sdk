@@ -18,6 +18,10 @@ public class DeleteSaslUserRequest extends Request {
     private String instanceId;
 
     @Query
+    @NameInMap("Mechanism")
+    private String mechanism;
+
+    @Query
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
@@ -34,6 +38,7 @@ public class DeleteSaslUserRequest extends Request {
     private DeleteSaslUserRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
+        this.mechanism = builder.mechanism;
         this.regionId = builder.regionId;
         this.type = builder.type;
         this.username = builder.username;
@@ -60,6 +65,13 @@ public class DeleteSaslUserRequest extends Request {
     }
 
     /**
+     * @return mechanism
+     */
+    public String getMechanism() {
+        return this.mechanism;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -82,6 +94,7 @@ public class DeleteSaslUserRequest extends Request {
 
     public static final class Builder extends Request.Builder<DeleteSaslUserRequest, Builder> {
         private String instanceId; 
+        private String mechanism; 
         private String regionId; 
         private String type; 
         private String username; 
@@ -93,6 +106,7 @@ public class DeleteSaslUserRequest extends Request {
         private Builder(DeleteSaslUserRequest request) {
             super(request);
             this.instanceId = request.instanceId;
+            this.mechanism = request.mechanism;
             this.regionId = request.regionId;
             this.type = request.type;
             this.username = request.username;
@@ -104,6 +118,15 @@ public class DeleteSaslUserRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * Mechanism.
+         */
+        public Builder mechanism(String mechanism) {
+            this.putQueryParameter("Mechanism", mechanism);
+            this.mechanism = mechanism;
             return this;
         }
 

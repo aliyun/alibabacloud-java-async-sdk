@@ -18,6 +18,14 @@ public class DeleteAclRequest extends Request {
     private String aclOperationType;
 
     @Query
+    @NameInMap("AclOperationTypes")
+    private String aclOperationTypes;
+
+    @Query
+    @NameInMap("AclPermissionType")
+    private String aclPermissionType;
+
+    @Query
     @NameInMap("AclResourceName")
     @Validation(required = true)
     private String aclResourceName;
@@ -31,6 +39,10 @@ public class DeleteAclRequest extends Request {
     @NameInMap("AclResourceType")
     @Validation(required = true)
     private String aclResourceType;
+
+    @Query
+    @NameInMap("Host")
+    private String host;
 
     @Query
     @NameInMap("InstanceId")
@@ -50,9 +62,12 @@ public class DeleteAclRequest extends Request {
     private DeleteAclRequest(Builder builder) {
         super(builder);
         this.aclOperationType = builder.aclOperationType;
+        this.aclOperationTypes = builder.aclOperationTypes;
+        this.aclPermissionType = builder.aclPermissionType;
         this.aclResourceName = builder.aclResourceName;
         this.aclResourcePatternType = builder.aclResourcePatternType;
         this.aclResourceType = builder.aclResourceType;
+        this.host = builder.host;
         this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
         this.username = builder.username;
@@ -79,6 +94,20 @@ public class DeleteAclRequest extends Request {
     }
 
     /**
+     * @return aclOperationTypes
+     */
+    public String getAclOperationTypes() {
+        return this.aclOperationTypes;
+    }
+
+    /**
+     * @return aclPermissionType
+     */
+    public String getAclPermissionType() {
+        return this.aclPermissionType;
+    }
+
+    /**
      * @return aclResourceName
      */
     public String getAclResourceName() {
@@ -97,6 +126,13 @@ public class DeleteAclRequest extends Request {
      */
     public String getAclResourceType() {
         return this.aclResourceType;
+    }
+
+    /**
+     * @return host
+     */
+    public String getHost() {
+        return this.host;
     }
 
     /**
@@ -122,9 +158,12 @@ public class DeleteAclRequest extends Request {
 
     public static final class Builder extends Request.Builder<DeleteAclRequest, Builder> {
         private String aclOperationType; 
+        private String aclOperationTypes; 
+        private String aclPermissionType; 
         private String aclResourceName; 
         private String aclResourcePatternType; 
         private String aclResourceType; 
+        private String host; 
         private String instanceId; 
         private String regionId; 
         private String username; 
@@ -136,9 +175,12 @@ public class DeleteAclRequest extends Request {
         private Builder(DeleteAclRequest request) {
             super(request);
             this.aclOperationType = request.aclOperationType;
+            this.aclOperationTypes = request.aclOperationTypes;
+            this.aclPermissionType = request.aclPermissionType;
             this.aclResourceName = request.aclResourceName;
             this.aclResourcePatternType = request.aclResourcePatternType;
             this.aclResourceType = request.aclResourceType;
+            this.host = request.host;
             this.instanceId = request.instanceId;
             this.regionId = request.regionId;
             this.username = request.username;
@@ -154,6 +196,24 @@ public class DeleteAclRequest extends Request {
         public Builder aclOperationType(String aclOperationType) {
             this.putQueryParameter("AclOperationType", aclOperationType);
             this.aclOperationType = aclOperationType;
+            return this;
+        }
+
+        /**
+         * AclOperationTypes.
+         */
+        public Builder aclOperationTypes(String aclOperationTypes) {
+            this.putQueryParameter("AclOperationTypes", aclOperationTypes);
+            this.aclOperationTypes = aclOperationTypes;
+            return this;
+        }
+
+        /**
+         * AclPermissionType.
+         */
+        public Builder aclPermissionType(String aclPermissionType) {
+            this.putQueryParameter("AclPermissionType", aclPermissionType);
+            this.aclPermissionType = aclPermissionType;
             return this;
         }
 
@@ -193,6 +253,15 @@ public class DeleteAclRequest extends Request {
         public Builder aclResourceType(String aclResourceType) {
             this.putQueryParameter("AclResourceType", aclResourceType);
             this.aclResourceType = aclResourceType;
+            return this;
+        }
+
+        /**
+         * Host.
+         */
+        public Builder host(String host) {
+            this.putQueryParameter("Host", host);
+            this.host = host;
             return this;
         }
 
