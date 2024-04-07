@@ -17,12 +17,17 @@ public class ListOrganizationsRequest extends Request {
     private Integer accessLevel;
 
     @Query
+    @NameInMap("accessToken")
+    private String accessToken;
+
+    @Query
     @NameInMap("minAccessLevel")
     private Integer minAccessLevel;
 
     private ListOrganizationsRequest(Builder builder) {
         super(builder);
         this.accessLevel = builder.accessLevel;
+        this.accessToken = builder.accessToken;
         this.minAccessLevel = builder.minAccessLevel;
     }
 
@@ -47,6 +52,13 @@ public class ListOrganizationsRequest extends Request {
     }
 
     /**
+     * @return accessToken
+     */
+    public String getAccessToken() {
+        return this.accessToken;
+    }
+
+    /**
      * @return minAccessLevel
      */
     public Integer getMinAccessLevel() {
@@ -55,6 +67,7 @@ public class ListOrganizationsRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListOrganizationsRequest, Builder> {
         private Integer accessLevel; 
+        private String accessToken; 
         private Integer minAccessLevel; 
 
         private Builder() {
@@ -64,6 +77,7 @@ public class ListOrganizationsRequest extends Request {
         private Builder(ListOrganizationsRequest request) {
             super(request);
             this.accessLevel = request.accessLevel;
+            this.accessToken = request.accessToken;
             this.minAccessLevel = request.minAccessLevel;
         } 
 
@@ -73,6 +87,15 @@ public class ListOrganizationsRequest extends Request {
         public Builder accessLevel(Integer accessLevel) {
             this.putQueryParameter("accessLevel", accessLevel);
             this.accessLevel = accessLevel;
+            return this;
+        }
+
+        /**
+         * accessToken.
+         */
+        public Builder accessToken(String accessToken) {
+            this.putQueryParameter("accessToken", accessToken);
+            this.accessToken = accessToken;
             return this;
         }
 
