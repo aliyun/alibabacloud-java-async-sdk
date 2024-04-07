@@ -303,7 +303,7 @@ public class SwitchNetworkRequest extends Request {
         }
 
         /**
-         * The network type to which you want to switch. Set the value to **VPC**.
+         * The network type to which you want to switch. If you want to switch to VPC network, Set the value to **VPC**.
          */
         public Builder targetNetworkType(String targetNetworkType) {
             this.putQueryParameter("TargetNetworkType", targetNetworkType);
