@@ -21,6 +21,10 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
     private String appIds;
 
     @Query
+    @NameInMap("CanaryModel")
+    private Integer canaryModel;
+
+    @Query
     @NameInMap("DbGrayEnable")
     private Boolean dbGrayEnable;
 
@@ -51,12 +55,20 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
     private String namespace;
 
     @Query
+    @NameInMap("Paths")
+    private java.util.List < String > paths;
+
+    @Query
     @NameInMap("RecordCanaryDetail")
     private Boolean recordCanaryDetail;
 
     @Query
     @NameInMap("Region")
     private String region;
+
+    @Query
+    @NameInMap("RouteIds")
+    private java.util.List < Long > routeIds;
 
     @Query
     @NameInMap("Status")
@@ -66,6 +78,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
         this.appIds = builder.appIds;
+        this.canaryModel = builder.canaryModel;
         this.dbGrayEnable = builder.dbGrayEnable;
         this.entryApp = builder.entryApp;
         this.id = builder.id;
@@ -73,8 +86,10 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         this.messageQueueGrayEnable = builder.messageQueueGrayEnable;
         this.name = builder.name;
         this.namespace = builder.namespace;
+        this.paths = builder.paths;
         this.recordCanaryDetail = builder.recordCanaryDetail;
         this.region = builder.region;
+        this.routeIds = builder.routeIds;
         this.status = builder.status;
     }
 
@@ -103,6 +118,13 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
      */
     public String getAppIds() {
         return this.appIds;
+    }
+
+    /**
+     * @return canaryModel
+     */
+    public Integer getCanaryModel() {
+        return this.canaryModel;
     }
 
     /**
@@ -155,6 +177,13 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
     }
 
     /**
+     * @return paths
+     */
+    public java.util.List < String > getPaths() {
+        return this.paths;
+    }
+
+    /**
      * @return recordCanaryDetail
      */
     public Boolean getRecordCanaryDetail() {
@@ -169,6 +198,13 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
     }
 
     /**
+     * @return routeIds
+     */
+    public java.util.List < Long > getRouteIds() {
+        return this.routeIds;
+    }
+
+    /**
      * @return status
      */
     public Integer getStatus() {
@@ -178,6 +214,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
     public static final class Builder extends Request.Builder<CreateOrUpdateSwimmingLaneGroupRequest, Builder> {
         private String acceptLanguage; 
         private String appIds; 
+        private Integer canaryModel; 
         private Boolean dbGrayEnable; 
         private String entryApp; 
         private Long id; 
@@ -185,8 +222,10 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         private Boolean messageQueueGrayEnable; 
         private String name; 
         private String namespace; 
+        private java.util.List < String > paths; 
         private Boolean recordCanaryDetail; 
         private String region; 
+        private java.util.List < Long > routeIds; 
         private Integer status; 
 
         private Builder() {
@@ -197,6 +236,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
             this.appIds = request.appIds;
+            this.canaryModel = request.canaryModel;
             this.dbGrayEnable = request.dbGrayEnable;
             this.entryApp = request.entryApp;
             this.id = request.id;
@@ -204,8 +244,10 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
             this.messageQueueGrayEnable = request.messageQueueGrayEnable;
             this.name = request.name;
             this.namespace = request.namespace;
+            this.paths = request.paths;
             this.recordCanaryDetail = request.recordCanaryDetail;
             this.region = request.region;
+            this.routeIds = request.routeIds;
             this.status = request.status;
         } 
 
@@ -228,6 +270,15 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         public Builder appIds(String appIds) {
             this.putQueryParameter("AppIds", appIds);
             this.appIds = appIds;
+            return this;
+        }
+
+        /**
+         * CanaryModel.
+         */
+        public Builder canaryModel(Integer canaryModel) {
+            this.putQueryParameter("CanaryModel", canaryModel);
+            this.canaryModel = canaryModel;
             return this;
         }
 
@@ -295,6 +346,16 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         }
 
         /**
+         * Paths.
+         */
+        public Builder paths(java.util.List < String > paths) {
+            String pathsShrink = shrink(paths, "Paths", "json");
+            this.putQueryParameter("Paths", pathsShrink);
+            this.paths = paths;
+            return this;
+        }
+
+        /**
          * Specifies whether to record request details.
          */
         public Builder recordCanaryDetail(Boolean recordCanaryDetail) {
@@ -309,6 +370,16 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
             this.region = region;
+            return this;
+        }
+
+        /**
+         * RouteIds.
+         */
+        public Builder routeIds(java.util.List < Long > routeIds) {
+            String routeIdsShrink = shrink(routeIds, "RouteIds", "json");
+            this.putQueryParameter("RouteIds", routeIdsShrink);
+            this.routeIds = routeIds;
             return this;
         }
 

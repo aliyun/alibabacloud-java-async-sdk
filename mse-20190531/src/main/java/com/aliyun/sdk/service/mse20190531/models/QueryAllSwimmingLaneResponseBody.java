@@ -457,9 +457,254 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
         } 
 
     }
+    public static class Conditions extends TeaModel {
+        @NameInMap("Cond")
+        private String cond;
+
+        @NameInMap("Name")
+        private String name;
+
+        @NameInMap("Type")
+        private String type;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Conditions(Builder builder) {
+            this.cond = builder.cond;
+            this.name = builder.name;
+            this.type = builder.type;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Conditions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cond
+         */
+        public String getCond() {
+            return this.cond;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String cond; 
+            private String name; 
+            private String type; 
+            private String value; 
+
+            /**
+             * Cond.
+             */
+            public Builder cond(String cond) {
+                this.cond = cond;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Conditions build() {
+                return new Conditions(this);
+            } 
+
+        } 
+
+    }
+    public static class GatewaySwimmingLaneRoute extends TeaModel {
+        @NameInMap("CanaryModel")
+        private Integer canaryModel;
+
+        @NameInMap("Conditions")
+        private java.util.List < Conditions> conditions;
+
+        @NameInMap("GatewayId")
+        private Long gatewayId;
+
+        @NameInMap("GatewayUniqueId")
+        private String gatewayUniqueId;
+
+        @NameInMap("Percentage")
+        private Integer percentage;
+
+        @NameInMap("RouteIdList")
+        private java.util.List < Long > routeIdList;
+
+        private GatewaySwimmingLaneRoute(Builder builder) {
+            this.canaryModel = builder.canaryModel;
+            this.conditions = builder.conditions;
+            this.gatewayId = builder.gatewayId;
+            this.gatewayUniqueId = builder.gatewayUniqueId;
+            this.percentage = builder.percentage;
+            this.routeIdList = builder.routeIdList;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static GatewaySwimmingLaneRoute create() {
+            return builder().build();
+        }
+
+        /**
+         * @return canaryModel
+         */
+        public Integer getCanaryModel() {
+            return this.canaryModel;
+        }
+
+        /**
+         * @return conditions
+         */
+        public java.util.List < Conditions> getConditions() {
+            return this.conditions;
+        }
+
+        /**
+         * @return gatewayId
+         */
+        public Long getGatewayId() {
+            return this.gatewayId;
+        }
+
+        /**
+         * @return gatewayUniqueId
+         */
+        public String getGatewayUniqueId() {
+            return this.gatewayUniqueId;
+        }
+
+        /**
+         * @return percentage
+         */
+        public Integer getPercentage() {
+            return this.percentage;
+        }
+
+        /**
+         * @return routeIdList
+         */
+        public java.util.List < Long > getRouteIdList() {
+            return this.routeIdList;
+        }
+
+        public static final class Builder {
+            private Integer canaryModel; 
+            private java.util.List < Conditions> conditions; 
+            private Long gatewayId; 
+            private String gatewayUniqueId; 
+            private Integer percentage; 
+            private java.util.List < Long > routeIdList; 
+
+            /**
+             * CanaryModel.
+             */
+            public Builder canaryModel(Integer canaryModel) {
+                this.canaryModel = canaryModel;
+                return this;
+            }
+
+            /**
+             * Conditions.
+             */
+            public Builder conditions(java.util.List < Conditions> conditions) {
+                this.conditions = conditions;
+                return this;
+            }
+
+            /**
+             * GatewayId.
+             */
+            public Builder gatewayId(Long gatewayId) {
+                this.gatewayId = gatewayId;
+                return this;
+            }
+
+            /**
+             * GatewayUniqueId.
+             */
+            public Builder gatewayUniqueId(String gatewayUniqueId) {
+                this.gatewayUniqueId = gatewayUniqueId;
+                return this;
+            }
+
+            /**
+             * Percentage.
+             */
+            public Builder percentage(Integer percentage) {
+                this.percentage = percentage;
+                return this;
+            }
+
+            /**
+             * RouteIdList.
+             */
+            public Builder routeIdList(java.util.List < Long > routeIdList) {
+                this.routeIdList = routeIdList;
+                return this;
+            }
+
+            public GatewaySwimmingLaneRoute build() {
+                return new GatewaySwimmingLaneRoute(this);
+            } 
+
+        } 
+
+    }
     public static class Data extends TeaModel {
         @NameInMap("EntryRules")
         private java.util.List < EntryRules> entryRules;
+
+        @NameInMap("GatewaySwimmingLaneRoute")
+        private GatewaySwimmingLaneRoute gatewaySwimmingLaneRoute;
 
         @NameInMap("GroupId")
         private String groupId;
@@ -502,6 +747,7 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
 
         private Data(Builder builder) {
             this.entryRules = builder.entryRules;
+            this.gatewaySwimmingLaneRoute = builder.gatewaySwimmingLaneRoute;
             this.groupId = builder.groupId;
             this.id = builder.id;
             this.messageQueueFilterSide = builder.messageQueueFilterSide;
@@ -530,6 +776,13 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
          */
         public java.util.List < EntryRules> getEntryRules() {
             return this.entryRules;
+        }
+
+        /**
+         * @return gatewaySwimmingLaneRoute
+         */
+        public GatewaySwimmingLaneRoute getGatewaySwimmingLaneRoute() {
+            return this.gatewaySwimmingLaneRoute;
         }
 
         /**
@@ -625,6 +878,7 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List < EntryRules> entryRules; 
+            private GatewaySwimmingLaneRoute gatewaySwimmingLaneRoute; 
             private String groupId; 
             private Long id; 
             private String messageQueueFilterSide; 
@@ -644,6 +898,14 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
              */
             public Builder entryRules(java.util.List < EntryRules> entryRules) {
                 this.entryRules = entryRules;
+                return this;
+            }
+
+            /**
+             * GatewaySwimmingLaneRoute.
+             */
+            public Builder gatewaySwimmingLaneRoute(GatewaySwimmingLaneRoute gatewaySwimmingLaneRoute) {
+                this.gatewaySwimmingLaneRoute = gatewaySwimmingLaneRoute;
                 return this;
             }
 

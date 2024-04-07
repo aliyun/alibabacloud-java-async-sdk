@@ -203,6 +203,9 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
         @NameInMap("AppIds")
         private String appIds;
 
+        @NameInMap("CanaryModel")
+        private Integer canaryModel;
+
         @NameInMap("EntryApp")
         private String entryApp;
 
@@ -221,6 +224,9 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
         @NameInMap("Namespace")
         private String namespace;
 
+        @NameInMap("Paths")
+        private String paths;
+
         @NameInMap("RecordCanaryDetail")
         private Boolean recordCanaryDetail;
 
@@ -232,12 +238,14 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
 
         private Data(Builder builder) {
             this.appIds = builder.appIds;
+            this.canaryModel = builder.canaryModel;
             this.entryApp = builder.entryApp;
             this.id = builder.id;
             this.messageQueueFilterSide = builder.messageQueueFilterSide;
             this.messageQueueGrayEnable = builder.messageQueueGrayEnable;
             this.name = builder.name;
             this.namespace = builder.namespace;
+            this.paths = builder.paths;
             this.recordCanaryDetail = builder.recordCanaryDetail;
             this.region = builder.region;
             this.userId = builder.userId;
@@ -256,6 +264,13 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
          */
         public String getAppIds() {
             return this.appIds;
+        }
+
+        /**
+         * @return canaryModel
+         */
+        public Integer getCanaryModel() {
+            return this.canaryModel;
         }
 
         /**
@@ -301,6 +316,13 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
         }
 
         /**
+         * @return paths
+         */
+        public String getPaths() {
+            return this.paths;
+        }
+
+        /**
          * @return recordCanaryDetail
          */
         public Boolean getRecordCanaryDetail() {
@@ -323,12 +345,14 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
 
         public static final class Builder {
             private String appIds; 
+            private Integer canaryModel; 
             private String entryApp; 
             private Long id; 
             private String messageQueueFilterSide; 
             private Boolean messageQueueGrayEnable; 
             private String name; 
             private String namespace; 
+            private String paths; 
             private Boolean recordCanaryDetail; 
             private String region; 
             private String userId; 
@@ -338,6 +362,14 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
              */
             public Builder appIds(String appIds) {
                 this.appIds = appIds;
+                return this;
+            }
+
+            /**
+             * CanaryModel.
+             */
+            public Builder canaryModel(Integer canaryModel) {
+                this.canaryModel = canaryModel;
                 return this;
             }
 
@@ -386,6 +418,14 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
+                return this;
+            }
+
+            /**
+             * Paths.
+             */
+            public Builder paths(String paths) {
+                this.paths = paths;
                 return this;
             }
 

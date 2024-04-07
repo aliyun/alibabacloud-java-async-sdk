@@ -766,6 +766,9 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
 
     }
     public static class GatewaySwimmingLaneRouteJson extends TeaModel {
+        @NameInMap("CanaryModel")
+        private Integer canaryModel;
+
         @NameInMap("Conditions")
         private java.util.List < Conditions> conditions;
 
@@ -775,13 +778,18 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         @NameInMap("GatewayUniqueId")
         private String gatewayUniqueId;
 
+        @NameInMap("Percentage")
+        private Integer percentage;
+
         @NameInMap("RouteIdList")
         private java.util.List < Long > routeIdList;
 
         private GatewaySwimmingLaneRouteJson(Builder builder) {
+            this.canaryModel = builder.canaryModel;
             this.conditions = builder.conditions;
             this.gatewayId = builder.gatewayId;
             this.gatewayUniqueId = builder.gatewayUniqueId;
+            this.percentage = builder.percentage;
             this.routeIdList = builder.routeIdList;
         }
 
@@ -791,6 +799,13 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
 
         public static GatewaySwimmingLaneRouteJson create() {
             return builder().build();
+        }
+
+        /**
+         * @return canaryModel
+         */
+        public Integer getCanaryModel() {
+            return this.canaryModel;
         }
 
         /**
@@ -815,6 +830,13 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         }
 
         /**
+         * @return percentage
+         */
+        public Integer getPercentage() {
+            return this.percentage;
+        }
+
+        /**
          * @return routeIdList
          */
         public java.util.List < Long > getRouteIdList() {
@@ -822,10 +844,20 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         }
 
         public static final class Builder {
+            private Integer canaryModel; 
             private java.util.List < Conditions> conditions; 
             private Long gatewayId; 
             private String gatewayUniqueId; 
+            private Integer percentage; 
             private java.util.List < Long > routeIdList; 
+
+            /**
+             * CanaryModel.
+             */
+            public Builder canaryModel(Integer canaryModel) {
+                this.canaryModel = canaryModel;
+                return this;
+            }
 
             /**
              * The matching conditions.
@@ -848,6 +880,14 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
              */
             public Builder gatewayUniqueId(String gatewayUniqueId) {
                 this.gatewayUniqueId = gatewayUniqueId;
+                return this;
+            }
+
+            /**
+             * Percentage.
+             */
+            public Builder percentage(Integer percentage) {
+                this.percentage = percentage;
                 return this;
             }
 
