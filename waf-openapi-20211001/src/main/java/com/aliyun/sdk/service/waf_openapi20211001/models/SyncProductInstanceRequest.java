@@ -7,16 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeDomainDNSRecordRequest} extends {@link RequestModel}
+ * {@link SyncProductInstanceRequest} extends {@link RequestModel}
  *
- * <p>DescribeDomainDNSRecordRequest</p>
+ * <p>SyncProductInstanceRequest</p>
  */
-public class DescribeDomainDNSRecordRequest extends Request {
-    @Query
-    @NameInMap("Domain")
-    @Validation(required = true)
-    private String domain;
-
+public class SyncProductInstanceRequest extends Request {
     @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
@@ -30,9 +25,8 @@ public class DescribeDomainDNSRecordRequest extends Request {
     @NameInMap("ResourceManagerResourceGroupId")
     private String resourceManagerResourceGroupId;
 
-    private DescribeDomainDNSRecordRequest(Builder builder) {
+    private SyncProductInstanceRequest(Builder builder) {
         super(builder);
-        this.domain = builder.domain;
         this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
         this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
@@ -42,20 +36,13 @@ public class DescribeDomainDNSRecordRequest extends Request {
         return new Builder();
     }
 
-    public static DescribeDomainDNSRecordRequest create() {
+    public static SyncProductInstanceRequest create() {
         return builder().build();
     }
 
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return domain
-     */
-    public String getDomain() {
-        return this.domain;
     }
 
     /**
@@ -79,8 +66,7 @@ public class DescribeDomainDNSRecordRequest extends Request {
         return this.resourceManagerResourceGroupId;
     }
 
-    public static final class Builder extends Request.Builder<DescribeDomainDNSRecordRequest, Builder> {
-        private String domain; 
+    public static final class Builder extends Request.Builder<SyncProductInstanceRequest, Builder> {
         private String instanceId; 
         private String regionId; 
         private String resourceManagerResourceGroupId; 
@@ -89,25 +75,15 @@ public class DescribeDomainDNSRecordRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDomainDNSRecordRequest request) {
+        private Builder(SyncProductInstanceRequest request) {
             super(request);
-            this.domain = request.domain;
             this.instanceId = request.instanceId;
             this.regionId = request.regionId;
             this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
         } 
 
         /**
-         * The domain name whose DNS settings you want to check.
-         */
-        public Builder domain(String domain) {
-            this.putQueryParameter("Domain", domain);
-            this.domain = domain;
-            return this;
-        }
-
-        /**
-         * The ID of the Web Application Firewall (WAF) instance.
+         * The ID of the WAF instance.
          * <p>
          * 
          * >  You can call the [DescribeInstance](~~433756~~) operation to query the ID of the WAF instance.
@@ -141,8 +117,8 @@ public class DescribeDomainDNSRecordRequest extends Request {
         }
 
         @Override
-        public DescribeDomainDNSRecordRequest build() {
-            return new DescribeDomainDNSRecordRequest(this);
+        public SyncProductInstanceRequest build() {
+            return new SyncProductInstanceRequest(this);
         } 
 
     } 

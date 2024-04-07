@@ -374,7 +374,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerUserId.
+             * The ID of the Alibaba Cloud account to which the resource belongs.
              */
             public Builder ownerUserId(String ownerUserId) {
                 this.ownerUserId = ownerUserId;

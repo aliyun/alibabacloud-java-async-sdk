@@ -53,6 +53,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeCertsResponse> describeCerts(DescribeCertsRequest request);
 
+    CompletableFuture<DescribeCloudResourcesResponse> describeCloudResources(DescribeCloudResourcesRequest request);
+
     CompletableFuture<DescribeDefenseResourceGroupResponse> describeDefenseResourceGroup(DescribeDefenseResourceGroupRequest request);
 
     CompletableFuture<DescribeDefenseResourceTemplatesResponse> describeDefenseResourceTemplates(DescribeDefenseResourceTemplatesRequest request);
@@ -92,6 +94,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeMemberAccountsResponse> describeMemberAccounts(DescribeMemberAccountsRequest request);
 
     CompletableFuture<DescribePeakTrendResponse> describePeakTrend(DescribePeakTrendRequest request);
+
+    CompletableFuture<DescribeProductInstancesResponse> describeProductInstances(DescribeProductInstancesRequest request);
 
     CompletableFuture<DescribeResourceInstanceCertsResponse> describeResourceInstanceCerts(DescribeResourceInstanceCertsRequest request);
 
@@ -162,5 +166,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyResourceLogStatusResponse> modifyResourceLogStatus(ModifyResourceLogStatusRequest request);
 
     CompletableFuture<ModifyTemplateResourcesResponse> modifyTemplateResources(ModifyTemplateResourcesRequest request);
+
+    /**
+      * SyncProductInstance is an asynchronous operation. You can call the [DescribeProductInstances](~~2743168~~) operation to query the status of the task.
+      *
+     */
+    CompletableFuture<SyncProductInstanceResponse> syncProductInstance(SyncProductInstanceRequest request);
 
 }
