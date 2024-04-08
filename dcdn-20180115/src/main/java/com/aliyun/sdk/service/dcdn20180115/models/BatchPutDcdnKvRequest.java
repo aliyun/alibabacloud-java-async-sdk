@@ -12,7 +12,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BatchPutDcdnKvRequest</p>
  */
 public class BatchPutDcdnKvRequest extends Request {
-    @Query
+    @Body
     @NameInMap("KvList")
     @Validation(required = true)
     private java.util.List < KvList> kvList;
@@ -70,11 +70,11 @@ public class BatchPutDcdnKvRequest extends Request {
         } 
 
         /**
-         * The key-value pairs. The key-value pairs can be up to 2 MB in size.
+         * KvList.
          */
         public Builder kvList(java.util.List < KvList> kvList) {
             String kvListShrink = shrink(kvList, "KvList", "json");
-            this.putQueryParameter("KvList", kvListShrink);
+            this.putBodyParameter("KvList", kvListShrink);
             this.kvList = kvList;
             return this;
         }
@@ -160,7 +160,7 @@ public class BatchPutDcdnKvRequest extends Request {
             private String value; 
 
             /**
-             * The expiration time. The value is a timestamp in seconds. The expiration time cannot be earlier than the current time. If you specify Expiration and ExpirationTtl, only ExpirationTtl takes effect.
+             * Expiration.
              */
             public Builder expiration(Long expiration) {
                 this.expiration = expiration;
@@ -168,7 +168,7 @@ public class BatchPutDcdnKvRequest extends Request {
             }
 
             /**
-             * The relative expiration time. Unit: seconds. If you specify Expiration and ExpirationTtl, only ExpirationTtl takes effect.
+             * ExpirationTtl.
              */
             public Builder expirationTtl(Long expirationTtl) {
                 this.expirationTtl = expirationTtl;
@@ -176,7 +176,7 @@ public class BatchPutDcdnKvRequest extends Request {
             }
 
             /**
-             * The key. The key can be up to 512 characters in length and cannot contain spaces.
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -184,7 +184,7 @@ public class BatchPutDcdnKvRequest extends Request {
             }
 
             /**
-             * The value.
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

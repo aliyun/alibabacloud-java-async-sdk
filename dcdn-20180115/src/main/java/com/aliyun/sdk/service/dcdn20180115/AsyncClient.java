@@ -62,6 +62,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<BatchDeleteDcdnDomainConfigsResponse> batchDeleteDcdnDomainConfigs(BatchDeleteDcdnDomainConfigsRequest request);
 
+    CompletableFuture<BatchDeleteDcdnKvResponse> batchDeleteDcdnKv(BatchDeleteDcdnKvRequest request);
+
+    CompletableFuture<BatchDeleteDcdnKvWithHighCapacityResponse> batchDeleteDcdnKvWithHighCapacity(BatchDeleteDcdnKvWithHighCapacityRequest request);
+
     /**
       * *   You can call this operation up to 20 times per second per account.
       * *   Alibaba Cloud Dynamic Content Delivery Network (DCDN) supports POST requests.
@@ -76,6 +80,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<BatchModifyDcdnWafRulesResponse> batchModifyDcdnWafRules(BatchModifyDcdnWafRulesRequest request);
 
     CompletableFuture<BatchPutDcdnKvResponse> batchPutDcdnKv(BatchPutDcdnKvRequest request);
+
+    CompletableFuture<BatchPutDcdnKvWithHighCapacityResponse> batchPutDcdnKvWithHighCapacity(BatchPutDcdnKvWithHighCapacityRequest request);
 
     /**
       * > You can call this operation up to 10 times per second per account.
@@ -1357,6 +1363,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<PutDcdnKvResponse> putDcdnKv(PutDcdnKvRequest request);
 
     CompletableFuture<PutDcdnKvNamespaceResponse> putDcdnKvNamespace(PutDcdnKvNamespaceRequest request);
+
+    CompletableFuture<PutDcdnKvWithHighCapacityResponse> putDcdnKvWithHighCapacity(PutDcdnKvWithHighCapacityRequest request);
 
     /**
       * *   DCDN supports POST requests in which parameters are sent as a form.

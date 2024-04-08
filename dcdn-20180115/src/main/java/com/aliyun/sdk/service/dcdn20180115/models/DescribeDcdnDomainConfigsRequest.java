@@ -23,7 +23,6 @@ public class DescribeDcdnDomainConfigsRequest extends Request {
 
     @Query
     @NameInMap("FunctionNames")
-    @Validation(required = true)
     private String functionNames;
 
     @Query

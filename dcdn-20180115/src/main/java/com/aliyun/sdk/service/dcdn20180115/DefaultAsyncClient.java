@@ -197,6 +197,34 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    @Override
+    public CompletableFuture<BatchDeleteDcdnKvResponse> batchDeleteDcdnKv(BatchDeleteDcdnKvRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("BatchDeleteDcdnKv").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(BatchDeleteDcdnKvResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<BatchDeleteDcdnKvResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<BatchDeleteDcdnKvWithHighCapacityResponse> batchDeleteDcdnKvWithHighCapacity(BatchDeleteDcdnKvWithHighCapacityRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("BatchDeleteDcdnKvWithHighCapacity").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(BatchDeleteDcdnKvWithHighCapacityResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<BatchDeleteDcdnKvWithHighCapacityResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
     /**
       * *   You can call this operation up to 20 times per second per account.
       * *   Alibaba Cloud Dynamic Content Delivery Network (DCDN) supports POST requests.
@@ -238,11 +266,25 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<BatchPutDcdnKvResponse> batchPutDcdnKv(BatchPutDcdnKvRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("BatchPutDcdnKv").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("BatchPutDcdnKv").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(BatchPutDcdnKvResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<BatchPutDcdnKvResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<BatchPutDcdnKvWithHighCapacityResponse> batchPutDcdnKvWithHighCapacity(BatchPutDcdnKvWithHighCapacityRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("BatchPutDcdnKvWithHighCapacity").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(BatchPutDcdnKvWithHighCapacityResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<BatchPutDcdnKvWithHighCapacityResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -3792,6 +3834,20 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<PutDcdnKvNamespaceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<PutDcdnKvWithHighCapacityResponse> putDcdnKvWithHighCapacity(PutDcdnKvWithHighCapacityRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("PutDcdnKvWithHighCapacity").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(PutDcdnKvWithHighCapacityResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<PutDcdnKvWithHighCapacityResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

@@ -14,7 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class PutDcdnKvNamespaceRequest extends Request {
     @Body
     @NameInMap("Description")
-    @Validation(required = true)
+    @Validation(required = true, maxLength = 1024)
     private String description;
 
     @Body
