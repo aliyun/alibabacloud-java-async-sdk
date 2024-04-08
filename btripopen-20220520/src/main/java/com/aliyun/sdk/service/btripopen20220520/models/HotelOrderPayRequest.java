@@ -42,6 +42,7 @@ public class HotelOrderPayRequest extends Request {
 
     @Body
     @NameInMap("total_price")
+    @Validation(required = true)
     private Long totalPrice;
 
     @Header

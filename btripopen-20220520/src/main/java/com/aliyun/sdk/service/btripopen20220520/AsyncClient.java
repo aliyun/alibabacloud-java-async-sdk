@@ -263,6 +263,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<MealBillSettlementQueryResponse> mealBillSettlementQuery(MealBillSettlementQueryRequest request);
 
+    CompletableFuture<MealOrderDetailQueryResponse> mealOrderDetailQuery(MealOrderDetailQueryRequest request);
+
+    CompletableFuture<MealOrderListQueryResponse> mealOrderListQuery(MealOrderListQueryRequest request);
+
     CompletableFuture<MonthBillConfirmResponse> monthBillConfirm(MonthBillConfirmRequest request);
 
     CompletableFuture<MonthBillGetResponse> monthBillGet(MonthBillGetRequest request);

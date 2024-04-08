@@ -194,6 +194,9 @@ public class WaitApplyInvoiceTaskDetailQueryResponseBody extends TeaModel {
         @NameInMap("mail_province")
         private String mailProvince;
 
+        @NameInMap("meal_normal_invoice_fee")
+        private String mealNormalInvoiceFee;
+
         @NameInMap("penalty_fee")
         private String penaltyFee;
 
@@ -227,6 +230,7 @@ public class WaitApplyInvoiceTaskDetailQueryResponseBody extends TeaModel {
             this.mailCity = builder.mailCity;
             this.mailFullAddress = builder.mailFullAddress;
             this.mailProvince = builder.mailProvince;
+            this.mealNormalInvoiceFee = builder.mealNormalInvoiceFee;
             this.penaltyFee = builder.penaltyFee;
             this.remark = builder.remark;
             this.serviceFee = builder.serviceFee;
@@ -342,6 +346,13 @@ public class WaitApplyInvoiceTaskDetailQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return mealNormalInvoiceFee
+         */
+        public String getMealNormalInvoiceFee() {
+            return this.mealNormalInvoiceFee;
+        }
+
+        /**
          * @return penaltyFee
          */
         public String getPenaltyFee() {
@@ -398,6 +409,7 @@ public class WaitApplyInvoiceTaskDetailQueryResponseBody extends TeaModel {
             private String mailCity; 
             private String mailFullAddress; 
             private String mailProvince; 
+            private String mealNormalInvoiceFee; 
             private String penaltyFee; 
             private String remark; 
             private String serviceFee; 
@@ -514,6 +526,14 @@ public class WaitApplyInvoiceTaskDetailQueryResponseBody extends TeaModel {
              */
             public Builder mailProvince(String mailProvince) {
                 this.mailProvince = mailProvince;
+                return this;
+            }
+
+            /**
+             * meal_normal_invoice_fee.
+             */
+            public Builder mealNormalInvoiceFee(String mealNormalInvoiceFee) {
+                this.mealNormalInvoiceFee = mealNormalInvoiceFee;
                 return this;
             }
 

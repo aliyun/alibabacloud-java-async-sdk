@@ -179,6 +179,15 @@ public class MealBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("cascade_department")
         private String cascadeDepartment;
 
+        @NameInMap("consume_report_address")
+        private String consumeReportAddress;
+
+        @NameInMap("consume_report_city")
+        private String consumeReportCity;
+
+        @NameInMap("consume_report_city_code")
+        private String consumeReportCityCode;
+
         @NameInMap("consumer_scene")
         private String consumerScene;
 
@@ -312,6 +321,9 @@ public class MealBillSettlementQueryResponseBody extends TeaModel {
             this.bookerName = builder.bookerName;
             this.capitalDirection = builder.capitalDirection;
             this.cascadeDepartment = builder.cascadeDepartment;
+            this.consumeReportAddress = builder.consumeReportAddress;
+            this.consumeReportCity = builder.consumeReportCity;
+            this.consumeReportCityCode = builder.consumeReportCityCode;
             this.consumerScene = builder.consumerScene;
             this.corpSettleFee = builder.corpSettleFee;
             this.costCenter = builder.costCenter;
@@ -424,6 +436,27 @@ public class MealBillSettlementQueryResponseBody extends TeaModel {
          */
         public String getCascadeDepartment() {
             return this.cascadeDepartment;
+        }
+
+        /**
+         * @return consumeReportAddress
+         */
+        public String getConsumeReportAddress() {
+            return this.consumeReportAddress;
+        }
+
+        /**
+         * @return consumeReportCity
+         */
+        public String getConsumeReportCity() {
+            return this.consumeReportCity;
+        }
+
+        /**
+         * @return consumeReportCityCode
+         */
+        public String getConsumeReportCityCode() {
+            return this.consumeReportCityCode;
         }
 
         /**
@@ -723,6 +756,9 @@ public class MealBillSettlementQueryResponseBody extends TeaModel {
             private String bookerName; 
             private String capitalDirection; 
             private String cascadeDepartment; 
+            private String consumeReportAddress; 
+            private String consumeReportCity; 
+            private String consumeReportCityCode; 
             private String consumerScene; 
             private Double corpSettleFee; 
             private String costCenter; 
@@ -834,6 +870,30 @@ public class MealBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder cascadeDepartment(String cascadeDepartment) {
                 this.cascadeDepartment = cascadeDepartment;
+                return this;
+            }
+
+            /**
+             * consume_report_address.
+             */
+            public Builder consumeReportAddress(String consumeReportAddress) {
+                this.consumeReportAddress = consumeReportAddress;
+                return this;
+            }
+
+            /**
+             * consume_report_city.
+             */
+            public Builder consumeReportCity(String consumeReportCity) {
+                this.consumeReportCity = consumeReportCity;
+                return this;
+            }
+
+            /**
+             * consume_report_city_code.
+             */
+            public Builder consumeReportCityCode(String consumeReportCityCode) {
+                this.consumeReportCityCode = consumeReportCityCode;
                 return this;
             }
 

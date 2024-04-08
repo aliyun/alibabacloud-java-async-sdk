@@ -486,11 +486,19 @@ public class HotelStaticInfoResponseBody extends TeaModel {
         @NameInMap("bed_type")
         private String bedType;
 
+        @NameInMap("length")
+        private String length;
+
+        @NameInMap("width")
+        private String width;
+
         private BedInfos(Builder builder) {
             this.bedDesc = builder.bedDesc;
             this.bedNum = builder.bedNum;
             this.bedSize = builder.bedSize;
             this.bedType = builder.bedType;
+            this.length = builder.length;
+            this.width = builder.width;
         }
 
         public static Builder builder() {
@@ -529,11 +537,27 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             return this.bedType;
         }
 
+        /**
+         * @return length
+         */
+        public String getLength() {
+            return this.length;
+        }
+
+        /**
+         * @return width
+         */
+        public String getWidth() {
+            return this.width;
+        }
+
         public static final class Builder {
             private String bedDesc; 
             private Integer bedNum; 
             private String bedSize; 
             private String bedType; 
+            private String length; 
+            private String width; 
 
             /**
              * bed_desc.
@@ -567,6 +591,22 @@ public class HotelStaticInfoResponseBody extends TeaModel {
                 return this;
             }
 
+            /**
+             * length.
+             */
+            public Builder length(String length) {
+                this.length = length;
+                return this;
+            }
+
+            /**
+             * width.
+             */
+            public Builder width(String width) {
+                this.width = width;
+                return this;
+            }
+
             public BedInfos build() {
                 return new BedInfos(this);
             } 
@@ -574,9 +614,194 @@ public class HotelStaticInfoResponseBody extends TeaModel {
         } 
 
     }
-    public static class RoomInfos extends TeaModel {
-        @NameInMap("bed_infos")
+    public static class BedInfoGroupList extends TeaModel {
+        @NameInMap("bed_Infos")
         private java.util.List < BedInfos> bedInfos;
+
+        private BedInfoGroupList(Builder builder) {
+            this.bedInfos = builder.bedInfos;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BedInfoGroupList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return bedInfos
+         */
+        public java.util.List < BedInfos> getBedInfos() {
+            return this.bedInfos;
+        }
+
+        public static final class Builder {
+            private java.util.List < BedInfos> bedInfos; 
+
+            /**
+             * bed_Infos.
+             */
+            public Builder bedInfos(java.util.List < BedInfos> bedInfos) {
+                this.bedInfos = bedInfos;
+                return this;
+            }
+
+            public BedInfoGroupList build() {
+                return new BedInfoGroupList(this);
+            } 
+
+        } 
+
+    }
+    public static class RoomInfosBedInfos extends TeaModel {
+        @NameInMap("bed_desc")
+        private String bedDesc;
+
+        @NameInMap("bed_num")
+        private Integer bedNum;
+
+        @NameInMap("bed_size")
+        private String bedSize;
+
+        @NameInMap("bed_type")
+        private String bedType;
+
+        @NameInMap("length")
+        private String length;
+
+        @NameInMap("width")
+        private String width;
+
+        private RoomInfosBedInfos(Builder builder) {
+            this.bedDesc = builder.bedDesc;
+            this.bedNum = builder.bedNum;
+            this.bedSize = builder.bedSize;
+            this.bedType = builder.bedType;
+            this.length = builder.length;
+            this.width = builder.width;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RoomInfosBedInfos create() {
+            return builder().build();
+        }
+
+        /**
+         * @return bedDesc
+         */
+        public String getBedDesc() {
+            return this.bedDesc;
+        }
+
+        /**
+         * @return bedNum
+         */
+        public Integer getBedNum() {
+            return this.bedNum;
+        }
+
+        /**
+         * @return bedSize
+         */
+        public String getBedSize() {
+            return this.bedSize;
+        }
+
+        /**
+         * @return bedType
+         */
+        public String getBedType() {
+            return this.bedType;
+        }
+
+        /**
+         * @return length
+         */
+        public String getLength() {
+            return this.length;
+        }
+
+        /**
+         * @return width
+         */
+        public String getWidth() {
+            return this.width;
+        }
+
+        public static final class Builder {
+            private String bedDesc; 
+            private Integer bedNum; 
+            private String bedSize; 
+            private String bedType; 
+            private String length; 
+            private String width; 
+
+            /**
+             * bed_desc.
+             */
+            public Builder bedDesc(String bedDesc) {
+                this.bedDesc = bedDesc;
+                return this;
+            }
+
+            /**
+             * bed_num.
+             */
+            public Builder bedNum(Integer bedNum) {
+                this.bedNum = bedNum;
+                return this;
+            }
+
+            /**
+             * bed_size.
+             */
+            public Builder bedSize(String bedSize) {
+                this.bedSize = bedSize;
+                return this;
+            }
+
+            /**
+             * bed_type.
+             */
+            public Builder bedType(String bedType) {
+                this.bedType = bedType;
+                return this;
+            }
+
+            /**
+             * length.
+             */
+            public Builder length(String length) {
+                this.length = length;
+                return this;
+            }
+
+            /**
+             * width.
+             */
+            public Builder width(String width) {
+                this.width = width;
+                return this;
+            }
+
+            public RoomInfosBedInfos build() {
+                return new RoomInfosBedInfos(this);
+            } 
+
+        } 
+
+    }
+    public static class RoomInfos extends TeaModel {
+        @NameInMap("bed_info_group_list")
+        private java.util.List < BedInfoGroupList> bedInfoGroupList;
+
+        @NameInMap("bed_infos")
+        private java.util.List < RoomInfosBedInfos> bedInfos;
 
         @NameInMap("extra_bed")
         private Integer extraBed;
@@ -630,6 +855,7 @@ public class HotelStaticInfoResponseBody extends TeaModel {
         private String windowView;
 
         private RoomInfos(Builder builder) {
+            this.bedInfoGroupList = builder.bedInfoGroupList;
             this.bedInfos = builder.bedInfos;
             this.extraBed = builder.extraBed;
             this.extraBedDesc = builder.extraBedDesc;
@@ -659,9 +885,16 @@ public class HotelStaticInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return bedInfoGroupList
+         */
+        public java.util.List < BedInfoGroupList> getBedInfoGroupList() {
+            return this.bedInfoGroupList;
+        }
+
+        /**
          * @return bedInfos
          */
-        public java.util.List < BedInfos> getBedInfos() {
+        public java.util.List < RoomInfosBedInfos> getBedInfos() {
             return this.bedInfos;
         }
 
@@ -785,7 +1018,8 @@ public class HotelStaticInfoResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < BedInfos> bedInfos; 
+            private java.util.List < BedInfoGroupList> bedInfoGroupList; 
+            private java.util.List < RoomInfosBedInfos> bedInfos; 
             private Integer extraBed; 
             private String extraBedDesc; 
             private String floor; 
@@ -805,9 +1039,17 @@ public class HotelStaticInfoResponseBody extends TeaModel {
             private String windowView; 
 
             /**
+             * bed_info_group_list.
+             */
+            public Builder bedInfoGroupList(java.util.List < BedInfoGroupList> bedInfoGroupList) {
+                this.bedInfoGroupList = bedInfoGroupList;
+                return this;
+            }
+
+            /**
              * bed_infos.
              */
-            public Builder bedInfos(java.util.List < BedInfos> bedInfos) {
+            public Builder bedInfos(java.util.List < RoomInfosBedInfos> bedInfos) {
                 this.bedInfos = bedInfos;
                 return this;
             }

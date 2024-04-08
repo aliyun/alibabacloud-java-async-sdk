@@ -62,8 +62,16 @@ public class AddressGetRequest extends Request {
     private String taobaoCallbackUrl;
 
     @Query
+    @NameInMap("traveler_id")
+    private String travelerId;
+
+    @Query
     @NameInMap("type")
     private Integer type;
+
+    @Query
+    @NameInMap("use_booking_proxy")
+    private Integer useBookingProxy;
 
     @Query
     @NameInMap("user_id")
@@ -88,7 +96,9 @@ public class AddressGetRequest extends Request {
         this.phone = builder.phone;
         this.subCorpId = builder.subCorpId;
         this.taobaoCallbackUrl = builder.taobaoCallbackUrl;
+        this.travelerId = builder.travelerId;
         this.type = builder.type;
+        this.useBookingProxy = builder.useBookingProxy;
         this.userId = builder.userId;
         this.xAcsBtripSoCorpToken = builder.xAcsBtripSoCorpToken;
     }
@@ -191,10 +201,24 @@ public class AddressGetRequest extends Request {
     }
 
     /**
+     * @return travelerId
+     */
+    public String getTravelerId() {
+        return this.travelerId;
+    }
+
+    /**
      * @return type
      */
     public Integer getType() {
         return this.type;
+    }
+
+    /**
+     * @return useBookingProxy
+     */
+    public Integer getUseBookingProxy() {
+        return this.useBookingProxy;
     }
 
     /**
@@ -224,7 +248,9 @@ public class AddressGetRequest extends Request {
         private String phone; 
         private String subCorpId; 
         private String taobaoCallbackUrl; 
+        private String travelerId; 
         private Integer type; 
+        private Integer useBookingProxy; 
         private String userId; 
         private String xAcsBtripSoCorpToken; 
 
@@ -246,7 +272,9 @@ public class AddressGetRequest extends Request {
             this.phone = request.phone;
             this.subCorpId = request.subCorpId;
             this.taobaoCallbackUrl = request.taobaoCallbackUrl;
+            this.travelerId = request.travelerId;
             this.type = request.type;
+            this.useBookingProxy = request.useBookingProxy;
             this.userId = request.userId;
             this.xAcsBtripSoCorpToken = request.xAcsBtripSoCorpToken;
         } 
@@ -360,11 +388,29 @@ public class AddressGetRequest extends Request {
         }
 
         /**
+         * traveler_id.
+         */
+        public Builder travelerId(String travelerId) {
+            this.putQueryParameter("traveler_id", travelerId);
+            this.travelerId = travelerId;
+            return this;
+        }
+
+        /**
          * type.
          */
         public Builder type(Integer type) {
             this.putQueryParameter("type", type);
             this.type = type;
+            return this;
+        }
+
+        /**
+         * use_booking_proxy.
+         */
+        public Builder useBookingProxy(Integer useBookingProxy) {
+            this.putQueryParameter("use_booking_proxy", useBookingProxy);
+            this.useBookingProxy = useBookingProxy;
             return this;
         }
 
