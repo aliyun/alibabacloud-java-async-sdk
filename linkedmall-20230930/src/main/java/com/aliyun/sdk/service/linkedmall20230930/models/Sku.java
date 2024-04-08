@@ -42,6 +42,9 @@ public class Sku extends TeaModel {
     @NameInMap("quantity")
     private Long quantity;
 
+    @NameInMap("rankValue")
+    private Long rankValue;
+
     @NameInMap("shopId")
     private String shopId;
 
@@ -71,6 +74,7 @@ public class Sku extends TeaModel {
         this.price = builder.price;
         this.productId = builder.productId;
         this.quantity = builder.quantity;
+        this.rankValue = builder.rankValue;
         this.shopId = builder.shopId;
         this.skuId = builder.skuId;
         this.skuSpecs = builder.skuSpecs;
@@ -158,6 +162,13 @@ public class Sku extends TeaModel {
     }
 
     /**
+     * @return rankValue
+     */
+    public Long getRankValue() {
+        return this.rankValue;
+    }
+
+    /**
      * @return shopId
      */
     public String getShopId() {
@@ -210,6 +221,7 @@ public class Sku extends TeaModel {
         private Long price; 
         private String productId; 
         private Long quantity; 
+        private Long rankValue; 
         private String shopId; 
         private String skuId; 
         private java.util.List < SkuSpec > skuSpecs; 
@@ -294,6 +306,14 @@ public class Sku extends TeaModel {
          */
         public Builder quantity(Long quantity) {
             this.quantity = quantity;
+            return this;
+        }
+
+        /**
+         * rankValue.
+         */
+        public Builder rankValue(Long rankValue) {
+            this.rankValue = rankValue;
             return this;
         }
 

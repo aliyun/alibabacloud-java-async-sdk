@@ -24,6 +24,7 @@ public class PurchaseOrderCreateCmd extends TeaModel {
     private java.util.Map < String, ? > extInfo;
 
     @NameInMap("outerPurchaseOrderId")
+    @Validation(required = true)
     private String outerPurchaseOrderId;
 
     @NameInMap("productList")
