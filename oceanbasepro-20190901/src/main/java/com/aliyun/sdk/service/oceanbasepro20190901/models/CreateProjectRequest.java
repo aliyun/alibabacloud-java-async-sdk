@@ -67,6 +67,10 @@ public class CreateProjectRequest extends Request {
     private String ossKey;
 
     @Body
+    @NameInMap("ReverseIncrTransferConfig")
+    private ReverseIncrTransferConfig reverseIncrTransferConfig;
+
+    @Body
     @NameInMap("SinkEndpointId")
     @Validation(required = true)
     private String sinkEndpointId;
@@ -114,6 +118,7 @@ public class CreateProjectRequest extends Request {
         this.labelIds = builder.labelIds;
         this.name = builder.name;
         this.ossKey = builder.ossKey;
+        this.reverseIncrTransferConfig = builder.reverseIncrTransferConfig;
         this.sinkEndpointId = builder.sinkEndpointId;
         this.sourceEndpointId = builder.sourceEndpointId;
         this.structTransferConfig = builder.structTransferConfig;
@@ -228,6 +233,13 @@ public class CreateProjectRequest extends Request {
     }
 
     /**
+     * @return reverseIncrTransferConfig
+     */
+    public ReverseIncrTransferConfig getReverseIncrTransferConfig() {
+        return this.reverseIncrTransferConfig;
+    }
+
+    /**
      * @return sinkEndpointId
      */
     public String getSinkEndpointId() {
@@ -290,6 +302,7 @@ public class CreateProjectRequest extends Request {
         private java.util.List < String > labelIds; 
         private String name; 
         private String ossKey; 
+        private ReverseIncrTransferConfig reverseIncrTransferConfig; 
         private String sinkEndpointId; 
         private String sourceEndpointId; 
         private StructTransferConfig structTransferConfig; 
@@ -317,6 +330,7 @@ public class CreateProjectRequest extends Request {
             this.labelIds = request.labelIds;
             this.name = request.name;
             this.ossKey = request.ossKey;
+            this.reverseIncrTransferConfig = request.reverseIncrTransferConfig;
             this.sinkEndpointId = request.sinkEndpointId;
             this.sourceEndpointId = request.sourceEndpointId;
             this.structTransferConfig = request.structTransferConfig;
@@ -444,6 +458,16 @@ public class CreateProjectRequest extends Request {
         public Builder ossKey(String ossKey) {
             this.putBodyParameter("OssKey", ossKey);
             this.ossKey = ossKey;
+            return this;
+        }
+
+        /**
+         * ReverseIncrTransferConfig.
+         */
+        public Builder reverseIncrTransferConfig(ReverseIncrTransferConfig reverseIncrTransferConfig) {
+            String reverseIncrTransferConfigShrink = shrink(reverseIncrTransferConfig, "ReverseIncrTransferConfig", "json");
+            this.putBodyParameter("ReverseIncrTransferConfig", reverseIncrTransferConfigShrink);
+            this.reverseIncrTransferConfig = reverseIncrTransferConfig;
             return this;
         }
 
@@ -894,11 +918,27 @@ public class CreateProjectRequest extends Request {
         @NameInMap("NonePkUkTruncateDstTable")
         private Boolean nonePkUkTruncateDstTable;
 
+        @NameInMap("ReadWorkerNum")
+        private Integer readWorkerNum;
+
+        @NameInMap("ThrottleIOPS")
+        private Integer throttleIOPS;
+
+        @NameInMap("ThrottleRps")
+        private Integer throttleRps;
+
+        @NameInMap("WriteWorkerNum")
+        private Integer writeWorkerNum;
+
         private FullTransferConfig(Builder builder) {
             this.allowDestTableNotEmpty = builder.allowDestTableNotEmpty;
             this.fullTransferSpeedMode = builder.fullTransferSpeedMode;
             this.fullVerifySpeedMode = builder.fullVerifySpeedMode;
             this.nonePkUkTruncateDstTable = builder.nonePkUkTruncateDstTable;
+            this.readWorkerNum = builder.readWorkerNum;
+            this.throttleIOPS = builder.throttleIOPS;
+            this.throttleRps = builder.throttleRps;
+            this.writeWorkerNum = builder.writeWorkerNum;
         }
 
         public static Builder builder() {
@@ -937,11 +977,43 @@ public class CreateProjectRequest extends Request {
             return this.nonePkUkTruncateDstTable;
         }
 
+        /**
+         * @return readWorkerNum
+         */
+        public Integer getReadWorkerNum() {
+            return this.readWorkerNum;
+        }
+
+        /**
+         * @return throttleIOPS
+         */
+        public Integer getThrottleIOPS() {
+            return this.throttleIOPS;
+        }
+
+        /**
+         * @return throttleRps
+         */
+        public Integer getThrottleRps() {
+            return this.throttleRps;
+        }
+
+        /**
+         * @return writeWorkerNum
+         */
+        public Integer getWriteWorkerNum() {
+            return this.writeWorkerNum;
+        }
+
         public static final class Builder {
             private Boolean allowDestTableNotEmpty; 
             private String fullTransferSpeedMode; 
             private String fullVerifySpeedMode; 
             private Boolean nonePkUkTruncateDstTable; 
+            private Integer readWorkerNum; 
+            private Integer throttleIOPS; 
+            private Integer throttleRps; 
+            private Integer writeWorkerNum; 
 
             /**
              * AllowDestTableNotEmpty.
@@ -975,6 +1047,38 @@ public class CreateProjectRequest extends Request {
                 return this;
             }
 
+            /**
+             * ReadWorkerNum.
+             */
+            public Builder readWorkerNum(Integer readWorkerNum) {
+                this.readWorkerNum = readWorkerNum;
+                return this;
+            }
+
+            /**
+             * ThrottleIOPS.
+             */
+            public Builder throttleIOPS(Integer throttleIOPS) {
+                this.throttleIOPS = throttleIOPS;
+                return this;
+            }
+
+            /**
+             * ThrottleRps.
+             */
+            public Builder throttleRps(Integer throttleRps) {
+                this.throttleRps = throttleRps;
+                return this;
+            }
+
+            /**
+             * WriteWorkerNum.
+             */
+            public Builder writeWorkerNum(Integer writeWorkerNum) {
+                this.writeWorkerNum = writeWorkerNum;
+                return this;
+            }
+
             public FullTransferConfig build() {
                 return new FullTransferConfig(this);
             } 
@@ -1002,6 +1106,15 @@ public class CreateProjectRequest extends Request {
         @NameInMap("StoreLogKeptHour")
         private Integer storeLogKeptHour;
 
+        @NameInMap("SupportDDLTypes")
+        private java.util.List < String > supportDDLTypes;
+
+        @NameInMap("ThrottleIOPS")
+        private Integer throttleIOPS;
+
+        @NameInMap("ThrottleRps")
+        private Integer throttleRps;
+
         private IncrTransferConfig(Builder builder) {
             this.enableIncrSyncStatistics = builder.enableIncrSyncStatistics;
             this.enableSequencingWithinTxn = builder.enableSequencingWithinTxn;
@@ -1009,6 +1122,9 @@ public class CreateProjectRequest extends Request {
             this.recordTypeWhiteList = builder.recordTypeWhiteList;
             this.startTimestamp = builder.startTimestamp;
             this.storeLogKeptHour = builder.storeLogKeptHour;
+            this.supportDDLTypes = builder.supportDDLTypes;
+            this.throttleIOPS = builder.throttleIOPS;
+            this.throttleRps = builder.throttleRps;
         }
 
         public static Builder builder() {
@@ -1061,6 +1177,27 @@ public class CreateProjectRequest extends Request {
             return this.storeLogKeptHour;
         }
 
+        /**
+         * @return supportDDLTypes
+         */
+        public java.util.List < String > getSupportDDLTypes() {
+            return this.supportDDLTypes;
+        }
+
+        /**
+         * @return throttleIOPS
+         */
+        public Integer getThrottleIOPS() {
+            return this.throttleIOPS;
+        }
+
+        /**
+         * @return throttleRps
+         */
+        public Integer getThrottleRps() {
+            return this.throttleRps;
+        }
+
         public static final class Builder {
             private Boolean enableIncrSyncStatistics; 
             private Boolean enableSequencingWithinTxn; 
@@ -1068,6 +1205,9 @@ public class CreateProjectRequest extends Request {
             private java.util.List < String > recordTypeWhiteList; 
             private String startTimestamp; 
             private Integer storeLogKeptHour; 
+            private java.util.List < String > supportDDLTypes; 
+            private Integer throttleIOPS; 
+            private Integer throttleRps; 
 
             /**
              * EnableIncrSyncStatistics.
@@ -1117,8 +1257,234 @@ public class CreateProjectRequest extends Request {
                 return this;
             }
 
+            /**
+             * SupportDDLTypes.
+             */
+            public Builder supportDDLTypes(java.util.List < String > supportDDLTypes) {
+                this.supportDDLTypes = supportDDLTypes;
+                return this;
+            }
+
+            /**
+             * ThrottleIOPS.
+             */
+            public Builder throttleIOPS(Integer throttleIOPS) {
+                this.throttleIOPS = throttleIOPS;
+                return this;
+            }
+
+            /**
+             * ThrottleRps.
+             */
+            public Builder throttleRps(Integer throttleRps) {
+                this.throttleRps = throttleRps;
+                return this;
+            }
+
             public IncrTransferConfig build() {
                 return new IncrTransferConfig(this);
+            } 
+
+        } 
+
+    }
+    public static class ReverseIncrTransferConfig extends TeaModel {
+        @NameInMap("EnableIncrSyncStatistics")
+        private Boolean enableIncrSyncStatistics;
+
+        @NameInMap("EnableSequencingWithinTxn")
+        private Boolean enableSequencingWithinTxn;
+
+        @NameInMap("IncrSyncConcurrency")
+        @Validation(maximum = 1024, minimum = 1)
+        private Integer incrSyncConcurrency;
+
+        @NameInMap("RecordTypeWhiteList")
+        private java.util.List < String > recordTypeWhiteList;
+
+        @NameInMap("StartTimestamp")
+        private String startTimestamp;
+
+        @NameInMap("StoreLogKeptHour")
+        private Integer storeLogKeptHour;
+
+        @NameInMap("SupportDDLTypes")
+        private java.util.List < String > supportDDLTypes;
+
+        @NameInMap("ThrottleIOPS")
+        private Integer throttleIOPS;
+
+        @NameInMap("ThrottleRps")
+        private Integer throttleRps;
+
+        private ReverseIncrTransferConfig(Builder builder) {
+            this.enableIncrSyncStatistics = builder.enableIncrSyncStatistics;
+            this.enableSequencingWithinTxn = builder.enableSequencingWithinTxn;
+            this.incrSyncConcurrency = builder.incrSyncConcurrency;
+            this.recordTypeWhiteList = builder.recordTypeWhiteList;
+            this.startTimestamp = builder.startTimestamp;
+            this.storeLogKeptHour = builder.storeLogKeptHour;
+            this.supportDDLTypes = builder.supportDDLTypes;
+            this.throttleIOPS = builder.throttleIOPS;
+            this.throttleRps = builder.throttleRps;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ReverseIncrTransferConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enableIncrSyncStatistics
+         */
+        public Boolean getEnableIncrSyncStatistics() {
+            return this.enableIncrSyncStatistics;
+        }
+
+        /**
+         * @return enableSequencingWithinTxn
+         */
+        public Boolean getEnableSequencingWithinTxn() {
+            return this.enableSequencingWithinTxn;
+        }
+
+        /**
+         * @return incrSyncConcurrency
+         */
+        public Integer getIncrSyncConcurrency() {
+            return this.incrSyncConcurrency;
+        }
+
+        /**
+         * @return recordTypeWhiteList
+         */
+        public java.util.List < String > getRecordTypeWhiteList() {
+            return this.recordTypeWhiteList;
+        }
+
+        /**
+         * @return startTimestamp
+         */
+        public String getStartTimestamp() {
+            return this.startTimestamp;
+        }
+
+        /**
+         * @return storeLogKeptHour
+         */
+        public Integer getStoreLogKeptHour() {
+            return this.storeLogKeptHour;
+        }
+
+        /**
+         * @return supportDDLTypes
+         */
+        public java.util.List < String > getSupportDDLTypes() {
+            return this.supportDDLTypes;
+        }
+
+        /**
+         * @return throttleIOPS
+         */
+        public Integer getThrottleIOPS() {
+            return this.throttleIOPS;
+        }
+
+        /**
+         * @return throttleRps
+         */
+        public Integer getThrottleRps() {
+            return this.throttleRps;
+        }
+
+        public static final class Builder {
+            private Boolean enableIncrSyncStatistics; 
+            private Boolean enableSequencingWithinTxn; 
+            private Integer incrSyncConcurrency; 
+            private java.util.List < String > recordTypeWhiteList; 
+            private String startTimestamp; 
+            private Integer storeLogKeptHour; 
+            private java.util.List < String > supportDDLTypes; 
+            private Integer throttleIOPS; 
+            private Integer throttleRps; 
+
+            /**
+             * EnableIncrSyncStatistics.
+             */
+            public Builder enableIncrSyncStatistics(Boolean enableIncrSyncStatistics) {
+                this.enableIncrSyncStatistics = enableIncrSyncStatistics;
+                return this;
+            }
+
+            /**
+             * EnableSequencingWithinTxn.
+             */
+            public Builder enableSequencingWithinTxn(Boolean enableSequencingWithinTxn) {
+                this.enableSequencingWithinTxn = enableSequencingWithinTxn;
+                return this;
+            }
+
+            /**
+             * IncrSyncConcurrency.
+             */
+            public Builder incrSyncConcurrency(Integer incrSyncConcurrency) {
+                this.incrSyncConcurrency = incrSyncConcurrency;
+                return this;
+            }
+
+            /**
+             * RecordTypeWhiteList.
+             */
+            public Builder recordTypeWhiteList(java.util.List < String > recordTypeWhiteList) {
+                this.recordTypeWhiteList = recordTypeWhiteList;
+                return this;
+            }
+
+            /**
+             * StartTimestamp.
+             */
+            public Builder startTimestamp(String startTimestamp) {
+                this.startTimestamp = startTimestamp;
+                return this;
+            }
+
+            /**
+             * StoreLogKeptHour.
+             */
+            public Builder storeLogKeptHour(Integer storeLogKeptHour) {
+                this.storeLogKeptHour = storeLogKeptHour;
+                return this;
+            }
+
+            /**
+             * SupportDDLTypes.
+             */
+            public Builder supportDDLTypes(java.util.List < String > supportDDLTypes) {
+                this.supportDDLTypes = supportDDLTypes;
+                return this;
+            }
+
+            /**
+             * ThrottleIOPS.
+             */
+            public Builder throttleIOPS(Integer throttleIOPS) {
+                this.throttleIOPS = throttleIOPS;
+                return this;
+            }
+
+            /**
+             * ThrottleRps.
+             */
+            public Builder throttleRps(Integer throttleRps) {
+                this.throttleRps = throttleRps;
+                return this;
+            }
+
+            public ReverseIncrTransferConfig build() {
+                return new ReverseIncrTransferConfig(this);
             } 
 
         } 

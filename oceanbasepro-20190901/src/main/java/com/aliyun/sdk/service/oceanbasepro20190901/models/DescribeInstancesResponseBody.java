@@ -62,7 +62,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The total storage space of the cluster, in GB.
+         * The information of the OceanBase cluster.
          */
         public Builder instances(java.util.List < Instances> instances) {
             this.instances = instances;
@@ -70,7 +70,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The number of OceanBase clusters queried.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -202,7 +202,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private Long upperbound; 
 
             /**
-             * AutoScale.
+             * Specifies whether to enable the automatic scaling of the data disk.
              */
             public Builder autoScale(Boolean autoScale) {
                 this.autoScale = autoScale;
@@ -210,7 +210,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * MaxDiskSize.
+             * The maximum size of the disk, in GB.
              */
             public Builder maxDiskSize(Long maxDiskSize) {
                 this.maxDiskSize = maxDiskSize;
@@ -218,7 +218,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ScaleStepInMerge.
+             * The size of scaling step during a major compaction.
              */
             public Builder scaleStepInMerge(Long scaleStepInMerge) {
                 this.scaleStepInMerge = scaleStepInMerge;
@@ -226,7 +226,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ScaleStepInNormal.
+             * The size of scaling step during daily use.
              */
             public Builder scaleStepInNormal(Long scaleStepInNormal) {
                 this.scaleStepInNormal = scaleStepInNormal;
@@ -234,7 +234,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * UpperMergeThreshold.
+             * The maximum usage of the data disk, in percentage, that triggers the scaling of the data disk for major compactions.
              */
             public Builder upperMergeThreshold(Long upperMergeThreshold) {
                 this.upperMergeThreshold = upperMergeThreshold;
@@ -242,7 +242,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * UpperScaleStrategy.
+             * The scale-out strategy. Valid values: RAW and PERCENTAGE.
              */
             public Builder upperScaleStrategy(String upperScaleStrategy) {
                 this.upperScaleStrategy = upperScaleStrategy;
@@ -250,7 +250,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * UpperThreshold.
+             * The maximum usage of the data disk, in percentage, that triggers the scaling of the data disk for daily use.
              */
             public Builder upperThreshold(Long upperThreshold) {
                 this.upperThreshold = upperThreshold;
@@ -258,7 +258,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Upperbound.
+             * The maximum space, in GB, to which the data disk can be scaled.
              */
             public Builder upperbound(Long upperbound) {
                 this.upperbound = upperbound;
@@ -323,7 +323,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private Integer usedCapacityUnit; 
 
             /**
-             * MaxCapacityUnit.
+             * The maximum number of capacity units.
              */
             public Builder maxCapacityUnit(Integer maxCapacityUnit) {
                 this.maxCapacityUnit = maxCapacityUnit;
@@ -331,7 +331,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * MinCapacityUnit.
+             * The minimum number of capacity units.
              */
             public Builder minCapacityUnit(Integer minCapacityUnit) {
                 this.minCapacityUnit = minCapacityUnit;
@@ -339,7 +339,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * UsedCapacityUnit.
+             * The number of used capacity units.
              */
             public Builder usedCapacityUnit(Integer usedCapacityUnit) {
                 this.usedCapacityUnit = usedCapacityUnit;
@@ -416,7 +416,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private Long usedCpu; 
 
             /**
-             * OriginalTotalCpu.
+             * The number of original CPU cores in the cluster.
              */
             public Builder originalTotalCpu(Long originalTotalCpu) {
                 this.originalTotalCpu = originalTotalCpu;
@@ -424,10 +424,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the OceanBase cluster.    
-             * <p>
-             * It must be 1 to 20 characters in length.   
-             * If this parameter is not specified, the value is the instance ID of the cluster by default.
+             * The total number of CPU cores of the cluster.
              */
             public Builder totalCpu(Long totalCpu) {
                 this.totalCpu = totalCpu;
@@ -435,12 +432,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The data replica distribution mode of the cluster. Valid values:    
-             * <p>
-             * 
-             * - n: indicates the single-IDC mode.  
-             * - n-n: indicates the dual-IDC mode.  
-             * - n-n-n: indicates the multi-IDC mode. The integer n represents the number of OBServer nodes in each IDC.
+             * The number of CPU cores of each replica node in the cluster.
              */
             public Builder unitCpu(Long unitCpu) {
                 this.unitCpu = unitCpu;
@@ -448,7 +440,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The search keyword.
+             * The number of CPU cores used in the cluster.
              */
             public Builder usedCpu(Long usedCpu) {
                 this.usedCpu = usedCpu;
@@ -525,7 +517,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private Long usedDiskSize; 
 
             /**
-             * OriginalTotalDiskSize.
+             * The original size of the disk.
              */
             public Builder originalTotalDiskSize(Long originalTotalDiskSize) {
                 this.originalTotalDiskSize = originalTotalDiskSize;
@@ -533,7 +525,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The request ID.
+             * The total storage space of the cluster, in GB.
              */
             public Builder totalDiskSize(Long totalDiskSize) {
                 this.totalDiskSize = totalDiskSize;
@@ -541,7 +533,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Example 1
+             * The storage space of each replica node in the cluster, in GB.
              */
             public Builder unitDiskSize(Long unitDiskSize) {
                 this.unitDiskSize = unitDiskSize;
@@ -549,7 +541,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * $.parameters[7].schema.example
+             * The size of used storage space of the cluster, in GB.
              */
             public Builder usedDiskSize(Long usedDiskSize) {
                 this.usedDiskSize = usedDiskSize;
@@ -626,7 +618,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private Long usedMemory; 
 
             /**
-             * OriginalTotalMemory.
+             * The original memory size of the cluster, in GB.
              */
             public Builder originalTotalMemory(Long originalTotalMemory) {
                 this.originalTotalMemory = originalTotalMemory;
@@ -634,7 +626,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of CPU cores of the cluster.
+             * The total memory size of the cluster, in GB.
              */
             public Builder totalMemory(Long totalMemory) {
                 this.totalMemory = totalMemory;
@@ -642,7 +634,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The size of used storage space of the cluster, in GB.
+             * The memory size of each replica node in the cluster, in GB.
              */
             public Builder unitMemory(Long unitMemory) {
                 this.unitMemory = unitMemory;
@@ -739,7 +731,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private Long unitCount; 
 
             /**
-             * CapacityUnit.
+             * The information about capacity units.
              */
             public Builder capacityUnit(CapacityUnit capacityUnit) {
                 this.capacityUnit = capacityUnit;
@@ -747,7 +739,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether new nodes can be added.
+             * The information about the CPU resources of the cluster.
              */
             public Builder cpu(Cpu cpu) {
                 this.cpu = cpu;
@@ -755,7 +747,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time elapsed since the expiration of the cluster, in seconds.
+             * The information about the storage resources of the cluster.
              */
             public Builder diskSize(DiskSize diskSize) {
                 this.diskSize = diskSize;
@@ -763,23 +755,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the cluster. Valid values:   
-             * <p>
-             * - PENDING_CREATE: The cluster is being created.  
-             * - ONLINE: The cluster is running.  
-             * - TENANT_CREATING: The tenant is being created.  
-             * - TENANT_SPEC_MODIFYING: The tenant specifications are being modified.  
-             * - EXPANDING: Nodes are being added to the cluster to increase its capacity.  
-             * - REDUCING: Nodes are being removed from the cluster to reduce its capacity.  
-             * - SPEC_UPGRADING: The service plan is being upgraded.  
-             * - DISK_UPGRADING: The storage space is being expanded.  
-             * - WHITE_LIST_MODIFYING: The whitelist is being modified.  
-             * - PARAMETER_MODIFYING: Parameters are being modified.  
-             * - SSL_MODIFYING: The SSL certificate is being changed.  
-             * - PREPAID_EXPIRE_CLOSED: The payment is overdue. This parameter is valid for a cluster whose billing method is set to PREPAY.  
-             * - ARREARS_CLOSED: The payment is overdue. This parameter is valid for a cluster whose billing method is set to POSTPAY.  
-             * - PENDING_DELETE: The cluster is being deleted.   
-             * Generally, the cluster is in the ONLINE state.
+             * The information about the memory resources of the cluster.
              */
             public Builder memory(Memory memory) {
                 this.memory = memory;
@@ -787,7 +763,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * UnitCount.
+             * The number of resource units in the cluster.
              */
             public Builder unitCount(Long unitCount) {
                 this.unitCount = unitCount;
@@ -1176,18 +1152,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * The time in UTC when the cluster expires.
+             * The information about the zone in which the cluster is deployed.
              */
             public Builder availableZones(java.util.List < String > availableZones) {
                 this.availableZones = availableZones;
-                return this;
-            }
-
-            /**
-             * The storage space of each replica node in the cluster, in GB.
-             */
-            public Builder commodityCode(String commodityCode) {
-                this.commodityCode = commodityCode;
                 return this;
             }
 
@@ -1198,13 +1166,21 @@ public class DescribeInstancesResponseBody extends TeaModel {
              * - oceanbase_oceanbasepost_public_cn: indicates an OceanBase cluster that is billed based on the pay-as-you-go plan and that is deployed in a China site.  
              * - oceanbase_obpre_public_intl: indicates an OceanBase cluster that is billed based on the subscription plan and that is deployed in an international site.
              */
+            public Builder commodityCode(String commodityCode) {
+                this.commodityCode = commodityCode;
+                return this;
+            }
+
+            /**
+             * The number of CPU cores of the cluster.
+             */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
                 return this;
             }
 
             /**
-             * CpuArchitecture.
+             * The CPU architecture of the cluster.
              */
             public Builder cpuArchitecture(String cpuArchitecture) {
                 this.cpuArchitecture = cpuArchitecture;
@@ -1212,7 +1188,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of OceanBase clusters queried.
+             * The time in UTC when the cluster was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -1220,7 +1196,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DataDiskAutoScaleConfig.
+             * Specifies parameters for the automatic scaling of the data disk.
              */
             public Builder dataDiskAutoScaleConfig(DataDiskAutoScaleConfig dataDiskAutoScaleConfig) {
                 this.dataDiskAutoScaleConfig = dataDiskAutoScaleConfig;
@@ -1228,7 +1204,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The request ID.
+             * The data replica distribution mode of the cluster. The value is in the n-n-n format, where n is the number of OBServer nodes in each IDC.
              */
             public Builder deployMode(String deployMode) {
                 this.deployMode = deployMode;
@@ -1236,7 +1212,11 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Alibaba Cloud provides SDKs in different languages to help you quickly integrate Alibaba Cloud products and services by using APIs. We recommend that you use an SDK to call APIs. In this way, you do not need to sign for verification.
+             * The deployment type of the cluster. Valid values:   
+             * <p>
+             * - multiple: multi-IDC deployment  
+             * - single: single-IDC deployment  
+             * - dual: dual-IDC deployment
              */
             public Builder deployType(String deployType) {
                 this.deployType = deployType;
@@ -1244,122 +1224,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the memory resources of the cluster.
+             * The size of the storage space, in GB.
              */
             public Builder diskSize(String diskSize) {
                 this.diskSize = diskSize;
-                return this;
-            }
-
-            /**
-             * The number of CPU cores used in the cluster.
-             */
-            public Builder diskType(String diskType) {
-                this.diskType = diskType;
-                return this;
-            }
-
-            /**
-             * EnableReadOnlyReplicaManagement.
-             */
-            public Builder enableReadOnlyReplicaManagement(Boolean enableReadOnlyReplicaManagement) {
-                this.enableReadOnlyReplicaManagement = enableReadOnlyReplicaManagement;
-                return this;
-            }
-
-            /**
-             * The ID of the OceanBase cluster.
-             */
-            public Builder enableUpgradeNodes(Boolean enableUpgradeNodes) {
-                this.enableUpgradeNodes = enableUpgradeNodes;
-                return this;
-            }
-
-            /**
-             * The whitelist information of the cluster.
-             */
-            public Builder expireSeconds(Integer expireSeconds) {
-                this.expireSeconds = expireSeconds;
-                return this;
-            }
-
-            /**
-             * The information about the storage resources of the cluster.
-             */
-            public Builder expireTime(String expireTime) {
-                this.expireTime = expireTime;
-                return this;
-            }
-
-            /**
-             * InTempCapacityStatus.
-             */
-            public Builder inTempCapacityStatus(Boolean inTempCapacityStatus) {
-                this.inTempCapacityStatus = inTempCapacityStatus;
-                return this;
-            }
-
-            /**
-             * The instance type.
-             */
-            public Builder instanceClass(String instanceClass) {
-                this.instanceClass = instanceClass;
-                return this;
-            }
-
-            /**
-             * The total storage space of the cluster, in GB.
-             */
-            public Builder instanceId(String instanceId) {
-                this.instanceId = instanceId;
-                return this;
-            }
-
-            /**
-             * The return result of the request.
-             */
-            public Builder instanceName(String instanceName) {
-                this.instanceName = instanceName;
-                return this;
-            }
-
-            /**
-             * InstanceRole.
-             */
-            public Builder instanceRole(String instanceRole) {
-                this.instanceRole = instanceRole;
-                return this;
-            }
-
-            /**
-             * You can call this operation to obtain the list of OceanBase clusters.
-             */
-            public Builder instanceType(String instanceType) {
-                this.instanceType = instanceType;
-                return this;
-            }
-
-            /**
-             * The return result of the request.
-             */
-            public Builder maintainTime(String maintainTime) {
-                this.maintainTime = maintainTime;
-                return this;
-            }
-
-            /**
-             * The information about the CPU resources of the cluster.
-             */
-            public Builder mem(Long mem) {
-                this.mem = mem;
-                return this;
-            }
-
-            /**
-             * It is an Alibaba Cloud asset management and configuration tool, with which you can manage multiple Alibaba Cloud products and services by using commands. It is easy to use and a good helper in migration to cloud.
-             */
-            public Builder payType(String payType) {
-                this.payType = payType;
                 return this;
             }
 
@@ -1368,16 +1236,117 @@ public class DescribeInstancesResponseBody extends TeaModel {
              * <p>
              * The default value is cloud_essd_pl1, which indicates an ESSD cloud disk.
              */
-            public Builder resource(Resource resource) {
-                this.resource = resource;
+            public Builder diskType(String diskType) {
+                this.diskType = diskType;
                 return this;
             }
 
             /**
-             * The number of OceanBase clusters queried.
+             * Indicates whether the cluster supports read-only replicas.
              */
-            public Builder resourceGroupId(String resourceGroupId) {
-                this.resourceGroupId = resourceGroupId;
+            public Builder enableReadOnlyReplicaManagement(Boolean enableReadOnlyReplicaManagement) {
+                this.enableReadOnlyReplicaManagement = enableReadOnlyReplicaManagement;
+                return this;
+            }
+
+            /**
+             * Indicates whether new nodes can be added.
+             */
+            public Builder enableUpgradeNodes(Boolean enableUpgradeNodes) {
+                this.enableUpgradeNodes = enableUpgradeNodes;
+                return this;
+            }
+
+            /**
+             * The time elapsed since the expiration of the cluster, in seconds. 
+             * <p>
+             * > In subscription mode, if the cluster has not expired, this parameter indicates the remaining validity period of the cluster. If the cluster has expired, this parameter indicates the time elapsed since the expiration.
+             */
+            public Builder expireSeconds(Integer expireSeconds) {
+                this.expireSeconds = expireSeconds;
+                return this;
+            }
+
+            /**
+             * The time in UTC when the cluster expires. 
+             * <p>
+             * > This parameter is valid only for subscription instances.
+             */
+            public Builder expireTime(String expireTime) {
+                this.expireTime = expireTime;
+                return this;
+            }
+
+            /**
+             * Specifies whether to indicate the temporary status of the capacity.
+             */
+            public Builder inTempCapacityStatus(Boolean inTempCapacityStatus) {
+                this.inTempCapacityStatus = inTempCapacityStatus;
+                return this;
+            }
+
+            /**
+             * The specifications of the cluster.  You can specify one of the following four plans:  
+             * <p>
+             * - 8C32G: indicates 8 CPU cores and 32 GB of memory.  
+             * - 14C70G: indicates 14 CPU cores and 70 GB of memory.  
+             * - 30C180G: indicates 30 CPU cores and 180 GB of memory.  
+             * - 62C400G: indicates 62 CPU cores and 400 GB of memory.
+             */
+            public Builder instanceClass(String instanceClass) {
+                this.instanceClass = instanceClass;
+                return this;
+            }
+
+            /**
+             * The ID of the OceanBase cluster.
+             */
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * The name of the OceanBase cluster.
+             */
+            public Builder instanceName(String instanceName) {
+                this.instanceName = instanceName;
+                return this;
+            }
+
+            /**
+             * The role of the instance.
+             */
+            public Builder instanceRole(String instanceRole) {
+                this.instanceRole = instanceRole;
+                return this;
+            }
+
+            /**
+             * The instance type.
+             * <p>
+             * - cluster: indicates a cluster instance.
+             * - mtenant: indicates a tenant instance in MySQL mode.
+             * - mtenant_serverless: indicates a serverless instance in MySQL mode.
+             */
+            public Builder instanceType(String instanceType) {
+                this.instanceType = instanceType;
+                return this;
+            }
+
+            /**
+             * The time period in UTC for the daily routine maintenance of the cluster.
+             */
+            public Builder maintainTime(String maintainTime) {
+                this.maintainTime = maintainTime;
+                return this;
+            }
+
+            /**
+             * The memory size of the instance, in GB.
+             */
+            public Builder mem(Long mem) {
+                this.mem = mem;
                 return this;
             }
 
@@ -1387,13 +1356,84 @@ public class DescribeInstancesResponseBody extends TeaModel {
              * - PREPAY: the subscription billing method.  
              * - POSTPAY: the pay-as-you-go billing method.
              */
+            public Builder payType(String payType) {
+                this.payType = payType;
+                return this;
+            }
+
+            /**
+             * The information about cluster resources.
+             */
+            public Builder resource(Resource resource) {
+                this.resource = resource;
+                return this;
+            }
+
+            /**
+             * The ID of the resource group.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * The series of the OceanBase cluster. Valid values:   
+             * <p>
+             * - NORMAL: the high availability edition.   
+             * - BASIC: the basic edition.
+             */
             public Builder series(String series) {
                 this.series = series;
                 return this;
             }
 
             /**
-             * The number of resource units in the cluster.
+             * The status of the cluster. Valid values:   
+             * <p>
+             * - ONLINE: The cluster is running.  
+             * - PENDING_CREATE: The cluster is being created.  
+             * - ARREARS_CLOSED("arrears_closed"): The cluster is suspended due to insufficient balance.
+             * - PREPAID_EXPIRE_CLOSED("prepaid_expire_closed"): The cluster is suspended because the subscription has expired.
+             * - WHITE_LIST_MODIFYING("white_list_modifying"): The allowlist of the cluster is being modified.
+             * - SSL_MODIFYING("ssl_modifying"): The Secure Sockets Layer (SSL) settings of the cluster are being modified.
+             * - PARAMETER_MODIFYING("parameter_modifying"): Parameters of the cluster are being modified.
+             * - TENANT_CREATING("tenant_creating"): A tenant is being created in the cluster.
+             * - TENANT_SPEC_MODIFYING("tenant_spec_modifying"): The specifications of a tenant in the cluster are being modified.
+             * - EXPANDING("expanding"): Nodes are being added to the cluster.
+             * - REDUCING("reducing"): Nodes are being removed from the cluster.
+             * - ZONE_CHANGING("zone_changing"): Zones of the cluster are being modified.
+             * - SPEC_UPGRADING: The service plan is being upgraded.
+             * - SPEC_DOWNGRADING("spec_downgrading"): The plan specification is being downgraded.
+             * - DISK_UPGRADING: The storage space is being expanded.
+             * - UPGRADING("upgrading"): The version of the cluster is being upgraded.
+             * - PENDING_DELETE("pending_delete"): The cluster is being deleted.
+             * - DELETED("deleted"): The cluster has been deleted.
+             * - ABNORMAL("abnormal"): The cluster is abnormal.
+             * - OFFLINE("offline"): The cluster is offline.
+             * - STANDBY_CREATING("standby_creating"): A standby cluster is being created for the cluster.
+             * - STANDBY_DELETING("standby_deleting"): A standby cluster of the cluster is being deleted.
+             * - SWITCHOVER_SWITCHING("switchover_switching"): The cluster is undergoing a primary/standby switchover.
+             * - STANDBY_DISCONNECTING("standby_disconnecting"): The cluster is being decoupled from its standby cluster.
+             * - LOG_DISK_UPGRADING("log_disk_upgrading"): The log disk of the cluster is being scaled out.
+             * - ISOLATION_OPTIMIZATION_MODIFYING("isolation_optimization_modifying"): The isolation optimization settings of the cluster are being modified.
+             * - DISKTYPE_MODIFYING("disktype_modifying"): The data disk type of the cluster is being modified.
+             * - PROXY_SERVICE_CREATING("proxy_service_creating"): The proxy service is being enabled for the cluster.
+             * - PROXY_SERVICE_DELETING("proxy_service_deleting"): The proxy service is being disabled for the cluster.
+             * - PROXY_SERVICE_SPEC_MODIFYING("proxy_service_spec_modifying"): The proxy service specification is being modified for the cluster.
+             * - READONLY_ADD_NODE("readonly_add_node"): A read-only node is being added to the cluster.
+             * - READONLY_REDUCE_NODE("readonly_reduce_node"): A read-only node is being removed from the cluster.
+             * - READONLY_REDUCE_ZONE("readonly_reduce_zone"): A read-only zone is being removed from the cluster.
+             * - READONLY_ADD_ZONE("readonly_add_zone"): A read-only zone is being added to the cluster.
+             * - READONLY_UPGRADE_SPEC("readonly_upgrade_spec"): The specification of read-only replicas is being upgraded.
+             * - READONLY_UPGRADE_DISK("readonly_upgrade_disk"): The disk space of read-only replicas is being scaled out.
+             * - READONLY_DOWNGRADE_SPEC("readonly_downgrade_spec"): The specification of read-only replicas is being downgraded.
+             * - READONLY_DOWNGRADE_DISK("readonly_downgrade_disk"): The disk space of read-only replicas is being scaled in.
+             * - CREATING_TENANT_READONLY_REPLICA("creating_tenant_readonly_replica"): A read-only replica is being created for a tenant in the cluster.
+             * - DELETING_TENANT_READONLY_REPLICA("deleting_tenant_readonly_replica"): A read-only replica is being deleted for a tenant in the cluster.
+             * - DISK_DOWNGRADING("disk_downgrading"): The disk space of the cluster is being scaled in.
+             * - DEPLOY_MODE_MODIFYING("deploy_mode_modifying"): The deployment mode of the cluster is being modified.
+             * > Generally, the cluster is in the ONLINE state.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -1401,7 +1441,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of resource units in the cluster.
+             * The size of used storage space of the cluster, in GB.
              */
             public Builder usedDiskSize(Long usedDiskSize) {
                 this.usedDiskSize = usedDiskSize;
@@ -1409,7 +1449,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of CPU cores of the cluster.
+             * The OBServer version.
              */
             public Builder version(String version) {
                 this.version = version;
