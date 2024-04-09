@@ -256,6 +256,7 @@ public class CreateDBNodesRequest extends Request {
          * 
          * *   RO
          * *   STANDBY
+         * *   DLNode
          */
         public Builder DBNodeType(String DBNodeType) {
             this.putQueryParameter("DBNodeType", DBNodeType);

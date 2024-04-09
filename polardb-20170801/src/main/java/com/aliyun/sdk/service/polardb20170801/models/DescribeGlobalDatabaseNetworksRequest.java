@@ -255,7 +255,7 @@ public class DescribeGlobalDatabaseNetworksRequest extends Request {
          * The description of the GDN. The description must meet the following requirements:
          * <p>
          * 
-         * *   It cannot start with [http:// or https://.](http://https://。)
+         * *   It cannot start with `http://` or `https://`.
          * *   It must start with a letter.
          * *   It can contain letters, digits, underscores (\_), and hyphens (-).
          * *   It must be 2 to 126 characters in length.
@@ -303,7 +303,7 @@ public class DescribeGlobalDatabaseNetworksRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 30. Valid values:
+         * The number of entries to return on each page. Default value: 30. Valid values:
          * <p>
          * 
          * *   30

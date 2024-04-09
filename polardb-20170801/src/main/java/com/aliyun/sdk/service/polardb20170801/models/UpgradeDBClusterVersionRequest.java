@@ -218,13 +218,13 @@ public class UpgradeDBClusterVersionRequest extends Request {
         }
 
         /**
-         * Specifies whether to immediately run the task to modify parameters and restart the cluster. Valid values: 
+         * Specifies whether to immediately run the kernel upgrade task. Valid values:
          * <p>
          * 
-         * - false: runs the task on schedule. 
-         * - true: runs the task immediately. Default value: false.
+         * *   **false** (default)
+         * *   **true**
          * 
-         * > No need to use this parameter when calling this interface
+         * >  This parameter is not required when you call the operation.
          */
         public Builder fromTimeService(Boolean fromTimeService) {
             this.putQueryParameter("FromTimeService", fromTimeService);
@@ -304,9 +304,11 @@ public class UpgradeDBClusterVersionRequest extends Request {
         }
 
         /**
-         * Kernel version upgrade label. The value is fixed as INNOVATE.
+         * The upgrade tag. The value is fixed as **INNOVATE**.
          * <p>
-         * > this parameter is passed in, UpgradePolicy must pass COLD.
+         * 
+         * > *   This parameter is applicable only when you upgrade PolarDB for MySQL 8.0.1 to PolarDB for MySQL 8.0.2.
+         * >*   If you specify this parameter, you must set `UpgradePolicy` to **COLD**.
          */
         public Builder upgradeLabel(String upgradeLabel) {
             this.putQueryParameter("UpgradeLabel", upgradeLabel);
@@ -315,11 +317,11 @@ public class UpgradeDBClusterVersionRequest extends Request {
         }
 
         /**
-         * Kernel version upgrade strategy. Value:
+         * The upgrade policy. Valid values:
          * <p>
          * 
-         * - HOT: Hot Upgrade
-         * - COLD: Cold upgrade. Currently, only PolarDB MySQL version 8.0 cluster version supports this upgrade method.
+         * *   **HOT**: hot upgrade.
+         * *   **COLD**: cold upgrade. Only PolarDB for MySQL Cluster Edition that runs MySQL 8.0 supports this upgrade method.
          */
         public Builder upgradePolicy(String upgradePolicy) {
             this.putQueryParameter("UpgradePolicy", upgradePolicy);
@@ -328,12 +330,12 @@ public class UpgradeDBClusterVersionRequest extends Request {
         }
 
         /**
-         * There is no need to use this parameter to upgrade the type when calling this interface. Value:
+         * The update type. Valid values:
          * <p>
          * 
-         * - PROXY: Upgrade database proxy only (Proxy)
-         * - DB: Upgrade kernel engine only
-         * - ALL (default): Upgrade both database proxy and kernel engine simultaneously
+         * *   **PROXY**: specifies to upgrade PloarProxy.
+         * *   **DB**: specifies to upgrade the kernel version.
+         * *   **ALL**: specifies to upgrade both PloarProxy and kernel version.
          */
         public Builder upgradeType(String upgradeType) {
             this.putQueryParameter("UpgradeType", upgradeType);

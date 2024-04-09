@@ -417,7 +417,9 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * �The expected expiration time of the backup set (This parameter is supported only for instances that are enabled with sparse backup).
+             * The expected expiration time of the backup set.
+             * <p>
+             * > This parameter is supported only for instances that are enabled with sparse backup.
              */
             public Builder expectExpireTime(String expectExpireTime) {
                 this.expectExpireTime = expectExpireTime;

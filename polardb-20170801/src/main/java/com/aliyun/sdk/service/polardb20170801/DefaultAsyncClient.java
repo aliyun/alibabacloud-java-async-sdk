@@ -946,10 +946,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * The release note of the kernel version.
-      *
-     */
     @Override
     public CompletableFuture<DescribeDBClusterVersionResponse> describeDBClusterVersion(DescribeDBClusterVersionRequest request) {
         try {

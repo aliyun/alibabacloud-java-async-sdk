@@ -403,7 +403,10 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * 查询方式，当取值为Simple时，将返回简略版参数
+         * The query mode of the list. The value Simple indicates that the simple mode is used. In this mode, only the basic metadata information of the cluster is returned.
+         * <p>
+         * 
+         * > If you do not specify this parameter, the detailed mode is used by default. Detailed information about the cluster is returned.
          */
         public Builder describeType(String describeType) {
             this.putQueryParameter("DescribeType", describeType);

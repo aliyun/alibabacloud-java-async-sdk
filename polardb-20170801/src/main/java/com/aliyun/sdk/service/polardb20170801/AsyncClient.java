@@ -219,10 +219,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeDBClusterTDEResponse> describeDBClusterTDE(DescribeDBClusterTDERequest request);
 
-    /**
-      * The release note of the kernel version.
-      *
-     */
     CompletableFuture<DescribeDBClusterVersionResponse> describeDBClusterVersion(DescribeDBClusterVersionRequest request);
 
     CompletableFuture<DescribeDBClustersResponse> describeDBClusters(DescribeDBClustersRequest request);

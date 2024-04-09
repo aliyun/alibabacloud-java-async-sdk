@@ -319,7 +319,7 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values:
+         * The number of entries to return on each page. Valid values:
          * <p>
          * 
          * *   **30**

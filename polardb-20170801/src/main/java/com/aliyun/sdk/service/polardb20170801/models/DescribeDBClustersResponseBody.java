@@ -262,7 +262,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
              * <p>
              * 
              * *   **Writer**: The node is the primary node.
-             * *   **Reader**: The node is a read-only node.
+             * *   **Reader**: The node is the read-only node.
              */
             public Builder DBNodeRole(String DBNodeRole) {
                 this.DBNodeRole = DBNodeRole;
@@ -302,7 +302,11 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the serverless feature is enabled for the current node. **ON** indicates that the serverless feature is enabled. An empty value indicates that the serverless feature is disabled.
+             * Indicates whether the serverless feature is enabled for the current node.
+             * <p>
+             * 
+             * *   **ON** indicates that the serverless feature is enabled.
+             * *   An empty value indicates that the serverless feature is disabled.
              */
             public Builder serverless(String serverless) {
                 this.serverless = serverless;
@@ -474,6 +478,9 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         @NameInMap("Category")
         private String category;
 
+        @NameInMap("CpuCores")
+        private String cpuCores;
+
         @NameInMap("CreateTime")
         private String createTime;
 
@@ -519,11 +526,17 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         @NameInMap("LockMode")
         private String lockMode;
 
+        @NameInMap("MemorySize")
+        private String memorySize;
+
         @NameInMap("PayType")
         private String payType;
 
         @NameInMap("RegionId")
         private String regionId;
+
+        @NameInMap("RemoteMemorySize")
+        private String remoteMemorySize;
 
         @NameInMap("ResourceGroupId")
         private String resourceGroupId;
@@ -543,6 +556,9 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         @NameInMap("StrictConsistency")
         private String strictConsistency;
 
+        @NameInMap("SubCategory")
+        private String subCategory;
+
         @NameInMap("Tags")
         private Tags tags;
 
@@ -558,6 +574,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         private DBCluster(Builder builder) {
             this.aiType = builder.aiType;
             this.category = builder.category;
+            this.cpuCores = builder.cpuCores;
             this.createTime = builder.createTime;
             this.DBClusterDescription = builder.DBClusterDescription;
             this.DBClusterId = builder.DBClusterId;
@@ -573,14 +590,17 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             this.expireTime = builder.expireTime;
             this.expired = builder.expired;
             this.lockMode = builder.lockMode;
+            this.memorySize = builder.memorySize;
             this.payType = builder.payType;
             this.regionId = builder.regionId;
+            this.remoteMemorySize = builder.remoteMemorySize;
             this.resourceGroupId = builder.resourceGroupId;
             this.serverlessType = builder.serverlessType;
             this.storagePayType = builder.storagePayType;
             this.storageSpace = builder.storageSpace;
             this.storageUsed = builder.storageUsed;
             this.strictConsistency = builder.strictConsistency;
+            this.subCategory = builder.subCategory;
             this.tags = builder.tags;
             this.vpcId = builder.vpcId;
             this.vswitchId = builder.vswitchId;
@@ -607,6 +627,13 @@ public class DescribeDBClustersResponseBody extends TeaModel {
          */
         public String getCategory() {
             return this.category;
+        }
+
+        /**
+         * @return cpuCores
+         */
+        public String getCpuCores() {
+            return this.cpuCores;
         }
 
         /**
@@ -715,6 +742,13 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         }
 
         /**
+         * @return memorySize
+         */
+        public String getMemorySize() {
+            return this.memorySize;
+        }
+
+        /**
          * @return payType
          */
         public String getPayType() {
@@ -726,6 +760,13 @@ public class DescribeDBClustersResponseBody extends TeaModel {
          */
         public String getRegionId() {
             return this.regionId;
+        }
+
+        /**
+         * @return remoteMemorySize
+         */
+        public String getRemoteMemorySize() {
+            return this.remoteMemorySize;
         }
 
         /**
@@ -771,6 +812,13 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         }
 
         /**
+         * @return subCategory
+         */
+        public String getSubCategory() {
+            return this.subCategory;
+        }
+
+        /**
          * @return tags
          */
         public Tags getTags() {
@@ -801,6 +849,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         public static final class Builder {
             private String aiType; 
             private String category; 
+            private String cpuCores; 
             private String createTime; 
             private String DBClusterDescription; 
             private String DBClusterId; 
@@ -816,14 +865,17 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             private String expireTime; 
             private String expired; 
             private String lockMode; 
+            private String memorySize; 
             private String payType; 
             private String regionId; 
+            private String remoteMemorySize; 
             private String resourceGroupId; 
             private String serverlessType; 
             private String storagePayType; 
             private Long storageSpace; 
             private Long storageUsed; 
             private String strictConsistency; 
+            private String subCategory; 
             private Tags tags; 
             private String vpcId; 
             private String vswitchId; 
@@ -833,52 +885,8 @@ public class DescribeDBClustersResponseBody extends TeaModel {
              * The type of the AI node. Valid values:
              * <p>
              * 
-             * *   SearchNode: Search node
-             * *   DLNode: ai node
-             * 
-             * Enumeration values:
-             * 
-             * *   SearchNode | DLNode
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     both
-             * 
-             *     <!-- -->
-             * 
-             *     .
-             * 
-             * *   DLNode
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     DLNode
-             * 
-             *     <!-- -->
-             * 
-             *     .
-             * 
-             * *   DLNode
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     DLNode
-             * 
-             *     <!-- -->
-             * 
-             *     .
+             * *   SearchNode: search node.
+             * *   DLNode: AI node.
              */
             public Builder aiType(String aiType) {
                 this.aiType = aiType;
@@ -896,6 +904,14 @@ public class DescribeDBClustersResponseBody extends TeaModel {
              */
             public Builder category(String category) {
                 this.category = category;
+                return this;
+            }
+
+            /**
+             * CpuCores.
+             */
+            public Builder cpuCores(String cpuCores) {
+                this.cpuCores = cpuCores;
                 return this;
             }
 
@@ -986,7 +1002,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
              * *   **0**: The cluster is not locked.
              * *   **1**: The cluster is locked.
              * 
-             * > If the cluster is locked, you cannot delete the cluster.
+             * > You cannot delete clusters that are locked.
              */
             public Builder deletionLock(Integer deletionLock) {
                 this.deletionLock = deletionLock;
@@ -1027,7 +1043,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The lock status of the cluster. Valid values:
+             * The lock state of the cluster. Valid values:
              * <p>
              * 
              * *   **Unlock**: The cluster is not locked.
@@ -1040,11 +1056,19 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
+             * MemorySize.
+             */
+            public Builder memorySize(String memorySize) {
+                this.memorySize = memorySize;
+                return this;
+            }
+
+            /**
              * The billing method of the cluster. Valid values:
              * <p>
              * 
-             * *   **Postpaid**: pay-as-you-go.
-             * *   **Prepaid**: subscription.
+             * *   **Postpaid**: pay-as-you-go
+             * *   **Prepaid**: subscription
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -1056,6 +1080,14 @@ public class DescribeDBClustersResponseBody extends TeaModel {
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * RemoteMemorySize.
+             */
+            public Builder remoteMemorySize(String remoteMemorySize) {
+                this.remoteMemorySize = remoteMemorySize;
                 return this;
             }
 
@@ -1079,8 +1111,8 @@ public class DescribeDBClustersResponseBody extends TeaModel {
              * The billing method of the storage space. Valid values:
              * <p>
              * 
-             * *   **Postpaid**: pay-as-you-go.
-             * *   **Prepaid**: subscription.
+             * *   **Postpaid**: pay-as-you-go
+             * *   **Prepaid**: subscription
              */
             public Builder storagePayType(String storagePayType) {
                 this.storagePayType = storagePayType;
@@ -1088,7 +1120,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The storage space that is billed based on the subscription billing method. Unit: bytes.
+             * The storage capacity that is billed based on the subscription billing method. Unit: byte.
              */
             public Builder storageSpace(Long storageSpace) {
                 this.storageSpace = storageSpace;
@@ -1112,6 +1144,14 @@ public class DescribeDBClustersResponseBody extends TeaModel {
              */
             public Builder strictConsistency(String strictConsistency) {
                 this.strictConsistency = strictConsistency;
+                return this;
+            }
+
+            /**
+             * SubCategory.
+             */
+            public Builder subCategory(String subCategory) {
+                this.subCategory = subCategory;
                 return this;
             }
 
