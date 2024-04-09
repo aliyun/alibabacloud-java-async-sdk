@@ -21,6 +21,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AddIpResponse> addIp(AddIpRequest request);
 
+    CompletableFuture<AddRdMemberListResponse> addRdMemberList(AddRdMemberListRequest request);
+
     CompletableFuture<AttachAssetGroupToInstanceResponse> attachAssetGroupToInstance(AttachAssetGroupToInstanceRequest request);
 
     CompletableFuture<CheckAccessLogAuthResponse> checkAccessLogAuth(CheckAccessLogAuthRequest request);
@@ -51,6 +53,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<DeleteIpResponse> deleteIp(DeleteIpRequest request);
+
+    CompletableFuture<DeleteRdMemberListResponse> deleteRdMemberList(DeleteRdMemberListRequest request);
 
     CompletableFuture<DeleteSchedruleOnDemandResponse> deleteSchedruleOnDemand(DeleteSchedruleOnDemandRequest request);
 
@@ -106,6 +110,10 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<DescribePackIpListResponse> describePackIpList(DescribePackIpListRequest request);
+
+    CompletableFuture<DescribeRdMemberListResponse> describeRdMemberList(DescribeRdMemberListRequest request);
+
+    CompletableFuture<DescribeRdStatusResponse> describeRdStatus(DescribeRdStatusRequest request);
 
     CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request);
 
