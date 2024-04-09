@@ -940,28 +940,6 @@ public final class DefaultAsyncClient implements AsyncClient {
       * MySQL
       * ### [](#)References
       * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-      * [Add a node to an ApsaraDB RDS for MySQL cluster](~~464129~~)
-      *
-     */
-    @Override
-    public CompletableFuture<CreateOrderForCreateDBNodesResponse> createOrderForCreateDBNodes(CreateOrderForCreateDBNodesRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateOrderForCreateDBNodes").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateOrderForCreateDBNodesResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<CreateOrderForCreateDBNodesResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
-      * ### [](#)Supported database engines
-      * MySQL
-      * ### [](#)References
-      * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
       * [Delete a node from an ApsaraDB RDS for MySQL instance that runs RDS Cluster Edition](~~464130~~)
       *
      */
@@ -5616,20 +5594,6 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ModifyWhitelistTemplateResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<PreCheckCreateOrderForCreateDBNodesResponse> preCheckCreateOrderForCreateDBNodes(PreCheckCreateOrderForCreateDBNodesRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("PreCheckCreateOrderForCreateDBNodes").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(PreCheckCreateOrderForCreateDBNodesResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<PreCheckCreateOrderForCreateDBNodesResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

@@ -454,16 +454,6 @@ public interface AsyncClient extends SdkAutoCloseable {
       * MySQL
       * ### [](#)References
       * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-      * [Add a node to an ApsaraDB RDS for MySQL cluster](~~464129~~)
-      *
-     */
-    CompletableFuture<CreateOrderForCreateDBNodesResponse> createOrderForCreateDBNodes(CreateOrderForCreateDBNodesRequest request);
-
-    /**
-      * ### [](#)Supported database engines
-      * MySQL
-      * ### [](#)References
-      * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
       * [Delete a node from an ApsaraDB RDS for MySQL instance that runs RDS Cluster Edition](~~464130~~)
       *
      */
@@ -2554,8 +2544,6 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<ModifyWhitelistTemplateResponse> modifyWhitelistTemplate(ModifyWhitelistTemplateRequest request);
-
-    CompletableFuture<PreCheckCreateOrderForCreateDBNodesResponse> preCheckCreateOrderForCreateDBNodes(PreCheckCreateOrderForCreateDBNodesRequest request);
 
     CompletableFuture<PreCheckCreateOrderForDeleteDBNodesResponse> preCheckCreateOrderForDeleteDBNodes(PreCheckCreateOrderForDeleteDBNodesRequest request);
 
