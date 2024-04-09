@@ -261,11 +261,11 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         private String createTime;
 
+        @NameInMap("DBInstanceCPU")
+        private String DBInstanceCPU;
+
         @NameInMap("DBInstanceClass")
         private String DBInstanceClass;
-
-        @NameInMap("DBInstanceCpuCores")
-        private String DBInstanceCpuCores;
 
         @NameInMap("DBInstanceDescription")
         private String DBInstanceDescription;
@@ -274,7 +274,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         private String DBInstanceId;
 
         @NameInMap("DBInstanceMemory")
-        private String DBInstanceMemory;
+        private Integer DBInstanceMemory;
 
         @NameInMap("DBInstanceNetType")
         private String DBInstanceNetType;
@@ -407,8 +407,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             this.connectionMode = builder.connectionMode;
             this.connectionString = builder.connectionString;
             this.createTime = builder.createTime;
+            this.DBInstanceCPU = builder.DBInstanceCPU;
             this.DBInstanceClass = builder.DBInstanceClass;
-            this.DBInstanceCpuCores = builder.DBInstanceCpuCores;
             this.DBInstanceDescription = builder.DBInstanceDescription;
             this.DBInstanceId = builder.DBInstanceId;
             this.DBInstanceMemory = builder.DBInstanceMemory;
@@ -513,17 +513,17 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return DBInstanceCPU
+         */
+        public String getDBInstanceCPU() {
+            return this.DBInstanceCPU;
+        }
+
+        /**
          * @return DBInstanceClass
          */
         public String getDBInstanceClass() {
             return this.DBInstanceClass;
-        }
-
-        /**
-         * @return DBInstanceCpuCores
-         */
-        public String getDBInstanceCpuCores() {
-            return this.DBInstanceCpuCores;
         }
 
         /**
@@ -543,7 +543,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         /**
          * @return DBInstanceMemory
          */
-        public String getDBInstanceMemory() {
+        public Integer getDBInstanceMemory() {
             return this.DBInstanceMemory;
         }
 
@@ -842,11 +842,11 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             private String connectionMode; 
             private String connectionString; 
             private String createTime; 
+            private String DBInstanceCPU; 
             private String DBInstanceClass; 
-            private String DBInstanceCpuCores; 
             private String DBInstanceDescription; 
             private String DBInstanceId; 
-            private String DBInstanceMemory; 
+            private Integer DBInstanceMemory; 
             private String DBInstanceNetType; 
             private String DBInstanceStatus; 
             private String DBInstanceStorageType; 
@@ -965,18 +965,18 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The instance type of the instance. For information, see [Primary ApsaraDB RDS instance types](~~26312~~).
+             * DBInstanceCPU.
              */
-            public Builder DBInstanceClass(String DBInstanceClass) {
-                this.DBInstanceClass = DBInstanceClass;
+            public Builder DBInstanceCPU(String DBInstanceCPU) {
+                this.DBInstanceCPU = DBInstanceCPU;
                 return this;
             }
 
             /**
-             * DBInstanceCpuCores.
+             * The instance type of the instance. For information, see [Primary ApsaraDB RDS instance types](~~26312~~).
              */
-            public Builder DBInstanceCpuCores(String DBInstanceCpuCores) {
-                this.DBInstanceCpuCores = DBInstanceCpuCores;
+            public Builder DBInstanceClass(String DBInstanceClass) {
+                this.DBInstanceClass = DBInstanceClass;
                 return this;
             }
 
@@ -999,7 +999,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             /**
              * DBInstanceMemory.
              */
-            public Builder DBInstanceMemory(String DBInstanceMemory) {
+            public Builder DBInstanceMemory(Integer DBInstanceMemory) {
                 this.DBInstanceMemory = DBInstanceMemory;
                 return this;
             }

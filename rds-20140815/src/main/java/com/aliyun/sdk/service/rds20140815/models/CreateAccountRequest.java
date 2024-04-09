@@ -181,14 +181,17 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * The username of the account.
+         * The name of the database account.
          * <p>
          * 
-         * *   The value must be unique.
          * 
-         * *   The value must start with a lowercase letter, and end with a lowercase letter or a digit.
+         * *   The name must be unique.
          * 
-         * *   The value can contain lowercase letters, digits, and underscores (\_).
+         * *   The name can contain lowercase letters, digits, and underscores (\_). For MySQL databases, the name can contain uppercase letters.
+         * 
+         * *   The name must start with a letter and end with a letter or digit.
+         * 
+         * *   For MySQL databases, the name of the privileged account cannot be the same as that of the standard account. For example, if the name of the privileged account is `Test1`, the name of the standard account cannot be `test1`.
          * 
          * *   The length of the value must meet the following requirements:
          * 
@@ -199,7 +202,7 @@ public class CreateAccountRequest extends Request {
          *     *   If the instance runs PostgreSQL with local disks, the value must be 2 to 16 characters in length.
          *     *   If the instance runs MariaDB, the value must be 2 to 16 characters in length.
          * 
-         * *   For more information about invalid characters, see [Forbidden keywords table](~~26317~~).
+         * *   For more information about invalid characters, see [Forbidden keywords](~~26317~~).
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);

@@ -57,7 +57,7 @@ public class DescribeKmsAssociateResourcesRequest extends Request {
 
     @Query
     @NameInMap("ResourceOwnerId")
-    private String resourceOwnerId;
+    private Long resourceOwnerId;
 
     private DescribeKmsAssociateResourcesRequest(Builder builder) {
         super(builder);
@@ -160,7 +160,7 @@ public class DescribeKmsAssociateResourcesRequest extends Request {
     /**
      * @return resourceOwnerId
      */
-    public String getResourceOwnerId() {
+    public Long getResourceOwnerId() {
         return this.resourceOwnerId;
     }
 
@@ -175,7 +175,7 @@ public class DescribeKmsAssociateResourcesRequest extends Request {
         private String regionId; 
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
-        private String resourceOwnerId; 
+        private Long resourceOwnerId; 
 
         private Builder() {
             super();
@@ -289,7 +289,7 @@ public class DescribeKmsAssociateResourcesRequest extends Request {
         /**
          * ResourceOwnerId.
          */
-        public Builder resourceOwnerId(String resourceOwnerId) {
+        public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
             return this;

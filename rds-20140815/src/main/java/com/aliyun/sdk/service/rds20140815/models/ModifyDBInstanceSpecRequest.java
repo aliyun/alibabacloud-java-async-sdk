@@ -39,7 +39,7 @@ public class ModifyDBInstanceSpecRequest extends Request {
 
     @Query
     @NameInMap("DBInstanceStorage")
-    @Validation(maximum = 32000, minimum = 5)
+    @Validation(maximum = 64000, minimum = 5)
     private Integer DBInstanceStorage;
 
     @Query

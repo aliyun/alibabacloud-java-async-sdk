@@ -139,7 +139,7 @@ public class DescribeAvailableRecoveryTimeRequest extends Request {
         } 
 
         /**
-         * The ID of the cross-region backup file. You can call the DescribeCrossRegionBackups operation to query the backup file ID.
+         * The ID of the cross-region data backup file. You can call the DescribeCrossRegionBackups operation to query the backup file ID.
          */
         public Builder crossBackupId(Integer crossBackupId) {
             this.putQueryParameter("CrossBackupId", crossBackupId);

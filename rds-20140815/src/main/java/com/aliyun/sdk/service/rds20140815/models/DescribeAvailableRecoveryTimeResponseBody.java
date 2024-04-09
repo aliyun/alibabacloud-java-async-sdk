@@ -94,7 +94,7 @@ public class DescribeAvailableRecoveryTimeResponseBody extends TeaModel {
         }
 
         /**
-         * The start time to which data can be restored. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+         * The start time from which data can be restored. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
          */
         public Builder recoveryBeginTime(String recoveryBeginTime) {
             this.recoveryBeginTime = recoveryBeginTime;

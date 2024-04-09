@@ -350,11 +350,11 @@ public class ModifyDBInstanceSSLRequest extends Request {
         }
 
         /**
-         * User-defined certificate. The custom certificate is in pfx format.
+         * The custom certificate. The custom certificate is in the `PFX` format.
          * <p>
          * 
-         * - Public address: `oss-<region ID>.aliyuncs.com:<Bucket name >:< certificate file name (with file suffix)>`
-         * - Intranet address: `oss-<region ID>-internal.aliyuncs.com:<Bucket name >:< certificate file name (with file suffix)>`
+         * *   Public endpoint: `oss-<The ID of the region>.aliyuncs.com:<The name of the bucket>:<The name of the certificate file (The file name contains the extension.)>`
+         * *   Internal endpoint: `oss-<The ID of the region>-internal.aliyuncs.com:<The name of the bucket>:<The name of the certificate file (The file name contains the extension.)>`
          */
         public Builder certificate(String certificate) {
             this.putQueryParameter("Certificate", certificate);
@@ -465,7 +465,7 @@ public class ModifyDBInstanceSSLRequest extends Request {
         }
 
         /**
-         * The method that is used to verify the replication permissions. This parameter is supported only when the instance runs PostgreSQL with cloud disks. In addition, this parameter is available only when the public key of the CA that issues client certificates is enabled. Valid values:
+         * The method that is used to verify the replication permission. This parameter is supported only when the instance runs PostgreSQL with cloud disks. In addition, this parameter is available only when the public key of the CA that issues client certificates is enabled. Valid values:
          * <p>
          * 
          * *   **cert**
