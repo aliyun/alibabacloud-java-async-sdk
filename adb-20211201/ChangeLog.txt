@@ -1,3 +1,6 @@
+2024-04-09 Version: 1.0.20
+- Generated java-async 2021-12-01 for adb.
+
 2024-03-25 Version: 1.0.19
 - Generated java-async 2021-12-01 for adb.
 

@@ -383,7 +383,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum amount of elastic computing resources. Unit: ACUs.
+             * The minimum amount of elastic computing resources. Unit: ACU.
              */
             public Builder elasticMinComputeResource(String elasticMinComputeResource) {
                 this.elasticMinComputeResource = elasticMinComputeResource;
@@ -421,7 +421,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The Resource Access Management (RAM) user with which the resource group is associated.
+             * The Resource Access Management (RAM) user that is associated with the resource group.
              */
             public Builder groupUsers(String groupUsers) {
                 this.groupUsers = groupUsers;
@@ -437,7 +437,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum amount of reserved computing resources. Unit: ACUs.
+             * The maximum amount of reserved computing resources. Unit: ACU.
              */
             public Builder maxComputeResource(String maxComputeResource) {
                 this.maxComputeResource = maxComputeResource;
@@ -453,7 +453,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum amount of reserved computing resources. Unit: AnalyticDB compute units (ACUs).
+             * The minimum amount of reserved computing resources. Unit: AnalyticDB compute unit (ACU).
              */
             public Builder minComputeResource(String minComputeResource) {
                 this.minComputeResource = minComputeResource;
@@ -477,7 +477,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the resource group. Valid values:
+             * The status of the resource group. Valid values:
              * <p>
              * 
              * *   **creating**: The resource group is being created.

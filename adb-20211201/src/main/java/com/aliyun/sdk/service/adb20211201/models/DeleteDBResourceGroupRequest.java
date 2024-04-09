@@ -82,7 +82,7 @@ public class DeleteDBResourceGroupRequest extends Request {
          * The name of the resource group.
          * <p>
          * 
-         * > You can call the [DescribeDBResourceGroup](~~612410~~) operation to query the resource group information of a cluster, including the resource group name.
+         * >  You can call the [DescribeDBResourceGroup](~~612410~~) operation to query the information about resource groups of an AnalyticDB for MySQL cluster, including resource group names.
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);

@@ -112,7 +112,7 @@ public class ModifyClusterConnectionStringRequest extends Request {
         }
 
         /**
-         * The current public endpoint of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         * The public endpoint of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
          */
         public Builder currentConnectionString(String currentConnectionString) {
             this.putQueryParameter("CurrentConnectionString", currentConnectionString);
@@ -130,7 +130,7 @@ public class ModifyClusterConnectionStringRequest extends Request {
         }
 
         /**
-         * The port number that is used to connect to the cluster. Set the value to **3306**.
+         * The port number. Set the value to **3306**.
          */
         public Builder port(Integer port) {
             this.putQueryParameter("Port", port);

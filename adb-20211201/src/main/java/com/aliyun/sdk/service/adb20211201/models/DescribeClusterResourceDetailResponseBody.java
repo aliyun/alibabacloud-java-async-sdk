@@ -279,7 +279,13 @@ public class DescribeClusterResourceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * EnableSpot.
+             * Indicates whether the preemptible instance feature is enabled for the resource group. After the preemptible instance feature is enabled, you are charged for resources at a lower unit price but the resources are probably released. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
+             * 
+             * The True value is returned only for job resource groups.
              */
             public Builder enableSpot(Boolean enableSpot) {
                 this.enableSpot = enableSpot;
@@ -359,7 +365,7 @@ public class DescribeClusterResourceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the resource group. Valid values:
+             * The status of the resource group. Valid values:
              * <p>
              * 
              * *   **running**
