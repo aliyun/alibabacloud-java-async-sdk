@@ -50,7 +50,7 @@ public class LockUsersResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * LockUsersResult.
+         * The result of the locking the convenience user.
          */
         public Builder lockUsersResult(LockUsersResult lockUsersResult) {
             this.lockUsersResult = lockUsersResult;
@@ -58,7 +58,7 @@ public class LockUsersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class LockUsersResponseBody extends TeaModel {
             private String errorMessage; 
 
             /**
-             * EndUserId.
+             * The ID of the convenience user that failed to be locked.
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
@@ -130,7 +130,7 @@ public class LockUsersResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorCode.
+             * The error code.
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -138,7 +138,7 @@ public class LockUsersResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * The error message.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -191,7 +191,7 @@ public class LockUsersResponseBody extends TeaModel {
             private java.util.List < String > lockedUsers; 
 
             /**
-             * FailedUsers.
+             * The convenience users that failed to be locked.
              */
             public Builder failedUsers(java.util.List < FailedUsers> failedUsers) {
                 this.failedUsers = failedUsers;
@@ -199,7 +199,7 @@ public class LockUsersResponseBody extends TeaModel {
             }
 
             /**
-             * LockedUsers.
+             * The convenience users that were locked.
              */
             public Builder lockedUsers(java.util.List < String > lockedUsers) {
                 this.lockedUsers = lockedUsers;

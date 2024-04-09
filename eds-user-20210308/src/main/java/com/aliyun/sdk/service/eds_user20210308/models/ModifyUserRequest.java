@@ -83,7 +83,7 @@ public class ModifyUserRequest extends Request {
         } 
 
         /**
-         * Email.
+         * The email address of the convenience user. For a user-activated convenience user, the email address or mobile number must be verified. You can choose to verify the email address or the mobile number. For an administrator-activated convenience user, the email address and mobile number can be left empty.
          */
         public Builder email(String email) {
             this.putQueryParameter("Email", email);
@@ -92,7 +92,7 @@ public class ModifyUserRequest extends Request {
         }
 
         /**
-         * EndUserId.
+         * The name of the user.
          */
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -101,7 +101,10 @@ public class ModifyUserRequest extends Request {
         }
 
         /**
-         * Phone.
+         * The mobile number of the convenience user. For a user-activated convenience user, the email address or mobile number must be verified. You can choose to verify the email address or the mobile number. For an administrator-activated convenience user, the email address and mobile number can be left empty.
+         * <p>
+         * 
+         * >  Accounts created on the International site (alibabacloud.com) do not support mobile number-based authentication.
          */
         public Builder phone(String phone) {
             this.putQueryParameter("Phone", phone);

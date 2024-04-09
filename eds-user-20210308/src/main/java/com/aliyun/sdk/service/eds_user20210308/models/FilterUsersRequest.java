@@ -213,7 +213,26 @@ public class FilterUsersRequest extends Request {
         }
 
         /**
-         * Specifies whether to return information about cloud desktops that are assigned to the convenience user.
+         * Specifies whether to return the number of cloud desktops that are assigned to the convenience user.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   true
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   false
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder includeDesktopCount(Boolean includeDesktopCount) {
             this.putQueryParameter("IncludeDesktopCount", includeDesktopCount);
@@ -222,7 +241,26 @@ public class FilterUsersRequest extends Request {
         }
 
         /**
-         * Specifies whether to return the number of desktop groups that are assigned to the user.
+         * Specifies whether to return the number of cloud desktop pools that are assigned to the convenience user.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   true
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   false
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder includeDesktopGroupCount(Boolean includeDesktopGroupCount) {
             this.putQueryParameter("IncludeDesktopGroupCount", includeDesktopGroupCount);
@@ -249,7 +287,7 @@ public class FilterUsersRequest extends Request {
         }
 
         /**
-         * The parameter that supports to sort query results.
+         * The parameters that are used to sort query results.
          */
         public Builder orderParam(OrderParam orderParam) {
             String orderParamShrink = shrink(orderParam, "OrderParam", "json");
@@ -340,34 +378,14 @@ public class FilterUsersRequest extends Request {
             private String orderType; 
 
             /**
-             * The way to sort query results.
+             * The parameter based on which to sort query results.
              * <p>
              * 
              * Valid values:
              * 
-             * *   EndUserId
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             * *   id
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             * *   gmt_created
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
+             * *   EndUserId: the username.
+             * *   id: the ID of the user primary key.
+             * *   gmt_created: the time when the convenience user was created.
              */
             public Builder orderField(String orderField) {
                 this.orderField = orderField;
@@ -375,7 +393,7 @@ public class FilterUsersRequest extends Request {
             }
 
             /**
-             * Specifies whether to sort query results in ascending or descending order. Valid values:
+             * Specifies whether to sort query results in ascending or descending order.
              * <p>
              * 
              * Valid values:

@@ -100,7 +100,7 @@ public class SetUserPropertyValueRequest extends Request {
         } 
 
         /**
-         * PropertyId.
+         * The property ID. You can call the [ListProperty](~~ListProperty~~) operation to query the property ID.
          */
         public Builder propertyId(Long propertyId) {
             this.putBodyParameter("PropertyId", propertyId);
@@ -109,7 +109,7 @@ public class SetUserPropertyValueRequest extends Request {
         }
 
         /**
-         * PropertyValueId.
+         * The ID of the property value. You can call the [ListProperty](~~ListProperty~~) operation to query the ID of the property value.
          */
         public Builder propertyValueId(Long propertyValueId) {
             this.putBodyParameter("PropertyValueId", propertyValueId);
@@ -118,7 +118,7 @@ public class SetUserPropertyValueRequest extends Request {
         }
 
         /**
-         * Associates a user property with a user.
+         * The ID of the convenience user. You can call the [DescribeUsers](~~DescribeUsers~~) operation to query the user ID.
          */
         public Builder userId(Long userId) {
             this.putBodyParameter("UserId", userId);
@@ -127,7 +127,7 @@ public class SetUserPropertyValueRequest extends Request {
         }
 
         /**
-         * SetUserPropertyValue
+         * The username of the convenience user.
          */
         public Builder userName(String userName) {
             this.putBodyParameter("UserName", userName);

@@ -16,10 +16,18 @@ public class CreateUsersRequest extends Request {
     @NameInMap("AutoLockTime")
     private String autoLockTime;
 
+    @Query
+    @NameInMap("IsLocalAdmin")
+    private Boolean isLocalAdmin;
+
     @Body
     @NameInMap("Password")
     @Validation(maxLength = 256)
     private String password;
+
+    @Query
+    @NameInMap("PasswordExpireDays")
+    private String passwordExpireDays;
 
     @Body
     @NameInMap("Users")
@@ -29,7 +37,9 @@ public class CreateUsersRequest extends Request {
     private CreateUsersRequest(Builder builder) {
         super(builder);
         this.autoLockTime = builder.autoLockTime;
+        this.isLocalAdmin = builder.isLocalAdmin;
         this.password = builder.password;
+        this.passwordExpireDays = builder.passwordExpireDays;
         this.users = builder.users;
     }
 
@@ -54,10 +64,24 @@ public class CreateUsersRequest extends Request {
     }
 
     /**
+     * @return isLocalAdmin
+     */
+    public Boolean getIsLocalAdmin() {
+        return this.isLocalAdmin;
+    }
+
+    /**
      * @return password
      */
     public String getPassword() {
         return this.password;
+    }
+
+    /**
+     * @return passwordExpireDays
+     */
+    public String getPasswordExpireDays() {
+        return this.passwordExpireDays;
     }
 
     /**
@@ -69,7 +93,9 @@ public class CreateUsersRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateUsersRequest, Builder> {
         private String autoLockTime; 
+        private Boolean isLocalAdmin; 
         private String password; 
+        private String passwordExpireDays; 
         private java.util.List < Users> users; 
 
         private Builder() {
@@ -79,16 +105,27 @@ public class CreateUsersRequest extends Request {
         private Builder(CreateUsersRequest request) {
             super(request);
             this.autoLockTime = request.autoLockTime;
+            this.isLocalAdmin = request.isLocalAdmin;
             this.password = request.password;
+            this.passwordExpireDays = request.passwordExpireDays;
             this.users = request.users;
         } 
 
         /**
-         * AutoLockTime.
+         * The date on which the convenience users are automatically locked.
          */
         public Builder autoLockTime(String autoLockTime) {
             this.putQueryParameter("AutoLockTime", autoLockTime);
             this.autoLockTime = autoLockTime;
+            return this;
+        }
+
+        /**
+         * IsLocalAdmin.
+         */
+        public Builder isLocalAdmin(Boolean isLocalAdmin) {
+            this.putQueryParameter("IsLocalAdmin", isLocalAdmin);
+            this.isLocalAdmin = isLocalAdmin;
             return this;
         }
 
@@ -102,7 +139,16 @@ public class CreateUsersRequest extends Request {
         }
 
         /**
-         * Details of the convenience users.
+         * PasswordExpireDays.
+         */
+        public Builder passwordExpireDays(String passwordExpireDays) {
+            this.putQueryParameter("PasswordExpireDays", passwordExpireDays);
+            this.passwordExpireDays = passwordExpireDays;
+            return this;
+        }
+
+        /**
+         * The information about the convenience user.
          */
         public Builder users(java.util.List < Users> users) {
             this.putBodyParameter("Users", users);
@@ -229,7 +275,7 @@ public class CreateUsersRequest extends Request {
             private String remark; 
 
             /**
-             * The email address of the end user. The email address is used to receive notifications about events such as desktop assignment. You must specify an email address or a mobile number to receive notifications.
+             * The email address of the convenience user. The email address is used to receive notifications about events such as desktop assignment. You must specify an email address or a mobile number to receive notifications.
              */
             public Builder email(String email) {
                 this.email = email;
@@ -237,7 +283,7 @@ public class CreateUsersRequest extends Request {
             }
 
             /**
-             * The name of the end user. The name must be 3 to 24 characters in length, and can contain lowercase letters, digits, and underscores (\_).
+             * The username of the convenience user. The name can contain lowercase letters, digits, and underscores (\_), and must be 3 to 24 characters in length.
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
@@ -245,7 +291,7 @@ public class CreateUsersRequest extends Request {
             }
 
             /**
-             * The organization to which the end user belongs.
+             * The organization to which the convenience user belongs.
              */
             public Builder orgId(String orgId) {
                 this.orgId = orgId;
@@ -254,6 +300,12 @@ public class CreateUsersRequest extends Request {
 
             /**
              * The type of the account ownership.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   CreateFromManager: administrator-activated
+             * *   Normal: user-activated
              */
             public Builder ownerType(String ownerType) {
                 this.ownerType = ownerType;
@@ -261,7 +313,10 @@ public class CreateUsersRequest extends Request {
             }
 
             /**
-             * The password of the end user.
+             * The user password.
+             * <p>
+             * 
+             * >  The password must be at least 10 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters (excluding spaces).
              */
             public Builder password(String password) {
                 this.password = password;
@@ -277,7 +332,7 @@ public class CreateUsersRequest extends Request {
             }
 
             /**
-             * RealNickName.
+             * The display name of the end user.
              */
             public Builder realNickName(String realNickName) {
                 this.realNickName = realNickName;
@@ -285,7 +340,7 @@ public class CreateUsersRequest extends Request {
             }
 
             /**
-             * The remarks of the end user.
+             * The remarks on the convenience user.
              */
             public Builder remark(String remark) {
                 this.remark = remark;

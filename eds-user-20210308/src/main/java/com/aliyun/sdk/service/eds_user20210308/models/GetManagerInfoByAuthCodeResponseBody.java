@@ -98,7 +98,7 @@ public class GetManagerInfoByAuthCodeResponseBody extends TeaModel {
         private Long waId; 
 
         /**
-         * OrgId.
+         * The organization ID.
          */
         public Builder orgId(String orgId) {
             this.orgId = orgId;
@@ -106,7 +106,7 @@ public class GetManagerInfoByAuthCodeResponseBody extends TeaModel {
         }
 
         /**
-         * Phone.
+         * The mobile number.
          */
         public Builder phone(String phone) {
             this.phone = phone;
@@ -114,7 +114,7 @@ public class GetManagerInfoByAuthCodeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class GetManagerInfoByAuthCodeResponseBody extends TeaModel {
         }
 
         /**
-         * TeamName.
+         * The team name.
          */
         public Builder teamName(String teamName) {
             this.teamName = teamName;
@@ -130,7 +130,7 @@ public class GetManagerInfoByAuthCodeResponseBody extends TeaModel {
         }
 
         /**
-         * UserName.
+         * The tenant name.
          */
         public Builder userName(String userName) {
             this.userName = userName;
@@ -138,7 +138,7 @@ public class GetManagerInfoByAuthCodeResponseBody extends TeaModel {
         }
 
         /**
-         * WaId.
+         * The ID of the WUYING Workspace account.
          */
         public Builder waId(Long waId) {
             this.waId = waId;

@@ -170,7 +170,7 @@ public class CreateUsersResponseBody extends TeaModel {
             }
 
             /**
-             * RealNickName.
+             * The display name of the end user.
              */
             public Builder realNickName(String realNickName) {
                 this.realNickName = realNickName;

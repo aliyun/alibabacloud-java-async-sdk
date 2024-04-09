@@ -111,7 +111,7 @@ public class DescribeMfaDevicesRequest extends Request {
         } 
 
         /**
-         * AdDomain.
+         * The domain of the Active Directory (AD) workspace.
          */
         public Builder adDomain(String adDomain) {
             this.putQueryParameter("AdDomain", adDomain);
@@ -120,7 +120,7 @@ public class DescribeMfaDevicesRequest extends Request {
         }
 
         /**
-         * The list of username of convenience users.
+         * The usernames of the convenience users.
          */
         public Builder endUserIds(java.util.List < String > endUserIds) {
             this.putQueryParameter("EndUserIds", endUserIds);
@@ -129,9 +129,8 @@ public class DescribeMfaDevicesRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to return. Valid values: 1 to 500.
+         * The maximum number of entries to return. Valid values: 1 to 500.\
          * <p>
-         * 
          * Default value: 100.
          */
         public Builder maxResults(Long maxResults) {
@@ -141,7 +140,7 @@ public class DescribeMfaDevicesRequest extends Request {
         }
 
         /**
-         * The query token. Set the value to the NextToken value returned in the last call.
+         * The pagination token that is used in the next request to retrieve a new page of results. Set the value to the token that is obtained from the previous query.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -150,7 +149,7 @@ public class DescribeMfaDevicesRequest extends Request {
         }
 
         /**
-         * The list of serial numbers of the virtual MFA devices.
+         * The serial numbers of the virtual MFA devices.
          */
         public Builder serialNumbers(java.util.List < String > serialNumbers) {
             this.putQueryParameter("SerialNumbers", serialNumbers);

@@ -69,7 +69,7 @@ public class CreatePropertyRequest extends Request {
         } 
 
         /**
-         * PropertyKey.
+         * The property name.
          */
         public Builder propertyKey(String propertyKey) {
             this.putBodyParameter("PropertyKey", propertyKey);
@@ -78,7 +78,7 @@ public class CreatePropertyRequest extends Request {
         }
 
         /**
-         * PropertyValues.
+         * The values of the property. You can specify up to 50 values for a property.
          */
         public Builder propertyValues(java.util.List < String > propertyValues) {
             this.putBodyParameter("PropertyValues", propertyValues);

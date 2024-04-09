@@ -50,7 +50,7 @@ public class CheckUsedPropertyResponseBody extends TeaModel {
         private Long useCount; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class CheckUsedPropertyResponseBody extends TeaModel {
         }
 
         /**
-         * UseCount.
+         * The number of convenience users that are associated with the property.
          */
         public Builder useCount(Long useCount) {
             this.useCount = useCount;

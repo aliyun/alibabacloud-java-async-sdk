@@ -85,7 +85,7 @@ public class DeleteUserPropertyValueRequest extends Request {
         } 
 
         /**
-         * DeleteUserPropertyValue
+         * The property ID.
          */
         public Builder propertyId(Long propertyId) {
             this.putBodyParameter("PropertyId", propertyId);
@@ -94,7 +94,7 @@ public class DeleteUserPropertyValueRequest extends Request {
         }
 
         /**
-         * PropertyValueId.
+         * The ID of the property value.
          */
         public Builder propertyValueId(Long propertyValueId) {
             this.putBodyParameter("PropertyValueId", propertyValueId);
@@ -103,7 +103,7 @@ public class DeleteUserPropertyValueRequest extends Request {
         }
 
         /**
-         * Dissociates a user property from a user.
+         * The ID of the convenience user.
          */
         public Builder userId(Long userId) {
             this.putBodyParameter("UserId", userId);

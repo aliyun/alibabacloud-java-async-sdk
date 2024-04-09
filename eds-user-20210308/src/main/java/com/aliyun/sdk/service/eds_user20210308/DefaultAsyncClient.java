@@ -104,7 +104,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The operation that you want to perform. Set the value to **DeleteUserPropertyValue**.
+      * Before you call this operation, you can call the FilterUsers operation to query the users that are associated with user properties.
       *
      */
     @Override
@@ -135,6 +135,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * An organization is in a tree structure. The root organization ID is in the following format: org-aliyun-wy-org-id.
+      *
+     */
     @Override
     public CompletableFuture<DescribeOrgsResponse> describeOrgs(DescribeOrgsRequest request) {
         try {
@@ -220,8 +224,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Description
-      * After a virtual MFA device is locked, the status of the virtual MFA device changes to LOCKED. The convenience user to which the MFA device is bound cannot log on to the cloud desktop that resides in the workspace with the MFA feature enabled because the convenience user will fail authentication based on the virtual MFA device. You can call the UnlockMfaDevice operation to unlock the virtual MFA device.
+      * After a virtual MFA device is locked, the status of the virtual MFA device changes to LOCKED. The convenience user to which the MFA device is bound cannot log on to the cloud desktop that resides in the workspace with the MFA feature enabled because the identity of the convenience user cannot be verified based on the virtual MFA device. You can call the [UnlockMfaDevice](~~286534~~) operation to unlock the virtual MFA device.
       *
      */
     @Override
@@ -280,6 +283,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * If you remove a virtual MFA device that is bound to a convenience user, the convenience user can no longer use the virtual MFA device to log on to cloud desktops. Before the convenience user can log on to cloud desktops again, a new virtual MFA device must be bound to the convenience user.
+      *
+     */
     @Override
     public CompletableFuture<RemoveMfaDeviceResponse> removeMfaDevice(RemoveMfaDeviceRequest request) {
         try {
@@ -336,10 +343,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * The ID of the request.
-      *
-     */
     @Override
     public CompletableFuture<SetUserPropertyValueResponse> setUserPropertyValue(SetUserPropertyValueRequest request) {
         try {

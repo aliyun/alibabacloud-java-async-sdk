@@ -70,6 +70,9 @@ public class ResetUserPasswordRequest extends Request {
 
         /**
          * The method to notify the user after the password is reset.
+         * <p>
+         * 
+         * > Alibaba Cloud accounts of the international site do not support sending notification through text messages.
          */
         public Builder notifyType(Integer notifyType) {
             this.putBodyParameter("NotifyType", notifyType);

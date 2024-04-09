@@ -69,7 +69,7 @@ public class UnlockUsersRequest extends Request {
         } 
 
         /**
-         * AutoLockTime.
+         * The date on which the convenience users are automatically locked.
          */
         public Builder autoLockTime(String autoLockTime) {
             this.putQueryParameter("AutoLockTime", autoLockTime);
@@ -78,7 +78,7 @@ public class UnlockUsersRequest extends Request {
         }
 
         /**
-         * Users.
+         * The usernames of the convenience users that you want to unlock.
          */
         public Builder users(java.util.List < String > users) {
             this.putBodyParameter("Users", users);

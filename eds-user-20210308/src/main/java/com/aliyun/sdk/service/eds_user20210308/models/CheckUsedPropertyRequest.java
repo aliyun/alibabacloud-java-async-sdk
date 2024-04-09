@@ -55,7 +55,7 @@ public class CheckUsedPropertyRequest extends Request {
         } 
 
         /**
-         * PropertyId.
+         * The ID of the property. You can call the [ListProperty](~~410890~~) operation to query the property ID.
          */
         public Builder propertyId(Long propertyId) {
             this.putQueryParameter("PropertyId", propertyId);

@@ -70,7 +70,7 @@ public class CheckUsedPropertyValueRequest extends Request {
         } 
 
         /**
-         * The ID of the property.
+         * The property ID. You can call the [ListProperty](~~ListProperty~~) operation to query property ID.
          */
         public Builder propertyId(Long propertyId) {
             this.putQueryParameter("PropertyId", propertyId);
@@ -79,7 +79,7 @@ public class CheckUsedPropertyValueRequest extends Request {
         }
 
         /**
-         * The ID of the property value.
+         * The ID of the property value. You can call the [ListProperty](~~ListProperty~~) operation to query the ID of the property value.
          */
         public Builder propertyValueId(Long propertyValueId) {
             this.putQueryParameter("PropertyValueId", propertyValueId);

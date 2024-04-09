@@ -166,7 +166,7 @@ public class DescribeUsersRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * The ID of the organization in which you want to query convenience users.
          */
         public Builder groupId(String groupId) {
             this.putBodyParameter("GroupId", groupId);

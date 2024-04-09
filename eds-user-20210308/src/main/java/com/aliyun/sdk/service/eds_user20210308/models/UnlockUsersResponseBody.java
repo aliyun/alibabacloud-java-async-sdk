@@ -50,7 +50,7 @@ public class UnlockUsersResponseBody extends TeaModel {
         private UnlockUsersResult unlockUsersResult; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class UnlockUsersResponseBody extends TeaModel {
         }
 
         /**
-         * UnlockUsersResult.
+         * The result of unlocking the convenience user.
          */
         public Builder unlockUsersResult(UnlockUsersResult unlockUsersResult) {
             this.unlockUsersResult = unlockUsersResult;
@@ -122,7 +122,7 @@ public class UnlockUsersResponseBody extends TeaModel {
             private String errorMessage; 
 
             /**
-             * EndUserId.
+             * The ID of the convenience user that failed to be unlocked.
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
@@ -130,7 +130,7 @@ public class UnlockUsersResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorCode.
+             * The error code.
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -138,7 +138,7 @@ public class UnlockUsersResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * The error message.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -191,7 +191,7 @@ public class UnlockUsersResponseBody extends TeaModel {
             private java.util.List < String > unlockedUsers; 
 
             /**
-             * FailedUsers.
+             * The convenience users that failed to be unlocked.
              */
             public Builder failedUsers(java.util.List < FailedUsers> failedUsers) {
                 this.failedUsers = failedUsers;
@@ -199,7 +199,7 @@ public class UnlockUsersResponseBody extends TeaModel {
             }
 
             /**
-             * UnlockedUsers.
+             * The convenience users that were unlocked.
              */
             public Builder unlockedUsers(java.util.List < String > unlockedUsers) {
                 this.unlockedUsers = unlockedUsers;

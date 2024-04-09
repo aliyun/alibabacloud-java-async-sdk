@@ -55,7 +55,7 @@ public class GetManagerInfoByAuthCodeRequest extends Request {
         } 
 
         /**
-         * AuthCode.
+         * The authorization code.
          */
         public Builder authCode(String authCode) {
             this.putQueryParameter("AuthCode", authCode);

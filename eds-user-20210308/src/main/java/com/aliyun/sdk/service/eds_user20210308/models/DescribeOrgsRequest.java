@@ -97,7 +97,9 @@ public class DescribeOrgsRequest extends Request {
         } 
 
         /**
-         * MaxResults.
+         * The maximum number of entries to return. Valid values: 1 to 100.\
+         * <p>
+         * Default value: 100.
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -106,7 +108,7 @@ public class DescribeOrgsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that determines the start point of the query. The return value is the value of the NextToken response parameter that was returned last time the DescribeOrgs operation was called.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -115,7 +117,7 @@ public class DescribeOrgsRequest extends Request {
         }
 
         /**
-         * OrgName.
+         * The name of the organization.
          */
         public Builder orgName(String orgName) {
             this.putQueryParameter("OrgName", orgName);
@@ -124,7 +126,7 @@ public class DescribeOrgsRequest extends Request {
         }
 
         /**
-         * ParentOrgId.
+         * The parent organization ID.
          */
         public Builder parentOrgId(String parentOrgId) {
             this.putQueryParameter("ParentOrgId", parentOrgId);

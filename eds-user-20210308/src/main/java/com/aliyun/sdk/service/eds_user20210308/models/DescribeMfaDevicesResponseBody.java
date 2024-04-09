@@ -62,7 +62,7 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details about the virtual MFA devices.
+         * The information about the virtual MFA devices.
          */
         public Builder mfaDevices(java.util.List < MfaDevices> mfaDevices) {
             this.mfaDevices = mfaDevices;
@@ -70,7 +70,7 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
         }
 
         /**
-         * The token that determines the start point of the next query.
+         * The pagination token that is used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -78,7 +78,7 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -214,7 +214,7 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The number of consecutive failures to bind the virtual MFA device, or the number of MFA failures based on the virtual MFA device.
+             * The number of consecutive failures to bind the virtual MFA device, or the number of authentication failures based on the virtual MFA device.
              */
             public Builder consecutiveFails(Integer consecutiveFails) {
                 this.consecutiveFails = consecutiveFails;
@@ -222,7 +222,7 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * The types of the virtual MFA device. Set the value to TOTP_VIRTUAL, which indicates that the virtual MFA devices follow the Time-based One-time Password (TOTP) algorithm.
+             * The type of the virtual MFA device. The value can only be TOTP_VIRTUAL. This value indicates that the virtual MFA device follows the Time-based One-time Password (TOTP) algorithm.
              */
             public Builder deviceType(String deviceType) {
                 this.deviceType = deviceType;
@@ -230,7 +230,7 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is unavailable.
+             * >  This parameter is not publicly available.
              */
             public Builder email(String email) {
                 this.email = email;
@@ -254,7 +254,7 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when a locked virtual MFA device is automatically unlocked. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * The time when the locked virtual MFA device was automatically unlocked. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder gmtUnlock(String gmtUnlock) {
                 this.gmtUnlock = gmtUnlock;
@@ -262,7 +262,7 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is unavailable.
+             * >  This parameter is not publicly available.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -270,7 +270,7 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * The serial number of the virtual MFA device, which is a unique identifier.
+             * The serial number of the virtual MFA device. The serial number is unique for each device.
              */
             public Builder serialNumber(String serialNumber) {
                 this.serialNumber = serialNumber;
@@ -278,12 +278,34 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the virtual MFA device. Valid values:
+             * The status of the virtual MFA device.
              * <p>
              * 
-             * *   UNBOUND
-             * *   NORMAL
+             * Valid values:
+             * 
              * *   LOCKED
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   UNBOUND
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   NORMAL
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder status(String status) {
                 this.status = status;

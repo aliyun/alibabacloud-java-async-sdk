@@ -69,7 +69,7 @@ public class UnlockMfaDeviceRequest extends Request {
         } 
 
         /**
-         * The address of the Active Directory (AD) workspace.
+         * The domain of the Active Directory (AD) workspace.
          */
         public Builder adDomain(String adDomain) {
             this.putQueryParameter("AdDomain", adDomain);
@@ -78,7 +78,7 @@ public class UnlockMfaDeviceRequest extends Request {
         }
 
         /**
-         * The serial number of the virtual MFA device, which is a unique identifier.
+         * The serial number of the virtual MFA device. The serial number is unique for each device.
          */
         public Builder serialNumber(String serialNumber) {
             this.putQueryParameter("SerialNumber", serialNumber);

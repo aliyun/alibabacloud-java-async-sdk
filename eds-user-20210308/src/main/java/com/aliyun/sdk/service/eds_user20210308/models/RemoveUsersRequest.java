@@ -55,7 +55,7 @@ public class RemoveUsersRequest extends Request {
         } 
 
         /**
-         * Users.
+         * The usernames of the convenience users that you want to remove.
          */
         public Builder users(java.util.List < String > users) {
             this.putBodyParameter("Users", users);

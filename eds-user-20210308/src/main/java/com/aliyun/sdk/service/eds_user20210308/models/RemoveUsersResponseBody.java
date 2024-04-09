@@ -50,7 +50,7 @@ public class RemoveUsersResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RemoveUsersResult.
+         * The result of removing the convenience user.
          */
         public Builder removeUsersResult(RemoveUsersResult removeUsersResult) {
             this.removeUsersResult = removeUsersResult;
@@ -58,7 +58,7 @@ public class RemoveUsersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class RemoveUsersResponseBody extends TeaModel {
             private String errorMessage; 
 
             /**
-             * EndUserId.
+             * The ID of the convenience user that failed to be removed.
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
@@ -130,7 +130,7 @@ public class RemoveUsersResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorCode.
+             * The error code.
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -138,7 +138,7 @@ public class RemoveUsersResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * The error message.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -191,7 +191,7 @@ public class RemoveUsersResponseBody extends TeaModel {
             private java.util.List < String > removedUsers; 
 
             /**
-             * FailedUsers.
+             * The convenience users that failed to be removed.
              */
             public Builder failedUsers(java.util.List < FailedUsers> failedUsers) {
                 this.failedUsers = failedUsers;
@@ -199,7 +199,7 @@ public class RemoveUsersResponseBody extends TeaModel {
             }
 
             /**
-             * RemovedUsers.
+             * The convenience users that were removed.
              */
             public Builder removedUsers(java.util.List < String > removedUsers) {
                 this.removedUsers = removedUsers;

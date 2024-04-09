@@ -62,7 +62,7 @@ public class DescribeOrgsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * NextToken.
+         * The token that determines the start point of the query. The return value is the value of the NextToken response parameter that was returned last time the DescribeOrgs operation was called.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -70,7 +70,7 @@ public class DescribeOrgsResponseBody extends TeaModel {
         }
 
         /**
-         * Orgs.
+         * The organizations.
          */
         public Builder orgs(java.util.List < Orgs> orgs) {
             this.orgs = orgs;
@@ -78,7 +78,7 @@ public class DescribeOrgsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -142,7 +142,7 @@ public class DescribeOrgsResponseBody extends TeaModel {
             private String parentOrgId; 
 
             /**
-             * OrgId.
+             * The organization ID.
              */
             public Builder orgId(String orgId) {
                 this.orgId = orgId;
@@ -150,7 +150,7 @@ public class DescribeOrgsResponseBody extends TeaModel {
             }
 
             /**
-             * OrgName.
+             * The name of the organizational unit.
              */
             public Builder orgName(String orgName) {
                 this.orgName = orgName;
@@ -158,7 +158,7 @@ public class DescribeOrgsResponseBody extends TeaModel {
             }
 
             /**
-             * ParentOrgId.
+             * The parent organization ID.
              */
             public Builder parentOrgId(String parentOrgId) {
                 this.parentOrgId = parentOrgId;

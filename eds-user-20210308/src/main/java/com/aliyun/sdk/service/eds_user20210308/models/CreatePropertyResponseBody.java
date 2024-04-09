@@ -50,7 +50,7 @@ public class CreatePropertyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * CreateResult.
+         * The result of creating the property.
          */
         public Builder createResult(CreateResult createResult) {
             this.createResult = createResult;
@@ -58,7 +58,7 @@ public class CreatePropertyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,7 +134,7 @@ public class CreatePropertyResponseBody extends TeaModel {
             private String propertyValue; 
 
             /**
-             * ErrorCode.
+             * The error code.
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -142,7 +142,7 @@ public class CreatePropertyResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * The error message.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -150,7 +150,7 @@ public class CreatePropertyResponseBody extends TeaModel {
             }
 
             /**
-             * PropertyId.
+             * The ID of the property value.
              */
             public Builder propertyId(Long propertyId) {
                 this.propertyId = propertyId;
@@ -158,7 +158,7 @@ public class CreatePropertyResponseBody extends TeaModel {
             }
 
             /**
-             * PropertyValue.
+             * The value of the property.
              */
             public Builder propertyValue(String propertyValue) {
                 this.propertyValue = propertyValue;
@@ -211,7 +211,7 @@ public class CreatePropertyResponseBody extends TeaModel {
             private Long propertyValueId; 
 
             /**
-             * PropertyValue.
+             * The value of the property.
              */
             public Builder propertyValue(String propertyValue) {
                 this.propertyValue = propertyValue;
@@ -219,7 +219,7 @@ public class CreatePropertyResponseBody extends TeaModel {
             }
 
             /**
-             * PropertyValueId.
+             * The ID of the property value.
              */
             public Builder propertyValueId(Long propertyValueId) {
                 this.propertyValueId = propertyValueId;
@@ -272,7 +272,7 @@ public class CreatePropertyResponseBody extends TeaModel {
             private java.util.List < SavePropertyValues> savePropertyValues; 
 
             /**
-             * FailedPropertyValues.
+             * The property values that failed to be created.
              */
             public Builder failedPropertyValues(java.util.List < FailedPropertyValues> failedPropertyValues) {
                 this.failedPropertyValues = failedPropertyValues;
@@ -280,7 +280,7 @@ public class CreatePropertyResponseBody extends TeaModel {
             }
 
             /**
-             * SavePropertyValues.
+             * Details of the property values that were created.
              */
             public Builder savePropertyValues(java.util.List < SavePropertyValues> savePropertyValues) {
                 this.savePropertyValues = savePropertyValues;
@@ -345,7 +345,7 @@ public class CreatePropertyResponseBody extends TeaModel {
             private SavePropertyValueModel savePropertyValueModel; 
 
             /**
-             * PropertyId.
+             * The ID of the property.
              */
             public Builder propertyId(Long propertyId) {
                 this.propertyId = propertyId;
@@ -353,7 +353,7 @@ public class CreatePropertyResponseBody extends TeaModel {
             }
 
             /**
-             * PropertyKey.
+             * The name of the property.
              */
             public Builder propertyKey(String propertyKey) {
                 this.propertyKey = propertyKey;
@@ -361,7 +361,7 @@ public class CreatePropertyResponseBody extends TeaModel {
             }
 
             /**
-             * SavePropertyValueModel.
+             * The result of creating the property value.
              */
             public Builder savePropertyValueModel(SavePropertyValueModel savePropertyValueModel) {
                 this.savePropertyValueModel = savePropertyValueModel;
