@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link UpdateServiceSafetyLockRequest} extends {@link RequestModel}
+ * {@link CloneServiceRequest} extends {@link RequestModel}
  *
- * <p>UpdateServiceSafetyLockRequest</p>
+ * <p>CloneServiceRequest</p>
  */
-public class UpdateServiceSafetyLockRequest extends Request {
+public class CloneServiceRequest extends Request {
     @Path
     @NameInMap("ClusterId")
     @Validation(required = true)
@@ -23,22 +23,21 @@ public class UpdateServiceSafetyLockRequest extends Request {
     private String serviceName;
 
     @Body
-    @NameInMap("Lock")
-    @Validation(required = true)
-    private String lock;
+    @NameInMap("body")
+    private String body;
 
-    private UpdateServiceSafetyLockRequest(Builder builder) {
+    private CloneServiceRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
         this.serviceName = builder.serviceName;
-        this.lock = builder.lock;
+        this.body = builder.body;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static UpdateServiceSafetyLockRequest create() {
+    public static CloneServiceRequest create() {
         return builder().build();
     }
 
@@ -62,26 +61,26 @@ public class UpdateServiceSafetyLockRequest extends Request {
     }
 
     /**
-     * @return lock
+     * @return body
      */
-    public String getLock() {
-        return this.lock;
+    public String getBody() {
+        return this.body;
     }
 
-    public static final class Builder extends Request.Builder<UpdateServiceSafetyLockRequest, Builder> {
+    public static final class Builder extends Request.Builder<CloneServiceRequest, Builder> {
         private String clusterId; 
         private String serviceName; 
-        private String lock; 
+        private String body; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(UpdateServiceSafetyLockRequest request) {
+        private Builder(CloneServiceRequest request) {
             super(request);
             this.clusterId = request.clusterId;
             this.serviceName = request.serviceName;
-            this.lock = request.lock;
+            this.body = request.body;
         } 
 
         /**
@@ -103,48 +102,17 @@ public class UpdateServiceSafetyLockRequest extends Request {
         }
 
         /**
-         * The lock scope. Valid values:
-         * <p>
-         * 
-         * *   all: locks all operations.
-         * *   dangerous: locks high-risk operations such as delete and stop operations.
-         * *   none: locks no operations.
-         * 
-         * Enumerated values:
-         * 
-         * *   all
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   dangerous
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   none
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * body.
          */
-        public Builder lock(String lock) {
-            this.putBodyParameter("Lock", lock);
-            this.lock = lock;
+        public Builder body(String body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
             return this;
         }
 
         @Override
-        public UpdateServiceSafetyLockRequest build() {
-            return new UpdateServiceSafetyLockRequest(this);
+        public CloneServiceRequest build() {
+            return new CloneServiceRequest(this);
         } 
 
     } 

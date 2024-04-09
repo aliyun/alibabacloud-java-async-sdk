@@ -102,7 +102,7 @@ public class ListServicesResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID。
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class ListServicesResponseBody extends TeaModel {
         }
 
         /**
-         * 服务列表。
+         * Services.
          */
         public Builder services(java.util.List < Service > services) {
             this.services = services;
@@ -118,7 +118,7 @@ public class ListServicesResponseBody extends TeaModel {
         }
 
         /**
-         * 服务总数。
+         * TotalCount.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

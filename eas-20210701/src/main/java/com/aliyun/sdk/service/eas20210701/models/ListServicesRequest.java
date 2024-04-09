@@ -333,7 +333,7 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * 所属的group。
+         * Order.
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -378,7 +378,7 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * 服务所属的资源组名称或ID。
+         * ResourceName.
          */
         public Builder resourceName(String resourceName) {
             this.putQueryParameter("ResourceName", resourceName);
@@ -387,7 +387,7 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * 服务名。
+         * ServiceName.
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);
@@ -396,7 +396,7 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * 服务运行的状态。
+         * ServiceStatus.
          */
         public Builder serviceStatus(String serviceStatus) {
             this.putQueryParameter("ServiceStatus", serviceStatus);
@@ -423,7 +423,7 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * 服务的类型定义。
+         * Sort.
          */
         public Builder sort(String sort) {
             this.putQueryParameter("Sort", sort);

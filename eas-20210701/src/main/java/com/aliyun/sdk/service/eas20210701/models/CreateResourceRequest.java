@@ -205,7 +205,7 @@ public class CreateResourceRequest extends Request {
         }
 
         /**
-         * 自运维资源组配置选项
+         * SelfManagedResourceOptions.
          */
         public Builder selfManagedResourceOptions(SelfManagedResourceOptions selfManagedResourceOptions) {
             this.putBodyParameter("SelfManagedResourceOptions", selfManagedResourceOptions);
@@ -301,7 +301,7 @@ public class CreateResourceRequest extends Request {
             private String value; 
 
             /**
-             * 效果
+             * effect.
              */
             public Builder effect(String effect) {
                 this.effect = effect;
@@ -309,7 +309,7 @@ public class CreateResourceRequest extends Request {
             }
 
             /**
-             * 键名
+             * key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -317,7 +317,7 @@ public class CreateResourceRequest extends Request {
             }
 
             /**
-             * 键名和键值的关系
+             * operator.
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -325,7 +325,7 @@ public class CreateResourceRequest extends Request {
             }
 
             /**
-             * 键值
+             * value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -402,7 +402,7 @@ public class CreateResourceRequest extends Request {
             private String roleName; 
 
             /**
-             * 自运维集群Id
+             * ExternalClusterId.
              */
             public Builder externalClusterId(String externalClusterId) {
                 this.externalClusterId = externalClusterId;
@@ -410,7 +410,7 @@ public class CreateResourceRequest extends Request {
             }
 
             /**
-             * 节点的标签键值对集合
+             * NodeMatchLabels.
              */
             public Builder nodeMatchLabels(java.util.Map < String, String > nodeMatchLabels) {
                 this.nodeMatchLabels = nodeMatchLabels;
@@ -418,7 +418,7 @@ public class CreateResourceRequest extends Request {
             }
 
             /**
-             * 节点污点的容忍度列表
+             * NodeTolerations.
              */
             public Builder nodeTolerations(java.util.List < NodeTolerations> nodeTolerations) {
                 this.nodeTolerations = nodeTolerations;
@@ -426,7 +426,7 @@ public class CreateResourceRequest extends Request {
             }
 
             /**
-             * 授予云服务PAI-EAS相关权限的RAM角色名称
+             * RoleName.
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;

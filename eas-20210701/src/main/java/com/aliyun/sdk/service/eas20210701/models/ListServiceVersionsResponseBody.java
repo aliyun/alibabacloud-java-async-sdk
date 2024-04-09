@@ -118,7 +118,7 @@ public class ListServiceVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * Versions.
+         * The versions of the service.
          */
         public Builder versions(java.util.List < Versions> versions) {
             this.versions = versions;
@@ -218,7 +218,7 @@ public class ListServiceVersionsResponseBody extends TeaModel {
             private String serviceRunnable; 
 
             /**
-             * BuildTime.
+             * The time when the service version was created. The time is displayed in UTC.
              */
             public Builder buildTime(String buildTime) {
                 this.buildTime = buildTime;
@@ -226,7 +226,12 @@ public class ListServiceVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * ImageAvailable.
+             * Indicates whether the image is available. Valid values:
+             * <p>
+             * 
+             * *   true: The image is available.
+             * *   false: The image is unavailable.
+             * *   unknown: The availability of the image is unknown.
              */
             public Builder imageAvailable(String imageAvailable) {
                 this.imageAvailable = imageAvailable;
@@ -234,7 +239,7 @@ public class ListServiceVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * ImageId.
+             * The ID of the image.
              */
             public Builder imageId(Integer imageId) {
                 this.imageId = imageId;
@@ -242,7 +247,7 @@ public class ListServiceVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * The returned message.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -250,7 +255,7 @@ public class ListServiceVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceConfig.
+             * The service deployment configurations. This parameter is returned only if the service is deployed by using a custom image.
              */
             public Builder serviceConfig(String serviceConfig) {
                 this.serviceConfig = serviceConfig;
@@ -258,7 +263,12 @@ public class ListServiceVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceRunnable.
+             * Indicates whether EAS is enabled. Valid values:
+             * <p>
+             * 
+             * *   true: EAS is enabled.
+             * *   false: EAS is not enabled.
+             * *   unknown: The enabling status of EAS is unknown.
              */
             public Builder serviceRunnable(String serviceRunnable) {
                 this.serviceRunnable = serviceRunnable;

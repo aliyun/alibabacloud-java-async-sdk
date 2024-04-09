@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.eas20210701;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.eas20210701.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -18,6 +19,8 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
+    CompletableFuture<CloneServiceResponse> cloneService(CloneServiceRequest request);
+
     CompletableFuture<CommitServiceResponse> commitService(CommitServiceRequest request);
 
     CompletableFuture<CreateAppServiceResponse> createAppService(CreateAppServiceRequest request);
@@ -28,6 +31,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateGatewayIntranetLinkedVpcResponse> createGatewayIntranetLinkedVpc(CreateGatewayIntranetLinkedVpcRequest request);
 
+    /**
+      * **Before you call this operation, make sure that you are familiar with the [billing](~~144261~~) of Elastic Algorithm Service (EAS).
+      *
+     */
     CompletableFuture<CreateResourceResponse> createResource(CreateResourceRequest request);
 
     CompletableFuture<CreateResourceInstancesResponse> createResourceInstances(CreateResourceInstancesRequest request);

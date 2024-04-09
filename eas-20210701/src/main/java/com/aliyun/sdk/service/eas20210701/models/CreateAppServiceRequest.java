@@ -203,7 +203,7 @@ public class CreateAppServiceRequest extends Request {
         }
 
         /**
-         * Additional configurations that are required for the service deployment.
+         * The additional configurations that are required for service deployment.
          */
         public Builder config(java.util.Map < String, ? > config) {
             this.putBodyParameter("Config", config);
@@ -230,7 +230,19 @@ public class CreateAppServiceRequest extends Request {
         }
 
         /**
-         * The service specifications.
+         * The service specifications. Valid values:
+         * <p>
+         * 
+         * *   llama\_7b_fp16
+         * *   llama\_7b_int8
+         * *   llama\_13b_fp16
+         * *   llama\_7b_int8
+         * *   chatglm\_6b_fp16
+         * *   chatglm\_6b_int8
+         * *   chatglm2\_6b_fp16
+         * *   baichuan\_7b_int8
+         * *   baichuan\_13b_fp16
+         * *   baichuan\_7b_fp16
          */
         public Builder serviceSpec(String serviceSpec) {
             this.putBodyParameter("ServiceSpec", serviceSpec);

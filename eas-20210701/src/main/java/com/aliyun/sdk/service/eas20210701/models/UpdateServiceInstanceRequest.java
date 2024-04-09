@@ -126,7 +126,11 @@ public class UpdateServiceInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether to isolate the service instance.
+         * Specifies whether to isolate the service instance. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder isolate(Boolean isolate) {
             this.putBodyParameter("Isolate", isolate);
