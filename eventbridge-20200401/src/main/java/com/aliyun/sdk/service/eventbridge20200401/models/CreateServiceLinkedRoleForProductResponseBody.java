@@ -15,6 +15,9 @@ public class CreateServiceLinkedRoleForProductResponseBody extends TeaModel {
     @NameInMap("Code")
     private String code;
 
+    @NameInMap("HttpCode")
+    private Integer httpCode;
+
     @NameInMap("Message")
     private String message;
 
@@ -26,6 +29,7 @@ public class CreateServiceLinkedRoleForProductResponseBody extends TeaModel {
 
     private CreateServiceLinkedRoleForProductResponseBody(Builder builder) {
         this.code = builder.code;
+        this.httpCode = builder.httpCode;
         this.message = builder.message;
         this.requestId = builder.requestId;
         this.success = builder.success;
@@ -44,6 +48,13 @@ public class CreateServiceLinkedRoleForProductResponseBody extends TeaModel {
      */
     public String getCode() {
         return this.code;
+    }
+
+    /**
+     * @return httpCode
+     */
+    public Integer getHttpCode() {
+        return this.httpCode;
     }
 
     /**
@@ -69,6 +80,7 @@ public class CreateServiceLinkedRoleForProductResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
+        private Integer httpCode; 
         private String message; 
         private String requestId; 
         private Boolean success; 
@@ -78,6 +90,14 @@ public class CreateServiceLinkedRoleForProductResponseBody extends TeaModel {
          */
         public Builder code(String code) {
             this.code = code;
+            return this;
+        }
+
+        /**
+         * HttpCode.
+         */
+        public Builder httpCode(Integer httpCode) {
+            this.httpCode = httpCode;
             return this;
         }
 

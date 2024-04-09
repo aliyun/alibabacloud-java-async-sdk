@@ -13,12 +13,17 @@ import com.aliyun.sdk.gateway.eventbridge.models.*;
  */
 public class DeleteEventSourceRequest extends Request {
     @Body
+    @NameInMap("EventBusName")
+    private String eventBusName;
+
+    @Body
     @NameInMap("EventSourceName")
     @Validation(required = true)
     private String eventSourceName;
 
     private DeleteEventSourceRequest(Builder builder) {
         super(builder);
+        this.eventBusName = builder.eventBusName;
         this.eventSourceName = builder.eventSourceName;
     }
 
@@ -36,6 +41,13 @@ public class DeleteEventSourceRequest extends Request {
     }
 
     /**
+     * @return eventBusName
+     */
+    public String getEventBusName() {
+        return this.eventBusName;
+    }
+
+    /**
      * @return eventSourceName
      */
     public String getEventSourceName() {
@@ -43,6 +55,7 @@ public class DeleteEventSourceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteEventSourceRequest, Builder> {
+        private String eventBusName; 
         private String eventSourceName; 
 
         private Builder() {
@@ -51,8 +64,18 @@ public class DeleteEventSourceRequest extends Request {
 
         private Builder(DeleteEventSourceRequest request) {
             super(request);
+            this.eventBusName = request.eventBusName;
             this.eventSourceName = request.eventSourceName;
         } 
+
+        /**
+         * EventBusName.
+         */
+        public Builder eventBusName(String eventBusName) {
+            this.putBodyParameter("EventBusName", eventBusName);
+            this.eventBusName = eventBusName;
+            return this;
+        }
 
         /**
          * The name of the event source.

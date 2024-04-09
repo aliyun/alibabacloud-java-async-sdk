@@ -7682,10 +7682,14 @@ public class CreateEventStreamingRequest extends Request {
         @NameInMap("Labels")
         private String labels;
 
+        @NameInMap("RegionId")
+        private String regionId;
+
         private SourcePrometheusParameters(Builder builder) {
             this.clusterId = builder.clusterId;
             this.dataType = builder.dataType;
             this.labels = builder.labels;
+            this.regionId = builder.regionId;
         }
 
         public static Builder builder() {
@@ -7717,10 +7721,18 @@ public class CreateEventStreamingRequest extends Request {
             return this.labels;
         }
 
+        /**
+         * @return regionId
+         */
+        public String getRegionId() {
+            return this.regionId;
+        }
+
         public static final class Builder {
             private String clusterId; 
             private String dataType; 
             private String labels; 
+            private String regionId; 
 
             /**
              * ClusterId.
@@ -7743,6 +7755,14 @@ public class CreateEventStreamingRequest extends Request {
              */
             public Builder labels(String labels) {
                 this.labels = labels;
+                return this;
+            }
+
+            /**
+             * The ID of the region where the Message Queue for MQTT instance resides.
+             */
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
                 return this;
             }
 
