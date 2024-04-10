@@ -379,6 +379,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
       * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
       *
+     * @tags cluster
      */
     CompletableFuture<ListListenersByConfigResponse> listListenersByConfig(ListListenersByConfigRequest request);
 

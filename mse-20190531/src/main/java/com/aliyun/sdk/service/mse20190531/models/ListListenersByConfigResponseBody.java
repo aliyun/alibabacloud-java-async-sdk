@@ -219,16 +219,24 @@ public class ListListenersByConfigResponseBody extends TeaModel {
         @NameInMap("Ip")
         private String ip;
 
+        @NameInMap("Labels")
+        private java.util.Map < String, String > labels;
+
         @NameInMap("Md5")
         private String md5;
 
         @NameInMap("Status")
         private String status;
 
+        @NameInMap("Version")
+        private String version;
+
         private Listeners(Builder builder) {
             this.ip = builder.ip;
+            this.labels = builder.labels;
             this.md5 = builder.md5;
             this.status = builder.status;
+            this.version = builder.version;
         }
 
         public static Builder builder() {
@@ -247,6 +255,13 @@ public class ListListenersByConfigResponseBody extends TeaModel {
         }
 
         /**
+         * @return labels
+         */
+        public java.util.Map < String, String > getLabels() {
+            return this.labels;
+        }
+
+        /**
          * @return md5
          */
         public String getMd5() {
@@ -260,16 +275,33 @@ public class ListListenersByConfigResponseBody extends TeaModel {
             return this.status;
         }
 
+        /**
+         * @return version
+         */
+        public String getVersion() {
+            return this.version;
+        }
+
         public static final class Builder {
             private String ip; 
+            private java.util.Map < String, String > labels; 
             private String md5; 
             private String status; 
+            private String version; 
 
             /**
              * The IP address.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
+                return this;
+            }
+
+            /**
+             * Labels.
+             */
+            public Builder labels(java.util.Map < String, String > labels) {
+                this.labels = labels;
                 return this;
             }
 
@@ -286,6 +318,14 @@ public class ListListenersByConfigResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * Version.
+             */
+            public Builder version(String version) {
+                this.version = version;
                 return this;
             }
 

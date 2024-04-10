@@ -225,10 +225,14 @@ public class ListListenersByIpResponseBody extends TeaModel {
         @NameInMap("Md5")
         private String md5;
 
+        @NameInMap("NamespaceId")
+        private String namespaceId;
+
         private Listeners(Builder builder) {
             this.dataId = builder.dataId;
             this.group = builder.group;
             this.md5 = builder.md5;
+            this.namespaceId = builder.namespaceId;
         }
 
         public static Builder builder() {
@@ -260,10 +264,18 @@ public class ListListenersByIpResponseBody extends TeaModel {
             return this.md5;
         }
 
+        /**
+         * @return namespaceId
+         */
+        public String getNamespaceId() {
+            return this.namespaceId;
+        }
+
         public static final class Builder {
             private String dataId; 
             private String group; 
             private String md5; 
+            private String namespaceId; 
 
             /**
              * The ID of the data.
@@ -286,6 +298,14 @@ public class ListListenersByIpResponseBody extends TeaModel {
              */
             public Builder md5(String md5) {
                 this.md5 = md5;
+                return this;
+            }
+
+            /**
+             * NamespaceId.
+             */
+            public Builder namespaceId(String namespaceId) {
+                this.namespaceId = namespaceId;
                 return this;
             }
 
