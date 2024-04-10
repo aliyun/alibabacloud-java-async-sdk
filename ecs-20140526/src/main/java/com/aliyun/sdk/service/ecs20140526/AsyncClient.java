@@ -973,6 +973,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DescribeClassicLinkInstancesResponse> describeClassicLinkInstances(DescribeClassicLinkInstancesRequest request);
 
+    CompletableFuture<DescribeCloudAssistantSettingsResponse> describeCloudAssistantSettings(DescribeCloudAssistantSettingsRequest request);
+
     /**
       * - Before you run commands on or send files to instances, especially new instances, we recommend that you query the status of Cloud Assistant on the instances by calling this operation and checking the return value of CloudAssistantStatus. Run commands on or send files to the instances only when the return value is true.
       * - You can use one of the following methods to check the responses:
@@ -1539,6 +1541,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeTasksResponse> describeTasks(DescribeTasksRequest request);
 
     /**
+      * You can query the session records of Session Manager that were generated in the last four weeks.
+      *
+     */
+    CompletableFuture<DescribeTerminalSessionsResponse> describeTerminalSessions(DescribeTerminalSessionsRequest request);
+
+    /**
       * @deprecated
       *
      */
@@ -1907,6 +1915,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyBandwidthPackageSpecResponse> modifyBandwidthPackageSpec(ModifyBandwidthPackageSpecRequest request);
 
     CompletableFuture<ModifyCapacityReservationResponse> modifyCapacityReservation(ModifyCapacityReservationRequest request);
+
+    CompletableFuture<ModifyCloudAssistantSettingsResponse> modifyCloudAssistantSettings(ModifyCloudAssistantSettingsRequest request);
 
     /**
       * You can modify a command when it is run. After the command is modified, the new command content applies to subsequent executions.
