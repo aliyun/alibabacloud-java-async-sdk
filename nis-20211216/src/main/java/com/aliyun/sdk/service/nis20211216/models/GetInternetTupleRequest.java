@@ -26,6 +26,10 @@ public class GetInternetTupleRequest extends Request {
     private String cloudIp;
 
     @Query
+    @NameInMap("CloudIpList")
+    private java.util.List < String > cloudIpList;
+
+    @Query
     @NameInMap("CloudIsp")
     private String cloudIsp;
 
@@ -106,6 +110,7 @@ public class GetInternetTupleRequest extends Request {
         this.accountIds = builder.accountIds;
         this.beginTime = builder.beginTime;
         this.cloudIp = builder.cloudIp;
+        this.cloudIpList = builder.cloudIpList;
         this.cloudIsp = builder.cloudIsp;
         this.cloudPort = builder.cloudPort;
         this.direction = builder.direction;
@@ -158,6 +163,13 @@ public class GetInternetTupleRequest extends Request {
      */
     public String getCloudIp() {
         return this.cloudIp;
+    }
+
+    /**
+     * @return cloudIpList
+     */
+    public java.util.List < String > getCloudIpList() {
+        return this.cloudIpList;
     }
 
     /**
@@ -290,6 +302,7 @@ public class GetInternetTupleRequest extends Request {
         private java.util.List < Long > accountIds; 
         private Long beginTime; 
         private String cloudIp; 
+        private java.util.List < String > cloudIpList; 
         private String cloudIsp; 
         private String cloudPort; 
         private String direction; 
@@ -318,6 +331,7 @@ public class GetInternetTupleRequest extends Request {
             this.accountIds = request.accountIds;
             this.beginTime = request.beginTime;
             this.cloudIp = request.cloudIp;
+            this.cloudIpList = request.cloudIpList;
             this.cloudIsp = request.cloudIsp;
             this.cloudPort = request.cloudPort;
             this.direction = request.direction;
@@ -362,6 +376,16 @@ public class GetInternetTupleRequest extends Request {
         public Builder cloudIp(String cloudIp) {
             this.putQueryParameter("CloudIp", cloudIp);
             this.cloudIp = cloudIp;
+            return this;
+        }
+
+        /**
+         * The local IP addresses for filtering.
+         */
+        public Builder cloudIpList(java.util.List < String > cloudIpList) {
+            String cloudIpListShrink = shrink(cloudIpList, "CloudIpList", "json");
+            this.putQueryParameter("CloudIpList", cloudIpListShrink);
+            this.cloudIpList = cloudIpList;
             return this;
         }
 
