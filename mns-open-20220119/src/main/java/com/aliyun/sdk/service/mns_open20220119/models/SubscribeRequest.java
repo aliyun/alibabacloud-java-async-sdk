@@ -12,8 +12,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SubscribeRequest</p>
  */
 public class SubscribeRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("Endpoint")
+    @Validation(required = true)
     private String endpoint;
 
     @Query
@@ -30,11 +35,8 @@ public class SubscribeRequest extends Request {
 
     @Query
     @NameInMap("PushType")
+    @Validation(required = true)
     private String pushType;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Query
     @NameInMap("SubscriptionName")
@@ -43,16 +45,17 @@ public class SubscribeRequest extends Request {
 
     @Query
     @NameInMap("TopicName")
+    @Validation(required = true)
     private String topicName;
 
     private SubscribeRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.endpoint = builder.endpoint;
         this.messageTag = builder.messageTag;
         this.notifyContentFormat = builder.notifyContentFormat;
         this.notifyStrategy = builder.notifyStrategy;
         this.pushType = builder.pushType;
-        this.regionId = builder.regionId;
         this.subscriptionName = builder.subscriptionName;
         this.topicName = builder.topicName;
     }
@@ -68,6 +71,13 @@ public class SubscribeRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -106,13 +116,6 @@ public class SubscribeRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return subscriptionName
      */
     public String getSubscriptionName() {
@@ -127,12 +130,12 @@ public class SubscribeRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SubscribeRequest, Builder> {
+        private String regionId; 
         private String endpoint; 
         private String messageTag; 
         private String notifyContentFormat; 
         private String notifyStrategy; 
         private String pushType; 
-        private String regionId; 
         private String subscriptionName; 
         private String topicName; 
 
@@ -142,15 +145,24 @@ public class SubscribeRequest extends Request {
 
         private Builder(SubscribeRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.endpoint = request.endpoint;
             this.messageTag = request.messageTag;
             this.notifyContentFormat = request.notifyContentFormat;
             this.notifyStrategy = request.notifyStrategy;
             this.pushType = request.pushType;
-            this.regionId = request.regionId;
             this.subscriptionName = request.subscriptionName;
             this.topicName = request.topicName;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * Endpoint.
@@ -194,15 +206,6 @@ public class SubscribeRequest extends Request {
         public Builder pushType(String pushType) {
             this.putQueryParameter("PushType", pushType);
             this.pushType = pushType;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

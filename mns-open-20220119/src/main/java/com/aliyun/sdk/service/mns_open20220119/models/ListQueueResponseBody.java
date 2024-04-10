@@ -182,14 +182,8 @@ public class ListQueueResponseBody extends TeaModel {
         @NameInMap("PollingWaitSeconds")
         private Long pollingWaitSeconds;
 
-        @NameInMap("QueueInternalUrl")
-        private String queueInternalUrl;
-
         @NameInMap("QueueName")
         private String queueName;
-
-        @NameInMap("QueueUrl")
-        private String queueUrl;
 
         @NameInMap("VisibilityTimeout")
         private Long visibilityTimeout;
@@ -205,9 +199,7 @@ public class ListQueueResponseBody extends TeaModel {
             this.maximumMessageSize = builder.maximumMessageSize;
             this.messageRetentionPeriod = builder.messageRetentionPeriod;
             this.pollingWaitSeconds = builder.pollingWaitSeconds;
-            this.queueInternalUrl = builder.queueInternalUrl;
             this.queueName = builder.queueName;
-            this.queueUrl = builder.queueUrl;
             this.visibilityTimeout = builder.visibilityTimeout;
         }
 
@@ -290,24 +282,10 @@ public class ListQueueResponseBody extends TeaModel {
         }
 
         /**
-         * @return queueInternalUrl
-         */
-        public String getQueueInternalUrl() {
-            return this.queueInternalUrl;
-        }
-
-        /**
          * @return queueName
          */
         public String getQueueName() {
             return this.queueName;
-        }
-
-        /**
-         * @return queueUrl
-         */
-        public String getQueueUrl() {
-            return this.queueUrl;
         }
 
         /**
@@ -328,9 +306,7 @@ public class ListQueueResponseBody extends TeaModel {
             private Long maximumMessageSize; 
             private Long messageRetentionPeriod; 
             private Long pollingWaitSeconds; 
-            private String queueInternalUrl; 
             private String queueName; 
-            private String queueUrl; 
             private Long visibilityTimeout; 
 
             /**
@@ -414,26 +390,10 @@ public class ListQueueResponseBody extends TeaModel {
             }
 
             /**
-             * QueueInternalUrl.
-             */
-            public Builder queueInternalUrl(String queueInternalUrl) {
-                this.queueInternalUrl = queueInternalUrl;
-                return this;
-            }
-
-            /**
              * QueueName.
              */
             public Builder queueName(String queueName) {
                 this.queueName = queueName;
-                return this;
-            }
-
-            /**
-             * QueueUrl.
-             */
-            public Builder queueUrl(String queueUrl) {
-                this.queueUrl = queueUrl;
                 return this;
             }
 

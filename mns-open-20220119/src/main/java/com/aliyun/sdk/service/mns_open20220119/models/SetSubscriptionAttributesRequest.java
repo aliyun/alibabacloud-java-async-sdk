@@ -12,13 +12,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SetSubscriptionAttributesRequest</p>
  */
 public class SetSubscriptionAttributesRequest extends Request {
-    @Query
-    @NameInMap("NotifyStrategy")
-    private String notifyStrategy;
-
     @Host
     @NameInMap("RegionId")
     private String regionId;
+
+    @Query
+    @NameInMap("NotifyStrategy")
+    private String notifyStrategy;
 
     @Query
     @NameInMap("SubscriptionName")
@@ -32,8 +32,8 @@ public class SetSubscriptionAttributesRequest extends Request {
 
     private SetSubscriptionAttributesRequest(Builder builder) {
         super(builder);
-        this.notifyStrategy = builder.notifyStrategy;
         this.regionId = builder.regionId;
+        this.notifyStrategy = builder.notifyStrategy;
         this.subscriptionName = builder.subscriptionName;
         this.topicName = builder.topicName;
     }
@@ -52,17 +52,17 @@ public class SetSubscriptionAttributesRequest extends Request {
     }
 
     /**
-     * @return notifyStrategy
-     */
-    public String getNotifyStrategy() {
-        return this.notifyStrategy;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return notifyStrategy
+     */
+    public String getNotifyStrategy() {
+        return this.notifyStrategy;
     }
 
     /**
@@ -80,8 +80,8 @@ public class SetSubscriptionAttributesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SetSubscriptionAttributesRequest, Builder> {
-        private String notifyStrategy; 
         private String regionId; 
+        private String notifyStrategy; 
         private String subscriptionName; 
         private String topicName; 
 
@@ -91,20 +91,11 @@ public class SetSubscriptionAttributesRequest extends Request {
 
         private Builder(SetSubscriptionAttributesRequest request) {
             super(request);
-            this.notifyStrategy = request.notifyStrategy;
             this.regionId = request.regionId;
+            this.notifyStrategy = request.notifyStrategy;
             this.subscriptionName = request.subscriptionName;
             this.topicName = request.topicName;
         } 
-
-        /**
-         * NotifyStrategy.
-         */
-        public Builder notifyStrategy(String notifyStrategy) {
-            this.putQueryParameter("NotifyStrategy", notifyStrategy);
-            this.notifyStrategy = notifyStrategy;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -112,6 +103,15 @@ public class SetSubscriptionAttributesRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * NotifyStrategy.
+         */
+        public Builder notifyStrategy(String notifyStrategy) {
+            this.putQueryParameter("NotifyStrategy", notifyStrategy);
+            this.notifyStrategy = notifyStrategy;
             return this;
         }
 

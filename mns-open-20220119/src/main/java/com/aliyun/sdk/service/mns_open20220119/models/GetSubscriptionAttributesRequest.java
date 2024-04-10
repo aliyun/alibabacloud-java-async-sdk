@@ -23,6 +23,7 @@ public class GetSubscriptionAttributesRequest extends Request {
 
     @Query
     @NameInMap("TopicName")
+    @Validation(required = true)
     private String topicName;
 
     private GetSubscriptionAttributesRequest(Builder builder) {

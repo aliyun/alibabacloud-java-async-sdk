@@ -12,19 +12,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteQueueRequest</p>
  */
 public class DeleteQueueRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("QueueName")
     @Validation(required = true)
     private String queueName;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private DeleteQueueRequest(Builder builder) {
         super(builder);
-        this.queueName = builder.queueName;
         this.regionId = builder.regionId;
+        this.queueName = builder.queueName;
     }
 
     public static Builder builder() {
@@ -41,22 +41,22 @@ public class DeleteQueueRequest extends Request {
     }
 
     /**
-     * @return queueName
-     */
-    public String getQueueName() {
-        return this.queueName;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
     }
 
+    /**
+     * @return queueName
+     */
+    public String getQueueName() {
+        return this.queueName;
+    }
+
     public static final class Builder extends Request.Builder<DeleteQueueRequest, Builder> {
-        private String queueName; 
         private String regionId; 
+        private String queueName; 
 
         private Builder() {
             super();
@@ -64,18 +64,9 @@ public class DeleteQueueRequest extends Request {
 
         private Builder(DeleteQueueRequest request) {
             super(request);
-            this.queueName = request.queueName;
             this.regionId = request.regionId;
+            this.queueName = request.queueName;
         } 
-
-        /**
-         * QueueName.
-         */
-        public Builder queueName(String queueName) {
-            this.putQueryParameter("QueueName", queueName);
-            this.queueName = queueName;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -83,6 +74,15 @@ public class DeleteQueueRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * QueueName.
+         */
+        public Builder queueName(String queueName) {
+            this.putQueryParameter("QueueName", queueName);
+            this.queueName = queueName;
             return this;
         }
 

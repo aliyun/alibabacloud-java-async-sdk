@@ -12,19 +12,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SetTopicAttributesRequest</p>
  */
 public class SetTopicAttributesRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("EnableLogging")
-    @Validation(required = true)
     private Boolean enableLogging;
 
     @Query
     @NameInMap("MaxMessageSize")
-    @Validation(required = true)
     private Long maxMessageSize;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Query
     @NameInMap("TopicName")
@@ -33,9 +31,9 @@ public class SetTopicAttributesRequest extends Request {
 
     private SetTopicAttributesRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.enableLogging = builder.enableLogging;
         this.maxMessageSize = builder.maxMessageSize;
-        this.regionId = builder.regionId;
         this.topicName = builder.topicName;
     }
 
@@ -53,6 +51,13 @@ public class SetTopicAttributesRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return enableLogging
      */
     public Boolean getEnableLogging() {
@@ -67,13 +72,6 @@ public class SetTopicAttributesRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return topicName
      */
     public String getTopicName() {
@@ -81,9 +79,9 @@ public class SetTopicAttributesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SetTopicAttributesRequest, Builder> {
+        private String regionId; 
         private Boolean enableLogging; 
         private Long maxMessageSize; 
-        private String regionId; 
         private String topicName; 
 
         private Builder() {
@@ -92,11 +90,20 @@ public class SetTopicAttributesRequest extends Request {
 
         private Builder(SetTopicAttributesRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.enableLogging = request.enableLogging;
             this.maxMessageSize = request.maxMessageSize;
-            this.regionId = request.regionId;
             this.topicName = request.topicName;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * EnableLogging.
@@ -113,15 +120,6 @@ public class SetTopicAttributesRequest extends Request {
         public Builder maxMessageSize(Long maxMessageSize) {
             this.putQueryParameter("MaxMessageSize", maxMessageSize);
             this.maxMessageSize = maxMessageSize;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

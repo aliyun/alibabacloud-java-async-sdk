@@ -12,19 +12,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListTopicRequest</p>
  */
 public class ListTopicRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("PageNum")
-    @Validation(required = true)
     private Long pageNum;
 
     @Query
     @NameInMap("PageSize")
-    @Validation(required = true)
     private Long pageSize;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Query
     @NameInMap("TopicName")
@@ -32,9 +30,9 @@ public class ListTopicRequest extends Request {
 
     private ListTopicRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.pageNum = builder.pageNum;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
         this.topicName = builder.topicName;
     }
 
@@ -52,6 +50,13 @@ public class ListTopicRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return pageNum
      */
     public Long getPageNum() {
@@ -66,13 +71,6 @@ public class ListTopicRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return topicName
      */
     public String getTopicName() {
@@ -80,9 +78,9 @@ public class ListTopicRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListTopicRequest, Builder> {
+        private String regionId; 
         private Long pageNum; 
         private Long pageSize; 
-        private String regionId; 
         private String topicName; 
 
         private Builder() {
@@ -91,11 +89,20 @@ public class ListTopicRequest extends Request {
 
         private Builder(ListTopicRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.pageNum = request.pageNum;
             this.pageSize = request.pageSize;
-            this.regionId = request.regionId;
             this.topicName = request.topicName;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * PageNum.
@@ -112,15 +119,6 @@ public class ListTopicRequest extends Request {
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

@@ -12,30 +12,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListQueueRequest</p>
  */
 public class ListQueueRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("PageNum")
-    @Validation(required = true)
     private Long pageNum;
 
     @Query
     @NameInMap("PageSize")
-    @Validation(required = true)
     private Long pageSize;
 
     @Query
     @NameInMap("QueueName")
     private String queueName;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     private ListQueueRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.pageNum = builder.pageNum;
         this.pageSize = builder.pageSize;
         this.queueName = builder.queueName;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -49,6 +47,13 @@ public class ListQueueRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -72,18 +77,11 @@ public class ListQueueRequest extends Request {
         return this.queueName;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<ListQueueRequest, Builder> {
+        private String regionId; 
         private Long pageNum; 
         private Long pageSize; 
         private String queueName; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -91,11 +89,20 @@ public class ListQueueRequest extends Request {
 
         private Builder(ListQueueRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.pageNum = request.pageNum;
             this.pageSize = request.pageSize;
             this.queueName = request.queueName;
-            this.regionId = request.regionId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * PageNum.
@@ -121,15 +128,6 @@ public class ListQueueRequest extends Request {
         public Builder queueName(String queueName) {
             this.putQueryParameter("QueueName", queueName);
             this.queueName = queueName;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

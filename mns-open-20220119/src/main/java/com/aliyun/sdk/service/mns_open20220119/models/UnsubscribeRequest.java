@@ -23,6 +23,7 @@ public class UnsubscribeRequest extends Request {
 
     @Query
     @NameInMap("TopicName")
+    @Validation(required = true)
     private String topicName;
 
     private UnsubscribeRequest(Builder builder) {

@@ -170,14 +170,8 @@ public class GetTopicAttributesResponseBody extends TeaModel {
         @NameInMap("MessageRetentionPeriod")
         private Long messageRetentionPeriod;
 
-        @NameInMap("TopicInnerUrl")
-        private String topicInnerUrl;
-
         @NameInMap("TopicName")
         private String topicName;
-
-        @NameInMap("TopicUrl")
-        private String topicUrl;
 
         private Data(Builder builder) {
             this.createTime = builder.createTime;
@@ -186,9 +180,7 @@ public class GetTopicAttributesResponseBody extends TeaModel {
             this.maxMessageSize = builder.maxMessageSize;
             this.messageCount = builder.messageCount;
             this.messageRetentionPeriod = builder.messageRetentionPeriod;
-            this.topicInnerUrl = builder.topicInnerUrl;
             this.topicName = builder.topicName;
-            this.topicUrl = builder.topicUrl;
         }
 
         public static Builder builder() {
@@ -242,24 +234,10 @@ public class GetTopicAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * @return topicInnerUrl
-         */
-        public String getTopicInnerUrl() {
-            return this.topicInnerUrl;
-        }
-
-        /**
          * @return topicName
          */
         public String getTopicName() {
             return this.topicName;
-        }
-
-        /**
-         * @return topicUrl
-         */
-        public String getTopicUrl() {
-            return this.topicUrl;
         }
 
         public static final class Builder {
@@ -269,9 +247,7 @@ public class GetTopicAttributesResponseBody extends TeaModel {
             private Long maxMessageSize; 
             private Long messageCount; 
             private Long messageRetentionPeriod; 
-            private String topicInnerUrl; 
             private String topicName; 
-            private String topicUrl; 
 
             /**
              * CreateTime.
@@ -322,26 +298,10 @@ public class GetTopicAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * TopicInnerUrl.
-             */
-            public Builder topicInnerUrl(String topicInnerUrl) {
-                this.topicInnerUrl = topicInnerUrl;
-                return this;
-            }
-
-            /**
              * TopicName.
              */
             public Builder topicName(String topicName) {
                 this.topicName = topicName;
-                return this;
-            }
-
-            /**
-             * TopicUrl.
-             */
-            public Builder topicUrl(String topicUrl) {
-                this.topicUrl = topicUrl;
                 return this;
             }
 

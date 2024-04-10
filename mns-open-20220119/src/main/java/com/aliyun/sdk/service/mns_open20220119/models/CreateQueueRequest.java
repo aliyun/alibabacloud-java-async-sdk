@@ -12,29 +12,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateQueueRequest</p>
  */
 public class CreateQueueRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("DelaySeconds")
-    @Validation(required = true)
     private Long delaySeconds;
 
     @Query
     @NameInMap("EnableLogging")
-    @Validation(required = true)
     private Boolean enableLogging;
 
     @Query
     @NameInMap("MaximumMessageSize")
-    @Validation(required = true)
     private Long maximumMessageSize;
 
     @Query
     @NameInMap("MessageRetentionPeriod")
-    @Validation(required = true)
     private Long messageRetentionPeriod;
 
     @Query
     @NameInMap("PollingWaitSeconds")
-    @Validation(required = true)
     private Long pollingWaitSeconds;
 
     @Query
@@ -42,24 +41,19 @@ public class CreateQueueRequest extends Request {
     @Validation(required = true)
     private String queueName;
 
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
     @Query
     @NameInMap("VisibilityTimeout")
-    @Validation(required = true)
     private Long visibilityTimeout;
 
     private CreateQueueRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.delaySeconds = builder.delaySeconds;
         this.enableLogging = builder.enableLogging;
         this.maximumMessageSize = builder.maximumMessageSize;
         this.messageRetentionPeriod = builder.messageRetentionPeriod;
         this.pollingWaitSeconds = builder.pollingWaitSeconds;
         this.queueName = builder.queueName;
-        this.regionId = builder.regionId;
         this.visibilityTimeout = builder.visibilityTimeout;
     }
 
@@ -74,6 +68,13 @@ public class CreateQueueRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -119,13 +120,6 @@ public class CreateQueueRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return visibilityTimeout
      */
     public Long getVisibilityTimeout() {
@@ -133,13 +127,13 @@ public class CreateQueueRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateQueueRequest, Builder> {
+        private String regionId; 
         private Long delaySeconds; 
         private Boolean enableLogging; 
         private Long maximumMessageSize; 
         private Long messageRetentionPeriod; 
         private Long pollingWaitSeconds; 
         private String queueName; 
-        private String regionId; 
         private Long visibilityTimeout; 
 
         private Builder() {
@@ -148,15 +142,24 @@ public class CreateQueueRequest extends Request {
 
         private Builder(CreateQueueRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.delaySeconds = request.delaySeconds;
             this.enableLogging = request.enableLogging;
             this.maximumMessageSize = request.maximumMessageSize;
             this.messageRetentionPeriod = request.messageRetentionPeriod;
             this.pollingWaitSeconds = request.pollingWaitSeconds;
             this.queueName = request.queueName;
-            this.regionId = request.regionId;
             this.visibilityTimeout = request.visibilityTimeout;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * DelaySeconds.
@@ -209,15 +212,6 @@ public class CreateQueueRequest extends Request {
         public Builder queueName(String queueName) {
             this.putQueryParameter("QueueName", queueName);
             this.queueName = queueName;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

@@ -173,9 +173,6 @@ public class GetSubscriptionAttributesResponseBody extends TeaModel {
         @NameInMap("SubscriptionName")
         private String subscriptionName;
 
-        @NameInMap("SubscriptionURL")
-        private String subscriptionURL;
-
         @NameInMap("TopicName")
         private String topicName;
 
@@ -190,7 +187,6 @@ public class GetSubscriptionAttributesResponseBody extends TeaModel {
             this.notifyContentFormat = builder.notifyContentFormat;
             this.notifyStrategy = builder.notifyStrategy;
             this.subscriptionName = builder.subscriptionName;
-            this.subscriptionURL = builder.subscriptionURL;
             this.topicName = builder.topicName;
             this.topicOwner = builder.topicOwner;
         }
@@ -253,13 +249,6 @@ public class GetSubscriptionAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * @return subscriptionURL
-         */
-        public String getSubscriptionURL() {
-            return this.subscriptionURL;
-        }
-
-        /**
          * @return topicName
          */
         public String getTopicName() {
@@ -281,7 +270,6 @@ public class GetSubscriptionAttributesResponseBody extends TeaModel {
             private String notifyContentFormat; 
             private String notifyStrategy; 
             private String subscriptionName; 
-            private String subscriptionURL; 
             private String topicName; 
             private String topicOwner; 
 
@@ -338,14 +326,6 @@ public class GetSubscriptionAttributesResponseBody extends TeaModel {
              */
             public Builder subscriptionName(String subscriptionName) {
                 this.subscriptionName = subscriptionName;
-                return this;
-            }
-
-            /**
-             * SubscriptionURL.
-             */
-            public Builder subscriptionURL(String subscriptionURL) {
-                this.subscriptionURL = subscriptionURL;
                 return this;
             }
 

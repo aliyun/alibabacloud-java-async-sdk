@@ -12,19 +12,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListSubscriptionByTopicRequest</p>
  */
 public class ListSubscriptionByTopicRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("PageNum")
-    @Validation(required = true)
     private Long pageNum;
 
     @Query
     @NameInMap("PageSize")
-    @Validation(required = true)
     private Long pageSize;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Query
     @NameInMap("SubscriptionName")
@@ -37,9 +35,9 @@ public class ListSubscriptionByTopicRequest extends Request {
 
     private ListSubscriptionByTopicRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.pageNum = builder.pageNum;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
         this.subscriptionName = builder.subscriptionName;
         this.topicName = builder.topicName;
     }
@@ -58,6 +56,13 @@ public class ListSubscriptionByTopicRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return pageNum
      */
     public Long getPageNum() {
@@ -69,13 +74,6 @@ public class ListSubscriptionByTopicRequest extends Request {
      */
     public Long getPageSize() {
         return this.pageSize;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -93,9 +91,9 @@ public class ListSubscriptionByTopicRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListSubscriptionByTopicRequest, Builder> {
+        private String regionId; 
         private Long pageNum; 
         private Long pageSize; 
-        private String regionId; 
         private String subscriptionName; 
         private String topicName; 
 
@@ -105,12 +103,21 @@ public class ListSubscriptionByTopicRequest extends Request {
 
         private Builder(ListSubscriptionByTopicRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.pageNum = request.pageNum;
             this.pageSize = request.pageSize;
-            this.regionId = request.regionId;
             this.subscriptionName = request.subscriptionName;
             this.topicName = request.topicName;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * PageNum.
@@ -127,15 +134,6 @@ public class ListSubscriptionByTopicRequest extends Request {
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 
