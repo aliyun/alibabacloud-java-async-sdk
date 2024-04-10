@@ -110,7 +110,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
         }
 
         /**
-         * The details about the snapshot chains.
+         * The details of the snapshot chains.
          */
         public Builder snapshotLinks(SnapshotLinks snapshotLinks) {
             this.snapshotLinks = snapshotLinks;
@@ -290,10 +290,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
             private Long totalSize; 
 
             /**
-             * The type of the snapshot.
-             * <p>
-             * 
-             * > This parameter will be removed in the future. We recommend that you configure `InstantAccess` to ensure compatibility.
+             * The category of the snapshot.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -301,7 +298,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID.
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -322,6 +319,8 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
              * 
              * *   true: The instant access feature is enabled. This feature can be enabled only for enhanced SSDs (ESSDs).
              * *   false: The instant access feature is disabled. The snapshot is a normal snapshot for which the instant access feature is disabled.
+             * 
+             * >  This parameter is no longer used. By default, new normal snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see [Use the instant access feature](~~193667~~).
              */
             public Builder instantAccess(Boolean instantAccess) {
                 this.instantAccess = instantAccess;
@@ -329,7 +328,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region where the source disk of the snapshot chain is located.
+             * The region ID of the source disk.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -337,7 +336,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
             }
 
             /**
-             * The snapshot chain IDs.
+             * The ID of the snapshot chain.
              */
             public Builder snapshotLinkId(String snapshotLinkId) {
                 this.snapshotLinkId = snapshotLinkId;
@@ -345,7 +344,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
             }
 
             /**
-             * The source disk ID. This parameter is retained even if the source disk is deleted.
+             * The ID of the source disk. This parameter is retained even if the source disk is deleted.
              */
             public Builder sourceDiskId(String sourceDiskId) {
                 this.sourceDiskId = sourceDiskId;
@@ -361,7 +360,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the source disk. Unit: GiB.
+             * The capacity of the source disk. Unit: GiB.
              */
             public Builder sourceDiskSize(Integer sourceDiskSize) {
                 this.sourceDiskSize = sourceDiskSize;
@@ -389,7 +388,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
             }
 
             /**
-             * The total size of all snapshots in the snapshot chain. Unit: bytes.
+             * The total size of all snapshots in the snapshot chain. Unit: byte.
              */
             public Builder totalSize(Long totalSize) {
                 this.totalSize = totalSize;

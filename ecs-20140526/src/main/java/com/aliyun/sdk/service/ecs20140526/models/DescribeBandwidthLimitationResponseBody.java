@@ -58,7 +58,7 @@ public class DescribeBandwidthLimitationResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,8 +137,8 @@ public class DescribeBandwidthLimitationResponseBody extends TeaModel {
              * The billing method for network usage. Valid values:
              * <p>
              * 
-             * *   PayByBandwidth: pay-by-bandwidth
-             * *   PayByTraffic: pay-by-traffic
+             * *   PayByBandwidth
+             * *   PayByTraffic
              */
             public Builder internetChargeType(String internetChargeType) {
                 this.internetChargeType = internetChargeType;

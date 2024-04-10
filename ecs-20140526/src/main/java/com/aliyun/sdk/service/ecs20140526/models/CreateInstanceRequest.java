@@ -963,7 +963,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * > This parameter is in invitational preview and is unavailable.
+         * >  This parameter is in invitational preview and is not publicly available.
          */
         public Builder arn(java.util.List < Arn> arn) {
             this.putQueryParameter("Arn", arn);
@@ -972,11 +972,11 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable auto-renewal for the instance. This parameter is valid only when the `InstanceChargeType` parameter is set to `PrePaid`. Default value: false. Valid values:
+         * Specifies whether to enable auto-renewal for the instance. This parameter is valid only if `InstanceChargeType` is set to `PrePaid`. Valid values:
          * <p>
          * 
-         * * true: enables auto-renewal.
-         * * false: does not enable auto-renewal.
+         * *   true: enables auto-renewal.
+         * *   false: does not enable auto-renewal.
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -985,10 +985,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The auto-renewal cycle of the instance. This parameter is required when AutoRenew is set to true.
+         * The auto-renewal period of the instance. This parameter is required if AutoRenew is set to true.
          * <p>
          * 
-         * Valid values when PeriodUnit is set to Month: 1, 2, 3, 6, and 12
+         * Valid values if PeriodUnit is set to Month: 1, 2, 3, 6, and 12.
          */
         public Builder autoRenewPeriod(Integer autoRenewPeriod) {
             this.putQueryParameter("AutoRenewPeriod", autoRenewPeriod);
@@ -997,7 +997,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.**** For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -1009,7 +1009,7 @@ public class CreateInstanceRequest extends Request {
          * The ID of the cluster in which to create the instance.
          * <p>
          * 
-         * > This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.
+         * >  This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -1021,8 +1021,8 @@ public class CreateInstanceRequest extends Request {
          * The performance mode of the burstable instance. Valid values:
          * <p>
          * 
-         * *   Standard: the standard mode. For more information, see the "Standard mode" section in [Burstable instances](~~59977~~).
-         * *   Unlimited: the unlimited mode. For more information, see the "Unlimited mode" section in [Burstable instances](~~59977~~).
+         * *   Standard: standard mode. For more information, see the "Standard mode" section in the [Overview of burstable instances](~~59977~~) topic.
+         * *   Unlimited: unlimited mode. For more information, see the "Unlimited mode" section in the [Burstable instances](~~59977~~) topic.
          */
         public Builder creditSpecification(String creditSpecification) {
             this.putQueryParameter("CreditSpecification", creditSpecification);
@@ -1031,7 +1031,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The list of data disks.
+         * The data disks.
          */
         public Builder dataDisk(java.util.List < DataDisk> dataDisk) {
             this.putQueryParameter("DataDisk", dataDisk);
@@ -1043,9 +1043,9 @@ public class CreateInstanceRequest extends Request {
          * The ID of the dedicated host on which to create the instance.
          * <p>
          * 
-         * You can call the [DescribeDedicatedHosts](~~134242~~) operation to query the list of dedicated host IDs.
+         * You can call the [DescribeDedicatedHosts](~~134242~~) operation to query the list of dedicated host IDs
          * 
-         * If the `DedicatedHostId` parameter is specified, the `SpotStrategy` and `SpotPriceLimit` parameters are ignored. This is because preemptible instances cannot be created on dedicated hosts.
+         * If you specify `DedicatedHostId`, the `SpotStrategy` and `SpotPriceLimit` parameters are ignored. This is because preemptible instances cannot be created on dedicated hosts.
          */
         public Builder dedicatedHostId(String dedicatedHostId) {
             this.putQueryParameter("DedicatedHostId", dedicatedHostId);
@@ -1054,11 +1054,11 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable release protection for the instance. This parameter determines whether you can use the ECS console or call the [DeleteInstance](~~25507~~) operation to release the instance. Default value: false. Valid values:
+         * Specifies whether to enable release protection for the instance. This parameter indicates whether you can use the ECS console or call the [DeleteInstance](~~25507~~) operation to release the instance.
          * <p>
          * 
          * *   true: enables release protection.
-         * *   false: disables release protection.
+         * *   false (default): disables release protection.
          * 
          * >  This parameter is applicable only to pay-as-you-go instances. It can protect instances against manual releases, but not against automatic releases.
          */
@@ -1099,11 +1099,11 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether to check the validity of the request without actually making the request. Default value: false. Valid values:
+         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
          * <p>
          * 
-         * *   true: The validity of the request is checked but the request is not made. Check items include whether required parameters are specified, the request format, service limits, and available ECS resources. If the check fails, the corresponding error code is returned. If the check succeeds, the `DryRunOperation` error code is returned.
-         * *   false: The validity of the request is checked, and the request is made if the check succeeds.
+         * *   true: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, service limits, and unavailable ECS resources. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+         * *   false (default): performs a dry run and performs the actual request. If the request passes the dry run, the operation is performed.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -1115,9 +1115,9 @@ public class CreateInstanceRequest extends Request {
          * The hostname of the instance.
          * <p>
          * 
-         * * The hostname cannot start or end with a period (.) or hyphen (-). It cannot contain consecutive periods (.) or hyphens (-).
-         * * For a Windows instance, the hostname must be 2 to 15 characters in length and cannot contain periods (.) or contain only digits. It can contain letters, digits, and hyphens (-).
-         * * For an instance that runs another type of operating system such as Linux, the hostname must be 2 to 64 characters in length. You can use periods (.) to separate the hostname into multiple segments. Each segment can contain letters, digits, and hyphens (-).
+         * *   The hostname cannot start or end with a period (.) or hyphen (-). It cannot contain consecutive periods (.) or hyphens (-).
+         * *   For a Windows instance, the hostname must be 2 to 15 characters in length and cannot contain periods (.) or contain only digits. It can contain letters, digits, and hyphens (-).
+         * *   For an instance that runs another type of operating system such as Linux, the hostname must be 2 to 64 characters in length. You can use periods (.) to separate the hostname into multiple segments. Each segment can contain letters, digits, and hyphens (-).
          */
         public Builder hostName(String hostName) {
             this.putQueryParameter("HostName", hostName);
@@ -1126,7 +1126,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the HPC cluster to which to assign the instance.
+         * The ID of the high performance computing (HPC) cluster to which to assign the instance.
          */
         public Builder hpcClusterId(String hpcClusterId) {
             this.putQueryParameter("HpcClusterId", hpcClusterId);
@@ -1138,12 +1138,12 @@ public class CreateInstanceRequest extends Request {
          * Specifies whether to enable the access channel for instance metadata. Valid values:
          * <p>
          * 
-         * *   enabled: enables the access channel for instance metadata.
-         * *   disabled: disables the access channel for instance metadata.
+         * *   enabled
+         * *   disabled
          * 
          * Default value: enabled.
          * 
-         * >  For more information about instance metadata, see [Overview of ECS instance metadata](~~49122~~).
+         * >  For more information about instance metadata, see [Overview of instance metadata](~~49122~~).
          */
         public Builder httpEndpoint(String httpEndpoint) {
             this.putQueryParameter("HttpEndpoint", httpEndpoint);
@@ -1152,7 +1152,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * >  This parameter is currently in invitational preview and unavailable for general users.
+         * >  This parameter is in invitational preview and is not publicly available.
          */
         public Builder httpPutResponseHopLimit(Integer httpPutResponseHopLimit) {
             this.putQueryParameter("HttpPutResponseHopLimit", httpPutResponseHopLimit);
@@ -1161,15 +1161,15 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether to forcefully use the security-enhanced mode (IMDSv2) to access instance metadata. Valid values:
+         * Specifies whether to forcibly use the security hardening mode (IMDSv2) to access instance metadata. Valid values:
          * <p>
          * 
-         * *   optional: does not forcibly use the security-enhanced mode (IMDSv2).
-         * *   required: forcefully uses the security-enhanced mode (IMDSv2). After you set this parameter to required, you cannot access instance metadata in normal mode.
+         * *   optional: does not forcefully use the security hardening mode (IMDSv2).
+         * *   required: forcefully uses the security hardening mode (IMDSv2). After you set this parameter to required, you cannot access instance metadata in normal mode.
          * 
          * Default value: optional.
          * 
-         * >  For more information about modes of accessing instance metadata, see [Access mode of instance metadata](~~150575~~).
+         * >  For more information about the modes of accessing instance metadata, see [Access mode of instance metadata](~~150575~~).
          */
         public Builder httpTokens(String httpTokens) {
             this.putQueryParameter("HttpTokens", httpTokens);
@@ -1181,8 +1181,8 @@ public class CreateInstanceRequest extends Request {
          * The name of the image family. You can set this parameter to obtain the latest available custom image from the specified image family to create the instance.
          * <p>
          * 
-         * * ImageFamily must be empty if `ImageId` is specified.
-         * * ImageFamily can be specified if `ImageId` is not specified.
+         * *   ImageFamily must be empty if `ImageId` is specified.
+         * *   ImageFamily can be specified if `ImageId` is not specified.
          */
         public Builder imageFamily(String imageFamily) {
             this.putQueryParameter("ImageFamily", imageFamily);
@@ -1191,7 +1191,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the image to use to create the instance. To use an Alibaba Cloud Marketplace image, you can view the `image ID` on the product page of the Alibaba Cloud Marketplace image. This parameter is required if you do not specify the `ImageFamily` parameter to obtain the latest available custom image from the specified image family.
+         * The ID of the image to use to create the instance. To use an Alibaba Cloud Marketplace image, you can view the `image ID` on the product page of the Alibaba Cloud Marketplace image. This parameter is required if you do not specify `ImageFamily` to obtain the latest available custom image from the specified image family.
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -1209,11 +1209,11 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The billing method of the instance. Default value: PostPaid. Valid values:
+         * The billing method of the instance. Valid values:
          * <p>
          * 
-         * * PrePaid: subscription. If you set this parameter to PrePaid, make sure that you have sufficient balance or credit in your account. Otherwise, an `InvalidPayMethod` error is returned.
-         * * PostPaid: pay-as-you-go.
+         * *   PrePaid: subscription. If you set this parameter to PrePaid, make sure that you have sufficient balance or credit in your account. Otherwise, an `InvalidPayMethod` error is returned.
+         * *   PostPaid (default): pay-as-you-go.
          */
         public Builder instanceChargeType(String instanceChargeType) {
             this.putQueryParameter("InstanceChargeType", instanceChargeType);
@@ -1234,8 +1234,8 @@ public class CreateInstanceRequest extends Request {
          * The instance type.
          * <p>
          * 
-         * * Select an instance type. See [Instance families](~~25378~~) or call the [DescribeInstanceTypes](~~25620~~) operation to query the performance data of an instance type, or see [Best practices for instance type selection](~~58291~~) to learn about how to select instance types.
-         * * Query available resources. You can call the [DescribeAvailableResource](~~66186~~) operation to query available resources in a specific region or zone.
+         * *   Instance type selection: See [Instance families](~~25378~~) or call the [DescribeInstanceTypes](~~25620~~) operation to query the performance data of instance types, or see [Best practices for instance type selection](~~58291~~) to learn about how to select instance types.
+         * *   Query of available resources: Call the [DescribeAvailableResource](~~66186~~) operation to query resources available in a specific region or zone.
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -1247,10 +1247,10 @@ public class CreateInstanceRequest extends Request {
          * The billing method for network usage. Default value: PayByTraffic. Valid values:
          * <p>
          * 
-         * * PayByBandwidth: pay-by-bandwidth
-         * * PayByTraffic: pay-by-traffic
+         * *   PayByBandwidth: pay-by-bandwidth
+         * *   PayByTraffic (default): pay-by-traffic
          * 
-         * > When the **pay-by-traffic** billing method for network usage is used, the maximum inbound and outbound bandwidth values are used as upper limits of bandwidths instead of guaranteed performance specifications. In scenarios where demand outstrips resource supplies, these maximum bandwidth values may not be reached. If you want guaranteed bandwidths for your instance, use the **pay-by-bandwidth** billing method for network usage.
+         * >  When the **pay-by-traffic** billing method is used for network usage, the maximum inbound and outbound bandwidths are used as the upper limits of bandwidths instead of guaranteed performance specifications. In scenarios where demand outstrips resource supplies, these maximum bandwidth values may be limited. If you want guaranteed bandwidths for your instance, use the **pay-by-bandwidth** billing method for network usage.
          */
         public Builder internetChargeType(String internetChargeType) {
             this.putQueryParameter("InternetChargeType", internetChargeType);
@@ -1262,8 +1262,8 @@ public class CreateInstanceRequest extends Request {
          * The maximum inbound public bandwidth. Unit: Mbit/s. Valid values:
          * <p>
          * 
-         * * When the purchased outbound public bandwidth is less than or equal to 10 Mbit/s, the valid values of this parameter are 1 to 10 and the default value is 10.
-         * * When the purchased outbound public bandwidth is greater than 10 Mbit/s, the valid values of this parameter are 1 to the `InternetMaxBandwidthOut` value and the default value is the `InternetMaxBandwidthOut` value.
+         * *   When the purchased outbound public bandwidth is less than or equal to 10 Mbit/s, the valid values of this parameter are 1 to 10 and the default value is 10.
+         * *   When the purchased outbound public bandwidth is greater than 10 Mbit/s, the valid values of this parameter are 1 to the `InternetMaxBandwidthOut` value and the default value is the `InternetMaxBandwidthOut` value.
          */
         public Builder internetMaxBandwidthIn(Integer internetMaxBandwidthIn) {
             this.putQueryParameter("InternetMaxBandwidthIn", internetMaxBandwidthIn);
@@ -1288,7 +1288,7 @@ public class CreateInstanceRequest extends Request {
          * <p>
          * 
          * *   none: The instance is not I/O optimized.
-         * *   optimized: The instance is I/O optimized.
+         * *   optimized: The ECS instance is I/O optimized.
          * 
          * For retired instance types, the default value is none. For more information, see [Retired instance types](~~55263~~).
          * 
@@ -1313,7 +1313,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * > This parameter is in invitational preview and is unavailable.
+         * >  This parameter is in invitational preview and is not publicly available.
          */
         public Builder nodeControllerId(String nodeControllerId) {
             this.putQueryParameter("NodeControllerId", nodeControllerId);
@@ -1340,18 +1340,16 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The password of the instance. The password must be 8 to 30 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include:
+         * The password of the instance. The password must be 8 to 30 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. The following special characters are supported:
          * <p>
          * 
-         * ```plain
-         * ( ) ` ~ ! @ # $ % ^ & * - _ + = | { } [ ] : ; \" < > , . ? /
-         * ```
+         *     ( ) ` ~ ! @ # $ % ^ & * - _ + = | { } [ ] : ; \" < > , . ? /
          * 
          * Take note of the following items:
          * 
-         * * For security reasons, we recommend that you use HTTPS to send requests if the Password parameter is specified.
-         * * Passwords of Windows instances cannot start with a forward slash (/).
-         * * Passwords cannot be set for instances that run some types of operating systems such as Others Linux and Fedora CoreOS. For these instances, only key pairs can be set.
+         * *   For security reasons, we recommend that you use HTTPS to send requests if the Password parameter is specified.
+         * *   Passwords of Windows instances cannot start with a forward slash (/).
+         * *   Passwords cannot be set for instances that run specific types of operating systems such as Others Linux and Fedora CoreOS. For these instances, only key pairs can be set.
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -1360,7 +1358,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether to use the password preset in the image. When you use this parameter, leave Password empty and make sure that the selected image has a password preset.
+         * Specifies whether to use the password preset in the image. When you use this parameter, leave the Password parameter empty and make sure that the selected image has a password preset.
          */
         public Builder passwordInherit(Boolean passwordInherit) {
             this.putQueryParameter("PasswordInherit", passwordInherit);
@@ -1369,10 +1367,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The subscription period of the instance. The unit is specified by the `PeriodUnit` parameter. This parameter is valid and required only when `InstanceChargeType` is set to `PrePaid`. If the `DedicatedHostId` parameter is specified, the value of Period must not exceed the subscription period of the specified dedicated host. Valid values:
+         * The subscription period of the instance. The unit is specified by `PeriodUnit`. This parameter is valid and required only when `InstanceChargeType` is set to `PrePaid`. If `DedicatedHostId` is specified, the value of Period must not exceed the subscription period of the specified dedicated host. Valid values:
          * <p>
          * 
-         * Valid values when PeriodUnit is set to Month: 1, 2, 3, 6, and 12
+         * Valid values if PeriodUnit is set to Month: 1, 2, 3, 6, and 12.
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -1395,7 +1393,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The private IP address to assign to the instance. The private IP address must be an available IP address within the CIDR block of the specified vSwitch.
+         * The private IP address to assign to the instance. The private IP address must be an available IP address in the CIDR block of the specified vSwitch.
          */
         public Builder privateIpAddress(String privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);
@@ -1452,8 +1450,8 @@ public class CreateInstanceRequest extends Request {
          * Specifies whether to enable security hardening. Valid values:
          * <p>
          * 
-         * *   Active: enables security hardening. This value is applicable only to public images.
-         * *   Deactive: does not enable security hardening. This value is applicable to all images.
+         * *   Active: enables security hardening. This value applies only to public images.
+         * *   Deactive: disables security hardening. This value is applicable to all images.
          */
         public Builder securityEnhancementStrategy(String securityEnhancementStrategy) {
             this.putQueryParameter("SecurityEnhancementStrategy", securityEnhancementStrategy);
@@ -1462,7 +1460,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the security group to which to assign the instance. Instances in the same security group can communicate with each other.
+         * The ID of the security group to which to assign the instance.
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -1471,13 +1469,15 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The protection period of the preemptible instance. Unit: hours. Valid values: 0, 1, 2, 3, 4, 5, and 6.
+         * The protection period of the preemptible instance. Unit: hours. Default value: 1. Valid values:
          * <p>
          * 
-         * *   Protection periods of 2, 3, 4, 5, and 6 hours are in invitational preview. If you want to set this parameter to one of these values, submit a ticket.
-         * *   If this parameter is set to 0, no protection period is configured for the preemptible instance.
+         * *   1: After a preemptible instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period ends, the system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.
+         * *   0: After a preemptible instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.
          * 
-         * Default value: 1.
+         * Alibaba Cloud sends an ECS system event to notify you 5 minutes before the instance is released. Preemptible instances are billed by second. We recommend that you specify an appropriate protection period based on your business requirements.
+         * 
+         * >  This parameter takes effect only if the SpotStrategy parameter is set to SpotWithPriceLimit or SpotAsPriceGo.
          */
         public Builder spotDuration(Integer spotDuration) {
             this.putQueryParameter("SpotDuration", spotDuration);
@@ -1486,7 +1486,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The interruption mode of the preemptible instance. Default value: Terminate. Set the value to Terminate, which specifies to release the instance.
+         * The interruption mode of the preemptible instance. The value can only be Terminate, which specifies that the instance is released.
          */
         public Builder spotInterruptionBehavior(String spotInterruptionBehavior) {
             this.putQueryParameter("SpotInterruptionBehavior", spotInterruptionBehavior);
@@ -1495,7 +1495,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The maximum hourly price of the instance. The value is accurate to three decimal places. This parameter is valid only when the `SpotStrategy` parameter is set to `SpotWithPriceLimit`.
+         * The maximum hourly price of the instance. The value is accurate to three decimal places. This parameter is valid only when `SpotStrategy` is set to `SpotWithPriceLimit`.
          */
         public Builder spotPriceLimit(Float spotPriceLimit) {
             this.putQueryParameter("SpotPriceLimit", spotPriceLimit);
@@ -1504,12 +1504,12 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The bidding policy for the pay-as-you-go instance. This parameter is valid only when the `InstanceChargeType` parameter is set to `PostPaid`. Default value: NoSpot. Valid values:
+         * The bidding policy for the pay-as-you-go instance. This parameter is valid only if you set `InstanceChargeType` to `PostPaid`. Valid values:
          * <p>
          * 
-         * *   NoSpot: The instance is created as a regular pay-as-you-go instance.
-         * *   SpotWithPriceLimit: The instance is created as a preemptible instance with a user-defined maximum hourly price.
-         * *   SpotAsPriceGo: The instance is created as a preemptible instance for which the market price at the time of purchase is automatically used as the bid price.
+         * *   NoSpot (default): The instance is created as a regular pay-as-you-go instance.
+         * *   SpotWithPriceLimit: The instance is a preemptible instance for which you specify the maximum hourly price.
+         * *   SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is automatically used as the bid price. The market price can be up to the pay-as-you-go price.
          */
         public Builder spotStrategy(String spotStrategy) {
             this.putQueryParameter("SpotStrategy", spotStrategy);
@@ -1549,7 +1549,7 @@ public class CreateInstanceRequest extends Request {
          * <p>
          * 
          * *   default: creates the instance on a non-dedicated host.
-         * *   host: creates the instance on a dedicated host. If you do not specify the `DedicatedHostId` parameter, Alibaba Cloud selects a dedicated host for the instance.
+         * *   host: creates the instance on a dedicated host. If you do not specify `DedicatedHostId`, Alibaba Cloud selects a dedicated host for the instance.
          * 
          * Default value: default.
          */
@@ -1560,7 +1560,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether to use the system configurations for virtual machines provided by Alibaba Cloud (Windows: NTP and KMS. Linux: NTP and YUM).
+         * Specifies whether to use the system configurations for virtual machines. Alibaba Cloud provides the Network Time Protocol (NTP) and Key Management Service (KMS) system configurations for Windows and the NTP and Yellowdog Updater, Modified (YUM) system configurations for Linux.
          */
         public Builder useAdditionalService(Boolean useAdditionalService) {
             this.putQueryParameter("UseAdditionalService", useAdditionalService);
@@ -1581,7 +1581,7 @@ public class CreateInstanceRequest extends Request {
          * The ID of the vSwitch to which to connect the instance. This parameter is required when you create an instance in a VPC. You can call the [DescribeVSwitches](~~35748~~) operation to query available vSwitches.
          * <p>
          * 
-         * >  If the `VSwitchId` parameter is specified, the zone specified by the `ZoneId` parameter must be the zone where the specified vSwitch is located. You can also leave the `ZoneId` parameter empty. Then, the system selects the zone where the specified vSwitch is located.
+         * >  If `VSwitchId` is specified, the zone specified by `ZoneId` must be the zone where the specified vSwitch resides. You can also leave `ZoneId` empty. Then, the system selects the zone where the specified vSwitch resides.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -1599,10 +1599,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the zone in which to create the instance. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.
+         * The ID of the zone in which to create the instance. You can call the [DescribeZones](~~25610~~) operation to query the zones in a specific region.
          * <p>
          * 
-         * >  If the `VSwitchId` parameter is specified, the zone specified by the `ZoneId` parameter must be the zone where the specified vSwitch is located. You can also leave the `ZoneId` parameter empty. Then, the system selects the zone where the specified vSwitch is located.
+         * >  If `VSwitchId` is specified, the zone specified by `ZoneId` must be the zone where the specified vSwitch resides. You can also leave `ZoneId` empty. Then, the system selects the zone where the specified vSwitch resides.
          * 
          * This parameter is empty by default.
          */
@@ -1646,7 +1646,7 @@ public class CreateInstanceRequest extends Request {
             private Boolean configured; 
 
             /**
-             * > This parameter is in invitational preview and is unavailable.
+             * >  This parameter is in invitational preview and is not publicly available.
              */
             public Builder configured(Boolean configured) {
                 this.configured = configured;
@@ -1699,7 +1699,7 @@ public class CreateInstanceRequest extends Request {
             private String matchCriteria; 
 
             /**
-             * The ID of the private pool to use to create the instance. The ID of a private pool is the same as that of the elasticity assurance or capacity reservation for which the private pool is generated.
+             * The ID of the private pool. The ID of a private pool is the same as that of the elasticity assurance or capacity reservation for which the private pool is generated.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -1707,20 +1707,20 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * The type of the private pool to use to create the instance. A private pool is generated when an elasticity assurance or a capacity reservation takes effect. You can select a private pool when you create an instance. Valid values:
+             * The type of the private pool to use to start the instance. A private pool is generated when an elasticity assurance or a capacity reservation takes effect. You can select a private pool to start instances. Valid values:
              * <p>
              * 
-             * * Open: open private pool. The system selects a matching open private pool to create the instance. If no matching open private pools are found, resources in the public pool are used. When you set this parameter to Open, you can leave the `PrivatePoolOptions.Id` parameter empty.
-             * * Target: specified private pool. The system uses the capacity in a specified private pool to create the instance. If the specified private pool is unavailable, the instance cannot be created. If you set this parameter to Target, you must specify the `PrivatePoolOptions.Id` parameter.
-             * * None: no private pool. The capacity in private pools is not used.
+             * *   Open: open private pool. The system selects a matching open private pool to start the instance. If no matching open private pools are found, resources in the public pool are used. When you set this parameter to Open, you can leave the `PrivatePoolOptions.Id` parameter empty.
+             * *   Target: specified private pool. The system uses the capacity in a specified private pool to start the instance. If the specified private pool is unavailable, the instance cannot be started. If you set this parameter to Target, you must specify the `PrivatePoolOptions.Id` parameter.
+             * *   None: no private pool. The capacity in private pools is not used.
              * 
-             * Default value: None.
+             * Default value: none.
              * 
              * In the following scenarios, the PrivatePoolOptions.MatchCriteria parameter can be set only to `None` or left empty:
              * 
-             * * Create a preemptible instance.
-             * * Create an instance in the classic network.
-             * * Create an instance on a dedicated host.
+             * *   Create a preemptible instance.
+             * *   Create an instance in the classic network.
+             * *   Create an instance on a dedicated host.
              */
             public Builder matchCriteria(String matchCriteria) {
                 this.matchCriteria = matchCriteria;
@@ -1824,12 +1824,12 @@ public class CreateInstanceRequest extends Request {
              * The category of the system disk. Valid values:
              * <p>
              * 
-             * * cloud_essd: ESSD. When the parameter is set to this value, you can use the `SystemDisk.PerformanceLevel` parameter to specify the performance level of the disk.
-             * * cloud_efficiency: ultra disk.
-             * * cloud_ssd: standard SSD.
-             * * cloud: basic disk.
+             * *   cloud_essd: ESSD. If SystemDisk.Category is set to this value, you can use `SystemDisk.PerformanceLevel` to specify the performance level of the disk.
+             * *   cloud_efficiency: ultra disk.
+             * *   cloud_ssd: standard SSD.
+             * *   cloud: basic disk.
              * 
-             * For non-I/O optimized instances of retired instance types, the default value is cloud. For other instances, the default value is cloud_efficiency.
+             * For non-I/O optimized instances of retired instance types, the default value is cloud. For other types of instances, the default value is cloud_efficiency.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -1859,15 +1859,15 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * The performance level of the ESSD to use as the system disk. Default value: PL1. Valid values:
+             * The performance level of the ESSD that is used as the system disk. Default value: PL1. Valid values:
              * <p>
              * 
-             * * PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.
-             * * PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.
-             * * PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.
-             * * PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.
+             * *   PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.
+             * *   PL1 (default): A single ESSD can deliver up to 50,000 random read/write IOPS.
+             * *   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.
+             * *   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.
              * 
-             * For more information about ESSD performance levels, see [ESSDs](~~122389~~).
+             * For information about ESSD performance levels, see [ESSDs](~~122389~~).
              */
             public Builder performanceLevel(String performanceLevel) {
                 this.performanceLevel = performanceLevel;
@@ -1875,10 +1875,13 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * The size of the system disk. Unit: GiB. Valid values: 20 to 500.
+             * The size of the system disk. Unit: GiB. Valid values:
              * <p>
              * 
-             * The value of this parameter must be at least 20 and greater than or equal to the size of the specified image.
+             * *   Basic disks: 20 to 500.
+             * *   Other disks: 20 to 2048.
+             * 
+             * The value of this parameter must be at least 20 and greater than or equal to the size of the image.
              * 
              * Default value: 40 or the size of the image, whichever is greater.
              */
@@ -1888,7 +1891,7 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * The ID of the dedicated block storage cluster. If you want to use a disk in a dedicated block storage cluster as the system disk when you create the instance, you must specify this parameter.
+             * The ID of the dedicated block storage cluster. If you want to use disks in a dedicated block storage cluster as system disks when you create instances, you need to specify this parameter.
              */
             public Builder storageClusterId(String storageClusterId) {
                 this.storageClusterId = storageClusterId;
@@ -1953,7 +1956,7 @@ public class CreateInstanceRequest extends Request {
             private String rolearn; 
 
             /**
-             * > This parameter is in invitational preview and is unavailable.
+             * >  This parameter is in invitational preview and is not publicly available.
              */
             public Builder assumeRoleFor(Long assumeRoleFor) {
                 this.assumeRoleFor = assumeRoleFor;
@@ -1961,7 +1964,7 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * > This parameter is in invitational preview and is unavailable.
+             * >  This parameter is in invitational preview and is not publicly available.
              */
             public Builder roleType(String roleType) {
                 this.roleType = roleType;
@@ -1969,7 +1972,7 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * > This parameter is in invitational preview and is unavailable.
+             * >  This parameter is in invitational preview and is not publicly available.
              */
             public Builder rolearn(String rolearn) {
                 this.rolearn = rolearn;
@@ -2161,6 +2164,9 @@ public class CreateInstanceRequest extends Request {
              * Specifies whether to release data disk N when the instance is released.
              * <p>
              * 
+             * *   true: releases data disk N.
+             * *   false: does not release data disk N.
+             * 
              * Default value: true.
              */
             public Builder deleteWithInstance(Boolean deleteWithInstance) {
@@ -2180,7 +2186,7 @@ public class CreateInstanceRequest extends Request {
              * The mount point of data disk N.
              * <p>
              * 
-             * >  This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.
+             * >  This parameter is applicable to scenarios in which a full image is used to create instances. A full image is an image that contains an operating system, application software, and business data. For these scenarios, you can set this parameter to the mount point of data disk N contained in the full image and modify the `DataDisk.N.Size` and `DataDisk.N.Category` parameters to change the category and size of data disk N created based on the image.
              */
             public Builder device(String device) {
                 this.device = device;
@@ -2196,7 +2202,7 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * The algorithm to use to encrypt data disk N.
+             * >  This parameter is not publicly available.
              */
             public Builder encryptAlgorithm(String encryptAlgorithm) {
                 this.encryptAlgorithm = encryptAlgorithm;
@@ -2207,6 +2213,9 @@ public class CreateInstanceRequest extends Request {
              * Specifies whether to encrypt data disk N.
              * <p>
              * 
+             * *   true: encrypts data disk N.
+             * *   false: does not encrypt data disk N.
+             * 
              * Default value: false.
              */
             public Builder encrypted(Boolean encrypted) {
@@ -2215,7 +2224,7 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * The ID of the Key Management Service (KMS) key to use for data disk N.
+             * The ID of the KMS key to use for data disk N.
              */
             public Builder KMSKeyId(String KMSKeyId) {
                 this.KMSKeyId = KMSKeyId;
@@ -2223,11 +2232,11 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * The performance level of the ESSD to use as data disk N. The N value must be the same as that in `DataDisk.N.Category` when DataDisk.N.Category is set to cloud_essd. Default value: PL1. Valid values:
+             * The performance level of the ESSD to use as data disk N. The value of N must be the same as that in `DataDisk.N.Category` when DataDisk.N.Category is set to cloud_essd. Valid values:
              * <p>
              * 
              * *   PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.
-             * *   PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.
+             * *   PL1 (default): A single ESSD can deliver up to 50,000 random read/write IOPS.
              * *   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.
              * *   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.
              * 
@@ -2242,20 +2251,20 @@ public class CreateInstanceRequest extends Request {
              * The size of data disk N. Valid values of N: 1 to 16. Unit: GiB. Valid values:
              * <p>
              * 
-             * * Valid values when DataDisk.N.Category is set to cloud_efficiency: 20 to 32768.
+             * *   Valid values if DataDisk.N.Category is set to cloud_efficiency: 20 to 32768.
              * 
-             * * Valid values when DataDisk.N.Category is set to cloud_ssd: 20 to 32768.
+             * *   Valid values if DataDisk.N.Category is set to cloud_ssd: 20 to 32768.
              * 
-             * * Valid values when DataDisk.N.Category is set to cloud_essd: depend on the `DataDisk.N.PerformanceLevel` value.
+             * *   Valid values if DataDisk.N.Category is set to cloud_essd: vary based on the `DataDisk.N.PerformanceLevel` value.
              * 
-             *     * Valid values when the DataDisk.N.PerformanceLevel parameter is set to PL0: 40 to 32768.
-             *     * Valid values when the DataDisk.N.PerformanceLevel parameter is set to PL1: 20 to 32768.
-             *     * Valid values when the DataDisk.N.PerformanceLevel parameter is set to PL2: 461 to 32768.
-             *     * Valid values when the DataDisk.N.PerformanceLevel parameter is set to PL3: 1261 to 32768.
+             *     *   Valid values if DataDisk.N.PerformanceLevel is set to PL0: 40 to 32768.
+             *     *   Valid values if DataDisk.N.PerformanceLevel is set to PL1: 20 to 32768.
+             *     *   Valid values if DataDisk.N.PerformanceLevel is set to PL2: 461 to 32768.
+             *     *   Valid values if DataDisk.N.PerformanceLevel is set to PL3: 1261 to 32768.
              * 
-             * * Valid values when DataDisk.N.Category is set to cloud: 5 to 2000.
+             * *   Valid values if DataDisk.N.Category is set to cloud: 5 to 2000.
              * 
-             * The value of this parameter must be greater than or equal to the size of the snapshot specified by the `SnapshotId` parameter.
+             * The value of this parameter must be greater than or equal to the size of the snapshot specified by `SnapshotId`.
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -2266,8 +2275,8 @@ public class CreateInstanceRequest extends Request {
              * The ID of the snapshot to use to create data disk N. Valid values of N: 1 to 16.
              * <p>
              * 
-             * *   If the `DataDisk.N.SnapshotId` parameter is specified, the `DataDisk.N.Size` parameter is ignored and the data disk is created with the size of the specified snapshot.
-             * *   Use snapshots created after July 15, 2013. Otherwise, an error is returned and your request is rejected.
+             * *   If `DataDisk.N.SnapshotId` is specified, `DataDisk.N.Size` is ignored. The data disk is created based on the size of the specified snapshot.
+             * *   Use snapshots created on or after July 15, 2013. Otherwise, an error is returned and your request is rejected.
              */
             public Builder snapshotId(String snapshotId) {
                 this.snapshotId = snapshotId;
@@ -2336,7 +2345,7 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * The value of tag N to add to the instance, disks, and primary ENI. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length. It cannot start with `acs:` or contain `http://` or `https://`.
+             * The value of tag N to add to the instance, disks, and primary ENI. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with `acs:`. It cannot contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

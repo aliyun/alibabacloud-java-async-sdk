@@ -214,7 +214,7 @@ public class DescribeDiskMonitorDataRequest extends Request {
         }
 
         /**
-         * The interval at which you want to query the monitoring data. Unit: seconds. Valid values:
+         * The interval at which to retrieve the monitoring data. Unit: seconds. Valid values:
          * <p>
          * 
          * *   60

@@ -219,7 +219,7 @@ public class DescribeKeyPairsRequest extends Request {
         }
 
         /**
-         * IncludePublicKey.
+         * Specifies whether to include PublicKey in the response. Default value: false.
          */
         public Builder includePublicKey(Boolean includePublicKey) {
             this.putQueryParameter("IncludePublicKey", includePublicKey);

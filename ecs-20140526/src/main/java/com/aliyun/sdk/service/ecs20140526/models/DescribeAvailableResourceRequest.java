@@ -84,7 +84,7 @@ public class DescribeAvailableResourceRequest extends Request {
 
     @Query
     @NameInMap("SpotDuration")
-    @Validation(maximum = 6, minimum = 2)
+    @Validation(maximum = 6)
     private Integer spotDuration;
 
     @Query

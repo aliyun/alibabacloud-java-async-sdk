@@ -140,7 +140,7 @@ public class DeleteAutoProvisioningGroupRequest extends Request {
         } 
 
         /**
-         * The ID of the auto provisioning group to be deleted.
+         * The ID of the auto provisioning group.
          */
         public Builder autoProvisioningGroupId(String autoProvisioningGroupId) {
             this.putQueryParameter("AutoProvisioningGroupId", autoProvisioningGroupId);
@@ -197,8 +197,10 @@ public class DeleteAutoProvisioningGroupRequest extends Request {
          * Specifies whether to release instances in the auto provisioning group. Valid values:
          * <p>
          * 
-         * *   true: releases instances in the auto provisioning group.
-         * *   false: retains instances in the auto provisioning group.
+         * *   true
+         * *   false
+         * 
+         * >  By default, this parameter inherits the value of `TerminateInstances` that you specified when you call the `CreateAutoProvisioningGroup` operation to create an auto provisioning group. You can also change the value of `TerminateInstances` when you call the DeleteAutoProvisioningGroup operation to delete the auto provisioning group.
          */
         public Builder terminateInstances(Boolean terminateInstances) {
             this.putQueryParameter("TerminateInstances", terminateInstances);

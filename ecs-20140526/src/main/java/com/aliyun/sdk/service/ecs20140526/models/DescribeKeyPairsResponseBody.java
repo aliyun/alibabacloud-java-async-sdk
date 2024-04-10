@@ -86,7 +86,7 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Details about the key pairs.
+         * The information of the key pairs.
          */
         public Builder keyPairs(KeyPairs keyPairs) {
             this.keyPairs = keyPairs;
@@ -344,7 +344,7 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
             }
 
             /**
-             * PublicKey.
+             * The content of the public key.
              */
             public Builder publicKey(String publicKey) {
                 this.publicKey = publicKey;

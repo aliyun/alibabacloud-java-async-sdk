@@ -156,7 +156,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The details about the security groups.
+         * The information about the security groups.
          */
         public Builder securityGroups(SecurityGroups securityGroups) {
             this.securityGroups = securityGroups;
@@ -216,7 +216,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The tag key of the security group.
+             * The key of the tag.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -224,7 +224,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value of the security group.
+             * The value of the tag.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -438,7 +438,12 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * > This parameter is in invitational preview and is not publicly available.
+             * The number of private IP addresses that can be added to the security group. For more information, see the "Security group capacity" section in [Basic security groups and advanced security groups](~~605897#section-kj9-e46-6v5~~).
+             * <p>
+             * 
+             * If you set IsQueryEcsCount to True, the return value of AvailableInstanceAmount is valid.
+             * 
+             * >  This parameter is deprecated. The returned quantity is provided only for reference. The actual quantity may differ from the returned quantity.
              */
             public Builder availableInstanceAmount(Integer availableInstanceAmount) {
                 this.availableInstanceAmount = availableInstanceAmount;
@@ -462,7 +467,12 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * > This parameter is in invitational preview and is not publicly available.
+             * The number of private IP addresses that are contained in the security group. For more information, see the "Security group capacity" section in [Basic security groups and advanced security groups](~~605897#section-kj9-e46-6v5~~).
+             * <p>
+             * 
+             * If you set IsQueryEcsCount to True, the return value of EcsCount is valid.
+             * 
+             * >  This parameter is deprecated. The returned quantity is provided only for reference. The actual quantity may differ from the returned quantity.
              */
             public Builder ecsCount(Integer ecsCount) {
                 this.ecsCount = ecsCount;
@@ -478,7 +488,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The security group ID.
+             * The ID of the security group.
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -522,7 +532,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the security groups.
+             * The tags of the security group.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;

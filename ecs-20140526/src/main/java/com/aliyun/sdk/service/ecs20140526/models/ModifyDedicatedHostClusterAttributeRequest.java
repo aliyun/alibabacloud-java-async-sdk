@@ -186,7 +186,7 @@ public class ModifyDedicatedHostClusterAttributeRequest extends Request {
         }
 
         /**
-         * The new name of the dedicated host cluster. The name must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter. It cannot contain `http://` or `https://`.
+         * The new name of the dedicated host cluster. The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter. The name cannot contain `http://` or `https://`.
          */
         public Builder dedicatedHostClusterName(String dedicatedHostClusterName) {
             this.putQueryParameter("DedicatedHostClusterName", dedicatedHostClusterName);

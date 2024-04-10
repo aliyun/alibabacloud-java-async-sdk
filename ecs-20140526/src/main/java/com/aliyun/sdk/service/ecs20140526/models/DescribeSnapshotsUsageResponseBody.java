@@ -62,7 +62,7 @@ public class DescribeSnapshotsUsageResponseBody extends TeaModel {
         private Long snapshotSize; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeSnapshotsUsageResponseBody extends TeaModel {
         }
 
         /**
-         * The total size of snapshots stored in the current region. Unit: byte.
+         * The total size of snapshots stored in the current region. Unit: bytes.
          */
         public Builder snapshotSize(Long snapshotSize) {
             this.snapshotSize = snapshotSize;

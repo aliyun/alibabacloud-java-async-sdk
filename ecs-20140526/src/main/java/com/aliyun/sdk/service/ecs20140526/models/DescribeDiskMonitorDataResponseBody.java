@@ -62,7 +62,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The details about the monitoring data of the disk.
+         * The monitoring data of the disk.
          */
         public Builder monitorData(MonitorData monitorData) {
             this.monitorData = monitorData;
@@ -226,7 +226,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             private String timeStamp; 
 
             /**
-             * The read bandwidth of the system disk. Unit: byte/s.
+             * The read bandwidth of the disk. Unit: byte/s.
              */
             public Builder BPSRead(Integer BPSRead) {
                 this.BPSRead = BPSRead;
@@ -234,7 +234,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * The total read and write bandwidth of the system disk. Unit: byte/s.
+             * The total read and write bandwidth of the disk. Unit: byte/s.
              */
             public Builder BPSTotal(Integer BPSTotal) {
                 this.BPSTotal = BPSTotal;
@@ -242,7 +242,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * The write bandwidth of the system disk. Unit: byte/s.
+             * The write bandwidth of the disk. Unit: byte/s.
              */
             public Builder BPSWrite(Integer BPSWrite) {
                 this.BPSWrite = BPSWrite;
@@ -250,7 +250,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * The disk ID.
+             * The ID of the disk.
              */
             public Builder diskId(String diskId) {
                 this.diskId = diskId;
@@ -258,7 +258,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * The number of read I/O operations per second on the system disk.
+             * The number of read I/O operations per second on the disk.
              */
             public Builder IOPSRead(Integer IOPSRead) {
                 this.IOPSRead = IOPSRead;
@@ -266,7 +266,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of read and write I/O operations per second on the system disk.
+             * The total number of read and write I/O operations per second on the disk.
              */
             public Builder IOPSTotal(Integer IOPSTotal) {
                 this.IOPSTotal = IOPSTotal;
@@ -274,7 +274,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * The number of write I/O operations per second on the system disk.
+             * The number of write I/O operations per second on the disk.
              */
             public Builder IOPSWrite(Integer IOPSWrite) {
                 this.IOPSWrite = IOPSWrite;
@@ -298,7 +298,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp to query the monitoring data. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * The timestamp of the monitoring data. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;

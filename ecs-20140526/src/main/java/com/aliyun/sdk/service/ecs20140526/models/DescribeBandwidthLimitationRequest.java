@@ -220,7 +220,13 @@ public class DescribeBandwidthLimitationRequest extends Request {
         }
 
         /**
-         * The instance type. For information about the values, see [Instance families](~~25378~~).
+         * The type of the elastic network interface (ENI). Valid values:
+         * <p>
+         * 
+         * *   Secondary: secondary ENI.
+         * *   Trunk: trunk ENI. This value is in invitational preview.
+         * 
+         * Default value: Secondary.
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -263,7 +269,7 @@ public class DescribeBandwidthLimitationRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can call the [DescribeRegions](~~DescribeRegions~~) operation to query the most recent region list.
+         * The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -272,7 +278,7 @@ public class DescribeBandwidthLimitationRequest extends Request {
         }
 
         /**
-         * The ID of the resource.
+         * The resource ID.
          * <p>
          * 
          * >  This parameter is required when the OperationType parameter is set to Upgrade or Downgrade.
@@ -305,8 +311,8 @@ public class DescribeBandwidthLimitationRequest extends Request {
          * The bidding policy for the pay-as-you-go instance. Valid values:
          * <p>
          * 
-         * *   NoSpot: The instance is a regular pay-as-you-go instance.
-         * *   SpotWithPriceLimit: The instance is a preemptible instance with user-defined maximum hourly prices.
+         * *   NoSpot: The instance is a pay-as-you-go instance.
+         * *   SpotWithPriceLimit: The instance is a preemptible instance for which you can specify the maximum hourly price.
          * *   SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is automatically used as the bid price. The market price can be up to the pay-as-you-go price.
          * 
          * Default value: NoSpot.

@@ -619,7 +619,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
              * The category of the snapshot.
              * <p>
              * 
-             * >  This parameter will be removed in the future. We recommend that you use the `InstantAccess` parameter to ensure future compatibility.
+             * >  This parameter will be removed in the future. We recommend that you use `InstantAccess` to ensure future compatibility.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -651,11 +651,11 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the instant access feature was enabled. Valid values:
+             * Indicates whether the instant access feature is enabled. Valid values:
              * <p>
              * 
-             * *   true: The instant access feature was enabled. This feature can be enabled only for enhanced SSDs (ESSDs).
-             * *   false: The instant access feature was disabled. The snapshot is a normal snapshot for which the instant access feature is disabled.
+             * *   true: The instant access feature is enabled. The instant access feature can be enabled only for enhanced SSDs (ESSDs).
+             * *   false: The instant access feature is disabled. The snapshot is a normal snapshot for which the instant access feature is disabled.
              */
             public Builder instantAccess(Boolean instantAccess) {
                 this.instantAccess = instantAccess;
@@ -666,7 +666,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
              * Indicates the validity period of the instant access feature. When the specified period expires, the instant access feature is automatically disabled.
              * <p>
              * 
-             * By default, the value of this parameter is the same as that of `RetentionDays`.
+             * By default, the value of this parameter is the same as the value of `RetentionDays`.
              */
             public Builder instantAccessRetentionDays(Integer instantAccessRetentionDays) {
                 this.instantAccessRetentionDays = instantAccessRetentionDays;
@@ -706,7 +706,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the region to which the snapshot belongs.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -714,7 +714,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The remaining time required to create the snapshot. Unit: seconds.
+             * The amount of remaining time required to create the snapshot. Unit: seconds.
              */
             public Builder remainTime(Integer remainTime) {
                 this.remainTime = remainTime;
@@ -765,9 +765,9 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
              * The type of snapshot. Valid values:
              * <p>
              * 
-             * *   auto or timer: automatic snapshot.
-             * *   user: manually created snapshot.
-             * *   all: all snapshot types.
+             * *   auto or timer: automatic snapshot
+             * *   user: manual snapshot
+             * *   all: all snapshot types
              */
             public Builder snapshotType(String snapshotType) {
                 this.snapshotType = snapshotType;

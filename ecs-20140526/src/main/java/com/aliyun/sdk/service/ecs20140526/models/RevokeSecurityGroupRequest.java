@@ -425,7 +425,7 @@ public class RevokeSecurityGroupRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated. Use `Permissions.N.Description` to specify the description of security group rule N.
+         * This parameter is deprecated. Use `Permissions.N.Description` to specify the rule description.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -470,7 +470,7 @@ public class RevokeSecurityGroupRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated. Use `Permissions.N.NicType` to specify the NIC type.
+         * This parameter is deprecated. Use `Permissions.N.NicType` to specify the network interface type.
          */
         public Builder nicType(String nicType) {
             this.putQueryParameter("NicType", nicType);
@@ -524,7 +524,7 @@ public class RevokeSecurityGroupRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated. Use `Permissions.N.Priority` to specify the priority of the rule.
+         * This parameter is deprecated. Use `Permissions.N.Priority` to specify the rule priority.
          */
         public Builder priority(String priority) {
             this.putQueryParameter("Priority", priority);

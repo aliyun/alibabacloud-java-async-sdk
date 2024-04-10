@@ -305,6 +305,8 @@ public class CreateSnapshotGroupRequest extends Request {
          * *   false
          * 
          * Default value: false.
+         * 
+         * >  This parameter is no longer used. By default, new normal snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see [Use the instant access feature](~~193667~~).
          */
         public Builder instantAccess(Boolean instantAccess) {
             this.putQueryParameter("InstantAccess", instantAccess);
@@ -318,7 +320,9 @@ public class CreateSnapshotGroupRequest extends Request {
          * 
          * This parameter takes effect only when `InstantAccess` is set to true. The instant access feature is automatically disabled when the specified duration ends.
          * 
-         * This parameter is empty by default, which indicates that the expiration time of the instant access feature is determined by the time when snapshots are released.
+         * This parameter is left empty by default, which indicates that the instant access feature is automatically disabled for snapshots when the snapshots are released.
+         * 
+         * >  This parameter is no longer used. By default, new normal snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see [Use the instant access feature](~~193667~~).
          */
         public Builder instantAccessRetentionDays(Integer instantAccessRetentionDays) {
             this.putQueryParameter("InstantAccessRetentionDays", instantAccessRetentionDays);
@@ -327,7 +331,7 @@ public class CreateSnapshotGroupRequest extends Request {
         }
 
         /**
-         * The name of the snapshot-consistent group. The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), hyphens (-), and colons (:). It must start with a letter and cannot start with `http://` or `https://`.
+         * The name of the snapshot-consistent group. The name must be 2 to 128 characters in length. The name can contain letters, digits, periods (.), underscores (\_), hyphens (-), and colons (:). It must start with a letter and cannot start with `http://` or `https://`.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

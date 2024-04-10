@@ -411,7 +411,7 @@ public class AuthorizeSecurityGroupRequest extends Request {
         }
 
         /**
-         * This parameter is no longer used. Use `Permissions.N.Description` to specify the description of security group rule N.
+         * This parameter is deprecated. Use `Permissions.N.Description` to specify the rule description.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -420,7 +420,7 @@ public class AuthorizeSecurityGroupRequest extends Request {
         }
 
         /**
-         * This parameter is no longer used. Use `Permissions.N.DestCidrIp` to specify the destination IPv4 CIDR block.
+         * This parameter is deprecated. Use `Permissions.N.DestCidrIp` to specify the destination IPv4 CIDR block.
          */
         public Builder destCidrIp(String destCidrIp) {
             this.putQueryParameter("DestCidrIp", destCidrIp);
@@ -429,7 +429,7 @@ public class AuthorizeSecurityGroupRequest extends Request {
         }
 
         /**
-         * This parameter is no longer used. Use `Permissions.N.IpProtocol` to specify the transport layer protocol.
+         * This parameter is deprecated. Use `Permissions.N.IpProtocol` to specify the transport layer protocol.
          */
         public Builder ipProtocol(String ipProtocol) {
             this.putQueryParameter("IpProtocol", ipProtocol);
@@ -438,7 +438,7 @@ public class AuthorizeSecurityGroupRequest extends Request {
         }
 
         /**
-         * This parameter is no longer used. Use `Permissions.N.Ipv6SourceCidrIp` to specify the source IPv6 CIDR block.
+         * This parameter is deprecated. Use `Permissions.N.Ipv6SourceCidrIp` to specify the source IPv6 CIDR block.
          */
         public Builder ipv6DestCidrIp(String ipv6DestCidrIp) {
             this.putQueryParameter("Ipv6DestCidrIp", ipv6DestCidrIp);
@@ -447,7 +447,7 @@ public class AuthorizeSecurityGroupRequest extends Request {
         }
 
         /**
-         * This parameter is no longer used. Use `Permissions.N.Ipv6SourceCidrIp` to specify the source IPv6 CIDR block.
+         * This parameter is deprecated. Use `Permissions.N.Ipv6SourceCidrIp` to specify the source IPv6 CIDR block.
          */
         public Builder ipv6SourceCidrIp(String ipv6SourceCidrIp) {
             this.putQueryParameter("Ipv6SourceCidrIp", ipv6SourceCidrIp);
@@ -456,7 +456,7 @@ public class AuthorizeSecurityGroupRequest extends Request {
         }
 
         /**
-         * This parameter is no longer used. Use `Permissions.N.NicType` to specify the network interface type.
+         * This parameter is deprecated. Use `Permissions.N.NicType` to specify the network interface type.
          */
         public Builder nicType(String nicType) {
             this.putQueryParameter("NicType", nicType);
@@ -492,7 +492,7 @@ public class AuthorizeSecurityGroupRequest extends Request {
         }
 
         /**
-         * This parameter is no longer used. Use `Permissions.N.Policy` to specify whether to allow inbound access.
+         * This parameter is deprecated. Use `Permissions.N.Policy` to specify whether to allow access.
          */
         public Builder policy(String policy) {
             this.putQueryParameter("Policy", policy);
@@ -501,7 +501,7 @@ public class AuthorizeSecurityGroupRequest extends Request {
         }
 
         /**
-         * This parameter is no longer used. Use `Permissions.N.PortRange` to specify the range of destination ports.
+         * This parameter is deprecated. Use `Permissions.N.PortRange` to specify the range of destination ports.
          */
         public Builder portRange(String portRange) {
             this.putQueryParameter("PortRange", portRange);
@@ -510,7 +510,7 @@ public class AuthorizeSecurityGroupRequest extends Request {
         }
 
         /**
-         * This parameter is no longer used. Use `Permissions.N.Priority` to specify the rule priority.
+         * This parameter is deprecated. Use `Permissions.N.Priority` to specify the rule priority.
          */
         public Builder priority(String priority) {
             this.putQueryParameter("Priority", priority);
@@ -555,7 +555,7 @@ public class AuthorizeSecurityGroupRequest extends Request {
         }
 
         /**
-         * This parameter is no longer used. Use `Permissions.N.SourceCidrIp` to specify the source IPv4 CIDR block.
+         * This parameter is deprecated. Use `Permissions.N.SourceCidrIp` to specify the source IPv4 CIDR block.
          */
         public Builder sourceCidrIp(String sourceCidrIp) {
             this.putQueryParameter("SourceCidrIp", sourceCidrIp);
@@ -564,7 +564,7 @@ public class AuthorizeSecurityGroupRequest extends Request {
         }
 
         /**
-         * This parameter is no longer used. Use `Permissions.N.SourceGroupId` to specify the ID of the source security group.
+         * This parameter is deprecated. Use `Permissions.N.SourceGroupId` to specify the ID of the source security group.
          */
         public Builder sourceGroupId(String sourceGroupId) {
             this.putQueryParameter("SourceGroupId", sourceGroupId);
@@ -573,7 +573,7 @@ public class AuthorizeSecurityGroupRequest extends Request {
         }
 
         /**
-         * This parameter is no longer used. Use `Permissions.N.SourceGroupOwnerAccount` to specify the Alibaba Cloud account that manages the source security group.
+         * This parameter is deprecated. Use `Permissions.N.SourceGroupOwnerAccount` to specify the Alibaba Cloud account that manages the source security group.
          */
         public Builder sourceGroupOwnerAccount(String sourceGroupOwnerAccount) {
             this.putQueryParameter("SourceGroupOwnerAccount", sourceGroupOwnerAccount);
@@ -582,7 +582,7 @@ public class AuthorizeSecurityGroupRequest extends Request {
         }
 
         /**
-         * This parameter is no longer used. Use `Permissions.N.SourceGroupOwnerId` to specify the ID of the Alibaba Cloud account that manages the source security group.
+         * This parameter is deprecated. Use `Permissions.N.SourceGroupOwnerId` to specify the ID of the Alibaba Cloud account that manages the source security group.
          */
         public Builder sourceGroupOwnerId(Long sourceGroupOwnerId) {
             this.putQueryParameter("SourceGroupOwnerId", sourceGroupOwnerId);
@@ -591,7 +591,7 @@ public class AuthorizeSecurityGroupRequest extends Request {
         }
 
         /**
-         * This parameter is no longer used. Use `Permissions.N.SourcePortRange` to specify the range of source ports.
+         * This parameter is deprecated. Use `Permissions.N.SourcePortRange` to specify the range of source ports.
          */
         public Builder sourcePortRange(String sourcePortRange) {
             this.putQueryParameter("SourcePortRange", sourcePortRange);
@@ -600,7 +600,7 @@ public class AuthorizeSecurityGroupRequest extends Request {
         }
 
         /**
-         * This parameter is no longer used. Use `Permissions.N.SourcePrefixListId` to specify the ID of the source prefix list.
+         * This parameter is deprecated. Use `Permissions.N.SourcePrefixListId` to specify the ID of the source prefix list.
          */
         public Builder sourcePrefixListId(String sourcePrefixListId) {
             this.putQueryParameter("SourcePrefixListId", sourcePrefixListId);

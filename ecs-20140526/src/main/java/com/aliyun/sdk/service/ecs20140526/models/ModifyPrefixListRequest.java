@@ -205,7 +205,7 @@ public class ModifyPrefixListRequest extends Request {
         }
 
         /**
-         * The entries that to be added to the prefix list.
+         * The entries to be added to the prefix list.
          */
         public Builder addEntry(java.util.List < AddEntry> addEntry) {
             this.putQueryParameter("AddEntry", addEntry);
@@ -250,7 +250,7 @@ public class ModifyPrefixListRequest extends Request {
         }
 
         /**
-         * The name of the prefix list. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://`, `https://`, `com.aliyun`, or `com.alibabacloud`. It can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).
+         * The name of the prefix list. The name must be 2 to 128 characters in length, and can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-). It must start with a letter and cannot start with `http://`, `https://`, `com.aliyun`, or `com.alibabacloud`.
          */
         public Builder prefixListName(String prefixListName) {
             this.putQueryParameter("PrefixListName", prefixListName);
@@ -268,7 +268,7 @@ public class ModifyPrefixListRequest extends Request {
         }
 
         /**
-         * The entries that to be deleted from the prefix list.
+         * The entries to be deleted from the prefix list.
          */
         public Builder removeEntry(java.util.List < RemoveEntry> removeEntry) {
             this.putQueryParameter("RemoveEntry", removeEntry);
@@ -341,12 +341,12 @@ public class ModifyPrefixListRequest extends Request {
             private String description; 
 
             /**
-             * The CIDR block of entry N to be added to the prefix list. Valid values of N: 0 to 200.
+             * The CIDR block in entry N to be added to the prefix list. Valid values of N: 0 to 200.
              * <p>
              * 
              * Take note of the following items when you add the entries:
              * 
-             * *   The number of entries in the prefix list cannot be greater than the maximum number of entries allowed for the prefix list. You can call the [DescribePrefixListAttributes](~~205872~~) operation to query the maximum number of entries in a specific prefix list.
+             * *   The total number of entries in the prefix list cannot exceed the maximum number of entries you specified for the prefix list. You can call the [DescribePrefixListAttributes](~~205872~~) operation to query the maximum number of entries that the prefix list can contain.
              * *   You cannot specify duplicate CIDR blocks.
              * *   The CIDR blocks cannot be the same as the `RemoveEntry.N.Cidr` values.
              */
@@ -398,7 +398,7 @@ public class ModifyPrefixListRequest extends Request {
             private String cidr; 
 
             /**
-             * The CIDR block of entry N to be deleted from the prefix list. Valid values of N: 0 to 200.
+             * The CIDR block in entry N to be deleted from the prefix list. Valid values of N: 0 to 200.
              * <p>
              * 
              * Take note of the following items when you delete the entries:

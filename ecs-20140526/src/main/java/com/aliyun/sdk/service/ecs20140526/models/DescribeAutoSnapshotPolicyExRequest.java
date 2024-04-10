@@ -219,7 +219,7 @@ public class DescribeAutoSnapshotPolicyExRequest extends Request {
         }
 
         /**
-         * The name of the automatic snapshot policy.
+         * The ID of the automatic snapshot policy.
          */
         public Builder autoSnapshotPolicyId(String autoSnapshotPolicyId) {
             this.putQueryParameter("AutoSnapshotPolicyId", autoSnapshotPolicyId);
@@ -228,12 +228,7 @@ public class DescribeAutoSnapshotPolicyExRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
-         * <p>
-         * 
-         * Page start from page 1.
-         * 
-         * Default value: 1.
+         * The name of the automatic snapshot policy.
          */
         public Builder autoSnapshotPolicyName(String autoSnapshotPolicyName) {
             this.putQueryParameter("AutoSnapshotPolicyName", autoSnapshotPolicyName);
@@ -260,12 +255,12 @@ public class DescribeAutoSnapshotPolicyExRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The page number.
          * <p>
          * 
-         * Maximum value: 100.
+         * Pages start from page 1.
          * 
-         * Default value: 10.
+         * Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -274,7 +269,12 @@ public class DescribeAutoSnapshotPolicyExRequest extends Request {
         }
 
         /**
-         * The tags.
+         * The number of entries per page.
+         * <p>
+         * 
+         * Valid values: 1 to 100.
+         * 
+         * Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -283,7 +283,7 @@ public class DescribeAutoSnapshotPolicyExRequest extends Request {
         }
 
         /**
-         * The ID of the automatic snapshot policy.
+         * The region ID of the automatic snapshot policy. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -292,7 +292,10 @@ public class DescribeAutoSnapshotPolicyExRequest extends Request {
         }
 
         /**
-         * The number of entries returned per page.
+         * The ID of the resource group. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.
+         * <p>
+         * 
+         * > Resources in the default resource group are displayed in the response regardless of how this parameter is set.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -319,7 +322,7 @@ public class DescribeAutoSnapshotPolicyExRequest extends Request {
         }
 
         /**
-         * The key of tag N of the automatic snapshot policy. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain http:// or https://.
+         * The tags of the automatic snapshot policy.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -373,7 +376,7 @@ public class DescribeAutoSnapshotPolicyExRequest extends Request {
             private String value; 
 
             /**
-             * The value of tag N of the automatic snapshot policy. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with acs: or contain http:// or https://.
+             * The key of tag N of the automatic snapshot policy. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -381,10 +384,7 @@ public class DescribeAutoSnapshotPolicyExRequest extends Request {
             }
 
             /**
-             * The ID of the resource group. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.
-             * <p>
-             * 
-             * >  Resources in the default resource group are displayed in the response regardless of how this parameter is set.
+             * The value of tag N of the automatic snapshot policy. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://. The tag value cannot start with acs:.
              */
             public Builder value(String value) {
                 this.value = value;

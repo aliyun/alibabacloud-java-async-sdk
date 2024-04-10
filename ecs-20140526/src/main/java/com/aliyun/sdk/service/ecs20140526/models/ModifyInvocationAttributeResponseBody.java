@@ -50,7 +50,12 @@ public class ModifyInvocationAttributeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * CommandId.
+         * *   The command ID.
+         * <p>
+         * 
+         *     *   A new command is added and its `CommandId` is returned only when `CommandContent` changes.
+         *     *   No new command is added and the `CommandId` of the command that is running is returned if `CommandContent` has no changes.
+         *     *   If you set `KeepCommand` to `true` when you called the [InvokeCommand](~~64841~~) or [RunCommand](~~141751~~) operation, the added command is retained. Otherwise, commands related to the task are deleted after executions are complete or the task is manually stopped.
          */
         public Builder commandId(String commandId) {
             this.commandId = commandId;
@@ -58,7 +63,7 @@ public class ModifyInvocationAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

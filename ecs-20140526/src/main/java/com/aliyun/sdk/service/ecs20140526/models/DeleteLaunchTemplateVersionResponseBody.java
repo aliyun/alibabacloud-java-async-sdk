@@ -50,7 +50,7 @@ public class DeleteLaunchTemplateVersionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 实例启动模板版本。
+         * The versions of the launch template.
          */
         public Builder launchTemplateVersions(LaunchTemplateVersions launchTemplateVersions) {
             this.launchTemplateVersions = launchTemplateVersions;
@@ -58,7 +58,7 @@ public class DeleteLaunchTemplateVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DeleteLaunchTemplateVersionResponseBody extends TeaModel {
             private Long launchTemplateVersionNumber; 
 
             /**
-             * 实例启动模板ID。
+             * The ID of the launch template.
              */
             public Builder launchTemplateId(String launchTemplateId) {
                 this.launchTemplateId = launchTemplateId;
@@ -118,7 +118,7 @@ public class DeleteLaunchTemplateVersionResponseBody extends TeaModel {
             }
 
             /**
-             * 实例启动模板版本号。
+             * The version number of the launch template.
              */
             public Builder launchTemplateVersionNumber(Long launchTemplateVersionNumber) {
                 this.launchTemplateVersionNumber = launchTemplateVersionNumber;

@@ -580,11 +580,11 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         }
 
         /**
-         * Specifies whether to release the removed instances when the real-time capacity of the auto provisioning group exceeds the target capacity and a scale-in event is triggered. Valid values:
+         * Specifies whether to release scaled-in instances when the real-time capacity of the auto provisioning group exceeds the target capacity and the group is triggered to scale in. Valid values:
          * <p>
          * 
-         * *   termination: releases the removed instances.
-         * *   no-termination: only removes the instances from the auto provisioning group but does not release them.
+         * *   termination: releases the scaled-in instances in the auto provisioning group.
+         * *   no-termination: removes the scaled-in instances from the auto provisioning group but does not release them.
          * 
          * Default value: no-termination.
          */
@@ -693,7 +693,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         }
 
         /**
-         * The target capacity of pay-as-you-go instances in the auto provisioning group. The value must be smaller than the `TotalTargetCapacity` value.
+         * The target capacity of pay-as-you-go instances in the auto provisioning group. The value must be less than or equal to the `TotalTargetCapacity` value.
          */
         public Builder payAsYouGoTargetCapacity(String payAsYouGoTargetCapacity) {
             this.putQueryParameter("PayAsYouGoTargetCapacity", payAsYouGoTargetCapacity);
@@ -781,7 +781,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         }
 
         /**
-         * The target capacity of preemptible instances in the auto provisioning group. The value must be smaller than the `TotalTargetCapacity` value.
+         * The target capacity of preemptible instances in the auto provisioning group. The value must be less than or equal to the `TotalTargetCapacity` value.
          */
         public Builder spotTargetCapacity(String spotTargetCapacity) {
             this.putQueryParameter("SpotTargetCapacity", spotTargetCapacity);
@@ -1103,14 +1103,14 @@ public class CreateAutoProvisioningGroupRequest extends Request {
              * The category of data disk N. Valid values of N: 1 to 16. Valid values:
              * <p>
              * 
-             * - cloud_efficiency: ultra disk.
-             * - cloud_ssd: standard SSD.
-             * - cloud_essd: ESSD
-             * - cloud: basic disk.
+             * *   cloud_efficiency: ultra disk
+             * *   cloud_ssd: standard SSD
+             * *   cloud_essd: ESSD
+             * *   cloud: basic disk
              * 
              * For I/O optimized instances, the default value is cloud_efficiency. For non-I/O optimized instances, the default value is cloud.
              * 
-             * If both the LaunchTemplateId and LaunchConfiguration.* parameters are specified, the LaunchTemplateId parameter takes precedence.
+             * When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -1118,15 +1118,15 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * Specifies whether to release the data disk after the instance with which the disk is associated is released. Valid values:
+             * Specifies whether to release data disk N when the instance to which the data disk is attached is released. Valid values:
              * <p>
              * 
-             * - true: yes
-             * - false: no
+             * *   true: releases data disk N when the instance is released.
+             * *   false: does not release data disk N when the instance is released.
              * 
              * Default value: true.
              * 
-             * If both the LaunchTemplateId and LaunchConfiguration.* parameters are specified, the LaunchTemplateId parameter takes precedence.
+             * When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.
              */
             public Builder deleteWithInstance(Boolean deleteWithInstance) {
                 this.deleteWithInstance = deleteWithInstance;
@@ -1134,7 +1134,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * The description of data disk N. The description must be 2 to 256 characters in length. The description can contain letters but cannot start with `http://` or `https://`. If both the LaunchTemplateId and LaunchConfiguration.* parameters are specified, the LaunchTemplateId parameter takes precedence.
+             * The description of data disk N. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`. When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1142,7 +1142,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * The mount target of the data disk. If both the LaunchTemplateId and LaunchConfiguration.* parameters are specified, the LaunchTemplateId parameter takes precedence.
+             * The mount point of data disk N. When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.
              */
             public Builder device(String device) {
                 this.device = device;
@@ -1150,12 +1150,12 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * The name of the data disk. The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), colons (:), underscores (_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.
+             * The name of data disk N. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, periods (.), colons (:), underscores (\_), and hyphens (-).
              * <p>
              * 
              * This parameter is empty by default.
              * 
-             * If both the LaunchTemplateId and LaunchConfiguration.* parameters are specified, the LaunchTemplateId parameter takes precedence.
+             * When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.
              */
             public Builder diskName(String diskName) {
                 this.diskName = diskName;
@@ -1166,12 +1166,12 @@ public class CreateAutoProvisioningGroupRequest extends Request {
              * Specifies whether to encrypt data disk N. Valid values:
              * <p>
              * 
-             * - true
-             * - false
+             * *   true
+             * *   false
              * 
              * Default value: false.
              * 
-             * If both the LaunchTemplateId and LaunchConfiguration.* parameters are specified, the LaunchTemplateId parameter takes precedence.
+             * When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.
              */
             public Builder encrypted(Boolean encrypted) {
                 this.encrypted = encrypted;
@@ -1179,7 +1179,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * The ID of the Key Management Service (KMS) key to be used for the data disk. If both the LaunchTemplateId and LaunchConfiguration.* parameters are specified, the LaunchTemplateId parameter takes precedence.
+             * The ID of the Key Management Service (KMS) key to use for data disk N. When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.
              */
             public Builder kmsKeyId(String kmsKeyId) {
                 this.kmsKeyId = kmsKeyId;
@@ -1187,19 +1187,17 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * The performance level of the ESSD. Valid values:
+             * The performance level of the enhanced SSD (ESSD) to use as data disk N. The value of N in this parameter must be the same as the value of N in `LaunchConfiguration.DataDisk.N.Category`. Valid values:
              * <p>
              * 
              * *   PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.
-             * *   PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.
+             * *   PL1 (default): A single ESSD can deliver up to 50,000 random read/write IOPS.
              * *   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.
              * *   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.
              * 
-             * Default value: PL1.
+             * For information about ESSD performance levels, see [ESSDs](~~122389~~).
              * 
-             * For more information about ESSD performance levels, see [ESSDs](~~122389~~).
-             * 
-             * If both the LaunchTemplateId and LaunchConfiguration.* parameters are specified, the LaunchTemplateId parameter takes precedence.
+             * When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.
              */
             public Builder performanceLevel(String performanceLevel) {
                 this.performanceLevel = performanceLevel;
@@ -1210,21 +1208,22 @@ public class CreateAutoProvisioningGroupRequest extends Request {
              * The size of data disk N. Valid values of N: 1 to 16. Unit: GiB. Valid values:
              * <p>
              * 
-             * - Valid values when LaunchConfiguration.DataDisk.N.Category is set to cloud_efficiency: 20 to 32768.
+             * *   Valid values when LaunchConfiguration.DataDisk.N.Category is set to cloud_efficiency: 20 to 32768.
              * 
-             * - Valid values when LaunchConfiguration.DataDisk.N.Category is set to cloud_ssd: 20 to 32768.
+             * *   Valid values when LaunchConfiguration.DataDisk.N.Category is set to cloud_ssd: 20 to 32768.
              * 
-             * - Valid values when LaunchConfiguration.DataDisk.N.Category is set to cloud_essd: depend on the `LaunchConfiguration.DataDisk.N.PerformanceLevel` value.
+             * *   Valid values when LaunchConfiguration.DataDisk.N.Category is set to cloud_essd: depend on the `LaunchConfiguration.DataDisk.N.PerformanceLevel` value.
              * 
-             *   - Valid values when LaunchConfiguration.DataDisk.N.PerformanceLevel is set to PL0: 40 to 32768.
-             *   - Valid values when DataDisk.N.PerformanceLevel is set to PL1: 20 to 32768.
-             *   - Valid values when LaunchConfiguration.DataDisk.N.PerformanceLevel is set to PL2: 461 to 32768.
-             *   - Valid values when LaunchConfiguration.DataDisk.N.PerformanceLevel is set to PL3: 1261 to 32768.
-             * - Valid values when LaunchConfiguration.DataDisk.N.Category is set to cloud: 5 to 2000.
+             *     *   Valid values when LaunchConfiguration.DataDisk.N.PerformanceLevel is set to PL0: 40 to 32768.
+             *     *   Valid values when LaunchConfiguration.DataDisk.N.PerformanceLevel is set to PL1: 20 to 32768.
+             *     *   Valid values when LaunchConfiguration.DataDisk.N.PerformanceLevel is set to PL2: 461 to 32768.
+             *     *   Valid values when LaunchConfiguration.DataDisk.N.PerformanceLevel is set to PL3: 1261 to 32768.
              * 
-             * >The parameter value must be greater than or equal to the size of the snapshot specified by the `LaunchConfiguration.DataDisk.N.SnapshotId` parameter.
+             * *   Valid values when LaunchConfiguration.DataDisk.N.Category is set to cloud: 5 to 2000.
              * 
-             * If both the LaunchTemplateId and LaunchConfiguration.* parameters are specified, the LaunchTemplateId parameter takes precedence.
+             * >  The value of this parameter must be greater than or equal to the size of the snapshot specified by `LaunchConfiguration.DataDisk.N.SnapshotId`.
+             * 
+             * When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -1232,12 +1231,12 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * The ID of the snapshot that you want to use to create the data disk. Valid values of N: 1 to 16.
+             * The ID of the snapshot to use to create data disk N. Valid values of N: 1 to 16.
              * <p>
              * 
-             * After this parameter is specified, the `LaunchConfiguration.DataDisk.N.Size` parameter is ignored. The size of the data disk is the same as that of the snapshot specified by this parameter. Use snapshots created after July 15, 2013. Otherwise, an error is returned and your request is rejected.
+             * After this parameter is specified, `LaunchConfiguration.DataDisk.N.Size` is ignored. The size of data disk N is the same as that of the snapshot specified by this parameter. Use snapshots created on or after July 15, 2013. Otherwise, an error is returned and your request is rejected.
              * 
-             * If both the LaunchTemplateId and LaunchConfiguration.* parameters are specified, the LaunchTemplateId parameter takes precedence.
+             * When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.
              */
             public Builder snapshotId(String snapshotId) {
                 this.snapshotId = snapshotId;
@@ -1305,10 +1304,12 @@ public class CreateAutoProvisioningGroupRequest extends Request {
              * The algorithm to use to encrypt the system disk. Valid values:
              * <p>
              * 
-             * - aes-256
-             * - sm4-128
+             * *   aes-256
+             * *   sm4-128
              * 
-             * Default value: aes-256. When both LaunchTemplateId and LaunchConfiguration.* parameters are specified, LaunchTemplateId takes precedence.
+             * Default value: aes-256.
+             * 
+             * When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.
              */
             public Builder encryptAlgorithm(String encryptAlgorithm) {
                 this.encryptAlgorithm = encryptAlgorithm;
@@ -1316,13 +1317,15 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * Specifies whether to encrypt the system disk. Valid values:
+             * Specifies whether to encrypt system disk N. Valid values:
              * <p>
              * 
-             * - true
-             * - false
+             * *   true
+             * *   false
              * 
-             * Default value: false. When both LaunchTemplateId and LaunchConfiguration.* parameters are specified, LaunchTemplateId takes precedence.
+             * Default value: false.
+             * 
+             * When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.
              */
             public Builder encrypted(String encrypted) {
                 this.encrypted = encrypted;
@@ -1330,7 +1333,10 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * The ID of the KMS key to use for the system disk. When both LaunchTemplateId and LaunchConfiguration.* parameters are specified, LaunchTemplateId takes precedence.
+             * The ID of the KMS key to use for the system disk.
+             * <p>
+             * 
+             * When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.
              */
             public Builder KMSKeyId(String KMSKeyId) {
                 this.KMSKeyId = KMSKeyId;
@@ -1800,12 +1806,12 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * The automatic release time of the instance. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+             * The automatic release time of the pay-as-you-go instance. Specify the time in the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in Coordinated Universal Time (UTC).
              * <p>
              * 
-             * *   If the value of `ss` is not `00`, the time is automatically rounded to the nearest minute based on the value of `mm`.
+             * *   If the value of `ss` is not `00`, the start time is automatically rounded down to the nearest minute based on the value of `mm`.
              * *   The specified time must be at least 30 minutes later than the current time.
-             * *   The specified time can be at most three years from the current time.
+             * *   The specified time can be at most three years later than the current time.
              */
             public Builder autoReleaseTime(String autoReleaseTime) {
                 this.autoReleaseTime = autoReleaseTime;
@@ -1816,8 +1822,8 @@ public class CreateAutoProvisioningGroupRequest extends Request {
              * The performance mode of the burstable instance. Valid values:
              * <p>
              * 
-             * *   Standard: the standard mode. For more information, see the "Standard mode" section in [Overview of burstable instances](~~59977~~).
-             * *   Unlimited: the unlimited mode. For more information, see the "Unlimited mode" section in [Overview of burstable instances](~~59977~~).
+             * *   Standard: the standard mode. For more information, see the "Standard mode" section in the [Overview of burstable instances](~~59977~~) topic.
+             * *   Unlimited: the unlimited mode. For more information, see the "Unlimited mode" section in the [Overview of burstable instances](~~59977~~) topic.
              * 
              * This parameter is empty by default.
              * 
@@ -1877,7 +1883,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * The name of the image family. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `aliyun` or `acs:`. The name cannot contain `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).
+             * The name of the image family. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `aliyun` or `acs:`. The name cannot contain `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
              */
             public Builder imageFamily(String imageFamily) {
                 this.imageFamily = imageFamily;
@@ -1901,8 +1907,10 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * The instance name. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-). The default value of this parameter is the `InstanceId` value.
+             * The instance name. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).
              * <p>
+             * 
+             * The default value of this parameter is the `InstanceId` value.
              * 
              * When you batch create instances, you can batch configure sequential names for the instances. For more information, see [Batch configure sequential names or hostnames for multiple instances](~~196048~~).
              * 
@@ -2058,7 +2066,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * The information of the system disk on the instance. If both the LaunchTemplateId and LaunchConfiguration.* parameters are specified, the LaunchTemplateId parameter takes precedence.
+             * The information of the system disk on the instance. When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.
              */
             public Builder systemDisk(SystemDisk systemDisk) {
                 this.systemDisk = systemDisk;
@@ -2095,7 +2103,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * The name of the system disk. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, periods (.), colons (:), underscores (\_), and hyphens (-).
+             * The name of the system disk. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, periods (.), colons (:), underscores (\_), and hyphens (-).
              * <p>
              * 
              * This parameter is empty by default.
@@ -2409,8 +2417,8 @@ public class CreateAutoProvisioningGroupRequest extends Request {
              * The instance family level of the instance type in extended configuration N. This parameter is used to filter instance types. Valid values:
              * <p>
              * 
-             * *   EntryLevel: entry level (shared instance types) Instance types of this level are the most cost-effective but may not provide stable computing performance. Instance types of this level are suitable for scenarios in which CPU utilization is low. For more information, see [Shared instance families](~~108489~~).
-             * *   EnterpriseLevel: enterprise level. Instance types of this level provide stable performance and dedicated resources and are suitable for scenarios that require high stability. For more information, see [Overview of instance families](~~25378~~).
+             * *   EntryLevel: entry level (shared instance types). Instance types of this level are the most cost-effective but may not provide stable computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low. For more information, see [Shared instance families](~~108489~~).
+             * *   EnterpriseLevel: enterprise level. Instance types of this level provide stable performance and dedicated resources and are suitable for scenarios that require high stability. For more information, see the [Overview of instance families](~~25378~~) topic.
              * *   CreditEntryLevel: credit entry level (burstable instance types). CPU credits are used to ensure computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low but may fluctuate in specific cases. For more information, see [Overview of burstable instances](~~59977~~).
              * 
              * Valid values of N: 1 to 10.
@@ -2421,7 +2429,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * The instance type in extended configuration N. Valid values of N: 1 to 20. For more information about the valid values of this parameter, see [Overview of instance families](~~25378~~).
+             * The instance type in extended configuration N. Valid values of N: 1 to 20. For more information about the valid values of this parameter, see [Instance families](~~25378~~).
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;

@@ -58,7 +58,10 @@ public class DescribeInstanceVncUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The URL of the VNC management terminal.
+         * The VNC logon address.
+         * <p>
+         * 
+         * >  **The address returned is valid only for 15 seconds. If a connection is not established within 15 seconds after a successful call, the address expires and you must recall the operation to obtain a new address.
          */
         public Builder vncUrl(String vncUrl) {
             this.vncUrl = vncUrl;

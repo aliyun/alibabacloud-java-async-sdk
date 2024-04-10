@@ -384,7 +384,10 @@ public class DescribeSecurityGroupsRequest extends Request {
         }
 
         /**
-         * > This parameter is deprecated.
+         * Specifies whether to query the capacity of the security group. If you set this parameter to True, the `EcsCount` and `AvailableInstanceAmount` values in the response are valid.
+         * <p>
+         * 
+         * >  This parameter is deprecated.
          */
         public Builder isQueryEcsCount(Boolean isQueryEcsCount) {
             this.putQueryParameter("IsQueryEcsCount", isQueryEcsCount);
@@ -454,7 +457,7 @@ public class DescribeSecurityGroupsRequest extends Request {
          * 
          * Default value: 1.
          * 
-         * > This parameter will be deprecated in the future. We recommend that you use NextToken and MaxResults for a paged query.
+         * >  This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -470,7 +473,7 @@ public class DescribeSecurityGroupsRequest extends Request {
          * 
          * Default value: 10.
          * 
-         * > This parameter will be deprecated in the future. We recommend that you use NextToken and MaxResults for a paged query.
+         * >  This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -560,7 +563,11 @@ public class DescribeSecurityGroupsRequest extends Request {
         }
 
         /**
-         * ServiceManaged.
+         * Specifies whether to query managed security groups. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder serviceManaged(Boolean serviceManaged) {
             this.putQueryParameter("ServiceManaged", serviceManaged);

@@ -280,8 +280,8 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
          * The retention period of the snapshot copy in the destination region. Unit: days. Valid values:
          * <p>
          * 
-         * *   \-1: The snapshot copy is permanently retained.
-         * *   A value in the range of 1 to 65535: The snapshot copy is retained for the specified number of days.
+         * *   \-1: The snapshot copy is retained until it is deleted.
+         * *   1 to 65535: The snapshot copy is retained for the specified number of days. After the retention period of the snapshot copy expires, the snapshot copy is automatically deleted.
          * 
          * Default value: -1.
          */
@@ -292,7 +292,7 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * CopyEncryptionConfiguration.
+         * The encryption parameters for cross-region snapshot replication.
          */
         public Builder copyEncryptionConfiguration(CopyEncryptionConfiguration copyEncryptionConfiguration) {
             this.putQueryParameter("CopyEncryptionConfiguration", copyEncryptionConfiguration);
@@ -377,10 +377,10 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * The name of the automatic snapshot policy. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with [http:// or https://. It can contain letters, digits, colons (.), underscores (\_), and hyphens (-).](http://https://。、（:）、（\_）（-）。)
+         * The name of the automatic snapshot policy. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http:// or https://. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
          * <p>
          * 
-         * This parameter is empty by default.
+         * By default, this parameter is left empty.
          */
         public Builder autoSnapshotPolicyName(String autoSnapshotPolicyName) {
             this.putQueryParameter("autoSnapshotPolicyName", autoSnapshotPolicyName);
@@ -414,8 +414,8 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
          * The retention period of the automatic snapshot. Unit: days. Valid values:
          * <p>
          * 
-         * *   \-1: The snapshot is permanently retained.
-         * *   A value in the range of 1 to 65535: The snapshot is retained for the specified number of days.
+         * *   \-1: The automatic snapshot is retained until it is deleted.
+         * *   1 to 65535: The automatic snapshot is retained for the specified number of days. After the retention period of the automatic snapshot expires, the automatic snapshot is automatically deleted.
          * 
          * Default value: -1.
          */
@@ -496,7 +496,7 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
             private String rolearn; 
 
             /**
-             * AssumeRoleFor.
+             * This parameter is not publicly available.
              */
             public Builder assumeRoleFor(Long assumeRoleFor) {
                 this.assumeRoleFor = assumeRoleFor;
@@ -504,7 +504,7 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
             }
 
             /**
-             * RoleType.
+             * This parameter is not publicly available.
              */
             public Builder roleType(String roleType) {
                 this.roleType = roleType;
@@ -512,7 +512,7 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
             }
 
             /**
-             * Rolearn.
+             * This parameter is not publicly available.
              */
             public Builder rolearn(String rolearn) {
                 this.rolearn = rolearn;
@@ -577,7 +577,7 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
             private String KMSKeyId; 
 
             /**
-             * Arn.
+             * This parameter is not publicly available.
              */
             public Builder arn(java.util.List < Arn> arn) {
                 this.arn = arn;
@@ -585,7 +585,13 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
             }
 
             /**
-             * Encrypted.
+             * Specifies whether to enable cross-region snapshot replication and encryption. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
+             * 
+             * Default value: false.
              */
             public Builder encrypted(Boolean encrypted) {
                 this.encrypted = encrypted;
@@ -593,7 +599,7 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
             }
 
             /**
-             * KMSKeyId.
+             * The ID of the KMS key used in cross-region snapshot replication and encryption.
              */
             public Builder KMSKeyId(String KMSKeyId) {
                 this.KMSKeyId = KMSKeyId;
@@ -646,7 +652,7 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N to add to the snapshot. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length. The tag key cannot start with acs: or aliyun or contain [http:// or https://.](http://https://。)
+             * The key of tag N to add to the snapshot. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -654,7 +660,7 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
             }
 
             /**
-             * The value of tag N to add to the snapshot. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length. The tag value cannot start with acs: or aliyun or contain [http:// or https://.](http://https://。)
+             * The value of tag N to add to the snapshot. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://. The tag value cannot start with acs:.
              */
             public Builder value(String value) {
                 this.value = value;

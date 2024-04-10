@@ -320,9 +320,9 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
          * 
          *     **
          * 
-         *     **Make sure that your payment account has sufficient balance. Otherwise, your order becomes invalid and is canceled.** If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ECS console to pay for the order.````
+         *     **Note** Make sure that your account balance is sufficient. Otherwise, your order becomes invalid. If your account balance is insufficient, you can set `AutoPay` to `false` to generate an unpaid order. Then, you can log on to the ECS console to pay for the order.
          * 
-         * *   false: An order is generated but no payment is made.
+         * *   false: disables automatic payment. An order is generated but no payment is made.
          * 
          * Default value: true.
          * 
@@ -344,7 +344,7 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
         }
 
         /**
-         * >该参数暂未开放使用。
+         * >  This parameter is not publicly available.
          */
         public Builder disk(java.util.List < Disk> disk) {
             this.putQueryParameter("Disk", disk);
@@ -353,7 +353,7 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
         }
 
         /**
-         * The end time of the temporary change. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * The end time of the temporary change. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -380,19 +380,22 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
         }
 
         /**
-         * Specifies whether to support cross-cluster instance type upgrades.
+         * Specifies whether cross-cluster instance type upgrades are supported. Valid values:
          * <p>
+         * 
+         * *   true
+         * *   false
          * 
          * Default value: false.
          * 
          * When you set `MigrateAcrossZone` to `true` and you upgrade the instance based on the returned information, take note of the following items:
          * 
-         * Instances of the classic network type:
+         * Instance that resides in the classic network:
          * 
-         * *   For retired instance types, when a non-I/O optimized instance is upgraded to an I/O optimized instance, the private IP address, disk device names, and software license codes of the instance are changed. For more information, see [Retired instance types](~~55263~~). For Linux instances, basic disks (cloud) are identified by the prefix xvd. Ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified by the prefix vd.
+         * *   For [retired instance types](~~55263~~), when a non-I/O optimized instance is upgraded to an I/O optimized instance, the private IP address, disk device names, and software authorization codes of the instance change. For a Linux instance, basic disks (cloud) are identified as xvd\* such as xvda and xvdb, and ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vd\* such as vda and vdb.
          * *   For [instance families available for purchase](~~25378~~), when the instance type of an instance is changed, the private IP address of the instance changes.
          * 
-         * Instances of the Virtual Private Cloud (VPC) type: For retired instance types, when a non-I/O optimized instance is upgraded to an I/O optimized instance, the disk device names and software license codes of the instance are changed. For Linux instances, basic disks (cloud) are identified by the prefix xvd. Ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified by the prefix vd.
+         * Instance that resides in a virtual private cloud (VPC): For retired instance types, when a non-I/O optimized instance is upgraded to an I/O optimized instance, the disk device names and software authorization codes of the instance change. For a Linux instance, basic disks (cloud) are identified as xvd\* such as xvda and xvdb, and ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vd\* such as vda and vdb.
          */
         public Builder migrateAcrossZone(Boolean migrateAcrossZone) {
             this.putQueryParameter("MigrateAcrossZone", migrateAcrossZone);
@@ -401,7 +404,13 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
         }
 
         /**
-         * >该参数暂未开放使用。
+         * >  This parameter is not publicly available.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   Online
+         * *   Offline
          */
         public Builder modifyMode(String modifyMode) {
             this.putQueryParameter("ModifyMode", modifyMode);
@@ -445,7 +454,7 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
         }
 
         /**
-         * The restart time of the instance. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * The restart time of the instance. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          */
         public Builder rebootTime(String rebootTime) {
             this.putQueryParameter("RebootTime", rebootTime);
@@ -531,11 +540,13 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
             private String category; 
 
             /**
-             * The new category of the system disk. This parameter is applicable only when you upgrade an instance from a retired instance type to a currently available instance type or when you upgrade a non-I/O optimized instance to an I/O optimized instance. For more information, see [Retired instance types](~~55263~~) and [Instance families](~~25378~~). Valid values:
+             * The new category of the system disk. Valid values:
              * <p>
              * 
-             * *   cloud_efficiency: ultra disk.
-             * *   cloud_ssd: standard SSD.
+             * *   cloud_efficiency: utra disk
+             * *   cloud_ssd: standard SSD
+             * 
+             * >  This parameter takes effect on an instance only when you change from a [retired instance type](~~55263~~) to an instance type in an [instance family available for purchase](~~25378~~) and upgrade the instance from a non-I/O optimized instance type to an I/O optimized instance type.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -600,7 +611,7 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
             private String performanceLevel; 
 
             /**
-             * >该参数暂未开放使用。
+             * >  This parameter is not publicly available.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -608,7 +619,7 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
             }
 
             /**
-             * >该参数暂未开放使用。
+             * >  This parameter is not publicly available.
              */
             public Builder diskId(String diskId) {
                 this.diskId = diskId;
@@ -616,7 +627,7 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
             }
 
             /**
-             * >该参数暂未开放使用。
+             * >  This parameter is not publicly available.
              */
             public Builder performanceLevel(String performanceLevel) {
                 this.performanceLevel = performanceLevel;

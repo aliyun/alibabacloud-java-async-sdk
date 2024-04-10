@@ -234,7 +234,7 @@ public class CreatePrefixListRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The `ClientToken` value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The `token` can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -252,7 +252,7 @@ public class CreatePrefixListRequest extends Request {
         }
 
         /**
-         * 前缀列表条目信息。
+         * The details of entries in the prefix list.
          */
         public Builder entry(java.util.List < Entry> entry) {
             this.putQueryParameter("Entry", entry);
@@ -288,7 +288,7 @@ public class CreatePrefixListRequest extends Request {
         }
 
         /**
-         * The name of the prefix list. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://`, `https://`, `com.aliyun`, or `com.alibabacloud`. It can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).
+         * The name of the prefix list. The name must be 2 to 128 characters in length, and can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-). It must start with a letter and cannot start with `http://`, `https://`, `com.aliyun`, or `com.alibabacloud`.
          */
         public Builder prefixListName(String prefixListName) {
             this.putQueryParameter("PrefixListName", prefixListName);
@@ -373,13 +373,13 @@ public class CreatePrefixListRequest extends Request {
              * The CIDR block in entry N. Valid values of N: 0 to 200. Take note of the following items:
              * <p>
              * 
-             * *   The total number of entries must not exceed the `MaxEntries` value.
+             * *   The total number of entries cannot exceed the `MaxEntries` value.
              * *   CIDR block types are determined by the IP address family. You cannot combine IPv4 and IPv6 CIDR blocks in a single prefix list.
              * *   CIDR blocks must be unique across all entries in a prefix list. For example, you cannot specify 192.168.1.0/24 twice in the entries of the prefix list.
              * *   IP addresses are supported. The system converts IP addresses into CIDR blocks. For example, if you specify 192.168.1.100, the system converts it into the 192.168.1.100/32 CIDR block.
-             * *   If an IPv6 CIDR block is used, the system converts it to the zero compression format and changes uppercase letters into lowercase ones. For example, if you specify 2001:0DB8:0000:0000:0000:0000:0000:0000/32, the system converts it into 2001:db8::/32.
+             * *   If an IPv6 CIDR block is used, the system converts it into the zero compression format and changes uppercase letters into lowercase ones. For example, if you specify 2001:0DB8:0000:0000:0000:0000:0000:0000/32, the system converts it into 2001:db8::/32.
              * 
-             * For more information about CIDR blocks, see the "What is CIDR block?" section of the [Network FAQ](https://www.alibabacloud.com/help/doc-detail/40637.htm#title-gu4-uzk-12r) topic.
+             * For more information about CIDR blocks, see the [What is CIDR?](~~40637~~#title-gu4-uzk-12r) section in the "Network FAQ" topic.
              * 
              * This parameter is empty by default.
              */

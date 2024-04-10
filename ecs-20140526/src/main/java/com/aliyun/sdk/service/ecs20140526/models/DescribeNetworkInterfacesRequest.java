@@ -469,7 +469,14 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * >This parameter is no longer used. We recommend that you specify the MaxResults or NextToken parameter for a paged query.
+         * The page number.
+         * <p>
+         * 
+         * Pages start from page 1.
+         * 
+         * Default value: 1.
+         * 
+         * >  This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -478,7 +485,14 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * >This parameter is no longer used. We recommend that you specify the MaxResults or NextToken parameter for a paged query.
+         * The number of entries per page.
+         * <p>
+         * 
+         * Valid values: 1 to 1000.
+         * 
+         * Default value: 10.
+         * 
+         * >  This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -617,7 +631,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * The ID of the virtual private cloud (VPC) to which the ENI belongs.
+         * The ID of the virtual private cloud (VPC) to which the elastic network interface (ENI) belongs.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

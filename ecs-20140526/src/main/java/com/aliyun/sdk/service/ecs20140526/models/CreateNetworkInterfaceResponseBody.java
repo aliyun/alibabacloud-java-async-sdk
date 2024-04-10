@@ -642,7 +642,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
             private String ipv6Address; 
 
             /**
-             * The IPv6 address.
+             * The IPv6 address assigned to the ENI.
              */
             public Builder ipv6Address(String ipv6Address) {
                 this.ipv6Address = ipv6Address;
@@ -736,7 +736,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
             private String privateIpAddress; 
 
             /**
-             * Indicates whether the IP address is the primary private IP address.
+             * Indicates whether the private IP address is the primary private IP address.
              */
             public Builder primary(Boolean primary) {
                 this.primary = primary;

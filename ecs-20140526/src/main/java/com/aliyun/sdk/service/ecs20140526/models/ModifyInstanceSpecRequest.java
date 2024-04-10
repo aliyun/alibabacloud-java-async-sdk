@@ -307,19 +307,22 @@ public class ModifyInstanceSpecRequest extends Request {
         }
 
         /**
-         * Specifies whether to support cross-cluster instance type upgrades.
+         * Specifies whether cross-cluster instance type upgrades are supported.
          * <p>
+         * 
+         * *   true
+         * *   false
          * 
          * Default value: false.
          * 
-         * When `AllowMigrateAcrossZone` is set to true and you upgrade the instance configurations based on the returned information, take note of the following items:
+         * When `AllowMigrateAcrossZone` is set to true and you upgrade the instance based on the returned information, take note of the following items:
          * 
-         * Instances of the classic network type:
+         * Instance that resides in the classic network:
          * 
-         * *   For [retired instance types](~~55263~~), the private IP address, disk device names, and software authorization codes of a non-I/O optimized instance change when you upgrade the instance to an I/O optimized instance. For Linux instances, basic disks (`cloud`) are identified by the prefix **xvd** such as **xvda and xvdb**. Ultra disks (`cloud_efficiency`) and standard SSDs (`cloud_ssd`) are identified by the prefix **vd** such as **vda and vdb**.
-         * *   For instance families that are available for purchase, when the instance type of an instance is changed, the private IP address of the instance is also changed. For more information, see [Overview of instance families](~~25378~~).
+         * *   For [retired instance types](~~55263~~), when a non-I/O optimized instance is upgraded to an I/O optimized instance, the private IP address, disk device names, and software authorization codes of the instance change. For a Linux instance, basic disks (`cloud`) are identified as xvd\* such as **xvda** and **xvdb**, and ultra disks (`cloud_efficiency`) and standard SSDs (`cloud_ssd`) are identified as vd\* such as **vda** and **vdb**.
+         * *   For [instance families available for purchase](~~25378~~), when the instance type of an instance is changed, the private IP address of the instance changes.
          * 
-         * Instances of the Virtual Private Cloud (VPC) type: For [retired instance types](~~55263~~), if a non-I/O-optimized instance is upgraded to an I/O-optimized instance, the disk device names and software authorization codes of the instance change. For Linux instances, basic disks (`cloud`) are identified by the prefix **xvd** such as **xvda and xvdb**. Ultra disks (`cloud_efficiency`) and standard SSDs (`cloud_ssd`) are identified by the prefix **vd** such as **vda and vdb**.
+         * Instance that resides in a virtual private cloud (VPC): For [retired instance types](~~55263~~), when a non-I/O optimized instance is upgraded to an I/O optimized instance, the disk device names and software authorization codes of the instance change. For a Linux instance, basic disks (`cloud`) are identified as xvd\* such as **xvda** and **xvdb**, and ultra disks (`cloud_efficiency`) and standard SSDs (`cloud_ssd`) are identified as vd\* such as **vda** and **vdb**.
          */
         public Builder allowMigrateAcrossZone(Boolean allowMigrateAcrossZone) {
             this.putQueryParameter("AllowMigrateAcrossZone", allowMigrateAcrossZone);
@@ -328,8 +331,11 @@ public class ModifyInstanceSpecRequest extends Request {
         }
 
         /**
-         * Specifies whether to submit an asynchronous request.
+         * Specifies whether to submit an asynchronous request. Valid values:
          * <p>
+         * 
+         * *   true
+         * *   false
          * 
          * Default value: false.
          */
@@ -340,7 +346,7 @@ public class ModifyInstanceSpecRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The **token** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. **The token can contain only ASCII characters and cannot exceed 64 characters in length.** For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -349,7 +355,7 @@ public class ModifyInstanceSpecRequest extends Request {
         }
 
         /**
-         * >该参数暂未开放使用。
+         * Disk.
          */
         public Builder disk(java.util.List < Disk> disk) {
             this.putQueryParameter("Disk", disk);
@@ -358,7 +364,11 @@ public class ModifyInstanceSpecRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
+         * <p>
+         * 
+         * *   true: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, service limits, and unavailable ECS resources. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+         * *   false (default): performs a dry run and performs the actual request.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -376,7 +386,7 @@ public class ModifyInstanceSpecRequest extends Request {
         }
 
         /**
-         * The new instance type. For more information, see [Overview of instance families](~~25378~~) or call the [DescribeInstanceTypes](~~25620~~) operation to query the most recent list of instance types.
+         * The new instance type. For more information, see [Overview of instance families](~~25378~~) or call the [DescribeInstanceTypes](~~25620~~) operation to query the most recent instance type list.
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -412,7 +422,7 @@ public class ModifyInstanceSpecRequest extends Request {
         }
 
         /**
-         * >该参数暂未开放使用。
+         * ModifyMode.
          */
         public Builder modifyMode(String modifyMode) {
             this.putQueryParameter("ModifyMode", modifyMode);
@@ -490,11 +500,13 @@ public class ModifyInstanceSpecRequest extends Request {
             private String category; 
 
             /**
-             * The new category of the system disk. This parameter is valid only when you upgrade an instance from a retired instance type to an available instance type or when you upgrade a non-I/O optimized instance to an I/O optimized instance. For more information, see [Retired instance types](~~55263~~) and [Overview of instance families](~~25378~~). Valid values:
+             * The new category of the system disk. Valid values:
              * <p>
              * 
-             * *   cloud_efficiency: ultra disk.
-             * *   cloud_ssd: standard SSD.
+             * *   cloud_efficiency: ultra disk
+             * *   cloud_ssd: standard SSD
+             * 
+             * >  This parameter takes effect only when you upgrade a non-I/O optimized instance of [a retired instance type](~~55263~~) to an I/O optimized instance of [an instance type available for purchase](~~25378~~).
              */
             public Builder category(String category) {
                 this.category = category;
@@ -560,7 +572,7 @@ public class ModifyInstanceSpecRequest extends Request {
             private String startTime; 
 
             /**
-             * > This parameter is in invitational preview and is not publicly available.
+             * >  This parameter is in invitational preview and is not publicly available.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -568,7 +580,7 @@ public class ModifyInstanceSpecRequest extends Request {
             }
 
             /**
-             * > This parameter is in invitational preview and is not publicly available.
+             * >  This parameter is in invitational preview and is not publicly available.
              */
             public Builder internetMaxBandwidthOut(Integer internetMaxBandwidthOut) {
                 this.internetMaxBandwidthOut = internetMaxBandwidthOut;
@@ -576,7 +588,7 @@ public class ModifyInstanceSpecRequest extends Request {
             }
 
             /**
-             * > This parameter is in invitational preview and is not publicly available.
+             * >  This parameter is in invitational preview and is not publicly available.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -641,7 +653,13 @@ public class ModifyInstanceSpecRequest extends Request {
             private String performanceLevel; 
 
             /**
-             * >该参数暂未开放使用。
+             * The new category of the system disk. Valid values:
+             * <p>
+             * 
+             * *   cloud_efficiency: ultra disk
+             * *   cloud_ssd: standard SSD
+             * 
+             * >  This parameter takes effect only when you upgrade a non-I/O optimized instance of [a retired instance type](~~55263~~) to an I/O optimized instance of [an instance type available for purchase](~~25378~~).
              */
             public Builder category(String category) {
                 this.category = category;
@@ -649,7 +667,7 @@ public class ModifyInstanceSpecRequest extends Request {
             }
 
             /**
-             * >该参数暂未开放使用。
+             * DiskId.
              */
             public Builder diskId(String diskId) {
                 this.diskId = diskId;
@@ -657,7 +675,7 @@ public class ModifyInstanceSpecRequest extends Request {
             }
 
             /**
-             * >该参数暂未开放使用。
+             * PerformanceLevel.
              */
             public Builder performanceLevel(String performanceLevel) {
                 this.performanceLevel = performanceLevel;

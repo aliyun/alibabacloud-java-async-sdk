@@ -205,10 +205,10 @@ public class StartTerminalSessionRequest extends Request {
         }
 
         /**
-         * If you set this parameter to the IP address of an instance, the PortNumber parameter specifies the port number of the instance.
+         * The command to run after the session is initiated. The command length cannot exceed 512 characters.
          * <p>
          * 
-         * >If you specify `CommandLine`, you do not need to specify `PortNumber` or `TargetServer`.
+         * >  If you specify the `CommandLine` parameter, you cannot specify the `PortNumber` or `TargetServer` parameter.
          */
         public Builder commandLine(String commandLine) {
             this.putQueryParameter("CommandLine", commandLine);
@@ -244,7 +244,7 @@ public class StartTerminalSessionRequest extends Request {
         }
 
         /**
-         * The port number of the instance. The port is used to forward data. After this parameter is configured, Cloud Assistant Agent forwards data to the specified port for forwarding. Example: 22.
+         * The port number of the ECS instance. The port is used to forward data. After this parameter is configured, Cloud Assistant Agent forwards data to the specified port. For example, you can set this parameter to 22 for data forwarding over SSH.
          * <p>
          * 
          * This parameter is empty by default, which indicates that no port is configured to forward data.
@@ -283,10 +283,10 @@ public class StartTerminalSessionRequest extends Request {
         }
 
         /**
-         * The IP address of the instance.
+         * The IP address of the instance. You can use the IP address to access the destination service in a virtual private cloud (VPC).
          * <p>
          * 
-         * >If you set this parameter to the IP address of an instance, the `PortNumber` parameter specifies the port number of the instance.
+         * >  If this parameter is not empty, `PortNumber` specifies the port number that is used by the managed instance to access the destination service in the VPC.
          */
         public Builder targetServer(String targetServer) {
             this.putQueryParameter("TargetServer", targetServer);
@@ -295,7 +295,7 @@ public class StartTerminalSessionRequest extends Request {
         }
 
         /**
-         * Username.
+         * 指定连接时的用户名称。
          */
         public Builder username(String username) {
             this.putQueryParameter("Username", username);

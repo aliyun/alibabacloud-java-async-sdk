@@ -207,14 +207,16 @@ public class ModifyDiskSpecRequest extends Request {
          * The new category of the disk. Valid values:
          * <p>
          * 
-         * *   cloud_essd: ESSD
+         * *   cloud_essd: enhanced SSD (ESSD)
          * *   cloud_auto: ESSD AutoPL disk
          * *   cloud_ssd: standard SSD
          * *   cloud_efficiency: ultra disk
          * 
          * This parameter is empty by default, which indicates that the disk category is not changed.
          * 
-         * >  The preceding values are listed in descending order of disk performance. Subscription disks cannot be downgraded.
+         * > 
+         * 
+         * *   The preceding values are listed in descending order of disk performance. Subscription disks cannot be downgraded.
          */
         public Builder diskCategory(String diskCategory) {
             this.putQueryParameter("DiskCategory", diskCategory);
