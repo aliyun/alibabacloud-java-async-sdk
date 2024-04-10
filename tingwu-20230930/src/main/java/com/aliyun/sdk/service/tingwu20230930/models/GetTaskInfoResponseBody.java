@@ -124,6 +124,9 @@ public class GetTaskInfoResponseBody extends TeaModel {
         @NameInMap("Summarization")
         private String summarization;
 
+        @NameInMap("TextPolish")
+        private String textPolish;
+
         @NameInMap("Transcription")
         private String transcription;
 
@@ -135,6 +138,7 @@ public class GetTaskInfoResponseBody extends TeaModel {
             this.meetingAssistance = builder.meetingAssistance;
             this.pptExtraction = builder.pptExtraction;
             this.summarization = builder.summarization;
+            this.textPolish = builder.textPolish;
             this.transcription = builder.transcription;
             this.translation = builder.translation;
         }
@@ -176,6 +180,13 @@ public class GetTaskInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return textPolish
+         */
+        public String getTextPolish() {
+            return this.textPolish;
+        }
+
+        /**
          * @return transcription
          */
         public String getTranscription() {
@@ -194,6 +205,7 @@ public class GetTaskInfoResponseBody extends TeaModel {
             private String meetingAssistance; 
             private String pptExtraction; 
             private String summarization; 
+            private String textPolish; 
             private String transcription; 
             private String translation; 
 
@@ -226,6 +238,14 @@ public class GetTaskInfoResponseBody extends TeaModel {
              */
             public Builder summarization(String summarization) {
                 this.summarization = summarization;
+                return this;
+            }
+
+            /**
+             * TextPolish.
+             */
+            public Builder textPolish(String textPolish) {
+                this.textPolish = textPolish;
                 return this;
             }
 
