@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.cr20181201;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.cr20181201.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -200,6 +201,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListRepoTriggerResponse> listRepoTrigger(ListRepoTriggerRequest request);
 
     CompletableFuture<ListRepositoryResponse> listRepository(ListRepositoryRequest request);
+
+    CompletableFuture<ListScanBaselineByTaskResponse> listScanBaselineByTask(ListScanBaselineByTaskRequest request);
+
+    CompletableFuture<ListScanMaliciousFileByTaskResponse> listScanMaliciousFileByTask(ListScanMaliciousFileByTaskRequest request);
 
     CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
 

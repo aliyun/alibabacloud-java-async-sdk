@@ -14,7 +14,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class GetRepoTagScanStatusRequest extends Request {
     @Host
     @NameInMap("RegionId")
-    @Validation(required = true)
     private String regionId;
 
     @Query
