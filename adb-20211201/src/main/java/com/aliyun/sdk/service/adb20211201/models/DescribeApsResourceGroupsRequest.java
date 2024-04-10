@@ -17,9 +17,19 @@ public class DescribeApsResourceGroupsRequest extends Request {
     @Validation(required = true)
     private String DBClusterId;
 
+    @Body
+    @NameInMap("RegionId")
+    private String regionId;
+
+    @Body
+    @NameInMap("WorkloadId")
+    private String workloadId;
+
     private DescribeApsResourceGroupsRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
+        this.regionId = builder.regionId;
+        this.workloadId = builder.workloadId;
     }
 
     public static Builder builder() {
@@ -42,8 +52,24 @@ public class DescribeApsResourceGroupsRequest extends Request {
         return this.DBClusterId;
     }
 
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return workloadId
+     */
+    public String getWorkloadId() {
+        return this.workloadId;
+    }
+
     public static final class Builder extends Request.Builder<DescribeApsResourceGroupsRequest, Builder> {
         private String DBClusterId; 
+        private String regionId; 
+        private String workloadId; 
 
         private Builder() {
             super();
@@ -52,6 +78,8 @@ public class DescribeApsResourceGroupsRequest extends Request {
         private Builder(DescribeApsResourceGroupsRequest request) {
             super(request);
             this.DBClusterId = request.DBClusterId;
+            this.regionId = request.regionId;
+            this.workloadId = request.workloadId;
         } 
 
         /**
@@ -63,6 +91,24 @@ public class DescribeApsResourceGroupsRequest extends Request {
         public Builder DBClusterId(String DBClusterId) {
             this.putBodyParameter("DBClusterId", DBClusterId);
             this.DBClusterId = DBClusterId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putBodyParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * WorkloadId.
+         */
+        public Builder workloadId(String workloadId) {
+            this.putBodyParameter("WorkloadId", workloadId);
+            this.workloadId = workloadId;
             return this;
         }
 
