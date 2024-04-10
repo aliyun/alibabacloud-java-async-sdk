@@ -234,6 +234,9 @@ public class ListObjectScanEventResponseBody extends TeaModel {
         @NameInMap("FirstTime")
         private Long firstTime;
 
+        @NameInMap("HasSubEvent")
+        private Boolean hasSubEvent;
+
         @NameInMap("LastTime")
         private Long lastTime;
 
@@ -263,6 +266,7 @@ public class ListObjectScanEventResponseBody extends TeaModel {
             this.eventName = builder.eventName;
             this.filePath = builder.filePath;
             this.firstTime = builder.firstTime;
+            this.hasSubEvent = builder.hasSubEvent;
             this.lastTime = builder.lastTime;
             this.md5 = builder.md5;
             this.ossKey = builder.ossKey;
@@ -330,6 +334,13 @@ public class ListObjectScanEventResponseBody extends TeaModel {
         }
 
         /**
+         * @return hasSubEvent
+         */
+        public Boolean getHasSubEvent() {
+            return this.hasSubEvent;
+        }
+
+        /**
          * @return lastTime
          */
         public Long getLastTime() {
@@ -386,6 +397,7 @@ public class ListObjectScanEventResponseBody extends TeaModel {
             private String eventName; 
             private String filePath; 
             private Long firstTime; 
+            private Boolean hasSubEvent; 
             private Long lastTime; 
             private String md5; 
             private String ossKey; 
@@ -451,6 +463,14 @@ public class ListObjectScanEventResponseBody extends TeaModel {
              */
             public Builder firstTime(Long firstTime) {
                 this.firstTime = firstTime;
+                return this;
+            }
+
+            /**
+             * HasSubEvent.
+             */
+            public Builder hasSubEvent(Boolean hasSubEvent) {
+                this.hasSubEvent = hasSubEvent;
                 return this;
             }
 

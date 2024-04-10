@@ -84,6 +84,12 @@ public class GetOssScanConfigResponseBody extends TeaModel {
         @NameInMap("BucketNameList")
         private java.util.List < String > bucketNameList;
 
+        @NameInMap("DecompressMaxFileCount")
+        private Integer decompressMaxFileCount;
+
+        @NameInMap("DecompressMaxLayer")
+        private Integer decompressMaxLayer;
+
         @NameInMap("Enable")
         private Integer enable;
 
@@ -116,6 +122,8 @@ public class GetOssScanConfigResponseBody extends TeaModel {
             this.bucketCount = builder.bucketCount;
             this.bucketName = builder.bucketName;
             this.bucketNameList = builder.bucketNameList;
+            this.decompressMaxFileCount = builder.decompressMaxFileCount;
+            this.decompressMaxLayer = builder.decompressMaxLayer;
             this.enable = builder.enable;
             this.endTime = builder.endTime;
             this.id = builder.id;
@@ -161,6 +169,20 @@ public class GetOssScanConfigResponseBody extends TeaModel {
          */
         public java.util.List < String > getBucketNameList() {
             return this.bucketNameList;
+        }
+
+        /**
+         * @return decompressMaxFileCount
+         */
+        public Integer getDecompressMaxFileCount() {
+            return this.decompressMaxFileCount;
+        }
+
+        /**
+         * @return decompressMaxLayer
+         */
+        public Integer getDecompressMaxLayer() {
+            return this.decompressMaxLayer;
         }
 
         /**
@@ -231,6 +253,8 @@ public class GetOssScanConfigResponseBody extends TeaModel {
             private Integer bucketCount; 
             private String bucketName; 
             private java.util.List < String > bucketNameList; 
+            private Integer decompressMaxFileCount; 
+            private Integer decompressMaxLayer; 
             private Integer enable; 
             private String endTime; 
             private String id; 
@@ -270,6 +294,22 @@ public class GetOssScanConfigResponseBody extends TeaModel {
              */
             public Builder bucketNameList(java.util.List < String > bucketNameList) {
                 this.bucketNameList = bucketNameList;
+                return this;
+            }
+
+            /**
+             * DecompressMaxFileCount.
+             */
+            public Builder decompressMaxFileCount(Integer decompressMaxFileCount) {
+                this.decompressMaxFileCount = decompressMaxFileCount;
+                return this;
+            }
+
+            /**
+             * DecompressMaxLayer.
+             */
+            public Builder decompressMaxLayer(Integer decompressMaxLayer) {
+                this.decompressMaxLayer = decompressMaxLayer;
                 return this;
             }
 

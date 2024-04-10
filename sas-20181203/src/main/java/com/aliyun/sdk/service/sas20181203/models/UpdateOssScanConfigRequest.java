@@ -21,6 +21,14 @@ public class UpdateOssScanConfigRequest extends Request {
     private java.util.List < String > bucketNameList;
 
     @Query
+    @NameInMap("DecompressMaxFileCount")
+    private Integer decompressMaxFileCount;
+
+    @Query
+    @NameInMap("DecompressMaxLayer")
+    private Integer decompressMaxLayer;
+
+    @Query
     @NameInMap("Enable")
     private Integer enable;
 
@@ -56,6 +64,8 @@ public class UpdateOssScanConfigRequest extends Request {
         super(builder);
         this.allKeyPrefix = builder.allKeyPrefix;
         this.bucketNameList = builder.bucketNameList;
+        this.decompressMaxFileCount = builder.decompressMaxFileCount;
+        this.decompressMaxLayer = builder.decompressMaxLayer;
         this.enable = builder.enable;
         this.endTime = builder.endTime;
         this.id = builder.id;
@@ -91,6 +101,20 @@ public class UpdateOssScanConfigRequest extends Request {
      */
     public java.util.List < String > getBucketNameList() {
         return this.bucketNameList;
+    }
+
+    /**
+     * @return decompressMaxFileCount
+     */
+    public Integer getDecompressMaxFileCount() {
+        return this.decompressMaxFileCount;
+    }
+
+    /**
+     * @return decompressMaxLayer
+     */
+    public Integer getDecompressMaxLayer() {
+        return this.decompressMaxLayer;
     }
 
     /**
@@ -152,6 +176,8 @@ public class UpdateOssScanConfigRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateOssScanConfigRequest, Builder> {
         private Boolean allKeyPrefix; 
         private java.util.List < String > bucketNameList; 
+        private Integer decompressMaxFileCount; 
+        private Integer decompressMaxLayer; 
         private Integer enable; 
         private String endTime; 
         private String id; 
@@ -169,6 +195,8 @@ public class UpdateOssScanConfigRequest extends Request {
             super(request);
             this.allKeyPrefix = request.allKeyPrefix;
             this.bucketNameList = request.bucketNameList;
+            this.decompressMaxFileCount = request.decompressMaxFileCount;
+            this.decompressMaxLayer = request.decompressMaxLayer;
             this.enable = request.enable;
             this.endTime = request.endTime;
             this.id = request.id;
@@ -194,6 +222,24 @@ public class UpdateOssScanConfigRequest extends Request {
         public Builder bucketNameList(java.util.List < String > bucketNameList) {
             this.putQueryParameter("BucketNameList", bucketNameList);
             this.bucketNameList = bucketNameList;
+            return this;
+        }
+
+        /**
+         * DecompressMaxFileCount.
+         */
+        public Builder decompressMaxFileCount(Integer decompressMaxFileCount) {
+            this.putQueryParameter("DecompressMaxFileCount", decompressMaxFileCount);
+            this.decompressMaxFileCount = decompressMaxFileCount;
+            return this;
+        }
+
+        /**
+         * DecompressMaxLayer.
+         */
+        public Builder decompressMaxLayer(Integer decompressMaxLayer) {
+            this.putQueryParameter("DecompressMaxLayer", decompressMaxLayer);
+            this.decompressMaxLayer = decompressMaxLayer;
             return this;
         }
 

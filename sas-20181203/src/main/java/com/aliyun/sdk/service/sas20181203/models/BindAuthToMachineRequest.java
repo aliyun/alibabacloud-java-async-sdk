@@ -14,7 +14,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class BindAuthToMachineRequest extends Request {
     @Query
     @NameInMap("AuthVersion")
-    @Validation(required = true)
     private Integer authVersion;
 
     @Query
@@ -34,8 +33,20 @@ public class BindAuthToMachineRequest extends Request {
     private String criteria;
 
     @Query
+    @NameInMap("IsPreBind")
+    private Integer isPreBind;
+
+    @Query
     @NameInMap("LogicalExp")
     private String logicalExp;
+
+    @Query
+    @NameInMap("NtmVersion")
+    private String ntmVersion;
+
+    @Query
+    @NameInMap("PreBindOrderId")
+    private Long preBindOrderId;
 
     @Query
     @NameInMap("UnBind")
@@ -48,7 +59,10 @@ public class BindAuthToMachineRequest extends Request {
         this.bind = builder.bind;
         this.bindAll = builder.bindAll;
         this.criteria = builder.criteria;
+        this.isPreBind = builder.isPreBind;
         this.logicalExp = builder.logicalExp;
+        this.ntmVersion = builder.ntmVersion;
+        this.preBindOrderId = builder.preBindOrderId;
         this.unBind = builder.unBind;
     }
 
@@ -101,10 +115,31 @@ public class BindAuthToMachineRequest extends Request {
     }
 
     /**
+     * @return isPreBind
+     */
+    public Integer getIsPreBind() {
+        return this.isPreBind;
+    }
+
+    /**
      * @return logicalExp
      */
     public String getLogicalExp() {
         return this.logicalExp;
+    }
+
+    /**
+     * @return ntmVersion
+     */
+    public String getNtmVersion() {
+        return this.ntmVersion;
+    }
+
+    /**
+     * @return preBindOrderId
+     */
+    public Long getPreBindOrderId() {
+        return this.preBindOrderId;
     }
 
     /**
@@ -120,7 +155,10 @@ public class BindAuthToMachineRequest extends Request {
         private java.util.List < String > bind; 
         private Boolean bindAll; 
         private String criteria; 
+        private Integer isPreBind; 
         private String logicalExp; 
+        private String ntmVersion; 
+        private Long preBindOrderId; 
         private java.util.List < String > unBind; 
 
         private Builder() {
@@ -134,7 +172,10 @@ public class BindAuthToMachineRequest extends Request {
             this.bind = request.bind;
             this.bindAll = request.bindAll;
             this.criteria = request.criteria;
+            this.isPreBind = request.isPreBind;
             this.logicalExp = request.logicalExp;
+            this.ntmVersion = request.ntmVersion;
+            this.preBindOrderId = request.preBindOrderId;
             this.unBind = request.unBind;
         } 
 
@@ -205,6 +246,15 @@ public class BindAuthToMachineRequest extends Request {
         }
 
         /**
+         * IsPreBind.
+         */
+        public Builder isPreBind(Integer isPreBind) {
+            this.putQueryParameter("IsPreBind", isPreBind);
+            this.isPreBind = isPreBind;
+            return this;
+        }
+
+        /**
          * The logical relationship that you want to use to evaluate multiple search conditions. Default value: **OR**. Valid values:
          * <p>
          * 
@@ -214,6 +264,24 @@ public class BindAuthToMachineRequest extends Request {
         public Builder logicalExp(String logicalExp) {
             this.putQueryParameter("LogicalExp", logicalExp);
             this.logicalExp = logicalExp;
+            return this;
+        }
+
+        /**
+         * NtmVersion.
+         */
+        public Builder ntmVersion(String ntmVersion) {
+            this.putQueryParameter("NtmVersion", ntmVersion);
+            this.ntmVersion = ntmVersion;
+            return this;
+        }
+
+        /**
+         * PreBindOrderId.
+         */
+        public Builder preBindOrderId(Long preBindOrderId) {
+            this.putQueryParameter("PreBindOrderId", preBindOrderId);
+            this.preBindOrderId = preBindOrderId;
             return this;
         }
 

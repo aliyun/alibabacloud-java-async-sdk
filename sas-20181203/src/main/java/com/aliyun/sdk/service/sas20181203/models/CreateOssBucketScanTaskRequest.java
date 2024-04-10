@@ -22,6 +22,14 @@ public class CreateOssBucketScanTaskRequest extends Request {
     private java.util.List < String > bucketNameList;
 
     @Query
+    @NameInMap("DecompressMaxFileCount")
+    private Integer decompressMaxFileCount;
+
+    @Query
+    @NameInMap("DecompressMaxLayer")
+    private Integer decompressMaxLayer;
+
+    @Query
     @NameInMap("ExcludeKeySuffixList")
     private java.util.List < String > excludeKeySuffixList;
 
@@ -42,6 +50,8 @@ public class CreateOssBucketScanTaskRequest extends Request {
         super(builder);
         this.allKeyPrefix = builder.allKeyPrefix;
         this.bucketNameList = builder.bucketNameList;
+        this.decompressMaxFileCount = builder.decompressMaxFileCount;
+        this.decompressMaxLayer = builder.decompressMaxLayer;
         this.excludeKeySuffixList = builder.excludeKeySuffixList;
         this.keyPrefixList = builder.keyPrefixList;
         this.keySuffixList = builder.keySuffixList;
@@ -76,6 +86,20 @@ public class CreateOssBucketScanTaskRequest extends Request {
     }
 
     /**
+     * @return decompressMaxFileCount
+     */
+    public Integer getDecompressMaxFileCount() {
+        return this.decompressMaxFileCount;
+    }
+
+    /**
+     * @return decompressMaxLayer
+     */
+    public Integer getDecompressMaxLayer() {
+        return this.decompressMaxLayer;
+    }
+
+    /**
      * @return excludeKeySuffixList
      */
     public java.util.List < String > getExcludeKeySuffixList() {
@@ -106,6 +130,8 @@ public class CreateOssBucketScanTaskRequest extends Request {
     public static final class Builder extends Request.Builder<CreateOssBucketScanTaskRequest, Builder> {
         private Boolean allKeyPrefix; 
         private java.util.List < String > bucketNameList; 
+        private Integer decompressMaxFileCount; 
+        private Integer decompressMaxLayer; 
         private java.util.List < String > excludeKeySuffixList; 
         private java.util.List < String > keyPrefixList; 
         private java.util.List < String > keySuffixList; 
@@ -119,6 +145,8 @@ public class CreateOssBucketScanTaskRequest extends Request {
             super(request);
             this.allKeyPrefix = request.allKeyPrefix;
             this.bucketNameList = request.bucketNameList;
+            this.decompressMaxFileCount = request.decompressMaxFileCount;
+            this.decompressMaxLayer = request.decompressMaxLayer;
             this.excludeKeySuffixList = request.excludeKeySuffixList;
             this.keyPrefixList = request.keyPrefixList;
             this.keySuffixList = request.keySuffixList;
@@ -140,6 +168,24 @@ public class CreateOssBucketScanTaskRequest extends Request {
         public Builder bucketNameList(java.util.List < String > bucketNameList) {
             this.putQueryParameter("BucketNameList", bucketNameList);
             this.bucketNameList = bucketNameList;
+            return this;
+        }
+
+        /**
+         * DecompressMaxFileCount.
+         */
+        public Builder decompressMaxFileCount(Integer decompressMaxFileCount) {
+            this.putQueryParameter("DecompressMaxFileCount", decompressMaxFileCount);
+            this.decompressMaxFileCount = decompressMaxFileCount;
+            return this;
+        }
+
+        /**
+         * DecompressMaxLayer.
+         */
+        public Builder decompressMaxLayer(Integer decompressMaxLayer) {
+            this.putQueryParameter("DecompressMaxLayer", decompressMaxLayer);
+            this.decompressMaxLayer = decompressMaxLayer;
             return this;
         }
 

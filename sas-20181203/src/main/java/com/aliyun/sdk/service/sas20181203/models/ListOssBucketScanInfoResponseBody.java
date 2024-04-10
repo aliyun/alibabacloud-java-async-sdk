@@ -98,6 +98,9 @@ public class ListOssBucketScanInfoResponseBody extends TeaModel {
         @NameInMap("ConfigStatus")
         private Integer configStatus;
 
+        @NameInMap("DecompressStatus")
+        private Integer decompressStatus;
+
         @NameInMap("HighRisk")
         private Long highRisk;
 
@@ -140,6 +143,7 @@ public class ListOssBucketScanInfoResponseBody extends TeaModel {
         private Data(Builder builder) {
             this.bucketName = builder.bucketName;
             this.configStatus = builder.configStatus;
+            this.decompressStatus = builder.decompressStatus;
             this.highRisk = builder.highRisk;
             this.lastScanEndTime = builder.lastScanEndTime;
             this.lastScanTime = builder.lastScanTime;
@@ -175,6 +179,13 @@ public class ListOssBucketScanInfoResponseBody extends TeaModel {
          */
         public Integer getConfigStatus() {
             return this.configStatus;
+        }
+
+        /**
+         * @return decompressStatus
+         */
+        public Integer getDecompressStatus() {
+            return this.decompressStatus;
         }
 
         /**
@@ -271,6 +282,7 @@ public class ListOssBucketScanInfoResponseBody extends TeaModel {
         public static final class Builder {
             private String bucketName; 
             private Integer configStatus; 
+            private Integer decompressStatus; 
             private Long highRisk; 
             private Long lastScanEndTime; 
             private Long lastScanTime; 
@@ -303,6 +315,14 @@ public class ListOssBucketScanInfoResponseBody extends TeaModel {
              */
             public Builder configStatus(Integer configStatus) {
                 this.configStatus = configStatus;
+                return this;
+            }
+
+            /**
+             * DecompressStatus.
+             */
+            public Builder decompressStatus(Integer decompressStatus) {
+                this.decompressStatus = decompressStatus;
                 return this;
             }
 

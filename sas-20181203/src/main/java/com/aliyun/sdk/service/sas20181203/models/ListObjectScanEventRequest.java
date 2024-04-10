@@ -43,6 +43,10 @@ public class ListObjectScanEventRequest extends Request {
     private Integer pageSize;
 
     @Query
+    @NameInMap("ParentEventId")
+    private Long parentEventId;
+
+    @Query
     @NameInMap("RiskLevel")
     private String riskLevel;
 
@@ -67,6 +71,7 @@ public class ListObjectScanEventRequest extends Request {
         this.md5 = builder.md5;
         this.ossKey = builder.ossKey;
         this.pageSize = builder.pageSize;
+        this.parentEventId = builder.parentEventId;
         this.riskLevel = builder.riskLevel;
         this.source = builder.source;
         this.timeEnd = builder.timeEnd;
@@ -136,6 +141,13 @@ public class ListObjectScanEventRequest extends Request {
     }
 
     /**
+     * @return parentEventId
+     */
+    public Long getParentEventId() {
+        return this.parentEventId;
+    }
+
+    /**
      * @return riskLevel
      */
     public String getRiskLevel() {
@@ -171,6 +183,7 @@ public class ListObjectScanEventRequest extends Request {
         private String md5; 
         private String ossKey; 
         private Integer pageSize; 
+        private Long parentEventId; 
         private String riskLevel; 
         private String source; 
         private Long timeEnd; 
@@ -189,6 +202,7 @@ public class ListObjectScanEventRequest extends Request {
             this.md5 = request.md5;
             this.ossKey = request.ossKey;
             this.pageSize = request.pageSize;
+            this.parentEventId = request.parentEventId;
             this.riskLevel = request.riskLevel;
             this.source = request.source;
             this.timeEnd = request.timeEnd;
@@ -259,6 +273,15 @@ public class ListObjectScanEventRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * ParentEventId.
+         */
+        public Builder parentEventId(Long parentEventId) {
+            this.putQueryParameter("ParentEventId", parentEventId);
+            this.parentEventId = parentEventId;
             return this;
         }
 
