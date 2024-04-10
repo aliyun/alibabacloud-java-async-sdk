@@ -38,6 +38,10 @@ public class CreateInstanceRequest extends Request {
     private Long duration;
 
     @Body
+    @NameInMap("enableServerlessComputing")
+    private Boolean enableServerlessComputing;
+
+    @Body
     @NameInMap("gatewayCount")
     @Validation(maximum = 50, minimum = 2)
     private Long gatewayCount;
@@ -100,6 +104,7 @@ public class CreateInstanceRequest extends Request {
         this.coldStorageSize = builder.coldStorageSize;
         this.cpu = builder.cpu;
         this.duration = builder.duration;
+        this.enableServerlessComputing = builder.enableServerlessComputing;
         this.gatewayCount = builder.gatewayCount;
         this.initialDatabases = builder.initialDatabases;
         this.instanceName = builder.instanceName;
@@ -167,6 +172,13 @@ public class CreateInstanceRequest extends Request {
      */
     public Long getDuration() {
         return this.duration;
+    }
+
+    /**
+     * @return enableServerlessComputing
+     */
+    public Boolean getEnableServerlessComputing() {
+        return this.enableServerlessComputing;
     }
 
     /**
@@ -260,6 +272,7 @@ public class CreateInstanceRequest extends Request {
         private Long coldStorageSize; 
         private Long cpu; 
         private Long duration; 
+        private Boolean enableServerlessComputing; 
         private Long gatewayCount; 
         private String initialDatabases; 
         private String instanceName; 
@@ -285,6 +298,7 @@ public class CreateInstanceRequest extends Request {
             this.coldStorageSize = request.coldStorageSize;
             this.cpu = request.cpu;
             this.duration = request.duration;
+            this.enableServerlessComputing = request.enableServerlessComputing;
             this.gatewayCount = request.gatewayCount;
             this.initialDatabases = request.initialDatabases;
             this.instanceName = request.instanceName;
@@ -391,6 +405,15 @@ public class CreateInstanceRequest extends Request {
         public Builder duration(Long duration) {
             this.putBodyParameter("duration", duration);
             this.duration = duration;
+            return this;
+        }
+
+        /**
+         * enableServerlessComputing.
+         */
+        public Builder enableServerlessComputing(Boolean enableServerlessComputing) {
+            this.putBodyParameter("enableServerlessComputing", enableServerlessComputing);
+            this.enableServerlessComputing = enableServerlessComputing;
             return this;
         }
 

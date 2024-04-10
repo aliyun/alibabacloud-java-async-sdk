@@ -26,6 +26,10 @@ public class ScaleInstanceRequest extends Request {
     private Long cpu;
 
     @Body
+    @NameInMap("enableServerlessComputing")
+    private Boolean enableServerlessComputing;
+
+    @Body
     @NameInMap("gatewayCount")
     private Long gatewayCount;
 
@@ -43,6 +47,7 @@ public class ScaleInstanceRequest extends Request {
         this.instanceId = builder.instanceId;
         this.coldStorageSize = builder.coldStorageSize;
         this.cpu = builder.cpu;
+        this.enableServerlessComputing = builder.enableServerlessComputing;
         this.gatewayCount = builder.gatewayCount;
         this.scaleType = builder.scaleType;
         this.storageSize = builder.storageSize;
@@ -83,6 +88,13 @@ public class ScaleInstanceRequest extends Request {
     }
 
     /**
+     * @return enableServerlessComputing
+     */
+    public Boolean getEnableServerlessComputing() {
+        return this.enableServerlessComputing;
+    }
+
+    /**
      * @return gatewayCount
      */
     public Long getGatewayCount() {
@@ -107,6 +119,7 @@ public class ScaleInstanceRequest extends Request {
         private String instanceId; 
         private Long coldStorageSize; 
         private Long cpu; 
+        private Boolean enableServerlessComputing; 
         private Long gatewayCount; 
         private String scaleType; 
         private Long storageSize; 
@@ -120,6 +133,7 @@ public class ScaleInstanceRequest extends Request {
             this.instanceId = request.instanceId;
             this.coldStorageSize = request.coldStorageSize;
             this.cpu = request.cpu;
+            this.enableServerlessComputing = request.enableServerlessComputing;
             this.gatewayCount = request.gatewayCount;
             this.scaleType = request.scaleType;
             this.storageSize = request.storageSize;
@@ -171,6 +185,15 @@ public class ScaleInstanceRequest extends Request {
         public Builder cpu(Long cpu) {
             this.putBodyParameter("cpu", cpu);
             this.cpu = cpu;
+            return this;
+        }
+
+        /**
+         * enableServerlessComputing.
+         */
+        public Builder enableServerlessComputing(Boolean enableServerlessComputing) {
+            this.putBodyParameter("enableServerlessComputing", enableServerlessComputing);
+            this.enableServerlessComputing = enableServerlessComputing;
             return this;
         }
 

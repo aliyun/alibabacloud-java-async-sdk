@@ -474,6 +474,9 @@ public class GetInstanceResponseBody extends TeaModel {
         @NameInMap("EnableHiveAccess")
         private String enableHiveAccess;
 
+        @NameInMap("EnableServerless")
+        private Boolean enableServerless;
+
         @NameInMap("Endpoints")
         private java.util.List < Endpoints> endpoints;
 
@@ -543,6 +546,7 @@ public class GetInstanceResponseBody extends TeaModel {
             this.creationTime = builder.creationTime;
             this.disk = builder.disk;
             this.enableHiveAccess = builder.enableHiveAccess;
+            this.enableServerless = builder.enableServerless;
             this.endpoints = builder.endpoints;
             this.expirationTime = builder.expirationTime;
             this.gatewayCount = builder.gatewayCount;
@@ -627,6 +631,13 @@ public class GetInstanceResponseBody extends TeaModel {
          */
         public String getEnableHiveAccess() {
             return this.enableHiveAccess;
+        }
+
+        /**
+         * @return enableServerless
+         */
+        public Boolean getEnableServerless() {
+            return this.enableServerless;
         }
 
         /**
@@ -778,6 +789,7 @@ public class GetInstanceResponseBody extends TeaModel {
             private String creationTime; 
             private String disk; 
             private String enableHiveAccess; 
+            private Boolean enableServerless; 
             private java.util.List < Endpoints> endpoints; 
             private String expirationTime; 
             private Long gatewayCount; 
@@ -990,6 +1002,14 @@ public class GetInstanceResponseBody extends TeaModel {
              */
             public Builder enableHiveAccess(String enableHiveAccess) {
                 this.enableHiveAccess = enableHiveAccess;
+                return this;
+            }
+
+            /**
+             * EnableServerless.
+             */
+            public Builder enableServerless(Boolean enableServerless) {
+                this.enableServerless = enableServerless;
                 return this;
             }
 
