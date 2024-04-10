@@ -33,6 +33,10 @@ public class PostMSSearchEnhanceRequest extends Request {
     private String filters;
 
     @Body
+    @NameInMap("MinScore")
+    private Double minScore;
+
+    @Body
     @NameInMap("Page")
     private Integer page;
 
@@ -71,6 +75,7 @@ public class PostMSSearchEnhanceRequest extends Request {
         this.debug = builder.debug;
         this.fields = builder.fields;
         this.filters = builder.filters;
+        this.minScore = builder.minScore;
         this.page = builder.page;
         this.queries = builder.queries;
         this.rankModelInfo = builder.rankModelInfo;
@@ -127,6 +132,13 @@ public class PostMSSearchEnhanceRequest extends Request {
      */
     public String getFilters() {
         return this.filters;
+    }
+
+    /**
+     * @return minScore
+     */
+    public Double getMinScore() {
+        return this.minScore;
     }
 
     /**
@@ -191,6 +203,7 @@ public class PostMSSearchEnhanceRequest extends Request {
         private Boolean debug; 
         private java.util.List < String > fields; 
         private String filters; 
+        private Double minScore; 
         private Integer page; 
         private String queries; 
         private java.util.Map < String, ? > rankModelInfo; 
@@ -211,6 +224,7 @@ public class PostMSSearchEnhanceRequest extends Request {
             this.debug = request.debug;
             this.fields = request.fields;
             this.filters = request.filters;
+            this.minScore = request.minScore;
             this.page = request.page;
             this.queries = request.queries;
             this.rankModelInfo = request.rankModelInfo;
@@ -265,6 +279,15 @@ public class PostMSSearchEnhanceRequest extends Request {
         public Builder filters(String filters) {
             this.putBodyParameter("Filters", filters);
             this.filters = filters;
+            return this;
+        }
+
+        /**
+         * MinScore.
+         */
+        public Builder minScore(Double minScore) {
+            this.putBodyParameter("MinScore", minScore);
+            this.minScore = minScore;
             return this;
         }
 
