@@ -62,7 +62,7 @@ public class PublishFlowResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * If OK is returned, the request was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -70,7 +70,7 @@ public class PublishFlowResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -78,7 +78,7 @@ public class PublishFlowResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request。
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

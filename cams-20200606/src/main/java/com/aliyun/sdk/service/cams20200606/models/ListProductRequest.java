@@ -200,7 +200,7 @@ public class ListProductRequest extends Request {
         }
 
         /**
-         * The ID of the product catalog.
+         * The catalog ID.
          */
         public Builder catalogId(String catalogId) {
             this.putQueryParameter("CatalogId", catalogId);

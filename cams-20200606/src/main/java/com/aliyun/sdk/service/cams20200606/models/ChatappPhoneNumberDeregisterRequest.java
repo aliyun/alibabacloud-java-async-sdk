@@ -70,7 +70,7 @@ public class ChatappPhoneNumberDeregisterRequest extends Request {
         } 
 
         /**
-         * CustSpaceId.
+         * The space ID of the user within the independent software vendor (ISV) account.
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putBodyParameter("CustSpaceId", custSpaceId);
@@ -79,7 +79,7 @@ public class ChatappPhoneNumberDeregisterRequest extends Request {
         }
 
         /**
-         * PhoneNumber.
+         * The phone number.
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putBodyParameter("PhoneNumber", phoneNumber);

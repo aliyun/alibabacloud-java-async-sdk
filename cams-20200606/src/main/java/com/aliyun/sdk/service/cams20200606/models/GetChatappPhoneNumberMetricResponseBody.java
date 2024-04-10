@@ -94,11 +94,7 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
-         * <p>
-         * 
-         * *   A value of OK indicates that the call is successful.
-         * *   Other values indicate that the call fails. For more information, see [Error codes](~~196974~~).
+         * The value OK indicates that the request was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +110,7 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -122,7 +118,7 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -222,7 +218,7 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
             private Long start; 
 
             /**
-             * Delivered count
+             * The number of delivered messages.
              */
             public Builder deliveredCount(Integer deliveredCount) {
                 this.deliveredCount = deliveredCount;
@@ -230,7 +226,7 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * The end of the time range that you queried.
              */
             public Builder end(Long end) {
                 this.end = end;
@@ -238,7 +234,14 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The granularity at which bills are queried.
+             * The metric granularity.
+             * <p>
+             * 
+             * >  Valid values:
+             * 
+             * *   DAILY
+             * 
+             * *   HALF_HOUR
              */
             public Builder granularity(String granularity) {
                 this.granularity = granularity;
@@ -254,7 +257,7 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
             }
 
             /**
-             * Sent count
+             * The number of sent messages.
              */
             public Builder sentCount(Integer sentCount) {
                 this.sentCount = sentCount;
@@ -262,7 +265,7 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * The beginning of the time range that you queried.
              */
             public Builder start(Long start) {
                 this.start = start;

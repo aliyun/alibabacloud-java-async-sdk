@@ -68,7 +68,7 @@ public class EnableWhatsappROIMetricRequest extends Request {
         } 
 
         /**
-         * The space ID of the user under the independent software vendor (ISV) account.
+         * The space ID of the user within the ISV account.
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -77,7 +77,7 @@ public class EnableWhatsappROIMetricRequest extends Request {
         }
 
         /**
-         * The independent software vendor (ISV) verification code, which is used to verify whether the user is authorized by the ISV account.
+         * The verification code used to verify whether the RAM user is authorized by the independent software vendor (ISV) account.
          */
         public Builder isvCode(String isvCode) {
             this.putQueryParameter("IsvCode", isvCode);

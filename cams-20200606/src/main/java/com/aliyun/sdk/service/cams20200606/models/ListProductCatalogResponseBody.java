@@ -126,7 +126,7 @@ public class ListProductCatalogResponseBody extends TeaModel {
         }
 
         /**
-         * The returned results.
+         * The returned data.
          */
         public Builder model(Model model) {
             this.model = model;

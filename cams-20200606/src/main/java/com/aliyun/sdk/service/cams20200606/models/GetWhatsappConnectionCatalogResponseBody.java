@@ -126,7 +126,7 @@ public class GetWhatsappConnectionCatalogResponseBody extends TeaModel {
         }
 
         /**
-         * The returned results.
+         * The returned data.
          */
         public Builder model(java.util.Map < String, ? > model) {
             this.model = model;

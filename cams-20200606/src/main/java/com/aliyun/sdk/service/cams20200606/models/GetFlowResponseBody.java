@@ -74,7 +74,7 @@ public class GetFlowResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * If OK is returned, the request was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class GetFlowResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +90,7 @@ public class GetFlowResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +98,7 @@ public class GetFlowResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request。
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -222,7 +222,7 @@ public class GetFlowResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * Categories.
+             * The categories of the Flow.
              */
             public Builder categories(java.util.List < String > categories) {
                 this.categories = categories;
@@ -230,7 +230,7 @@ public class GetFlowResponseBody extends TeaModel {
             }
 
             /**
-             * DataApiVersion.
+             * The API version.
              */
             public Builder dataApiVersion(String dataApiVersion) {
                 this.dataApiVersion = dataApiVersion;
@@ -238,7 +238,7 @@ public class GetFlowResponseBody extends TeaModel {
             }
 
             /**
-             * flow ID。
+             * The Flow ID.
              */
             public Builder flowId(String flowId) {
                 this.flowId = flowId;
@@ -246,7 +246,7 @@ public class GetFlowResponseBody extends TeaModel {
             }
 
             /**
-             * FlowName.
+             * The name of the Flow.
              */
             public Builder flowName(String flowName) {
                 this.flowName = flowName;
@@ -254,7 +254,7 @@ public class GetFlowResponseBody extends TeaModel {
             }
 
             /**
-             * JSONVersion.
+             * The JSON version.
              */
             public Builder JSONVersion(String JSONVersion) {
                 this.JSONVersion = JSONVersion;
@@ -262,7 +262,7 @@ public class GetFlowResponseBody extends TeaModel {
             }
 
             /**
-             * PreviewUrl.
+             * The temporary preview URL.
              */
             public Builder previewUrl(String previewUrl) {
                 this.previewUrl = previewUrl;
@@ -270,7 +270,7 @@ public class GetFlowResponseBody extends TeaModel {
             }
 
             /**
-             * PreviewUrlExpires.
+             * The time when the preview URL expires. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder previewUrlExpires(Long previewUrlExpires) {
                 this.previewUrlExpires = previewUrlExpires;
@@ -278,7 +278,34 @@ public class GetFlowResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The state of the Flow.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   PUBLISHED
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   DRAFT
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   DEPRECATED
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder status(String status) {
                 this.status = status;

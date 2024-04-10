@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.cams20200606;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.cams20200606.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -18,6 +19,10 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
+    /**
+      * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+     */
     CompletableFuture<AddChatappPhoneNumberResponse> addChatappPhoneNumber(AddChatappPhoneNumberRequest request);
 
     /**
@@ -56,6 +61,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<ChatappMigrationVerifiedResponse> chatappMigrationVerified(ChatappMigrationVerifiedRequest request);
 
+    /**
+      * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+     */
     CompletableFuture<ChatappPhoneNumberDeregisterResponse> chatappPhoneNumberDeregister(ChatappPhoneNumberDeregisterRequest request);
 
     /**
@@ -88,6 +97,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<CreateChatappTemplateResponse> createChatappTemplate(CreateChatappTemplateRequest request);
 
+    /**
+      * You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+     */
     CompletableFuture<CreateFlowResponse> createFlow(CreateFlowRequest request);
 
     CompletableFuture<CreatePhoneMessageQrdlResponse> createPhoneMessageQrdl(CreatePhoneMessageQrdlRequest request);
@@ -99,14 +112,26 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DeleteChatappTemplateResponse> deleteChatappTemplate(DeleteChatappTemplateRequest request);
 
+    /**
+      * You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+     */
     CompletableFuture<DeleteFlowResponse> deleteFlow(DeleteFlowRequest request);
 
     CompletableFuture<DeletePhoneMessageQrdlResponse> deletePhoneMessageQrdl(DeletePhoneMessageQrdlRequest request);
 
     CompletableFuture<DeprecateFlowResponse> deprecateFlow(DeprecateFlowRequest request);
 
+    /**
+      * You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+     */
     CompletableFuture<EnableWhatsappROIMetricResponse> enableWhatsappROIMetric(EnableWhatsappROIMetricRequest request);
 
+    /**
+      * You can call this operation up to 50 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+     */
     CompletableFuture<GetChatappPhoneNumberMetricResponse> getChatappPhoneNumberMetric(GetChatappPhoneNumberMetricRequest request);
 
     /**
@@ -116,6 +141,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<GetChatappTemplateDetailResponse> getChatappTemplateDetail(GetChatappTemplateDetailRequest request);
 
+    /**
+      * You can call this operation up to 50 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+     */
     CompletableFuture<GetChatappTemplateMetricResponse> getChatappTemplateMetric(GetChatappTemplateMetricRequest request);
 
     /**
@@ -130,12 +159,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<GetChatappVerifyCodeResponse> getChatappVerifyCode(GetChatappVerifyCodeRequest request);
 
+    /**
+      * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+     */
     CompletableFuture<GetCommerceSettingResponse> getCommerceSetting(GetCommerceSettingRequest request);
 
+    /**
+      * You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+     */
     CompletableFuture<GetFlowResponse> getFlow(GetFlowRequest request);
 
     CompletableFuture<GetFlowJSONAssestResponse> getFlowJSONAssest(GetFlowJSONAssestRequest request);
 
+    /**
+      * You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+     */
     CompletableFuture<GetFlowPreviewUrlResponse> getFlowPreviewUrl(GetFlowPreviewUrlRequest request);
 
     /**
@@ -154,6 +195,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<GetPhoneNumberVerificationStatusResponse> getPhoneNumberVerificationStatus(GetPhoneNumberVerificationStatusRequest request);
 
+    /**
+      * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+     */
     CompletableFuture<GetPreValidatePhoneIdResponse> getPreValidatePhoneId(GetPreValidatePhoneIdRequest request);
 
     /**
@@ -175,6 +220,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<ListChatappTemplateResponse> listChatappTemplate(ListChatappTemplateRequest request);
 
+    /**
+      * You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+     */
     CompletableFuture<ListFlowResponse> listFlow(ListFlowRequest request);
 
     CompletableFuture<ListPhoneMessageQrdlResponse> listPhoneMessageQrdl(ListPhoneMessageQrdlRequest request);
@@ -197,6 +246,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<ModifyChatappTemplateResponse> modifyChatappTemplate(ModifyChatappTemplateRequest request);
 
+    /**
+      * You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+     */
     CompletableFuture<ModifyFlowResponse> modifyFlow(ModifyFlowRequest request);
 
     /**
@@ -205,6 +258,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<ModifyPhoneBusinessProfileResponse> modifyPhoneBusinessProfile(ModifyPhoneBusinessProfileRequest request);
 
+    /**
+      * You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+     */
     CompletableFuture<PublishFlowResponse> publishFlow(PublishFlowRequest request);
 
     /**
@@ -256,6 +313,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<UpdateAccountWebhookResponse> updateAccountWebhook(UpdateAccountWebhookRequest request);
 
+    /**
+      * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+     */
     CompletableFuture<UpdateCommerceSettingResponse> updateCommerceSetting(UpdateCommerceSettingRequest request);
 
     CompletableFuture<UpdateFlowJSONAssetResponse> updateFlowJSONAsset(UpdateFlowJSONAssetRequest request);

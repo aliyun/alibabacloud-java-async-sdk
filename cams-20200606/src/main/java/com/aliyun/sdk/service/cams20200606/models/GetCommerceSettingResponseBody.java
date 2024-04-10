@@ -74,7 +74,11 @@ public class GetCommerceSettingResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The response code.
+         * <p>
+         * 
+         * *   The value OK indicates that the request was successful.
+         * *   Other values indicate that the request failed. For more information, see [Error codes](~~196974~~).
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +86,7 @@ public class GetCommerceSettingResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +94,7 @@ public class GetCommerceSettingResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +102,7 @@ public class GetCommerceSettingResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +154,7 @@ public class GetCommerceSettingResponseBody extends TeaModel {
             private Boolean catalogVisible; 
 
             /**
-             * CartEnable.
+             * Indicates whether the shopping cart button is displayed.
              */
             public Builder cartEnable(Boolean cartEnable) {
                 this.cartEnable = cartEnable;
@@ -158,7 +162,7 @@ public class GetCommerceSettingResponseBody extends TeaModel {
             }
 
             /**
-             * CatalogVisible.
+             * Indicates whether the catalog button is displayed.
              */
             public Builder catalogVisible(Boolean catalogVisible) {
                 this.catalogVisible = catalogVisible;

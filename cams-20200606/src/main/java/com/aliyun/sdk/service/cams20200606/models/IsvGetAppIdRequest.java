@@ -69,7 +69,7 @@ public class IsvGetAppIdRequest extends Request {
         } 
 
         /**
-         * Permissions.
+         * 权限
          */
         public Builder permissions(String permissions) {
             this.putBodyParameter("Permissions", permissions);

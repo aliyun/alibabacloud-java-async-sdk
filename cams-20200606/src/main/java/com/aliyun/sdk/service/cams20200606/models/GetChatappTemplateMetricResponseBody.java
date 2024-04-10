@@ -94,11 +94,7 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
-         * <p>
-         * 
-         * *   A value of OK indicates that the call is successful.
-         * *   Other values indicate that the call fails. For more information, see [Error codes](~~196974~~).
+         * The value OK indicates that the request was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +110,7 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -122,7 +118,7 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -186,7 +182,7 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Button name
+             * The text on the button.
              */
             public Builder buttonContent(String buttonContent) {
                 this.buttonContent = buttonContent;
@@ -194,7 +190,7 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
             }
 
             /**
-             * Clicked count
+             * The number of clicks.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -202,7 +198,16 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The type of button.
+             * The button type.
+             * <p>
+             * 
+             * >  Valid values:
+             * 
+             * *   url_button
+             * 
+             * *   quick_relpy_button
+             * 
+             * *   phone_number_button
              */
             public Builder type(String type) {
                 this.type = type;
@@ -327,7 +332,7 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
             private String templateCode; 
 
             /**
-             * Click Statistics
+             * The statistics on button clicks.
              */
             public Builder cliented(java.util.List < Cliented> cliented) {
                 this.cliented = cliented;
@@ -335,7 +340,7 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
             }
 
             /**
-             * Delivered count
+             * The number of delivered messages.
              */
             public Builder deliveredCount(Integer deliveredCount) {
                 this.deliveredCount = deliveredCount;
@@ -343,7 +348,7 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * The end of the time range you queried.
              */
             public Builder end(Long end) {
                 this.end = end;
@@ -351,7 +356,7 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The language that is used in the message template. For more information, see [Language codes](~~463420~~).
+             * The template language.
              */
             public Builder language(String language) {
                 this.language = language;
@@ -359,7 +364,7 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
             }
 
             /**
-             * Read count
+             * The number of read messages.
              */
             public Builder readCount(Integer readCount) {
                 this.readCount = readCount;
@@ -367,7 +372,7 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
             }
 
             /**
-             * Sent count
+             * The number of sent messages.
              */
             public Builder sentCount(Integer sentCount) {
                 this.sentCount = sentCount;
@@ -375,7 +380,7 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * The beginning of the time range you queried.
              */
             public Builder start(Long start) {
                 this.start = start;
@@ -383,7 +388,7 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the message template.
+             * The template code.
              */
             public Builder templateCode(String templateCode) {
                 this.templateCode = templateCode;

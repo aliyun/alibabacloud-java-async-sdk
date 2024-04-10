@@ -98,7 +98,7 @@ public class ListChatappTemplateResponseBody extends TeaModel {
         private Integer total; 
 
         /**
-         * 访问被拒绝详细信息。
+         * AccessDeniedDetail.
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -142,7 +142,7 @@ public class ListChatappTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * 总记录条数。
+         * The total number of entries returned.
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -254,7 +254,7 @@ public class ListChatappTemplateResponseBody extends TeaModel {
             private String templateType; 
 
             /**
-             * The review status of the message template. Valid values:
+             * The review state of the message template. Valid values:
              * <p>
              * 
              * *   **pass**: The message template is approved.
@@ -268,12 +268,24 @@ public class ListChatappTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The category of the message template. Valid values:
+             * The category of the WhatsApp template. Valid values:
              * <p>
              * 
-             * *   **TRANSACTIONAL**: a transactional template
-             * *   **MARKETING**: a marketing template
-             * *   **OTP**: a one-time password template
+             * *   **UTILITY**: utility template
+             * *   **MARKETING**: marketing template
+             * *   **AUTHENTICATION**: authentication template
+             * 
+             * The category of the Viber template. Valid values:
+             * 
+             * *   **text**: template that contains only text
+             * *   **image**: template that contains only an image
+             * *   **text_image_button**: template that contains text, an image, and a button
+             * *   **text_button**: template that contains text and a button
+             * *   **document**: template that contains only a document
+             * *   **video**: template that contains only a video
+             * *   **text_video**: template that contains text and a video
+             * *   **text_video_button**: template that contains text, a video, and a button
+             * *   **text_image**: template that contains text and an image
              */
             public Builder category(String category) {
                 this.category = category;
@@ -289,7 +301,7 @@ public class ListChatappTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * 模板审核被拒的原因
+             * The reason for the review failure.
              */
             public Builder reason(String reason) {
                 this.reason = reason;

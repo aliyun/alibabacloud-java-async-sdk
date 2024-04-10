@@ -20,10 +20,15 @@ public class QueryChatappPhoneNumbersRequest extends Request {
     @NameInMap("IsvCode")
     private String isvCode;
 
+    @Query
+    @NameInMap("Status")
+    private String status;
+
     private QueryChatappPhoneNumbersRequest(Builder builder) {
         super(builder);
         this.custSpaceId = builder.custSpaceId;
         this.isvCode = builder.isvCode;
+        this.status = builder.status;
     }
 
     public static Builder builder() {
@@ -53,9 +58,17 @@ public class QueryChatappPhoneNumbersRequest extends Request {
         return this.isvCode;
     }
 
+    /**
+     * @return status
+     */
+    public String getStatus() {
+        return this.status;
+    }
+
     public static final class Builder extends Request.Builder<QueryChatappPhoneNumbersRequest, Builder> {
         private String custSpaceId; 
         private String isvCode; 
+        private String status; 
 
         private Builder() {
             super();
@@ -65,6 +78,7 @@ public class QueryChatappPhoneNumbersRequest extends Request {
             super(request);
             this.custSpaceId = request.custSpaceId;
             this.isvCode = request.isvCode;
+            this.status = request.status;
         } 
 
         /**
@@ -82,6 +96,15 @@ public class QueryChatappPhoneNumbersRequest extends Request {
         public Builder isvCode(String isvCode) {
             this.putQueryParameter("IsvCode", isvCode);
             this.isvCode = isvCode;
+            return this;
+        }
+
+        /**
+         * Status.
+         */
+        public Builder status(String status) {
+            this.putQueryParameter("Status", status);
+            this.status = status;
             return this;
         }
 

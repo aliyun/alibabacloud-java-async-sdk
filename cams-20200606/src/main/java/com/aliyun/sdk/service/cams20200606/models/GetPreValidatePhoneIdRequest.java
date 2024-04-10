@@ -70,7 +70,7 @@ public class GetPreValidatePhoneIdRequest extends Request {
         } 
 
         /**
-         * PhoneNumber.
+         * The phone number.
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putBodyParameter("PhoneNumber", phoneNumber);
@@ -79,7 +79,7 @@ public class GetPreValidatePhoneIdRequest extends Request {
         }
 
         /**
-         * VerifyCode.
+         * The verification code provided when you purchased the pre-registered phone number.
          */
         public Builder verifyCode(String verifyCode) {
             this.putBodyParameter("VerifyCode", verifyCode);

@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyPhoneBusinessProfileRequest extends Request {
     @Query
+    @NameInMap("About")
+    private String about;
+
+    @Query
     @NameInMap("Address")
     private String address;
 
@@ -48,6 +52,7 @@ public class ModifyPhoneBusinessProfileRequest extends Request {
 
     private ModifyPhoneBusinessProfileRequest(Builder builder) {
         super(builder);
+        this.about = builder.about;
         this.address = builder.address;
         this.custSpaceId = builder.custSpaceId;
         this.description = builder.description;
@@ -69,6 +74,13 @@ public class ModifyPhoneBusinessProfileRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return about
+     */
+    public String getAbout() {
+        return this.about;
     }
 
     /**
@@ -128,6 +140,7 @@ public class ModifyPhoneBusinessProfileRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyPhoneBusinessProfileRequest, Builder> {
+        private String about; 
         private String address; 
         private String custSpaceId; 
         private String description; 
@@ -143,6 +156,7 @@ public class ModifyPhoneBusinessProfileRequest extends Request {
 
         private Builder(ModifyPhoneBusinessProfileRequest request) {
             super(request);
+            this.about = request.about;
             this.address = request.address;
             this.custSpaceId = request.custSpaceId;
             this.description = request.description;
@@ -152,6 +166,15 @@ public class ModifyPhoneBusinessProfileRequest extends Request {
             this.vertical = request.vertical;
             this.websites = request.websites;
         } 
+
+        /**
+         * About.
+         */
+        public Builder about(String about) {
+            this.putQueryParameter("About", about);
+            this.about = about;
+            return this;
+        }
 
         /**
          * The space ID of the user under the independent software vendor (ISV) account.

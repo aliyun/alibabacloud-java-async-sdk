@@ -177,7 +177,10 @@ public class ListChatappTemplateRequest extends Request {
         }
 
         /**
-         * The ID of the WhatsApp account that you register.
+         * The WhatsApp Business account (WABA) ID of the user within the independent software vendor (ISV) account.
+         * <p>
+         * 
+         * >  CustWabaId is an obsolete parameter. Use CustSpaceId instead.
          */
         public Builder custWabaId(String custWabaId) {
             this.putQueryParameter("CustWabaId", custWabaId);
@@ -213,7 +216,7 @@ public class ListChatappTemplateRequest extends Request {
         }
 
         /**
-         * The paging settings.
+         * The pagination settings.
          */
         public Builder page(Page page) {
             String pageShrink = shrink(page, "Page", "json");
@@ -284,7 +287,7 @@ public class ListChatappTemplateRequest extends Request {
             private Integer size; 
 
             /**
-             * The number of the page to return. Pages start from page 1. Default value: 1.
+             * The page number. Default value: 1.
              */
             public Builder index(Integer index) {
                 this.index = index;
@@ -292,7 +295,7 @@ public class ListChatappTemplateRequest extends Request {
             }
 
             /**
-             * The number of message templates to return on each page. Default value: 10.
+             * The number of entries per page. Default value: 10.
              */
             public Builder size(Integer size) {
                 this.size = size;

@@ -74,7 +74,7 @@ public class ModifyFlowResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * If OK is returned, the request was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class ModifyFlowResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +90,7 @@ public class ModifyFlowResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +98,7 @@ public class ModifyFlowResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request。
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -162,7 +162,7 @@ public class ModifyFlowResponseBody extends TeaModel {
             private String flowName; 
 
             /**
-             * Categories.
+             * The categories of the Flow.
              */
             public Builder categories(java.util.List < String > categories) {
                 this.categories = categories;
@@ -170,7 +170,7 @@ public class ModifyFlowResponseBody extends TeaModel {
             }
 
             /**
-             * flow ID。
+             * The Flow ID.
              */
             public Builder flowId(String flowId) {
                 this.flowId = flowId;
@@ -178,7 +178,7 @@ public class ModifyFlowResponseBody extends TeaModel {
             }
 
             /**
-             * FlowName.
+             * The name of the Flow.
              */
             public Builder flowName(String flowName) {
                 this.flowName = flowName;

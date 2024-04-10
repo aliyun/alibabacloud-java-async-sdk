@@ -82,7 +82,7 @@ public class ListFlowRequest extends Request {
         } 
 
         /**
-         * CustSpaceId.
+         * The space ID of the user within the independent software vendor (ISV) account.
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putBodyParameter("CustSpaceId", custSpaceId);
@@ -91,7 +91,7 @@ public class ListFlowRequest extends Request {
         }
 
         /**
-         * FlowName.
+         * The name of the Flow.
          */
         public Builder flowName(String flowName) {
             this.putBodyParameter("FlowName", flowName);
@@ -100,7 +100,7 @@ public class ListFlowRequest extends Request {
         }
 
         /**
-         * Page.
+         * The returned pages.
          */
         public Builder page(Page page) {
             String pageShrink = shrink(page, "Page", "json");
@@ -155,7 +155,7 @@ public class ListFlowRequest extends Request {
             private Integer size; 
 
             /**
-             * Index.
+             * The page number.
              */
             public Builder index(Integer index) {
                 this.index = index;
@@ -163,7 +163,7 @@ public class ListFlowRequest extends Request {
             }
 
             /**
-             * Size.
+             * The number of entries per page.
              */
             public Builder size(Integer size) {
                 this.size = size;

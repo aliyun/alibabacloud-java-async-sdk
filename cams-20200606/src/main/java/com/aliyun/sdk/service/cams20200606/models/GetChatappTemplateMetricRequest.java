@@ -164,7 +164,7 @@ public class GetChatappTemplateMetricRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * The end of the time range to query.
          */
         public Builder end(Long end) {
             this.putQueryParameter("End", end);
@@ -173,10 +173,12 @@ public class GetChatappTemplateMetricRequest extends Request {
         }
 
         /**
-         * Metric granularity. Valid values:
+         * The metric granularity.
          * <p>
          * 
-         * - DAILY
+         * >  Valid values:
+         * 
+         * *   DAILY
          */
         public Builder granularity(String granularity) {
             this.putQueryParameter("Granularity", granularity);
@@ -185,7 +187,7 @@ public class GetChatappTemplateMetricRequest extends Request {
         }
 
         /**
-         * The independent software vendor (ISV) verification code. This parameter is used to verify whether the user is authorized by the ISV account.
+         * The verification code used to verify whether the RAM user is authorized by the independent software vendor (ISV) account.
          */
         public Builder isvCode(String isvCode) {
             this.putQueryParameter("IsvCode", isvCode);
@@ -194,7 +196,7 @@ public class GetChatappTemplateMetricRequest extends Request {
         }
 
         /**
-         * The language that is used in the message template. For more information, see [Language codes](~~463420~~).
+         * The template language.
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -203,7 +205,7 @@ public class GetChatappTemplateMetricRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * The beginning of the time range to query.
          */
         public Builder start(Long start) {
             this.putQueryParameter("Start", start);
@@ -212,7 +214,7 @@ public class GetChatappTemplateMetricRequest extends Request {
         }
 
         /**
-         * The code of the message template.
+         * The template code.
          */
         public Builder templateCode(String templateCode) {
             this.putQueryParameter("TemplateCode", templateCode);
@@ -221,10 +223,7 @@ public class GetChatappTemplateMetricRequest extends Request {
         }
 
         /**
-         * The type of the message template. Valid values:
-         * <p>
-         * 
-         * *   **WHATSAPP**
+         * The template type. Valid values: WHATSAPP and VIBER. If you do not specify this parameter, WHATSAPP is used by default.
          */
         public Builder templateType(String templateType) {
             this.putQueryParameter("TemplateType", templateType);

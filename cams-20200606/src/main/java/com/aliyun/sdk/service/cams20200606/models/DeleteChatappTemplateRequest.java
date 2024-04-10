@@ -26,16 +26,30 @@ public class DeleteChatappTemplateRequest extends Request {
     private String isvCode;
 
     @Query
+    @NameInMap("Language")
+    private String language;
+
+    @Query
     @NameInMap("TemplateCode")
-    @Validation(required = true)
     private String templateCode;
+
+    @Query
+    @NameInMap("TemplateName")
+    private String templateName;
+
+    @Query
+    @NameInMap("TemplateType")
+    private String templateType;
 
     private DeleteChatappTemplateRequest(Builder builder) {
         super(builder);
         this.custSpaceId = builder.custSpaceId;
         this.custWabaId = builder.custWabaId;
         this.isvCode = builder.isvCode;
+        this.language = builder.language;
         this.templateCode = builder.templateCode;
+        this.templateName = builder.templateName;
+        this.templateType = builder.templateType;
     }
 
     public static Builder builder() {
@@ -73,17 +87,41 @@ public class DeleteChatappTemplateRequest extends Request {
     }
 
     /**
+     * @return language
+     */
+    public String getLanguage() {
+        return this.language;
+    }
+
+    /**
      * @return templateCode
      */
     public String getTemplateCode() {
         return this.templateCode;
     }
 
+    /**
+     * @return templateName
+     */
+    public String getTemplateName() {
+        return this.templateName;
+    }
+
+    /**
+     * @return templateType
+     */
+    public String getTemplateType() {
+        return this.templateType;
+    }
+
     public static final class Builder extends Request.Builder<DeleteChatappTemplateRequest, Builder> {
         private String custSpaceId; 
         private String custWabaId; 
         private String isvCode; 
+        private String language; 
         private String templateCode; 
+        private String templateName; 
+        private String templateType; 
 
         private Builder() {
             super();
@@ -94,7 +132,10 @@ public class DeleteChatappTemplateRequest extends Request {
             this.custSpaceId = request.custSpaceId;
             this.custWabaId = request.custWabaId;
             this.isvCode = request.isvCode;
+            this.language = request.language;
             this.templateCode = request.templateCode;
+            this.templateName = request.templateName;
+            this.templateType = request.templateType;
         } 
 
         /**
@@ -107,7 +148,10 @@ public class DeleteChatappTemplateRequest extends Request {
         }
 
         /**
-         * The ID of the WhatsApp account that you register.
+         * The WhatsApp Business account (WABA) ID of the user within the independent software vendor (ISV) account.
+         * <p>
+         * 
+         * >  CustWabaId is an obsolete parameter. Use CustSpaceId instead.
          */
         public Builder custWabaId(String custWabaId) {
             this.putQueryParameter("CustWabaId", custWabaId);
@@ -125,11 +169,38 @@ public class DeleteChatappTemplateRequest extends Request {
         }
 
         /**
+         * Language.
+         */
+        public Builder language(String language) {
+            this.putQueryParameter("Language", language);
+            this.language = language;
+            return this;
+        }
+
+        /**
          * The code of the message template.
          */
         public Builder templateCode(String templateCode) {
             this.putQueryParameter("TemplateCode", templateCode);
             this.templateCode = templateCode;
+            return this;
+        }
+
+        /**
+         * TemplateName.
+         */
+        public Builder templateName(String templateName) {
+            this.putQueryParameter("TemplateName", templateName);
+            this.templateName = templateName;
+            return this;
+        }
+
+        /**
+         * TemplateType.
+         */
+        public Builder templateType(String templateType) {
+            this.putQueryParameter("TemplateType", templateType);
+            this.templateType = templateType;
             return this;
         }
 

@@ -82,11 +82,7 @@ public class EnableWhatsappROIMetricResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
-         * <p>
-         * 
-         * *   A value of OK indicates that the call is successful.
-         * *   Other values indicate that the call fails. For more information, see [Error codes](~~196974~~).
+         * The value OK indicates that the request was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +90,7 @@ public class EnableWhatsappROIMetricResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -102,7 +98,7 @@ public class EnableWhatsappROIMetricResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

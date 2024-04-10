@@ -69,7 +69,7 @@ public class DeleteFlowRequest extends Request {
         } 
 
         /**
-         * CustSpaceId.
+         * The space ID of the user within the independent software vendor (ISV) account.
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putBodyParameter("CustSpaceId", custSpaceId);
@@ -78,7 +78,7 @@ public class DeleteFlowRequest extends Request {
         }
 
         /**
-         * Flow ID。
+         * The Flow ID.
          */
         public Builder flowId(String flowId) {
             this.putBodyParameter("FlowId", flowId);

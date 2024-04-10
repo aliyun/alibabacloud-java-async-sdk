@@ -74,7 +74,7 @@ public class GetPreValidatePhoneIdResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The response code. The value OK indicates the request was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class GetPreValidatePhoneIdResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +90,7 @@ public class GetPreValidatePhoneIdResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +98,7 @@ public class GetPreValidatePhoneIdResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +150,7 @@ public class GetPreValidatePhoneIdResponseBody extends TeaModel {
             private String phoneNumberId; 
 
             /**
-             * PhoneNumber.
+             * The phone number.
              */
             public Builder phoneNumber(String phoneNumber) {
                 this.phoneNumber = phoneNumber;
@@ -158,7 +158,7 @@ public class GetPreValidatePhoneIdResponseBody extends TeaModel {
             }
 
             /**
-             * PhoneNumberId.
+             * The ID of the phone number.
              */
             public Builder phoneNumberId(String phoneNumberId) {
                 this.phoneNumberId = phoneNumberId;

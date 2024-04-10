@@ -86,7 +86,7 @@ public class ChatappEmbedSignUpResponseBody extends TeaModel {
         private java.util.List < Wabas> wabas; 
 
         /**
-         * AccessDeniedDetail.
+         * The details about the access denial.
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -210,7 +210,7 @@ public class ChatappEmbedSignUpResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The review status of the WhatsApp Business account.
+             * The review state of the WABA.
              */
             public Builder accountReviewStatus(String accountReviewStatus) {
                 this.accountReviewStatus = accountReviewStatus;
@@ -226,7 +226,7 @@ public class ChatappEmbedSignUpResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the WhatsApp Business account.
+             * The ID of the WABA.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -242,7 +242,7 @@ public class ChatappEmbedSignUpResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the WhatsApp Business account.
+             * The name of the WABA.
              */
             public Builder name(String name) {
                 this.name = name;

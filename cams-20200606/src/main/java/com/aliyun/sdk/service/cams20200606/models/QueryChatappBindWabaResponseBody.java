@@ -86,7 +86,7 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AccessDeniedDetail.
+         * The details about the access denial.
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -106,7 +106,7 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -210,7 +210,18 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The review status of the WhatsApp Business account.
+             * The review state of the WhatsApp Business account (WABA).
+             * <p>
+             * 
+             * >  Valid values:
+             * 
+             * *   PENDING: The WABA is to be reviewed.
+             * 
+             * *   APPROVED: The WABA was approved.
+             * 
+             * *   REJECTED: The WABA was rejected.
+             * 
+             * *   DISABLED: The WABA was forbidden.
              */
             public Builder accountReviewStatus(String accountReviewStatus) {
                 this.accountReviewStatus = accountReviewStatus;

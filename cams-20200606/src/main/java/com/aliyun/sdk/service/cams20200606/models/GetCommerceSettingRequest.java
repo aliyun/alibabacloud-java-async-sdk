@@ -70,7 +70,7 @@ public class GetCommerceSettingRequest extends Request {
         } 
 
         /**
-         * CustSpaceId.
+         * The space ID of the user within the independent software vendor (ISV) account.
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -79,7 +79,7 @@ public class GetCommerceSettingRequest extends Request {
         }
 
         /**
-         * PhoneNumber.
+         * The phone number.
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putQueryParameter("PhoneNumber", phoneNumber);

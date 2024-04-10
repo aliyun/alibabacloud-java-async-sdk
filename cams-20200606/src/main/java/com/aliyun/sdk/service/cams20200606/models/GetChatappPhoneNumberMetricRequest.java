@@ -126,7 +126,7 @@ public class GetChatappPhoneNumberMetricRequest extends Request {
         } 
 
         /**
-         * The space ID of the user under the ISV account.
+         * The space ID of the user within the ISV account.
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -135,10 +135,7 @@ public class GetChatappPhoneNumberMetricRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
-         * <p>
-         * 
-         * >  The end time must be later than the start time. The interval between the start time and the end time cannot exceed 24 hours.
+         * The end of the time range to query.
          */
         public Builder end(Long end) {
             this.putQueryParameter("End", end);
@@ -147,11 +144,7 @@ public class GetChatappPhoneNumberMetricRequest extends Request {
         }
 
         /**
-         * Metric granularity. Valid values:
-         * <p>
-         * 
-         * - DAILY
-         * - HALF_HOUR
+         * The metric granularity.
          */
         public Builder granularity(String granularity) {
             this.putQueryParameter("Granularity", granularity);
@@ -160,7 +153,7 @@ public class GetChatappPhoneNumberMetricRequest extends Request {
         }
 
         /**
-         * The ISV verification code, which is used to verify whether the user is authorized by the ISV account.
+         * The verification code used to verify whether the RAM user is authorized by the independent software vendor (ISV) account.
          */
         public Builder isvCode(String isvCode) {
             this.putQueryParameter("IsvCode", isvCode);
@@ -178,7 +171,7 @@ public class GetChatappPhoneNumberMetricRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * The beginning of the time range to query.
          */
         public Builder start(Long start) {
             this.putQueryParameter("Start", start);

@@ -74,7 +74,7 @@ public class AddChatappPhoneNumberResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AccessDeniedDetail.
+         * The details about the access denial.
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -82,7 +82,11 @@ public class AddChatappPhoneNumberResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * The response code.
+         * <p>
+         * 
+         * *   The value OK indicates that the request was successful.
+         * *   Other values indicate that the request failed. For more information, see [Error codes](~~196974~~).
          */
         public Builder code(String code) {
             this.code = code;
@@ -90,7 +94,7 @@ public class AddChatappPhoneNumberResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +102,7 @@ public class AddChatappPhoneNumberResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

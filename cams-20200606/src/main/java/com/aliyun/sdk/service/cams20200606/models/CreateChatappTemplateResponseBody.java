@@ -86,7 +86,7 @@ public class CreateChatappTemplateResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 访问被拒绝详细信息。
+         * AccessDeniedDetail.
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;

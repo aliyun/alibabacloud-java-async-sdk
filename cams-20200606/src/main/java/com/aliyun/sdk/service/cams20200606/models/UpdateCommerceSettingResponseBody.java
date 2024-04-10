@@ -62,7 +62,11 @@ public class UpdateCommerceSettingResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The response code.
+         * <p>
+         * 
+         * *   The value OK indicates that the request was successful.
+         * *   Other values indicate that the request failed. For more information, see [Error codes](~~196974~~).
          */
         public Builder code(String code) {
             this.code = code;
@@ -70,7 +74,7 @@ public class UpdateCommerceSettingResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -78,7 +82,7 @@ public class UpdateCommerceSettingResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

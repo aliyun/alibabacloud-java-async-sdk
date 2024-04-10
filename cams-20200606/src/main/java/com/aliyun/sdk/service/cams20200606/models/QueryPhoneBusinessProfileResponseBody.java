@@ -136,6 +136,9 @@ public class QueryPhoneBusinessProfileResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
+        @NameInMap("About")
+        private String about;
+
         @NameInMap("Address")
         private String address;
 
@@ -155,6 +158,7 @@ public class QueryPhoneBusinessProfileResponseBody extends TeaModel {
         private java.util.List < String > websites;
 
         private Data(Builder builder) {
+            this.about = builder.about;
             this.address = builder.address;
             this.description = builder.description;
             this.email = builder.email;
@@ -169,6 +173,13 @@ public class QueryPhoneBusinessProfileResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return about
+         */
+        public String getAbout() {
+            return this.about;
         }
 
         /**
@@ -214,12 +225,21 @@ public class QueryPhoneBusinessProfileResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String about; 
             private String address; 
             private String description; 
             private String email; 
             private String profilePictureUrl; 
             private String vertical; 
             private java.util.List < String > websites; 
+
+            /**
+             * About.
+             */
+            public Builder about(String about) {
+                this.about = about;
+                return this;
+            }
 
             /**
              * The address.

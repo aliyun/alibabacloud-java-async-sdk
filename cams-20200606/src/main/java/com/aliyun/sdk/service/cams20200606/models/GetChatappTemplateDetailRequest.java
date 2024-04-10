@@ -32,8 +32,11 @@ public class GetChatappTemplateDetailRequest extends Request {
 
     @Query
     @NameInMap("TemplateCode")
-    @Validation(required = true)
     private String templateCode;
+
+    @Query
+    @NameInMap("TemplateName")
+    private String templateName;
 
     @Query
     @NameInMap("TemplateType")
@@ -46,6 +49,7 @@ public class GetChatappTemplateDetailRequest extends Request {
         this.isvCode = builder.isvCode;
         this.language = builder.language;
         this.templateCode = builder.templateCode;
+        this.templateName = builder.templateName;
         this.templateType = builder.templateType;
     }
 
@@ -98,6 +102,13 @@ public class GetChatappTemplateDetailRequest extends Request {
     }
 
     /**
+     * @return templateName
+     */
+    public String getTemplateName() {
+        return this.templateName;
+    }
+
+    /**
      * @return templateType
      */
     public String getTemplateType() {
@@ -110,6 +121,7 @@ public class GetChatappTemplateDetailRequest extends Request {
         private String isvCode; 
         private String language; 
         private String templateCode; 
+        private String templateName; 
         private String templateType; 
 
         private Builder() {
@@ -123,11 +135,12 @@ public class GetChatappTemplateDetailRequest extends Request {
             this.isvCode = request.isvCode;
             this.language = request.language;
             this.templateCode = request.templateCode;
+            this.templateName = request.templateName;
             this.templateType = request.templateType;
         } 
 
         /**
-         * The space ID of the user under the ISV account.
+         * The space ID of the user within the ISV account.
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -136,7 +149,10 @@ public class GetChatappTemplateDetailRequest extends Request {
         }
 
         /**
-         * The ID of the WhatsApp account that you registered.
+         * The WhatsApp Business account (WABA) ID of the user within the independent software vendor (ISV) account.
+         * <p>
+         * 
+         * >  CustWabaId is an obsolete parameter. Use CustSpaceId instead.
          */
         public Builder custWabaId(String custWabaId) {
             this.putQueryParameter("CustWabaId", custWabaId);
@@ -168,6 +184,15 @@ public class GetChatappTemplateDetailRequest extends Request {
         public Builder templateCode(String templateCode) {
             this.putQueryParameter("TemplateCode", templateCode);
             this.templateCode = templateCode;
+            return this;
+        }
+
+        /**
+         * TemplateName.
+         */
+        public Builder templateName(String templateName) {
+            this.putQueryParameter("TemplateName", templateName);
+            this.templateName = templateName;
             return this;
         }
 

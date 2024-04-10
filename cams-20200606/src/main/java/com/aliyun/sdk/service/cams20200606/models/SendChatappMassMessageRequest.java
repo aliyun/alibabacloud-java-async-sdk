@@ -32,7 +32,7 @@ public class SendChatappMassMessageRequest extends Request {
 
     @Body
     @NameInMap("FallBackDuration")
-    @Validation(maximum = 43200, minimum = 60)
+    @Validation(maximum = 43200, minimum = 10)
     private Integer fallBackDuration;
 
     @Body
@@ -76,8 +76,11 @@ public class SendChatappMassMessageRequest extends Request {
 
     @Body
     @NameInMap("TemplateCode")
-    @Validation(required = true)
     private String templateCode;
+
+    @Body
+    @NameInMap("TemplateName")
+    private String templateName;
 
     @Body
     @NameInMap("Ttl")
@@ -100,6 +103,7 @@ public class SendChatappMassMessageRequest extends Request {
         this.tag = builder.tag;
         this.taskId = builder.taskId;
         this.templateCode = builder.templateCode;
+        this.templateName = builder.templateName;
         this.ttl = builder.ttl;
     }
 
@@ -222,6 +226,13 @@ public class SendChatappMassMessageRequest extends Request {
     }
 
     /**
+     * @return templateName
+     */
+    public String getTemplateName() {
+        return this.templateName;
+    }
+
+    /**
      * @return ttl
      */
     public Long getTtl() {
@@ -244,6 +255,7 @@ public class SendChatappMassMessageRequest extends Request {
         private String tag; 
         private String taskId; 
         private String templateCode; 
+        private String templateName; 
         private Long ttl; 
 
         private Builder() {
@@ -267,6 +279,7 @@ public class SendChatappMassMessageRequest extends Request {
             this.tag = request.tag;
             this.taskId = request.taskId;
             this.templateCode = request.templateCode;
+            this.templateName = request.templateName;
             this.ttl = request.ttl;
         } 
 
@@ -307,7 +320,7 @@ public class SendChatappMassMessageRequest extends Request {
         }
 
         /**
-         * 消息在指定时间内没有返回已到达回执时回落, 不填代表不根据此时间判断回落，只有发送失败和有失败的状态报告时才会回落。时间单位为秒 最小值为60，最大值43200
+         * FallBackDuration.
          */
         public Builder fallBackDuration(Integer fallBackDuration) {
             this.putBodyParameter("FallBackDuration", fallBackDuration);
@@ -325,7 +338,14 @@ public class SendChatappMassMessageRequest extends Request {
         }
 
         /**
-         * FallBackRule.
+         * The fallback rule.
+         * <p>
+         * 
+         * >  Valid values:
+         * 
+         * *   undelivered: A fallback is triggered if the WhatsApp message is not delivered to clients. When the WhatsApp message is being sent, the template parameters are verified. If the parameters fail to pass the verification, the message fails to be sent. Whether the template and phone number are prohibited is not verified. By default, this value is used when FallBackRule is left empty.
+         * 
+         * *   sentfailed: A fallback is triggered even if the template parameters including variables fail to pass the verification. If the channelType, type, messageType, to, and from parameters fail to pass the verification, a fallback is not triggered.
          */
         public Builder fallBackRule(String fallBackRule) {
             this.putBodyParameter("FallBackRule", fallBackRule);
@@ -370,7 +390,7 @@ public class SendChatappMassMessageRequest extends Request {
         }
 
         /**
-         * The list of phone numbers that receive the message.
+         * The phone numbers to which the message is sent.
          */
         public Builder senderList(java.util.List < SenderList> senderList) {
             String senderListShrink = shrink(senderList, "SenderList", "json");
@@ -403,6 +423,15 @@ public class SendChatappMassMessageRequest extends Request {
         public Builder templateCode(String templateCode) {
             this.putBodyParameter("TemplateCode", templateCode);
             this.templateCode = templateCode;
+            return this;
+        }
+
+        /**
+         * TemplateName.
+         */
+        public Builder templateName(String templateName) {
+            this.putBodyParameter("TemplateName", templateName);
+            this.templateName = templateName;
             return this;
         }
 
@@ -510,7 +539,7 @@ public class SendChatappMassMessageRequest extends Request {
             private String productRetailerId; 
 
             /**
-             * ProductRetailerId.
+             * The retailer ID of the product.
              */
             public Builder productRetailerId(String productRetailerId) {
                 this.productRetailerId = productRetailerId;
@@ -563,7 +592,7 @@ public class SendChatappMassMessageRequest extends Request {
             private String title; 
 
             /**
-             * ProductItems.
+             * The products.
              */
             public Builder productItems(java.util.List < ProductItems> productItems) {
                 this.productItems = productItems;
@@ -571,7 +600,7 @@ public class SendChatappMassMessageRequest extends Request {
             }
 
             /**
-             * Title.
+             * The name of the category.
              */
             public Builder title(String title) {
                 this.title = title;
@@ -624,7 +653,7 @@ public class SendChatappMassMessageRequest extends Request {
             private String thumbnailProductRetailerId; 
 
             /**
-             * Sections.
+             * The products. Up to 30 products and 10 categories can be added.
              */
             public Builder sections(java.util.List < Sections> sections) {
                 this.sections = sections;
@@ -632,7 +661,7 @@ public class SendChatappMassMessageRequest extends Request {
             }
 
             /**
-             * ThumbnailProductRetailerId.
+             * The retailer ID of the product.
              */
             public Builder thumbnailProductRetailerId(String thumbnailProductRetailerId) {
                 this.thumbnailProductRetailerId = thumbnailProductRetailerId;
@@ -730,7 +759,7 @@ public class SendChatappMassMessageRequest extends Request {
             }
 
             /**
-             * payload
+             * The payload.
              */
             public Builder payload(java.util.List < String > payload) {
                 this.payload = payload;
@@ -738,7 +767,7 @@ public class SendChatappMassMessageRequest extends Request {
             }
 
             /**
-             * ProductAction.
+             * The information about the product.
              */
             public Builder productAction(ProductAction productAction) {
                 this.productAction = productAction;
@@ -746,7 +775,7 @@ public class SendChatappMassMessageRequest extends Request {
             }
 
             /**
-             * The parameters of the message template.
+             * The parameters of the template.
              */
             public Builder templateParams(java.util.Map < String, String > templateParams) {
                 this.templateParams = templateParams;
@@ -754,7 +783,7 @@ public class SendChatappMassMessageRequest extends Request {
             }
 
             /**
-             * The phone number that receives the message.
+             * The phone number to which the message is sent.
              */
             public Builder to(String to) {
                 this.to = to;

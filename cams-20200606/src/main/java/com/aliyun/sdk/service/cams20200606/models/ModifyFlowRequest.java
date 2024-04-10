@@ -98,7 +98,7 @@ public class ModifyFlowRequest extends Request {
         } 
 
         /**
-         * Categories.
+         * The categories of the Flow.
          */
         public Builder categories(java.util.List < String > categories) {
             String categoriesShrink = shrink(categories, "Categories", "json");
@@ -108,7 +108,7 @@ public class ModifyFlowRequest extends Request {
         }
 
         /**
-         * CustSpaceId.
+         * The space ID of the user within the independent software vendor (ISV) account.
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putBodyParameter("CustSpaceId", custSpaceId);
@@ -117,7 +117,7 @@ public class ModifyFlowRequest extends Request {
         }
 
         /**
-         * FlowId.
+         * The Flow ID.
          */
         public Builder flowId(String flowId) {
             this.putBodyParameter("FlowId", flowId);
@@ -126,7 +126,7 @@ public class ModifyFlowRequest extends Request {
         }
 
         /**
-         * FlowName.
+         * The name of the Flow.
          */
         public Builder flowName(String flowName) {
             this.putBodyParameter("FlowName", flowName);

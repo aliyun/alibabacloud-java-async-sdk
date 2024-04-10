@@ -40,7 +40,7 @@ public class SendChatappMessageRequest extends Request {
 
     @Body
     @NameInMap("FallBackDuration")
-    @Validation(maximum = 43200, minimum = 60)
+    @Validation(maximum = 43200, minimum = 10)
     private Integer fallBackDuration;
 
     @Body
@@ -97,6 +97,10 @@ public class SendChatappMessageRequest extends Request {
     private String templateCode;
 
     @Body
+    @NameInMap("TemplateName")
+    private String templateName;
+
+    @Body
     @NameInMap("TemplateParams")
     private java.util.Map < String, String > templateParams;
 
@@ -140,6 +144,7 @@ public class SendChatappMessageRequest extends Request {
         this.tag = builder.tag;
         this.taskId = builder.taskId;
         this.templateCode = builder.templateCode;
+        this.templateName = builder.templateName;
         this.templateParams = builder.templateParams;
         this.to = builder.to;
         this.trackingData = builder.trackingData;
@@ -301,6 +306,13 @@ public class SendChatappMessageRequest extends Request {
     }
 
     /**
+     * @return templateName
+     */
+    public String getTemplateName() {
+        return this.templateName;
+    }
+
+    /**
      * @return templateParams
      */
     public java.util.Map < String, String > getTemplateParams() {
@@ -356,6 +368,7 @@ public class SendChatappMessageRequest extends Request {
         private String tag; 
         private String taskId; 
         private String templateCode; 
+        private String templateName; 
         private java.util.Map < String, String > templateParams; 
         private String to; 
         private String trackingData; 
@@ -388,6 +401,7 @@ public class SendChatappMessageRequest extends Request {
             this.tag = request.tag;
             this.taskId = request.taskId;
             this.templateCode = request.templateCode;
+            this.templateName = request.templateName;
             this.templateParams = request.templateParams;
             this.to = request.to;
             this.trackingData = request.trackingData;
@@ -480,7 +494,7 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * FallBackDuration.
+         * Specifies the period of time after which the fallback Short Message Service (SMS) message is sent if the message receipt that indicates the message is delivered to customers is not received. If this parameter is left empty, the fallback SMS message is sent only when the **message fails to be sent** or **the message receipt that indicates the message is not delivered to customers** is received. Valid values: 60 to 43200. Unit: seconds.
          */
         public Builder fallBackDuration(Integer fallBackDuration) {
             this.putBodyParameter("FallBackDuration", fallBackDuration);
@@ -498,7 +512,17 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * FallBackRule.
+         * 回落规则。
+         * <p>
+         * 
+         * > 取值范围
+         * > - undelivered  消息不能发送到端时回落（在发送状态时模板、参数需要校验通过，模板被封、号码被封等不做校验）。参数值为空时默认使用此规则
+         * > - sentFailed  消息在校验模板、模板变量等参数时，校验不通过也会回落。只会强校验channelType, type, messageType, to, from(是否存在) 几个参数。
+         * 
+         * <props="china">
+         * 
+         * > 中国站此字段无效
+         * </props>
          */
         public Builder fallBackRule(String fallBackRule) {
             this.putBodyParameter("FallBackRule", fallBackRule);
@@ -507,7 +531,7 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * FlowAction.
+         * Flow发送数据
          */
         public Builder flowAction(FlowAction flowAction) {
             String flowActionShrink = shrink(flowAction, "FlowAction", "json");
@@ -640,6 +664,15 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
+         * TemplateName.
+         */
+        public Builder templateName(String templateName) {
+            this.putBodyParameter("TemplateName", templateName);
+            this.templateName = templateName;
+            return this;
+        }
+
+        /**
          * The variables of the message template.
          */
         public Builder templateParams(java.util.Map < String, String > templateParams) {
@@ -735,7 +768,7 @@ public class SendChatappMessageRequest extends Request {
             private String flowToken; 
 
             /**
-             * FlowActionData.
+             * flow默认参数
              */
             public Builder flowActionData(java.util.Map < String, String > flowActionData) {
                 this.flowActionData = flowActionData;
@@ -743,7 +776,7 @@ public class SendChatappMessageRequest extends Request {
             }
 
             /**
-             * FlowToken.
+             * flow token信息
              */
             public Builder flowToken(String flowToken) {
                 this.flowToken = flowToken;

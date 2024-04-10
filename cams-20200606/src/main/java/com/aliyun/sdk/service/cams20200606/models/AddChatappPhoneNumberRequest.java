@@ -114,7 +114,7 @@ public class AddChatappPhoneNumberRequest extends Request {
         } 
 
         /**
-         * Cc.
+         * The country code.
          */
         public Builder cc(String cc) {
             this.putBodyParameter("Cc", cc);
@@ -123,7 +123,7 @@ public class AddChatappPhoneNumberRequest extends Request {
         }
 
         /**
-         * CustSpaceId.
+         * The space ID of the user within the independent software vendor (ISV) account.
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putBodyParameter("CustSpaceId", custSpaceId);
@@ -132,7 +132,7 @@ public class AddChatappPhoneNumberRequest extends Request {
         }
 
         /**
-         * PhoneNumber.
+         * The phone number without a country code.
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putBodyParameter("PhoneNumber", phoneNumber);
@@ -141,7 +141,7 @@ public class AddChatappPhoneNumberRequest extends Request {
         }
 
         /**
-         * PreValidateId.
+         * The ID of the pre-registered phone number.
          */
         public Builder preValidateId(String preValidateId) {
             this.putBodyParameter("PreValidateId", preValidateId);
@@ -150,7 +150,7 @@ public class AddChatappPhoneNumberRequest extends Request {
         }
 
         /**
-         * VerifiedName.
+         * The display name of the phone number.
          */
         public Builder verifiedName(String verifiedName) {
             this.putBodyParameter("VerifiedName", verifiedName);
