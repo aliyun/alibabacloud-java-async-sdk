@@ -75,6 +75,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateFlowRuleResponse> createFlowRule(CreateFlowRuleRequest request);
 
+    CompletableFuture<CreateGatewayCircuitBreakerRuleResponse> createGatewayCircuitBreakerRule(CreateGatewayCircuitBreakerRuleRequest request);
+
+    CompletableFuture<CreateGatewayFlowRuleResponse> createGatewayFlowRule(CreateGatewayFlowRuleRequest request);
+
+    CompletableFuture<CreateGatewayIsolationRuleResponse> createGatewayIsolationRule(CreateGatewayIsolationRuleRequest request);
+
     CompletableFuture<CreateIsolationRuleResponse> createIsolationRule(CreateIsolationRuleRequest request);
 
     /**
@@ -127,7 +133,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteGatewayAuthConsumerResourceResponse> deleteGatewayAuthConsumerResource(DeleteGatewayAuthConsumerResourceRequest request);
 
+    CompletableFuture<DeleteGatewayCircuitBreakerRuleResponse> deleteGatewayCircuitBreakerRule(DeleteGatewayCircuitBreakerRuleRequest request);
+
     CompletableFuture<DeleteGatewayDomainResponse> deleteGatewayDomain(DeleteGatewayDomainRequest request);
+
+    CompletableFuture<DeleteGatewayFlowRuleResponse> deleteGatewayFlowRule(DeleteGatewayFlowRuleRequest request);
+
+    CompletableFuture<DeleteGatewayIsolationRuleResponse> deleteGatewayIsolationRule(DeleteGatewayIsolationRuleRequest request);
 
     CompletableFuture<DeleteGatewayRouteResponse> deleteGatewayRoute(DeleteGatewayRouteRequest request);
 
@@ -362,7 +374,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListGatewayAuthConsumerResourceResponse> listGatewayAuthConsumerResource(ListGatewayAuthConsumerResourceRequest request);
 
+    CompletableFuture<ListGatewayCircuitBreakerRuleResponse> listGatewayCircuitBreakerRule(ListGatewayCircuitBreakerRuleRequest request);
+
     CompletableFuture<ListGatewayDomainResponse> listGatewayDomain(ListGatewayDomainRequest request);
+
+    CompletableFuture<ListGatewayFlowRuleResponse> listGatewayFlowRule(ListGatewayFlowRuleRequest request);
+
+    CompletableFuture<ListGatewayIsolationRuleResponse> listGatewayIsolationRule(ListGatewayIsolationRuleRequest request);
 
     CompletableFuture<ListGatewayRouteResponse> listGatewayRoute(ListGatewayRouteRequest request);
 
@@ -513,7 +531,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<UpdateGatewayAuthConsumerStatusResponse> updateGatewayAuthConsumerStatus(UpdateGatewayAuthConsumerStatusRequest request);
 
+    CompletableFuture<UpdateGatewayCircuitBreakerRuleResponse> updateGatewayCircuitBreakerRule(UpdateGatewayCircuitBreakerRuleRequest request);
+
     CompletableFuture<UpdateGatewayDomainResponse> updateGatewayDomain(UpdateGatewayDomainRequest request);
+
+    CompletableFuture<UpdateGatewayFlowRuleResponse> updateGatewayFlowRule(UpdateGatewayFlowRuleRequest request);
+
+    CompletableFuture<UpdateGatewayIsolationRuleResponse> updateGatewayIsolationRule(UpdateGatewayIsolationRuleRequest request);
 
     CompletableFuture<UpdateGatewayNameResponse> updateGatewayName(UpdateGatewayNameRequest request);
 
