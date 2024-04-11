@@ -141,6 +141,9 @@ public class QueryMotionShopVideoDetectResultResponseBody extends TeaModel {
         @NameInMap("CoverUrl")
         private String coverUrl;
 
+        @NameInMap("HumanBoxes")
+        private java.util.List < java.util.List < Double > > humanBoxes;
+
         @NameInMap("Message")
         private String message;
 
@@ -151,6 +154,7 @@ public class QueryMotionShopVideoDetectResultResponseBody extends TeaModel {
             this.box = builder.box;
             this.code = builder.code;
             this.coverUrl = builder.coverUrl;
+            this.humanBoxes = builder.humanBoxes;
             this.message = builder.message;
             this.selectedFrameIndex = builder.selectedFrameIndex;
         }
@@ -185,6 +189,13 @@ public class QueryMotionShopVideoDetectResultResponseBody extends TeaModel {
         }
 
         /**
+         * @return humanBoxes
+         */
+        public java.util.List < java.util.List < Double > > getHumanBoxes() {
+            return this.humanBoxes;
+        }
+
+        /**
          * @return message
          */
         public String getMessage() {
@@ -202,6 +213,7 @@ public class QueryMotionShopVideoDetectResultResponseBody extends TeaModel {
             private java.util.List < Double > box; 
             private Integer code; 
             private String coverUrl; 
+            private java.util.List < java.util.List < Double > > humanBoxes; 
             private String message; 
             private Integer selectedFrameIndex; 
 
@@ -226,6 +238,14 @@ public class QueryMotionShopVideoDetectResultResponseBody extends TeaModel {
              */
             public Builder coverUrl(String coverUrl) {
                 this.coverUrl = coverUrl;
+                return this;
+            }
+
+            /**
+             * HumanBoxes.
+             */
+            public Builder humanBoxes(java.util.List < java.util.List < Double > > humanBoxes) {
+                this.humanBoxes = humanBoxes;
                 return this;
             }
 

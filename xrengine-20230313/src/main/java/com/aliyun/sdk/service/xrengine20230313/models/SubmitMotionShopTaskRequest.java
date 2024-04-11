@@ -22,6 +22,10 @@ public class SubmitMotionShopTaskRequest extends Request {
     private String jwtToken;
 
     @Body
+    @NameInMap("SelectedBoxIndex")
+    private Integer selectedBoxIndex;
+
+    @Body
     @NameInMap("Title")
     private String title;
 
@@ -34,6 +38,7 @@ public class SubmitMotionShopTaskRequest extends Request {
         super(builder);
         this.avatarId = builder.avatarId;
         this.jwtToken = builder.jwtToken;
+        this.selectedBoxIndex = builder.selectedBoxIndex;
         this.title = builder.title;
         this.videoId = builder.videoId;
     }
@@ -66,6 +71,13 @@ public class SubmitMotionShopTaskRequest extends Request {
     }
 
     /**
+     * @return selectedBoxIndex
+     */
+    public Integer getSelectedBoxIndex() {
+        return this.selectedBoxIndex;
+    }
+
+    /**
      * @return title
      */
     public String getTitle() {
@@ -82,6 +94,7 @@ public class SubmitMotionShopTaskRequest extends Request {
     public static final class Builder extends Request.Builder<SubmitMotionShopTaskRequest, Builder> {
         private String avatarId; 
         private String jwtToken; 
+        private Integer selectedBoxIndex; 
         private String title; 
         private String videoId; 
 
@@ -93,6 +106,7 @@ public class SubmitMotionShopTaskRequest extends Request {
             super(request);
             this.avatarId = request.avatarId;
             this.jwtToken = request.jwtToken;
+            this.selectedBoxIndex = request.selectedBoxIndex;
             this.title = request.title;
             this.videoId = request.videoId;
         } 
@@ -112,6 +126,15 @@ public class SubmitMotionShopTaskRequest extends Request {
         public Builder jwtToken(String jwtToken) {
             this.putBodyParameter("JwtToken", jwtToken);
             this.jwtToken = jwtToken;
+            return this;
+        }
+
+        /**
+         * SelectedBoxIndex.
+         */
+        public Builder selectedBoxIndex(Integer selectedBoxIndex) {
+            this.putBodyParameter("SelectedBoxIndex", selectedBoxIndex);
+            this.selectedBoxIndex = selectedBoxIndex;
             return this;
         }
 
