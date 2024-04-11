@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePriceResponseBody</p>
  */
 public class DescribePriceResponseBody extends TeaModel {
+    @NameInMap("OrderParams")
+    private String orderParams;
+
     @NameInMap("PriceInfo")
     private PriceInfo priceInfo;
 
@@ -20,6 +23,9 @@ public class DescribePriceResponseBody extends TeaModel {
 
     @NameInMap("Rules")
     private Rules rules;
+
+    @NameInMap("ServerlessPrice")
+    private ServerlessPrice serverlessPrice;
 
     @NameInMap("ShowDiscount")
     private Boolean showDiscount;
@@ -31,9 +37,11 @@ public class DescribePriceResponseBody extends TeaModel {
     private Float tradeMinRCUAmount;
 
     private DescribePriceResponseBody(Builder builder) {
+        this.orderParams = builder.orderParams;
         this.priceInfo = builder.priceInfo;
         this.requestId = builder.requestId;
         this.rules = builder.rules;
+        this.serverlessPrice = builder.serverlessPrice;
         this.showDiscount = builder.showDiscount;
         this.tradeMaxRCUAmount = builder.tradeMaxRCUAmount;
         this.tradeMinRCUAmount = builder.tradeMinRCUAmount;
@@ -45,6 +53,13 @@ public class DescribePriceResponseBody extends TeaModel {
 
     public static DescribePriceResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return orderParams
+     */
+    public String getOrderParams() {
+        return this.orderParams;
     }
 
     /**
@@ -69,6 +84,13 @@ public class DescribePriceResponseBody extends TeaModel {
     }
 
     /**
+     * @return serverlessPrice
+     */
+    public ServerlessPrice getServerlessPrice() {
+        return this.serverlessPrice;
+    }
+
+    /**
      * @return showDiscount
      */
     public Boolean getShowDiscount() {
@@ -90,12 +112,22 @@ public class DescribePriceResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String orderParams; 
         private PriceInfo priceInfo; 
         private String requestId; 
         private Rules rules; 
+        private ServerlessPrice serverlessPrice; 
         private Boolean showDiscount; 
         private Float tradeMaxRCUAmount; 
         private Float tradeMinRCUAmount; 
+
+        /**
+         * OrderParams.
+         */
+        public Builder orderParams(String orderParams) {
+            this.orderParams = orderParams;
+            return this;
+        }
 
         /**
          * The price information.
@@ -118,6 +150,14 @@ public class DescribePriceResponseBody extends TeaModel {
          */
         public Builder rules(Rules rules) {
             this.rules = rules;
+            return this;
+        }
+
+        /**
+         * ServerlessPrice.
+         */
+        public Builder serverlessPrice(ServerlessPrice serverlessPrice) {
+            this.serverlessPrice = serverlessPrice;
             return this;
         }
 
@@ -428,11 +468,20 @@ public class DescribePriceResponseBody extends TeaModel {
         @NameInMap("DiscountPrice")
         private Float discountPrice;
 
+        @NameInMap("OrderLines")
+        private String orderLines;
+
         @NameInMap("OriginalPrice")
         private Float originalPrice;
 
         @NameInMap("RuleIds")
         private RuleIds ruleIds;
+
+        @NameInMap("TradeMaxRCUAmount")
+        private Float tradeMaxRCUAmount;
+
+        @NameInMap("TradeMinRCUAmount")
+        private Float tradeMinRCUAmount;
 
         @NameInMap("TradePrice")
         private Float tradePrice;
@@ -442,8 +491,11 @@ public class DescribePriceResponseBody extends TeaModel {
             this.coupons = builder.coupons;
             this.currency = builder.currency;
             this.discountPrice = builder.discountPrice;
+            this.orderLines = builder.orderLines;
             this.originalPrice = builder.originalPrice;
             this.ruleIds = builder.ruleIds;
+            this.tradeMaxRCUAmount = builder.tradeMaxRCUAmount;
+            this.tradeMinRCUAmount = builder.tradeMinRCUAmount;
             this.tradePrice = builder.tradePrice;
         }
 
@@ -484,6 +536,13 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
+         * @return orderLines
+         */
+        public String getOrderLines() {
+            return this.orderLines;
+        }
+
+        /**
          * @return originalPrice
          */
         public Float getOriginalPrice() {
@@ -498,6 +557,20 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
+         * @return tradeMaxRCUAmount
+         */
+        public Float getTradeMaxRCUAmount() {
+            return this.tradeMaxRCUAmount;
+        }
+
+        /**
+         * @return tradeMinRCUAmount
+         */
+        public Float getTradeMinRCUAmount() {
+            return this.tradeMinRCUAmount;
+        }
+
+        /**
          * @return tradePrice
          */
         public Float getTradePrice() {
@@ -509,8 +582,11 @@ public class DescribePriceResponseBody extends TeaModel {
             private Coupons coupons; 
             private String currency; 
             private Float discountPrice; 
+            private String orderLines; 
             private Float originalPrice; 
             private RuleIds ruleIds; 
+            private Float tradeMaxRCUAmount; 
+            private Float tradeMinRCUAmount; 
             private Float tradePrice; 
 
             /**
@@ -546,6 +622,14 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
+             * OrderLines.
+             */
+            public Builder orderLines(String orderLines) {
+                this.orderLines = orderLines;
+                return this;
+            }
+
+            /**
              * The original price.
              */
             public Builder originalPrice(Float originalPrice) {
@@ -558,6 +642,22 @@ public class DescribePriceResponseBody extends TeaModel {
              */
             public Builder ruleIds(RuleIds ruleIds) {
                 this.ruleIds = ruleIds;
+                return this;
+            }
+
+            /**
+             * The estimated hourly fee that is calculated based on the maximum number of RCUs.
+             */
+            public Builder tradeMaxRCUAmount(Float tradeMaxRCUAmount) {
+                this.tradeMaxRCUAmount = tradeMaxRCUAmount;
+                return this;
+            }
+
+            /**
+             * The estimated hourly fee that is calculated based on the minimum number of RCUs.
+             */
+            public Builder tradeMinRCUAmount(Float tradeMinRCUAmount) {
+                this.tradeMinRCUAmount = tradeMinRCUAmount;
                 return this;
             }
 
@@ -693,6 +793,227 @@ public class DescribePriceResponseBody extends TeaModel {
 
             public Rules build() {
                 return new Rules(this);
+            } 
+
+        } 
+
+    }
+    public static class ServerlessPrice extends TeaModel {
+        @NameInMap("RCUDiscountMaxAmount")
+        private Float RCUDiscountMaxAmount;
+
+        @NameInMap("RCUDiscountMinAmount")
+        private Float RCUDiscountMinAmount;
+
+        @NameInMap("RCUOriginalMaxAmount")
+        private Float RCUOriginalMaxAmount;
+
+        @NameInMap("RCUOriginalMinAmount")
+        private Float RCUOriginalMinAmount;
+
+        @NameInMap("StorageOriginalAmount")
+        private Float storageOriginalAmount;
+
+        @NameInMap("TotalOriginalMaxAmount")
+        private Float totalOriginalMaxAmount;
+
+        @NameInMap("TotalOriginalMinAmount")
+        private Float totalOriginalMinAmount;
+
+        @NameInMap("TradeMaxRCUAmount")
+        private Float tradeMaxRCUAmount;
+
+        @NameInMap("TradeMinRCUAmount")
+        private Float tradeMinRCUAmount;
+
+        @NameInMap("storageDiscountAmount")
+        private Float storageDiscountAmount;
+
+        private ServerlessPrice(Builder builder) {
+            this.RCUDiscountMaxAmount = builder.RCUDiscountMaxAmount;
+            this.RCUDiscountMinAmount = builder.RCUDiscountMinAmount;
+            this.RCUOriginalMaxAmount = builder.RCUOriginalMaxAmount;
+            this.RCUOriginalMinAmount = builder.RCUOriginalMinAmount;
+            this.storageOriginalAmount = builder.storageOriginalAmount;
+            this.totalOriginalMaxAmount = builder.totalOriginalMaxAmount;
+            this.totalOriginalMinAmount = builder.totalOriginalMinAmount;
+            this.tradeMaxRCUAmount = builder.tradeMaxRCUAmount;
+            this.tradeMinRCUAmount = builder.tradeMinRCUAmount;
+            this.storageDiscountAmount = builder.storageDiscountAmount;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ServerlessPrice create() {
+            return builder().build();
+        }
+
+        /**
+         * @return RCUDiscountMaxAmount
+         */
+        public Float getRCUDiscountMaxAmount() {
+            return this.RCUDiscountMaxAmount;
+        }
+
+        /**
+         * @return RCUDiscountMinAmount
+         */
+        public Float getRCUDiscountMinAmount() {
+            return this.RCUDiscountMinAmount;
+        }
+
+        /**
+         * @return RCUOriginalMaxAmount
+         */
+        public Float getRCUOriginalMaxAmount() {
+            return this.RCUOriginalMaxAmount;
+        }
+
+        /**
+         * @return RCUOriginalMinAmount
+         */
+        public Float getRCUOriginalMinAmount() {
+            return this.RCUOriginalMinAmount;
+        }
+
+        /**
+         * @return storageOriginalAmount
+         */
+        public Float getStorageOriginalAmount() {
+            return this.storageOriginalAmount;
+        }
+
+        /**
+         * @return totalOriginalMaxAmount
+         */
+        public Float getTotalOriginalMaxAmount() {
+            return this.totalOriginalMaxAmount;
+        }
+
+        /**
+         * @return totalOriginalMinAmount
+         */
+        public Float getTotalOriginalMinAmount() {
+            return this.totalOriginalMinAmount;
+        }
+
+        /**
+         * @return tradeMaxRCUAmount
+         */
+        public Float getTradeMaxRCUAmount() {
+            return this.tradeMaxRCUAmount;
+        }
+
+        /**
+         * @return tradeMinRCUAmount
+         */
+        public Float getTradeMinRCUAmount() {
+            return this.tradeMinRCUAmount;
+        }
+
+        /**
+         * @return storageDiscountAmount
+         */
+        public Float getStorageDiscountAmount() {
+            return this.storageDiscountAmount;
+        }
+
+        public static final class Builder {
+            private Float RCUDiscountMaxAmount; 
+            private Float RCUDiscountMinAmount; 
+            private Float RCUOriginalMaxAmount; 
+            private Float RCUOriginalMinAmount; 
+            private Float storageOriginalAmount; 
+            private Float totalOriginalMaxAmount; 
+            private Float totalOriginalMinAmount; 
+            private Float tradeMaxRCUAmount; 
+            private Float tradeMinRCUAmount; 
+            private Float storageDiscountAmount; 
+
+            /**
+             * RCUDiscountMaxAmount.
+             */
+            public Builder RCUDiscountMaxAmount(Float RCUDiscountMaxAmount) {
+                this.RCUDiscountMaxAmount = RCUDiscountMaxAmount;
+                return this;
+            }
+
+            /**
+             * RCUDiscountMinAmount.
+             */
+            public Builder RCUDiscountMinAmount(Float RCUDiscountMinAmount) {
+                this.RCUDiscountMinAmount = RCUDiscountMinAmount;
+                return this;
+            }
+
+            /**
+             * RCUOriginalMaxAmount.
+             */
+            public Builder RCUOriginalMaxAmount(Float RCUOriginalMaxAmount) {
+                this.RCUOriginalMaxAmount = RCUOriginalMaxAmount;
+                return this;
+            }
+
+            /**
+             * RCUOriginalMinAmount.
+             */
+            public Builder RCUOriginalMinAmount(Float RCUOriginalMinAmount) {
+                this.RCUOriginalMinAmount = RCUOriginalMinAmount;
+                return this;
+            }
+
+            /**
+             * StorageOriginalAmount.
+             */
+            public Builder storageOriginalAmount(Float storageOriginalAmount) {
+                this.storageOriginalAmount = storageOriginalAmount;
+                return this;
+            }
+
+            /**
+             * TotalOriginalMaxAmount.
+             */
+            public Builder totalOriginalMaxAmount(Float totalOriginalMaxAmount) {
+                this.totalOriginalMaxAmount = totalOriginalMaxAmount;
+                return this;
+            }
+
+            /**
+             * TotalOriginalMinAmount.
+             */
+            public Builder totalOriginalMinAmount(Float totalOriginalMinAmount) {
+                this.totalOriginalMinAmount = totalOriginalMinAmount;
+                return this;
+            }
+
+            /**
+             * The estimated hourly fee that is calculated based on the maximum number of RCUs.
+             */
+            public Builder tradeMaxRCUAmount(Float tradeMaxRCUAmount) {
+                this.tradeMaxRCUAmount = tradeMaxRCUAmount;
+                return this;
+            }
+
+            /**
+             * The estimated hourly fee that is calculated based on the minimum number of RCUs.
+             */
+            public Builder tradeMinRCUAmount(Float tradeMinRCUAmount) {
+                this.tradeMinRCUAmount = tradeMinRCUAmount;
+                return this;
+            }
+
+            /**
+             * storageDiscountAmount.
+             */
+            public Builder storageDiscountAmount(Float storageDiscountAmount) {
+                this.storageDiscountAmount = storageDiscountAmount;
+                return this;
+            }
+
+            public ServerlessPrice build() {
+                return new ServerlessPrice(this);
             } 
 
         } 

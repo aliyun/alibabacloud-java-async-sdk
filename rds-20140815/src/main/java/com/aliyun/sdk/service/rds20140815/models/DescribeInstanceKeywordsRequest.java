@@ -115,6 +115,8 @@ public class DescribeInstanceKeywordsRequest extends Request {
          * 
          * *   **account**
          * *   **database**
+         * 
+         * >  This parameter is required.
          */
         public Builder key(String key) {
             this.putQueryParameter("Key", key);

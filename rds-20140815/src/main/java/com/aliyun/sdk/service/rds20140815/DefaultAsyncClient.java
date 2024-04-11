@@ -937,9 +937,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
       * ### [](#)Supported database engines
-      * MySQL
+      * RDS MySQL
       * ### [](#)References
-      * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+      * >  Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.
       * [Delete a node from an ApsaraDB RDS for MySQL instance that runs RDS Cluster Edition](~~464130~~)
       *
      */
@@ -3038,6 +3038,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### [](#)Supported database engines
+      * *   RDS MySQL
+      * *   RDS PostgreSQL
+      * *   RDS SQL Server
+      * *   RDS MariaDB
+      *
+     */
     @Override
     public CompletableFuture<DescribeInstanceKeywordsResponse> describeInstanceKeywords(DescribeInstanceKeywordsRequest request) {
         try {

@@ -78,7 +78,7 @@ public class DescribeInstanceKeywordsResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of reserved keywords.
+         * The reserved keywords.
          */
         public Builder words(Words words) {
             this.words = words;
