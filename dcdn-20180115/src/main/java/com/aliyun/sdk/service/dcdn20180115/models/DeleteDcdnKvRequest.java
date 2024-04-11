@@ -70,7 +70,7 @@ public class DeleteDcdnKvRequest extends Request {
         } 
 
         /**
-         * The ID of the request.
+         * The name of the key that you want to delete.
          */
         public Builder key(String key) {
             this.putQueryParameter("Key", key);

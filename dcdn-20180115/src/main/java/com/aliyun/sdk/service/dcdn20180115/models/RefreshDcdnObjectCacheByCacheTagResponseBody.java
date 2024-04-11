@@ -7,19 +7,19 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeRoutineUserInfoResponseBody} extends {@link TeaModel}
+ * {@link RefreshDcdnObjectCacheByCacheTagResponseBody} extends {@link TeaModel}
  *
- * <p>DescribeRoutineUserInfoResponseBody</p>
+ * <p>RefreshDcdnObjectCacheByCacheTagResponseBody</p>
  */
-public class DescribeRoutineUserInfoResponseBody extends TeaModel {
-    @NameInMap("Content")
-    private java.util.Map < String, ? > content;
+public class RefreshDcdnObjectCacheByCacheTagResponseBody extends TeaModel {
+    @NameInMap("RefreshTaskId")
+    private String refreshTaskId;
 
     @NameInMap("RequestId")
     private String requestId;
 
-    private DescribeRoutineUserInfoResponseBody(Builder builder) {
-        this.content = builder.content;
+    private RefreshDcdnObjectCacheByCacheTagResponseBody(Builder builder) {
+        this.refreshTaskId = builder.refreshTaskId;
         this.requestId = builder.requestId;
     }
 
@@ -27,15 +27,15 @@ public class DescribeRoutineUserInfoResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static DescribeRoutineUserInfoResponseBody create() {
+    public static RefreshDcdnObjectCacheByCacheTagResponseBody create() {
         return builder().build();
     }
 
     /**
-     * @return content
+     * @return refreshTaskId
      */
-    public java.util.Map < String, ? > getContent() {
-        return this.content;
+    public String getRefreshTaskId() {
+        return this.refreshTaskId;
     }
 
     /**
@@ -46,27 +46,27 @@ public class DescribeRoutineUserInfoResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.Map < String, ? > content; 
+        private String refreshTaskId; 
         private String requestId; 
 
         /**
-         * The content returned by calling the operation.
+         * RefreshTaskId.
          */
-        public Builder content(java.util.Map < String, ? > content) {
-            this.content = content;
+        public Builder refreshTaskId(String refreshTaskId) {
+            this.refreshTaskId = refreshTaskId;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public DescribeRoutineUserInfoResponseBody build() {
-            return new DescribeRoutineUserInfoResponseBody(this);
+        public RefreshDcdnObjectCacheByCacheTagResponseBody build() {
+            return new RefreshDcdnObjectCacheByCacheTagResponseBody(this);
         } 
 
     } 

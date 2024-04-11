@@ -82,13 +82,7 @@ public class DescribeDcdnHttpsDomainListRequest extends Request {
         } 
 
         /**
-         * The status of the certificate. Valid values:
-         * <p>
-         * 
-         * *   **ok**: The certificate is working as expected.
-         * *   **mismatch**: The certificate does not match the specified domain name.
-         * *   **expired**: The certificate has expired.
-         * *   **expire_soon**: The certificate is about to expire.
+         * The keyword that is used to search for certificates.
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -97,7 +91,7 @@ public class DescribeDcdnHttpsDomainListRequest extends Request {
         }
 
         /**
-         * The total number of entries returned.
+         * The number of returned pages. Valid values: **1 to 100000**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -106,12 +100,7 @@ public class DescribeDcdnHttpsDomainListRequest extends Request {
         }
 
         /**
-         * The type of the certificate. Valid values:
-         * <p>
-         * 
-         * *   **free**: A free certificate.
-         * *   **cas**: A certificate that is purchased through Alibaba Cloud SSL Certificates Service.
-         * *   **upload**: A user-uploaded certificate.
+         * The number of entries to return on each page. Valid values: **1 to 500**. Default value: **20**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

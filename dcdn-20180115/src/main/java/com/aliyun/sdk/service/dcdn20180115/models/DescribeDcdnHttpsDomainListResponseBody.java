@@ -62,7 +62,7 @@ public class DescribeDcdnHttpsDomainListResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The time when the certificate became effective.
+         * The information about the certificate.
          */
         public Builder certInfos(CertInfos certInfos) {
             this.certInfos = certInfos;
@@ -70,7 +70,7 @@ public class DescribeDcdnHttpsDomainListResponseBody extends TeaModel {
         }
 
         /**
-         * The returned primary domain name of the certificate.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeDcdnHttpsDomainListResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: **1 to 500**. Default value: **20**.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -202,7 +202,7 @@ public class DescribeDcdnHttpsDomainListResponseBody extends TeaModel {
             private String domainName; 
 
             /**
-             * The certificate information about the domain name.
+             * The returned primary domain name of the certificate.
              */
             public Builder certCommonName(String certCommonName) {
                 this.certCommonName = certCommonName;
@@ -210,7 +210,7 @@ public class DescribeDcdnHttpsDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the certificate.
+             * The time at which the certificate expires.
              */
             public Builder certExpireTime(String certExpireTime) {
                 this.certExpireTime = certExpireTime;
@@ -218,7 +218,7 @@ public class DescribeDcdnHttpsDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * The accelerated domain name for which the certificate information was queried.
+             * The name of the certificate.
              */
             public Builder certName(String certName) {
                 this.certName = certName;
@@ -226,7 +226,7 @@ public class DescribeDcdnHttpsDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the certificate expires.
+             * The time at which the certificate became effective.
              */
             public Builder certStartTime(String certStartTime) {
                 this.certStartTime = certStartTime;
@@ -234,7 +234,13 @@ public class DescribeDcdnHttpsDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of pages to return. Valid values: **1 to 100000**.
+             * The status of the certificate. Valid values:
+             * <p>
+             * 
+             * *   **ok**: The certificate is working as expected.
+             * *   **mismatch**: The certificate does not match the specified domain name.
+             * *   **expired**: The certificate has expired.
+             * *   **expire_soon**: The certificate is about to expire.
              */
             public Builder certStatus(String certStatus) {
                 this.certStatus = certStatus;
@@ -242,7 +248,11 @@ public class DescribeDcdnHttpsDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * The operation that you want to perform. Set the value to **DescribeDcdnHttpsDomainList**.
+             * The type of the certificate. Valid values:
+             * <p>
+             * 
+             * *   **cas**: a certificate that is purchased by using Certificate Management Service
+             * *   **upload**: a custom certificate that you upload
              */
             public Builder certType(String certType) {
                 this.certType = certType;
@@ -250,7 +260,7 @@ public class DescribeDcdnHttpsDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * The keyword used for search.
+             * The time at which the certificate was updated.
              */
             public Builder certUpdateTime(String certUpdateTime) {
                 this.certUpdateTime = certUpdateTime;
@@ -258,7 +268,7 @@ public class DescribeDcdnHttpsDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the certificate was updated.
+             * The accelerated domain name.
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;

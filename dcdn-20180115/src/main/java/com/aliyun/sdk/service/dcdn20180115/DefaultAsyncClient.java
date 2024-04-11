@@ -493,10 +493,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * **
-      * ****
-      * *
-      * *
+      * > *   This operation allows you to create a custom operations report for a specific domain name. You can view the statistics about the domain name in the report.
+      * > *   You can call this operation up to three times per second per account.
       *
      */
     @Override
@@ -1824,7 +1822,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The name of the accelerated domain.
+      * > You can call this operation up to 30 times per second per account.
       *
      */
     @Override
@@ -2101,7 +2099,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * >  The maximum number of times that each user can call this operation per second is 100.
+      * > You can call this operation up to 100 times per second per account.
       *
      */
     @Override
@@ -3462,7 +3460,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * >  You can call this operation up to 100 times per second per account.
+      * > You can call this operation up to 100 times per second per account.
       *
      */
     @Override
@@ -3853,6 +3851,20 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    @Override
+    public CompletableFuture<RefreshDcdnObjectCacheByCacheTagResponse> refreshDcdnObjectCacheByCacheTag(RefreshDcdnObjectCacheByCacheTagRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RefreshDcdnObjectCacheByCacheTag").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RefreshDcdnObjectCacheByCacheTagResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RefreshDcdnObjectCacheByCacheTagResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
     /**
       * *   DCDN supports POST requests in which parameters are sent as a form.
       * *   You can call the [RefreshDcdnObjectCaches](~~130620~~) operation to refresh content and call the [PreloadDcdnObjectCaches](~~130636~~) operation to prefetch content.
@@ -4194,7 +4206,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * >  You can call this operation up to 30 times per second per account.
+      * > You can call this operation up to 30 times per second per account.
       *
      */
     @Override

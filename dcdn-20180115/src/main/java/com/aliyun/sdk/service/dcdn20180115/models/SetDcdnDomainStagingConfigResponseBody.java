@@ -38,7 +38,7 @@ public class SetDcdnDomainStagingConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the region.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

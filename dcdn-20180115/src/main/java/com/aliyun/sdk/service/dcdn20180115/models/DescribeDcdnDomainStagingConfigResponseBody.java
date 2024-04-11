@@ -50,13 +50,7 @@ public class DescribeDcdnDomainStagingConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The status of the feature. Valid values:
-         * <p>
-         * 
-         * *   success
-         * *   testing
-         * *   failed
-         * *   configuring
+         * The configurations of accelerated domain names returned.
          */
         public Builder domainConfigs(java.util.List < DomainConfigs> domainConfigs) {
             this.domainConfigs = domainConfigs;
@@ -64,7 +58,7 @@ public class DescribeDcdnDomainStagingConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The configurations of accelerated domain names returned.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -116,7 +110,7 @@ public class DescribeDcdnDomainStagingConfigResponseBody extends TeaModel {
             private String argValue; 
 
             /**
-             * The value of the configuration.
+             * The name of the configuration.
              */
             public Builder argName(String argName) {
                 this.argName = argName;
@@ -124,7 +118,7 @@ public class DescribeDcdnDomainStagingConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ArgValue.
+             * The value of the configuration.
              */
             public Builder argValue(String argValue) {
                 this.argValue = argValue;
@@ -201,7 +195,7 @@ public class DescribeDcdnDomainStagingConfigResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The name of the feature.
+             * The ID of the configuration.
              */
             public Builder configId(String configId) {
                 this.configId = configId;
@@ -209,7 +203,7 @@ public class DescribeDcdnDomainStagingConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the configuration.
+             * The following table describes the features.
              */
             public Builder functionArgs(java.util.List < FunctionArgs> functionArgs) {
                 this.functionArgs = functionArgs;
@@ -217,7 +211,7 @@ public class DescribeDcdnDomainStagingConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The descriptions of a feature.
+             * The name of the feature.
              */
             public Builder functionName(String functionName) {
                 this.functionName = functionName;
@@ -225,7 +219,13 @@ public class DescribeDcdnDomainStagingConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the configuration.
+             * The status. Valid values:
+             * <p>
+             * 
+             * *   success: The configuration is successful.
+             * *   testing: The configuration is under testing.
+             * *   failed: The task failed.
+             * *   configuring: The feature is being configured.
              */
             public Builder status(String status) {
                 this.status = status;

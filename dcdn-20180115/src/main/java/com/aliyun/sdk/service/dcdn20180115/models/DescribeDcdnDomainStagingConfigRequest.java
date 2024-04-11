@@ -70,7 +70,7 @@ public class DescribeDcdnDomainStagingConfigRequest extends Request {
         } 
 
         /**
-         * The names of the features to query. You can specify multiple features and separate them with commas (,).
+         * The accelerated domain name.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -79,7 +79,7 @@ public class DescribeDcdnDomainStagingConfigRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The names of the features to query. You can separate multiple features with commas (,).
          */
         public Builder functionNames(String functionNames) {
             this.putQueryParameter("FunctionNames", functionNames);

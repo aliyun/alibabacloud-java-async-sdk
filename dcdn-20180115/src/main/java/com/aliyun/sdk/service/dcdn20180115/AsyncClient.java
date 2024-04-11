@@ -154,10 +154,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateDcdnSLSRealTimeLogDeliveryResponse> createDcdnSLSRealTimeLogDelivery(CreateDcdnSLSRealTimeLogDeliveryRequest request);
 
     /**
-      * **
-      * ****
-      * *
-      * *
+      * > *   This operation allows you to create a custom operations report for a specific domain name. You can view the statistics about the domain name in the report.
+      * > *   You can call this operation up to three times per second per account.
       *
      */
     CompletableFuture<CreateDcdnSubTaskResponse> createDcdnSubTask(CreateDcdnSubTaskRequest request);
@@ -693,7 +691,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDcdnDomainRegionDataResponse> describeDcdnDomainRegionData(DescribeDcdnDomainRegionDataRequest request);
 
     /**
-      * The name of the accelerated domain.
+      * > You can call this operation up to 30 times per second per account.
       *
      */
     CompletableFuture<DescribeDcdnDomainStagingConfigResponse> describeDcdnDomainStagingConfig(DescribeDcdnDomainStagingConfigRequest request);
@@ -814,7 +812,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDcdnFullDomainsBlockIPHistoryResponse> describeDcdnFullDomainsBlockIPHistory(DescribeDcdnFullDomainsBlockIPHistoryRequest request);
 
     /**
-      * >  The maximum number of times that each user can call this operation per second is 100.
+      * > You can call this operation up to 100 times per second per account.
       *
      */
     CompletableFuture<DescribeDcdnHttpsDomainListResponse> describeDcdnHttpsDomainList(DescribeDcdnHttpsDomainListRequest request);
@@ -1239,7 +1237,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeRoutineSpecResponse> describeRoutineSpec(DescribeRoutineSpecRequest request);
 
     /**
-      * >  You can call this operation up to 100 times per second per account.
+      * > You can call this operation up to 100 times per second per account.
       *
      */
     CompletableFuture<DescribeRoutineUserInfoResponse> describeRoutineUserInfo(DescribeRoutineUserInfoRequest request);
@@ -1366,6 +1364,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<PutDcdnKvWithHighCapacityResponse> putDcdnKvWithHighCapacity(PutDcdnKvWithHighCapacityRequest request);
 
+    CompletableFuture<RefreshDcdnObjectCacheByCacheTagResponse> refreshDcdnObjectCacheByCacheTag(RefreshDcdnObjectCacheByCacheTagRequest request);
+
     /**
       * *   DCDN supports POST requests in which parameters are sent as a form.
       * *   You can call the [RefreshDcdnObjectCaches](~~130620~~) operation to refresh content and call the [PreloadDcdnObjectCaches](~~130636~~) operation to prefetch content.
@@ -1491,7 +1491,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateDcdnDeliverTaskResponse> updateDcdnDeliverTask(UpdateDcdnDeliverTaskRequest request);
 
     /**
-      * >  You can call this operation up to 30 times per second per account.
+      * > You can call this operation up to 30 times per second per account.
       *
      */
     CompletableFuture<UpdateDcdnDomainResponse> updateDcdnDomain(UpdateDcdnDomainRequest request);
