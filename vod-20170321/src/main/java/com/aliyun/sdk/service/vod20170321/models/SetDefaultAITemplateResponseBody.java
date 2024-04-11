@@ -50,7 +50,7 @@ public class SetDefaultAITemplateResponseBody extends TeaModel {
         private String templateId; 
 
         /**
-         * The request ID.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class SetDefaultAITemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the AI template.
+         * TemplateId.
          */
         public Builder templateId(String templateId) {
             this.templateId = templateId;

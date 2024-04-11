@@ -14,6 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DeleteAttachedMediaRequest extends Request {
     @Query
     @NameInMap("MediaIds")
+    @Validation(required = true)
     private String mediaIds;
 
     private DeleteAttachedMediaRequest(Builder builder) {

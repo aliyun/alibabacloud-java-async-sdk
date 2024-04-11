@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class RefreshVodObjectCachesRequest extends Request {
     @Query
+    @NameInMap("Force")
+    private Boolean force;
+
+    @Query
     @NameInMap("ObjectPath")
     @Validation(required = true)
     private String objectPath;
@@ -31,6 +35,7 @@ public class RefreshVodObjectCachesRequest extends Request {
 
     private RefreshVodObjectCachesRequest(Builder builder) {
         super(builder);
+        this.force = builder.force;
         this.objectPath = builder.objectPath;
         this.objectType = builder.objectType;
         this.ownerId = builder.ownerId;
@@ -48,6 +53,13 @@ public class RefreshVodObjectCachesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return force
+     */
+    public Boolean getForce() {
+        return this.force;
     }
 
     /**
@@ -79,6 +91,7 @@ public class RefreshVodObjectCachesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<RefreshVodObjectCachesRequest, Builder> {
+        private Boolean force; 
         private String objectPath; 
         private String objectType; 
         private Long ownerId; 
@@ -90,11 +103,26 @@ public class RefreshVodObjectCachesRequest extends Request {
 
         private Builder(RefreshVodObjectCachesRequest request) {
             super(request);
+            this.force = request.force;
             this.objectPath = request.objectPath;
             this.objectType = request.objectType;
             this.ownerId = request.ownerId;
             this.securityToken = request.securityToken;
         } 
+
+        /**
+         * Specifies whether to refresh resources in a directory if the resources are different from the resources in the same directory in the origin server. Default value: false.
+         * <p>
+         * 
+         *    - true:refresh all resources in the directory.
+         * 
+         *    - false:refresh the changed resources in the directory.
+         */
+        public Builder force(Boolean force) {
+            this.putQueryParameter("Force", force);
+            this.force = force;
+            return this;
+        }
 
         /**
          * The URL of the file to be prefetched. Separate multiple URLs with line breaks (\n or \r\n).
@@ -111,6 +139,12 @@ public class RefreshVodObjectCachesRequest extends Request {
          * 
          * *   **File** (default): refreshes files.
          * *   **Directory**: refreshes the files in specified directories.
+         * *   **Regex**: refreshes content based on regular expressions.
+         * *   **ExQuery**: omits parameters after the question mark in the URL and refreshes content.
+         * 
+         * If you set the ObjectType parameter to File or Directory, you can view Refresh and prefetch resources to obtain more information. If you set the ObjectType parameter to Regex, you can view Configure URL refresh rules that contain regular expressions to obtain more information.
+         * 
+         * If you set the ObjectType parameter to Directory, the resources in the directory that you want to refresh are marked as expired. You cannot delete the directory. If clients request resources on POPs that are marked as expired, Alibaba Cloud CDN checks whether the resources on your origin server are updated. If resources are updated, Alibaba Cloud CDN retrieves the latest version of the resources and returns the resources to the clients. Otherwise, the origin server returns the 304 status code.
          */
         public Builder objectType(String objectType) {
             this.putQueryParameter("ObjectType", objectType);

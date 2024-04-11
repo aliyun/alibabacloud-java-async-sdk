@@ -408,6 +408,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DescribeVodDomainUsageDataResponse> describeVodDomainUsageData(DescribeVodDomainUsageDataRequest request);
 
+    CompletableFuture<DescribeVodMediaPlayDataResponse> describeVodMediaPlayData(DescribeVodMediaPlayDataRequest request);
+
     /**
       * > *   This operation is available only in the **China (Shanghai)** region.
       * > *   You can call the [RefreshVodObjectCaches](~~69215~~) operation to refresh content and the [PreloadVodObjectCaches](~~69211~~) operation to prefetch content.
@@ -811,8 +813,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SetCrossdomainContentResponse> setCrossdomainContent(SetCrossdomainContentRequest request);
 
     /**
-      * *   Regions that support this operation: **China (Beijing)**, **China (Shanghai)**, and **Singapore**.
-      * *   Before you can call this operation to specify an AI template as the default template, you must obtain the ID of the AI template. You cannot delete an AI template that is set as the default template.
+      * Specifies an AI template as the default template.
       *
      */
     CompletableFuture<SetDefaultAITemplateResponse> setDefaultAITemplate(SetDefaultAITemplateRequest request);
