@@ -21,10 +21,20 @@ public class SuspendDtsJobsRequest extends Request {
     @NameInMap("RegionId")
     private String regionId;
 
+    @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
+    @NameInMap("ZeroEtlJob")
+    private Boolean zeroEtlJob;
+
     private SuspendDtsJobsRequest(Builder builder) {
         super(builder);
         this.dtsJobIds = builder.dtsJobIds;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
+        this.zeroEtlJob = builder.zeroEtlJob;
     }
 
     public static Builder builder() {
@@ -54,9 +64,25 @@ public class SuspendDtsJobsRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
+     * @return zeroEtlJob
+     */
+    public Boolean getZeroEtlJob() {
+        return this.zeroEtlJob;
+    }
+
     public static final class Builder extends Request.Builder<SuspendDtsJobsRequest, Builder> {
         private String dtsJobIds; 
         private String regionId; 
+        private String resourceGroupId; 
+        private Boolean zeroEtlJob; 
 
         private Builder() {
             super();
@@ -66,6 +92,8 @@ public class SuspendDtsJobsRequest extends Request {
             super(request);
             this.dtsJobIds = request.dtsJobIds;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.zeroEtlJob = request.zeroEtlJob;
         } 
 
         /**
@@ -88,6 +116,24 @@ public class SuspendDtsJobsRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * ZeroEtlJob.
+         */
+        public Builder zeroEtlJob(Boolean zeroEtlJob) {
+            this.putQueryParameter("ZeroEtlJob", zeroEtlJob);
+            this.zeroEtlJob = zeroEtlJob;
             return this;
         }
 

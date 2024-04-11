@@ -25,6 +25,10 @@ public class DescribeDtsJobDetailRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("SyncSubJobHistory")
     private Boolean syncSubJobHistory;
 
@@ -32,13 +36,19 @@ public class DescribeDtsJobDetailRequest extends Request {
     @NameInMap("SynchronizationDirection")
     private String synchronizationDirection;
 
+    @Query
+    @NameInMap("ZeroEtlJob")
+    private Boolean zeroEtlJob;
+
     private DescribeDtsJobDetailRequest(Builder builder) {
         super(builder);
         this.dtsInstanceID = builder.dtsInstanceID;
         this.dtsJobId = builder.dtsJobId;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.syncSubJobHistory = builder.syncSubJobHistory;
         this.synchronizationDirection = builder.synchronizationDirection;
+        this.zeroEtlJob = builder.zeroEtlJob;
     }
 
     public static Builder builder() {
@@ -76,6 +86,13 @@ public class DescribeDtsJobDetailRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return syncSubJobHistory
      */
     public Boolean getSyncSubJobHistory() {
@@ -89,12 +106,21 @@ public class DescribeDtsJobDetailRequest extends Request {
         return this.synchronizationDirection;
     }
 
+    /**
+     * @return zeroEtlJob
+     */
+    public Boolean getZeroEtlJob() {
+        return this.zeroEtlJob;
+    }
+
     public static final class Builder extends Request.Builder<DescribeDtsJobDetailRequest, Builder> {
         private String dtsInstanceID; 
         private String dtsJobId; 
         private String regionId; 
+        private String resourceGroupId; 
         private Boolean syncSubJobHistory; 
         private String synchronizationDirection; 
+        private Boolean zeroEtlJob; 
 
         private Builder() {
             super();
@@ -105,8 +131,10 @@ public class DescribeDtsJobDetailRequest extends Request {
             this.dtsInstanceID = request.dtsInstanceID;
             this.dtsJobId = request.dtsJobId;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.syncSubJobHistory = request.syncSubJobHistory;
             this.synchronizationDirection = request.synchronizationDirection;
+            this.zeroEtlJob = request.zeroEtlJob;
         } 
 
         /**
@@ -158,6 +186,15 @@ public class DescribeDtsJobDetailRequest extends Request {
         }
 
         /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
          * SyncSubJobHistory.
          */
         public Builder syncSubJobHistory(Boolean syncSubJobHistory) {
@@ -172,6 +209,15 @@ public class DescribeDtsJobDetailRequest extends Request {
         public Builder synchronizationDirection(String synchronizationDirection) {
             this.putQueryParameter("SynchronizationDirection", synchronizationDirection);
             this.synchronizationDirection = synchronizationDirection;
+            return this;
+        }
+
+        /**
+         * ZeroEtlJob.
+         */
+        public Builder zeroEtlJob(Boolean zeroEtlJob) {
+            this.putQueryParameter("ZeroEtlJob", zeroEtlJob);
+            this.zeroEtlJob = zeroEtlJob;
             return this;
         }
 

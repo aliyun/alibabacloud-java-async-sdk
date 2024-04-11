@@ -54,6 +54,10 @@ public class DescribeMetricListRequest extends Request {
     @NameInMap("Period")
     private Long period;
 
+    @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
     @Body
     @NameInMap("StartTime")
     private Long startTime;
@@ -70,6 +74,7 @@ public class DescribeMetricListRequest extends Request {
         this.ownerID = builder.ownerID;
         this.param = builder.param;
         this.period = builder.period;
+        this.resourceGroupId = builder.resourceGroupId;
         this.startTime = builder.startTime;
     }
 
@@ -157,6 +162,13 @@ public class DescribeMetricListRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return startTime
      */
     public Long getStartTime() {
@@ -174,6 +186,7 @@ public class DescribeMetricListRequest extends Request {
         private String ownerID; 
         private String param; 
         private Long period; 
+        private String resourceGroupId; 
         private Long startTime; 
 
         private Builder() {
@@ -192,6 +205,7 @@ public class DescribeMetricListRequest extends Request {
             this.ownerID = request.ownerID;
             this.param = request.param;
             this.period = request.period;
+            this.resourceGroupId = request.resourceGroupId;
             this.startTime = request.startTime;
         } 
 
@@ -293,6 +307,15 @@ public class DescribeMetricListRequest extends Request {
         public Builder period(Long period) {
             this.putBodyParameter("Period", period);
             this.period = period;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

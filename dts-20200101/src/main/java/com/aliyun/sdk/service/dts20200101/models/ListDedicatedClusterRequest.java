@@ -41,6 +41,10 @@ public class ListDedicatedClusterRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("State")
     private String state;
 
@@ -57,6 +61,7 @@ public class ListDedicatedClusterRequest extends Request {
         this.pageSize = builder.pageSize;
         this.params = builder.params;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.state = builder.state;
         this.type = builder.type;
     }
@@ -124,6 +129,13 @@ public class ListDedicatedClusterRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return state
      */
     public String getState() {
@@ -145,6 +157,7 @@ public class ListDedicatedClusterRequest extends Request {
         private Integer pageSize; 
         private String params; 
         private String regionId; 
+        private String resourceGroupId; 
         private String state; 
         private String type; 
 
@@ -161,6 +174,7 @@ public class ListDedicatedClusterRequest extends Request {
             this.pageSize = request.pageSize;
             this.params = request.params;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.state = request.state;
             this.type = request.type;
         } 
@@ -236,6 +250,15 @@ public class ListDedicatedClusterRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

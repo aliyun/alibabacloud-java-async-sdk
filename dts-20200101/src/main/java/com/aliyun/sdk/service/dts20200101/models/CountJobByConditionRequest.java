@@ -39,6 +39,10 @@ public class CountJobByConditionRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("SrcDbType")
     private String srcDbType;
 
@@ -58,6 +62,7 @@ public class CountJobByConditionRequest extends Request {
         this.params = builder.params;
         this.region = builder.region;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.srcDbType = builder.srcDbType;
         this.status = builder.status;
         this.type = builder.type;
@@ -119,6 +124,13 @@ public class CountJobByConditionRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return srcDbType
      */
     public String getSrcDbType() {
@@ -146,6 +158,7 @@ public class CountJobByConditionRequest extends Request {
         private String params; 
         private String region; 
         private String regionId; 
+        private String resourceGroupId; 
         private String srcDbType; 
         private String status; 
         private String type; 
@@ -162,6 +175,7 @@ public class CountJobByConditionRequest extends Request {
             this.params = request.params;
             this.region = request.region;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.srcDbType = request.srcDbType;
             this.status = request.status;
             this.type = request.type;
@@ -223,6 +237,15 @@ public class CountJobByConditionRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

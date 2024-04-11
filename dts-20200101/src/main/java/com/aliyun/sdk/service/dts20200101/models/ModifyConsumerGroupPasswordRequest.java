@@ -43,6 +43,10 @@ public class ModifyConsumerGroupPasswordRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("SubscriptionInstanceId")
     @Validation(required = true)
     private String subscriptionInstanceId;
@@ -61,6 +65,7 @@ public class ModifyConsumerGroupPasswordRequest extends Request {
         this.consumerGroupUserName = builder.consumerGroupUserName;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.subscriptionInstanceId = builder.subscriptionInstanceId;
         this.consumerGroupNewPassword = builder.consumerGroupNewPassword;
     }
@@ -128,6 +133,13 @@ public class ModifyConsumerGroupPasswordRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return subscriptionInstanceId
      */
     public String getSubscriptionInstanceId() {
@@ -149,6 +161,7 @@ public class ModifyConsumerGroupPasswordRequest extends Request {
         private String consumerGroupUserName; 
         private String ownerId; 
         private String regionId; 
+        private String resourceGroupId; 
         private String subscriptionInstanceId; 
         private String consumerGroupNewPassword; 
 
@@ -165,6 +178,7 @@ public class ModifyConsumerGroupPasswordRequest extends Request {
             this.consumerGroupUserName = request.consumerGroupUserName;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.subscriptionInstanceId = request.subscriptionInstanceId;
             this.consumerGroupNewPassword = request.consumerGroupNewPassword;
         } 
@@ -232,6 +246,15 @@ public class ModifyConsumerGroupPasswordRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

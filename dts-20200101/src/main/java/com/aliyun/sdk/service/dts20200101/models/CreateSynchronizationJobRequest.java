@@ -56,6 +56,10 @@ public class CreateSynchronizationJobRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("SourceRegion")
     @Validation(required = true)
     private String sourceRegion;
@@ -89,6 +93,7 @@ public class CreateSynchronizationJobRequest extends Request {
         this.payType = builder.payType;
         this.period = builder.period;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.sourceRegion = builder.sourceRegion;
         this.synchronizationJobClass = builder.synchronizationJobClass;
         this.topology = builder.topology;
@@ -180,6 +185,13 @@ public class CreateSynchronizationJobRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return sourceRegion
      */
     public String getSourceRegion() {
@@ -225,6 +237,7 @@ public class CreateSynchronizationJobRequest extends Request {
         private String payType; 
         private String period; 
         private String regionId; 
+        private String resourceGroupId; 
         private String sourceRegion; 
         private String synchronizationJobClass; 
         private String topology; 
@@ -247,6 +260,7 @@ public class CreateSynchronizationJobRequest extends Request {
             this.payType = request.payType;
             this.period = request.period;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.sourceRegion = request.sourceRegion;
             this.synchronizationJobClass = request.synchronizationJobClass;
             this.topology = request.topology;
@@ -354,6 +368,15 @@ public class CreateSynchronizationJobRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

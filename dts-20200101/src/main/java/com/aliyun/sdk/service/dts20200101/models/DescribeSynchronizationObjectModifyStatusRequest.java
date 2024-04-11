@@ -29,6 +29,10 @@ public class DescribeSynchronizationObjectModifyStatusRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("TaskId")
     @Validation(required = true)
     private String taskId;
@@ -39,6 +43,7 @@ public class DescribeSynchronizationObjectModifyStatusRequest extends Request {
         this.clientToken = builder.clientToken;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.taskId = builder.taskId;
     }
 
@@ -84,6 +89,13 @@ public class DescribeSynchronizationObjectModifyStatusRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return taskId
      */
     public String getTaskId() {
@@ -95,6 +107,7 @@ public class DescribeSynchronizationObjectModifyStatusRequest extends Request {
         private String clientToken; 
         private String ownerId; 
         private String regionId; 
+        private String resourceGroupId; 
         private String taskId; 
 
         private Builder() {
@@ -107,6 +120,7 @@ public class DescribeSynchronizationObjectModifyStatusRequest extends Request {
             this.clientToken = request.clientToken;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.taskId = request.taskId;
         } 
 
@@ -143,6 +157,15 @@ public class DescribeSynchronizationObjectModifyStatusRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

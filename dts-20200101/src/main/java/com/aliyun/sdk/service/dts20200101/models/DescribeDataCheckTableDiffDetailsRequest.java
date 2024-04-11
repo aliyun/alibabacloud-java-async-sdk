@@ -40,6 +40,10 @@ public class DescribeDataCheckTableDiffDetailsRequest extends Request {
     private Long pageSize;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("TbName")
     @Validation(required = true)
     private String tbName;
@@ -52,6 +56,7 @@ public class DescribeDataCheckTableDiffDetailsRequest extends Request {
         this.dtsJobId = builder.dtsJobId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.resourceGroupId = builder.resourceGroupId;
         this.tbName = builder.tbName;
     }
 
@@ -111,6 +116,13 @@ public class DescribeDataCheckTableDiffDetailsRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return tbName
      */
     public String getTbName() {
@@ -124,6 +136,7 @@ public class DescribeDataCheckTableDiffDetailsRequest extends Request {
         private String dtsJobId; 
         private Long pageNumber; 
         private Long pageSize; 
+        private String resourceGroupId; 
         private String tbName; 
 
         private Builder() {
@@ -138,6 +151,7 @@ public class DescribeDataCheckTableDiffDetailsRequest extends Request {
             this.dtsJobId = request.dtsJobId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.resourceGroupId = request.resourceGroupId;
             this.tbName = request.tbName;
         } 
 
@@ -192,6 +206,15 @@ public class DescribeDataCheckTableDiffDetailsRequest extends Request {
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

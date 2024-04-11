@@ -37,6 +37,10 @@ public class DescribeDtsServiceLogRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("StartTime")
     private Long startTime;
 
@@ -48,6 +52,10 @@ public class DescribeDtsServiceLogRequest extends Request {
     @NameInMap("SubJobType")
     private String subJobType;
 
+    @Query
+    @NameInMap("ZeroEtlJob")
+    private Boolean zeroEtlJob;
+
     private DescribeDtsServiceLogRequest(Builder builder) {
         super(builder);
         this.dtsJobId = builder.dtsJobId;
@@ -56,9 +64,11 @@ public class DescribeDtsServiceLogRequest extends Request {
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.startTime = builder.startTime;
         this.status = builder.status;
         this.subJobType = builder.subJobType;
+        this.zeroEtlJob = builder.zeroEtlJob;
     }
 
     public static Builder builder() {
@@ -117,6 +127,13 @@ public class DescribeDtsServiceLogRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return startTime
      */
     public Long getStartTime() {
@@ -137,6 +154,13 @@ public class DescribeDtsServiceLogRequest extends Request {
         return this.subJobType;
     }
 
+    /**
+     * @return zeroEtlJob
+     */
+    public Boolean getZeroEtlJob() {
+        return this.zeroEtlJob;
+    }
+
     public static final class Builder extends Request.Builder<DescribeDtsServiceLogRequest, Builder> {
         private String dtsJobId; 
         private Long endTime; 
@@ -144,9 +168,11 @@ public class DescribeDtsServiceLogRequest extends Request {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String regionId; 
+        private String resourceGroupId; 
         private Long startTime; 
         private String status; 
         private String subJobType; 
+        private Boolean zeroEtlJob; 
 
         private Builder() {
             super();
@@ -160,9 +186,11 @@ public class DescribeDtsServiceLogRequest extends Request {
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.startTime = request.startTime;
             this.status = request.status;
             this.subJobType = request.subJobType;
+            this.zeroEtlJob = request.zeroEtlJob;
         } 
 
         /**
@@ -227,6 +255,15 @@ public class DescribeDtsServiceLogRequest extends Request {
         }
 
         /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
          * The beginning of the time range to query.
          * <p>
          * 
@@ -264,6 +301,15 @@ public class DescribeDtsServiceLogRequest extends Request {
         public Builder subJobType(String subJobType) {
             this.putQueryParameter("SubJobType", subJobType);
             this.subJobType = subJobType;
+            return this;
+        }
+
+        /**
+         * ZeroEtlJob.
+         */
+        public Builder zeroEtlJob(Boolean zeroEtlJob) {
+            this.putQueryParameter("ZeroEtlJob", zeroEtlJob);
+            this.zeroEtlJob = zeroEtlJob;
             return this;
         }
 

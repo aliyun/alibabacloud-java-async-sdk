@@ -30,6 +30,10 @@ public class ModifySubscriptionRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("SubscriptionDataTypeDDL")
     @Validation(required = true)
     private Boolean subscriptionDataTypeDDL;
@@ -45,6 +49,7 @@ public class ModifySubscriptionRequest extends Request {
         this.dtsInstanceId = builder.dtsInstanceId;
         this.dtsJobId = builder.dtsJobId;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.subscriptionDataTypeDDL = builder.subscriptionDataTypeDDL;
         this.subscriptionDataTypeDML = builder.subscriptionDataTypeDML;
     }
@@ -91,6 +96,13 @@ public class ModifySubscriptionRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return subscriptionDataTypeDDL
      */
     public Boolean getSubscriptionDataTypeDDL() {
@@ -109,6 +121,7 @@ public class ModifySubscriptionRequest extends Request {
         private String dtsInstanceId; 
         private String dtsJobId; 
         private String regionId; 
+        private String resourceGroupId; 
         private Boolean subscriptionDataTypeDDL; 
         private Boolean subscriptionDataTypeDML; 
 
@@ -122,6 +135,7 @@ public class ModifySubscriptionRequest extends Request {
             this.dtsInstanceId = request.dtsInstanceId;
             this.dtsJobId = request.dtsJobId;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.subscriptionDataTypeDDL = request.subscriptionDataTypeDDL;
             this.subscriptionDataTypeDML = request.subscriptionDataTypeDML;
         } 
@@ -162,6 +176,15 @@ public class ModifySubscriptionRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

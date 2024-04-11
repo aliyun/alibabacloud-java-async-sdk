@@ -29,8 +29,16 @@ public class DeleteDtsJobRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("SynchronizationDirection")
     private String synchronizationDirection;
+
+    @Query
+    @NameInMap("ZeroEtlJob")
+    private Boolean zeroEtlJob;
 
     private DeleteDtsJobRequest(Builder builder) {
         super(builder);
@@ -38,7 +46,9 @@ public class DeleteDtsJobRequest extends Request {
         this.dtsJobId = builder.dtsJobId;
         this.jobType = builder.jobType;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.synchronizationDirection = builder.synchronizationDirection;
+        this.zeroEtlJob = builder.zeroEtlJob;
     }
 
     public static Builder builder() {
@@ -83,10 +93,24 @@ public class DeleteDtsJobRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return synchronizationDirection
      */
     public String getSynchronizationDirection() {
         return this.synchronizationDirection;
+    }
+
+    /**
+     * @return zeroEtlJob
+     */
+    public Boolean getZeroEtlJob() {
+        return this.zeroEtlJob;
     }
 
     public static final class Builder extends Request.Builder<DeleteDtsJobRequest, Builder> {
@@ -94,7 +118,9 @@ public class DeleteDtsJobRequest extends Request {
         private String dtsJobId; 
         private String jobType; 
         private String regionId; 
+        private String resourceGroupId; 
         private String synchronizationDirection; 
+        private Boolean zeroEtlJob; 
 
         private Builder() {
             super();
@@ -106,7 +132,9 @@ public class DeleteDtsJobRequest extends Request {
             this.dtsJobId = request.dtsJobId;
             this.jobType = request.jobType;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.synchronizationDirection = request.synchronizationDirection;
+            this.zeroEtlJob = request.zeroEtlJob;
         } 
 
         /**
@@ -149,11 +177,29 @@ public class DeleteDtsJobRequest extends Request {
         }
 
         /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
          * The dynamic error code. This parameter will be removed in the future.
          */
         public Builder synchronizationDirection(String synchronizationDirection) {
             this.putQueryParameter("SynchronizationDirection", synchronizationDirection);
             this.synchronizationDirection = synchronizationDirection;
+            return this;
+        }
+
+        /**
+         * ZeroEtlJob.
+         */
+        public Builder zeroEtlJob(Boolean zeroEtlJob) {
+            this.putQueryParameter("ZeroEtlJob", zeroEtlJob);
+            this.zeroEtlJob = zeroEtlJob;
             return this;
         }
 

@@ -31,6 +31,10 @@ public class SummaryJobDetailRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("StructType")
     private String structType;
 
@@ -38,14 +42,20 @@ public class SummaryJobDetailRequest extends Request {
     @NameInMap("SynchronizationDirection")
     private String synchronizationDirection;
 
+    @Query
+    @NameInMap("ZeroEtlJob")
+    private Boolean zeroEtlJob;
+
     private SummaryJobDetailRequest(Builder builder) {
         super(builder);
         this.dtsInstanceId = builder.dtsInstanceId;
         this.dtsJobId = builder.dtsJobId;
         this.jobCode = builder.jobCode;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.structType = builder.structType;
         this.synchronizationDirection = builder.synchronizationDirection;
+        this.zeroEtlJob = builder.zeroEtlJob;
     }
 
     public static Builder builder() {
@@ -90,6 +100,13 @@ public class SummaryJobDetailRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return structType
      */
     public String getStructType() {
@@ -103,13 +120,22 @@ public class SummaryJobDetailRequest extends Request {
         return this.synchronizationDirection;
     }
 
+    /**
+     * @return zeroEtlJob
+     */
+    public Boolean getZeroEtlJob() {
+        return this.zeroEtlJob;
+    }
+
     public static final class Builder extends Request.Builder<SummaryJobDetailRequest, Builder> {
         private String dtsInstanceId; 
         private String dtsJobId; 
         private String jobCode; 
         private String regionId; 
+        private String resourceGroupId; 
         private String structType; 
         private String synchronizationDirection; 
+        private Boolean zeroEtlJob; 
 
         private Builder() {
             super();
@@ -121,8 +147,10 @@ public class SummaryJobDetailRequest extends Request {
             this.dtsJobId = request.dtsJobId;
             this.jobCode = request.jobCode;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.structType = request.structType;
             this.synchronizationDirection = request.synchronizationDirection;
+            this.zeroEtlJob = request.zeroEtlJob;
         } 
 
         /**
@@ -172,6 +200,15 @@ public class SummaryJobDetailRequest extends Request {
         }
 
         /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
          * The type of schema definition. Valid values:
          * <p>
          * 
@@ -198,6 +235,15 @@ public class SummaryJobDetailRequest extends Request {
         public Builder synchronizationDirection(String synchronizationDirection) {
             this.putQueryParameter("SynchronizationDirection", synchronizationDirection);
             this.synchronizationDirection = synchronizationDirection;
+            return this;
+        }
+
+        /**
+         * ZeroEtlJob.
+         */
+        public Builder zeroEtlJob(Boolean zeroEtlJob) {
+            this.putQueryParameter("ZeroEtlJob", zeroEtlJob);
+            this.zeroEtlJob = zeroEtlJob;
             return this;
         }
 

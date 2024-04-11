@@ -38,6 +38,10 @@ public class CreateMigrationJobRequest extends Request {
     @NameInMap("RegionId")
     private String regionId;
 
+    @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
     private CreateMigrationJobRequest(Builder builder) {
         super(builder);
         this.accountId = builder.accountId;
@@ -46,6 +50,7 @@ public class CreateMigrationJobRequest extends Request {
         this.ownerId = builder.ownerId;
         this.region = builder.region;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
     }
 
     public static Builder builder() {
@@ -103,6 +108,13 @@ public class CreateMigrationJobRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public static final class Builder extends Request.Builder<CreateMigrationJobRequest, Builder> {
         private String accountId; 
         private String clientToken; 
@@ -110,6 +122,7 @@ public class CreateMigrationJobRequest extends Request {
         private String ownerId; 
         private String region; 
         private String regionId; 
+        private String resourceGroupId; 
 
         private Builder() {
             super();
@@ -123,6 +136,7 @@ public class CreateMigrationJobRequest extends Request {
             this.ownerId = request.ownerId;
             this.region = request.region;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
         } 
 
         /**
@@ -181,6 +195,15 @@ public class CreateMigrationJobRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

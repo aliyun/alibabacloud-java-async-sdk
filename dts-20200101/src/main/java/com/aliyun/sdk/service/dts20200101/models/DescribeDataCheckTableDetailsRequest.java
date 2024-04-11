@@ -37,6 +37,10 @@ public class DescribeDataCheckTableDetailsRequest extends Request {
     private Integer pageSize;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("SchemaName")
     private String schemaName;
 
@@ -55,6 +59,7 @@ public class DescribeDataCheckTableDetailsRequest extends Request {
         this.dtsJobId = builder.dtsJobId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.resourceGroupId = builder.resourceGroupId;
         this.schemaName = builder.schemaName;
         this.status = builder.status;
         this.tableName = builder.tableName;
@@ -109,6 +114,13 @@ public class DescribeDataCheckTableDetailsRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return schemaName
      */
     public String getSchemaName() {
@@ -135,6 +147,7 @@ public class DescribeDataCheckTableDetailsRequest extends Request {
         private String dtsJobId; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String resourceGroupId; 
         private String schemaName; 
         private String status; 
         private String tableName; 
@@ -150,6 +163,7 @@ public class DescribeDataCheckTableDetailsRequest extends Request {
             this.dtsJobId = request.dtsJobId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.resourceGroupId = request.resourceGroupId;
             this.schemaName = request.schemaName;
             this.status = request.status;
             this.tableName = request.tableName;
@@ -201,6 +215,15 @@ public class DescribeDataCheckTableDetailsRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

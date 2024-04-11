@@ -64,6 +64,10 @@ public class ModifyDtsJobEndpointRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("RoleName")
     private String roleName;
 
@@ -97,6 +101,7 @@ public class ModifyDtsJobEndpointRequest extends Request {
         this.endpointPort = builder.endpointPort;
         this.password = builder.password;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.roleName = builder.roleName;
         this.shardPassword = builder.shardPassword;
         this.shardUsername = builder.shardUsername;
@@ -202,6 +207,13 @@ public class ModifyDtsJobEndpointRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return roleName
      */
     public String getRoleName() {
@@ -249,6 +261,7 @@ public class ModifyDtsJobEndpointRequest extends Request {
         private String endpointPort; 
         private String password; 
         private String regionId; 
+        private String resourceGroupId; 
         private String roleName; 
         private String shardPassword; 
         private String shardUsername; 
@@ -273,6 +286,7 @@ public class ModifyDtsJobEndpointRequest extends Request {
             this.endpointPort = request.endpointPort;
             this.password = request.password;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.roleName = request.roleName;
             this.shardPassword = request.shardPassword;
             this.shardUsername = request.shardUsername;
@@ -385,6 +399,15 @@ public class ModifyDtsJobEndpointRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

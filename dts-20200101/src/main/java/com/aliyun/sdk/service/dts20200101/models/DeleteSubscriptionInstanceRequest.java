@@ -25,6 +25,10 @@ public class DeleteSubscriptionInstanceRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("SubscriptionInstanceId")
     @Validation(required = true)
     private String subscriptionInstanceId;
@@ -34,6 +38,7 @@ public class DeleteSubscriptionInstanceRequest extends Request {
         this.accountId = builder.accountId;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.subscriptionInstanceId = builder.subscriptionInstanceId;
     }
 
@@ -72,6 +77,13 @@ public class DeleteSubscriptionInstanceRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return subscriptionInstanceId
      */
     public String getSubscriptionInstanceId() {
@@ -82,6 +94,7 @@ public class DeleteSubscriptionInstanceRequest extends Request {
         private String accountId; 
         private String ownerId; 
         private String regionId; 
+        private String resourceGroupId; 
         private String subscriptionInstanceId; 
 
         private Builder() {
@@ -93,6 +106,7 @@ public class DeleteSubscriptionInstanceRequest extends Request {
             this.accountId = request.accountId;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.subscriptionInstanceId = request.subscriptionInstanceId;
         } 
 
@@ -120,6 +134,15 @@ public class DeleteSubscriptionInstanceRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

@@ -25,15 +25,25 @@ public class StopDtsJobRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("SynchronizationDirection")
     private String synchronizationDirection;
+
+    @Query
+    @NameInMap("ZeroEtlJob")
+    private Boolean zeroEtlJob;
 
     private StopDtsJobRequest(Builder builder) {
         super(builder);
         this.dtsInstanceId = builder.dtsInstanceId;
         this.dtsJobId = builder.dtsJobId;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.synchronizationDirection = builder.synchronizationDirection;
+        this.zeroEtlJob = builder.zeroEtlJob;
     }
 
     public static Builder builder() {
@@ -71,17 +81,33 @@ public class StopDtsJobRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return synchronizationDirection
      */
     public String getSynchronizationDirection() {
         return this.synchronizationDirection;
     }
 
+    /**
+     * @return zeroEtlJob
+     */
+    public Boolean getZeroEtlJob() {
+        return this.zeroEtlJob;
+    }
+
     public static final class Builder extends Request.Builder<StopDtsJobRequest, Builder> {
         private String dtsInstanceId; 
         private String dtsJobId; 
         private String regionId; 
+        private String resourceGroupId; 
         private String synchronizationDirection; 
+        private Boolean zeroEtlJob; 
 
         private Builder() {
             super();
@@ -92,7 +118,9 @@ public class StopDtsJobRequest extends Request {
             this.dtsInstanceId = request.dtsInstanceId;
             this.dtsJobId = request.dtsJobId;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.synchronizationDirection = request.synchronizationDirection;
+            this.zeroEtlJob = request.zeroEtlJob;
         } 
 
         /**
@@ -123,6 +151,15 @@ public class StopDtsJobRequest extends Request {
         }
 
         /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
          * The synchronization direction. Valid values:
          * <p>
          * 
@@ -136,6 +173,15 @@ public class StopDtsJobRequest extends Request {
         public Builder synchronizationDirection(String synchronizationDirection) {
             this.putQueryParameter("SynchronizationDirection", synchronizationDirection);
             this.synchronizationDirection = synchronizationDirection;
+            return this;
+        }
+
+        /**
+         * ZeroEtlJob.
+         */
+        public Builder zeroEtlJob(Boolean zeroEtlJob) {
+            this.putQueryParameter("ZeroEtlJob", zeroEtlJob);
+            this.zeroEtlJob = zeroEtlJob;
             return this;
         }
 

@@ -34,6 +34,10 @@ public class ModifyDynamicConfigRequest extends Request {
     @NameInMap("RegionId")
     private String regionId;
 
+    @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
     private ModifyDynamicConfigRequest(Builder builder) {
         super(builder);
         this.configList = builder.configList;
@@ -41,6 +45,7 @@ public class ModifyDynamicConfigRequest extends Request {
         this.enableLimit = builder.enableLimit;
         this.jobCode = builder.jobCode;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
     }
 
     public static Builder builder() {
@@ -91,12 +96,20 @@ public class ModifyDynamicConfigRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public static final class Builder extends Request.Builder<ModifyDynamicConfigRequest, Builder> {
         private String configList; 
         private String dtsJobId; 
         private Boolean enableLimit; 
         private String jobCode; 
         private String regionId; 
+        private String resourceGroupId; 
 
         private Builder() {
             super();
@@ -109,6 +122,7 @@ public class ModifyDynamicConfigRequest extends Request {
             this.enableLimit = request.enableLimit;
             this.jobCode = request.jobCode;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
         } 
 
         /**
@@ -153,6 +167,15 @@ public class ModifyDynamicConfigRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

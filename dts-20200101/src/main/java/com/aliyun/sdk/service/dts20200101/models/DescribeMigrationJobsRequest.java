@@ -38,6 +38,10 @@ public class DescribeMigrationJobsRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("Tag")
     private java.util.List < Tag> tag;
 
@@ -49,6 +53,7 @@ public class DescribeMigrationJobsRequest extends Request {
         this.pageNum = builder.pageNum;
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.tag = builder.tag;
     }
 
@@ -108,6 +113,13 @@ public class DescribeMigrationJobsRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return tag
      */
     public java.util.List < Tag> getTag() {
@@ -121,6 +133,7 @@ public class DescribeMigrationJobsRequest extends Request {
         private Integer pageNum; 
         private Integer pageSize; 
         private String regionId; 
+        private String resourceGroupId; 
         private java.util.List < Tag> tag; 
 
         private Builder() {
@@ -135,6 +148,7 @@ public class DescribeMigrationJobsRequest extends Request {
             this.pageNum = request.pageNum;
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.tag = request.tag;
         } 
 
@@ -192,6 +206,15 @@ public class DescribeMigrationJobsRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

@@ -29,6 +29,10 @@ public class ConfigureSynchronizationJobReplicatorCompareRequest extends Request
     private String regionId;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("SynchronizationDirection")
     private String synchronizationDirection;
 
@@ -47,6 +51,7 @@ public class ConfigureSynchronizationJobReplicatorCompareRequest extends Request
         this.clientToken = builder.clientToken;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.synchronizationDirection = builder.synchronizationDirection;
         this.synchronizationJobId = builder.synchronizationJobId;
         this.synchronizationReplicatorCompareEnable = builder.synchronizationReplicatorCompareEnable;
@@ -94,6 +99,13 @@ public class ConfigureSynchronizationJobReplicatorCompareRequest extends Request
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return synchronizationDirection
      */
     public String getSynchronizationDirection() {
@@ -119,6 +131,7 @@ public class ConfigureSynchronizationJobReplicatorCompareRequest extends Request
         private String clientToken; 
         private String ownerId; 
         private String regionId; 
+        private String resourceGroupId; 
         private String synchronizationDirection; 
         private String synchronizationJobId; 
         private Boolean synchronizationReplicatorCompareEnable; 
@@ -133,6 +146,7 @@ public class ConfigureSynchronizationJobReplicatorCompareRequest extends Request
             this.clientToken = request.clientToken;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.synchronizationDirection = request.synchronizationDirection;
             this.synchronizationJobId = request.synchronizationJobId;
             this.synchronizationReplicatorCompareEnable = request.synchronizationReplicatorCompareEnable;
@@ -171,6 +185,15 @@ public class ConfigureSynchronizationJobReplicatorCompareRequest extends Request
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

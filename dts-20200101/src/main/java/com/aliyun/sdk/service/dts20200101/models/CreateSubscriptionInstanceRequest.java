@@ -46,6 +46,10 @@ public class CreateSubscriptionInstanceRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("UsedTime")
     private Integer usedTime;
 
@@ -59,6 +63,7 @@ public class CreateSubscriptionInstanceRequest extends Request {
         this.period = builder.period;
         this.region = builder.region;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.usedTime = builder.usedTime;
     }
 
@@ -132,6 +137,13 @@ public class CreateSubscriptionInstanceRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return usedTime
      */
     public Integer getUsedTime() {
@@ -147,6 +159,7 @@ public class CreateSubscriptionInstanceRequest extends Request {
         private String period; 
         private String region; 
         private String regionId; 
+        private String resourceGroupId; 
         private Integer usedTime; 
 
         private Builder() {
@@ -163,6 +176,7 @@ public class CreateSubscriptionInstanceRequest extends Request {
             this.period = request.period;
             this.region = request.region;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.usedTime = request.usedTime;
         } 
 
@@ -245,6 +259,15 @@ public class CreateSubscriptionInstanceRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

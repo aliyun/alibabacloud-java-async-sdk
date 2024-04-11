@@ -33,6 +33,14 @@ public class DescribeDtsJobsRequest extends Request {
     private String groupId;
 
     @Query
+    @NameInMap("InstanceId")
+    private String instanceId;
+
+    @Query
+    @NameInMap("InstanceType")
+    private String instanceType;
+
+    @Query
     @NameInMap("JobType")
     private String jobType;
 
@@ -90,6 +98,10 @@ public class DescribeDtsJobsRequest extends Request {
     @NameInMap("WithoutDbList")
     private Boolean withoutDbList;
 
+    @Query
+    @NameInMap("ZeroEtlJob")
+    private Boolean zeroEtlJob;
+
     private DescribeDtsJobsRequest(Builder builder) {
         super(builder);
         this.dedicatedClusterId = builder.dedicatedClusterId;
@@ -97,6 +109,8 @@ public class DescribeDtsJobsRequest extends Request {
         this.dtsInstanceId = builder.dtsInstanceId;
         this.dtsJobId = builder.dtsJobId;
         this.groupId = builder.groupId;
+        this.instanceId = builder.instanceId;
+        this.instanceType = builder.instanceType;
         this.jobType = builder.jobType;
         this.orderColumn = builder.orderColumn;
         this.orderDirection = builder.orderDirection;
@@ -111,6 +125,7 @@ public class DescribeDtsJobsRequest extends Request {
         this.tags = builder.tags;
         this.type = builder.type;
         this.withoutDbList = builder.withoutDbList;
+        this.zeroEtlJob = builder.zeroEtlJob;
     }
 
     public static Builder builder() {
@@ -159,6 +174,20 @@ public class DescribeDtsJobsRequest extends Request {
      */
     public String getGroupId() {
         return this.groupId;
+    }
+
+    /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    /**
+     * @return instanceType
+     */
+    public String getInstanceType() {
+        return this.instanceType;
     }
 
     /**
@@ -259,12 +288,21 @@ public class DescribeDtsJobsRequest extends Request {
         return this.withoutDbList;
     }
 
+    /**
+     * @return zeroEtlJob
+     */
+    public Boolean getZeroEtlJob() {
+        return this.zeroEtlJob;
+    }
+
     public static final class Builder extends Request.Builder<DescribeDtsJobsRequest, Builder> {
         private String dedicatedClusterId; 
         private String dtsBisLabel; 
         private String dtsInstanceId; 
         private String dtsJobId; 
         private String groupId; 
+        private String instanceId; 
+        private String instanceType; 
         private String jobType; 
         private String orderColumn; 
         private String orderDirection; 
@@ -279,6 +317,7 @@ public class DescribeDtsJobsRequest extends Request {
         private String tags; 
         private String type; 
         private Boolean withoutDbList; 
+        private Boolean zeroEtlJob; 
 
         private Builder() {
             super();
@@ -291,6 +330,8 @@ public class DescribeDtsJobsRequest extends Request {
             this.dtsInstanceId = request.dtsInstanceId;
             this.dtsJobId = request.dtsJobId;
             this.groupId = request.groupId;
+            this.instanceId = request.instanceId;
+            this.instanceType = request.instanceType;
             this.jobType = request.jobType;
             this.orderColumn = request.orderColumn;
             this.orderDirection = request.orderDirection;
@@ -305,6 +346,7 @@ public class DescribeDtsJobsRequest extends Request {
             this.tags = request.tags;
             this.type = request.type;
             this.withoutDbList = request.withoutDbList;
+            this.zeroEtlJob = request.zeroEtlJob;
         } 
 
         /**
@@ -356,6 +398,24 @@ public class DescribeDtsJobsRequest extends Request {
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
             this.groupId = groupId;
+            return this;
+        }
+
+        /**
+         * InstanceId.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * InstanceType.
+         */
+        public Builder instanceType(String instanceType) {
+            this.putQueryParameter("InstanceType", instanceType);
+            this.instanceType = instanceType;
             return this;
         }
 
@@ -567,6 +627,15 @@ public class DescribeDtsJobsRequest extends Request {
         public Builder withoutDbList(Boolean withoutDbList) {
             this.putQueryParameter("WithoutDbList", withoutDbList);
             this.withoutDbList = withoutDbList;
+            return this;
+        }
+
+        /**
+         * ZeroEtlJob.
+         */
+        public Builder zeroEtlJob(Boolean zeroEtlJob) {
+            this.putQueryParameter("ZeroEtlJob", zeroEtlJob);
+            this.zeroEtlJob = zeroEtlJob;
             return this;
         }
 

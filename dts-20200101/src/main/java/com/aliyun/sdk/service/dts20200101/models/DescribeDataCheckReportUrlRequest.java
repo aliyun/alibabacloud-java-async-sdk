@@ -32,6 +32,10 @@ public class DescribeDataCheckReportUrlRequest extends Request {
     private String dtsJobId;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("TbName")
     @Validation(required = true)
     private String tbName;
@@ -42,6 +46,7 @@ public class DescribeDataCheckReportUrlRequest extends Request {
         this.checkType = builder.checkType;
         this.dbName = builder.dbName;
         this.dtsJobId = builder.dtsJobId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.tbName = builder.tbName;
     }
 
@@ -87,6 +92,13 @@ public class DescribeDataCheckReportUrlRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return tbName
      */
     public String getTbName() {
@@ -98,6 +110,7 @@ public class DescribeDataCheckReportUrlRequest extends Request {
         private Integer checkType; 
         private String dbName; 
         private String dtsJobId; 
+        private String resourceGroupId; 
         private String tbName; 
 
         private Builder() {
@@ -110,6 +123,7 @@ public class DescribeDataCheckReportUrlRequest extends Request {
             this.checkType = request.checkType;
             this.dbName = request.dbName;
             this.dtsJobId = request.dtsJobId;
+            this.resourceGroupId = request.resourceGroupId;
             this.tbName = request.tbName;
         } 
 
@@ -150,6 +164,15 @@ public class DescribeDataCheckReportUrlRequest extends Request {
         public Builder dtsJobId(String dtsJobId) {
             this.putQueryParameter("DtsJobId", dtsJobId);
             this.dtsJobId = dtsJobId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

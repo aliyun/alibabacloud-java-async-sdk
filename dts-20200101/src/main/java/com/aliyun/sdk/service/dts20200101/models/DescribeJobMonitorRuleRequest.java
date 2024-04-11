@@ -21,10 +21,15 @@ public class DescribeJobMonitorRuleRequest extends Request {
     @NameInMap("RegionId")
     private String regionId;
 
+    @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
     private DescribeJobMonitorRuleRequest(Builder builder) {
         super(builder);
         this.dtsJobId = builder.dtsJobId;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
     }
 
     public static Builder builder() {
@@ -54,9 +59,17 @@ public class DescribeJobMonitorRuleRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public static final class Builder extends Request.Builder<DescribeJobMonitorRuleRequest, Builder> {
         private String dtsJobId; 
         private String regionId; 
+        private String resourceGroupId; 
 
         private Builder() {
             super();
@@ -66,6 +79,7 @@ public class DescribeJobMonitorRuleRequest extends Request {
             super(request);
             this.dtsJobId = request.dtsJobId;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
         } 
 
         /**
@@ -83,6 +97,15 @@ public class DescribeJobMonitorRuleRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

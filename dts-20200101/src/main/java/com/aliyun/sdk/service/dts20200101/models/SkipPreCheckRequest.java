@@ -26,6 +26,10 @@ public class SkipPreCheckRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("Skip")
     @Validation(required = true)
     private Boolean skip;
@@ -43,6 +47,7 @@ public class SkipPreCheckRequest extends Request {
         this.dtsJobId = builder.dtsJobId;
         this.jobId = builder.jobId;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.skip = builder.skip;
         this.skipPreCheckItems = builder.skipPreCheckItems;
         this.skipPreCheckNames = builder.skipPreCheckNames;
@@ -83,6 +88,13 @@ public class SkipPreCheckRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return skip
      */
     public Boolean getSkip() {
@@ -107,6 +119,7 @@ public class SkipPreCheckRequest extends Request {
         private String dtsJobId; 
         private String jobId; 
         private String regionId; 
+        private String resourceGroupId; 
         private Boolean skip; 
         private String skipPreCheckItems; 
         private String skipPreCheckNames; 
@@ -120,6 +133,7 @@ public class SkipPreCheckRequest extends Request {
             this.dtsJobId = request.dtsJobId;
             this.jobId = request.jobId;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.skip = request.skip;
             this.skipPreCheckItems = request.skipPreCheckItems;
             this.skipPreCheckNames = request.skipPreCheckNames;
@@ -149,6 +163,15 @@ public class SkipPreCheckRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

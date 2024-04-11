@@ -50,6 +50,10 @@ public class ConfigureSynchronizationJobRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("StructureInitialization")
     @Validation(required = true)
     private Boolean structureInitialization;
@@ -83,6 +87,7 @@ public class ConfigureSynchronizationJobRequest extends Request {
         this.migrationReserved = builder.migrationReserved;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.structureInitialization = builder.structureInitialization;
         this.synchronizationDirection = builder.synchronizationDirection;
         this.synchronizationJobId = builder.synchronizationJobId;
@@ -167,6 +172,13 @@ public class ConfigureSynchronizationJobRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return structureInitialization
      */
     public Boolean getStructureInitialization() {
@@ -211,6 +223,7 @@ public class ConfigureSynchronizationJobRequest extends Request {
         private String migrationReserved; 
         private String ownerId; 
         private String regionId; 
+        private String resourceGroupId; 
         private Boolean structureInitialization; 
         private String synchronizationDirection; 
         private String synchronizationJobId; 
@@ -232,6 +245,7 @@ public class ConfigureSynchronizationJobRequest extends Request {
             this.migrationReserved = request.migrationReserved;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.structureInitialization = request.structureInitialization;
             this.synchronizationDirection = request.synchronizationDirection;
             this.synchronizationJobId = request.synchronizationJobId;
@@ -326,6 +340,15 @@ public class ConfigureSynchronizationJobRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

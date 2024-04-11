@@ -38,6 +38,10 @@ public class DescribeCheckJobsRequest extends Request {
     @Validation(maximum = 1000, minimum = 1)
     private Integer pageSize;
 
+    @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
     private DescribeCheckJobsRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -46,6 +50,7 @@ public class DescribeCheckJobsRequest extends Request {
         this.jobName = builder.jobName;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.resourceGroupId = builder.resourceGroupId;
     }
 
     public static Builder builder() {
@@ -103,6 +108,13 @@ public class DescribeCheckJobsRequest extends Request {
         return this.pageSize;
     }
 
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public static final class Builder extends Request.Builder<DescribeCheckJobsRequest, Builder> {
         private String regionId; 
         private Integer checkType; 
@@ -110,6 +122,7 @@ public class DescribeCheckJobsRequest extends Request {
         private String jobName; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String resourceGroupId; 
 
         private Builder() {
             super();
@@ -123,6 +136,7 @@ public class DescribeCheckJobsRequest extends Request {
             this.jobName = request.jobName;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.resourceGroupId = request.resourceGroupId;
         } 
 
         /**
@@ -176,6 +190,15 @@ public class DescribeCheckJobsRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

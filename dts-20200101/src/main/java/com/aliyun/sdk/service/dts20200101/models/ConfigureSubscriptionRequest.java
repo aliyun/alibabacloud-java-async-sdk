@@ -80,6 +80,10 @@ public class ConfigureSubscriptionRequest extends Request {
     private String reserve;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("SourceEndpointDatabaseName")
     private String sourceEndpointDatabaseName;
 
@@ -166,6 +170,7 @@ public class ConfigureSubscriptionRequest extends Request {
         this.minDu = builder.minDu;
         this.regionId = builder.regionId;
         this.reserve = builder.reserve;
+        this.resourceGroupId = builder.resourceGroupId;
         this.sourceEndpointDatabaseName = builder.sourceEndpointDatabaseName;
         this.sourceEndpointEngineName = builder.sourceEndpointEngineName;
         this.sourceEndpointIP = builder.sourceEndpointIP;
@@ -311,6 +316,13 @@ public class ConfigureSubscriptionRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return sourceEndpointDatabaseName
      */
     public String getSourceEndpointDatabaseName() {
@@ -446,6 +458,7 @@ public class ConfigureSubscriptionRequest extends Request {
         private Double minDu; 
         private String regionId; 
         private String reserve; 
+        private String resourceGroupId; 
         private String sourceEndpointDatabaseName; 
         private String sourceEndpointEngineName; 
         private String sourceEndpointIP; 
@@ -486,6 +499,7 @@ public class ConfigureSubscriptionRequest extends Request {
             this.minDu = request.minDu;
             this.regionId = request.regionId;
             this.reserve = request.reserve;
+            this.resourceGroupId = request.resourceGroupId;
             this.sourceEndpointDatabaseName = request.sourceEndpointDatabaseName;
             this.sourceEndpointEngineName = request.sourceEndpointEngineName;
             this.sourceEndpointIP = request.sourceEndpointIP;
@@ -673,6 +687,15 @@ public class ConfigureSubscriptionRequest extends Request {
         public Builder reserve(String reserve) {
             this.putQueryParameter("Reserve", reserve);
             this.reserve = reserve;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

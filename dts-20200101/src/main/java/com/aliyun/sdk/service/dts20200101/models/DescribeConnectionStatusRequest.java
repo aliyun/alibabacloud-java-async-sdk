@@ -62,6 +62,10 @@ public class DescribeConnectionStatusRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("SourceEndpointArchitecture")
     private String sourceEndpointArchitecture;
 
@@ -120,6 +124,7 @@ public class DescribeConnectionStatusRequest extends Request {
         this.destinationEndpointRegion = builder.destinationEndpointRegion;
         this.destinationEndpointUserName = builder.destinationEndpointUserName;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.sourceEndpointArchitecture = builder.sourceEndpointArchitecture;
         this.sourceEndpointDatabaseName = builder.sourceEndpointDatabaseName;
         this.sourceEndpointEngineName = builder.sourceEndpointEngineName;
@@ -231,6 +236,13 @@ public class DescribeConnectionStatusRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return sourceEndpointArchitecture
      */
     public String getSourceEndpointArchitecture() {
@@ -320,6 +332,7 @@ public class DescribeConnectionStatusRequest extends Request {
         private String destinationEndpointRegion; 
         private String destinationEndpointUserName; 
         private String regionId; 
+        private String resourceGroupId; 
         private String sourceEndpointArchitecture; 
         private String sourceEndpointDatabaseName; 
         private String sourceEndpointEngineName; 
@@ -350,6 +363,7 @@ public class DescribeConnectionStatusRequest extends Request {
             this.destinationEndpointRegion = request.destinationEndpointRegion;
             this.destinationEndpointUserName = request.destinationEndpointUserName;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.sourceEndpointArchitecture = request.sourceEndpointArchitecture;
             this.sourceEndpointDatabaseName = request.sourceEndpointDatabaseName;
             this.sourceEndpointEngineName = request.sourceEndpointEngineName;
@@ -512,6 +526,15 @@ public class DescribeConnectionStatusRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

@@ -26,16 +26,26 @@ public class WhiteIpListRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("Type")
     @Validation(required = true)
     private String type;
+
+    @Query
+    @NameInMap("ZeroEtlJob")
+    private Boolean zeroEtlJob;
 
     private WhiteIpListRequest(Builder builder) {
         super(builder);
         this.destinationRegion = builder.destinationRegion;
         this.region = builder.region;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.type = builder.type;
+        this.zeroEtlJob = builder.zeroEtlJob;
     }
 
     public static Builder builder() {
@@ -73,17 +83,33 @@ public class WhiteIpListRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return type
      */
     public String getType() {
         return this.type;
     }
 
+    /**
+     * @return zeroEtlJob
+     */
+    public Boolean getZeroEtlJob() {
+        return this.zeroEtlJob;
+    }
+
     public static final class Builder extends Request.Builder<WhiteIpListRequest, Builder> {
         private String destinationRegion; 
         private String region; 
         private String regionId; 
+        private String resourceGroupId; 
         private String type; 
+        private Boolean zeroEtlJob; 
 
         private Builder() {
             super();
@@ -94,7 +120,9 @@ public class WhiteIpListRequest extends Request {
             this.destinationRegion = request.destinationRegion;
             this.region = request.region;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.type = request.type;
+            this.zeroEtlJob = request.zeroEtlJob;
         } 
 
         /**
@@ -130,6 +158,15 @@ public class WhiteIpListRequest extends Request {
         }
 
         /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
          * The ID of the region where the source instance resides. For more information, see [List of supported regions](~~141033~~).
          * <p>
          * 
@@ -138,6 +175,15 @@ public class WhiteIpListRequest extends Request {
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
             this.type = type;
+            return this;
+        }
+
+        /**
+         * ZeroEtlJob.
+         */
+        public Builder zeroEtlJob(Boolean zeroEtlJob) {
+            this.putQueryParameter("ZeroEtlJob", zeroEtlJob);
+            this.zeroEtlJob = zeroEtlJob;
             return this;
         }
 

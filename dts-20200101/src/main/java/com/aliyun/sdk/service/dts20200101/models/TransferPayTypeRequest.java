@@ -27,6 +27,14 @@ public class TransferPayTypeRequest extends Request {
     private String dtsJobId;
 
     @Query
+    @NameInMap("MaxDu")
+    private Integer maxDu;
+
+    @Query
+    @NameInMap("MinDu")
+    private Integer minDu;
+
+    @Query
     @NameInMap("Period")
     private String period;
 
@@ -34,13 +42,20 @@ public class TransferPayTypeRequest extends Request {
     @NameInMap("RegionId")
     private String regionId;
 
+    @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
     private TransferPayTypeRequest(Builder builder) {
         super(builder);
         this.buyCount = builder.buyCount;
         this.chargeType = builder.chargeType;
         this.dtsJobId = builder.dtsJobId;
+        this.maxDu = builder.maxDu;
+        this.minDu = builder.minDu;
         this.period = builder.period;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
     }
 
     public static Builder builder() {
@@ -78,6 +93,20 @@ public class TransferPayTypeRequest extends Request {
     }
 
     /**
+     * @return maxDu
+     */
+    public Integer getMaxDu() {
+        return this.maxDu;
+    }
+
+    /**
+     * @return minDu
+     */
+    public Integer getMinDu() {
+        return this.minDu;
+    }
+
+    /**
      * @return period
      */
     public String getPeriod() {
@@ -91,12 +120,22 @@ public class TransferPayTypeRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public static final class Builder extends Request.Builder<TransferPayTypeRequest, Builder> {
         private String buyCount; 
         private String chargeType; 
         private String dtsJobId; 
+        private Integer maxDu; 
+        private Integer minDu; 
         private String period; 
         private String regionId; 
+        private String resourceGroupId; 
 
         private Builder() {
             super();
@@ -107,8 +146,11 @@ public class TransferPayTypeRequest extends Request {
             this.buyCount = request.buyCount;
             this.chargeType = request.chargeType;
             this.dtsJobId = request.dtsJobId;
+            this.maxDu = request.maxDu;
+            this.minDu = request.minDu;
             this.period = request.period;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
         } 
 
         /**
@@ -153,6 +195,24 @@ public class TransferPayTypeRequest extends Request {
         }
 
         /**
+         * MaxDu.
+         */
+        public Builder maxDu(Integer maxDu) {
+            this.putQueryParameter("MaxDu", maxDu);
+            this.maxDu = maxDu;
+            return this;
+        }
+
+        /**
+         * MinDu.
+         */
+        public Builder minDu(Integer minDu) {
+            this.putQueryParameter("MinDu", minDu);
+            this.minDu = minDu;
+            return this;
+        }
+
+        /**
          * The billing cycle of the subscription instance. Valid values:
          * <p>
          * 
@@ -173,6 +233,15 @@ public class TransferPayTypeRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

@@ -26,11 +26,16 @@ public class UpgradeTwoWayRequest extends Request {
     @NameInMap("RegionId")
     private String regionId;
 
+    @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
     private UpgradeTwoWayRequest(Builder builder) {
         super(builder);
         this.instanceClass = builder.instanceClass;
         this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
     }
 
     public static Builder builder() {
@@ -67,10 +72,18 @@ public class UpgradeTwoWayRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public static final class Builder extends Request.Builder<UpgradeTwoWayRequest, Builder> {
         private String instanceClass; 
         private String instanceId; 
         private String regionId; 
+        private String resourceGroupId; 
 
         private Builder() {
             super();
@@ -81,6 +94,7 @@ public class UpgradeTwoWayRequest extends Request {
             this.instanceClass = request.instanceClass;
             this.instanceId = request.instanceId;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
         } 
 
         /**
@@ -110,6 +124,15 @@ public class UpgradeTwoWayRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

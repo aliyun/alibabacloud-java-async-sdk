@@ -25,6 +25,10 @@ public class ResetDtsJobRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("SynchronizationDirection")
     private String synchronizationDirection;
 
@@ -33,6 +37,7 @@ public class ResetDtsJobRequest extends Request {
         this.dtsInstanceId = builder.dtsInstanceId;
         this.dtsJobId = builder.dtsJobId;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.synchronizationDirection = builder.synchronizationDirection;
     }
 
@@ -71,6 +76,13 @@ public class ResetDtsJobRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return synchronizationDirection
      */
     public String getSynchronizationDirection() {
@@ -81,6 +93,7 @@ public class ResetDtsJobRequest extends Request {
         private String dtsInstanceId; 
         private String dtsJobId; 
         private String regionId; 
+        private String resourceGroupId; 
         private String synchronizationDirection; 
 
         private Builder() {
@@ -92,6 +105,7 @@ public class ResetDtsJobRequest extends Request {
             this.dtsInstanceId = request.dtsInstanceId;
             this.dtsJobId = request.dtsJobId;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.synchronizationDirection = request.synchronizationDirection;
         } 
 
@@ -119,6 +133,15 @@ public class ResetDtsJobRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

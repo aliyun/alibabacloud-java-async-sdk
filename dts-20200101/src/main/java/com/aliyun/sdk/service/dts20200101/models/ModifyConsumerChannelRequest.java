@@ -42,6 +42,10 @@ public class ModifyConsumerChannelRequest extends Request {
     @Validation(required = true)
     private String regionId;
 
+    @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
     private ModifyConsumerChannelRequest(Builder builder) {
         super(builder);
         this.consumerGroupId = builder.consumerGroupId;
@@ -51,6 +55,7 @@ public class ModifyConsumerChannelRequest extends Request {
         this.dtsInstanceId = builder.dtsInstanceId;
         this.dtsJobId = builder.dtsJobId;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
     }
 
     public static Builder builder() {
@@ -115,6 +120,13 @@ public class ModifyConsumerChannelRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public static final class Builder extends Request.Builder<ModifyConsumerChannelRequest, Builder> {
         private String consumerGroupId; 
         private String consumerGroupName; 
@@ -123,6 +135,7 @@ public class ModifyConsumerChannelRequest extends Request {
         private String dtsInstanceId; 
         private String dtsJobId; 
         private String regionId; 
+        private String resourceGroupId; 
 
         private Builder() {
             super();
@@ -137,6 +150,7 @@ public class ModifyConsumerChannelRequest extends Request {
             this.dtsInstanceId = request.dtsInstanceId;
             this.dtsJobId = request.dtsJobId;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
         } 
 
         /**
@@ -213,6 +227,15 @@ public class ModifyConsumerChannelRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

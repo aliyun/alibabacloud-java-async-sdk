@@ -30,8 +30,16 @@ public class ModifyDtsJobPasswordRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("UserName")
     private String userName;
+
+    @Query
+    @NameInMap("ZeroEtlJob")
+    private Boolean zeroEtlJob;
 
     private ModifyDtsJobPasswordRequest(Builder builder) {
         super(builder);
@@ -39,7 +47,9 @@ public class ModifyDtsJobPasswordRequest extends Request {
         this.endpoint = builder.endpoint;
         this.password = builder.password;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.userName = builder.userName;
+        this.zeroEtlJob = builder.zeroEtlJob;
     }
 
     public static Builder builder() {
@@ -84,10 +94,24 @@ public class ModifyDtsJobPasswordRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return userName
      */
     public String getUserName() {
         return this.userName;
+    }
+
+    /**
+     * @return zeroEtlJob
+     */
+    public Boolean getZeroEtlJob() {
+        return this.zeroEtlJob;
     }
 
     public static final class Builder extends Request.Builder<ModifyDtsJobPasswordRequest, Builder> {
@@ -95,7 +119,9 @@ public class ModifyDtsJobPasswordRequest extends Request {
         private String endpoint; 
         private String password; 
         private String regionId; 
+        private String resourceGroupId; 
         private String userName; 
+        private Boolean zeroEtlJob; 
 
         private Builder() {
             super();
@@ -107,7 +133,9 @@ public class ModifyDtsJobPasswordRequest extends Request {
             this.endpoint = request.endpoint;
             this.password = request.password;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.userName = request.userName;
+            this.zeroEtlJob = request.zeroEtlJob;
         } 
 
         /**
@@ -156,6 +184,15 @@ public class ModifyDtsJobPasswordRequest extends Request {
         }
 
         /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
          * The account of the source or destination database.
          * <p>
          * 
@@ -164,6 +201,15 @@ public class ModifyDtsJobPasswordRequest extends Request {
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);
             this.userName = userName;
+            return this;
+        }
+
+        /**
+         * ZeroEtlJob.
+         */
+        public Builder zeroEtlJob(Boolean zeroEtlJob) {
+            this.putQueryParameter("ZeroEtlJob", zeroEtlJob);
+            this.zeroEtlJob = zeroEtlJob;
             return this;
         }
 

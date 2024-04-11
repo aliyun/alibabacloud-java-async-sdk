@@ -38,6 +38,10 @@ public class CreateJobMonitorRuleRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("State")
     private String state;
 
@@ -57,6 +61,7 @@ public class CreateJobMonitorRuleRequest extends Request {
         this.period = builder.period;
         this.phone = builder.phone;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.state = builder.state;
         this.times = builder.times;
         this.type = builder.type;
@@ -118,6 +123,13 @@ public class CreateJobMonitorRuleRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return state
      */
     public String getState() {
@@ -145,6 +157,7 @@ public class CreateJobMonitorRuleRequest extends Request {
         private Integer period; 
         private String phone; 
         private String regionId; 
+        private String resourceGroupId; 
         private String state; 
         private Integer times; 
         private String type; 
@@ -161,6 +174,7 @@ public class CreateJobMonitorRuleRequest extends Request {
             this.period = request.period;
             this.phone = request.phone;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.state = request.state;
             this.times = request.times;
             this.type = request.type;
@@ -231,6 +245,15 @@ public class CreateJobMonitorRuleRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

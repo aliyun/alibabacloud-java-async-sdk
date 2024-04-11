@@ -45,6 +45,10 @@ public class DescribeClusterUsedUtilizationRequest extends Request {
     @NameInMap("RegionId")
     private String regionId;
 
+    @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
     @Body
     @NameInMap("SecurityToken")
     private String securityToken;
@@ -59,6 +63,7 @@ public class DescribeClusterUsedUtilizationRequest extends Request {
         this.metricType = builder.metricType;
         this.ownerID = builder.ownerID;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.securityToken = builder.securityToken;
     }
 
@@ -132,6 +137,13 @@ public class DescribeClusterUsedUtilizationRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return securityToken
      */
     public String getSecurityToken() {
@@ -147,6 +159,7 @@ public class DescribeClusterUsedUtilizationRequest extends Request {
         private String metricType; 
         private String ownerID; 
         private String regionId; 
+        private String resourceGroupId; 
         private String securityToken; 
 
         private Builder() {
@@ -163,6 +176,7 @@ public class DescribeClusterUsedUtilizationRequest extends Request {
             this.metricType = request.metricType;
             this.ownerID = request.ownerID;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.securityToken = request.securityToken;
         } 
 
@@ -239,6 +253,15 @@ public class DescribeClusterUsedUtilizationRequest extends Request {
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

@@ -38,6 +38,10 @@ public class DescribeSubscriptionInstancesRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("SubscriptionInstanceName")
     private String subscriptionInstanceName;
 
@@ -53,6 +57,7 @@ public class DescribeSubscriptionInstancesRequest extends Request {
         this.pageNum = builder.pageNum;
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.subscriptionInstanceName = builder.subscriptionInstanceName;
         this.tag = builder.tag;
     }
@@ -113,6 +118,13 @@ public class DescribeSubscriptionInstancesRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return subscriptionInstanceName
      */
     public String getSubscriptionInstanceName() {
@@ -133,6 +145,7 @@ public class DescribeSubscriptionInstancesRequest extends Request {
         private Integer pageNum; 
         private Integer pageSize; 
         private String regionId; 
+        private String resourceGroupId; 
         private String subscriptionInstanceName; 
         private java.util.List < Tag> tag; 
 
@@ -148,6 +161,7 @@ public class DescribeSubscriptionInstancesRequest extends Request {
             this.pageNum = request.pageNum;
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.subscriptionInstanceName = request.subscriptionInstanceName;
             this.tag = request.tag;
         } 
@@ -203,6 +217,15 @@ public class DescribeSubscriptionInstancesRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

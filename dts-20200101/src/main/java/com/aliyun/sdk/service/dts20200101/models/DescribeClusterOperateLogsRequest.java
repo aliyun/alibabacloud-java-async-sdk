@@ -45,6 +45,10 @@ public class DescribeClusterOperateLogsRequest extends Request {
     @NameInMap("PageSize")
     private Integer pageSize;
 
+    @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
     @Body
     @NameInMap("StartTime")
     private Long startTime;
@@ -59,6 +63,7 @@ public class DescribeClusterOperateLogsRequest extends Request {
         this.ownerID = builder.ownerID;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.resourceGroupId = builder.resourceGroupId;
         this.startTime = builder.startTime;
     }
 
@@ -132,6 +137,13 @@ public class DescribeClusterOperateLogsRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return startTime
      */
     public Long getStartTime() {
@@ -147,6 +159,7 @@ public class DescribeClusterOperateLogsRequest extends Request {
         private String ownerID; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String resourceGroupId; 
         private Long startTime; 
 
         private Builder() {
@@ -163,6 +176,7 @@ public class DescribeClusterOperateLogsRequest extends Request {
             this.ownerID = request.ownerID;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.resourceGroupId = request.resourceGroupId;
             this.startTime = request.startTime;
         } 
 
@@ -235,6 +249,15 @@ public class DescribeClusterOperateLogsRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

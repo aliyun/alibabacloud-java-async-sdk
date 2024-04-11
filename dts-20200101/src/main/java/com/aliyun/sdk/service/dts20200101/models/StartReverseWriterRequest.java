@@ -25,11 +25,16 @@ public class StartReverseWriterRequest extends Request {
     @Validation(required = true)
     private String dtsJobId;
 
+    @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
     private StartReverseWriterRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.checkPoint = builder.checkPoint;
         this.dtsJobId = builder.dtsJobId;
+        this.resourceGroupId = builder.resourceGroupId;
     }
 
     public static Builder builder() {
@@ -66,10 +71,18 @@ public class StartReverseWriterRequest extends Request {
         return this.dtsJobId;
     }
 
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public static final class Builder extends Request.Builder<StartReverseWriterRequest, Builder> {
         private String regionId; 
         private String checkPoint; 
         private String dtsJobId; 
+        private String resourceGroupId; 
 
         private Builder() {
             super();
@@ -80,6 +93,7 @@ public class StartReverseWriterRequest extends Request {
             this.regionId = request.regionId;
             this.checkPoint = request.checkPoint;
             this.dtsJobId = request.dtsJobId;
+            this.resourceGroupId = request.resourceGroupId;
         } 
 
         /**
@@ -109,6 +123,15 @@ public class StartReverseWriterRequest extends Request {
         public Builder dtsJobId(String dtsJobId) {
             this.putQueryParameter("DtsJobId", dtsJobId);
             this.dtsJobId = dtsJobId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

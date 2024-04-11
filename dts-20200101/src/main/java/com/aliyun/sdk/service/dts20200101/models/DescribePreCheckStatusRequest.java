@@ -39,12 +39,20 @@ public class DescribePreCheckStatusRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("StructPhase")
     private String structPhase;
 
     @Query
     @NameInMap("StructType")
     private String structType;
+
+    @Query
+    @NameInMap("ZeroEtlJob")
+    private Boolean zeroEtlJob;
 
     private DescribePreCheckStatusRequest(Builder builder) {
         super(builder);
@@ -54,8 +62,10 @@ public class DescribePreCheckStatusRequest extends Request {
         this.pageNo = builder.pageNo;
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.structPhase = builder.structPhase;
         this.structType = builder.structType;
+        this.zeroEtlJob = builder.zeroEtlJob;
     }
 
     public static Builder builder() {
@@ -114,6 +124,13 @@ public class DescribePreCheckStatusRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return structPhase
      */
     public String getStructPhase() {
@@ -127,6 +144,13 @@ public class DescribePreCheckStatusRequest extends Request {
         return this.structType;
     }
 
+    /**
+     * @return zeroEtlJob
+     */
+    public Boolean getZeroEtlJob() {
+        return this.zeroEtlJob;
+    }
+
     public static final class Builder extends Request.Builder<DescribePreCheckStatusRequest, Builder> {
         private String dtsJobId; 
         private String jobCode; 
@@ -134,8 +158,10 @@ public class DescribePreCheckStatusRequest extends Request {
         private String pageNo; 
         private String pageSize; 
         private String regionId; 
+        private String resourceGroupId; 
         private String structPhase; 
         private String structType; 
+        private Boolean zeroEtlJob; 
 
         private Builder() {
             super();
@@ -149,8 +175,10 @@ public class DescribePreCheckStatusRequest extends Request {
             this.pageNo = request.pageNo;
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.structPhase = request.structPhase;
             this.structType = request.structType;
+            this.zeroEtlJob = request.zeroEtlJob;
         } 
 
         /**
@@ -214,6 +242,15 @@ public class DescribePreCheckStatusRequest extends Request {
         }
 
         /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
          * The filter item used to filter tables, views, and functions during schema migration.
          */
         public Builder structPhase(String structPhase) {
@@ -232,6 +269,15 @@ public class DescribePreCheckStatusRequest extends Request {
         public Builder structType(String structType) {
             this.putQueryParameter("StructType", structType);
             this.structType = structType;
+            return this;
+        }
+
+        /**
+         * ZeroEtlJob.
+         */
+        public Builder zeroEtlJob(Boolean zeroEtlJob) {
+            this.putQueryParameter("ZeroEtlJob", zeroEtlJob);
+            this.zeroEtlJob = zeroEtlJob;
             return this;
         }
 
