@@ -836,6 +836,12 @@ public class GetGatewayAuthDetailResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
+        @NameInMap("AuthResourceConfig")
+        private String authResourceConfig;
+
+        @NameInMap("AuthResourceMode")
+        private Integer authResourceMode;
+
         @NameInMap("ClientId")
         private String clientId;
 
@@ -909,6 +915,8 @@ public class GetGatewayAuthDetailResponseBody extends TeaModel {
         private String type;
 
         private Data(Builder builder) {
+            this.authResourceConfig = builder.authResourceConfig;
+            this.authResourceMode = builder.authResourceMode;
             this.clientId = builder.clientId;
             this.clientSecret = builder.clientSecret;
             this.cookieDomain = builder.cookieDomain;
@@ -941,6 +949,20 @@ public class GetGatewayAuthDetailResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return authResourceConfig
+         */
+        public String getAuthResourceConfig() {
+            return this.authResourceConfig;
+        }
+
+        /**
+         * @return authResourceMode
+         */
+        public Integer getAuthResourceMode() {
+            return this.authResourceMode;
         }
 
         /**
@@ -1112,6 +1134,8 @@ public class GetGatewayAuthDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String authResourceConfig; 
+            private Integer authResourceMode; 
             private String clientId; 
             private String clientSecret; 
             private String cookieDomain; 
@@ -1136,6 +1160,22 @@ public class GetGatewayAuthDetailResponseBody extends TeaModel {
             private Boolean tokenPass; 
             private String tokenPosition; 
             private String type; 
+
+            /**
+             * AuthResourceConfig.
+             */
+            public Builder authResourceConfig(String authResourceConfig) {
+                this.authResourceConfig = authResourceConfig;
+                return this;
+            }
+
+            /**
+             * AuthResourceMode.
+             */
+            public Builder authResourceMode(Integer authResourceMode) {
+                this.authResourceMode = authResourceMode;
+                return this;
+            }
 
             /**
              * ClientId.

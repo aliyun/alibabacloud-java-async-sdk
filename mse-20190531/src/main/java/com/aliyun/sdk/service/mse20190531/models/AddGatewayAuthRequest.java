@@ -17,8 +17,16 @@ public class AddGatewayAuthRequest extends Request {
     private String acceptLanguage;
 
     @Query
+    @NameInMap("AuthResourceConfig")
+    private String authResourceConfig;
+
+    @Query
     @NameInMap("AuthResourceList")
     private java.util.List < AuthResourceList> authResourceList;
+
+    @Query
+    @NameInMap("AuthResourceMode")
+    private Integer authResourceMode;
 
     @Query
     @NameInMap("ClientId")
@@ -99,7 +107,9 @@ public class AddGatewayAuthRequest extends Request {
     private AddGatewayAuthRequest(Builder builder) {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
+        this.authResourceConfig = builder.authResourceConfig;
         this.authResourceList = builder.authResourceList;
+        this.authResourceMode = builder.authResourceMode;
         this.clientId = builder.clientId;
         this.clientSecret = builder.clientSecret;
         this.cookieDomain = builder.cookieDomain;
@@ -142,10 +152,24 @@ public class AddGatewayAuthRequest extends Request {
     }
 
     /**
+     * @return authResourceConfig
+     */
+    public String getAuthResourceConfig() {
+        return this.authResourceConfig;
+    }
+
+    /**
      * @return authResourceList
      */
     public java.util.List < AuthResourceList> getAuthResourceList() {
         return this.authResourceList;
+    }
+
+    /**
+     * @return authResourceMode
+     */
+    public Integer getAuthResourceMode() {
+        return this.authResourceMode;
     }
 
     /**
@@ -283,7 +307,9 @@ public class AddGatewayAuthRequest extends Request {
 
     public static final class Builder extends Request.Builder<AddGatewayAuthRequest, Builder> {
         private String acceptLanguage; 
+        private String authResourceConfig; 
         private java.util.List < AuthResourceList> authResourceList; 
+        private Integer authResourceMode; 
         private String clientId; 
         private String clientSecret; 
         private String cookieDomain; 
@@ -311,7 +337,9 @@ public class AddGatewayAuthRequest extends Request {
         private Builder(AddGatewayAuthRequest request) {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
+            this.authResourceConfig = request.authResourceConfig;
             this.authResourceList = request.authResourceList;
+            this.authResourceMode = request.authResourceMode;
             this.clientId = request.clientId;
             this.clientSecret = request.clientSecret;
             this.cookieDomain = request.cookieDomain;
@@ -343,12 +371,30 @@ public class AddGatewayAuthRequest extends Request {
         }
 
         /**
+         * AuthResourceConfig.
+         */
+        public Builder authResourceConfig(String authResourceConfig) {
+            this.putQueryParameter("AuthResourceConfig", authResourceConfig);
+            this.authResourceConfig = authResourceConfig;
+            return this;
+        }
+
+        /**
          * The information about the resource to be authorized.
          */
         public Builder authResourceList(java.util.List < AuthResourceList> authResourceList) {
             String authResourceListShrink = shrink(authResourceList, "AuthResourceList", "json");
             this.putQueryParameter("AuthResourceList", authResourceListShrink);
             this.authResourceList = authResourceList;
+            return this;
+        }
+
+        /**
+         * AuthResourceMode.
+         */
+        public Builder authResourceMode(Integer authResourceMode) {
+            this.putQueryParameter("AuthResourceMode", authResourceMode);
+            this.authResourceMode = authResourceMode;
             return this;
         }
 
