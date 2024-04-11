@@ -233,7 +233,91 @@ public class DescribeImageResultExtResponseBody extends TeaModel {
         } 
 
     }
+    public static class CustomTexts extends TeaModel {
+        @NameInMap("KeyWords")
+        private String keyWords;
+
+        @NameInMap("LibId")
+        private String libId;
+
+        @NameInMap("LibName")
+        private String libName;
+
+        private CustomTexts(Builder builder) {
+            this.keyWords = builder.keyWords;
+            this.libId = builder.libId;
+            this.libName = builder.libName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CustomTexts create() {
+            return builder().build();
+        }
+
+        /**
+         * @return keyWords
+         */
+        public String getKeyWords() {
+            return this.keyWords;
+        }
+
+        /**
+         * @return libId
+         */
+        public String getLibId() {
+            return this.libId;
+        }
+
+        /**
+         * @return libName
+         */
+        public String getLibName() {
+            return this.libName;
+        }
+
+        public static final class Builder {
+            private String keyWords; 
+            private String libId; 
+            private String libName; 
+
+            /**
+             * KeyWords.
+             */
+            public Builder keyWords(String keyWords) {
+                this.keyWords = keyWords;
+                return this;
+            }
+
+            /**
+             * 图库ID。
+             */
+            public Builder libId(String libId) {
+                this.libId = libId;
+                return this;
+            }
+
+            /**
+             * 图库名。
+             */
+            public Builder libName(String libName) {
+                this.libName = libName;
+                return this;
+            }
+
+            public CustomTexts build() {
+                return new CustomTexts(this);
+            } 
+
+        } 
+
+    }
     public static class TextInImage extends TeaModel {
+        @NameInMap("CustomTexts")
+        private java.util.List < CustomTexts> customTexts;
+
         @NameInMap("OcrDatas")
         private java.util.List < String > ocrDatas;
 
@@ -241,6 +325,7 @@ public class DescribeImageResultExtResponseBody extends TeaModel {
         private java.util.List < String > riskWords;
 
         private TextInImage(Builder builder) {
+            this.customTexts = builder.customTexts;
             this.ocrDatas = builder.ocrDatas;
             this.riskWords = builder.riskWords;
         }
@@ -251,6 +336,13 @@ public class DescribeImageResultExtResponseBody extends TeaModel {
 
         public static TextInImage create() {
             return builder().build();
+        }
+
+        /**
+         * @return customTexts
+         */
+        public java.util.List < CustomTexts> getCustomTexts() {
+            return this.customTexts;
         }
 
         /**
@@ -268,8 +360,17 @@ public class DescribeImageResultExtResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List < CustomTexts> customTexts; 
             private java.util.List < String > ocrDatas; 
             private java.util.List < String > riskWords; 
+
+            /**
+             * CustomTexts.
+             */
+            public Builder customTexts(java.util.List < CustomTexts> customTexts) {
+                this.customTexts = customTexts;
+                return this;
+            }
 
             /**
              * OcrDatas.
