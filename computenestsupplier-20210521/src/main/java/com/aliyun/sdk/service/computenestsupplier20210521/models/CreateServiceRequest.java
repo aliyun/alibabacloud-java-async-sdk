@@ -646,7 +646,71 @@ public class CreateServiceRequest extends Request {
 
     } 
 
+    public static class Agreements extends TeaModel {
+        @NameInMap("Name")
+        private String name;
+
+        @NameInMap("Url")
+        private String url;
+
+        private Agreements(Builder builder) {
+            this.name = builder.name;
+            this.url = builder.url;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Agreements create() {
+            return builder().build();
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return url
+         */
+        public String getUrl() {
+            return this.url;
+        }
+
+        public static final class Builder {
+            private String name; 
+            private String url; 
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * Url.
+             */
+            public Builder url(String url) {
+                this.url = url;
+                return this;
+            }
+
+            public Agreements build() {
+                return new Agreements(this);
+            } 
+
+        } 
+
+    }
     public static class ServiceInfo extends TeaModel {
+        @NameInMap("Agreements")
+        private java.util.List < Agreements> agreements;
+
         @NameInMap("Image")
         private String image;
 
@@ -665,6 +729,7 @@ public class CreateServiceRequest extends Request {
         private String shortDescription;
 
         private ServiceInfo(Builder builder) {
+            this.agreements = builder.agreements;
             this.image = builder.image;
             this.locale = builder.locale;
             this.longDescriptionUrl = builder.longDescriptionUrl;
@@ -678,6 +743,13 @@ public class CreateServiceRequest extends Request {
 
         public static ServiceInfo create() {
             return builder().build();
+        }
+
+        /**
+         * @return agreements
+         */
+        public java.util.List < Agreements> getAgreements() {
+            return this.agreements;
         }
 
         /**
@@ -716,11 +788,20 @@ public class CreateServiceRequest extends Request {
         }
 
         public static final class Builder {
+            private java.util.List < Agreements> agreements; 
             private String image; 
             private String locale; 
             private String longDescriptionUrl; 
             private String name; 
             private String shortDescription; 
+
+            /**
+             * Agreements.
+             */
+            public Builder agreements(java.util.List < Agreements> agreements) {
+                this.agreements = agreements;
+                return this;
+            }
 
             /**
              * Image.

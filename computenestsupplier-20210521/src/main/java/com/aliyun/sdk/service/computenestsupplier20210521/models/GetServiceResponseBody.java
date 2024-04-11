@@ -1434,23 +1434,655 @@ public class GetServiceResponseBody extends TeaModel {
         } 
 
     }
+    public static class ComponentsMappings extends TeaModel {
+        @NameInMap("Mappings")
+        private java.util.Map < String, String > mappings;
+
+        @NameInMap("TemplateName")
+        private String templateName;
+
+        private ComponentsMappings(Builder builder) {
+            this.mappings = builder.mappings;
+            this.templateName = builder.templateName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ComponentsMappings create() {
+            return builder().build();
+        }
+
+        /**
+         * @return mappings
+         */
+        public java.util.Map < String, String > getMappings() {
+            return this.mappings;
+        }
+
+        /**
+         * @return templateName
+         */
+        public String getTemplateName() {
+            return this.templateName;
+        }
+
+        public static final class Builder {
+            private java.util.Map < String, String > mappings; 
+            private String templateName; 
+
+            /**
+             * Mappings.
+             */
+            public Builder mappings(java.util.Map < String, String > mappings) {
+                this.mappings = mappings;
+                return this;
+            }
+
+            /**
+             * TemplateName.
+             */
+            public Builder templateName(String templateName) {
+                this.templateName = templateName;
+                return this;
+            }
+
+            public ComponentsMappings build() {
+                return new ComponentsMappings(this);
+            } 
+
+        } 
+
+    }
+    public static class CssMetadata extends TeaModel {
+        @NameInMap("ComponentsMappings")
+        private java.util.List < ComponentsMappings> componentsMappings;
+
+        private CssMetadata(Builder builder) {
+            this.componentsMappings = builder.componentsMappings;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CssMetadata create() {
+            return builder().build();
+        }
+
+        /**
+         * @return componentsMappings
+         */
+        public java.util.List < ComponentsMappings> getComponentsMappings() {
+            return this.componentsMappings;
+        }
+
+        public static final class Builder {
+            private java.util.List < ComponentsMappings> componentsMappings; 
+
+            /**
+             * ComponentsMappings.
+             */
+            public Builder componentsMappings(java.util.List < ComponentsMappings> componentsMappings) {
+                this.componentsMappings = componentsMappings;
+                return this;
+            }
+
+            public CssMetadata build() {
+                return new CssMetadata(this);
+            } 
+
+        } 
+
+    }
+    public static class MeteringEntityExtraInfos extends TeaModel {
+        @NameInMap("EntityId")
+        private String entityId;
+
+        @NameInMap("MetricName")
+        private String metricName;
+
+        @NameInMap("Promql")
+        private String promql;
+
+        @NameInMap("Type")
+        private String type;
+
+        private MeteringEntityExtraInfos(Builder builder) {
+            this.entityId = builder.entityId;
+            this.metricName = builder.metricName;
+            this.promql = builder.promql;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static MeteringEntityExtraInfos create() {
+            return builder().build();
+        }
+
+        /**
+         * @return entityId
+         */
+        public String getEntityId() {
+            return this.entityId;
+        }
+
+        /**
+         * @return metricName
+         */
+        public String getMetricName() {
+            return this.metricName;
+        }
+
+        /**
+         * @return promql
+         */
+        public String getPromql() {
+            return this.promql;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private String entityId; 
+            private String metricName; 
+            private String promql; 
+            private String type; 
+
+            /**
+             * EntityId.
+             */
+            public Builder entityId(String entityId) {
+                this.entityId = entityId;
+                return this;
+            }
+
+            /**
+             * MetricName.
+             */
+            public Builder metricName(String metricName) {
+                this.metricName = metricName;
+                return this;
+            }
+
+            /**
+             * Promql.
+             */
+            public Builder promql(String promql) {
+                this.promql = promql;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public MeteringEntityExtraInfos build() {
+                return new MeteringEntityExtraInfos(this);
+            } 
+
+        } 
+
+    }
+    public static class MeteringEntityMappings extends TeaModel {
+        @NameInMap("EntityIds")
+        private String entityIds;
+
+        @NameInMap("SpecificationName")
+        private String specificationName;
+
+        @NameInMap("TemplateName")
+        private String templateName;
+
+        private MeteringEntityMappings(Builder builder) {
+            this.entityIds = builder.entityIds;
+            this.specificationName = builder.specificationName;
+            this.templateName = builder.templateName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static MeteringEntityMappings create() {
+            return builder().build();
+        }
+
+        /**
+         * @return entityIds
+         */
+        public String getEntityIds() {
+            return this.entityIds;
+        }
+
+        /**
+         * @return specificationName
+         */
+        public String getSpecificationName() {
+            return this.specificationName;
+        }
+
+        /**
+         * @return templateName
+         */
+        public String getTemplateName() {
+            return this.templateName;
+        }
+
+        public static final class Builder {
+            private String entityIds; 
+            private String specificationName; 
+            private String templateName; 
+
+            /**
+             * EntityIds.
+             */
+            public Builder entityIds(String entityIds) {
+                this.entityIds = entityIds;
+                return this;
+            }
+
+            /**
+             * SpecificationName.
+             */
+            public Builder specificationName(String specificationName) {
+                this.specificationName = specificationName;
+                return this;
+            }
+
+            /**
+             * TemplateName.
+             */
+            public Builder templateName(String templateName) {
+                this.templateName = templateName;
+                return this;
+            }
+
+            public MeteringEntityMappings build() {
+                return new MeteringEntityMappings(this);
+            } 
+
+        } 
+
+    }
+    public static class SpecificationMappings extends TeaModel {
+        @NameInMap("SpecificationCode")
+        private String specificationCode;
+
+        @NameInMap("SpecificationName")
+        private String specificationName;
+
+        @NameInMap("TemplateName")
+        private String templateName;
+
+        @NameInMap("TrialType")
+        private String trialType;
+
+        private SpecificationMappings(Builder builder) {
+            this.specificationCode = builder.specificationCode;
+            this.specificationName = builder.specificationName;
+            this.templateName = builder.templateName;
+            this.trialType = builder.trialType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SpecificationMappings create() {
+            return builder().build();
+        }
+
+        /**
+         * @return specificationCode
+         */
+        public String getSpecificationCode() {
+            return this.specificationCode;
+        }
+
+        /**
+         * @return specificationName
+         */
+        public String getSpecificationName() {
+            return this.specificationName;
+        }
+
+        /**
+         * @return templateName
+         */
+        public String getTemplateName() {
+            return this.templateName;
+        }
+
+        /**
+         * @return trialType
+         */
+        public String getTrialType() {
+            return this.trialType;
+        }
+
+        public static final class Builder {
+            private String specificationCode; 
+            private String specificationName; 
+            private String templateName; 
+            private String trialType; 
+
+            /**
+             * SpecificationCode.
+             */
+            public Builder specificationCode(String specificationCode) {
+                this.specificationCode = specificationCode;
+                return this;
+            }
+
+            /**
+             * SpecificationName.
+             */
+            public Builder specificationName(String specificationName) {
+                this.specificationName = specificationName;
+                return this;
+            }
+
+            /**
+             * TemplateName.
+             */
+            public Builder templateName(String templateName) {
+                this.templateName = templateName;
+                return this;
+            }
+
+            /**
+             * TrialType.
+             */
+            public Builder trialType(String trialType) {
+                this.trialType = trialType;
+                return this;
+            }
+
+            public SpecificationMappings build() {
+                return new SpecificationMappings(this);
+            } 
+
+        } 
+
+    }
+    public static class MarketplaceMetadata extends TeaModel {
+        @NameInMap("MeteringEntityExtraInfos")
+        private java.util.List < MeteringEntityExtraInfos> meteringEntityExtraInfos;
+
+        @NameInMap("MeteringEntityMappings")
+        private java.util.List < MeteringEntityMappings> meteringEntityMappings;
+
+        @NameInMap("SpecificationMappings")
+        private java.util.List < SpecificationMappings> specificationMappings;
+
+        private MarketplaceMetadata(Builder builder) {
+            this.meteringEntityExtraInfos = builder.meteringEntityExtraInfos;
+            this.meteringEntityMappings = builder.meteringEntityMappings;
+            this.specificationMappings = builder.specificationMappings;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static MarketplaceMetadata create() {
+            return builder().build();
+        }
+
+        /**
+         * @return meteringEntityExtraInfos
+         */
+        public java.util.List < MeteringEntityExtraInfos> getMeteringEntityExtraInfos() {
+            return this.meteringEntityExtraInfos;
+        }
+
+        /**
+         * @return meteringEntityMappings
+         */
+        public java.util.List < MeteringEntityMappings> getMeteringEntityMappings() {
+            return this.meteringEntityMappings;
+        }
+
+        /**
+         * @return specificationMappings
+         */
+        public java.util.List < SpecificationMappings> getSpecificationMappings() {
+            return this.specificationMappings;
+        }
+
+        public static final class Builder {
+            private java.util.List < MeteringEntityExtraInfos> meteringEntityExtraInfos; 
+            private java.util.List < MeteringEntityMappings> meteringEntityMappings; 
+            private java.util.List < SpecificationMappings> specificationMappings; 
+
+            /**
+             * MeteringEntityExtraInfos.
+             */
+            public Builder meteringEntityExtraInfos(java.util.List < MeteringEntityExtraInfos> meteringEntityExtraInfos) {
+                this.meteringEntityExtraInfos = meteringEntityExtraInfos;
+                return this;
+            }
+
+            /**
+             * MeteringEntityMappings.
+             */
+            public Builder meteringEntityMappings(java.util.List < MeteringEntityMappings> meteringEntityMappings) {
+                this.meteringEntityMappings = meteringEntityMappings;
+                return this;
+            }
+
+            /**
+             * SpecificationMappings.
+             */
+            public Builder specificationMappings(java.util.List < SpecificationMappings> specificationMappings) {
+                this.specificationMappings = specificationMappings;
+                return this;
+            }
+
+            public MarketplaceMetadata build() {
+                return new MarketplaceMetadata(this);
+            } 
+
+        } 
+
+    }
+    public static class MeteringEntities extends TeaModel {
+        @NameInMap("EntityId")
+        private String entityId;
+
+        @NameInMap("Name")
+        private String name;
+
+        private MeteringEntities(Builder builder) {
+            this.entityId = builder.entityId;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static MeteringEntities create() {
+            return builder().build();
+        }
+
+        /**
+         * @return entityId
+         */
+        public String getEntityId() {
+            return this.entityId;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private String entityId; 
+            private String name; 
+
+            /**
+             * EntityId.
+             */
+            public Builder entityId(String entityId) {
+                this.entityId = entityId;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public MeteringEntities build() {
+                return new MeteringEntities(this);
+            } 
+
+        } 
+
+    }
+    public static class Specifications extends TeaModel {
+        @NameInMap("Code")
+        private String code;
+
+        @NameInMap("Name")
+        private String name;
+
+        @NameInMap("Times")
+        private java.util.List < String > times;
+
+        private Specifications(Builder builder) {
+            this.code = builder.code;
+            this.name = builder.name;
+            this.times = builder.times;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Specifications create() {
+            return builder().build();
+        }
+
+        /**
+         * @return code
+         */
+        public String getCode() {
+            return this.code;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return times
+         */
+        public java.util.List < String > getTimes() {
+            return this.times;
+        }
+
+        public static final class Builder {
+            private String code; 
+            private String name; 
+            private java.util.List < String > times; 
+
+            /**
+             * Code.
+             */
+            public Builder code(String code) {
+                this.code = code;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * Times.
+             */
+            public Builder times(java.util.List < String > times) {
+                this.times = times;
+                return this;
+            }
+
+            public Specifications build() {
+                return new Specifications(this);
+            } 
+
+        } 
+
+    }
     public static class Commodity extends TeaModel {
         @NameInMap("ChargeType")
         private String chargeType;
 
+        @NameInMap("CommodityCode")
+        private String commodityCode;
+
         @NameInMap("Components")
         private java.util.List < String > components;
 
+        @NameInMap("CssMetadata")
+        private CssMetadata cssMetadata;
+
+        @NameInMap("MarketplaceMetadata")
+        private MarketplaceMetadata marketplaceMetadata;
+
+        @NameInMap("MeteringEntities")
+        private java.util.List < MeteringEntities> meteringEntities;
+
         @NameInMap("OrderTime")
         private java.util.Map < String, java.util.List<String>> orderTime;
+
+        @NameInMap("SaasBoostMetadata")
+        private String saasBoostMetadata;
+
+        @NameInMap("Specifications")
+        private java.util.List < Specifications> specifications;
 
         @NameInMap("Type")
         private String type;
 
         private Commodity(Builder builder) {
             this.chargeType = builder.chargeType;
+            this.commodityCode = builder.commodityCode;
             this.components = builder.components;
+            this.cssMetadata = builder.cssMetadata;
+            this.marketplaceMetadata = builder.marketplaceMetadata;
+            this.meteringEntities = builder.meteringEntities;
             this.orderTime = builder.orderTime;
+            this.saasBoostMetadata = builder.saasBoostMetadata;
+            this.specifications = builder.specifications;
             this.type = builder.type;
         }
 
@@ -1470,6 +2102,13 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
+         * @return commodityCode
+         */
+        public String getCommodityCode() {
+            return this.commodityCode;
+        }
+
+        /**
          * @return components
          */
         public java.util.List < String > getComponents() {
@@ -1477,10 +2116,45 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
+         * @return cssMetadata
+         */
+        public CssMetadata getCssMetadata() {
+            return this.cssMetadata;
+        }
+
+        /**
+         * @return marketplaceMetadata
+         */
+        public MarketplaceMetadata getMarketplaceMetadata() {
+            return this.marketplaceMetadata;
+        }
+
+        /**
+         * @return meteringEntities
+         */
+        public java.util.List < MeteringEntities> getMeteringEntities() {
+            return this.meteringEntities;
+        }
+
+        /**
          * @return orderTime
          */
         public java.util.Map < String, java.util.List<String>> getOrderTime() {
             return this.orderTime;
+        }
+
+        /**
+         * @return saasBoostMetadata
+         */
+        public String getSaasBoostMetadata() {
+            return this.saasBoostMetadata;
+        }
+
+        /**
+         * @return specifications
+         */
+        public java.util.List < Specifications> getSpecifications() {
+            return this.specifications;
         }
 
         /**
@@ -1492,8 +2166,14 @@ public class GetServiceResponseBody extends TeaModel {
 
         public static final class Builder {
             private String chargeType; 
+            private String commodityCode; 
             private java.util.List < String > components; 
+            private CssMetadata cssMetadata; 
+            private MarketplaceMetadata marketplaceMetadata; 
+            private java.util.List < MeteringEntities> meteringEntities; 
             private java.util.Map < String, java.util.List<String>> orderTime; 
+            private String saasBoostMetadata; 
+            private java.util.List < Specifications> specifications; 
             private String type; 
 
             /**
@@ -1501,6 +2181,14 @@ public class GetServiceResponseBody extends TeaModel {
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
+                return this;
+            }
+
+            /**
+             * CommodityCode.
+             */
+            public Builder commodityCode(String commodityCode) {
+                this.commodityCode = commodityCode;
                 return this;
             }
 
@@ -1513,10 +2201,50 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
+             * CssMetadata.
+             */
+            public Builder cssMetadata(CssMetadata cssMetadata) {
+                this.cssMetadata = cssMetadata;
+                return this;
+            }
+
+            /**
+             * MarketplaceMetadata.
+             */
+            public Builder marketplaceMetadata(MarketplaceMetadata marketplaceMetadata) {
+                this.marketplaceMetadata = marketplaceMetadata;
+                return this;
+            }
+
+            /**
+             * MeteringEntities.
+             */
+            public Builder meteringEntities(java.util.List < MeteringEntities> meteringEntities) {
+                this.meteringEntities = meteringEntities;
+                return this;
+            }
+
+            /**
              * OrderTime.
              */
             public Builder orderTime(java.util.Map < String, java.util.List<String>> orderTime) {
                 this.orderTime = orderTime;
+                return this;
+            }
+
+            /**
+             * SaasBoostMetadata.
+             */
+            public Builder saasBoostMetadata(String saasBoostMetadata) {
+                this.saasBoostMetadata = saasBoostMetadata;
+                return this;
+            }
+
+            /**
+             * Specifications.
+             */
+            public Builder specifications(java.util.List < Specifications> specifications) {
+                this.specifications = specifications;
                 return this;
             }
 
@@ -1758,7 +2486,71 @@ public class GetServiceResponseBody extends TeaModel {
         } 
 
     }
+    public static class Agreements extends TeaModel {
+        @NameInMap("Name")
+        private String name;
+
+        @NameInMap("Url")
+        private String url;
+
+        private Agreements(Builder builder) {
+            this.name = builder.name;
+            this.url = builder.url;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Agreements create() {
+            return builder().build();
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return url
+         */
+        public String getUrl() {
+            return this.url;
+        }
+
+        public static final class Builder {
+            private String name; 
+            private String url; 
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * Url.
+             */
+            public Builder url(String url) {
+                this.url = url;
+                return this;
+            }
+
+            public Agreements build() {
+                return new Agreements(this);
+            } 
+
+        } 
+
+    }
     public static class ServiceInfos extends TeaModel {
+        @NameInMap("Agreements")
+        private java.util.List < Agreements> agreements;
+
         @NameInMap("Image")
         private String image;
 
@@ -1775,6 +2567,7 @@ public class GetServiceResponseBody extends TeaModel {
         private String shortDescription;
 
         private ServiceInfos(Builder builder) {
+            this.agreements = builder.agreements;
             this.image = builder.image;
             this.locale = builder.locale;
             this.longDescriptionUrl = builder.longDescriptionUrl;
@@ -1788,6 +2581,13 @@ public class GetServiceResponseBody extends TeaModel {
 
         public static ServiceInfos create() {
             return builder().build();
+        }
+
+        /**
+         * @return agreements
+         */
+        public java.util.List < Agreements> getAgreements() {
+            return this.agreements;
         }
 
         /**
@@ -1826,11 +2626,20 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List < Agreements> agreements; 
             private String image; 
             private String locale; 
             private String longDescriptionUrl; 
             private String name; 
             private String shortDescription; 
+
+            /**
+             * Agreements.
+             */
+            public Builder agreements(java.util.List < Agreements> agreements) {
+                this.agreements = agreements;
+                return this;
+            }
 
             /**
              * Image.
