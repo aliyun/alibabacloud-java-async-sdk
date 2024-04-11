@@ -692,8 +692,14 @@ public class GetInstanceListResponseBody extends TeaModel {
         @NameInMap("IoMax")
         private Integer ioMax;
 
+        @NameInMap("IoMaxRead")
+        private Integer ioMaxRead;
+
         @NameInMap("IoMaxSpec")
         private String ioMaxSpec;
+
+        @NameInMap("IoMaxWrite")
+        private Integer ioMaxWrite;
 
         @NameInMap("KmsKeyId")
         private String kmsKeyId;
@@ -783,7 +789,9 @@ public class GetInstanceListResponseBody extends TeaModel {
             this.expiredTime = builder.expiredTime;
             this.instanceId = builder.instanceId;
             this.ioMax = builder.ioMax;
+            this.ioMaxRead = builder.ioMaxRead;
             this.ioMaxSpec = builder.ioMaxSpec;
+            this.ioMaxWrite = builder.ioMaxWrite;
             this.kmsKeyId = builder.kmsKeyId;
             this.msgRetain = builder.msgRetain;
             this.name = builder.name;
@@ -904,10 +912,24 @@ public class GetInstanceListResponseBody extends TeaModel {
         }
 
         /**
+         * @return ioMaxRead
+         */
+        public Integer getIoMaxRead() {
+            return this.ioMaxRead;
+        }
+
+        /**
          * @return ioMaxSpec
          */
         public String getIoMaxSpec() {
             return this.ioMaxSpec;
+        }
+
+        /**
+         * @return ioMaxWrite
+         */
+        public Integer getIoMaxWrite() {
+            return this.ioMaxWrite;
         }
 
         /**
@@ -1098,7 +1120,9 @@ public class GetInstanceListResponseBody extends TeaModel {
             private Long expiredTime; 
             private String instanceId; 
             private Integer ioMax; 
+            private Integer ioMaxRead; 
             private String ioMaxSpec; 
+            private Integer ioMaxWrite; 
             private String kmsKeyId; 
             private Integer msgRetain; 
             private String name; 
@@ -1238,10 +1262,26 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
+             * IoMaxRead.
+             */
+            public Builder ioMaxRead(Integer ioMaxRead) {
+                this.ioMaxRead = ioMaxRead;
+                return this;
+            }
+
+            /**
              * The traffic specification.
              */
             public Builder ioMaxSpec(String ioMaxSpec) {
                 this.ioMaxSpec = ioMaxSpec;
+                return this;
+            }
+
+            /**
+             * IoMaxWrite.
+             */
+            public Builder ioMaxWrite(Integer ioMaxWrite) {
+                this.ioMaxWrite = ioMaxWrite;
                 return this;
             }
 

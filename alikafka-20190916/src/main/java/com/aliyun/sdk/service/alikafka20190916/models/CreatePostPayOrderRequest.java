@@ -19,12 +19,10 @@ public class CreatePostPayOrderRequest extends Request {
 
     @Query
     @NameInMap("DiskSize")
-    @Validation(required = true)
     private Integer diskSize;
 
     @Query
     @NameInMap("DiskType")
-    @Validation(required = true)
     private String diskType;
 
     @Query
@@ -40,6 +38,10 @@ public class CreatePostPayOrderRequest extends Request {
     private String ioMaxSpec;
 
     @Query
+    @NameInMap("PaidType")
+    private Integer paidType;
+
+    @Query
     @NameInMap("PartitionNum")
     private Integer partitionNum;
 
@@ -51,6 +53,10 @@ public class CreatePostPayOrderRequest extends Request {
     @Query
     @NameInMap("ResourceGroupId")
     private String resourceGroupId;
+
+    @Query
+    @NameInMap("ServerlessConfig")
+    private ServerlessConfig serverlessConfig;
 
     @Query
     @NameInMap("SpecType")
@@ -72,9 +78,11 @@ public class CreatePostPayOrderRequest extends Request {
         this.eipMax = builder.eipMax;
         this.ioMax = builder.ioMax;
         this.ioMaxSpec = builder.ioMaxSpec;
+        this.paidType = builder.paidType;
         this.partitionNum = builder.partitionNum;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
+        this.serverlessConfig = builder.serverlessConfig;
         this.specType = builder.specType;
         this.tag = builder.tag;
         this.topicQuota = builder.topicQuota;
@@ -136,6 +144,13 @@ public class CreatePostPayOrderRequest extends Request {
     }
 
     /**
+     * @return paidType
+     */
+    public Integer getPaidType() {
+        return this.paidType;
+    }
+
+    /**
      * @return partitionNum
      */
     public Integer getPartitionNum() {
@@ -154,6 +169,13 @@ public class CreatePostPayOrderRequest extends Request {
      */
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    /**
+     * @return serverlessConfig
+     */
+    public ServerlessConfig getServerlessConfig() {
+        return this.serverlessConfig;
     }
 
     /**
@@ -184,9 +206,11 @@ public class CreatePostPayOrderRequest extends Request {
         private Integer eipMax; 
         private Integer ioMax; 
         private String ioMaxSpec; 
+        private Integer paidType; 
         private Integer partitionNum; 
         private String regionId; 
         private String resourceGroupId; 
+        private ServerlessConfig serverlessConfig; 
         private String specType; 
         private java.util.List < Tag> tag; 
         private Integer topicQuota; 
@@ -203,9 +227,11 @@ public class CreatePostPayOrderRequest extends Request {
             this.eipMax = request.eipMax;
             this.ioMax = request.ioMax;
             this.ioMaxSpec = request.ioMaxSpec;
+            this.paidType = request.paidType;
             this.partitionNum = request.partitionNum;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
+            this.serverlessConfig = request.serverlessConfig;
             this.specType = request.specType;
             this.tag = request.tag;
             this.topicQuota = request.topicQuota;
@@ -289,6 +315,15 @@ public class CreatePostPayOrderRequest extends Request {
         }
 
         /**
+         * PaidType.
+         */
+        public Builder paidType(Integer paidType) {
+            this.putQueryParameter("PaidType", paidType);
+            this.paidType = paidType;
+            return this;
+        }
+
+        /**
          * The number of partitions. We recommend that you configure this parameter.
          * <p>
          * 
@@ -320,6 +355,16 @@ public class CreatePostPayOrderRequest extends Request {
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
             this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * ServerlessConfig.
+         */
+        public Builder serverlessConfig(ServerlessConfig serverlessConfig) {
+            String serverlessConfigShrink = shrink(serverlessConfig, "ServerlessConfig", "json");
+            this.putQueryParameter("ServerlessConfig", serverlessConfigShrink);
+            this.serverlessConfig = serverlessConfig;
             return this;
         }
 
@@ -370,6 +415,67 @@ public class CreatePostPayOrderRequest extends Request {
 
     } 
 
+    public static class ServerlessConfig extends TeaModel {
+        @NameInMap("ReservedPublishCapacity")
+        private Long reservedPublishCapacity;
+
+        @NameInMap("ReservedSubscribeCapacity")
+        private Long reservedSubscribeCapacity;
+
+        private ServerlessConfig(Builder builder) {
+            this.reservedPublishCapacity = builder.reservedPublishCapacity;
+            this.reservedSubscribeCapacity = builder.reservedSubscribeCapacity;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ServerlessConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return reservedPublishCapacity
+         */
+        public Long getReservedPublishCapacity() {
+            return this.reservedPublishCapacity;
+        }
+
+        /**
+         * @return reservedSubscribeCapacity
+         */
+        public Long getReservedSubscribeCapacity() {
+            return this.reservedSubscribeCapacity;
+        }
+
+        public static final class Builder {
+            private Long reservedPublishCapacity; 
+            private Long reservedSubscribeCapacity; 
+
+            /**
+             * ReservedPublishCapacity.
+             */
+            public Builder reservedPublishCapacity(Long reservedPublishCapacity) {
+                this.reservedPublishCapacity = reservedPublishCapacity;
+                return this;
+            }
+
+            /**
+             * ReservedSubscribeCapacity.
+             */
+            public Builder reservedSubscribeCapacity(Long reservedSubscribeCapacity) {
+                this.reservedSubscribeCapacity = reservedSubscribeCapacity;
+                return this;
+            }
+
+            public ServerlessConfig build() {
+                return new ServerlessConfig(this);
+            } 
+
+        } 
+
+    }
     public static class Tag extends TeaModel {
         @NameInMap("Key")
         @Validation(required = true)
