@@ -21,8 +21,20 @@ public class DescribeInstanceTypesRequest extends Request {
     private String cpuArchitecture;
 
     @Query
+    @NameInMap("CpuArchitectures")
+    private java.util.List < String > cpuArchitectures;
+
+    @Query
     @NameInMap("GPUSpec")
     private String GPUSpec;
+
+    @Query
+    @NameInMap("GpuSpecs")
+    private java.util.List < String > gpuSpecs;
+
+    @Query
+    @NameInMap("InstanceCategories")
+    private java.util.List < String > instanceCategories;
 
     @Query
     @NameInMap("InstanceCategory")
@@ -33,12 +45,20 @@ public class DescribeInstanceTypesRequest extends Request {
     private String instanceFamilyLevel;
 
     @Query
+    @NameInMap("InstanceTypeFamilies")
+    private java.util.List < String > instanceTypeFamilies;
+
+    @Query
     @NameInMap("InstanceTypeFamily")
     private String instanceTypeFamily;
 
     @Query
     @NameInMap("InstanceTypes")
     private java.util.List < String > instanceTypes;
+
+    @Query
+    @NameInMap("LocalStorageCategories")
+    private java.util.List < String > localStorageCategories;
 
     @Query
     @NameInMap("LocalStorageCategory")
@@ -175,6 +195,10 @@ public class DescribeInstanceTypesRequest extends Request {
     private String physicalProcessorModel;
 
     @Query
+    @NameInMap("PhysicalProcessorModels")
+    private java.util.List < String > physicalProcessorModels;
+
+    @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -186,11 +210,16 @@ public class DescribeInstanceTypesRequest extends Request {
         super(builder);
         this.sourceRegionId = builder.sourceRegionId;
         this.cpuArchitecture = builder.cpuArchitecture;
+        this.cpuArchitectures = builder.cpuArchitectures;
         this.GPUSpec = builder.GPUSpec;
+        this.gpuSpecs = builder.gpuSpecs;
+        this.instanceCategories = builder.instanceCategories;
         this.instanceCategory = builder.instanceCategory;
         this.instanceFamilyLevel = builder.instanceFamilyLevel;
+        this.instanceTypeFamilies = builder.instanceTypeFamilies;
         this.instanceTypeFamily = builder.instanceTypeFamily;
         this.instanceTypes = builder.instanceTypes;
+        this.localStorageCategories = builder.localStorageCategories;
         this.localStorageCategory = builder.localStorageCategory;
         this.maxResults = builder.maxResults;
         this.maximumCpuCoreCount = builder.maximumCpuCoreCount;
@@ -224,6 +253,7 @@ public class DescribeInstanceTypesRequest extends Request {
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.physicalProcessorModel = builder.physicalProcessorModel;
+        this.physicalProcessorModels = builder.physicalProcessorModels;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
     }
@@ -256,10 +286,31 @@ public class DescribeInstanceTypesRequest extends Request {
     }
 
     /**
+     * @return cpuArchitectures
+     */
+    public java.util.List < String > getCpuArchitectures() {
+        return this.cpuArchitectures;
+    }
+
+    /**
      * @return GPUSpec
      */
     public String getGPUSpec() {
         return this.GPUSpec;
+    }
+
+    /**
+     * @return gpuSpecs
+     */
+    public java.util.List < String > getGpuSpecs() {
+        return this.gpuSpecs;
+    }
+
+    /**
+     * @return instanceCategories
+     */
+    public java.util.List < String > getInstanceCategories() {
+        return this.instanceCategories;
     }
 
     /**
@@ -277,6 +328,13 @@ public class DescribeInstanceTypesRequest extends Request {
     }
 
     /**
+     * @return instanceTypeFamilies
+     */
+    public java.util.List < String > getInstanceTypeFamilies() {
+        return this.instanceTypeFamilies;
+    }
+
+    /**
      * @return instanceTypeFamily
      */
     public String getInstanceTypeFamily() {
@@ -288,6 +346,13 @@ public class DescribeInstanceTypesRequest extends Request {
      */
     public java.util.List < String > getInstanceTypes() {
         return this.instanceTypes;
+    }
+
+    /**
+     * @return localStorageCategories
+     */
+    public java.util.List < String > getLocalStorageCategories() {
+        return this.localStorageCategories;
     }
 
     /**
@@ -522,6 +587,13 @@ public class DescribeInstanceTypesRequest extends Request {
     }
 
     /**
+     * @return physicalProcessorModels
+     */
+    public java.util.List < String > getPhysicalProcessorModels() {
+        return this.physicalProcessorModels;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -538,11 +610,16 @@ public class DescribeInstanceTypesRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeInstanceTypesRequest, Builder> {
         private String sourceRegionId; 
         private String cpuArchitecture; 
+        private java.util.List < String > cpuArchitectures; 
         private String GPUSpec; 
+        private java.util.List < String > gpuSpecs; 
+        private java.util.List < String > instanceCategories; 
         private String instanceCategory; 
         private String instanceFamilyLevel; 
+        private java.util.List < String > instanceTypeFamilies; 
         private String instanceTypeFamily; 
         private java.util.List < String > instanceTypes; 
+        private java.util.List < String > localStorageCategories; 
         private String localStorageCategory; 
         private Long maxResults; 
         private Integer maximumCpuCoreCount; 
@@ -576,6 +653,7 @@ public class DescribeInstanceTypesRequest extends Request {
         private String ownerAccount; 
         private Long ownerId; 
         private String physicalProcessorModel; 
+        private java.util.List < String > physicalProcessorModels; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
 
@@ -587,11 +665,16 @@ public class DescribeInstanceTypesRequest extends Request {
             super(request);
             this.sourceRegionId = request.sourceRegionId;
             this.cpuArchitecture = request.cpuArchitecture;
+            this.cpuArchitectures = request.cpuArchitectures;
             this.GPUSpec = request.GPUSpec;
+            this.gpuSpecs = request.gpuSpecs;
+            this.instanceCategories = request.instanceCategories;
             this.instanceCategory = request.instanceCategory;
             this.instanceFamilyLevel = request.instanceFamilyLevel;
+            this.instanceTypeFamilies = request.instanceTypeFamilies;
             this.instanceTypeFamily = request.instanceTypeFamily;
             this.instanceTypes = request.instanceTypes;
+            this.localStorageCategories = request.localStorageCategories;
             this.localStorageCategory = request.localStorageCategory;
             this.maxResults = request.maxResults;
             this.maximumCpuCoreCount = request.maximumCpuCoreCount;
@@ -625,6 +708,7 @@ public class DescribeInstanceTypesRequest extends Request {
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.physicalProcessorModel = request.physicalProcessorModel;
+            this.physicalProcessorModels = request.physicalProcessorModels;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
         } 
@@ -652,6 +736,15 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
+         * CpuArchitectures.
+         */
+        public Builder cpuArchitectures(java.util.List < String > cpuArchitectures) {
+            this.putQueryParameter("CpuArchitectures", cpuArchitectures);
+            this.cpuArchitectures = cpuArchitectures;
+            return this;
+        }
+
+        /**
          * The GPU model.
          * <p>
          * 
@@ -660,6 +753,24 @@ public class DescribeInstanceTypesRequest extends Request {
         public Builder GPUSpec(String GPUSpec) {
             this.putQueryParameter("GPUSpec", GPUSpec);
             this.GPUSpec = GPUSpec;
+            return this;
+        }
+
+        /**
+         * GpuSpecs.
+         */
+        public Builder gpuSpecs(java.util.List < String > gpuSpecs) {
+            this.putQueryParameter("GpuSpecs", gpuSpecs);
+            this.gpuSpecs = gpuSpecs;
+            return this;
+        }
+
+        /**
+         * InstanceCategories.
+         */
+        public Builder instanceCategories(java.util.List < String > instanceCategories) {
+            this.putQueryParameter("InstanceCategories", instanceCategories);
+            this.instanceCategories = instanceCategories;
             return this;
         }
 
@@ -706,6 +817,15 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
+         * InstanceTypeFamilies.
+         */
+        public Builder instanceTypeFamilies(java.util.List < String > instanceTypeFamilies) {
+            this.putQueryParameter("InstanceTypeFamilies", instanceTypeFamilies);
+            this.instanceTypeFamilies = instanceTypeFamilies;
+            return this;
+        }
+
+        /**
          * The instance family to which the instance type belongs. For information about the valid values of this parameter, see [DescribeInstanceTypeFamilies](~~25621~~).
          * <p>
          * 
@@ -723,6 +843,15 @@ public class DescribeInstanceTypesRequest extends Request {
         public Builder instanceTypes(java.util.List < String > instanceTypes) {
             this.putQueryParameter("InstanceTypes", instanceTypes);
             this.instanceTypes = instanceTypes;
+            return this;
+        }
+
+        /**
+         * LocalStorageCategories.
+         */
+        public Builder localStorageCategories(java.util.List < String > localStorageCategories) {
+            this.putQueryParameter("LocalStorageCategories", localStorageCategories);
+            this.localStorageCategories = localStorageCategories;
             return this;
         }
 
@@ -1109,6 +1238,15 @@ public class DescribeInstanceTypesRequest extends Request {
         public Builder physicalProcessorModel(String physicalProcessorModel) {
             this.putQueryParameter("PhysicalProcessorModel", physicalProcessorModel);
             this.physicalProcessorModel = physicalProcessorModel;
+            return this;
+        }
+
+        /**
+         * PhysicalProcessorModels.
+         */
+        public Builder physicalProcessorModels(java.util.List < String > physicalProcessorModels) {
+            this.putQueryParameter("PhysicalProcessorModels", physicalProcessorModels);
+            this.physicalProcessorModels = physicalProcessorModels;
             return this;
         }
 

@@ -15,6 +15,9 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
     @NameInMap("DedicatedHosts")
     private DedicatedHosts dedicatedHosts;
 
+    @NameInMap("NextToken")
+    private String nextToken;
+
     @NameInMap("PageNumber")
     private Integer pageNumber;
 
@@ -29,6 +32,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
 
     private DescribeDedicatedHostsResponseBody(Builder builder) {
         this.dedicatedHosts = builder.dedicatedHosts;
+        this.nextToken = builder.nextToken;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
@@ -48,6 +52,13 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
      */
     public DedicatedHosts getDedicatedHosts() {
         return this.dedicatedHosts;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     /**
@@ -80,6 +91,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
 
     public static final class Builder {
         private DedicatedHosts dedicatedHosts; 
+        private String nextToken; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
@@ -90,6 +102,14 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
          */
         public Builder dedicatedHosts(DedicatedHosts dedicatedHosts) {
             this.dedicatedHosts = dedicatedHosts;
+            return this;
+        }
+
+        /**
+         * NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.nextToken = nextToken;
             return this;
         }
 

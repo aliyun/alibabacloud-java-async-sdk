@@ -37,6 +37,15 @@ public class DescribeDedicatedHostsRequest extends Request {
     private String lockReason;
 
     @Query
+    @NameInMap("MaxResults")
+    @Validation(maximum = 100, minimum = 1)
+    private Integer maxResults;
+
+    @Query
+    @NameInMap("NextToken")
+    private String nextToken;
+
+    @Query
     @NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -94,6 +103,8 @@ public class DescribeDedicatedHostsRequest extends Request {
         this.dedicatedHostName = builder.dedicatedHostName;
         this.dedicatedHostType = builder.dedicatedHostType;
         this.lockReason = builder.lockReason;
+        this.maxResults = builder.maxResults;
+        this.nextToken = builder.nextToken;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
@@ -161,6 +172,20 @@ public class DescribeDedicatedHostsRequest extends Request {
      */
     public String getLockReason() {
         return this.lockReason;
+    }
+
+    /**
+     * @return maxResults
+     */
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     /**
@@ -254,6 +279,8 @@ public class DescribeDedicatedHostsRequest extends Request {
         private String dedicatedHostName; 
         private String dedicatedHostType; 
         private String lockReason; 
+        private Integer maxResults; 
+        private String nextToken; 
         private String ownerAccount; 
         private Long ownerId; 
         private Integer pageNumber; 
@@ -279,6 +306,8 @@ public class DescribeDedicatedHostsRequest extends Request {
             this.dedicatedHostName = request.dedicatedHostName;
             this.dedicatedHostType = request.dedicatedHostType;
             this.lockReason = request.lockReason;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
@@ -348,6 +377,24 @@ public class DescribeDedicatedHostsRequest extends Request {
         public Builder lockReason(String lockReason) {
             this.putQueryParameter("LockReason", lockReason);
             this.lockReason = lockReason;
+            return this;
+        }
+
+        /**
+         * MaxResults.
+         */
+        public Builder maxResults(Integer maxResults) {
+            this.putQueryParameter("MaxResults", maxResults);
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.putQueryParameter("NextToken", nextToken);
+            this.nextToken = nextToken;
             return this;
         }
 
