@@ -31,6 +31,10 @@ public class GetPermissionRequest extends Request {
     private String creator;
 
     @Query
+    @NameInMap("Option")
+    private String option;
+
+    @Query
     @NameInMap("Resource")
     private String resource;
 
@@ -40,6 +44,7 @@ public class GetPermissionRequest extends Request {
         this.permissionCode = builder.permissionCode;
         this.accessibility = builder.accessibility;
         this.creator = builder.creator;
+        this.option = builder.option;
         this.resource = builder.resource;
     }
 
@@ -85,6 +90,13 @@ public class GetPermissionRequest extends Request {
     }
 
     /**
+     * @return option
+     */
+    public String getOption() {
+        return this.option;
+    }
+
+    /**
      * @return resource
      */
     public String getResource() {
@@ -96,6 +108,7 @@ public class GetPermissionRequest extends Request {
         private String permissionCode; 
         private String accessibility; 
         private String creator; 
+        private String option; 
         private String resource; 
 
         private Builder() {
@@ -108,6 +121,7 @@ public class GetPermissionRequest extends Request {
             this.permissionCode = request.permissionCode;
             this.accessibility = request.accessibility;
             this.creator = request.creator;
+            this.option = request.option;
             this.resource = request.resource;
         } 
 
@@ -144,6 +158,15 @@ public class GetPermissionRequest extends Request {
         public Builder creator(String creator) {
             this.putQueryParameter("Creator", creator);
             this.creator = creator;
+            return this;
+        }
+
+        /**
+         * Option.
+         */
+        public Builder option(String option) {
+            this.putQueryParameter("Option", option);
+            this.option = option;
             return this;
         }
 
