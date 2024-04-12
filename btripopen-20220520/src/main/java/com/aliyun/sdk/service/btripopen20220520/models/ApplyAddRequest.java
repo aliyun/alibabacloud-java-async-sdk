@@ -1160,11 +1160,23 @@ public class ApplyAddRequest extends Request {
         @NameInMap("flight_cabins")
         private String flightCabins;
 
+        @NameInMap("flight_intl_rule_code")
+        private Long flightIntlRuleCode;
+
+        @NameInMap("flight_rule_code")
+        private Long flightRuleCode;
+
         @NameInMap("hotel_citys")
         private java.util.List < HotelCitys> hotelCitys;
 
         @NameInMap("hotel_intl_citys")
         private java.util.List < HotelIntlCitys> hotelIntlCitys;
+
+        @NameInMap("hotel_intl_rule_code")
+        private Long hotelIntlRuleCode;
+
+        @NameInMap("hotel_rule_code")
+        private Long hotelRuleCode;
 
         @NameInMap("international_flight_cabins")
         private String internationalFlightCabins;
@@ -1175,6 +1187,9 @@ public class ApplyAddRequest extends Request {
         @NameInMap("reserve_type")
         private Integer reserveType;
 
+        @NameInMap("train_rule_code")
+        private Long trainRuleCode;
+
         @NameInMap("train_seats")
         private String trainSeats;
 
@@ -1183,11 +1198,16 @@ public class ApplyAddRequest extends Request {
             this.economyDiscount = builder.economyDiscount;
             this.firstDiscount = builder.firstDiscount;
             this.flightCabins = builder.flightCabins;
+            this.flightIntlRuleCode = builder.flightIntlRuleCode;
+            this.flightRuleCode = builder.flightRuleCode;
             this.hotelCitys = builder.hotelCitys;
             this.hotelIntlCitys = builder.hotelIntlCitys;
+            this.hotelIntlRuleCode = builder.hotelIntlRuleCode;
+            this.hotelRuleCode = builder.hotelRuleCode;
             this.internationalFlightCabins = builder.internationalFlightCabins;
             this.premiumEconomyDiscount = builder.premiumEconomyDiscount;
             this.reserveType = builder.reserveType;
+            this.trainRuleCode = builder.trainRuleCode;
             this.trainSeats = builder.trainSeats;
         }
 
@@ -1228,6 +1248,20 @@ public class ApplyAddRequest extends Request {
         }
 
         /**
+         * @return flightIntlRuleCode
+         */
+        public Long getFlightIntlRuleCode() {
+            return this.flightIntlRuleCode;
+        }
+
+        /**
+         * @return flightRuleCode
+         */
+        public Long getFlightRuleCode() {
+            return this.flightRuleCode;
+        }
+
+        /**
          * @return hotelCitys
          */
         public java.util.List < HotelCitys> getHotelCitys() {
@@ -1239,6 +1273,20 @@ public class ApplyAddRequest extends Request {
          */
         public java.util.List < HotelIntlCitys> getHotelIntlCitys() {
             return this.hotelIntlCitys;
+        }
+
+        /**
+         * @return hotelIntlRuleCode
+         */
+        public Long getHotelIntlRuleCode() {
+            return this.hotelIntlRuleCode;
+        }
+
+        /**
+         * @return hotelRuleCode
+         */
+        public Long getHotelRuleCode() {
+            return this.hotelRuleCode;
         }
 
         /**
@@ -1263,6 +1311,13 @@ public class ApplyAddRequest extends Request {
         }
 
         /**
+         * @return trainRuleCode
+         */
+        public Long getTrainRuleCode() {
+            return this.trainRuleCode;
+        }
+
+        /**
          * @return trainSeats
          */
         public String getTrainSeats() {
@@ -1274,11 +1329,16 @@ public class ApplyAddRequest extends Request {
             private Integer economyDiscount; 
             private Integer firstDiscount; 
             private String flightCabins; 
+            private Long flightIntlRuleCode; 
+            private Long flightRuleCode; 
             private java.util.List < HotelCitys> hotelCitys; 
             private java.util.List < HotelIntlCitys> hotelIntlCitys; 
+            private Long hotelIntlRuleCode; 
+            private Long hotelRuleCode; 
             private String internationalFlightCabins; 
             private Integer premiumEconomyDiscount; 
             private Integer reserveType; 
+            private Long trainRuleCode; 
             private String trainSeats; 
 
             /**
@@ -1314,6 +1374,22 @@ public class ApplyAddRequest extends Request {
             }
 
             /**
+             * flight_intl_rule_code.
+             */
+            public Builder flightIntlRuleCode(Long flightIntlRuleCode) {
+                this.flightIntlRuleCode = flightIntlRuleCode;
+                return this;
+            }
+
+            /**
+             * flight_rule_code.
+             */
+            public Builder flightRuleCode(Long flightRuleCode) {
+                this.flightRuleCode = flightRuleCode;
+                return this;
+            }
+
+            /**
              * hotel_citys.
              */
             public Builder hotelCitys(java.util.List < HotelCitys> hotelCitys) {
@@ -1326,6 +1402,22 @@ public class ApplyAddRequest extends Request {
              */
             public Builder hotelIntlCitys(java.util.List < HotelIntlCitys> hotelIntlCitys) {
                 this.hotelIntlCitys = hotelIntlCitys;
+                return this;
+            }
+
+            /**
+             * hotel_intl_rule_code.
+             */
+            public Builder hotelIntlRuleCode(Long hotelIntlRuleCode) {
+                this.hotelIntlRuleCode = hotelIntlRuleCode;
+                return this;
+            }
+
+            /**
+             * hotel_rule_code.
+             */
+            public Builder hotelRuleCode(Long hotelRuleCode) {
+                this.hotelRuleCode = hotelRuleCode;
                 return this;
             }
 
@@ -1350,6 +1442,14 @@ public class ApplyAddRequest extends Request {
              */
             public Builder reserveType(Integer reserveType) {
                 this.reserveType = reserveType;
+                return this;
+            }
+
+            /**
+             * train_rule_code.
+             */
+            public Builder trainRuleCode(Long trainRuleCode) {
+                this.trainRuleCode = trainRuleCode;
                 return this;
             }
 
@@ -2488,11 +2588,23 @@ public class ApplyAddRequest extends Request {
         @NameInMap("flight_cabins")
         private String flightCabins;
 
+        @NameInMap("flight_intl_rule_code")
+        private Long flightIntlRuleCode;
+
+        @NameInMap("flight_rule_code")
+        private Long flightRuleCode;
+
         @NameInMap("hotel_citys")
         private java.util.List < TravelerStandardHotelCitys> hotelCitys;
 
         @NameInMap("hotel_intl_citys")
         private java.util.List < TravelerStandardHotelIntlCitys> hotelIntlCitys;
+
+        @NameInMap("hotel_intl_rule_code")
+        private Long hotelIntlRuleCode;
+
+        @NameInMap("hotel_rule_code")
+        private Long hotelRuleCode;
 
         @NameInMap("international_flight_cabins")
         private String internationalFlightCabins;
@@ -2502,6 +2614,9 @@ public class ApplyAddRequest extends Request {
 
         @NameInMap("reserve_type")
         private Integer reserveType;
+
+        @NameInMap("train_rule_code")
+        private Long trainRuleCode;
 
         @NameInMap("train_seats")
         private String trainSeats;
@@ -2515,11 +2630,16 @@ public class ApplyAddRequest extends Request {
             this.economyDiscount = builder.economyDiscount;
             this.firstDiscount = builder.firstDiscount;
             this.flightCabins = builder.flightCabins;
+            this.flightIntlRuleCode = builder.flightIntlRuleCode;
+            this.flightRuleCode = builder.flightRuleCode;
             this.hotelCitys = builder.hotelCitys;
             this.hotelIntlCitys = builder.hotelIntlCitys;
+            this.hotelIntlRuleCode = builder.hotelIntlRuleCode;
+            this.hotelRuleCode = builder.hotelRuleCode;
             this.internationalFlightCabins = builder.internationalFlightCabins;
             this.premiumEconomyDiscount = builder.premiumEconomyDiscount;
             this.reserveType = builder.reserveType;
+            this.trainRuleCode = builder.trainRuleCode;
             this.trainSeats = builder.trainSeats;
             this.userId = builder.userId;
         }
@@ -2568,6 +2688,20 @@ public class ApplyAddRequest extends Request {
         }
 
         /**
+         * @return flightIntlRuleCode
+         */
+        public Long getFlightIntlRuleCode() {
+            return this.flightIntlRuleCode;
+        }
+
+        /**
+         * @return flightRuleCode
+         */
+        public Long getFlightRuleCode() {
+            return this.flightRuleCode;
+        }
+
+        /**
          * @return hotelCitys
          */
         public java.util.List < TravelerStandardHotelCitys> getHotelCitys() {
@@ -2579,6 +2713,20 @@ public class ApplyAddRequest extends Request {
          */
         public java.util.List < TravelerStandardHotelIntlCitys> getHotelIntlCitys() {
             return this.hotelIntlCitys;
+        }
+
+        /**
+         * @return hotelIntlRuleCode
+         */
+        public Long getHotelIntlRuleCode() {
+            return this.hotelIntlRuleCode;
+        }
+
+        /**
+         * @return hotelRuleCode
+         */
+        public Long getHotelRuleCode() {
+            return this.hotelRuleCode;
         }
 
         /**
@@ -2603,6 +2751,13 @@ public class ApplyAddRequest extends Request {
         }
 
         /**
+         * @return trainRuleCode
+         */
+        public Long getTrainRuleCode() {
+            return this.trainRuleCode;
+        }
+
+        /**
          * @return trainSeats
          */
         public String getTrainSeats() {
@@ -2622,11 +2777,16 @@ public class ApplyAddRequest extends Request {
             private Integer economyDiscount; 
             private Integer firstDiscount; 
             private String flightCabins; 
+            private Long flightIntlRuleCode; 
+            private Long flightRuleCode; 
             private java.util.List < TravelerStandardHotelCitys> hotelCitys; 
             private java.util.List < TravelerStandardHotelIntlCitys> hotelIntlCitys; 
+            private Long hotelIntlRuleCode; 
+            private Long hotelRuleCode; 
             private String internationalFlightCabins; 
             private Integer premiumEconomyDiscount; 
             private Integer reserveType; 
+            private Long trainRuleCode; 
             private String trainSeats; 
             private String userId; 
 
@@ -2671,6 +2831,22 @@ public class ApplyAddRequest extends Request {
             }
 
             /**
+             * flight_intl_rule_code.
+             */
+            public Builder flightIntlRuleCode(Long flightIntlRuleCode) {
+                this.flightIntlRuleCode = flightIntlRuleCode;
+                return this;
+            }
+
+            /**
+             * flight_rule_code.
+             */
+            public Builder flightRuleCode(Long flightRuleCode) {
+                this.flightRuleCode = flightRuleCode;
+                return this;
+            }
+
+            /**
              * hotel_citys.
              */
             public Builder hotelCitys(java.util.List < TravelerStandardHotelCitys> hotelCitys) {
@@ -2683,6 +2859,22 @@ public class ApplyAddRequest extends Request {
              */
             public Builder hotelIntlCitys(java.util.List < TravelerStandardHotelIntlCitys> hotelIntlCitys) {
                 this.hotelIntlCitys = hotelIntlCitys;
+                return this;
+            }
+
+            /**
+             * hotel_intl_rule_code.
+             */
+            public Builder hotelIntlRuleCode(Long hotelIntlRuleCode) {
+                this.hotelIntlRuleCode = hotelIntlRuleCode;
+                return this;
+            }
+
+            /**
+             * hotel_rule_code.
+             */
+            public Builder hotelRuleCode(Long hotelRuleCode) {
+                this.hotelRuleCode = hotelRuleCode;
                 return this;
             }
 
@@ -2707,6 +2899,14 @@ public class ApplyAddRequest extends Request {
              */
             public Builder reserveType(Integer reserveType) {
                 this.reserveType = reserveType;
+                return this;
+            }
+
+            /**
+             * train_rule_code.
+             */
+            public Builder trainRuleCode(Long trainRuleCode) {
+                this.trainRuleCode = trainRuleCode;
                 return this;
             }
 

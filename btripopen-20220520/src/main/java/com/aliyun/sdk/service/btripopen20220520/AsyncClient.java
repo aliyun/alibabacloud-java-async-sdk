@@ -313,6 +313,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<TrainTicketScanQueryResponse> trainTicketScanQuery(TrainTicketScanQueryRequest request);
 
+    CompletableFuture<TravelStandardListQueryResponse> travelStandardListQuery(TravelStandardListQueryRequest request);
+
+    CompletableFuture<TravelStandardQueryResponse> travelStandardQuery(TravelStandardQueryRequest request);
+
     CompletableFuture<UserQueryResponse> userQuery(UserQueryRequest request);
 
     CompletableFuture<VatInvoiceScanQueryResponse> vatInvoiceScanQuery(VatInvoiceScanQueryRequest request);

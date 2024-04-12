@@ -548,17 +548,32 @@ public class ApplyQueryResponseBody extends TeaModel {
         @NameInMap("flight_cabins")
         private String flightCabins;
 
+        @NameInMap("flight_intl_rule_code")
+        private Long flightIntlRuleCode;
+
+        @NameInMap("flight_rule_code")
+        private Long flightRuleCode;
+
         @NameInMap("hotel_citys")
         private java.util.List < HotelCitys> hotelCitys;
 
         @NameInMap("hotel_intl_citys")
         private java.util.List < HotelIntlCitys> hotelIntlCitys;
 
+        @NameInMap("hotel_intl_rule_code")
+        private Long hotelIntlRuleCode;
+
+        @NameInMap("hotel_rule_code")
+        private Long hotelRuleCode;
+
         @NameInMap("premium_economy_discount")
         private Integer premiumEconomyDiscount;
 
         @NameInMap("reserve_type")
         private Integer reserveType;
+
+        @NameInMap("train_rule_code")
+        private Long trainRuleCode;
 
         @NameInMap("train_seats")
         private String trainSeats;
@@ -571,10 +586,15 @@ public class ApplyQueryResponseBody extends TeaModel {
             this.economyDiscount = builder.economyDiscount;
             this.firstDiscount = builder.firstDiscount;
             this.flightCabins = builder.flightCabins;
+            this.flightIntlRuleCode = builder.flightIntlRuleCode;
+            this.flightRuleCode = builder.flightRuleCode;
             this.hotelCitys = builder.hotelCitys;
             this.hotelIntlCitys = builder.hotelIntlCitys;
+            this.hotelIntlRuleCode = builder.hotelIntlRuleCode;
+            this.hotelRuleCode = builder.hotelRuleCode;
             this.premiumEconomyDiscount = builder.premiumEconomyDiscount;
             this.reserveType = builder.reserveType;
+            this.trainRuleCode = builder.trainRuleCode;
             this.trainSeats = builder.trainSeats;
             this.userName = builder.userName;
         }
@@ -616,6 +636,20 @@ public class ApplyQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return flightIntlRuleCode
+         */
+        public Long getFlightIntlRuleCode() {
+            return this.flightIntlRuleCode;
+        }
+
+        /**
+         * @return flightRuleCode
+         */
+        public Long getFlightRuleCode() {
+            return this.flightRuleCode;
+        }
+
+        /**
          * @return hotelCitys
          */
         public java.util.List < HotelCitys> getHotelCitys() {
@@ -630,6 +664,20 @@ public class ApplyQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return hotelIntlRuleCode
+         */
+        public Long getHotelIntlRuleCode() {
+            return this.hotelIntlRuleCode;
+        }
+
+        /**
+         * @return hotelRuleCode
+         */
+        public Long getHotelRuleCode() {
+            return this.hotelRuleCode;
+        }
+
+        /**
          * @return premiumEconomyDiscount
          */
         public Integer getPremiumEconomyDiscount() {
@@ -641,6 +689,13 @@ public class ApplyQueryResponseBody extends TeaModel {
          */
         public Integer getReserveType() {
             return this.reserveType;
+        }
+
+        /**
+         * @return trainRuleCode
+         */
+        public Long getTrainRuleCode() {
+            return this.trainRuleCode;
         }
 
         /**
@@ -662,10 +717,15 @@ public class ApplyQueryResponseBody extends TeaModel {
             private Integer economyDiscount; 
             private Integer firstDiscount; 
             private String flightCabins; 
+            private Long flightIntlRuleCode; 
+            private Long flightRuleCode; 
             private java.util.List < HotelCitys> hotelCitys; 
             private java.util.List < HotelIntlCitys> hotelIntlCitys; 
+            private Long hotelIntlRuleCode; 
+            private Long hotelRuleCode; 
             private Integer premiumEconomyDiscount; 
             private Integer reserveType; 
+            private Long trainRuleCode; 
             private String trainSeats; 
             private String userName; 
 
@@ -702,6 +762,22 @@ public class ApplyQueryResponseBody extends TeaModel {
             }
 
             /**
+             * flight_intl_rule_code.
+             */
+            public Builder flightIntlRuleCode(Long flightIntlRuleCode) {
+                this.flightIntlRuleCode = flightIntlRuleCode;
+                return this;
+            }
+
+            /**
+             * flight_rule_code.
+             */
+            public Builder flightRuleCode(Long flightRuleCode) {
+                this.flightRuleCode = flightRuleCode;
+                return this;
+            }
+
+            /**
              * hotel_citys.
              */
             public Builder hotelCitys(java.util.List < HotelCitys> hotelCitys) {
@@ -718,6 +794,22 @@ public class ApplyQueryResponseBody extends TeaModel {
             }
 
             /**
+             * hotel_intl_rule_code.
+             */
+            public Builder hotelIntlRuleCode(Long hotelIntlRuleCode) {
+                this.hotelIntlRuleCode = hotelIntlRuleCode;
+                return this;
+            }
+
+            /**
+             * hotel_rule_code.
+             */
+            public Builder hotelRuleCode(Long hotelRuleCode) {
+                this.hotelRuleCode = hotelRuleCode;
+                return this;
+            }
+
+            /**
              * premium_economy_discount.
              */
             public Builder premiumEconomyDiscount(Integer premiumEconomyDiscount) {
@@ -730,6 +822,14 @@ public class ApplyQueryResponseBody extends TeaModel {
              */
             public Builder reserveType(Integer reserveType) {
                 this.reserveType = reserveType;
+                return this;
+            }
+
+            /**
+             * train_rule_code.
+             */
+            public Builder trainRuleCode(Long trainRuleCode) {
+                this.trainRuleCode = trainRuleCode;
                 return this;
             }
 
@@ -1720,17 +1820,32 @@ public class ApplyQueryResponseBody extends TeaModel {
         @NameInMap("flight_cabins")
         private String flightCabins;
 
+        @NameInMap("flight_intl_rule_code")
+        private Long flightIntlRuleCode;
+
+        @NameInMap("flight_rule_code")
+        private Long flightRuleCode;
+
         @NameInMap("hotel_citys")
         private java.util.List < TravelerListHotelCitys> hotelCitys;
 
         @NameInMap("hotel_intl_citys")
         private java.util.List < TravelerListHotelIntlCitys> hotelIntlCitys;
 
+        @NameInMap("hotel_intl_rule_code")
+        private Long hotelIntlRuleCode;
+
+        @NameInMap("hotel_rule_code")
+        private Long hotelRuleCode;
+
         @NameInMap("premium_economy_discount")
         private Integer premiumEconomyDiscount;
 
         @NameInMap("reserve_type")
         private Integer reserveType;
+
+        @NameInMap("train_rule_code")
+        private Long trainRuleCode;
 
         @NameInMap("train_seats")
         private String trainSeats;
@@ -1747,10 +1862,15 @@ public class ApplyQueryResponseBody extends TeaModel {
             this.economyDiscount = builder.economyDiscount;
             this.firstDiscount = builder.firstDiscount;
             this.flightCabins = builder.flightCabins;
+            this.flightIntlRuleCode = builder.flightIntlRuleCode;
+            this.flightRuleCode = builder.flightRuleCode;
             this.hotelCitys = builder.hotelCitys;
             this.hotelIntlCitys = builder.hotelIntlCitys;
+            this.hotelIntlRuleCode = builder.hotelIntlRuleCode;
+            this.hotelRuleCode = builder.hotelRuleCode;
             this.premiumEconomyDiscount = builder.premiumEconomyDiscount;
             this.reserveType = builder.reserveType;
+            this.trainRuleCode = builder.trainRuleCode;
             this.trainSeats = builder.trainSeats;
             this.userId = builder.userId;
             this.userName = builder.userName;
@@ -1800,6 +1920,20 @@ public class ApplyQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return flightIntlRuleCode
+         */
+        public Long getFlightIntlRuleCode() {
+            return this.flightIntlRuleCode;
+        }
+
+        /**
+         * @return flightRuleCode
+         */
+        public Long getFlightRuleCode() {
+            return this.flightRuleCode;
+        }
+
+        /**
          * @return hotelCitys
          */
         public java.util.List < TravelerListHotelCitys> getHotelCitys() {
@@ -1814,6 +1948,20 @@ public class ApplyQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return hotelIntlRuleCode
+         */
+        public Long getHotelIntlRuleCode() {
+            return this.hotelIntlRuleCode;
+        }
+
+        /**
+         * @return hotelRuleCode
+         */
+        public Long getHotelRuleCode() {
+            return this.hotelRuleCode;
+        }
+
+        /**
          * @return premiumEconomyDiscount
          */
         public Integer getPremiumEconomyDiscount() {
@@ -1825,6 +1973,13 @@ public class ApplyQueryResponseBody extends TeaModel {
          */
         public Integer getReserveType() {
             return this.reserveType;
+        }
+
+        /**
+         * @return trainRuleCode
+         */
+        public Long getTrainRuleCode() {
+            return this.trainRuleCode;
         }
 
         /**
@@ -1854,10 +2009,15 @@ public class ApplyQueryResponseBody extends TeaModel {
             private Integer economyDiscount; 
             private Integer firstDiscount; 
             private String flightCabins; 
+            private Long flightIntlRuleCode; 
+            private Long flightRuleCode; 
             private java.util.List < TravelerListHotelCitys> hotelCitys; 
             private java.util.List < TravelerListHotelIntlCitys> hotelIntlCitys; 
+            private Long hotelIntlRuleCode; 
+            private Long hotelRuleCode; 
             private Integer premiumEconomyDiscount; 
             private Integer reserveType; 
+            private Long trainRuleCode; 
             private String trainSeats; 
             private String userId; 
             private String userName; 
@@ -1903,6 +2063,22 @@ public class ApplyQueryResponseBody extends TeaModel {
             }
 
             /**
+             * flight_intl_rule_code.
+             */
+            public Builder flightIntlRuleCode(Long flightIntlRuleCode) {
+                this.flightIntlRuleCode = flightIntlRuleCode;
+                return this;
+            }
+
+            /**
+             * flight_rule_code.
+             */
+            public Builder flightRuleCode(Long flightRuleCode) {
+                this.flightRuleCode = flightRuleCode;
+                return this;
+            }
+
+            /**
              * hotel_citys.
              */
             public Builder hotelCitys(java.util.List < TravelerListHotelCitys> hotelCitys) {
@@ -1919,6 +2095,22 @@ public class ApplyQueryResponseBody extends TeaModel {
             }
 
             /**
+             * hotel_intl_rule_code.
+             */
+            public Builder hotelIntlRuleCode(Long hotelIntlRuleCode) {
+                this.hotelIntlRuleCode = hotelIntlRuleCode;
+                return this;
+            }
+
+            /**
+             * hotel_rule_code.
+             */
+            public Builder hotelRuleCode(Long hotelRuleCode) {
+                this.hotelRuleCode = hotelRuleCode;
+                return this;
+            }
+
+            /**
              * premium_economy_discount.
              */
             public Builder premiumEconomyDiscount(Integer premiumEconomyDiscount) {
@@ -1931,6 +2123,14 @@ public class ApplyQueryResponseBody extends TeaModel {
              */
             public Builder reserveType(Integer reserveType) {
                 this.reserveType = reserveType;
+                return this;
+            }
+
+            /**
+             * train_rule_code.
+             */
+            public Builder trainRuleCode(Long trainRuleCode) {
+                this.trainRuleCode = trainRuleCode;
                 return this;
             }
 
