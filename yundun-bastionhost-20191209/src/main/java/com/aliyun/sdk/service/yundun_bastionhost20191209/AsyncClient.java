@@ -28,6 +28,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<AcceptOperationTicketResponse> acceptOperationTicket(AcceptOperationTicketRequest request);
 
+    CompletableFuture<AddDatabasesToGroupResponse> addDatabasesToGroup(AddDatabasesToGroupRequest request);
+
     /**
       * You can call this operation to add one or more hosts to a host group. You can add multiple hosts to a host group to manage and grant permissions on the hosts in a centralized manner.
       * # Limits
@@ -44,6 +46,10 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<AddUsersToGroupResponse> addUsersToGroup(AddUsersToGroupRequest request);
+
+    CompletableFuture<AttachDatabaseAccountsToUserResponse> attachDatabaseAccountsToUser(AttachDatabaseAccountsToUserRequest request);
+
+    CompletableFuture<AttachDatabaseAccountsToUserGroupResponse> attachDatabaseAccountsToUserGroup(AttachDatabaseAccountsToUserGroupRequest request);
 
     CompletableFuture<AttachHostAccountsToHostShareKeyResponse> attachHostAccountsToHostShareKey(AttachHostAccountsToHostShareKeyRequest request);
 
@@ -62,10 +68,17 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ConfigInstanceSecurityGroupsResponse> configInstanceSecurityGroups(ConfigInstanceSecurityGroupsRequest request);
 
     /**
-      * The ID of the request, which is used to locate and troubleshoot issues.
+      * ## Usage notes
+      * You can call this operation to configure a whitelist of public IP addresses for a bastion host. By default, a bastion host is accessible from all public IP addresses. If you want to allow the requests from specific public IP addresses, you can call this operation to add trusted IP addresses to the whitelist of the bastion host.  
+      * ## Limits
+      * You can call this operation up to 30 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
      */
     CompletableFuture<ConfigInstanceWhiteListResponse> configInstanceWhiteList(ConfigInstanceWhiteListRequest request);
+
+    CompletableFuture<CreateDatabaseResponse> createDatabase(CreateDatabaseRequest request);
+
+    CompletableFuture<CreateDatabaseAccountResponse> createDatabaseAccount(CreateDatabaseAccountRequest request);
 
     CompletableFuture<CreateHostResponse> createHost(CreateHostRequest request);
 
@@ -74,6 +87,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateHostGroupResponse> createHostGroup(CreateHostGroupRequest request);
 
     CompletableFuture<CreateHostShareKeyResponse> createHostShareKey(CreateHostShareKeyRequest request);
+
+    CompletableFuture<CreateNetworkDomainResponse> createNetworkDomain(CreateNetworkDomainRequest request);
+
+    CompletableFuture<CreatePolicyResponse> createPolicy(CreatePolicyRequest request);
+
+    CompletableFuture<CreateRuleResponse> createRule(CreateRuleRequest request);
 
     /**
       * ## Usage notes
@@ -97,14 +116,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<CreateUserPublicKeyResponse> createUserPublicKey(CreateUserPublicKeyRequest request);
 
+    CompletableFuture<DeleteDatabaseResponse> deleteDatabase(DeleteDatabaseRequest request);
+
+    CompletableFuture<DeleteDatabaseAccountResponse> deleteDatabaseAccount(DeleteDatabaseAccountRequest request);
+
     CompletableFuture<DeleteHostResponse> deleteHost(DeleteHostRequest request);
 
     /**
       * ## Usage notes
-      * You can call this operation to remove a single host account. If you no longer use a host account that is added to a host in Bastionhost, you can call this operation to remove the host account from the host.  
+      * This interface is used to delete individual host accounts. If a host account is no longer in use, you can invoke this interface to delete the host account for that host that has been configured on the bastion.
       * >  After you remove the host account, you must enter the username and password of the host when you log on to the host in Bastionhost.  
-      * ## Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      * ## QPS Limit
+      * The single-user QPS limit of this interface is 10 times/second. If the limit is exceeded, the API call will be stream-limited, which may affect your business, please call reasonably.
       *
      */
     CompletableFuture<DeleteHostAccountResponse> deleteHostAccount(DeleteHostAccountRequest request);
@@ -118,6 +141,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteHostGroupResponse> deleteHostGroup(DeleteHostGroupRequest request);
 
     CompletableFuture<DeleteHostShareKeyResponse> deleteHostShareKey(DeleteHostShareKeyRequest request);
+
+    CompletableFuture<DeleteNetworkDomainResponse> deleteNetworkDomain(DeleteNetworkDomainRequest request);
+
+    CompletableFuture<DeletePolicyResponse> deletePolicy(DeletePolicyRequest request);
+
+    CompletableFuture<DeleteRuleResponse> deleteRule(DeleteRuleRequest request);
 
     CompletableFuture<DeleteUserResponse> deleteUser(DeleteUserRequest request);
 
@@ -135,6 +164,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request);
 
+    CompletableFuture<DetachDatabaseAccountsFromUserResponse> detachDatabaseAccountsFromUser(DetachDatabaseAccountsFromUserRequest request);
+
+    CompletableFuture<DetachDatabaseAccountsFromUserGroupResponse> detachDatabaseAccountsFromUserGroup(DetachDatabaseAccountsFromUserGroupRequest request);
+
     CompletableFuture<DetachHostAccountsFromHostShareKeyResponse> detachHostAccountsFromHostShareKey(DetachHostAccountsFromHostShareKeyRequest request);
 
     CompletableFuture<DetachHostAccountsFromUserResponse> detachHostAccountsFromUser(DetachHostAccountsFromUserRequest request);
@@ -151,7 +184,17 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DisableInstancePublicAccessResponse> disableInstancePublicAccess(DisableInstancePublicAccessRequest request);
 
+    CompletableFuture<DisableRuleResponse> disableRule(DisableRuleRequest request);
+
     CompletableFuture<EnableInstancePublicAccessResponse> enableInstancePublicAccess(EnableInstancePublicAccessRequest request);
+
+    CompletableFuture<EnableRuleResponse> enableRule(EnableRuleRequest request);
+
+    CompletableFuture<GenerateAssetOperationTokenResponse> generateAssetOperationToken(GenerateAssetOperationTokenRequest request);
+
+    CompletableFuture<GetDatabaseResponse> getDatabase(GetDatabaseRequest request);
+
+    CompletableFuture<GetDatabaseAccountResponse> getDatabaseAccount(GetDatabaseAccountRequest request);
 
     CompletableFuture<GetHostResponse> getHost(GetHostRequest request);
 
@@ -162,7 +205,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetHostShareKeyResponse> getHostShareKey(GetHostShareKeyRequest request);
 
     /**
-      * The condition that is used to filter users.
+      * ###
+      * You can call this operation to query the settings of AD authentication on a bastion host. After you configure AD authentication on a bastion host, you can import AD-authenticated users into the bastion host. After the AD-authenticated users are imported into the bastion host, the AD-authenticated users can log on to the bastion host to perform O\\&M operations on servers.
+      * ### Limit
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
      */
     CompletableFuture<GetInstanceADAuthServerResponse> getInstanceADAuthServer(GetInstanceADAuthServerRequest request);
@@ -170,18 +216,40 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetInstanceLDAPAuthServerResponse> getInstanceLDAPAuthServer(GetInstanceLDAPAuthServerRequest request);
 
     /**
-      * Indicates whether two-factor authentication is enabled. Valid values:
-      * *   **true**: enabled
-      * *   **false**: disabled
+      * You can call this operation to query the settings of two-factor authentication on a bastion host. After you enable two-factor authentication, Bastionhost sends a verification code to a local user when the local user logs on to a bastion host. A local user can log on to the bastion host only when the local user enters the valid username and password and the verification code. This reduces the security risks caused by account information leaks.
+      * ### Limit
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
      */
     CompletableFuture<GetInstanceTwoFactorResponse> getInstanceTwoFactor(GetInstanceTwoFactorRequest request);
+
+    CompletableFuture<GetNetworkDomainResponse> getNetworkDomain(GetNetworkDomainRequest request);
+
+    CompletableFuture<GetPolicyResponse> getPolicy(GetPolicyRequest request);
+
+    CompletableFuture<GetPolicyAssetScopeResponse> getPolicyAssetScope(GetPolicyAssetScopeRequest request);
+
+    CompletableFuture<GetPolicyUserScopeResponse> getPolicyUserScope(GetPolicyUserScopeRequest request);
+
+    CompletableFuture<GetRuleResponse> getRule(GetRuleRequest request);
 
     CompletableFuture<GetUserResponse> getUser(GetUserRequest request);
 
     CompletableFuture<GetUserGroupResponse> getUserGroup(GetUserGroupRequest request);
 
     CompletableFuture<ListApproveCommandsResponse> listApproveCommands(ListApproveCommandsRequest request);
+
+    CompletableFuture<ListDatabaseAccountsResponse> listDatabaseAccounts(ListDatabaseAccountsRequest request);
+
+    CompletableFuture<ListDatabaseAccountsForUserResponse> listDatabaseAccountsForUser(ListDatabaseAccountsForUserRequest request);
+
+    CompletableFuture<ListDatabaseAccountsForUserGroupResponse> listDatabaseAccountsForUserGroup(ListDatabaseAccountsForUserGroupRequest request);
+
+    CompletableFuture<ListDatabasesResponse> listDatabases(ListDatabasesRequest request);
+
+    CompletableFuture<ListDatabasesForUserResponse> listDatabasesForUser(ListDatabasesForUserRequest request);
+
+    CompletableFuture<ListDatabasesForUserGroupResponse> listDatabasesForUserGroup(ListDatabasesForUserGroupRequest request);
 
     CompletableFuture<ListHostAccountsResponse> listHostAccounts(ListHostAccountsRequest request);
 
@@ -209,7 +277,21 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListHostsForUserGroupResponse> listHostsForUserGroup(ListHostsForUserGroupRequest request);
 
+    CompletableFuture<ListNetworkDomainsResponse> listNetworkDomains(ListNetworkDomainsRequest request);
+
+    CompletableFuture<ListOperationDatabaseAccountsResponse> listOperationDatabaseAccounts(ListOperationDatabaseAccountsRequest request);
+
+    CompletableFuture<ListOperationDatabasesResponse> listOperationDatabases(ListOperationDatabasesRequest request);
+
+    CompletableFuture<ListOperationHostAccountsResponse> listOperationHostAccounts(ListOperationHostAccountsRequest request);
+
+    CompletableFuture<ListOperationHostsResponse> listOperationHosts(ListOperationHostsRequest request);
+
     CompletableFuture<ListOperationTicketsResponse> listOperationTickets(ListOperationTicketsRequest request);
+
+    CompletableFuture<ListPoliciesResponse> listPolicies(ListPoliciesRequest request);
+
+    CompletableFuture<ListRulesResponse> listRules(ListRulesRequest request);
 
     CompletableFuture<ListTagKeysResponse> listTagKeys(ListTagKeysRequest request);
 
@@ -229,6 +311,10 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<LockUsersResponse> lockUsers(LockUsersRequest request);
+
+    CompletableFuture<ModifyDatabaseResponse> modifyDatabase(ModifyDatabaseRequest request);
+
+    CompletableFuture<ModifyDatabaseAccountResponse> modifyDatabaseAccount(ModifyDatabaseAccountRequest request);
 
     /**
       * You can call the ModifyHost operation to modify the basic information about a host in a data center, an Elastic Compute Service (ECS) instance, or a host in an ApsaraDB MyBase dedicated cluster.
@@ -263,9 +349,21 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ModifyInstanceTwoFactorResponse> modifyInstanceTwoFactor(ModifyInstanceTwoFactorRequest request);
 
+    CompletableFuture<ModifyNetworkDomainResponse> modifyNetworkDomain(ModifyNetworkDomainRequest request);
+
+    CompletableFuture<ModifyPolicyResponse> modifyPolicy(ModifyPolicyRequest request);
+
+    CompletableFuture<ModifyRuleResponse> modifyRule(ModifyRuleRequest request);
+
     CompletableFuture<ModifyUserResponse> modifyUser(ModifyUserRequest request);
 
     CompletableFuture<ModifyUserGroupResponse> modifyUserGroup(ModifyUserGroupRequest request);
+
+    CompletableFuture<ModifyUserPublicKeyResponse> modifyUserPublicKey(ModifyUserPublicKeyRequest request);
+
+    CompletableFuture<MoveDatabasesToNetworkDomainResponse> moveDatabasesToNetworkDomain(MoveDatabasesToNetworkDomainRequest request);
+
+    CompletableFuture<MoveHostsToNetworkDomainResponse> moveHostsToNetworkDomain(MoveHostsToNetworkDomainRequest request);
 
     CompletableFuture<MoveResourceGroupResponse> moveResourceGroup(MoveResourceGroupRequest request);
 
@@ -278,6 +376,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<RejectOperationTicketResponse> rejectOperationTicket(RejectOperationTicketRequest request);
 
+    CompletableFuture<RemoveDatabasesFromGroupResponse> removeDatabasesFromGroup(RemoveDatabasesFromGroupRequest request);
+
     CompletableFuture<RemoveHostsFromGroupResponse> removeHostsFromGroup(RemoveHostsFromGroupRequest request);
 
     /**
@@ -288,7 +388,23 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<RemoveUsersFromGroupResponse> removeUsersFromGroup(RemoveUsersFromGroupRequest request);
 
+    CompletableFuture<RenewAssetOperationTokenResponse> renewAssetOperationToken(RenewAssetOperationTokenRequest request);
+
     CompletableFuture<ResetHostAccountCredentialResponse> resetHostAccountCredential(ResetHostAccountCredentialRequest request);
+
+    CompletableFuture<SetPolicyAccessTimeRangeConfigResponse> setPolicyAccessTimeRangeConfig(SetPolicyAccessTimeRangeConfigRequest request);
+
+    CompletableFuture<SetPolicyApprovalConfigResponse> setPolicyApprovalConfig(SetPolicyApprovalConfigRequest request);
+
+    CompletableFuture<SetPolicyAssetScopeResponse> setPolicyAssetScope(SetPolicyAssetScopeRequest request);
+
+    CompletableFuture<SetPolicyCommandConfigResponse> setPolicyCommandConfig(SetPolicyCommandConfigRequest request);
+
+    CompletableFuture<SetPolicyIPAclConfigResponse> setPolicyIPAclConfig(SetPolicyIPAclConfigRequest request);
+
+    CompletableFuture<SetPolicyProtocolConfigResponse> setPolicyProtocolConfig(SetPolicyProtocolConfigRequest request);
+
+    CompletableFuture<SetPolicyUserScopeResponse> setPolicyUserScope(SetPolicyUserScopeRequest request);
 
     CompletableFuture<StartInstanceResponse> startInstance(StartInstanceRequest request);
 
@@ -303,5 +419,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UnlockUsersResponse> unlockUsers(UnlockUsersRequest request);
 
     CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);
+
+    CompletableFuture<VerifyInstanceADAuthServerResponse> verifyInstanceADAuthServer(VerifyInstanceADAuthServerRequest request);
+
+    CompletableFuture<VerifyInstanceLDAPAuthServerResponse> verifyInstanceLDAPAuthServer(VerifyInstanceLDAPAuthServerRequest request);
 
 }

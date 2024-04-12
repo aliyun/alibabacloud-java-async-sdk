@@ -131,9 +131,7 @@ public class CreateHostGroupRequest extends Request {
          * The region ID of the bastion host on which you want to create a host group.
          * <p>
          * 
-         * **
-         * 
-         * **For more information about the mapping between region IDs and region names, see **Regions and zones[.](~~40654~~)
+         * > For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -141,7 +141,7 @@ public class ListHostAccountsForUserRequest extends Request {
         } 
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * The name of the host account that you want to query. Exact match is supported.
          */
         public Builder hostAccountName(String hostAccountName) {
             this.putQueryParameter("HostAccountName", hostAccountName);
@@ -150,7 +150,10 @@ public class ListHostAccountsForUserRequest extends Request {
         }
 
         /**
-         * The ID of the host for which the host accounts were queried.
+         * The ID of the host to query.
+         * <p>
+         * 
+         * > You can call the [ListHosts](~~200665~~) operation to query the ID of the host.
          */
         public Builder hostId(String hostId) {
             this.putQueryParameter("HostId", hostId);
@@ -159,7 +162,10 @@ public class ListHostAccountsForUserRequest extends Request {
         }
 
         /**
-         * The total number of host accounts returned.
+         * The ID of the bastion host on which you want to perform the query. The host accounts that the specified user is authorized to manage on the specified host are queried.
+         * <p>
+         * 
+         * > You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -168,10 +174,7 @@ public class ListHostAccountsForUserRequest extends Request {
         }
 
         /**
-         * The ID of the user for which you want to query authorized host accounts.
-         * <p>
-         * 
-         * >  You can call the [ListUsers](~~204522~~) operation to query the ID of the user ID.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -180,7 +183,11 @@ public class ListHostAccountsForUserRequest extends Request {
         }
 
         /**
-         * The name of the host account that you want to query. Exact match is supported.
+         * The number of entries to return on each page.\
+         * <p>
+         * Maximum value: 100. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.
+         * 
+         * > We recommend that you do not leave this parameter empty.
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -189,7 +196,10 @@ public class ListHostAccountsForUserRequest extends Request {
         }
 
         /**
-         * The name of the host account.
+         * The region ID of the bastion host on which you want to perform the query. The host accounts that the specified user is authorized to manage on the specified host are queried.
+         * <p>
+         * 
+         * > For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -198,10 +208,10 @@ public class ListHostAccountsForUserRequest extends Request {
         }
 
         /**
-         * The region ID of the Bastionhost instance where you want to query the host accounts that the user is authorized to manage on the host.
+         * The ID of the user for which you want to query authorized host accounts.
          * <p>
          * 
-         * >  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
+         * > You can call the [ListUsers](~~204522~~) operation to query the ID of the user.
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

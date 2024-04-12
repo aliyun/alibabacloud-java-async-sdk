@@ -69,7 +69,10 @@ public class GetInstanceTwoFactorRequest extends Request {
         } 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * The ID of the bastion host.
+         * <p>
+         * 
+         * > You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -78,7 +81,10 @@ public class GetInstanceTwoFactorRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **GetInstanceTwoFactor**.
+         * The region ID of the bastion host.
+         * <p>
+         * 
+         * > For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

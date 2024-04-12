@@ -84,7 +84,10 @@ public class GetUserGroupRequest extends Request {
         } 
 
         /**
-         * The ID of the request.
+         * The ID of the bastion host in which you want to query the details of the user group.
+         * <p>
+         * 
+         * > You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -93,7 +96,10 @@ public class GetUserGroupRequest extends Request {
         }
 
         /**
-         * The name of the user group.
+         * The region ID of the bastion host in which you want to query the details of the user group.
+         * <p>
+         * 
+         * > For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -102,10 +108,10 @@ public class GetUserGroupRequest extends Request {
         }
 
         /**
-         * All Bastionhost API requests must include common request parameters. For more information about common request parameters, see [Common parameters](~~315526~~).
+         * The ID of the user group.
          * <p>
          * 
-         * For more information about sample requests, see the "Examples" section of this topic.
+         * > You can call the [ListUserGroups](~~204509~~) operation to query the ID of the user group.
          */
         public Builder userGroupId(String userGroupId) {
             this.putQueryParameter("UserGroupId", userGroupId);

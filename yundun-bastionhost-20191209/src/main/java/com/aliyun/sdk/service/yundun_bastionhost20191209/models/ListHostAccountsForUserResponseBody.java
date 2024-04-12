@@ -62,7 +62,7 @@ public class ListHostAccountsForUserResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The host accounts returned.
+         * An array that consists of the queried host accounts.
          */
         public Builder hostAccounts(java.util.List < HostAccounts> hostAccounts) {
             this.hostAccounts = hostAccounts;
@@ -70,10 +70,7 @@ public class ListHostAccountsForUserResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the Bastionhost instance where you want to query the host accounts that the user is authorized to manage on the host.
-         * <p>
-         * 
-         * >  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the Bastionhost instance.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -81,12 +78,7 @@ public class ListHostAccountsForUserResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
-         * 
-         * The value of the PageSize parameter must not exceed 100. Default value: 20. If you leave the PageSize parameter empty, 20 entries are returned on each page.
-         * 
-         * >  We recommend that you do not leave the PageSize parameter empty.
+         * The total number of host accounts that were queried.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -174,11 +166,7 @@ public class ListHostAccountsForUserResponseBody extends TeaModel {
             private String protocolName; 
 
             /**
-             * The protocol that is used by the host account. Valid values:
-             * <p>
-             * 
-             * *   **SSH**
-             * *   **RDP**
+             * The ID of the host account.
              */
             public Builder hostAccountId(String hostAccountId) {
                 this.hostAccountId = hostAccountId;
@@ -186,7 +174,7 @@ public class ListHostAccountsForUserResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the host account.
+             * The name of the host account.
              */
             public Builder hostAccountName(String hostAccountName) {
                 this.hostAccountName = hostAccountName;
@@ -194,7 +182,7 @@ public class ListHostAccountsForUserResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request.
+             * The ID of the host for which the host accounts were queried.
              */
             public Builder hostId(String hostId) {
                 this.hostId = hostId;
@@ -202,10 +190,11 @@ public class ListHostAccountsForUserResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the host for which you want to query the host accounts that the user is authorized to manage.
+             * Indicates whether the user is authorized to manage the host account. Valid values:
              * <p>
              * 
-             * >  You can call the [ListHosts](~~200665~~) operation to query the ID of the host.
+             * *   **true**: yes
+             * *   **false**: no
              */
             public Builder isAuthorized(Boolean isAuthorized) {
                 this.isAuthorized = isAuthorized;
@@ -213,11 +202,11 @@ public class ListHostAccountsForUserResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the user is authorized to manage the host account. Valid values:
+             * The protocol that is used by the host. Valid values:
              * <p>
              * 
-             * *   **true**: The user is authorized to manage the host account.
-             * *   **false**: The user is not authorized to manage the host account.
+             * *   **SSH**
+             * *   **RDP**
              */
             public Builder protocolName(String protocolName) {
                 this.protocolName = protocolName;

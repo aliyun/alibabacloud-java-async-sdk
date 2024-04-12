@@ -83,7 +83,7 @@ public class ConfigInstanceWhiteListRequest extends Request {
         } 
 
         /**
-         * The ID of the bastion host for which a whitelist of public IP addresses is configured.
+         * The ID of the bastion host for which you want to configure a whitelist of public IP addresses.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -92,7 +92,7 @@ public class ConfigInstanceWhiteListRequest extends Request {
         }
 
         /**
-         * Configures a whitelist of public IP addresses for a bastion host.
+         * The region ID of the bastion host.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -101,7 +101,7 @@ public class ConfigInstanceWhiteListRequest extends Request {
         }
 
         /**
-         * ConfigInstanceWhiteList
+         * The public IP addresses that you want to add to the whitelist.
          */
         public Builder whiteList(java.util.List < String > whiteList) {
             this.putQueryParameter("WhiteList", whiteList);

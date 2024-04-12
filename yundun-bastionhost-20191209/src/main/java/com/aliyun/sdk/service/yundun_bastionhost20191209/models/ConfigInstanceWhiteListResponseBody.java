@@ -50,7 +50,7 @@ public class ConfigInstanceWhiteListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * InstanceId.
+         * The ID of the bastion host for which a whitelist of public IP addresses is configured.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -58,7 +58,7 @@ public class ConfigInstanceWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

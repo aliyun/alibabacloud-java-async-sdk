@@ -84,10 +84,10 @@ public class GetHostGroupRequest extends Request {
         } 
 
         /**
-         * The region ID of the Bastionhost instance where you want to query the host group.
+         * The ID of the host group.
          * <p>
          * 
-         * >  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
+         * > You can call the [ListHostGroups](~~201307~~) operation to query the ID of the host group.
          */
         public Builder hostGroupId(String hostGroupId) {
             this.putQueryParameter("HostGroupId", hostGroupId);
@@ -96,7 +96,10 @@ public class GetHostGroupRequest extends Request {
         }
 
         /**
-         * MyHostGroup
+         * The ID of the bastion host in which you want to query the details of the host group.
+         * <p>
+         * 
+         * > You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -105,10 +108,10 @@ public class GetHostGroupRequest extends Request {
         }
 
         /**
-         * The ID of the Bastionhost instance where you want to query the host group.
+         * The region ID of the bastion host in which you want to query the details of the host group.
          * <p>
          * 
-         * >  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the Bastionhost instance.
+         * > For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

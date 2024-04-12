@@ -69,7 +69,7 @@ public class GetInstanceADAuthServerRequest extends Request {
         } 
 
         /**
-         * The field that is used to indicate the email address of a user on the AD server.
+         * The ID of the bastion host. You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -78,11 +78,10 @@ public class GetInstanceADAuthServerRequest extends Request {
         }
 
         /**
-         * Indicates whether passwords are required. Valid values:
+         * The region ID of the bastion host.
          * <p>
          * 
-         * *   **true**: required
-         * *   **false**: not required
+         * > For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -62,7 +62,7 @@ public class ListHostAccountsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The ID of the host account.
+         * An array that consists of the queried host accounts.
          */
         public Builder hostAccounts(java.util.List < HostAccounts> hostAccounts) {
             this.hostAccounts = hostAccounts;
@@ -70,7 +70,7 @@ public class ListHostAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the queried host accounts.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,10 +78,7 @@ public class ListHostAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the bastion host in which you want to query accounts of the specified host.
-         * <p>
-         * 
-         * >  You can call the DescribeInstances operation to query the ID of the bastion host.
+         * The total number of host accounts that are queried.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -205,7 +202,13 @@ public class ListHostAccountsResponseBody extends TeaModel {
             private String protocolName; 
 
             /**
-             * The fingerprint of the private key for the host account.
+             * Indicates whether a password is configured for the host account.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   true: A password is configured for the host account.
+             * *   false: No passwords are configured for the host account.
              */
             public Builder hasPassword(Boolean hasPassword) {
                 this.hasPassword = hasPassword;
@@ -213,7 +216,7 @@ public class ListHostAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request.
+             * The ID of the host account.
              */
             public Builder hostAccountId(String hostAccountId) {
                 this.hostAccountId = hostAccountId;
@@ -221,7 +224,7 @@ public class ListHostAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the shared key.
+             * The name of the host account.
              */
             public Builder hostAccountName(String hostAccountName) {
                 this.hostAccountName = hostAccountName;
@@ -229,7 +232,7 @@ public class ListHostAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * HostId.
+             * The ID of the host.
              */
             public Builder hostId(String hostId) {
                 this.hostId = hostId;
@@ -237,7 +240,7 @@ public class ListHostAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * HostShareKeyId.
+             * The ID of the shared key.
              */
             public Builder hostShareKeyId(String hostShareKeyId) {
                 this.hostShareKeyId = hostShareKeyId;
@@ -245,10 +248,18 @@ public class ListHostAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * HostShareKeyName.
+             * The name of the shared key.
              */
             public Builder hostShareKeyName(String hostShareKeyName) {
                 this.hostShareKeyName = hostShareKeyName;
+                return this;
+            }
+
+            /**
+             * The fingerprint of the private key for the host account.
+             */
+            public Builder privateKeyFingerprint(String privateKeyFingerprint) {
+                this.privateKeyFingerprint = privateKeyFingerprint;
                 return this;
             }
 
@@ -260,14 +271,6 @@ public class ListHostAccountsResponseBody extends TeaModel {
              * 
              * *   SSH
              * *   RDP
-             */
-            public Builder privateKeyFingerprint(String privateKeyFingerprint) {
-                this.privateKeyFingerprint = privateKeyFingerprint;
-                return this;
-            }
-
-            /**
-             * The number of the page to return. Default value: **1**.
              */
             public Builder protocolName(String protocolName) {
                 this.protocolName = protocolName;
