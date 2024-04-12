@@ -33,6 +33,10 @@ public class DescribeVulListRequest extends Request {
     private String groupId;
 
     @Query
+    @NameInMap("Ids")
+    private String ids;
+
+    @Query
     @NameInMap("Lang")
     private String lang;
 
@@ -88,6 +92,7 @@ public class DescribeVulListRequest extends Request {
         this.currentPage = builder.currentPage;
         this.dealed = builder.dealed;
         this.groupId = builder.groupId;
+        this.ids = builder.ids;
         this.lang = builder.lang;
         this.name = builder.name;
         this.necessity = builder.necessity;
@@ -148,6 +153,13 @@ public class DescribeVulListRequest extends Request {
      */
     public String getGroupId() {
         return this.groupId;
+    }
+
+    /**
+     * @return ids
+     */
+    public String getIds() {
+        return this.ids;
     }
 
     /**
@@ -240,6 +252,7 @@ public class DescribeVulListRequest extends Request {
         private Integer currentPage; 
         private String dealed; 
         private String groupId; 
+        private String ids; 
         private String lang; 
         private String name; 
         private String necessity; 
@@ -264,6 +277,7 @@ public class DescribeVulListRequest extends Request {
             this.currentPage = request.currentPage;
             this.dealed = request.dealed;
             this.groupId = request.groupId;
+            this.ids = request.ids;
             this.lang = request.lang;
             this.name = request.name;
             this.necessity = request.necessity;
@@ -330,6 +344,15 @@ public class DescribeVulListRequest extends Request {
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
             this.groupId = groupId;
+            return this;
+        }
+
+        /**
+         * Ids.
+         */
+        public Builder ids(String ids) {
+            this.putQueryParameter("Ids", ids);
+            this.ids = ids;
             return this;
         }
 
