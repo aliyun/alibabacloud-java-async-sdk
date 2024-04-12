@@ -13,6 +13,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetScaleAppMetricRequest extends Request {
     @Query
+    @NameInMap("AppSource")
+    private String appSource;
+
+    @Query
+    @NameInMap("CpuStrategy")
+    private String cpuStrategy;
+
+    @Query
     @NameInMap("Limit")
     @Validation(required = true)
     private Long limit;
@@ -23,6 +31,8 @@ public class GetScaleAppMetricRequest extends Request {
 
     private GetScaleAppMetricRequest(Builder builder) {
         super(builder);
+        this.appSource = builder.appSource;
+        this.cpuStrategy = builder.cpuStrategy;
         this.limit = builder.limit;
         this.regionId = builder.regionId;
     }
@@ -41,6 +51,20 @@ public class GetScaleAppMetricRequest extends Request {
     }
 
     /**
+     * @return appSource
+     */
+    public String getAppSource() {
+        return this.appSource;
+    }
+
+    /**
+     * @return cpuStrategy
+     */
+    public String getCpuStrategy() {
+        return this.cpuStrategy;
+    }
+
+    /**
      * @return limit
      */
     public Long getLimit() {
@@ -55,6 +79,8 @@ public class GetScaleAppMetricRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetScaleAppMetricRequest, Builder> {
+        private String appSource; 
+        private String cpuStrategy; 
         private Long limit; 
         private String regionId; 
 
@@ -64,9 +90,29 @@ public class GetScaleAppMetricRequest extends Request {
 
         private Builder(GetScaleAppMetricRequest request) {
             super(request);
+            this.appSource = request.appSource;
+            this.cpuStrategy = request.cpuStrategy;
             this.limit = request.limit;
             this.regionId = request.regionId;
         } 
+
+        /**
+         * AppSource.
+         */
+        public Builder appSource(String appSource) {
+            this.putQueryParameter("AppSource", appSource);
+            this.appSource = appSource;
+            return this;
+        }
+
+        /**
+         * CpuStrategy.
+         */
+        public Builder cpuStrategy(String cpuStrategy) {
+            this.putQueryParameter("CpuStrategy", cpuStrategy);
+            this.cpuStrategy = cpuStrategy;
+            return this;
+        }
 
         /**
          * Limit.

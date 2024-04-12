@@ -413,6 +413,9 @@ public class BuildPipeline extends TeaModel {
         @NameInMap("CommitUrl")
         private String commitUrl;
 
+        @NameInMap("OrganizationId")
+        private String organizationId;
+
         @NameInMap("Provider")
         @Validation(required = true)
         private String provider;
@@ -430,6 +433,7 @@ public class BuildPipeline extends TeaModel {
             this.branchName = builder.branchName;
             this.commitId = builder.commitId;
             this.commitUrl = builder.commitUrl;
+            this.organizationId = builder.organizationId;
             this.provider = builder.provider;
             this.repoFullName = builder.repoFullName;
             this.repoId = builder.repoId;
@@ -472,6 +476,13 @@ public class BuildPipeline extends TeaModel {
         }
 
         /**
+         * @return organizationId
+         */
+        public String getOrganizationId() {
+            return this.organizationId;
+        }
+
+        /**
          * @return provider
          */
         public String getProvider() {
@@ -497,6 +508,7 @@ public class BuildPipeline extends TeaModel {
             private String branchName; 
             private String commitId; 
             private String commitUrl; 
+            private String organizationId; 
             private String provider; 
             private String repoFullName; 
             private String repoId; 
@@ -530,6 +542,14 @@ public class BuildPipeline extends TeaModel {
              */
             public Builder commitUrl(String commitUrl) {
                 this.commitUrl = commitUrl;
+                return this;
+            }
+
+            /**
+             * OrganizationId.
+             */
+            public Builder organizationId(String organizationId) {
+                this.organizationId = organizationId;
                 return this;
             }
 
@@ -849,8 +869,10 @@ public class BuildPipeline extends TeaModel {
     }
     public static class TriggerConfig extends TeaModel {
         @NameInMap("BranchName")
-        @Validation(required = true)
         private String branchName;
+
+        @NameInMap("TagName")
+        private String tagName;
 
         @NameInMap("Type")
         @Validation(required = true)
@@ -858,6 +880,7 @@ public class BuildPipeline extends TeaModel {
 
         private TriggerConfig(Builder builder) {
             this.branchName = builder.branchName;
+            this.tagName = builder.tagName;
             this.type = builder.type;
         }
 
@@ -877,6 +900,13 @@ public class BuildPipeline extends TeaModel {
         }
 
         /**
+         * @return tagName
+         */
+        public String getTagName() {
+            return this.tagName;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
@@ -885,6 +915,7 @@ public class BuildPipeline extends TeaModel {
 
         public static final class Builder {
             private String branchName; 
+            private String tagName; 
             private String type; 
 
             /**
@@ -892,6 +923,14 @@ public class BuildPipeline extends TeaModel {
              */
             public Builder branchName(String branchName) {
                 this.branchName = branchName;
+                return this;
+            }
+
+            /**
+             * TagName.
+             */
+            public Builder tagName(String tagName) {
+                this.tagName = tagName;
                 return this;
             }
 

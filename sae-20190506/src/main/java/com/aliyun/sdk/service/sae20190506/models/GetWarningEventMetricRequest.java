@@ -13,6 +13,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetWarningEventMetricRequest extends Request {
     @Query
+    @NameInMap("AppSource")
+    private String appSource;
+
+    @Query
+    @NameInMap("CpuStrategy")
+    private String cpuStrategy;
+
+    @Query
     @NameInMap("EndTime")
     @Validation(required = true)
     private Long endTime;
@@ -34,6 +42,8 @@ public class GetWarningEventMetricRequest extends Request {
 
     private GetWarningEventMetricRequest(Builder builder) {
         super(builder);
+        this.appSource = builder.appSource;
+        this.cpuStrategy = builder.cpuStrategy;
         this.endTime = builder.endTime;
         this.limit = builder.limit;
         this.regionId = builder.regionId;
@@ -51,6 +61,20 @@ public class GetWarningEventMetricRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return appSource
+     */
+    public String getAppSource() {
+        return this.appSource;
+    }
+
+    /**
+     * @return cpuStrategy
+     */
+    public String getCpuStrategy() {
+        return this.cpuStrategy;
     }
 
     /**
@@ -82,6 +106,8 @@ public class GetWarningEventMetricRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetWarningEventMetricRequest, Builder> {
+        private String appSource; 
+        private String cpuStrategy; 
         private Long endTime; 
         private Long limit; 
         private String regionId; 
@@ -93,11 +119,31 @@ public class GetWarningEventMetricRequest extends Request {
 
         private Builder(GetWarningEventMetricRequest request) {
             super(request);
+            this.appSource = request.appSource;
+            this.cpuStrategy = request.cpuStrategy;
             this.endTime = request.endTime;
             this.limit = request.limit;
             this.regionId = request.regionId;
             this.startTime = request.startTime;
         } 
+
+        /**
+         * AppSource.
+         */
+        public Builder appSource(String appSource) {
+            this.putQueryParameter("AppSource", appSource);
+            this.appSource = appSource;
+            return this;
+        }
+
+        /**
+         * CpuStrategy.
+         */
+        public Builder cpuStrategy(String cpuStrategy) {
+            this.putQueryParameter("CpuStrategy", cpuStrategy);
+            this.cpuStrategy = cpuStrategy;
+            return this;
+        }
 
         /**
          * EndTime.

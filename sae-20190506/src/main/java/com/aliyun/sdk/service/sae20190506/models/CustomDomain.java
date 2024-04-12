@@ -42,6 +42,9 @@ public class CustomDomain extends TeaModel {
     @NameInMap("requestId")
     private String requestId;
 
+    @NameInMap("routeConfig")
+    private RouteConfig routeConfig;
+
     @NameInMap("subdomainCount")
     private String subdomainCount;
 
@@ -62,6 +65,7 @@ public class CustomDomain extends TeaModel {
         this.namespaceID = builder.namespaceID;
         this.protocol = builder.protocol;
         this.requestId = builder.requestId;
+        this.routeConfig = builder.routeConfig;
         this.subdomainCount = builder.subdomainCount;
         this.tlsConfig = builder.tlsConfig;
         this.wafConfig = builder.wafConfig;
@@ -146,6 +150,13 @@ public class CustomDomain extends TeaModel {
     }
 
     /**
+     * @return routeConfig
+     */
+    public RouteConfig getRouteConfig() {
+        return this.routeConfig;
+    }
+
+    /**
      * @return subdomainCount
      */
     public String getSubdomainCount() {
@@ -177,6 +188,7 @@ public class CustomDomain extends TeaModel {
         private String namespaceID; 
         private String protocol; 
         private String requestId; 
+        private RouteConfig routeConfig; 
         private String subdomainCount; 
         private TLSConfig tlsConfig; 
         private WAFConfig wafConfig; 
@@ -258,6 +270,14 @@ public class CustomDomain extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * routeConfig.
+         */
+        public Builder routeConfig(RouteConfig routeConfig) {
+            this.routeConfig = routeConfig;
             return this;
         }
 

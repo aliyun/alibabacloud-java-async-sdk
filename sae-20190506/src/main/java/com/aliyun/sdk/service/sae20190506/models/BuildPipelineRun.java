@@ -54,6 +54,9 @@ public class BuildPipelineRun extends TeaModel {
     @NameInMap("Steps")
     private java.util.List < Steps> steps;
 
+    @NameInMap("TriggerConfig")
+    private TriggerConfig triggerConfig;
+
     @NameInMap("VersionId")
     private String versionId;
 
@@ -75,6 +78,7 @@ public class BuildPipelineRun extends TeaModel {
         this.startTime = builder.startTime;
         this.status = builder.status;
         this.steps = builder.steps;
+        this.triggerConfig = builder.triggerConfig;
         this.versionId = builder.versionId;
         this.waitDuration = builder.waitDuration;
     }
@@ -186,6 +190,13 @@ public class BuildPipelineRun extends TeaModel {
     }
 
     /**
+     * @return triggerConfig
+     */
+    public TriggerConfig getTriggerConfig() {
+        return this.triggerConfig;
+    }
+
+    /**
      * @return versionId
      */
     public String getVersionId() {
@@ -214,6 +225,7 @@ public class BuildPipelineRun extends TeaModel {
         private Long startTime; 
         private String status; 
         private java.util.List < Steps> steps; 
+        private TriggerConfig triggerConfig; 
         private String versionId; 
         private Long waitDuration; 
 
@@ -330,6 +342,14 @@ public class BuildPipelineRun extends TeaModel {
         }
 
         /**
+         * TriggerConfig.
+         */
+        public Builder triggerConfig(TriggerConfig triggerConfig) {
+            this.triggerConfig = triggerConfig;
+            return this;
+        }
+
+        /**
          * VersionId.
          */
         public Builder versionId(String versionId) {
@@ -353,8 +373,10 @@ public class BuildPipelineRun extends TeaModel {
 
     public static class Trigger extends TeaModel {
         @NameInMap("BranchName")
-        @Validation(required = true)
         private String branchName;
+
+        @NameInMap("TagName")
+        private String tagName;
 
         @NameInMap("Type")
         @Validation(required = true)
@@ -362,6 +384,7 @@ public class BuildPipelineRun extends TeaModel {
 
         private Trigger(Builder builder) {
             this.branchName = builder.branchName;
+            this.tagName = builder.tagName;
             this.type = builder.type;
         }
 
@@ -381,6 +404,13 @@ public class BuildPipelineRun extends TeaModel {
         }
 
         /**
+         * @return tagName
+         */
+        public String getTagName() {
+            return this.tagName;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
@@ -389,6 +419,7 @@ public class BuildPipelineRun extends TeaModel {
 
         public static final class Builder {
             private String branchName; 
+            private String tagName; 
             private String type; 
 
             /**
@@ -396,6 +427,14 @@ public class BuildPipelineRun extends TeaModel {
              */
             public Builder branchName(String branchName) {
                 this.branchName = branchName;
+                return this;
+            }
+
+            /**
+             * TagName.
+             */
+            public Builder tagName(String tagName) {
+                this.tagName = tagName;
                 return this;
             }
 
@@ -632,9 +671,8 @@ public class BuildPipelineRun extends TeaModel {
         @NameInMap("CommitUrl")
         private String commitUrl;
 
-        @NameInMap("OrgId")
-        @Validation(required = true)
-        private String orgId;
+        @NameInMap("OrganizationId")
+        private String organizationId;
 
         @NameInMap("Provider")
         @Validation(required = true)
@@ -653,7 +691,7 @@ public class BuildPipelineRun extends TeaModel {
             this.branchName = builder.branchName;
             this.commitId = builder.commitId;
             this.commitUrl = builder.commitUrl;
-            this.orgId = builder.orgId;
+            this.organizationId = builder.organizationId;
             this.provider = builder.provider;
             this.repoFullName = builder.repoFullName;
             this.repoId = builder.repoId;
@@ -696,10 +734,10 @@ public class BuildPipelineRun extends TeaModel {
         }
 
         /**
-         * @return orgId
+         * @return organizationId
          */
-        public String getOrgId() {
-            return this.orgId;
+        public String getOrganizationId() {
+            return this.organizationId;
         }
 
         /**
@@ -728,7 +766,7 @@ public class BuildPipelineRun extends TeaModel {
             private String branchName; 
             private String commitId; 
             private String commitUrl; 
-            private String orgId; 
+            private String organizationId; 
             private String provider; 
             private String repoFullName; 
             private String repoId; 
@@ -766,10 +804,10 @@ public class BuildPipelineRun extends TeaModel {
             }
 
             /**
-             * OrgId.
+             * OrganizationId.
              */
-            public Builder orgId(String orgId) {
-                this.orgId = orgId;
+            public Builder organizationId(String organizationId) {
+                this.organizationId = organizationId;
                 return this;
             }
 
@@ -1263,6 +1301,87 @@ public class BuildPipelineRun extends TeaModel {
 
             public Steps build() {
                 return new Steps(this);
+            } 
+
+        } 
+
+    }
+    public static class TriggerConfig extends TeaModel {
+        @NameInMap("BranchName")
+        private String branchName;
+
+        @NameInMap("TagName")
+        private String tagName;
+
+        @NameInMap("Type")
+        private String type;
+
+        private TriggerConfig(Builder builder) {
+            this.branchName = builder.branchName;
+            this.tagName = builder.tagName;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TriggerConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return branchName
+         */
+        public String getBranchName() {
+            return this.branchName;
+        }
+
+        /**
+         * @return tagName
+         */
+        public String getTagName() {
+            return this.tagName;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private String branchName; 
+            private String tagName; 
+            private String type; 
+
+            /**
+             * BranchName.
+             */
+            public Builder branchName(String branchName) {
+                this.branchName = branchName;
+                return this;
+            }
+
+            /**
+             * TagName.
+             */
+            public Builder tagName(String tagName) {
+                this.tagName = tagName;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public TriggerConfig build() {
+                return new TriggerConfig(this);
             } 
 
         } 

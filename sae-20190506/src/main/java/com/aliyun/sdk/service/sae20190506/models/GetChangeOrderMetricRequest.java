@@ -13,6 +13,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetChangeOrderMetricRequest extends Request {
     @Query
+    @NameInMap("AppSource")
+    private String appSource;
+
+    @Query
+    @NameInMap("CpuStrategy")
+    private String cpuStrategy;
+
+    @Query
     @NameInMap("CreateTime")
     @Validation(required = true)
     private String createTime;
@@ -33,6 +41,8 @@ public class GetChangeOrderMetricRequest extends Request {
 
     private GetChangeOrderMetricRequest(Builder builder) {
         super(builder);
+        this.appSource = builder.appSource;
+        this.cpuStrategy = builder.cpuStrategy;
         this.createTime = builder.createTime;
         this.limit = builder.limit;
         this.orderBy = builder.orderBy;
@@ -50,6 +60,20 @@ public class GetChangeOrderMetricRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return appSource
+     */
+    public String getAppSource() {
+        return this.appSource;
+    }
+
+    /**
+     * @return cpuStrategy
+     */
+    public String getCpuStrategy() {
+        return this.cpuStrategy;
     }
 
     /**
@@ -81,6 +105,8 @@ public class GetChangeOrderMetricRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetChangeOrderMetricRequest, Builder> {
+        private String appSource; 
+        private String cpuStrategy; 
         private String createTime; 
         private Long limit; 
         private String orderBy; 
@@ -92,11 +118,31 @@ public class GetChangeOrderMetricRequest extends Request {
 
         private Builder(GetChangeOrderMetricRequest request) {
             super(request);
+            this.appSource = request.appSource;
+            this.cpuStrategy = request.cpuStrategy;
             this.createTime = request.createTime;
             this.limit = request.limit;
             this.orderBy = request.orderBy;
             this.regionId = request.regionId;
         } 
+
+        /**
+         * AppSource.
+         */
+        public Builder appSource(String appSource) {
+            this.putQueryParameter("AppSource", appSource);
+            this.appSource = appSource;
+            return this;
+        }
+
+        /**
+         * CpuStrategy.
+         */
+        public Builder cpuStrategy(String cpuStrategy) {
+            this.putQueryParameter("CpuStrategy", cpuStrategy);
+            this.cpuStrategy = cpuStrategy;
+            return this;
+        }
 
         /**
          * CreateTime.

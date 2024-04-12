@@ -21,10 +21,15 @@ public class BatchStopApplicationsRequest extends Request {
     @Validation(required = true)
     private String namespaceId;
 
+    @Query
+    @NameInMap("Version")
+    private String version;
+
     private BatchStopApplicationsRequest(Builder builder) {
         super(builder);
         this.appIds = builder.appIds;
         this.namespaceId = builder.namespaceId;
+        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -54,9 +59,17 @@ public class BatchStopApplicationsRequest extends Request {
         return this.namespaceId;
     }
 
+    /**
+     * @return version
+     */
+    public String getVersion() {
+        return this.version;
+    }
+
     public static final class Builder extends Request.Builder<BatchStopApplicationsRequest, Builder> {
         private String appIds; 
         private String namespaceId; 
+        private String version; 
 
         private Builder() {
             super();
@@ -66,6 +79,7 @@ public class BatchStopApplicationsRequest extends Request {
             super(request);
             this.appIds = request.appIds;
             this.namespaceId = request.namespaceId;
+            this.version = request.version;
         } 
 
         /**
@@ -83,6 +97,15 @@ public class BatchStopApplicationsRequest extends Request {
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
             this.namespaceId = namespaceId;
+            return this;
+        }
+
+        /**
+         * Version.
+         */
+        public Builder version(String version) {
+            this.putQueryParameter("Version", version);
+            this.version = version;
             return this;
         }
 
