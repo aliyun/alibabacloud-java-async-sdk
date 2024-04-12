@@ -87,6 +87,9 @@ public class GetInstanceResponseBody extends TeaModel {
     @NameInMap("Message")
     private String message;
 
+    @NameInMap("NodeErrorRecovery")
+    private NodeErrorRecovery nodeErrorRecovery;
+
     @NameInMap("PaymentType")
     private String paymentType;
 
@@ -167,6 +170,7 @@ public class GetInstanceResponseBody extends TeaModel {
         this.labels = builder.labels;
         this.latestSnapshot = builder.latestSnapshot;
         this.message = builder.message;
+        this.nodeErrorRecovery = builder.nodeErrorRecovery;
         this.paymentType = builder.paymentType;
         this.priority = builder.priority;
         this.reasonCode = builder.reasonCode;
@@ -371,6 +375,13 @@ public class GetInstanceResponseBody extends TeaModel {
     }
 
     /**
+     * @return nodeErrorRecovery
+     */
+    public NodeErrorRecovery getNodeErrorRecovery() {
+        return this.nodeErrorRecovery;
+    }
+
+    /**
      * @return paymentType
      */
     public String getPaymentType() {
@@ -522,6 +533,7 @@ public class GetInstanceResponseBody extends TeaModel {
         private java.util.List < Labels> labels; 
         private LatestSnapshot latestSnapshot; 
         private String message; 
+        private NodeErrorRecovery nodeErrorRecovery; 
         private String paymentType; 
         private Long priority; 
         private String reasonCode; 
@@ -738,6 +750,14 @@ public class GetInstanceResponseBody extends TeaModel {
          */
         public Builder message(String message) {
             this.message = message;
+            return this;
+        }
+
+        /**
+         * NodeErrorRecovery.
+         */
+        public Builder nodeErrorRecovery(NodeErrorRecovery nodeErrorRecovery) {
+            this.nodeErrorRecovery = nodeErrorRecovery;
             return this;
         }
 
@@ -1753,6 +1773,87 @@ public class GetInstanceResponseBody extends TeaModel {
 
             public LatestSnapshot build() {
                 return new LatestSnapshot(this);
+            } 
+
+        } 
+
+    }
+    public static class NodeErrorRecovery extends TeaModel {
+        @NameInMap("autoSwitchCountdownSeconds")
+        private Long autoSwitchCountdownSeconds;
+
+        @NameInMap("enableAutoSwitchOnNodeError")
+        private Boolean enableAutoSwitchOnNodeError;
+
+        @NameInMap("hasNodeError")
+        private Boolean hasNodeError;
+
+        private NodeErrorRecovery(Builder builder) {
+            this.autoSwitchCountdownSeconds = builder.autoSwitchCountdownSeconds;
+            this.enableAutoSwitchOnNodeError = builder.enableAutoSwitchOnNodeError;
+            this.hasNodeError = builder.hasNodeError;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NodeErrorRecovery create() {
+            return builder().build();
+        }
+
+        /**
+         * @return autoSwitchCountdownSeconds
+         */
+        public Long getAutoSwitchCountdownSeconds() {
+            return this.autoSwitchCountdownSeconds;
+        }
+
+        /**
+         * @return enableAutoSwitchOnNodeError
+         */
+        public Boolean getEnableAutoSwitchOnNodeError() {
+            return this.enableAutoSwitchOnNodeError;
+        }
+
+        /**
+         * @return hasNodeError
+         */
+        public Boolean getHasNodeError() {
+            return this.hasNodeError;
+        }
+
+        public static final class Builder {
+            private Long autoSwitchCountdownSeconds; 
+            private Boolean enableAutoSwitchOnNodeError; 
+            private Boolean hasNodeError; 
+
+            /**
+             * autoSwitchCountdownSeconds.
+             */
+            public Builder autoSwitchCountdownSeconds(Long autoSwitchCountdownSeconds) {
+                this.autoSwitchCountdownSeconds = autoSwitchCountdownSeconds;
+                return this;
+            }
+
+            /**
+             * enableAutoSwitchOnNodeError.
+             */
+            public Builder enableAutoSwitchOnNodeError(Boolean enableAutoSwitchOnNodeError) {
+                this.enableAutoSwitchOnNodeError = enableAutoSwitchOnNodeError;
+                return this;
+            }
+
+            /**
+             * hasNodeError.
+             */
+            public Builder hasNodeError(Boolean hasNodeError) {
+                this.hasNodeError = hasNodeError;
+                return this;
+            }
+
+            public NodeErrorRecovery build() {
+                return new NodeErrorRecovery(this);
             } 
 
         } 
