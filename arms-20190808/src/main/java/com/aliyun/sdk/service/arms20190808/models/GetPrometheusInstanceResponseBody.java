@@ -173,6 +173,9 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
+        @NameInMap("ArchiveDuration")
+        private Integer archiveDuration;
+
         @NameInMap("AuthToken")
         private String authToken;
 
@@ -227,6 +230,9 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         @NameInMap("SecurityGroupId")
         private String securityGroupId;
 
+        @NameInMap("StorageDuration")
+        private Integer storageDuration;
+
         @NameInMap("SubClustersJson")
         private String subClustersJson;
 
@@ -243,6 +249,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         private String vpcId;
 
         private Data(Builder builder) {
+            this.archiveDuration = builder.archiveDuration;
             this.authToken = builder.authToken;
             this.clusterId = builder.clusterId;
             this.clusterName = builder.clusterName;
@@ -261,6 +268,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             this.resourceGroupId = builder.resourceGroupId;
             this.resourceType = builder.resourceType;
             this.securityGroupId = builder.securityGroupId;
+            this.storageDuration = builder.storageDuration;
             this.subClustersJson = builder.subClustersJson;
             this.tags = builder.tags;
             this.userId = builder.userId;
@@ -274,6 +282,13 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return archiveDuration
+         */
+        public Integer getArchiveDuration() {
+            return this.archiveDuration;
         }
 
         /**
@@ -403,6 +418,13 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return storageDuration
+         */
+        public Integer getStorageDuration() {
+            return this.storageDuration;
+        }
+
+        /**
          * @return subClustersJson
          */
         public String getSubClustersJson() {
@@ -438,6 +460,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer archiveDuration; 
             private String authToken; 
             private String clusterId; 
             private String clusterName; 
@@ -456,11 +479,20 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             private String resourceGroupId; 
             private String resourceType; 
             private String securityGroupId; 
+            private Integer storageDuration; 
             private String subClustersJson; 
             private java.util.List < Tags> tags; 
             private String userId; 
             private String vSwitchId; 
             private String vpcId; 
+
+            /**
+             * ArchiveDuration.
+             */
+            public Builder archiveDuration(Integer archiveDuration) {
+                this.archiveDuration = archiveDuration;
+                return this;
+            }
 
             /**
              * auth token string.
@@ -613,6 +645,14 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
+                return this;
+            }
+
+            /**
+             * StorageDuration.
+             */
+            public Builder storageDuration(Integer storageDuration) {
+                this.storageDuration = storageDuration;
                 return this;
             }
 

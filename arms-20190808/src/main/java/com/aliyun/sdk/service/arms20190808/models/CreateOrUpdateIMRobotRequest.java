@@ -242,9 +242,7 @@ public class CreateOrUpdateIMRobotRequest extends Request {
         /**
          * The ID of the IM chatbot.
          * <p>
-         * 
-         * - If you do not specify the parameter, a new IM chatbot is created.
-         * - If you specify this parameter, the specified IM chatbot is modified.
+         * > If you do not specify the parameter, a new IM chatbot is created.
          */
         public Builder robotId(Long robotId) {
             this.putBodyParameter("RobotId", robotId);

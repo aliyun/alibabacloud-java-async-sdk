@@ -17,6 +17,10 @@ public class CreatePrometheusInstanceRequest extends Request {
     private Boolean allSubClustersSuccess;
 
     @Query
+    @NameInMap("ArchiveDuration")
+    private Integer archiveDuration;
+
+    @Query
     @NameInMap("ClusterId")
     private String clusterId;
 
@@ -69,6 +73,7 @@ public class CreatePrometheusInstanceRequest extends Request {
     private CreatePrometheusInstanceRequest(Builder builder) {
         super(builder);
         this.allSubClustersSuccess = builder.allSubClustersSuccess;
+        this.archiveDuration = builder.archiveDuration;
         this.clusterId = builder.clusterId;
         this.clusterName = builder.clusterName;
         this.clusterType = builder.clusterType;
@@ -101,6 +106,13 @@ public class CreatePrometheusInstanceRequest extends Request {
      */
     public Boolean getAllSubClustersSuccess() {
         return this.allSubClustersSuccess;
+    }
+
+    /**
+     * @return archiveDuration
+     */
+    public Integer getArchiveDuration() {
+        return this.archiveDuration;
     }
 
     /**
@@ -189,6 +201,7 @@ public class CreatePrometheusInstanceRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreatePrometheusInstanceRequest, Builder> {
         private Boolean allSubClustersSuccess; 
+        private Integer archiveDuration; 
         private String clusterId; 
         private String clusterName; 
         private String clusterType; 
@@ -209,6 +222,7 @@ public class CreatePrometheusInstanceRequest extends Request {
         private Builder(CreatePrometheusInstanceRequest request) {
             super(request);
             this.allSubClustersSuccess = request.allSubClustersSuccess;
+            this.archiveDuration = request.archiveDuration;
             this.clusterId = request.clusterId;
             this.clusterName = request.clusterName;
             this.clusterType = request.clusterType;
@@ -224,10 +238,7 @@ public class CreatePrometheusInstanceRequest extends Request {
         } 
 
         /**
-         * To edit a GlobalView aggregated instance, do you require all passed child instances to be verified successfully before creating a GlobalView instance (optional, default to false):
-         * <p>
-         * - true
-         * - false
+         * Does it require all child instances to be verified successfully before creating a GlobalView instance. The default is false, which means partial success is possible.
          */
         public Builder allSubClustersSuccess(Boolean allSubClustersSuccess) {
             this.putQueryParameter("AllSubClustersSuccess", allSubClustersSuccess);
@@ -236,7 +247,16 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the cluster. This parameter is required if you set ClusterType to aliyun-cs.
+         * The number of days for automatic archiving after storage expiration (optional values: 60, 90, 180, 365). 0 means not archive.
+         */
+        public Builder archiveDuration(Integer archiveDuration) {
+            this.putQueryParameter("ArchiveDuration", archiveDuration);
+            this.archiveDuration = archiveDuration;
+            return this;
+        }
+
+        /**
+         * The ID of the ACK cluster. This parameter is required if you set the ClusterType parameter to aliyun-cs.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -245,7 +265,7 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * The name of the cluster. This parameter is required if you set ClusterType to remote-write, ecs, or global-view.
+         * The name of the created cluster. This parameter is required if you set the ClusterType parameter to remote-write or ecs.
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("ClusterName", clusterName);
@@ -254,15 +274,14 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * Types include:
+         * The type of the cluster to which the Prometheus instance belongs. Valid values: 
          * <p>
-         * - remote-write: General-purpose Instance
-         * - ecs: Prometheus for ECS
-         * - global-view: Global Aggregation Instance
-         * - aliyun-cs: Prometheus Instance for Container Service
-         * - cloud-product: Prometheus for cloud monitor
-         * - cloud-monitor: Prometheus for enterprise cloud monitor
-         * - flink: Prometheus for Flink
+         * * remote-write: Prometheus instance for remote write.
+         * * ecs(Not supported): Prometheus instance for ECS.
+         * * cloud-monitor(Not supported): Prometheus instance for Alibaba Cloud services in China.
+         * * cloud-product(Not supported): Prometheus instance for Alibaba Cloud services outside China.
+         * * global-view: Prometheus instance for GlobalView.
+         * * aliyun-cs(Not supported): Prometheus instance for Container Service for Kubernetes (ACK).
          */
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("ClusterType", clusterType);
@@ -271,7 +290,7 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * Duration.
+         * Data storage duration (in days).
          */
         public Builder duration(Integer duration) {
             this.putQueryParameter("Duration", duration);
@@ -280,7 +299,7 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the Grafana dedicated instance. This parameter is available if you set ClusterType to ecs.
+         * The ID of the Grafana dedicated instance. This parameter is available if you set the ClusterType parameter to ecs.
          */
         public Builder grafanaInstanceId(String grafanaInstanceId) {
             this.putQueryParameter("GrafanaInstanceId", grafanaInstanceId);
@@ -289,7 +308,7 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * The region ID. If you create a Prometheus instance for a cloud service in China, set this parameter to cn-shanghai.
+         * The ID of the region. If you use a Prometheus instance to monitor an Alibaba Cloud service in China, this parameter must be set to cn-shanghai.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -298,7 +317,7 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the custom resource group. You can specify this parameter to bind the instance to the resource group.
+         * The ID of the custom resource group. You can configure this parameter to bind the instance to the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -307,7 +326,7 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the security group. This parameter is required if you set ClusterType to ecs or create an ASK managed cluster.
+         * The ID of the security group. This parameter is required if you set the ClusterType parameter to ecs.
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -316,7 +335,7 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * The child instances of the Prometheus instance for GlobalView. The value is a JSON string.
+         * JSON string for child instances of the globalView instance.
          */
         public Builder subClustersJson(String subClustersJson) {
             this.putQueryParameter("SubClustersJson", subClustersJson);
@@ -325,7 +344,7 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * The tags of the instance. You can specify this parameter to manage tags for the instance.
+         * The tags of the instance. You can configure this parameter to manage tags for the instance.
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -334,7 +353,7 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the vSwitch. This parameter is required if you set ClusterType to ecs or create an ASK managed cluster.
+         * The ID of the vSwitch. This parameter is required if you set the ClusterType parameter to ecs.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -343,7 +362,7 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the virtual private cloud (VPC). This parameter is required if you set ClusterType to ecs or create a serverless Kubernetes (ASK) managed cluster.
+         * The ID of virtual private cloud (VPC). This parameter is required if you set the ClusterType parameter to ecs.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

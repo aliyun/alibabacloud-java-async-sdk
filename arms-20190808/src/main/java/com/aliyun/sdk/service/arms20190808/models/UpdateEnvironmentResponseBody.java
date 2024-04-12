@@ -74,7 +74,7 @@ public class UpdateEnvironmentResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The status code or error code.
+         * The HTTP status code. The status code 200 indicates that the request was successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class UpdateEnvironmentResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * The result of the operation.
          */
         public Builder data(String data) {
             this.data = data;
@@ -90,7 +90,7 @@ public class UpdateEnvironmentResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +98,7 @@ public class UpdateEnvironmentResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

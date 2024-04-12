@@ -17,6 +17,10 @@ public class InitEnvironmentRequest extends Request {
     private String aliyunLang;
 
     @Query
+    @NameInMap("CreateAuthToken")
+    private Boolean createAuthToken;
+
+    @Query
     @NameInMap("EnvironmentId")
     @Validation(required = true)
     private String environmentId;
@@ -33,6 +37,7 @@ public class InitEnvironmentRequest extends Request {
     private InitEnvironmentRequest(Builder builder) {
         super(builder);
         this.aliyunLang = builder.aliyunLang;
+        this.createAuthToken = builder.createAuthToken;
         this.environmentId = builder.environmentId;
         this.managedType = builder.managedType;
         this.regionId = builder.regionId;
@@ -59,6 +64,13 @@ public class InitEnvironmentRequest extends Request {
     }
 
     /**
+     * @return createAuthToken
+     */
+    public Boolean getCreateAuthToken() {
+        return this.createAuthToken;
+    }
+
+    /**
      * @return environmentId
      */
     public String getEnvironmentId() {
@@ -81,6 +93,7 @@ public class InitEnvironmentRequest extends Request {
 
     public static final class Builder extends Request.Builder<InitEnvironmentRequest, Builder> {
         private String aliyunLang; 
+        private Boolean createAuthToken; 
         private String environmentId; 
         private String managedType; 
         private String regionId; 
@@ -92,6 +105,7 @@ public class InitEnvironmentRequest extends Request {
         private Builder(InitEnvironmentRequest request) {
             super(request);
             this.aliyunLang = request.aliyunLang;
+            this.createAuthToken = request.createAuthToken;
             this.environmentId = request.environmentId;
             this.managedType = request.managedType;
             this.regionId = request.regionId;
@@ -107,6 +121,15 @@ public class InitEnvironmentRequest extends Request {
         }
 
         /**
+         * Whether to create a Token in order to enhance the security of data retrieval.
+         */
+        public Builder createAuthToken(Boolean createAuthToken) {
+            this.putQueryParameter("CreateAuthToken", createAuthToken);
+            this.createAuthToken = createAuthToken;
+            return this;
+        }
+
+        /**
          * The ID of the environment instance.
          */
         public Builder environmentId(String environmentId) {
@@ -116,11 +139,12 @@ public class InitEnvironmentRequest extends Request {
         }
 
         /**
-         * type of managed:
+         * Whether agents or exporters are managed. Valid values:
          * <p>
-         * - none: not managed. default value of prometheus for ACK.
-         * - agent: managed agent. default value of promehtues for ASK/ACS/AckOne.
-         * - agent-exproter: maanged agent and exporter. default of prometheus for Cloud.
+         * 
+         * *   none: No. By default, no managed agents or exporters are provided for ACK clusters.
+         * *   agent: Agents are managed. By default, managed agents are provided for ASK clusters, ACS clusters, and ACK One clusters.
+         * *   agent-exproter: Agents and exporters are managed. By default, managed agents and exporters are provided for cloud services.
          */
         public Builder managedType(String managedType) {
             this.putQueryParameter("ManagedType", managedType);

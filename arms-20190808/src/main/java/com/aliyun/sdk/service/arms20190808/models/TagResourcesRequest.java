@@ -117,7 +117,16 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The type of the ARMS resources for which you want to modify tags. Valid values: WEB: Browser Monitoring APPLICATION: Application Monitoring PROMETHEUS: Managed Service for Prometheus SYNTHETICTASK: Synthetic Monitoring ALERTRULE: Application Monitoring alert rules PROMETHEUSALERTRULE: Prometheus alert rules
+         * The type of the ARMS resources for which you want to modify tags. Valid values:
+         * <p>
+         * 
+         * *   WEB: Browser Monitoring
+         * *   APPLICATION: Application Monitoring
+         * *   PROMETHEUS: Managed Service for Prometheus
+         * *   SYNTHETICTASK: Synthetic Monitoring
+         * *   ALERTRULE: Application Monitoring alert rule
+         * *   PROMETHEUSALERTRULE: Managed Service for Prometheus alert rule
+         * *   XTRACEAPP: Managed Service for OpenTelemetry
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreatePrometheusInstanceResponseBody} extends {@link TeaModel}
+ * {@link UpdatePrometheusInstanceResponseBody} extends {@link TeaModel}
  *
- * <p>CreatePrometheusInstanceResponseBody</p>
+ * <p>UpdatePrometheusInstanceResponseBody</p>
  */
-public class CreatePrometheusInstanceResponseBody extends TeaModel {
+public class UpdatePrometheusInstanceResponseBody extends TeaModel {
     @NameInMap("Code")
     private Integer code;
 
@@ -24,7 +24,7 @@ public class CreatePrometheusInstanceResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
-    private CreatePrometheusInstanceResponseBody(Builder builder) {
+    private UpdatePrometheusInstanceResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
@@ -35,7 +35,7 @@ public class CreatePrometheusInstanceResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static CreatePrometheusInstanceResponseBody create() {
+    public static UpdatePrometheusInstanceResponseBody create() {
         return builder().build();
     }
 
@@ -74,7 +74,7 @@ public class CreatePrometheusInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The status code. The status code 200 indicates that the request was successful.
+         * Code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class CreatePrometheusInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the created Prometheus instance.
+         * Data.
          */
         public Builder data(String data) {
             this.data = data;
@@ -90,7 +90,7 @@ public class CreatePrometheusInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,15 +98,15 @@ public class CreatePrometheusInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public CreatePrometheusInstanceResponseBody build() {
-            return new CreatePrometheusInstanceResponseBody(this);
+        public UpdatePrometheusInstanceResponseBody build() {
+            return new UpdatePrometheusInstanceResponseBody(this);
         } 
 
     } 

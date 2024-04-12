@@ -111,6 +111,511 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
 
     } 
 
+    public static class Hosts extends TeaModel {
+        @NameInMap("Domain")
+        private String domain;
+
+        @NameInMap("IpType")
+        private Integer ipType;
+
+        @NameInMap("Ips")
+        private java.util.List < String > ips;
+
+        private Hosts(Builder builder) {
+            this.domain = builder.domain;
+            this.ipType = builder.ipType;
+            this.ips = builder.ips;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Hosts create() {
+            return builder().build();
+        }
+
+        /**
+         * @return domain
+         */
+        public String getDomain() {
+            return this.domain;
+        }
+
+        /**
+         * @return ipType
+         */
+        public Integer getIpType() {
+            return this.ipType;
+        }
+
+        /**
+         * @return ips
+         */
+        public java.util.List < String > getIps() {
+            return this.ips;
+        }
+
+        public static final class Builder {
+            private String domain; 
+            private Integer ipType; 
+            private java.util.List < String > ips; 
+
+            /**
+             * Domain.
+             */
+            public Builder domain(String domain) {
+                this.domain = domain;
+                return this;
+            }
+
+            /**
+             * IpType.
+             */
+            public Builder ipType(Integer ipType) {
+                this.ipType = ipType;
+                return this;
+            }
+
+            /**
+             * Ips.
+             */
+            public Builder ips(java.util.List < String > ips) {
+                this.ips = ips;
+                return this;
+            }
+
+            public Hosts build() {
+                return new Hosts(this);
+            } 
+
+        } 
+
+    }
+    public static class CustomHost extends TeaModel {
+        @NameInMap("Hosts")
+        private java.util.List < Hosts> hosts;
+
+        @NameInMap("SelectType")
+        private Integer selectType;
+
+        private CustomHost(Builder builder) {
+            this.hosts = builder.hosts;
+            this.selectType = builder.selectType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CustomHost create() {
+            return builder().build();
+        }
+
+        /**
+         * @return hosts
+         */
+        public java.util.List < Hosts> getHosts() {
+            return this.hosts;
+        }
+
+        /**
+         * @return selectType
+         */
+        public Integer getSelectType() {
+            return this.selectType;
+        }
+
+        public static final class Builder {
+            private java.util.List < Hosts> hosts; 
+            private Integer selectType; 
+
+            /**
+             * Hosts.
+             */
+            public Builder hosts(java.util.List < Hosts> hosts) {
+                this.hosts = hosts;
+                return this;
+            }
+
+            /**
+             * SelectType.
+             */
+            public Builder selectType(Integer selectType) {
+                this.selectType = selectType;
+                return this;
+            }
+
+            public CustomHost build() {
+                return new CustomHost(this);
+            } 
+
+        } 
+
+    }
+    public static class CustomPrometheusSetting extends TeaModel {
+        @NameInMap("PrometheusClusterId")
+        private String prometheusClusterId;
+
+        @NameInMap("PrometheusClusterRegion")
+        private String prometheusClusterRegion;
+
+        @NameInMap("PrometheusLabels")
+        private java.util.Map < String, String > prometheusLabels;
+
+        private CustomPrometheusSetting(Builder builder) {
+            this.prometheusClusterId = builder.prometheusClusterId;
+            this.prometheusClusterRegion = builder.prometheusClusterRegion;
+            this.prometheusLabels = builder.prometheusLabels;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CustomPrometheusSetting create() {
+            return builder().build();
+        }
+
+        /**
+         * @return prometheusClusterId
+         */
+        public String getPrometheusClusterId() {
+            return this.prometheusClusterId;
+        }
+
+        /**
+         * @return prometheusClusterRegion
+         */
+        public String getPrometheusClusterRegion() {
+            return this.prometheusClusterRegion;
+        }
+
+        /**
+         * @return prometheusLabels
+         */
+        public java.util.Map < String, String > getPrometheusLabels() {
+            return this.prometheusLabels;
+        }
+
+        public static final class Builder {
+            private String prometheusClusterId; 
+            private String prometheusClusterRegion; 
+            private java.util.Map < String, String > prometheusLabels; 
+
+            /**
+             * PrometheusClusterId.
+             */
+            public Builder prometheusClusterId(String prometheusClusterId) {
+                this.prometheusClusterId = prometheusClusterId;
+                return this;
+            }
+
+            /**
+             * PrometheusClusterRegion.
+             */
+            public Builder prometheusClusterRegion(String prometheusClusterRegion) {
+                this.prometheusClusterRegion = prometheusClusterRegion;
+                return this;
+            }
+
+            /**
+             * PrometheusLabels.
+             */
+            public Builder prometheusLabels(java.util.Map < String, String > prometheusLabels) {
+                this.prometheusLabels = prometheusLabels;
+                return this;
+            }
+
+            public CustomPrometheusSetting build() {
+                return new CustomPrometheusSetting(this);
+            } 
+
+        } 
+
+    }
+    public static class CustomVPCSetting extends TeaModel {
+        @NameInMap("RegionId")
+        private String regionId;
+
+        @NameInMap("SecureGroupId")
+        private String secureGroupId;
+
+        @NameInMap("VSwitchId")
+        private String vSwitchId;
+
+        @NameInMap("VpcId")
+        private String vpcId;
+
+        private CustomVPCSetting(Builder builder) {
+            this.regionId = builder.regionId;
+            this.secureGroupId = builder.secureGroupId;
+            this.vSwitchId = builder.vSwitchId;
+            this.vpcId = builder.vpcId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CustomVPCSetting create() {
+            return builder().build();
+        }
+
+        /**
+         * @return regionId
+         */
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        /**
+         * @return secureGroupId
+         */
+        public String getSecureGroupId() {
+            return this.secureGroupId;
+        }
+
+        /**
+         * @return vSwitchId
+         */
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+        /**
+         * @return vpcId
+         */
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        public static final class Builder {
+            private String regionId; 
+            private String secureGroupId; 
+            private String vSwitchId; 
+            private String vpcId; 
+
+            /**
+             * RegionId.
+             */
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * SecureGroupId.
+             */
+            public Builder secureGroupId(String secureGroupId) {
+                this.secureGroupId = secureGroupId;
+                return this;
+            }
+
+            /**
+             * VSwitchId.
+             */
+            public Builder vSwitchId(String vSwitchId) {
+                this.vSwitchId = vSwitchId;
+                return this;
+            }
+
+            /**
+             * VpcId.
+             */
+            public Builder vpcId(String vpcId) {
+                this.vpcId = vpcId;
+                return this;
+            }
+
+            public CustomVPCSetting build() {
+                return new CustomVPCSetting(this);
+            } 
+
+        } 
+
+    }
+    public static class CommonSetting extends TeaModel {
+        @NameInMap("CustomHost")
+        private CustomHost customHost;
+
+        @NameInMap("CustomPrometheusSetting")
+        private CustomPrometheusSetting customPrometheusSetting;
+
+        @NameInMap("CustomVPCSetting")
+        private CustomVPCSetting customVPCSetting;
+
+        @NameInMap("IpType")
+        private Integer ipType;
+
+        @NameInMap("IsOpenTrace")
+        private Boolean isOpenTrace;
+
+        @NameInMap("MonitorSamples")
+        private Integer monitorSamples;
+
+        @NameInMap("TraceClientType")
+        private Integer traceClientType;
+
+        @NameInMap("XtraceRegion")
+        private String xtraceRegion;
+
+        private CommonSetting(Builder builder) {
+            this.customHost = builder.customHost;
+            this.customPrometheusSetting = builder.customPrometheusSetting;
+            this.customVPCSetting = builder.customVPCSetting;
+            this.ipType = builder.ipType;
+            this.isOpenTrace = builder.isOpenTrace;
+            this.monitorSamples = builder.monitorSamples;
+            this.traceClientType = builder.traceClientType;
+            this.xtraceRegion = builder.xtraceRegion;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CommonSetting create() {
+            return builder().build();
+        }
+
+        /**
+         * @return customHost
+         */
+        public CustomHost getCustomHost() {
+            return this.customHost;
+        }
+
+        /**
+         * @return customPrometheusSetting
+         */
+        public CustomPrometheusSetting getCustomPrometheusSetting() {
+            return this.customPrometheusSetting;
+        }
+
+        /**
+         * @return customVPCSetting
+         */
+        public CustomVPCSetting getCustomVPCSetting() {
+            return this.customVPCSetting;
+        }
+
+        /**
+         * @return ipType
+         */
+        public Integer getIpType() {
+            return this.ipType;
+        }
+
+        /**
+         * @return isOpenTrace
+         */
+        public Boolean getIsOpenTrace() {
+            return this.isOpenTrace;
+        }
+
+        /**
+         * @return monitorSamples
+         */
+        public Integer getMonitorSamples() {
+            return this.monitorSamples;
+        }
+
+        /**
+         * @return traceClientType
+         */
+        public Integer getTraceClientType() {
+            return this.traceClientType;
+        }
+
+        /**
+         * @return xtraceRegion
+         */
+        public String getXtraceRegion() {
+            return this.xtraceRegion;
+        }
+
+        public static final class Builder {
+            private CustomHost customHost; 
+            private CustomPrometheusSetting customPrometheusSetting; 
+            private CustomVPCSetting customVPCSetting; 
+            private Integer ipType; 
+            private Boolean isOpenTrace; 
+            private Integer monitorSamples; 
+            private Integer traceClientType; 
+            private String xtraceRegion; 
+
+            /**
+             * CustomHost.
+             */
+            public Builder customHost(CustomHost customHost) {
+                this.customHost = customHost;
+                return this;
+            }
+
+            /**
+             * CustomPrometheusSetting.
+             */
+            public Builder customPrometheusSetting(CustomPrometheusSetting customPrometheusSetting) {
+                this.customPrometheusSetting = customPrometheusSetting;
+                return this;
+            }
+
+            /**
+             * CustomVPCSetting.
+             */
+            public Builder customVPCSetting(CustomVPCSetting customVPCSetting) {
+                this.customVPCSetting = customVPCSetting;
+                return this;
+            }
+
+            /**
+             * IpType.
+             */
+            public Builder ipType(Integer ipType) {
+                this.ipType = ipType;
+                return this;
+            }
+
+            /**
+             * IsOpenTrace.
+             */
+            public Builder isOpenTrace(Boolean isOpenTrace) {
+                this.isOpenTrace = isOpenTrace;
+                return this;
+            }
+
+            /**
+             * MonitorSamples.
+             */
+            public Builder monitorSamples(Integer monitorSamples) {
+                this.monitorSamples = monitorSamples;
+                return this;
+            }
+
+            /**
+             * TraceClientType.
+             */
+            public Builder traceClientType(Integer traceClientType) {
+                this.traceClientType = traceClientType;
+                return this;
+            }
+
+            /**
+             * XtraceRegion.
+             */
+            public Builder xtraceRegion(String xtraceRegion) {
+                this.xtraceRegion = xtraceRegion;
+                return this;
+            }
+
+            public CommonSetting build() {
+                return new CommonSetting(this);
+            } 
+
+        } 
+
+    }
     public static class Tags extends TeaModel {
         @NameInMap("Key")
         private String key;
@@ -173,6 +678,9 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
 
     }
     public static class Items extends TeaModel {
+        @NameInMap("CommonSetting")
+        private CommonSetting commonSetting;
+
         @NameInMap("Frequency")
         private String frequency;
 
@@ -213,6 +721,7 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
         private String url;
 
         private Items(Builder builder) {
+            this.commonSetting = builder.commonSetting;
             this.frequency = builder.frequency;
             this.gmtCreate = builder.gmtCreate;
             this.gmtModified = builder.gmtModified;
@@ -234,6 +743,13 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
 
         public static Items create() {
             return builder().build();
+        }
+
+        /**
+         * @return commonSetting
+         */
+        public CommonSetting getCommonSetting() {
+            return this.commonSetting;
         }
 
         /**
@@ -328,6 +844,7 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private CommonSetting commonSetting; 
             private String frequency; 
             private String gmtCreate; 
             private String gmtModified; 
@@ -341,6 +858,14 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             private String taskId; 
             private Integer taskType; 
             private String url; 
+
+            /**
+             * CommonSetting.
+             */
+            public Builder commonSetting(CommonSetting commonSetting) {
+                this.commonSetting = commonSetting;
+                return this;
+            }
 
             /**
              * The detection frequency. Valid values: 1m, 5m, 10m, 15m, 20m, 30m, 1h, 2h, 3h, 4h, 6h, 8h, 12h, and 24h.

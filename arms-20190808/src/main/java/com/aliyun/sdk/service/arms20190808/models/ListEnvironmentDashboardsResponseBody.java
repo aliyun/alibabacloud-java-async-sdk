@@ -323,7 +323,7 @@ public class ListEnvironmentDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * Totle of the dashboards.
+             * Total of the dashboards.
              */
             public Builder total(Long total) {
                 this.total = total;

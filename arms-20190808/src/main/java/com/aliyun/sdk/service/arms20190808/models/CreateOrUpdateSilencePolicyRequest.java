@@ -141,7 +141,7 @@ public class CreateOrUpdateSilencePolicyRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);

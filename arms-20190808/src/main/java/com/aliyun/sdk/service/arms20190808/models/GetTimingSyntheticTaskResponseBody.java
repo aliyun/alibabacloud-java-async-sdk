@@ -359,6 +359,87 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
         } 
 
     }
+    public static class CustomPrometheusSetting extends TeaModel {
+        @NameInMap("PrometheusClusterId")
+        private String prometheusClusterId;
+
+        @NameInMap("PrometheusClusterRegion")
+        private String prometheusClusterRegion;
+
+        @NameInMap("PrometheusLabels")
+        private java.util.Map < String, String > prometheusLabels;
+
+        private CustomPrometheusSetting(Builder builder) {
+            this.prometheusClusterId = builder.prometheusClusterId;
+            this.prometheusClusterRegion = builder.prometheusClusterRegion;
+            this.prometheusLabels = builder.prometheusLabels;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CustomPrometheusSetting create() {
+            return builder().build();
+        }
+
+        /**
+         * @return prometheusClusterId
+         */
+        public String getPrometheusClusterId() {
+            return this.prometheusClusterId;
+        }
+
+        /**
+         * @return prometheusClusterRegion
+         */
+        public String getPrometheusClusterRegion() {
+            return this.prometheusClusterRegion;
+        }
+
+        /**
+         * @return prometheusLabels
+         */
+        public java.util.Map < String, String > getPrometheusLabels() {
+            return this.prometheusLabels;
+        }
+
+        public static final class Builder {
+            private String prometheusClusterId; 
+            private String prometheusClusterRegion; 
+            private java.util.Map < String, String > prometheusLabels; 
+
+            /**
+             * PrometheusClusterId.
+             */
+            public Builder prometheusClusterId(String prometheusClusterId) {
+                this.prometheusClusterId = prometheusClusterId;
+                return this;
+            }
+
+            /**
+             * PrometheusClusterRegion.
+             */
+            public Builder prometheusClusterRegion(String prometheusClusterRegion) {
+                this.prometheusClusterRegion = prometheusClusterRegion;
+                return this;
+            }
+
+            /**
+             * PrometheusLabels.
+             */
+            public Builder prometheusLabels(java.util.Map < String, String > prometheusLabels) {
+                this.prometheusLabels = prometheusLabels;
+                return this;
+            }
+
+            public CustomPrometheusSetting build() {
+                return new CustomPrometheusSetting(this);
+            } 
+
+        } 
+
+    }
     public static class CustomVPCSetting extends TeaModel {
         @NameInMap("RegionId")
         private String regionId;
@@ -464,6 +545,9 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
         @NameInMap("CustomHost")
         private CustomHost customHost;
 
+        @NameInMap("CustomPrometheusSetting")
+        private CustomPrometheusSetting customPrometheusSetting;
+
         @NameInMap("CustomVPCSetting")
         private CustomVPCSetting customVPCSetting;
 
@@ -484,6 +568,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
 
         private CommonSetting(Builder builder) {
             this.customHost = builder.customHost;
+            this.customPrometheusSetting = builder.customPrometheusSetting;
             this.customVPCSetting = builder.customVPCSetting;
             this.ipType = builder.ipType;
             this.isOpenTrace = builder.isOpenTrace;
@@ -505,6 +590,13 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
          */
         public CustomHost getCustomHost() {
             return this.customHost;
+        }
+
+        /**
+         * @return customPrometheusSetting
+         */
+        public CustomPrometheusSetting getCustomPrometheusSetting() {
+            return this.customPrometheusSetting;
         }
 
         /**
@@ -551,6 +643,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
 
         public static final class Builder {
             private CustomHost customHost; 
+            private CustomPrometheusSetting customPrometheusSetting; 
             private CustomVPCSetting customVPCSetting; 
             private Integer ipType; 
             private Boolean isOpenTrace; 
@@ -563,6 +656,14 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
              */
             public Builder customHost(CustomHost customHost) {
                 this.customHost = customHost;
+                return this;
+            }
+
+            /**
+             * CustomPrometheusSetting.
+             */
+            public Builder customPrometheusSetting(CustomPrometheusSetting customPrometheusSetting) {
+                this.customPrometheusSetting = customPrometheusSetting;
                 return this;
             }
 

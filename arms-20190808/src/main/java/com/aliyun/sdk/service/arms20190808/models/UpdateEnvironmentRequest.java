@@ -112,7 +112,7 @@ public class UpdateEnvironmentRequest extends Request {
         } 
 
         /**
-         * Locale, the default is Chinese zh | en.
+         * The language. Valid values: zh and en. Default value: zh.
          */
         public Builder aliyunLang(String aliyunLang) {
             this.putQueryParameter("AliyunLang", aliyunLang);
@@ -121,7 +121,7 @@ public class UpdateEnvironmentRequest extends Request {
         }
 
         /**
-         * Environment ID.
+         * The environment ID.
          */
         public Builder environmentId(String environmentId) {
             this.putQueryParameter("EnvironmentId", environmentId);
@@ -130,7 +130,7 @@ public class UpdateEnvironmentRequest extends Request {
         }
 
         /**
-         * Environment name.
+         * The environment name.
          */
         public Builder environmentName(String environmentName) {
             this.putQueryParameter("EnvironmentName", environmentName);
@@ -139,7 +139,10 @@ public class UpdateEnvironmentRequest extends Request {
         }
 
         /**
-         * FeePackage.
+         * Fee package.
+         * <p>
+         * * When the EnvironmentType is CS: it can be specified as CS_Basic (default) or CS-Pro.
+         * * When the EnvironmentType is a different value, please enter a null value.
          */
         public Builder feePackage(String feePackage) {
             this.putQueryParameter("FeePackage", feePackage);

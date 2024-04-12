@@ -112,7 +112,11 @@ public class ListSilencePoliciesRequest extends Request {
         } 
 
         /**
-         * The operation that you want to perform. Set the value to **ListSilencePolicies**.
+         * Specifies whether to query the details of a silence policy. Valid values:
+         * <p>
+         * 
+         * *   `true`: Details of the silence policy are queried.
+         * *   `false`: Details about notification policies are not queried.
          */
         public Builder isDetail(Boolean isDetail) {
             this.putQueryParameter("IsDetail", isDetail);
@@ -121,7 +125,7 @@ public class ListSilencePoliciesRequest extends Request {
         }
 
         /**
-         * An array of matching condition objects.
+         * The name of the silence policy.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -130,7 +134,7 @@ public class ListSilencePoliciesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The number of the page to return.
          */
         public Builder page(Long page) {
             this.putQueryParameter("Page", page);
@@ -139,7 +143,7 @@ public class ListSilencePoliciesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -148,7 +152,7 @@ public class ListSilencePoliciesRequest extends Request {
         }
 
         /**
-         * The ID of the silence policy.
+         * The number of entries to return on each page.
          */
         public Builder size(Long size) {
             this.putQueryParameter("Size", size);
