@@ -83,7 +83,7 @@ public class SaveBatchTaskForGenerateDomainCertificateRequest extends Request {
         } 
 
         /**
-         * DomainNames.
+         * The domain names.
          */
         public Builder domainNames(java.util.List < String > domainNames) {
             String domainNamesShrink = shrink(domainNames, "DomainNames", "json");
@@ -93,7 +93,13 @@ public class SaveBatchTaskForGenerateDomainCertificateRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the error message to return if the request fails. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese.
+         * *   **en**: English.
+         * 
+         * Default value: **en**.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -102,7 +108,7 @@ public class SaveBatchTaskForGenerateDomainCertificateRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * The IP address of the client.
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

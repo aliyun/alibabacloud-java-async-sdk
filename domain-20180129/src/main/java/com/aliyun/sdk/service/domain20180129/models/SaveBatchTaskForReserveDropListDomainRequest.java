@@ -95,11 +95,19 @@ public class SaveBatchTaskForReserveDropListDomainRequest extends Request {
     } 
 
     public static class Domains extends TeaModel {
+        @NameInMap("Dns1")
+        private String dns1;
+
+        @NameInMap("Dns2")
+        private String dns2;
+
         @NameInMap("DomainName")
         @Validation(required = true)
         private String domainName;
 
         private Domains(Builder builder) {
+            this.dns1 = builder.dns1;
+            this.dns2 = builder.dns2;
             this.domainName = builder.domainName;
         }
 
@@ -112,6 +120,20 @@ public class SaveBatchTaskForReserveDropListDomainRequest extends Request {
         }
 
         /**
+         * @return dns1
+         */
+        public String getDns1() {
+            return this.dns1;
+        }
+
+        /**
+         * @return dns2
+         */
+        public String getDns2() {
+            return this.dns2;
+        }
+
+        /**
          * @return domainName
          */
         public String getDomainName() {
@@ -119,7 +141,25 @@ public class SaveBatchTaskForReserveDropListDomainRequest extends Request {
         }
 
         public static final class Builder {
+            private String dns1; 
+            private String dns2; 
             private String domainName; 
+
+            /**
+             * Dns1.
+             */
+            public Builder dns1(String dns1) {
+                this.dns1 = dns1;
+                return this;
+            }
+
+            /**
+             * Dns2.
+             */
+            public Builder dns2(String dns2) {
+                this.dns2 = dns2;
+                return this;
+            }
 
             /**
              * DomainName.

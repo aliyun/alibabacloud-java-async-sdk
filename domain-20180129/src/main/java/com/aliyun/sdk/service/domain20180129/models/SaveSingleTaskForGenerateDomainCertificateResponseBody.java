@@ -50,7 +50,7 @@ public class SaveSingleTaskForGenerateDomainCertificateResponseBody extends TeaM
         private String taskNo; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class SaveSingleTaskForGenerateDomainCertificateResponseBody extends TeaM
         }
 
         /**
-         * TaskNo.
+         * The task ID.
          */
         public Builder taskNo(String taskNo) {
             this.taskNo = taskNo;
