@@ -279,6 +279,18 @@ public class GetTaskInfoResponseBody extends TeaModel {
         @NameInMap("ErrorMessage")
         private String errorMessage;
 
+        @NameInMap("OutputMp3Path")
+        private String outputMp3Path;
+
+        @NameInMap("OutputMp4Path")
+        private String outputMp4Path;
+
+        @NameInMap("OutputSpectrumPath")
+        private String outputSpectrumPath;
+
+        @NameInMap("OutputThumbnailPath")
+        private String outputThumbnailPath;
+
         @NameInMap("Result")
         private Result result;
 
@@ -294,6 +306,10 @@ public class GetTaskInfoResponseBody extends TeaModel {
         private Data(Builder builder) {
             this.errorCode = builder.errorCode;
             this.errorMessage = builder.errorMessage;
+            this.outputMp3Path = builder.outputMp3Path;
+            this.outputMp4Path = builder.outputMp4Path;
+            this.outputSpectrumPath = builder.outputSpectrumPath;
+            this.outputThumbnailPath = builder.outputThumbnailPath;
             this.result = builder.result;
             this.taskId = builder.taskId;
             this.taskKey = builder.taskKey;
@@ -320,6 +336,34 @@ public class GetTaskInfoResponseBody extends TeaModel {
          */
         public String getErrorMessage() {
             return this.errorMessage;
+        }
+
+        /**
+         * @return outputMp3Path
+         */
+        public String getOutputMp3Path() {
+            return this.outputMp3Path;
+        }
+
+        /**
+         * @return outputMp4Path
+         */
+        public String getOutputMp4Path() {
+            return this.outputMp4Path;
+        }
+
+        /**
+         * @return outputSpectrumPath
+         */
+        public String getOutputSpectrumPath() {
+            return this.outputSpectrumPath;
+        }
+
+        /**
+         * @return outputThumbnailPath
+         */
+        public String getOutputThumbnailPath() {
+            return this.outputThumbnailPath;
         }
 
         /**
@@ -353,6 +397,10 @@ public class GetTaskInfoResponseBody extends TeaModel {
         public static final class Builder {
             private String errorCode; 
             private String errorMessage; 
+            private String outputMp3Path; 
+            private String outputMp4Path; 
+            private String outputSpectrumPath; 
+            private String outputThumbnailPath; 
             private Result result; 
             private String taskId; 
             private String taskKey; 
@@ -371,6 +419,38 @@ public class GetTaskInfoResponseBody extends TeaModel {
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
+                return this;
+            }
+
+            /**
+             * OutputMp3Path.
+             */
+            public Builder outputMp3Path(String outputMp3Path) {
+                this.outputMp3Path = outputMp3Path;
+                return this;
+            }
+
+            /**
+             * OutputMp4Path.
+             */
+            public Builder outputMp4Path(String outputMp4Path) {
+                this.outputMp4Path = outputMp4Path;
+                return this;
+            }
+
+            /**
+             * OutputSpectrumPath.
+             */
+            public Builder outputSpectrumPath(String outputSpectrumPath) {
+                this.outputSpectrumPath = outputSpectrumPath;
+                return this;
+            }
+
+            /**
+             * OutputThumbnailPath.
+             */
+            public Builder outputThumbnailPath(String outputThumbnailPath) {
+                this.outputThumbnailPath = outputThumbnailPath;
                 return this;
             }
 
