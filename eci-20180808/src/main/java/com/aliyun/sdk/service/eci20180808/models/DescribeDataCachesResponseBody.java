@@ -301,7 +301,7 @@ public class DescribeDataCachesResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the event.
+             * The message about the event.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -317,7 +317,7 @@ public class DescribeDataCachesResponseBody extends TeaModel {
             }
 
             /**
-             * The event cause.
+             * The reason for the transition into the current status of the event.
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -325,7 +325,7 @@ public class DescribeDataCachesResponseBody extends TeaModel {
             }
 
             /**
-             * The event type. Valid values:
+             * The type of the event. Valid values:
              * <p>
              * 
              * *   Normal
@@ -659,7 +659,7 @@ public class DescribeDataCachesResponseBody extends TeaModel {
             }
 
             /**
-             * The data cache ID.
+             * The ID of the data cache.
              */
             public Builder dataCacheId(String dataCacheId) {
                 this.dataCacheId = dataCacheId;
@@ -691,7 +691,7 @@ public class DescribeDataCachesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the local snapshot.
+             * The ID of the on-premises snapshot.
              */
             public Builder flashSnapshotId(String flashSnapshotId) {
                 this.flashSnapshotId = flashSnapshotId;
@@ -707,7 +707,7 @@ public class DescribeDataCachesResponseBody extends TeaModel {
             }
 
             /**
-             * The data cache name.
+             * The name of the data cache.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -715,7 +715,7 @@ public class DescribeDataCachesResponseBody extends TeaModel {
             }
 
             /**
-             * The vHost directory in which the data cache resides.
+             * The directory in which the virtual host of the data cache resides.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -739,7 +739,7 @@ public class DescribeDataCachesResponseBody extends TeaModel {
             }
 
             /**
-             * The resource group ID.
+             * The ID of the resource group.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -763,7 +763,7 @@ public class DescribeDataCachesResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the data cache. Valid values:
+             * The status of the data cache. Valid values:
              * <p>
              * 
              * *   Loading: The data cache is loading data.
@@ -773,7 +773,7 @@ public class DescribeDataCachesResponseBody extends TeaModel {
              * *   Updating: The data cache is being updated.
              * *   UpdateFailed: The data cache failed to be updated.
              * 
-             * The data cache is available when it is in the Ready state.
+             * If the data cache is in the Available state, the data cache can be used.
              */
             public Builder status(String status) {
                 this.status = status;

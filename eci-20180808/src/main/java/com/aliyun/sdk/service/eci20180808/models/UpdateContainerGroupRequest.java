@@ -317,7 +317,7 @@ public class UpdateContainerGroupRequest extends Request {
         }
 
         /**
-         * The information about the Container Registry Enterprise Edition instance.
+         * Details of the Container Registry Enterprise Edition instance that hosts the image of the init container.
          */
         public Builder acrRegistryInfo(java.util.List < AcrRegistryInfo> acrRegistryInfo) {
             this.putQueryParameter("AcrRegistryInfo", acrRegistryInfo);
@@ -353,7 +353,7 @@ public class UpdateContainerGroupRequest extends Request {
         }
 
         /**
-         * The number of vCPUs allocated to the elastic container instance.
+         * The number of vCPUs that are allocated to the elastic container instance.
          */
         public Builder cpu(Float cpu) {
             this.putQueryParameter("Cpu", cpu);
@@ -371,7 +371,7 @@ public class UpdateContainerGroupRequest extends Request {
         }
 
         /**
-         * The information about the new init containers.
+         * The information about the new init container.
          */
         public Builder initContainer(java.util.List < InitContainer> initContainer) {
             this.putQueryParameter("InitContainer", initContainer);
@@ -380,7 +380,7 @@ public class UpdateContainerGroupRequest extends Request {
         }
 
         /**
-         * The memory size allocated to the elastic container instance. Unit: GiB.
+         * The size of the memory that is allocated to the elastic container instance. Unit: GiB.
          */
         public Builder memory(Float memory) {
             this.putQueryParameter("Memory", memory);
@@ -469,8 +469,8 @@ public class UpdateContainerGroupRequest extends Request {
          * The update type. Valid values:
          * <p>
          * 
-         * *   RenewUpdate: full update. You must specify all relevant parameters to update the instance. For a parameter of the List type, you must specify all the items contained in the parameter even if you want to update only some of the items. For a parameter of the struct type, you must specify all the members if you want to update only some of the members.
-         * *   IncrementalUpdate: incremental update. You can specify only the parameter that needs to be updated. Other related parameters remain unchanged.
+         * *   RenewUpdate: full updates. You must specify all relevant parameters to update the elastic container instance. For a parameter of the list type, you must specify all the items contained in the parameter even if you want to update only some of the items. For a parameter of the struct type, you must specify all the members even if you want to update only some of the members.
+         * *   IncrementalUpdate: incremental updates. You may specify only the parameter that you want to update. Other related parameters remain unchanged.
          * 
          * Default value: RenewUpdate.
          */
@@ -608,7 +608,7 @@ public class UpdateContainerGroupRequest extends Request {
             private java.util.List < String > search; 
 
             /**
-             * The IP addresses of the DNS servers.
+             * The IP addresses of DNS servers.
              */
             public Builder nameServer(java.util.List < String > nameServer) {
                 this.nameServer = nameServer;
@@ -701,7 +701,7 @@ public class UpdateContainerGroupRequest extends Request {
             private String regionId; 
 
             /**
-             * The domain names of the Container Registry Enterprise Edition instance. By default, all domain names of the instance are displayed. You can specify one or more domain names. Separate multiple domain names with commas (,).
+             * The domain names of the Container Registry Enterprise Edition instance. By default, all domain names of the instance are displayed. You can specify specific domain names. Separate multiple domain names with commas (,).
              */
             public Builder domain(java.util.List < String > domain) {
                 this.domain = domain;
@@ -725,7 +725,7 @@ public class UpdateContainerGroupRequest extends Request {
             }
 
             /**
-             * The region ID of the Container Registry Enterprise Edition instance.
+             * The ID of the region where the Container Registry Enterprise Edition instance resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1718,7 +1718,7 @@ public class UpdateContainerGroupRequest extends Request {
             private String value; 
 
             /**
-             * The request parameter of HTTP GET requests when you use HTTP requests to specify the postStart callback function.
+             * The request parameter of the HTTP GET request when you use an HTTP request to specify the postStart callback function.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1726,7 +1726,7 @@ public class UpdateContainerGroupRequest extends Request {
             }
 
             /**
-             * The request parameter value of HTTP GET requests when you use HTTP requests to specify the postStart callback function.
+             * The request parameter value of the HTTP GET request when you use an HTTP request to specify the postStart callback function.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1779,7 +1779,7 @@ public class UpdateContainerGroupRequest extends Request {
             private String value; 
 
             /**
-             * The request parameter of HTTP GET requests when you use HTTP requests to specify the preStop callback function.
+             * The request parameter of the HTTP GET request when you use an HTTP request to specify the preStop callback function.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1787,7 +1787,7 @@ public class UpdateContainerGroupRequest extends Request {
             }
 
             /**
-             * The request parameter value of HTTP GET requests when you use HTTP requests to specify the preStop callback function.
+             * The request parameter value of the HTTP GET request when you use an HTTP request to specify the preStop callback function.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1945,12 +1945,12 @@ public class UpdateContainerGroupRequest extends Request {
             }
 
             /**
-             * The mount propagation setting of the volume. Mount propagation allows volumes that are mounted on one container to be shared with other containers in the same pod, or even with other pods on the same node. Valid values:
+             * The mount propagation settings of the volume. Mount propagation allows volumes that are mounted on one container to be shared with other containers in the same pod, or even with other pods on the same node. Valid values:
              * <p>
              * 
-             * *   None: This volume mount does not receive subsequent mounts that are mounted to this volume or subdirectories of this volume by the host.
-             * *   HostToCotainer: This volume mount receives all subsequent mounts that are mounted to this volume or subdirectories of this volume.
-             * *   Bidirectional: The volume mount behaves the same as the HostToCotainer mount. The volume mount receives all subsequent mounts that are mounted to this volume or subdirectories of this volume. In addition, all volume mounts created by the container are propagated back to the host and to all containers of all pods that use the same volume.
+             * *   None: This volume mount does not receive subsequent mounts that are performed on this volume or subdirectories of this volume.
+             * *   HostToCotainer: The volume mount receives subsequent mounts that are performed on this volume or the subdirectories of this volume.
+             * *   Bidirectional: The volume mount behaves the same as the HostToContainer mount. The volume mount receives subsequent mounts that are performed on the volume or the subdirectories of the volume. In addition, all volume mounts that are mounted on the container are propagated back to the host and all containers of all pods that use the same volume.
              * 
              * Default value: None.
              */
@@ -1976,7 +1976,7 @@ public class UpdateContainerGroupRequest extends Request {
             }
 
             /**
-             * The subdirectory of the volume that is mounted to the container. The pod can mount different directories of the same volume to different subdirectories of containers.
+             * The subdirectory of the volume that is mounted to the container. You can use this parameter to mount the same volume to different subdirectories of the container.
              */
             public Builder subPath(String subPath) {
                 this.subPath = subPath;
@@ -2440,7 +2440,7 @@ public class UpdateContainerGroupRequest extends Request {
             }
 
             /**
-             * The arguments that are passed to the container startup command. You can specify up to 10 arguments.
+             * The arguments that you want to pass to the startup command of the container. You can specify up to 10 arguments.
              */
             public Builder arg(java.util.List < String > arg) {
                 this.arg = arg;
@@ -2448,7 +2448,7 @@ public class UpdateContainerGroupRequest extends Request {
             }
 
             /**
-             * The commands that are used to run the probe.
+             * The commands that you want to run to perform the health check.
              */
             public Builder command(java.util.List < String > command) {
                 this.command = command;
@@ -2456,7 +2456,7 @@ public class UpdateContainerGroupRequest extends Request {
             }
 
             /**
-             * The number of vCPUs that you want to allocate to the container.
+             * The number of vCPUs that you want to allocate to the container
              */
             public Builder cpu(Float cpu) {
                 this.cpu = cpu;
@@ -2488,7 +2488,12 @@ public class UpdateContainerGroupRequest extends Request {
             }
 
             /**
-             * The image pulling policy.
+             * The image pulling policy. Valid values:
+             * <p>
+             * 
+             * *   Always: Each time the instance is updated, image pulling is performed.
+             * *   IfNotPresent: On-premises images are used first. If no on-premises images are available, image pulling is performed.
+             * *   Never: On-premises images are always used. Image pulling is not performed.
              */
             public Builder imagePullPolicy(String imagePullPolicy) {
                 this.imagePullPolicy = imagePullPolicy;
@@ -2496,7 +2501,7 @@ public class UpdateContainerGroupRequest extends Request {
             }
 
             /**
-             * The command that you run in the container when you use a command-line interface (CLI) to specify the postStart callback function.
+             * The commands to be executed in the container when you use the CLI to specify the postStart callback function.
              */
             public Builder lifecyclePostStartHandlerExec(java.util.List < String > lifecyclePostStartHandlerExec) {
                 this.lifecyclePostStartHandlerExec = lifecyclePostStartHandlerExec;
@@ -2504,7 +2509,7 @@ public class UpdateContainerGroupRequest extends Request {
             }
 
             /**
-             * The IP address of the host that receives HTTP GET requests when you use HTTP requests to specify the postStart callback function.
+             * The IP address of the host that receives the HTTP GET request when you use an HTTP request to specify the postStart callback function.
              */
             public Builder lifecyclePostStartHandlerHttpGetHost(String lifecyclePostStartHandlerHttpGetHost) {
                 this.lifecyclePostStartHandlerHttpGetHost = lifecyclePostStartHandlerHttpGetHost;
@@ -2520,7 +2525,7 @@ public class UpdateContainerGroupRequest extends Request {
             }
 
             /**
-             * The path to which HTTP GET requests are sent when you use HTTP requests to specify the postStart callback function.
+             * The path to which the system sends an HTTP GET request for a health check when you use an HTTP request to specify the postStart callback function.
              */
             public Builder lifecyclePostStartHandlerHttpGetPath(String lifecyclePostStartHandlerHttpGetPath) {
                 this.lifecyclePostStartHandlerHttpGetPath = lifecyclePostStartHandlerHttpGetPath;
@@ -2528,7 +2533,7 @@ public class UpdateContainerGroupRequest extends Request {
             }
 
             /**
-             * The port to which HTTP GET requests are sent when you use HTTP requests to specify the postStart callback function.
+             * The port to which the system sends the HTTP GET request when you use an HTTP request to specify the postStart callback function.
              */
             public Builder lifecyclePostStartHandlerHttpGetPort(Integer lifecyclePostStartHandlerHttpGetPort) {
                 this.lifecyclePostStartHandlerHttpGetPort = lifecyclePostStartHandlerHttpGetPort;
@@ -2536,7 +2541,7 @@ public class UpdateContainerGroupRequest extends Request {
             }
 
             /**
-             * The path to which HTTP GET requests are sent when you use HTTP requests to specify the postStart callback function.
+             * The path to which the system sends an HTTP GET request for a health check when you use an HTTP request to specify the postStart callback function.
              */
             public Builder lifecyclePostStartHandlerHttpGetScheme(String lifecyclePostStartHandlerHttpGetScheme) {
                 this.lifecyclePostStartHandlerHttpGetScheme = lifecyclePostStartHandlerHttpGetScheme;
@@ -2544,7 +2549,7 @@ public class UpdateContainerGroupRequest extends Request {
             }
 
             /**
-             * The host IP address of TCP socket probes when you use TCP sockets to specify the postStart callback function.
+             * The IP address of the host that receives the TCP socket request when you use a TCP socket request to specify the postStart callback function.
              */
             public Builder lifecyclePostStartHandlerTcpSocketHost(String lifecyclePostStartHandlerTcpSocketHost) {
                 this.lifecyclePostStartHandlerTcpSocketHost = lifecyclePostStartHandlerTcpSocketHost;
@@ -2552,7 +2557,7 @@ public class UpdateContainerGroupRequest extends Request {
             }
 
             /**
-             * The port of TCP socket probes when you use TCP sockets to specify the postStart callback function.
+             * The port to which the system sends a TCP socket request for a health check when you use TCP sockets to specify the postStart callback function.
              */
             public Builder lifecyclePostStartHandlerTcpSocketPort(Integer lifecyclePostStartHandlerTcpSocketPort) {
                 this.lifecyclePostStartHandlerTcpSocketPort = lifecyclePostStartHandlerTcpSocketPort;
@@ -2560,7 +2565,7 @@ public class UpdateContainerGroupRequest extends Request {
             }
 
             /**
-             * The command that you run in the container when you use a CLI to specify the preStop callback function.
+             * The commands to be executed in the container when you use the CLI to specify the preStop callback function.
              */
             public Builder lifecyclePreStopHandlerExec(java.util.List < String > lifecyclePreStopHandlerExec) {
                 this.lifecyclePreStopHandlerExec = lifecyclePreStopHandlerExec;
@@ -2568,7 +2573,7 @@ public class UpdateContainerGroupRequest extends Request {
             }
 
             /**
-             * The IP address of the host that receives HTTP GET requests when you use HTTP requests to specify the preStop callback function.
+             * The IP address of the host that receives the HTTP GET request when you use an HTTP request to specify the preStop callback function.
              */
             public Builder lifecyclePreStopHandlerHttpGetHost(String lifecyclePreStopHandlerHttpGetHost) {
                 this.lifecyclePreStopHandlerHttpGetHost = lifecyclePreStopHandlerHttpGetHost;
@@ -2576,7 +2581,7 @@ public class UpdateContainerGroupRequest extends Request {
             }
 
             /**
-             * The information about the generated HTTP request headers.
+             * The information about the generated HTTP request header.
              */
             public Builder lifecyclePreStopHandlerHttpGetHttpHeader(java.util.List < LifecyclePreStopHandlerHttpGetHttpHeader> lifecyclePreStopHandlerHttpGetHttpHeader) {
                 this.lifecyclePreStopHandlerHttpGetHttpHeader = lifecyclePreStopHandlerHttpGetHttpHeader;
@@ -2584,7 +2589,7 @@ public class UpdateContainerGroupRequest extends Request {
             }
 
             /**
-             * The path to which HTTP GET requests are sent when you use HTTP requests to specify the preStop callback function.
+             * The path to which the system sends an HTTP GET request for a health check when you use an HTTP request to specify the preSop callback function.
              */
             public Builder lifecyclePreStopHandlerHttpGetPath(String lifecyclePreStopHandlerHttpGetPath) {
                 this.lifecyclePreStopHandlerHttpGetPath = lifecyclePreStopHandlerHttpGetPath;
@@ -2592,7 +2597,7 @@ public class UpdateContainerGroupRequest extends Request {
             }
 
             /**
-             * The port to which HTTP GET requests are sent when you use HTTP requests to specify the preStop callback function.
+             * The port to which the system sends the HTTP GET request for a health check when you use an HTTP request to specify the preStop callback function.
              */
             public Builder lifecyclePreStopHandlerHttpGetPort(Integer lifecyclePreStopHandlerHttpGetPort) {
                 this.lifecyclePreStopHandlerHttpGetPort = lifecyclePreStopHandlerHttpGetPort;
@@ -2600,7 +2605,7 @@ public class UpdateContainerGroupRequest extends Request {
             }
 
             /**
-             * The protocol type of HTTP GET requests when you use HTTP requests to specify the preStop callback function. Valid values:
+             * The protocol type of the HTTP GET request when you use an HTTP request to specify the preStop callback function. Valid values:
              * <p>
              * 
              * *   HTTP
@@ -2612,7 +2617,7 @@ public class UpdateContainerGroupRequest extends Request {
             }
 
             /**
-             * The host IP address of TCP socket probes when you use TCP sockets to specify the preStop callback function.
+             * The IP address of the host that receives the TCP socket request when you use a TCP socket request to specify the preStop callback function.
              */
             public Builder lifecyclePreStopHandlerTcpSocketHost(String lifecyclePreStopHandlerTcpSocketHost) {
                 this.lifecyclePreStopHandlerTcpSocketHost = lifecyclePreStopHandlerTcpSocketHost;
@@ -2620,7 +2625,7 @@ public class UpdateContainerGroupRequest extends Request {
             }
 
             /**
-             * The port of TCP socket probes when you use TCP sockets to specify the preStop callback function.
+             * The port to which the system sends a TCP socket request for a health check when you use TCP sockets to specify the preStop callback function.
              */
             public Builder lifecyclePreStopHandlerTcpSocketPort(Integer lifecyclePreStopHandlerTcpSocketPort) {
                 this.lifecyclePreStopHandlerTcpSocketPort = lifecyclePreStopHandlerTcpSocketPort;
@@ -2660,7 +2665,7 @@ public class UpdateContainerGroupRequest extends Request {
             }
 
             /**
-             * Whether the container runtime closes the stdin channel after the stdin channel has been opened by a sing attach. If stdin is true, the stdin stream remains open across multiple attach sessions. If StdinOnce is set to true, stdin is opened on container start, is empty until the first client attaches to stdin, and then remains open and receive data until the client disconnects. When the client disconnects, stdin is closed and remains closed until the container is restarted.
+             * Specifies whether standard input streams are disconnected after a client is disconnected. If Stdin is set to true, standard input streams remain connected among multiple sessions. If StdinOnce is set to true, standard input streams are connected after the container is started, and remain idle until a client is connected to receive data. After the client is disconnected, streams are also disconnected, and remain disconnected until the container restarts.
              */
             public Builder stdinOnce(Boolean stdinOnce) {
                 this.stdinOnce = stdinOnce;
@@ -2676,7 +2681,7 @@ public class UpdateContainerGroupRequest extends Request {
             }
 
             /**
-             * Pod volumes to mount into the filesystem of the container.
+             * Pod volumes that you want to mount into the filesystem of the container.
              */
             public Builder volumeMount(java.util.List < VolumeMount> volumeMount) {
                 this.volumeMount = volumeMount;
@@ -2749,7 +2754,7 @@ public class UpdateContainerGroupRequest extends Request {
             private String userName; 
 
             /**
-             * The password that is used to access the image repository.
+             * The password that you use to access the image repository.
              */
             public Builder password(String password) {
                 this.password = password;
@@ -2765,7 +2770,7 @@ public class UpdateContainerGroupRequest extends Request {
             }
 
             /**
-             * The username that is used to access the image repository.
+             * The username that you use to access the image repository.
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -3161,7 +3166,7 @@ public class UpdateContainerGroupRequest extends Request {
             private String subPath; 
 
             /**
-             * The directory of the volume that is mounted to the init container. The data in this directory is overwritten by the data on the volume. Specify this parameter with caution.
+             * The mount directory of the init container. The data in this directory is overwritten by the data on the volume. Specify this parameter with caution.
              */
             public Builder mountPath(String mountPath) {
                 this.mountPath = mountPath;
@@ -3169,12 +3174,12 @@ public class UpdateContainerGroupRequest extends Request {
             }
 
             /**
-             * The mount propagation setting of the volume. Mount propagation allows volumes that are mounted on one container to be shared with other containers in the same pod, or even with other pods on the same node. Valid values:
+             * The mount propagation settings of the volume. Mount propagation allows volumes that are mounted on one container to be shared with other containers in the same pod, or even with other pods on the same node. Valid values:
              * <p>
              * 
-             * *   None: This volume mount does not receive subsequent mounts that are mounted to this volume or subdirectories of this volume by the host.
-             * *   HostToCotainer: This volume mount receives all subsequent mounts that are mounted to this volume or subdirectories of this volume.
-             * *   Bidirectional: The volume mount behaves the same as the HostToCotainer mount. The volume mount receives all subsequent mounts that are mounted to this volume or subdirectories of this volume. In addition, all volume mounts created by the container are propagated back to the host and to all containers of all pods that use the same volume.
+             * *   None: The volume mount does not receive subsequent mounts that are performed on this volume or subdirectories of this volume.
+             * *   HostToContainer: The volume mount receives all subsequent mounts that are performed on this volume or subdirectories of this volume.
+             * *   Bidirectional: The volume mount behaves the same as the HostToContainer mount. The volume mount receives subsequent mounts that are performed on the volume or the subdirectories of the volume. In addition, all volume mounts that are mounted on the container are propagated back to the host and all containers of all pods that use the same volume.
              * 
              * Default value: None.
              */
@@ -3200,7 +3205,7 @@ public class UpdateContainerGroupRequest extends Request {
             }
 
             /**
-             * The subdirectory of the volume that is mounted to the init container. The pod can mount different directories of the same volume to different subdirectories of init containers.
+             * The subdirectory of the volume that is mounted to the init container. You can use this parameter to mount the same volume to different subdirectories of the init container.
              */
             public Builder subPath(String subPath) {
                 this.subPath = subPath;
@@ -3430,7 +3435,7 @@ public class UpdateContainerGroupRequest extends Request {
             }
 
             /**
-             * The startup arguments of the init container.
+             * The arguments that you want to pass to the startup command of the init container.
              */
             public Builder arg(java.util.List < String > arg) {
                 this.arg = arg;
@@ -3438,7 +3443,7 @@ public class UpdateContainerGroupRequest extends Request {
             }
 
             /**
-             * The commands of the init container.
+             * The commands that are used to start the init container.
              */
             public Builder command(java.util.List < String > command) {
                 this.command = command;
@@ -3454,7 +3459,7 @@ public class UpdateContainerGroupRequest extends Request {
             }
 
             /**
-             * The environment variables for the init container.
+             * The environment variable of the init container.
              */
             public Builder environmentVar(java.util.List < InitContainerEnvironmentVar> environmentVar) {
                 this.environmentVar = environmentVar;
@@ -3462,7 +3467,7 @@ public class UpdateContainerGroupRequest extends Request {
             }
 
             /**
-             * The number of GPUs that you want to allocate to the init container.
+             * The number of GPUs you want to allocate to the init container.
              */
             public Builder gpu(Integer gpu) {
                 this.gpu = gpu;
@@ -3478,7 +3483,12 @@ public class UpdateContainerGroupRequest extends Request {
             }
 
             /**
-             * The image pulling policy.
+             * The image pulling policy. Valid values:
+             * <p>
+             * 
+             * *   Always: Each time the instance is updated, image pulling is performed.
+             * *   IfNotPresent: On-premises images are used first. If no on-premises images are available, image pulling is performed.
+             * *   Never: On-premises images are always used. Image pulling is not performed.
              */
             public Builder imagePullPolicy(String imagePullPolicy) {
                 this.imagePullPolicy = imagePullPolicy;
@@ -3486,7 +3496,7 @@ public class UpdateContainerGroupRequest extends Request {
             }
 
             /**
-             * The size of memory that you want to allocate to the init container.
+             * The memory size of the init container.
              */
             public Builder memory(Float memory) {
                 this.memory = memory;
@@ -3518,7 +3528,7 @@ public class UpdateContainerGroupRequest extends Request {
             }
 
             /**
-             * Whether the container runtime closes the stdin channel after the stdin channel has been opened by a sing attach. If stdin is true, the stdin stream remains open across multiple attach sessions. If StdinOnce is set to true, stdin is opened on container start, is empty until the first client attaches to stdin, and then remains open and receive data until the client disconnects. When the client disconnects, stdin is closed and remains closed until the container is restarted.
+             * Specifies whether standard input streams are disconnected after a client is disconnected. If Stdin is set to true, standard input streams remain connected among multiple sessions. If StdinOnce is set to true, standard input streams are connected after the init container is started, and remain idle until a client is connected to receive data. After the client is disconnected, streams are also disconnected, and remain disconnected until the init container restarts.
              */
             public Builder stdinOnce(Boolean stdinOnce) {
                 this.stdinOnce = stdinOnce;
@@ -3534,7 +3544,7 @@ public class UpdateContainerGroupRequest extends Request {
             }
 
             /**
-             * Pod volumes to mount into the filesystem of the init container.
+             * The information about the volume that you want to mount on the init container.
              */
             public Builder volumeMount(java.util.List < InitContainerVolumeMount> volumeMount) {
                 this.volumeMount = volumeMount;
@@ -3595,7 +3605,7 @@ public class UpdateContainerGroupRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -3603,7 +3613,7 @@ public class UpdateContainerGroupRequest extends Request {
             }
 
             /**
-             * The value of the tag.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -4147,7 +4157,7 @@ public class UpdateContainerGroupRequest extends Request {
             }
 
             /**
-             * The name of the volume.
+             * The volume name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -4161,7 +4171,7 @@ public class UpdateContainerGroupRequest extends Request {
              * *   Directory
              * *   File
              * 
-             * > This parameter is unavailable.
+             * >  This parameter is not publicly available.
              */
             public Builder type(String type) {
                 this.type = type;

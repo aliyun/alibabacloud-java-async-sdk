@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeContainerGroupsRequest extends Request {
     @Query
+    @NameInMap("ComputeCategory")
+    private String computeCategory;
+
+    @Query
     @NameInMap("ContainerGroupIds")
     private String containerGroupIds;
 
@@ -79,6 +83,7 @@ public class DescribeContainerGroupsRequest extends Request {
 
     private DescribeContainerGroupsRequest(Builder builder) {
         super(builder);
+        this.computeCategory = builder.computeCategory;
         this.containerGroupIds = builder.containerGroupIds;
         this.containerGroupName = builder.containerGroupName;
         this.limit = builder.limit;
@@ -108,6 +113,13 @@ public class DescribeContainerGroupsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return computeCategory
+     */
+    public String getComputeCategory() {
+        return this.computeCategory;
     }
 
     /**
@@ -223,6 +235,7 @@ public class DescribeContainerGroupsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeContainerGroupsRequest, Builder> {
+        private String computeCategory; 
         private String containerGroupIds; 
         private String containerGroupName; 
         private Integer limit; 
@@ -246,6 +259,7 @@ public class DescribeContainerGroupsRequest extends Request {
 
         private Builder(DescribeContainerGroupsRequest request) {
             super(request);
+            this.computeCategory = request.computeCategory;
             this.containerGroupIds = request.containerGroupIds;
             this.containerGroupName = request.containerGroupName;
             this.limit = request.limit;
@@ -263,6 +277,15 @@ public class DescribeContainerGroupsRequest extends Request {
             this.withEvent = request.withEvent;
             this.zoneId = request.zoneId;
         } 
+
+        /**
+         * The computing power type of the elastic container instance. A value of economy specifies economic elastic container instances.
+         */
+        public Builder computeCategory(String computeCategory) {
+            this.putQueryParameter("ComputeCategory", computeCategory);
+            this.computeCategory = computeCategory;
+            return this;
+        }
 
         /**
          * The IDs of the elastic container instances in JSON format. You can specify up to 20 IDs.
@@ -334,7 +357,7 @@ public class DescribeContainerGroupsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the elastic container instances belong. If you do not specify a resource group when you create an elastic container instance, the system automatically adds the instance to the default resource group in your account.
+         * The ID of the resource group to which the instance belongs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -361,7 +384,7 @@ public class DescribeContainerGroupsRequest extends Request {
         }
 
         /**
-         * SecurityGroupId.
+         * The ID of the security group to which the instance belongs.
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -409,7 +432,7 @@ public class DescribeContainerGroupsRequest extends Request {
         }
 
         /**
-         * Specifies whether to return event information.
+         * Specify whether to return event information.
          */
         public Builder withEvent(Boolean withEvent) {
             this.putQueryParameter("WithEvent", withEvent);

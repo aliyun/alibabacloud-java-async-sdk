@@ -45,6 +45,10 @@ public class CreateContainerGroupRequest extends Request {
     private String clientToken;
 
     @Query
+    @NameInMap("ComputeCategory")
+    private java.util.List < String > computeCategory;
+
+    @Query
     @NameInMap("Container")
     @Validation(required = true)
     private java.util.List < Container> container;
@@ -142,6 +146,10 @@ public class CreateContainerGroupRequest extends Request {
     @Query
     @NameInMap("FixedIpRetainHour")
     private Integer fixedIpRetainHour;
+
+    @Query
+    @NameInMap("GpuDriverVersion")
+    private String gpuDriverVersion;
 
     @Query
     @NameInMap("HostAliase")
@@ -307,6 +315,7 @@ public class CreateContainerGroupRequest extends Request {
         this.autoCreateEip = builder.autoCreateEip;
         this.autoMatchImageCache = builder.autoMatchImageCache;
         this.clientToken = builder.clientToken;
+        this.computeCategory = builder.computeCategory;
         this.container = builder.container;
         this.containerGroupName = builder.containerGroupName;
         this.containerResourceView = builder.containerResourceView;
@@ -330,6 +339,7 @@ public class CreateContainerGroupRequest extends Request {
         this.ephemeralStorage = builder.ephemeralStorage;
         this.fixedIp = builder.fixedIp;
         this.fixedIpRetainHour = builder.fixedIpRetainHour;
+        this.gpuDriverVersion = builder.gpuDriverVersion;
         this.hostAliase = builder.hostAliase;
         this.hostName = builder.hostName;
         this.imageAccelerateMode = builder.imageAccelerateMode;
@@ -437,6 +447,13 @@ public class CreateContainerGroupRequest extends Request {
      */
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    /**
+     * @return computeCategory
+     */
+    public java.util.List < String > getComputeCategory() {
+        return this.computeCategory;
     }
 
     /**
@@ -598,6 +615,13 @@ public class CreateContainerGroupRequest extends Request {
      */
     public Integer getFixedIpRetainHour() {
         return this.fixedIpRetainHour;
+    }
+
+    /**
+     * @return gpuDriverVersion
+     */
+    public String getGpuDriverVersion() {
+        return this.gpuDriverVersion;
     }
 
     /**
@@ -875,6 +899,7 @@ public class CreateContainerGroupRequest extends Request {
         private Boolean autoCreateEip; 
         private Boolean autoMatchImageCache; 
         private String clientToken; 
+        private java.util.List < String > computeCategory; 
         private java.util.List < Container> container; 
         private String containerGroupName; 
         private Boolean containerResourceView; 
@@ -898,6 +923,7 @@ public class CreateContainerGroupRequest extends Request {
         private Integer ephemeralStorage; 
         private String fixedIp; 
         private Integer fixedIpRetainHour; 
+        private String gpuDriverVersion; 
         private java.util.List < HostAliase> hostAliase; 
         private String hostName; 
         private String imageAccelerateMode; 
@@ -951,6 +977,7 @@ public class CreateContainerGroupRequest extends Request {
             this.autoCreateEip = request.autoCreateEip;
             this.autoMatchImageCache = request.autoMatchImageCache;
             this.clientToken = request.clientToken;
+            this.computeCategory = request.computeCategory;
             this.container = request.container;
             this.containerGroupName = request.containerGroupName;
             this.containerResourceView = request.containerResourceView;
@@ -974,6 +1001,7 @@ public class CreateContainerGroupRequest extends Request {
             this.ephemeralStorage = request.ephemeralStorage;
             this.fixedIp = request.fixedIp;
             this.fixedIpRetainHour = request.fixedIpRetainHour;
+            this.gpuDriverVersion = request.gpuDriverVersion;
             this.hostAliase = request.hostAliase;
             this.hostName = request.hostName;
             this.imageAccelerateMode = request.imageAccelerateMode;
@@ -1087,6 +1115,15 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
+         * The computing power type of the instance.
+         */
+        public Builder computeCategory(java.util.List < String > computeCategory) {
+            this.putQueryParameter("ComputeCategory", computeCategory);
+            this.computeCategory = computeCategory;
+            return this;
+        }
+
+        /**
          * The information about the containers.
          */
         public Builder container(java.util.List < Container> container) {
@@ -1139,7 +1176,11 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * CpuArchitecture.
+         * The CPU architecture of the instance. Default value: AMD64. Valid values:
+         * <p>
+         * 
+         * *   AMD64
+         * *   ARM64
          */
         public Builder cpuArchitecture(String cpuArchitecture) {
             this.putQueryParameter("CpuArchitecture", cpuArchitecture);
@@ -1322,6 +1363,15 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
+         * GpuDriverVersion.
+         */
+        public Builder gpuDriverVersion(String gpuDriverVersion) {
+            this.putQueryParameter("GpuDriverVersion", gpuDriverVersion);
+            this.gpuDriverVersion = gpuDriverVersion;
+            return this;
+        }
+
+        /**
          * The alias of the elastic container instance.
          */
         public Builder hostAliase(java.util.List < HostAliase> hostAliase) {
@@ -1465,7 +1515,13 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * OsType.
+         * The operating system of the elastic container instance. Default value: Linux. Valid values:
+         * <p>
+         * 
+         * *   Linux
+         * *   Windows
+         * 
+         * >  Windows instances are in invitational preview. To use the operating system, submit a ticket.
          */
         public Builder osType(String osType) {
             this.putQueryParameter("OsType", osType);
@@ -1474,7 +1530,7 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * OverheadReservationOption.
+         * The options that you can configure when you enable the overhead reservation feature.
          */
         public Builder overheadReservationOption(OverheadReservationOption overheadReservationOption) {
             this.putQueryParameter("OverheadReservationOption", overheadReservationOption);
@@ -3140,7 +3196,7 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The name of the environment variable. The name must be 1 to 128 characters in length, and can contain letters, digits, and underscores (\_). It cannot start with a digit.``
+             * The name of the environment variable. The name must be 1 to 128 bits in length and can contain letters, digits, and underscores (\_). It cannot start with a digit.``
              */
             public Builder key(String key) {
                 this.key = key;
@@ -3148,7 +3204,7 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The value of the environment variable. The value can be up to 256 characters in length.
+             * The value of the environment variable. The value must be 0 to 256 bits in length.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -3201,7 +3257,7 @@ public class CreateContainerGroupRequest extends Request {
             private String value; 
 
             /**
-             * The key of the custom field in the HTTP GET request header when you use HTTP requests to specify the postStart callback function.
+             * The name of the custom field in the HTTP GET request header when you use HTTP requests to specify the postStart callback function.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -3438,9 +3494,9 @@ public class CreateContainerGroupRequest extends Request {
              * The mount propagation settings of the volume. Mount propagation allows volumes that are mounted on one container to be shared with other containers in the same pod, or even with other pods on the same node. Valid values:
              * <p>
              * 
-             * *   None: This volume mount does not receive subsequent mounts that are performed on this volume or subdirectories of this volume.
+             * *   None: The volume mount does not receive subsequent mounts that are performed on this volume or subdirectories of this volume.
              * *   HostToCotainer: The volume mount receives subsequent mounts that are performed on this volume or the subdirectories of this volume.
-             * *   Bidirectional: The volume mount behaves the same as the HostToCotainer mount. The volume mount receives subsequent mounts that are performed on the volume or the subdirectories of the volume. In addition, all volume mounts created by the container are propagated back to the host and to all containers of all pods that use the same volume.
+             * *   Bidirectional: This value is similar to HostToContainer. The volume mount receives subsequent mounts that are performed on this volume or the subdirectories of this volume. In addition, all volume mounts that are mounted on the container are propagated back to the host and all containers of all pods that use the same volume.
              * 
              * Default value: None.
              */
@@ -3450,7 +3506,7 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The name of the volume. This parameter is the same as Name in the Volume object.
+             * The name of the volume. The name of this parameter is the same as the name of the volume that is mounted to the containers.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -3993,7 +4049,7 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The arguments that are passed to the startup command of the container. You can specify a maximum of 10 arguments.
+             * The arguments that are passed to the startup command of the container. You can specify up to 10 arguments.
              */
             public Builder arg(java.util.List < String > arg) {
                 this.arg = arg;
@@ -4001,7 +4057,7 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The commands that you want to run to perform checks in containers.
+             * The commands that you want to run to perform health checks on containers.
              */
             public Builder command(java.util.List < String > command) {
                 this.command = command;
@@ -4009,7 +4065,7 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The number of vCPUs that you want to allocate to the container. Unit: cores.
+             * The number of vCPUs that you want to allocate to the container.
              */
             public Builder cpu(Float cpu) {
                 this.cpu = cpu;
@@ -4017,7 +4073,7 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The environment variable of the container.
+             * The value of the environment variable for the container.
              */
             public Builder environmentVar(java.util.List < EnvironmentVar> environmentVar) {
                 this.environmentVar = environmentVar;
@@ -4025,11 +4081,11 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * Specifies whether to hide the information about the environment variable when you query the details of an elastic container instance (ECI). Valid values:
+             * Specifies whether to hide the information about environment variables when you query the details of an elastic container instance. Default value: false. Valid values:
              * <p>
              * 
-             * *   false (default): does not hide the information about the environment variable.
-             * *   true: does not return the information about the environment variable. If the environment variable contains sensitive information, you can set this parameter to true to improve the security of the information.
+             * *   false
+             * *   true If environment variables contain sensitive information, you can set this parameter to true to improve security of the information.
              */
             public Builder environmentVarHide(Boolean environmentVarHide) {
                 this.environmentVarHide = environmentVarHide;
@@ -4056,9 +4112,9 @@ public class CreateContainerGroupRequest extends Request {
              * The policy that you want to use to pull an image. Valid values:
              * <p>
              * 
-             * *   Always: Image pulling is always performed.
-             * *   IfNotPresent: On-premises images are used first. If no on-premises images are available, image pulling is performed.
-             * *   Never: Image pulling is not performed. On-premises images are always used.
+             * *   Always: Each time instances are created, image pulling is performed.
+             * *   IfNotPresent: On-premises images are preferentially used. If no on-premises images are available, image pulling is performed.
+             * *   Never: On-premises images are always used. Image pulling is not performed.
              */
             public Builder imagePullPolicy(String imagePullPolicy) {
                 this.imagePullPolicy = imagePullPolicy;
@@ -4066,7 +4122,7 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The commands to be executed in containers when you use the CLI to specify the postStart callback function.
+             * The commands to be executed in containers when you use a CLI to specify the postStart callback function.
              */
             public Builder lifecyclePostStartHandlerExec(java.util.List < String > lifecyclePostStartHandlerExec) {
                 this.lifecyclePostStartHandlerExec = lifecyclePostStartHandlerExec;
@@ -4074,7 +4130,7 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The IP address of the host that receives HTTP GET requests when you use HTTP requests to specify the postStart callback function.
+             * The IP address of the host that receives the HTTP GET request when you use an HTTP request to specify the postStart callback function.
              */
             public Builder lifecyclePostStartHandlerHttpGetHost(String lifecyclePostStartHandlerHttpGetHost) {
                 this.lifecyclePostStartHandlerHttpGetHost = lifecyclePostStartHandlerHttpGetHost;
@@ -4090,7 +4146,7 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The path to which HTTP GET requests are sent when you use HTTP requests to specify the postStart callback function.
+             * The path to which the system sends an HTTP GET request for a health check when you use an HTTP request to specify the postStart callback function.
              */
             public Builder lifecyclePostStartHandlerHttpGetPath(String lifecyclePostStartHandlerHttpGetPath) {
                 this.lifecyclePostStartHandlerHttpGetPath = lifecyclePostStartHandlerHttpGetPath;
@@ -4098,7 +4154,7 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The port to which HTTP GET requests are sent when you use HTTP requests to specify the postStart callback function.
+             * The port to which the system sends an HTTP GET request when you use an HTTP request to specify the postStart callback function.
              */
             public Builder lifecyclePostStartHandlerHttpGetPort(Integer lifecyclePostStartHandlerHttpGetPort) {
                 this.lifecyclePostStartHandlerHttpGetPort = lifecyclePostStartHandlerHttpGetPort;
@@ -4118,7 +4174,7 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The port that is detected by TCP sockets when you use TCP sockets to specify the postStart callback function.
+             * The port to which the system sends a TCP socket request for a health check when you use TCP sockets to specify the postStart callback function.
              */
             public Builder lifecyclePostStartHandlerTcpSocketHost(String lifecyclePostStartHandlerTcpSocketHost) {
                 this.lifecyclePostStartHandlerTcpSocketHost = lifecyclePostStartHandlerTcpSocketHost;
@@ -4126,7 +4182,7 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The port that is detected by TCP sockets when you use TCP sockets to specify the postStart callback function.
+             * The port to which the system sends a TCP socket request for a health check when you use TCP sockets to specify the postStart callback function.
              */
             public Builder lifecyclePostStartHandlerTcpSocketPort(Integer lifecyclePostStartHandlerTcpSocketPort) {
                 this.lifecyclePostStartHandlerTcpSocketPort = lifecyclePostStartHandlerTcpSocketPort;
@@ -4134,7 +4190,7 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The commands to be executed in containers when you use the CLI to specify the preStop callback function.
+             * The commands to be executed in containers when you use a CLI to specify the preStop callback function.
              */
             public Builder lifecyclePreStopHandlerExec(java.util.List < String > lifecyclePreStopHandlerExec) {
                 this.lifecyclePreStopHandlerExec = lifecyclePreStopHandlerExec;
@@ -4142,7 +4198,7 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The IP address of the host that receives HTTP GET requests when you use HTTP requests to specify the preStop callback function.
+             * The IP address of the host that receives the HTTP GET request when you use an HTTP request to specify the preStop callback function.
              */
             public Builder lifecyclePreStopHandlerHttpGetHost(String lifecyclePreStopHandlerHttpGetHost) {
                 this.lifecyclePreStopHandlerHttpGetHost = lifecyclePreStopHandlerHttpGetHost;
@@ -4158,7 +4214,7 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The path to which HTTP GET requests are sent when you use HTTP requests to specify the preStop callback function.
+             * The path to which the system sends an HTTP GET request for a health check when you use an HTTP request to specify the preSop callback function.
              */
             public Builder lifecyclePreStopHandlerHttpGetPath(String lifecyclePreStopHandlerHttpGetPath) {
                 this.lifecyclePreStopHandlerHttpGetPath = lifecyclePreStopHandlerHttpGetPath;
@@ -4166,7 +4222,7 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The port to which HTTP GET requests are sent when you use HTTP requests to specify the preStop callback function.
+             * The port to which the system sends an HTTP GET request for a health check when you use HTTP requests to specify the preStop callback function.
              */
             public Builder lifecyclePreStopHandlerHttpGetPort(Integer lifecyclePreStopHandlerHttpGetPort) {
                 this.lifecyclePreStopHandlerHttpGetPort = lifecyclePreStopHandlerHttpGetPort;
@@ -4174,7 +4230,7 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The protocol type of HTTP GET requests when you use HTTP requests to specify the preStop callback function. Valid values:
+             * The protocol type of the HTTP GET request when you use an HTTP request to specify the preStop callback function. Valid values:
              * <p>
              * 
              * *   HTTP
@@ -4186,7 +4242,7 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The host IP address that is detected by TCP sockets when you use TCP sockets to specify the preStop callback function.
+             * The IP address of the host that receives the TCP socket request when you use a TCP socket request to specify the preStop callback function.
              */
             public Builder lifecyclePreStopHandlerTcpSocketHost(String lifecyclePreStopHandlerTcpSocketHost) {
                 this.lifecyclePreStopHandlerTcpSocketHost = lifecyclePreStopHandlerTcpSocketHost;
@@ -4194,7 +4250,7 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The port that is detected by TCP sockets when you use TCP sockets to specify the preStop callback function.
+             * The port to which the system sends a TCP socket request for a health check when you use TCP sockets to specify the preStop callback function.
              */
             public Builder lifecyclePreStopHandlerTcpSocketPort(Integer lifecyclePreStopHandlerTcpSocketPort) {
                 this.lifecyclePreStopHandlerTcpSocketPort = lifecyclePreStopHandlerTcpSocketPort;
@@ -4202,7 +4258,7 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The memory size of the container. Unit: GiB
+             * The memory size that you want to allocate to the container. Unit: GiB
              */
             public Builder memory(Float memory) {
                 this.memory = memory;
@@ -4210,7 +4266,7 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The container name.
+             * The name of the container.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -4218,7 +4274,7 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The port to which HTTP GET requests are sent when you use HTTP requests to perform health checks.
+             * The port to which the system sends an HTTP GET request for a health check when you use HTTP requests to perform health checks.
              */
             public Builder port(java.util.List < Port> port) {
                 this.port = port;
@@ -4226,7 +4282,7 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * SecurityContextRunAsGroup.
+             * The user group that runs the container.
              */
             public Builder securityContextRunAsGroup(Long securityContextRunAsGroup) {
                 this.securityContextRunAsGroup = securityContextRunAsGroup;
@@ -4234,7 +4290,7 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * SecurityContextRunAsNonRoot.
+             * Specifies whether to run the container as a non-root user.
              */
             public Builder securityContextRunAsNonRoot(Boolean securityContextRunAsNonRoot) {
                 this.securityContextRunAsNonRoot = securityContextRunAsNonRoot;
@@ -4242,7 +4298,7 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * Specifies whether the container allocates a buffer for standard input in the container runtime. If you do not specify this parameter, an end-of-file (EOF) error occurs when standard input in the container is read. Default value: false.
+             * Specifies whether the container allocates buffer resources to standard input streams when the container is running. If you do not specify this parameter, an end-of-file (EOF) error may occur when standard input streams in the container are read. Default value: false.
              */
             public Builder stdin(Boolean stdin) {
                 this.stdin = stdin;
@@ -4250,9 +4306,9 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * Specifies whether to keep the standard input stream open in the container runtime across multiple attach sessions if Stdin is set to true.\
+             * Specifies whether standard input streams are disconnected from multiple sessions after a client is disconnected.\
              * <p>
-             * If StdinOnce is set to true, the standard input stream is opened when the container is started, remains empty until the first client is attached to standard input, and then remains open and receives data until the client is disconnected. When the client is disconnected, the standard input stream is closed and remains closed until the container is restarted.
+             * If StdinOnce is set to true, standard input streams are connected after the container is started, and remain idle until a client is connected to receive data. After the client is disconnected, standard input streams are also disconnected, and remain disconnected until the container restarts.
              */
             public Builder stdinOnce(Boolean stdinOnce) {
                 this.stdinOnce = stdinOnce;
@@ -4268,7 +4324,7 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The message notification policy. This parameter is empty by default. You can use only Message Service (MNS) queues to configure notifications.
+             * The message notification policy. This parameter is empty by default. Only Message Service (MNS) queue message notifications can be sent.
              */
             public Builder terminationMessagePolicy(String terminationMessagePolicy) {
                 this.terminationMessagePolicy = terminationMessagePolicy;
@@ -4279,7 +4335,7 @@ public class CreateContainerGroupRequest extends Request {
              * Specifies whether to enable interaction. Default value: false.
              * <p>
              * 
-             * If you set Command to /bin/bash, you must set this parameter to true.
+             * If the command is a /bin/bash command, set the value to true.
              */
             public Builder tty(Boolean tty) {
                 this.tty = tty;
@@ -4287,7 +4343,7 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The information about the volume that you want to mount on the container.
+             * The information about the volume that you want to mount to the container.
              */
             public Builder volumeMount(java.util.List < VolumeMount> volumeMount) {
                 this.volumeMount = volumeMount;
@@ -5245,7 +5301,7 @@ public class CreateContainerGroupRequest extends Request {
             private Boolean enableOverheadReservation; 
 
             /**
-             * EnableOverheadReservation.
+             * Specify whether to enable the overhead reservation feature. Default: false. Valid values: true and false. After you enable the overhead reservation feature, the system automatically adds the overhead to the specification of the elastic container instance, and then adjusts the specification of the instance upward to the most approximate specification. You are charged based on the new specification after the adjustment.
              */
             public Builder enableOverheadReservation(Boolean enableOverheadReservation) {
                 this.enableOverheadReservation = enableOverheadReservation;

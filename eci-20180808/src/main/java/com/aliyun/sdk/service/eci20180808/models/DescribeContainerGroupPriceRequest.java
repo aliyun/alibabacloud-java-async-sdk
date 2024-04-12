@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeContainerGroupPriceRequest extends Request {
     @Query
+    @NameInMap("ComputeCategory")
+    private String computeCategory;
+
+    @Query
     @NameInMap("Cpu")
     private Float cpu;
 
@@ -67,6 +71,7 @@ public class DescribeContainerGroupPriceRequest extends Request {
 
     private DescribeContainerGroupPriceRequest(Builder builder) {
         super(builder);
+        this.computeCategory = builder.computeCategory;
         this.cpu = builder.cpu;
         this.ephemeralStorage = builder.ephemeralStorage;
         this.instanceType = builder.instanceType;
@@ -93,6 +98,13 @@ public class DescribeContainerGroupPriceRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return computeCategory
+     */
+    public String getComputeCategory() {
+        return this.computeCategory;
     }
 
     /**
@@ -187,6 +199,7 @@ public class DescribeContainerGroupPriceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeContainerGroupPriceRequest, Builder> {
+        private String computeCategory; 
         private Float cpu; 
         private Integer ephemeralStorage; 
         private String instanceType; 
@@ -207,6 +220,7 @@ public class DescribeContainerGroupPriceRequest extends Request {
 
         private Builder(DescribeContainerGroupPriceRequest request) {
             super(request);
+            this.computeCategory = request.computeCategory;
             this.cpu = request.cpu;
             this.ephemeralStorage = request.ephemeralStorage;
             this.instanceType = request.instanceType;
@@ -221,6 +235,15 @@ public class DescribeContainerGroupPriceRequest extends Request {
             this.spotStrategy = request.spotStrategy;
             this.zoneId = request.zoneId;
         } 
+
+        /**
+         * The computing power type. A value of economy specifies economic instances.
+         */
+        public Builder computeCategory(String computeCategory) {
+            this.putQueryParameter("ComputeCategory", computeCategory);
+            this.computeCategory = computeCategory;
+            return this;
+        }
 
         /**
          * The number of vCPUs. For information about the vCPU and memory specifications that are supported by Elastic Container Instance, see [vCPU and memory specifications](~~114662~~).
