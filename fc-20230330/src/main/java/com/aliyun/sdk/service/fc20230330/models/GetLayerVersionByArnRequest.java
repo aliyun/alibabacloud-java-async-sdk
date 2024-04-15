@@ -55,7 +55,7 @@ public class GetLayerVersionByArnRequest extends Request {
         } 
 
         /**
-         * arn.
+         * The Alibaba Cloud Resource Name (ARN) of the layer.
          */
         public Builder arn(String arn) {
             this.putPathParameter("arn", arn);

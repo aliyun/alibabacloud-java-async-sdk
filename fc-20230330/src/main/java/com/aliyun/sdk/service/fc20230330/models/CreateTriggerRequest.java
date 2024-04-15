@@ -70,7 +70,7 @@ public class CreateTriggerRequest extends Request {
         } 
 
         /**
-         * functionName.
+         * The function name.
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -79,7 +79,7 @@ public class CreateTriggerRequest extends Request {
         }
 
         /**
-         * body.
+         * The trigger configurations.
          */
         public Builder body(CreateTriggerInput body) {
             this.putBodyParameter("body", body);

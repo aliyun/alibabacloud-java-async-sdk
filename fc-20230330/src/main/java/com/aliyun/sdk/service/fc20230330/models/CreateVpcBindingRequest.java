@@ -70,7 +70,7 @@ public class CreateVpcBindingRequest extends Request {
         } 
 
         /**
-         * functionName.
+         * The function name.
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -79,7 +79,7 @@ public class CreateVpcBindingRequest extends Request {
         }
 
         /**
-         * body.
+         * The configurations of the virtual private cloud (VPC) binding.
          */
         public Builder body(CreateVpcBindingInput body) {
             this.putBodyParameter("body", body);

@@ -70,7 +70,7 @@ public class DeleteVpcBindingRequest extends Request {
         } 
 
         /**
-         * functionName.
+         * The function name.
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -79,7 +79,7 @@ public class DeleteVpcBindingRequest extends Request {
         }
 
         /**
-         * vpcId.
+         * The ID of the virtual private cloud (VPC).
          */
         public Builder vpcId(String vpcId) {
             this.putPathParameter("vpcId", vpcId);

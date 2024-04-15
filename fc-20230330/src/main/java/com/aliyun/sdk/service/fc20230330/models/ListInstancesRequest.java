@@ -83,7 +83,7 @@ public class ListInstancesRequest extends Request {
         } 
 
         /**
-         * functionName.
+         * The function name.
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -92,7 +92,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * qualifier.
+         * The function version or alias.
          */
         public Builder qualifier(String qualifier) {
             this.putQueryParameter("qualifier", qualifier);
@@ -101,7 +101,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * withAllActive.
+         * Specifies whether to list all instances. Valid values: true and false.
          */
         public Builder withAllActive(Boolean withAllActive) {
             this.putQueryParameter("withAllActive", withAllActive);

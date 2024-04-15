@@ -84,7 +84,7 @@ public class PutProvisionConfigRequest extends Request {
         } 
 
         /**
-         * functionName.
+         * The function name.
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -93,7 +93,7 @@ public class PutProvisionConfigRequest extends Request {
         }
 
         /**
-         * body.
+         * The information about the provisioned configuration.
          */
         public Builder body(PutProvisionConfigInput body) {
             this.putBodyParameter("body", body);
@@ -102,7 +102,7 @@ public class PutProvisionConfigRequest extends Request {
         }
 
         /**
-         * qualifier.
+         * The function alias or LATEST.
          */
         public Builder qualifier(String qualifier) {
             this.putQueryParameter("qualifier", qualifier);

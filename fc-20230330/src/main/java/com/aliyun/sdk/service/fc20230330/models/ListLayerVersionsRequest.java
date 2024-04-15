@@ -83,7 +83,7 @@ public class ListLayerVersionsRequest extends Request {
         } 
 
         /**
-         * layerName.
+         * The layer name.
          */
         public Builder layerName(String layerName) {
             this.putPathParameter("layerName", layerName);
@@ -92,7 +92,7 @@ public class ListLayerVersionsRequest extends Request {
         }
 
         /**
-         * limit.
+         * The number of versions to be returned.
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("limit", limit);
@@ -101,7 +101,7 @@ public class ListLayerVersionsRequest extends Request {
         }
 
         /**
-         * startVersion.
+         * The initial version of the layer.
          */
         public Builder startVersion(String startVersion) {
             this.putQueryParameter("startVersion", startVersion);

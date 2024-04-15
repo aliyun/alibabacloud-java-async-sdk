@@ -70,7 +70,7 @@ public class UpdateCustomDomainRequest extends Request {
         } 
 
         /**
-         * domainName.
+         * The domain name.
          */
         public Builder domainName(String domainName) {
             this.putPathParameter("domainName", domainName);
@@ -79,7 +79,7 @@ public class UpdateCustomDomainRequest extends Request {
         }
 
         /**
-         * body.
+         * The information about the custom domain name.
          */
         public Builder body(UpdateCustomDomainInput body) {
             this.putBodyParameter("body", body);

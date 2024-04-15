@@ -70,7 +70,7 @@ public class CreateAliasRequest extends Request {
         } 
 
         /**
-         * functionName.
+         * The function name.
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -79,7 +79,7 @@ public class CreateAliasRequest extends Request {
         }
 
         /**
-         * body.
+         * The request parameters for creating an alias.
          */
         public Builder body(CreateAliasInput body) {
             this.putBodyParameter("body", body);

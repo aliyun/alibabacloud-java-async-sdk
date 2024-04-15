@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PutAsyncInvokeConfigInput</p>
  */
 public class PutAsyncInvokeConfigInput extends TeaModel {
+    @NameInMap("asyncTask")
+    private Boolean asyncTask;
+
     @NameInMap("destinationConfig")
     private DestinationConfig destinationConfig;
 
@@ -22,6 +25,7 @@ public class PutAsyncInvokeConfigInput extends TeaModel {
     private Long maxAsyncRetryAttempts;
 
     private PutAsyncInvokeConfigInput(Builder builder) {
+        this.asyncTask = builder.asyncTask;
         this.destinationConfig = builder.destinationConfig;
         this.maxAsyncEventAgeInSeconds = builder.maxAsyncEventAgeInSeconds;
         this.maxAsyncRetryAttempts = builder.maxAsyncRetryAttempts;
@@ -33,6 +37,13 @@ public class PutAsyncInvokeConfigInput extends TeaModel {
 
     public static PutAsyncInvokeConfigInput create() {
         return builder().build();
+    }
+
+    /**
+     * @return asyncTask
+     */
+    public Boolean getAsyncTask() {
+        return this.asyncTask;
     }
 
     /**
@@ -57,9 +68,18 @@ public class PutAsyncInvokeConfigInput extends TeaModel {
     }
 
     public static final class Builder {
+        private Boolean asyncTask; 
         private DestinationConfig destinationConfig; 
         private Long maxAsyncEventAgeInSeconds; 
         private Long maxAsyncRetryAttempts; 
+
+        /**
+         * asyncTask.
+         */
+        public Builder asyncTask(Boolean asyncTask) {
+            this.asyncTask = asyncTask;
+            return this;
+        }
 
         /**
          * destinationConfig.

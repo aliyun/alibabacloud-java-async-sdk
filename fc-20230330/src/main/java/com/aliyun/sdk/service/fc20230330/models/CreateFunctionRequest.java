@@ -55,7 +55,7 @@ public class CreateFunctionRequest extends Request {
         } 
 
         /**
-         * body.
+         * The information about function configurations.
          */
         public Builder body(CreateFunctionInput body) {
             this.putBodyParameter("body", body);

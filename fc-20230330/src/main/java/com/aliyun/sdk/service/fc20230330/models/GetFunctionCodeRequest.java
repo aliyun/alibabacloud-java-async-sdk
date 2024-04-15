@@ -78,7 +78,7 @@ public class GetFunctionCodeRequest extends Request {
         }
 
         /**
-         * qualifier.
+         * The version or alias of the function.
          */
         public Builder qualifier(String qualifier) {
             this.putQueryParameter("qualifier", qualifier);

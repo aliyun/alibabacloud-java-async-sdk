@@ -389,24 +389,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * @deprecated
-      *
-     */
-    @Override
-    public CompletableFuture<GetResourceTagsResponse> getResourceTags(GetResourceTagsRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetResourceTags").setMethod(HttpMethod.GET).setPathRegex("/2023-03-30/tag").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetResourceTagsResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<GetResourceTagsResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
     @Override
     public CompletableFuture<GetTriggerResponse> getTrigger(GetTriggerRequest request) {
         try {
@@ -618,24 +600,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * @deprecated
-      *
-     */
-    @Override
-    public CompletableFuture<ListTaggedResourcesResponse> listTaggedResources(ListTaggedResourcesRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListTaggedResources").setMethod(HttpMethod.GET).setPathRegex("/2023-03-30/tags").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListTaggedResourcesResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<ListTaggedResourcesResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
     @Override
     public CompletableFuture<ListTriggersResponse> listTriggers(ListTriggersRequest request) {
         try {
@@ -734,24 +698,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * @deprecated
-      *
-     */
-    @Override
-    public CompletableFuture<TagResourceResponse> tagResource(TagResourceRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("TagResource").setMethod(HttpMethod.POST).setPathRegex("/2023-03-30/tag").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(TagResourceResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<TagResourceResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
     @Override
     public CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request) {
         try {
@@ -761,24 +707,6 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<TagResourcesResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
-      * @deprecated
-      *
-     */
-    @Override
-    public CompletableFuture<UntagResourceResponse> untagResource(UntagResourceRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UntagResource").setMethod(HttpMethod.DELETE).setPathRegex("/2023-03-30/tag").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UntagResourceResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<UntagResourceResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

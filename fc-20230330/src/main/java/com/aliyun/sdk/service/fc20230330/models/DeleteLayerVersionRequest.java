@@ -70,7 +70,7 @@ public class DeleteLayerVersionRequest extends Request {
         } 
 
         /**
-         * layerName.
+         * The layer name.
          */
         public Builder layerName(String layerName) {
             this.putPathParameter("layerName", layerName);
@@ -79,7 +79,7 @@ public class DeleteLayerVersionRequest extends Request {
         }
 
         /**
-         * version.
+         * The layer version.
          */
         public Builder version(Integer version) {
             this.putPathParameter("version", version);

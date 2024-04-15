@@ -55,7 +55,7 @@ public class GetCustomDomainRequest extends Request {
         } 
 
         /**
-         * domainName.
+         * The domain name.
          */
         public Builder domainName(String domainName) {
             this.putPathParameter("domainName", domainName);

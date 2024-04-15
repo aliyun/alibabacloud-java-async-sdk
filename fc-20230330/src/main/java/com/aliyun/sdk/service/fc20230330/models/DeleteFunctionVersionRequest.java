@@ -70,7 +70,7 @@ public class DeleteFunctionVersionRequest extends Request {
         } 
 
         /**
-         * functionName.
+         * The function name.
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -79,7 +79,7 @@ public class DeleteFunctionVersionRequest extends Request {
         }
 
         /**
-         * versionId.
+         * The function version.
          */
         public Builder versionId(Integer versionId) {
             this.putPathParameter("versionId", versionId);

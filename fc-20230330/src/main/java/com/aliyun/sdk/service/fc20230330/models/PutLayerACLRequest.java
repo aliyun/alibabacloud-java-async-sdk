@@ -69,7 +69,7 @@ public class PutLayerACLRequest extends Request {
         } 
 
         /**
-         * layerName.
+         * The layer name.
          */
         public Builder layerName(String layerName) {
             this.putPathParameter("layerName", layerName);
@@ -78,7 +78,7 @@ public class PutLayerACLRequest extends Request {
         }
 
         /**
-         * public.
+         * Specifies whether the layer is a public layer. Valid values: true and false.
          */
         public Builder _public(String _public) {
             this.putQueryParameter("public", _public);

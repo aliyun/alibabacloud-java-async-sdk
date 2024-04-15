@@ -84,7 +84,7 @@ public class PutAsyncInvokeConfigRequest extends Request {
         } 
 
         /**
-         * functionName.
+         * The function name.
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -93,7 +93,7 @@ public class PutAsyncInvokeConfigRequest extends Request {
         }
 
         /**
-         * body.
+         * The configurations of asynchronous function invocation.
          */
         public Builder body(PutAsyncInvokeConfigInput body) {
             this.putBodyParameter("body", body);
@@ -102,7 +102,7 @@ public class PutAsyncInvokeConfigRequest extends Request {
         }
 
         /**
-         * qualifier.
+         * The version or alias of the function.
          */
         public Builder qualifier(String qualifier) {
             this.putQueryParameter("qualifier", qualifier);

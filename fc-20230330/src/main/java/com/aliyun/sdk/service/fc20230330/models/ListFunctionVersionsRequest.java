@@ -97,7 +97,7 @@ public class ListFunctionVersionsRequest extends Request {
         } 
 
         /**
-         * functionName.
+         * The function name.
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -106,7 +106,7 @@ public class ListFunctionVersionsRequest extends Request {
         }
 
         /**
-         * direction.
+         * The sorting mode of function versions. Valid values: BACKWARD and FORWARD.
          */
         public Builder direction(String direction) {
             this.putQueryParameter("direction", direction);
@@ -115,7 +115,7 @@ public class ListFunctionVersionsRequest extends Request {
         }
 
         /**
-         * limit.
+         * The number of function versions that are returned.
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("limit", limit);
@@ -124,7 +124,7 @@ public class ListFunctionVersionsRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);

@@ -69,7 +69,7 @@ public class GetProvisionConfigRequest extends Request {
         } 
 
         /**
-         * functionName.
+         * The function name.
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -78,7 +78,7 @@ public class GetProvisionConfigRequest extends Request {
         }
 
         /**
-         * qualifier.
+         * The function alias or LATEST.
          */
         public Builder qualifier(String qualifier) {
             this.putQueryParameter("qualifier", qualifier);

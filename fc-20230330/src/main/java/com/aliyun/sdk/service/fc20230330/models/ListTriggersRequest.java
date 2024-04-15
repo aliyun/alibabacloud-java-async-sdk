@@ -97,7 +97,7 @@ public class ListTriggersRequest extends Request {
         } 
 
         /**
-         * functionName.
+         * The function name.
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -106,7 +106,7 @@ public class ListTriggersRequest extends Request {
         }
 
         /**
-         * limit.
+         * The number of triggers returned.
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("limit", limit);
@@ -115,7 +115,7 @@ public class ListTriggersRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * The token for the next page.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -124,7 +124,7 @@ public class ListTriggersRequest extends Request {
         }
 
         /**
-         * prefix.
+         * The trigger name prefix.
          */
         public Builder prefix(String prefix) {
             this.putQueryParameter("prefix", prefix);

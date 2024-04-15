@@ -85,7 +85,7 @@ public class UpdateTriggerRequest extends Request {
         } 
 
         /**
-         * functionName.
+         * The function name.
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -94,7 +94,7 @@ public class UpdateTriggerRequest extends Request {
         }
 
         /**
-         * triggerName.
+         * The trigger name.
          */
         public Builder triggerName(String triggerName) {
             this.putPathParameter("triggerName", triggerName);
@@ -103,7 +103,7 @@ public class UpdateTriggerRequest extends Request {
         }
 
         /**
-         * body.
+         * The trigger configurations.
          */
         public Builder body(UpdateTriggerInput body) {
             this.putBodyParameter("body", body);

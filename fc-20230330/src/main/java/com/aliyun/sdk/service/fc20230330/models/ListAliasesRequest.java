@@ -97,7 +97,7 @@ public class ListAliasesRequest extends Request {
         } 
 
         /**
-         * functionName.
+         * The function name.
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -106,7 +106,7 @@ public class ListAliasesRequest extends Request {
         }
 
         /**
-         * limit.
+         * The number of aliases returned.
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("limit", limit);
@@ -115,7 +115,7 @@ public class ListAliasesRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -124,7 +124,7 @@ public class ListAliasesRequest extends Request {
         }
 
         /**
-         * prefix.
+         * The alias prefix.
          */
         public Builder prefix(String prefix) {
             this.putQueryParameter("prefix", prefix);

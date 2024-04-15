@@ -26,6 +26,10 @@ public class InvokeFunctionRequest extends Request {
     private String qualifier;
 
     @Header
+    @NameInMap("x-fc-async-task-id")
+    private String xFcAsyncTaskId;
+
+    @Header
     @NameInMap("x-fc-invocation-type")
     private String xFcInvocationType;
 
@@ -38,6 +42,7 @@ public class InvokeFunctionRequest extends Request {
         this.functionName = builder.functionName;
         this.body = builder.body;
         this.qualifier = builder.qualifier;
+        this.xFcAsyncTaskId = builder.xFcAsyncTaskId;
         this.xFcInvocationType = builder.xFcInvocationType;
         this.xFcLogType = builder.xFcLogType;
     }
@@ -77,6 +82,13 @@ public class InvokeFunctionRequest extends Request {
     }
 
     /**
+     * @return xFcAsyncTaskId
+     */
+    public String getXFcAsyncTaskId() {
+        return this.xFcAsyncTaskId;
+    }
+
+    /**
      * @return xFcInvocationType
      */
     public String getXFcInvocationType() {
@@ -94,6 +106,7 @@ public class InvokeFunctionRequest extends Request {
         private String functionName; 
         private java.io.InputStream body; 
         private String qualifier; 
+        private String xFcAsyncTaskId; 
         private String xFcInvocationType; 
         private String xFcLogType; 
 
@@ -106,12 +119,13 @@ public class InvokeFunctionRequest extends Request {
             this.functionName = request.functionName;
             this.body = request.body;
             this.qualifier = request.qualifier;
+            this.xFcAsyncTaskId = request.xFcAsyncTaskId;
             this.xFcInvocationType = request.xFcInvocationType;
             this.xFcLogType = request.xFcLogType;
         } 
 
         /**
-         * functionName.
+         * The function name.
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -120,7 +134,7 @@ public class InvokeFunctionRequest extends Request {
         }
 
         /**
-         * body.
+         * The request parameters of function invocation.
          */
         public Builder body(java.io.InputStream body) {
             this.putBodyParameter("body", body);
@@ -129,7 +143,7 @@ public class InvokeFunctionRequest extends Request {
         }
 
         /**
-         * qualifier.
+         * The version or alias of the function.
          */
         public Builder qualifier(String qualifier) {
             this.putQueryParameter("qualifier", qualifier);
@@ -138,7 +152,16 @@ public class InvokeFunctionRequest extends Request {
         }
 
         /**
-         * x-fc-invocation-type.
+         * x-fc-async-task-id.
+         */
+        public Builder xFcAsyncTaskId(String xFcAsyncTaskId) {
+            this.putHeaderParameter("x-fc-async-task-id", xFcAsyncTaskId);
+            this.xFcAsyncTaskId = xFcAsyncTaskId;
+            return this;
+        }
+
+        /**
+         * The type of function invocation. Valid values: Sync and Async.
          */
         public Builder xFcInvocationType(String xFcInvocationType) {
             this.putHeaderParameter("x-fc-invocation-type", xFcInvocationType);
@@ -147,7 +170,7 @@ public class InvokeFunctionRequest extends Request {
         }
 
         /**
-         * x-fc-log-type.
+         * The log type of function invocation. Valid values: None and Tail.
          */
         public Builder xFcLogType(String xFcLogType) {
             this.putHeaderParameter("x-fc-log-type", xFcLogType);

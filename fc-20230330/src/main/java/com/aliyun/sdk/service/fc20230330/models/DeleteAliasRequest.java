@@ -70,7 +70,7 @@ public class DeleteAliasRequest extends Request {
         } 
 
         /**
-         * functionName.
+         * The function name.
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -79,7 +79,7 @@ public class DeleteAliasRequest extends Request {
         }
 
         /**
-         * aliasName.
+         * The function alias.
          */
         public Builder aliasName(String aliasName) {
             this.putPathParameter("aliasName", aliasName);

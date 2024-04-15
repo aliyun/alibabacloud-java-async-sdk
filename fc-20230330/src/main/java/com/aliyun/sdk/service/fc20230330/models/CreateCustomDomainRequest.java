@@ -55,7 +55,7 @@ public class CreateCustomDomainRequest extends Request {
         } 
 
         /**
-         * body.
+         * The information about the custom domain name.
          */
         public Builder body(CreateCustomDomainInput body) {
             this.putBodyParameter("body", body);

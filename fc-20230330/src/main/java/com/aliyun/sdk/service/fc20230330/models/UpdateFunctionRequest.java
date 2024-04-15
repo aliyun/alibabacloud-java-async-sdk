@@ -70,7 +70,7 @@ public class UpdateFunctionRequest extends Request {
         } 
 
         /**
-         * functionName.
+         * The function name.
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -79,7 +79,7 @@ public class UpdateFunctionRequest extends Request {
         }
 
         /**
-         * body.
+         * The function information
          */
         public Builder body(UpdateFunctionInput body) {
             this.putBodyParameter("body", body);

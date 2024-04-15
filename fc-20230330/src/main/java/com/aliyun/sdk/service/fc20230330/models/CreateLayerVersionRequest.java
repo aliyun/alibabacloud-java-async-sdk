@@ -70,7 +70,7 @@ public class CreateLayerVersionRequest extends Request {
         } 
 
         /**
-         * layerName.
+         * The name of the layer.
          */
         public Builder layerName(String layerName) {
             this.putPathParameter("layerName", layerName);
@@ -79,7 +79,7 @@ public class CreateLayerVersionRequest extends Request {
         }
 
         /**
-         * body.
+         * The information about layer configurations.
          */
         public Builder body(CreateLayerVersionInput body) {
             this.putBodyParameter("body", body);

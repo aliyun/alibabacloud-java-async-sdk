@@ -70,7 +70,7 @@ public class DeleteTriggerRequest extends Request {
         } 
 
         /**
-         * functionName.
+         * The function name.
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -79,7 +79,7 @@ public class DeleteTriggerRequest extends Request {
         }
 
         /**
-         * triggerName.
+         * The trigger name.
          */
         public Builder triggerName(String triggerName) {
             this.putPathParameter("triggerName", triggerName);

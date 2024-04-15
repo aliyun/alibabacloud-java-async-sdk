@@ -110,7 +110,7 @@ public class ListLayersRequest extends Request {
         } 
 
         /**
-         * limit.
+         * The number of layers that are returned
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("limit", limit);
@@ -119,7 +119,7 @@ public class ListLayersRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -128,7 +128,7 @@ public class ListLayersRequest extends Request {
         }
 
         /**
-         * official.
+         * Specifies whether the layer is official. Valid values: true and false.
          */
         public Builder official(String official) {
             this.putQueryParameter("official", official);
@@ -137,7 +137,7 @@ public class ListLayersRequest extends Request {
         }
 
         /**
-         * prefix.
+         * The name prefix of the layer.
          */
         public Builder prefix(String prefix) {
             this.putQueryParameter("prefix", prefix);
@@ -146,7 +146,7 @@ public class ListLayersRequest extends Request {
         }
 
         /**
-         * public.
+         * Specifies whether the layer is public. Valid values: true and false.
          */
         public Builder _public(String _public) {
             this.putQueryParameter("public", _public);

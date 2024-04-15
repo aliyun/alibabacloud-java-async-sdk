@@ -82,7 +82,7 @@ public class ListConcurrencyConfigsRequest extends Request {
         } 
 
         /**
-         * functionName.
+         * The function name. If you leave this parameter empty, the concurrency configurations of all functions are returned.
          */
         public Builder functionName(String functionName) {
             this.putQueryParameter("functionName", functionName);
@@ -91,7 +91,7 @@ public class ListConcurrencyConfigsRequest extends Request {
         }
 
         /**
-         * limit.
+         * The maximum number of entries returned.
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("limit", limit);
@@ -100,7 +100,7 @@ public class ListConcurrencyConfigsRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);

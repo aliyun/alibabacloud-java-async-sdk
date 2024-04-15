@@ -69,12 +69,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetProvisionConfigResponse> getProvisionConfig(GetProvisionConfigRequest request);
 
-    /**
-      * @deprecated
-      *
-     */
-    CompletableFuture<GetResourceTagsResponse> getResourceTags(GetResourceTagsRequest request);
-
     CompletableFuture<GetTriggerResponse> getTrigger(GetTriggerRequest request);
 
     CompletableFuture<InvokeFunctionResponse> invokeFunction(InvokeFunctionRequest request);
@@ -105,12 +99,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
 
-    /**
-      * @deprecated
-      *
-     */
-    CompletableFuture<ListTaggedResourcesResponse> listTaggedResources(ListTaggedResourcesRequest request);
-
     CompletableFuture<ListTriggersResponse> listTriggers(ListTriggersRequest request);
 
     CompletableFuture<ListVpcBindingsResponse> listVpcBindings(ListVpcBindingsRequest request);
@@ -125,19 +113,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<PutProvisionConfigResponse> putProvisionConfig(PutProvisionConfigRequest request);
 
-    /**
-      * @deprecated
-      *
-     */
-    CompletableFuture<TagResourceResponse> tagResource(TagResourceRequest request);
-
     CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
-
-    /**
-      * @deprecated
-      *
-     */
-    CompletableFuture<UntagResourceResponse> untagResource(UntagResourceRequest request);
 
     CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);
 

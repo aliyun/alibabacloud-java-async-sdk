@@ -85,7 +85,7 @@ public class UpdateAliasRequest extends Request {
         } 
 
         /**
-         * functionName.
+         * The function name.
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -94,7 +94,7 @@ public class UpdateAliasRequest extends Request {
         }
 
         /**
-         * aliasName.
+         * The function alias name.
          */
         public Builder aliasName(String aliasName) {
             this.putPathParameter("aliasName", aliasName);
@@ -103,7 +103,7 @@ public class UpdateAliasRequest extends Request {
         }
 
         /**
-         * body.
+         * The alias information to be updated.
          */
         public Builder body(UpdateAliasInput body) {
             this.putBodyParameter("body", body);

@@ -82,7 +82,7 @@ public class ListCustomDomainsRequest extends Request {
         } 
 
         /**
-         * limit.
+         * The number of custom domain names returned.
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("limit", limit);
@@ -91,7 +91,7 @@ public class ListCustomDomainsRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -100,7 +100,7 @@ public class ListCustomDomainsRequest extends Request {
         }
 
         /**
-         * prefix.
+         * The domain name prefix.
          */
         public Builder prefix(String prefix) {
             this.putQueryParameter("prefix", prefix);

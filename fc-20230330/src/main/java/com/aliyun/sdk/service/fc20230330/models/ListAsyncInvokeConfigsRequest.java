@@ -82,7 +82,7 @@ public class ListAsyncInvokeConfigsRequest extends Request {
         } 
 
         /**
-         * functionName.
+         * The function name. If you do not configure this parameter, the asynchronous invocation configurations of all functions are displayed.
          */
         public Builder functionName(String functionName) {
             this.putQueryParameter("functionName", functionName);
@@ -91,7 +91,7 @@ public class ListAsyncInvokeConfigsRequest extends Request {
         }
 
         /**
-         * limit.
+         * The maximum number of entries to be returned.
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("limit", limit);
@@ -100,7 +100,7 @@ public class ListAsyncInvokeConfigsRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * The paging information. This parameter specifies the start point of the query.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);

@@ -69,7 +69,7 @@ public class DeleteAsyncInvokeConfigRequest extends Request {
         } 
 
         /**
-         * functionName.
+         * The function name.
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -78,7 +78,7 @@ public class DeleteAsyncInvokeConfigRequest extends Request {
         }
 
         /**
-         * qualifier.
+         * The version or alias of the function.
          */
         public Builder qualifier(String qualifier) {
             this.putQueryParameter("qualifier", qualifier);
