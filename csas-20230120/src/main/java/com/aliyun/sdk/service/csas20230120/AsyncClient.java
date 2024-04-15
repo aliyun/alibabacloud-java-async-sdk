@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.csas20230120;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.csas20230120.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -106,6 +107,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListUserGroupsForRegistrationPolicyResponse> listUserGroupsForRegistrationPolicy(ListUserGroupsForRegistrationPolicyRequest request);
 
+    CompletableFuture<ListUsersResponse> listUsers(ListUsersRequest request);
+
     CompletableFuture<UpdateDynamicRouteResponse> updateDynamicRoute(UpdateDynamicRouteRequest request);
 
     CompletableFuture<UpdateExcessiveDeviceRegistrationApplicationsStatusResponse> updateExcessiveDeviceRegistrationApplicationsStatus(UpdateExcessiveDeviceRegistrationApplicationsStatusRequest request);
@@ -121,5 +124,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateUserDevicesStatusResponse> updateUserDevicesStatus(UpdateUserDevicesStatusRequest request);
 
     CompletableFuture<UpdateUserGroupResponse> updateUserGroup(UpdateUserGroupRequest request);
+
+    CompletableFuture<UpdateUsersStatusResponse> updateUsersStatus(UpdateUsersStatusRequest request);
 
 }
