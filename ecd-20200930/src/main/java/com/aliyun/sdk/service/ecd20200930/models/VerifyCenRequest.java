@@ -122,11 +122,11 @@ public class VerifyCenRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account to which the CEN instance belongs.
+         * The Alibaba Cloud account to which the CEN instance belongs.
          * <p>
          * 
-         * *   If you specify the CenId parameter and the CEN instance that you specify for the CenId parameter belongs to the current Alibaba Cloud account, skip this parameter.
-         * *   If you specify the CenId parameter and the CEN instance that you specify for the CenId parameter belongs to another Alibaba Cloud account, enter the ID of the exact Alibaba Cloud account.
+         * *   If you own the CEN instance, you can skip this parameter.
+         * *   If you do not own the CEN instance, you must specify the ID of the account that owns the CEN instance.
          */
         public Builder cenOwnerId(Long cenOwnerId) {
             this.putQueryParameter("CenOwnerId", cenOwnerId);
@@ -135,7 +135,7 @@ public class VerifyCenRequest extends Request {
         }
 
         /**
-         * The IPv4 CIDR block of the workspace.
+         * The IPv4 CIDR block of the associated office network.
          */
         public Builder cidrBlock(String cidrBlock) {
             this.putQueryParameter("CidrBlock", cidrBlock);
@@ -144,7 +144,7 @@ public class VerifyCenRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -153,7 +153,7 @@ public class VerifyCenRequest extends Request {
         }
 
         /**
-         * The verification code. If the CEN instance that you specify for the CenId parameter belongs to another Alibaba Cloud account, you must call the SendVerifyCode operation to obtain the verification code.
+         * The verification code. If you do not own the CEN instance, you must call the [SendVerifyCode](~~436847~~) operation to obtain a verification code.
          */
         public Builder verifyCode(String verifyCode) {
             this.putQueryParameter("VerifyCode", verifyCode);

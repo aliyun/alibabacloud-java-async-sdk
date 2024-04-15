@@ -185,7 +185,7 @@ public class CreateBundleRequest extends Request {
         } 
 
         /**
-         * The name of the desktop template.
+         * The name of the cloud computer template.
          */
         public Builder bundleName(String bundleName) {
             this.putQueryParameter("BundleName", bundleName);
@@ -194,7 +194,7 @@ public class CreateBundleRequest extends Request {
         }
 
         /**
-         * The description of the desktop template.
+         * The description of the cloud computer template.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -203,10 +203,10 @@ public class CreateBundleRequest extends Request {
         }
 
         /**
-         * The type of the cloud desktop. You can call the DescribeBundles operation to query the cloud desktop templates and obtain the supported desktop type from the value of the DesktopType parameter.
+         * The instance type of the cloud computers. You can call the [DescribeBundles](~~436974~~) operation to query cloud computer templates and obtain the instance types supported by the cloud computers from the `DesktopType` response parameter.
          * <p>
          * 
-         * >  You can select GPU-accelerated desktop types only when you use GPU-accelerated images.
+         * >  If you want the template to use a non-GPU-accelerated image, you can only select a non-GPU-accelerated instance type. If you want the template to use a GPU-accelerated image, you can only select a GPU-accelerated instance type.
          */
         public Builder desktopType(String desktopType) {
             this.putQueryParameter("DesktopType", desktopType);
@@ -224,12 +224,12 @@ public class CreateBundleRequest extends Request {
         }
 
         /**
-         * The language of the OS. This parameter is available only for system images. Valid values:
+         * The OS language. This parameter is available only for system images. Valid values:
          * <p>
          * 
          * *   zh-CN: Simplified Chinese
          * *   zh-HK: Traditional Chinese (Hong Kong)
-         * *   en-US: English
+         * *   en-US: American English
          * *   ja-JP: Japanese
          */
         public Builder language(String language) {
@@ -239,7 +239,7 @@ public class CreateBundleRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -248,15 +248,42 @@ public class CreateBundleRequest extends Request {
         }
 
         /**
-         * The performance level (PL) of the system disk. If the cloud desktop type is Graphics or High Frequency, you can set the PL of the system disk. Valid values:
+         * The performance level (PL) of the system disk. When the cloud computer instance type that is specified by the DesktopType parameter is set to a graphical instance type or instance type with a high clock speed, you can set the performance level of the disks. For more information about the differences among disks at different PLs, see [Enhanced SSDs](~~122389~~).
          * <p>
          * 
-         * *   PL0
+         * Valid values:
+         * 
          * *   PL1
-         * *   PL2
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   PL0
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
          * *   PL3
          * 
-         * For more information about the differences between disks at different PLs, see [Enhanced SSDs](~~122389~~).
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   PL2
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder rootDiskPerformanceLevel(String rootDiskPerformanceLevel) {
             this.putQueryParameter("RootDiskPerformanceLevel", rootDiskPerformanceLevel);
@@ -265,10 +292,7 @@ public class CreateBundleRequest extends Request {
         }
 
         /**
-         * The size of the system disk. Unit: GiB.
-         * <p>
-         * 
-         * The value of this parameter must be consistent with the system disk size supported by the cloud desktop type. For more information, see [Cloud desktop types](~~188609~~).
+         * The size of the system disk. Unit: GiB. The value of this parameter must be consistent with the system disk size supported by the cloud computer instance type. For more information, see [Overview](~~188609~~).
          */
         public Builder rootDiskSizeGib(Integer rootDiskSizeGib) {
             this.putQueryParameter("RootDiskSizeGib", rootDiskSizeGib);
@@ -277,15 +301,42 @@ public class CreateBundleRequest extends Request {
         }
 
         /**
-         * The PL of the data disk. If the cloud desktop type is Graphics or High Frequency, you can set the PL of the data disk. Valid values:
+         * The PL of the data disk. When the cloud computer instance type that is specified by the DesktopType parameter is set to a graphical instance type or instance type with a high clock speed, you can set the performance level of the disks. For more information about the differences among disks at different PLs, see [Enhanced SSDs](~~122389~~).
          * <p>
          * 
-         * *   PL0
+         * Valid values:
+         * 
          * *   PL1
-         * *   PL2
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   PL0
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
          * *   PL3
          * 
-         * For more information about the differences between disks at different PLs, see [Enhanced SSDs](~~122389~~).
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   PL2
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder userDiskPerformanceLevel(String userDiskPerformanceLevel) {
             this.putQueryParameter("UserDiskPerformanceLevel", userDiskPerformanceLevel);
@@ -294,7 +345,7 @@ public class CreateBundleRequest extends Request {
         }
 
         /**
-         * UserDiskSizeGib.
+         * The data disk sizes. You can configure only one data disk.
          */
         public Builder userDiskSizeGib(java.util.List < Integer > userDiskSizeGib) {
             this.putQueryParameter("UserDiskSizeGib", userDiskSizeGib);

@@ -70,7 +70,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         }
 
         /**
-         * Details about the workspaces.
+         * The information about office networks.
          */
         public Builder officeSites(java.util.List < OfficeSites> officeSites) {
             this.officeSites = officeSites;
@@ -178,7 +178,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             private String vSwitchId; 
 
             /**
-             * The IP address of the AD connector.
+             * The connection address of the AD connector.
              */
             public Builder ADConnectorAddress(String ADConnectorAddress) {
                 this.ADConnectorAddress = ADConnectorAddress;
@@ -186,12 +186,12 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the AD connector.
+             * The status of the AD connector.
              * <p>
              * 
              * Valid values:
              * 
-             * *   CONNECT_ERROR: A connection error occurs.
+             * *   CONNECT_ERROR
              * 
              *     <!-- -->
              * 
@@ -199,7 +199,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
              * 
              *     <!-- -->
              * 
-             * *   RUNNING: The AD connector is running
+             * *   RUNNING
              * 
              *     <!-- -->
              * 
@@ -207,27 +207,17 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
              * 
              *     <!-- -->
              * 
-             *     .
-             * 
-             * *   CONNECTING: The AD connector is being connected.
+             * *   CONNECTING
              * 
              *     <!-- -->
              * 
              *     <!-- -->
              * 
-             *     The AD domain for the connector needs to be configured.
+             *     (You must configure the AD domain in which the AD connector is used.)
              * 
              *     <!-- -->
              * 
-             * *   EXPIRED: The AD connector expired due to overdue payments.
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             * *   CREATING: The consumer group is being created
+             * *   EXPIRED
              * 
              *     <!-- -->
              * 
@@ -235,7 +225,13 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
              * 
              *     <!-- -->
              * 
-             *     .
+             * *   CREATING
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder connectorStatus(String connectorStatus) {
                 this.connectorStatus = connectorStatus;
@@ -243,7 +239,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the network interface controller (NIC) that is associated with the AD connector.
+             * The ID of an elastic network interface (ENI) to which the AD connector is mounted.
              */
             public Builder networkInterfaceId(String networkInterfaceId) {
                 this.networkInterfaceId = networkInterfaceId;
@@ -278,7 +274,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * The trust password that is specified when you configured the AD trust relationship.
+             * The trust password that is specified when you configure the AD trust relationship.
              */
             public Builder trustKey(String trustKey) {
                 this.trustKey = trustKey;
@@ -286,7 +282,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch that corresponds to the network of the AD connector.
+             * The ID of the vSwitch that resides in the network of the AD connector.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -363,12 +359,12 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             private String timeStamp; 
 
             /**
-             * The log level.
+             * The log severity.
              * <p>
              * 
              * Valid values:
              * 
-             * *   ERROR: errors
+             * *   ERROR
              * 
              *     <!-- -->
              * 
@@ -376,7 +372,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
              * 
              *     <!-- -->
              * 
-             * *   INFO: information
+             * *   INFO
              * 
              *     <!-- -->
              * 
@@ -384,7 +380,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
              * 
              *     <!-- -->
              * 
-             * *   WARN: warnings
+             * *   WARN
              * 
              *     <!-- -->
              * 
@@ -406,7 +402,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * The step that corresponds to the log entry.
+             * The step in the log entry.
              */
             public Builder step(String step) {
                 this.step = step;
@@ -983,7 +979,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             private String vpcType; 
 
             /**
-             * Details about AD connectors.
+             * The details of AD connectors.
              */
             public Builder ADConnectors(java.util.List < ADConnectors> ADConnectors) {
                 this.ADConnectors = ADConnectors;
@@ -991,7 +987,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * The hostname of the domain controller. The hostname must comply with the naming conventions for Windows hosts.
+             * The hostname of the domain controller. The hostname must comply with Windows hostname naming convention.
              */
             public Builder adHostname(String adHostname) {
                 this.adHostname = adHostname;
@@ -1001,7 +997,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             /**
              * The maximum public bandwidth value. Valid values: 0 to 1000.\
              * <p>
-             * If the value of this parameter is 0, Internet access is disabled.
+             * If you leave this parameter empty or set this parameter to 0, Internet access is not enabled.
              */
             public Builder bandwidth(Integer bandwidth) {
                 this.bandwidth = bandwidth;
@@ -1009,7 +1005,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * CenAttachStatus.
+             * The CEN instance status.
              */
             public Builder cenAttachStatus(String cenAttachStatus) {
                 this.cenAttachStatus = cenAttachStatus;
@@ -1017,7 +1013,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Cloud Enterprise Network (CEN) instance.
+             * The CEN instance ID.
              */
             public Builder cenId(String cenId) {
                 this.cenId = cenId;
@@ -1025,7 +1021,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * The IPv4 CIDR block that is included in the secure office network of the workspace.
+             * The IPv4 CIDR block of the VPC that the office network uses.
              */
             public Builder cidrBlock(String cidrBlock) {
                 this.cidrBlock = cidrBlock;
@@ -1033,12 +1029,12 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether the workspace is a cloud box-based workspace.
+             * Indicates whether the CloudBox-based office network is created.
              * <p>
              * 
              * Valid values:
              * 
-             * *   True: a cloud box-based workspace
+             * *   true
              * 
              *     <!-- -->
              * 
@@ -1046,7 +1042,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
              * 
              *     <!-- -->
              * 
-             * *   False: an Internet-based workspace
+             * *   false
              * 
              *     <!-- -->
              * 
@@ -1060,7 +1056,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the workspace was created.
+             * The time when the office network was created.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -1068,7 +1064,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the security group.
+             * The security group ID.
              */
             public Builder customSecurityGroupId(String customSecurityGroupId) {
                 this.customSecurityGroupId = customSecurityGroupId;
@@ -1076,36 +1072,16 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * The method that is used to connect an Alibaba Cloud Workspace client to cloud desktops.
+             * The method that is used to connect cloud computers that reside in the office network from WUYING clients.
              * <p>
+             * 
+             * >  The VPC connection depends on Alibaba Cloud PrivateLink. You can use Alibaba Cloud PrivateLink for free. When you set this parameter to `VPC` or `Any`, PrivateLink is automatically activated.
              * 
              * Valid values:
              * 
-             * *   INTERNET: allows clients to connect to cloud desktops only over the Internet.
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             * *   VPC: allows only clients in VPCs to connect to a cloud desktop.
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             * *   ANY: connects the client to cloud desktops over the Internet or a VPC.
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     Configure the Connection Method parameter based on your business requirements.
-             * 
-             *     <!-- -->
+             * *   INTERNET (default): Cloud computers are connected from WUYING clients over the Internet.
+             * *   VPC: Cloud computers are connected from WUYING clients over the VPC.
+             * *   ANY: Cloud computers are connected from WUYING clients over the Internet or the VPC. When you use can choose a method to connect cloud computers over the Internet or VPC from WUYING clients based on their business requirements.
              */
             public Builder desktopAccessType(String desktopAccessType) {
                 this.desktopAccessType = desktopAccessType;
@@ -1113,7 +1089,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of cloud desktops that are created.
+             * The number of cloud computers that are created.
              */
             public Builder desktopCount(Long desktopCount) {
                 this.desktopCount = desktopCount;
@@ -1121,7 +1097,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint that is used to connect to cloud desktops over a VPC.
+             * The endpoint that is used by the VPC, over which cloud computers are connected.
              */
             public Builder desktopVpcEndpoint(String desktopVpcEndpoint) {
                 this.desktopVpcEndpoint = desktopVpcEndpoint;
@@ -1129,7 +1105,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * The DNS addresses of the AD domains.
+             * The array of DNS addresses in the AD domains.
              */
             public Builder dnsAddress(java.util.List < String > dnsAddress) {
                 this.dnsAddress = dnsAddress;
@@ -1137,7 +1113,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * The username of the Domain Name System (DNS) user.
+             * The username of a Domain Name System (DNS) user.
              */
             public Builder dnsUserName(String dnsUserName) {
                 this.dnsUserName = dnsUserName;
@@ -1145,7 +1121,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name of the enterprise Active Directory (AD) system.
+             * The domain name of the enterprise AD.
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -1169,7 +1145,13 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the Local Administrator permissions are granted for users of the cloud desktop.
+             * Indicates whether the local administrator permissions are granted to users that are authorized to use cloud computers in the office network.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * * true (default)
+             * * false
              */
             public Builder enableAdminAccess(Boolean enableAdminAccess) {
                 this.enableAdminAccess = enableAdminAccess;
@@ -1177,7 +1159,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the cross-desktop access feature is enabled for cloud desktops in the same workspace. If the feature is enabled, cloud desktops in the same workspace can access each other.
+             * Indicates whether the connection between cloud computers in the office network is enabled. After you enable the connection between cloud computers in the office network, cloud computers in the office network can access each other.
              */
             public Builder enableCrossDesktopAccess(Boolean enableCrossDesktopAccess) {
                 this.enableCrossDesktopAccess = enableCrossDesktopAccess;
@@ -1193,7 +1175,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the Apsara File Storage NAS (NAS) file systems.
+             * An array of Apsara File Storage NAS (NAS) file system IDs.
              */
             public Builder fileSystemIds(java.util.List < String > fileSystemIds) {
                 this.fileSystemIds = fileSystemIds;
@@ -1209,7 +1191,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether to enable multi-factor authentication (MFA).
+             * Indicates whether multi-factor authentication (MFA) is enabled.
              */
             public Builder mfaEnabled(Boolean mfaEnabled) {
                 this.mfaEnabled = mfaEnabled;
@@ -1217,7 +1199,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the workspace. The name is unique in the same region.
+             * The office network name. The name is unique in a region.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1225,9 +1207,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether two-step verification for logons is enabled. This parameter is returned only for workspaces of the convenience account type.\
-             * <p>
-             * If two-factor verification is enabled, the system checks whether security risks exist within the logon account when a convenience user logs on to an Alibaba Cloud Workspace client. If risks are detected, the system sends a verification code to the email address that is associated with the account. Then, the convenience user can log on to the client only after the user enters the correct verification code.
+             * Indicates whether two-factor verification is enabled when an end user logs on to a WUYING client. This parameter is required only for convenience office networks. If two-factor verification is enabled, the system checks whether security risks exist within the logon account when the end user uses a convenience user to log on to the client. If risks are detected, the system sends a verification code to the email address that is associated with the account of the convenience user. Then, the end user can log on to the client only when the verification code is correct.
              */
             public Builder needVerifyLoginRisk(Boolean needVerifyLoginRisk) {
                 this.needVerifyLoginRisk = needVerifyLoginRisk;
@@ -1235,12 +1215,12 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether to enable trusted device verification.
+             * Indicates whether the trusted device verification is enabled.
              * <p>
              * 
              * Valid values:
              * 
-             * *   true: enables device verification.
+             * *   true
              * 
              *     <!-- -->
              * 
@@ -1248,7 +1228,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
              * 
              *     <!-- -->
              * 
-             * *   false: disables device verification.
+             * *   false
              * 
              *     <!-- -->
              * 
@@ -1262,7 +1242,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Internet access package.
+             * The premium bandwidth plan ID.
              */
             public Builder networkPackageId(String networkPackageId) {
                 this.networkPackageId = networkPackageId;
@@ -1270,7 +1250,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * The workspace ID.
+             * The office network ID.
              */
             public Builder officeSiteId(String officeSiteId) {
                 this.officeSiteId = officeSiteId;
@@ -1278,12 +1258,12 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * The account type of the workspace.
+             * The account type of the office network.
              * <p>
              * 
              * Valid values:
              * 
-             * *   SIMPLE: the convenience account
+             * *   SIMPLE: convenience account
              * 
              *     <!-- -->
              * 
@@ -1291,7 +1271,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
              * 
              *     <!-- -->
              * 
-             * *   AD_CONNECTOR: the enterprise AD account
+             * *   AD_CONNECTOR: enterprise AD account
              * 
              *     <!-- -->
              * 
@@ -1305,7 +1285,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the organizational unit (OU) that is connected to the AD domain.
+             * The organizational unit (OU) in the AD domain to which the office network is connected.
              */
             public Builder ouName(String ouName) {
                 this.ouName = ouName;
@@ -1313,12 +1293,12 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * The workspace protocol.
+             * The protocol type.
              * <p>
              * 
              * Valid values:
              * 
-             * *   HDX: the third-party protocol
+             * *   High-definition Experience (HDX)
              * 
              *     <!-- -->
              * 
@@ -1326,7 +1306,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
              * 
              *     <!-- -->
              * 
-             * *   ASP: the protocol developed by Alibaba Cloud
+             * *   Adaptive Streaming Protocol (ASP)
              * 
              *     <!-- -->
              * 
@@ -1340,7 +1320,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * RdsLicenseAddress.
+             * The IP address of the RDS license.
              */
             public Builder rdsLicenseAddress(String rdsLicenseAddress) {
                 this.rdsLicenseAddress = rdsLicenseAddress;
@@ -1348,7 +1328,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * RdsLicenseDomainName.
+             * The domain name of the RDS license.
              */
             public Builder rdsLicenseDomainName(String rdsLicenseDomainName) {
                 this.rdsLicenseDomainName = rdsLicenseDomainName;
@@ -1356,7 +1336,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * RdsLicenseStatus.
+             * The remote desktop service (RDS) license status.
              */
             public Builder rdsLicenseStatus(String rdsLicenseStatus) {
                 this.rdsLicenseStatus = rdsLicenseStatus;
@@ -1372,7 +1352,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of SSO.
+             * The SSO type.
              */
             public Builder ssoType(String ssoType) {
                 this.ssoType = ssoType;
@@ -1380,12 +1360,12 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the workspace.
+             * The office network status.
              * <p>
              * 
              * Valid values:
              * 
-             * *   REGISTERING: The workspace is being registered.
+             * *   REGISTERING: The office network is being registered.
              * 
              *     <!-- -->
              * 
@@ -1393,7 +1373,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
              * 
              *     <!-- -->
              * 
-             * *   DEREGISTERING: The workspace is being deregistered.
+             * *   DEREGISTERING: The office network is being deregistered.
              * 
              *     <!-- -->
              * 
@@ -1401,7 +1381,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
              * 
              *     <!-- -->
              * 
-             * *   REGISTERED: The workspace is registered.
+             * *   REGISTERED: The office network is registered.
              * 
              *     <!-- -->
              * 
@@ -1409,7 +1389,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
              * 
              *     <!-- -->
              * 
-             * *   NEEDCONFIGTRUST: A trust relationship needs to be configured.
+             * *   NEEDCONFIGTRUST: A trust relationship is required for the office network.
              * 
              *     <!-- -->
              * 
@@ -1417,7 +1397,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
              * 
              *     <!-- -->
              * 
-             * *   CONFIGTRUSTFAILED: A trust relationship fails to be configured.
+             * *   CONFIGTRUSTFAILED: A trust relationship fails to be configured for the office network.
              * 
              *     <!-- -->
              * 
@@ -1425,7 +1405,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
              * 
              *     <!-- -->
              * 
-             * *   DEREGISTERED: The workspace is deregistered.
+             * *   DEREGISTERED: The office network is deregistered.
              * 
              *     <!-- -->
              * 
@@ -1433,7 +1413,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
              * 
              *     <!-- -->
              * 
-             * *   ERROR: The configurations of the workspace are invalid.
+             * *   ERROR: One or more configurations of the office network are invalid.
              * 
              *     <!-- -->
              * 
@@ -1441,7 +1421,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
              * 
              *     <!-- -->
              * 
-             * *   CONFIGTRUSTING: A trust relationship is being configured.
+             * *   CONFIGTRUSTING: A trust relationship is being configured for the office network.
              * 
              *     <!-- -->
              * 
@@ -1449,7 +1429,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
              * 
              *     <!-- -->
              * 
-             * *   NEEDCONFIGUSER: Users need to be configured.
+             * *   NEEDCONFIGUSER: Users are required for the office network.
              * 
              *     <!-- -->
              * 
@@ -1463,7 +1443,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * The DNS addresses of the AD subdomains.
+             * An array of DNS addresses for AD subdomains.
              */
             public Builder subDnsAddress(java.util.List < String > subDnsAddress) {
                 this.subDnsAddress = subDnsAddress;
@@ -1471,7 +1451,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * The username of a Domain Name System (DNS) account in the AD subdomain.
+             * The username of enterprise AD subdomain.
              */
             public Builder subDomainName(String subDomainName) {
                 this.subDomainName = subDomainName;
@@ -1479,7 +1459,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalEdsCount.
+             * The total number of cloud computers.
              */
             public Builder totalEdsCount(Long totalEdsCount) {
                 this.totalEdsCount = totalEdsCount;
@@ -1487,7 +1467,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalEdsCountForGroup.
+             * The total number of cloud computers in the cloud computer pool (formerly desktop group).
              */
             public Builder totalEdsCountForGroup(Long totalEdsCountForGroup) {
                 this.totalEdsCountForGroup = totalEdsCountForGroup;
@@ -1495,7 +1475,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * > This parameter is unavailable.
+             * >  This parameter is unavailable.
              */
             public Builder trustPassword(String trustPassword) {
                 this.trustPassword = trustPassword;
@@ -1503,7 +1483,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the vSwitches.
+             * An array of VSwitch IDs.
              */
             public Builder vSwitchIds(java.util.List < String > vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
@@ -1511,7 +1491,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the secure office network of the workspace. The ID is also the ID of the virtual private cloud (VPC) used by the workspace.
+             * The VPC ID.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

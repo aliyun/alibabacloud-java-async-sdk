@@ -181,11 +181,11 @@ public class GetConnectionTicketRequest extends Request {
         } 
 
         /**
-         * The command that you want to run to configure a custom application in user mode. After you obtain the credentials, the application automatically starts.
+         * The command that you want to run to configure a custom application in user mode. After you obtain the credential, the application is automatically started. Parameter description in the command:
          * <p>
          * 
-         * *   appPath: the path of the application startup file. Example: C:\\\Program Files (x86)\\\000\\\000.exe. Use double slashes as delimiters.
-         * *   appParameter: the startup parameters of the application. The value must be of the String type. Separate multiple parameters with spaces. Example: meetingid 000 meetingname aaa.
+         * *   appPath: the path of the application startup file. Example: `"C:\\Program Files (x86)\\000\\000.exe"`. Use double slashes (\\\) as the delimiter. Type of the parameter value: string.
+         * *   appParameter: the startup arguments of the application. Example: `"meetingid 000 meetingname aaa"`. Separate multiple arguments with spaces. Type of the parameter value: string.
          */
         public Builder commandContent(String commandContent) {
             this.putQueryParameter("CommandContent", commandContent);
@@ -194,7 +194,7 @@ public class GetConnectionTicketRequest extends Request {
         }
 
         /**
-         * The ID of the cloud desktop.
+         * The ID of the cloud computer for which you want to generate a connection credential. This parameter is required.
          */
         public Builder desktopId(String desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -203,7 +203,7 @@ public class GetConnectionTicketRequest extends Request {
         }
 
         /**
-         * The ID of the end user.
+         * The ID of the end user of the cloud computer. The end user must be the current end user of the cloud computer.
          */
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -221,7 +221,7 @@ public class GetConnectionTicketRequest extends Request {
         }
 
         /**
-         * The password for the username.
+         * The password of the current end user of the cloud computer.
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -230,7 +230,7 @@ public class GetConnectionTicketRequest extends Request {
         }
 
         /**
-         * The region ID of the cloud desktop.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -257,7 +257,7 @@ public class GetConnectionTicketRequest extends Request {
         }
 
         /**
-         * The ID of the desktop connection task.
+         * The ID of the cloud computer connection task.
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

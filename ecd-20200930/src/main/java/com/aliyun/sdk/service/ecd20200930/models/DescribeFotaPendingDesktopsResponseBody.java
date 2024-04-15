@@ -86,7 +86,7 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The response code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
         }
 
         /**
-         * Details about the cloud desktops whose images can be but are not yet updated to the version that is described in an image update task (TaskUid).
+         * The cloud computers whose images can be but are not yet updated to the version that is described in an image update task (TaskUid).
          */
         public Builder fotaPendingDesktops(java.util.List < FotaPendingDesktops> fotaPendingDesktops) {
             this.fotaPendingDesktops = fotaPendingDesktops;
@@ -102,7 +102,7 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. If the NextToken parameter is empty, no next page exists.
+         * A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -118,7 +118,7 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,7 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
             private String endUserId; 
 
             /**
-             * EndUserId.
+             * The ID of the end user that connects to the cloud computer.
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
@@ -271,7 +271,7 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
             private Long status; 
 
             /**
-             * The current version of the image used by the cloud desktop.
+             * The current version of the image used by the cloud computer.
              */
             public Builder currentAppVersion(String currentAppVersion) {
                 this.currentAppVersion = currentAppVersion;
@@ -279,7 +279,7 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * The cloud desktop ID.
+             * The cloud computer ID.
              */
             public Builder desktopId(String desktopId) {
                 this.desktopId = desktopId;
@@ -287,7 +287,7 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * The cloud desktop name.
+             * The cloud computer name.
              */
             public Builder desktopName(String desktopName) {
                 this.desktopName = desktopName;
@@ -295,7 +295,7 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * FotaProject.
+             * The Firmware Over-The-Air (FOTA) update project of the cloud computer.
              */
             public Builder fotaProject(String fotaProject) {
                 this.fotaProject = fotaProject;
@@ -303,7 +303,7 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * The workspace ID.
+             * The office network ID.
              */
             public Builder officeSiteId(String officeSiteId) {
                 this.officeSiteId = officeSiteId;
@@ -311,7 +311,7 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * Sessions.
+             * The information about the connected sessions.
              */
             public Builder sessions(java.util.List < Sessions> sessions) {
                 this.sessions = sessions;
@@ -319,7 +319,7 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status.
              */
             public Builder status(Long status) {
                 this.status = status;

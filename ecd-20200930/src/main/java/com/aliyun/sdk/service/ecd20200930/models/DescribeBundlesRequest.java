@@ -322,7 +322,7 @@ public class DescribeBundlesRequest extends Request {
         } 
 
         /**
-         * The IDs of the desktop templates. You can specify 1 to 100 desktop templates.
+         * The IDs of the cloud computer templates. You can specify 1 to 100 IDs.
          */
         public Builder bundleId(java.util.List < String > bundleId) {
             this.putQueryParameter("BundleId", bundleId);
@@ -331,11 +331,26 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * The type of the cloud desktop template. Valid values:
+         * The type of the cloud computer template.
          * <p>
          * 
-         * *   SYSTEM: the system template
-         * *   CUSTOM: the custom template
+         * Valid values:
+         * 
+         * *   SYSTEM: system template
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   CUSTOM: custom template
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder bundleType(String bundleType) {
             this.putQueryParameter("BundleType", bundleType);
@@ -344,7 +359,7 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * Specifies whether to query the inventory status of the cloud desktop type.
+         * Specifies whether to query the inventory status of the cloud computer instance type.
          */
         public Builder checkStock(Boolean checkStock) {
             this.putQueryParameter("CheckStock", checkStock);
@@ -353,7 +368,7 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * The number of vCPUs that is defined in the cloud desktop type.
+         * The number of vCPUs contained in the cloud computer instance type.
          */
         public Builder cpuCount(Integer cpuCount) {
             this.putQueryParameter("CpuCount", cpuCount);
@@ -362,12 +377,14 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * The family of the cloud desktop type. Valid values:
+         * The instance family of the cloud computers.
          * <p>
          * 
-         * *   eds.general: General Office
-         * *   eds.hf: High Frequency
-         * *   eds.graphics: Graphics
+         * Valid values:
+         * 
+         * *   eds.graphics: graphical instance families
+         * *   eds.hf: instance families with high clock speeds
+         * *   eds.general: general-purpose instance families
          */
         public Builder desktopTypeFamily(String desktopTypeFamily) {
             this.putQueryParameter("DesktopTypeFamily", desktopTypeFamily);
@@ -376,7 +393,7 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * This parameter is now in invitational preview and unavailable.
+         * This parameter is now in invitational preview and not publicly available.
          */
         public Builder fotaChannel(String fotaChannel) {
             this.putQueryParameter("FotaChannel", fotaChannel);
@@ -385,7 +402,26 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * Specifies whether the cloud desktop template belongs to a desktop group. Default value: false.
+         * Specifies whether the cloud computers in the template belong to a cloud computer pool.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   true
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   false
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder fromDesktopGroup(Boolean fromDesktopGroup) {
             this.putQueryParameter("FromDesktopGroup", fromDesktopGroup);
@@ -394,7 +430,7 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * The number of GPUs that is defined in the cloud desktop type.
+         * The number of GPUs contained in the cloud computer instance type.
          */
         public Builder gpuCount(Float gpuCount) {
             this.putQueryParameter("GpuCount", gpuCount);
@@ -426,7 +462,7 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * The memory size that is defined in the cloud desktop type. Unit: GiB.
+         * The memory size of the cloud computer instance type. Unit: GiB.
          */
         public Builder memorySize(Integer memorySize) {
             this.putQueryParameter("MemorySize", memorySize);
@@ -444,11 +480,26 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * The OS. Valid values:
+         * The type of the OS.
          * <p>
          * 
-         * * **Windows**
-         * * **Linux**
+         * Valid values:
+         * 
+         * *   Linux
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   Windows
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder osType(String osType) {
             this.putQueryParameter("OsType", osType);
@@ -460,8 +511,10 @@ public class DescribeBundlesRequest extends Request {
          * The protocol type.
          * <p>
          * 
-         * *   HDX
-         * *   ASP (Recommend)
+         * Valid values:
+         * 
+         * *   HDX: High-definition Experience (HDX) protocol
+         * *   ASP: in-house Adaptive Streaming Protocol (ASP) (recommend)
          */
         public Builder protocolType(String protocolType) {
             this.putQueryParameter("ProtocolType", protocolType);
@@ -470,7 +523,7 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can call the [DescribeRegions](~~436773~~) operation to query the most recent region list.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -511,7 +564,7 @@ public class DescribeBundlesRequest extends Request {
         }
 
         /**
-         * Specifies whether to return multi-session desktop templates in this call. Default value: false.
+         * Specifies whether to return multi-session cloud computer templates. Default value: false.
          */
         public Builder supportMultiSession(Boolean supportMultiSession) {
             this.putQueryParameter("SupportMultiSession", supportMultiSession);

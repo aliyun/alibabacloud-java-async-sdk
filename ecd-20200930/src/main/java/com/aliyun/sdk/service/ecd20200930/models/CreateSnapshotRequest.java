@@ -124,7 +124,7 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * The ID of the cloud desktop.
+         * The ID of the cloud computer.
          */
         public Builder desktopId(String desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -133,7 +133,7 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -142,9 +142,7 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * The name of the snapshot. The name must be 2 to 128 characters in length.\
-         * <p>
-         * The name cannot start with auto because snapshots whose names start with auto are recognized as automatic snapshots.
+         * The name of the snapshot. The name must be 2 to 127 characters in length. The name must start with a letter. The name can contain letters, digits, underscores (\_), and hyphens (-). The name cannot start with `auto` because snapshots whose names start with auto are recognized as automatic snapshots.
          */
         public Builder snapshotName(String snapshotName) {
             this.putQueryParameter("SnapshotName", snapshotName);
@@ -153,11 +151,26 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * The type of the disk for which to create a snapshot. Valid values:
+         * The type of the disk for which you want to create a snapshot.
          * <p>
          * 
+         * Valid values:
+         * 
          * *   system: system disk
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
          * *   data: data disk
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder sourceDiskType(String sourceDiskType) {
             this.putQueryParameter("SourceDiskType", sourceDiskType);

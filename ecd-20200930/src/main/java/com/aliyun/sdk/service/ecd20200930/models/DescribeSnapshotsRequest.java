@@ -219,7 +219,7 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The cloud desktop ID.
+         * The ID of the cloud computer.
          */
         public Builder desktopId(String desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -228,7 +228,7 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The cloud desktop name.
+         * The name of the cloud computer.
          */
         public Builder desktopName(String desktopName) {
             this.putQueryParameter("DesktopName", desktopName);
@@ -237,7 +237,7 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. The query is performed based on the time when the system stopped creating a snapshot. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-mm-ddthh:mm:ssz format. The time must be in UTC.
+         * The end of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -286,10 +286,7 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The snapshot name. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.
-         * <p>
-         * 
-         * The name cannot start with `auto` because snapshots whose names start with auto are recognized as automatic snapshots.
+         * The name of the snapshot. The name must be 2 to 127 characters in length. The name must start with a letter. The name can contain letters, digits, underscores (\_), and hyphens (-). The name cannot start with `auto` because snapshots whose names start with auto are recognized as automatic snapshots.
          */
         public Builder snapshotName(String snapshotName) {
             this.putQueryParameter("SnapshotName", snapshotName);
@@ -298,14 +295,34 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The snapshot type.
+         * The category of the snapshots.
          * <p>
          * 
-         * Valid values:
+         * Default value: all. Valid values:
          * 
-         * *   auto: automatic snapshot
-         * *   user: manual snapshot
-         * *   all (default): all types of snapshots
+         * *   all: all snapshot categories
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   auto: automatic snapshots
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   user: manual snapshots
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder snapshotType(String snapshotType) {
             this.putQueryParameter("SnapshotType", snapshotType);
@@ -314,13 +331,28 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The type of the source disk of which you want to query snapshots. Valid values:
+         * The type of the disk for which the snapshot is created.
          * <p>
          * 
-         * *   System: system disk
+         * >  The value of this parameter is not case-sensitive.
+         * 
+         * Valid values:
+         * 
          * *   Data: data disk
          * 
-         * > The value of this parameter is not case-sensitive.
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   System: system disk
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder sourceDiskType(String sourceDiskType) {
             this.putQueryParameter("SourceDiskType", sourceDiskType);
@@ -329,7 +361,7 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. The query is performed based on the time when the system created a snapshot. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-mm-ddthh:mm:ssz format. The time must be in UTC.
+         * The beginning of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

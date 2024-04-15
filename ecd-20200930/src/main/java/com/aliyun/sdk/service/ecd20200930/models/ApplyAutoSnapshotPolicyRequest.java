@@ -85,7 +85,7 @@ public class ApplyAutoSnapshotPolicyRequest extends Request {
         } 
 
         /**
-         * The IDs of cloud desktops. You can specify 1 to 20 cloud desktops.
+         * The IDs of the cloud computers. You can specify 1 to 20 IDs.
          */
         public Builder desktopId(java.util.List < String > desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -103,7 +103,7 @@ public class ApplyAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

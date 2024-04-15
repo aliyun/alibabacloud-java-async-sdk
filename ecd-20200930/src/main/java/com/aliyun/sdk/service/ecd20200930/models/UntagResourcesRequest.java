@@ -122,7 +122,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -131,7 +131,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The resource IDs, namely the cloud desktop IDs. Valid values of N: 1 to 50.
+         * The resource IDs, which are cloud computer IDs. You can specify 1 to 50 IDs.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -140,7 +140,12 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The resource type. Valid value: ALIYUN::GWS::INSTANCE.
+         * The type of the resource.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * * ALIYUN::GWS::INSTANCE: cloud computer.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -149,7 +154,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The tag key. You can specify up to 20 tag keys.
+         * The tag keys. You can specify 1 to 20 tag keys.
          */
         public Builder tagKey(java.util.List < String > tagKey) {
             this.putQueryParameter("TagKey", tagKey);

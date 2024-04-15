@@ -62,7 +62,7 @@ public class DescribeUserConnectionRecordsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details about connection records.
+         * Details about connection records of the end user.
          */
         public Builder connectionRecords(java.util.List < ConnectionRecords> connectionRecords) {
             this.connectionRecords = connectionRecords;
@@ -178,7 +178,7 @@ public class DescribeUserConnectionRecordsResponseBody extends TeaModel {
             private String desktopName; 
 
             /**
-             * The duration of the desktop connection. Unit: seconds.
+             * The duration for which the end user is connected to the cloud computer. Unit: seconds.
              */
             public Builder connectDuration(String connectDuration) {
                 this.connectDuration = connectDuration;
@@ -186,7 +186,7 @@ public class DescribeUserConnectionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the cloud desktop was disconnected.
+             * The time when the end user disconnected from the cloud computer.
              */
             public Builder connectEndTime(String connectEndTime) {
                 this.connectEndTime = connectEndTime;
@@ -194,7 +194,7 @@ public class DescribeUserConnectionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the cloud desktop was connected.
+             * The time when the end user connected to the cloud computer.
              */
             public Builder connectStartTime(String connectStartTime) {
                 this.connectStartTime = connectStartTime;
@@ -210,7 +210,7 @@ public class DescribeUserConnectionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cloud desktop that is connected.
+             * The ID of the cloud computer to which the end user connected.
              */
             public Builder desktopId(String desktopId) {
                 this.desktopId = desktopId;
@@ -218,7 +218,7 @@ public class DescribeUserConnectionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cloud desktop that is connected.
+             * The name of the cloud computer to which the end user connected.
              */
             public Builder desktopName(String desktopName) {
                 this.desktopName = desktopName;

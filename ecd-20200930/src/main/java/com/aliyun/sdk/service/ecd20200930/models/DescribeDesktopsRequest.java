@@ -575,11 +575,11 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The number of entries per page.
          * <p>
          * 
-         * *   Maximum value: 100.
-         * *   Default value: 10.
+         * *   Maximum value: 100
+         * *   Default value: 10
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);

@@ -98,7 +98,7 @@ public class ModifyImageAttributeRequest extends Request {
         } 
 
         /**
-         * The image description. The description must be 2 to 256 characters in length. It cannot start with `http://` or `https://`.
+         * The description of the image. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -116,7 +116,7 @@ public class ModifyImageAttributeRequest extends Request {
         }
 
         /**
-         * The name of the image. The name must be 2 to 128 characters in length, and can contain letters, digits, colons (:), underscores (\_), and hyphens (-). It must start with a letter but cannot start with `http://` or `https://`.
+         * The name of the image. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -125,7 +125,7 @@ public class ModifyImageAttributeRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

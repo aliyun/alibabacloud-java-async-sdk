@@ -70,7 +70,7 @@ public class DeleteOfficeSitesRequest extends Request {
         } 
 
         /**
-         * The ID of the workspace that you want to delete. You can specify 1 to 100 IDs of workspaces.
+         * The IDs of the office networks. You can specify 1 to 100 office networks.
          */
         public Builder officeSiteId(java.util.List < String > officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -79,7 +79,7 @@ public class DeleteOfficeSitesRequest extends Request {
         }
 
         /**
-         * The region ID of the workspace that you want to delete. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

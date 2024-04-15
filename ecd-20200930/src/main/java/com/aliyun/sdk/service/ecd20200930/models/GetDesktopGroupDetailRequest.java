@@ -70,7 +70,7 @@ public class GetDesktopGroupDetailRequest extends Request {
         } 
 
         /**
-         * The ID of the desktop group.
+         * The ID of the cloud computer pool.
          */
         public Builder desktopGroupId(String desktopGroupId) {
             this.putQueryParameter("DesktopGroupId", desktopGroupId);
@@ -79,7 +79,7 @@ public class GetDesktopGroupDetailRequest extends Request {
         }
 
         /**
-         * The region ID of the desktop group.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

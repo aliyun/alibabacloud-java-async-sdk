@@ -109,7 +109,7 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * The name of the automatic snapshot policy.
+         * The name of the automatic snapshot policy. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-). This parameter is empty by default.
          */
         public Builder policyName(String policyName) {
             this.putQueryParameter("PolicyName", policyName);
@@ -118,7 +118,7 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * The ID of the region where the automatic snapshot policy is created. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -127,11 +127,7 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * The retention period of automatic snapshots. Unit: days. Valid values:
-         * <p>
-         * 
-         * *   \-1: Automatic snapshots are retained until they are deleted.
-         * *   1 to 65536: Automatic snapshots are retained for the specified number of days.
+         * The retention period of the automatic snapshots. Unit: days. Valid values: 1 to 180.
          */
         public Builder retentionDays(Integer retentionDays) {
             this.putQueryParameter("RetentionDays", retentionDays);

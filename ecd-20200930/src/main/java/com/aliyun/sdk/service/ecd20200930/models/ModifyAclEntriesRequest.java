@@ -100,26 +100,14 @@ public class ModifyAclEntriesRequest extends Request {
         } 
 
         /**
-         * The ACL policy.
+         * The Internet access control policy.
          * <p>
          * 
          * Valid values:
          * 
-         * *   allow
+         * *   allow: allows access to the Internet.
          * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   deny
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * *   disable: forbids access to the Internet.
          */
         public Builder policy(String policy) {
             this.putQueryParameter("Policy", policy);
@@ -137,7 +125,7 @@ public class ModifyAclEntriesRequest extends Request {
         }
 
         /**
-         * The IDs of instances that correspond to the ACL granularity.
+         * The instance IDs (office network IDs or cloud computer IDs) to which the Internet access control policy is applicable.
          */
         public Builder sourceId(java.util.List < String > sourceId) {
             this.putQueryParameter("SourceId", sourceId);
@@ -146,34 +134,14 @@ public class ModifyAclEntriesRequest extends Request {
         }
 
         /**
-         * The network granularity that corresponds to the access control list (ACL) policy.
+         * The granularity to which the Internet access control policy is applicable.
          * <p>
          * 
          * Valid values:
          * 
-         * *   desktop
+         * *   desktop: cloud computer granularity.
          * 
-         *     <!-- -->
-         * 
-         *     :
-         * 
-         *     <!-- -->
-         * 
-         *     cloud desktop
-         * 
-         *     <!-- -->
-         * 
-         * *   vpc
-         * 
-         *     <!-- -->
-         * 
-         *     :
-         * 
-         *     <!-- -->
-         * 
-         *     workspace
-         * 
-         *     <!-- -->
+         * *   vpc: office network granularity.
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);

@@ -98,7 +98,7 @@ public class RemoveUserFromDesktopGroupRequest extends Request {
         } 
 
         /**
-         * The ID of the desktop group.
+         * The ID of the cloud computer pool for which you want to remove the authorized users.
          */
         public Builder desktopGroupId(String desktopGroupId) {
             this.putQueryParameter("DesktopGroupId", desktopGroupId);
@@ -107,7 +107,7 @@ public class RemoveUserFromDesktopGroupRequest extends Request {
         }
 
         /**
-         * The IDs of the desktop groups.
+         * The IDs of cloud computer pools.
          */
         public Builder desktopGroupIds(java.util.List < String > desktopGroupIds) {
             this.putQueryParameter("DesktopGroupIds", desktopGroupIds);
@@ -116,7 +116,7 @@ public class RemoveUserFromDesktopGroupRequest extends Request {
         }
 
         /**
-         * The authorized user to be removed.
+         * The IDs of the authorized users that you want to remove.
          */
         public Builder endUserIds(java.util.List < String > endUserIds) {
             this.putQueryParameter("EndUserIds", endUserIds);
@@ -125,7 +125,7 @@ public class RemoveUserFromDesktopGroupRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

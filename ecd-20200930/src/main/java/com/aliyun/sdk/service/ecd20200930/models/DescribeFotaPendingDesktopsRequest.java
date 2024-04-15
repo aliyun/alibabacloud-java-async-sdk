@@ -140,7 +140,7 @@ public class DescribeFotaPendingDesktopsRequest extends Request {
         } 
 
         /**
-         * The cloud desktop ID.
+         * The cloud computer ID.
          */
         public Builder desktopId(String desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -149,7 +149,7 @@ public class DescribeFotaPendingDesktopsRequest extends Request {
         }
 
         /**
-         * The name of the cloud desktop.
+         * The cloud computer name.
          */
         public Builder desktopName(String desktopName) {
             this.putQueryParameter("DesktopName", desktopName);
@@ -158,10 +158,10 @@ public class DescribeFotaPendingDesktopsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The number of entries per page.
          * <p>
          * 
-         * *   Maximum value: 100.
+         * *   Valid values: 1 to 100.
          * *   Default value: 20.
          */
         public Builder maxResults(Integer maxResults) {
@@ -171,7 +171,7 @@ public class DescribeFotaPendingDesktopsRequest extends Request {
         }
 
         /**
-         * The token that determines the start point of the next query. If this parameter is left empty, all results are returned.
+         * The pagination token that is used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -180,7 +180,7 @@ public class DescribeFotaPendingDesktopsRequest extends Request {
         }
 
         /**
-         * The ID of the workspace.
+         * The office network ID. You can call the [DescribeOfficeSites](~~216071~~) operation to obtain the office network ID.
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -189,7 +189,7 @@ public class DescribeFotaPendingDesktopsRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can call the [DescribeRegions](https://next.api.aliyun.com/document/ecd/2020-09-30/DescribeRegions) operation to query the most recent region list.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -198,7 +198,7 @@ public class DescribeFotaPendingDesktopsRequest extends Request {
         }
 
         /**
-         * The ID of the image update task. You can call the [DescribeFotaTasks](~~DescribeFotaTasks~~) operation to obtain the value of this parameter.
+         * The ID of the image update task. You can call the DescribeFotaTasks operation to obtain the task ID.
          */
         public Builder taskUid(String taskUid) {
             this.putQueryParameter("TaskUid", taskUid);

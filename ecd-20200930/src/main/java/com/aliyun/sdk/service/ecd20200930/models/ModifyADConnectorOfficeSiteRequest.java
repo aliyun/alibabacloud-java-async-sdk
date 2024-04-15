@@ -210,7 +210,7 @@ public class ModifyADConnectorOfficeSiteRequest extends Request {
         } 
 
         /**
-         * AdHostname.
+         * The hostname of the domain controller. The hostname must comply with the naming conventions for hostnames in Windows.
          */
         public Builder adHostname(String adHostname) {
             this.putQueryParameter("AdHostname", adHostname);
@@ -219,7 +219,7 @@ public class ModifyADConnectorOfficeSiteRequest extends Request {
         }
 
         /**
-         * DnsAddress.
+         * Details of the IP addresses of the Domain Name System (DNS) servers that correspond to the enterprise AD system. You can specify only one IP address.
          */
         public Builder dnsAddress(java.util.List < String > dnsAddress) {
             this.putQueryParameter("DnsAddress", dnsAddress);
@@ -228,7 +228,7 @@ public class ModifyADConnectorOfficeSiteRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * The domain name of the enterprise AD system. You can register each domain name only once.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -237,7 +237,7 @@ public class ModifyADConnectorOfficeSiteRequest extends Request {
         }
 
         /**
-         * DomainPassword.
+         * The password of the domain administrator. The username can be up to 64 characters in length.
          */
         public Builder domainPassword(String domainPassword) {
             this.putQueryParameter("DomainPassword", domainPassword);
@@ -246,7 +246,10 @@ public class ModifyADConnectorOfficeSiteRequest extends Request {
         }
 
         /**
-         * DomainUserName.
+         * The username of the domain administrator. The username can be up to 64 characters in length.
+         * <p>
+         * 
+         * > Specify the value of the sAMAccountName parameter instead of the value of the userPrincipalName parameter as the username.
          */
         public Builder domainUserName(String domainUserName) {
             this.putQueryParameter("DomainUserName", domainUserName);
@@ -255,7 +258,26 @@ public class ModifyADConnectorOfficeSiteRequest extends Request {
         }
 
         /**
-         * MfaEnabled.
+         * Specifies whether to enable multi-factor authentication (MFA).
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   true
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   false
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder mfaEnabled(Boolean mfaEnabled) {
             this.putQueryParameter("MfaEnabled", mfaEnabled);
@@ -264,7 +286,7 @@ public class ModifyADConnectorOfficeSiteRequest extends Request {
         }
 
         /**
-         * OUName.
+         * The name of the organizational unit (OU) in the AD domain. You can call the [ListUserAdOrganizationUnits](~~311259~~) operation to obtain OUs.
          */
         public Builder OUName(String OUName) {
             this.putQueryParameter("OUName", OUName);
@@ -273,7 +295,7 @@ public class ModifyADConnectorOfficeSiteRequest extends Request {
         }
 
         /**
-         * OfficeSiteId.
+         * The office network ID.
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -282,7 +304,7 @@ public class ModifyADConnectorOfficeSiteRequest extends Request {
         }
 
         /**
-         * OfficeSiteName.
+         * The office network name. The name must be 2 to 255 characters in length. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-). It must start with a letter and cannot start with `http://` or `https://`.
          */
         public Builder officeSiteName(String officeSiteName) {
             this.putQueryParameter("OfficeSiteName", officeSiteName);
@@ -291,7 +313,7 @@ public class ModifyADConnectorOfficeSiteRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -300,7 +322,7 @@ public class ModifyADConnectorOfficeSiteRequest extends Request {
         }
 
         /**
-         * SubDomainDnsAddress.
+         * The DNS address of the subdomain in the enterprise AD domain. You can specify only one DNS address. If you configure `SubDomainName` and leave this parameter empty, the value is the same as that of the enterprise AD domain.
          */
         public Builder subDomainDnsAddress(java.util.List < String > subDomainDnsAddress) {
             this.putQueryParameter("SubDomainDnsAddress", subDomainDnsAddress);
@@ -309,7 +331,7 @@ public class ModifyADConnectorOfficeSiteRequest extends Request {
         }
 
         /**
-         * SubDomainName.
+         * The name of the subdomain in the enterprise AD domain.
          */
         public Builder subDomainName(String subDomainName) {
             this.putQueryParameter("SubDomainName", subDomainName);

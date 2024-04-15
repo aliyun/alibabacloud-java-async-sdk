@@ -7,52 +7,58 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeDesktopGroupSessionsRequest} extends {@link RequestModel}
+ * {@link DescribeRecordingsRequest} extends {@link RequestModel}
  *
- * <p>DescribeDesktopGroupSessionsRequest</p>
+ * <p>DescribeRecordingsRequest</p>
  */
-public class DescribeDesktopGroupSessionsRequest extends Request {
+public class DescribeRecordingsRequest extends Request {
+    @Query
+    @NameInMap("DesktopId")
+    private String desktopId;
+
     @Query
     @NameInMap("EndTime")
     private String endTime;
-
-    @Query
-    @NameInMap("EndUserId")
-    private String endUserId;
 
     @Query
     @NameInMap("MaxResults")
     private Integer maxResults;
 
     @Query
+    @NameInMap("NeedSignedUrl")
+    private Boolean needSignedUrl;
+
+    @Query
     @NameInMap("NextToken")
     private String nextToken;
 
     @Query
-    @NameInMap("OwnType")
-    private Integer ownType;
+    @NameInMap("PolicyGroupId")
+    private String policyGroupId;
 
     @Query
     @NameInMap("RegionId")
+    @Validation(required = true)
     private String regionId;
 
     @Query
-    @NameInMap("SessionStatus")
-    private String sessionStatus;
+    @NameInMap("SignedUrlExpireMinutes")
+    private Integer signedUrlExpireMinutes;
 
     @Query
     @NameInMap("StartTime")
     private String startTime;
 
-    private DescribeDesktopGroupSessionsRequest(Builder builder) {
+    private DescribeRecordingsRequest(Builder builder) {
         super(builder);
+        this.desktopId = builder.desktopId;
         this.endTime = builder.endTime;
-        this.endUserId = builder.endUserId;
         this.maxResults = builder.maxResults;
+        this.needSignedUrl = builder.needSignedUrl;
         this.nextToken = builder.nextToken;
-        this.ownType = builder.ownType;
+        this.policyGroupId = builder.policyGroupId;
         this.regionId = builder.regionId;
-        this.sessionStatus = builder.sessionStatus;
+        this.signedUrlExpireMinutes = builder.signedUrlExpireMinutes;
         this.startTime = builder.startTime;
     }
 
@@ -60,13 +66,20 @@ public class DescribeDesktopGroupSessionsRequest extends Request {
         return new Builder();
     }
 
-    public static DescribeDesktopGroupSessionsRequest create() {
+    public static DescribeRecordingsRequest create() {
         return builder().build();
     }
 
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return desktopId
+     */
+    public String getDesktopId() {
+        return this.desktopId;
     }
 
     /**
@@ -77,17 +90,17 @@ public class DescribeDesktopGroupSessionsRequest extends Request {
     }
 
     /**
-     * @return endUserId
-     */
-    public String getEndUserId() {
-        return this.endUserId;
-    }
-
-    /**
      * @return maxResults
      */
     public Integer getMaxResults() {
         return this.maxResults;
+    }
+
+    /**
+     * @return needSignedUrl
+     */
+    public Boolean getNeedSignedUrl() {
+        return this.needSignedUrl;
     }
 
     /**
@@ -98,10 +111,10 @@ public class DescribeDesktopGroupSessionsRequest extends Request {
     }
 
     /**
-     * @return ownType
+     * @return policyGroupId
      */
-    public Integer getOwnType() {
-        return this.ownType;
+    public String getPolicyGroupId() {
+        return this.policyGroupId;
     }
 
     /**
@@ -112,10 +125,10 @@ public class DescribeDesktopGroupSessionsRequest extends Request {
     }
 
     /**
-     * @return sessionStatus
+     * @return signedUrlExpireMinutes
      */
-    public String getSessionStatus() {
-        return this.sessionStatus;
+    public Integer getSignedUrlExpireMinutes() {
+        return this.signedUrlExpireMinutes;
     }
 
     /**
@@ -125,34 +138,45 @@ public class DescribeDesktopGroupSessionsRequest extends Request {
         return this.startTime;
     }
 
-    public static final class Builder extends Request.Builder<DescribeDesktopGroupSessionsRequest, Builder> {
+    public static final class Builder extends Request.Builder<DescribeRecordingsRequest, Builder> {
+        private String desktopId; 
         private String endTime; 
-        private String endUserId; 
         private Integer maxResults; 
+        private Boolean needSignedUrl; 
         private String nextToken; 
-        private Integer ownType; 
+        private String policyGroupId; 
         private String regionId; 
-        private String sessionStatus; 
+        private Integer signedUrlExpireMinutes; 
         private String startTime; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeDesktopGroupSessionsRequest request) {
+        private Builder(DescribeRecordingsRequest request) {
             super(request);
+            this.desktopId = request.desktopId;
             this.endTime = request.endTime;
-            this.endUserId = request.endUserId;
             this.maxResults = request.maxResults;
+            this.needSignedUrl = request.needSignedUrl;
             this.nextToken = request.nextToken;
-            this.ownType = request.ownType;
+            this.policyGroupId = request.policyGroupId;
             this.regionId = request.regionId;
-            this.sessionStatus = request.sessionStatus;
+            this.signedUrlExpireMinutes = request.signedUrlExpireMinutes;
             this.startTime = request.startTime;
         } 
 
         /**
-         * The end of the time range to query.
+         * DesktopId.
+         */
+        public Builder desktopId(String desktopId) {
+            this.putQueryParameter("DesktopId", desktopId);
+            this.desktopId = desktopId;
+            return this;
+        }
+
+        /**
+         * EndTime.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -161,16 +185,7 @@ public class DescribeDesktopGroupSessionsRequest extends Request {
         }
 
         /**
-         * The ID of the end user.
-         */
-        public Builder endUserId(String endUserId) {
-            this.putQueryParameter("EndUserId", endUserId);
-            this.endUserId = endUserId;
-            return this;
-        }
-
-        /**
-         * The number of entries per page.
+         * MaxResults.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -179,7 +194,16 @@ public class DescribeDesktopGroupSessionsRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results.
+         * NeedSignedUrl.
+         */
+        public Builder needSignedUrl(Boolean needSignedUrl) {
+            this.putQueryParameter("NeedSignedUrl", needSignedUrl);
+            this.needSignedUrl = needSignedUrl;
+            return this;
+        }
+
+        /**
+         * NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -188,22 +212,16 @@ public class DescribeDesktopGroupSessionsRequest extends Request {
         }
 
         /**
-         * The type of the session.
-         * <p>
-         * 
-         * Valid values:
-         * 
-         * *   0: single-session
-         * *   1: multi-session
+         * PolicyGroupId.
          */
-        public Builder ownType(Integer ownType) {
-            this.putQueryParameter("OwnType", ownType);
-            this.ownType = ownType;
+        public Builder policyGroupId(String policyGroupId) {
+            this.putQueryParameter("PolicyGroupId", policyGroupId);
+            this.policyGroupId = policyGroupId;
             return this;
         }
 
         /**
-         * The region ID.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -212,35 +230,16 @@ public class DescribeDesktopGroupSessionsRequest extends Request {
         }
 
         /**
-         * The status of the session.
-         * <p>
-         * 
-         * Valid values:
-         * 
-         * *   Connected
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   Disconnected
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * SignedUrlExpireMinutes.
          */
-        public Builder sessionStatus(String sessionStatus) {
-            this.putQueryParameter("SessionStatus", sessionStatus);
-            this.sessionStatus = sessionStatus;
+        public Builder signedUrlExpireMinutes(Integer signedUrlExpireMinutes) {
+            this.putQueryParameter("SignedUrlExpireMinutes", signedUrlExpireMinutes);
+            this.signedUrlExpireMinutes = signedUrlExpireMinutes;
             return this;
         }
 
         /**
-         * The beginning of the time range to query.
+         * StartTime.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -249,8 +248,8 @@ public class DescribeDesktopGroupSessionsRequest extends Request {
         }
 
         @Override
-        public DescribeDesktopGroupSessionsRequest build() {
-            return new DescribeDesktopGroupSessionsRequest(this);
+        public DescribeRecordingsRequest build() {
+            return new DescribeRecordingsRequest(this);
         } 
 
     } 

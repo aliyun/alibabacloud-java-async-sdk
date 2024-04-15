@@ -84,7 +84,7 @@ public class SetDesktopGroupScaleTimerRequest extends Request {
         } 
 
         /**
-         * The ID of the desktop group.
+         * The ID of the cloud computer pool.
          */
         public Builder desktopGroupId(String desktopGroupId) {
             this.putQueryParameter("DesktopGroupId", desktopGroupId);
@@ -93,7 +93,7 @@ public class SetDesktopGroupScaleTimerRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the regions supported by WUYING Workspace.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -102,7 +102,7 @@ public class SetDesktopGroupScaleTimerRequest extends Request {
         }
 
         /**
-         * The information about the scheduled auto scaling tasks.
+         * The information about the scheduled auto scaling task.
          */
         public Builder scaleTimerInfos(java.util.List < ScaleTimerInfos> scaleTimerInfos) {
             this.putQueryParameter("ScaleTimerInfos", scaleTimerInfos);
@@ -228,7 +228,7 @@ public class SetDesktopGroupScaleTimerRequest extends Request {
             private String type; 
 
             /**
-             * The number of cloud desktops that you want to create in the desktop group. Valid values: 0 to 200. You must configure this parameter for the scaling policy.
+             * One option for the auto scaling policy. This option specifies the number of cloud computers that you want to create in the cloud computer pool. Valid values: 0 to 200.
              */
             public Builder buyResAmount(Integer buyResAmount) {
                 this.buyResAmount = buyResAmount;
@@ -236,7 +236,7 @@ public class SetDesktopGroupScaleTimerRequest extends Request {
             }
 
             /**
-             * The CRON expression that is used when an auto scaling task is triggered.
+             * The cron expression of the trigger time.
              */
             public Builder cron(String cron) {
                 this.cron = cron;
@@ -244,7 +244,10 @@ public class SetDesktopGroupScaleTimerRequest extends Request {
             }
 
             /**
-             * The keep-alive duration after the cloud desktop is disconnected. Unit: milliseconds.
+             * The keep-alive duration of a session after the session is disconnected. Unit: milliseconds. Valid values: 180000 (3 minutes) to 345600000 (4 days). A value of 0 indicates that the session always keeps alive.
+             * <p>
+             * 
+             * If a session is disconnected by the end user or accidentally due to a factor and the end user does not re-establish a connection with the session within the keep-alive duration, the session expires and unsaved data is deleted. If the end user successfully re-establishes a connection with the session within the keep-alive duration, the end user returns to the session and can still access the original data.
              */
             public Builder keepDuration(Long keepDuration) {
                 this.keepDuration = keepDuration;
@@ -252,7 +255,13 @@ public class SetDesktopGroupScaleTimerRequest extends Request {
             }
 
             /**
-             * The load balancing policy of the multi-session desktop group.
+             * The load balancing policy for the multi-session cloud computer pool.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   0: depth-first
+             * *   1: breadth first.
              */
             public Builder loadPolicy(Integer loadPolicy) {
                 this.loadPolicy = loadPolicy;
@@ -260,7 +269,7 @@ public class SetDesktopGroupScaleTimerRequest extends Request {
             }
 
             /**
-             * The maximum number of cloud desktops in the workspace after scaling. Valid values: 0 to 200. You must configure this parameter for the scaling policy.
+             * One option for the auto scaling policy. This option specifies the maximum number of cloud computers that you can create in the cloud computer pool. Valid values: 0 to 200.
              */
             public Builder maxResAmount(Integer maxResAmount) {
                 this.maxResAmount = maxResAmount;
@@ -268,7 +277,7 @@ public class SetDesktopGroupScaleTimerRequest extends Request {
             }
 
             /**
-             * The minimum number of cloud desktops that can be connected. Valid values: 0 to 200.
+             * One option for the auto scaling policy. This option specifies the minimum number of cloud computers that you must create in the cloud computer pool. Valid values: 0 to 200.
              */
             public Builder minResAmount(Integer minResAmount) {
                 this.minResAmount = minResAmount;
@@ -276,7 +285,12 @@ public class SetDesktopGroupScaleTimerRequest extends Request {
             }
 
             /**
-             * The threshold for the ratio of connected sessions. This parameter is the condition that triggers auto scaling in a multi-session desktop group. `Ratio of connected sessions = Number of connected sessions/(Total number of cloud desktops × Maximum number of sessions supported by each cloud desktop) × 100%`. When the ratio of connected sessions is greater than the specified threshold, desktop scale-out is automatically triggered. When the ratio of connected sessions is smaller than the specified threshold, desktop scale-in is automatically triggered under a specific condition.
+             * The threshold for the ratio of connected sessions. This parameter is the condition that triggers auto scaling in a multi-session cloud computer pool. Formula:
+             * <p>
+             * 
+             * `Ratio of connected sessions = Number of connected sessions/(Total number of cloud computers × Maximum number of sessions allowed for each cloud computer) × 100%`.
+             * 
+             * When the specified threshold is reached, new cloud computers are automatically created. When the specified threshold is not reached, idle cloud computers are released.
              */
             public Builder ratioThreshold(Float ratioThreshold) {
                 this.ratioThreshold = ratioThreshold;
@@ -284,7 +298,42 @@ public class SetDesktopGroupScaleTimerRequest extends Request {
             }
 
             /**
-             * The type of the policy.
+             * The type of the auto scaling policy.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   drop
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   normal
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   peak
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   rise
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder type(String type) {
                 this.type = type;

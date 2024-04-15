@@ -84,7 +84,7 @@ public class ModifyEntitlementRequest extends Request {
         } 
 
         /**
-         * The cloud desktop ID.
+         * The ID of the cloud computer.
          */
         public Builder desktopId(String desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -93,7 +93,7 @@ public class ModifyEntitlementRequest extends Request {
         }
 
         /**
-         * The usernames. You can specify 1 to 100 usernames.
+         * The username IDs. End users specified by this parameter become the end users of the cloud computer, and the original end users of the cloud computer are removed. You can specify 1 to 100 IDs.
          */
         public Builder endUserId(java.util.List < String > endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -102,7 +102,7 @@ public class ModifyEntitlementRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -70,7 +70,7 @@ public class DeleteAutoSnapshotPolicyRequest extends Request {
         } 
 
         /**
-         * The ID of the policy template that you want to manage.
+         * The IDs of the automatic snapshot policies that you want to delete.
          */
         public Builder policyId(java.util.List < String > policyId) {
             this.putQueryParameter("PolicyId", policyId);
@@ -79,7 +79,7 @@ public class DeleteAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * The ID of the region where the automatic snapshot policy is created.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

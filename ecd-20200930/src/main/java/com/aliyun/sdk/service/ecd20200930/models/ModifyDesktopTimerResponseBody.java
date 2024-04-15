@@ -50,7 +50,7 @@ public class ModifyDesktopTimerResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The IDs of cloud desktops whose scheduled tasks are configured.
+         * The IDs of the cloud computers for which you successfully configure the scheduled task.
          */
         public Builder desktopIds(java.util.List < String > desktopIds) {
             this.desktopIds = desktopIds;

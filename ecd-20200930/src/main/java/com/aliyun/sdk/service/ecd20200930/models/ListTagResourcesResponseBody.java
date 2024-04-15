@@ -154,7 +154,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The resource ID, namely the cloud desktop ID.
+             * The resource ID, which is the cloud computer ID.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -162,7 +162,12 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The resource type. Valid value: ALIYUN::GWS::INSTANCE.
+             * The type of the resource.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * * ALIYUN::GWS::INSTANCE: cloud computer.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -170,7 +175,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag key.
+             * The tag keys.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -178,7 +183,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * The tag values.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

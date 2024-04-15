@@ -74,7 +74,7 @@ public class VerifyCenResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * The three random IPv4 CIDR blocks that are recommended. If the returned value of the Status parameter is Conflict, this parameter is returned.
+         * The recommended IPv4 CIDR blocks. Three CIDR blocks are randomly recommended. This parameter is returned when the `Status` value is `Conflict`.
          */
         public Builder cidrBlocks(java.util.List < String > cidrBlocks) {
             this.cidrBlocks = cidrBlocks;
@@ -90,7 +90,7 @@ public class VerifyCenResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the routes of the CEN instance.
+         * The routes provided by the CEN instance.
          */
         public Builder routeEntries(java.util.List < RouteEntries> routeEntries) {
             this.routeEntries = routeEntries;
@@ -98,15 +98,17 @@ public class VerifyCenResponseBody extends TeaModel {
         }
 
         /**
-         * The verification result. Valid values:
+         * The check result of CIDR block conflict.
          * <p>
          * 
-         * *   Access: The route verification succeeds. If the verification result for all routes succeeds, Access is returned for this parameter.
-         * *   Conflict: A CIDR block conflict exists. If the verification result of at least one route is Conflict, Conflict is returned for this parameter.
-         * *   InvalidCen.ParameterCenInstanceId: The ID of the CEN instance and the ID of the Alibaba Cloud account are invalid. The CEN instance does not belong to the Alibaba Cloud account.
-         * *   InvalidCen.CenUidInvalid: The ID of the Alibaba Cloud account is invalid or the Alibaba Cloud account is not granted the required permissions to access Elastic Desktop Service (EDS).
+         * Valid values:
+         * 
+         * *   InvalidCen.CenUidInvalid: The Alibaba Cloud account is invalid or the Alibaba Cloud account does not have the permission to access WUYING Workspace.
          * *   VerifyCode.InvalidTokenCode: The verification code is invalid.
-         * *   VerifyCode.ReachTokenRetryTime: The retries of entering the verification code reaches the upper limit.
+         * *   VerifyCode.ReachTokenRetryTime: The maximum number of times for entering a verification code reaches the limit.
+         * *   Conflict: A CIDR block conflict exists. If the verification result of at least one route is Conflict, Conflict is returned for this parameter.
+         * *   Access: The verification is passed. If the verification result for all routes is Access, Access is returned for this parameter.
+         * *   InvalidCen.ParameterCenInstanceId: The Alibaba Cloud account does not own the CEN instance.
          */
         public Builder status(String status) {
             this.status = status;
@@ -190,7 +192,7 @@ public class VerifyCenResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the network instance that is attached to the route.
+             * The ID of the instance corresponding to the route.
              */
             public Builder nextHopInstanceId(String nextHopInstanceId) {
                 this.nextHopInstanceId = nextHopInstanceId;
@@ -198,7 +200,7 @@ public class VerifyCenResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region where the route resides.
+             * The region ID of the route.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -206,11 +208,13 @@ public class VerifyCenResponseBody extends TeaModel {
             }
 
             /**
-             * The verification result for a route. Valid values:
+             * The verification result of the route.
              * <p>
              * 
-             * *   Access: The route verification succeeds.
+             * Valid values:
+             * 
              * *   Conflict: A CIDR block conflict exists.
+             * *   Access: The verification is passed.
              */
             public Builder status(String status) {
                 this.status = status;

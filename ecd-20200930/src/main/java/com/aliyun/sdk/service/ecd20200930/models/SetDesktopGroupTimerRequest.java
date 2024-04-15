@@ -127,7 +127,7 @@ public class SetDesktopGroupTimerRequest extends Request {
         } 
 
         /**
-         * The CRON expression for the scheduled task.
+         * The cron expression for the scheduled task. This parameter is required when `TimerType` is set to 2, 3, or 4.
          */
         public Builder cronExpression(String cronExpression) {
             this.putQueryParameter("CronExpression", cronExpression);
@@ -136,7 +136,7 @@ public class SetDesktopGroupTimerRequest extends Request {
         }
 
         /**
-         * The ID of the desktop group.
+         * The ID of the cloud computer pool.
          */
         public Builder desktopGroupId(String desktopGroupId) {
             this.putQueryParameter("DesktopGroupId", desktopGroupId);
@@ -154,7 +154,7 @@ public class SetDesktopGroupTimerRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -164,6 +164,14 @@ public class SetDesktopGroupTimerRequest extends Request {
 
         /**
          * The type of the disk that you want to reset.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * - does not reset disks.
+         * - resets only the system disk.
+         * - resets only the user disk.
+         * - resets the system disk and the user disk.
          */
         public Builder resetType(Integer resetType) {
             this.putQueryParameter("ResetType", resetType);
@@ -173,6 +181,14 @@ public class SetDesktopGroupTimerRequest extends Request {
 
         /**
          * The type of the scheduled task.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   1: scheduled reset
+         * *   2: scheduled startup
+         * *   3: scheduled stop
+         * *   4: scheduled restart
          */
         public Builder timerType(Integer timerType) {
             this.putQueryParameter("TimerType", timerType);

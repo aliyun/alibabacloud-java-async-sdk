@@ -74,7 +74,7 @@ public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The image modification record collection.
+         * Details about the image modification record.
          */
         public Builder imageModifiedRecords(java.util.List < ImageModifiedRecords> imageModifiedRecords) {
             this.imageModifiedRecords = imageModifiedRecords;
@@ -198,7 +198,7 @@ public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * The ID of the image before the change.
+             * The ID of the original image.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -206,7 +206,7 @@ public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the image before the change.
+             * The name of the original image.
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -214,7 +214,7 @@ public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the new image.
+             * The ID of the new image after the image was modified.
              */
             public Builder newImageId(String newImageId) {
                 this.newImageId = newImageId;
@@ -222,7 +222,7 @@ public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Add the image name.
+             * The name of the new image after the image was modified.
              */
             public Builder newImageName(String newImageName) {
                 this.newImageName = newImageName;
@@ -230,7 +230,16 @@ public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the workspace.
+             * The status of the image modification.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   0: The image is being modified.
+             * 
+             * *   1: The image is successfully modified.
+             * 
+             * *   2: The image fails to be modified.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -238,7 +247,7 @@ public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The last time when the disaster recovery plan was updated.
+             * The time when the image was last modified.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

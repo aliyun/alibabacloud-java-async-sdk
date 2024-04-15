@@ -148,7 +148,7 @@ public class DescribeOfficeSitesRequest extends Request {
         }
 
         /**
-         * The IDs of the workspaces. You can specify 1 to 100 IDs of workspaces.
+         * The office network IDs. You can specify the IDs of 1 to 100 office networks.
          */
         public Builder officeSiteId(java.util.List < String > officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -157,7 +157,26 @@ public class DescribeOfficeSitesRequest extends Request {
         }
 
         /**
-         * The account type of the workspace.
+         * The account type of the office network.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   SIMPLE: convenience account
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   AD_CONNECTOR: enterprise Active Directory (AD) account
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder officeSiteType(String officeSiteType) {
             this.putQueryParameter("OfficeSiteType", officeSiteType);
@@ -166,7 +185,7 @@ public class DescribeOfficeSitesRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -175,7 +194,82 @@ public class DescribeOfficeSitesRequest extends Request {
         }
 
         /**
-         * The state of the workspace.
+         * The office network status.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   REGISTERING: The office network is being registered.
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   DEREGISTERING: The office network is being deregistered.
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   REGISTERED: The office network is registered.
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   NEEDCONFIGTRUST: A trust relationship is required for the office network.
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   CONFIGTRUSTFAILED: A trust relationship fails to be configured for the office network.
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   DEREGISTERED: The office network is deregistered.
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   ERROR: One or more configurations of the office network are invalid.
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   CONFIGTRUSTING: A trust relationship is being configured for the office network.
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   NEEDCONFIGUSER: Users are required for the office network.
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

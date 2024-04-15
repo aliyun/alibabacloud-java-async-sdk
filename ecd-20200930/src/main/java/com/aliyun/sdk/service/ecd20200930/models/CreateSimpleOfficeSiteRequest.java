@@ -246,10 +246,10 @@ public class CreateSimpleOfficeSiteRequest extends Request {
         }
 
         /**
-         * The ID of the Cloud Enterprise Network (CEN) instance.
+         * The Cloud Enterprise Network (CEN) instance ID.
          * <p>
          * 
-         * > If you want to connect to your cloud desktops over a VPC, you can attach the network of the workspace to the CEN instance. The CEN instance is connected to the on-premises network over VPN Gateway or Express Connect.
+         * >  If you want end users to connect to cloud computers from WUYING clients over VPCs, you can attach the office network to a CEN instance. The CEN instance is the one that connects to your on-premises network over VPN Gateway or Express Connect.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -271,7 +271,12 @@ public class CreateSimpleOfficeSiteRequest extends Request {
         }
 
         /**
-         * The IPv4 CIDR block in the secure office network of the workspace. The IPv4 CIDR block that the system uses to create a virtual private cloud (VPC) for the workspace. We recommend that you set the IPv4 CIDR block to 10.0.0.0/12, 172.16.0.0/12, 192.168.0.0/16, or a subnet of these CIDR blocks. If you set the IPv4 CIDR block to 10.0.0.0/12 or 172.16.0.0/12, the mask is 1224 bits in length. If you set the IPv4 CIDR block to 192.168.0.0/16, the mask is 1624 bits in length.
+         * The IPv4 CIDR block that you want the office network to use in the virtual private cloud (VPC) of the office network. The system automatically creates a VPC for the office network based on the IPv4 CIDR block. We recommend that you set this parameter to one of the following CIDR blocks and their subnets:
+         * <p>
+         * 
+         * *   `10.0.0.0/12` (subnet mask range: 12 to 14 bits)
+         * *   `172.16.0.0/12` (subnet mask range: 12 to 24 bits)
+         * *   `192.168.0.0/16` (subnet mask range: 16 to 24 bits)
          */
         public Builder cidrBlock(String cidrBlock) {
             this.putQueryParameter("CidrBlock", cidrBlock);
@@ -280,7 +285,26 @@ public class CreateSimpleOfficeSiteRequest extends Request {
         }
 
         /**
-         * Specifies whether the workspace is a CloudBox-based workspace.
+         * Specifies whether to create a CloudBox-based office network.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   true
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   false
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder cloudBoxOfficeSite(Boolean cloudBoxOfficeSite) {
             this.putQueryParameter("CloudBoxOfficeSite", cloudBoxOfficeSite);
@@ -289,10 +313,10 @@ public class CreateSimpleOfficeSiteRequest extends Request {
         }
 
         /**
-         * The method that is used to connect the client to cloud desktops.
+         * The method to connect to cloud computers from WUYING clients.
          * <p>
          * 
-         * > VPC connections are established by using Alibaba Cloud PrivateLink. You can use PrivateLink for free. When you set this parameter to VPC or Any, PrivateLink is automatically activated.
+         * >  The VPC connection depends on Alibaba Cloud PrivateLink. You can use PrivateLink for free. When you set this parameter to VPC or Any, PrivateLink is automatically activated.````
          */
         public Builder desktopAccessType(String desktopAccessType) {
             this.putQueryParameter("DesktopAccessType", desktopAccessType);
@@ -301,7 +325,13 @@ public class CreateSimpleOfficeSiteRequest extends Request {
         }
 
         /**
-         * Specifies whether to grant the permissions of the local administrator to the regular user of the cloud desktop.
+         * Specifies whether to grant the local administrator permissions to users that are authorized to use cloud computers in the office network.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * * true (default)
+         * * false
          */
         public Builder enableAdminAccess(Boolean enableAdminAccess) {
             this.putQueryParameter("EnableAdminAccess", enableAdminAccess);
@@ -310,7 +340,26 @@ public class CreateSimpleOfficeSiteRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable Internet access. By default, Internet access is not enabled.
+         * Specifies whether to enable Internet access.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   true
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   false (default)
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder enableInternetAccess(Boolean enableInternetAccess) {
             this.putQueryParameter("EnableInternetAccess", enableInternetAccess);
@@ -328,7 +377,7 @@ public class CreateSimpleOfficeSiteRequest extends Request {
         }
 
         /**
-         * The name of the workspace. The name must be 2 to 255 characters in length. It must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+         * The office network name. The name must be 2 to 255 characters in length. It can contain digits, colons (:), underscores (\_), and hyphens (-). It must start with a letter and cannot start with `http://` or `https://`.
          */
         public Builder officeSiteName(String officeSiteName) {
             this.putQueryParameter("OfficeSiteName", officeSiteName);
@@ -337,7 +386,7 @@ public class CreateSimpleOfficeSiteRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -346,7 +395,7 @@ public class CreateSimpleOfficeSiteRequest extends Request {
         }
 
         /**
-         * The IDs of the vSwitches in the VPC. This parameter is required when you create a CloudBox-based workspace.
+         * The IDs of the vSwitches that you want to specify in VPCs. This parameter is required only when you create CloudBox-based office networks.
          */
         public Builder vSwitchId(java.util.List < String > vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -364,7 +413,13 @@ public class CreateSimpleOfficeSiteRequest extends Request {
         }
 
         /**
-         * VpcType.
+         * The network type of the office network.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   standard: advanced
+         * *   basic: basic
          */
         public Builder vpcType(String vpcType) {
             this.putQueryParameter("VpcType", vpcType);

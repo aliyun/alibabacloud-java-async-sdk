@@ -126,7 +126,7 @@ public class ModifyBundleRequest extends Request {
         } 
 
         /**
-         * The desktop template ID.
+         * The ID of the cloud computer template that you want to modify.
          */
         public Builder bundleId(String bundleId) {
             this.putQueryParameter("BundleId", bundleId);
@@ -135,7 +135,7 @@ public class ModifyBundleRequest extends Request {
         }
 
         /**
-         * The name of the new desktop template.
+         * The name of the new cloud computer template.
          */
         public Builder bundleName(String bundleName) {
             this.putQueryParameter("BundleName", bundleName);
@@ -144,7 +144,7 @@ public class ModifyBundleRequest extends Request {
         }
 
         /**
-         * The description of the new desktop template.
+         * The description of the new cloud computer template.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -168,12 +168,15 @@ public class ModifyBundleRequest extends Request {
         }
 
         /**
-         * The language of the OS. This parameter is available only for system images. Valid values:
+         * The OS language. This parameter is available only for system images.
          * <p>
          * 
-         * *   zh-CN: Simplified Chinese
+         * Valid values:
+         * 
+         * *   en-US: American English
          * *   zh-HK: Traditional Chinese (Hong Kong)
-         * *   en-US: English
+         * *   zh-CN: Simplified Chinese.
+         * 
          * *   ja-JP: Japanese
          */
         public Builder language(String language) {
@@ -183,7 +186,7 @@ public class ModifyBundleRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

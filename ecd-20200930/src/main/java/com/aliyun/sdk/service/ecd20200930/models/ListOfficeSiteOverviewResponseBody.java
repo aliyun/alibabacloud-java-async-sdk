@@ -70,7 +70,7 @@ public class ListOfficeSiteOverviewResponseBody extends TeaModel {
         }
 
         /**
-         * Details of the workspaces.
+         * The office network information.
          */
         public Builder officeSiteOverviewResults(java.util.List < OfficeSiteOverviewResults> officeSiteOverviewResults) {
             this.officeSiteOverviewResults = officeSiteOverviewResults;
@@ -262,7 +262,7 @@ public class ListOfficeSiteOverviewResponseBody extends TeaModel {
             private Integer willExpiredEdsCountForGroup; 
 
             /**
-             * The number of expired cloud desktops in the workspace.
+             * The number of expired cloud computers in the office network.
              */
             public Builder hasExpiredEdsCount(Integer hasExpiredEdsCount) {
                 this.hasExpiredEdsCount = hasExpiredEdsCount;
@@ -270,7 +270,7 @@ public class ListOfficeSiteOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * The number of expired cloud desktops in the desktop group.
+             * The number of expired cloud computers in the cloud computer pool.
              */
             public Builder hasExpiredEdsCountForGroup(Integer hasExpiredEdsCountForGroup) {
                 this.hasExpiredEdsCountForGroup = hasExpiredEdsCountForGroup;
@@ -278,7 +278,7 @@ public class ListOfficeSiteOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the workspace.
+             * The office network ID.
              */
             public Builder officeSiteId(String officeSiteId) {
                 this.officeSiteId = officeSiteId;
@@ -286,7 +286,7 @@ public class ListOfficeSiteOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the workspace.
+             * The office network name.
              */
             public Builder officeSiteName(String officeSiteName) {
                 this.officeSiteName = officeSiteName;
@@ -294,7 +294,82 @@ public class ListOfficeSiteOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the workspace.
+             * The office network status.
+             * <p>
+             * 
+             * Default values:
+             * 
+             * *   CONFIGUSERFAILED
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   REGISTERING
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   REGISTERED
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   NEEDCONFIGTRUST
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   CONFIGUSERING
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   CONFIGTRUSTFAILED
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   ERROR
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   CONFIGTRUSTING
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   NEEDCONFIGUSER
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder officeSiteStatus(String officeSiteStatus) {
                 this.officeSiteStatus = officeSiteStatus;
@@ -302,7 +377,7 @@ public class ListOfficeSiteOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the workspace.
+             * The ID of the region where the office network resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -310,7 +385,7 @@ public class ListOfficeSiteOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * The number of running cloud desktops in the workspace.
+             * The number of cloud computers that are running in the office network.
              */
             public Builder runningEdsCount(Integer runningEdsCount) {
                 this.runningEdsCount = runningEdsCount;
@@ -318,7 +393,7 @@ public class ListOfficeSiteOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * The number of running cloud desktops in the desktop group.
+             * The number of running cloud computers in the cloud computer pool.
              */
             public Builder runningEdsCountForGroup(Integer runningEdsCountForGroup) {
                 this.runningEdsCountForGroup = runningEdsCountForGroup;
@@ -326,7 +401,7 @@ public class ListOfficeSiteOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of cloud desktops in the workspace.
+             * The total number of cloud computers in the office network.
              */
             public Builder totalEdsCount(Integer totalEdsCount) {
                 this.totalEdsCount = totalEdsCount;
@@ -334,7 +409,7 @@ public class ListOfficeSiteOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of cloud desktops in the desktop group.
+             * The total number of cloud computers in the cloud computer pool.
              */
             public Builder totalEdsCountForGroup(Integer totalEdsCountForGroup) {
                 this.totalEdsCountForGroup = totalEdsCountForGroup;
@@ -342,7 +417,14 @@ public class ListOfficeSiteOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * The virtual private cloud (VPC) type of the workspace.
+             * The office network type and its suitable VPC type.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   standard (default): standard, exclusive VPC
+             * *   customized: custom, user VPC
+             * *   basic: basic, shared VPC
              */
             public Builder vpcType(String vpcType) {
                 this.vpcType = vpcType;
@@ -350,7 +432,7 @@ public class ListOfficeSiteOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * The number of cloud desktops that are about to expire in the workspace.
+             * The number of cloud computers that are about to expire in the office network.
              */
             public Builder willExpiredEdsCount(Integer willExpiredEdsCount) {
                 this.willExpiredEdsCount = willExpiredEdsCount;
@@ -358,7 +440,7 @@ public class ListOfficeSiteOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * The number of cloud desktops that are about to expire in the desktop group.
+             * The number of cloud computers that are about to expire in the cloud computer pool.
              */
             public Builder willExpiredEdsCountForGroup(Integer willExpiredEdsCountForGroup) {
                 this.willExpiredEdsCountForGroup = willExpiredEdsCountForGroup;

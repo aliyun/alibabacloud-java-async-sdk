@@ -199,7 +199,7 @@ public class DescribeDesktopTypesRequest extends Request {
         }
 
         /**
-         * DesktopGroupIdForModify.
+         * The ID of the cloud computer pool when you change instance types of cloud computers. If you specify this parameter, the information about whether the instance type is compatible with the cloud computer pool is included in the response.
          */
         public Builder desktopGroupIdForModify(String desktopGroupIdForModify) {
             this.putQueryParameter("DesktopGroupIdForModify", desktopGroupIdForModify);
@@ -208,7 +208,7 @@ public class DescribeDesktopTypesRequest extends Request {
         }
 
         /**
-         * When changing the configuration, enter the desktop ID that needs to be changed. The return value will increase the compatibility between the specifications and the desktop.
+         * The ID of the cloud computer when you change instance types of cloud computers. If you specify this parameter, the information about whether the instance type is compatible with the cloud computer is included in the response.
          */
         public Builder desktopIdForModify(String desktopIdForModify) {
             this.putQueryParameter("DesktopIdForModify", desktopIdForModify);
@@ -217,29 +217,172 @@ public class DescribeDesktopTypesRequest extends Request {
         }
 
         /**
-         * The ID of the cloud desktop type. Valid values:
+         * The IDs of the instance types of cloud computers.
          * <p>
          * 
-         * *   eds.graphics.16c1t4
-         * *   eds.graphics.24c1t4
-         * *   eds.hf.12c24g
-         * *   eds.hf.8c16g
+         * >  If the values of the `InstanceTypeFamily` and `DesktopTypeId` parameters are empty, all instance types of cloud computers are queried.
+         * 
+         * Valid values:
+         * 
          * *   eds.hf.4c8g
-         * *   eds.general.8c32g
-         * *   eds.general.16c32g
-         * *   eds.general.8c16g
-         * *   eds.general.4c16g
-         * *   eds.general.4c8g
-         * *   eds.general.2c8g
-         * *   eds.general.2c4g
-         * *   eds.general.2c2g
-         * *   ecd.graphics.xlarge
-         * *   ecd.graphics.2xlarge
-         * *   ecd.performance.2xlarge
-         * *   ecd.advanced.xlarge
-         * *   ecd.advanced.large
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
          * *   ecd.basic.large
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   ecd.advanced.large
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
          * *   ecd.basic.small
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   ecd.graphics.2xlarge
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   eds.hf.8c16g
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   eds.hf.12c24g
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   eds.general.8c16g
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   eds.general.16c32g
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   ecd.advanced.xlarge
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   eds.graphics.16c1t4
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   ecd.graphics.xlarge
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   ecd.performance.2xlarge
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   eds.general.8c32g
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   eds.general.2c2g
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   eds.general.2c4g
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   eds.graphics.24c1t4
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   eds.general.4c8g
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   eds.general.4c16g
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   eds.general.2c8g
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder desktopTypeId(String desktopTypeId) {
             this.putQueryParameter("DesktopTypeId", desktopTypeId);
@@ -257,16 +400,68 @@ public class DescribeDesktopTypesRequest extends Request {
         }
 
         /**
-         * The family of the cloud desktop type. Valid values:
+         * The name of the instance family.
          * <p>
          * 
-         * *   eds.graphics
-         * *   eds.hf
-         * *   eds.general
-         * *   ecd.graphics
-         * *   ecd.performance
+         * >  If the values of the `InstanceTypeFamily` and `DesktopTypeId` parameters are empty, all instance families of cloud computers are queried.
+         * 
+         * Valid values:
+         * 
          * *   ecd.advanced
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   eds.graphics
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
          * *   ecd.basic
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   eds.hf
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   ecd.graphics
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   eds.general
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   ecd.performance
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder instanceTypeFamily(String instanceTypeFamily) {
             this.putQueryParameter("InstanceTypeFamily", instanceTypeFamily);
@@ -275,7 +470,7 @@ public class DescribeDesktopTypesRequest extends Request {
         }
 
         /**
-         * The memory size. Unit: GiB.
+         * The memory size. Unit: MiB.
          */
         public Builder memorySize(Integer memorySize) {
             this.putQueryParameter("MemorySize", memorySize);
@@ -293,7 +488,7 @@ public class DescribeDesktopTypesRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

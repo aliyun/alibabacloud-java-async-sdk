@@ -62,7 +62,7 @@ public class DescribeFlowStatisticResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The number of available cloud desktops in the workspace.
+         * The number of available cloud computers in the office network.
          */
         public Builder desktopCount(Integer desktopCount) {
             this.desktopCount = desktopCount;
@@ -70,7 +70,7 @@ public class DescribeFlowStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * Details of the traffic that is consumed by cloud desktops.
+         * The traffic statistics.
          */
         public Builder desktopFlowStatistic(java.util.List < DesktopFlowStatistic> desktopFlowStatistic) {
             this.desktopFlowStatistic = desktopFlowStatistic;
@@ -154,7 +154,7 @@ public class DescribeFlowStatisticResponseBody extends TeaModel {
             private Integer flowRank; 
 
             /**
-             * The ID of the cloud desktop.
+             * The ID of the cloud computer.
              */
             public Builder desktopId(String desktopId) {
                 this.desktopId = desktopId;
@@ -162,7 +162,7 @@ public class DescribeFlowStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cloud desktop.
+             * The name of the cloud computer.
              */
             public Builder desktopName(String desktopName) {
                 this.desktopName = desktopName;
@@ -170,7 +170,7 @@ public class DescribeFlowStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of the traffic. Unit: KB.
+             * The traffic amount. Unit: KB.
              */
             public Builder flowIn(String flowIn) {
                 this.flowIn = flowIn;

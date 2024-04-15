@@ -70,7 +70,7 @@ public class ActivateOfficeSiteRequest extends Request {
         } 
 
         /**
-         * The ID of the convenience workspace that is locked.
+         * The ID of the convenience office network that is locked.
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -79,7 +79,7 @@ public class ActivateOfficeSiteRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

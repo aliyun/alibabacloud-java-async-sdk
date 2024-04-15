@@ -70,7 +70,7 @@ public class DeleteNetworkPackagesRequest extends Request {
         } 
 
         /**
-         * The IDs of Internet access packages.
+         * The IDs of premium bandwidth plans. You can specify one or more IDs.
          */
         public Builder networkPackageId(java.util.List < String > networkPackageId) {
             this.putQueryParameter("NetworkPackageId", networkPackageId);
@@ -79,7 +79,7 @@ public class DeleteNetworkPackagesRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

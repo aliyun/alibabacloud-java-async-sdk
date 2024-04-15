@@ -319,29 +319,8 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
              * 
              * Valid values:
              * 
-             * *   valid
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     The end user can update the image.
-             * 
-             *     <!-- -->
-             * 
-             * *   invalid
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     The end user cannot update the image.
-             * 
-             *     <!-- -->
+             * *   valid: The end user can update the image.
+             * *   invalid: The end user cannot update the image.
              */
             public Builder status(String status) {
                 this.status = status;

@@ -99,7 +99,7 @@ public class SetDesktopGroupTimerStatusRequest extends Request {
         } 
 
         /**
-         * The ID of the desktop group.
+         * The ID of the cloud computer pool.
          */
         public Builder desktopGroupId(String desktopGroupId) {
             this.putQueryParameter("DesktopGroupId", desktopGroupId);
@@ -108,7 +108,7 @@ public class SetDesktopGroupTimerStatusRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -118,6 +118,14 @@ public class SetDesktopGroupTimerStatusRequest extends Request {
 
         /**
          * The status of the scheduled task.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   1: enabled
+         * *   2: disabled
+         * *   3: deleted
+         * *   100: unknown
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);
@@ -127,6 +135,14 @@ public class SetDesktopGroupTimerStatusRequest extends Request {
 
         /**
          * The type of the scheduled task.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   1: scheduled reset
+         * *   2: scheduled startup
+         * *   3: scheduled stop
+         * *   4: scheduled restart
          */
         public Builder timerType(Integer timerType) {
             this.putQueryParameter("TimerType", timerType);

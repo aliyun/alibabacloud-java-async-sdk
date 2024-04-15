@@ -62,7 +62,7 @@ public class DescribeAutoSnapshotPolicyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details of the automatic snapshot policies.
+         * The details of the queried automatic snapshot policies.
          */
         public Builder autoSnapshotPolicies(java.util.List < AutoSnapshotPolicies> autoSnapshotPolicies) {
             this.autoSnapshotPolicies = autoSnapshotPolicies;
@@ -214,7 +214,7 @@ public class DescribeAutoSnapshotPolicyResponseBody extends TeaModel {
             private String timePoints; 
 
             /**
-             * The time when the automatic snapshot policy was created. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-mm-ddthh:mm:ssz format. The time is displayed in UTC.
+             * The time when the automatic snapshot policy was created. The time follows the [ISO 8601](~~25696~~) standard in the `yyyy-mm-ddthh:mm:ssz` format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -222,7 +222,7 @@ public class DescribeAutoSnapshotPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The CRON expression that is used to create the snapshot.
+             * The cron expression that specifies when WUYING Workspace creates snapshots on the cloud computers.
              */
             public Builder cronExpression(String cronExpression) {
                 this.cronExpression = cronExpression;
@@ -230,7 +230,7 @@ public class DescribeAutoSnapshotPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The number of cloud desktops that are associated with the automatic snapshot policy.
+             * The number of cloud computers to which the automatic snapshot policy is applied.
              */
             public Builder desktopNum(Integer desktopNum) {
                 this.desktopNum = desktopNum;
@@ -254,7 +254,7 @@ public class DescribeAutoSnapshotPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region where the automatic snapshot policy resides.
+             * The ID of the region to which the automatic snapshot policy belongs.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -262,11 +262,7 @@ public class DescribeAutoSnapshotPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The retention period of the automatic snapshot. Unit: days. Valid values:
-             * <p>
-             * 
-             * *   \-1: The snapshot is permanently retained.
-             * *   1 to 65536: The automatic snapshot is retained for the specified number of days.
+             * The retention period of the automatic snapshots. Unit: days. Valid values: 1 to 180.
              */
             public Builder retentionDays(String retentionDays) {
                 this.retentionDays = retentionDays;
@@ -274,11 +270,26 @@ public class DescribeAutoSnapshotPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the automatic snapshot policy. Valid values:
+             * The status of the automatic snapshot policy.
              * <p>
              * 
+             * Valid values:
+             * 
+             * *   Expire: The automatic snapshot policy cannot be used because you have overdue payments in your account.
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
              * *   Normal: The automatic snapshot policy is normal.
-             * *   Expire: The automatic snapshot policy cannot be used because your account has an overdue payment.
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder status(String status) {
                 this.status = status;
@@ -286,12 +297,10 @@ public class DescribeAutoSnapshotPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The points in time at which automatic snapshots are created.
+             * The points in time at which the auto snapshots were created.
              * <p>
              * 
-             * The time is displayed in UTC+8. Unit: hours. Valid values are 0 to 23, which correspond to the 24 points in time on the hour from 00:00:00 to 23:00:00. 1 indicates 01:00:00. Multiple points in time can be specified.
-             * 
-             * The parameter value is a JSON array that contains up to 24 points in time separated by commas (,). Example: `["0", "1", ... "23"]`.
+             * The parameter values are a JSON array. Example: `["0", "1", ... "23"]`. A maximum of 24 points in time are returned. The points in time are separated with commas (,).
              */
             public Builder timePoints(String timePoints) {
                 this.timePoints = timePoints;

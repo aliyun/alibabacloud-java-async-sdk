@@ -70,7 +70,7 @@ public class DeleteDirectoriesRequest extends Request {
         } 
 
         /**
-         * The IDs of directories.
+         * The directory IDs. You can specify one or more directory IDs.
          */
         public Builder directoryId(java.util.List < String > directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -79,7 +79,7 @@ public class DeleteDirectoriesRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

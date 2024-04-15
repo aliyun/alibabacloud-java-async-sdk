@@ -112,11 +112,14 @@ public class DescribeNetworkPackagesRequest extends Request {
         } 
 
         /**
-         * The billing method of the Internet access package. Valid values:
+         * The charge type of the pay-as-you-go premium bandwidth plan.
          * <p>
          * 
-         * *   PayByTraffic: pay-by-data-transfer
-         * *   PayByBandwidth: pay-by-bandwidth
+         * Valid values:
+         * 
+         * *   PayByTraffic: charges by data transfer.
+         * 
+         * *   PayByBandwidth: charges by fixed bandwidth.
          */
         public Builder internetChargeType(String internetChargeType) {
             this.putQueryParameter("InternetChargeType", internetChargeType);
@@ -138,7 +141,7 @@ public class DescribeNetworkPackagesRequest extends Request {
         }
 
         /**
-         * The IDs of the Internet access packages. You can specify 1 to 100 IDs of Internet access packages.
+         * The ID of the premium bandwidth plan. You can specify 1 to 100 IDs.
          */
         public Builder networkPackageId(java.util.List < String > networkPackageId) {
             this.putQueryParameter("NetworkPackageId", networkPackageId);
@@ -156,7 +159,7 @@ public class DescribeNetworkPackagesRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

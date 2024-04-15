@@ -85,7 +85,7 @@ public class MigrateDesktopsRequest extends Request {
         } 
 
         /**
-         * The IDs of the cloud desktops. You can specify one or more cloud desktops. Valid values of N: 1 to 100.
+         * The IDs of the cloud computers. You can specify 1 to 100 IDs.
          */
         public Builder desktopId(java.util.List < String > desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -94,7 +94,7 @@ public class MigrateDesktopsRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -103,7 +103,7 @@ public class MigrateDesktopsRequest extends Request {
         }
 
         /**
-         * The ID of the destination workspace.
+         * The ID of the destination office network.
          */
         public Builder targetOfficeSiteId(String targetOfficeSiteId) {
             this.putQueryParameter("TargetOfficeSiteId", targetOfficeSiteId);

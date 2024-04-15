@@ -98,7 +98,7 @@ public class RebuildDesktopsRequest extends Request {
         } 
 
         /**
-         * The IDs of the cloud desktops.
+         * The IDs of the cloud computers. You can specify 1 to 20 IDs.
          */
         public Builder desktopId(java.util.List < String > desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -119,22 +119,22 @@ public class RebuildDesktopsRequest extends Request {
          * The operation type on the data disk.
          * <p>
          * 
-         * > For cloud desktops that do not have data disks, when you call this operation, you do not need to configure this parameter.
+         * >  This parameter is empty by default regardless of whether data disks are attached to the cloud computer.
          * 
-         * *   Cloud desktops do not have data disks\
-         *     The values that you configured have no impacts.
+         * *   No data disks are attached to the cloud computer:\
+         *     No operation is performed on the data disks of the cloud computer regardless of the value of this parameter.
          * 
-         * *   Cloud desktops have data disks
+         * *   Data disks are attached to the cloud computer:
          * 
-         *     1.  If the OS of the cloud desktop is the same as the OS of a destination image:
+         *     1.  The OS of the cloud computer is the same as the OS of the destination image:
          * 
-         *         *   The value replace indicates that the data disk of the cloud desktop is replaced.
-         *         *   If you do not specify this parameter, the data disk of the cloud desktop is retained.
+         *         *   If you set the OperateType parameter to `replace`, the data in the data disks of the cloud computer is replaced.
+         *         *   If you leave the OperateType parameter empty, the data in the data disks of the cloud computer is retained.
          * 
-         *     2.  If the OS of the cloud desktop is the different from the OS of a destination image:
+         *     2.  The OS of the cloud computer is different from the OS of the destination image:
          * 
-         *         *   The value replace indicates that the data disk of the cloud desktop is replaced.
-         *         *   If you do not specify this parameter, the data disk of the cloud desktop is cleared.
+         *         *   If you set the OperateType parameter to `replace`, the data in the data disks of the cloud computer is replaced.
+         *         *   If you leave the OperateType parameter empty, the data in the data disks of the cloud computer is cleared.
          */
         public Builder operateType(String operateType) {
             this.putQueryParameter("OperateType", operateType);
@@ -143,7 +143,7 @@ public class RebuildDesktopsRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

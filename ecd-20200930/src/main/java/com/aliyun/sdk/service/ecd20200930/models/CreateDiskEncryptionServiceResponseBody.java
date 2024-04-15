@@ -62,7 +62,7 @@ public class CreateDiskEncryptionServiceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * OrderId.
+         * The order ID.
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -70,7 +70,7 @@ public class CreateDiskEncryptionServiceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class CreateDiskEncryptionServiceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
          */
         public Builder success(Boolean success) {
             this.success = success;

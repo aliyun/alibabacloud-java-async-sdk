@@ -62,7 +62,7 @@ public class CreateNetworkPackageResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the Internet access package.
+         * The ID of the premium bandwidth plan.
          */
         public Builder networkPackageId(String networkPackageId) {
             this.networkPackageId = networkPackageId;

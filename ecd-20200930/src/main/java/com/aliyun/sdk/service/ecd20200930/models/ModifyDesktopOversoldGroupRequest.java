@@ -21,8 +21,16 @@ public class ModifyDesktopOversoldGroupRequest extends Request {
     private String description;
 
     @Query
+    @NameInMap("IdleDisconnectDuration")
+    private Long idleDisconnectDuration;
+
+    @Query
     @NameInMap("ImageId")
     private String imageId;
+
+    @Query
+    @NameInMap("KeepDuration")
+    private Integer keepDuration;
 
     @Query
     @NameInMap("Name")
@@ -52,7 +60,9 @@ public class ModifyDesktopOversoldGroupRequest extends Request {
         super(builder);
         this.concurrenceCount = builder.concurrenceCount;
         this.description = builder.description;
+        this.idleDisconnectDuration = builder.idleDisconnectDuration;
         this.imageId = builder.imageId;
+        this.keepDuration = builder.keepDuration;
         this.name = builder.name;
         this.oversoldGroupId = builder.oversoldGroupId;
         this.oversoldUserCount = builder.oversoldUserCount;
@@ -89,10 +99,24 @@ public class ModifyDesktopOversoldGroupRequest extends Request {
     }
 
     /**
+     * @return idleDisconnectDuration
+     */
+    public Long getIdleDisconnectDuration() {
+        return this.idleDisconnectDuration;
+    }
+
+    /**
      * @return imageId
      */
     public String getImageId() {
         return this.imageId;
+    }
+
+    /**
+     * @return keepDuration
+     */
+    public Integer getKeepDuration() {
+        return this.keepDuration;
     }
 
     /**
@@ -140,7 +164,9 @@ public class ModifyDesktopOversoldGroupRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyDesktopOversoldGroupRequest, Builder> {
         private Integer concurrenceCount; 
         private String description; 
+        private Long idleDisconnectDuration; 
         private String imageId; 
+        private Integer keepDuration; 
         private String name; 
         private String oversoldGroupId; 
         private Integer oversoldUserCount; 
@@ -156,7 +182,9 @@ public class ModifyDesktopOversoldGroupRequest extends Request {
             super(request);
             this.concurrenceCount = request.concurrenceCount;
             this.description = request.description;
+            this.idleDisconnectDuration = request.idleDisconnectDuration;
             this.imageId = request.imageId;
+            this.keepDuration = request.keepDuration;
             this.name = request.name;
             this.oversoldGroupId = request.oversoldGroupId;
             this.oversoldUserCount = request.oversoldUserCount;
@@ -184,11 +212,29 @@ public class ModifyDesktopOversoldGroupRequest extends Request {
         }
 
         /**
+         * IdleDisconnectDuration.
+         */
+        public Builder idleDisconnectDuration(Long idleDisconnectDuration) {
+            this.putQueryParameter("IdleDisconnectDuration", idleDisconnectDuration);
+            this.idleDisconnectDuration = idleDisconnectDuration;
+            return this;
+        }
+
+        /**
          * ImageId.
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
             this.imageId = imageId;
+            return this;
+        }
+
+        /**
+         * KeepDuration.
+         */
+        public Builder keepDuration(Integer keepDuration) {
+            this.putQueryParameter("KeepDuration", keepDuration);
+            this.keepDuration = keepDuration;
             return this;
         }
 

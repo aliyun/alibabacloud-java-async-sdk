@@ -69,7 +69,7 @@ public class DescribeZonesRequest extends Request {
         } 
 
         /**
-         * The region ID.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -78,7 +78,7 @@ public class DescribeZonesRequest extends Request {
         }
 
         /**
-         * The zone type. Default value: **AvailabilityZone**. This value specifies Alibaba Cloud zones.
+         * The type of the zone. Default value: `AvailabilityZone`. This value indicates Alibaba Cloud zones.
          */
         public Builder zoneType(String zoneType) {
             this.putQueryParameter("ZoneType", zoneType);

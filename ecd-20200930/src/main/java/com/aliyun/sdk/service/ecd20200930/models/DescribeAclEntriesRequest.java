@@ -133,7 +133,7 @@ public class DescribeAclEntriesRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -142,7 +142,7 @@ public class DescribeAclEntriesRequest extends Request {
         }
 
         /**
-         * The ID of the instance corresponding to the ACL.
+         * The ID of the instance to which the ACL applies. You can specify an office network ID or a cloud computer ID.
          */
         public Builder sourceId(String sourceId) {
             this.putQueryParameter("SourceId", sourceId);
@@ -151,11 +151,13 @@ public class DescribeAclEntriesRequest extends Request {
         }
 
         /**
-         * The object on which the ACL takes effect.
+         * The granularity of the ACL.
          * <p>
          * 
-         * *   **vpc**: workspace.
-         * *   **desktop**: cloud desktop.
+         * Valid values:
+         * 
+         * *   desktop: cloud computer
+         * *   vpc: office network
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);

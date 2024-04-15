@@ -183,7 +183,30 @@ public class CreateNetworkPackageRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable automatic payment.
+         * Specifies whether to enable the automatic payment feature.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   true (default): enables the auto-payment feature.
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     Make sure that your account has sufficient balance. Otherwise, no order is generated.
+         * 
+         *     <!-- -->
+         * 
+         * *   false: disables the auto-payment feature. In this case, an order is generated but you need to make the payment manually.
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     To make the payment, log on to the WUYING Workspace console, go to the Orders page, and find the order based on the order ID.
+         * 
+         *     <!-- -->
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -192,7 +215,26 @@ public class CreateNetworkPackageRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable auto-renewal.
+         * Specifies whether to enable auto-renewal for the premium bandwidth plan.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   true
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   false
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -201,9 +243,12 @@ public class CreateNetworkPackageRequest extends Request {
         }
 
         /**
-         * The maximum public bandwidth. Unit: Mbit/s.\
+         * The bandwidth provided by the premium bandwidth plan. Unit: Mbit/s.
          * <p>
-         * Valid values for the pay-by-data-transfer type (PayByTraffic): 10 to 200. Valid values for the pay-by-bandwith type (PayByBandwidth): 10 to 1000.
+         * 
+         * *   Valid values if the premium bandwidth plan is a subscription plan: 2 to 1000.
+         * *   Valid values if the premium bandwidth plan is a pay-as-you-go plan that charges by data transfer (PayByTraffic): 2 to 200.
+         * *   Valid values if the premium bandwidth plan is a pay-as-you-go plan that charges by fixed bandwidth (PayByBandwidth): 2 to 1000.
          */
         public Builder bandwidth(Integer bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -212,7 +257,17 @@ public class CreateNetworkPackageRequest extends Request {
         }
 
         /**
-         * The metering method of the pay-as-you-go Internet access package. Valid values: PayByTraffic: pay-by-data-transfer. PayByBandwidth: pay-by-bandwidth. Default value: PayByTraffic.
+         * The charge type of the premium bandwidth plan.
+         * <p>
+         * 
+         * *   Valid value when the `PayType` parameter is set to `PrePaid`:
+         * 
+         *     *   PayByBandwidth: charges by fixed bandwidth.
+         * 
+         * *   Valid values when the `PayType` parameter is set to `PostPaid`:
+         * 
+         *     *   PayByTraffic: charges by data transfer.
+         *     *   PayByBandwidth: charges by fixed bandwidth.
          */
         public Builder internetChargeType(String internetChargeType) {
             this.putQueryParameter("InternetChargeType", internetChargeType);
@@ -221,7 +276,7 @@ public class CreateNetworkPackageRequest extends Request {
         }
 
         /**
-         * The ID of the workspace.
+         * The office network ID.
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -230,7 +285,13 @@ public class CreateNetworkPackageRequest extends Request {
         }
 
         /**
-         * The billing method of the Internet access package.
+         * The billing method of the premium bandwidth plan.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   PostPaid: pay-as-you-go
+         * *   PrePaid: subscription
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -239,7 +300,14 @@ public class CreateNetworkPackageRequest extends Request {
         }
 
         /**
-         * The duration of the Internet access package.
+         * The subscription duration of the premium bandwidth plan. This parameter takes effect and is required only when the `PayType` parameter is set to `PrePaid`. The valid values of this parameter vary based on the `PeriodUnit` value.
+         * <p>
+         * 
+         * *   Valid value when the `PeriodUnit` parameter is set to `Week`: 1
+         * *   Valid values when the `PeriodUnit` parameter is set to `Month`: 1, 2, 3, and 6
+         * *   Valid values when the `PeriodUnit` parameter is set to `Year`: 1, 2, and 3
+         * 
+         * Default value: 1.
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -248,7 +316,34 @@ public class CreateNetworkPackageRequest extends Request {
         }
 
         /**
-         * The unit of duration that you want to use for the Internet access package.
+         * The unit of the subscription duration of the premium bandwidth plan. This parameter takes effect and is required only when the `PayType` parameter is set to `PrePaid`.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   Month
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   Year
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   Week
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -266,7 +361,7 @@ public class CreateNetworkPackageRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

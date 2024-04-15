@@ -50,7 +50,7 @@ public class CreateRAMDirectoryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the RAM directory.
+         * The RAM directory ID.
          */
         public Builder directoryId(String directoryId) {
             this.directoryId = directoryId;
@@ -58,7 +58,7 @@ public class CreateRAMDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

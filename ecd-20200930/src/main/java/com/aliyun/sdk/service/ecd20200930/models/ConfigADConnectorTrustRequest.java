@@ -99,7 +99,7 @@ public class ConfigADConnectorTrustRequest extends Request {
         } 
 
         /**
-         * The ID of the AD workspace.
+         * The ID of the enterprise AD office network.
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -108,38 +108,14 @@ public class ConfigADConnectorTrustRequest extends Request {
         }
 
         /**
-         * Specifies whether to configure the trust password for the RDS license domain of the AD workspace.
+         * Specifies whether to configure a trust password for the Remote Desktop Services (RDS) License Domain of the enterprise AD office network.
          * <p>
          * 
          * Valid values:
          * 
-         * *   true
+         * *   true: configures a trust password for the RDS License Domain of the AD office network.
          * 
-         *     <!-- -->
-         * 
-         *     :
-         * 
-         *     <!-- -->
-         * 
-         *     configures the trust password
-         * 
-         *     <!-- -->
-         * 
-         *     for the RDS license domain of the AD workspace.
-         * 
-         * *   false
-         * 
-         *     <!-- -->
-         * 
-         *     :
-         * 
-         *     <!-- -->
-         * 
-         *     configures the trust password
-         * 
-         *     <!-- -->
-         * 
-         *     for common AD workspaces.
+         * *   false: configures a trust password for a regular enterprise AD office network.
          */
         public Builder rdsLicenseDomain(Boolean rdsLicenseDomain) {
             this.putQueryParameter("RdsLicenseDomain", rdsLicenseDomain);
@@ -148,7 +124,7 @@ public class ConfigADConnectorTrustRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

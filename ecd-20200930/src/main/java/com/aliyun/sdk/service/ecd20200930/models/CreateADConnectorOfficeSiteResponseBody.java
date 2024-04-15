@@ -50,7 +50,7 @@ public class CreateADConnectorOfficeSiteResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the workspace.
+         * The office network ID.
          */
         public Builder officeSiteId(String officeSiteId) {
             this.officeSiteId = officeSiteId;

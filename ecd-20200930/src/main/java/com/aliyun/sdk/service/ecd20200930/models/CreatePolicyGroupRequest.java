@@ -783,7 +783,10 @@ public class CreatePolicyGroupRequest extends Request {
         } 
 
         /**
-         * AdminAccess.
+         * Specifies whether users have the administrator permissions after they connect to cloud desktops.
+         * <p>
+         * 
+         * >  This parameter is in invitational preview and not available to the public.
          */
         public Builder adminAccess(String adminAccess) {
             this.putQueryParameter("AdminAccess", adminAccess);
@@ -1371,7 +1374,7 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * RecordingUserNotify.
+         * Specifies whether the feature to send screen recording notifications to clients is enabled. Valid values: on and off.
          */
         public Builder recordingUserNotify(String recordingUserNotify) {
             this.putQueryParameter("RecordingUserNotify", recordingUserNotify);
@@ -1380,7 +1383,7 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * RecordingUserNotifyMessage.
+         * The notification content sent to clients when screen recording is enabled. By default, you do not need to specify this parameter.
          */
         public Builder recordingUserNotifyMessage(String recordingUserNotifyMessage) {
             this.putQueryParameter("RecordingUserNotifyMessage", recordingUserNotifyMessage);
@@ -1572,7 +1575,7 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * WatermarkAntiCam.
+         * The anti-screen photo feature. Valid values: on and off.
          */
         public Builder watermarkAntiCam(String watermarkAntiCam) {
             this.putQueryParameter("WatermarkAntiCam", watermarkAntiCam);
@@ -1621,7 +1624,7 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * WatermarkPower.
+         * The invisible watermark enhancement feature. Valid values: low, medium, and high.
          */
         public Builder watermarkPower(String watermarkPower) {
             this.putQueryParameter("WatermarkPower", watermarkPower);

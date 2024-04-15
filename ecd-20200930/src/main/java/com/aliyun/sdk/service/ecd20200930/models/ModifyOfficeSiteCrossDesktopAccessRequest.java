@@ -85,11 +85,7 @@ public class ModifyOfficeSiteCrossDesktopAccessRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable the cross-desktop access feature for the workspace.
-         * <p>
-         * 
-         * *   true: enable
-         * *   false: disable
+         * Specifies whether to enable the communication between cloud computers in an office network. If you enable the communication between cloud computers in an office network, the cloud computers can access each other.
          */
         public Builder enableCrossDesktopAccess(Boolean enableCrossDesktopAccess) {
             this.putQueryParameter("EnableCrossDesktopAccess", enableCrossDesktopAccess);
@@ -98,7 +94,7 @@ public class ModifyOfficeSiteCrossDesktopAccessRequest extends Request {
         }
 
         /**
-         * The workspace ID.
+         * The office network ID.
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -107,7 +103,7 @@ public class ModifyOfficeSiteCrossDesktopAccessRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

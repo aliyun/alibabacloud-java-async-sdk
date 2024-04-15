@@ -50,7 +50,7 @@ public class CreateBundleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the desktop template.
+         * The ID of the cloud computer template.
          */
         public Builder bundleId(String bundleId) {
             this.bundleId = bundleId;

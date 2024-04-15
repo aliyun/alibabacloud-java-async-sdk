@@ -157,7 +157,7 @@ public class ListOfficeSiteOverviewRequest extends Request {
         }
 
         /**
-         * Details about the IDs of the workspaces. You can specify 1 to 100 workspace IDs.
+         * The office network IDs. You can specify IDs of 1 to 100 office networks.
          */
         public Builder officeSiteId(java.util.List < String > officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -166,7 +166,14 @@ public class ListOfficeSiteOverviewRequest extends Request {
         }
 
         /**
-         * The query scope. Default value: 1.
+         * The query scope. Cloud computers in a cloud computer pool are pooled cloud computers.
+         * <p>
+         * 
+         * Default values:
+         * 
+         * *   1 (default): queries non-pooled cloud computers in the office network.
+         * *   2: queries pooled cloud computers in the office network.
+         * *   3: queries all cloud computers in the office network.
          */
         public Builder queryRange(Integer queryRange) {
             this.putQueryParameter("QueryRange", queryRange);
@@ -175,7 +182,7 @@ public class ListOfficeSiteOverviewRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

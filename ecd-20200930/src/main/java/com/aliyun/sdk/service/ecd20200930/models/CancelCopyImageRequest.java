@@ -70,7 +70,7 @@ public class CancelCopyImageRequest extends Request {
         } 
 
         /**
-         * The ID of the image that is being copied.
+         * The ID of the new image in the destination region.
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -79,7 +79,7 @@ public class CancelCopyImageRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * The ID of the region to which the image is copied.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

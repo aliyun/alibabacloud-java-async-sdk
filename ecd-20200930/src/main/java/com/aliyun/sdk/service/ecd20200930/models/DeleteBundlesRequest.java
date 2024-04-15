@@ -70,7 +70,7 @@ public class DeleteBundlesRequest extends Request {
         } 
 
         /**
-         * BundleId.
+         * The IDs of the cloud computer templates. You can specify 1 to 100 IDs.
          */
         public Builder bundleId(java.util.List < String > bundleId) {
             this.putQueryParameter("BundleId", bundleId);
@@ -79,7 +79,7 @@ public class DeleteBundlesRequest extends Request {
         }
 
         /**
-         * DeleteBundles
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

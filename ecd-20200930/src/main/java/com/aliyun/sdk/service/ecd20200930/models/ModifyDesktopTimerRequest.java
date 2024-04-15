@@ -98,7 +98,7 @@ public class ModifyDesktopTimerRequest extends Request {
         } 
 
         /**
-         * The cloud computer ID. You can specify 1 to 20 IDs.
+         * The IDs of the cloud computers.
          */
         public Builder desktopId(java.util.List < String > desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -107,7 +107,7 @@ public class ModifyDesktopTimerRequest extends Request {
         }
 
         /**
-         * The details of the scheduled task for the cloud desktops.
+         * The details of the scheduled task on cloud computers.
          */
         public Builder desktopTimers(java.util.List < DesktopTimers> desktopTimers) {
             this.putQueryParameter("DesktopTimers", desktopTimers);
@@ -116,7 +116,7 @@ public class ModifyDesktopTimerRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -125,7 +125,7 @@ public class ModifyDesktopTimerRequest extends Request {
         }
 
         /**
-         * Specifies whether to use DesktopTimers. If you want to use a timer, **set this parameter to true**.
+         * Specifies whether to use the `DesktopTimers`** parameter. Set the value to `true`**.
          */
         public Builder useDesktopTimers(Boolean useDesktopTimers) {
             this.putQueryParameter("UseDesktopTimers", useDesktopTimers);
@@ -239,7 +239,7 @@ public class ModifyDesktopTimerRequest extends Request {
             private String timerType; 
 
             /**
-             * Specifies whether to allow end users to configure scheduled tasks on an Alibaba Cloud Workspace client.
+             * Specifies whether to allow end users to configure the scheduled task.
              */
             public Builder allowClientSetting(Boolean allowClientSetting) {
                 this.allowClientSetting = allowClientSetting;
@@ -247,10 +247,10 @@ public class ModifyDesktopTimerRequest extends Request {
             }
 
             /**
-             * The cron expression of the scheduled task.
+             * The cron expression of the schedule.
              * <p>
              * 
-             * >  You must specify the time in UTC format. For example, if you want to specify 00:00 of UTC+8, use the following cron expression: 0 0 16. \* 1,2,3,4,5,6,7
+             * > The time must be in UTC. For example, for 24:00 (UTC+8), you must set the value to 0 0 16 ? \* 1,2,3,4,5,6,7
              */
             public Builder cronExpression(String cronExpression) {
                 this.cronExpression = cronExpression;
@@ -258,7 +258,26 @@ public class ModifyDesktopTimerRequest extends Request {
             }
 
             /**
-             * Specifies whether to forcefully execute the scheduled task. A value of true indicates that the system forcefully executes the scheduled task regardless of the connection status of the cloud desktop.
+             * Specifies whether to forcibly execute the scheduled task.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   true: forcibly executes the scheduled task regardless of the status and connection of the cloud computers.
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   false: does not forcibly execute the scheduled task.
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder enforce(Boolean enforce) {
                 this.enforce = enforce;
@@ -266,7 +285,7 @@ public class ModifyDesktopTimerRequest extends Request {
             }
 
             /**
-             * The interval. Unit: minutes.
+             * The interval at which the scheduled task is executed. Unit: minutes.
              */
             public Builder interval(Integer interval) {
                 this.interval = interval;
@@ -274,38 +293,26 @@ public class ModifyDesktopTimerRequest extends Request {
             }
 
             /**
-             * The type of the scheduled operation. This parameter is valid only when TimerType is set to NoConnect.
+             * The operations that scheduled tasks support. This parameter is valid only when TimerType is set to NoConnect.
              * <p>
              * 
              * Valid values:
              * 
-             * *   Hibernate
+             * *   Hibernate: hibernates the cloud computers.
              * 
              *     <!-- -->
              * 
-             *     :
+             *     <!-- -->
              * 
              *     <!-- -->
              * 
-             *     hibernates the cloud desktops
+             * *   Shutdown: stops the cloud computers.
              * 
              *     <!-- -->
              * 
-             *     .
-             * 
-             * *   Shutdown
-             * 
              *     <!-- -->
              * 
-             *     :
-             * 
              *     <!-- -->
-             * 
-             *     stops the cloud desktops
-             * 
-             *     <!-- -->
-             * 
-             *     .
              */
             public Builder operationType(String operationType) {
                 this.operationType = operationType;
@@ -313,34 +320,24 @@ public class ModifyDesktopTimerRequest extends Request {
             }
 
             /**
-             * Indicates which type of disk that is used by the cloud desktop is reset.
+             * The reset type of the cloud computers.
              * <p>
              * 
              * Valid values:
              * 
-             * *   RESET_TYPE_SYSTEM
+             * *   RESET_TYPE_SYSTE: resets the system disk.
              * 
              *     <!-- -->
              * 
-             *     :
+             *     <!-- -->
              * 
              *     <!-- -->
              * 
-             *     resets the system disks
+             * *   RESET_TYPE_BOTH: resets data and user disks.
              * 
              *     <!-- -->
              * 
-             *     .
-             * 
-             * *   RESET_TYPE_BOTH
-             * 
              *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     resets the data disks and system disks.
              * 
              *     <!-- -->
              */
@@ -355,7 +352,7 @@ public class ModifyDesktopTimerRequest extends Request {
              * 
              * Valid values:
              * 
-             * *   NoOperationDisconnect: Disconnects the cloud desktops when no operations are performed on the cloud desktops.
+             * *   NoOperationDisconnect: Disconnects the cloud computers without performing operations on the cloud computers.
              * 
              *     <!-- -->
              * 
@@ -363,7 +360,7 @@ public class ModifyDesktopTimerRequest extends Request {
              * 
              *     <!-- -->
              * 
-             * *   LogoutShutdown: Stops the cloud desktops when end users log out of Alibaba Cloud Workspace clients.
+             * *   LogoutShutdown: Stops the cloud computers when end users log out Alibaba Cloud Workspace clients.
              * 
              *     <!-- -->
              * 
@@ -371,7 +368,7 @@ public class ModifyDesktopTimerRequest extends Request {
              * 
              *     <!-- -->
              * 
-             * *   NoConnect: Disconnets the cloud desktops when end users perform one of the actions that is specified by the OperationType parameter.
+             * *   NoConnect: Disconnects the cloud computers when end users perform one of the actions that is specified by the OperationType parameter.
              * 
              *     <!-- -->
              * 
@@ -379,7 +376,7 @@ public class ModifyDesktopTimerRequest extends Request {
              * 
              *     <!-- -->
              * 
-             * *   TimerBoot: Starts the cloud desktops at a scheduled point in time.
+             * *   TimerBoot: Starts the cloud computers on schedule.
              * 
              *     <!-- -->
              * 
@@ -387,7 +384,7 @@ public class ModifyDesktopTimerRequest extends Request {
              * 
              *     <!-- -->
              * 
-             * *   TimerReset: Resets the cloud desktops at a scheduled point in time.
+             * *   TimerReset: Resets the cloud computers on schedule.
              * 
              *     <!-- -->
              * 
@@ -395,7 +392,7 @@ public class ModifyDesktopTimerRequest extends Request {
              * 
              *     <!-- -->
              * 
-             * *   LoginAutoConnect: automatically connects to cloud desktops when end users log on to Alibaba Cloud Workspace clients.
+             * *   LoginAutoConnect: automatically connects to the cloud computers when end users log on to Alibaba Cloud Workspace clients.
              * 
              *     <!-- -->
              * 
@@ -403,7 +400,7 @@ public class ModifyDesktopTimerRequest extends Request {
              * 
              *     <!-- -->
              * 
-             * *   NoOperationShutdown: Stops the cloud desktops when no operations are performed on the cloud desktops.
+             * *   NoOperationShutdown: Stops the cloud computers without performing operations on the cloud computers.
              * 
              *     <!-- -->
              * 
@@ -411,7 +408,7 @@ public class ModifyDesktopTimerRequest extends Request {
              * 
              *     <!-- -->
              * 
-             * *   TimerShutdown: Stops the cloud desktops at a scheduled point in time.
+             * *   TimerShutdown: Stops the cloud computers on schedule.
              * 
              *     <!-- -->
              * 
@@ -419,7 +416,7 @@ public class ModifyDesktopTimerRequest extends Request {
              * 
              *     <!-- -->
              * 
-             * *   NoOperationReboot: Restarts the cloud desktops when no operations are performed on the cloud desktops.
+             * *   NoOperationReboot: Restarts the cloud computers without performing operations on the cloud computers.
              * 
              *     <!-- -->
              * 
@@ -427,7 +424,7 @@ public class ModifyDesktopTimerRequest extends Request {
              * 
              *     <!-- -->
              * 
-             * *   TimerReboot: Restarts the cloud desktops at a scheduled point in time.
+             * *   TimerReboot: Restarts the cloud computers on schedule.
              * 
              *     <!-- -->
              * 

@@ -129,7 +129,7 @@ public class DescribeFlowStatisticRequest extends Request {
         } 
 
         /**
-         * The ID of the cloud desktop.
+         * The ID of the cloud computer.
          */
         public Builder desktopId(String desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -138,7 +138,7 @@ public class DescribeFlowStatisticRequest extends Request {
         }
 
         /**
-         * The ID of the workspace.
+         * The office network ID.
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -167,12 +167,14 @@ public class DescribeFlowStatisticRequest extends Request {
         }
 
         /**
-         * The interval to query the traffic data. Unit: seconds. Valid values:
+         * The statistic collection interval. Unit: seconds.
          * <p>
          * 
-         * *   3600
-         * *   10800
-         * *   86400
+         * Valid values:
+         * 
+         * *   3600: 1 hour
+         * *   10800: 3 hours
+         * *   86400: 24 hours
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -181,7 +183,7 @@ public class DescribeFlowStatisticRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

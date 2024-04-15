@@ -69,30 +69,7 @@ public class DescribeRegionsRequest extends Request {
         } 
 
         /**
-         * The display language of the specified service in a location.
-         * <p>
-         * 
-         * Valid values:
-         * 
-         * *   en
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     : English
-         * 
-         * *   zh (default)
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     : Chinese
+         * The display name of the region, which varies based on the current language.
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);

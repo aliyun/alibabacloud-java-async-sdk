@@ -279,7 +279,7 @@ public class DescribeUserConnectionRecordsRequest extends Request {
         }
 
         /**
-         * The ID of the desktop group.
+         * The ID of the cloud computer pool.
          */
         public Builder desktopGroupId(String desktopGroupId) {
             this.putQueryParameter("DesktopGroupId", desktopGroupId);
@@ -288,7 +288,7 @@ public class DescribeUserConnectionRecordsRequest extends Request {
         }
 
         /**
-         * The ID of the cloud desktop.
+         * The ID of the cloud computer.
          */
         public Builder desktopId(String desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -297,7 +297,7 @@ public class DescribeUserConnectionRecordsRequest extends Request {
         }
 
         /**
-         * The user that you want to authorize to use the desktop group.
+         * The ID of the authorized user.
          */
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -306,11 +306,26 @@ public class DescribeUserConnectionRecordsRequest extends Request {
         }
 
         /**
-         * The account type of the user. Valid values:
+         * The type of the user account.
          * <p>
          * 
-         * *   SIMPLE: the convenience account type
-         * *   AD_CONNECTOR: the enterprise Active Directory (AD) account type
+         * Valid values:
+         * 
+         * *   SIMPLE: convenience account
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   AD_CONNECTOR: enterprise AD account
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder endUserType(String endUserType) {
             this.putQueryParameter("EndUserType", endUserType);
@@ -337,7 +352,7 @@ public class DescribeUserConnectionRecordsRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

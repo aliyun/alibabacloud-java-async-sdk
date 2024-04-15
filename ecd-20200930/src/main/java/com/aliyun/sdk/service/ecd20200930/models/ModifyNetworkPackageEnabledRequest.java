@@ -84,11 +84,26 @@ public class ModifyNetworkPackageEnabledRequest extends Request {
         } 
 
         /**
-         * Specifies whether to restore or disable Internet access for the cloud desktop. Valid values:
+         * Specifies whether to restore the premium bandwidth plan of the cloud computer.
          * <p>
          * 
-         * *   true: restores Internet access.
-         * *   false: disables Internet access.
+         * Valid values:
+         * 
+         * *   true
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   false
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder enabled(Boolean enabled) {
             this.putQueryParameter("Enabled", enabled);
@@ -97,7 +112,7 @@ public class ModifyNetworkPackageEnabledRequest extends Request {
         }
 
         /**
-         * The ID of the Internet access package.
+         * The ID of the premium bandwidth plan.
          */
         public Builder networkPackageId(String networkPackageId) {
             this.putQueryParameter("NetworkPackageId", networkPackageId);
@@ -106,7 +121,7 @@ public class ModifyNetworkPackageEnabledRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -33,8 +33,16 @@ public class CreateDesktopOversoldGroupRequest extends Request {
     private String directoryId;
 
     @Query
+    @NameInMap("IdleDisconnectDuration")
+    private Long idleDisconnectDuration;
+
+    @Query
     @NameInMap("ImageId")
     private String imageId;
+
+    @Query
+    @NameInMap("KeepDuration")
+    private Integer keepDuration;
 
     @Query
     @NameInMap("Name")
@@ -75,7 +83,9 @@ public class CreateDesktopOversoldGroupRequest extends Request {
         this.description = builder.description;
         this.desktopType = builder.desktopType;
         this.directoryId = builder.directoryId;
+        this.idleDisconnectDuration = builder.idleDisconnectDuration;
         this.imageId = builder.imageId;
+        this.keepDuration = builder.keepDuration;
         this.name = builder.name;
         this.oversoldUserCount = builder.oversoldUserCount;
         this.oversoldWarn = builder.oversoldWarn;
@@ -135,10 +145,24 @@ public class CreateDesktopOversoldGroupRequest extends Request {
     }
 
     /**
+     * @return idleDisconnectDuration
+     */
+    public Long getIdleDisconnectDuration() {
+        return this.idleDisconnectDuration;
+    }
+
+    /**
      * @return imageId
      */
     public String getImageId() {
         return this.imageId;
+    }
+
+    /**
+     * @return keepDuration
+     */
+    public Integer getKeepDuration() {
+        return this.keepDuration;
     }
 
     /**
@@ -203,7 +227,9 @@ public class CreateDesktopOversoldGroupRequest extends Request {
         private String description; 
         private String desktopType; 
         private String directoryId; 
+        private Long idleDisconnectDuration; 
         private String imageId; 
+        private Integer keepDuration; 
         private String name; 
         private Integer oversoldUserCount; 
         private Integer oversoldWarn; 
@@ -224,7 +250,9 @@ public class CreateDesktopOversoldGroupRequest extends Request {
             this.description = request.description;
             this.desktopType = request.desktopType;
             this.directoryId = request.directoryId;
+            this.idleDisconnectDuration = request.idleDisconnectDuration;
             this.imageId = request.imageId;
+            this.keepDuration = request.keepDuration;
             this.name = request.name;
             this.oversoldUserCount = request.oversoldUserCount;
             this.oversoldWarn = request.oversoldWarn;
@@ -281,11 +309,29 @@ public class CreateDesktopOversoldGroupRequest extends Request {
         }
 
         /**
+         * IdleDisconnectDuration.
+         */
+        public Builder idleDisconnectDuration(Long idleDisconnectDuration) {
+            this.putQueryParameter("IdleDisconnectDuration", idleDisconnectDuration);
+            this.idleDisconnectDuration = idleDisconnectDuration;
+            return this;
+        }
+
+        /**
          * ImageId.
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
             this.imageId = imageId;
+            return this;
+        }
+
+        /**
+         * KeepDuration.
+         */
+        public Builder keepDuration(Integer keepDuration) {
+            this.putQueryParameter("KeepDuration", keepDuration);
+            this.keepDuration = keepDuration;
             return this;
         }
 

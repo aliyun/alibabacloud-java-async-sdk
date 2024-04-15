@@ -207,7 +207,7 @@ public class UploadImageRequest extends Request {
         }
 
         /**
-         * The description of the custom image. The description must be 2 to 256 characters in length. It cannot start with `http://` or `https://`.
+         * The description of the image. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -234,12 +234,14 @@ public class UploadImageRequest extends Request {
         }
 
         /**
-         * The type of the pre-installed GPU driver. Valid values:
+         * The type of the pre-installed GPU driver.
          * <p>
          * 
-         * *   gpu_grid9: This value is applicable to a Graphics cloud desktop that uses 4 vCores, 23 GB memory, and 4 GB GPU memory and a Graphics cloud desktop that uses 10 vCores, 46 GB memory, and 8 GB GPU memory
-         * *   gpu_grid12: This value is applicable to a cloud desktop other than a Graphics cloud desktop that uses 4 vCores, 23 GB memory, and 4 GB GPU memory and a Graphics cloud desktop that uses 10 vCores, 46 GB memory, and 8 GB GPU memory.
-         * *   gpu_custom: You can install a driver later.
+         * Valid values:
+         * 
+         * *   gpu_grid9: This GPU driver is used on cloud computers of the following two specifications: graphics – 4 vCPUs, 23 GiB memory, 4 GiB GPU memory, and graphics – 10 vCPUs, 46 GiB memory, 8 GiB GPU memory.
+         * *   gpu_custom: You can install the driver later.
+         * *   gpu_grid12: This GPU driver is used on graphical cloud computers of specifications other than the following two specifications: graphics – 4 vCPUs, 23 GiB memory, & 4 GiB GPU memory, and graphics – 10 vCPUs, 46 GiB memory, & 8 GiB GPU memory.
          */
         public Builder gpuDriverType(String gpuDriverType) {
             this.putQueryParameter("GpuDriverType", gpuDriverType);
@@ -248,7 +250,7 @@ public class UploadImageRequest extends Request {
         }
 
         /**
-         * The name of the custom image. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (\_), and hyphens (-). The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-). The name must start with a letter and cannot start with `http://` or `https://`.
+         * The name of the image. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
          */
         public Builder imageName(String imageName) {
             this.putQueryParameter("ImageName", imageName);
@@ -257,16 +259,16 @@ public class UploadImageRequest extends Request {
         }
 
         /**
-         * The type of the license that you want to use to activate the OS after the image is imported. Valid values:
+         * The type of the license that is used to activate the operating system after the image is imported. Valid values:
          * <p>
          * 
-         * *   Auto: Elastic Desktop Service (EDS) checks the source OS of the image and allocates a license to the OS. EDS first checks whether the OS distribution that is specified by `Platform` has a license allocated by using an official Alibaba Cloud channel. If yes, the allocated license is used. If no, the license of the source OS is used.
-         * *   Aliyun: The license allocated by using an official Alibaba Cloud channel is used for the OS distribution that is specified by `Platform`.
-         * *   BYOL: The license of the source OS is used. In this case, make sure that your license key can be used in Alibaba Cloud.
+         * *   Auto: WUYING Workspace detects the operating system of the image and allocates a license to the operating system. In this mode, the system first checks whether a license allocated by an official Alibaba Cloud channel is specified in the `Platform`. If a license allocated by an official Alibaba Cloud channel is specified, the system allocates the license to the imported image. If no such license is specified, the BYOL (Bring Your Own License) mode is used.
+         * *   Aliyun: The license that is allocated by an official Alibaba Cloud channel and is specified by `Platform` is used for the operating system distribution.
+         * *   BYOL: The license that comes with the source operating system is used. When you use the BYOL mode, make sure that your license key is supported by Alibaba Cloud.
          * 
          * Default value: Auto.
          * 
-         * > Windows 10 cannot be activated by using a license that is allocated by using an official Alibaba Cloud channel. In this case, you must set `LicenseType` to BYOL.
+         * >  Windows 10 cannot be activated by Alibaba Cloud. Set the `LicenseType` to BYOL for Windows 10.
          */
         public Builder licenseType(String licenseType) {
             this.putQueryParameter("LicenseType", licenseType);
@@ -275,11 +277,26 @@ public class UploadImageRequest extends Request {
         }
 
         /**
-         * The type of the OS. Valid values:
+         * The type of the operating system.
          * <p>
          * 
-         * *   Windows
+         * Valid values:
+         * 
          * *   Linux
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   Windows
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder osType(String osType) {
             this.putQueryParameter("OsType", osType);
@@ -288,7 +305,7 @@ public class UploadImageRequest extends Request {
         }
 
         /**
-         * The URL of the image object that you want to upload in Object Storage Service (OSS).
+         * The object path of the image file in Object Storage Service (OSS).
          */
         public Builder ossObjectPath(String ossObjectPath) {
             this.putQueryParameter("OssObjectPath", ossObjectPath);
@@ -297,7 +314,12 @@ public class UploadImageRequest extends Request {
         }
 
         /**
-         * The type of the protocol. Valid value: ASP.
+         * The protocol type.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   ASP: in-house Adaptive Streaming Protocol (ASP)
          */
         public Builder protocolType(String protocolType) {
             this.putQueryParameter("ProtocolType", protocolType);
@@ -306,7 +328,7 @@ public class UploadImageRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

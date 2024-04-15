@@ -50,7 +50,7 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The application details.
+         * The details of the applications.
          */
         public Builder applications(java.util.List < Applications> applications) {
             this.applications = applications;
@@ -198,7 +198,7 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The CPU usage.
+             * The CPU utilization (%).
              */
             public Builder cpuPercent(Double cpuPercent) {
                 this.cpuPercent = cpuPercent;
@@ -206,7 +206,7 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The GPU usage.
+             * The GPU utilization (%).
              */
             public Builder gpuPercent(Double gpuPercent) {
                 this.gpuPercent = gpuPercent;
@@ -222,7 +222,7 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The memory usage.
+             * The memory utilization (%).
              */
             public Builder memPercent(Double memPercent) {
                 this.memPercent = memPercent;
@@ -230,7 +230,7 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The process ID.
+             * The PID.
              */
             public Builder pid(Integer pid) {
                 this.pid = pid;
@@ -415,7 +415,7 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The CPU usage.
+             * The CPU utilization (%).
              */
             public Builder cpuPercent(Double cpuPercent) {
                 this.cpuPercent = cpuPercent;
@@ -423,7 +423,7 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The GPU usage.
+             * The GPU utilization (%).
              */
             public Builder gpuPercent(Double gpuPercent) {
                 this.gpuPercent = gpuPercent;
@@ -431,7 +431,7 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The icon address of the application.
+             * The icon URL of the application.
              */
             public Builder iconUrl(String iconUrl) {
                 this.iconUrl = iconUrl;
@@ -447,7 +447,7 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The memory usage.
+             * The memory utilization (%).
              */
             public Builder memPercent(Double memPercent) {
                 this.memPercent = memPercent;
@@ -455,7 +455,7 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The process ID.
+             * The process ID (PID).
              */
             public Builder pid(Integer pid) {
                 this.pid = pid;

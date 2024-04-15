@@ -551,7 +551,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * EndUserId.
+             * The ID of the end user.
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;

@@ -166,7 +166,7 @@ public class ListOfficeSiteUsersRequest extends Request {
         }
 
         /**
-         * The workspace ID. Only workspaces of the enterprise AD account type are supported.
+         * The office network ID. The office network must be of the enterprise AD account type.
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -175,7 +175,7 @@ public class ListOfficeSiteUsersRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~196646~~) to query the most recent region list.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

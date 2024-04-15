@@ -131,7 +131,7 @@ public class ListUserAdOrganizationUnitsRequest extends Request {
         }
 
         /**
-         * The token that determines the start point of the query. Set the value to the NextToken value that is returned from the last call.
+         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request or if no next request exists. You must specify the token that is obtained from the previous query as the value of NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -140,7 +140,7 @@ public class ListUserAdOrganizationUnitsRequest extends Request {
         }
 
         /**
-         * The ID of the AD workspace.
+         * The enterprise AD office network ID.
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -149,7 +149,7 @@ public class ListUserAdOrganizationUnitsRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

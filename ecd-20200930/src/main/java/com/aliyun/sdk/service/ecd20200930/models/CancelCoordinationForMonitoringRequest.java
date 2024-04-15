@@ -130,15 +130,7 @@ public class CancelCoordinationForMonitoringRequest extends Request {
          * 
          * Valid value:
          * 
-         * *   <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     TENANT_ADMIN
-         * 
-         *     <!-- -->
-         * 
-         *     : administrator.
+         * * TENANT_ADMIN: administrator.
          */
         public Builder userType(String userType) {
             this.putQueryParameter("UserType", userType);

@@ -93,7 +93,7 @@ public class MigrateImageProtocolRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -102,7 +102,7 @@ public class MigrateImageProtocolRequest extends Request {
         }
 
         /**
-         * The protocol of the image. Valid value: ASP.
+         * The protocol to which you want to update the image protocols. Set the value to ASP.
          */
         public Builder targetProtocolType(String targetProtocolType) {
             this.putQueryParameter("TargetProtocolType", targetProtocolType);

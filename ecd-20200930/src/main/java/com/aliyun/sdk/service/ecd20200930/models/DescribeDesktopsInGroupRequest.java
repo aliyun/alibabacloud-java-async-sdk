@@ -127,7 +127,7 @@ public class DescribeDesktopsInGroupRequest extends Request {
         } 
 
         /**
-         * The desktop group ID.
+         * The ID of the cloud computer pool.
          */
         public Builder desktopGroupId(String desktopGroupId) {
             this.putQueryParameter("DesktopGroupId", desktopGroupId);
@@ -136,7 +136,13 @@ public class DescribeDesktopsInGroupRequest extends Request {
         }
 
         /**
-         * Specifies whether to ignore the deleted cloud desktops.
+         * Specifies whether to ignore deletion flags.
+         * <p>
+         * 
+         * Default value: true. Valid values:
+         * 
+         * *   true: ignores deletion flags. The cloud computers that were deleted are returned.
+         * *   false: does not ignore deletion flags. The cloud computers that were deleted are not returned.
          */
         public Builder ignoreDeleted(Boolean ignoreDeleted) {
             this.putQueryParameter("IgnoreDeleted", ignoreDeleted);
@@ -172,7 +178,7 @@ public class DescribeDesktopsInGroupRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

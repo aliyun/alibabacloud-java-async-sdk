@@ -126,18 +126,18 @@ public class RenewDesktopsRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable the automatic payment feature.
+         * Specifies whether to enable the auto-payment feature.
          * <p>
          * 
-         * Valid values:
+         * Default value: true. Valid values:
          * 
-         * *   true (default): enables the auto-payment feature.
-         * 
-         *     <!-- -->
+         * *   true: enables the auto-payment feature.
          * 
          *     <!-- -->
          * 
-         *     Make sure that your account has sufficient balance. Otherwise, no order is generated.
+         *     <!-- -->
+         * 
+         *     Make sure that you have sufficient balance in your Alibaba Cloud account. Otherwise, your order becomes invalid.
          * 
          *     <!-- -->
          * 
@@ -147,7 +147,7 @@ public class RenewDesktopsRequest extends Request {
          * 
          *     <!-- -->
          * 
-         *     You can log on to the EDS console and complete the payment based on the order number.
+         *     You can log on to the WUYING Workspace console and complete the payment based on the order ID on the Orders page.
          * 
          *     <!-- -->
          */
@@ -158,7 +158,7 @@ public class RenewDesktopsRequest extends Request {
         }
 
         /**
-         * The cloud desktop ID. Only subscription cloud desktops can be renewed.
+         * The IDs of the cloud computers. Only IDs of subscription cloud computers are supported.
          */
         public Builder desktopId(java.util.List < String > desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -182,12 +182,12 @@ public class RenewDesktopsRequest extends Request {
         }
 
         /**
-         * The unit of the renewal duration that is specified by the Period parameter.
+         * The unit of the renewal duration specified by the `Period` parameter.
          * <p>
          * 
-         * Valid values:
+         * Default value: Month. Valid values:
          * 
-         * *   Month (default)
+         * *   Month
          * 
          *     <!-- -->
          * 
@@ -210,7 +210,7 @@ public class RenewDesktopsRequest extends Request {
         }
 
         /**
-         * The ID of the sales promotion.
+         * The ID of the promotional activity.
          */
         public Builder promotionId(String promotionId) {
             this.putQueryParameter("PromotionId", promotionId);
@@ -219,7 +219,7 @@ public class RenewDesktopsRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~196646~~) to query the most recent region list.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

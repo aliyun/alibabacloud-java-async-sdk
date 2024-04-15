@@ -62,7 +62,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details about the cloud desktop templates.
+         * The details of the queried cloud computer templates.
          */
         public Builder bundles(java.util.List < Bundles> bundles) {
             this.bundles = bundles;
@@ -178,7 +178,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * The memory size. Unit: MB.
+             * The memory size. Unit: MiB.
              */
             public Builder memorySize(Integer memorySize) {
                 this.memorySize = memorySize;
@@ -243,7 +243,42 @@ public class DescribeBundlesResponseBody extends TeaModel {
             private String diskType; 
 
             /**
-             * The performance level (PL) of the disk.
+             * The PL of the disk.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   PL1
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   PL0
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   PL3
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   PL2
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder diskPerformanceLevel(String diskPerformanceLevel) {
                 this.diskPerformanceLevel = diskPerformanceLevel;
@@ -259,11 +294,26 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * The disk type. Valid values:
+             * The type of the disk.
              * <p>
              * 
-             * *   SYSTEM: the system disk
-             * *   DATA: the data disk
+             * Valid values:
+             * 
+             * *   SYSTEM: system disk
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   DATA: data disk
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -532,7 +582,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
             private String volumeEncryptionKey; 
 
             /**
-             * The ID of the cloud desktop template.
+             * The ID of the cloud computer template.
              */
             public Builder bundleId(String bundleId) {
                 this.bundleId = bundleId;
@@ -540,7 +590,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cloud desktop template.
+             * The name of the cloud computer template.
              */
             public Builder bundleName(String bundleName) {
                 this.bundleName = bundleName;
@@ -548,11 +598,26 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the cloud desktop template. Valid values:
+             * The type of the cloud computer template.
              * <p>
              * 
-             * *   SYSTEM: the system template
-             * *   CUSTOM: the custom template
+             * Valid values:
+             * 
+             * *   SYSTEM: system template
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   CUSTOM: custom template
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder bundleType(String bundleType) {
                 this.bundleType = bundleType;
@@ -560,7 +625,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the cloud desktop template was created.
+             * The time when the cloud computer template was created.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -568,7 +633,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the cloud desktop template.
+             * The description of the cloud computer template.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -576,7 +641,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the cloud desktop.
+             * The instance type of the cloud computer.
              */
             public Builder desktopType(String desktopType) {
                 this.desktopType = desktopType;
@@ -584,7 +649,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * Details about the cloud desktop type.
+             * The details of the cloud computer instance type.
              */
             public Builder desktopTypeAttribute(DesktopTypeAttribute desktopTypeAttribute) {
                 this.desktopTypeAttribute = desktopTypeAttribute;
@@ -592,12 +657,14 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * The family of the cloud desktop type. Valid values:
+             * The instance family of the cloud computer.
              * <p>
              * 
-             * *   eds.general: General Office
-             * *   eds.hf: High Frequency
-             * *   eds.graphics: Graphics
+             * Valid values:
+             * 
+             * *   eds.graphics: graphical instance family
+             * *   eds.hf: instance family with a high clock speed
+             * *   eds.general: general-purpose instance family
              */
             public Builder desktopTypeFamily(String desktopTypeFamily) {
                 this.desktopTypeFamily = desktopTypeFamily;
@@ -605,7 +672,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * Details about the disks.
+             * Details of the disks.
              */
             public Builder disks(java.util.List < Disks> disks) {
                 this.disks = disks;
@@ -613,7 +680,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the image.
+             * The image ID.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -621,7 +688,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the image.
+             * The image name.
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -645,7 +712,26 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * The OS type.
+             * The type of the OS.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   Linux
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   Windows
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder osType(String osType) {
                 this.osType = osType;
@@ -653,14 +739,58 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the OS platform. Valid values:
+             * The OS.
              * <p>
              * 
-             * * CentOS
-             * * Ubuntu
-             * * Windows Server 2016
-             * * Windows Server 2019
-             * * UOS
+             * Valid values:
+             * 
+             * *   Ubuntu
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   Windows Server 2022
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   UOS
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   CentOS
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   Windows Server 2019
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   Windows Server 2016
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder platform(String platform) {
                 this.platform = platform;
@@ -671,8 +801,10 @@ public class DescribeBundlesResponseBody extends TeaModel {
              * The protocol type.
              * <p>
              * 
-             * *   HDX
-             * *   ASP (Recommend)
+             * Valid values:
+             * 
+             * *   HDX: HDX protocol
+             * *   ASP: in-house ASP
              */
             public Builder protocolType(String protocolType) {
                 this.protocolType = protocolType;
@@ -680,11 +812,13 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * The session type. Valid values:
+             * The session type.
              * <p>
              * 
-             * *   0: single_session
-             * *   1: multiple_session
+             * Valid values:
+             * 
+             * *   0: single-session
+             * *   1: multi-session
              */
             public Builder sessionType(String sessionType) {
                 this.sessionType = sessionType;
@@ -692,7 +826,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
             }
 
             /**
-             * The inventory status of the cloud desktop type, which is returned when the CheckStock parameter is set to true.
+             * The inventory status of the cloud computer instance type. This parameter is returned only if you set the `CheckStock` parameter to `true`.
              */
             public Builder stockState(String stockState) {
                 this.stockState = stockState;

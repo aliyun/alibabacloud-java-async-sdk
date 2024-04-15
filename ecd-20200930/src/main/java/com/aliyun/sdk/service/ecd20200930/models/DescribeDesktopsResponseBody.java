@@ -74,7 +74,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Details of the cloud desktops.
+         * The details about the cloud desktops.
          */
         public Builder desktops(java.util.List < Desktops> desktops) {
             this.desktops = desktops;
@@ -174,7 +174,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             private String performanceLevel; 
 
             /**
-             * The ID of the disk.
+             * The disk ID.
              */
             public Builder diskId(String diskId) {
                 this.diskId = diskId;
@@ -182,7 +182,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the disk. Unit: GiB.
+             * The disk size. Unit: GiB.
              */
             public Builder diskSize(Integer diskSize) {
                 this.diskSize = diskSize;
@@ -191,6 +191,25 @@ public class DescribeDesktopsResponseBody extends TeaModel {
 
             /**
              * The type of the disk.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   SYSTEM: system disk
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   DATA: data disk
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -198,7 +217,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * The performance level (PL) of the disk that is an enhanced SSD (ESSD). Valid values:
+             * The performance level (PL) of the disk when an enhanced SSD (ESSD) is used. Valid values:
              * <p>
              * 
              * *   PL0
@@ -206,7 +225,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
              * *   PL2
              * *   PL3
              * 
-             * For more information about the differences between disks of different PLs, see [Enhanced SSDs](~~122389~~).
+             * For more information about the differences among ESSDs at different PLs, see [Enhanced SSDs](~~122389~~).
              */
             public Builder performanceLevel(String performanceLevel) {
                 this.performanceLevel = performanceLevel;
@@ -307,7 +326,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             private Long size; 
 
             /**
-             * The current version of the cloud desktop.
+             * The current image version of the cloud desktop.
              */
             public Builder currentAppVersion(String currentAppVersion) {
                 this.currentAppVersion = currentAppVersion;
@@ -315,7 +334,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * The version to which the cloud desktop can be updated.
+             * The image version to which the cloud desktop can be updated.
              */
             public Builder newAppVersion(String newAppVersion) {
                 this.newAppVersion = newAppVersion;
@@ -323,7 +342,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the version to which the cloud desktop can be updated.
+             * The description of the image version to which the cloud desktop can be updated.
              */
             public Builder releaseNote(String releaseNote) {
                 this.releaseNote = releaseNote;
@@ -331,7 +350,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the version that can be upgraded in English.
+             * The English description of the image version to which the cloud desktop can be updated.
              */
             public Builder releaseNoteEn(String releaseNoteEn) {
                 this.releaseNoteEn = releaseNoteEn;
@@ -339,7 +358,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the version that can be upgraded in Japanese.
+             * The Japanese description of the image version to which the cloud desktop can be updated.
              */
             public Builder releaseNoteJp(String releaseNoteJp) {
                 this.releaseNoteJp = releaseNoteJp;
@@ -347,7 +366,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the installation package for the version to which the cloud desktop can be updated. Unit: KB.
+             * The size of the installation package for the image to which the cloud desktop can be updated. Unit: KB.
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -412,7 +431,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             private String externalUserName; 
 
             /**
-             * The ID of the end user that logged on to the cloud desktop.
+             * The ID of the end user who logged on to the cloud desktop.
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
@@ -481,7 +500,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The key of the tag.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -489,7 +508,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1226,7 +1245,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             private String zoneType; 
 
             /**
-             * The number of sessions allowed for each cloud desktop in the multi-session desktop group.
+             * The number of sessions that are allowed for each cloud desktop in the multi-session desktop group.
              */
             public Builder bindAmount(Integer bindAmount) {
                 this.bindAmount = bindAmount;
@@ -1251,6 +1270,25 @@ public class DescribeDesktopsResponseBody extends TeaModel {
 
             /**
              * The billing method of the cloud desktop.
+             * <p>
+             * 
+             * Default value: PostPaid. Valid values:
+             * 
+             * *   Postpaid: pay-as-you-go
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   PrePaid: subscription
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -1259,6 +1297,33 @@ public class DescribeDesktopsResponseBody extends TeaModel {
 
             /**
              * The connection status of the end user.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   Unknown
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   Connected
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   Disconnected
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder connectionStatus(String connectionStatus) {
                 this.connectionStatus = connectionStatus;
@@ -1282,7 +1347,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * > This parameter is in invitational preview and is unavailable.
+             * >  This parameter is in invitational preview and is not publicly available.
              */
             public Builder dataDiskCategory(String dataDiskCategory) {
                 this.dataDiskCategory = dataDiskCategory;
@@ -1290,7 +1355,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * > This parameter is in invitational preview and is unavailable.
+             * >  This parameter is in invitational preview and is not publicly available.
              */
             public Builder dataDiskSize(String dataDiskSize) {
                 this.dataDiskSize = dataDiskSize;
@@ -1298,10 +1363,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the desktop group. Default value: null.
-             * <p>
-             * 
-             * > This parameter is in invitational preview and is unavailable.
+             * The ID of the desktop group to which the cloud desktop belongs. Default value: null.
              */
             public Builder desktopGroupId(String desktopGroupId) {
                 this.desktopGroupId = desktopGroupId;
@@ -1309,7 +1371,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cloud desktop.
+             * The cloud desktop ID.
              */
             public Builder desktopId(String desktopId) {
                 this.desktopId = desktopId;
@@ -1317,7 +1379,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cloud desktop.
+             * The cloud desktop name.
              */
             public Builder desktopName(String desktopName) {
                 this.desktopName = desktopName;
@@ -1333,7 +1395,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * The desktop type.
+             * The type of the cloud desktop.
              */
             public Builder desktopType(String desktopType) {
                 this.desktopType = desktopType;
@@ -1341,7 +1403,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the directory. The ID is the same as the workspace ID that is indicated by the OfficeSiteId parameter.
+             * The directory ID. The value of this parameter is the same as the workspace ID that is indicated by the OfficeSiteId parameter.
              */
             public Builder directoryId(String directoryId) {
                 this.directoryId = directoryId;
@@ -1349,7 +1411,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is in invitational preview and is unavailable.
+             * >  This parameter is in invitational preview and is not publicly available.
              */
             public Builder directoryType(String directoryType) {
                 this.directoryType = directoryType;
@@ -1381,7 +1443,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the end users that have the permissions to connect to the cloud desktops.
+             * The IDs of the end users who are authorized to connect to the cloud desktop.
              */
             public Builder endUserIds(java.util.List < String > endUserIds) {
                 this.endUserIds = endUserIds;
@@ -1389,7 +1451,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the subscription cloud desktop expired.
+             * The time when the subscription cloud desktop expires.
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -1405,7 +1467,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the cloud desktop is of the GPU-accelerated type.
+             * Indicates whether the cloud desktop is a GPU-accelerated desktop.
              */
             public Builder gpuCategory(Long gpuCategory) {
                 this.gpuCategory = gpuCategory;
@@ -1413,7 +1475,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of GPUs.
+             * The number of GPU cores.
              */
             public Builder gpuCount(Float gpuCount) {
                 this.gpuCount = gpuCount;
@@ -1421,7 +1483,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the GPU driver with which the cloud desktop is equipped.
+             * The version number of the GPU driver of the cloud desktop.
              */
             public Builder gpuDriverVersion(String gpuDriverVersion) {
                 this.gpuDriverVersion = gpuDriverVersion;
@@ -1429,7 +1491,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * The GPU specifications.
+             * The GPU Specifications.
              */
             public Builder gpuSpec(String gpuSpec) {
                 this.gpuSpec = gpuSpec;
@@ -1437,7 +1499,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * > This parameter is in invitational preview and is not available for use.
+             * >  This parameter is in invitational preview and is not publicly available.
              */
             public Builder hibernationBeta(Boolean hibernationBeta) {
                 this.hibernationBeta = hibernationBeta;
@@ -1445,7 +1507,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * > This parameter is in invitational preview and is not available for use.
+             * >  This parameter is in invitational preview and is not publicly available.
              */
             public Builder hibernationOptionsConfigured(Boolean hibernationOptionsConfigured) {
                 this.hibernationOptionsConfigured = hibernationOptionsConfigured;
@@ -1461,7 +1523,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the image.
+             * The image ID.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -1469,7 +1531,26 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * The flag that is used to manage the cloud desktops.
+             * The flag that is used to manage the cloud desktop.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   Updating: The configurations of the cloud desktop are being updated.
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   NoFlag: No flags are available.
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder managementFlag(String managementFlag) {
                 this.managementFlag = managementFlag;
@@ -1477,7 +1558,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * The flag that is used to manage the cloud desktops.
+             * The flags that are used to manage the cloud desktops.
              */
             public Builder managementFlags(java.util.List < String > managementFlags) {
                 this.managementFlags = managementFlags;
@@ -1493,7 +1574,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the secondary network interface controller (NIC) created by the RAM user or Active Directory (AD) user in EDS. You do not have the permissions to modify this ID.
+             * The ID of the secondary network interface controller (NIC) created by the RAM or Active Directory (AD) user in Elastic Desktop Service (EDS). You do not have permissions to modify this parameter.
              */
             public Builder networkInterfaceId(String networkInterfaceId) {
                 this.networkInterfaceId = networkInterfaceId;
@@ -1501,7 +1582,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the secondary NIC that is created by the RAM user or AD user in EDS.
+             * The IP address of the secondary NIC that is created by the RAM or AD user in EDS.
              */
             public Builder networkInterfaceIp(String networkInterfaceIp) {
                 this.networkInterfaceIp = networkInterfaceIp;
@@ -1509,7 +1590,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the workspace.
+             * The workspace ID.
              */
             public Builder officeSiteId(String officeSiteId) {
                 this.officeSiteId = officeSiteId;
@@ -1517,7 +1598,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the workspace.
+             * The workspace name.
              */
             public Builder officeSiteName(String officeSiteName) {
                 this.officeSiteName = officeSiteName;
@@ -1526,6 +1607,25 @@ public class DescribeDesktopsResponseBody extends TeaModel {
 
             /**
              * The account type of the workspace.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   SIMPLE: convenience account
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   AD_CONNECTOR: enterprise AD account
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder officeSiteType(String officeSiteType) {
                 this.officeSiteType = officeSiteType;
@@ -1534,6 +1634,33 @@ public class DescribeDesktopsResponseBody extends TeaModel {
 
             /**
              * The virtual private cloud (VPC) type of the workspace.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   standard
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   customized
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   basic
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder officeSiteVpcType(String officeSiteVpcType) {
                 this.officeSiteVpcType = officeSiteVpcType;
@@ -1541,7 +1668,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the OS.
+             * The OS that is defined in the desktop template.
              */
             public Builder osType(String osType) {
                 this.osType = osType;
@@ -1564,7 +1691,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the policy.
+             * The policy ID.
              */
             public Builder policyGroupId(String policyGroupId) {
                 this.policyGroupId = policyGroupId;
@@ -1572,7 +1699,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * The policies IDs.
+             * The policy IDs.
              */
             public Builder policyGroupIdList(java.util.List < String > policyGroupIdList) {
                 this.policyGroupIdList = policyGroupIdList;
@@ -1580,7 +1707,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the policy.
+             * The policy name.
              */
             public Builder policyGroupName(String policyGroupName) {
                 this.policyGroupName = policyGroupName;
@@ -1604,7 +1731,26 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the protocol.
+             * The protocol.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   HDX: High-definition Experience (HDX) protocol
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   ASP: Adaptive Streaming Protocol (ASP) developed by Alibaba Cloud
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder protocolType(String protocolType) {
                 this.protocolType = protocolType;
@@ -1612,14 +1758,26 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * The session type.
+             * The type of the session.
              * <p>
              * 
              * Valid values:
              * 
-             * * **SINGLE_SESSION**
+             * *   SINGLE_SESSION
              * 
-             * * **MULTIPLE_SESSION**
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   MULTIPLE_SESSION
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder sessionType(String sessionType) {
                 this.sessionType = sessionType;
@@ -1627,7 +1785,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * Details of the desktop sessions that end users hold.
+             * The information about the desktop sessions of end users.
              */
             public Builder sessions(java.util.List < Sessions> sessions) {
                 this.sessions = sessions;
@@ -1651,7 +1809,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * The first time when the cloud desktop was started.
+             * The time when the cloud desktop was first started.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -1659,7 +1817,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether hibernation is supported for the cloud desktop.
+             * Indicates whether the cloud desktop supports hibernation.
              */
             public Builder supportHibernation(Boolean supportHibernation) {
                 this.supportHibernation = supportHibernation;
@@ -1667,7 +1825,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * > This parameter is in invitational preview and is unavailable.
+             * >  This parameter is in invitational preview and is not publicly available.
              */
             public Builder systemDiskCategory(String systemDiskCategory) {
                 this.systemDiskCategory = systemDiskCategory;
@@ -1675,7 +1833,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * > This parameter is in invitational preview and is unavailable.
+             * >  This parameter is in invitational preview and is not publicly available.
              */
             public Builder systemDiskSize(Integer systemDiskSize) {
                 this.systemDiskSize = systemDiskSize;
@@ -1683,7 +1841,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * Details of the tags.
+             * Details about the tags.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -1699,7 +1857,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Key Management Service (KMS) key that is used when disk encryption is enabled. You can call the [ListKeys](~~28951~~) operation to obtain a list of KMS keys.
+             * The ID of the Key Management Service (KMS) key that is used when disk encryption is enabled. You can call the [ListKeys](~~28951~~) operation to query the list of KMS keys.
              */
             public Builder volumeEncryptionKey(String volumeEncryptionKey) {
                 this.volumeEncryptionKey = volumeEncryptionKey;
@@ -1707,7 +1865,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the zone. Default value: **AvailabilityZone**. This value indicates Alibaba Cloud zones.
+             * The zone type. Default value: **AvailabilityZone**. This value indicates Alibaba Cloud zones.
              */
             public Builder zoneType(String zoneType) {
                 this.zoneType = zoneType;

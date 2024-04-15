@@ -475,29 +475,8 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
              * 
              * Valid values:
              * 
-             * *   0
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     single-session
-             * 
-             *     <!-- -->
-             * 
-             * *   1
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     multi-session
-             * 
-             *     <!-- -->
+             * *   0: single-session
+             * *   1: multi-session
              */
             public Builder ownType(Integer ownType) {
                 this.ownType = ownType;

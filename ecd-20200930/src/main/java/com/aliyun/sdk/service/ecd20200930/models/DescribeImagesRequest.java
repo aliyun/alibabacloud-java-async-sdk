@@ -252,7 +252,7 @@ public class DescribeImagesRequest extends Request {
         } 
 
         /**
-         * The cloud desktop type. You can call the [DescribeBundles](~~188884~~) operation to query the available cloud desktop types.
+         * The instance type of the cloud computer. You can call the [DescribeDesktopTypes](~~436816~~) operation to obtain the parameter value.
          */
         public Builder desktopInstanceType(String desktopInstanceType) {
             this.putQueryParameter("DesktopInstanceType", desktopInstanceType);
@@ -270,7 +270,26 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * Specifies whether the image is a GPU-accelerated image.
+         * Specifies whether the images are GPU-accelerated images.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   true
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   false
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder gpuCategory(Boolean gpuCategory) {
             this.putQueryParameter("GpuCategory", gpuCategory);
@@ -355,7 +374,26 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * The type of the OS. Default value: `null`.
+         * The type of the operating system of the images. Default value: `null`.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   Linux
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   Windows
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder osType(String osType) {
             this.putQueryParameter("OsType", osType);
@@ -364,7 +402,13 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * The type of the protocol.
+         * The protocol type.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   HDX: High-definition Experience (HDX) protocol
+         * *   ASP: in-house Adaptive Streaming Protocol (ASP) (recommended)
          */
         public Builder protocolType(String protocolType) {
             this.putQueryParameter("ProtocolType", protocolType);
@@ -373,7 +417,7 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

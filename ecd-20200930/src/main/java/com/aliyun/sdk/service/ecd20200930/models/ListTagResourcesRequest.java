@@ -153,7 +153,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The resource IDs, namely the cloud desktop IDs. You can specify 1 to 50 IDs of cloud desktops.
+         * The resource IDs, which are cloud computer IDs. You can specify 1 to 50 IDs.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -162,7 +162,12 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The resource type. Valid value: ALIYUN::GWS::INSTANCE.
+         * The type of the resource.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * * ALIYUN::GWS::INSTANCE: cloud computer.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -171,7 +176,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The tags.
+         * The tags that you want to query.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -225,7 +230,7 @@ public class ListTagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * The tag key. You can specify 1 to 20 keys.
+             * The tag keys. You can specify 1 to 20 tag keys.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -233,7 +238,7 @@ public class ListTagResourcesRequest extends Request {
             }
 
             /**
-             * The tag value. You can specify 1 to 20 values.
+             * The tag values. You can specify 1 to 20 tag values.
              */
             public Builder value(String value) {
                 this.value = value;

@@ -62,7 +62,7 @@ public class DescribeClientEventsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details about the events.
+         * The information about the events of an end user.
          */
         public Builder events(java.util.List < Events> events) {
             this.events = events;
@@ -70,7 +70,7 @@ public class DescribeClientEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The query token that is returned in this call.
+         * A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -78,7 +78,7 @@ public class DescribeClientEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -410,7 +410,7 @@ public class DescribeClientEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the client.
+             * The client version.
              */
             public Builder clientVersion(String clientVersion) {
                 this.clientVersion = clientVersion;
@@ -418,7 +418,7 @@ public class DescribeClientEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the desktop group.
+             * The desktop group ID.
              */
             public Builder desktopGroupId(String desktopGroupId) {
                 this.desktopGroupId = desktopGroupId;
@@ -426,7 +426,7 @@ public class DescribeClientEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the desktop group.
+             * The desktop group name.
              */
             public Builder desktopGroupName(String desktopGroupName) {
                 this.desktopGroupName = desktopGroupName;
@@ -434,7 +434,7 @@ public class DescribeClientEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cloud desktop.
+             * The cloud desktop ID.
              */
             public Builder desktopId(String desktopId) {
                 this.desktopId = desktopId;
@@ -450,7 +450,7 @@ public class DescribeClientEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cloud desktop.
+             * The cloud desktop name.
              */
             public Builder desktopName(String desktopName) {
                 this.desktopName = desktopName;
@@ -466,7 +466,7 @@ public class DescribeClientEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the directory.
+             * The directory type.
              */
             public Builder directoryType(String directoryType) {
                 this.directoryType = directoryType;
@@ -474,7 +474,7 @@ public class DescribeClientEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the regular user that connects to the cloud desktop from the EDS client. The information can be the RAM user ID or AD username.
+             * The information about the end user that connects to the cloud desktop from the EDS client. The information can be a RAM user ID or an AD username.
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
@@ -482,7 +482,7 @@ public class DescribeClientEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the event.
+             * The event ID.
              */
             public Builder eventId(String eventId) {
                 this.eventId = eventId;
@@ -498,7 +498,7 @@ public class DescribeClientEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the event.
+             * The event type. Valid values:
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -514,7 +514,7 @@ public class DescribeClientEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the workspace.
+             * The workspace name.
              */
             public Builder officeSiteName(String officeSiteName) {
                 this.officeSiteName = officeSiteName;
@@ -522,11 +522,26 @@ public class DescribeClientEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The account type of the workspace. Valid values:
+             * The account type of the workspace.
              * <p>
              * 
+             * Valid values:
+             * 
              * *   SIMPLE: convenience account
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
              * *   AD_CONNECTOR: enterprise AD account
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder officeSiteType(String officeSiteType) {
                 this.officeSiteType = officeSiteType;
@@ -534,7 +549,7 @@ public class DescribeClientEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -542,7 +557,7 @@ public class DescribeClientEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the event. This parameter is returned if you set the EventType parameter to DESKTOP_DISCONNECT or GET_CONNECTION_TICKET. Valid values:
+             * The status of the event. If you set the EventType parameter to `DESKTOP_DISCONNECT` or `GET_CONNECTION_TICKET`, this parameter is returned. Valid values:
              * <p>
              * 
              * *   200\. The value indicates that the request is successful.

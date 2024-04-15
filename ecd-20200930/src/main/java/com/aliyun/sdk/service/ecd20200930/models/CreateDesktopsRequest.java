@@ -421,7 +421,7 @@ public class CreateDesktopsRequest extends Request {
         } 
 
         /**
-         * The number of cloud desktops that you want to create. Valid values: 1 to 300. Default value: 1.
+         * The number of cloud computers that you want to create. Valid values: 1 to 300. Default value: 1.
          */
         public Builder amount(Integer amount) {
             this.putQueryParameter("Amount", amount);
@@ -448,7 +448,7 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * The ID of the desktop template.
+         * The ID of the cloud computer template.
          */
         public Builder bundleId(String bundleId) {
             this.putQueryParameter("BundleId", bundleId);
@@ -457,7 +457,7 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * The desktop templates that you want to use.
+         * The cloud computer templates.
          */
         public Builder bundleModels(java.util.List < BundleModels> bundleModels) {
             this.putQueryParameter("BundleModels", bundleModels);
@@ -466,7 +466,26 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * The billing method of the cloud desktop.
+         * The billing method of the cloud computers.
+         * <p>
+         * 
+         * Default value: PostPaid. Valid values:
+         * 
+         * *   Postpaid: pay-as-you-go
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   PrePaid: subscription
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -475,7 +494,7 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * DesktopMemberIp.
+         * The private IP address of the cloud computer.
          */
         public Builder desktopMemberIp(String desktopMemberIp) {
             this.putQueryParameter("DesktopMemberIp", desktopMemberIp);
@@ -484,11 +503,12 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * The name of the cloud desktop. The name must meet the following requirements:
+         * The name of the cloud computer. The name must meet the following requirements:
          * <p>
          * 
          * *   The name must be 1 to 64 characters in length.
-         * *   The name can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-). It must start with a letter but cannot start with http:// or https://.
+         * *   The name must start with a letter but cannot start with `http://` or `https://`.
+         * *   The name can only contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).
          */
         public Builder desktopName(String desktopName) {
             this.putQueryParameter("DesktopName", desktopName);
@@ -497,7 +517,26 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * Specifies whether to automatically add a suffix to the cloud desktop name when you create multiple cloud desktops at a time.
+         * Specifies whether to automatically add suffixes to the names of cloud computers when you create multiple cloud computers at the same time.
+         * <p>
+         * 
+         * Default value: true. Valid values:
+         * 
+         * *   true
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   False
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder desktopNameSuffix(Boolean desktopNameSuffix) {
             this.putQueryParameter("DesktopNameSuffix", desktopNameSuffix);
@@ -506,7 +545,7 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * DesktopTimers.
+         * The details of the scheduled task on cloud computers.
          */
         public Builder desktopTimers(java.util.List < DesktopTimers> desktopTimers) {
             this.putQueryParameter("DesktopTimers", desktopTimers);
@@ -515,7 +554,7 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * This parameter is not available.
+         * >  This parameter is not publicly available.
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -524,11 +563,7 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * The IDs of the users that you want to authorize to use the cloud desktop. The cloud desktop is assigned to the users. You can specify IDs of 1 to 100 users.
-         * <p>
-         * 
-         * *   Only one user can use the cloud desktop at a time.
-         * *   If you do not specify the `EndUserId` parameter, the cloud desktop that you create is not assigned to users.
+         * The IDs of the end users to which you want to assign the cloud computers. You can specify 1 to 100 IDs.
          */
         public Builder endUserId(java.util.List < String > endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -537,7 +572,7 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * The ID of the desktop group.
+         * The ID of the cloud computer pool.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -546,18 +581,18 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * The hostname that you specify for the cloud desktop. You can specify only the hostname of a Windows cloud desktop in the workspace of the enterprise AD account type.
+         * The custom hostnames of the cloud computers. This parameter is valid only if the office network is an AD office network and the operating system type of the cloud computers is Windows.
          * <p>
          * 
-         * The hostname must meet the following requirements:
+         * The hostnames must meet the following requirements:
          * 
-         * *   It must be 2 to 15 characters in length.
-         * *   It can contain letters, digits, and hyphens (-). The hostname cannot start or end with a hyphen (-), contain consecutive hyphens (-), or contain only digits.
+         * *   The hostnames must be 2 to 15 characters in length.
+         * *   The hostnames can contain only letters, digits, and hyphens (-). The hostnames cannot start or end with a hyphen (-), contain consecutive hyphens (-), or contain only digits.
          * 
-         * If you create multiple cloud desktops, you can use the`  name_prefix[begin_number,bits]name_suffix ` format to determine the hostnames of the cloud desktops. For example, if you set Hostname to ecd-\[1,4]-test, the hostname of the first cloud desktop is ecd-0001-test and the hostname of the second cloud desktop is ecd-0002-test. Other hostnames follow the same rule.
+         * When you create multiple cloud computers, you can use the `name_prefix[begin_number,bits]name_suffix` naming format to name the cloud computers. For example, if you set the value of the Hostname parameter to ecd-\[1,4]-test, the hostname of the first cloud computer is ecd-0001-test, the hostname of the second cloud computer is ecd-0002-test, and so on.
          * 
          * *   `name_prefix`: the prefix of the hostname.
-         * *   `[begin_number,bits]`: the ordered numbers in the hostname. begin_number: the start number. Valid values: 0 to 999999. Default value: 0. bits: the digit. Valid values: 1 to 6. Default value: 6.
+         * *   `[begin_number,bits]`: the sequential number in the hostname. The `begin_number` value is the starting digit. Valid values of begin_number: 0 to 999999. Default value: 0. The `bits` value is the number of digits. Valid values: 1 to 6. Default value: 6.
          * *   `name_suffix`: the suffix of the hostname.
          */
         public Builder hostname(String hostname) {
@@ -567,7 +602,7 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * The ID of the workspace.
+         * The office network ID.
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -646,10 +681,30 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * The assignment mode of the cloud desktop.
+         * How the cloud computers are assigned.
          * <p>
          * 
-         * > If you do not specify the `EndUserId` parameter, the cloud desktop that you create is not assigned to users.
+         * >  If you do not specify the `EndUserId` parameter, the cloud computers are not assigned to end users after the cloud computers are created.
+         * 
+         * Default value: ALL. Valid values:
+         * 
+         * *   ALL: If you specify the EndUserId parameter, the cloud computers are assigned to all specified end users after the cloud computers are created.
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   PER_USER: If you specify the EndUserId parameter, the cloud computers are evenly assigned to the specified end users after the cloud computers are created.
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     In this case, you must make sure that the value of the Amount parameter can be divided by the N value of the EndUserId.N parameter that you specify.
+         * 
+         *     <!-- -->
          */
         public Builder userAssignMode(String userAssignMode) {
             this.putQueryParameter("UserAssignMode", userAssignMode);
@@ -658,7 +713,7 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * The custom command scripts of the user.
+         * Details about the custom command scripts.
          */
         public Builder userCommands(java.util.List < UserCommands> userCommands) {
             this.putQueryParameter("UserCommands", userCommands);
@@ -667,7 +722,7 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * This parameter is not available.
+         * >  This parameter is not publicly available.
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);
@@ -694,7 +749,7 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * This parameter is not available.
+         * >  This parameter is not publicly available.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -809,7 +864,7 @@ public class CreateDesktopsRequest extends Request {
             private String volumeEncryptionKey; 
 
             /**
-             * The number of cloud desktops that you want to create. Valid values: 1 to 300. Default value: 0.
+             * The number of cloud computers that you want to create. Valid values: 1 to 300. Default value: null.
              */
             public Builder amount(Integer amount) {
                 this.amount = amount;
@@ -817,7 +872,7 @@ public class CreateDesktopsRequest extends Request {
             }
 
             /**
-             * The ID of the desktop template.
+             * The ID of a cloud computer template.
              */
             public Builder bundleId(String bundleId) {
                 this.bundleId = bundleId;
@@ -825,7 +880,12 @@ public class CreateDesktopsRequest extends Request {
             }
 
             /**
-             * The name of the cloud desktop.
+             * The name of the cloud computer. The name must meet the following requirements:
+             * <p>
+             * 
+             * *   The name must be 1 to 64 characters in length.
+             * *   The name must start with a letter but cannot start with `http://` or `https://`.
+             * *   The name can only contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).
              */
             public Builder desktopName(String desktopName) {
                 this.desktopName = desktopName;
@@ -833,7 +893,7 @@ public class CreateDesktopsRequest extends Request {
             }
 
             /**
-             * The users to whom you want to assign the cloud desktops.
+             * The IDs of the end users to whom the cloud computer are assigned.
              */
             public Builder endUserIds(java.util.List < String > endUserIds) {
                 this.endUserIds = endUserIds;
@@ -841,18 +901,18 @@ public class CreateDesktopsRequest extends Request {
             }
 
             /**
-             * The hostname that you specify for the cloud desktop. You can only specify the hostname of a Windows cloud desktop in the workspace of the enterprise AD account type.
+             * The custom hostnames of the cloud computers. This parameter is valid only if the office network is an AD office network and the operating system type of the cloud computers is Windows.
              * <p>
              * 
-             * The hostname must meet the following requirements:
+             * The hostnames must meet the following requirements:
              * 
-             * *   It must be 2 to 15 characters in length.
-             * *   It can contain letters, digits, and hyphens (-). The hostname cannot start or end with a hyphen (-), contain consecutive hyphens (-), or contain only digits.
+             * *   The hostnames must be 2 to 15 characters in length.
+             * *   The hostnames can contain only letters, digits, and hyphens (-). The hostnames cannot start or end with a hyphen (-), contain consecutive hyphens (-), or contain only digits.
              * 
-             * If you create multiple cloud desktops, you can use the`  name_prefix[begin_number,bits]name_suffix ` format to determine the hostnames of the cloud desktops. For example, if you set Hostname to ecd-\[1,4]-test, the hostname of the first cloud desktop is ecd-0001-test and the hostname of the second cloud desktop is ecd-0002-test. Other hostnames follow the same rule.
+             * When you create multiple cloud computers, you can use the `name_prefix[begin_number,bits]name_suffix` naming format to name the cloud computers. For example, if you set the value of the Hostname parameter to ecd-\[1,4]-test, the hostname of the first cloud computer is ecd-0001-test, the hostname of the second cloud computer is ecd-0002-test, and so on.
              * 
              * *   `name_prefix`: the prefix of the hostname.
-             * *   `[begin_number,bits]`: the ordered numbers in the hostname. begin_number: the start number. Valid values: 0 to 999999. Default value: 0. bits: the digit. Valid values: 1 to 6. Default value: 6.
+             * *   `[begin_number,bits]`: the sequential number in the hostname. The `begin_number` value is the starting digit. Valid values of begin_number: 0 to 999999. Default value: 0. The `bits` value is the number of digits. Valid values: 1 to 6. Default value: 6.
              * *   `name_suffix`: the suffix of the hostname.
              */
             public Builder hostname(String hostname) {
@@ -869,7 +929,7 @@ public class CreateDesktopsRequest extends Request {
             }
 
             /**
-             * The ID of the Key Management Service (KMS) key that you want to use when disk encryption is enabled. You can call the [ListKeys](~~28951~~) operation to obtain a list of KMS keys.
+             * The ID of the Key Management Service (KMS) key that is used when disk encryption is enabled. You can call the [ListKeys](~~28951~~) operation to query the list of KMS keys.
              */
             public Builder volumeEncryptionKey(String volumeEncryptionKey) {
                 this.volumeEncryptionKey = volumeEncryptionKey;
@@ -982,7 +1042,7 @@ public class CreateDesktopsRequest extends Request {
             private String timerType; 
 
             /**
-             * AllowClientSetting.
+             * Specifies whether to allow the end user to configure the scheduled task.
              */
             public Builder allowClientSetting(Boolean allowClientSetting) {
                 this.allowClientSetting = allowClientSetting;
@@ -990,7 +1050,10 @@ public class CreateDesktopsRequest extends Request {
             }
 
             /**
-             * CronExpression.
+             * The cron expression for the scheduled task.
+             * <p>
+             * 
+             * >  The time must be in UTC. For example, for 24:00 (UTC+8), you must set the value to 0 0 16 ? \* 1,2,3,4,5,6,7
              */
             public Builder cronExpression(String cronExpression) {
                 this.cronExpression = cronExpression;
@@ -998,7 +1061,26 @@ public class CreateDesktopsRequest extends Request {
             }
 
             /**
-             * Enforce.
+             * Specifies whether to forcibly execute the scheduled task.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   true: forcibly executes the scheduled task regardless of the status and connection of the cloud computers.
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   false: does not forcibly execute the scheduled task.
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder enforce(Boolean enforce) {
                 this.enforce = enforce;
@@ -1006,7 +1088,7 @@ public class CreateDesktopsRequest extends Request {
             }
 
             /**
-             * Interval.
+             * The interval at which cloud computers are created. Unit: minutes.
              */
             public Builder interval(Integer interval) {
                 this.interval = interval;
@@ -1014,7 +1096,26 @@ public class CreateDesktopsRequest extends Request {
             }
 
             /**
-             * OperationType.
+             * The operations that scheduled tasks support. This parameter is valid only when TimerType is set to NoConnect.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   Hibernate: hibernates the cloud computers.
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   Shutdown: stops the cloud computers.
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder operationType(String operationType) {
                 this.operationType = operationType;
@@ -1022,7 +1123,26 @@ public class CreateDesktopsRequest extends Request {
             }
 
             /**
-             * ResetType.
+             * The reset type of the cloud computers.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   RESET_TYPE_SYSTEM: resets the system disks.
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   RESET_TYPE_BOTH: resets the system disks and data disks.
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder resetType(String resetType) {
                 this.resetType = resetType;
@@ -1030,7 +1150,7 @@ public class CreateDesktopsRequest extends Request {
             }
 
             /**
-             * TimerType.
+             * The type of the scheduled task.
              */
             public Builder timerType(String timerType) {
                 this.timerType = timerType;
@@ -1165,7 +1285,7 @@ public class CreateDesktopsRequest extends Request {
             }
 
             /**
-             * The encoding mode of the command content (CommandContent).
+             * The encoding mode of the command content.
              * <p>
              * 
              * Valid values:
@@ -1192,12 +1312,12 @@ public class CreateDesktopsRequest extends Request {
             }
 
             /**
-             * The command language.
+             * The language type of the command.
              * <p>
              * 
              * Valid values:
              * 
-             * *   RunPowerShellScript: PowerShell command (applicable to Windows cloud desktops).
+             * *   RunPowerShellScript: PowerShell commands (applicable to Windows cloud computers).
              * 
              *     <!-- -->
              * 
@@ -1205,7 +1325,7 @@ public class CreateDesktopsRequest extends Request {
              * 
              *     <!-- -->
              * 
-             * *   RunShellScript: shell command (applicable to Linux cloud desktops).
+             * *   RunShellScript: shell commands (applicable to Linux cloud computers).
              * 
              *     <!-- -->
              * 
@@ -1213,7 +1333,7 @@ public class CreateDesktopsRequest extends Request {
              * 
              *     <!-- -->
              * 
-             * *   RunBatScript: batch command (applicable to Windows cloud desktops).
+             * *   RunBatScript: batch commands (applicable to Windows cloud computers).
              * 
              *     <!-- -->
              * 

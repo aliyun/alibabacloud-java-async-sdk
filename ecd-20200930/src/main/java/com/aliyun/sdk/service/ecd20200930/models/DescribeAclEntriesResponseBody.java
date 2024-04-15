@@ -62,7 +62,7 @@ public class DescribeAclEntriesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ACL entry.
+         * The ACL entries.
          */
         public Builder aclEntries(java.util.List < AclEntries> aclEntries) {
             this.aclEntries = aclEntries;
@@ -142,11 +142,13 @@ public class DescribeAclEntriesResponseBody extends TeaModel {
             private String sourceType; 
 
             /**
-             * The ACL policy.
+             * The ACL type.
              * <p>
              * 
-             * *   **allow**: allows access.
-             * *   **drop**: denies access.
+             * Valid values:
+             * 
+             * *   allow: whitelist
+             * *   disable: blacklist
              */
             public Builder policy(String policy) {
                 this.policy = policy;
@@ -154,7 +156,7 @@ public class DescribeAclEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance corresponding to the ACL.
+             * The ID of the instance to which the ACL applies, such as an office network ID or a cloud computer ID.
              */
             public Builder sourceId(String sourceId) {
                 this.sourceId = sourceId;
@@ -162,11 +164,13 @@ public class DescribeAclEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The object on which the ACL takes effect.
+             * The granularity of the ACL.
              * <p>
              * 
-             * *   **vpc**: workspace.
-             * *   **desktop**: cloud desktop.
+             * Valid values:
+             * 
+             * *   desktop: cloud computer
+             * *   vpc: office network
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;

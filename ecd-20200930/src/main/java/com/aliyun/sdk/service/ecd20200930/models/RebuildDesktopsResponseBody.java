@@ -50,7 +50,7 @@ public class RebuildDesktopsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The recreation results of cloud desktops by changing images.
+         * The recreation results.
          */
         public Builder rebuildResults(java.util.List < RebuildResults> rebuildResults) {
             this.rebuildResults = rebuildResults;
@@ -122,7 +122,7 @@ public class RebuildDesktopsResponseBody extends TeaModel {
             private String message; 
 
             /**
-             * The recreation result of the cloud desktop by changing the image. A value of success indicates that the image of the cloud desktop is changed. If the image of the cloud desktop failed to be changed, an error message is returned.
+             * The recreation result code. If the request was successful, `success` is returned. If the request failed, an error message is returned.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -130,7 +130,7 @@ public class RebuildDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cloud desktop.
+             * The IDs of the cloud computers.
              */
             public Builder desktopId(String desktopId) {
                 this.desktopId = desktopId;
@@ -138,7 +138,7 @@ public class RebuildDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * The error message. This parameter is not returned if the value of Code is success.
+             * The error message. This parameter is invalid if the value of `Code` is `success`.
              */
             public Builder message(String message) {
                 this.message = message;

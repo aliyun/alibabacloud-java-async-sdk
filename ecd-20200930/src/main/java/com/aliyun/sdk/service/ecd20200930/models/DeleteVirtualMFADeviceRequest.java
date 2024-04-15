@@ -70,7 +70,7 @@ public class DeleteVirtualMFADeviceRequest extends Request {
         } 
 
         /**
-         * The ID of the region.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -82,7 +82,7 @@ public class DeleteVirtualMFADeviceRequest extends Request {
          * The serial number of the virtual MFA device, which is a unique identifier.
          * <p>
          * 
-         * You can call the [DescribeVirtualMFADevices](~~206210~~) operation to query the serial number of the virtual MFA device bound to AD users.
+         * You can call the [DescribeVirtualMFADevices](~~206210~~) operation to query the serial number of the virtual MFA device that is bound by AD users.
          */
         public Builder serialNumber(String serialNumber) {
             this.putQueryParameter("SerialNumber", serialNumber);

@@ -62,7 +62,7 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details of the Internet access packages.
+         * The premium bandwidth plans.
          */
         public Builder networkPackages(java.util.List < NetworkPackages> networkPackages) {
             this.networkPackages = networkPackages;
@@ -286,7 +286,7 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
             private String reservationInternetChargeType; 
 
             /**
-             * The maximum public bandwidth of the Internet access package. Unit: Mbit/s.
+             * The bandwidth provided by the premium bandwidth plan. Unit: Mbit/s.
              */
             public Builder bandwidth(Integer bandwidth) {
                 this.bandwidth = bandwidth;
@@ -294,7 +294,26 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * BusinessStatus.
+             * The business status.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   Expired
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   Normal
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder businessStatus(String businessStatus) {
                 this.businessStatus = businessStatus;
@@ -302,7 +321,7 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the Internet access package was created.
+             * The time when the premium bandwidth plan was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -310,7 +329,7 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The elastic IP addresses (EIPs) of the Internet access package for outbound traffic.
+             * The public egress IP address of the premium bandwidth plan.
              */
             public Builder eipAddresses(java.util.List < String > eipAddresses) {
                 this.eipAddresses = eipAddresses;
@@ -318,11 +337,11 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the Internet access package expires.
+             * The time when the premium bandwidth plan expires.
              * <p>
              * 
-             * *   If the Internet access package is metered on a pay-by-bandwidth basis, the actual expiration time is returned.
-             * *   If the Internet access package is metered on a pay-by-data-transfer basis, 2099-12-31T15:59:59Z is returned.
+             * *   If the plan is a subscription one, the time when the plan expires is returned.
+             * *   If the plan is a pay-as-you-go one, `2099-12-31T15:59:59Z` is returned.
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -330,11 +349,17 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method of the network bandwidth.
+             * The charge type of the premium bandwidth plan.
              * <p>
              * 
-             * *   PayByTraffic: pay-by-data-transfer
-             * *   PayByBandwidth: pay-by-bandwidth
+             * *   Valid value when the `PayType` parameter is set to `PrePaid`:
+             * 
+             *     *   PayByBandwidth: charges by fixed bandwidth.
+             * 
+             * *   Valid values when the `PayType` parameter is set to `PostPaid`:
+             * 
+             *     *   PayByTraffic: charges by data transfer.
+             *     *   PayByBandwidth: charges by fixed bandwidth.
              */
             public Builder internetChargeType(String internetChargeType) {
                 this.internetChargeType = internetChargeType;
@@ -342,7 +367,7 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Internet access package.
+             * The ID of the premium bandwidth plan.
              */
             public Builder networkPackageId(String networkPackageId) {
                 this.networkPackageId = networkPackageId;
@@ -350,13 +375,42 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the Internet access package. Valid values:
+             * The status of the premium bandwidth plan.
              * <p>
              * 
+             * Valid values:
+             * 
              * *   Creating
-             * *   InUse
-             * *   Releasing
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
              * *   Released
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   InUse
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   Releasing
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder networkPackageStatus(String networkPackageStatus) {
                 this.networkPackageStatus = networkPackageStatus;
@@ -364,7 +418,7 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the workspace.
+             * The office network ID.
              */
             public Builder officeSiteId(String officeSiteId) {
                 this.officeSiteId = officeSiteId;
@@ -372,7 +426,7 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the workspace.
+             * The office network name.
              */
             public Builder officeSiteName(String officeSiteName) {
                 this.officeSiteName = officeSiteName;
@@ -380,12 +434,14 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the workspace. Valid values:
+             * The type of the office network.
              * <p>
              * 
-             * *   basic
-             * *   standard
-             * *   customized
+             * Valid values:
+             * 
+             * *   standard: advanced office network
+             * *   customized: custom office network
+             * *   basic: basic office network
              */
             public Builder officeSiteVpcType(String officeSiteVpcType) {
                 this.officeSiteVpcType = officeSiteVpcType;
@@ -393,11 +449,13 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method for the network.
+             * The billing method of the premium bandwidth plan.
              * <p>
              * 
-             * *   PrePaid: subscription
+             * Valid values:
+             * 
              * *   PostPaid: pay-as-you-go
+             * *   PrePaid: subscription
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -405,7 +463,7 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the reserved network bandwidth takes effect.
+             * The time when the reserved network bandwidth took effect.
              */
             public Builder reservationActiveTime(String reservationActiveTime) {
                 this.reservationActiveTime = reservationActiveTime;
@@ -413,7 +471,7 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The peak bandwidth of the reserved network bandwidth. Unit: Mbit/s.
+             * The peak bandwidth that is reserved for the premium bandwidth plan. Unit: Mbit/s.
              */
             public Builder reservationBandwidth(Integer reservationBandwidth) {
                 this.reservationBandwidth = reservationBandwidth;
@@ -424,8 +482,11 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
              * The billing method of the reserved network bandwidth.
              * <p>
              * 
-             * *   PayByTraffic: pay-by-data-transfer
-             * *   PayByBandwidth: pay-by-bandwidth
+             * Valid values:
+             * 
+             * *   PayByTraffic: charges by data transfer.
+             * 
+             * *   PayByBandwidth: charges by fixed bandwidth.
              */
             public Builder reservationInternetChargeType(String reservationInternetChargeType) {
                 this.reservationInternetChargeType = reservationInternetChargeType;

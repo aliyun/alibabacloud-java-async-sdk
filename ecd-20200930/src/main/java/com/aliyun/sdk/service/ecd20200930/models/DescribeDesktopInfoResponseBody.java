@@ -50,7 +50,7 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details of the cloud desktops.
+         * Details of the cloud computers.
          */
         public Builder desktops(java.util.List < Desktops> desktops) {
             this.desktops = desktops;
@@ -206,7 +206,7 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The current image version of the cloud desktop.
+             * The version of the image that is used by the cloud computer.
              */
             public Builder currentAppVersion(String currentAppVersion) {
                 this.currentAppVersion = currentAppVersion;
@@ -214,7 +214,7 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cloud desktop.
+             * The cloud computer ID.
              */
             public Builder desktopId(String desktopId) {
                 this.desktopId = desktopId;
@@ -222,17 +222,17 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the cloud desktop. Valid values:
+             * The status of the cloud computer. Valid values:
              * <p>
              * 
-             * *   Pending: The cloud desktop is being created.
-             * *   Starting: The cloud desktop is being started.
-             * *   Running: The cloud desktop is running.
-             * *   Stopping: The cloud desktop is being stopped.
-             * *   Stopped: The cloud desktop is stopped.
-             * *   Expired: The cloud desktop is expired.
-             * *   Deleted: The cloud desktop is deleted.
-             * *   Failed: Failed to create the cloud desktop.
+             * *   Pending: The cloud computer is being created.
+             * *   Starting: The cloud computer is being started.
+             * *   Running: The cloud computer is running.
+             * *   Stopping: The cloud computer is being stopped.
+             * *   Stopped: The cloud computer is stopped.
+             * *   Expired: The cloud computer is expired.
+             * *   Deleted: The cloud computer is deleted.
+             * *   Failed: Failed to create the cloud computer.
              */
             public Builder desktopStatus(String desktopStatus) {
                 this.desktopStatus = desktopStatus;
@@ -240,7 +240,7 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The information about flags that are used to manage cloud desktops.
+             * The information about flags that are used to manage cloud computers.
              */
             public Builder managementFlag(java.util.List < String > managementFlag) {
                 this.managementFlag = managementFlag;
@@ -248,7 +248,7 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
             }
 
             /**
-             * NewAppSize.
+             * The size of the update package. Unit: KB.
              */
             public Builder newAppSize(Long newAppSize) {
                 this.newAppSize = newAppSize;
@@ -256,7 +256,7 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
             }
 
             /**
-             * NewAppVersion.
+             * The destination version to which the image of the cloud computer can be updated.
              */
             public Builder newAppVersion(String newAppVersion) {
                 this.newAppVersion = newAppVersion;
@@ -264,7 +264,7 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ReleaseNote.
+             * The description of the destination version to which the image of the cloud computer can be updated.
              */
             public Builder releaseNote(String releaseNote) {
                 this.releaseNote = releaseNote;
@@ -272,7 +272,7 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The first time when the cloud desktop was started.
+             * The first time when the cloud computer was started.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;

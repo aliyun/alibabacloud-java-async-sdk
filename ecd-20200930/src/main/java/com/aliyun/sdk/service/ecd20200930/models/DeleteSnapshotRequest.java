@@ -70,7 +70,7 @@ public class DeleteSnapshotRequest extends Request {
         } 
 
         /**
-         * The ID of the region.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -79,7 +79,7 @@ public class DeleteSnapshotRequest extends Request {
         }
 
         /**
-         * The IDs of the snapshots. You can specify 1 to 100 IDs of snapshots.
+         * The snapshot IDs. You can specify 1 to 100 IDs.
          */
         public Builder snapshotId(java.util.List < String > snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);

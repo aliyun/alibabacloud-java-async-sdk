@@ -155,7 +155,7 @@ public class AddFilePermissionRequest extends Request {
         }
 
         /**
-         * The group ID.
+         * The ID of the team that uses cloud disks in Cloud Drive Service.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -365,111 +365,19 @@ public class AddFilePermissionRequest extends Request {
              * 
              * Valid values:
              * 
-             * *   <!-- -->
-             * 
-             *     SystemFileEditorWithoutShareLink
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             * *   <!-- -->
-             * 
-             *     SystemFileUploaderAndDownloaderWithShareLink
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             * *   <!-- -->
-             * 
-             *     SystemFileDownloader
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             * *   <!-- -->
-             * 
-             *     SystemFileEditorWithoutDelete
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             * *   <!-- -->
-             * 
-             *     SystemFileOwner
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             * *   <!-- -->
-             * 
-             *     SystemFileDownloaderWithShareLink
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             * *   <!-- -->
-             * 
-             *     SystemFileUploaderAndViewer
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             * *   <!-- -->
-             * 
-             *     SystemFileViewer
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             * *   <!-- -->
-             * 
-             *     SystemFileEditor
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             * *   <!-- -->
-             * 
-             *     SystemFileUploaderWithShareLink
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             * *   <!-- -->
-             * 
-             *     SystemFileUploader
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             * *   <!-- -->
-             * 
-             *     SystemFileUploaderAndDownloader
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             * *   <!-- -->
-             * 
-             *     SystemFileMetaViewer
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
+             * * SystemFileEditorWithoutShareLink
+             * * SystemFileUploaderAndDownloaderWithShareLink
+             * * SystemFileDownloader
+             * * SystemFileEditorWithoutDelete
+             * * SystemFileOwner
+             * * SystemFileDownloaderWithShareLink
+             * * SystemFileUploaderAndViewer
+             * * SystemFileViewer
+             * * SystemFileEditor
+             * * SystemFileUploaderWithShareLink
+             * * SystemFileUploader
+             * * SystemFileUploaderAndDownloader
+             * * SystemFileMetaViewer
              */
             public Builder roleId(String roleId) {
                 this.roleId = roleId;

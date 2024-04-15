@@ -86,7 +86,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
         private Integer usersCount; 
 
         /**
-         * Details about the end users.
+         * The list of authorized users.
          */
         public Builder endUsers(java.util.List < EndUsers> endUsers) {
             this.endUsers = endUsers;
@@ -102,7 +102,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The number of authorized users that are connecting to cloud desktops.
+         * The total number of authorized users that is connected to cloud computers in the cloud computer pool.
          */
         public Builder onlineUsersCount(Integer onlineUsersCount) {
             this.onlineUsersCount = onlineUsersCount;
@@ -118,7 +118,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of authorized users of the desktop group.
+         * The total number of authorized users of the cloud computer pool.
          */
         public Builder usersCount(Integer usersCount) {
             this.usersCount = usersCount;
@@ -340,7 +340,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * The ID of the property.
+             * The property ID.
              */
             public Builder propertyId(Long propertyId) {
                 this.propertyId = propertyId;
@@ -348,7 +348,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the property.
+             * The property name.
              */
             public Builder propertyKey(String propertyKey) {
                 this.propertyKey = propertyKey;
@@ -356,7 +356,13 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the property.
+             * The property type.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   1: system property
+             * *   2: custom property
              */
             public Builder propertyType(Integer propertyType) {
                 this.propertyType = propertyType;
@@ -372,7 +378,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the end user.
+             * The user ID.
              */
             public Builder userId(Long userId) {
                 this.userId = userId;
@@ -380,7 +386,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the end user.
+             * The username.
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -565,7 +571,13 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             private java.util.List < UserSetPropertiesModels> userSetPropertiesModels; 
 
             /**
-             * The status of the desktop connection for the end user.
+             * The connection status.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   0: disconnected
+             * *   1: connecting
              */
             public Builder connectionStatus(String connectionStatus) {
                 this.connectionStatus = connectionStatus;
@@ -573,7 +585,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cloud desktop.
+             * The ID of the cloud computer.
              */
             public Builder desktopId(String desktopId) {
                 this.desktopId = desktopId;
@@ -581,7 +593,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cloud desktop.
+             * The name of the cloud computer.
              */
             public Builder desktopName(String desktopName) {
                 this.desktopName = desktopName;
@@ -597,7 +609,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The email address of the end user.
+             * The email address of the authorized user.
              */
             public Builder endUserEmail(String endUserEmail) {
                 this.endUserEmail = endUserEmail;
@@ -605,7 +617,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the end user.
+             * The ID of the authorized user.
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
@@ -613,7 +625,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the end user.
+             * The username of the authorized user.
              */
             public Builder endUserName(String endUserName) {
                 this.endUserName = endUserName;
@@ -621,7 +633,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The mobile number of the end user.
+             * The mobile number of the authorized user.
              */
             public Builder endUserPhone(String endUserPhone) {
                 this.endUserPhone = endUserPhone;
@@ -629,7 +641,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The remarks of the end user.
+             * The remarks.
              */
             public Builder endUserRemark(String endUserRemark) {
                 this.endUserRemark = endUserRemark;
@@ -637,7 +649,13 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The account type of the end user.
+             * The user account type.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   SIMPLE: convenience account
+             * *   AD_CONNECTOR: enterprise Active Directory (AD) account
              */
             public Builder endUserType(String endUserType) {
                 this.endUserType = endUserType;
@@ -653,7 +671,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the desktop of the end user.
+             * The ID of the cloud computer that is used by the user.
              */
             public Builder userDesktopId(String userDesktopId) {
                 this.userDesktopId = userDesktopId;
@@ -661,7 +679,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Details about the seats of end users.
+             * Details about the seats of users.
              */
             public Builder userSetPropertiesModels(java.util.List < UserSetPropertiesModels> userSetPropertiesModels) {
                 this.userSetPropertiesModels = userSetPropertiesModels;

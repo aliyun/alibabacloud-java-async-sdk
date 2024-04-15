@@ -62,7 +62,7 @@ public class ListUserAdOrganizationUnitsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The token that is used to start the next query.
+         * A pagination token.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -70,7 +70,7 @@ public class ListUserAdOrganizationUnitsResponseBody extends TeaModel {
         }
 
         /**
-         * The names of the OUs in the AD domain.
+         * The OUs of the AD domain.
          */
         public Builder OUNames(java.util.List < OUNames> OUNames) {
             this.OUNames = OUNames;
@@ -142,7 +142,7 @@ public class ListUserAdOrganizationUnitsResponseBody extends TeaModel {
             private String officeSiteId; 
 
             /**
-             * The display name of the OU.
+             * The name of the OU.
              */
             public Builder displayOUName(String displayOUName) {
                 this.displayOUName = displayOUName;
@@ -150,7 +150,7 @@ public class ListUserAdOrganizationUnitsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the OU of the AD domain controller.
+             * The canonical name (CNAME) of the OU in the AD domain controller.
              */
             public Builder OUName(String OUName) {
                 this.OUName = OUName;
@@ -158,7 +158,7 @@ public class ListUserAdOrganizationUnitsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the AD workspace.
+             * The enterprise AD office network ID.
              */
             public Builder officeSiteId(String officeSiteId) {
                 this.officeSiteId = officeSiteId;

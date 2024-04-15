@@ -183,6 +183,12 @@ public class DescribeUsersInGroupRequest extends Request {
 
         /**
          * The status of the desktop connection for the end user.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * - 0: Disconnected.
+         * - 1: Connected.
          */
         public Builder connectState(Integer connectState) {
             this.putQueryParameter("ConnectState", connectState);
@@ -191,7 +197,7 @@ public class DescribeUsersInGroupRequest extends Request {
         }
 
         /**
-         * The ID of the desktop group.
+         * The ID of the cloud computer pool.
          */
         public Builder desktopGroupId(String desktopGroupId) {
             this.putQueryParameter("DesktopGroupId", desktopGroupId);
@@ -209,7 +215,7 @@ public class DescribeUsersInGroupRequest extends Request {
         }
 
         /**
-         * The IDs of the end users.
+         * The IDs of the authorized users.
          */
         public Builder endUserIds(java.util.List < String > endUserIds) {
             this.putQueryParameter("EndUserIds", endUserIds);
@@ -258,7 +264,26 @@ public class DescribeUsersInGroupRequest extends Request {
         }
 
         /**
-         * Specifies whether to query the details about the end user.
+         * Specifies whether to query user details.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   true (default)
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   false
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder queryUserDetail(Boolean queryUserDetail) {
             this.putQueryParameter("QueryUserDetail", queryUserDetail);
@@ -267,7 +292,7 @@ public class DescribeUsersInGroupRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

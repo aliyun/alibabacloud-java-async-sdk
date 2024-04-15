@@ -166,7 +166,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The number of subscription cloud desktops that are connected.
+         * The number of subscription cloud computers that are in the Connected state.
          */
         public Builder onlinePrePaidDesktopsCount(Integer onlinePrePaidDesktopsCount) {
             this.onlinePrePaidDesktopsCount = onlinePrePaidDesktopsCount;
@@ -174,7 +174,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The subscription cloud desktops.
+         * The details about subscription cloud computers.
          */
         public Builder paidDesktops(java.util.List < PaidDesktops> paidDesktops) {
             this.paidDesktops = paidDesktops;
@@ -182,7 +182,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of subscription cloud desktops.
+         * The total number of queried subscription cloud computers.
          */
         public Builder paidDesktopsCount(Integer paidDesktopsCount) {
             this.paidDesktopsCount = paidDesktopsCount;
@@ -190,7 +190,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The pay-as-you-go cloud desktops.
+         * The details about pay-as-you-go cloud computers.
          */
         public Builder postPaidDesktops(java.util.List < PostPaidDesktops> postPaidDesktops) {
             this.postPaidDesktops = postPaidDesktops;
@@ -198,7 +198,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of pay-as-you-go cloud desktops.
+         * The total number of queried pay-as-you-go cloud computers.
          */
         public Builder postPaidDesktopsCount(Integer postPaidDesktopsCount) {
             this.postPaidDesktopsCount = postPaidDesktopsCount;
@@ -206,7 +206,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The total bill amount for the pay-as-you-go cloud desktops.
+         * The total amount of bills for pay-as-you-go cloud computers.
          */
         public Builder postPaidDesktopsTotalAmount(Integer postPaidDesktopsTotalAmount) {
             this.postPaidDesktopsTotalAmount = postPaidDesktopsTotalAmount;
@@ -222,7 +222,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The number of subscription cloud desktops that are running.
+         * The number of subscription cloud computers that are in the Running state.
          */
         public Builder runningPrePaidDesktopsCount(Integer runningPrePaidDesktopsCount) {
             this.runningPrePaidDesktopsCount = runningPrePaidDesktopsCount;
@@ -230,7 +230,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The number of subscription cloud desktops that are stopped.
+         * The number of subscription cloud computers that are in the Stopped state.
          */
         public Builder stopedPrePaidDesktopsCount(Integer stopedPrePaidDesktopsCount) {
             this.stopedPrePaidDesktopsCount = stopedPrePaidDesktopsCount;
@@ -238,7 +238,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The number of subscription cloud desktops that are stopped.
+         * The number of subscription cloud computers that are in the Stopped state.
          */
         public Builder stoppedPrePaidDesktopsCount(Integer stoppedPrePaidDesktopsCount) {
             this.stoppedPrePaidDesktopsCount = stoppedPrePaidDesktopsCount;
@@ -518,7 +518,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             private Integer systemDiskSize; 
 
             /**
-             * The connection state.
+             * The connection status of the cloud computer.
              * <p>
              * 
              * Valid values:
@@ -553,7 +553,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The cloud desktop ID.
+             * The ID of the cloud computer.
              */
             public Builder desktopId(String desktopId) {
                 this.desktopId = desktopId;
@@ -561,7 +561,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The cloud desktop name.
+             * The name of the cloud computer.
              */
             public Builder desktopName(String desktopName) {
                 this.desktopName = desktopName;
@@ -569,7 +569,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the cloud desktop.
+             * The status of the cloud computer.
              * <p>
              * 
              * Valid values:
@@ -644,30 +644,24 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The disk type.
+             * The type of the disk.
              * <p>
              * 
              * Valid values:
              * 
-             * *   SYSTEM
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     the system disk
-             * 
-             *     <!-- -->
-             * 
-             * *   DATA:
+             * *   SYSTEM: system disk
              * 
              *     <!-- -->
              * 
              *     <!-- -->
              * 
-             *     the data disk
+             *     <!-- -->
+             * 
+             * *   DATA: data disk
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              * 
              *     <!-- -->
              */
@@ -677,7 +671,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The authorized user.
+             * The ID of the authorized user of the cloud computer.
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
@@ -685,7 +679,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of users that are connected to cloud desktops. If no users are connected, null is returned.
+             * The IDs of the end users who are connected to the cloud computers in the cloud computer pool. If no end users are connected, no values are returned for this parameter.
              */
             public Builder endUserIds(java.util.List < String > endUserIds) {
                 this.endUserIds = endUserIds;
@@ -701,7 +695,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The names of users that are connected to cloud desktops. If no users are connected, null is returned.
+             * The usernames of the end users who are connected to the cloud computers in the cloud computer pool. If no end users are connected, no values are returned for this parameter.
              */
             public Builder endUserNames(java.util.List < String > endUserNames) {
                 this.endUserNames = endUserNames;
@@ -717,7 +711,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The GPU driver version.
+             * The version of the GPU driver.
              */
             public Builder gpuDriverVersion(String gpuDriverVersion) {
                 this.gpuDriverVersion = gpuDriverVersion;
@@ -741,12 +735,12 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The flag that is used for management.
+             * The flag that is used to manage the cloud computer.
              * <p>
              * 
              * Valid values:
              * 
-             * *   Updating: The configurations of the cloud desktop are being changed.
+             * *   Updating: The configurations of the cloud computer are being updated.
              * 
              *     <!-- -->
              * 
@@ -754,7 +748,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
              * 
              *     <!-- -->
              * 
-             * *   NoFlag: No flags are available.
+             * *   NoFlag: No flags are attached to the cloud computer.
              * 
              *     <!-- -->
              * 
@@ -768,7 +762,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The flags that are used for management.
+             * The flags that are used to manage the cloud computers.
              */
             public Builder managementFlags(java.util.List < String > managementFlags) {
                 this.managementFlags = managementFlags;
@@ -776,7 +770,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the member Elastic Network Interface (ENI).
+             * The IP address of the member network interface controller (NIC) of the instance.
              */
             public Builder memberEniIp(String memberEniIp) {
                 this.memberEniIp = memberEniIp;
@@ -811,7 +805,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the primary ENI.
+             * The IP address of the primary NIC of the instance.
              */
             public Builder primaryEniIp(String primaryEniIp) {
                 this.primaryEniIp = primaryEniIp;
@@ -819,11 +813,26 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol type. Valid values:
+             * The protocol.
              * <p>
              * 
-             * *   ASP
-             * *   HDX
+             * Valid values:
+             * 
+             * *   HDX: High-definition Experience (HDX) protocol
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   ASP: Adaptive Streaming Protocol (ASP) protocol provided by Alibaba Cloud
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder protocolType(String protocolType) {
                 this.protocolType = protocolType;
@@ -831,7 +840,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The point in time when the cloud desktop was reset.
+             * The time when the cloud computer was reset.
              */
             public Builder resetTime(String resetTime) {
                 this.resetTime = resetTime;
@@ -1156,7 +1165,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             private Integer systemDiskSize; 
 
             /**
-             * The connection state.
+             * The connection status of the cloud computer.
              * <p>
              * 
              * Valid values:
@@ -1191,7 +1200,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The retention period.
+             * The retention period of the cloud computer.
              */
             public Builder createDuration(String createDuration) {
                 this.createDuration = createDuration;
@@ -1199,7 +1208,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the auxiliary media asset was created.
+             * The time when the cloud computer was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -1207,7 +1216,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The cloud desktop ID.
+             * The ID of the cloud computer.
              */
             public Builder desktopId(String desktopId) {
                 this.desktopId = desktopId;
@@ -1215,7 +1224,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The cloud desktop name.
+             * The name of the cloud computer.
              */
             public Builder desktopName(String desktopName) {
                 this.desktopName = desktopName;
@@ -1223,7 +1232,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the cloud desktop.
+             * The status of the cloud computer.
              * <p>
              * 
              * Valid values:
@@ -1298,30 +1307,24 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The disk type.
+             * The type of the disk.
              * <p>
              * 
              * Valid values:
              * 
-             * *   SYSTEM
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     the system disk
-             * 
-             *     <!-- -->
-             * 
-             * *   DATA:
+             * *   SYSTEM: system disk
              * 
              *     <!-- -->
              * 
              *     <!-- -->
              * 
-             *     the data disk
+             *     <!-- -->
+             * 
+             * *   DATA: data disk
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              * 
              *     <!-- -->
              */
@@ -1331,7 +1334,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The authorized user.
+             * The ID of the authorized user.
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
@@ -1339,7 +1342,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of users that are connected to cloud desktops. If no users are connected, null is returned.
+             * The IDs of the end users who are connected to the cloud computers in the cloud computer pool. If no end users are connected, no values are returned for this parameter.
              */
             public Builder endUserIds(java.util.List < String > endUserIds) {
                 this.endUserIds = endUserIds;
@@ -1355,7 +1358,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The names of users that are connected to cloud desktops. If no users are connected, null is returned.
+             * The usernames of the end users who are connected to the cloud computers in the cloud computer pool. If no end users are connected, no values are returned for this parameter.
              */
             public Builder endUserNames(java.util.List < String > endUserNames) {
                 this.endUserNames = endUserNames;
@@ -1371,7 +1374,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The GPU driver version.
+             * The version of the GPU driver.
              */
             public Builder gpuDriverVersion(String gpuDriverVersion) {
                 this.gpuDriverVersion = gpuDriverVersion;
@@ -1395,12 +1398,12 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The flag that is used for management.
+             * The flag that is used to manage the cloud computer.
              * <p>
              * 
              * Valid values:
              * 
-             * *   Updating: The configurations of the cloud desktop are being changed.
+             * *   Updating: The configurations of the cloud computer are being updated.
              * 
              *     <!-- -->
              * 
@@ -1408,7 +1411,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
              * 
              *     <!-- -->
              * 
-             * *   NoFlag: No flags are available.
+             * *   NoFlag: No flags are attached to the cloud computer.
              * 
              *     <!-- -->
              * 
@@ -1422,7 +1425,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The flags that are used for management.
+             * The flags that are used to manage the cloud computers.
              */
             public Builder managementFlags(java.util.List < String > managementFlags) {
                 this.managementFlags = managementFlags;
@@ -1430,7 +1433,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the member Elastic Network Interface (ENI).
+             * The IP address of the member NIC of the instance.
              */
             public Builder memberEniIp(String memberEniIp) {
                 this.memberEniIp = memberEniIp;
@@ -1465,7 +1468,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the primary ENI.
+             * The IP address of the primary NIC of the instance.
              */
             public Builder primaryEniIp(String primaryEniIp) {
                 this.primaryEniIp = primaryEniIp;
@@ -1473,11 +1476,26 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol type. Valid values:
+             * The protocol.
              * <p>
              * 
-             * *   ASP
-             * *   HDX
+             * Valid values:
+             * 
+             * *   HDX: HDX protocol
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   ASP: ASP protocol provided by Alibaba Cloud
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder protocolType(String protocolType) {
                 this.protocolType = protocolType;
@@ -1485,7 +1503,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the cloud desktop was released.
+             * The time when the cloud computer was released.
              */
             public Builder releaseTime(String releaseTime) {
                 this.releaseTime = releaseTime;
@@ -1493,7 +1511,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The point in time when the cloud desktop was reset.
+             * The time when the cloud computer was reset.
              */
             public Builder resetTime(String resetTime) {
                 this.resetTime = resetTime;

@@ -85,7 +85,7 @@ public class DescribeGuestApplicationsRequest extends Request {
         } 
 
         /**
-         * The cloud desktop ID.
+         * The ID of the cloud computer.
          */
         public Builder desktopId(String desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -94,7 +94,7 @@ public class DescribeGuestApplicationsRequest extends Request {
         }
 
         /**
-         * The end user ID.
+         * The ID of the end user.
          */
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);

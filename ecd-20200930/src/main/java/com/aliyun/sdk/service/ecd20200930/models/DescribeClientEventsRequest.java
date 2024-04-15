@@ -237,7 +237,7 @@ public class DescribeClientEventsRequest extends Request {
         } 
 
         /**
-         * The ID of the cloud desktop. If you do not specify a value for this parameter, events of all cloud desktops in the specified region are queried.
+         * The cloud desktop ID. If you do not specify a value for this parameter, events of all cloud desktops in the specified region are queried.
          */
         public Builder desktopId(String desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -246,7 +246,7 @@ public class DescribeClientEventsRequest extends Request {
         }
 
         /**
-         * The IP address of the cloud desktop. If you do not specify a value for this parameter, events of all cloud desktops in the specified region are queried.
+         * The IP address of the cloud desktop. If you do not specify a value for this parameter, the events of all cloud desktops in the specified region are queried.
          */
         public Builder desktopIp(String desktopIp) {
             this.putQueryParameter("DesktopIp", desktopIp);
@@ -255,7 +255,7 @@ public class DescribeClientEventsRequest extends Request {
         }
 
         /**
-         * The name of the cloud desktop.
+         * The cloud desktop name.
          */
         public Builder desktopName(String desktopName) {
             this.putQueryParameter("DesktopName", desktopName);
@@ -264,7 +264,7 @@ public class DescribeClientEventsRequest extends Request {
         }
 
         /**
-         * The ID of the directory to which the cloud desktop belongs.
+         * This parameter is not available to the public.
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -273,9 +273,8 @@ public class DescribeClientEventsRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.
+         * The end of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.\
          * <p>
-         * 
          * If you do not specify a value for this parameter, the current time is used.
          */
         public Builder endTime(String endTime) {
@@ -285,7 +284,7 @@ public class DescribeClientEventsRequest extends Request {
         }
 
         /**
-         * The information about the regular user that connects to the cloud desktop from the EDS client. The information can be the RAM user ID or Active Directory (AD) username. If you do not specify a value for this parameter, events of all regular users in the specified region are queried.
+         * The information about the end user that connects to the cloud desktop from the Elastic Desktop Service (EDS) client. The information can be a Resource Access Management (RAM) user ID or an Active Directory (AD) username. If you do not specify a value for this parameter, the events of all end users in the specified region are queried.
          */
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -294,18 +293,74 @@ public class DescribeClientEventsRequest extends Request {
         }
 
         /**
-         * The type of event that you want to query. Valid values:
+         * The type of the events that you want to query. If you specify multiple values for the EventTypes parameter, the events of all specified types are returned. If you do not specify values for the EventTypes and EventType parameters, all events of end users in the specified region are returned.
          * <p>
          * 
-         * *   DESKTOP_CONNECT: The desktop session is established.
-         * *   DESKTOP_DISCONNECT: The desktop session is disconnected.
-         * *   DESKTOP_REBOOT: The cloud desktop is restarted.
-         * *   CLIENT_AD_LOGIN: The AD user logs on to the client.
-         * *   GET_CONNECTION_TICKET: The request to connect to the cloud desktop is sent.
-         * *   DESKTOP_START: The cloud desktop is started.
-         * *   DESKTOP_STOP: The cloud desktop is stopped.
+         * Valid values:
          * 
-         * If you do not specify a value for this parameter, events of all types are queried.
+         * *   DESKTOP_STOP: End users stop the cloud desktop.
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   GET_LITE_CONNECTION_TICKET: End users obtain the credential for reconnecting to the cloud desktop upon disconnection.
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   DESKTOP_DISCONNECT: End users disconnect desktop sessions.
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   GET_CONNECTION_TICKET: End users request to connect to the cloud desktop.
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   CLIENT_LOGIN: End users log on to the cloud desktop.
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   DESKTOP_REBOOT: End users restart the cloud desktop.
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   DESKTOP_CONNECT: End users establish desktop sessions.
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   DESKTOP_START: End users start the cloud desktop.
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder eventType(String eventType) {
             this.putQueryParameter("EventType", eventType);
@@ -314,7 +369,7 @@ public class DescribeClientEventsRequest extends Request {
         }
 
         /**
-         * The types of event.
+         * The array of event types that you want to query. You can specify multiple event types. The response contains all or specified types of events.
          */
         public Builder eventTypes(java.util.List < String > eventTypes) {
             this.putQueryParameter("EventTypes", eventTypes);
@@ -323,9 +378,8 @@ public class DescribeClientEventsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The number of entries per page.\
          * <p>
-         * 
          * Default value: 100.
          */
         public Builder maxResults(Integer maxResults) {
@@ -335,7 +389,7 @@ public class DescribeClientEventsRequest extends Request {
         }
 
         /**
-         * The query token. Set the value to the NextToken value that is returned from the last call to the DescribeClientEvents operation.
+         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -344,7 +398,7 @@ public class DescribeClientEventsRequest extends Request {
         }
 
         /**
-         * The ID of the workspace to which the cloud desktop belongs. If you do not specify a value for this parameter, events of all workspaces in the specified region are queried.
+         * The ID of the workspace to which the cloud desktop belongs. If you do not specify a value for this parameter, the events of all workspaces in the specified region are queried.
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -353,7 +407,7 @@ public class DescribeClientEventsRequest extends Request {
         }
 
         /**
-         * The name of the workspace.
+         * The workspace name.
          */
         public Builder officeSiteName(String officeSiteName) {
             this.putQueryParameter("OfficeSiteName", officeSiteName);
@@ -362,7 +416,7 @@ public class DescribeClientEventsRequest extends Request {
         }
 
         /**
-         * The ID of the region where the cloud desktop resides.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -371,9 +425,8 @@ public class DescribeClientEventsRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.
+         * The beginning of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.\
          * <p>
-         * 
          * If you do not specify a value for this parameter, all events that occurred before the point in time that you specify for `EndTime` are queried.
          */
         public Builder startTime(String startTime) {

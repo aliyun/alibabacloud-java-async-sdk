@@ -97,7 +97,7 @@ public class ModifyUserEntitlementRequest extends Request {
         } 
 
         /**
-         * The IDs of the cloud desktops on which you want to grant permissions to users.
+         * The IDs of the cloud computers to which you want to add end users.
          */
         public Builder authorizeDesktopId(java.util.List < String > authorizeDesktopId) {
             this.putQueryParameter("AuthorizeDesktopId", authorizeDesktopId);
@@ -115,7 +115,7 @@ public class ModifyUserEntitlementRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -124,7 +124,7 @@ public class ModifyUserEntitlementRequest extends Request {
         }
 
         /**
-         * The IDs of the cloud desktops on which you want to revoke permissions from users.
+         * The IDs of the cloud computers whose end users you want to remove.
          */
         public Builder revokeDesktopId(java.util.List < String > revokeDesktopId) {
             this.putQueryParameter("RevokeDesktopId", revokeDesktopId);

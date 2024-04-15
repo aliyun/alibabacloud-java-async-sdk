@@ -148,7 +148,7 @@ public class AddUserToDesktopGroupRequest extends Request {
         }
 
         /**
-         * The ID of the region
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

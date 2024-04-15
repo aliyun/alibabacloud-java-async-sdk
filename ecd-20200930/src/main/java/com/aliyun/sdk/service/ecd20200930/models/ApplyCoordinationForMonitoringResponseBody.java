@@ -183,61 +183,13 @@ public class ApplyCoordinationForMonitoringResponseBody extends TeaModel {
              * 
              * Valid values:
              * 
-             * *   COORDINATING
+             * *   COORDINATING: The collaboration task is being executed.
              * 
-             *     <!-- -->
+             * *   TERMINATING: The collaboration task is being terminated.
              * 
-             *     :
+             * *   TERMINATED: The collaboration task is terminated.
              * 
-             *     <!-- -->
-             * 
-             *     The collaboration task is being executed
-             * 
-             *     <!-- -->
-             * 
-             *     .
-             * 
-             * *   TERMINATING
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     The collaboration task is being terminated
-             * 
-             *     <!-- -->
-             * 
-             *     .
-             * 
-             * *   TERMINATED
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     The collaboration task is terminated
-             * 
-             *     <!-- -->
-             * 
-             *     .
-             * 
-             * *   PENDING
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     The collaboration task is pending to be executed
-             * 
-             *     <!-- -->
-             * 
-             *     .
+             * *   PENDING: The collaboration task is pending to be executed.
              */
             public Builder coordinateStatus(String coordinateStatus) {
                 this.coordinateStatus = coordinateStatus;
@@ -258,47 +210,11 @@ public class ApplyCoordinationForMonitoringResponseBody extends TeaModel {
              * 
              * Valid values:
              * 
-             * *   ADMIN_INITIATE_FORCE
+             * *   ADMIN_INITIATE_FORCE: The administrator forcibly initiates the collaboration request.
              * 
-             *     <!-- -->
+             * *   ADMIN_INITIATE: The administrator initiates the collaboration request.
              * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     The administrator forcibly initiates the collaboration request
-             * 
-             *     <!-- -->
-             * 
-             *     .
-             * 
-             * *   ADMIN_INITIATE
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     The administrator initiates the collaboration request
-             * 
-             *     <!-- -->
-             * 
-             *     .
-             * 
-             * *   COORDINATOR_INITIATE_FORCE
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     The coordinator forcibly initiates the collaboration request
-             * 
-             *     <!-- -->
-             * 
-             *     .
+             * *   COORDINATOR_INITIATE_FORCE: The coordinator forcibly initiates the collaboration request.
              */
             public Builder initiatorType(String initiatorType) {
                 this.initiatorType = initiatorType;

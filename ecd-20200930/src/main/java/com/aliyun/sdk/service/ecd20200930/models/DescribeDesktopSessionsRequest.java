@@ -13,6 +13,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDesktopSessionsRequest extends Request {
     @Query
+    @NameInMap("DesktopId")
+    private java.util.List < String > desktopId;
+
+    @Query
+    @NameInMap("DesktopName")
+    private String desktopName;
+
+    @Query
     @NameInMap("EndTime")
     private String endTime;
 
@@ -47,6 +55,8 @@ public class DescribeDesktopSessionsRequest extends Request {
 
     private DescribeDesktopSessionsRequest(Builder builder) {
         super(builder);
+        this.desktopId = builder.desktopId;
+        this.desktopName = builder.desktopName;
         this.endTime = builder.endTime;
         this.endUserId = builder.endUserId;
         this.officeSiteId = builder.officeSiteId;
@@ -68,6 +78,20 @@ public class DescribeDesktopSessionsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return desktopId
+     */
+    public java.util.List < String > getDesktopId() {
+        return this.desktopId;
+    }
+
+    /**
+     * @return desktopName
+     */
+    public String getDesktopName() {
+        return this.desktopName;
     }
 
     /**
@@ -127,6 +151,8 @@ public class DescribeDesktopSessionsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeDesktopSessionsRequest, Builder> {
+        private java.util.List < String > desktopId; 
+        private String desktopName; 
         private String endTime; 
         private String endUserId; 
         private String officeSiteId; 
@@ -142,6 +168,8 @@ public class DescribeDesktopSessionsRequest extends Request {
 
         private Builder(DescribeDesktopSessionsRequest request) {
             super(request);
+            this.desktopId = request.desktopId;
+            this.desktopName = request.desktopName;
             this.endTime = request.endTime;
             this.endUserId = request.endUserId;
             this.officeSiteId = request.officeSiteId;
@@ -151,6 +179,24 @@ public class DescribeDesktopSessionsRequest extends Request {
             this.sessionStatus = request.sessionStatus;
             this.startTime = request.startTime;
         } 
+
+        /**
+         * DesktopId.
+         */
+        public Builder desktopId(java.util.List < String > desktopId) {
+            this.putQueryParameter("DesktopId", desktopId);
+            this.desktopId = desktopId;
+            return this;
+        }
+
+        /**
+         * DesktopName.
+         */
+        public Builder desktopName(String desktopName) {
+            this.putQueryParameter("DesktopName", desktopName);
+            this.desktopName = desktopName;
+            return this;
+        }
 
         /**
          * The end of the time range to query.

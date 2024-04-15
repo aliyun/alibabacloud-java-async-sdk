@@ -126,13 +126,30 @@ public class RenewNetworkPackagesRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable automatic payment. Valid values:
+         * Specifies whether to enable the automatic payment feature.
          * <p>
          * 
-         * *   true: enables automatic payment. Make sure that you have sufficient balance in your account. Otherwise, abnormal orders are generated.
-         * *   false: generates the order with no payment made. You can log on to the EDS console and complete the payment based on the order number.
+         * Valid values:
          * 
-         * Default value: true.
+         * *   true (default): enables the auto-payment feature.
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     Make sure that your account has sufficient balance. Otherwise, no order is generated.
+         * 
+         *     <!-- -->
+         * 
+         * *   false: disables the auto-payment feature. In this case, an order is generated but you need to make the payment manually.
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     To make the payment, log on to the WUYING Workspace console, go to the Orders page, and find the order based on the order ID.
+         * 
+         *     <!-- -->
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -141,7 +158,7 @@ public class RenewNetworkPackagesRequest extends Request {
         }
 
         /**
-         * The IDs of Internet access packages.
+         * The IDs of premium bandwidth plans. You can specify up to 100 IDs.
          */
         public Builder networkPackageId(java.util.List < String > networkPackageId) {
             this.putQueryParameter("NetworkPackageId", networkPackageId);
@@ -179,7 +196,7 @@ public class RenewNetworkPackagesRequest extends Request {
         }
 
         /**
-         * The ID of the promotion. You can call the `GetResourcePrice` operation to obtain the ID of the promotion.
+         * The promotion ID.
          */
         public Builder promotionId(String promotionId) {
             this.putQueryParameter("PromotionId", promotionId);
@@ -188,7 +205,7 @@ public class RenewNetworkPackagesRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can call the [DescribeRegions](~~DescribeRegions~~) operation to query the most recent region list.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

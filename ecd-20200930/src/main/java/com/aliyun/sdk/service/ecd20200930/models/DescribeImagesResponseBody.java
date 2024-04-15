@@ -398,7 +398,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the GPU driver.
+             * The version number of the GPU driver.
              */
             public Builder gpuDriverVersion(String gpuDriverVersion) {
                 this.gpuDriverVersion = gpuDriverVersion;
@@ -415,6 +415,25 @@ public class DescribeImagesResponseBody extends TeaModel {
 
             /**
              * The type of the image.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   SYSTEM
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   CUSTOM
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder imageType(String imageType) {
                 this.imageType = imageType;
@@ -430,7 +449,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The OS type of the image.
+             * The type of the operating system.
              */
             public Builder osType(String osType) {
                 this.osType = osType;
@@ -438,7 +457,66 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The OS type of the image.
+             * The operating system type of the image.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   Ubuntu
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   Windows Server 2022
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   UOS
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   CentOS
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   Windows Server 2019
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   SQL Server 2016
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   Windows 10
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder platform(String platform) {
                 this.platform = platform;
@@ -446,7 +524,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The progress of image creation. Unit: percentage (%).
+             * The creation progress of the image. Unit: %.
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -454,7 +532,13 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the protocol.
+             * The protocol type.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   HDX: High-definition Experience (HDX) protocol
+             * *   ASP: in-house Adaptive Streaming Protocol (ASP) (recommended)
              */
             public Builder protocolType(String protocolType) {
                 this.protocolType = protocolType;
@@ -462,11 +546,14 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The session type of the image. Valid values:
+             * The type of the image session.
              * <p>
              * 
-             * *   SINGLE_SESSION: single-session images
-             * *   MULTIPLE_SESSION: multi-session images
+             * Valid values:
+             * 
+             * *   SINGLE_SESSION: single-session image.
+             * 
+             * *   MULTIPLE_SESSION: multi-session image.
              */
             public Builder sessionType(String sessionType) {
                 this.sessionType = sessionType;
@@ -490,7 +577,34 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the image.
+             * The status of the image.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   Creating
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   Available
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   CreateFailed
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder status(String status) {
                 this.status = status;
@@ -498,7 +612,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The languages of the OS.
+             * The languages of the operating system.
              */
             public Builder supportedLanguages(java.util.List < String > supportedLanguages) {
                 this.supportedLanguages = supportedLanguages;
@@ -522,7 +636,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Key Management Service (KMS) key that is used when disk encryption is enabled. You can call the [ListKeys](~~28951~~) operation to obtain the list of KMS keys.
+             * The ID of the Key Management Service (KMS) key that is used when disk encryption is enabled. You can call the [ListKeys](~~28951~~) operation to query the list of KMS keys.
              */
             public Builder volumeEncryptionKey(String volumeEncryptionKey) {
                 this.volumeEncryptionKey = volumeEncryptionKey;

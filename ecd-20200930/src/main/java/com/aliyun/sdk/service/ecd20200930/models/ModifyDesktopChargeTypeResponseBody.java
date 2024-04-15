@@ -62,7 +62,7 @@ public class ModifyDesktopChargeTypeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The IDs of the desktop groups. If multiple cloud desktops are created at a time, multiple cloud desktop IDs are returned.
+         * The IDs of the cloud computers.
          */
         public Builder desktopId(java.util.List < String > desktopId) {
             this.desktopId = desktopId;

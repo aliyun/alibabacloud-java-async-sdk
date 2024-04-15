@@ -195,13 +195,14 @@ public class ExportDesktopGroupInfoRequest extends Request {
         } 
 
         /**
-         * The billing method of the cloud desktop. Valid values:
+         * The billing method of the cloud computer pool.
          * <p>
          * 
-         * *   PostPaid: pay-as-you-go
-         * *   PrePaid: subscription
+         * Valid values:
          * 
-         * Default value: PostPaid.
+         * *   PostPaid: pay-as-you-go.
+         * 
+         * *   PrePaid: subscription.
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -210,7 +211,7 @@ public class ExportDesktopGroupInfoRequest extends Request {
         }
 
         /**
-         * The ID of the desktop group. You can set 1 to 100.
+         * The IDs of the cloud computer pools.
          */
         public Builder desktopGroupId(java.util.List < String > desktopGroupId) {
             this.putQueryParameter("DesktopGroupId", desktopGroupId);
@@ -219,7 +220,7 @@ public class ExportDesktopGroupInfoRequest extends Request {
         }
 
         /**
-         * The name of the desktop group.
+         * The name of the cloud computer pool.
          */
         public Builder desktopGroupName(String desktopGroupName) {
             this.putQueryParameter("DesktopGroupName", desktopGroupName);
@@ -228,7 +229,7 @@ public class ExportDesktopGroupInfoRequest extends Request {
         }
 
         /**
-         * The ID of the user who is authorized to use the desktop group. You can set 1 to 100.
+         * The authorized user IDs of cloud computer pools.
          */
         public Builder endUserId(java.util.List < String > endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -237,7 +238,7 @@ public class ExportDesktopGroupInfoRequest extends Request {
         }
 
         /**
-         * The time when the subscription cloud desktop expires.
+         * The time when the subscription cloud computer pool expires.
          */
         public Builder expiredTime(String expiredTime) {
             this.putQueryParameter("ExpiredTime", expiredTime);
@@ -278,7 +279,7 @@ public class ExportDesktopGroupInfoRequest extends Request {
         }
 
         /**
-         * The ID of the workspace.
+         * The ID of the office network to which the cloud computer pool belongs.
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -287,7 +288,7 @@ public class ExportDesktopGroupInfoRequest extends Request {
         }
 
         /**
-         * The ID of the policy that is associated with the cloud desktop.
+         * The ID of the policy that is associated with the cloud computer pool.
          */
         public Builder policyGroupId(String policyGroupId) {
             this.putQueryParameter("PolicyGroupId", policyGroupId);
@@ -296,7 +297,7 @@ public class ExportDesktopGroupInfoRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the regions supported by WUYING Workspace.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

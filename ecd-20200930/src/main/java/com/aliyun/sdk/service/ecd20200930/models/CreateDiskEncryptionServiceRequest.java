@@ -55,7 +55,7 @@ public class CreateDiskEncryptionServiceRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

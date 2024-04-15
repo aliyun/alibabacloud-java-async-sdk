@@ -154,7 +154,7 @@ public class ResetDesktopsRequest extends Request {
         } 
 
         /**
-         * The ID of the desktop group. If you specify the `DesktopId` parameter, ignore the `DesktopGroupId` parameter. If you do not specify the `DesktopId` parameter, specify the `DesktopGroupId` parameter in the call to request all IDs of the cloud desktops in the specified desktop group.``
+         * The ID of the cloud computer pool. If you specify the `DesktopId` parameter, ignore the `DesktopGroupId` parameter. If you do not specify the `DesktopId` parameter, specify the `DesktopGroupId` parameter in the call to request all IDs of the cloud computers in the specified pool.
          */
         public Builder desktopGroupId(String desktopGroupId) {
             this.putQueryParameter("DesktopGroupId", desktopGroupId);
@@ -163,7 +163,7 @@ public class ResetDesktopsRequest extends Request {
         }
 
         /**
-         * DesktopGroupIds.
+         * The IDs of the cloud computer pools.
          */
         public Builder desktopGroupIds(java.util.List < String > desktopGroupIds) {
             this.putQueryParameter("DesktopGroupIds", desktopGroupIds);
@@ -172,7 +172,7 @@ public class ResetDesktopsRequest extends Request {
         }
 
         /**
-         * The IDs of the cloud desktops. You can specify 1 to 100 cloud desktop IDs.
+         * The IDs of the cloud computers. You can specify the IDs of 1 to 100 cloud computers.
          */
         public Builder desktopId(java.util.List < String > desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -193,7 +193,7 @@ public class ResetDesktopsRequest extends Request {
          * The billing method.
          * <p>
          * 
-         * > This parameter is available only when you reset desktop groups. If you leave this parameter empty, all cloud desktops in the specified desktop group are reset, regardless of how the cloud desktops are billed.
+         * > This parameter is available only when you reset cloud computer pools. If you leave this parameter empty, all cloud computers in the specified cloud computer pool are reset, regardless of how the cloud computers are billed.
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -202,7 +202,7 @@ public class ResetDesktopsRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can call the [DescribeRegions](~~436773~~) operation to query the most recent region list.
+         * The region ID. You can call the [DescribeRegions](~~436773~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -211,7 +211,13 @@ public class ResetDesktopsRequest extends Request {
         }
 
         /**
-         * ResetScope.
+         * The reset scope. You can configure this parameter to reset the image or cloud computer.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   ALL (default): resets the image and cloud computer.
+         * *   IMAGE: resets only the image.
          */
         public Builder resetScope(String resetScope) {
             this.putQueryParameter("ResetScope", resetScope);
@@ -220,7 +226,15 @@ public class ResetDesktopsRequest extends Request {
         }
 
         /**
-         * The type of the disk that you want to reset.
+         * The disk reset type.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   0: does not reset disks.
+         * *   1: resets only the system disk.
+         * *   2: resets only the user disk.
+         * *   3: resets the system disk and the user disk.
          */
         public Builder resetType(String resetType) {
             this.putQueryParameter("ResetType", resetType);
