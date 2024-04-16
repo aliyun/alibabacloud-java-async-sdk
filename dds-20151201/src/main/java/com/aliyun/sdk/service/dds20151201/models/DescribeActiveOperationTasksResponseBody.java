@@ -110,7 +110,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -458,7 +458,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             private String taskTypeZh; 
 
             /**
-             * None
+             * N/A
              */
             public Builder allowCancel(String allowCancel) {
                 this.allowCancel = allowCancel;
@@ -466,11 +466,11 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the change is allowed.
+             * Indicates whether the modification operation is allowed.
              * <p>
              * 
-             * *   **0**: The change is not allowed.
-             * *   **1**: The change is allowed.
+             * *   **0**: The modification operation is not allowed.
+             * *   **1**: The modification operation is allowed.
              */
             public Builder allowChange(String allowChange) {
                 this.allowChange = allowChange;
@@ -486,7 +486,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * None
+             * N/A
              */
             public Builder changeLevelEn(String changeLevelEn) {
                 this.changeLevelEn = changeLevelEn;
@@ -510,7 +510,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * None
+             * N/A
              */
             public Builder currentAVZ(String currentAVZ) {
                 this.currentAVZ = currentAVZ;
@@ -550,7 +550,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * None
+             * N/A
              */
             public Builder impactEn(String impactEn) {
                 this.impactEn = impactEn;
@@ -558,7 +558,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * None
+             * N/A
              */
             public Builder impactZh(String impactZh) {
                 this.impactZh = impactZh;
@@ -574,7 +574,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The node ID.
+             * The ID of the node.
              */
             public Builder insName(String insName) {
                 this.insName = insName;
@@ -582,7 +582,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the O\&M task was modified. The time follows the ISO 8601 standard in the *yyyy-mm-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.
+             * The time when the task is modified. The time follows the ISO 8601 standard in the *yyyy-mm-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -614,7 +614,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the O\&M task started to run. The time follows the ISO 8601 standard in the *yyyy-mm-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.
+             * The start time of the task. The time follows the ISO 8601 standard in the *yyyy-mm-dd* T*hh:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -622,7 +622,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * None
+             * N/A
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -638,7 +638,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The point in time when the switchover is performed. The time follows the ISO 8601 standard in the *yyyy-mm-dd*T*hh:mm:ss*Z format. The time is displayed in UTC. Service interruptions may occur during switchover.
+             * The switchover point in time in which disconnection may occur. The time follows the ISO 8601 standard in the *yyyy-mm-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder switchTime(String switchTime) {
                 this.switchTime = switchTime;
@@ -654,7 +654,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * None
+             * N/A
              */
             public Builder taskTypeEn(String taskTypeEn) {
                 this.taskTypeEn = taskTypeEn;

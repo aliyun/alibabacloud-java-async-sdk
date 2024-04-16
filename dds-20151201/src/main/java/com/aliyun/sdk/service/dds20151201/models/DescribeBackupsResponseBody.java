@@ -147,13 +147,13 @@ public class DescribeBackupsResponseBody extends TeaModel {
         private String backupEndTime;
 
         @NameInMap("BackupId")
-        private Long backupId;
+        private String backupId;
 
         @NameInMap("BackupIntranetDownloadURL")
         private String backupIntranetDownloadURL;
 
         @NameInMap("BackupJobId")
-        private Long backupJobId;
+        private String backupJobId;
 
         @NameInMap("BackupMethod")
         private String backupMethod;
@@ -220,7 +220,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         /**
          * @return backupId
          */
-        public Long getBackupId() {
+        public String getBackupId() {
             return this.backupId;
         }
 
@@ -234,7 +234,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         /**
          * @return backupJobId
          */
-        public Long getBackupJobId() {
+        public String getBackupJobId() {
             return this.backupJobId;
         }
 
@@ -284,9 +284,9 @@ public class DescribeBackupsResponseBody extends TeaModel {
             private String backupDBNames; 
             private String backupDownloadURL; 
             private String backupEndTime; 
-            private Long backupId; 
+            private String backupId; 
             private String backupIntranetDownloadURL; 
-            private Long backupJobId; 
+            private String backupJobId; 
             private String backupMethod; 
             private String backupMode; 
             private Long backupSize; 
@@ -321,7 +321,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             /**
              * The ID of the backup set.
              */
-            public Builder backupId(Long backupId) {
+            public Builder backupId(String backupId) {
                 this.backupId = backupId;
                 return this;
             }
@@ -340,7 +340,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             /**
              * BackupJobId.
              */
-            public Builder backupJobId(Long backupJobId) {
+            public Builder backupJobId(String backupJobId) {
                 this.backupJobId = backupJobId;
                 return this;
             }

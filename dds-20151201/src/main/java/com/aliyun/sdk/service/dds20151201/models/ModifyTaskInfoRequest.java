@@ -31,10 +31,12 @@ public class ModifyTaskInfoRequest extends Request {
 
     @Query
     @NameInMap("StepName")
+    @Validation(required = true)
     private String stepName;
 
     @Query
     @NameInMap("TaskAction")
+    @Validation(required = true)
     private String taskAction;
 
     @Query

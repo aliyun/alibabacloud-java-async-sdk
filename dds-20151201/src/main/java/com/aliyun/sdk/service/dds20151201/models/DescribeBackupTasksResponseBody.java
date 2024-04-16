@@ -79,7 +79,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
         private String backupStartTime;
 
         @NameInMap("BackupjobId")
-        private Long backupjobId;
+        private String backupjobId;
 
         @NameInMap("JobMode")
         private String jobMode;
@@ -120,7 +120,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
         /**
          * @return backupjobId
          */
-        public Long getBackupjobId() {
+        public String getBackupjobId() {
             return this.backupjobId;
         }
 
@@ -141,7 +141,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
         public static final class Builder {
             private String backupSetStatus; 
             private String backupStartTime; 
-            private Long backupjobId; 
+            private String backupjobId; 
             private String jobMode; 
             private String progress; 
 
@@ -164,7 +164,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
             /**
              * BackupjobId.
              */
-            public Builder backupjobId(Long backupjobId) {
+            public Builder backupjobId(String backupjobId) {
                 this.backupjobId = backupjobId;
                 return this;
             }

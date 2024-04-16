@@ -18,7 +18,7 @@ public class DescribeBackupTasksRequest extends Request {
 
     @Query
     @NameInMap("BackupJobId")
-    private Long backupJobId;
+    private String backupJobId;
 
     @Query
     @NameInMap("DBInstanceId")
@@ -80,7 +80,7 @@ public class DescribeBackupTasksRequest extends Request {
     /**
      * @return backupJobId
      */
-    public Long getBackupJobId() {
+    public String getBackupJobId() {
         return this.backupJobId;
     }
 
@@ -128,7 +128,7 @@ public class DescribeBackupTasksRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeBackupTasksRequest, Builder> {
         private String regionId; 
-        private Long backupJobId; 
+        private String backupJobId; 
         private String DBInstanceId; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -164,7 +164,7 @@ public class DescribeBackupTasksRequest extends Request {
         /**
          * BackupJobId.
          */
-        public Builder backupJobId(Long backupJobId) {
+        public Builder backupJobId(String backupJobId) {
             this.putQueryParameter("BackupJobId", backupJobId);
             this.backupJobId = backupJobId;
             return this;

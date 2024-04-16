@@ -1585,6 +1585,9 @@ public class DescribePriceResponseBody extends TeaModel {
         @NameInMap("OriginalStandAmount")
         private Double originalStandAmount;
 
+        @NameInMap("StartTime")
+        private String startTime;
+
         private SubOrderDepreciateInfo(Builder builder) {
             this.cheapRate = builder.cheapRate;
             this.cheapStandAmount = builder.cheapStandAmount;
@@ -1596,6 +1599,7 @@ public class DescribePriceResponseBody extends TeaModel {
             this.listPrice = builder.listPrice;
             this.monthPrice = builder.monthPrice;
             this.originalStandAmount = builder.originalStandAmount;
+            this.startTime = builder.startTime;
         }
 
         public static Builder builder() {
@@ -1676,6 +1680,13 @@ public class DescribePriceResponseBody extends TeaModel {
             return this.originalStandAmount;
         }
 
+        /**
+         * @return startTime
+         */
+        public String getStartTime() {
+            return this.startTime;
+        }
+
         public static final class Builder {
             private Double cheapRate; 
             private Double cheapStandAmount; 
@@ -1687,6 +1698,7 @@ public class DescribePriceResponseBody extends TeaModel {
             private Double listPrice; 
             private Double monthPrice; 
             private Double originalStandAmount; 
+            private String startTime; 
 
             /**
              * CheapRate.
@@ -1765,6 +1777,14 @@ public class DescribePriceResponseBody extends TeaModel {
              */
             public Builder originalStandAmount(Double originalStandAmount) {
                 this.originalStandAmount = originalStandAmount;
+                return this;
+            }
+
+            /**
+             * StartTime.
+             */
+            public Builder startTime(String startTime) {
+                this.startTime = startTime;
                 return this;
             }
 

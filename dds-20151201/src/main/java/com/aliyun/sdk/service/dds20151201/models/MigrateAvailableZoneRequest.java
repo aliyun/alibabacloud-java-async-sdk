@@ -13,10 +13,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class MigrateAvailableZoneRequest extends Request {
     @Query
-    @NameInMap("Category")
-    private String category;
-
-    @Query
     @NameInMap("DBInstanceId")
     @Validation(required = true)
     private String DBInstanceId;
@@ -52,7 +48,6 @@ public class MigrateAvailableZoneRequest extends Request {
 
     private MigrateAvailableZoneRequest(Builder builder) {
         super(builder);
-        this.category = builder.category;
         this.DBInstanceId = builder.DBInstanceId;
         this.effectiveTime = builder.effectiveTime;
         this.ownerAccount = builder.ownerAccount;
@@ -74,13 +69,6 @@ public class MigrateAvailableZoneRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return category
-     */
-    public String getCategory() {
-        return this.category;
     }
 
     /**
@@ -140,7 +128,6 @@ public class MigrateAvailableZoneRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<MigrateAvailableZoneRequest, Builder> {
-        private String category; 
         private String DBInstanceId; 
         private String effectiveTime; 
         private String ownerAccount; 
@@ -156,7 +143,6 @@ public class MigrateAvailableZoneRequest extends Request {
 
         private Builder(MigrateAvailableZoneRequest request) {
             super(request);
-            this.category = request.category;
             this.DBInstanceId = request.DBInstanceId;
             this.effectiveTime = request.effectiveTime;
             this.ownerAccount = request.ownerAccount;
@@ -166,15 +152,6 @@ public class MigrateAvailableZoneRequest extends Request {
             this.vswitch = request.vswitch;
             this.zoneId = request.zoneId;
         } 
-
-        /**
-         * Category.
-         */
-        public Builder category(String category) {
-            this.putQueryParameter("Category", category);
-            this.category = category;
-            return this;
-        }
 
         /**
          * The ID of the instance.

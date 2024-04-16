@@ -252,7 +252,11 @@ public class DescribeActiveOperationTasksRequest extends Request {
         } 
 
         /**
-         * Specifies whether the task can be canceled. Valid values: -**0**: The task cannot be canceled. -**1**: The task can be canceled.
+         * Specifies whether to allow the cancellation operation. Valid values:
+         * <p>
+         * 
+         * *   **0**: The cancellation operation is not allowed.
+         * *   **1**: The cancellation operation is allowed.
          */
         public Builder allowCancel(Integer allowCancel) {
             this.putQueryParameter("AllowCancel", allowCancel);
@@ -261,7 +265,11 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * Specifies whether the time can be modified. Valid values: -**0**: The time cannot be modified. -**1**: The time can be modified.
+         * Specifies whether to allow the modification operation. Valid values:
+         * <p>
+         * 
+         * *   **0**: The modification operation is not allowed.
+         * *   **1**: The modification operation is allowed.
          */
         public Builder allowChange(Integer allowChange) {
             this.putQueryParameter("AllowChange", allowChange);
@@ -270,7 +278,12 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * The type of configuration change. Valid values: -**all** (default): All O\&M tasks are returned. -**S0**: O\&M tasks that are executed for exception fixing are returned. -**S1**: O\&M tasks that are executed for regular O\&M are returned.
+         * The type of task configuration change. Valid values:
+         * <p>
+         * 
+         * *   **all** (default): The configurations of all O\&M tasks are changed.
+         * *   **S0**: The configurations of tasks initiated to fix exceptions are changed.
+         * *   **S1**: The configurations of system O\&M tasks are changed.
          */
         public Builder changeLevel(String changeLevel) {
             this.putQueryParameter("ChangeLevel", changeLevel);
@@ -342,7 +355,10 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * The region of the instance. If you set the Region parameter to all, all tasks created within your Alibaba Cloud account are queried. In this case, you must also set the TaskType parameter to all.
+         * The region ID of the instance.
+         * <p>
+         * 
+         * >  If you set the Region parameter to **all**, all tasks created within your Alibaba Cloud account are queried. In this case, you must set the **taskType** parameter to **all**.
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -369,7 +385,13 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * Specifies the status of the task. Valid values: **0**: The task is waiting to be run. **1**: The task is running. **2**: The task is run. **3**: The task failed to be run.
+         * The status of the task. Valid values:
+         * <p>
+         * 
+         * *   **0**: waiting for execution
+         * *   **1**: being executed
+         * *   **2**: successful
+         * *   **3**: failed
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);
