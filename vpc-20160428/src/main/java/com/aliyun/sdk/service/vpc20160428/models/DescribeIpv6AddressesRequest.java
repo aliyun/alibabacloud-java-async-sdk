@@ -79,6 +79,10 @@ public class DescribeIpv6AddressesRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
+    @NameInMap("ServiceManaged")
+    private Boolean serviceManaged;
+
+    @Query
     @NameInMap("Tag")
     private java.util.List < Tag> tag;
 
@@ -108,6 +112,7 @@ public class DescribeIpv6AddressesRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.serviceManaged = builder.serviceManaged;
         this.tag = builder.tag;
         this.vSwitchId = builder.vSwitchId;
         this.vpcId = builder.vpcId;
@@ -239,6 +244,13 @@ public class DescribeIpv6AddressesRequest extends Request {
     }
 
     /**
+     * @return serviceManaged
+     */
+    public Boolean getServiceManaged() {
+        return this.serviceManaged;
+    }
+
+    /**
      * @return tag
      */
     public java.util.List < Tag> getTag() {
@@ -276,6 +288,7 @@ public class DescribeIpv6AddressesRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private Boolean serviceManaged; 
         private java.util.List < Tag> tag; 
         private String vSwitchId; 
         private String vpcId; 
@@ -302,6 +315,7 @@ public class DescribeIpv6AddressesRequest extends Request {
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.serviceManaged = request.serviceManaged;
             this.tag = request.tag;
             this.vSwitchId = request.vSwitchId;
             this.vpcId = request.vpcId;
@@ -320,7 +334,8 @@ public class DescribeIpv6AddressesRequest extends Request {
          * The type of instance associated with the IPv6 address. Valid values:
          * <p>
          * 
-         * **EcsInstance**: Elastic Compute Service (ECS) instance in a virtual private cloud (VPC).
+         * *   **EcsInstance**: Elastic Compute Service (ECS) instance in a virtual private cloud (VPC)
+         * *   **NetworkInterface**: secondary elastic network interface (ENI)
          */
         public Builder associatedInstanceType(String associatedInstanceType) {
             this.putQueryParameter("AssociatedInstanceType", associatedInstanceType);
@@ -462,6 +477,21 @@ public class DescribeIpv6AddressesRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * Indicates whether the instance is managed. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
+         * 
+         * If you do not specify this parameter, all instances are queried.
+         */
+        public Builder serviceManaged(Boolean serviceManaged) {
+            this.putQueryParameter("ServiceManaged", serviceManaged);
+            this.serviceManaged = serviceManaged;
             return this;
         }
 

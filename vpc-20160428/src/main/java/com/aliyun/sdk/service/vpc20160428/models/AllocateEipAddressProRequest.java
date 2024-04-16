@@ -322,14 +322,14 @@ public class AllocateEipAddressProRequest extends Request {
         }
 
         /**
-         * The maximum bandwidth of the EIP. Unit: Mbit/s.
+         * The maximum bandwidth of the specified EIP. Unit: Mbit/s.
          * <p>
          * 
-         * *   Valid values when **InstanceChargeType** is set to **PostPaid** and **InternetChargeType** is set to **PayByBandwidth**: **1** to **500**.****
-         * *   Valid values when **InstanceChargeType** is set to **PostPaid** and **InternetChargeType** is set to **PayByTraffic**: **1** to **200**.****
-         * *   Valid values when **InstanceChargeType** is set to **PrePaid**: **1** to **1000**.****
+         * *   When **InstanceChargeType** is set to **PostPaid** and **InternetChargeType** is set to **PayByBandwidth**, valid values for **Bandwidth** are **1** to **500**.
+         * *   When **InstanceChargeType** is set to **PostPaid** and **InternetChargeType** is set to **PayByTraffic**, valid values for **Bandwidth** are **1** to **200**.
+         * *   When **InstanceChargeType** is set to **PrePaid**, valid values for **Bandwidth** are **1** to **1000**.
          * 
-         * Default value: **5**. Unit: Mbit/s.
+         * Default value: **5** Mbit /s.
          */
         public Builder bandwidth(String bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);

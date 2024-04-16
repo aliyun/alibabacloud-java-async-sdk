@@ -103,6 +103,10 @@ public class DescribeEipAddressesRequest extends Request {
     private String segmentInstanceId;
 
     @Query
+    @NameInMap("ServiceManaged")
+    private Boolean serviceManaged;
+
+    @Query
     @NameInMap("Status")
     private String status;
 
@@ -134,6 +138,7 @@ public class DescribeEipAddressesRequest extends Request {
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityProtectionEnabled = builder.securityProtectionEnabled;
         this.segmentInstanceId = builder.segmentInstanceId;
+        this.serviceManaged = builder.serviceManaged;
         this.status = builder.status;
         this.tag = builder.tag;
     }
@@ -306,6 +311,13 @@ public class DescribeEipAddressesRequest extends Request {
     }
 
     /**
+     * @return serviceManaged
+     */
+    public Boolean getServiceManaged() {
+        return this.serviceManaged;
+    }
+
+    /**
      * @return status
      */
     public String getStatus() {
@@ -342,6 +354,7 @@ public class DescribeEipAddressesRequest extends Request {
         private Long resourceOwnerId; 
         private Boolean securityProtectionEnabled; 
         private String segmentInstanceId; 
+        private Boolean serviceManaged; 
         private String status; 
         private java.util.List < Tag> tag; 
 
@@ -373,6 +386,7 @@ public class DescribeEipAddressesRequest extends Request {
             this.resourceOwnerId = request.resourceOwnerId;
             this.securityProtectionEnabled = request.securityProtectionEnabled;
             this.segmentInstanceId = request.segmentInstanceId;
+            this.serviceManaged = request.serviceManaged;
             this.status = request.status;
             this.tag = request.tag;
         } 
@@ -635,6 +649,15 @@ public class DescribeEipAddressesRequest extends Request {
         public Builder segmentInstanceId(String segmentInstanceId) {
             this.putQueryParameter("SegmentInstanceId", segmentInstanceId);
             this.segmentInstanceId = segmentInstanceId;
+            return this;
+        }
+
+        /**
+         * ServiceManaged.
+         */
+        public Builder serviceManaged(Boolean serviceManaged) {
+            this.putQueryParameter("ServiceManaged", serviceManaged);
+            this.serviceManaged = serviceManaged;
             return this;
         }
 

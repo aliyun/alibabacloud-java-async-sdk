@@ -12,10 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddPublicIpAddressPoolCidrBlockResponseBody</p>
  */
 public class AddPublicIpAddressPoolCidrBlockResponseBody extends TeaModel {
+    @NameInMap("CidrBlock")
+    private String cidrBlock;
+
     @NameInMap("RequestId")
     private String requestId;
 
     private AddPublicIpAddressPoolCidrBlockResponseBody(Builder builder) {
+        this.cidrBlock = builder.cidrBlock;
         this.requestId = builder.requestId;
     }
 
@@ -28,6 +32,13 @@ public class AddPublicIpAddressPoolCidrBlockResponseBody extends TeaModel {
     }
 
     /**
+     * @return cidrBlock
+     */
+    public String getCidrBlock() {
+        return this.cidrBlock;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -35,7 +46,16 @@ public class AddPublicIpAddressPoolCidrBlockResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String cidrBlock; 
         private String requestId; 
+
+        /**
+         * The CIDR blocks.
+         */
+        public Builder cidrBlock(String cidrBlock) {
+            this.cidrBlock = cidrBlock;
+            return this;
+        }
 
         /**
          * The request ID.

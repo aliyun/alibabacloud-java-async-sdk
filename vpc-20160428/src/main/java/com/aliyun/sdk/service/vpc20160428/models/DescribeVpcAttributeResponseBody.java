@@ -39,6 +39,9 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
     @NameInMap("DhcpOptionsSetStatus")
     private String dhcpOptionsSetStatus;
 
+    @NameInMap("EnabledIpv6")
+    private Boolean enabledIpv6;
+
     @NameInMap("Ipv4GatewayId")
     private String ipv4GatewayId;
 
@@ -100,6 +103,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         this.description = builder.description;
         this.dhcpOptionsSetId = builder.dhcpOptionsSetId;
         this.dhcpOptionsSetStatus = builder.dhcpOptionsSetStatus;
+        this.enabledIpv6 = builder.enabledIpv6;
         this.ipv4GatewayId = builder.ipv4GatewayId;
         this.ipv6CidrBlock = builder.ipv6CidrBlock;
         this.ipv6CidrBlocks = builder.ipv6CidrBlocks;
@@ -188,6 +192,13 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
      */
     public String getDhcpOptionsSetStatus() {
         return this.dhcpOptionsSetStatus;
+    }
+
+    /**
+     * @return enabledIpv6
+     */
+    public Boolean getEnabledIpv6() {
+        return this.enabledIpv6;
     }
 
     /**
@@ -319,6 +330,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         private String description; 
         private String dhcpOptionsSetId; 
         private String dhcpOptionsSetStatus; 
+        private Boolean enabledIpv6; 
         private String ipv4GatewayId; 
         private String ipv6CidrBlock; 
         private Ipv6CidrBlocks ipv6CidrBlocks; 
@@ -349,7 +361,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The propagation source associated with the VPC.
+         * The route source associated with the VPC.
          */
         public Builder associatedPropagationSources(AssociatedPropagationSources associatedPropagationSources) {
             this.associatedPropagationSources = associatedPropagationSources;
@@ -419,6 +431,14 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
          */
         public Builder dhcpOptionsSetStatus(String dhcpOptionsSetStatus) {
             this.dhcpOptionsSetStatus = dhcpOptionsSetStatus;
+            return this;
+        }
+
+        /**
+         * 是否开启IPv6。
+         */
+        public Builder enabledIpv6(Boolean enabledIpv6) {
+            this.enabledIpv6 = enabledIpv6;
             return this;
         }
 
@@ -776,7 +796,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * Indicates whether to propagate the routes of the VPC.
+             * Indicates whether routes are advertised to the VPC.
              */
             public Builder routePropagated(Boolean routePropagated) {
                 this.routePropagated = routePropagated;
@@ -784,7 +804,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID of the propagation source.
+             * The instance ID of the source.
              */
             public Builder sourceInstanceId(String sourceInstanceId) {
                 this.sourceInstanceId = sourceInstanceId;
@@ -792,7 +812,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the account to which the propagation source belongs.
+             * The account ID of the source.
              */
             public Builder sourceOwnerId(Long sourceOwnerId) {
                 this.sourceOwnerId = sourceOwnerId;
@@ -800,13 +820,13 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the propagation source. Valid values:
+             * The source type.
              * <p>
              * 
-             * - **CEN**
-             * - **VPN**
-             * - **TR**
-             * - **ECR**
+             * *   **CEN**
+             * *   **VPN**
+             * *   **TR**
+             * *   **ECR**
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -814,12 +834,12 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The status indicating whether the propagation source is attached to the VPC. Valid values:
+             * The binding status.
              * <p>
              * 
-             * - **Attaching**
-             * - **Attached**
-             * - **Detaching**
+             * *   **Attaching**
+             * *   **Attached**
+             * *   **Detaching**
              */
             public Builder status(String status) {
                 this.status = status;
@@ -860,7 +880,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
             private java.util.List < AssociatedPropagationSourcesAssociatedPropagationSources> associatedPropagationSources; 
 
             /**
-             * The propagation source associated with the VPC.
+             * The route source associated with the VPC.
              */
             public Builder associatedPropagationSources(java.util.List < AssociatedPropagationSourcesAssociatedPropagationSources> associatedPropagationSources) {
                 this.associatedPropagationSources = associatedPropagationSources;

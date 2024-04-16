@@ -309,17 +309,21 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the next hop. Valid values:
+             * The next hop type. Valid values:
              * <p>
              * 
-             * *   **Instance**: an Elastic Compute Service (ECS) instance
-             * *   **HaVip**: a high-availability virtual IP address (HAVIP)
-             * *   **VpnGateway**: a VPN gateway
-             * *   **NatGateway**: a NAT gateway
-             * *   **NetworkInterface**: a secondary elastic network interface (ENI)
-             * *   **RouterInterface**: a router interface
-             * *   **IPv6Gateway**: an IPv6 gateway
-             * *   **Attachment**: a transit router
+             * *   **Instance**: an ECS instance.
+             * *   **HaVip**: an HAVIP.
+             * *   **VpnGateway**: a VPN gateway.
+             * *   **NatGateway**: a NAT gateway.
+             * *   **NetworkInterface**: a secondary ENI.
+             * *   **RouterInterface**: a router interface.
+             * *   **IPv6Gateway**: an IPv6 gateway.
+             * *   **Attachment**: a transit router.
+             * *   **Ipv4Gateway**: an IPv4 gateway.
+             * *   **GatewayEndpoint**: a gateway endpoint.
+             * *   **CenBasic**: CEN does not support transit routers.
+             * *   **Ecr**: ECR.
              */
             public Builder nextHopType(String nextHopType) {
                 this.nextHopType = nextHopType;
@@ -560,7 +564,7 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the route was modified. Specify the time in the `YYYY-MM-DDThh:mm:ssZ` format. The time must be in UTC.
+             * The time when the route was modified. The time follows the ISO 8601 standard in the `YYYY-MM-DDThh:mm:ssZ` format. The time is displayed in UTC.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -568,7 +572,7 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
             }
 
             /**
-             * The IP version. Valid values:
+             * The IP version. Valid values: Valid values:
              * <p>
              * 
              * *   **ipv4**
@@ -608,7 +612,7 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
             }
 
             /**
-             * The route name.
+             * The name of the route.
              */
             public Builder routeEntryName(String routeEntryName) {
                 this.routeEntryName = routeEntryName;
@@ -640,7 +644,7 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
              * 
              * *   **Pending**
              * *   **Available**
-             * *   **Modifying**: The Internet Shared Bandwidth instance is being modified.
+             * *   **Modifying**
              */
             public Builder status(String status) {
                 this.status = status;
@@ -651,10 +655,11 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
              * The route type. Valid values:
              * <p>
              * 
-             * *   **Custom**
-             * *   **System**
-             * *   **BGP**
-             * *   **CEN**
+             * *   **Custom**: custom routes.
+             * *   **System**: system routes.
+             * *   **BGP**: BGP routes.
+             * *   **CEN**: CEN routes.
+             * *   **ECR**: ECR routes.
              */
             public Builder type(String type) {
                 this.type = type;

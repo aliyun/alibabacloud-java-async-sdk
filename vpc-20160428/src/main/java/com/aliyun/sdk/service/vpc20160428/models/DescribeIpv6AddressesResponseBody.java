@@ -314,7 +314,7 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
              * <p>
              * 
              * *   **PayByTraffic**
-             * *   **PayByBandwidth**: pay-by-bandwidth
+             * *   **PayByBandwidth**
              */
             public Builder internetChargeType(String internetChargeType) {
                 this.internetChargeType = internetChargeType;
@@ -330,7 +330,7 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the renewal took effect. The time follows the ISO 8601 standard in the `YYYY-MM-DDThh:mm:ssZ` format.
+             * The time when the renewal takes effect. The time is displayed in the `YYYY-MM-DDThh:mm:ssZ` format.
              */
             public Builder reservationActiveTime(String reservationActiveTime) {
                 this.reservationActiveTime = reservationActiveTime;
@@ -350,7 +350,7 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
              * <p>
              * 
              * *   **PayByTraffic**
-             * *   **PayByBandwidth**: pay-by-bandwidth
+             * *   **PayByBandwidth**
              */
             public Builder reservationInternetChargeType(String reservationInternetChargeType) {
                 this.reservationInternetChargeType = reservationInternetChargeType;
@@ -411,10 +411,10 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The key of tag N. You can specify at most 20 tag keys. The tag key cannot be an empty string.
+             * The tag key. You can specify up to 20 tag keys. The tag key cannot be an empty string.
              * <p>
              * 
-             * The tag key can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
+             * The tag key can be up to 128 characters in length. The tag key cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -422,7 +422,7 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The value of tag N.
+             * The tag value.
              * <p>
              * 
              * The tag value can be up to 128 characters in length. It can be an empty string. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
@@ -522,6 +522,9 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
         @NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
+        @NameInMap("ServiceManaged")
+        private Integer serviceManaged;
+
         @NameInMap("Status")
         private String status;
 
@@ -548,6 +551,7 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             this.networkType = builder.networkType;
             this.realBandwidth = builder.realBandwidth;
             this.resourceGroupId = builder.resourceGroupId;
+            this.serviceManaged = builder.serviceManaged;
             this.status = builder.status;
             this.tags = builder.tags;
             this.vSwitchId = builder.vSwitchId;
@@ -654,6 +658,13 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
         }
 
         /**
+         * @return serviceManaged
+         */
+        public Integer getServiceManaged() {
+            return this.serviceManaged;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -695,6 +706,7 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             private String networkType; 
             private Integer realBandwidth; 
             private String resourceGroupId; 
+            private Integer serviceManaged; 
             private String status; 
             private Tags tags; 
             private String vSwitchId; 
@@ -773,7 +785,7 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The ISP of the IPv6 address.
+             * The ISP of the IPv6 address. Valid values:
              * <p>
              * 
              * *   **BGP** (default)
@@ -811,6 +823,18 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * Indicates whether the instance is managed. Valid values:
+             * <p>
+             * 
+             * *   **1**: yes
+             * *   **0**: no
+             */
+            public Builder serviceManaged(Integer serviceManaged) {
+                this.serviceManaged = serviceManaged;
                 return this;
             }
 

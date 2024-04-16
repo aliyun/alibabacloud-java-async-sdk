@@ -26,10 +26,12 @@ public class DeleteExpressConnectTrafficQosQueueRequest extends Request {
 
     @Query
     @NameInMap("QosId")
+    @Validation(required = true)
     private String qosId;
 
     @Query
     @NameInMap("QueueId")
+    @Validation(required = true)
     private String queueId;
 
     @Query

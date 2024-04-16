@@ -210,8 +210,8 @@ public class CreateVcoRouteEntryResponseBody extends TeaModel {
          * The weight of the destination-based route. Valid values:
          * <p>
          * 
-         * *   **0**: a low priority
-         * *   **100**: a high priority
+         * *   **0**: a low priority.
+         * *   **100**: a high priority.
          */
         public Builder weight(Integer weight) {
             this.weight = weight;

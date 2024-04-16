@@ -268,9 +268,11 @@ public class CreateCommonBandwidthPackageRequest extends Request {
          * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * You can use the client to generate a token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.
          * 
-         * >  If you do not specify this parameter, the system automatically uses the value of **RequestId** as the **client token**. The value of **RequestId** is different for each API request.
+         * > 
+         * 
+         * If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -282,7 +284,7 @@ public class CreateCommonBandwidthPackageRequest extends Request {
          * The description of the Internet Shared Bandwidth instance.
          * <p>
          * 
-         * The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with `http://` or `https://`.
+         * The description must be 2 to 256 characters in length and start with a letter. The description cannot start with `http://` or `https://`.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -294,10 +296,10 @@ public class CreateCommonBandwidthPackageRequest extends Request {
          * The line type. Valid values:
          * <p>
          * 
-         * *   **BGP**: BGP (Multi-ISP) All regions support BGP (Multi-ISP).
-         * *   **BGP_PRO**: BGP (Multi-ISP) Pro Only the following regions support BGP (Multi-ISP) Pro lines: China (Hong Kong), Singapore, Japan (Tokyo), Philippines (Manila), Malaysia (Kuala Lumpur), Indonesia (Jakarta), and Thailand (Bangkok).
+         * *   **BGP** All regions support BGP (Multi-ISP).
+         * *   **BGP_PRO** BGP (Multi-ISP) Pro lines are available in the China (Hong Kong), Singapore, Japan (Tokyo), Philippines (Manila), Malaysia (Kuala Lumpur), Indonesia (Jakarta), and Thailand (Bangkok) regions.
          * 
-         * If you are allowed to use single-ISP bandwidth, you can also choose one of the following values:
+         * If you are allowed to use single-ISP bandwidth, you can also use one of the following values:
          * 
          * *   **ChinaTelecom**
          * *   **ChinaUnicom**
@@ -315,7 +317,7 @@ public class CreateCommonBandwidthPackageRequest extends Request {
         }
 
         /**
-         * The billing method of the Internet Shared Bandwidth instance. Valid values: **PayByTraffic**: pay-by-data-transfer
+         * The billing method of the Internet Shared Bandwidth instance. Set the value to **PayByTraffic**, which specifies the pay-by-data-transfer billing method.
          */
         public Builder internetChargeType(String internetChargeType) {
             this.putQueryParameter("InternetChargeType", internetChargeType);
@@ -327,7 +329,7 @@ public class CreateCommonBandwidthPackageRequest extends Request {
          * The name of the Internet Shared Bandwidth instance.
          * <p>
          * 
-         * The name must be 2 to 128 characters in length and start with a letter, and can contain letters, digits, underscores (\_), and hyphens (-).
+         * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -357,7 +359,9 @@ public class CreateCommonBandwidthPackageRequest extends Request {
          * The percentage of the minimum bandwidth commitment. Set the parameter to **20**.
          * <p>
          * 
-         * >  This parameter is supported only on the Alibaba Cloud China site.
+         * > 
+         * 
+         * This parameter is available only on the Alibaba Cloud China site.
          */
         public Builder ratio(Integer ratio) {
             this.putQueryParameter("Ratio", ratio);
@@ -369,7 +373,7 @@ public class CreateCommonBandwidthPackageRequest extends Request {
          * The region ID of the Internet Shared Bandwidth instance.
          * <p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the region ID.
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -405,13 +409,7 @@ public class CreateCommonBandwidthPackageRequest extends Request {
         }
 
         /**
-         * The editions of Anti-DDoS.
-         * <p>
-         * 
-         * *   If you do not specify this parameter, Anti-DDoS Origin Basic is used.
-         * *   If you set the parameter to **AntiDDoS_Enhanced**, Anti-DDoS Pro/Premium is used.
-         * 
-         * You can specify up to 10 editions of Anti-DDoS.
+         * SecurityProtectionTypes.
          */
         public Builder securityProtectionTypes(java.util.List < String > securityProtectionTypes) {
             this.putQueryParameter("SecurityProtectionTypes", securityProtectionTypes);
@@ -420,7 +418,7 @@ public class CreateCommonBandwidthPackageRequest extends Request {
         }
 
         /**
-         * The zone of the Internet Shared Bandwidth instance. This parameter must be specified when you create an Internet Shared Bandwidth instance for a cloud box.
+         * The zone of the Internet Shared Bandwidth instance. This parameter is required if you create an Internet Shared Bandwidth instance for a cloud box.
          */
         public Builder zone(String zone) {
             this.putQueryParameter("Zone", zone);

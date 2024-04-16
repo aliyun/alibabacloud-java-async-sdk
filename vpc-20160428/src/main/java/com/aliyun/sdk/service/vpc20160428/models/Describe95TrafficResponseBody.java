@@ -308,7 +308,9 @@ public class Describe95TrafficResponseBody extends TeaModel {
             }
 
             /**
-             * The daily peak bandwidth. Unit: Mbit/s. For more information, see [Daily peak bandwidth](~~89729~~).
+             * The daily peak bandwidth. Unit: Mbit/s.
+             * <p>
+             * <props="china"> For more information, see [Daily peak bandwidth](~~89729~~).</props>
              */
             public Builder fifthPeakBandwidth(String fifthPeakBandwidth) {
                 this.fifthPeakBandwidth = fifthPeakBandwidth;

@@ -102,7 +102,10 @@ public class AllocateEipAddressProResponseBody extends TeaModel {
         }
 
         /**
-         * The order ID. This parameter is returned only when **InstanceChargeType** is set to **PrePaid**.
+         * The order ID.
+         * <p>
+         * 
+         * This parameter is returned when InstanceChargeType is set to PrePaid. If AutoPay is set to false, you must manually complete the payment in the [Order Center](https://usercenter2-intl.aliyun.com/order/list).
          */
         public Builder orderId(Long orderId) {
             this.orderId = orderId;

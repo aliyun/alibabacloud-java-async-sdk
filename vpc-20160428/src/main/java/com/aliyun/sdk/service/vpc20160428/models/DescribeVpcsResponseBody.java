@@ -567,6 +567,9 @@ public class DescribeVpcsResponseBody extends TeaModel {
         @NameInMap("DhcpOptionsSetStatus")
         private String dhcpOptionsSetStatus;
 
+        @NameInMap("EnabledIpv6")
+        private Boolean enabledIpv6;
+
         @NameInMap("Ipv6CidrBlock")
         private String ipv6CidrBlock;
 
@@ -622,6 +625,7 @@ public class DescribeVpcsResponseBody extends TeaModel {
             this.description = builder.description;
             this.dhcpOptionsSetId = builder.dhcpOptionsSetId;
             this.dhcpOptionsSetStatus = builder.dhcpOptionsSetStatus;
+            this.enabledIpv6 = builder.enabledIpv6;
             this.ipv6CidrBlock = builder.ipv6CidrBlock;
             this.ipv6CidrBlocks = builder.ipv6CidrBlocks;
             this.isDefault = builder.isDefault;
@@ -688,6 +692,13 @@ public class DescribeVpcsResponseBody extends TeaModel {
          */
         public String getDhcpOptionsSetStatus() {
             return this.dhcpOptionsSetStatus;
+        }
+
+        /**
+         * @return enabledIpv6
+         */
+        public Boolean getEnabledIpv6() {
+            return this.enabledIpv6;
         }
 
         /**
@@ -809,6 +820,7 @@ public class DescribeVpcsResponseBody extends TeaModel {
             private String description; 
             private String dhcpOptionsSetId; 
             private String dhcpOptionsSetStatus; 
+            private Boolean enabledIpv6; 
             private String ipv6CidrBlock; 
             private Ipv6CidrBlocks ipv6CidrBlocks; 
             private Boolean isDefault; 
@@ -877,6 +889,14 @@ public class DescribeVpcsResponseBody extends TeaModel {
              */
             public Builder dhcpOptionsSetStatus(String dhcpOptionsSetStatus) {
                 this.dhcpOptionsSetStatus = dhcpOptionsSetStatus;
+                return this;
+            }
+
+            /**
+             * EnabledIpv6.
+             */
+            public Builder enabledIpv6(Boolean enabledIpv6) {
+                this.enabledIpv6 = enabledIpv6;
                 return this;
             }
 

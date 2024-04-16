@@ -279,7 +279,7 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The configurations of IKE Phase 1.
+         * The Phase 1 configuration.
          */
         public Builder tunnelIkeConfig(TunnelIkeConfig tunnelIkeConfig) {
             this.tunnelIkeConfig = tunnelIkeConfig;
@@ -600,11 +600,11 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The IKE negotiation mode. Valid values:
+             * The IKE negotiation mode.
              * <p>
              * 
              * *   **main:** This mode offers higher security during negotiations.
-             * *   **aggressive:** This mode is faster and has a higher success rate.
+             * *   **aggressive**: This mode is faster and has a higher success rate.
              */
             public Builder ikeMode(String ikeMode) {
                 this.ikeMode = ikeMode;
@@ -620,13 +620,13 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The IKE version. Valid values:
+             * The IKE version.
              * <p>
              * 
              * *   **ikev1**
              * *   **ikev2**
              * 
-             * Compared with IKEv1, IKEv2 simplifies the SA negotiation process and is more suitable for scenarios in which multiple CIDR blocks are used.
+             * Compared with IKEv1, IKEv2 simplifies the SA negotiation process and provides better support for scenarios with multiple CIDR blocks.
              */
             public Builder ikeVersion(String ikeVersion) {
                 this.ikeVersion = ikeVersion;

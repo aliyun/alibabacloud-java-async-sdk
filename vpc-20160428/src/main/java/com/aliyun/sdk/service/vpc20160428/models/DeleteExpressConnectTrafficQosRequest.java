@@ -26,6 +26,7 @@ public class DeleteExpressConnectTrafficQosRequest extends Request {
 
     @Query
     @NameInMap("QosId")
+    @Validation(required = true)
     private String qosId;
 
     @Query
