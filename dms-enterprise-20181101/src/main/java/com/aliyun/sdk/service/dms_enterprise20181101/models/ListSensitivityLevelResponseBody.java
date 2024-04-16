@@ -86,7 +86,7 @@ public class ListSensitivityLevelResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * ErrorCode.
+         * The status code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class ListSensitivityLevelResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class ListSensitivityLevelResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID. You can use the ID to query logs and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class ListSensitivityLevelResponseBody extends TeaModel {
         }
 
         /**
-         * SensitivityLevelList.
+         * The sensitivity levels.
          */
         public Builder sensitivityLevelList(java.util.List < SensitivityLevelList> sensitivityLevelList) {
             this.sensitivityLevelList = sensitivityLevelList;
@@ -118,7 +118,11 @@ public class ListSensitivityLevelResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -194,7 +198,7 @@ public class ListSensitivityLevelResponseBody extends TeaModel {
             private String templateType; 
 
             /**
-             * IsPlain.
+             * Indicates whether the fields of the sensitive level are displayed in plaintext.
              */
             public Builder isPlain(Boolean isPlain) {
                 this.isPlain = isPlain;
@@ -202,7 +206,7 @@ public class ListSensitivityLevelResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the sensitive level.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -210,7 +214,7 @@ public class ListSensitivityLevelResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * The ID of the classification template.
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -218,7 +222,11 @@ public class ListSensitivityLevelResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateType.
+             * The type of the classification template. Valid values:
+             * <p>
+             * 
+             * *   **INNER**: a built-in template.
+             * *   **USER_DEFINE**: a custom template.
              */
             public Builder templateType(String templateType) {
                 this.templateType = templateType;

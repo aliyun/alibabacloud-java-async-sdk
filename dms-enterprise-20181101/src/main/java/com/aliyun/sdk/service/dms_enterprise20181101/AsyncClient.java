@@ -534,6 +534,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListScenariosResponse> listScenarios(ListScenariosRequest request);
 
+    CompletableFuture<ListSensitiveColumnInfoResponse> listSensitiveColumnInfo(ListSensitiveColumnInfoRequest request);
+
     CompletableFuture<ListSensitiveColumnsResponse> listSensitiveColumns(ListSensitiveColumnsRequest request);
 
     CompletableFuture<ListSensitiveColumnsDetailResponse> listSensitiveColumnsDetail(ListSensitiveColumnsDetailRequest request);

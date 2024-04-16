@@ -86,7 +86,7 @@ public class CreateDataArchiveOrderResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The data archiving ticket IDs.
+         * The ID of the data archiving ticket.
          */
         public Builder createOrderResult(java.util.List < Long > createOrderResult) {
             this.createOrderResult = createOrderResult;
@@ -94,7 +94,7 @@ public class CreateDataArchiveOrderResponseBody extends TeaModel {
         }
 
         /**
-         * Error code
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -118,11 +118,11 @@ public class CreateDataArchiveOrderResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
+         * Indicates whether the request was successful. Valid values:
          * <p>
          * 
-         * *   true
-         * *   false
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;

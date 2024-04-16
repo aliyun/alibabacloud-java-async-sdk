@@ -616,7 +616,7 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Comment.
+             * Release remarks.
              */
             public Builder comment(String comment) {
                 this.comment = comment;

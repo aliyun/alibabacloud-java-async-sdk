@@ -123,7 +123,7 @@ public class UpdateStandardGroupRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the security rule set.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -132,7 +132,7 @@ public class UpdateStandardGroupRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * The security rule set ID. You can call the [ListStandardGroups](~~465940~~) operation to obtain the ID of the security rule set.
          */
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -141,7 +141,7 @@ public class UpdateStandardGroupRequest extends Request {
         }
 
         /**
-         * GroupName.
+         * The name of the security rule set.
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -150,7 +150,10 @@ public class UpdateStandardGroupRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The tenant ID.
+         * <p>
+         * 
+         * >  To view the tenant ID, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see the [View information about the current tenant](~~181330~~) section of the "Manage DMS tenants" topic.
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

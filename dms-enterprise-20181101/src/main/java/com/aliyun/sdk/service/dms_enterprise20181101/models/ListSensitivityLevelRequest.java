@@ -105,7 +105,7 @@ public class ListSensitivityLevelRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * The ID of the classification template. You can call the [ListClassificationTemplates](~~460613~~) operation to query the ID of the classification template.
          */
         public Builder templateId(Long templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -114,7 +114,13 @@ public class ListSensitivityLevelRequest extends Request {
         }
 
         /**
-         * TemplateType.
+         * The type of the classification template. You can call the [ListClassificationTemplates](~~460613~~) operation to query the type of the classification template.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   USER_DEFINE: a custom template.
+         * *   INNER: a built-in template.
          */
         public Builder templateType(String templateType) {
             this.putQueryParameter("TemplateType", templateType);
@@ -123,7 +129,10 @@ public class ListSensitivityLevelRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The ID of the tenant.
+         * <p>
+         * 
+         * >  To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~) in the topic "Manage DMS tenants."
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

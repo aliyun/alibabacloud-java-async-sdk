@@ -110,7 +110,7 @@ public class CreateStandardGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The created security rule set.
+         * The information about the created security rule set.
          */
         public Builder standardGroup(StandardGroup standardGroup) {
             this.standardGroup = standardGroup;
@@ -238,7 +238,7 @@ public class CreateStandardGroupResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * The security rule set ID.
              */
             public Builder groupId(Long groupId) {
                 this.groupId = groupId;

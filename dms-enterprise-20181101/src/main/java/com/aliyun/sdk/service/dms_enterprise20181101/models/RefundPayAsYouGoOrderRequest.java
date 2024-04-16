@@ -108,7 +108,7 @@ public class RefundPayAsYouGoOrderRequest extends Request {
         }
 
         /**
-         * The ID of the sales order instance.
+         * The instance ID in the sales order.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

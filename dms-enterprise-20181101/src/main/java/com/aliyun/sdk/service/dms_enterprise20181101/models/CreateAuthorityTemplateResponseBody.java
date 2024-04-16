@@ -142,7 +142,7 @@ public class CreateAuthorityTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Tid.
+         * The ID of the tenant. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to query the tenant ID.
          */
         public Builder tid(Long tid) {
             this.tid = tid;

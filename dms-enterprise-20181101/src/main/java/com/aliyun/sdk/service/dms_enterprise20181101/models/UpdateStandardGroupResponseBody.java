@@ -86,7 +86,7 @@ public class UpdateStandardGroupResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * ErrorCode.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -94,7 +94,7 @@ public class UpdateStandardGroupResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned if the request failed.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -102,7 +102,7 @@ public class UpdateStandardGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID. You can use the request ID to locate logs and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class UpdateStandardGroupResponseBody extends TeaModel {
         }
 
         /**
-         * StandardGroup.
+         * The information about the security rule set.
          */
         public Builder standardGroup(StandardGroup standardGroup) {
             this.standardGroup = standardGroup;
@@ -118,7 +118,11 @@ public class UpdateStandardGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -218,7 +222,7 @@ public class UpdateStandardGroupResponseBody extends TeaModel {
             private Long lastMenderId; 
 
             /**
-             * DbType.
+             * The type of the database for which the security rules are used.
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -226,7 +230,7 @@ public class UpdateStandardGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the security rule set.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -234,7 +238,7 @@ public class UpdateStandardGroupResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * The security rule set ID.
              */
             public Builder groupId(Long groupId) {
                 this.groupId = groupId;
@@ -242,7 +246,12 @@ public class UpdateStandardGroupResponseBody extends TeaModel {
             }
 
             /**
-             * GroupMode.
+             * The control mode. Valid values:
+             * <p>
+             * 
+             * *   **NONE_CONTROL**: Flexible Management
+             * *   **STABLE**: Stable Change
+             * *   **COMMON**: Security Collaboration
              */
             public Builder groupMode(String groupMode) {
                 this.groupMode = groupMode;
@@ -250,7 +259,7 @@ public class UpdateStandardGroupResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * The name of the security rule set.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -258,7 +267,7 @@ public class UpdateStandardGroupResponseBody extends TeaModel {
             }
 
             /**
-             * LastMenderId.
+             * The ID of the user who last modified the security rules.
              */
             public Builder lastMenderId(Long lastMenderId) {
                 this.lastMenderId = lastMenderId;
