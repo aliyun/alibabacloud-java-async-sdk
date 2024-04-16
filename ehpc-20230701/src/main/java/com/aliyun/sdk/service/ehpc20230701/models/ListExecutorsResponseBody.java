@@ -15,9 +15,6 @@ public class ListExecutorsResponseBody extends TeaModel {
     @NameInMap("Executors")
     private java.util.List < Executors> executors;
 
-    @NameInMap("JobId")
-    private String jobId;
-
     @NameInMap("PageNumber")
     private String pageNumber;
 
@@ -27,19 +24,14 @@ public class ListExecutorsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TaskName")
-    private String taskName;
-
     @NameInMap("TotalCount")
     private String totalCount;
 
     private ListExecutorsResponseBody(Builder builder) {
         this.executors = builder.executors;
-        this.jobId = builder.jobId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
-        this.taskName = builder.taskName;
         this.totalCount = builder.totalCount;
     }
 
@@ -56,13 +48,6 @@ public class ListExecutorsResponseBody extends TeaModel {
      */
     public java.util.List < Executors> getExecutors() {
         return this.executors;
-    }
-
-    /**
-     * @return jobId
-     */
-    public String getJobId() {
-        return this.jobId;
     }
 
     /**
@@ -87,13 +72,6 @@ public class ListExecutorsResponseBody extends TeaModel {
     }
 
     /**
-     * @return taskName
-     */
-    public String getTaskName() {
-        return this.taskName;
-    }
-
-    /**
      * @return totalCount
      */
     public String getTotalCount() {
@@ -102,11 +80,9 @@ public class ListExecutorsResponseBody extends TeaModel {
 
     public static final class Builder {
         private java.util.List < Executors> executors; 
-        private String jobId; 
         private String pageNumber; 
         private String pageSize; 
         private String requestId; 
-        private String taskName; 
         private String totalCount; 
 
         /**
@@ -114,14 +90,6 @@ public class ListExecutorsResponseBody extends TeaModel {
          */
         public Builder executors(java.util.List < Executors> executors) {
             this.executors = executors;
-            return this;
-        }
-
-        /**
-         * JobId.
-         */
-        public Builder jobId(String jobId) {
-            this.jobId = jobId;
             return this;
         }
 
@@ -146,14 +114,6 @@ public class ListExecutorsResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * TaskName.
-         */
-        public Builder taskName(String taskName) {
-            this.taskName = taskName;
             return this;
         }
 

@@ -528,6 +528,169 @@ public class CreateJobRequest extends Request {
         } 
 
     }
+    public static class EnvironmentVars extends TeaModel {
+        @NameInMap("Name")
+        private String name;
+
+        @NameInMap("Value")
+        private String value;
+
+        private EnvironmentVars(Builder builder) {
+            this.name = builder.name;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static EnvironmentVars create() {
+            return builder().build();
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String name; 
+            private String value; 
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public EnvironmentVars build() {
+                return new EnvironmentVars(this);
+            } 
+
+        } 
+
+    }
+    public static class Container extends TeaModel {
+        @NameInMap("Command")
+        private java.util.List < String > command;
+
+        @NameInMap("EnvironmentVars")
+        private java.util.List < EnvironmentVars> environmentVars;
+
+        @NameInMap("Image")
+        @Validation(required = true)
+        private String image;
+
+        @NameInMap("WorkingDir")
+        private String workingDir;
+
+        private Container(Builder builder) {
+            this.command = builder.command;
+            this.environmentVars = builder.environmentVars;
+            this.image = builder.image;
+            this.workingDir = builder.workingDir;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Container create() {
+            return builder().build();
+        }
+
+        /**
+         * @return command
+         */
+        public java.util.List < String > getCommand() {
+            return this.command;
+        }
+
+        /**
+         * @return environmentVars
+         */
+        public java.util.List < EnvironmentVars> getEnvironmentVars() {
+            return this.environmentVars;
+        }
+
+        /**
+         * @return image
+         */
+        public String getImage() {
+            return this.image;
+        }
+
+        /**
+         * @return workingDir
+         */
+        public String getWorkingDir() {
+            return this.workingDir;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > command; 
+            private java.util.List < EnvironmentVars> environmentVars; 
+            private String image; 
+            private String workingDir; 
+
+            /**
+             * Command.
+             */
+            public Builder command(java.util.List < String > command) {
+                this.command = command;
+                return this;
+            }
+
+            /**
+             * EnvironmentVars.
+             */
+            public Builder environmentVars(java.util.List < EnvironmentVars> environmentVars) {
+                this.environmentVars = environmentVars;
+                return this;
+            }
+
+            /**
+             * Image.
+             */
+            public Builder image(String image) {
+                this.image = image;
+                return this;
+            }
+
+            /**
+             * WorkingDir.
+             */
+            public Builder workingDir(String workingDir) {
+                this.workingDir = workingDir;
+                return this;
+            }
+
+            public Container build() {
+                return new Container(this);
+            } 
+
+        } 
+
+    }
     public static class Vm extends TeaModel {
         @NameInMap("Image")
         @Validation(required = true)
@@ -611,10 +774,14 @@ public class CreateJobRequest extends Request {
 
     }
     public static class TaskExecutor extends TeaModel {
+        @NameInMap("Container")
+        private Container container;
+
         @NameInMap("VM")
         private Vm vm;
 
         private TaskExecutor(Builder builder) {
+            this.container = builder.container;
             this.vm = builder.vm;
         }
 
@@ -627,6 +794,13 @@ public class CreateJobRequest extends Request {
         }
 
         /**
+         * @return container
+         */
+        public Container getContainer() {
+            return this.container;
+        }
+
+        /**
          * @return vm
          */
         public Vm getVm() {
@@ -634,7 +808,16 @@ public class CreateJobRequest extends Request {
         }
 
         public static final class Builder {
+            private Container container; 
             private Vm vm; 
+
+            /**
+             * Container.
+             */
+            public Builder container(Container container) {
+                this.container = container;
+                return this;
+            }
 
             /**
              * VM.
@@ -651,6 +834,87 @@ public class CreateJobRequest extends Request {
         } 
 
     }
+    public static class VolumeMount extends TeaModel {
+        @NameInMap("MountOptions")
+        private String mountOptions;
+
+        @NameInMap("MountPath")
+        private String mountPath;
+
+        @NameInMap("VolumeDriver")
+        private String volumeDriver;
+
+        private VolumeMount(Builder builder) {
+            this.mountOptions = builder.mountOptions;
+            this.mountPath = builder.mountPath;
+            this.volumeDriver = builder.volumeDriver;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VolumeMount create() {
+            return builder().build();
+        }
+
+        /**
+         * @return mountOptions
+         */
+        public String getMountOptions() {
+            return this.mountOptions;
+        }
+
+        /**
+         * @return mountPath
+         */
+        public String getMountPath() {
+            return this.mountPath;
+        }
+
+        /**
+         * @return volumeDriver
+         */
+        public String getVolumeDriver() {
+            return this.volumeDriver;
+        }
+
+        public static final class Builder {
+            private String mountOptions; 
+            private String mountPath; 
+            private String volumeDriver; 
+
+            /**
+             * MountOptions.
+             */
+            public Builder mountOptions(String mountOptions) {
+                this.mountOptions = mountOptions;
+                return this;
+            }
+
+            /**
+             * MountPath.
+             */
+            public Builder mountPath(String mountPath) {
+                this.mountPath = mountPath;
+                return this;
+            }
+
+            /**
+             * VolumeDriver.
+             */
+            public Builder volumeDriver(String volumeDriver) {
+                this.volumeDriver = volumeDriver;
+                return this;
+            }
+
+            public VolumeMount build() {
+                return new VolumeMount(this);
+            } 
+
+        } 
+
+    }
     public static class TaskSpec extends TeaModel {
         @NameInMap("Resource")
         private Resource resource;
@@ -659,9 +923,13 @@ public class CreateJobRequest extends Request {
         @Validation(required = true)
         private java.util.List < TaskExecutor> taskExecutor;
 
+        @NameInMap("VolumeMount")
+        private java.util.List < VolumeMount> volumeMount;
+
         private TaskSpec(Builder builder) {
             this.resource = builder.resource;
             this.taskExecutor = builder.taskExecutor;
+            this.volumeMount = builder.volumeMount;
         }
 
         public static Builder builder() {
@@ -686,9 +954,17 @@ public class CreateJobRequest extends Request {
             return this.taskExecutor;
         }
 
+        /**
+         * @return volumeMount
+         */
+        public java.util.List < VolumeMount> getVolumeMount() {
+            return this.volumeMount;
+        }
+
         public static final class Builder {
             private Resource resource; 
             private java.util.List < TaskExecutor> taskExecutor; 
+            private java.util.List < VolumeMount> volumeMount; 
 
             /**
              * Resource.
@@ -703,6 +979,14 @@ public class CreateJobRequest extends Request {
              */
             public Builder taskExecutor(java.util.List < TaskExecutor> taskExecutor) {
                 this.taskExecutor = taskExecutor;
+                return this;
+            }
+
+            /**
+             * VolumeMount.
+             */
+            public Builder volumeMount(java.util.List < VolumeMount> volumeMount) {
+                this.volumeMount = volumeMount;
                 return this;
             }
 
