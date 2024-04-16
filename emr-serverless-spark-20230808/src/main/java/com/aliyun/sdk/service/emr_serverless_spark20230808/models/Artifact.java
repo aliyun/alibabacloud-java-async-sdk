@@ -1,0 +1,201 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.emr_serverless_spark20230808.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link Artifact} extends {@link TeaModel}
+ *
+ * <p>Artifact</p>
+ */
+public class Artifact extends TeaModel {
+    @NameInMap("bizId")
+    @Validation(required = true)
+    private String bizId;
+
+    @NameInMap("creator")
+    @Validation(required = true)
+    private Long creator;
+
+    @NameInMap("credential")
+    private Credential credential;
+
+    @NameInMap("gmtCreated")
+    @Validation(required = true)
+    private String gmtCreated;
+
+    @NameInMap("gmtModified")
+    @Validation(required = true)
+    private String gmtModified;
+
+    @NameInMap("location")
+    @Validation(required = true)
+    private String location;
+
+    @NameInMap("modifier")
+    @Validation(required = true)
+    private Long modifier;
+
+    @NameInMap("name")
+    @Validation(required = true)
+    private String name;
+
+    private Artifact(Builder builder) {
+        this.bizId = builder.bizId;
+        this.creator = builder.creator;
+        this.credential = builder.credential;
+        this.gmtCreated = builder.gmtCreated;
+        this.gmtModified = builder.gmtModified;
+        this.location = builder.location;
+        this.modifier = builder.modifier;
+        this.name = builder.name;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static Artifact create() {
+        return builder().build();
+    }
+
+    /**
+     * @return bizId
+     */
+    public String getBizId() {
+        return this.bizId;
+    }
+
+    /**
+     * @return creator
+     */
+    public Long getCreator() {
+        return this.creator;
+    }
+
+    /**
+     * @return credential
+     */
+    public Credential getCredential() {
+        return this.credential;
+    }
+
+    /**
+     * @return gmtCreated
+     */
+    public String getGmtCreated() {
+        return this.gmtCreated;
+    }
+
+    /**
+     * @return gmtModified
+     */
+    public String getGmtModified() {
+        return this.gmtModified;
+    }
+
+    /**
+     * @return location
+     */
+    public String getLocation() {
+        return this.location;
+    }
+
+    /**
+     * @return modifier
+     */
+    public Long getModifier() {
+        return this.modifier;
+    }
+
+    /**
+     * @return name
+     */
+    public String getName() {
+        return this.name;
+    }
+
+    public static final class Builder {
+        private String bizId; 
+        private Long creator; 
+        private Credential credential; 
+        private String gmtCreated; 
+        private String gmtModified; 
+        private String location; 
+        private Long modifier; 
+        private String name; 
+
+        /**
+         * bizId.
+         */
+        public Builder bizId(String bizId) {
+            this.bizId = bizId;
+            return this;
+        }
+
+        /**
+         * creator.
+         */
+        public Builder creator(Long creator) {
+            this.creator = creator;
+            return this;
+        }
+
+        /**
+         * credential.
+         */
+        public Builder credential(Credential credential) {
+            this.credential = credential;
+            return this;
+        }
+
+        /**
+         * gmtCreated.
+         */
+        public Builder gmtCreated(String gmtCreated) {
+            this.gmtCreated = gmtCreated;
+            return this;
+        }
+
+        /**
+         * gmtModified.
+         */
+        public Builder gmtModified(String gmtModified) {
+            this.gmtModified = gmtModified;
+            return this;
+        }
+
+        /**
+         * location.
+         */
+        public Builder location(String location) {
+            this.location = location;
+            return this;
+        }
+
+        /**
+         * modifier.
+         */
+        public Builder modifier(Long modifier) {
+            this.modifier = modifier;
+            return this;
+        }
+
+        /**
+         * name.
+         */
+        public Builder name(String name) {
+            this.name = name;
+            return this;
+        }
+
+        public Artifact build() {
+            return new Artifact(this);
+        } 
+
+    } 
+
+}
