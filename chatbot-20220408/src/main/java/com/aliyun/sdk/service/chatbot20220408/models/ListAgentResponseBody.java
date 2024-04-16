@@ -141,6 +141,9 @@ public class ListAgentResponseBody extends TeaModel {
         @NameInMap("AgentName")
         private String agentName;
 
+        @NameInMap("DefaultAgent")
+        private Boolean defaultAgent;
+
         @NameInMap("InstanceInfos")
         private java.util.Map < String, ? > instanceInfos;
 
@@ -148,6 +151,7 @@ public class ListAgentResponseBody extends TeaModel {
             this.agentId = builder.agentId;
             this.agentKey = builder.agentKey;
             this.agentName = builder.agentName;
+            this.defaultAgent = builder.defaultAgent;
             this.instanceInfos = builder.instanceInfos;
         }
 
@@ -181,6 +185,13 @@ public class ListAgentResponseBody extends TeaModel {
         }
 
         /**
+         * @return defaultAgent
+         */
+        public Boolean getDefaultAgent() {
+            return this.defaultAgent;
+        }
+
+        /**
          * @return instanceInfos
          */
         public java.util.Map < String, ? > getInstanceInfos() {
@@ -191,6 +202,7 @@ public class ListAgentResponseBody extends TeaModel {
             private Long agentId; 
             private String agentKey; 
             private String agentName; 
+            private Boolean defaultAgent; 
             private java.util.Map < String, ? > instanceInfos; 
 
             /**
@@ -214,6 +226,14 @@ public class ListAgentResponseBody extends TeaModel {
              */
             public Builder agentName(String agentName) {
                 this.agentName = agentName;
+                return this;
+            }
+
+            /**
+             * DefaultAgent.
+             */
+            public Builder defaultAgent(Boolean defaultAgent) {
+                this.defaultAgent = defaultAgent;
                 return this;
             }
 

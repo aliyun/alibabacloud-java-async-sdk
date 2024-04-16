@@ -28,12 +28,17 @@ public class ListAgentRequest extends Request {
     @NameInMap("PageSize")
     private Integer pageSize;
 
+    @Query
+    @NameInMap("ProductCode")
+    private String productCode;
+
     private ListAgentRequest(Builder builder) {
         super(builder);
         this.agentName = builder.agentName;
         this.goodsCodes = builder.goodsCodes;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.productCode = builder.productCode;
     }
 
     public static Builder builder() {
@@ -77,11 +82,19 @@ public class ListAgentRequest extends Request {
         return this.pageSize;
     }
 
+    /**
+     * @return productCode
+     */
+    public String getProductCode() {
+        return this.productCode;
+    }
+
     public static final class Builder extends Request.Builder<ListAgentRequest, Builder> {
         private String agentName; 
         private String goodsCodes; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String productCode; 
 
         private Builder() {
             super();
@@ -93,6 +106,7 @@ public class ListAgentRequest extends Request {
             this.goodsCodes = request.goodsCodes;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.productCode = request.productCode;
         } 
 
         /**
@@ -128,6 +142,15 @@ public class ListAgentRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * ProductCode.
+         */
+        public Builder productCode(String productCode) {
+            this.putQueryParameter("ProductCode", productCode);
+            this.productCode = productCode;
             return this;
         }
 
