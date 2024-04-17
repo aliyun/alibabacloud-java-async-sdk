@@ -798,6 +798,9 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         @NameInMap("EcrId")
         private String ecrId;
 
+        @NameInMap("EcrOwnerId")
+        private String ecrOwnerId;
+
         @NameInMap("EnableIpv6")
         private Boolean enableIpv6;
 
@@ -893,6 +896,7 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             this.eccId = builder.eccId;
             this.ecrAttatchStatus = builder.ecrAttatchStatus;
             this.ecrId = builder.ecrId;
+            this.ecrOwnerId = builder.ecrOwnerId;
             this.enableIpv6 = builder.enableIpv6;
             this.localGatewayIp = builder.localGatewayIp;
             this.localIpv6GatewayIp = builder.localIpv6GatewayIp;
@@ -1019,6 +1023,13 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
          */
         public String getEcrId() {
             return this.ecrId;
+        }
+
+        /**
+         * @return ecrOwnerId
+         */
+        public String getEcrOwnerId() {
+            return this.ecrOwnerId;
         }
 
         /**
@@ -1224,6 +1235,7 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             private String eccId; 
             private String ecrAttatchStatus; 
             private String ecrId; 
+            private String ecrOwnerId; 
             private Boolean enableIpv6; 
             private String localGatewayIp; 
             private String localIpv6GatewayIp; 
@@ -1358,6 +1370,14 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
              */
             public Builder ecrId(String ecrId) {
                 this.ecrId = ecrId;
+                return this;
+            }
+
+            /**
+             * EcrOwnerId.
+             */
+            public Builder ecrOwnerId(String ecrOwnerId) {
+                this.ecrOwnerId = ecrOwnerId;
                 return this;
             }
 
