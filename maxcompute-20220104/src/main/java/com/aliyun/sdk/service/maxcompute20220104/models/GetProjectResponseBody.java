@@ -506,11 +506,17 @@ public class GetProjectResponseBody extends TeaModel {
         @NameInMap("enableDecimal2")
         private Boolean enableDecimal2;
 
+        @NameInMap("enableFdcCacheForce")
+        private Boolean enableFdcCacheForce;
+
         @NameInMap("enableTunnelQuotaRoute")
         private Boolean enableTunnelQuotaRoute;
 
         @NameInMap("encryption")
         private Encryption encryption;
+
+        @NameInMap("fdcQuota")
+        private String fdcQuota;
 
         @NameInMap("retentionDays")
         private Long retentionDays;
@@ -537,8 +543,10 @@ public class GetProjectResponseBody extends TeaModel {
             this.allowFullScan = builder.allowFullScan;
             this.elderTunnelQuota = builder.elderTunnelQuota;
             this.enableDecimal2 = builder.enableDecimal2;
+            this.enableFdcCacheForce = builder.enableFdcCacheForce;
             this.enableTunnelQuotaRoute = builder.enableTunnelQuotaRoute;
             this.encryption = builder.encryption;
+            this.fdcQuota = builder.fdcQuota;
             this.retentionDays = builder.retentionDays;
             this.sqlMeteringMax = builder.sqlMeteringMax;
             this.storageTierInfo = builder.storageTierInfo;
@@ -578,6 +586,13 @@ public class GetProjectResponseBody extends TeaModel {
         }
 
         /**
+         * @return enableFdcCacheForce
+         */
+        public Boolean getEnableFdcCacheForce() {
+            return this.enableFdcCacheForce;
+        }
+
+        /**
          * @return enableTunnelQuotaRoute
          */
         public Boolean getEnableTunnelQuotaRoute() {
@@ -589,6 +604,13 @@ public class GetProjectResponseBody extends TeaModel {
          */
         public Encryption getEncryption() {
             return this.encryption;
+        }
+
+        /**
+         * @return fdcQuota
+         */
+        public String getFdcQuota() {
+            return this.fdcQuota;
         }
 
         /**
@@ -644,8 +666,10 @@ public class GetProjectResponseBody extends TeaModel {
             private Boolean allowFullScan; 
             private String elderTunnelQuota; 
             private Boolean enableDecimal2; 
+            private Boolean enableFdcCacheForce; 
             private Boolean enableTunnelQuotaRoute; 
             private Encryption encryption; 
+            private String fdcQuota; 
             private Long retentionDays; 
             private String sqlMeteringMax; 
             private StorageTierInfo storageTierInfo; 
@@ -679,6 +703,14 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
+             * enableFdcCacheForce.
+             */
+            public Builder enableFdcCacheForce(Boolean enableFdcCacheForce) {
+                this.enableFdcCacheForce = enableFdcCacheForce;
+                return this;
+            }
+
+            /**
              * Indicates whether tunnel quota routing is enabled.
              */
             public Builder enableTunnelQuotaRoute(Boolean enableTunnelQuotaRoute) {
@@ -691,6 +723,14 @@ public class GetProjectResponseBody extends TeaModel {
              */
             public Builder encryption(Encryption encryption) {
                 this.encryption = encryption;
+                return this;
+            }
+
+            /**
+             * fdcQuota.
+             */
+            public Builder fdcQuota(String fdcQuota) {
+                this.fdcQuota = fdcQuota;
                 return this;
             }
 
