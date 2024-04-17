@@ -108,6 +108,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreatePermissionApplyOrderResponse> createPermissionApplyOrder(CreatePermissionApplyOrderRequest request);
 
+    CompletableFuture<CreateProjectResponse> createProject(CreateProjectRequest request);
+
     CompletableFuture<CreateProjectMemberResponse> createProjectMember(CreateProjectMemberRequest request);
 
     CompletableFuture<CreateQualityEntityResponse> createQualityEntity(CreateQualityEntityRequest request);
@@ -191,6 +193,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeployFileResponse> deployFile(DeployFileRequest request);
 
     CompletableFuture<DesensitizeDataResponse> desensitizeData(DesensitizeDataRequest request);
+
+    CompletableFuture<DsgQuerySensResultResponse> dsgQuerySensResult(DsgQuerySensResultRequest request);
 
     CompletableFuture<EstablishRelationTableToBusinessResponse> establishRelationTableToBusiness(EstablishRelationTableToBusinessRequest request);
 
