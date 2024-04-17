@@ -53,6 +53,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ApplyTagPoliciesResponse> applyTagPolicies(ApplyTagPoliciesRequest request);
 
+    CompletableFuture<BindSentinelBlockFallbackDefinitionResponse> bindSentinelBlockFallbackDefinition(BindSentinelBlockFallbackDefinitionRequest request);
+
     /**
       * mse-200-105
       *
@@ -431,6 +433,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListSecurityGroupResponse> listSecurityGroup(ListSecurityGroupRequest request);
 
     CompletableFuture<ListSecurityGroupRuleResponse> listSecurityGroupRule(ListSecurityGroupRuleRequest request);
+
+    CompletableFuture<ListSentinelBlockFallbackDefinitionsResponse> listSentinelBlockFallbackDefinitions(ListSentinelBlockFallbackDefinitionsRequest request);
 
     CompletableFuture<ListServiceSourceResponse> listServiceSource(ListServiceSourceRequest request);
 
