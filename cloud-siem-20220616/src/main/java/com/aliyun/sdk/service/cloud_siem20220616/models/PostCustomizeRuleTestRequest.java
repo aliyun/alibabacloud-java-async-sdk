@@ -21,6 +21,14 @@ public class PostCustomizeRuleTestRequest extends Request {
     private String regionId;
 
     @Body
+    @NameInMap("RoleFor")
+    private Long roleFor;
+
+    @Body
+    @NameInMap("RoleType")
+    private Integer roleType;
+
+    @Body
     @NameInMap("SimulatedData")
     private String simulatedData;
 
@@ -32,6 +40,8 @@ public class PostCustomizeRuleTestRequest extends Request {
         super(builder);
         this.id = builder.id;
         this.regionId = builder.regionId;
+        this.roleFor = builder.roleFor;
+        this.roleType = builder.roleType;
         this.simulatedData = builder.simulatedData;
         this.testType = builder.testType;
     }
@@ -64,6 +74,20 @@ public class PostCustomizeRuleTestRequest extends Request {
     }
 
     /**
+     * @return roleFor
+     */
+    public Long getRoleFor() {
+        return this.roleFor;
+    }
+
+    /**
+     * @return roleType
+     */
+    public Integer getRoleType() {
+        return this.roleType;
+    }
+
+    /**
      * @return simulatedData
      */
     public String getSimulatedData() {
@@ -80,6 +104,8 @@ public class PostCustomizeRuleTestRequest extends Request {
     public static final class Builder extends Request.Builder<PostCustomizeRuleTestRequest, Builder> {
         private Long id; 
         private String regionId; 
+        private Long roleFor; 
+        private Integer roleType; 
         private String simulatedData; 
         private String testType; 
 
@@ -91,6 +117,8 @@ public class PostCustomizeRuleTestRequest extends Request {
             super(request);
             this.id = request.id;
             this.regionId = request.regionId;
+            this.roleFor = request.roleFor;
+            this.roleType = request.roleType;
             this.simulatedData = request.simulatedData;
             this.testType = request.testType;
         } 
@@ -114,6 +142,24 @@ public class PostCustomizeRuleTestRequest extends Request {
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * RoleFor.
+         */
+        public Builder roleFor(Long roleFor) {
+            this.putBodyParameter("RoleFor", roleFor);
+            this.roleFor = roleFor;
+            return this;
+        }
+
+        /**
+         * RoleType.
+         */
+        public Builder roleType(Integer roleType) {
+            this.putBodyParameter("RoleType", roleType);
+            this.roleType = roleType;
             return this;
         }
 

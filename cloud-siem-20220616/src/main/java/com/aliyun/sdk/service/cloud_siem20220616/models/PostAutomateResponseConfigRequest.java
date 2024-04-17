@@ -37,6 +37,14 @@ public class PostAutomateResponseConfigRequest extends Request {
     private String regionId;
 
     @Body
+    @NameInMap("RoleFor")
+    private Long roleFor;
+
+    @Body
+    @NameInMap("RoleType")
+    private Integer roleType;
+
+    @Body
     @NameInMap("RuleName")
     private String ruleName;
 
@@ -52,6 +60,8 @@ public class PostAutomateResponseConfigRequest extends Request {
         this.executionCondition = builder.executionCondition;
         this.id = builder.id;
         this.regionId = builder.regionId;
+        this.roleFor = builder.roleFor;
+        this.roleType = builder.roleType;
         this.ruleName = builder.ruleName;
         this.subUserId = builder.subUserId;
     }
@@ -112,6 +122,20 @@ public class PostAutomateResponseConfigRequest extends Request {
     }
 
     /**
+     * @return roleFor
+     */
+    public Long getRoleFor() {
+        return this.roleFor;
+    }
+
+    /**
+     * @return roleType
+     */
+    public Integer getRoleType() {
+        return this.roleType;
+    }
+
+    /**
      * @return ruleName
      */
     public String getRuleName() {
@@ -132,6 +156,8 @@ public class PostAutomateResponseConfigRequest extends Request {
         private String executionCondition; 
         private Long id; 
         private String regionId; 
+        private Long roleFor; 
+        private Integer roleType; 
         private String ruleName; 
         private Long subUserId; 
 
@@ -147,6 +173,8 @@ public class PostAutomateResponseConfigRequest extends Request {
             this.executionCondition = request.executionCondition;
             this.id = request.id;
             this.regionId = request.regionId;
+            this.roleFor = request.roleFor;
+            this.roleType = request.roleType;
             this.ruleName = request.ruleName;
             this.subUserId = request.subUserId;
         } 
@@ -215,6 +243,24 @@ public class PostAutomateResponseConfigRequest extends Request {
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * RoleFor.
+         */
+        public Builder roleFor(Long roleFor) {
+            this.putBodyParameter("RoleFor", roleFor);
+            this.roleFor = roleFor;
+            return this;
+        }
+
+        /**
+         * RoleType.
+         */
+        public Builder roleType(Integer roleType) {
+            this.putBodyParameter("RoleType", roleType);
+            this.roleType = roleType;
             return this;
         }
 

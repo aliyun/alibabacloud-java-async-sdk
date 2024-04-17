@@ -90,6 +90,9 @@ public class ListImportedLogsByProdResponseBody extends TeaModel {
         @NameInMap("LogMdsCode")
         private String logMdsCode;
 
+        @NameInMap("LogType")
+        private Integer logType;
+
         @NameInMap("ModifyTime")
         private String modifyTime;
 
@@ -109,6 +112,7 @@ public class ListImportedLogsByProdResponseBody extends TeaModel {
             this.importedUserCount = builder.importedUserCount;
             this.logCode = builder.logCode;
             this.logMdsCode = builder.logMdsCode;
+            this.logType = builder.logType;
             this.modifyTime = builder.modifyTime;
             this.prodCode = builder.prodCode;
             this.totalUserCount = builder.totalUserCount;
@@ -166,6 +170,13 @@ public class ListImportedLogsByProdResponseBody extends TeaModel {
         }
 
         /**
+         * @return logType
+         */
+        public Integer getLogType() {
+            return this.logType;
+        }
+
+        /**
          * @return modifyTime
          */
         public String getModifyTime() {
@@ -200,6 +211,7 @@ public class ListImportedLogsByProdResponseBody extends TeaModel {
             private Integer importedUserCount; 
             private String logCode; 
             private String logMdsCode; 
+            private Integer logType; 
             private String modifyTime; 
             private String prodCode; 
             private Integer totalUserCount; 
@@ -263,6 +275,14 @@ public class ListImportedLogsByProdResponseBody extends TeaModel {
              */
             public Builder logMdsCode(String logMdsCode) {
                 this.logMdsCode = logMdsCode;
+                return this;
+            }
+
+            /**
+             * LogType.
+             */
+            public Builder logType(Integer logType) {
+                this.logType = logType;
                 return this;
             }
 

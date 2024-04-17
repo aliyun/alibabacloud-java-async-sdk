@@ -220,6 +220,12 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
         @NameInMap("AlertType")
         private String alertType;
 
+        @NameInMap("AttCk")
+        private String attCk;
+
+        @NameInMap("EventTransferType")
+        private String eventTransferType;
+
         @NameInMap("GmtCreate")
         private String gmtCreate;
 
@@ -235,6 +241,12 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
         @NameInMap("RuleName")
         private String ruleName;
 
+        @NameInMap("RuleNameCn")
+        private String ruleNameCn;
+
+        @NameInMap("RuleNameEn")
+        private String ruleNameEn;
+
         @NameInMap("RuleNameMds")
         private String ruleNameMds;
 
@@ -249,11 +261,15 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
 
         private ResponseData(Builder builder) {
             this.alertType = builder.alertType;
+            this.attCk = builder.attCk;
+            this.eventTransferType = builder.eventTransferType;
             this.gmtCreate = builder.gmtCreate;
             this.gmtModified = builder.gmtModified;
             this.id = builder.id;
             this.ruleDescMds = builder.ruleDescMds;
             this.ruleName = builder.ruleName;
+            this.ruleNameCn = builder.ruleNameCn;
+            this.ruleNameEn = builder.ruleNameEn;
             this.ruleNameMds = builder.ruleNameMds;
             this.source = builder.source;
             this.status = builder.status;
@@ -273,6 +289,20 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
          */
         public String getAlertType() {
             return this.alertType;
+        }
+
+        /**
+         * @return attCk
+         */
+        public String getAttCk() {
+            return this.attCk;
+        }
+
+        /**
+         * @return eventTransferType
+         */
+        public String getEventTransferType() {
+            return this.eventTransferType;
         }
 
         /**
@@ -311,6 +341,20 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
         }
 
         /**
+         * @return ruleNameCn
+         */
+        public String getRuleNameCn() {
+            return this.ruleNameCn;
+        }
+
+        /**
+         * @return ruleNameEn
+         */
+        public String getRuleNameEn() {
+            return this.ruleNameEn;
+        }
+
+        /**
          * @return ruleNameMds
          */
         public String getRuleNameMds() {
@@ -340,11 +384,15 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String alertType; 
+            private String attCk; 
+            private String eventTransferType; 
             private String gmtCreate; 
             private String gmtModified; 
             private Long id; 
             private String ruleDescMds; 
             private String ruleName; 
+            private String ruleNameCn; 
+            private String ruleNameEn; 
             private String ruleNameMds; 
             private String source; 
             private Integer status; 
@@ -355,6 +403,22 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
              */
             public Builder alertType(String alertType) {
                 this.alertType = alertType;
+                return this;
+            }
+
+            /**
+             * AttCk.
+             */
+            public Builder attCk(String attCk) {
+                this.attCk = attCk;
+                return this;
+            }
+
+            /**
+             * EventTransferType.
+             */
+            public Builder eventTransferType(String eventTransferType) {
+                this.eventTransferType = eventTransferType;
                 return this;
             }
 
@@ -395,6 +459,22 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
+                return this;
+            }
+
+            /**
+             * RuleNameCn.
+             */
+            public Builder ruleNameCn(String ruleNameCn) {
+                this.ruleNameCn = ruleNameCn;
+                return this;
+            }
+
+            /**
+             * RuleNameEn.
+             */
+            public Builder ruleNameEn(String ruleNameEn) {
+                this.ruleNameEn = ruleNameEn;
                 return this;
             }
 

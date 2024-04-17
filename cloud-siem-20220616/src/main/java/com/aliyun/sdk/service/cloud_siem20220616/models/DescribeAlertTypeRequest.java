@@ -16,9 +16,24 @@ public class DescribeAlertTypeRequest extends Request {
     @NameInMap("RegionId")
     private String regionId;
 
+    @Body
+    @NameInMap("RoleFor")
+    private Long roleFor;
+
+    @Body
+    @NameInMap("RoleType")
+    private Integer roleType;
+
+    @Body
+    @NameInMap("RuleType")
+    private String ruleType;
+
     private DescribeAlertTypeRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.roleFor = builder.roleFor;
+        this.roleType = builder.roleType;
+        this.ruleType = builder.ruleType;
     }
 
     public static Builder builder() {
@@ -41,8 +56,32 @@ public class DescribeAlertTypeRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return roleFor
+     */
+    public Long getRoleFor() {
+        return this.roleFor;
+    }
+
+    /**
+     * @return roleType
+     */
+    public Integer getRoleType() {
+        return this.roleType;
+    }
+
+    /**
+     * @return ruleType
+     */
+    public String getRuleType() {
+        return this.ruleType;
+    }
+
     public static final class Builder extends Request.Builder<DescribeAlertTypeRequest, Builder> {
         private String regionId; 
+        private Long roleFor; 
+        private Integer roleType; 
+        private String ruleType; 
 
         private Builder() {
             super();
@@ -51,6 +90,9 @@ public class DescribeAlertTypeRequest extends Request {
         private Builder(DescribeAlertTypeRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.roleFor = request.roleFor;
+            this.roleType = request.roleType;
+            this.ruleType = request.ruleType;
         } 
 
         /**
@@ -63,6 +105,33 @@ public class DescribeAlertTypeRequest extends Request {
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * RoleFor.
+         */
+        public Builder roleFor(Long roleFor) {
+            this.putBodyParameter("RoleFor", roleFor);
+            this.roleFor = roleFor;
+            return this;
+        }
+
+        /**
+         * RoleType.
+         */
+        public Builder roleType(Integer roleType) {
+            this.putBodyParameter("RoleType", roleType);
+            this.roleType = roleType;
+            return this;
+        }
+
+        /**
+         * RuleType.
+         */
+        public Builder ruleType(String ruleType) {
+            this.putBodyParameter("RuleType", ruleType);
+            this.ruleType = ruleType;
             return this;
         }
 

@@ -229,6 +229,9 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
         @NameInMap("AutoResponseType")
         private String autoResponseType;
 
+        @NameInMap("DataType")
+        private Integer dataType;
+
         @NameInMap("ExecutionCondition")
         private String executionCondition;
 
@@ -255,6 +258,7 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
             this.actionType = builder.actionType;
             this.aliuid = builder.aliuid;
             this.autoResponseType = builder.autoResponseType;
+            this.dataType = builder.dataType;
             this.executionCondition = builder.executionCondition;
             this.gmtCreate = builder.gmtCreate;
             this.gmtModified = builder.gmtModified;
@@ -298,6 +302,13 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
          */
         public String getAutoResponseType() {
             return this.autoResponseType;
+        }
+
+        /**
+         * @return dataType
+         */
+        public Integer getDataType() {
+            return this.dataType;
         }
 
         /**
@@ -354,6 +365,7 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
             private String actionType; 
             private Long aliuid; 
             private String autoResponseType; 
+            private Integer dataType; 
             private String executionCondition; 
             private String gmtCreate; 
             private String gmtModified; 
@@ -400,6 +412,14 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
              */
             public Builder autoResponseType(String autoResponseType) {
                 this.autoResponseType = autoResponseType;
+                return this;
+            }
+
+            /**
+             * DataType.
+             */
+            public Builder dataType(Integer dataType) {
+                this.dataType = dataType;
                 return this;
             }
 

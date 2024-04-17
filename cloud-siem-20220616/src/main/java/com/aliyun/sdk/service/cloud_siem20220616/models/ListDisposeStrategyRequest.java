@@ -64,6 +64,14 @@ public class ListDisposeStrategyRequest extends Request {
     private String regionId;
 
     @Body
+    @NameInMap("RoleFor")
+    private Long roleFor;
+
+    @Body
+    @NameInMap("RoleType")
+    private Integer roleType;
+
+    @Body
     @NameInMap("SophonTaskId")
     private String sophonTaskId;
 
@@ -86,6 +94,8 @@ public class ListDisposeStrategyRequest extends Request {
         this.playbookTypes = builder.playbookTypes;
         this.playbookUuid = builder.playbookUuid;
         this.regionId = builder.regionId;
+        this.roleFor = builder.roleFor;
+        this.roleType = builder.roleType;
         this.sophonTaskId = builder.sophonTaskId;
         this.startTime = builder.startTime;
     }
@@ -188,6 +198,20 @@ public class ListDisposeStrategyRequest extends Request {
     }
 
     /**
+     * @return roleFor
+     */
+    public Long getRoleFor() {
+        return this.roleFor;
+    }
+
+    /**
+     * @return roleType
+     */
+    public Integer getRoleType() {
+        return this.roleType;
+    }
+
+    /**
      * @return sophonTaskId
      */
     public String getSophonTaskId() {
@@ -214,6 +238,8 @@ public class ListDisposeStrategyRequest extends Request {
         private String playbookTypes; 
         private String playbookUuid; 
         private String regionId; 
+        private Long roleFor; 
+        private Integer roleType; 
         private String sophonTaskId; 
         private Long startTime; 
 
@@ -235,6 +261,8 @@ public class ListDisposeStrategyRequest extends Request {
             this.playbookTypes = request.playbookTypes;
             this.playbookUuid = request.playbookUuid;
             this.regionId = request.regionId;
+            this.roleFor = request.roleFor;
+            this.roleType = request.roleType;
             this.sophonTaskId = request.sophonTaskId;
             this.startTime = request.startTime;
         } 
@@ -373,6 +401,24 @@ public class ListDisposeStrategyRequest extends Request {
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * RoleFor.
+         */
+        public Builder roleFor(Long roleFor) {
+            this.putBodyParameter("RoleFor", roleFor);
+            this.roleFor = roleFor;
+            return this;
+        }
+
+        /**
+         * RoleType.
+         */
+        public Builder roleType(Integer roleType) {
+            this.putBodyParameter("RoleType", roleType);
+            this.roleType = roleType;
             return this;
         }
 

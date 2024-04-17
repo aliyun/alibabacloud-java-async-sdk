@@ -17,6 +17,10 @@ public class ListCloudSiemPredefinedRulesRequest extends Request {
     private String alertType;
 
     @Body
+    @NameInMap("AttCk")
+    private String attCk;
+
+    @Body
     @NameInMap("CurrentPage")
     @Validation(required = true, minimum = 1)
     private Integer currentPage;
@@ -26,8 +30,24 @@ public class ListCloudSiemPredefinedRulesRequest extends Request {
     private Long endTime;
 
     @Body
+    @NameInMap("EventTransferType")
+    private String eventTransferType;
+
+    @Body
     @NameInMap("Id")
     private String id;
+
+    @Body
+    @NameInMap("LogSource")
+    private String logSource;
+
+    @Body
+    @NameInMap("Order")
+    private String order;
+
+    @Body
+    @NameInMap("OrderField")
+    private String orderField;
 
     @Body
     @NameInMap("PageSize")
@@ -37,6 +57,14 @@ public class ListCloudSiemPredefinedRulesRequest extends Request {
     @Body
     @NameInMap("RegionId")
     private String regionId;
+
+    @Body
+    @NameInMap("RoleFor")
+    private Long roleFor;
+
+    @Body
+    @NameInMap("RoleType")
+    private Integer roleType;
 
     @Body
     @NameInMap("RuleName")
@@ -61,11 +89,18 @@ public class ListCloudSiemPredefinedRulesRequest extends Request {
     private ListCloudSiemPredefinedRulesRequest(Builder builder) {
         super(builder);
         this.alertType = builder.alertType;
+        this.attCk = builder.attCk;
         this.currentPage = builder.currentPage;
         this.endTime = builder.endTime;
+        this.eventTransferType = builder.eventTransferType;
         this.id = builder.id;
+        this.logSource = builder.logSource;
+        this.order = builder.order;
+        this.orderField = builder.orderField;
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
+        this.roleFor = builder.roleFor;
+        this.roleType = builder.roleType;
         this.ruleName = builder.ruleName;
         this.ruleType = builder.ruleType;
         this.startTime = builder.startTime;
@@ -94,6 +129,13 @@ public class ListCloudSiemPredefinedRulesRequest extends Request {
     }
 
     /**
+     * @return attCk
+     */
+    public String getAttCk() {
+        return this.attCk;
+    }
+
+    /**
      * @return currentPage
      */
     public Integer getCurrentPage() {
@@ -108,10 +150,38 @@ public class ListCloudSiemPredefinedRulesRequest extends Request {
     }
 
     /**
+     * @return eventTransferType
+     */
+    public String getEventTransferType() {
+        return this.eventTransferType;
+    }
+
+    /**
      * @return id
      */
     public String getId() {
         return this.id;
+    }
+
+    /**
+     * @return logSource
+     */
+    public String getLogSource() {
+        return this.logSource;
+    }
+
+    /**
+     * @return order
+     */
+    public String getOrder() {
+        return this.order;
+    }
+
+    /**
+     * @return orderField
+     */
+    public String getOrderField() {
+        return this.orderField;
     }
 
     /**
@@ -126,6 +196,20 @@ public class ListCloudSiemPredefinedRulesRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return roleFor
+     */
+    public Long getRoleFor() {
+        return this.roleFor;
+    }
+
+    /**
+     * @return roleType
+     */
+    public Integer getRoleType() {
+        return this.roleType;
     }
 
     /**
@@ -165,11 +249,18 @@ public class ListCloudSiemPredefinedRulesRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListCloudSiemPredefinedRulesRequest, Builder> {
         private String alertType; 
+        private String attCk; 
         private Integer currentPage; 
         private Long endTime; 
+        private String eventTransferType; 
         private String id; 
+        private String logSource; 
+        private String order; 
+        private String orderField; 
         private Integer pageSize; 
         private String regionId; 
+        private Long roleFor; 
+        private Integer roleType; 
         private String ruleName; 
         private String ruleType; 
         private Long startTime; 
@@ -183,11 +274,18 @@ public class ListCloudSiemPredefinedRulesRequest extends Request {
         private Builder(ListCloudSiemPredefinedRulesRequest request) {
             super(request);
             this.alertType = request.alertType;
+            this.attCk = request.attCk;
             this.currentPage = request.currentPage;
             this.endTime = request.endTime;
+            this.eventTransferType = request.eventTransferType;
             this.id = request.id;
+            this.logSource = request.logSource;
+            this.order = request.order;
+            this.orderField = request.orderField;
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
+            this.roleFor = request.roleFor;
+            this.roleType = request.roleType;
             this.ruleName = request.ruleName;
             this.ruleType = request.ruleType;
             this.startTime = request.startTime;
@@ -201,6 +299,15 @@ public class ListCloudSiemPredefinedRulesRequest extends Request {
         public Builder alertType(String alertType) {
             this.putBodyParameter("AlertType", alertType);
             this.alertType = alertType;
+            return this;
+        }
+
+        /**
+         * AttCk.
+         */
+        public Builder attCk(String attCk) {
+            this.putBodyParameter("AttCk", attCk);
+            this.attCk = attCk;
             return this;
         }
 
@@ -223,11 +330,47 @@ public class ListCloudSiemPredefinedRulesRequest extends Request {
         }
 
         /**
+         * EventTransferType.
+         */
+        public Builder eventTransferType(String eventTransferType) {
+            this.putBodyParameter("EventTransferType", eventTransferType);
+            this.eventTransferType = eventTransferType;
+            return this;
+        }
+
+        /**
          * The ID of the rule.
          */
         public Builder id(String id) {
             this.putBodyParameter("Id", id);
             this.id = id;
+            return this;
+        }
+
+        /**
+         * LogSource.
+         */
+        public Builder logSource(String logSource) {
+            this.putBodyParameter("LogSource", logSource);
+            this.logSource = logSource;
+            return this;
+        }
+
+        /**
+         * Order.
+         */
+        public Builder order(String order) {
+            this.putBodyParameter("Order", order);
+            this.order = order;
+            return this;
+        }
+
+        /**
+         * OrderField.
+         */
+        public Builder orderField(String orderField) {
+            this.putBodyParameter("OrderField", orderField);
+            this.orderField = orderField;
             return this;
         }
 
@@ -250,6 +393,24 @@ public class ListCloudSiemPredefinedRulesRequest extends Request {
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * RoleFor.
+         */
+        public Builder roleFor(Long roleFor) {
+            this.putBodyParameter("RoleFor", roleFor);
+            this.roleFor = roleFor;
+            return this;
+        }
+
+        /**
+         * RoleType.
+         */
+        public Builder roleType(Integer roleType) {
+            this.putBodyParameter("RoleType", roleType);
+            this.roleType = roleType;
             return this;
         }
 

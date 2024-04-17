@@ -139,19 +139,27 @@ public class DescribeScopeUsersResponseBody extends TeaModel {
         @NameInMap("AliUid")
         private Long aliUid;
 
+        @NameInMap("CloudCode")
+        private String cloudCode;
+
         @NameInMap("Domains")
         private java.util.List < String > domains;
 
         @NameInMap("InstanceId")
         private String instanceId;
 
+        @NameInMap("UserId")
+        private String userId;
+
         @NameInMap("UserName")
         private String userName;
 
         private Data(Builder builder) {
             this.aliUid = builder.aliUid;
+            this.cloudCode = builder.cloudCode;
             this.domains = builder.domains;
             this.instanceId = builder.instanceId;
+            this.userId = builder.userId;
             this.userName = builder.userName;
         }
 
@@ -171,6 +179,13 @@ public class DescribeScopeUsersResponseBody extends TeaModel {
         }
 
         /**
+         * @return cloudCode
+         */
+        public String getCloudCode() {
+            return this.cloudCode;
+        }
+
+        /**
          * @return domains
          */
         public java.util.List < String > getDomains() {
@@ -185,6 +200,13 @@ public class DescribeScopeUsersResponseBody extends TeaModel {
         }
 
         /**
+         * @return userId
+         */
+        public String getUserId() {
+            return this.userId;
+        }
+
+        /**
          * @return userName
          */
         public String getUserName() {
@@ -193,8 +215,10 @@ public class DescribeScopeUsersResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long aliUid; 
+            private String cloudCode; 
             private java.util.List < String > domains; 
             private String instanceId; 
+            private String userId; 
             private String userName; 
 
             /**
@@ -202,6 +226,14 @@ public class DescribeScopeUsersResponseBody extends TeaModel {
              */
             public Builder aliUid(Long aliUid) {
                 this.aliUid = aliUid;
+                return this;
+            }
+
+            /**
+             * CloudCode.
+             */
+            public Builder cloudCode(String cloudCode) {
+                this.cloudCode = cloudCode;
                 return this;
             }
 
@@ -218,6 +250,14 @@ public class DescribeScopeUsersResponseBody extends TeaModel {
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * UserId.
+             */
+            public Builder userId(String userId) {
+                this.userId = userId;
                 return this;
             }
 

@@ -26,6 +26,14 @@ public class UpdateWhiteRuleListRequest extends Request {
     private String regionId;
 
     @Body
+    @NameInMap("RoleFor")
+    private Long roleFor;
+
+    @Body
+    @NameInMap("RoleType")
+    private Integer roleType;
+
+    @Body
     @NameInMap("WhiteRuleId")
     @Validation(required = true)
     private Long whiteRuleId;
@@ -35,6 +43,8 @@ public class UpdateWhiteRuleListRequest extends Request {
         this.expression = builder.expression;
         this.incidentUuid = builder.incidentUuid;
         this.regionId = builder.regionId;
+        this.roleFor = builder.roleFor;
+        this.roleType = builder.roleType;
         this.whiteRuleId = builder.whiteRuleId;
     }
 
@@ -73,6 +83,20 @@ public class UpdateWhiteRuleListRequest extends Request {
     }
 
     /**
+     * @return roleFor
+     */
+    public Long getRoleFor() {
+        return this.roleFor;
+    }
+
+    /**
+     * @return roleType
+     */
+    public Integer getRoleType() {
+        return this.roleType;
+    }
+
+    /**
      * @return whiteRuleId
      */
     public Long getWhiteRuleId() {
@@ -83,6 +107,8 @@ public class UpdateWhiteRuleListRequest extends Request {
         private String expression; 
         private String incidentUuid; 
         private String regionId; 
+        private Long roleFor; 
+        private Integer roleType; 
         private Long whiteRuleId; 
 
         private Builder() {
@@ -94,6 +120,8 @@ public class UpdateWhiteRuleListRequest extends Request {
             this.expression = request.expression;
             this.incidentUuid = request.incidentUuid;
             this.regionId = request.regionId;
+            this.roleFor = request.roleFor;
+            this.roleType = request.roleType;
             this.whiteRuleId = request.whiteRuleId;
         } 
 
@@ -125,6 +153,24 @@ public class UpdateWhiteRuleListRequest extends Request {
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * RoleFor.
+         */
+        public Builder roleFor(Long roleFor) {
+            this.putBodyParameter("RoleFor", roleFor);
+            this.roleFor = roleFor;
+            return this;
+        }
+
+        /**
+         * RoleType.
+         */
+        public Builder roleType(Integer roleType) {
+            this.putBodyParameter("RoleType", roleType);
+            this.roleType = roleType;
             return this;
         }
 

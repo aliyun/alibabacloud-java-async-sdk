@@ -21,6 +21,10 @@ public class PostCustomizeRuleRequest extends Request {
     private String alertTypeMds;
 
     @Body
+    @NameInMap("AttCk")
+    private String attCk;
+
+    @Body
     @NameInMap("EventTransferExt")
     private String eventTransferExt;
 
@@ -61,6 +65,14 @@ public class PostCustomizeRuleRequest extends Request {
     private String regionId;
 
     @Body
+    @NameInMap("RoleFor")
+    private Long roleFor;
+
+    @Body
+    @NameInMap("RoleType")
+    private Integer roleType;
+
+    @Body
     @NameInMap("RuleCondition")
     private String ruleCondition;
 
@@ -88,6 +100,7 @@ public class PostCustomizeRuleRequest extends Request {
         super(builder);
         this.alertType = builder.alertType;
         this.alertTypeMds = builder.alertTypeMds;
+        this.attCk = builder.attCk;
         this.eventTransferExt = builder.eventTransferExt;
         this.eventTransferSwitch = builder.eventTransferSwitch;
         this.eventTransferType = builder.eventTransferType;
@@ -98,6 +111,8 @@ public class PostCustomizeRuleRequest extends Request {
         this.logTypeMds = builder.logTypeMds;
         this.queryCycle = builder.queryCycle;
         this.regionId = builder.regionId;
+        this.roleFor = builder.roleFor;
+        this.roleType = builder.roleType;
         this.ruleCondition = builder.ruleCondition;
         this.ruleDesc = builder.ruleDesc;
         this.ruleGroup = builder.ruleGroup;
@@ -131,6 +146,13 @@ public class PostCustomizeRuleRequest extends Request {
      */
     public String getAlertTypeMds() {
         return this.alertTypeMds;
+    }
+
+    /**
+     * @return attCk
+     */
+    public String getAttCk() {
+        return this.attCk;
     }
 
     /**
@@ -204,6 +226,20 @@ public class PostCustomizeRuleRequest extends Request {
     }
 
     /**
+     * @return roleFor
+     */
+    public Long getRoleFor() {
+        return this.roleFor;
+    }
+
+    /**
+     * @return roleType
+     */
+    public Integer getRoleType() {
+        return this.roleType;
+    }
+
+    /**
      * @return ruleCondition
      */
     public String getRuleCondition() {
@@ -248,6 +284,7 @@ public class PostCustomizeRuleRequest extends Request {
     public static final class Builder extends Request.Builder<PostCustomizeRuleRequest, Builder> {
         private String alertType; 
         private String alertTypeMds; 
+        private String attCk; 
         private String eventTransferExt; 
         private Integer eventTransferSwitch; 
         private String eventTransferType; 
@@ -258,6 +295,8 @@ public class PostCustomizeRuleRequest extends Request {
         private String logTypeMds; 
         private String queryCycle; 
         private String regionId; 
+        private Long roleFor; 
+        private Integer roleType; 
         private String ruleCondition; 
         private String ruleDesc; 
         private String ruleGroup; 
@@ -273,6 +312,7 @@ public class PostCustomizeRuleRequest extends Request {
             super(request);
             this.alertType = request.alertType;
             this.alertTypeMds = request.alertTypeMds;
+            this.attCk = request.attCk;
             this.eventTransferExt = request.eventTransferExt;
             this.eventTransferSwitch = request.eventTransferSwitch;
             this.eventTransferType = request.eventTransferType;
@@ -283,6 +323,8 @@ public class PostCustomizeRuleRequest extends Request {
             this.logTypeMds = request.logTypeMds;
             this.queryCycle = request.queryCycle;
             this.regionId = request.regionId;
+            this.roleFor = request.roleFor;
+            this.roleType = request.roleType;
             this.ruleCondition = request.ruleCondition;
             this.ruleDesc = request.ruleDesc;
             this.ruleGroup = request.ruleGroup;
@@ -306,6 +348,15 @@ public class PostCustomizeRuleRequest extends Request {
         public Builder alertTypeMds(String alertTypeMds) {
             this.putBodyParameter("AlertTypeMds", alertTypeMds);
             this.alertTypeMds = alertTypeMds;
+            return this;
+        }
+
+        /**
+         * AttCk.
+         */
+        public Builder attCk(String attCk) {
+            this.putBodyParameter("AttCk", attCk);
+            this.attCk = attCk;
             return this;
         }
 
@@ -409,6 +460,24 @@ public class PostCustomizeRuleRequest extends Request {
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * RoleFor.
+         */
+        public Builder roleFor(Long roleFor) {
+            this.putBodyParameter("RoleFor", roleFor);
+            this.roleFor = roleFor;
+            return this;
+        }
+
+        /**
+         * RoleType.
+         */
+        public Builder roleType(Integer roleType) {
+            this.putBodyParameter("RoleType", roleType);
+            this.roleType = roleType;
             return this;
         }
 

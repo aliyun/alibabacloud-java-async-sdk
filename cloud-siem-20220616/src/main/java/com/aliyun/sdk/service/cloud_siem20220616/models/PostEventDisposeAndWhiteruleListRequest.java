@@ -33,6 +33,14 @@ public class PostEventDisposeAndWhiteruleListRequest extends Request {
     private String remark;
 
     @Body
+    @NameInMap("RoleFor")
+    private Long roleFor;
+
+    @Body
+    @NameInMap("RoleType")
+    private Integer roleType;
+
+    @Body
     @NameInMap("Status")
     private Integer status;
 
@@ -43,6 +51,8 @@ public class PostEventDisposeAndWhiteruleListRequest extends Request {
         this.receiverInfo = builder.receiverInfo;
         this.regionId = builder.regionId;
         this.remark = builder.remark;
+        this.roleFor = builder.roleFor;
+        this.roleType = builder.roleType;
         this.status = builder.status;
     }
 
@@ -95,6 +105,20 @@ public class PostEventDisposeAndWhiteruleListRequest extends Request {
     }
 
     /**
+     * @return roleFor
+     */
+    public Long getRoleFor() {
+        return this.roleFor;
+    }
+
+    /**
+     * @return roleType
+     */
+    public Integer getRoleType() {
+        return this.roleType;
+    }
+
+    /**
      * @return status
      */
     public Integer getStatus() {
@@ -107,6 +131,8 @@ public class PostEventDisposeAndWhiteruleListRequest extends Request {
         private String receiverInfo; 
         private String regionId; 
         private String remark; 
+        private Long roleFor; 
+        private Integer roleType; 
         private Integer status; 
 
         private Builder() {
@@ -120,6 +146,8 @@ public class PostEventDisposeAndWhiteruleListRequest extends Request {
             this.receiverInfo = request.receiverInfo;
             this.regionId = request.regionId;
             this.remark = request.remark;
+            this.roleFor = request.roleFor;
+            this.roleType = request.roleType;
             this.status = request.status;
         } 
 
@@ -169,6 +197,24 @@ public class PostEventDisposeAndWhiteruleListRequest extends Request {
         public Builder remark(String remark) {
             this.putBodyParameter("Remark", remark);
             this.remark = remark;
+            return this;
+        }
+
+        /**
+         * RoleFor.
+         */
+        public Builder roleFor(Long roleFor) {
+            this.putBodyParameter("RoleFor", roleFor);
+            this.roleFor = roleFor;
+            return this;
+        }
+
+        /**
+         * RoleType.
+         */
+        public Builder roleType(Integer roleType) {
+            this.putBodyParameter("RoleType", roleType);
+            this.roleType = roleType;
             return this;
         }
 

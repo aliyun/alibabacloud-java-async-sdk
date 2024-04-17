@@ -43,6 +43,14 @@ public class ListAutomateResponseConfigsRequest extends Request {
     private String regionId;
 
     @Body
+    @NameInMap("RoleFor")
+    private Long roleFor;
+
+    @Body
+    @NameInMap("RoleType")
+    private Integer roleType;
+
+    @Body
     @NameInMap("RuleName")
     private String ruleName;
 
@@ -63,6 +71,8 @@ public class ListAutomateResponseConfigsRequest extends Request {
         this.pageSize = builder.pageSize;
         this.playbookUuid = builder.playbookUuid;
         this.regionId = builder.regionId;
+        this.roleFor = builder.roleFor;
+        this.roleType = builder.roleType;
         this.ruleName = builder.ruleName;
         this.status = builder.status;
         this.subUserId = builder.subUserId;
@@ -131,6 +141,20 @@ public class ListAutomateResponseConfigsRequest extends Request {
     }
 
     /**
+     * @return roleFor
+     */
+    public Long getRoleFor() {
+        return this.roleFor;
+    }
+
+    /**
+     * @return roleType
+     */
+    public Integer getRoleType() {
+        return this.roleType;
+    }
+
+    /**
      * @return ruleName
      */
     public String getRuleName() {
@@ -159,6 +183,8 @@ public class ListAutomateResponseConfigsRequest extends Request {
         private Integer pageSize; 
         private String playbookUuid; 
         private String regionId; 
+        private Long roleFor; 
+        private Integer roleType; 
         private String ruleName; 
         private Integer status; 
         private Long subUserId; 
@@ -176,6 +202,8 @@ public class ListAutomateResponseConfigsRequest extends Request {
             this.pageSize = request.pageSize;
             this.playbookUuid = request.playbookUuid;
             this.regionId = request.regionId;
+            this.roleFor = request.roleFor;
+            this.roleType = request.roleType;
             this.ruleName = request.ruleName;
             this.status = request.status;
             this.subUserId = request.subUserId;
@@ -254,6 +282,24 @@ public class ListAutomateResponseConfigsRequest extends Request {
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * RoleFor.
+         */
+        public Builder roleFor(Long roleFor) {
+            this.putBodyParameter("RoleFor", roleFor);
+            this.roleFor = roleFor;
+            return this;
+        }
+
+        /**
+         * RoleType.
+         */
+        public Builder roleType(Integer roleType) {
+            this.putBodyParameter("RoleType", roleType);
+            this.roleType = roleType;
             return this;
         }
 

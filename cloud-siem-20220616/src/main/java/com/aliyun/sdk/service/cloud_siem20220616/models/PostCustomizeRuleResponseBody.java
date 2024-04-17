@@ -145,6 +145,12 @@ public class PostCustomizeRuleResponseBody extends TeaModel {
         @NameInMap("Aliuid")
         private Long aliuid;
 
+        @NameInMap("AttCk")
+        private String attCk;
+
+        @NameInMap("DataType")
+        private Integer dataType;
+
         @NameInMap("EventTransferExt")
         private String eventTransferExt;
 
@@ -206,6 +212,8 @@ public class PostCustomizeRuleResponseBody extends TeaModel {
             this.alertType = builder.alertType;
             this.alertTypeMds = builder.alertTypeMds;
             this.aliuid = builder.aliuid;
+            this.attCk = builder.attCk;
+            this.dataType = builder.dataType;
             this.eventTransferExt = builder.eventTransferExt;
             this.eventTransferSwitch = builder.eventTransferSwitch;
             this.eventTransferType = builder.eventTransferType;
@@ -254,6 +262,20 @@ public class PostCustomizeRuleResponseBody extends TeaModel {
          */
         public Long getAliuid() {
             return this.aliuid;
+        }
+
+        /**
+         * @return attCk
+         */
+        public String getAttCk() {
+            return this.attCk;
+        }
+
+        /**
+         * @return dataType
+         */
+        public Integer getDataType() {
+            return this.dataType;
         }
 
         /**
@@ -393,6 +415,8 @@ public class PostCustomizeRuleResponseBody extends TeaModel {
             private String alertType; 
             private String alertTypeMds; 
             private Long aliuid; 
+            private String attCk; 
+            private Integer dataType; 
             private String eventTransferExt; 
             private Integer eventTransferSwitch; 
             private String eventTransferType; 
@@ -434,6 +458,22 @@ public class PostCustomizeRuleResponseBody extends TeaModel {
              */
             public Builder aliuid(Long aliuid) {
                 this.aliuid = aliuid;
+                return this;
+            }
+
+            /**
+             * AttCk.
+             */
+            public Builder attCk(String attCk) {
+                this.attCk = attCk;
+                return this;
+            }
+
+            /**
+             * DataType.
+             */
+            public Builder dataType(Integer dataType) {
+                this.dataType = dataType;
                 return this;
             }
 

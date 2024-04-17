@@ -47,6 +47,14 @@ public class DescribeAlertsRequest extends Request {
     private String regionId;
 
     @Body
+    @NameInMap("RoleFor")
+    private Long roleFor;
+
+    @Body
+    @NameInMap("RoleType")
+    private Integer roleType;
+
+    @Body
     @NameInMap("Source")
     private String source;
 
@@ -68,6 +76,8 @@ public class DescribeAlertsRequest extends Request {
         this.level = builder.level;
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
+        this.roleFor = builder.roleFor;
+        this.roleType = builder.roleType;
         this.source = builder.source;
         this.startTime = builder.startTime;
         this.subUserId = builder.subUserId;
@@ -143,6 +153,20 @@ public class DescribeAlertsRequest extends Request {
     }
 
     /**
+     * @return roleFor
+     */
+    public Long getRoleFor() {
+        return this.roleFor;
+    }
+
+    /**
+     * @return roleType
+     */
+    public Integer getRoleType() {
+        return this.roleType;
+    }
+
+    /**
      * @return source
      */
     public String getSource() {
@@ -172,6 +196,8 @@ public class DescribeAlertsRequest extends Request {
         private java.util.List < String > level; 
         private Integer pageSize; 
         private String regionId; 
+        private Long roleFor; 
+        private Integer roleType; 
         private String source; 
         private Long startTime; 
         private String subUserId; 
@@ -190,6 +216,8 @@ public class DescribeAlertsRequest extends Request {
             this.level = request.level;
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
+            this.roleFor = request.roleFor;
+            this.roleType = request.roleType;
             this.source = request.source;
             this.startTime = request.startTime;
             this.subUserId = request.subUserId;
@@ -277,6 +305,24 @@ public class DescribeAlertsRequest extends Request {
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * RoleFor.
+         */
+        public Builder roleFor(Long roleFor) {
+            this.putBodyParameter("RoleFor", roleFor);
+            this.roleFor = roleFor;
+            return this;
+        }
+
+        /**
+         * RoleType.
+         */
+        public Builder roleType(Integer roleType) {
+            this.putBodyParameter("RoleType", roleType);
+            this.roleType = roleType;
             return this;
         }
 

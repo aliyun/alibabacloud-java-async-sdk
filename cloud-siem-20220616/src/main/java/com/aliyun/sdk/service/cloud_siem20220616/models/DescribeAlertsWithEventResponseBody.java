@@ -361,6 +361,9 @@ public class DescribeAlertsWithEventResponseBody extends TeaModel {
         @NameInMap("EndTime")
         private String endTime;
 
+        @NameInMap("EntityList")
+        private String entityList;
+
         @NameInMap("GmtCreate")
         private String gmtCreate;
 
@@ -416,6 +419,7 @@ public class DescribeAlertsWithEventResponseBody extends TeaModel {
             this.attCk = builder.attCk;
             this.cloudCode = builder.cloudCode;
             this.endTime = builder.endTime;
+            this.entityList = builder.entityList;
             this.gmtCreate = builder.gmtCreate;
             this.gmtModified = builder.gmtModified;
             this.id = builder.id;
@@ -585,6 +589,13 @@ public class DescribeAlertsWithEventResponseBody extends TeaModel {
         }
 
         /**
+         * @return entityList
+         */
+        public String getEntityList() {
+            return this.entityList;
+        }
+
+        /**
          * @return gmtCreate
          */
         public String getGmtCreate() {
@@ -683,6 +694,7 @@ public class DescribeAlertsWithEventResponseBody extends TeaModel {
             private String attCk; 
             private String cloudCode; 
             private String endTime; 
+            private String entityList; 
             private String gmtCreate; 
             private String gmtModified; 
             private Long id; 
@@ -870,6 +882,14 @@ public class DescribeAlertsWithEventResponseBody extends TeaModel {
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
+                return this;
+            }
+
+            /**
+             * EntityList.
+             */
+            public Builder entityList(String entityList) {
+                this.entityList = entityList;
                 return this;
             }
 

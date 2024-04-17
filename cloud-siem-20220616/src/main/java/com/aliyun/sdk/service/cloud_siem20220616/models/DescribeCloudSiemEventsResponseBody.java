@@ -256,6 +256,9 @@ public class DescribeCloudSiemEventsResponseBody extends TeaModel {
         @NameInMap("IncidentUuid")
         private String incidentUuid;
 
+        @NameInMap("ReferAccount")
+        private String referAccount;
+
         @NameInMap("Remark")
         private String remark;
 
@@ -282,6 +285,7 @@ public class DescribeCloudSiemEventsResponseBody extends TeaModel {
             this.incidentName = builder.incidentName;
             this.incidentNameEn = builder.incidentNameEn;
             this.incidentUuid = builder.incidentUuid;
+            this.referAccount = builder.referAccount;
             this.remark = builder.remark;
             this.status = builder.status;
             this.threatLevel = builder.threatLevel;
@@ -388,6 +392,13 @@ public class DescribeCloudSiemEventsResponseBody extends TeaModel {
         }
 
         /**
+         * @return referAccount
+         */
+        public String getReferAccount() {
+            return this.referAccount;
+        }
+
+        /**
          * @return remark
          */
         public String getRemark() {
@@ -429,6 +440,7 @@ public class DescribeCloudSiemEventsResponseBody extends TeaModel {
             private String incidentName; 
             private String incidentNameEn; 
             private String incidentUuid; 
+            private String referAccount; 
             private String remark; 
             private Integer status; 
             private String threatLevel; 
@@ -535,6 +547,14 @@ public class DescribeCloudSiemEventsResponseBody extends TeaModel {
              */
             public Builder incidentUuid(String incidentUuid) {
                 this.incidentUuid = incidentUuid;
+                return this;
+            }
+
+            /**
+             * ReferAccount.
+             */
+            public Builder referAccount(String referAccount) {
+                this.referAccount = referAccount;
                 return this;
             }
 

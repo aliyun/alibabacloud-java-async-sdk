@@ -30,6 +30,14 @@ public class ListCloudSiemCustomizeRulesRequest extends Request {
     private String id;
 
     @Body
+    @NameInMap("Order")
+    private String order;
+
+    @Body
+    @NameInMap("OrderField")
+    private String orderField;
+
+    @Body
     @NameInMap("PageSize")
     @Validation(required = true, maximum = 100, minimum = 1)
     private Integer pageSize;
@@ -37,6 +45,14 @@ public class ListCloudSiemCustomizeRulesRequest extends Request {
     @Body
     @NameInMap("RegionId")
     private String regionId;
+
+    @Body
+    @NameInMap("RoleFor")
+    private Long roleFor;
+
+    @Body
+    @NameInMap("RoleType")
+    private Integer roleType;
 
     @Body
     @NameInMap("RuleName")
@@ -64,8 +80,12 @@ public class ListCloudSiemCustomizeRulesRequest extends Request {
         this.currentPage = builder.currentPage;
         this.endTime = builder.endTime;
         this.id = builder.id;
+        this.order = builder.order;
+        this.orderField = builder.orderField;
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
+        this.roleFor = builder.roleFor;
+        this.roleType = builder.roleType;
         this.ruleName = builder.ruleName;
         this.ruleType = builder.ruleType;
         this.startTime = builder.startTime;
@@ -115,6 +135,20 @@ public class ListCloudSiemCustomizeRulesRequest extends Request {
     }
 
     /**
+     * @return order
+     */
+    public String getOrder() {
+        return this.order;
+    }
+
+    /**
+     * @return orderField
+     */
+    public String getOrderField() {
+        return this.orderField;
+    }
+
+    /**
      * @return pageSize
      */
     public Integer getPageSize() {
@@ -126,6 +160,20 @@ public class ListCloudSiemCustomizeRulesRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return roleFor
+     */
+    public Long getRoleFor() {
+        return this.roleFor;
+    }
+
+    /**
+     * @return roleType
+     */
+    public Integer getRoleType() {
+        return this.roleType;
     }
 
     /**
@@ -168,8 +216,12 @@ public class ListCloudSiemCustomizeRulesRequest extends Request {
         private Integer currentPage; 
         private Long endTime; 
         private String id; 
+        private String order; 
+        private String orderField; 
         private Integer pageSize; 
         private String regionId; 
+        private Long roleFor; 
+        private Integer roleType; 
         private String ruleName; 
         private String ruleType; 
         private Long startTime; 
@@ -186,8 +238,12 @@ public class ListCloudSiemCustomizeRulesRequest extends Request {
             this.currentPage = request.currentPage;
             this.endTime = request.endTime;
             this.id = request.id;
+            this.order = request.order;
+            this.orderField = request.orderField;
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
+            this.roleFor = request.roleFor;
+            this.roleType = request.roleType;
             this.ruleName = request.ruleName;
             this.ruleType = request.ruleType;
             this.startTime = request.startTime;
@@ -232,6 +288,24 @@ public class ListCloudSiemCustomizeRulesRequest extends Request {
         }
 
         /**
+         * Order.
+         */
+        public Builder order(String order) {
+            this.putBodyParameter("Order", order);
+            this.order = order;
+            return this;
+        }
+
+        /**
+         * OrderField.
+         */
+        public Builder orderField(String orderField) {
+            this.putBodyParameter("OrderField", orderField);
+            this.orderField = orderField;
+            return this;
+        }
+
+        /**
          * The number of entries per page. The value can be up to 100.
          */
         public Builder pageSize(Integer pageSize) {
@@ -250,6 +324,24 @@ public class ListCloudSiemCustomizeRulesRequest extends Request {
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * RoleFor.
+         */
+        public Builder roleFor(Long roleFor) {
+            this.putBodyParameter("RoleFor", roleFor);
+            this.roleFor = roleFor;
+            return this;
+        }
+
+        /**
+         * RoleType.
+         */
+        public Builder roleType(Integer roleType) {
+            this.putBodyParameter("RoleType", roleType);
+            this.roleType = roleType;
             return this;
         }
 

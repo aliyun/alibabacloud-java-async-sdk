@@ -96,6 +96,9 @@ public class DescribeUserBuyStatusResponseBody extends TeaModel {
         @NameInMap("MasterUserName")
         private String masterUserName;
 
+        @NameInMap("RdOrder")
+        private Integer rdOrder;
+
         @NameInMap("SasInstanceId")
         private String sasInstanceId;
 
@@ -114,6 +117,7 @@ public class DescribeUserBuyStatusResponseBody extends TeaModel {
             this.mainUserName = builder.mainUserName;
             this.masterUserId = builder.masterUserId;
             this.masterUserName = builder.masterUserName;
+            this.rdOrder = builder.rdOrder;
             this.sasInstanceId = builder.sasInstanceId;
             this.subUserId = builder.subUserId;
             this.subUserName = builder.subUserName;
@@ -184,6 +188,13 @@ public class DescribeUserBuyStatusResponseBody extends TeaModel {
         }
 
         /**
+         * @return rdOrder
+         */
+        public Integer getRdOrder() {
+            return this.rdOrder;
+        }
+
+        /**
          * @return sasInstanceId
          */
         public String getSasInstanceId() {
@@ -213,6 +224,7 @@ public class DescribeUserBuyStatusResponseBody extends TeaModel {
             private String mainUserName; 
             private Long masterUserId; 
             private String masterUserName; 
+            private Integer rdOrder; 
             private String sasInstanceId; 
             private Long subUserId; 
             private String subUserName; 
@@ -282,6 +294,14 @@ public class DescribeUserBuyStatusResponseBody extends TeaModel {
              */
             public Builder masterUserName(String masterUserName) {
                 this.masterUserName = masterUserName;
+                return this;
+            }
+
+            /**
+             * RdOrder.
+             */
+            public Builder rdOrder(Integer rdOrder) {
+                this.rdOrder = rdOrder;
                 return this;
             }
 
