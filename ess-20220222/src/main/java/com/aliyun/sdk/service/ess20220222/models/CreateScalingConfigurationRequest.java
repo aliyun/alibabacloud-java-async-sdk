@@ -137,6 +137,10 @@ public class CreateScalingConfigurationRequest extends Request {
     private Integer memory;
 
     @Query
+    @NameInMap("NetworkInterfaces")
+    private java.util.List < NetworkInterfaces> networkInterfaces;
+
+    @Query
     @NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -266,6 +270,7 @@ public class CreateScalingConfigurationRequest extends Request {
         this.keyPairName = builder.keyPairName;
         this.loadBalancerWeight = builder.loadBalancerWeight;
         this.memory = builder.memory;
+        this.networkInterfaces = builder.networkInterfaces;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.password = builder.password;
@@ -523,6 +528,13 @@ public class CreateScalingConfigurationRequest extends Request {
     }
 
     /**
+     * @return networkInterfaces
+     */
+    public java.util.List < NetworkInterfaces> getNetworkInterfaces() {
+        return this.networkInterfaces;
+    }
+
+    /**
      * @return ownerAccount
      */
     public String getOwnerAccount() {
@@ -722,6 +734,7 @@ public class CreateScalingConfigurationRequest extends Request {
         private String keyPairName; 
         private Integer loadBalancerWeight; 
         private Integer memory; 
+        private java.util.List < NetworkInterfaces> networkInterfaces; 
         private String ownerAccount; 
         private Long ownerId; 
         private String password; 
@@ -784,6 +797,7 @@ public class CreateScalingConfigurationRequest extends Request {
             this.keyPairName = request.keyPairName;
             this.loadBalancerWeight = request.loadBalancerWeight;
             this.memory = request.memory;
+            this.networkInterfaces = request.networkInterfaces;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.password = request.password;
@@ -891,7 +905,16 @@ public class CreateScalingConfigurationRequest extends Request {
         }
 
         /**
-         * CustomPriorities.
+         * The priority of the custom ECS instance type + vSwitch combination.
+         * <p>
+         * 
+         * >  This parameter takes effect only when Scaling Policy of the scaling group is set to Priority Policy.
+         * 
+         * If Auto Scaling cannot create ECS instances by using the custom ECS instance type + vSwitch combination of the highest priority, Auto Scaling creates ECS instances by using the custom ECS instance type + vSwitch combination of the next highest priority.
+         * 
+         * >  If you specify the priorities of only partial custom ECS instance type + vSwitch combinations, Auto Scaling preferentially creates ECS instances by using the custom combinations that have specified priorities. If the custom combinations that have specified priorities do not provide sufficient resources, Auto Scaling creates ECS instances by using the custom combinations that do not have specified priorities based on the specified orders of vSwitches and instance types.
+         * 
+         * *   Example: the specified order of vSwitches for your scaling group is vsw1 and vsw2 and the specified order of instance types in your scaling configuration is type1 and type 2. In addition, you use CustomPriorities to specify \["vsw2+type2", "vsw1+type2"]. In this example, the vsw2+type2 combination has the highest priority and the vsw2+type1 combination has the lowest priority. The vsw1+type2 combination has a higher priority than the vsw1+type1 combination.
          */
         public Builder customPriorities(java.util.List < CustomPriorities> customPriorities) {
             this.putQueryParameter("CustomPriorities", customPriorities);
@@ -1018,7 +1041,7 @@ public class CreateScalingConfigurationRequest extends Request {
         }
 
         /**
-         * The instance type of the ECS instance. For more information, see the "Instance families" topic.
+         * The instance type of the ECS instance. For more information, see the [Instance families](~~25378~~) topic.
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -1146,6 +1169,15 @@ public class CreateScalingConfigurationRequest extends Request {
         public Builder memory(Integer memory) {
             this.putQueryParameter("Memory", memory);
             this.memory = memory;
+            return this;
+        }
+
+        /**
+         * NetworkInterfaces.
+         */
+        public Builder networkInterfaces(java.util.List < NetworkInterfaces> networkInterfaces) {
+            this.putQueryParameter("NetworkInterfaces", networkInterfaces);
+            this.networkInterfaces = networkInterfaces;
             return this;
         }
 
@@ -1452,7 +1484,13 @@ public class CreateScalingConfigurationRequest extends Request {
             private Boolean loginAsNonRoot; 
 
             /**
-             * LoginAsNonRoot.
+             * For more information about whether an ECS instance uses the ecs-user user user to log on to an ECS instance, see [Manage the login name of an ECS instance](~~388447~~). Value range:
+             * <p>
+             * 
+             * - true: Yes.
+             * - false: No.
+             * 
+             * Default value: false.
              */
             public Builder loginAsNonRoot(Boolean loginAsNonRoot) {
                 this.loginAsNonRoot = loginAsNonRoot;
@@ -1774,7 +1812,7 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The performance level (PL) of the system disk that is an ESSD. Valid values:
+             * The performance level (PL) of the system disk that is an enhanced SSD (ESSD). Valid values:
              * <p>
              * 
              * *   PL0: An ESSD can provide up to 10,000 random read/write IOPS.
@@ -1782,7 +1820,7 @@ public class CreateScalingConfigurationRequest extends Request {
              * *   PL2: An ESSD can provide up to 100,000 random read/write IOPS.
              * *   PL3: An ESSD can provide up to 1,000,000 random read/write IOPS.
              * 
-             * Default value: PL0
+             * Default value: PL1.
              */
             public Builder performanceLevel(String performanceLevel) {
                 this.performanceLevel = performanceLevel;
@@ -1865,7 +1903,10 @@ public class CreateScalingConfigurationRequest extends Request {
             private String vswitchId; 
 
             /**
-             * The instance type of the ECS instance. For more information, see the "Instance families" topic.
+             * The ECS instance type.
+             * <p>
+             * 
+             * >  The ECS instance type must be included in the instance types specified in the scaling configuration.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -1873,7 +1914,10 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * VswitchId.
+             * The vSwitch ID.
+             * <p>
+             * 
+             * >  The vSwitch must be included in the vSwitch list of the scaling group.
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;
@@ -2527,6 +2571,117 @@ public class CreateScalingConfigurationRequest extends Request {
 
             public InstanceTypeOverrides build() {
                 return new InstanceTypeOverrides(this);
+            } 
+
+        } 
+
+    }
+    public static class NetworkInterfaces extends TeaModel {
+        @NameInMap("InstanceType")
+        private String instanceType;
+
+        @NameInMap("Ipv6AddressCount")
+        private Integer ipv6AddressCount;
+
+        @NameInMap("NetworkInterfaceTrafficMode")
+        private String networkInterfaceTrafficMode;
+
+        @NameInMap("SecurityGroupIds")
+        private java.util.List < String > securityGroupIds;
+
+        private NetworkInterfaces(Builder builder) {
+            this.instanceType = builder.instanceType;
+            this.ipv6AddressCount = builder.ipv6AddressCount;
+            this.networkInterfaceTrafficMode = builder.networkInterfaceTrafficMode;
+            this.securityGroupIds = builder.securityGroupIds;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NetworkInterfaces create() {
+            return builder().build();
+        }
+
+        /**
+         * @return instanceType
+         */
+        public String getInstanceType() {
+            return this.instanceType;
+        }
+
+        /**
+         * @return ipv6AddressCount
+         */
+        public Integer getIpv6AddressCount() {
+            return this.ipv6AddressCount;
+        }
+
+        /**
+         * @return networkInterfaceTrafficMode
+         */
+        public String getNetworkInterfaceTrafficMode() {
+            return this.networkInterfaceTrafficMode;
+        }
+
+        /**
+         * @return securityGroupIds
+         */
+        public java.util.List < String > getSecurityGroupIds() {
+            return this.securityGroupIds;
+        }
+
+        public static final class Builder {
+            private String instanceType; 
+            private Integer ipv6AddressCount; 
+            private String networkInterfaceTrafficMode; 
+            private java.util.List < String > securityGroupIds; 
+
+            /**
+             * Instance type N that you want to use to override the instance type that is specified in the launch template.
+             * <p>
+             * 
+             * If you want to trigger scale-outs based on the weighted capacities of instances, specify InstanceType and WeightedCapacity at the same time. You can specify N instance types by using the Extended Configurations feature. Valid values of N: 1 to 10.
+             * 
+             * > This parameter takes effect only if you specify LaunchTemplateId.
+             * 
+             * You can specify an instance type that is available for purchase as the value of InstanceType.
+             */
+            public Builder instanceType(String instanceType) {
+                this.instanceType = instanceType;
+                return this;
+            }
+
+            /**
+             * The number of randomly generated IPv6 addresses that you want to allocate to the elastic network interface (ENI).
+             */
+            public Builder ipv6AddressCount(Integer ipv6AddressCount) {
+                this.ipv6AddressCount = ipv6AddressCount;
+                return this;
+            }
+
+            /**
+             * NetworkInterfaceTrafficMode.
+             */
+            public Builder networkInterfaceTrafficMode(String networkInterfaceTrafficMode) {
+                this.networkInterfaceTrafficMode = networkInterfaceTrafficMode;
+                return this;
+            }
+
+            /**
+             * The IDs of the security groups with which you want to associate the ECS instances that are created by using the scaling configuration. For more information, see the "Security group limits" section of the "[Limits](~~25412~~)" topic.
+             * <p>
+             * 
+             * > If you specify SecurityGroupId, you cannot specify SecurityGroupIds.
+             */
+            public Builder securityGroupIds(java.util.List < String > securityGroupIds) {
+                this.securityGroupIds = securityGroupIds;
+                return this;
+            }
+
+            public NetworkInterfaces build() {
+                return new NetworkInterfaces(this);
             } 
 
         } 

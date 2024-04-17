@@ -832,7 +832,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * DataCacheBucket.
+         * The bucket that caches data.
          */
         public Builder dataCacheBucket(String dataCacheBucket) {
             this.putQueryParameter("DataCacheBucket", dataCacheBucket);
@@ -841,7 +841,15 @@ public class CreateEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * DataCacheBurstingEnabled.
+         * Specifies whether to enable the Performance Burst feature for the ESSD AutoPL disk that caches data. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
+         * 
+         * Default value: false.
+         * 
+         * >  For more information about ESSD AutoPL disks, see [ESSD AutoPL disks](~~368372~~).
          */
         public Builder dataCacheBurstingEnabled(Boolean dataCacheBurstingEnabled) {
             this.putQueryParameter("DataCacheBurstingEnabled", dataCacheBurstingEnabled);
@@ -850,7 +858,17 @@ public class CreateEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * DataCachePL.
+         * The performance level (PL) of the cloud disk that caches disk. We recommend that you use enhanced SSDs (ESSDs). Valid values:
+         * <p>
+         * 
+         * *   PL0: An ESSD can deliver up to 10,000 random read/write IOPS.
+         * *   PL1: An ESSD can deliver up to 50,000 random read/write IOPS.
+         * *   PL2: An ESSD can deliver up to 100,000 random read/write IOPS.
+         * *   PL3: An ESSD can deliver up to 1,000,000 random read/write IOPS.
+         * 
+         * Default value: PL1.
+         * 
+         * >  For more information about ESSDs, see [ESSDs](~~122389~~).
          */
         public Builder dataCachePL(String dataCachePL) {
             this.putQueryParameter("DataCachePL", dataCachePL);
@@ -859,7 +877,10 @@ public class CreateEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * DataCacheProvisionedIops.
+         * The provisioned read/write IOPS of the ESSD AutoPL disk that caches data. Valid values: 0 to min{50,000, 1,000 × *Capacity - Baseline IOPS}. Baseline IOPS = min{1,800+50 x *Capacity, 50,000}.
+         * <p>
+         * 
+         * >  For more information about ESSD AutoPL disks, see [ESSD AutoPL disks](~~368372~~).
          */
         public Builder dataCacheProvisionedIops(Integer dataCacheProvisionedIops) {
             this.putQueryParameter("DataCacheProvisionedIops", dataCacheProvisionedIops);
@@ -2197,7 +2218,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             private String value; 
 
             /**
-             * > This parameter is unavailable.
+             * >  This parameter is not available for use.
              */
             public Builder fieldRefFieldPath(String fieldRefFieldPath) {
                 this.fieldRefFieldPath = fieldRefFieldPath;
@@ -2205,7 +2226,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The name of the environment variable. The name must be 1 to 128 characters in length and can contain letters, digits, and underscores (\_). The name cannot start with a digit. Specify the name in the \[0-9a-zA-Z] format.
+             * The name of the environment variable. The name can be 1 to 128 characters in length and can contain underscores (\_) and digits. The name cannot start with a digit. Specify the value in the \[0-9a-zA-Z] format.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -2213,7 +2234,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The value of the environment variable. The value must be 0 to 256 characters in length.
+             * The value of the environment variable. The value can be up to 256 characters in length.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -2274,7 +2295,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The type of the protocol. Valid values:
+             * The protocol type. Valid values:
              * <p>
              * 
              * *   TCP
@@ -2367,10 +2388,10 @@ public class CreateEciScalingConfigurationRequest extends Request {
             private String subPath; 
 
             /**
-             * The directory on which the container mounts the volume.
+             * The directory to which the container mounts the volume.
              * <p>
              * 
-             * > Data in this directory is overwritten by the data on the volume.
+             * >  Data under this directory is overwritten by data on the volume. Specify this parameter with caution.
              */
             public Builder mountPath(String mountPath) {
                 this.mountPath = mountPath;
@@ -2378,12 +2399,12 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The mount propagation settings of the volume. Mount propagation allows volumes that are mounted on one container to be shared with other containers in the same pod, or even with other pods on the same node. Valid values:
+             * The mount propagation setting of the volume. Mount propagation allows volumes that are mounted on one container to be shared with other containers in the same pod, or even with other pods on the same node. Valid values:
              * <p>
              * 
-             * *   None: The volume mount does not receive subsequent mounts that are mounted to this volume or its subdirectories.
-             * *   HostToCotainer: The volume mount receives all subsequent mounts that are mounted to this volume or its subdirectories.
-             * *   Bidirectional: This value is similar to HostToCotainer. The volume mount receives all subsequent mounts that are mounted to this volume or its subdirectories. In addition, all volume mounts that are created by the container are propagated back to the instance and to all containers of all pods that use the same volume.
+             * *   None: The volume mount does not receive subsequent mounts that are performed on the volume or the subdirectories of the volume.
+             * *   HostToContainer: The volume mount receives all subsequent mounts that are performed on the volume or the subdirectories of the volume.
+             * *   Bidirectional: The volume mount behaves the same as the HostToContainer mount. The volume mount receives subsequent mounts that are performed on the volume or the subdirectories of the volume. In addition, all volume mounts that are performed on the container are propagated back to the host and all containers of all pods that use the same volume.
              * 
              * Default value: None.
              */
@@ -2393,7 +2414,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The name of the volume. The value of this parameter is the same as the value of the VolumeName parameter.
+             * The volume name. The value of this parameter is the same as the value of Volumes.Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2855,7 +2876,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The arguments that correspond to the startup commands of the container. You can specify up to 10 arguments.
+             * The container startup arguments. You can specify up to 10 arguments.
              */
             public Builder args(java.util.List < String > args) {
                 this.args = args;
@@ -2863,7 +2884,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The commands that you want to run in the container when you use the CLI to perform probes.
+             * The commands that you can run in the container when you use the CLI to perform liveness probes.
              */
             public Builder commands(java.util.List < String > commands) {
                 this.commands = commands;
@@ -2871,7 +2892,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The number of CPU cores in the container.
+             * The number of vCPUs that you want to allocate to the container.
              */
             public Builder cpu(Float cpu) {
                 this.cpu = cpu;
@@ -2879,7 +2900,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * Information about environment variables.
+             * The environment variables.
              */
             public Builder environmentVars(java.util.List < EnvironmentVars> environmentVars) {
                 this.environmentVars = environmentVars;
@@ -2906,9 +2927,9 @@ public class CreateEciScalingConfigurationRequest extends Request {
              * The image pulling policy. Valid values:
              * <p>
              * 
-             * *   Always: pulls images each time.
-             * *   IfNotPresent: pulls images only if no on-premises images are available. On-premises images are preferentially used. If no on-premises images are available, image pulling is performed.
-             * *   Never: never pulls images. On-premises images are always used.
+             * *   Always: Each time instances are created, image pulling is performed.
+             * *   IfNotPresent: Image pulling is performed as needed. On-premises images are preferentially used. If no on-premises images are available, image pulling is performed.
+             * *   Never: On-premises images are always used. Image pulling is not performed.
              */
             public Builder imagePullPolicy(String imagePullPolicy) {
                 this.imagePullPolicy = imagePullPolicy;
@@ -3028,7 +3049,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The memory size of the container. Unit: GiB.
+             * The memory size that you want to allocate to the container. Unit: GiB.
              */
             public Builder memory(Float memory) {
                 this.memory = memory;
@@ -3052,7 +3073,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * Specifies whether the container allocates buffer resources to standard input streams when the container is running. If you do not specify this parameter, an end-of-file (EOF) error may occur.
+             * Specifies whether the container allocates buffer resources to standard input streams when the container is running. If you do not specify this parameter, an end-of-file (EOF) error may occur when standard input streams in the container are read.
              * <p>
              * 
              * Default value: false.
@@ -3063,10 +3084,10 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * Specifies whether to disconnect standard input streams after a client is disconnected.
+             * Specifies whether to remain standard input streams connected during multiple sessions if StdinOnce is set to true.
              * <p>
              * 
-             * If you set the StdinOnce parameter to true, standard input streams are connected after the container is started, and remain idle until a client is connected to receive data. After the client is disconnected, streams are also disconnected, and remain disconnected until the container is started again.
+             * If StdinOnce is set to true, standard input streams are connected after the container is started, and remain idle until a client is connected to receive data. After the client is disconnected, streams are also disconnected, and remain disconnected until the container is restarted.
              */
             public Builder stdinOnce(Boolean stdinOnce) {
                 this.stdinOnce = stdinOnce;
@@ -3080,7 +3101,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
              * *   true
              * *   false
              * 
-             * If the value of the Command parameter is /bin/bash, you must set this parameter to true.
+             * If the command is a /bin/bash command, set the value to true.
              * 
              * Default value: false.
              */
@@ -3090,7 +3111,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * Information about the volume mount of the container.
+             * The volume mounts of the container.
              */
             public Builder volumeMounts(java.util.List < VolumeMounts> volumeMounts) {
                 this.volumeMounts = volumeMounts;
@@ -3671,8 +3692,8 @@ public class CreateEciScalingConfigurationRequest extends Request {
              * <p>
              * 
              * *   None: The volume mount does not receive subsequent mounts that are mounted to this volume or its subdirectories.
-             * *   HostToCotainer: The volume mount receives all subsequent mounts that are mounted to this volume or its subdirectories.
-             * *   Bidirectional: This value is similar to HostToCotainer. The volume mount receives all subsequent mounts that are mounted to this volume or its subdirectories. In addition, all volume mounts that are created by the container are propagated back to the instance and to all containers of all pods that use the same volume.
+             * *   HostToContainer: The volume mount receives all subsequent mounts that are mounted to this volume or its subdirectories.
+             * *   Bidirectional: This value is similar to HostToContainer. The volume mount receives all subsequent mounts that are mounted to this volume or its subdirectories. In addition, all volume mounts that are created by the container are propagated back to the instance and to all containers of all pods that use the same volume.
              */
             public Builder mountPropagation(String mountPropagation) {
                 this.mountPropagation = mountPropagation;

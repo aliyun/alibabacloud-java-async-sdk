@@ -125,6 +125,10 @@ public class ModifyScalingConfigurationRequest extends Request {
     private Integer memory;
 
     @Query
+    @NameInMap("NetworkInterfaces")
+    private java.util.List < NetworkInterfaces> networkInterfaces;
+
+    @Query
     @NameInMap("Override")
     private Boolean override;
 
@@ -247,6 +251,7 @@ public class ModifyScalingConfigurationRequest extends Request {
         this.keyPairName = builder.keyPairName;
         this.loadBalancerWeight = builder.loadBalancerWeight;
         this.memory = builder.memory;
+        this.networkInterfaces = builder.networkInterfaces;
         this.override = builder.override;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -482,6 +487,13 @@ public class ModifyScalingConfigurationRequest extends Request {
     }
 
     /**
+     * @return networkInterfaces
+     */
+    public java.util.List < NetworkInterfaces> getNetworkInterfaces() {
+        return this.networkInterfaces;
+    }
+
+    /**
      * @return override
      */
     public Boolean getOverride() {
@@ -671,6 +683,7 @@ public class ModifyScalingConfigurationRequest extends Request {
         private String keyPairName; 
         private Integer loadBalancerWeight; 
         private Integer memory; 
+        private java.util.List < NetworkInterfaces> networkInterfaces; 
         private Boolean override; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -729,6 +742,7 @@ public class ModifyScalingConfigurationRequest extends Request {
             this.keyPairName = request.keyPairName;
             this.loadBalancerWeight = request.loadBalancerWeight;
             this.memory = request.memory;
+            this.networkInterfaces = request.networkInterfaces;
             this.override = request.override;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -1053,6 +1067,15 @@ public class ModifyScalingConfigurationRequest extends Request {
         public Builder memory(Integer memory) {
             this.putQueryParameter("Memory", memory);
             this.memory = memory;
+            return this;
+        }
+
+        /**
+         * NetworkInterfaces.
+         */
+        public Builder networkInterfaces(java.util.List < NetworkInterfaces> networkInterfaces) {
+            this.putQueryParameter("NetworkInterfaces", networkInterfaces);
+            this.networkInterfaces = networkInterfaces;
             return this;
         }
 
@@ -1604,7 +1627,10 @@ public class ModifyScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The name of the system disk. The name must be 2 to 128 characters in length, and can contain letters, digits, colons (:), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with [http:// or https://. Default value: null.](http://https://。、（:）、（\_）（-）。：)
+             * The name of the system disk. The name must be 2 to 128 characters in length, and can contain letters, digits, colons (:), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http:// `or `https://`. 
+             * <p>
+             * 
+             * Default value: null.
              */
             public Builder diskName(String diskName) {
                 this.diskName = diskName;
@@ -2395,6 +2421,114 @@ public class ModifyScalingConfigurationRequest extends Request {
 
             public InstanceTypeOverrides build() {
                 return new InstanceTypeOverrides(this);
+            } 
+
+        } 
+
+    }
+    public static class NetworkInterfaces extends TeaModel {
+        @NameInMap("InstanceType")
+        private String instanceType;
+
+        @NameInMap("Ipv6AddressCount")
+        private Integer ipv6AddressCount;
+
+        @NameInMap("NetworkInterfaceTrafficMode")
+        private String networkInterfaceTrafficMode;
+
+        @NameInMap("SecurityGroupIds")
+        private java.util.List < String > securityGroupIds;
+
+        private NetworkInterfaces(Builder builder) {
+            this.instanceType = builder.instanceType;
+            this.ipv6AddressCount = builder.ipv6AddressCount;
+            this.networkInterfaceTrafficMode = builder.networkInterfaceTrafficMode;
+            this.securityGroupIds = builder.securityGroupIds;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NetworkInterfaces create() {
+            return builder().build();
+        }
+
+        /**
+         * @return instanceType
+         */
+        public String getInstanceType() {
+            return this.instanceType;
+        }
+
+        /**
+         * @return ipv6AddressCount
+         */
+        public Integer getIpv6AddressCount() {
+            return this.ipv6AddressCount;
+        }
+
+        /**
+         * @return networkInterfaceTrafficMode
+         */
+        public String getNetworkInterfaceTrafficMode() {
+            return this.networkInterfaceTrafficMode;
+        }
+
+        /**
+         * @return securityGroupIds
+         */
+        public java.util.List < String > getSecurityGroupIds() {
+            return this.securityGroupIds;
+        }
+
+        public static final class Builder {
+            private String instanceType; 
+            private Integer ipv6AddressCount; 
+            private String networkInterfaceTrafficMode; 
+            private java.util.List < String > securityGroupIds; 
+
+            /**
+             * The instance type. If you want to specify the capacity of instance types in the scaling configuration, specify InstanceType and WeightedCapacity at the same time.
+             * <p>
+             * 
+             * You can use InstanceType to specify multiple instance types and WeightedCapacity to specify the weights of the instance types.
+             * 
+             * > If you specify InstanceType, you cannot specify InstanceTypes.
+             * 
+             * You can use InstanceType to specify only instance types that are available for purchase.
+             */
+            public Builder instanceType(String instanceType) {
+                this.instanceType = instanceType;
+                return this;
+            }
+
+            /**
+             * The number of randomly generated IPv6 addresses that you want to allocate to the elastic network interface (ENI).
+             */
+            public Builder ipv6AddressCount(Integer ipv6AddressCount) {
+                this.ipv6AddressCount = ipv6AddressCount;
+                return this;
+            }
+
+            /**
+             * NetworkInterfaceTrafficMode.
+             */
+            public Builder networkInterfaceTrafficMode(String networkInterfaceTrafficMode) {
+                this.networkInterfaceTrafficMode = networkInterfaceTrafficMode;
+                return this;
+            }
+
+            /**
+             * The IDs of the security groups.
+             */
+            public Builder securityGroupIds(java.util.List < String > securityGroupIds) {
+                this.securityGroupIds = securityGroupIds;
+                return this;
+            }
+
+            public NetworkInterfaces build() {
+                return new NetworkInterfaces(this);
             } 
 
         } 

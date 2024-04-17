@@ -311,7 +311,7 @@ public class DescribeScalingInstancesRequest extends Request {
         }
 
         /**
-         * LifecycleStates.
+         * The lifecycle states of the ECS instance in the scaling group. You can specify only one of the LifecycleStates and LifecycleState parameters at the same time. We recommend that you specify this parameter.
          */
         public Builder lifecycleStates(java.util.List < String > lifecycleStates) {
             this.putQueryParameter("LifecycleStates", lifecycleStates);

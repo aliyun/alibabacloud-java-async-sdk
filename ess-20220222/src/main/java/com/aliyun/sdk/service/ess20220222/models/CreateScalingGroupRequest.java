@@ -808,8 +808,9 @@ public class CreateScalingGroupRequest extends Request {
          * The health check mode of the scaling group. Valid values:
          * <p>
          * 
-         * *   NONE: Auto Scaling does not perform health checks on instances in the scaling group.
-         * *   ECS: Auto Scaling performs health checks on ECS instances in the scaling group.
+         * *   NONE: Auto Scaling does not check the health status of instances in the scaling group.
+         * *   ECS: Auto Scaling checks the health status of ECS instances in the scaling group.
+         * *   LOAD_BALANCER: Auto Scaling checks the health status of instances in the scaling group based on the health check results of load balancers. The health check results of Classic Load Balancer (CLB) instances are not supported as the health check basis for instances in the scaling group.
          * 
          * Default value: ECS.
          */
@@ -820,7 +821,14 @@ public class CreateScalingGroupRequest extends Request {
         }
 
         /**
-         * HealthCheckTypes.
+         * The health check modes of the scaling group. Valid values:
+         * <p>
+         * 
+         * *   NONE: Auto Scaling does not check the health status of instances in the scaling group.
+         * *   ECS: Auto Scaling checks the health status of ECS instances in the scaling group.
+         * *   LOAD_BALANCER: Auto Scaling checks the health status of instances in the scaling group based on the health check results of load balancers. The health check results of CLB instances are not supported as the health check basis for instances in the scaling group.
+         * 
+         * Default value: ECS.
          */
         public Builder healthCheckTypes(java.util.List < String > healthCheckTypes) {
             this.putQueryParameter("HealthCheckTypes", healthCheckTypes);
@@ -917,7 +925,7 @@ public class CreateScalingGroupRequest extends Request {
          * The maximum number of ECS instances that can be contained in the scaling group. If the number of ECS instances in the scaling group is greater than the value of the MaxSize parameter, Auto Scaling removes ECS instances from the scaling group to ensure that the number of ECS instances is equal to the value of the MaxSize parameter.
          * <p>
          * 
-         * The value range of the MaxSize parameter varies based on the instance quota. You can go to [Quota Center](https://quotas.console.aliyun.com/products/ess/quotas) to check the maximum number of instances that a scaling group can contain.****
+         * The value range of the MaxSize parameter varies based on the instance quota. You can go to [Quota Center](https://quotas.console.aliyun.com/products/ess/quotas) to check the maximum number of instances that a scaling group can contain.
          * 
          * For example, if the instance quota is 2,000, the value range of the **MaxSize** parameter is 0 to 2000.
          */
@@ -947,9 +955,7 @@ public class CreateScalingGroupRequest extends Request {
          * 
          * *   COST_OPTIMIZED: scales ECS instances based on the unit price of vCPUs. Auto Scaling preferentially scales out ECS instances whose vCPUs are provided at the lowest price and scales in ECS instances whose vCPUs are provided at the highest price. If preemptible instance types are specified in the scaling configuration, Auto Scaling preferentially scales out preemptible instances. You can use the CompensateWithOnDemand parameter to specify whether to automatically create pay-as-you-go instances when preemptible instances cannot be created due to insufficient resources.
          * 
-         *     **
-         * 
-         *     **Note**The COST_OPTIMIZED setting takes effect only when multiple instance types are specified or at least one preemptible instance type is specified.
+         *     **Note** The COST_OPTIMIZED setting takes effect only when multiple instance types are specified or at least one preemptible instance type is specified.
          * 
          * *   BALANCE: evenly distributes ECS instances across zones that are specified for the scaling group. If ECS instances are unevenly distributed across zones due to insufficient resources, you can call the [RebalanceInstance](~~71516~~) operation to evenly redistribute the instances across the zones.
          * 

@@ -122,7 +122,7 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * ScalingInstances.
+         * The information about the ECS instances.
          */
         public Builder scalingInstances(java.util.List < ScalingInstances> scalingInstances) {
             this.scalingInstances = scalingInstances;
@@ -394,7 +394,7 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * CreatedTime.
+             * The time when the ECS instance was added to the scaling group. The value is accurate to seconds.
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -402,7 +402,7 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * The time when the ECS instance was added to the scaling group. The value is accurate to minutes.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -410,7 +410,11 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CreationType.
+             * Indicates how the ECS instance is created. Valid values:
+             * <p>
+             * 
+             * *   AutoCreated: Auto Scaling automatically creates ECS instances based on the instance configuration source.
+             * *   Attached: You manually add independent ECS instances to the scaling group.
              */
             public Builder creationType(String creationType) {
                 this.creationType = creationType;
@@ -418,7 +422,11 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Entrusted.
+             * Indicates whether the scaling group is allowed to manage the instance lifecycle when you manually add the instance. If the scaling group is allowed to manage the instance lifecycle, Auto Scaling can release the instance when the instance is automatically removed from the scaling group. This rule does not apply to instances that are manually removed from the scaling group. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder entrusted(Boolean entrusted) {
                 this.entrusted = entrusted;
@@ -426,7 +434,17 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * HealthStatus.
+             * The health status of the ECS instance in the scaling group. If the ECS instance does not run as expected, Auto Scaling considers the ECS instance unhealthy. Valid values:
+             * <p>
+             * 
+             * *   Healthy
+             * *   Unhealthy
+             * 
+             * Auto Scaling automatically removes unhealthy ECS instances from the scaling group and then releases automatically created instances among the unhealthy instances.
+             * 
+             * Unhealthy ECS instances that are manually added to the scaling group are released based on the management mode of the instance lifecycles. If the lifecycles of the ECS instances are not managed by the scaling group, Auto Scaling removes the instances from the scaling group but does not release the instances. If the lifecycles of the ECS instances are managed by the scaling group, Auto Scaling removes the instances from the scaling group and releases the instances.
+             * 
+             * >  Make sure that you have sufficient balance within your Alibaba Cloud account. If you have overdue payments within your Alibaba Cloud account, pay-as-you-go and preemptible instances are stopped or even released. For information about how the states of ECS instances change when you have overdue payments within your Alibaba Cloud account, see [Overdue payments](~~170589~~).
              */
             public Builder healthStatus(String healthStatus) {
                 this.healthStatus = healthStatus;
@@ -434,7 +452,7 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the ECS instance
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -442,7 +460,7 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * LaunchTemplateId.
+             * The ID of the launch template.
              */
             public Builder launchTemplateId(String launchTemplateId) {
                 this.launchTemplateId = launchTemplateId;
@@ -450,7 +468,7 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * LaunchTemplateVersion.
+             * The version number of the launch template.
              */
             public Builder launchTemplateVersion(String launchTemplateVersion) {
                 this.launchTemplateVersion = launchTemplateVersion;
@@ -458,7 +476,17 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * LifecycleState.
+             * The lifecycle state of the ECS instance. Valid values:
+             * <p>
+             * 
+             * *   InService: The ECS instance is added to the scaling group and provides services as expected.
+             * *   Pending: The ECS instance is being added to the scaling group. During this process, Auto Scaling adds the ECS instance to the backend server groups of the associated SLB instance and adds the private IP address of the ECS instance to the IP address whitelist of the associated ApsaraDB RDS instance.
+             * *   Pending:Wait: The ECS instance is waiting to be added to the scaling group. If a lifecycle hook that applies to scale-outs is created for the scaling group, the ECS instance enters the Pending:Wait state. The ECS instance is added to the scaling group only after the lifecycle hook times out.
+             * *   Protected: The ECS instance is being protected. The ECS instance can provide services as expected. However, Auto Scaling does not manage the lifecycle of the ECS instance. You must manually manage the lifecycle of the ECS instance.
+             * *   Standby: The ECS instance is on standby. The ECS instance is out of service and the weight of the ECS instance as a backend server is set to zero. Auto Scaling does not manage the lifecycle of the ECS instance. You must manually manage the lifecycle of the ECS instance.
+             * *   Stopped: The ECS instance is stopped. The ECS instance is stopped and cannot provide services.
+             * *   Removing: The ECS instance is being removed from the scaling group. During this process, Auto Scaling removes the ECS instance from the backend server groups of the associated SLB instance and removes the IP address of the ECS instance from the IP address whitelist of the associated ApsaraDB RDS instance.
+             * *   Removing:Wait: The ECS instance is waiting to be removed from the scaling group. If a lifecycle hook that applies to scale-ins is created for the scaling group, the ECS instance enters the Removing:Wait state. The ECS instance is removed from the scaling group only after the lifecycle hook times out.
              */
             public Builder lifecycleState(String lifecycleState) {
                 this.lifecycleState = lifecycleState;
@@ -466,7 +494,7 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * LoadBalancerWeight.
+             * The weight of the ECS instance as a backend server.
              */
             public Builder loadBalancerWeight(Integer loadBalancerWeight) {
                 this.loadBalancerWeight = loadBalancerWeight;
@@ -474,7 +502,7 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PrivateIpAddress.
+             * The private IP address of the ECS instance in the scaling group.
              */
             public Builder privateIpAddress(String privateIpAddress) {
                 this.privateIpAddress = privateIpAddress;
@@ -482,7 +510,7 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ScalingActivityId.
+             * The ID of the scaling activity during which the ECS instance is added to the scaling group.
              */
             public Builder scalingActivityId(String scalingActivityId) {
                 this.scalingActivityId = scalingActivityId;
@@ -490,7 +518,7 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ScalingConfigurationId.
+             * The ID of the scaling configuration.
              */
             public Builder scalingConfigurationId(String scalingConfigurationId) {
                 this.scalingConfigurationId = scalingConfigurationId;
@@ -498,7 +526,7 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ScalingGroupId.
+             * The ID of the scaling group.
              */
             public Builder scalingGroupId(String scalingGroupId) {
                 this.scalingGroupId = scalingGroupId;
@@ -506,7 +534,7 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ScalingInstanceId.
+             * The identifier of the ECS instance in the scaling group. The identifier of an ECS instance or elastic container instance matches the ID of the ECS instance or elastic container instance.
              */
             public Builder scalingInstanceId(String scalingInstanceId) {
                 this.scalingInstanceId = scalingInstanceId;
@@ -514,7 +542,11 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * SpotStrategy.
+             * The bidding policy for the preemptible instance. Valid values:
+             * <p>
+             * 
+             * *   SpotWithPriceLimit: The instance is created as a preemptible instance with a user-defined maximum hourly price.
+             * *   SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is automatically used as the bidding price.
              */
             public Builder spotStrategy(String spotStrategy) {
                 this.spotStrategy = spotStrategy;
@@ -522,7 +554,12 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * WarmupState.
+             * The warmup state of the ECS instance. Valid values:
+             * <p>
+             * 
+             * *   NoNeedWarmup: The instance does not need to be warmed up.
+             * *   WaitingForInstanceWarmup: The instance is being warmed up.
+             * *   InstanceWarmupFinish: The instance is warmed up.
              */
             public Builder warmupState(String warmupState) {
                 this.warmupState = warmupState;
@@ -530,7 +567,7 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * WeightedCapacity.
+             * The weight of the instance type. The weight indicates the capacity of a single instance of the specified instance type in the scaling group. A greater weight indicates that a smaller number of instances of the specified instance type are required to meet the expected capacity requirement.
              */
             public Builder weightedCapacity(Integer weightedCapacity) {
                 this.weightedCapacity = weightedCapacity;
@@ -538,7 +575,7 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * The zone ID of the ECS instance.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

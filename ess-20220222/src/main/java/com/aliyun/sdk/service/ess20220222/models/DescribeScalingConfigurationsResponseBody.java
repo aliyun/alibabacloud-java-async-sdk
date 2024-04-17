@@ -717,6 +717,107 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         } 
 
     }
+    public static class NetworkInterfaces extends TeaModel {
+        @NameInMap("InstanceType")
+        private String instanceType;
+
+        @NameInMap("Ipv6AddressCount")
+        private Integer ipv6AddressCount;
+
+        @NameInMap("NetworkInterfaceTrafficMode")
+        private String networkInterfaceTrafficMode;
+
+        @NameInMap("SecurityGroupIds")
+        private java.util.List < String > securityGroupIds;
+
+        private NetworkInterfaces(Builder builder) {
+            this.instanceType = builder.instanceType;
+            this.ipv6AddressCount = builder.ipv6AddressCount;
+            this.networkInterfaceTrafficMode = builder.networkInterfaceTrafficMode;
+            this.securityGroupIds = builder.securityGroupIds;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NetworkInterfaces create() {
+            return builder().build();
+        }
+
+        /**
+         * @return instanceType
+         */
+        public String getInstanceType() {
+            return this.instanceType;
+        }
+
+        /**
+         * @return ipv6AddressCount
+         */
+        public Integer getIpv6AddressCount() {
+            return this.ipv6AddressCount;
+        }
+
+        /**
+         * @return networkInterfaceTrafficMode
+         */
+        public String getNetworkInterfaceTrafficMode() {
+            return this.networkInterfaceTrafficMode;
+        }
+
+        /**
+         * @return securityGroupIds
+         */
+        public java.util.List < String > getSecurityGroupIds() {
+            return this.securityGroupIds;
+        }
+
+        public static final class Builder {
+            private String instanceType; 
+            private Integer ipv6AddressCount; 
+            private String networkInterfaceTrafficMode; 
+            private java.util.List < String > securityGroupIds; 
+
+            /**
+             * InstanceType.
+             */
+            public Builder instanceType(String instanceType) {
+                this.instanceType = instanceType;
+                return this;
+            }
+
+            /**
+             * Ipv6AddressCount.
+             */
+            public Builder ipv6AddressCount(Integer ipv6AddressCount) {
+                this.ipv6AddressCount = ipv6AddressCount;
+                return this;
+            }
+
+            /**
+             * NetworkInterfaceTrafficMode.
+             */
+            public Builder networkInterfaceTrafficMode(String networkInterfaceTrafficMode) {
+                this.networkInterfaceTrafficMode = networkInterfaceTrafficMode;
+                return this;
+            }
+
+            /**
+             * SecurityGroupIds.
+             */
+            public Builder securityGroupIds(java.util.List < String > securityGroupIds) {
+                this.securityGroupIds = securityGroupIds;
+                return this;
+            }
+
+            public NetworkInterfaces build() {
+                return new NetworkInterfaces(this);
+            } 
+
+        } 
+
+    }
     public static class SchedulerOptions extends TeaModel {
         @NameInMap("ManagedPrivateSpaceId")
         private String managedPrivateSpaceId;
@@ -980,6 +1081,9 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         @NameInMap("Memory")
         private Integer memory;
 
+        @NameInMap("NetworkInterfaces")
+        private java.util.List < NetworkInterfaces> networkInterfaces;
+
         @NameInMap("PasswordInherit")
         private Boolean passwordInherit;
 
@@ -1117,6 +1221,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             this.lifecycleState = builder.lifecycleState;
             this.loadBalancerWeight = builder.loadBalancerWeight;
             this.memory = builder.memory;
+            this.networkInterfaces = builder.networkInterfaces;
             this.passwordInherit = builder.passwordInherit;
             this.privatePoolOptions_id = builder.privatePoolOptions_id;
             this.privatePoolOptions_matchCriteria = builder.privatePoolOptions_matchCriteria;
@@ -1377,6 +1482,13 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
          */
         public Integer getMemory() {
             return this.memory;
+        }
+
+        /**
+         * @return networkInterfaces
+         */
+        public java.util.List < NetworkInterfaces> getNetworkInterfaces() {
+            return this.networkInterfaces;
         }
 
         /**
@@ -1656,6 +1768,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             private String lifecycleState; 
             private Integer loadBalancerWeight; 
             private Integer memory; 
+            private java.util.List < NetworkInterfaces> networkInterfaces; 
             private Boolean passwordInherit; 
             private String privatePoolOptions_id; 
             private String privatePoolOptions_matchCriteria; 
@@ -1984,6 +2097,14 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
              */
             public Builder memory(Integer memory) {
                 this.memory = memory;
+                return this;
+            }
+
+            /**
+             * NetworkInterfaces.
+             */
+            public Builder networkInterfaces(java.util.List < NetworkInterfaces> networkInterfaces) {
+                this.networkInterfaces = networkInterfaces;
                 return this;
             }
 

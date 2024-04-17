@@ -182,7 +182,7 @@ public class RemoveInstancesRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * 保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。只支持ASCII字符，且不能超过64个字符。更多信息，请参见[如何保证幂等性](~~25965~~)。
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -191,7 +191,13 @@ public class RemoveInstancesRequest extends Request {
         }
 
         /**
-         * DecreaseDesiredCapacity.
+         * Specifies whether to adjust the expected number of ECS instances in the scaling group. Valid values:
+         * <p>
+         * 
+         * *   true: After ECS instances are removed from the scaling group, the expected number of ECS instances in the scaling group decreases.
+         * *   false: After ECS instances are removed from the scaling group, the expected number of ECS instances in the scaling group remains unchanged.
+         * 
+         * Default value: true.
          */
         public Builder decreaseDesiredCapacity(Boolean decreaseDesiredCapacity) {
             this.putQueryParameter("DecreaseDesiredCapacity", decreaseDesiredCapacity);
@@ -200,7 +206,7 @@ public class RemoveInstancesRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * The IDs of the ECS instances that you want to remove from the scaling group.
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -227,7 +233,7 @@ public class RemoveInstancesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the scaling group.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -236,7 +242,23 @@ public class RemoveInstancesRequest extends Request {
         }
 
         /**
-         * RemovePolicy.
+         * The action that you want Auto Scaling to perform after the ECS instance is removed from the scaling group. Valid values:
+         * <p>
+         * 
+         * *   recycle: puts the ECS instance into economical mode.
+         * 
+         *     **Note** This setting takes effect only if you set the ScalingPolicy parameter to recycle.
+         * 
+         * *   release: releases the ECS instance.
+         * 
+         * The ScalingPolicy parameter that you specify when you call the CreateScalingGroup operation specifies the reclaim mode of the scaling group. The RemovePolicy parameter that you specify when you call the RemoveInstances operation specifies the action to be performed on ECS instances after the ECS instances are removed. Example:
+         * 
+         * *   If you set both the ScalingPolicy parameter and the RemovePolicy parameter to recycle, the ECS instances are put into economical mode after the ECS instances are removed from the scaling group.
+         * *   If you set the ScalingPolicy parameter to recycle and the RemovePolicy parameter to release, the ECS instances are released after the ECS instances are removed from the scaling group.
+         * *   If you set the ScalingPolicy parameter to release and the RemovePolicy parameter to recycle, the ECS instances are released after the ECS instances are removed from the scaling group.
+         * *   If you set both the ScalingPolicy parameter and the RemovePolicy parameter to release, the ECS instances are released after the ECS instances are removed from the scaling group.
+         * 
+         * Default value: release.
          */
         public Builder removePolicy(String removePolicy) {
             this.putQueryParameter("RemovePolicy", removePolicy);
@@ -263,7 +285,7 @@ public class RemoveInstancesRequest extends Request {
         }
 
         /**
-         * ScalingGroupId.
+         * The ID of the scaling group.
          */
         public Builder scalingGroupId(String scalingGroupId) {
             this.putQueryParameter("ScalingGroupId", scalingGroupId);
