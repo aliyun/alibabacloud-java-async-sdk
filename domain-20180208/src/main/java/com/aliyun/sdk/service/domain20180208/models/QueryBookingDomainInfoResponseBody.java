@@ -30,6 +30,9 @@ public class QueryBookingDomainInfoResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("SnatchNo")
+    private String snatchNo;
+
     @NameInMap("TransferInPrice")
     private Float transferInPrice;
 
@@ -40,6 +43,7 @@ public class QueryBookingDomainInfoResponseBody extends TeaModel {
         this.maxBid = builder.maxBid;
         this.partnerType = builder.partnerType;
         this.requestId = builder.requestId;
+        this.snatchNo = builder.snatchNo;
         this.transferInPrice = builder.transferInPrice;
     }
 
@@ -94,6 +98,13 @@ public class QueryBookingDomainInfoResponseBody extends TeaModel {
     }
 
     /**
+     * @return snatchNo
+     */
+    public String getSnatchNo() {
+        return this.snatchNo;
+    }
+
+    /**
      * @return transferInPrice
      */
     public Float getTransferInPrice() {
@@ -107,6 +118,7 @@ public class QueryBookingDomainInfoResponseBody extends TeaModel {
         private Float maxBid; 
         private String partnerType; 
         private String requestId; 
+        private String snatchNo; 
         private Float transferInPrice; 
 
         /**
@@ -154,6 +166,14 @@ public class QueryBookingDomainInfoResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * SnatchNo.
+         */
+        public Builder snatchNo(String snatchNo) {
+            this.snatchNo = snatchNo;
             return this;
         }
 
