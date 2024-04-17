@@ -61,4 +61,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<RenderRefundOrderResponse> renderRefundOrder(RenderRefundOrderRequest request);
 
+    CompletableFuture<SplitPurchaseOrderResponse> splitPurchaseOrder(SplitPurchaseOrderRequest request);
+
 }
