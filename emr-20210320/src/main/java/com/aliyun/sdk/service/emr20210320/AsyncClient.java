@@ -33,7 +33,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DecreaseNodesResponse> decreaseNodes(DecreaseNodesRequest request);
 
+    /**
+      * 创建集群模板
+      *
+     */
+    CompletableFuture<DeleteApiTemplateResponse> deleteApiTemplate(DeleteApiTemplateRequest request);
+
     CompletableFuture<DeleteClusterResponse> deleteCluster(DeleteClusterRequest request);
+
+    CompletableFuture<GetApiTemplateResponse> getApiTemplate(GetApiTemplateRequest request);
 
     /**
       * 查询应用详情。
@@ -150,6 +158,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<IncreaseNodesResponse> increaseNodes(IncreaseNodesRequest request);
 
     CompletableFuture<JoinResourceGroupResponse> joinResourceGroup(JoinResourceGroupRequest request);
+
+    CompletableFuture<ListApiTemplatesResponse> listApiTemplates(ListApiTemplatesRequest request);
 
     /**
       * 查询应用配置。
@@ -276,6 +286,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<PutAutoScalingPolicyResponse> putAutoScalingPolicy(PutAutoScalingPolicyRequest request);
 
     CompletableFuture<RemoveAutoScalingPolicyResponse> removeAutoScalingPolicy(RemoveAutoScalingPolicyRequest request);
+
+    /**
+      * 执行集群模板
+      *
+     */
+    CompletableFuture<RunApiTemplateResponse> runApiTemplate(RunApiTemplateRequest request);
 
     CompletableFuture<RunApplicationActionResponse> runApplicationAction(RunApplicationActionRequest request);
 

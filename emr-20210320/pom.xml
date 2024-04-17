@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>alibabacloud-emr20210320</artifactId>
-  <version>1.0.7</version>
+  <version>1.0.8</version>
   <packaging>jar</packaging>
   <name>alibabacloud-emr20210320</name>
   <description>Alibaba Cloud Emr (20210320) Async SDK for Java

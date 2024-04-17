@@ -1,3 +1,6 @@
+2024-04-17 Version: 1.0.8
+- Generated java-async 2021-03-20 for Emr.
+
 2024-03-26 Version: 1.0.7
 - Generated java-async 2021-03-20 for Emr.
 
