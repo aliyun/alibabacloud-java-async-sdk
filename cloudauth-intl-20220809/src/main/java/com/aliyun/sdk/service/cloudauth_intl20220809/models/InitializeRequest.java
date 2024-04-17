@@ -45,10 +45,6 @@ public class InitializeRequest extends Request {
     private String facePictureUrl;
 
     @Query
-    @NameInMap("FlowType")
-    private String flowType;
-
-    @Query
     @NameInMap("IdFaceQuality")
     private String idFaceQuality;
 
@@ -77,20 +73,8 @@ public class InitializeRequest extends Request {
     private String ocr;
 
     @Query
-    @NameInMap("OperationMode")
-    private String operationMode;
-
-    @Query
-    @NameInMap("Pages")
-    private String pages;
-
-    @Query
     @NameInMap("ProductCode")
     private String productCode;
-
-    @Query
-    @NameInMap("ProductConfig")
-    private String productConfig;
 
     @Query
     @NameInMap("ProductFlow")
@@ -109,8 +93,8 @@ public class InitializeRequest extends Request {
     private String securityLevel;
 
     @Query
-    @NameInMap("ServiceLevel")
-    private String serviceLevel;
+    @NameInMap("StyleConfig")
+    private String styleConfig;
 
     private InitializeRequest(Builder builder) {
         super(builder);
@@ -122,7 +106,6 @@ public class InitializeRequest extends Request {
         this.docType = builder.docType;
         this.facePictureBase64 = builder.facePictureBase64;
         this.facePictureUrl = builder.facePictureUrl;
-        this.flowType = builder.flowType;
         this.idFaceQuality = builder.idFaceQuality;
         this.idSpoof = builder.idSpoof;
         this.languageConfig = builder.languageConfig;
@@ -130,15 +113,12 @@ public class InitializeRequest extends Request {
         this.merchantUserId = builder.merchantUserId;
         this.metaInfo = builder.metaInfo;
         this.ocr = builder.ocr;
-        this.operationMode = builder.operationMode;
-        this.pages = builder.pages;
         this.productCode = builder.productCode;
-        this.productConfig = builder.productConfig;
         this.productFlow = builder.productFlow;
         this.returnUrl = builder.returnUrl;
         this.sceneCode = builder.sceneCode;
         this.securityLevel = builder.securityLevel;
-        this.serviceLevel = builder.serviceLevel;
+        this.styleConfig = builder.styleConfig;
     }
 
     public static Builder builder() {
@@ -211,13 +191,6 @@ public class InitializeRequest extends Request {
     }
 
     /**
-     * @return flowType
-     */
-    public String getFlowType() {
-        return this.flowType;
-    }
-
-    /**
      * @return idFaceQuality
      */
     public String getIdFaceQuality() {
@@ -267,31 +240,10 @@ public class InitializeRequest extends Request {
     }
 
     /**
-     * @return operationMode
-     */
-    public String getOperationMode() {
-        return this.operationMode;
-    }
-
-    /**
-     * @return pages
-     */
-    public String getPages() {
-        return this.pages;
-    }
-
-    /**
      * @return productCode
      */
     public String getProductCode() {
         return this.productCode;
-    }
-
-    /**
-     * @return productConfig
-     */
-    public String getProductConfig() {
-        return this.productConfig;
     }
 
     /**
@@ -323,10 +275,10 @@ public class InitializeRequest extends Request {
     }
 
     /**
-     * @return serviceLevel
+     * @return styleConfig
      */
-    public String getServiceLevel() {
-        return this.serviceLevel;
+    public String getStyleConfig() {
+        return this.styleConfig;
     }
 
     public static final class Builder extends Request.Builder<InitializeRequest, Builder> {
@@ -338,7 +290,6 @@ public class InitializeRequest extends Request {
         private String docType; 
         private String facePictureBase64; 
         private String facePictureUrl; 
-        private String flowType; 
         private String idFaceQuality; 
         private String idSpoof; 
         private String languageConfig; 
@@ -346,15 +297,12 @@ public class InitializeRequest extends Request {
         private String merchantUserId; 
         private String metaInfo; 
         private String ocr; 
-        private String operationMode; 
-        private String pages; 
         private String productCode; 
-        private String productConfig; 
         private String productFlow; 
         private String returnUrl; 
         private String sceneCode; 
         private String securityLevel; 
-        private String serviceLevel; 
+        private String styleConfig; 
 
         private Builder() {
             super();
@@ -370,7 +318,6 @@ public class InitializeRequest extends Request {
             this.docType = request.docType;
             this.facePictureBase64 = request.facePictureBase64;
             this.facePictureUrl = request.facePictureUrl;
-            this.flowType = request.flowType;
             this.idFaceQuality = request.idFaceQuality;
             this.idSpoof = request.idSpoof;
             this.languageConfig = request.languageConfig;
@@ -378,15 +325,12 @@ public class InitializeRequest extends Request {
             this.merchantUserId = request.merchantUserId;
             this.metaInfo = request.metaInfo;
             this.ocr = request.ocr;
-            this.operationMode = request.operationMode;
-            this.pages = request.pages;
             this.productCode = request.productCode;
-            this.productConfig = request.productConfig;
             this.productFlow = request.productFlow;
             this.returnUrl = request.returnUrl;
             this.sceneCode = request.sceneCode;
             this.securityLevel = request.securityLevel;
-            this.serviceLevel = request.serviceLevel;
+            this.styleConfig = request.styleConfig;
         } 
 
         /**
@@ -462,15 +406,6 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * FlowType.
-         */
-        public Builder flowType(String flowType) {
-            this.putQueryParameter("FlowType", flowType);
-            this.flowType = flowType;
-            return this;
-        }
-
-        /**
          * IdFaceQuality.
          */
         public Builder idFaceQuality(String idFaceQuality) {
@@ -534,38 +469,11 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * OperationMode.
-         */
-        public Builder operationMode(String operationMode) {
-            this.putQueryParameter("OperationMode", operationMode);
-            this.operationMode = operationMode;
-            return this;
-        }
-
-        /**
-         * Pages.
-         */
-        public Builder pages(String pages) {
-            this.putQueryParameter("Pages", pages);
-            this.pages = pages;
-            return this;
-        }
-
-        /**
          * ProductCode.
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
             this.productCode = productCode;
-            return this;
-        }
-
-        /**
-         * ProductConfig.
-         */
-        public Builder productConfig(String productConfig) {
-            this.putQueryParameter("ProductConfig", productConfig);
-            this.productConfig = productConfig;
             return this;
         }
 
@@ -606,11 +514,11 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * ServiceLevel.
+         * StyleConfig.
          */
-        public Builder serviceLevel(String serviceLevel) {
-            this.putQueryParameter("ServiceLevel", serviceLevel);
-            this.serviceLevel = serviceLevel;
+        public Builder styleConfig(String styleConfig) {
+            this.putQueryParameter("StyleConfig", styleConfig);
+            this.styleConfig = styleConfig;
             return this;
         }
 
