@@ -91,7 +91,7 @@ public class DescribeClusterTasksRequest extends Request {
         }
 
         /**
-         * page_number.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("page_number", pageNumber);
@@ -100,7 +100,7 @@ public class DescribeClusterTasksRequest extends Request {
         }
 
         /**
-         * page_size.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("page_size", pageSize);

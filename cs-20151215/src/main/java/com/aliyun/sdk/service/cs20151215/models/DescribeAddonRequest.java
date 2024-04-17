@@ -152,7 +152,7 @@ public class DescribeAddonRequest extends Request {
         } 
 
         /**
-         * addon_name.
+         * The name of the component.
          */
         public Builder addonName(String addonName) {
             this.putPathParameter("addon_name", addonName);
@@ -161,7 +161,7 @@ public class DescribeAddonRequest extends Request {
         }
 
         /**
-         * cluster_id.
+         * The ID of the cluster. If you specify a cluster ID, only components used in the cluster are queried. Other parameters are ignored.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("cluster_id", clusterId);
@@ -170,7 +170,7 @@ public class DescribeAddonRequest extends Request {
         }
 
         /**
-         * cluster_spec.
+         * The specifications of the cluster. If cluster_id is specified, this parameter is ignored. You must specify the region_id, cluster_type, profile, cluster_spec, and cluster_version parameters at the same time.
          */
         public Builder clusterSpec(String clusterSpec) {
             this.putQueryParameter("cluster_spec", clusterSpec);
@@ -179,7 +179,7 @@ public class DescribeAddonRequest extends Request {
         }
 
         /**
-         * cluster_type.
+         * The type of the cluster. If cluster_id is specified, this parameter is ignored. You must specify the region_id, cluster_type, profile, cluster_spec, and cluster_version parameters at the same time.
          */
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("cluster_type", clusterType);
@@ -188,7 +188,7 @@ public class DescribeAddonRequest extends Request {
         }
 
         /**
-         * cluster_version.
+         * The version of the cluster. If cluster_id is specified, this parameter is ignored. You must specify the region_id, cluster_type, profile, cluster_spec, and cluster_version parameters at the same time.
          */
         public Builder clusterVersion(String clusterVersion) {
             this.putQueryParameter("cluster_version", clusterVersion);
@@ -197,7 +197,7 @@ public class DescribeAddonRequest extends Request {
         }
 
         /**
-         * profile.
+         * The subtype of the cluster. If cluster_id is specified, this parameter is ignored. You must specify the region_id, cluster_type, profile, cluster_spec, and cluster_version parameters at the same time.
          */
         public Builder profile(String profile) {
             this.putQueryParameter("profile", profile);
@@ -206,7 +206,7 @@ public class DescribeAddonRequest extends Request {
         }
 
         /**
-         * region_id.
+         * The region ID. If cluster_id is specified, this parameter is ignored. You must specify the region_id, cluster_type, profile, cluster_spec, and cluster_version parameters at the same time.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("region_id", regionId);
@@ -215,7 +215,7 @@ public class DescribeAddonRequest extends Request {
         }
 
         /**
-         * version.
+         * The version of the component. If you do not specify this parameter, the latest version of the component is queried.
          */
         public Builder version(String version) {
             this.putQueryParameter("version", version);

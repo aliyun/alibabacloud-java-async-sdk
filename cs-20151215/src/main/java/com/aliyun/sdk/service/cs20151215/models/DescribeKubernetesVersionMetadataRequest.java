@@ -129,9 +129,9 @@ public class DescribeKubernetesVersionMetadataRequest extends Request {
          * The cluster type that you want to use. Valid values:
          * <p>
          * 
-         * *   `Kubernetes`: ACK dedicated cluster
-         * *   `ManagedKubernetes`: ACK managed cluster
-         * *   `ExternalKubernetes`: registered cluster
+         * *   `Kubernetes`: ACK dedicated cluster.
+         * *   `ManagedKubernetes`: ACK managed cluster. ACK managed clusters include ACK Pro clusters, ACK Basic clusters, ACK Serverless Pro clusters, ACK Serverless Basic clusters, ACK Edge Pro clusters, and ACK Edge Basic clusters.
+         * *   `ExternalKubernetes`: registered cluster.
          */
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("ClusterType", clusterType);

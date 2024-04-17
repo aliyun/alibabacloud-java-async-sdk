@@ -91,7 +91,7 @@ public class ListClusterChecksRequest extends Request {
         }
 
         /**
-         * target.
+         * The targets to check.
          */
         public Builder target(String target) {
             this.putQueryParameter("target", target);

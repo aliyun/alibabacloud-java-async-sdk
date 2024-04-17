@@ -38,7 +38,7 @@ public class ListAddonsResponseBody extends TeaModel {
         private java.util.List < Addons> addons; 
 
         /**
-         * addons.
+         * The list of available components.
          */
         public Builder addons(java.util.List < Addons> addons) {
             this.addons = addons;
@@ -162,7 +162,11 @@ public class ListAddonsResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * architecture.
+             * Architectures supported by the component. Valid values:
+             * <p>
+             * 
+             * *   amd64
+             * *   arm64
              */
             public Builder architecture(java.util.List < String > architecture) {
                 this.architecture = architecture;
@@ -170,7 +174,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * category.
+             * The category of the component.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -178,7 +182,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * config_schema.
+             * The schema of the custom parameters of the component.
              */
             public Builder configSchema(String configSchema) {
                 this.configSchema = configSchema;
@@ -186,7 +190,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * install_by_default.
+             * Indicates whether the component is automatically installed by default.
              */
             public Builder installByDefault(Boolean installByDefault) {
                 this.installByDefault = installByDefault;
@@ -194,7 +198,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * managed.
+             * Indicates whether the component is fully managed.
              */
             public Builder managed(Boolean managed) {
                 this.managed = managed;
@@ -202,7 +206,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * The component name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -210,7 +214,13 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * supported_actions.
+             * Operations supported by the component. Valid values:
+             * <p>
+             * 
+             * *   Install
+             * *   Upgrade
+             * *   Modify
+             * *   Uninstall
              */
             public Builder supportedActions(java.util.List < String > supportedActions) {
                 this.supportedActions = supportedActions;
@@ -218,7 +228,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * version.
+             * The version number.
              */
             public Builder version(String version) {
                 this.version = version;

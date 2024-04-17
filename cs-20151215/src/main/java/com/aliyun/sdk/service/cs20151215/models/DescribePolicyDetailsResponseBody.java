@@ -182,7 +182,12 @@ public class DescribePolicyDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * The severity level of the policy.
+         * The severity level of the policy. Valid values:
+         * <p>
+         * 
+         * *   `high`
+         * *   `medium`
+         * *   `low`
          */
         public Builder severity(String severity) {
             this.severity = severity;

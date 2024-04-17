@@ -152,7 +152,7 @@ public class DescribeClustersV1Request extends Request {
         } 
 
         /**
-         * 集群ID。
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("cluster_id", clusterId);

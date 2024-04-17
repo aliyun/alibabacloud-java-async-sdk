@@ -27,6 +27,10 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
     private KubeletConfig kubeletConfig;
 
     @Body
+    @NameInMap("os_config")
+    private OsConfig osConfig;
+
+    @Body
     @NameInMap("rolling_policy")
     private RollingPolicy rollingPolicy;
 
@@ -35,6 +39,7 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
         this.clusterId = builder.clusterId;
         this.nodepoolId = builder.nodepoolId;
         this.kubeletConfig = builder.kubeletConfig;
+        this.osConfig = builder.osConfig;
         this.rollingPolicy = builder.rollingPolicy;
     }
 
@@ -73,6 +78,13 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
     }
 
     /**
+     * @return osConfig
+     */
+    public OsConfig getOsConfig() {
+        return this.osConfig;
+    }
+
+    /**
      * @return rollingPolicy
      */
     public RollingPolicy getRollingPolicy() {
@@ -83,6 +95,7 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
         private String clusterId; 
         private String nodepoolId; 
         private KubeletConfig kubeletConfig; 
+        private OsConfig osConfig; 
         private RollingPolicy rollingPolicy; 
 
         private Builder() {
@@ -94,6 +107,7 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
             this.clusterId = request.clusterId;
             this.nodepoolId = request.nodepoolId;
             this.kubeletConfig = request.kubeletConfig;
+            this.osConfig = request.osConfig;
             this.rollingPolicy = request.rollingPolicy;
         } 
 
@@ -125,6 +139,15 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
         }
 
         /**
+         * os_config.
+         */
+        public Builder osConfig(OsConfig osConfig) {
+            this.putBodyParameter("os_config", osConfig);
+            this.osConfig = osConfig;
+            return this;
+        }
+
+        /**
          * The rotation configuration.
          */
         public Builder rollingPolicy(RollingPolicy rollingPolicy) {
@@ -140,6 +163,47 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
 
     } 
 
+    public static class OsConfig extends TeaModel {
+        @NameInMap("sysctl")
+        private java.util.Map < String, ? > sysctl;
+
+        private OsConfig(Builder builder) {
+            this.sysctl = builder.sysctl;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static OsConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return sysctl
+         */
+        public java.util.Map < String, ? > getSysctl() {
+            return this.sysctl;
+        }
+
+        public static final class Builder {
+            private java.util.Map < String, ? > sysctl; 
+
+            /**
+             * sysctl.
+             */
+            public Builder sysctl(java.util.Map < String, ? > sysctl) {
+                this.sysctl = sysctl;
+                return this;
+            }
+
+            public OsConfig build() {
+                return new OsConfig(this);
+            } 
+
+        } 
+
+    }
     public static class RollingPolicy extends TeaModel {
         @NameInMap("max_parallelism")
         private Long maxParallelism;

@@ -389,11 +389,11 @@ public class ScaleOutClusterRequest extends Request {
         }
 
         /**
-         * The CPU management policy. The following policies are supported if the Kubernetes version of the cluster is 1.12.6 or later.
+         * The CPU management policy of the nodes in a node pool. The following policies are supported if the Kubernetes version of the cluster is 1.12.6 or later.
          * <p>
          * 
          * *   `static`: This policy allows pods with specific resource characteristics on the node to be granted with enhanced CPU affinity and exclusivity.
-         * *   `none`: specifies that the default CPU affinity is used.
+         * *   `none`: The default CPU affinity is used.
          * 
          * Default value: `none`.
          */
@@ -404,7 +404,7 @@ public class ScaleOutClusterRequest extends Request {
         }
 
         /**
-         * Specifies a custom image for nodes. By default, the image provided by ACK is used. You can select a custom image to replace the default image. For more information, see [Custom images](~~146647~~).
+         * Specifies a custom image for nodes. By default, the image provided by Container Service for Kubernetes (ACK) is used. You can select a custom image to replace the default image. For more information, see [Custom images](~~146647~~).
          */
         public Builder imageId(String imageId) {
             this.putBodyParameter("image_id", imageId);
@@ -431,7 +431,7 @@ public class ScaleOutClusterRequest extends Request {
         }
 
         /**
-         * After you specify the list of RDS instances, the ECS instances in the cluster are automatically added to the whitelist of the RDS instances.
+         * After you specify the list of ApsaraDB RDS instances, the ECS instances in the cluster are automatically added to the whitelist of the ApsaraDB RDS instances.
          */
         public Builder rdsInstances(java.util.List < String > rdsInstances) {
             this.putBodyParameter("rds_instances", rdsInstances);
@@ -462,7 +462,7 @@ public class ScaleOutClusterRequest extends Request {
         }
 
         /**
-         * The taints that you want to add to nodes. Taints are added to nodes to prevent pods from being scheduled to inappropriate nodes. However, tolerations allow pods to be scheduled to nodes with matching taints. For more information, see [taint-and-toleration](https://kubernetes.io/zh/docs/concepts/scheduling-eviction/taint-and-toleration/).
+         * The taints that you want to add to nodes. Taints are added to nodes to prevent pods from being scheduled to inappropriate nodes. However, tolerations allow pods to be scheduled to nodes with matching taints. For more information, see [Taints and Tolerations](https://kubernetes.io/zh/docs/concepts/scheduling-eviction/taint-and-toleration/).
          */
         public Builder taints(java.util.List < Taint > taints) {
             this.putBodyParameter("taints", taints);
@@ -531,9 +531,9 @@ public class ScaleOutClusterRequest extends Request {
          * <p>
          * 
          * *   `PrePaid`: subscription.
-         * *   `PostPaid`: pay-as-you-go
+         * *   `PostPaid`: pay-as-you-go.
          * 
-         * Default value: `PostPaid`
+         * Default value: `PostPaid`.
          */
         public Builder workerInstanceChargeType(String workerInstanceChargeType) {
             this.putBodyParameter("worker_instance_charge_type", workerInstanceChargeType);
@@ -679,7 +679,7 @@ public class ScaleOutClusterRequest extends Request {
              * The ID of an automatic snapshot policy. Automatic backup is performed for a disk based on the specified automatic snapshot policy.
              * <p>
              * 
-             * By default, this parameter is empty. This indicates that automatic backup is disabled.
+             * By default, this parameter is empty, which indicates that automatic backup is disabled.
              */
             public Builder autoSnapshotPolicyId(String autoSnapshotPolicyId) {
                 this.autoSnapshotPolicyId = autoSnapshotPolicyId;

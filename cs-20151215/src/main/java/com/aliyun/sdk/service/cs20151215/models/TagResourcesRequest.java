@@ -109,7 +109,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The IDs of the resources that you want to label.
+         * The list of resource IDs.
          */
         public Builder resourceIds(java.util.List < String > resourceIds) {
             this.putBodyParameter("resource_ids", resourceIds);
@@ -127,12 +127,12 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The labels that you want to add to the resources in key-value pairs. You can add up to 20 labels. Note:
+         * The labels that you want to add to the resources in key-value pairs. You can add up to 20 labels. Usage notes:
          * <p>
          * 
-         * *   A value cannot be empty and can contain up to 128 characters.
-         * *   A key or value must not start with `aliyun` or `acs:`.
-         * *   A key or value must not contain `http://` or `https://`.
+         * *   Label values must not be empty strings. A label value must be 1 to 128 characters in length.
+         * *   The label value must not start with `aliyun` or `acs:`.
+         * *   The label value must not contain `http://` or `https://`.
          */
         public Builder tags(java.util.List < Tag > tags) {
             this.putBodyParameter("tags", tags);

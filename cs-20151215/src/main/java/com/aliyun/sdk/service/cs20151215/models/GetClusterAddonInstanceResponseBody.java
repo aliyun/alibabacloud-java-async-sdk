@@ -86,7 +86,7 @@ public class GetClusterAddonInstanceResponseBody extends TeaModel {
         private String version; 
 
         /**
-         * config.
+         * The custom configurations of the component.
          */
         public Builder config(String config) {
             this.config = config;
@@ -94,7 +94,7 @@ public class GetClusterAddonInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * logging.
+         * The status of Simple Log Service.
          */
         public Builder logging(Logging logging) {
             this.logging = logging;
@@ -102,7 +102,7 @@ public class GetClusterAddonInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * name.
+         * The name of the component instance.
          */
         public Builder name(String name) {
             this.name = name;
@@ -110,7 +110,13 @@ public class GetClusterAddonInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * state.
+         * The status of the component. Valid values:
+         * <p>
+         * 
+         * *   active: The component is installed.
+         * *   updating: The component is being modified.
+         * *   upgrading: The component is being updated.
+         * *   deleting: The component is being uninstalled.
          */
         public Builder state(String state) {
             this.state = state;
@@ -118,7 +124,7 @@ public class GetClusterAddonInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * version.
+         * The version of the component instance.
          */
         public Builder version(String version) {
             this.version = version;
@@ -194,7 +200,7 @@ public class GetClusterAddonInstanceResponseBody extends TeaModel {
             private String logstore; 
 
             /**
-             * capable.
+             * Indicates whether Simple Log Service is supported by the component.
              */
             public Builder capable(Boolean capable) {
                 this.capable = capable;
@@ -202,7 +208,7 @@ public class GetClusterAddonInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * enabled.
+             * Indicates whether Simple Log Service is enabled for the component.
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -210,7 +216,7 @@ public class GetClusterAddonInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * log_project.
+             * The Simple Log Service project that is used to collect logs for the component.
              */
             public Builder logProject(String logProject) {
                 this.logProject = logProject;
@@ -218,7 +224,7 @@ public class GetClusterAddonInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * logstore.
+             * The Simple Log Service Logstore that is used to collect logs for the component.
              */
             public Builder logstore(String logstore) {
                 this.logstore = logstore;

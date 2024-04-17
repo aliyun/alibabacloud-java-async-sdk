@@ -124,7 +124,7 @@ public class ListAddonsRequest extends Request {
         } 
 
         /**
-         * cluster_id.
+         * The cluster ID. If you specify a cluster ID, only components used in the specified cluster are queried. Other parameters are ignored.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("cluster_id", clusterId);
@@ -133,7 +133,7 @@ public class ListAddonsRequest extends Request {
         }
 
         /**
-         * cluster_spec.
+         * The specifications of the cluster. If cluster_id is specified, this parameter is ignored. You must specify the region_id, cluster_type, profile, cluster_spec, and cluster_version parameters at the same time.
          */
         public Builder clusterSpec(String clusterSpec) {
             this.putQueryParameter("cluster_spec", clusterSpec);
@@ -142,7 +142,7 @@ public class ListAddonsRequest extends Request {
         }
 
         /**
-         * cluster_type.
+         * The type of the cluster. If cluster_id is specified, this parameter is ignored. You must specify the region_id, cluster_type, profile, cluster_spec, and cluster_version parameters at the same time.
          */
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("cluster_type", clusterType);
@@ -151,7 +151,7 @@ public class ListAddonsRequest extends Request {
         }
 
         /**
-         * cluster_version.
+         * The version of the cluster. If cluster_id is specified, this parameter is ignored. You must specify the region_id, cluster_type, profile, cluster_spec, and cluster_version parameters at the same time.
          */
         public Builder clusterVersion(String clusterVersion) {
             this.putQueryParameter("cluster_version", clusterVersion);
@@ -160,7 +160,7 @@ public class ListAddonsRequest extends Request {
         }
 
         /**
-         * profile.
+         * The subtype of the cluster. If cluster_id is specified, this parameter is ignored. You must specify the region_id, cluster_type, profile, cluster_spec, and cluster_version parameters at the same time.
          */
         public Builder profile(String profile) {
             this.putQueryParameter("profile", profile);
@@ -169,7 +169,7 @@ public class ListAddonsRequest extends Request {
         }
 
         /**
-         * region_id.
+         * The region of the cluster. If cluster_id is specified, this parameter is ignored. You must specify the region_id, cluster_type, profile, cluster_spec, and cluster_version parameters at the same time.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("region_id", regionId);

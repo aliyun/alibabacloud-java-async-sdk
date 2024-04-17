@@ -175,41 +175,9 @@ public class DescribeClusterVulsResponseBody extends TeaModel {
              * 
              * Valid values:
              * 
-             * *   nntf
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     low
-             * 
-             *     <!-- -->
-             * 
-             * *   later
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     medium
-             * 
-             *     <!-- -->
-             * 
-             * *   asap
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     high
-             * 
-             *     <!-- -->
+             * *   nntf: low
+             * *   later: medium     
+             * *   asap: high
              */
             public Builder necessity(String necessity) {
                 this.necessity = necessity;
@@ -262,77 +230,12 @@ public class DescribeClusterVulsResponseBody extends TeaModel {
              * 
              * Valid values:
              * 
-             * *   app
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     application vulnerabilities
-             * 
-             *     <!-- -->
-             * 
-             * *   sca
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     application vulnerabilities (software component analysis)
-             * 
-             *     <!-- -->
-             * 
-             * *   cve
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     Linux vulnerabilities
-             * 
-             *     <!-- -->
-             * 
-             * *   cms
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     Web-CMS vulnerabilities
-             * 
-             *     <!-- -->
-             * 
-             * *   sys
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     Windows vulnerabilities
-             * 
-             *     <!-- -->
-             * 
-             * *   emg
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     emergency vulnerabilities
-             * 
-             *     <!-- -->
+             * *   app: application vulnerabilities
+             * *   sca: application vulnerabilities (software component analysis)
+             * *   cve: Linux vulnerabilities
+             * *   cms: Web-CMS vulnerabilities
+             * *   sys: Windows vulnerabilities
+             * *   emg:  emergency vulnerabilities
              */
             public Builder vulType(String vulType) {
                 this.vulType = vulType;

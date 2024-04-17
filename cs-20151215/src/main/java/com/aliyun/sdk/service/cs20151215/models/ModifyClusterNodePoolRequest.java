@@ -209,7 +209,7 @@ public class ModifyClusterNodePoolRequest extends Request {
         }
 
         /**
-         * concurrency.
+         * Specifies whether concurrency is supported.
          */
         public Builder concurrency(Boolean concurrency) {
             this.putBodyParameter("concurrency", concurrency);
@@ -452,7 +452,7 @@ public class ModifyClusterNodePoolRequest extends Request {
              * 
              * *   `cpu`: regular instance.
              * *   `gpu`: GPU-accelerated instance.
-             * *   `gpushare`: shared GPU-accelerated instance.
+             * *   `gpushare`: shared GPU-accelerated instance
              * *   `spot`: preemptible instance
              * 
              * Default value: `cpu`.
@@ -594,7 +594,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * The CPU management policy of the nodes in the node pool. The following policies are supported if the Kubernetes version of the cluster is 1.12.6 or later.
+             * The CPU management policy of the nodes in the node pool. The following policies are supported if the Kubernetes version of the cluster is 1.12.6 or later:
              * <p>
              * 
              * *   `static`: allows pods with specific resource characteristics on the node to be granted enhanced CPU affinity and exclusivity.
@@ -611,7 +611,7 @@ public class ModifyClusterNodePoolRequest extends Request {
              * The labels of the nodes in the node pool. You can add labels to the nodes in the cluster. You must add labels based on the following rules:
              * <p>
              * 
-             * *   Each label is a case-sensitive key-value pair. You can add at most 20 labels.
+             * *   A tag is a case-sensitive key-value pair. You can add up to 20 tags.
              * *   The key must be unique and cannot exceed 64 characters in length. The value can be empty and cannot exceed 128 characters in length. Keys and values cannot start with `aliyun`, `acs:`, `https://`, or `http://`. For more information, see [Labels and Selectors](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set).
              */
             public Builder labels(java.util.List < Tag > labels) {
@@ -1095,7 +1095,7 @@ public class ModifyClusterNodePoolRequest extends Request {
              * <p>
              * 
              * *   `true`: yes
-             * *   `false`: no
+             * *   `true`: no
              */
             public Builder autoVulFix(Boolean autoVulFix) {
                 this.autoVulFix = autoVulFix;
@@ -1189,7 +1189,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * The ID of the resource group to which the node pool belongs.
+             * The ID of the resource group.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -1821,7 +1821,7 @@ public class ModifyClusterNodePoolRequest extends Request {
              * Specifies whether to automatically create pay-as-you-go instances to meet the required number of ECS instances if preemptible instances cannot be created due to reasons such as the cost or insufficient inventory. This parameter takes effect when you set `multi_az_policy` to `COST_OPTIMIZED`. Valid values:
              * <p>
              * 
-             * *   `true`: automatically creates pay-as-you-go instances to meet the required number of ECS instances if preemptible instances cannot be created.
+             * *   `true`: automatically creates pay-as-you-go instances to meet the required number of ECS instances if preemptible instances cannot be created
              * *   `false`: does not create pay-as-you-go instances to meet the required number of ECS instances if preemptible instances cannot be created.
              */
             public Builder compensateWithOnDemand(Boolean compensateWithOnDemand) {
@@ -1854,7 +1854,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * image_type.
+             * The type of OS distribution that you want to use. To specify the node OS, we recommend that you use this parameter. Valid values: CentOS, AliyunLinux, AliyunLinux Qboot, AliyunLinuxUEFI, AliyunLinux3, Windows, WindowsCore, AliyunLinux3Arm64, and ContainerOS.
              */
             public Builder imageType(String imageType) {
                 this.imageType = imageType;
@@ -1920,7 +1920,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * The ECS instance scaling policy for a multi-zone scaling group. Valid values:
+             * The ECS instance scaling policy for the multi-zone scaling group. Valid values:
              * <p>
              * 
              * *   `PRIORITY`: The scaling group is scaled based on the VSwitchIds.N parameter. If an ECS instance cannot be created in the zone where the vSwitch that has the highest priority resides, Auto Scaling creates the ECS instance in the zone where the vSwitch that has the next highest priority resides.
@@ -1931,7 +1931,7 @@ public class ModifyClusterNodePoolRequest extends Request {
              * 
              *     **Note** `COST_OPTIMIZED` is valid only when multiple instance types are specified or at least one preemptible instance type is specified.
              * 
-             * *   `BALANCE`: ECS instances are evenly distributed across multiple zones specified by the scaling group. If ECS instances become imbalanced among multiple zones due to insufficient inventory, you can call the `RebalanceInstances` operation of Auto Scaling to balance the instance distribution among zones. For more information, see [RebalanceInstances](~~71516~~).
+             * *   `BALANCE`: ECS instances are evenly distributed across multiple zones specified by the scaling group. If ECS instances become imbalanced among multiple zones due to the insufficient inventory, you can call the `RebalanceInstances` operation of Auto Scaling to balance the instance distribution among zones. For more information, see [RebalanceInstances](~~71516~~).
              * 
              * Default value: `PRIORITY`.
              */
@@ -2014,7 +2014,7 @@ public class ModifyClusterNodePoolRequest extends Request {
              * The scaling mode of the scaling group. Valid values:
              * <p>
              * 
-             * *   `release`: the standard mode. ECS instances are created and released based on resource usage.
+             * *   `release`: the standard mode. ECS instances are created and released based on the resource usage.
              * *   `recycle`: the swift mode. ECS instances are created, stopped, or started during scaling events. This reduces the time required for the next scale-out event. When the instance is stopped, you are charged only for the storage service. This does not apply to ECS instances that are attached with local disks.
              */
             public Builder scalingPolicy(String scalingPolicy) {
@@ -2066,7 +2066,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * system_disk_bursting_enabled.
+             * Indicates whether Burst is enabled for the system disk when the disk type is cloud_auto.
              */
             public Builder systemDiskBurstingEnabled(Boolean systemDiskBurstingEnabled) {
                 this.systemDiskBurstingEnabled = systemDiskBurstingEnabled;
@@ -2074,7 +2074,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * system_disk_categories.
+             * The types of system disks. The system attempts to create system disks from a disk type with a lower priority when the disk type with a higher priority is unavailable. Valid values: cloud: disk cloud_efficiency: ultra disk cloud_ssd: standard SSD cloud_essd: indicates an enhanced SSD (ESSD).
              */
             public Builder systemDiskCategories(java.util.List < String > systemDiskCategories) {
                 this.systemDiskCategories = systemDiskCategories;
@@ -2086,7 +2086,7 @@ public class ModifyClusterNodePoolRequest extends Request {
              * <p>
              * 
              * *   `cloud_efficiency`: ultra disk.
-             * *   `cloud_ssd`: standard SSD.
+             * *   `cloud_ssd`: standard SSD
              * 
              * Default value: `cloud_ssd`.
              */
@@ -2096,7 +2096,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * system_disk_encrypt_algorithm.
+             * The algorithm that you want to use to encrypt the system disk. The value is aes-256.
              */
             public Builder systemDiskEncryptAlgorithm(String systemDiskEncryptAlgorithm) {
                 this.systemDiskEncryptAlgorithm = systemDiskEncryptAlgorithm;
@@ -2104,7 +2104,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * system_disk_encrypted.
+             * Indicates whether the system disk is encrypted. Valid values: true: encrypts the system disk. false: does not encrypt the system disk.
              */
             public Builder systemDiskEncrypted(Boolean systemDiskEncrypted) {
                 this.systemDiskEncrypted = systemDiskEncrypted;
@@ -2112,7 +2112,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * system_disk_kms_key_id.
+             * The ID of the Key Management Service (KMS) key that is used to encrypt the system disk.
              */
             public Builder systemDiskKmsKeyId(String systemDiskKmsKeyId) {
                 this.systemDiskKmsKeyId = systemDiskKmsKeyId;
@@ -2128,7 +2128,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * system_disk_provisioned_iops.
+             * The predefined read and write IOPS of the system disk when the disk type is cloud_auto.
              */
             public Builder systemDiskProvisionedIops(Long systemDiskProvisionedIops) {
                 this.systemDiskProvisionedIops = systemDiskProvisionedIops;
@@ -2136,14 +2136,14 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * The system disk size of a node. Unit: GiB.
+             * The size of the system disk in GiB.
              * <p>
              * 
              * Valid values: 20 to 500.
              * 
-             * The value of this parameter must be at least 20 and greater than or equal to the size of the specified image.
+             * The value of this parameter must be at least 20 and greater than or equal to the size of the image.
              * 
-             * The default value is the greater one between 40 and the image size.
+             * Default value: the greater value between 40 and the image size.
              */
             public Builder systemDiskSize(Long systemDiskSize) {
                 this.systemDiskSize = systemDiskSize;
@@ -2151,10 +2151,10 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * The labels that you want to add to the ECS instances.
+             * The labels that you want to add only to ECS instances.
              * <p>
              * 
-             * The key must be unique and cannot exceed 128 characters in length. Neither keys nor values can start with aliyun or acs:. Neither keys nor values can contain https:// or http://.
+             * The tag key must be unique and cannot exceed 128 characters in length. The tag key and value must not start with aliyun or acs: or contain https:// or http://.
              */
             public Builder tags(java.util.List < Tag > tags) {
                 this.tags = tags;
@@ -2162,7 +2162,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * The vSwitch IDs. You can specify 1 to 20 vSwitches.
+             * The IDs of vSwitches. You can specify 1 to 20 vSwitches.
              * <p>
              * 
              * >  To ensure high availability, we recommend that you select vSwitches in different zones.

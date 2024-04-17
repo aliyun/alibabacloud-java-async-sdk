@@ -50,7 +50,7 @@ public class ScanClusterVulsResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * The request ID.
+         * request_id.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ScanClusterVulsResponseBody extends TeaModel {
         }
 
         /**
-         * The task ID.
+         * task_id.
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

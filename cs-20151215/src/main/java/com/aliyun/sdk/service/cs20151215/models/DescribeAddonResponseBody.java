@@ -134,7 +134,11 @@ public class DescribeAddonResponseBody extends TeaModel {
         private String version; 
 
         /**
-         * architecture.
+         * Architectures supported by the component. Valid values:
+         * <p>
+         * 
+         * *   amd64
+         * *   arm64
          */
         public Builder architecture(java.util.List < String > architecture) {
             this.architecture = architecture;
@@ -142,7 +146,7 @@ public class DescribeAddonResponseBody extends TeaModel {
         }
 
         /**
-         * category.
+         * The category of the component.
          */
         public Builder category(String category) {
             this.category = category;
@@ -150,7 +154,7 @@ public class DescribeAddonResponseBody extends TeaModel {
         }
 
         /**
-         * config_schema.
+         * The custom parameter schema of the component.
          */
         public Builder configSchema(String configSchema) {
             this.configSchema = configSchema;
@@ -158,7 +162,7 @@ public class DescribeAddonResponseBody extends TeaModel {
         }
 
         /**
-         * install_by_default.
+         * Indicates whether the component is automatically installed by default.
          */
         public Builder installByDefault(Boolean installByDefault) {
             this.installByDefault = installByDefault;
@@ -166,7 +170,7 @@ public class DescribeAddonResponseBody extends TeaModel {
         }
 
         /**
-         * managed.
+         * Indicates whether the component is fully managed.
          */
         public Builder managed(Boolean managed) {
             this.managed = managed;
@@ -174,7 +178,7 @@ public class DescribeAddonResponseBody extends TeaModel {
         }
 
         /**
-         * name.
+         * The name of the component.
          */
         public Builder name(String name) {
             this.name = name;
@@ -182,7 +186,7 @@ public class DescribeAddonResponseBody extends TeaModel {
         }
 
         /**
-         * newer_versions.
+         * The latest version of the component.
          */
         public Builder newerVersions(java.util.List < NewerVersions> newerVersions) {
             this.newerVersions = newerVersions;
@@ -190,7 +194,13 @@ public class DescribeAddonResponseBody extends TeaModel {
         }
 
         /**
-         * supported_actions.
+         * Operations supported by the component. Valid values:
+         * <p>
+         * 
+         * *   Install
+         * *   Upgrade
+         * *   Modify
+         * *   Uninstall
          */
         public Builder supportedActions(java.util.List < String > supportedActions) {
             this.supportedActions = supportedActions;
@@ -198,7 +208,7 @@ public class DescribeAddonResponseBody extends TeaModel {
         }
 
         /**
-         * version.
+         * The version of the component.
          */
         public Builder version(String version) {
             this.version = version;
@@ -262,7 +272,7 @@ public class DescribeAddonResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * minimum_cluster_version.
+             * The minimum cluster version required by the component version.
              */
             public Builder minimumClusterVersion(String minimumClusterVersion) {
                 this.minimumClusterVersion = minimumClusterVersion;
@@ -270,7 +280,7 @@ public class DescribeAddonResponseBody extends TeaModel {
             }
 
             /**
-             * upgradable.
+             * Indicates whether the component can be updated to the version.
              */
             public Builder upgradable(Boolean upgradable) {
                 this.upgradable = upgradable;
@@ -278,7 +288,7 @@ public class DescribeAddonResponseBody extends TeaModel {
             }
 
             /**
-             * version.
+             * The version number.
              */
             public Builder version(String version) {
                 this.version = version;

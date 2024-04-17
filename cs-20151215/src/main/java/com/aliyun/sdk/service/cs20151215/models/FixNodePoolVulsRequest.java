@@ -144,7 +144,7 @@ public class FixNodePoolVulsRequest extends Request {
         }
 
         /**
-         * auto_restart.
+         * Specifies whether to allow the nodes to restart.
          */
         public Builder autoRestart(Boolean autoRestart) {
             this.putBodyParameter("auto_restart", autoRestart);
@@ -213,7 +213,7 @@ public class FixNodePoolVulsRequest extends Request {
             private Long maxParallelism; 
 
             /**
-             * The maximum number of nodes that can be patched in parallel. The minimum value is 1. The maximum value equals the number of nodes in the node pool.
+             * The maximum concurrency for batch patching. Minimum value: 1. The maximum value equals the number of nodes in the node pool.
              */
             public Builder maxParallelism(Long maxParallelism) {
                 this.maxParallelism = maxParallelism;
