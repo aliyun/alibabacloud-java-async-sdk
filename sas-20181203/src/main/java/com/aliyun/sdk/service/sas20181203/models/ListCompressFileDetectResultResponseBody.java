@@ -7,18 +7,22 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetFileDetectResultResponseBody} extends {@link TeaModel}
+ * {@link ListCompressFileDetectResultResponseBody} extends {@link TeaModel}
  *
- * <p>GetFileDetectResultResponseBody</p>
+ * <p>ListCompressFileDetectResultResponseBody</p>
  */
-public class GetFileDetectResultResponseBody extends TeaModel {
+public class ListCompressFileDetectResultResponseBody extends TeaModel {
+    @NameInMap("PageInfo")
+    private PageInfo pageInfo;
+
     @NameInMap("RequestId")
     private String requestId;
 
     @NameInMap("ResultList")
     private java.util.List < ResultList> resultList;
 
-    private GetFileDetectResultResponseBody(Builder builder) {
+    private ListCompressFileDetectResultResponseBody(Builder builder) {
+        this.pageInfo = builder.pageInfo;
         this.requestId = builder.requestId;
         this.resultList = builder.resultList;
     }
@@ -27,8 +31,15 @@ public class GetFileDetectResultResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static GetFileDetectResultResponseBody create() {
+    public static ListCompressFileDetectResultResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return pageInfo
+     */
+    public PageInfo getPageInfo() {
+        return this.pageInfo;
     }
 
     /**
@@ -46,11 +57,20 @@ public class GetFileDetectResultResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private PageInfo pageInfo; 
         private String requestId; 
         private java.util.List < ResultList> resultList; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * PageInfo.
+         */
+        public Builder pageInfo(PageInfo pageInfo) {
+            this.pageInfo = pageInfo;
+            return this;
+        }
+
+        /**
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,34 +78,109 @@ public class GetFileDetectResultResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of file detection results.
+         * ResultList.
          */
         public Builder resultList(java.util.List < ResultList> resultList) {
             this.resultList = resultList;
             return this;
         }
 
-        public GetFileDetectResultResponseBody build() {
-            return new GetFileDetectResultResponseBody(this);
+        public ListCompressFileDetectResultResponseBody build() {
+            return new ListCompressFileDetectResultResponseBody(this);
         } 
 
     } 
 
+    public static class PageInfo extends TeaModel {
+        @NameInMap("CurrentPage")
+        private Integer currentPage;
+
+        @NameInMap("PageSize")
+        private Integer pageSize;
+
+        @NameInMap("TotalCount")
+        private Integer totalCount;
+
+        private PageInfo(Builder builder) {
+            this.currentPage = builder.currentPage;
+            this.pageSize = builder.pageSize;
+            this.totalCount = builder.totalCount;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PageInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return currentPage
+         */
+        public Integer getCurrentPage() {
+            return this.currentPage;
+        }
+
+        /**
+         * @return pageSize
+         */
+        public Integer getPageSize() {
+            return this.pageSize;
+        }
+
+        /**
+         * @return totalCount
+         */
+        public Integer getTotalCount() {
+            return this.totalCount;
+        }
+
+        public static final class Builder {
+            private Integer currentPage; 
+            private Integer pageSize; 
+            private Integer totalCount; 
+
+            /**
+             * CurrentPage.
+             */
+            public Builder currentPage(Integer currentPage) {
+                this.currentPage = currentPage;
+                return this;
+            }
+
+            /**
+             * PageSize.
+             */
+            public Builder pageSize(Integer pageSize) {
+                this.pageSize = pageSize;
+                return this;
+            }
+
+            /**
+             * TotalCount.
+             */
+            public Builder totalCount(Integer totalCount) {
+                this.totalCount = totalCount;
+                return this;
+            }
+
+            public PageInfo build() {
+                return new PageInfo(this);
+            } 
+
+        } 
+
+    }
     public static class ResultList extends TeaModel {
-        @NameInMap("Code")
-        private String code;
-
-        @NameInMap("Compress")
-        private Boolean compress;
-
         @NameInMap("Ext")
         private String ext;
 
         @NameInMap("HashKey")
         private String hashKey;
 
-        @NameInMap("Message")
-        private String message;
+        @NameInMap("Path")
+        private String path;
 
         @NameInMap("Result")
         private Integer result;
@@ -97,11 +192,9 @@ public class GetFileDetectResultResponseBody extends TeaModel {
         private String virusType;
 
         private ResultList(Builder builder) {
-            this.code = builder.code;
-            this.compress = builder.compress;
             this.ext = builder.ext;
             this.hashKey = builder.hashKey;
-            this.message = builder.message;
+            this.path = builder.path;
             this.result = builder.result;
             this.score = builder.score;
             this.virusType = builder.virusType;
@@ -113,20 +206,6 @@ public class GetFileDetectResultResponseBody extends TeaModel {
 
         public static ResultList create() {
             return builder().build();
-        }
-
-        /**
-         * @return code
-         */
-        public String getCode() {
-            return this.code;
-        }
-
-        /**
-         * @return compress
-         */
-        public Boolean getCompress() {
-            return this.compress;
         }
 
         /**
@@ -144,10 +223,10 @@ public class GetFileDetectResultResponseBody extends TeaModel {
         }
 
         /**
-         * @return message
+         * @return path
          */
-        public String getMessage() {
-            return this.message;
+        public String getPath() {
+            return this.path;
         }
 
         /**
@@ -172,33 +251,15 @@ public class GetFileDetectResultResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private String code; 
-            private Boolean compress; 
             private String ext; 
             private String hashKey; 
-            private String message; 
+            private String path; 
             private Integer result; 
             private Integer score; 
             private String virusType; 
 
             /**
-             * The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
-             */
-            public Builder code(String code) {
-                this.code = code;
-                return this;
-            }
-
-            /**
-             * Compress.
-             */
-            public Builder compress(Boolean compress) {
-                this.compress = compress;
-                return this;
-            }
-
-            /**
-             * The extended information about the file detection result.
+             * Ext.
              */
             public Builder ext(String ext) {
                 this.ext = ext;
@@ -206,7 +267,7 @@ public class GetFileDetectResultResponseBody extends TeaModel {
             }
 
             /**
-             * The identifier of the file. Only MD5 hash values are supported.
+             * HashKey.
              */
             public Builder hashKey(String hashKey) {
                 this.hashKey = hashKey;
@@ -214,20 +275,15 @@ public class GetFileDetectResultResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned.
+             * Path.
              */
-            public Builder message(String message) {
-                this.message = message;
+            public Builder path(String path) {
+                this.path = path;
                 return this;
             }
 
             /**
-             * The file detection result. Valid values:
-             * <p>
-             * 
-             * *   **0**: The file is normal.
-             * *   **1**: The file is suspicious.
-             * *   **3**: The detection is in progress.
+             * Result.
              */
             public Builder result(Integer result) {
                 this.result = result;
@@ -235,10 +291,7 @@ public class GetFileDetectResultResponseBody extends TeaModel {
             }
 
             /**
-             * The score of file detection result.
-             * <p>
-             * 
-             * > A higher score indicates a more suspicious file.
+             * Score.
              */
             public Builder score(Integer score) {
                 this.score = score;
@@ -246,31 +299,7 @@ public class GetFileDetectResultResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the virus. Valid values:
-             * <p>
-             * 
-             * *   **Trojan**: self-mutating trojan
-             * *   **WebShell**: webshell
-             * *   **Backdoor**: backdoor program
-             * *   **RansomWare**: ransomware
-             * *   **Scanner**: scanner
-             * *   **Stealer**: tool that is used to steal information
-             * *   **Malbaseware**: tainted basic software
-             * *   **Hacktool**: attacker tool
-             * *   **Engtest**: engine test program
-             * *   **Downloader**: trojan downloader
-             * *   **Virus**: infectious virus
-             * *   **Miner**: mining program
-             * *   **Worm**: worm
-             * *   **DDoS**: DDoS trojan
-             * *   **Malware**: malicious program
-             * *   **Backdoor**: reverse shell
-             * *   **RiskWare**: software that has risks
-             * *   **Proxytool**: proxy
-             * *   **Suspicious**: suspicious program
-             * *   **MalScript**: malicious script
-             * *   **Rootkit**: rootkit
-             * *   **Exploit**: exploit
+             * VirusType.
              */
             public Builder virusType(String virusType) {
                 this.virusType = virusType;

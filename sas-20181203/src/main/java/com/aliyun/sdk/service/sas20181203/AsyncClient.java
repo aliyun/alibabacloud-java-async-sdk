@@ -1100,6 +1100,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListClusterPluginInfoResponse> listClusterPluginInfo(ListClusterPluginInfoRequest request);
 
+    CompletableFuture<ListCompressFileDetectResultResponse> listCompressFileDetectResult(ListCompressFileDetectResultRequest request);
+
     CompletableFuture<ListContainerDefenseRuleResponse> listContainerDefenseRule(ListContainerDefenseRuleRequest request);
 
     CompletableFuture<ListContainerDefenseRuleClustersResponse> listContainerDefenseRuleClusters(ListContainerDefenseRuleClustersRequest request);

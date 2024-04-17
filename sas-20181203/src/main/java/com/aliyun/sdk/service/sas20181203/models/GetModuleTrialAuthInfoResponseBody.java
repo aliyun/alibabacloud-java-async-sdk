@@ -75,6 +75,9 @@ public class GetModuleTrialAuthInfoResponseBody extends TeaModel {
         @NameInMap("AuthLimit")
         private Long authLimit;
 
+        @NameInMap("AuthLimitList")
+        private String authLimitList;
+
         @NameInMap("GmtEnd")
         private Long gmtEnd;
 
@@ -89,6 +92,7 @@ public class GetModuleTrialAuthInfoResponseBody extends TeaModel {
 
         private TrialRecordList(Builder builder) {
             this.authLimit = builder.authLimit;
+            this.authLimitList = builder.authLimitList;
             this.gmtEnd = builder.gmtEnd;
             this.gmtStart = builder.gmtStart;
             this.moduleCode = builder.moduleCode;
@@ -108,6 +112,13 @@ public class GetModuleTrialAuthInfoResponseBody extends TeaModel {
          */
         public Long getAuthLimit() {
             return this.authLimit;
+        }
+
+        /**
+         * @return authLimitList
+         */
+        public String getAuthLimitList() {
+            return this.authLimitList;
         }
 
         /**
@@ -140,6 +151,7 @@ public class GetModuleTrialAuthInfoResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long authLimit; 
+            private String authLimitList; 
             private Long gmtEnd; 
             private Long gmtStart; 
             private String moduleCode; 
@@ -150,6 +162,14 @@ public class GetModuleTrialAuthInfoResponseBody extends TeaModel {
              */
             public Builder authLimit(Long authLimit) {
                 this.authLimit = authLimit;
+                return this;
+            }
+
+            /**
+             * AuthLimitList.
+             */
+            public Builder authLimitList(String authLimitList) {
+                this.authLimitList = authLimitList;
                 return this;
             }
 

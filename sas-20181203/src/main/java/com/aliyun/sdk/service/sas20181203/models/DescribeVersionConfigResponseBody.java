@@ -69,6 +69,9 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     @NameInMap("MVUnusedAuthCount")
     private Integer MVUnusedAuthCount;
 
+    @NameInMap("NewThreatAnalysis")
+    private Integer newThreatAnalysis;
+
     @NameInMap("OpenTime")
     private Long openTime;
 
@@ -108,6 +111,9 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     @NameInMap("ThreatAnalysisCapacity")
     private Long threatAnalysisCapacity;
 
+    @NameInMap("ThreatAnalysisFlow")
+    private Integer threatAnalysisFlow;
+
     @NameInMap("UserDefinedAlarms")
     private Integer userDefinedAlarms;
 
@@ -146,6 +152,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         this.lastTrailEndTime = builder.lastTrailEndTime;
         this.MVAuthCount = builder.MVAuthCount;
         this.MVUnusedAuthCount = builder.MVUnusedAuthCount;
+        this.newThreatAnalysis = builder.newThreatAnalysis;
         this.openTime = builder.openTime;
         this.postPayInstanceId = builder.postPayInstanceId;
         this.postPayModuleSwitch = builder.postPayModuleSwitch;
@@ -159,6 +166,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         this.sdkCapacity = builder.sdkCapacity;
         this.slsCapacity = builder.slsCapacity;
         this.threatAnalysisCapacity = builder.threatAnalysisCapacity;
+        this.threatAnalysisFlow = builder.threatAnalysisFlow;
         this.userDefinedAlarms = builder.userDefinedAlarms;
         this.version = builder.version;
         this.vmCores = builder.vmCores;
@@ -309,6 +317,13 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     }
 
     /**
+     * @return newThreatAnalysis
+     */
+    public Integer getNewThreatAnalysis() {
+        return this.newThreatAnalysis;
+    }
+
+    /**
      * @return openTime
      */
     public Long getOpenTime() {
@@ -400,6 +415,13 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     }
 
     /**
+     * @return threatAnalysisFlow
+     */
+    public Integer getThreatAnalysisFlow() {
+        return this.threatAnalysisFlow;
+    }
+
+    /**
      * @return userDefinedAlarms
      */
     public Integer getUserDefinedAlarms() {
@@ -461,6 +483,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         private Long lastTrailEndTime; 
         private Integer MVAuthCount; 
         private Integer MVUnusedAuthCount; 
+        private Integer newThreatAnalysis; 
         private Long openTime; 
         private String postPayInstanceId; 
         private String postPayModuleSwitch; 
@@ -474,6 +497,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         private Long sdkCapacity; 
         private Long slsCapacity; 
         private Long threatAnalysisCapacity; 
+        private Integer threatAnalysisFlow; 
         private Integer userDefinedAlarms; 
         private Integer version; 
         private Integer vmCores; 
@@ -682,6 +706,14 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
+         * NewThreatAnalysis.
+         */
+        public Builder newThreatAnalysis(Integer newThreatAnalysis) {
+            this.newThreatAnalysis = newThreatAnalysis;
+            return this;
+        }
+
+        /**
          * The timestamp when Security Center is purchased. Unit: milliseconds.
          */
         public Builder openTime(Long openTime) {
@@ -800,6 +832,14 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
          */
         public Builder threatAnalysisCapacity(Long threatAnalysisCapacity) {
             this.threatAnalysisCapacity = threatAnalysisCapacity;
+            return this;
+        }
+
+        /**
+         * ThreatAnalysisFlow.
+         */
+        public Builder threatAnalysisFlow(Integer threatAnalysisFlow) {
+            this.threatAnalysisFlow = threatAnalysisFlow;
             return this;
         }
 

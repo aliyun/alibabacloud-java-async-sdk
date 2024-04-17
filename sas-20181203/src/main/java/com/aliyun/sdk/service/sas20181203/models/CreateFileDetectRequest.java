@@ -13,6 +13,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateFileDetectRequest extends Request {
     @Query
+    @NameInMap("Decompress")
+    private Boolean decompress;
+
+    @Query
+    @NameInMap("DecompressMaxFileCount")
+    private Integer decompressMaxFileCount;
+
+    @Query
+    @NameInMap("DecompressMaxLayer")
+    private Integer decompressMaxLayer;
+
+    @Query
     @NameInMap("DownloadUrl")
     private String downloadUrl;
 
@@ -36,6 +48,9 @@ public class CreateFileDetectRequest extends Request {
 
     private CreateFileDetectRequest(Builder builder) {
         super(builder);
+        this.decompress = builder.decompress;
+        this.decompressMaxFileCount = builder.decompressMaxFileCount;
+        this.decompressMaxLayer = builder.decompressMaxLayer;
         this.downloadUrl = builder.downloadUrl;
         this.hashKey = builder.hashKey;
         this.ossKey = builder.ossKey;
@@ -54,6 +69,27 @@ public class CreateFileDetectRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return decompress
+     */
+    public Boolean getDecompress() {
+        return this.decompress;
+    }
+
+    /**
+     * @return decompressMaxFileCount
+     */
+    public Integer getDecompressMaxFileCount() {
+        return this.decompressMaxFileCount;
+    }
+
+    /**
+     * @return decompressMaxLayer
+     */
+    public Integer getDecompressMaxLayer() {
+        return this.decompressMaxLayer;
     }
 
     /**
@@ -92,6 +128,9 @@ public class CreateFileDetectRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateFileDetectRequest, Builder> {
+        private Boolean decompress; 
+        private Integer decompressMaxFileCount; 
+        private Integer decompressMaxLayer; 
         private String downloadUrl; 
         private String hashKey; 
         private String ossKey; 
@@ -104,12 +143,42 @@ public class CreateFileDetectRequest extends Request {
 
         private Builder(CreateFileDetectRequest request) {
             super(request);
+            this.decompress = request.decompress;
+            this.decompressMaxFileCount = request.decompressMaxFileCount;
+            this.decompressMaxLayer = request.decompressMaxLayer;
             this.downloadUrl = request.downloadUrl;
             this.hashKey = request.hashKey;
             this.ossKey = request.ossKey;
             this.sourceIp = request.sourceIp;
             this.type = request.type;
         } 
+
+        /**
+         * Decompress.
+         */
+        public Builder decompress(Boolean decompress) {
+            this.putQueryParameter("Decompress", decompress);
+            this.decompress = decompress;
+            return this;
+        }
+
+        /**
+         * DecompressMaxFileCount.
+         */
+        public Builder decompressMaxFileCount(Integer decompressMaxFileCount) {
+            this.putQueryParameter("DecompressMaxFileCount", decompressMaxFileCount);
+            this.decompressMaxFileCount = decompressMaxFileCount;
+            return this;
+        }
+
+        /**
+         * DecompressMaxLayer.
+         */
+        public Builder decompressMaxLayer(Integer decompressMaxLayer) {
+            this.putQueryParameter("DecompressMaxLayer", decompressMaxLayer);
+            this.decompressMaxLayer = decompressMaxLayer;
+            return this;
+        }
 
         /**
          * The URL that is used to download the file. You can specify this parameter to trigger file detection without the need to upload the file in advance.
