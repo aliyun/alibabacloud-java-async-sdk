@@ -91,6 +91,147 @@ public class QueryConvertInstancePriceResponseBody extends TeaModel {
 
     } 
 
+    public static class DepreciateInfo extends TeaModel {
+        @NameInMap("CheapRate")
+        private String cheapRate;
+
+        @NameInMap("CheapStandAmount")
+        private String cheapStandAmount;
+
+        @NameInMap("IsShow")
+        private Boolean isShow;
+
+        @NameInMap("MonthPrice")
+        private String monthPrice;
+
+        @NameInMap("OriginalStandAmount")
+        private String originalStandAmount;
+
+        @NameInMap("StartTime")
+        private String startTime;
+
+        private DepreciateInfo(Builder builder) {
+            this.cheapRate = builder.cheapRate;
+            this.cheapStandAmount = builder.cheapStandAmount;
+            this.isShow = builder.isShow;
+            this.monthPrice = builder.monthPrice;
+            this.originalStandAmount = builder.originalStandAmount;
+            this.startTime = builder.startTime;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DepreciateInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cheapRate
+         */
+        public String getCheapRate() {
+            return this.cheapRate;
+        }
+
+        /**
+         * @return cheapStandAmount
+         */
+        public String getCheapStandAmount() {
+            return this.cheapStandAmount;
+        }
+
+        /**
+         * @return isShow
+         */
+        public Boolean getIsShow() {
+            return this.isShow;
+        }
+
+        /**
+         * @return monthPrice
+         */
+        public String getMonthPrice() {
+            return this.monthPrice;
+        }
+
+        /**
+         * @return originalStandAmount
+         */
+        public String getOriginalStandAmount() {
+            return this.originalStandAmount;
+        }
+
+        /**
+         * @return startTime
+         */
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        public static final class Builder {
+            private String cheapRate; 
+            private String cheapStandAmount; 
+            private Boolean isShow; 
+            private String monthPrice; 
+            private String originalStandAmount; 
+            private String startTime; 
+
+            /**
+             * CheapRate.
+             */
+            public Builder cheapRate(String cheapRate) {
+                this.cheapRate = cheapRate;
+                return this;
+            }
+
+            /**
+             * CheapStandAmount.
+             */
+            public Builder cheapStandAmount(String cheapStandAmount) {
+                this.cheapStandAmount = cheapStandAmount;
+                return this;
+            }
+
+            /**
+             * IsShow.
+             */
+            public Builder isShow(Boolean isShow) {
+                this.isShow = isShow;
+                return this;
+            }
+
+            /**
+             * MonthPrice.
+             */
+            public Builder monthPrice(String monthPrice) {
+                this.monthPrice = monthPrice;
+                return this;
+            }
+
+            /**
+             * OriginalStandAmount.
+             */
+            public Builder originalStandAmount(String originalStandAmount) {
+                this.originalStandAmount = originalStandAmount;
+                return this;
+            }
+
+            /**
+             * StartTime.
+             */
+            public Builder startTime(String startTime) {
+                this.startTime = startTime;
+                return this;
+            }
+
+            public DepreciateInfo build() {
+                return new DepreciateInfo(this);
+            } 
+
+        } 
+
+    }
     public static class OptionalPromotions extends TeaModel {
         @NameInMap("PromotionDesc")
         private String promotionDesc;
@@ -260,8 +401,14 @@ public class QueryConvertInstancePriceResponseBody extends TeaModel {
         @NameInMap("Currency")
         private String currency;
 
+        @NameInMap("DepreciateInfo")
+        private DepreciateInfo depreciateInfo;
+
         @NameInMap("DiscountAmount")
         private Float discountAmount;
+
+        @NameInMap("IsContractActivity")
+        private Boolean isContractActivity;
 
         @NameInMap("Message")
         private String message;
@@ -275,17 +422,27 @@ public class QueryConvertInstancePriceResponseBody extends TeaModel {
         @NameInMap("Rules")
         private java.util.List < Rules> rules;
 
+        @NameInMap("StandDiscountPrice")
+        private String standDiscountPrice;
+
+        @NameInMap("StandPrice")
+        private String standPrice;
+
         @NameInMap("TradeAmount")
         private Float tradeAmount;
 
         private PriceInfo(Builder builder) {
             this.code = builder.code;
             this.currency = builder.currency;
+            this.depreciateInfo = builder.depreciateInfo;
             this.discountAmount = builder.discountAmount;
+            this.isContractActivity = builder.isContractActivity;
             this.message = builder.message;
             this.optionalPromotions = builder.optionalPromotions;
             this.originalAmount = builder.originalAmount;
             this.rules = builder.rules;
+            this.standDiscountPrice = builder.standDiscountPrice;
+            this.standPrice = builder.standPrice;
             this.tradeAmount = builder.tradeAmount;
         }
 
@@ -312,10 +469,24 @@ public class QueryConvertInstancePriceResponseBody extends TeaModel {
         }
 
         /**
+         * @return depreciateInfo
+         */
+        public DepreciateInfo getDepreciateInfo() {
+            return this.depreciateInfo;
+        }
+
+        /**
          * @return discountAmount
          */
         public Float getDiscountAmount() {
             return this.discountAmount;
+        }
+
+        /**
+         * @return isContractActivity
+         */
+        public Boolean getIsContractActivity() {
+            return this.isContractActivity;
         }
 
         /**
@@ -347,6 +518,20 @@ public class QueryConvertInstancePriceResponseBody extends TeaModel {
         }
 
         /**
+         * @return standDiscountPrice
+         */
+        public String getStandDiscountPrice() {
+            return this.standDiscountPrice;
+        }
+
+        /**
+         * @return standPrice
+         */
+        public String getStandPrice() {
+            return this.standPrice;
+        }
+
+        /**
          * @return tradeAmount
          */
         public Float getTradeAmount() {
@@ -356,11 +541,15 @@ public class QueryConvertInstancePriceResponseBody extends TeaModel {
         public static final class Builder {
             private String code; 
             private String currency; 
+            private DepreciateInfo depreciateInfo; 
             private Float discountAmount; 
+            private Boolean isContractActivity; 
             private String message; 
             private java.util.List < OptionalPromotions> optionalPromotions; 
             private Float originalAmount; 
             private java.util.List < Rules> rules; 
+            private String standDiscountPrice; 
+            private String standPrice; 
             private Float tradeAmount; 
 
             /**
@@ -380,10 +569,26 @@ public class QueryConvertInstancePriceResponseBody extends TeaModel {
             }
 
             /**
+             * DepreciateInfo.
+             */
+            public Builder depreciateInfo(DepreciateInfo depreciateInfo) {
+                this.depreciateInfo = depreciateInfo;
+                return this;
+            }
+
+            /**
              * DiscountAmount.
              */
             public Builder discountAmount(Float discountAmount) {
                 this.discountAmount = discountAmount;
+                return this;
+            }
+
+            /**
+             * IsContractActivity.
+             */
+            public Builder isContractActivity(Boolean isContractActivity) {
+                this.isContractActivity = isContractActivity;
                 return this;
             }
 
@@ -416,6 +621,22 @@ public class QueryConvertInstancePriceResponseBody extends TeaModel {
              */
             public Builder rules(java.util.List < Rules> rules) {
                 this.rules = rules;
+                return this;
+            }
+
+            /**
+             * StandDiscountPrice.
+             */
+            public Builder standDiscountPrice(String standDiscountPrice) {
+                this.standDiscountPrice = standDiscountPrice;
+                return this;
+            }
+
+            /**
+             * StandPrice.
+             */
+            public Builder standPrice(String standPrice) {
+                this.standPrice = standPrice;
                 return this;
             }
 

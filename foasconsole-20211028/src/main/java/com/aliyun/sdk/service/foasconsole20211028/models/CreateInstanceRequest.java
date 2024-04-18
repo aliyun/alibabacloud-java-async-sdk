@@ -85,6 +85,10 @@ public class CreateInstanceRequest extends Request {
     private Storage storage;
 
     @Body
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
+    @Body
     @NameInMap("UsePromotionCode")
     private Boolean usePromotionCode;
 
@@ -122,6 +126,7 @@ public class CreateInstanceRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceSpec = builder.resourceSpec;
         this.storage = builder.storage;
+        this.tag = builder.tag;
         this.usePromotionCode = builder.usePromotionCode;
         this.vSwitchIds = builder.vSwitchIds;
         this.vpcId = builder.vpcId;
@@ -261,6 +266,13 @@ public class CreateInstanceRequest extends Request {
     }
 
     /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
      * @return usePromotionCode
      */
     public Boolean getUsePromotionCode() {
@@ -306,6 +318,7 @@ public class CreateInstanceRequest extends Request {
         private String resourceGroupId; 
         private ResourceSpec resourceSpec; 
         private Storage storage; 
+        private java.util.List < Tag> tag; 
         private Boolean usePromotionCode; 
         private java.util.List < String > vSwitchIds; 
         private String vpcId; 
@@ -334,6 +347,7 @@ public class CreateInstanceRequest extends Request {
             this.resourceGroupId = request.resourceGroupId;
             this.resourceSpec = request.resourceSpec;
             this.storage = request.storage;
+            this.tag = request.tag;
             this.usePromotionCode = request.usePromotionCode;
             this.vSwitchIds = request.vSwitchIds;
             this.vpcId = request.vpcId;
@@ -494,6 +508,16 @@ public class CreateInstanceRequest extends Request {
             String storageShrink = shrink(storage, "Storage", "json");
             this.putBodyParameter("Storage", storageShrink);
             this.storage = storage;
+            return this;
+        }
+
+        /**
+         * Tag.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            String tagShrink = shrink(tag, "Tag", "json");
+            this.putBodyParameter("Tag", tagShrink);
+            this.tag = tag;
             return this;
         }
 
@@ -742,6 +766,67 @@ public class CreateInstanceRequest extends Request {
 
             public Storage build() {
                 return new Storage(this);
+            } 
+
+        } 
+
+    }
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
             } 
 
         } 
