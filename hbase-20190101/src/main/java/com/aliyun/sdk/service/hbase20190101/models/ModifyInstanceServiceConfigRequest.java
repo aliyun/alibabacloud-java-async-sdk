@@ -19,10 +19,12 @@ public class ModifyInstanceServiceConfigRequest extends Request {
 
     @Query
     @NameInMap("ConfigureName")
+    @Validation(required = true)
     private String configureName;
 
     @Query
     @NameInMap("ConfigureValue")
+    @Validation(required = true)
     private String configureValue;
 
     @Query

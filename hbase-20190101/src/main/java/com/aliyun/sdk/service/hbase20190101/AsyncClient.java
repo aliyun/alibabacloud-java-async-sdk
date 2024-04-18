@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.hbase20190101;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.hbase20190101.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -22,11 +23,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AllocatePublicNetworkAddressResponse> allocatePublicNetworkAddress(AllocatePublicNetworkAddressRequest request);
 
+    CompletableFuture<CancelActiveOperationTasksResponse> cancelActiveOperationTasks(CancelActiveOperationTasksRequest request);
+
     CompletableFuture<CheckComponentsVersionResponse> checkComponentsVersion(CheckComponentsVersionRequest request);
 
     CompletableFuture<CloseBackupResponse> closeBackup(CloseBackupRequest request);
 
     CompletableFuture<ConvertInstanceResponse> convertInstance(ConvertInstanceRequest request);
+
+    CompletableFuture<CreateAccountResponse> createAccount(CreateAccountRequest request);
 
     CompletableFuture<CreateBackupPlanResponse> createBackupPlan(CreateBackupPlanRequest request);
 
@@ -44,6 +49,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateServerlessClusterResponse> createServerlessCluster(CreateServerlessClusterRequest request);
 
+    CompletableFuture<DeleteAccountResponse> deleteAccount(DeleteAccountRequest request);
+
     CompletableFuture<DeleteGlobalResourceResponse> deleteGlobalResource(DeleteGlobalResourceRequest request);
 
     CompletableFuture<DeleteHBaseHaDBResponse> deleteHBaseHaDB(DeleteHBaseHaDBRequest request);
@@ -59,6 +66,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteServerlessClusterResponse> deleteServerlessCluster(DeleteServerlessClusterRequest request);
 
     CompletableFuture<DeleteUserHdfsInfoResponse> deleteUserHdfsInfo(DeleteUserHdfsInfoRequest request);
+
+    CompletableFuture<DescribeAccountsResponse> describeAccounts(DescribeAccountsRequest request);
+
+    CompletableFuture<DescribeActiveOperationTaskTypeResponse> describeActiveOperationTaskType(DescribeActiveOperationTaskTypeRequest request);
+
+    CompletableFuture<DescribeActiveOperationTasksResponse> describeActiveOperationTasks(DescribeActiveOperationTasksRequest request);
 
     CompletableFuture<DescribeAvailableResourceResponse> describeAvailableResource(DescribeAvailableResourceRequest request);
 
@@ -128,6 +141,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetMultimodeCmsUrlResponse> getMultimodeCmsUrl(GetMultimodeCmsUrlRequest request);
 
+    CompletableFuture<GrantResponse> grant(GrantRequest request);
+
     CompletableFuture<ListHBaseInstancesResponse> listHBaseInstances(ListHBaseInstancesRequest request);
 
     CompletableFuture<ListInstanceServiceConfigHistoriesResponse> listInstanceServiceConfigHistories(ListInstanceServiceConfigHistoriesRequest request);
@@ -137,6 +152,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
 
     CompletableFuture<ListTagsResponse> listTags(ListTagsRequest request);
+
+    CompletableFuture<ModifyAccountPasswordResponse> modifyAccountPassword(ModifyAccountPasswordRequest request);
+
+    CompletableFuture<ModifyActiveOperationTasksResponse> modifyActiveOperationTasks(ModifyActiveOperationTasksRequest request);
 
     CompletableFuture<ModifyBackupPlanConfigResponse> modifyBackupPlanConfig(ModifyBackupPlanConfigRequest request);
 
@@ -190,7 +209,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<RestartInstanceResponse> restartInstance(RestartInstanceRequest request);
 
+    CompletableFuture<RevokeResponse> revoke(RevokeRequest request);
+
     CompletableFuture<SwitchHbaseHaSlbResponse> switchHbaseHaSlb(SwitchHbaseHaSlbRequest request);
+
+    CompletableFuture<SwitchServiceResponse> switchService(SwitchServiceRequest request);
 
     CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
 

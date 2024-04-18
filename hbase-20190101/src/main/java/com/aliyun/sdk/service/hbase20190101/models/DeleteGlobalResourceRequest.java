@@ -18,6 +18,10 @@ public class DeleteGlobalResourceRequest extends Request {
     private String clusterId;
 
     @Query
+    @NameInMap("RegionId")
+    private String regionId;
+
+    @Query
     @NameInMap("ResourceName")
     @Validation(required = true)
     private String resourceName;
@@ -30,6 +34,7 @@ public class DeleteGlobalResourceRequest extends Request {
     private DeleteGlobalResourceRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
+        this.regionId = builder.regionId;
         this.resourceName = builder.resourceName;
         this.resourceType = builder.resourceType;
     }
@@ -55,6 +60,13 @@ public class DeleteGlobalResourceRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return resourceName
      */
     public String getResourceName() {
@@ -70,6 +82,7 @@ public class DeleteGlobalResourceRequest extends Request {
 
     public static final class Builder extends Request.Builder<DeleteGlobalResourceRequest, Builder> {
         private String clusterId; 
+        private String regionId; 
         private String resourceName; 
         private String resourceType; 
 
@@ -80,6 +93,7 @@ public class DeleteGlobalResourceRequest extends Request {
         private Builder(DeleteGlobalResourceRequest request) {
             super(request);
             this.clusterId = request.clusterId;
+            this.regionId = request.regionId;
             this.resourceName = request.resourceName;
             this.resourceType = request.resourceType;
         } 
@@ -90,6 +104,15 @@ public class DeleteGlobalResourceRequest extends Request {
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
             this.clusterId = clusterId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 

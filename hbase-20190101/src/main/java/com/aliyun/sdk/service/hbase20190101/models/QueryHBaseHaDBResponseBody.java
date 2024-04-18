@@ -336,7 +336,7 @@ public class QueryHBaseHaDBResponseBody extends TeaModel {
             }
 
             /**
-             * BdsName.
+             * bdsId
              */
             public Builder bdsName(String bdsName) {
                 this.bdsName = bdsName;

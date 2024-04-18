@@ -27,6 +27,9 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
     @NameInMap("ClusterName")
     private String clusterName;
 
+    @NameInMap("ColdStorageSize")
+    private Integer coldStorageSize;
+
     @NameInMap("CoreDiskCount")
     private String coreDiskCount;
 
@@ -168,6 +171,7 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
         this.autoRenewal = builder.autoRenewal;
         this.clusterId = builder.clusterId;
         this.clusterName = builder.clusterName;
+        this.coldStorageSize = builder.coldStorageSize;
         this.coreDiskCount = builder.coreDiskCount;
         this.coreDiskSize = builder.coreDiskSize;
         this.coreDiskType = builder.coreDiskType;
@@ -256,6 +260,13 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
      */
     public String getClusterName() {
         return this.clusterName;
+    }
+
+    /**
+     * @return coldStorageSize
+     */
+    public Integer getColdStorageSize() {
+        return this.coldStorageSize;
     }
 
     /**
@@ -579,6 +590,7 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
         private Boolean autoRenewal; 
         private String clusterId; 
         private String clusterName; 
+        private Integer coldStorageSize; 
         private String coreDiskCount; 
         private Integer coreDiskSize; 
         private String coreDiskType; 
@@ -662,6 +674,14 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
          */
         public Builder clusterName(String clusterName) {
             this.clusterName = clusterName;
+            return this;
+        }
+
+        /**
+         * ColdStorageSize.
+         */
+        public Builder coldStorageSize(Integer coldStorageSize) {
+            this.coldStorageSize = coldStorageSize;
             return this;
         }
 
@@ -1032,11 +1052,23 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
     } 
 
     public static class MultiZoneInstanceModel extends TeaModel {
+        @NameInMap("HdfsMinorVersion")
+        private String hdfsMinorVersion;
+
         @NameInMap("InsName")
         private String insName;
 
+        @NameInMap("IsHdfsLatestVersion")
+        private String isHdfsLatestVersion;
+
         @NameInMap("IsLatestVersion")
         private Boolean isLatestVersion;
+
+        @NameInMap("LatestHdfsMinorVersion")
+        private String latestHdfsMinorVersion;
+
+        @NameInMap("LatestMinorVersion")
+        private String latestMinorVersion;
 
         @NameInMap("MinorVersion")
         private String minorVersion;
@@ -1048,8 +1080,12 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
         private String status;
 
         private MultiZoneInstanceModel(Builder builder) {
+            this.hdfsMinorVersion = builder.hdfsMinorVersion;
             this.insName = builder.insName;
+            this.isHdfsLatestVersion = builder.isHdfsLatestVersion;
             this.isLatestVersion = builder.isLatestVersion;
+            this.latestHdfsMinorVersion = builder.latestHdfsMinorVersion;
+            this.latestMinorVersion = builder.latestMinorVersion;
             this.minorVersion = builder.minorVersion;
             this.role = builder.role;
             this.status = builder.status;
@@ -1064,6 +1100,13 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
         }
 
         /**
+         * @return hdfsMinorVersion
+         */
+        public String getHdfsMinorVersion() {
+            return this.hdfsMinorVersion;
+        }
+
+        /**
          * @return insName
          */
         public String getInsName() {
@@ -1071,10 +1114,31 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
         }
 
         /**
+         * @return isHdfsLatestVersion
+         */
+        public String getIsHdfsLatestVersion() {
+            return this.isHdfsLatestVersion;
+        }
+
+        /**
          * @return isLatestVersion
          */
         public Boolean getIsLatestVersion() {
             return this.isLatestVersion;
+        }
+
+        /**
+         * @return latestHdfsMinorVersion
+         */
+        public String getLatestHdfsMinorVersion() {
+            return this.latestHdfsMinorVersion;
+        }
+
+        /**
+         * @return latestMinorVersion
+         */
+        public String getLatestMinorVersion() {
+            return this.latestMinorVersion;
         }
 
         /**
@@ -1099,11 +1163,23 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String hdfsMinorVersion; 
             private String insName; 
+            private String isHdfsLatestVersion; 
             private Boolean isLatestVersion; 
+            private String latestHdfsMinorVersion; 
+            private String latestMinorVersion; 
             private String minorVersion; 
             private String role; 
             private String status; 
+
+            /**
+             * HdfsMinorVersion.
+             */
+            public Builder hdfsMinorVersion(String hdfsMinorVersion) {
+                this.hdfsMinorVersion = hdfsMinorVersion;
+                return this;
+            }
 
             /**
              * InsName.
@@ -1114,10 +1190,34 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
             }
 
             /**
+             * IsHdfsLatestVersion.
+             */
+            public Builder isHdfsLatestVersion(String isHdfsLatestVersion) {
+                this.isHdfsLatestVersion = isHdfsLatestVersion;
+                return this;
+            }
+
+            /**
              * IsLatestVersion.
              */
             public Builder isLatestVersion(Boolean isLatestVersion) {
                 this.isLatestVersion = isLatestVersion;
+                return this;
+            }
+
+            /**
+             * LatestHdfsMinorVersion.
+             */
+            public Builder latestHdfsMinorVersion(String latestHdfsMinorVersion) {
+                this.latestHdfsMinorVersion = latestHdfsMinorVersion;
+                return this;
+            }
+
+            /**
+             * LatestMinorVersion.
+             */
+            public Builder latestMinorVersion(String latestMinorVersion) {
+                this.latestMinorVersion = latestMinorVersion;
                 return this;
             }
 

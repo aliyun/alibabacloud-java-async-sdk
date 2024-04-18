@@ -60,6 +60,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
     @NameInMap("Duration")
     private Integer duration;
 
+    @NameInMap("EnableHbaseProxy")
+    @Validation(required = true)
+    private Boolean enableHbaseProxy;
+
     @NameInMap("EncryptionKey")
     private String encryptionKey;
 
@@ -92,6 +96,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
     @NameInMap("IsMultiModel")
     private Boolean isMultiModel;
+
+    @NameInMap("LproxyMinorVersion")
+    private String lproxyMinorVersion;
 
     @NameInMap("MaintainEndTime")
     private String maintainEndTime;
@@ -182,6 +189,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         this.createdTime = builder.createdTime;
         this.createdTimeUTC = builder.createdTimeUTC;
         this.duration = builder.duration;
+        this.enableHbaseProxy = builder.enableHbaseProxy;
         this.encryptionKey = builder.encryptionKey;
         this.encryptionType = builder.encryptionType;
         this.engine = builder.engine;
@@ -193,6 +201,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         this.isHa = builder.isHa;
         this.isLatestVersion = builder.isLatestVersion;
         this.isMultiModel = builder.isMultiModel;
+        this.lproxyMinorVersion = builder.lproxyMinorVersion;
         this.maintainEndTime = builder.maintainEndTime;
         this.maintainStartTime = builder.maintainStartTime;
         this.majorVersion = builder.majorVersion;
@@ -340,6 +349,13 @@ public class DescribeInstanceResponseBody extends TeaModel {
     }
 
     /**
+     * @return enableHbaseProxy
+     */
+    public Boolean getEnableHbaseProxy() {
+        return this.enableHbaseProxy;
+    }
+
+    /**
      * @return encryptionKey
      */
     public String getEncryptionKey() {
@@ -414,6 +430,13 @@ public class DescribeInstanceResponseBody extends TeaModel {
      */
     public Boolean getIsMultiModel() {
         return this.isMultiModel;
+    }
+
+    /**
+     * @return lproxyMinorVersion
+     */
+    public String getLproxyMinorVersion() {
+        return this.lproxyMinorVersion;
     }
 
     /**
@@ -601,6 +624,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         private String createdTime; 
         private String createdTimeUTC; 
         private Integer duration; 
+        private Boolean enableHbaseProxy; 
         private String encryptionKey; 
         private String encryptionType; 
         private String engine; 
@@ -612,6 +636,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         private Boolean isHa; 
         private Boolean isLatestVersion; 
         private Boolean isMultiModel; 
+        private String lproxyMinorVersion; 
         private String maintainEndTime; 
         private String maintainStartTime; 
         private String majorVersion; 
@@ -766,6 +791,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * EnableHbaseProxy.
+         */
+        public Builder enableHbaseProxy(Boolean enableHbaseProxy) {
+            this.enableHbaseProxy = enableHbaseProxy;
+            return this;
+        }
+
+        /**
          * EncryptionKey.
          */
         public Builder encryptionKey(String encryptionKey) {
@@ -850,6 +883,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
          */
         public Builder isMultiModel(Boolean isMultiModel) {
             this.isMultiModel = isMultiModel;
+            return this;
+        }
+
+        /**
+         * LproxyMinorVersion.
+         */
+        public Builder lproxyMinorVersion(String lproxyMinorVersion) {
+            this.lproxyMinorVersion = lproxyMinorVersion;
             return this;
         }
 
