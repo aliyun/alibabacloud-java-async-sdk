@@ -19,6 +19,8 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
+    CompletableFuture<CreateApiTemplateResponse> createApiTemplate(CreateApiTemplateRequest request);
+
     CompletableFuture<CreateClusterResponse> createCluster(CreateClusterRequest request);
 
     /**
@@ -302,6 +304,12 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);
+
+    /**
+      * 修改集群模板
+      *
+     */
+    CompletableFuture<UpdateApiTemplateResponse> updateApiTemplate(UpdateApiTemplateRequest request);
 
     CompletableFuture<UpdateApplicationConfigsResponse> updateApplicationConfigs(UpdateApplicationConfigsRequest request);
 
