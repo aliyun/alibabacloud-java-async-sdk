@@ -170,11 +170,23 @@ public class GetAccountInfoResponseBody extends TeaModel {
         @NameInMap("Cid")
         private Long cid;
 
+        @NameInMap("CustomerBd")
+        private String customerBd;
+
+        @NameInMap("DelayAmount")
+        private String delayAmount;
+
+        @NameInMap("DelayStatus")
+        private String delayStatus;
+
         @NameInMap("Email")
         private String email;
 
         @NameInMap("Mobile")
         private String mobile;
+
+        @NameInMap("NewBuyStatus")
+        private String newBuyStatus;
 
         @NameInMap("Remark")
         private String remark;
@@ -190,8 +202,12 @@ public class GetAccountInfoResponseBody extends TeaModel {
             this.aliyunId = builder.aliyunId;
             this.associationSuccessTime = builder.associationSuccessTime;
             this.cid = builder.cid;
+            this.customerBd = builder.customerBd;
+            this.delayAmount = builder.delayAmount;
+            this.delayStatus = builder.delayStatus;
             this.email = builder.email;
             this.mobile = builder.mobile;
+            this.newBuyStatus = builder.newBuyStatus;
             this.remark = builder.remark;
             this.subAccountType = builder.subAccountType;
             this.uid = builder.uid;
@@ -234,6 +250,27 @@ public class GetAccountInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return customerBd
+         */
+        public String getCustomerBd() {
+            return this.customerBd;
+        }
+
+        /**
+         * @return delayAmount
+         */
+        public String getDelayAmount() {
+            return this.delayAmount;
+        }
+
+        /**
+         * @return delayStatus
+         */
+        public String getDelayStatus() {
+            return this.delayStatus;
+        }
+
+        /**
          * @return email
          */
         public String getEmail() {
@@ -245,6 +282,13 @@ public class GetAccountInfoResponseBody extends TeaModel {
          */
         public String getMobile() {
             return this.mobile;
+        }
+
+        /**
+         * @return newBuyStatus
+         */
+        public String getNewBuyStatus() {
+            return this.newBuyStatus;
         }
 
         /**
@@ -273,8 +317,12 @@ public class GetAccountInfoResponseBody extends TeaModel {
             private String aliyunId; 
             private String associationSuccessTime; 
             private Long cid; 
+            private String customerBd; 
+            private String delayAmount; 
+            private String delayStatus; 
             private String email; 
             private String mobile; 
+            private String newBuyStatus; 
             private String remark; 
             private Integer subAccountType; 
             private Long uid; 
@@ -315,6 +363,30 @@ public class GetAccountInfoResponseBody extends TeaModel {
             }
 
             /**
+             * CustomerBd.
+             */
+            public Builder customerBd(String customerBd) {
+                this.customerBd = customerBd;
+                return this;
+            }
+
+            /**
+             * DelayAmount.
+             */
+            public Builder delayAmount(String delayAmount) {
+                this.delayAmount = delayAmount;
+                return this;
+            }
+
+            /**
+             * DelayStatus.
+             */
+            public Builder delayStatus(String delayStatus) {
+                this.delayStatus = delayStatus;
+                return this;
+            }
+
+            /**
              * The E-mail of Distribution Customer.
              */
             public Builder email(String email) {
@@ -327,6 +399,14 @@ public class GetAccountInfoResponseBody extends TeaModel {
              */
             public Builder mobile(String mobile) {
                 this.mobile = mobile;
+                return this;
+            }
+
+            /**
+             * NewBuyStatus.
+             */
+            public Builder newBuyStatus(String newBuyStatus) {
+                this.newBuyStatus = newBuyStatus;
                 return this;
             }
 

@@ -81,6 +81,9 @@ public class InviteSubAccountRequest extends Request {
         @Validation(required = true)
         private String creditLine;
 
+        @NameInMap("CustomerBd")
+        private String customerBd;
+
         @NameInMap("CustomerId")
         @Validation(required = true)
         private String customerId;
@@ -107,6 +110,7 @@ public class InviteSubAccountRequest extends Request {
         private AccountInfoList(Builder builder) {
             this.accountNickname = builder.accountNickname;
             this.creditLine = builder.creditLine;
+            this.customerBd = builder.customerBd;
             this.customerId = builder.customerId;
             this.emailAddress = builder.emailAddress;
             this.newBuyStatus = builder.newBuyStatus;
@@ -135,6 +139,13 @@ public class InviteSubAccountRequest extends Request {
          */
         public String getCreditLine() {
             return this.creditLine;
+        }
+
+        /**
+         * @return customerBd
+         */
+        public String getCustomerBd() {
+            return this.customerBd;
         }
 
         /**
@@ -182,6 +193,7 @@ public class InviteSubAccountRequest extends Request {
         public static final class Builder {
             private String accountNickname; 
             private String creditLine; 
+            private String customerBd; 
             private String customerId; 
             private String emailAddress; 
             private String newBuyStatus; 
@@ -205,6 +217,14 @@ public class InviteSubAccountRequest extends Request {
              */
             public Builder creditLine(String creditLine) {
                 this.creditLine = creditLine;
+                return this;
+            }
+
+            /**
+             * CustomerBd.
+             */
+            public Builder customerBd(String customerBd) {
+                this.customerBd = customerBd;
                 return this;
             }
 

@@ -17,6 +17,10 @@ public class SetAccountInfoRequest extends Request {
     private String accountNickname;
 
     @Query
+    @NameInMap("CustomerBd")
+    private String customerBd;
+
+    @Query
     @NameInMap("Remark")
     private String remark;
 
@@ -28,6 +32,7 @@ public class SetAccountInfoRequest extends Request {
     private SetAccountInfoRequest(Builder builder) {
         super(builder);
         this.accountNickname = builder.accountNickname;
+        this.customerBd = builder.customerBd;
         this.remark = builder.remark;
         this.uid = builder.uid;
     }
@@ -53,6 +58,13 @@ public class SetAccountInfoRequest extends Request {
     }
 
     /**
+     * @return customerBd
+     */
+    public String getCustomerBd() {
+        return this.customerBd;
+    }
+
+    /**
      * @return remark
      */
     public String getRemark() {
@@ -68,6 +80,7 @@ public class SetAccountInfoRequest extends Request {
 
     public static final class Builder extends Request.Builder<SetAccountInfoRequest, Builder> {
         private String accountNickname; 
+        private String customerBd; 
         private String remark; 
         private Long uid; 
 
@@ -78,6 +91,7 @@ public class SetAccountInfoRequest extends Request {
         private Builder(SetAccountInfoRequest request) {
             super(request);
             this.accountNickname = request.accountNickname;
+            this.customerBd = request.customerBd;
             this.remark = request.remark;
             this.uid = request.uid;
         } 
@@ -91,6 +105,15 @@ public class SetAccountInfoRequest extends Request {
         public Builder accountNickname(String accountNickname) {
             this.putQueryParameter("AccountNickname", accountNickname);
             this.accountNickname = accountNickname;
+            return this;
+        }
+
+        /**
+         * CustomerBd.
+         */
+        public Builder customerBd(String customerBd) {
+            this.putQueryParameter("CustomerBd", customerBd);
+            this.customerBd = customerBd;
             return this;
         }
 
