@@ -165,6 +165,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     @NameInMap("SubCategory")
     private String subCategory;
 
+    @NameInMap("SupportInstantSwitchWithImci")
+    private String supportInstantSwitchWithImci;
+
     @NameInMap("Tags")
     private java.util.List < Tags> tags;
 
@@ -229,6 +232,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         this.storageUsed = builder.storageUsed;
         this.strictConsistency = builder.strictConsistency;
         this.subCategory = builder.subCategory;
+        this.supportInstantSwitchWithImci = builder.supportInstantSwitchWithImci;
         this.tags = builder.tags;
         this.VPCId = builder.VPCId;
         this.vSwitchId = builder.vSwitchId;
@@ -601,6 +605,13 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return supportInstantSwitchWithImci
+     */
+    public String getSupportInstantSwitchWithImci() {
+        return this.supportInstantSwitchWithImci;
+    }
+
+    /**
      * @return tags
      */
     public java.util.List < Tags> getTags() {
@@ -680,6 +691,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         private Long storageUsed; 
         private String strictConsistency; 
         private String subCategory; 
+        private String supportInstantSwitchWithImci; 
         private java.util.List < Tags> tags; 
         private String VPCId; 
         private String vSwitchId; 
@@ -1170,6 +1182,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
          */
         public Builder subCategory(String subCategory) {
             this.subCategory = subCategory;
+            return this;
+        }
+
+        /**
+         * SupportInstantSwitchWithImci.
+         */
+        public Builder supportInstantSwitchWithImci(String supportInstantSwitchWithImci) {
+            this.supportInstantSwitchWithImci = supportInstantSwitchWithImci;
             return this;
         }
 

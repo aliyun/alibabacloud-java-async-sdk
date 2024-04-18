@@ -261,10 +261,10 @@ public class ModifyDBClusterStorageSpaceRequest extends Request {
         }
 
         /**
-         * The new storage capacity. Unit: GB.
+         * The storage capacity that you can select when you change the cluster. Unit: GB.
          * <p>
          * 
-         * > Valid values for PolarDB for MySQL Standard Edition are 20 to 32000.
+         * >  You can set this parameter for PolarDB for MySQL clusters of Standard Edition to a value that ranges from 20 to 32000.
          */
         public Builder storageSpace(Long storageSpace) {
             this.putQueryParameter("StorageSpace", storageSpace);
@@ -277,7 +277,7 @@ public class ModifyDBClusterStorageSpaceRequest extends Request {
          * <p>
          * 
          * *   **normal_exclusive**: dedicated
-         * *   **normal_general**: genera-purpose
+         * *   **normal_general**: general-purpose
          */
         public Builder subCategory(String subCategory) {
             this.putQueryParameter("SubCategory", subCategory);

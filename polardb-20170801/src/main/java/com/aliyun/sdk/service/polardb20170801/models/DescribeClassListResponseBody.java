@@ -70,7 +70,7 @@ public class DescribeClassListResponseBody extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * The region ID of the cluster.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -78,13 +78,7 @@ public class DescribeClassListResponseBody extends TeaModel {
         }
 
         /**
-         * The price.
-         * <p>
-         * 
-         * Unit: cents (US dollars).
-         * 
-         * > *   If you set the CommodityCode parameter to a value that indicates the pay-as-you-go billing method, the ReferencePrice parameter specifies the hourly fee that you must pay.
-         * > *   If you set the CommodityCode parameter to a value that indicates the subscription billing method, the ReferencePrice parameter specifies the monthly fee that you must pay.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
