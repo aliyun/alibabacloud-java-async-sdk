@@ -53,6 +53,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<CancelRobotTaskResponse> cancelRobotTask(CancelRobotTaskRequest request);
 
+    CompletableFuture<ChangeMediaTypeResponse> changeMediaType(ChangeMediaTypeRequest request);
+
     /**
       * You can create up to 1,000 voice notifications for each task.
       * ### QPS limits
@@ -69,6 +71,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<CreateRobotTaskResponse> createRobotTask(CreateRobotTaskRequest request);
 
+    CompletableFuture<DegradeVideoFileResponse> degradeVideoFile(DegradeVideoFileRequest request);
+
     /**
       * You can call this operation to delete only tasks that are not started, that are completed, and that are terminated.
       * ### QPS limits
@@ -84,6 +88,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<ExecuteCallTaskResponse> executeCallTask(ExecuteCallTaskRequest request);
 
+    CompletableFuture<GetCallProgressResponse> getCallProgress(GetCallProgressRequest request);
+
     /**
       * ### QPS limits
       * You can call this operation up to 100 times per second per account.
@@ -97,6 +103,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<GetTokenResponse> getToken(GetTokenRequest request);
+
+    CompletableFuture<GetVideoFieldUrlResponse> getVideoFieldUrl(GetVideoFieldUrlRequest request);
 
     /**
       * *   Your enterprise qualification is approved. For more information, see [Submit enterprise qualifications](~~149795~~).
@@ -135,6 +143,10 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<ListHotlineTransferRegisterFileResponse> listHotlineTransferRegisterFile(ListHotlineTransferRegisterFileRequest request);
+
+    CompletableFuture<PauseVideoFileResponse> pauseVideoFile(PauseVideoFileRequest request);
+
+    CompletableFuture<PlayVideoFileResponse> playVideoFile(PlayVideoFileRequest request);
 
     /**
       * QueryCallDetailByCallId is a common query operation. You can call this operation to query the details of a voice notification, voice verification code, interactive voice response (IVR), intelligent inbound voice call, intelligent outbound voice call, or intelligent robocall.
@@ -197,6 +209,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<QueryRobotv2AllListResponse> queryRobotv2AllList(QueryRobotv2AllListRequest request);
 
+    CompletableFuture<QueryVideoPlayProgressResponse> queryVideoPlayProgress(QueryVideoPlayProgressRequest request);
+
     /**
       * ### QPS limits
       * You can call this operation up to 100 times per second per account.
@@ -214,6 +228,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryVoiceFileAuditInfoResponse> queryVoiceFileAuditInfo(QueryVoiceFileAuditInfoRequest request);
 
     CompletableFuture<RecoverCallInConfigResponse> recoverCallInConfig(RecoverCallInConfigRequest request);
+
+    CompletableFuture<ResumeVideoFileResponse> resumeVideoFile(ResumeVideoFileRequest request);
+
+    CompletableFuture<SeekVideoFileResponse> seekVideoFile(SeekVideoFileRequest request);
 
     /**
       * ### QPS limits
@@ -238,6 +256,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<SingleCallByTtsResponse> singleCallByTts(SingleCallByTtsRequest request);
 
+    CompletableFuture<SingleCallByVideoResponse> singleCallByVideo(SingleCallByVideoRequest request);
+
     /**
       * > Due to business adjustments, the updates of the voice notification and voice verification code services have been stopped in regions outside the Chinese mainland and the services have been discontinued since March 2022. Only qualified customers can continue using the voice notification and voice verification code services.
       * You can call the [SingleCallByTts](~~393519~~) operation to send voice notifications with variables.
@@ -246,6 +266,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<SingleCallByVoiceResponse> singleCallByVoice(SingleCallByVoiceRequest request);
+
+    CompletableFuture<SkipVideoFileResponse> skipVideoFile(SkipVideoFileRequest request);
 
     /**
       * *   The SmartCall operation must be used together with the [intelligent outbound HTTP operation](~~112703~~). After the call initiated by the Voice Messaging Service (VMS) platform is connected, the VMS platform sends the text converted from speech back to the business side, and the business side then returns the follow-up action to the VMS platform.
@@ -288,6 +310,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<SubmitHotlineTransferRegisterResponse> submitHotlineTransferRegister(SubmitHotlineTransferRegisterRequest request);
+
+    CompletableFuture<UpgradeVideoFileResponse> upgradeVideoFile(UpgradeVideoFileRequest request);
 
     /**
       * ### QPS limits

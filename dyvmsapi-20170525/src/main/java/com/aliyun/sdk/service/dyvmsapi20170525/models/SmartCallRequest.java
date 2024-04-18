@@ -68,6 +68,10 @@ public class SmartCallRequest extends Request {
     private Integer muteTime;
 
     @Query
+    @NameInMap("NoiseThreshold")
+    private Double noiseThreshold;
+
+    @Query
     @NameInMap("OutId")
     private String outId;
 
@@ -148,6 +152,7 @@ public class SmartCallRequest extends Request {
         this.earlyMediaAsr = builder.earlyMediaAsr;
         this.enableITN = builder.enableITN;
         this.muteTime = builder.muteTime;
+        this.noiseThreshold = builder.noiseThreshold;
         this.outId = builder.outId;
         this.ownerId = builder.ownerId;
         this.pauseTime = builder.pauseTime;
@@ -268,6 +273,13 @@ public class SmartCallRequest extends Request {
      */
     public Integer getMuteTime() {
         return this.muteTime;
+    }
+
+    /**
+     * @return noiseThreshold
+     */
+    public Double getNoiseThreshold() {
+        return this.noiseThreshold;
     }
 
     /**
@@ -396,6 +408,7 @@ public class SmartCallRequest extends Request {
         private Boolean earlyMediaAsr; 
         private Boolean enableITN; 
         private Integer muteTime; 
+        private Double noiseThreshold; 
         private String outId; 
         private Long ownerId; 
         private Integer pauseTime; 
@@ -432,6 +445,7 @@ public class SmartCallRequest extends Request {
             this.earlyMediaAsr = request.earlyMediaAsr;
             this.enableITN = request.enableITN;
             this.muteTime = request.muteTime;
+            this.noiseThreshold = request.noiseThreshold;
             this.outId = request.outId;
             this.ownerId = request.ownerId;
             this.pauseTime = request.pauseTime;
@@ -621,6 +635,15 @@ public class SmartCallRequest extends Request {
         public Builder muteTime(Integer muteTime) {
             this.putQueryParameter("MuteTime", muteTime);
             this.muteTime = muteTime;
+            return this;
+        }
+
+        /**
+         * NoiseThreshold.
+         */
+        public Builder noiseThreshold(Double noiseThreshold) {
+            this.putQueryParameter("NoiseThreshold", noiseThreshold);
+            this.noiseThreshold = noiseThreshold;
             return this;
         }
 
