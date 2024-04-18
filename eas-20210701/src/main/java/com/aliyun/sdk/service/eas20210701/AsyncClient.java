@@ -105,6 +105,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeServiceMirrorResponse> describeServiceMirror(DescribeServiceMirrorRequest request);
 
+    CompletableFuture<DescribeSpotDiscountHistoryResponse> describeSpotDiscountHistory(DescribeSpotDiscountHistoryRequest request);
+
     CompletableFuture<DevelopServiceResponse> developService(DevelopServiceRequest request);
 
     CompletableFuture<ListBenchmarkTaskResponse> listBenchmarkTask(ListBenchmarkTaskRequest request);
