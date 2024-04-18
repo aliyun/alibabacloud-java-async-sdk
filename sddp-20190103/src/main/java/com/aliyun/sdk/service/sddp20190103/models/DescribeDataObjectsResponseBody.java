@@ -329,6 +329,9 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         @NameInMap("LastScanTime")
         private Long lastScanTime;
 
+        @NameInMap("MemberAccount")
+        private Long memberAccount;
+
         @NameInMap("ModelTags")
         private java.util.List < ModelTags> modelTags;
 
@@ -368,6 +371,7 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
             this.instanceDescription = builder.instanceDescription;
             this.instanceId = builder.instanceId;
             this.lastScanTime = builder.lastScanTime;
+            this.memberAccount = builder.memberAccount;
             this.modelTags = builder.modelTags;
             this.name = builder.name;
             this.objectFileCategory = builder.objectFileCategory;
@@ -422,6 +426,13 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
          */
         public Long getLastScanTime() {
             return this.lastScanTime;
+        }
+
+        /**
+         * @return memberAccount
+         */
+        public Long getMemberAccount() {
+            return this.memberAccount;
         }
 
         /**
@@ -507,6 +518,7 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
             private String instanceDescription; 
             private String instanceId; 
             private Long lastScanTime; 
+            private Long memberAccount; 
             private java.util.List < ModelTags> modelTags; 
             private String name; 
             private String objectFileCategory; 
@@ -556,6 +568,14 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
              */
             public Builder lastScanTime(Long lastScanTime) {
                 this.lastScanTime = lastScanTime;
+                return this;
+            }
+
+            /**
+             * MemberAccount.
+             */
+            public Builder memberAccount(Long memberAccount) {
+                this.memberAccount = memberAccount;
                 return this;
             }
 

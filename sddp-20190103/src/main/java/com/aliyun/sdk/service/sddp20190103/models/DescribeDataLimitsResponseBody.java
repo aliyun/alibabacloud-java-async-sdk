@@ -186,6 +186,9 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
         @NameInMap("LogStoreDay")
         private Integer logStoreDay;
 
+        @NameInMap("MemberAccount")
+        private Long memberAccount;
+
         @NameInMap("NextStartTime")
         private Long nextStartTime;
 
@@ -268,6 +271,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             this.lastFinishedTime = builder.lastFinishedTime;
             this.localName = builder.localName;
             this.logStoreDay = builder.logStoreDay;
+            this.memberAccount = builder.memberAccount;
             this.nextStartTime = builder.nextStartTime;
             this.ocrStatus = builder.ocrStatus;
             this.parentId = builder.parentId;
@@ -423,6 +427,13 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
          */
         public Integer getLogStoreDay() {
             return this.logStoreDay;
+        }
+
+        /**
+         * @return memberAccount
+         */
+        public Long getMemberAccount() {
+            return this.memberAccount;
         }
 
         /**
@@ -591,6 +602,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             private Long lastFinishedTime; 
             private String localName; 
             private Integer logStoreDay; 
+            private Long memberAccount; 
             private Long nextStartTime; 
             private Integer ocrStatus; 
             private String parentId; 
@@ -785,6 +797,14 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
              */
             public Builder logStoreDay(Integer logStoreDay) {
                 this.logStoreDay = logStoreDay;
+                return this;
+            }
+
+            /**
+             * MemberAccount.
+             */
+            public Builder memberAccount(Long memberAccount) {
+                this.memberAccount = memberAccount;
                 return this;
             }
 

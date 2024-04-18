@@ -45,6 +45,10 @@ public class DescribeParentInstanceRequest extends Request {
     private String lang;
 
     @Query
+    @NameInMap("MemberAccount")
+    private Long memberAccount;
+
+    @Query
     @NameInMap("PageSize")
     private Integer pageSize;
 
@@ -66,6 +70,7 @@ public class DescribeParentInstanceRequest extends Request {
         this.engineType = builder.engineType;
         this.instanceId = builder.instanceId;
         this.lang = builder.lang;
+        this.memberAccount = builder.memberAccount;
         this.pageSize = builder.pageSize;
         this.resourceType = builder.resourceType;
         this.serviceRegionId = builder.serviceRegionId;
@@ -141,6 +146,13 @@ public class DescribeParentInstanceRequest extends Request {
     }
 
     /**
+     * @return memberAccount
+     */
+    public Long getMemberAccount() {
+        return this.memberAccount;
+    }
+
+    /**
      * @return pageSize
      */
     public Integer getPageSize() {
@@ -170,6 +182,7 @@ public class DescribeParentInstanceRequest extends Request {
         private String engineType; 
         private String instanceId; 
         private String lang; 
+        private Long memberAccount; 
         private Integer pageSize; 
         private Long resourceType; 
         private String serviceRegionId; 
@@ -188,6 +201,7 @@ public class DescribeParentInstanceRequest extends Request {
             this.engineType = request.engineType;
             this.instanceId = request.instanceId;
             this.lang = request.lang;
+            this.memberAccount = request.memberAccount;
             this.pageSize = request.pageSize;
             this.resourceType = request.resourceType;
             this.serviceRegionId = request.serviceRegionId;
@@ -262,6 +276,15 @@ public class DescribeParentInstanceRequest extends Request {
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
             this.lang = lang;
+            return this;
+        }
+
+        /**
+         * MemberAccount.
+         */
+        public Builder memberAccount(Long memberAccount) {
+            this.putQueryParameter("MemberAccount", memberAccount);
+            this.memberAccount = memberAccount;
             return this;
         }
 

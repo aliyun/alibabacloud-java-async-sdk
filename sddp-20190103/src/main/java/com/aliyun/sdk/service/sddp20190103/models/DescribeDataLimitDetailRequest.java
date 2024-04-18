@@ -97,7 +97,7 @@ public class DescribeDataLimitDetailRequest extends Request {
         } 
 
         /**
-         * FeatureType.
+         * This parameter is deprecated.
          */
         public Builder featureType(Integer featureType) {
             this.putQueryParameter("FeatureType", featureType);

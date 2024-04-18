@@ -132,6 +132,9 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
     } 
 
     public static class Items extends TeaModel {
+        @NameInMap("DstMemberAccount")
+        private Long dstMemberAccount;
+
         @NameInMap("DstPath")
         private String dstPath;
 
@@ -159,6 +162,9 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
         @NameInMap("RunCount")
         private Integer runCount;
 
+        @NameInMap("SrcMemberAccount")
+        private Long srcMemberAccount;
+
         @NameInMap("SrcPath")
         private String srcPath;
 
@@ -181,6 +187,7 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
         private Integer triggerType;
 
         private Items(Builder builder) {
+            this.dstMemberAccount = builder.dstMemberAccount;
             this.dstPath = builder.dstPath;
             this.dstType = builder.dstType;
             this.dstTypeCode = builder.dstTypeCode;
@@ -190,6 +197,7 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
             this.originalTable = builder.originalTable;
             this.owner = builder.owner;
             this.runCount = builder.runCount;
+            this.srcMemberAccount = builder.srcMemberAccount;
             this.srcPath = builder.srcPath;
             this.srcType = builder.srcType;
             this.srcTypeCode = builder.srcTypeCode;
@@ -205,6 +213,13 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
 
         public static Items create() {
             return builder().build();
+        }
+
+        /**
+         * @return dstMemberAccount
+         */
+        public Long getDstMemberAccount() {
+            return this.dstMemberAccount;
         }
 
         /**
@@ -271,6 +286,13 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
         }
 
         /**
+         * @return srcMemberAccount
+         */
+        public Long getSrcMemberAccount() {
+            return this.srcMemberAccount;
+        }
+
+        /**
          * @return srcPath
          */
         public String getSrcPath() {
@@ -320,6 +342,7 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Long dstMemberAccount; 
             private String dstPath; 
             private Integer dstType; 
             private String dstTypeCode; 
@@ -329,6 +352,7 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
             private Boolean originalTable; 
             private String owner; 
             private Integer runCount; 
+            private Long srcMemberAccount; 
             private String srcPath; 
             private Integer srcType; 
             private String srcTypeCode; 
@@ -336,6 +360,14 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
             private String taskId; 
             private String taskName; 
             private Integer triggerType; 
+
+            /**
+             * DstMemberAccount.
+             */
+            public Builder dstMemberAccount(Long dstMemberAccount) {
+                this.dstMemberAccount = dstMemberAccount;
+                return this;
+            }
 
             /**
              * The destination directory.
@@ -406,6 +438,14 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
              */
             public Builder runCount(Integer runCount) {
                 this.runCount = runCount;
+                return this;
+            }
+
+            /**
+             * SrcMemberAccount.
+             */
+            public Builder srcMemberAccount(Long srcMemberAccount) {
+                this.srcMemberAccount = srcMemberAccount;
                 return this;
             }
 

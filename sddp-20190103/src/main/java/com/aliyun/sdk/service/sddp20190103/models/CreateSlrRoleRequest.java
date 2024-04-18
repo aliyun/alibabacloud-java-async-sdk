@@ -82,7 +82,7 @@ public class CreateSlrRoleRequest extends Request {
         } 
 
         /**
-         * FeatureType.
+         * This parameter is deprecated.
          */
         public Builder featureType(Integer featureType) {
             this.putQueryParameter("FeatureType", featureType);
@@ -104,7 +104,7 @@ public class CreateSlrRoleRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * This parameter is deprecated.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

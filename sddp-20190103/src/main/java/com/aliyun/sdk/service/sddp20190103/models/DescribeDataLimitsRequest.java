@@ -49,6 +49,10 @@ public class DescribeDataLimitsRequest extends Request {
     private String lang;
 
     @Query
+    @NameInMap("MemberAccount")
+    private Long memberAccount;
+
+    @Query
     @NameInMap("PageSize")
     private Integer pageSize;
 
@@ -79,6 +83,7 @@ public class DescribeDataLimitsRequest extends Request {
         this.engineType = builder.engineType;
         this.featureType = builder.featureType;
         this.lang = builder.lang;
+        this.memberAccount = builder.memberAccount;
         this.pageSize = builder.pageSize;
         this.parentId = builder.parentId;
         this.resourceType = builder.resourceType;
@@ -163,6 +168,13 @@ public class DescribeDataLimitsRequest extends Request {
     }
 
     /**
+     * @return memberAccount
+     */
+    public Long getMemberAccount() {
+        return this.memberAccount;
+    }
+
+    /**
      * @return pageSize
      */
     public Integer getPageSize() {
@@ -207,6 +219,7 @@ public class DescribeDataLimitsRequest extends Request {
         private String engineType; 
         private Integer featureType; 
         private String lang; 
+        private Long memberAccount; 
         private Integer pageSize; 
         private String parentId; 
         private Integer resourceType; 
@@ -228,6 +241,7 @@ public class DescribeDataLimitsRequest extends Request {
             this.engineType = request.engineType;
             this.featureType = request.featureType;
             this.lang = request.lang;
+            this.memberAccount = request.memberAccount;
             this.pageSize = request.pageSize;
             this.parentId = request.parentId;
             this.resourceType = request.resourceType;
@@ -318,7 +332,7 @@ public class DescribeDataLimitsRequest extends Request {
         }
 
         /**
-         * FeatureType.
+         * This parameter is deprecated.
          */
         public Builder featureType(Integer featureType) {
             this.putQueryParameter("FeatureType", featureType);
@@ -336,6 +350,15 @@ public class DescribeDataLimitsRequest extends Request {
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
             this.lang = lang;
+            return this;
+        }
+
+        /**
+         * MemberAccount.
+         */
+        public Builder memberAccount(Long memberAccount) {
+            this.putQueryParameter("MemberAccount", memberAccount);
+            this.memberAccount = memberAccount;
             return this;
         }
 

@@ -162,6 +162,9 @@ public class DescribeParentInstanceResponseBody extends TeaModel {
         @NameInMap("LocalName")
         private String localName;
 
+        @NameInMap("MemberAccount")
+        private Long memberAccount;
+
         @NameInMap("ParentId")
         private String parentId;
 
@@ -194,6 +197,7 @@ public class DescribeParentInstanceResponseBody extends TeaModel {
             this.instanceId = builder.instanceId;
             this.instanceSize = builder.instanceSize;
             this.localName = builder.localName;
+            this.memberAccount = builder.memberAccount;
             this.parentId = builder.parentId;
             this.resourceType = builder.resourceType;
             this.supportConnectNodes = builder.supportConnectNodes;
@@ -282,6 +286,13 @@ public class DescribeParentInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return memberAccount
+         */
+        public Long getMemberAccount() {
+            return this.memberAccount;
+        }
+
+        /**
          * @return parentId
          */
         public String getParentId() {
@@ -341,6 +352,7 @@ public class DescribeParentInstanceResponseBody extends TeaModel {
             private String instanceId; 
             private Long instanceSize; 
             private String localName; 
+            private Long memberAccount; 
             private String parentId; 
             private String resourceType; 
             private String supportConnectNodes; 
@@ -426,6 +438,14 @@ public class DescribeParentInstanceResponseBody extends TeaModel {
              */
             public Builder localName(String localName) {
                 this.localName = localName;
+                return this;
+            }
+
+            /**
+             * MemberAccount.
+             */
+            public Builder memberAccount(Long memberAccount) {
+                this.memberAccount = memberAccount;
                 return this;
             }
 

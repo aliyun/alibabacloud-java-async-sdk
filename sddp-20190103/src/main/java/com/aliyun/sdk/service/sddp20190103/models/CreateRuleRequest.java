@@ -404,7 +404,7 @@ public class CreateRuleRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * This parameter is deprecated.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

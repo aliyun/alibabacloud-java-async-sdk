@@ -394,7 +394,7 @@ public class DescribeUserStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance within the current account.
+             * The ID of the data security center instance purchased by the main account.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;

@@ -460,9 +460,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation to query the data assets that DSC is not authorized to access. This helps you obtain information about the data assets.
-      * # Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      * You can query a list of unauthorized or authorized data assets based on the value of AuthStatus.
+      * This operation is no longer used for the KMS console of the new version.
+      * # [](#qps-)QPS limits
+      * This operation can be called up to 10 times per second for each Alibaba Cloud account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
      */
     @Override
