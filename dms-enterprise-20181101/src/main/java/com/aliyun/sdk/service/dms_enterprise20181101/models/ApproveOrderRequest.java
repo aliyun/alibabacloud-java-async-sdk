@@ -38,6 +38,10 @@ public class ApproveOrderRequest extends Request {
     private Long newApprover;
 
     @Query
+    @NameInMap("NewApproverList")
+    private String newApproverList;
+
+    @Query
     @NameInMap("OldApprover")
     private Long oldApprover;
 
@@ -58,6 +62,7 @@ public class ApproveOrderRequest extends Request {
         this.approvalType = builder.approvalType;
         this.comment = builder.comment;
         this.newApprover = builder.newApprover;
+        this.newApproverList = builder.newApproverList;
         this.oldApprover = builder.oldApprover;
         this.tid = builder.tid;
         this.workflowInstanceId = builder.workflowInstanceId;
@@ -119,6 +124,13 @@ public class ApproveOrderRequest extends Request {
     }
 
     /**
+     * @return newApproverList
+     */
+    public String getNewApproverList() {
+        return this.newApproverList;
+    }
+
+    /**
      * @return oldApprover
      */
     public Long getOldApprover() {
@@ -146,6 +158,7 @@ public class ApproveOrderRequest extends Request {
         private String approvalType; 
         private String comment; 
         private Long newApprover; 
+        private String newApproverList; 
         private Long oldApprover; 
         private Long tid; 
         private Long workflowInstanceId; 
@@ -162,6 +175,7 @@ public class ApproveOrderRequest extends Request {
             this.approvalType = request.approvalType;
             this.comment = request.comment;
             this.newApprover = request.newApprover;
+            this.newApproverList = request.newApproverList;
             this.oldApprover = request.oldApprover;
             this.tid = request.tid;
             this.workflowInstanceId = request.workflowInstanceId;
@@ -229,6 +243,15 @@ public class ApproveOrderRequest extends Request {
         public Builder newApprover(Long newApprover) {
             this.putQueryParameter("NewApprover", newApprover);
             this.newApprover = newApprover;
+            return this;
+        }
+
+        /**
+         * NewApproverList.
+         */
+        public Builder newApproverList(String newApproverList) {
+            this.putQueryParameter("NewApproverList", newApproverList);
+            this.newApproverList = newApproverList;
             return this;
         }
 

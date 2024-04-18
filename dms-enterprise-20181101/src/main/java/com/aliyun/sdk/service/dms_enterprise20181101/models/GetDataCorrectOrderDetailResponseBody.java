@@ -135,6 +135,469 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
 
     } 
 
+    public static class CronExtConfig extends TeaModel {
+        @NameInMap("CurrentClearTaskCount")
+        private Integer currentClearTaskCount;
+
+        @NameInMap("OptimizeTableAfterEveryClearTimes")
+        private Integer optimizeTableAfterEveryClearTimes;
+
+        private CronExtConfig(Builder builder) {
+            this.currentClearTaskCount = builder.currentClearTaskCount;
+            this.optimizeTableAfterEveryClearTimes = builder.optimizeTableAfterEveryClearTimes;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CronExtConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return currentClearTaskCount
+         */
+        public Integer getCurrentClearTaskCount() {
+            return this.currentClearTaskCount;
+        }
+
+        /**
+         * @return optimizeTableAfterEveryClearTimes
+         */
+        public Integer getOptimizeTableAfterEveryClearTimes() {
+            return this.optimizeTableAfterEveryClearTimes;
+        }
+
+        public static final class Builder {
+            private Integer currentClearTaskCount; 
+            private Integer optimizeTableAfterEveryClearTimes; 
+
+            /**
+             * CurrentClearTaskCount.
+             */
+            public Builder currentClearTaskCount(Integer currentClearTaskCount) {
+                this.currentClearTaskCount = currentClearTaskCount;
+                return this;
+            }
+
+            /**
+             * OptimizeTableAfterEveryClearTimes.
+             */
+            public Builder optimizeTableAfterEveryClearTimes(Integer optimizeTableAfterEveryClearTimes) {
+                this.optimizeTableAfterEveryClearTimes = optimizeTableAfterEveryClearTimes;
+                return this;
+            }
+
+            public CronExtConfig build() {
+                return new CronExtConfig(this);
+            } 
+
+        } 
+
+    }
+    public static class ImportExtConfig extends TeaModel {
+        @NameInMap("CsvFirstRowIsColumnDef")
+        private Boolean csvFirstRowIsColumnDef;
+
+        @NameInMap("IgnoreError")
+        private Boolean ignoreError;
+
+        @NameInMap("ImportMode")
+        private String importMode;
+
+        @NameInMap("InsertType")
+        private String insertType;
+
+        private ImportExtConfig(Builder builder) {
+            this.csvFirstRowIsColumnDef = builder.csvFirstRowIsColumnDef;
+            this.ignoreError = builder.ignoreError;
+            this.importMode = builder.importMode;
+            this.insertType = builder.insertType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ImportExtConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return csvFirstRowIsColumnDef
+         */
+        public Boolean getCsvFirstRowIsColumnDef() {
+            return this.csvFirstRowIsColumnDef;
+        }
+
+        /**
+         * @return ignoreError
+         */
+        public Boolean getIgnoreError() {
+            return this.ignoreError;
+        }
+
+        /**
+         * @return importMode
+         */
+        public String getImportMode() {
+            return this.importMode;
+        }
+
+        /**
+         * @return insertType
+         */
+        public String getInsertType() {
+            return this.insertType;
+        }
+
+        public static final class Builder {
+            private Boolean csvFirstRowIsColumnDef; 
+            private Boolean ignoreError; 
+            private String importMode; 
+            private String insertType; 
+
+            /**
+             * CsvFirstRowIsColumnDef.
+             */
+            public Builder csvFirstRowIsColumnDef(Boolean csvFirstRowIsColumnDef) {
+                this.csvFirstRowIsColumnDef = csvFirstRowIsColumnDef;
+                return this;
+            }
+
+            /**
+             * IgnoreError.
+             */
+            public Builder ignoreError(Boolean ignoreError) {
+                this.ignoreError = ignoreError;
+                return this;
+            }
+
+            /**
+             * ImportMode.
+             */
+            public Builder importMode(String importMode) {
+                this.importMode = importMode;
+                return this;
+            }
+
+            /**
+             * InsertType.
+             */
+            public Builder insertType(String insertType) {
+                this.insertType = insertType;
+                return this;
+            }
+
+            public ImportExtConfig build() {
+                return new ImportExtConfig(this);
+            } 
+
+        } 
+
+    }
+    public static class ConfigDetail extends TeaModel {
+        @NameInMap("Cron")
+        private Boolean cron;
+
+        @NameInMap("CronCallTimes")
+        private Integer cronCallTimes;
+
+        @NameInMap("CronExtConfig")
+        private CronExtConfig cronExtConfig;
+
+        @NameInMap("CronFormat")
+        private String cronFormat;
+
+        @NameInMap("CronLastCallStartTime")
+        private String cronLastCallStartTime;
+
+        @NameInMap("CronNextCallTime")
+        private String cronNextCallTime;
+
+        @NameInMap("CronStatus")
+        private String cronStatus;
+
+        @NameInMap("CsvTableName")
+        private String csvTableName;
+
+        @NameInMap("CurrentTaskId")
+        private Long currentTaskId;
+
+        @NameInMap("DetailType")
+        private String detailType;
+
+        @NameInMap("Duration")
+        private Integer duration;
+
+        @NameInMap("FileEncoding")
+        private String fileEncoding;
+
+        @NameInMap("FileType")
+        private String fileType;
+
+        @NameInMap("ImportExtConfig")
+        private ImportExtConfig importExtConfig;
+
+        private ConfigDetail(Builder builder) {
+            this.cron = builder.cron;
+            this.cronCallTimes = builder.cronCallTimes;
+            this.cronExtConfig = builder.cronExtConfig;
+            this.cronFormat = builder.cronFormat;
+            this.cronLastCallStartTime = builder.cronLastCallStartTime;
+            this.cronNextCallTime = builder.cronNextCallTime;
+            this.cronStatus = builder.cronStatus;
+            this.csvTableName = builder.csvTableName;
+            this.currentTaskId = builder.currentTaskId;
+            this.detailType = builder.detailType;
+            this.duration = builder.duration;
+            this.fileEncoding = builder.fileEncoding;
+            this.fileType = builder.fileType;
+            this.importExtConfig = builder.importExtConfig;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ConfigDetail create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cron
+         */
+        public Boolean getCron() {
+            return this.cron;
+        }
+
+        /**
+         * @return cronCallTimes
+         */
+        public Integer getCronCallTimes() {
+            return this.cronCallTimes;
+        }
+
+        /**
+         * @return cronExtConfig
+         */
+        public CronExtConfig getCronExtConfig() {
+            return this.cronExtConfig;
+        }
+
+        /**
+         * @return cronFormat
+         */
+        public String getCronFormat() {
+            return this.cronFormat;
+        }
+
+        /**
+         * @return cronLastCallStartTime
+         */
+        public String getCronLastCallStartTime() {
+            return this.cronLastCallStartTime;
+        }
+
+        /**
+         * @return cronNextCallTime
+         */
+        public String getCronNextCallTime() {
+            return this.cronNextCallTime;
+        }
+
+        /**
+         * @return cronStatus
+         */
+        public String getCronStatus() {
+            return this.cronStatus;
+        }
+
+        /**
+         * @return csvTableName
+         */
+        public String getCsvTableName() {
+            return this.csvTableName;
+        }
+
+        /**
+         * @return currentTaskId
+         */
+        public Long getCurrentTaskId() {
+            return this.currentTaskId;
+        }
+
+        /**
+         * @return detailType
+         */
+        public String getDetailType() {
+            return this.detailType;
+        }
+
+        /**
+         * @return duration
+         */
+        public Integer getDuration() {
+            return this.duration;
+        }
+
+        /**
+         * @return fileEncoding
+         */
+        public String getFileEncoding() {
+            return this.fileEncoding;
+        }
+
+        /**
+         * @return fileType
+         */
+        public String getFileType() {
+            return this.fileType;
+        }
+
+        /**
+         * @return importExtConfig
+         */
+        public ImportExtConfig getImportExtConfig() {
+            return this.importExtConfig;
+        }
+
+        public static final class Builder {
+            private Boolean cron; 
+            private Integer cronCallTimes; 
+            private CronExtConfig cronExtConfig; 
+            private String cronFormat; 
+            private String cronLastCallStartTime; 
+            private String cronNextCallTime; 
+            private String cronStatus; 
+            private String csvTableName; 
+            private Long currentTaskId; 
+            private String detailType; 
+            private Integer duration; 
+            private String fileEncoding; 
+            private String fileType; 
+            private ImportExtConfig importExtConfig; 
+
+            /**
+             * Cron.
+             */
+            public Builder cron(Boolean cron) {
+                this.cron = cron;
+                return this;
+            }
+
+            /**
+             * CronCallTimes.
+             */
+            public Builder cronCallTimes(Integer cronCallTimes) {
+                this.cronCallTimes = cronCallTimes;
+                return this;
+            }
+
+            /**
+             * CronExtConfig.
+             */
+            public Builder cronExtConfig(CronExtConfig cronExtConfig) {
+                this.cronExtConfig = cronExtConfig;
+                return this;
+            }
+
+            /**
+             * CronFormat.
+             */
+            public Builder cronFormat(String cronFormat) {
+                this.cronFormat = cronFormat;
+                return this;
+            }
+
+            /**
+             * CronLastCallStartTime.
+             */
+            public Builder cronLastCallStartTime(String cronLastCallStartTime) {
+                this.cronLastCallStartTime = cronLastCallStartTime;
+                return this;
+            }
+
+            /**
+             * CronNextCallTime.
+             */
+            public Builder cronNextCallTime(String cronNextCallTime) {
+                this.cronNextCallTime = cronNextCallTime;
+                return this;
+            }
+
+            /**
+             * CronStatus.
+             */
+            public Builder cronStatus(String cronStatus) {
+                this.cronStatus = cronStatus;
+                return this;
+            }
+
+            /**
+             * CsvTableName.
+             */
+            public Builder csvTableName(String csvTableName) {
+                this.csvTableName = csvTableName;
+                return this;
+            }
+
+            /**
+             * CurrentTaskId.
+             */
+            public Builder currentTaskId(Long currentTaskId) {
+                this.currentTaskId = currentTaskId;
+                return this;
+            }
+
+            /**
+             * DetailType.
+             */
+            public Builder detailType(String detailType) {
+                this.detailType = detailType;
+                return this;
+            }
+
+            /**
+             * Duration.
+             */
+            public Builder duration(Integer duration) {
+                this.duration = duration;
+                return this;
+            }
+
+            /**
+             * FileEncoding.
+             */
+            public Builder fileEncoding(String fileEncoding) {
+                this.fileEncoding = fileEncoding;
+                return this;
+            }
+
+            /**
+             * FileType.
+             */
+            public Builder fileType(String fileType) {
+                this.fileType = fileType;
+                return this;
+            }
+
+            /**
+             * ImportExtConfig.
+             */
+            public Builder importExtConfig(ImportExtConfig importExtConfig) {
+                this.importExtConfig = importExtConfig;
+                return this;
+            }
+
+            public ConfigDetail build() {
+                return new ConfigDetail(this);
+            } 
+
+        } 
+
+    }
     public static class Database extends TeaModel {
         @NameInMap("DbId")
         private Integer dbId;
@@ -699,6 +1162,9 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
 
     }
     public static class DataCorrectOrderDetail extends TeaModel {
+        @NameInMap("ConfigDetail")
+        private ConfigDetail configDetail;
+
         @NameInMap("DatabaseList")
         private DatabaseList databaseList;
 
@@ -715,6 +1181,7 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
         private String status;
 
         private DataCorrectOrderDetail(Builder builder) {
+            this.configDetail = builder.configDetail;
             this.databaseList = builder.databaseList;
             this.execMode = builder.execMode;
             this.orderDetail = builder.orderDetail;
@@ -728,6 +1195,13 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
 
         public static DataCorrectOrderDetail create() {
             return builder().build();
+        }
+
+        /**
+         * @return configDetail
+         */
+        public ConfigDetail getConfigDetail() {
+            return this.configDetail;
         }
 
         /**
@@ -766,11 +1240,20 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private ConfigDetail configDetail; 
             private DatabaseList databaseList; 
             private String execMode; 
             private OrderDetail orderDetail; 
             private PreCheckDetail preCheckDetail; 
             private String status; 
+
+            /**
+             * ConfigDetail.
+             */
+            public Builder configDetail(ConfigDetail configDetail) {
+                this.configDetail = configDetail;
+                return this;
+            }
 
             /**
              * The information about the database in which data is changed.
