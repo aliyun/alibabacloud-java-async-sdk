@@ -98,7 +98,7 @@ public class ListTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * The metadata of the template.
+         * The template metadata.
          */
         public Builder templates(java.util.List < Templates> templates) {
             this.templates = templates;
@@ -378,7 +378,7 @@ public class ListTemplatesResponseBody extends TeaModel {
             private String updatedDate; 
 
             /**
-             * The type of the template.
+             * The template type.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -410,7 +410,7 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the template.
+             * The template description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -418,7 +418,7 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the template is configured with a trigger.
+             * Indicates whether the template was configured with a trigger.
              */
             public Builder hasTrigger(Boolean hasTrigger) {
                 this.hasTrigger = hasTrigger;
@@ -442,10 +442,10 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The popularity of the public template. Valid values: **1-10**. A greater value indicates higher popularity. If the **ShareType** parameter is set to **Private**, the value of this parameter is `-1`.
+             * The popularity of the public template. Valid values: **1-10**. A greater value indicates higher popularity. If **ShareType** is set to **Private**, the value of this parameter is `-1`.
              * <p>
              * 
-             * **Notes** This parameter is valid only if the value of the **ShareType** parameter is set to **Public**.
+             * >  This parameter is valid only if the value of **ShareType** is set to **Public**.
              */
             public Builder popularity(Integer popularity) {
                 this.popularity = popularity;
@@ -461,7 +461,7 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * The resource group ID.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -469,7 +469,7 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The share type of the template. The share type of the template that you create is **Private**. Valid values:
+             * The share type of the template. The share type of a template created by a user is **Private**. Valid values:
              * <p>
              * 
              * *   **Public**
@@ -489,7 +489,7 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The format of the template. The system automatically determines whether the format is JSON or YAML.
+             * The template format. The system automatically determines whether the format is JSON or YAML.
              */
             public Builder templateFormat(String templateFormat) {
                 this.templateFormat = templateFormat;
@@ -497,7 +497,7 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the template.
+             * The template ID.
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -505,7 +505,7 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the template.
+             * The template name.
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -513,7 +513,7 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the template.
+             * The template type.
              */
             public Builder templateType(String templateType) {
                 this.templateType = templateType;
@@ -521,7 +521,7 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the template. The name of the version consists of the letter v and a number. The number starts from 1.
+             * The template version. The name of the version consists of the letter v and a number. The number starts from 1.
              */
             public Builder templateVersion(String templateVersion) {
                 this.templateVersion = templateVersion;
@@ -529,9 +529,10 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of times for which the private template is executed. If the **ShareType** parameter is set to **Public**, the value of this parameter is `-1`.
+             * The number of times for which the private template is executed. If **ShareType** is set to **Public**, the value of this parameter is `-1`.
              * <p>
-             * **Notes** This parameter is valid only if the **ShareType** parameter is set to **Private**.
+             * 
+             * >  This parameter is valid only if the value of **ShareType** is **Private**.
              */
             public Builder totalExecutionCount(Integer totalExecutionCount) {
                 this.totalExecutionCount = totalExecutionCount;

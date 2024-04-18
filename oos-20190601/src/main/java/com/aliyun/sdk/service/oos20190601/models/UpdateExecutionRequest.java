@@ -139,7 +139,7 @@ public class UpdateExecutionRequest extends Request {
         } 
 
         /**
-         * The description of the execution.
+         * The client token that is used to ensure the idempotence of the request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);

@@ -74,7 +74,7 @@ public class ListInstancePatchStatesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The number of patches that are not installed.
+         * The details of patches of the instance.
          */
         public Builder instancePatchStates(java.util.List < InstancePatchStates> instancePatchStates) {
             this.instancePatchStates = instancePatchStates;
@@ -82,7 +82,7 @@ public class ListInstancePatchStatesResponseBody extends TeaModel {
         }
 
         /**
-         * The details of patches of the instance.
+         * The number of entries returned on each page.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -90,7 +90,7 @@ public class ListInstancePatchStatesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The token that is used to retrieve the next page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -98,7 +98,7 @@ public class ListInstancePatchStatesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned on each page.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -282,7 +282,7 @@ public class ListInstancePatchStatesResponseBody extends TeaModel {
             private String patchGroup; 
 
             /**
-             * The number of patches that have been installed but require a restart to take effect.
+             * The ID of the patch baseline.
              */
             public Builder baselineId(String baselineId) {
                 this.baselineId = baselineId;
@@ -290,7 +290,7 @@ public class ListInstancePatchStatesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the patch baseline.
+             * The number of patches that failed to be installed.
              */
             public Builder failedCount(String failedCount) {
                 this.failedCount = failedCount;
@@ -298,7 +298,7 @@ public class ListInstancePatchStatesResponseBody extends TeaModel {
             }
 
             /**
-             * Queries patches of an instance.
+             * The number of installed patches.
              */
             public Builder installedCount(String installedCount) {
                 this.installedCount = installedCount;
@@ -306,7 +306,7 @@ public class ListInstancePatchStatesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ECS instance.
+             * The number of patches that do not meet the baseline.
              */
             public Builder installedOtherCount(String installedOtherCount) {
                 this.installedOtherCount = installedOtherCount;
@@ -314,7 +314,7 @@ public class ListInstancePatchStatesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of patches that are rejected by the user.
+             * The number of patches that have been installed but require a restart to take effect.
              */
             public Builder installedPendingRebootCount(String installedPendingRebootCount) {
                 this.installedPendingRebootCount = installedPendingRebootCount;
@@ -322,7 +322,7 @@ public class ListInstancePatchStatesResponseBody extends TeaModel {
             }
 
             /**
-             * The patch group.
+             * The number of patches that are rejected by the user.
              */
             public Builder installedRejectedCount(String installedRejectedCount) {
                 this.installedRejectedCount = installedRejectedCount;
@@ -330,7 +330,7 @@ public class ListInstancePatchStatesResponseBody extends TeaModel {
             }
 
             /**
-             * The operation type.
+             * The ID of the ECS instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -338,7 +338,7 @@ public class ListInstancePatchStatesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the operation ended.
+             * The number of patches that are not installed.
              */
             public Builder missingCount(String missingCount) {
                 this.missingCount = missingCount;
@@ -346,7 +346,7 @@ public class ListInstancePatchStatesResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the user.
+             * The time when the operation ended.
              */
             public Builder operationEndTime(String operationEndTime) {
                 this.operationEndTime = operationEndTime;
@@ -354,7 +354,7 @@ public class ListInstancePatchStatesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of patches that failed to be installed.
+             * The time when the operation was initiated.
              */
             public Builder operationStartTime(String operationStartTime) {
                 this.operationStartTime = operationStartTime;
@@ -362,7 +362,7 @@ public class ListInstancePatchStatesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the operation was initiated.
+             * The operation type.
              */
             public Builder operationType(String operationType) {
                 this.operationType = operationType;
@@ -370,7 +370,7 @@ public class ListInstancePatchStatesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of patches that do not meet the baseline.
+             * The information about the user.
              */
             public Builder ownerInformation(String ownerInformation) {
                 this.ownerInformation = ownerInformation;
@@ -378,7 +378,7 @@ public class ListInstancePatchStatesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of installed patches.
+             * The patch group.
              */
             public Builder patchGroup(String patchGroup) {
                 this.patchGroup = patchGroup;

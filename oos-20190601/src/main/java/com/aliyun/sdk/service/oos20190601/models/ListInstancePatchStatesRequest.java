@@ -96,7 +96,7 @@ public class ListInstancePatchStatesRequest extends Request {
         } 
 
         /**
-         * The token that is used to retrieve the next page of results.
+         * The ID of the Elastic Compute Service (ECS) instance. The value can be a JSON array that consists of up to 100 instance IDs. Separate the instance IDs with commas (,).
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -105,7 +105,7 @@ public class ListInstancePatchStatesRequest extends Request {
         }
 
         /**
-         * The token that is used to retrieve the next page of results.
+         * The number of entries to return on each page.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -114,7 +114,7 @@ public class ListInstancePatchStatesRequest extends Request {
         }
 
         /**
-         * The ID of the Elastic Compute Service (ECS) instance. The value can be a JSON array that consists of up to 100 instance IDs. Separate the instance IDs with commas (,).
+         * The token that is used to retrieve the next page of results.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -123,7 +123,7 @@ public class ListInstancePatchStatesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The ID of the region in which the instance whose patches you want to query resides.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

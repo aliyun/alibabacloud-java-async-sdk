@@ -110,7 +110,7 @@ public class ListInstancePatchesRequest extends Request {
         } 
 
         /**
-         * The number of entries to return on each page.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -119,7 +119,7 @@ public class ListInstancePatchesRequest extends Request {
         }
 
         /**
-         * The token that is used to retrieve the next page of results.
+         * The number of entries to return on each page.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -128,7 +128,7 @@ public class ListInstancePatchesRequest extends Request {
         }
 
         /**
-         * MTRBMDc0NjAtRUJFNy00N0NBLTk3NTctMTJDQzQ
+         * The token that is used to retrieve the next page of results.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -137,7 +137,7 @@ public class ListInstancePatchesRequest extends Request {
         }
 
         /**
-         * The token that is used to retrieve the next page of results.
+         * The status of the patches that you want to query. If you do not set this parameter, patches are not filtered.
          */
         public Builder patchStatuses(String patchStatuses) {
             this.putQueryParameter("PatchStatuses", patchStatuses);
@@ -146,7 +146,7 @@ public class ListInstancePatchesRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The ID of the region in which the instance whose patches you want to query resides.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

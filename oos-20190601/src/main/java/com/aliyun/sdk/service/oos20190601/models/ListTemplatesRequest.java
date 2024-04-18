@@ -342,7 +342,7 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: 20 to 100. Default value: 50.
+         * The number of entries to return on each page. Valid values: 10 to 100. Default value: 50.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);

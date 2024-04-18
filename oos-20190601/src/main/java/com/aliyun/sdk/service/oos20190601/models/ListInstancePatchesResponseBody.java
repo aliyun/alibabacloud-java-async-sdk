@@ -74,7 +74,7 @@ public class ListInstancePatchesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the patch.
+         * The number of entries returned on each page.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -82,7 +82,7 @@ public class ListInstancePatchesResponseBody extends TeaModel {
         }
 
         /**
-         * MTRBMDc0NjAtRUJFNy00N0NBLTk3NTctMTJDQzQ
+         * The token that is used to retrieve the next page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -90,7 +90,7 @@ public class ListInstancePatchesResponseBody extends TeaModel {
         }
 
         /**
-         * The level of the severity.
+         * The information about the patch.
          */
         public Builder patches(java.util.List < Patches> patches) {
             this.patches = patches;
@@ -98,7 +98,7 @@ public class ListInstancePatchesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned on each page.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -198,7 +198,7 @@ public class ListInstancePatchesResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * Queries the patches of an instance.
+             * The classification of the patch.
              */
             public Builder classification(String classification) {
                 this.classification = classification;
@@ -206,7 +206,7 @@ public class ListInstancePatchesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the patch.
+             * The time when the patch was installed.
              */
             public Builder installedTime(String installedTime) {
                 this.installedTime = installedTime;
@@ -214,7 +214,7 @@ public class ListInstancePatchesResponseBody extends TeaModel {
             }
 
             /**
-             * KBId
+             * The Id of KBId.
              */
             public Builder KBId(String KBId) {
                 this.KBId = KBId;
@@ -222,7 +222,7 @@ public class ListInstancePatchesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the installation.
+             * The level of the severity.
              */
             public Builder severity(String severity) {
                 this.severity = severity;
@@ -230,7 +230,7 @@ public class ListInstancePatchesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the patch was installed.
+             * The status of the installation.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -238,7 +238,7 @@ public class ListInstancePatchesResponseBody extends TeaModel {
             }
 
             /**
-             * The classification of the patch.
+             * The name of the patch.
              */
             public Builder title(String title) {
                 this.title = title;

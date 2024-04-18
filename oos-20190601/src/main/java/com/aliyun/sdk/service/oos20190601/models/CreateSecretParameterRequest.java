@@ -21,6 +21,10 @@ public class CreateSecretParameterRequest extends Request {
     private String constraints;
 
     @Query
+    @NameInMap("DKMSInstanceId")
+    private String DKMSInstanceId;
+
+    @Query
     @NameInMap("Description")
     private String description;
 
@@ -58,6 +62,7 @@ public class CreateSecretParameterRequest extends Request {
         super(builder);
         this.clientToken = builder.clientToken;
         this.constraints = builder.constraints;
+        this.DKMSInstanceId = builder.DKMSInstanceId;
         this.description = builder.description;
         this.keyId = builder.keyId;
         this.name = builder.name;
@@ -93,6 +98,13 @@ public class CreateSecretParameterRequest extends Request {
      */
     public String getConstraints() {
         return this.constraints;
+    }
+
+    /**
+     * @return DKMSInstanceId
+     */
+    public String getDKMSInstanceId() {
+        return this.DKMSInstanceId;
     }
 
     /**
@@ -154,6 +166,7 @@ public class CreateSecretParameterRequest extends Request {
     public static final class Builder extends Request.Builder<CreateSecretParameterRequest, Builder> {
         private String clientToken; 
         private String constraints; 
+        private String DKMSInstanceId; 
         private String description; 
         private String keyId; 
         private String name; 
@@ -171,6 +184,7 @@ public class CreateSecretParameterRequest extends Request {
             super(request);
             this.clientToken = request.clientToken;
             this.constraints = request.constraints;
+            this.DKMSInstanceId = request.DKMSInstanceId;
             this.description = request.description;
             this.keyId = request.keyId;
             this.name = request.name;
@@ -202,6 +216,15 @@ public class CreateSecretParameterRequest extends Request {
         public Builder constraints(String constraints) {
             this.putQueryParameter("Constraints", constraints);
             this.constraints = constraints;
+            return this;
+        }
+
+        /**
+         * DKMSInstanceId.
+         */
+        public Builder DKMSInstanceId(String DKMSInstanceId) {
+            this.putQueryParameter("DKMSInstanceId", DKMSInstanceId);
+            this.DKMSInstanceId = DKMSInstanceId;
             return this;
         }
 

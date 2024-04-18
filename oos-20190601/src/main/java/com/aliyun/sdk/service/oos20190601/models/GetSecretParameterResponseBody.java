@@ -81,6 +81,9 @@ public class GetSecretParameterResponseBody extends TeaModel {
         @NameInMap("CreatedDate")
         private String createdDate;
 
+        @NameInMap("DKMSInstanceId")
+        private String DKMSInstanceId;
+
         @NameInMap("Description")
         private String description;
 
@@ -121,6 +124,7 @@ public class GetSecretParameterResponseBody extends TeaModel {
             this.constraints = builder.constraints;
             this.createdBy = builder.createdBy;
             this.createdDate = builder.createdDate;
+            this.DKMSInstanceId = builder.DKMSInstanceId;
             this.description = builder.description;
             this.id = builder.id;
             this.keyId = builder.keyId;
@@ -162,6 +166,13 @@ public class GetSecretParameterResponseBody extends TeaModel {
          */
         public String getCreatedDate() {
             return this.createdDate;
+        }
+
+        /**
+         * @return DKMSInstanceId
+         */
+        public String getDKMSInstanceId() {
+            return this.DKMSInstanceId;
         }
 
         /**
@@ -252,6 +263,7 @@ public class GetSecretParameterResponseBody extends TeaModel {
             private String constraints; 
             private String createdBy; 
             private String createdDate; 
+            private String DKMSInstanceId; 
             private String description; 
             private String id; 
             private String keyId; 
@@ -286,6 +298,14 @@ public class GetSecretParameterResponseBody extends TeaModel {
              */
             public Builder createdDate(String createdDate) {
                 this.createdDate = createdDate;
+                return this;
+            }
+
+            /**
+             * DKMSInstanceId.
+             */
+            public Builder DKMSInstanceId(String DKMSInstanceId) {
+                this.DKMSInstanceId = DKMSInstanceId;
                 return this;
             }
 

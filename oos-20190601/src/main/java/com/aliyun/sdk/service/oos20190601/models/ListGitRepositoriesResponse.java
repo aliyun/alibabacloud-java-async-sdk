@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetInventorySchemaResponse} extends {@link TeaModel}
+ * {@link ListGitRepositoriesResponse} extends {@link TeaModel}
  *
- * <p>GetInventorySchemaResponse</p>
+ * <p>ListGitRepositoriesResponse</p>
  */
-public class GetInventorySchemaResponse extends Response {
+public class ListGitRepositoriesResponse extends Response {
     @NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -19,16 +19,16 @@ public class GetInventorySchemaResponse extends Response {
     private Integer statusCode;
 
     @NameInMap("body")
-    private GetInventorySchemaResponseBody body;
+    private ListGitRepositoriesResponseBody body;
 
-    private GetInventorySchemaResponse(BuilderImpl builder) {
+    private ListGitRepositoriesResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static GetInventorySchemaResponse create() {
+    public static ListGitRepositoriesResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +54,35 @@ public class GetInventorySchemaResponse extends Response {
     /**
      * @return body
      */
-    public GetInventorySchemaResponseBody getBody() {
+    public ListGitRepositoriesResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<GetInventorySchemaResponse, Builder> {
+    public interface Builder extends Response.Builder<ListGitRepositoriesResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(GetInventorySchemaResponseBody body);
+        Builder body(ListGitRepositoriesResponseBody body);
 
         @Override
-        GetInventorySchemaResponse build();
+        ListGitRepositoriesResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<GetInventorySchemaResponse, Builder>
+            extends Response.BuilderImpl<ListGitRepositoriesResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private GetInventorySchemaResponseBody body; 
+        private ListGitRepositoriesResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(GetInventorySchemaResponse response) {
+        private BuilderImpl(ListGitRepositoriesResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +111,14 @@ public class GetInventorySchemaResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(GetInventorySchemaResponseBody body) {
+        public Builder body(ListGitRepositoriesResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public GetInventorySchemaResponse build() {
-            return new GetInventorySchemaResponse(this);
+        public ListGitRepositoriesResponse build() {
+            return new ListGitRepositoriesResponse(this);
         } 
 
     } 
