@@ -550,6 +550,9 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
         @NameInMap("document")
         private String document;
 
+        @NameInMap("documentFormat")
+        private String documentFormat;
+
         @NameInMap("finishTime")
         private Long finishTime;
 
@@ -625,6 +628,7 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
             this.creator = builder.creator;
             this.customFields = builder.customFields;
             this.document = builder.document;
+            this.documentFormat = builder.documentFormat;
             this.finishTime = builder.finishTime;
             this.gmtCreate = builder.gmtCreate;
             this.gmtModified = builder.gmtModified;
@@ -691,6 +695,13 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
          */
         public String getDocument() {
             return this.document;
+        }
+
+        /**
+         * @return documentFormat
+         */
+        public String getDocumentFormat() {
+            return this.documentFormat;
         }
 
         /**
@@ -860,6 +871,7 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
             private String creator; 
             private java.util.List < CustomFields> customFields; 
             private String document; 
+            private String documentFormat; 
             private Long finishTime; 
             private Long gmtCreate; 
             private Long gmtModified; 
@@ -921,6 +933,14 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
              */
             public Builder document(String document) {
                 this.document = document;
+                return this;
+            }
+
+            /**
+             * documentFormat.
+             */
+            public Builder documentFormat(String documentFormat) {
+                this.documentFormat = documentFormat;
                 return this;
             }
 

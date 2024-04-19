@@ -144,6 +144,9 @@ public class CreateWorkitemResponseBody extends TeaModel {
         @NameInMap("document")
         private String document;
 
+        @NameInMap("documentFormat")
+        private String documentFormat;
+
         @NameInMap("gmtCreate")
         private Long gmtCreate;
 
@@ -200,6 +203,7 @@ public class CreateWorkitemResponseBody extends TeaModel {
             this.categoryIdentifier = builder.categoryIdentifier;
             this.creator = builder.creator;
             this.document = builder.document;
+            this.documentFormat = builder.documentFormat;
             this.gmtCreate = builder.gmtCreate;
             this.gmtModified = builder.gmtModified;
             this.identifier = builder.identifier;
@@ -253,6 +257,13 @@ public class CreateWorkitemResponseBody extends TeaModel {
          */
         public String getDocument() {
             return this.document;
+        }
+
+        /**
+         * @return documentFormat
+         */
+        public String getDocumentFormat() {
+            return this.documentFormat;
         }
 
         /**
@@ -379,6 +390,7 @@ public class CreateWorkitemResponseBody extends TeaModel {
             private String categoryIdentifier; 
             private String creator; 
             private String document; 
+            private String documentFormat; 
             private Long gmtCreate; 
             private Long gmtModified; 
             private String identifier; 
@@ -426,6 +438,14 @@ public class CreateWorkitemResponseBody extends TeaModel {
              */
             public Builder document(String document) {
                 this.document = document;
+                return this;
+            }
+
+            /**
+             * documentFormat.
+             */
+            public Builder documentFormat(String documentFormat) {
+                this.documentFormat = documentFormat;
                 return this;
             }
 
