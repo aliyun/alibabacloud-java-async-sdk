@@ -131,6 +131,87 @@ public class ListServicesResponseBody extends TeaModel {
 
     } 
 
+    public static class Commodity extends TeaModel {
+        @NameInMap("CommodityCode")
+        private String commodityCode;
+
+        @NameInMap("SaasBoostMetadata")
+        private String saasBoostMetadata;
+
+        @NameInMap("Type")
+        private String type;
+
+        private Commodity(Builder builder) {
+            this.commodityCode = builder.commodityCode;
+            this.saasBoostMetadata = builder.saasBoostMetadata;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Commodity create() {
+            return builder().build();
+        }
+
+        /**
+         * @return commodityCode
+         */
+        public String getCommodityCode() {
+            return this.commodityCode;
+        }
+
+        /**
+         * @return saasBoostMetadata
+         */
+        public String getSaasBoostMetadata() {
+            return this.saasBoostMetadata;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private String commodityCode; 
+            private String saasBoostMetadata; 
+            private String type; 
+
+            /**
+             * CommodityCode.
+             */
+            public Builder commodityCode(String commodityCode) {
+                this.commodityCode = commodityCode;
+                return this;
+            }
+
+            /**
+             * SaasBoostMetadata.
+             */
+            public Builder saasBoostMetadata(String saasBoostMetadata) {
+                this.saasBoostMetadata = saasBoostMetadata;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public Commodity build() {
+                return new Commodity(this);
+            } 
+
+        } 
+
+    }
     public static class ServiceInfos extends TeaModel {
         @NameInMap("Image")
         private String image;
@@ -306,6 +387,9 @@ public class ListServicesResponseBody extends TeaModel {
         @NameInMap("Categories")
         private String categories;
 
+        @NameInMap("Commodity")
+        private Commodity commodity;
+
         @NameInMap("CommodityCode")
         private String commodityCode;
 
@@ -404,6 +488,7 @@ public class ListServicesResponseBody extends TeaModel {
             this.artifactId = builder.artifactId;
             this.artifactVersion = builder.artifactVersion;
             this.categories = builder.categories;
+            this.commodity = builder.commodity;
             this.commodityCode = builder.commodityCode;
             this.createTime = builder.createTime;
             this.defaultVersion = builder.defaultVersion;
@@ -471,6 +556,13 @@ public class ListServicesResponseBody extends TeaModel {
          */
         public String getCategories() {
             return this.categories;
+        }
+
+        /**
+         * @return commodity
+         */
+        public Commodity getCommodity() {
+            return this.commodity;
         }
 
         /**
@@ -695,6 +787,7 @@ public class ListServicesResponseBody extends TeaModel {
             private String artifactId; 
             private String artifactVersion; 
             private String categories; 
+            private Commodity commodity; 
             private String commodityCode; 
             private String createTime; 
             private Boolean defaultVersion; 
@@ -756,6 +849,14 @@ public class ListServicesResponseBody extends TeaModel {
              */
             public Builder categories(String categories) {
                 this.categories = categories;
+                return this;
+            }
+
+            /**
+             * Commodity.
+             */
+            public Builder commodity(Commodity commodity) {
+                this.commodity = commodity;
                 return this;
             }
 

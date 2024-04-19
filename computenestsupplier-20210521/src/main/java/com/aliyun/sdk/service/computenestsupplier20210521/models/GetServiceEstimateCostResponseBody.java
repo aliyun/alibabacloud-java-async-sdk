@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetServiceEstimateCostResponseBody</p>
  */
 public class GetServiceEstimateCostResponseBody extends TeaModel {
+    @NameInMap("Commodity")
+    private java.util.Map < String, ? > commodity;
+
     @NameInMap("RequestId")
     private String requestId;
 
@@ -19,6 +22,7 @@ public class GetServiceEstimateCostResponseBody extends TeaModel {
     private java.util.Map < String, ? > resources;
 
     private GetServiceEstimateCostResponseBody(Builder builder) {
+        this.commodity = builder.commodity;
         this.requestId = builder.requestId;
         this.resources = builder.resources;
     }
@@ -29,6 +33,13 @@ public class GetServiceEstimateCostResponseBody extends TeaModel {
 
     public static GetServiceEstimateCostResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return commodity
+     */
+    public java.util.Map < String, ? > getCommodity() {
+        return this.commodity;
     }
 
     /**
@@ -46,8 +57,17 @@ public class GetServiceEstimateCostResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private java.util.Map < String, ? > commodity; 
         private String requestId; 
         private java.util.Map < String, ? > resources; 
+
+        /**
+         * Commodity.
+         */
+        public Builder commodity(java.util.Map < String, ? > commodity) {
+            this.commodity = commodity;
+            return this;
+        }
 
         /**
          * RequestId.

@@ -17,6 +17,10 @@ public class GetServiceEstimateCostRequest extends Request {
     private String clientToken;
 
     @Query
+    @NameInMap("Commodity")
+    private Commodity commodity;
+
+    @Query
     @NameInMap("Parameters")
     private java.util.Map < String, ? > parameters;
 
@@ -48,6 +52,7 @@ public class GetServiceEstimateCostRequest extends Request {
     private GetServiceEstimateCostRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
+        this.commodity = builder.commodity;
         this.parameters = builder.parameters;
         this.regionId = builder.regionId;
         this.serviceId = builder.serviceId;
@@ -75,6 +80,13 @@ public class GetServiceEstimateCostRequest extends Request {
      */
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    /**
+     * @return commodity
+     */
+    public Commodity getCommodity() {
+        return this.commodity;
     }
 
     /**
@@ -128,6 +140,7 @@ public class GetServiceEstimateCostRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetServiceEstimateCostRequest, Builder> {
         private String clientToken; 
+        private Commodity commodity; 
         private java.util.Map < String, ? > parameters; 
         private String regionId; 
         private String serviceId; 
@@ -143,6 +156,7 @@ public class GetServiceEstimateCostRequest extends Request {
         private Builder(GetServiceEstimateCostRequest request) {
             super(request);
             this.clientToken = request.clientToken;
+            this.commodity = request.commodity;
             this.parameters = request.parameters;
             this.regionId = request.regionId;
             this.serviceId = request.serviceId;
@@ -158,6 +172,16 @@ public class GetServiceEstimateCostRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * Commodity.
+         */
+        public Builder commodity(Commodity commodity) {
+            String commodityShrink = shrink(commodity, "Commodity", "json");
+            this.putQueryParameter("Commodity", commodityShrink);
+            this.commodity = commodity;
             return this;
         }
 
@@ -232,4 +256,65 @@ public class GetServiceEstimateCostRequest extends Request {
 
     } 
 
+    public static class Commodity extends TeaModel {
+        @NameInMap("PayPeriod")
+        private Integer payPeriod;
+
+        @NameInMap("PayPeriodUnit")
+        private String payPeriodUnit;
+
+        private Commodity(Builder builder) {
+            this.payPeriod = builder.payPeriod;
+            this.payPeriodUnit = builder.payPeriodUnit;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Commodity create() {
+            return builder().build();
+        }
+
+        /**
+         * @return payPeriod
+         */
+        public Integer getPayPeriod() {
+            return this.payPeriod;
+        }
+
+        /**
+         * @return payPeriodUnit
+         */
+        public String getPayPeriodUnit() {
+            return this.payPeriodUnit;
+        }
+
+        public static final class Builder {
+            private Integer payPeriod; 
+            private String payPeriodUnit; 
+
+            /**
+             * PayPeriod.
+             */
+            public Builder payPeriod(Integer payPeriod) {
+                this.payPeriod = payPeriod;
+                return this;
+            }
+
+            /**
+             * PayPeriodUnit.
+             */
+            public Builder payPeriodUnit(String payPeriodUnit) {
+                this.payPeriodUnit = payPeriodUnit;
+                return this;
+            }
+
+            public Commodity build() {
+                return new Commodity(this);
+            } 
+
+        } 
+
+    }
 }
