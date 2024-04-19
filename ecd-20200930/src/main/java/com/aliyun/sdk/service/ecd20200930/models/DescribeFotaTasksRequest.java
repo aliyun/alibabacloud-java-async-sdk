@@ -140,7 +140,7 @@ public class DescribeFotaTasksRequest extends Request {
         } 
 
         /**
-         * This parameter is not available.
+         * >  This parameter is not publicly available.
          */
         public Builder fotaStatus(String fotaStatus) {
             this.putQueryParameter("FotaStatus", fotaStatus);
@@ -149,11 +149,13 @@ public class DescribeFotaTasksRequest extends Request {
         }
 
         /**
-         * The language of the image version to update. Valid values:
+         * The language of the image version to update.
          * <p>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * Valid values:
+         * 
+         * *   en: English.
+         * *   zh: Simplified Chinese.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -184,7 +186,7 @@ public class DescribeFotaTasksRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the regions supported by WUYING Workspace.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -193,7 +195,7 @@ public class DescribeFotaTasksRequest extends Request {
         }
 
         /**
-         * The IDs of the image update tasks. You can call the DescribeFotaTasks operation to obtain the value of this parameter.
+         * The IDs of the image update tasks.
          */
         public Builder taskUid(java.util.List < String > taskUid) {
             this.putQueryParameter("TaskUid", taskUid);

@@ -74,7 +74,7 @@ public class CreateADConnectorDirectoryResponseBody extends TeaModel {
         private String trustPassword; 
 
         /**
-         * Details of the AD connectors.
+         * The details of AD connectors.
          */
         public Builder adConnectors(java.util.List < AdConnectors> adConnectors) {
             this.adConnectors = adConnectors;
@@ -138,7 +138,7 @@ public class CreateADConnectorDirectoryResponseBody extends TeaModel {
             private String address; 
 
             /**
-             * The IP address of the AD connector.
+             * The connection address.
              */
             public Builder address(String address) {
                 this.address = address;

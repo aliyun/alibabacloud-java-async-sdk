@@ -78,7 +78,7 @@ public class ListDirectoryUsersResponseBody extends TeaModel {
         }
 
         /**
-         * The names of users corresponding to the AD directory. If the AD directory corresponds only to the `Administrator` and `Guest` users, the returned `Users` value is empty.
+         * The names of users corresponding to the AD directory. If the AD directory contains only Administrator and Guest, an empty Users array is returned.
          */
         public Builder users(java.util.List < Users> users) {
             this.users = users;
@@ -130,7 +130,7 @@ public class ListDirectoryUsersResponseBody extends TeaModel {
             private String endUser; 
 
             /**
-             * The display name.
+             * The display name of the user.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;

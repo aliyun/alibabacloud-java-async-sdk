@@ -86,7 +86,7 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The operation result. If the request was successful, a success message is returned. If the request failed, an error message is returned.
+         * The returned message. If the request was successful, a `success` is returned. If the request failed, an error message is returned.
          */
         public Builder code(String code) {
             this.code = code;
@@ -102,7 +102,7 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The returned error message. This parameter is not returned if the value of Code is `success`.
+         * The returned error message. This parameter is not returned if the Code value is a `success` message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,11 +110,7 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
         }
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:
-         * <p>
-         * 
-         * *   If **NextToken** is empty, no next page exists.
-         * *   If a value is returned for **NextToken**, the value is the token that is used for the next query.
+         * A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -258,7 +254,7 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
             private String taskUid; 
 
             /**
-             * The version of the image. You can call the [DescribeImages](~~188895~~) operation to obtain this parameter.
+             * The image version. You can call the [DescribeImages](~~188895~~) operation to obtain the value of this parameter.
              */
             public Builder appVersion(String appVersion) {
                 this.appVersion = appVersion;
@@ -266,7 +262,7 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is not available.
+             * >  This parameter is not publicly available.
              */
             public Builder fotaProject(String fotaProject) {
                 this.fotaProject = fotaProject;
@@ -282,7 +278,7 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The number of cloud desktops for which images can be updated to this version.
+             * The number of cloud computers whose images can be updated to this version.
              */
             public Builder pendingDesktopCount(Integer pendingDesktopCount) {
                 this.pendingDesktopCount = pendingDesktopCount;
@@ -290,7 +286,7 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the image version is available for update was published.
+             * The time when the image version available for update was published.
              */
             public Builder publishTime(String publishTime) {
                 this.publishTime = publishTime;
@@ -298,7 +294,7 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the image version that is available for update.
+             * The description of the image version available for update.
              */
             public Builder releaseNote(String releaseNote) {
                 this.releaseNote = releaseNote;
@@ -306,7 +302,7 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the image update package. Unit: KB.
+             * The size of the update package. Unit: KB.
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -314,13 +310,13 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether an end user can update the image.
+             * Indicates whether the image update task is automatically pushed.
              * <p>
              * 
              * Valid values:
              * 
-             * *   valid: The end user can update the image.
-             * *   invalid: The end user cannot update the image.
+             * *   Running: automatically pushes the image update task.
+             * *   Pending: does not automatically push the image update task.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -328,7 +324,7 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the image update task.
+             * The ID of the image upgrade task.
              */
             public Builder taskUid(String taskUid) {
                 this.taskUid = taskUid;

@@ -21,6 +21,9 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
     @NameInMap("CenId")
     private String cenId;
 
+    @NameInMap("ConflictCdsAndOrder")
+    private ConflictCdsAndOrder conflictCdsAndOrder;
+
     @NameInMap("DomainName")
     private String domainName;
 
@@ -43,6 +46,7 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
         this.cdsId = builder.cdsId;
         this.cdsName = builder.cdsName;
         this.cenId = builder.cenId;
+        this.conflictCdsAndOrder = builder.conflictCdsAndOrder;
         this.domainName = builder.domainName;
         this.errorCode = builder.errorCode;
         this.maxSize = builder.maxSize;
@@ -78,6 +82,13 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
      */
     public String getCenId() {
         return this.cenId;
+    }
+
+    /**
+     * @return conflictCdsAndOrder
+     */
+    public ConflictCdsAndOrder getConflictCdsAndOrder() {
+        return this.conflictCdsAndOrder;
     }
 
     /**
@@ -126,6 +137,7 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
         private String cdsId; 
         private String cdsName; 
         private String cenId; 
+        private ConflictCdsAndOrder conflictCdsAndOrder; 
         private String domainName; 
         private String errorCode; 
         private String maxSize; 
@@ -154,6 +166,14 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
          */
         public Builder cenId(String cenId) {
             this.cenId = cenId;
+            return this;
+        }
+
+        /**
+         * ConflictCdsAndOrder.
+         */
+        public Builder conflictCdsAndOrder(ConflictCdsAndOrder conflictCdsAndOrder) {
+            this.conflictCdsAndOrder = conflictCdsAndOrder;
             return this;
         }
 
@@ -211,4 +231,207 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
 
     } 
 
+    public static class ConflictCds extends TeaModel {
+        @NameInMap("CdsId")
+        private String cdsId;
+
+        @NameInMap("RegionId")
+        private String regionId;
+
+        private ConflictCds(Builder builder) {
+            this.cdsId = builder.cdsId;
+            this.regionId = builder.regionId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ConflictCds create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cdsId
+         */
+        public String getCdsId() {
+            return this.cdsId;
+        }
+
+        /**
+         * @return regionId
+         */
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public static final class Builder {
+            private String cdsId; 
+            private String regionId; 
+
+            /**
+             * The ID of the attached cloud disk.
+             */
+            public Builder cdsId(String cdsId) {
+                this.cdsId = cdsId;
+                return this;
+            }
+
+            /**
+             * RegionId.
+             */
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
+                return this;
+            }
+
+            public ConflictCds build() {
+                return new ConflictCds(this);
+            } 
+
+        } 
+
+    }
+    public static class ConflictOrder extends TeaModel {
+        @NameInMap("CdsId")
+        private String cdsId;
+
+        @NameInMap("OrderId")
+        private String orderId;
+
+        @NameInMap("RegionId")
+        private String regionId;
+
+        private ConflictOrder(Builder builder) {
+            this.cdsId = builder.cdsId;
+            this.orderId = builder.orderId;
+            this.regionId = builder.regionId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ConflictOrder create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cdsId
+         */
+        public String getCdsId() {
+            return this.cdsId;
+        }
+
+        /**
+         * @return orderId
+         */
+        public String getOrderId() {
+            return this.orderId;
+        }
+
+        /**
+         * @return regionId
+         */
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public static final class Builder {
+            private String cdsId; 
+            private String orderId; 
+            private String regionId; 
+
+            /**
+             * The ID of the attached cloud disk.
+             */
+            public Builder cdsId(String cdsId) {
+                this.cdsId = cdsId;
+                return this;
+            }
+
+            /**
+             * OrderId.
+             */
+            public Builder orderId(String orderId) {
+                this.orderId = orderId;
+                return this;
+            }
+
+            /**
+             * RegionId.
+             */
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
+                return this;
+            }
+
+            public ConflictOrder build() {
+                return new ConflictOrder(this);
+            } 
+
+        } 
+
+    }
+    public static class ConflictCdsAndOrder extends TeaModel {
+        @NameInMap("ConflictCds")
+        private java.util.List < ConflictCds> conflictCds;
+
+        @NameInMap("ConflictOrder")
+        private java.util.List < ConflictOrder> conflictOrder;
+
+        private ConflictCdsAndOrder(Builder builder) {
+            this.conflictCds = builder.conflictCds;
+            this.conflictOrder = builder.conflictOrder;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ConflictCdsAndOrder create() {
+            return builder().build();
+        }
+
+        /**
+         * @return conflictCds
+         */
+        public java.util.List < ConflictCds> getConflictCds() {
+            return this.conflictCds;
+        }
+
+        /**
+         * @return conflictOrder
+         */
+        public java.util.List < ConflictOrder> getConflictOrder() {
+            return this.conflictOrder;
+        }
+
+        public static final class Builder {
+            private java.util.List < ConflictCds> conflictCds; 
+            private java.util.List < ConflictOrder> conflictOrder; 
+
+            /**
+             * ConflictCds.
+             */
+            public Builder conflictCds(java.util.List < ConflictCds> conflictCds) {
+                this.conflictCds = conflictCds;
+                return this;
+            }
+
+            /**
+             * ConflictOrder.
+             */
+            public Builder conflictOrder(java.util.List < ConflictOrder> conflictOrder) {
+                this.conflictOrder = conflictOrder;
+                return this;
+            }
+
+            public ConflictCdsAndOrder build() {
+                return new ConflictCdsAndOrder(this);
+            } 
+
+        } 
+
+    }
 }

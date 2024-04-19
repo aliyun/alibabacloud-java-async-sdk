@@ -84,7 +84,7 @@ public class UpdateFotaTaskRequest extends Request {
         } 
 
         /**
-         * The ID of the region. You can call the DescribeRegions operation to query the most recent region list.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the regions supported by WUYING Workspace.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -93,7 +93,7 @@ public class UpdateFotaTaskRequest extends Request {
         }
 
         /**
-         * The ID of the image update task. You can call the DescribeFotaTasks operation to obtain the value of this parameter.
+         * The ID of the image update task. You can call the [DescribeFotaTasks](~~437001~~) operation to obtain the value of this parameter.
          */
         public Builder taskUid(String taskUid) {
             this.putQueryParameter("TaskUid", taskUid);
@@ -107,8 +107,8 @@ public class UpdateFotaTaskRequest extends Request {
          * 
          * Valid values:
          * 
-         * - Running
-         * - Pending
+         * *   Running: automatically pushes the image update task.
+         * *   Pending: does not automatically push the image update task.
          */
         public Builder userStatus(String userStatus) {
             this.putQueryParameter("UserStatus", userStatus);

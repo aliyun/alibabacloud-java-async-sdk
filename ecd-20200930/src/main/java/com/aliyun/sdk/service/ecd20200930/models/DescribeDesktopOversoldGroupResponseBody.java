@@ -133,8 +133,14 @@ public class DescribeDesktopOversoldGroupResponseBody extends TeaModel {
         @NameInMap("ExpireTime")
         private String expireTime;
 
+        @NameInMap("IdleDisconnectDuration")
+        private String idleDisconnectDuration;
+
         @NameInMap("ImageId")
         private String imageId;
+
+        @NameInMap("KeepDuration")
+        private String keepDuration;
 
         @NameInMap("Name")
         private String name;
@@ -171,7 +177,9 @@ public class DescribeDesktopOversoldGroupResponseBody extends TeaModel {
             this.desktopType = builder.desktopType;
             this.directoryId = builder.directoryId;
             this.expireTime = builder.expireTime;
+            this.idleDisconnectDuration = builder.idleDisconnectDuration;
             this.imageId = builder.imageId;
+            this.keepDuration = builder.keepDuration;
             this.name = builder.name;
             this.oversoldGroupId = builder.oversoldGroupId;
             this.oversoldUserCount = builder.oversoldUserCount;
@@ -241,10 +249,24 @@ public class DescribeDesktopOversoldGroupResponseBody extends TeaModel {
         }
 
         /**
+         * @return idleDisconnectDuration
+         */
+        public String getIdleDisconnectDuration() {
+            return this.idleDisconnectDuration;
+        }
+
+        /**
          * @return imageId
          */
         public String getImageId() {
             return this.imageId;
+        }
+
+        /**
+         * @return keepDuration
+         */
+        public String getKeepDuration() {
+            return this.keepDuration;
         }
 
         /**
@@ -318,7 +340,9 @@ public class DescribeDesktopOversoldGroupResponseBody extends TeaModel {
             private String desktopType; 
             private String directoryId; 
             private String expireTime; 
+            private String idleDisconnectDuration; 
             private String imageId; 
+            private String keepDuration; 
             private String name; 
             private String oversoldGroupId; 
             private Integer oversoldUserCount; 
@@ -386,10 +410,26 @@ public class DescribeDesktopOversoldGroupResponseBody extends TeaModel {
             }
 
             /**
+             * IdleDisconnectDuration.
+             */
+            public Builder idleDisconnectDuration(String idleDisconnectDuration) {
+                this.idleDisconnectDuration = idleDisconnectDuration;
+                return this;
+            }
+
+            /**
              * ImageId.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
+                return this;
+            }
+
+            /**
+             * KeepDuration.
+             */
+            public Builder keepDuration(String keepDuration) {
+                this.keepDuration = keepDuration;
                 return this;
             }
 

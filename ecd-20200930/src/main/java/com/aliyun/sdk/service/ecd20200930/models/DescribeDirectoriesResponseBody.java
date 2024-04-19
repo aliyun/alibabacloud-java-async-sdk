@@ -74,7 +74,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The hostname of the domain controller. The hostname must comply with the hostname naming convention of Windows.
+         * The hostname of the domain controller. The hostname must comply with the hostname naming convention of Windows. This parameter is returned only when the directory type is AD office network.
          */
         public Builder adHostname(String adHostname) {
             this.adHostname = adHostname;
@@ -82,7 +82,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         }
 
         /**
-         * Details of the directories.
+         * The directories.
          */
         public Builder directories(java.util.List < Directories> directories) {
             this.directories = directories;
@@ -198,7 +198,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             private String vSwitchId; 
 
             /**
-             * The address of the AD connector.
+             * The connection address.
              */
             public Builder ADConnectorAddress(String ADConnectorAddress) {
                 this.ADConnectorAddress = ADConnectorAddress;
@@ -206,7 +206,14 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the AD connector.
+             * Valid values:
+             * <p>
+             * 
+             * *   CONNECT_ERROR
+             * *   RUNNING
+             * *   CONNECTING: You must configure domain trust for your AD system.
+             * *   EXPIRED
+             * *   CREATING
              */
             public Builder connectorStatus(String connectorStatus) {
                 this.connectorStatus = connectorStatus;
@@ -214,7 +221,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the network interface controller (NIC) with which the AD connector is associated.
+             * The ID of the NIC to which the AD connector is mounted.
              */
             public Builder networkInterfaceId(String networkInterfaceId) {
                 this.networkInterfaceId = networkInterfaceId;
@@ -222,7 +229,26 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the AD connector.
+             * The AD connector type.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   1: General
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   2: Advanced
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder specification(String specification) {
                 this.specification = specification;
@@ -316,6 +342,33 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
 
             /**
              * The level of the log entry.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   ERROR
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   INFO
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   WARN
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder level(String level) {
                 this.level = level;
@@ -704,7 +757,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * Details of the AD connectors.
+             * Details of the AD connector.
              */
             public Builder ADConnectors(java.util.List < ADConnectors> ADConnectors) {
                 this.ADConnectors = ADConnectors;
@@ -720,7 +773,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the security group.
+             * The security group ID. This parameter is returned only when the directory type is AD office network.
              */
             public Builder customSecurityGroupId(String customSecurityGroupId) {
                 this.customSecurityGroupId = customSecurityGroupId;
@@ -728,7 +781,34 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The method that is used to connect the client to cloud desktops.
+             * The method in which the cloud computer is connected.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   VPC
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   Internet
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   Any
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder desktopAccessType(String desktopAccessType) {
                 this.desktopAccessType = desktopAccessType;
@@ -736,7 +816,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint that is used to connect to cloud desktops over a VPC.
+             * The endpoint that is used to connect to cloud computers in the directory over a VPC.
              */
             public Builder desktopVpcEndpoint(String desktopVpcEndpoint) {
                 this.desktopVpcEndpoint = desktopVpcEndpoint;
@@ -744,7 +824,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the directory.
+             * The directory ID.
              */
             public Builder directoryId(String directoryId) {
                 this.directoryId = directoryId;
@@ -752,7 +832,26 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the directory.
+             * The directory type.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   AD_CONNECTOR: AD directory
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   RAM: RAM directory
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder directoryType(String directoryType) {
                 this.directoryType = directoryType;
@@ -760,7 +859,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * Details of the DNS addresses of the directory.
+             * The DNS address of the directory.
              */
             public Builder dnsAddress(java.util.List < String > dnsAddress) {
                 this.dnsAddress = dnsAddress;
@@ -768,7 +867,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The username of the Domain Name System (DNS) user.
+             * The username of a DNS user.
              */
             public Builder dnsUserName(String dnsUserName) {
                 this.dnsUserName = dnsUserName;
@@ -776,7 +875,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the domain.
+             * The domain name.
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -784,7 +883,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The password of the domain administrator.
+             * The password of the domain administrator. This parameter is returned only when the directory type is AD office network.
              */
             public Builder domainPassword(String domainPassword) {
                 this.domainPassword = domainPassword;
@@ -800,7 +899,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the permissions of the local administrator are granted to the regular user of the cloud desktop.
+             * Indicates whether the local administrator permissions are granted to users that use cloud computers in the office network.
              */
             public Builder enableAdminAccess(Boolean enableAdminAccess) {
                 this.enableAdminAccess = enableAdminAccess;
@@ -808,10 +907,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the desktop communication feature is enabled for cloud desktops in the same workspace.
-             * <p>
-             * 
-             * If the feature is enabled, the cloud desktops in the same workspace can access each other.
+             * Indicates whether cloud computers can communicate with each other in the directory.
              */
             public Builder enableCrossDesktopAccess(Boolean enableCrossDesktopAccess) {
                 this.enableCrossDesktopAccess = enableCrossDesktopAccess;
@@ -819,7 +915,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether access over the Internet is allowed.
+             * Indicates whether access over the Internet is enabled.
              * <p>
              * 
              * >  This parameter is unavailable.
@@ -830,7 +926,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * Details of the IDs of the Apsara File Storage NAS (NAS) file systems.
+             * The IDs of Apsara File Storage NAS (NAS) file systems.
              */
             public Builder fileSystemIds(java.util.List < String > fileSystemIds) {
                 this.fileSystemIds = fileSystemIds;
@@ -838,7 +934,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * Details of the registration logs.
+             * The registration logs. This parameter is returned only when the directory type is AD office network.
              */
             public Builder logs(java.util.List < Logs> logs) {
                 this.logs = logs;
@@ -846,7 +942,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether multi-factor authentication (MFA) is enabled.
+             * Indicates whether MFA is enabled.
              */
             public Builder mfaEnabled(Boolean mfaEnabled) {
                 this.mfaEnabled = mfaEnabled;
@@ -854,7 +950,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the directory.
+             * The directory name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -862,9 +958,9 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether two-factor verification for logons is enabled. This parameter is returned only for workspaces of the convenience account type.\
+             * Indicates whether two-step verification for logons is enabled. This parameter is returned only for directories of convenience account type.\
              * <p>
-             * If two-factor verification is enabled, the system checks whether security risks exist within the logon account when a convenience user logs on to the Elastic Desktop Service (EDS) client. If risks are detected, the system sends a verification code to the email address that is associated with the account. Then, the convenience user can log on to the client only after the user enters the correct verification code.
+             * If two-factor verification is enabled, the system checks whether security risks exist within the logon account when a convenience user logs on to an Alibaba Cloud Workspace client. If risks are detected, the system sends a verification code to the email address that is associated with the account. Then, the convenience user can log on to the client only after the user enters the correct verification code.
              */
             public Builder needVerifyLoginRisk(Boolean needVerifyLoginRisk) {
                 this.needVerifyLoginRisk = needVerifyLoginRisk;
@@ -872,7 +968,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the organizational unit (OU) that you specified when you add cloud desktops to domains.
+             * The organization unit that you selected when you added the cloud computer to the domain.
              */
             public Builder ouName(String ouName) {
                 this.ouName = ouName;
@@ -888,11 +984,26 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the AD directory. Valid values:
+             * The status of the AD directory.
              * <p>
              * 
+             * Valid values:
+             * 
              * *   REGISTERING
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
              * *   REGISTERED
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder status(String status) {
                 this.status = status;
@@ -900,7 +1011,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * Details of the DNS addresses of the AD subdomain.
+             * The DNS address of the enterprise AD subdomain.
              */
             public Builder subDnsAddress(java.util.List < String > subDnsAddress) {
                 this.subDnsAddress = subDnsAddress;
@@ -908,7 +1019,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The fully qualified domain name (FQDN) of the enterprise AD subdomain. The value must contain the hostname and the subdomain name. Example: child.example.com.
+             * The fully qualified domain name (FQDN) of the existing AD subdomain. The value contains both the host name and the domain name.
              */
             public Builder subDomainName(String subDomainName) {
                 this.subDomainName = subDomainName;
@@ -916,7 +1027,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The AD trust password.
+             * The AD trust password. This parameter is returned only when the directory type is AD office network.
              */
             public Builder trustPassword(String trustPassword) {
                 this.trustPassword = trustPassword;
@@ -924,7 +1035,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * Details of vSwitch IDs that are specified when the directory is being created.
+             * The IDs of the vSwitches specified when the directory was created.
              */
             public Builder vSwitchIds(java.util.List < String > vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
@@ -932,7 +1043,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the virtual private cloud (VPC) to which the vSwitch belongs.
+             * The ID of the VPC to which the vSwitch belongs. This parameter is returned only when the directory type is AD office network.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

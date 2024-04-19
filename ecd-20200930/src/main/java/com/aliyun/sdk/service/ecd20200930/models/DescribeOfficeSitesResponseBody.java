@@ -1352,7 +1352,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
-             * The SSO type.
+             * >  This parameter is unavailable.
              */
             public Builder ssoType(String ssoType) {
                 this.ssoType = ssoType;

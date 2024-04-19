@@ -78,7 +78,7 @@ public class CreateDiskEncryptionServiceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;

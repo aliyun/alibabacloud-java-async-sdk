@@ -94,7 +94,7 @@ public class ApproveFotaUpdateRequest extends Request {
         }
 
         /**
-         * The ID of the cloud desktop.
+         * The ID of the cloud computer.
          */
         public Builder desktopId(String desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -103,7 +103,7 @@ public class ApproveFotaUpdateRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the regions supported by WUYING Workspace.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

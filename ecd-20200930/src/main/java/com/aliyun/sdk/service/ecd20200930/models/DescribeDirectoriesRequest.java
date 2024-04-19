@@ -149,7 +149,7 @@ public class DescribeDirectoriesRequest extends Request {
         }
 
         /**
-         * The status of the directory. The value of this parameter is the same as the value of the `Status` parameter.
+         * The directory status. This parameter is equivalent to `Status`.
          */
         public Builder directoryStatus(String directoryStatus) {
             this.putQueryParameter("DirectoryStatus", directoryStatus);
@@ -158,7 +158,14 @@ public class DescribeDirectoriesRequest extends Request {
         }
 
         /**
-         * The type of the directory.
+         * The directory type.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   SIMPLE: a directory of the convenience account type
+         * *   AD_CONNECTOR: an AD directory
+         * *   RAM: a RAM directory
          */
         public Builder directoryType(String directoryType) {
             this.putQueryParameter("DirectoryType", directoryType);
@@ -190,7 +197,7 @@ public class DescribeDirectoriesRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -199,7 +206,82 @@ public class DescribeDirectoriesRequest extends Request {
         }
 
         /**
-         * The status of the workspace.
+         * The directory status.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   REGISTERING: The directory is being registered.
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   DEREGISTERING: The directory is being deregistered.
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   REGISTERED: The directory is registered.
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   NEEDCONFIGTRUST: A trust relationship needs to be configured for the directory.
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   CONFIGTRUSTFAILED: A trust relationship fails to be configured for the directory.
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   DEREGISTERED: The directory is deregistered.
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   ERROR: One or more configurations of the directory are invalid.
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   CONFIGTRUSTING: A trust relationship is being configured.
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   NEEDCONFIGUSER: Users need to be configured for the directory.
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
