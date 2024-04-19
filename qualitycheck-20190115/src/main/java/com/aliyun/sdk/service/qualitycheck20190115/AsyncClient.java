@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.qualitycheck20190115;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.qualitycheck20190115.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -112,12 +113,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetResultResponse> getResult(GetResultRequest request);
 
-    /**
-      * @deprecated
-      *
-     */
-    CompletableFuture<GetResultCallbackResponse> getResultCallback(GetResultCallbackRequest request);
-
     CompletableFuture<GetResultToReviewResponse> getResultToReview(GetResultToReviewRequest request);
 
     CompletableFuture<GetRuleResponse> getRule(GetRuleRequest request);
@@ -165,8 +160,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListBusinessSpacesResponse> listBusinessSpaces(ListBusinessSpacesRequest request);
 
     CompletableFuture<ListDataSetResponse> listDataSet(ListDataSetRequest request);
-
-    CompletableFuture<ListHotWordsTasksResponse> listHotWordsTasks(ListHotWordsTasksRequest request);
 
     CompletableFuture<ListPrecisionTaskResponse> listPrecisionTask(ListPrecisionTaskRequest request);
 
