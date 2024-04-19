@@ -111,6 +111,108 @@ public class ImageModerationResponseBody extends TeaModel {
 
     } 
 
+    public static class Recognition extends TeaModel {
+        @NameInMap("Classification")
+        private String classification;
+
+        @NameInMap("Confidence")
+        private Float confidence;
+
+        private Recognition(Builder builder) {
+            this.classification = builder.classification;
+            this.confidence = builder.confidence;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Recognition create() {
+            return builder().build();
+        }
+
+        /**
+         * @return classification
+         */
+        public String getClassification() {
+            return this.classification;
+        }
+
+        /**
+         * @return confidence
+         */
+        public Float getConfidence() {
+            return this.confidence;
+        }
+
+        public static final class Builder {
+            private String classification; 
+            private Float confidence; 
+
+            /**
+             * Classification.
+             */
+            public Builder classification(String classification) {
+                this.classification = classification;
+                return this;
+            }
+
+            /**
+             * Confidence.
+             */
+            public Builder confidence(Float confidence) {
+                this.confidence = confidence;
+                return this;
+            }
+
+            public Recognition build() {
+                return new Recognition(this);
+            } 
+
+        } 
+
+    }
+    public static class Ext extends TeaModel {
+        @NameInMap("Recognition")
+        private java.util.List < Recognition> recognition;
+
+        private Ext(Builder builder) {
+            this.recognition = builder.recognition;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Ext create() {
+            return builder().build();
+        }
+
+        /**
+         * @return recognition
+         */
+        public java.util.List < Recognition> getRecognition() {
+            return this.recognition;
+        }
+
+        public static final class Builder {
+            private java.util.List < Recognition> recognition; 
+
+            /**
+             * Recognition.
+             */
+            public Builder recognition(java.util.List < Recognition> recognition) {
+                this.recognition = recognition;
+                return this;
+            }
+
+            public Ext build() {
+                return new Ext(this);
+            } 
+
+        } 
+
+    }
     public static class Result extends TeaModel {
         @NameInMap("Confidence")
         private Float confidence;
@@ -176,11 +278,15 @@ public class ImageModerationResponseBody extends TeaModel {
         @NameInMap("DataId")
         private String dataId;
 
+        @NameInMap("Ext")
+        private Ext ext;
+
         @NameInMap("Result")
         private java.util.List < Result> result;
 
         private Data(Builder builder) {
             this.dataId = builder.dataId;
+            this.ext = builder.ext;
             this.result = builder.result;
         }
 
@@ -200,6 +306,13 @@ public class ImageModerationResponseBody extends TeaModel {
         }
 
         /**
+         * @return ext
+         */
+        public Ext getExt() {
+            return this.ext;
+        }
+
+        /**
          * @return result
          */
         public java.util.List < Result> getResult() {
@@ -208,6 +321,7 @@ public class ImageModerationResponseBody extends TeaModel {
 
         public static final class Builder {
             private String dataId; 
+            private Ext ext; 
             private java.util.List < Result> result; 
 
             /**
@@ -215,6 +329,14 @@ public class ImageModerationResponseBody extends TeaModel {
              */
             public Builder dataId(String dataId) {
                 this.dataId = dataId;
+                return this;
+            }
+
+            /**
+             * Ext.
+             */
+            public Builder ext(Ext ext) {
+                this.ext = ext;
                 return this;
             }
 
