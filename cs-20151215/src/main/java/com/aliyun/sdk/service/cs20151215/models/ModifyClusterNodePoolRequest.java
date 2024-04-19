@@ -715,8 +715,16 @@ public class ModifyClusterNodePoolRequest extends Request {
         @NameInMap("auto_upgrade_kubelet")
         private Boolean autoUpgradeKubelet;
 
+        @NameInMap("auto_upgrade_os")
+        private Boolean autoUpgradeOs;
+
+        @NameInMap("auto_upgrade_runtime")
+        private Boolean autoUpgradeRuntime;
+
         private AutoUpgradePolicy(Builder builder) {
             this.autoUpgradeKubelet = builder.autoUpgradeKubelet;
+            this.autoUpgradeOs = builder.autoUpgradeOs;
+            this.autoUpgradeRuntime = builder.autoUpgradeRuntime;
         }
 
         public static Builder builder() {
@@ -734,8 +742,24 @@ public class ModifyClusterNodePoolRequest extends Request {
             return this.autoUpgradeKubelet;
         }
 
+        /**
+         * @return autoUpgradeOs
+         */
+        public Boolean getAutoUpgradeOs() {
+            return this.autoUpgradeOs;
+        }
+
+        /**
+         * @return autoUpgradeRuntime
+         */
+        public Boolean getAutoUpgradeRuntime() {
+            return this.autoUpgradeRuntime;
+        }
+
         public static final class Builder {
             private Boolean autoUpgradeKubelet; 
+            private Boolean autoUpgradeOs; 
+            private Boolean autoUpgradeRuntime; 
 
             /**
              * Specifies whether ACK is allowed to automatically update the kubelet. Valid values:
@@ -746,6 +770,22 @@ public class ModifyClusterNodePoolRequest extends Request {
              */
             public Builder autoUpgradeKubelet(Boolean autoUpgradeKubelet) {
                 this.autoUpgradeKubelet = autoUpgradeKubelet;
+                return this;
+            }
+
+            /**
+             * auto_upgrade_os.
+             */
+            public Builder autoUpgradeOs(Boolean autoUpgradeOs) {
+                this.autoUpgradeOs = autoUpgradeOs;
+                return this;
+            }
+
+            /**
+             * auto_upgrade_runtime.
+             */
+            public Builder autoUpgradeRuntime(Boolean autoUpgradeRuntime) {
+                this.autoUpgradeRuntime = autoUpgradeRuntime;
                 return this;
             }
 

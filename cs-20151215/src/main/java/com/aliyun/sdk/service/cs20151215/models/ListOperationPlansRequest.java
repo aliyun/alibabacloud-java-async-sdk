@@ -68,7 +68,7 @@ public class ListOperationPlansRequest extends Request {
         } 
 
         /**
-         * cluster_id.
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("cluster_id", clusterId);
@@ -77,7 +77,7 @@ public class ListOperationPlansRequest extends Request {
         }
 
         /**
-         * type.
+         * The operation plan type.
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);

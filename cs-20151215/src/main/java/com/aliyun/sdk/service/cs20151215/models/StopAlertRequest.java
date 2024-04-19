@@ -95,7 +95,7 @@ public class StopAlertRequest extends Request {
         }
 
         /**
-         * alert_rule_group_name.
+         * The name of the alert rule set to be disabled.
          */
         public Builder alertRuleGroupName(String alertRuleGroupName) {
             this.putBodyParameter("alert_rule_group_name", alertRuleGroupName);
@@ -104,7 +104,7 @@ public class StopAlertRequest extends Request {
         }
 
         /**
-         * alert_rule_name.
+         * The name of the alert rule to be disabled. If you do not specify an alert rule name, the alert rule set is disabled.
          */
         public Builder alertRuleName(String alertRuleName) {
             this.putBodyParameter("alert_rule_name", alertRuleName);

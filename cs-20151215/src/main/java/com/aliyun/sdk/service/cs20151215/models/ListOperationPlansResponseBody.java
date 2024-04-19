@@ -38,7 +38,7 @@ public class ListOperationPlansResponseBody extends TeaModel {
         private java.util.List < Plans> plans; 
 
         /**
-         * plans.
+         * The operation plans.
          */
         public Builder plans(java.util.List < Plans> plans) {
             this.plans = plans;
@@ -174,7 +174,7 @@ public class ListOperationPlansResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * cluster_id.
+             * The cluster ID.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -182,7 +182,7 @@ public class ListOperationPlansResponseBody extends TeaModel {
             }
 
             /**
-             * created.
+             * The time when the operation plan was created.
              */
             public Builder created(String created) {
                 this.created = created;
@@ -190,7 +190,7 @@ public class ListOperationPlansResponseBody extends TeaModel {
             }
 
             /**
-             * end_time.
+             * The expected end time of the plan.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -198,7 +198,7 @@ public class ListOperationPlansResponseBody extends TeaModel {
             }
 
             /**
-             * plan_id.
+             * The operation plan ID.
              */
             public Builder planId(String planId) {
                 this.planId = planId;
@@ -206,7 +206,7 @@ public class ListOperationPlansResponseBody extends TeaModel {
             }
 
             /**
-             * start_time.
+             * The expected start time of the plan.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -214,7 +214,11 @@ public class ListOperationPlansResponseBody extends TeaModel {
             }
 
             /**
-             * state.
+             * The plan status. Valid values:
+             * <p>
+             * 
+             * *   scheduled
+             * *   Canceled
              */
             public Builder state(String state) {
                 this.state = state;
@@ -222,7 +226,7 @@ public class ListOperationPlansResponseBody extends TeaModel {
             }
 
             /**
-             * target_id.
+             * The target ID.
              */
             public Builder targetId(String targetId) {
                 this.targetId = targetId;
@@ -230,7 +234,7 @@ public class ListOperationPlansResponseBody extends TeaModel {
             }
 
             /**
-             * target_type.
+             * The target type.
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -238,7 +242,10 @@ public class ListOperationPlansResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * The plan type. Valid values:
+             * <p>
+             * 
+             * *   cluster_upgrade
              */
             public Builder type(String type) {
                 this.type = type;
