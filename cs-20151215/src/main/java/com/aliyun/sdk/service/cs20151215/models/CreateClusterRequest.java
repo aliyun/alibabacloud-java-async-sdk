@@ -30,6 +30,7 @@ public class CreateClusterRequest extends Request {
 
     @Body
     @NameInMap("cis_enabled")
+    @Deprecated
     private Boolean cisEnabled;
 
     @Body
@@ -270,6 +271,10 @@ public class CreateClusterRequest extends Request {
     private String securityGroupId;
 
     @Body
+    @NameInMap("security_hardening_os")
+    private Boolean securityHardeningOs;
+
+    @Body
     @NameInMap("service_account_issuer")
     private String serviceAccountIssuer;
 
@@ -457,6 +462,7 @@ public class CreateClusterRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.runtime = builder.runtime;
         this.securityGroupId = builder.securityGroupId;
+        this.securityHardeningOs = builder.securityHardeningOs;
         this.serviceAccountIssuer = builder.serviceAccountIssuer;
         this.serviceCidr = builder.serviceCidr;
         this.serviceDiscoveryTypes = builder.serviceDiscoveryTypes;
@@ -941,6 +947,13 @@ public class CreateClusterRequest extends Request {
     }
 
     /**
+     * @return securityHardeningOs
+     */
+    public Boolean getSecurityHardeningOs() {
+        return this.securityHardeningOs;
+    }
+
+    /**
      * @return serviceAccountIssuer
      */
     public String getServiceAccountIssuer() {
@@ -1193,6 +1206,7 @@ public class CreateClusterRequest extends Request {
         private String resourceGroupId; 
         private Runtime runtime; 
         private String securityGroupId; 
+        private Boolean securityHardeningOs; 
         private String serviceAccountIssuer; 
         private String serviceCidr; 
         private java.util.List < String > serviceDiscoveryTypes; 
@@ -1290,6 +1304,7 @@ public class CreateClusterRequest extends Request {
             this.resourceGroupId = request.resourceGroupId;
             this.runtime = request.runtime;
             this.securityGroupId = request.securityGroupId;
+            this.securityHardeningOs = request.securityHardeningOs;
             this.serviceAccountIssuer = request.serviceAccountIssuer;
             this.serviceCidr = request.serviceCidr;
             this.serviceDiscoveryTypes = request.serviceDiscoveryTypes;
@@ -1665,7 +1680,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The cluster IP stack.
+         * The cluster ip_stack.
          */
         public Builder ipStack(String ipStack) {
             this.putBodyParameter("ip_stack", ipStack);
@@ -2145,6 +2160,15 @@ public class CreateClusterRequest extends Request {
         public Builder securityGroupId(String securityGroupId) {
             this.putBodyParameter("security_group_id", securityGroupId);
             this.securityGroupId = securityGroupId;
+            return this;
+        }
+
+        /**
+         * security_hardening_os.
+         */
+        public Builder securityHardeningOs(Boolean securityHardeningOs) {
+            this.putBodyParameter("security_hardening_os", securityHardeningOs);
+            this.securityHardeningOs = securityHardeningOs;
             return this;
         }
 

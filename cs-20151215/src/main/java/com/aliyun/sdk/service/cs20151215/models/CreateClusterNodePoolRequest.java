@@ -1698,6 +1698,7 @@ public class CreateClusterNodePoolRequest extends Request {
         private Long autoRenewPeriod;
 
         @NameInMap("cis_enabled")
+        @Deprecated
         private Boolean cisEnabled;
 
         @NameInMap("compensate_with_on_demand")
@@ -1776,6 +1777,9 @@ public class CreateClusterNodePoolRequest extends Request {
         @NameInMap("security_group_ids")
         private java.util.List < String > securityGroupIds;
 
+        @NameInMap("security_hardening_os")
+        private Boolean securityHardeningOs;
+
         @NameInMap("soc_enabled")
         private Boolean socEnabled;
 
@@ -1853,6 +1857,7 @@ public class CreateClusterNodePoolRequest extends Request {
             this.scalingPolicy = builder.scalingPolicy;
             this.securityGroupId = builder.securityGroupId;
             this.securityGroupIds = builder.securityGroupIds;
+            this.securityHardeningOs = builder.securityHardeningOs;
             this.socEnabled = builder.socEnabled;
             this.spotInstancePools = builder.spotInstancePools;
             this.spotInstanceRemedy = builder.spotInstanceRemedy;
@@ -2069,6 +2074,13 @@ public class CreateClusterNodePoolRequest extends Request {
         }
 
         /**
+         * @return securityHardeningOs
+         */
+        public Boolean getSecurityHardeningOs() {
+            return this.securityHardeningOs;
+        }
+
+        /**
          * @return socEnabled
          */
         public Boolean getSocEnabled() {
@@ -2208,6 +2220,7 @@ public class CreateClusterNodePoolRequest extends Request {
             private String scalingPolicy; 
             private String securityGroupId; 
             private java.util.List < String > securityGroupIds; 
+            private Boolean securityHardeningOs; 
             private Boolean socEnabled; 
             private Long spotInstancePools; 
             private Boolean spotInstanceRemedy; 
@@ -2504,6 +2517,14 @@ public class CreateClusterNodePoolRequest extends Request {
              */
             public Builder securityGroupIds(java.util.List < String > securityGroupIds) {
                 this.securityGroupIds = securityGroupIds;
+                return this;
+            }
+
+            /**
+             * security_hardening_os.
+             */
+            public Builder securityHardeningOs(Boolean securityHardeningOs) {
+                this.securityHardeningOs = securityHardeningOs;
                 return this;
             }
 

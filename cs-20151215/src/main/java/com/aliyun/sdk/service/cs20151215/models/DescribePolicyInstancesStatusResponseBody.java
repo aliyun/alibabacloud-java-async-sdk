@@ -146,7 +146,7 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
             private String policySeverity; 
 
             /**
-             * The policy type. For more information about different types of policies and their descriptions, see [Predefined security policies of ACK](https://www.alibabacloud.com/help/doc-detail/359819.html).
+             * The policy type. For more information about different types of policies and their descriptions, see [Predefined security policies of ACK](~~359819~~).
              */
             public Builder policyCategory(String policyCategory) {
                 this.policyCategory = policyCategory;
