@@ -50,7 +50,7 @@ public class ListBusiRegionsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information of the regions.
+         * The information about the acceleration regions that are supported by GA.
          */
         public Builder regions(java.util.List < Regions> regions) {
             this.regions = regions;
@@ -118,7 +118,7 @@ public class ListBusiRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region where the GA instance is deployed. Only **cn-hangzhou** is returned.
+             * The ID of the region.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

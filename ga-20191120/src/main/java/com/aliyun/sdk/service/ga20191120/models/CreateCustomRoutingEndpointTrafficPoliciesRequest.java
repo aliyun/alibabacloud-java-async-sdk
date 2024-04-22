@@ -113,10 +113,7 @@ public class CreateCustomRoutingEndpointTrafficPoliciesRequest extends Request {
         }
 
         /**
-         * The ID of the endpoint for which you want to create the traffic destinations.
-         * <p>
-         * 
-         * > This parameter is required.
+         * The ID of the endpoint for which you want to create traffic destinations.
          */
         public Builder endpointId(String endpointId) {
             this.putQueryParameter("EndpointId", endpointId);

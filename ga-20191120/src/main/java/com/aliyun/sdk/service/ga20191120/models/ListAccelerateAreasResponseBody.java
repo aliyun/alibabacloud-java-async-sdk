@@ -110,7 +110,7 @@ public class ListAccelerateAreasResponseBody extends TeaModel {
             private String regionId; 
 
             /**
-             * The region name.
+             * The name of the region.
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -191,7 +191,7 @@ public class ListAccelerateAreasResponseBody extends TeaModel {
             }
 
             /**
-             * The area name.
+             * The name of the area.
              */
             public Builder localName(String localName) {
                 this.localName = localName;
