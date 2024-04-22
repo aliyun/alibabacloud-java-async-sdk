@@ -141,6 +141,12 @@ public class ListConversationsResponseBody extends TeaModel {
         @NameInMap("ConversationId")
         private String conversationId;
 
+        @NameInMap("DsReport")
+        private String dsReport;
+
+        @NameInMap("DsReportTitles")
+        private java.util.List < String > dsReportTitles;
+
         @NameInMap("EndReason")
         private Integer endReason;
 
@@ -169,6 +175,8 @@ public class ListConversationsResponseBody extends TeaModel {
             this.calledNumber = builder.calledNumber;
             this.callingNumber = builder.callingNumber;
             this.conversationId = builder.conversationId;
+            this.dsReport = builder.dsReport;
+            this.dsReportTitles = builder.dsReportTitles;
             this.endReason = builder.endReason;
             this.endTime = builder.endTime;
             this.hasLastPlaybackCompleted = builder.hasLastPlaybackCompleted;
@@ -206,6 +214,20 @@ public class ListConversationsResponseBody extends TeaModel {
          */
         public String getConversationId() {
             return this.conversationId;
+        }
+
+        /**
+         * @return dsReport
+         */
+        public String getDsReport() {
+            return this.dsReport;
+        }
+
+        /**
+         * @return dsReportTitles
+         */
+        public java.util.List < String > getDsReportTitles() {
+            return this.dsReportTitles;
         }
 
         /**
@@ -268,6 +290,8 @@ public class ListConversationsResponseBody extends TeaModel {
             private String calledNumber; 
             private String callingNumber; 
             private String conversationId; 
+            private String dsReport; 
+            private java.util.List < String > dsReportTitles; 
             private Integer endReason; 
             private Long endTime; 
             private Boolean hasLastPlaybackCompleted; 
@@ -298,6 +322,22 @@ public class ListConversationsResponseBody extends TeaModel {
              */
             public Builder conversationId(String conversationId) {
                 this.conversationId = conversationId;
+                return this;
+            }
+
+            /**
+             * DsReport.
+             */
+            public Builder dsReport(String dsReport) {
+                this.dsReport = dsReport;
+                return this;
+            }
+
+            /**
+             * DsReportTitles.
+             */
+            public Builder dsReportTitles(java.util.List < String > dsReportTitles) {
+                this.dsReportTitles = dsReportTitles;
                 return this;
             }
 
