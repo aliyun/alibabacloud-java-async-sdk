@@ -78,9 +78,13 @@ public class DescribeEventDetailResponseBody extends TeaModel {
         @NameInMap("Y")
         private java.util.List < String > y;
 
+        @NameInMap("Z")
+        private java.util.List < String > z;
+
         private Data(Builder builder) {
             this.x = builder.x;
             this.y = builder.y;
+            this.z = builder.z;
         }
 
         public static Builder builder() {
@@ -105,9 +109,17 @@ public class DescribeEventDetailResponseBody extends TeaModel {
             return this.y;
         }
 
+        /**
+         * @return z
+         */
+        public java.util.List < String > getZ() {
+            return this.z;
+        }
+
         public static final class Builder {
             private java.util.List < String > x; 
             private java.util.List < String > y; 
+            private java.util.List < String > z; 
 
             /**
              * The values of data on the x-axis.
@@ -125,6 +137,14 @@ public class DescribeEventDetailResponseBody extends TeaModel {
                 return this;
             }
 
+            /**
+             * Z.
+             */
+            public Builder z(java.util.List < String > z) {
+                this.z = z;
+                return this;
+            }
+
             public Data build() {
                 return new Data(this);
             } 
@@ -133,11 +153,17 @@ public class DescribeEventDetailResponseBody extends TeaModel {
 
     }
     public static class Chart extends TeaModel {
+        @NameInMap("ChatType")
+        private Integer chatType;
+
         @NameInMap("Data")
         private Data data;
 
         @NameInMap("Label")
         private String label;
+
+        @NameInMap("Name")
+        private String name;
 
         @NameInMap("Type")
         private String type;
@@ -148,12 +174,18 @@ public class DescribeEventDetailResponseBody extends TeaModel {
         @NameInMap("YLabel")
         private String yLabel;
 
+        @NameInMap("ZLabel")
+        private String zLabel;
+
         private Chart(Builder builder) {
+            this.chatType = builder.chatType;
             this.data = builder.data;
             this.label = builder.label;
+            this.name = builder.name;
             this.type = builder.type;
             this.xLabel = builder.xLabel;
             this.yLabel = builder.yLabel;
+            this.zLabel = builder.zLabel;
         }
 
         public static Builder builder() {
@@ -162,6 +194,13 @@ public class DescribeEventDetailResponseBody extends TeaModel {
 
         public static Chart create() {
             return builder().build();
+        }
+
+        /**
+         * @return chatType
+         */
+        public Integer getChatType() {
+            return this.chatType;
         }
 
         /**
@@ -176,6 +215,13 @@ public class DescribeEventDetailResponseBody extends TeaModel {
          */
         public String getLabel() {
             return this.label;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
         }
 
         /**
@@ -199,12 +245,30 @@ public class DescribeEventDetailResponseBody extends TeaModel {
             return this.yLabel;
         }
 
+        /**
+         * @return zLabel
+         */
+        public String getZLabel() {
+            return this.zLabel;
+        }
+
         public static final class Builder {
+            private Integer chatType; 
             private Data data; 
             private String label; 
+            private String name; 
             private String type; 
             private String xLabel; 
             private String yLabel; 
+            private String zLabel; 
+
+            /**
+             * ChatType.
+             */
+            public Builder chatType(Integer chatType) {
+                this.chatType = chatType;
+                return this;
+            }
 
             /**
              * The data in the baseline behavior profile of the anomalous event.
@@ -219,6 +283,14 @@ public class DescribeEventDetailResponseBody extends TeaModel {
              */
             public Builder label(String label) {
                 this.label = label;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
                 return this;
             }
 
@@ -250,6 +322,14 @@ public class DescribeEventDetailResponseBody extends TeaModel {
                 return this;
             }
 
+            /**
+             * ZLabel.
+             */
+            public Builder zLabel(String zLabel) {
+                this.zLabel = zLabel;
+                return this;
+            }
+
             public Chart build() {
                 return new Chart(this);
             } 
@@ -261,11 +341,15 @@ public class DescribeEventDetailResponseBody extends TeaModel {
         @NameInMap("Label")
         private String label;
 
+        @NameInMap("Name")
+        private String name;
+
         @NameInMap("Value")
         private String value;
 
         private Content(Builder builder) {
             this.label = builder.label;
+            this.name = builder.name;
             this.value = builder.value;
         }
 
@@ -285,6 +369,13 @@ public class DescribeEventDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
          * @return value
          */
         public String getValue() {
@@ -293,6 +384,7 @@ public class DescribeEventDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private String label; 
+            private String name; 
             private String value; 
 
             /**
@@ -300,6 +392,14 @@ public class DescribeEventDetailResponseBody extends TeaModel {
              */
             public Builder label(String label) {
                 this.label = label;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
                 return this;
             }
 
@@ -693,6 +793,9 @@ public class DescribeEventDetailResponseBody extends TeaModel {
         @NameInMap("LoginName")
         private String loginName;
 
+        @NameInMap("NewAlarm")
+        private Boolean newAlarm;
+
         @NameInMap("ProductCode")
         private String productCode;
 
@@ -733,6 +836,7 @@ public class DescribeEventDetailResponseBody extends TeaModel {
             this.id = builder.id;
             this.logDetail = builder.logDetail;
             this.loginName = builder.loginName;
+            this.newAlarm = builder.newAlarm;
             this.productCode = builder.productCode;
             this.status = builder.status;
             this.statusName = builder.statusName;
@@ -857,6 +961,13 @@ public class DescribeEventDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return newAlarm
+         */
+        public Boolean getNewAlarm() {
+            return this.newAlarm;
+        }
+
+        /**
          * @return productCode
          */
         public String getProductCode() {
@@ -928,6 +1039,7 @@ public class DescribeEventDetailResponseBody extends TeaModel {
             private Long id; 
             private String logDetail; 
             private String loginName; 
+            private Boolean newAlarm; 
             private String productCode; 
             private Integer status; 
             private String statusName; 
@@ -1060,6 +1172,14 @@ public class DescribeEventDetailResponseBody extends TeaModel {
              */
             public Builder loginName(String loginName) {
                 this.loginName = loginName;
+                return this;
+            }
+
+            /**
+             * NewAlarm.
+             */
+            public Builder newAlarm(Boolean newAlarm) {
+                this.newAlarm = newAlarm;
                 return this;
             }
 
