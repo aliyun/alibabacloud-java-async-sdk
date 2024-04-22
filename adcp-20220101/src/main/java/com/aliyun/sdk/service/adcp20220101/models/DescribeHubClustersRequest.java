@@ -16,9 +16,14 @@ public class DescribeHubClustersRequest extends Request {
     @NameInMap("Profile")
     private String profile;
 
+    @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
     private DescribeHubClustersRequest(Builder builder) {
         super(builder);
         this.profile = builder.profile;
+        this.resourceGroupId = builder.resourceGroupId;
     }
 
     public static Builder builder() {
@@ -41,8 +46,16 @@ public class DescribeHubClustersRequest extends Request {
         return this.profile;
     }
 
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public static final class Builder extends Request.Builder<DescribeHubClustersRequest, Builder> {
         private String profile; 
+        private String resourceGroupId; 
 
         private Builder() {
             super();
@@ -51,14 +64,24 @@ public class DescribeHubClustersRequest extends Request {
         private Builder(DescribeHubClustersRequest request) {
             super(request);
             this.profile = request.profile;
+            this.resourceGroupId = request.resourceGroupId;
         } 
 
         /**
-         * Profile.
+         * The configurations of the cluster.
          */
         public Builder profile(String profile) {
             this.putQueryParameter("Profile", profile);
             this.profile = profile;
+            return this;
+        }
+
+        /**
+         * The resource group ID.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

@@ -54,8 +54,8 @@ public class UpdateHubClusterFeatureRequest extends Request {
     private Boolean enableMesh;
 
     @Query
-    @NameInMap("MSEEnabled")
-    private Boolean MSEEnabled;
+    @NameInMap("GatewayEnabled")
+    private Boolean gatewayEnabled;
 
     @Query
     @NameInMap("MonitorEnabled")
@@ -97,7 +97,7 @@ public class UpdateHubClusterFeatureRequest extends Request {
         this.clusterId = builder.clusterId;
         this.deletionProtection = builder.deletionProtection;
         this.enableMesh = builder.enableMesh;
-        this.MSEEnabled = builder.MSEEnabled;
+        this.gatewayEnabled = builder.gatewayEnabled;
         this.monitorEnabled = builder.monitorEnabled;
         this.name = builder.name;
         this.priceLimit = builder.priceLimit;
@@ -191,10 +191,10 @@ public class UpdateHubClusterFeatureRequest extends Request {
     }
 
     /**
-     * @return MSEEnabled
+     * @return gatewayEnabled
      */
-    public Boolean getMSEEnabled() {
-        return this.MSEEnabled;
+    public Boolean getGatewayEnabled() {
+        return this.gatewayEnabled;
     }
 
     /**
@@ -257,7 +257,7 @@ public class UpdateHubClusterFeatureRequest extends Request {
         private String clusterId; 
         private Boolean deletionProtection; 
         private Boolean enableMesh; 
-        private Boolean MSEEnabled; 
+        private Boolean gatewayEnabled; 
         private Boolean monitorEnabled; 
         private String name; 
         private String priceLimit; 
@@ -282,7 +282,7 @@ public class UpdateHubClusterFeatureRequest extends Request {
             this.clusterId = request.clusterId;
             this.deletionProtection = request.deletionProtection;
             this.enableMesh = request.enableMesh;
-            this.MSEEnabled = request.MSEEnabled;
+            this.gatewayEnabled = request.gatewayEnabled;
             this.monitorEnabled = request.monitorEnabled;
             this.name = request.name;
             this.priceLimit = request.priceLimit;
@@ -414,11 +414,14 @@ public class UpdateHubClusterFeatureRequest extends Request {
         }
 
         /**
-         * MSEEnabled.
+         * Specifies whether to enable Gateway. Valid values:
+         * <p>
+         * - true
+         * - false
          */
-        public Builder MSEEnabled(Boolean MSEEnabled) {
-            this.putQueryParameter("MSEEnabled", MSEEnabled);
-            this.MSEEnabled = MSEEnabled;
+        public Builder gatewayEnabled(Boolean gatewayEnabled) {
+            this.putQueryParameter("GatewayEnabled", gatewayEnabled);
+            this.gatewayEnabled = gatewayEnabled;
             return this;
         }
 

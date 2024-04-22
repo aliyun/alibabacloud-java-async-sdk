@@ -46,6 +46,10 @@ public class CreateHubClusterRequest extends Request {
     private String regionId;
 
     @Body
+    @NameInMap("ResourceGroupID")
+    private String resourceGroupID;
+
+    @Body
     @NameInMap("VSwitches")
     @Validation(required = true)
     private String vSwitches;
@@ -69,6 +73,7 @@ public class CreateHubClusterRequest extends Request {
         this.priceLimit = builder.priceLimit;
         this.profile = builder.profile;
         this.regionId = builder.regionId;
+        this.resourceGroupID = builder.resourceGroupID;
         this.vSwitches = builder.vSwitches;
         this.vpcId = builder.vpcId;
         this.workflowScheduleMode = builder.workflowScheduleMode;
@@ -144,6 +149,13 @@ public class CreateHubClusterRequest extends Request {
     }
 
     /**
+     * @return resourceGroupID
+     */
+    public String getResourceGroupID() {
+        return this.resourceGroupID;
+    }
+
+    /**
      * @return vSwitches
      */
     public String getVSwitches() {
@@ -173,6 +185,7 @@ public class CreateHubClusterRequest extends Request {
         private String priceLimit; 
         private String profile; 
         private String regionId; 
+        private String resourceGroupID; 
         private String vSwitches; 
         private String vpcId; 
         private String workflowScheduleMode; 
@@ -191,6 +204,7 @@ public class CreateHubClusterRequest extends Request {
             this.priceLimit = request.priceLimit;
             this.profile = request.profile;
             this.regionId = request.regionId;
+            this.resourceGroupID = request.resourceGroupID;
             this.vSwitches = request.vSwitches;
             this.vpcId = request.vpcId;
             this.workflowScheduleMode = request.workflowScheduleMode;
@@ -210,7 +224,11 @@ public class CreateHubClusterRequest extends Request {
         }
 
         /**
-         * ArgoServerEnabled.
+         * Specifies whether to enable the workflow instance UI. This parameter takes effect only if Profile is set to XFlow. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder argoServerEnabled(Boolean argoServerEnabled) {
             this.putBodyParameter("ArgoServerEnabled", argoServerEnabled);
@@ -250,7 +268,7 @@ public class CreateHubClusterRequest extends Request {
         }
 
         /**
-         * PriceLimit.
+         * The limit on the prices of containers in the workflow. This parameter takes effect only if the WorkflowScheduleMode parameter is set to cost-optimized.
          */
         public Builder priceLimit(String priceLimit) {
             this.putBodyParameter("PriceLimit", priceLimit);
@@ -283,6 +301,15 @@ public class CreateHubClusterRequest extends Request {
         }
 
         /**
+         * The Resource Group ID.
+         */
+        public Builder resourceGroupID(String resourceGroupID) {
+            this.putBodyParameter("ResourceGroupID", resourceGroupID);
+            this.resourceGroupID = resourceGroupID;
+            return this;
+        }
+
+        /**
          * The ID of the vSwitch.
          */
         public Builder vSwitches(String vSwitches) {
@@ -301,7 +328,11 @@ public class CreateHubClusterRequest extends Request {
         }
 
         /**
-         * WorkflowScheduleMode.
+         * The scheduling mode of the workflow. This parameter takes effect only if Profile is set to XFlow. Valid values:
+         * <p>
+         * 
+         * *   cost-optimized: cost-prioritized scheduling mode.
+         * *   stock-optimized: inventory-prioritized scheduling mode.
          */
         public Builder workflowScheduleMode(String workflowScheduleMode) {
             this.putBodyParameter("WorkflowScheduleMode", workflowScheduleMode);

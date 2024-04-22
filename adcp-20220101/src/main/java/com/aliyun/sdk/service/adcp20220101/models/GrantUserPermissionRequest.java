@@ -128,7 +128,7 @@ public class GrantUserPermissionRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -146,7 +146,7 @@ public class GrantUserPermissionRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The namespace to which the permissions are scoped. By default, this parameter is empty when you set RoleType to cluster.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -160,32 +160,6 @@ public class GrantUserPermissionRequest extends Request {
          * 
          * *   admin: the administrator role.
          * *   dev: the developer role.
-         * 
-         * Enumerated values:
-         * 
-         * *   arms-admin
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   dev
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   admin
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
          */
         public Builder roleName(String roleName) {
             this.putQueryParameter("RoleName", roleName);
@@ -194,7 +168,11 @@ public class GrantUserPermissionRequest extends Request {
         }
 
         /**
-         * RoleType.
+         * The authorization type. Valid values:
+         * <p>
+         * 
+         * *   cluster: specifies that the permissions are scoped to a master instance.
+         * *   namespace: specifies that the permissions are scoped to a namespace of a cluster.
          */
         public Builder roleType(String roleType) {
             this.putQueryParameter("RoleType", roleType);

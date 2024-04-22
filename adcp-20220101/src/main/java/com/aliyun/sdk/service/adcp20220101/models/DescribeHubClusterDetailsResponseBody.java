@@ -156,6 +156,375 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
         } 
 
     }
+    public static class GitOps extends TeaModel {
+        @NameInMap("AccessControlList")
+        private java.util.List < String > accessControlList;
+
+        @NameInMap("Enabled")
+        private Boolean enabled;
+
+        @NameInMap("HAEnabled")
+        private Boolean HAEnabled;
+
+        @NameInMap("PublicAccessEnabled")
+        private Boolean publicAccessEnabled;
+
+        private GitOps(Builder builder) {
+            this.accessControlList = builder.accessControlList;
+            this.enabled = builder.enabled;
+            this.HAEnabled = builder.HAEnabled;
+            this.publicAccessEnabled = builder.publicAccessEnabled;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static GitOps create() {
+            return builder().build();
+        }
+
+        /**
+         * @return accessControlList
+         */
+        public java.util.List < String > getAccessControlList() {
+            return this.accessControlList;
+        }
+
+        /**
+         * @return enabled
+         */
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        /**
+         * @return HAEnabled
+         */
+        public Boolean getHAEnabled() {
+            return this.HAEnabled;
+        }
+
+        /**
+         * @return publicAccessEnabled
+         */
+        public Boolean getPublicAccessEnabled() {
+            return this.publicAccessEnabled;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > accessControlList; 
+            private Boolean enabled; 
+            private Boolean HAEnabled; 
+            private Boolean publicAccessEnabled; 
+
+            /**
+             * The Internet access control list (ACL). This parameter takes effect only if PublicAccessEnabled is set to true.
+             */
+            public Builder accessControlList(java.util.List < String > accessControlList) {
+                this.accessControlList = accessControlList;
+                return this;
+            }
+
+            /**
+             * Indicates whether GitOps is enabled. Valid values:
+             * <p>
+             * 
+             * *   true: GitOps is enabled.
+             * *   false: GitOps is disabled.
+             */
+            public Builder enabled(Boolean enabled) {
+                this.enabled = enabled;
+                return this;
+            }
+
+            /**
+             * Indicates whether GitOps High Availability is enabled. Valid values:
+             * <p>
+             * 
+             * *   true:  GitOps High Availability is enabled.
+             * *   false:  GitOps High Availability is disabled.
+             */
+            public Builder HAEnabled(Boolean HAEnabled) {
+                this.HAEnabled = HAEnabled;
+                return this;
+            }
+
+            /**
+             * Specifies whether to enable public domain name resolution in the Argo CD or Argo Workflow console. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
+             */
+            public Builder publicAccessEnabled(Boolean publicAccessEnabled) {
+                this.publicAccessEnabled = publicAccessEnabled;
+                return this;
+            }
+
+            public GitOps build() {
+                return new GitOps(this);
+            } 
+
+        } 
+
+    }
+    public static class ArgoWorkflow extends TeaModel {
+        @NameInMap("AccessControlList")
+        private java.util.List < String > accessControlList;
+
+        @NameInMap("Enabled")
+        private Boolean enabled;
+
+        @NameInMap("PublicAccessEnabled")
+        private Boolean publicAccessEnabled;
+
+        @NameInMap("ServerEnabled")
+        private String serverEnabled;
+
+        private ArgoWorkflow(Builder builder) {
+            this.accessControlList = builder.accessControlList;
+            this.enabled = builder.enabled;
+            this.publicAccessEnabled = builder.publicAccessEnabled;
+            this.serverEnabled = builder.serverEnabled;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ArgoWorkflow create() {
+            return builder().build();
+        }
+
+        /**
+         * @return accessControlList
+         */
+        public java.util.List < String > getAccessControlList() {
+            return this.accessControlList;
+        }
+
+        /**
+         * @return enabled
+         */
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        /**
+         * @return publicAccessEnabled
+         */
+        public Boolean getPublicAccessEnabled() {
+            return this.publicAccessEnabled;
+        }
+
+        /**
+         * @return serverEnabled
+         */
+        public String getServerEnabled() {
+            return this.serverEnabled;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > accessControlList; 
+            private Boolean enabled; 
+            private Boolean publicAccessEnabled; 
+            private String serverEnabled; 
+
+            /**
+             * The Internet access control list (ACL). This parameter takes effect only if PublicAccessEnabled is set to true.
+             */
+            public Builder accessControlList(java.util.List < String > accessControlList) {
+                this.accessControlList = accessControlList;
+                return this;
+            }
+
+            /**
+             * Specifies whether to enable the argo workflow. Valid values:
+             * <p>
+             * 
+             * *   **false** (default)
+             * *   **true**
+             */
+            public Builder enabled(Boolean enabled) {
+                this.enabled = enabled;
+                return this;
+            }
+
+            /**
+             * Specifies whether to enable public domain name resolution in the Argo CD or Argo Workflow console. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
+             */
+            public Builder publicAccessEnabled(Boolean publicAccessEnabled) {
+                this.publicAccessEnabled = publicAccessEnabled;
+                return this;
+            }
+
+            /**
+             * Specifies whether to enable the argo workflow. UI Valid values:
+             * <p>
+             * 
+             * *   **false** (default)
+             * *   **true**
+             */
+            public Builder serverEnabled(String serverEnabled) {
+                this.serverEnabled = serverEnabled;
+                return this;
+            }
+
+            public ArgoWorkflow build() {
+                return new ArgoWorkflow(this);
+            } 
+
+        } 
+
+    }
+    public static class WorkFlow extends TeaModel {
+        @NameInMap("ArgoWorkflow")
+        private ArgoWorkflow argoWorkflow;
+
+        private WorkFlow(Builder builder) {
+            this.argoWorkflow = builder.argoWorkflow;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static WorkFlow create() {
+            return builder().build();
+        }
+
+        /**
+         * @return argoWorkflow
+         */
+        public ArgoWorkflow getArgoWorkflow() {
+            return this.argoWorkflow;
+        }
+
+        public static final class Builder {
+            private ArgoWorkflow argoWorkflow; 
+
+            /**
+             * The Argo workflow metadata.
+             */
+            public Builder argoWorkflow(ArgoWorkflow argoWorkflow) {
+                this.argoWorkflow = argoWorkflow;
+                return this;
+            }
+
+            public WorkFlow build() {
+                return new WorkFlow(this);
+            } 
+
+        } 
+
+    }
+    public static class ACKOne extends TeaModel {
+        @NameInMap("GitOps")
+        private GitOps gitOps;
+
+        @NameInMap("WorkFlow")
+        private WorkFlow workFlow;
+
+        private ACKOne(Builder builder) {
+            this.gitOps = builder.gitOps;
+            this.workFlow = builder.workFlow;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ACKOne create() {
+            return builder().build();
+        }
+
+        /**
+         * @return gitOps
+         */
+        public GitOps getGitOps() {
+            return this.gitOps;
+        }
+
+        /**
+         * @return workFlow
+         */
+        public WorkFlow getWorkFlow() {
+            return this.workFlow;
+        }
+
+        public static final class Builder {
+            private GitOps gitOps; 
+            private WorkFlow workFlow; 
+
+            /**
+             * The GitOps metadata.
+             */
+            public Builder gitOps(GitOps gitOps) {
+                this.gitOps = gitOps;
+                return this;
+            }
+
+            /**
+             * The workflow metadata.
+             */
+            public Builder workFlow(WorkFlow workFlow) {
+                this.workFlow = workFlow;
+                return this;
+            }
+
+            public ACKOne build() {
+                return new ACKOne(this);
+            } 
+
+        } 
+
+    }
+    public static class MetaData extends TeaModel {
+        @NameInMap("ACKOne")
+        private ACKOne ACKOne;
+
+        private MetaData(Builder builder) {
+            this.ACKOne = builder.ACKOne;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static MetaData create() {
+            return builder().build();
+        }
+
+        /**
+         * @return ACKOne
+         */
+        public ACKOne getACKOne() {
+            return this.ACKOne;
+        }
+
+        public static final class Builder {
+            private ACKOne ACKOne; 
+
+            /**
+             * The cluster metadata.
+             */
+            public Builder ACKOne(ACKOne ACKOne) {
+                this.ACKOne = ACKOne;
+                return this;
+            }
+
+            public MetaData build() {
+                return new MetaData(this);
+            } 
+
+        } 
+
+    }
     public static class ClusterInfo extends TeaModel {
         @NameInMap("ClusterId")
         private String clusterId;
@@ -169,6 +538,9 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
         @NameInMap("ErrorMessage")
         private String errorMessage;
 
+        @NameInMap("MetaData")
+        private MetaData metaData;
+
         @NameInMap("Name")
         private String name;
 
@@ -177,6 +549,9 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
 
         @NameInMap("RegionId")
         private String regionId;
+
+        @NameInMap("ResourceGroupID")
+        private String resourceGroupID;
 
         @NameInMap("State")
         private String state;
@@ -192,9 +567,11 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             this.clusterSpec = builder.clusterSpec;
             this.creationTime = builder.creationTime;
             this.errorMessage = builder.errorMessage;
+            this.metaData = builder.metaData;
             this.name = builder.name;
             this.profile = builder.profile;
             this.regionId = builder.regionId;
+            this.resourceGroupID = builder.resourceGroupID;
             this.state = builder.state;
             this.updateTime = builder.updateTime;
             this.version = builder.version;
@@ -237,6 +614,13 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
         }
 
         /**
+         * @return metaData
+         */
+        public MetaData getMetaData() {
+            return this.metaData;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
@@ -255,6 +639,13 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
          */
         public String getRegionId() {
             return this.regionId;
+        }
+
+        /**
+         * @return resourceGroupID
+         */
+        public String getResourceGroupID() {
+            return this.resourceGroupID;
         }
 
         /**
@@ -283,9 +674,11 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             private String clusterSpec; 
             private String creationTime; 
             private String errorMessage; 
+            private MetaData metaData; 
             private String name; 
             private String profile; 
             private String regionId; 
+            private String resourceGroupID; 
             private String state; 
             private String updateTime; 
             private String version; 
@@ -326,6 +719,14 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             }
 
             /**
+             * The cluster metadata.
+             */
+            public Builder metaData(MetaData metaData) {
+                this.metaData = metaData;
+                return this;
+            }
+
+            /**
              * The name of the master instance.
              */
             public Builder name(String name) {
@@ -346,6 +747,14 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * The ID of Resource Group.
+             */
+            public Builder resourceGroupID(String resourceGroupID) {
+                this.resourceGroupID = resourceGroupID;
                 return this;
             }
 
@@ -871,7 +1280,7 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * VswitchId.
+             * The ID of the vSwitch.
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;
@@ -879,7 +1288,10 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * The zone ID of the cluster.
+             * <p>
+             * 
+             * > You can call the [DescribeRegions](~~143074~~) operation to query the most recent zone list.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -944,7 +1356,10 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * The ID of the region in which the master instance resides.
+             * The region ID of the cluster.
+             * <p>
+             * 
+             * >  You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -952,7 +1367,7 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the vSwitches.
+             * The vSwitches.
              */
             public Builder vSwitches(java.util.List < VSwitches> vSwitches) {
                 this.vSwitches = vSwitches;
@@ -960,7 +1375,7 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the virtual private cloud (VPC) in which the master instance resides.
+             * The ID of the VPC.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -1037,7 +1452,11 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             private java.util.List < WorkflowUnits> workflowUnits; 
 
             /**
-             * ArgoServerEnabled.
+             * Specifies whether to enable the workflow instance UI. This parameter takes effect only if Profile is set to XFlow. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder argoServerEnabled(Boolean argoServerEnabled) {
                 this.argoServerEnabled = argoServerEnabled;
@@ -1045,7 +1464,7 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * PriceLimit.
+             * The limit on the prices of containers in the workflow. This parameter takes effect only if the WorkflowScheduleMode parameter is set to cost-optimized.
              */
             public Builder priceLimit(String priceLimit) {
                 this.priceLimit = priceLimit;
@@ -1053,7 +1472,11 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * WorkflowScheduleMode.
+             * The scheduling mode of the workflow. This parameter takes effect only if Profile is set to XFlow. Valid values:
+             * <p>
+             * 
+             * *   cost-optimized: cost-prioritized scheduling mode.
+             * *   stock-optimized: inventory-prioritized scheduling mode.
              */
             public Builder workflowScheduleMode(String workflowScheduleMode) {
                 this.workflowScheduleMode = workflowScheduleMode;
@@ -1061,7 +1484,7 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * WorkflowUnits.
+             * The Argo workflow regions  configuration.
              */
             public Builder workflowUnits(java.util.List < WorkflowUnits> workflowUnits) {
                 this.workflowUnits = workflowUnits;
@@ -1242,7 +1665,7 @@ public class DescribeHubClusterDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * WorkflowConfig.
+             * The Argo workflow configuration.
              */
             public Builder workflowConfig(WorkflowConfig workflowConfig) {
                 this.workflowConfig = workflowConfig;

@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.adcp20220101;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.adcp20220101.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -58,6 +59,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GrantUserPermissionResponse> grantUserPermission(GrantUserPermissionRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<GrantUserPermissionsResponse> grantUserPermissions(GrantUserPermissionsRequest request);
 
     CompletableFuture<UpdateHubClusterFeatureResponse> updateHubClusterFeature(UpdateHubClusterFeatureRequest request);

@@ -50,7 +50,7 @@ public class DescribeHubClustersResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Clusters.
+         * The information about clusters.
          */
         public Builder clusters(java.util.List < Clusters> clusters) {
             this.clusters = clusters;
@@ -58,7 +58,7 @@ public class DescribeHubClustersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             private String loadBalancerId; 
 
             /**
-             * ApiServerEipId.
+             * The elastic IP address (EIP) ID.
              */
             public Builder apiServerEipId(String apiServerEipId) {
                 this.apiServerEipId = apiServerEipId;
@@ -130,7 +130,11 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             }
 
             /**
-             * EnabledPublic.
+             * Indicates whether public endpoint is enabled for the API server. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder enabledPublic(Boolean enabledPublic) {
                 this.enabledPublic = enabledPublic;
@@ -138,7 +142,7 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             }
 
             /**
-             * LoadBalancerId.
+             * The ID of the Server Load Balancer (SLB) instance that is associated with the cluster.
              */
             public Builder loadBalancerId(String loadBalancerId) {
                 this.loadBalancerId = loadBalancerId;
@@ -174,6 +178,9 @@ public class DescribeHubClustersResponseBody extends TeaModel {
         @NameInMap("RegionId")
         private String regionId;
 
+        @NameInMap("ResourceGroupID")
+        private String resourceGroupID;
+
         @NameInMap("State")
         private String state;
 
@@ -191,6 +198,7 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             this.name = builder.name;
             this.profile = builder.profile;
             this.regionId = builder.regionId;
+            this.resourceGroupID = builder.resourceGroupID;
             this.state = builder.state;
             this.updateTime = builder.updateTime;
             this.version = builder.version;
@@ -254,6 +262,13 @@ public class DescribeHubClustersResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupID
+         */
+        public String getResourceGroupID() {
+            return this.resourceGroupID;
+        }
+
+        /**
          * @return state
          */
         public String getState() {
@@ -282,12 +297,13 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             private String name; 
             private String profile; 
             private String regionId; 
+            private String resourceGroupID; 
             private String state; 
             private String updateTime; 
             private String version; 
 
             /**
-             * ClusterId.
+             * The cluster ID.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -295,7 +311,10 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterSpec.
+             * The specification of the cluster.
+             * <p>
+             * 
+             * *   Only ack.pro.small is returned.
              */
             public Builder clusterSpec(String clusterSpec) {
                 this.clusterSpec = clusterSpec;
@@ -303,7 +322,7 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * The time when the cluster was created.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -311,7 +330,7 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * The error message that is returned if the cluster failed to be created.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -319,7 +338,7 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the cluster.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -327,7 +346,7 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Profile.
+             * The configurations of the cluster.
              */
             public Builder profile(String profile) {
                 this.profile = profile;
@@ -335,7 +354,7 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -343,7 +362,24 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * The ID of Resource Group.
+             */
+            public Builder resourceGroupID(String resourceGroupID) {
+                this.resourceGroupID = resourceGroupID;
+                return this;
+            }
+
+            /**
+             * The status of the cluster. Valid values:
+             * <p>
+             * 
+             * *   initial: The cluster is being initialized.
+             * *   failed: The cluster failed to be created.
+             * *   running: The cluster is running
+             * *   inactive: The cluster is pending.
+             * *   deleting: The cluster is being deleted.
+             * *   delete_failed: The cluster failed to be deleted.
+             * *   deleted: The cluster is deleted.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -351,7 +387,7 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The time when the cluster was last updated.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -359,7 +395,7 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * The Kubernetes version of the cluster.
              */
             public Builder version(String version) {
                 this.version = version;
@@ -436,7 +472,7 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Message.
+             * The error message that is returned.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -444,7 +480,7 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * The reason for the deletion condition.
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -452,7 +488,12 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the cluster that the deletion condition indicates. Valid values:
+             * <p>
+             * 
+             * *   True: The cluster cannot be deleted.
+             * *   False: The cluster can be deleted.
+             * *   Unknow: Whether the cluster can be deleted is unknown.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -460,7 +501,7 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of deletion condition.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -513,7 +554,7 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             private String publicApiServerEndpoint; 
 
             /**
-             * IntranetApiServerEndpoint.
+             * The internal endpoint of the API server.
              */
             public Builder intranetApiServerEndpoint(String intranetApiServerEndpoint) {
                 this.intranetApiServerEndpoint = intranetApiServerEndpoint;
@@ -521,7 +562,7 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             }
 
             /**
-             * PublicApiServerEndpoint.
+             * The public endpoint of the API server.
              */
             public Builder publicApiServerEndpoint(String publicApiServerEndpoint) {
                 this.publicApiServerEndpoint = publicApiServerEndpoint;
@@ -586,7 +627,11 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             private String logStoreTTL; 
 
             /**
-             * EnableLog.
+             * Indicates whether the audit logging feature is enabled. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder enableLog(Boolean enableLog) {
                 this.enableLog = enableLog;
@@ -594,7 +639,7 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             }
 
             /**
-             * LogProject.
+             * The name of the project in Simple Log Service.
              */
             public Builder logProject(String logProject) {
                 this.logProject = logProject;
@@ -602,7 +647,7 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             }
 
             /**
-             * LogStoreTTL.
+             * The number of days that logs are retained by Simple Log Service.
              */
             public Builder logStoreTTL(String logStoreTTL) {
                 this.logStoreTTL = logStoreTTL;
@@ -655,7 +700,11 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             private String meshId; 
 
             /**
-             * EnableMesh.
+             * Indicates whether ASM is enabled. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder enableMesh(Boolean enableMesh) {
                 this.enableMesh = enableMesh;
@@ -663,7 +712,7 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             }
 
             /**
-             * MeshId.
+             * The ASM instance ID.
              */
             public Builder meshId(String meshId) {
                 this.meshId = meshId;
@@ -740,7 +789,7 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * ClusterDomain.
+             * The domain name of the cluster.
              */
             public Builder clusterDomain(String clusterDomain) {
                 this.clusterDomain = clusterDomain;
@@ -748,7 +797,7 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroupIDs.
+             * The security group IDs.
              */
             public Builder securityGroupIDs(java.util.List < String > securityGroupIDs) {
                 this.securityGroupIDs = securityGroupIDs;
@@ -756,7 +805,7 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitches.
+             * The IDs of vSwitches to which the cluster belongs.
              */
             public Builder vSwitches(java.util.List < String > vSwitches) {
                 this.vSwitches = vSwitches;
@@ -764,7 +813,7 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * The ID of the virtual private cloud (VPC) to which the cluster belongs.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -877,7 +926,7 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             private Network network; 
 
             /**
-             * ApiServer.
+             * The information about the API server.
              */
             public Builder apiServer(ApiServer apiServer) {
                 this.apiServer = apiServer;
@@ -885,7 +934,7 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterInfo.
+             * The details of the cluster.
              */
             public Builder clusterInfo(ClusterInfo clusterInfo) {
                 this.clusterInfo = clusterInfo;
@@ -893,7 +942,7 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Conditions.
+             * The deletion conditions of the cluster.
              */
             public Builder conditions(java.util.List < Conditions> conditions) {
                 this.conditions = conditions;
@@ -901,7 +950,7 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Endpoints.
+             * The endpoint of the cluster.
              */
             public Builder endpoints(Endpoints endpoints) {
                 this.endpoints = endpoints;
@@ -909,7 +958,7 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             }
 
             /**
-             * LogConfig.
+             * The logging configurations.
              */
             public Builder logConfig(LogConfig logConfig) {
                 this.logConfig = logConfig;
@@ -917,7 +966,7 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             }
 
             /**
-             * MeshConfig.
+             * The configurations of Alibaba Cloud Service Mesh (ASM).
              */
             public Builder meshConfig(MeshConfig meshConfig) {
                 this.meshConfig = meshConfig;
@@ -925,7 +974,7 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Network.
+             * The network configurations of the cluster.
              */
             public Builder network(Network network) {
                 this.network = network;

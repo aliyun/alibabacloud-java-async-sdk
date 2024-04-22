@@ -182,7 +182,7 @@ public class GrantUserPermissionsRequest extends Request {
             }
 
             /**
-             * IsRamRole.
+             * The entity to which the permissions are granted. A value of `true` indicates that the permissions are granted to a RAM user. A value of `false` indicates that the permissions are granted to a RAM role.
              */
             public Builder isRamRole(Boolean isRamRole) {
                 this.isRamRole = isRamRole;

@@ -50,7 +50,7 @@ public class DescribePolicyDetailsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Detailed information about the policy.
+         * The policies.
          */
         public Builder policy(Policy policy) {
             this.policy = policy;
@@ -242,7 +242,7 @@ public class DescribePolicyDetailsResponseBody extends TeaModel {
              * <p>
              * 
              * *   0: Parameters are required.
-             * *   1: Parameters are optional.
+             * *   1: Parameters are not required.
              */
             public Builder noConfig(Integer noConfig) {
                 this.noConfig = noConfig;
