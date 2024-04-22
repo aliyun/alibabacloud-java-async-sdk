@@ -308,11 +308,11 @@ public class DownloadSQLLogsRecordsRequest extends Request {
         }
 
         /**
-         * The execution state of the SQL statement.
+         * The execution status of the SQL statement.
          * <p>
          * 
-         * *   **success**
-         * *   **fail**
+         * *   **1**: successful.
+         * *   **0**: failed.
          */
         public Builder executeState(String executeState) {
             this.putQueryParameter("ExecuteState", executeState);

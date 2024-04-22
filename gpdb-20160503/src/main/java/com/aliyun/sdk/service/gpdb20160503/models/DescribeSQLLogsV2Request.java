@@ -313,7 +313,7 @@ public class DescribeSQLLogsV2Request extends Request {
         }
 
         /**
-         * The execution duration of the query. Unit: seconds.
+         * The execution duration of the SQL statement. Unit: seconds.
          */
         public Builder executeCost(String executeCost) {
             this.putQueryParameter("ExecuteCost", executeCost);
@@ -322,11 +322,11 @@ public class DescribeSQLLogsV2Request extends Request {
         }
 
         /**
-         * The execution state of the query. Valid values:
+         * The execution status of the SQL statement. Valid values:
          * <p>
          * 
-         * *   **success**
-         * *   **fail**
+         * *   **1**: successful.
+         * *   **0**: failed.
          */
         public Builder executeState(String executeState) {
             this.putQueryParameter("ExecuteState", executeState);

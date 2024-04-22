@@ -306,7 +306,7 @@ public class DescribeSQLLogsV2ResponseBody extends TeaModel {
             }
 
             /**
-             * The execution duration of the query.
+             * The execution duration of the SQL statement.
              */
             public Builder executeCost(Float executeCost) {
                 this.executeCost = executeCost;
@@ -314,7 +314,7 @@ public class DescribeSQLLogsV2ResponseBody extends TeaModel {
             }
 
             /**
-             * The execution state of the query. Valid values:
+             * The execution status of the SQL statement. Valid values:
              * <p>
              * 
              * *   **success**

@@ -31,6 +31,14 @@ public class QueryCollectionDataRequest extends Request {
     private String filter;
 
     @Query
+    @NameInMap("HybridSearch")
+    private String hybridSearch;
+
+    @Query
+    @NameInMap("HybridSearchArgs")
+    private java.util.Map < String, java.util.Map<String, ?>> hybridSearchArgs;
+
+    @Query
     @NameInMap("IncludeValues")
     private Boolean includeValues;
 
@@ -71,6 +79,8 @@ public class QueryCollectionDataRequest extends Request {
         this.content = builder.content;
         this.DBInstanceId = builder.DBInstanceId;
         this.filter = builder.filter;
+        this.hybridSearch = builder.hybridSearch;
+        this.hybridSearchArgs = builder.hybridSearchArgs;
         this.includeValues = builder.includeValues;
         this.metrics = builder.metrics;
         this.namespace = builder.namespace;
@@ -120,6 +130,20 @@ public class QueryCollectionDataRequest extends Request {
      */
     public String getFilter() {
         return this.filter;
+    }
+
+    /**
+     * @return hybridSearch
+     */
+    public String getHybridSearch() {
+        return this.hybridSearch;
+    }
+
+    /**
+     * @return hybridSearchArgs
+     */
+    public java.util.Map < String, java.util.Map<String, ?>> getHybridSearchArgs() {
+        return this.hybridSearchArgs;
     }
 
     /**
@@ -183,6 +207,8 @@ public class QueryCollectionDataRequest extends Request {
         private String content; 
         private String DBInstanceId; 
         private String filter; 
+        private String hybridSearch; 
+        private java.util.Map < String, java.util.Map<String, ?>> hybridSearchArgs; 
         private Boolean includeValues; 
         private String metrics; 
         private String namespace; 
@@ -202,6 +228,8 @@ public class QueryCollectionDataRequest extends Request {
             this.content = request.content;
             this.DBInstanceId = request.DBInstanceId;
             this.filter = request.filter;
+            this.hybridSearch = request.hybridSearch;
+            this.hybridSearchArgs = request.hybridSearchArgs;
             this.includeValues = request.includeValues;
             this.metrics = request.metrics;
             this.namespace = request.namespace;
@@ -245,6 +273,25 @@ public class QueryCollectionDataRequest extends Request {
         public Builder filter(String filter) {
             this.putQueryParameter("Filter", filter);
             this.filter = filter;
+            return this;
+        }
+
+        /**
+         * HybridSearch.
+         */
+        public Builder hybridSearch(String hybridSearch) {
+            this.putQueryParameter("HybridSearch", hybridSearch);
+            this.hybridSearch = hybridSearch;
+            return this;
+        }
+
+        /**
+         * HybridSearchArgs.
+         */
+        public Builder hybridSearchArgs(java.util.Map < String, java.util.Map<String, ?>> hybridSearchArgs) {
+            String hybridSearchArgsShrink = shrink(hybridSearchArgs, "HybridSearchArgs", "json");
+            this.putQueryParameter("HybridSearchArgs", hybridSearchArgsShrink);
+            this.hybridSearchArgs = hybridSearchArgs;
             return this;
         }
 
