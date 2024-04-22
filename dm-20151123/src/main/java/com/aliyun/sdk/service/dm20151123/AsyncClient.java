@@ -37,6 +37,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateTagResponse> createTag(CreateTagRequest request);
 
+    CompletableFuture<CreateUserSuppressionResponse> createUserSuppression(CreateUserSuppressionRequest request);
+
     CompletableFuture<DeleteDomainResponse> deleteDomain(DeleteDomainRequest request);
 
     CompletableFuture<DeleteInvalidAddressResponse> deleteInvalidAddress(DeleteInvalidAddressRequest request);
@@ -59,9 +61,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetIpfilterListResponse> getIpfilterList(GetIpfilterListRequest request);
 
+    CompletableFuture<GetSuppressionListLevelResponse> getSuppressionListLevel(GetSuppressionListLevelRequest request);
+
     CompletableFuture<GetTrackListResponse> getTrackList(GetTrackListRequest request);
 
     CompletableFuture<GetTrackListByMailFromAndTagNameResponse> getTrackListByMailFromAndTagName(GetTrackListByMailFromAndTagNameRequest request);
+
+    CompletableFuture<ListUserSuppressionResponse> listUserSuppression(ListUserSuppressionRequest request);
 
     CompletableFuture<ModifyMailAddressResponse> modifyMailAddress(ModifyMailAddressRequest request);
 
@@ -83,6 +89,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<QueryTaskByParamResponse> queryTaskByParam(QueryTaskByParamRequest request);
 
+    CompletableFuture<RemoveUserSuppressionResponse> removeUserSuppression(RemoveUserSuppressionRequest request);
+
     CompletableFuture<SaveReceiverDetailResponse> saveReceiverDetail(SaveReceiverDetailRequest request);
 
     CompletableFuture<SendTestByTemplateResponse> sendTestByTemplate(SendTestByTemplateRequest request);
@@ -90,6 +98,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SenderStatisticsByTagNameAndBatchIDResponse> senderStatisticsByTagNameAndBatchID(SenderStatisticsByTagNameAndBatchIDRequest request);
 
     CompletableFuture<SenderStatisticsDetailByParamResponse> senderStatisticsDetailByParam(SenderStatisticsDetailByParamRequest request);
+
+    CompletableFuture<SetSuppressionListLevelResponse> setSuppressionListLevel(SetSuppressionListLevelRequest request);
 
     CompletableFuture<SingleSendMailResponse> singleSendMail(SingleSendMailRequest request);
 

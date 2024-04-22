@@ -95,6 +95,9 @@ public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
         @NameInMap("AccountName")
         private String accountName;
 
+        @NameInMap("ErrorClassification")
+        private String errorClassification;
+
         @NameInMap("LastUpdateTime")
         private String lastUpdateTime;
 
@@ -115,6 +118,7 @@ public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
 
         private MailDetail(Builder builder) {
             this.accountName = builder.accountName;
+            this.errorClassification = builder.errorClassification;
             this.lastUpdateTime = builder.lastUpdateTime;
             this.message = builder.message;
             this.status = builder.status;
@@ -136,6 +140,13 @@ public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
          */
         public String getAccountName() {
             return this.accountName;
+        }
+
+        /**
+         * @return errorClassification
+         */
+        public String getErrorClassification() {
+            return this.errorClassification;
         }
 
         /**
@@ -182,6 +193,7 @@ public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
 
         public static final class Builder {
             private String accountName; 
+            private String errorClassification; 
             private String lastUpdateTime; 
             private String message; 
             private Integer status; 
@@ -194,6 +206,14 @@ public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
+                return this;
+            }
+
+            /**
+             * ErrorClassification.
+             */
+            public Builder errorClassification(String errorClassification) {
+                this.errorClassification = errorClassification;
                 return this;
             }
 
