@@ -909,7 +909,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * IOPS。
+             * IOPS.
              */
             public Builder iops(Long iops) {
                 this.iops = iops;

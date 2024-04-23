@@ -829,7 +829,7 @@ public class GetDiskResponseBody extends TeaModel {
             }
 
             /**
-             * IOPS。
+             * IOPS.
              */
             public Builder iops(Long iops) {
                 this.iops = iops;
