@@ -32,6 +32,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<CreateArtifactBuildRuleResponse> createArtifactBuildRule(CreateArtifactBuildRuleRequest request);
 
+    CompletableFuture<CreateArtifactLifecycleRuleResponse> createArtifactLifecycleRule(CreateArtifactLifecycleRuleRequest request);
+
     CompletableFuture<CreateBuildRecordByRecordResponse> createBuildRecordByRecord(CreateBuildRecordByRecordRequest request);
 
     CompletableFuture<CreateBuildRecordByRuleResponse> createBuildRecordByRule(CreateBuildRecordByRuleRequest request);
@@ -69,6 +71,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateRepoTriggerResponse> createRepoTrigger(CreateRepoTriggerRequest request);
 
     CompletableFuture<CreateRepositoryResponse> createRepository(CreateRepositoryRequest request);
+
+    CompletableFuture<DeleteArtifactLifecycleRuleResponse> deleteArtifactLifecycleRule(DeleteArtifactLifecycleRuleRequest request);
 
     CompletableFuture<DeleteChainResponse> deleteChain(DeleteChainRequest request);
 
@@ -111,6 +115,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetArtifactBuildRuleResponse> getArtifactBuildRule(GetArtifactBuildRuleRequest request);
 
     CompletableFuture<GetArtifactBuildTaskResponse> getArtifactBuildTask(GetArtifactBuildTaskRequest request);
+
+    CompletableFuture<GetArtifactLifecycleRuleResponse> getArtifactLifecycleRule(GetArtifactLifecycleRuleRequest request);
 
     /**
       * The ID of the Container Registry instance.
@@ -161,6 +167,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetRepositoryResponse> getRepository(GetRepositoryRequest request);
 
     CompletableFuture<ListArtifactBuildTaskLogResponse> listArtifactBuildTaskLog(ListArtifactBuildTaskLogRequest request);
+
+    CompletableFuture<ListArtifactLifecycleRuleResponse> listArtifactLifecycleRule(ListArtifactLifecycleRuleRequest request);
 
     CompletableFuture<ListChainResponse> listChain(ListChainRequest request);
 
@@ -213,6 +221,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
 
     CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);
+
+    CompletableFuture<UpdateArtifactLifecycleRuleResponse> updateArtifactLifecycleRule(UpdateArtifactLifecycleRuleRequest request);
 
     CompletableFuture<UpdateChainResponse> updateChain(UpdateChainRequest request);
 
