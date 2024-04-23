@@ -7,23 +7,29 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetFunctionCodeRequest} extends {@link RequestModel}
+ * {@link GetAsyncTaskRequest} extends {@link RequestModel}
  *
- * <p>GetFunctionCodeRequest</p>
+ * <p>GetAsyncTaskRequest</p>
  */
-public class GetFunctionCodeRequest extends Request {
+public class GetAsyncTaskRequest extends Request {
     @Path
     @NameInMap("functionName")
     @Validation(required = true)
     private String functionName;
 
+    @Path
+    @NameInMap("taskId")
+    @Validation(required = true)
+    private String taskId;
+
     @Query
     @NameInMap("qualifier")
     private String qualifier;
 
-    private GetFunctionCodeRequest(Builder builder) {
+    private GetAsyncTaskRequest(Builder builder) {
         super(builder);
         this.functionName = builder.functionName;
+        this.taskId = builder.taskId;
         this.qualifier = builder.qualifier;
     }
 
@@ -31,7 +37,7 @@ public class GetFunctionCodeRequest extends Request {
         return new Builder();
     }
 
-    public static GetFunctionCodeRequest create() {
+    public static GetAsyncTaskRequest create() {
         return builder().build();
     }
 
@@ -48,28 +54,37 @@ public class GetFunctionCodeRequest extends Request {
     }
 
     /**
+     * @return taskId
+     */
+    public String getTaskId() {
+        return this.taskId;
+    }
+
+    /**
      * @return qualifier
      */
     public String getQualifier() {
         return this.qualifier;
     }
 
-    public static final class Builder extends Request.Builder<GetFunctionCodeRequest, Builder> {
+    public static final class Builder extends Request.Builder<GetAsyncTaskRequest, Builder> {
         private String functionName; 
+        private String taskId; 
         private String qualifier; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetFunctionCodeRequest request) {
+        private Builder(GetAsyncTaskRequest request) {
             super(request);
             this.functionName = request.functionName;
+            this.taskId = request.taskId;
             this.qualifier = request.qualifier;
         } 
 
         /**
-         * The function name.
+         * functionName.
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -78,7 +93,16 @@ public class GetFunctionCodeRequest extends Request {
         }
 
         /**
-         * The version or alias of the function.
+         * taskId.
+         */
+        public Builder taskId(String taskId) {
+            this.putPathParameter("taskId", taskId);
+            this.taskId = taskId;
+            return this;
+        }
+
+        /**
+         * qualifier.
          */
         public Builder qualifier(String qualifier) {
             this.putQueryParameter("qualifier", qualifier);
@@ -87,8 +111,8 @@ public class GetFunctionCodeRequest extends Request {
         }
 
         @Override
-        public GetFunctionCodeRequest build() {
-            return new GetFunctionCodeRequest(this);
+        public GetAsyncTaskRequest build() {
+            return new GetAsyncTaskRequest(this);
         } 
 
     } 

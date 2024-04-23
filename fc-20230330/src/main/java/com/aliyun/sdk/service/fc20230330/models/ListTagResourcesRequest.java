@@ -111,7 +111,7 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * Limit.
+         * The number of resources to return.
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("Limit", limit);
@@ -120,7 +120,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -129,7 +129,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The resource IDs.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             String resourceIdShrink = shrink(resourceId, "ResourceId", "json");
@@ -139,7 +139,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The resource type.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -148,7 +148,10 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags.
+         * <p>
+         * 
+         * You can query up to 20 tags at a time.
          */
         public Builder tag(java.util.List < Tag> tag) {
             String tagShrink = shrink(tag, "Tag", "json");
@@ -203,7 +206,10 @@ public class ListTagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * 标签名
+             * The tag key.
+             * <p>
+             * 
+             * The tag key can be up to 64 characters in length, and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -211,7 +217,10 @@ public class ListTagResourcesRequest extends Request {
             }
 
             /**
-             * 标签值
+             * The tag value.
+             * <p>
+             * 
+             * The tag value can be up to 128 characters in length and can be an empty string.
              */
             public Builder value(String value) {
                 this.value = value;

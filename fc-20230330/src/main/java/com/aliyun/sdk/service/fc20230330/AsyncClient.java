@@ -55,6 +55,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetAsyncInvokeConfigResponse> getAsyncInvokeConfig(GetAsyncInvokeConfigRequest request);
 
+    CompletableFuture<GetAsyncTaskResponse> getAsyncTask(GetAsyncTaskRequest request);
+
     CompletableFuture<GetConcurrencyConfigResponse> getConcurrencyConfig(GetConcurrencyConfigRequest request);
 
     CompletableFuture<GetCustomDomainResponse> getCustomDomain(GetCustomDomainRequest request);
@@ -80,6 +82,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListAliasesResponse> listAliases(ListAliasesRequest request);
 
     CompletableFuture<ListAsyncInvokeConfigsResponse> listAsyncInvokeConfigs(ListAsyncInvokeConfigsRequest request);
+
+    CompletableFuture<ListAsyncTasksResponse> listAsyncTasks(ListAsyncTasksRequest request);
 
     CompletableFuture<ListConcurrencyConfigsResponse> listConcurrencyConfigs(ListConcurrencyConfigsRequest request);
 
@@ -112,6 +116,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<PutLayerACLResponse> putLayerACL(PutLayerACLRequest request);
 
     CompletableFuture<PutProvisionConfigResponse> putProvisionConfig(PutProvisionConfigRequest request);
+
+    CompletableFuture<StopAsyncTaskResponse> stopAsyncTask(StopAsyncTaskRequest request);
 
     CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
 

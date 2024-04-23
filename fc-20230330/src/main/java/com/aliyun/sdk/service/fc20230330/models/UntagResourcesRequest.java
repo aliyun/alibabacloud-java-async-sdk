@@ -98,7 +98,7 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * All.
+         * Specifies whether to delete all tags.
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -107,7 +107,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The resource identifiers.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             String resourceIdShrink = shrink(resourceId, "ResourceId", "json");
@@ -117,7 +117,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The resource type.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -126,7 +126,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * TagKey.
+         * The tag to remove. You can specify a maximum of 50 tags.
          */
         public Builder tagKey(java.util.List < String > tagKey) {
             String tagKeyShrink = shrink(tagKey, "TagKey", "json");

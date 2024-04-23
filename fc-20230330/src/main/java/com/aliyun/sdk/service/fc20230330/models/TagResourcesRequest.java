@@ -55,7 +55,7 @@ public class TagResourcesRequest extends Request {
         } 
 
         /**
-         * body.
+         * The configuration of the resource tag.
          */
         public Builder body(TagResourcesInput body) {
             this.putBodyParameter("body", body);
