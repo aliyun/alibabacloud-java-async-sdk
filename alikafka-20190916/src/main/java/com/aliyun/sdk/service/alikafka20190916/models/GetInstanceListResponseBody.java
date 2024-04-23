@@ -731,6 +731,9 @@ public class GetInstanceListResponseBody extends TeaModel {
         @NameInMap("SecurityGroup")
         private String securityGroup;
 
+        @NameInMap("Series")
+        private String series;
+
         @NameInMap("ServiceStatus")
         private Integer serviceStatus;
 
@@ -802,6 +805,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             this.resourceGroupId = builder.resourceGroupId;
             this.saslDomainEndpoint = builder.saslDomainEndpoint;
             this.securityGroup = builder.securityGroup;
+            this.series = builder.series;
             this.serviceStatus = builder.serviceStatus;
             this.specType = builder.specType;
             this.sslDomainEndpoint = builder.sslDomainEndpoint;
@@ -1003,6 +1007,13 @@ public class GetInstanceListResponseBody extends TeaModel {
         }
 
         /**
+         * @return series
+         */
+        public String getSeries() {
+            return this.series;
+        }
+
+        /**
          * @return serviceStatus
          */
         public Integer getServiceStatus() {
@@ -1133,6 +1144,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             private String resourceGroupId; 
             private String saslDomainEndpoint; 
             private String securityGroup; 
+            private String series; 
             private Integer serviceStatus; 
             private String specType; 
             private String sslDomainEndpoint; 
@@ -1374,6 +1386,14 @@ public class GetInstanceListResponseBody extends TeaModel {
              */
             public Builder securityGroup(String securityGroup) {
                 this.securityGroup = securityGroup;
+                return this;
+            }
+
+            /**
+             * Series.
+             */
+            public Builder series(String series) {
+                this.series = series;
                 return this;
             }
 

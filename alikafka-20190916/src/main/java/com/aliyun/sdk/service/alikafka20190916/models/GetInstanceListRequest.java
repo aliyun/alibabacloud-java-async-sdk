@@ -30,6 +30,10 @@ public class GetInstanceListRequest extends Request {
     private String resourceGroupId;
 
     @Query
+    @NameInMap("Series")
+    private String series;
+
+    @Query
     @NameInMap("Tag")
     private java.util.List < Tag> tag;
 
@@ -39,6 +43,7 @@ public class GetInstanceListRequest extends Request {
         this.orderId = builder.orderId;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
+        this.series = builder.series;
         this.tag = builder.tag;
     }
 
@@ -84,6 +89,13 @@ public class GetInstanceListRequest extends Request {
     }
 
     /**
+     * @return series
+     */
+    public String getSeries() {
+        return this.series;
+    }
+
+    /**
      * @return tag
      */
     public java.util.List < Tag> getTag() {
@@ -95,6 +107,7 @@ public class GetInstanceListRequest extends Request {
         private String orderId; 
         private String regionId; 
         private String resourceGroupId; 
+        private String series; 
         private java.util.List < Tag> tag; 
 
         private Builder() {
@@ -107,6 +120,7 @@ public class GetInstanceListRequest extends Request {
             this.orderId = request.orderId;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
+            this.series = request.series;
             this.tag = request.tag;
         } 
 
@@ -143,6 +157,15 @@ public class GetInstanceListRequest extends Request {
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
             this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * Series.
+         */
+        public Builder series(String series) {
+            this.putQueryParameter("Series", series);
+            this.series = series;
             return this;
         }
 

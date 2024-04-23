@@ -187,11 +187,13 @@ public class DeleteAclRequest extends Request {
         } 
 
         /**
-         * The operation type. Valid values:
+         * The operation allowed by the access control list (ACL). Valid values:
          * <p>
          * 
-         * *   **Write**
-         * *   **Read**
+         * *   **Write**: data writes
+         * *   **Read**: data reads
+         * *   **Describe**: reads of transactional IDs
+         * *   **IdempotentWrite**: idempotent data writes to clusters
          */
         public Builder aclOperationType(String aclOperationType) {
             this.putQueryParameter("AclOperationType", aclOperationType);
@@ -200,7 +202,17 @@ public class DeleteAclRequest extends Request {
         }
 
         /**
-         * AclOperationTypes.
+         * The operations allowed by the ACL. Separate multiple operations with commas (,).
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   **Write**: data writes
+         * *   **Read**: data reads
+         * *   **Describe**: reads of **transactional IDs**
+         * *   **IdempotentWrite**: idempotent data writes to **clusters**
+         * 
+         * >  This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.
          */
         public Builder aclOperationTypes(String aclOperationTypes) {
             this.putQueryParameter("AclOperationTypes", aclOperationTypes);
@@ -209,7 +221,13 @@ public class DeleteAclRequest extends Request {
         }
 
         /**
-         * AclPermissionType.
+         * The authorization method. Valid values:
+         * <p>
+         * 
+         * *   Deny
+         * *   ALLOW
+         * 
+         * >  This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.
          */
         public Builder aclPermissionType(String aclPermissionType) {
             this.putQueryParameter("AclPermissionType", aclPermissionType);
@@ -244,11 +262,13 @@ public class DeleteAclRequest extends Request {
         }
 
         /**
-         * The type of the resource.
+         * The resource type. Valid values:
          * <p>
          * 
-         * *   **Topic**
-         * *   **Group**
+         * *   **Topic**: topic
+         * *   **Group**: consumer group
+         * *   **Cluster**: cluster
+         * *   **TransactionalId**: transactional ID
          */
         public Builder aclResourceType(String aclResourceType) {
             this.putQueryParameter("AclResourceType", aclResourceType);
@@ -257,7 +277,7 @@ public class DeleteAclRequest extends Request {
         }
 
         /**
-         * Host.
+         * The IP address of the source.
          */
         public Builder host(String host) {
             this.putQueryParameter("Host", host);

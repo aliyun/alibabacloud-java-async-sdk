@@ -137,7 +137,15 @@ public class CreateSaslUserRequest extends Request {
         }
 
         /**
-         * Mechanism.
+         * The encryption method. Valid values:
+         * <p>
+         * 
+         * *   SCRAM-SHA-512 (default)
+         * *   SCRAM-SHA-256
+         * 
+         * > 
+         * 
+         * *   This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.
          */
         public Builder mechanism(String mechanism) {
             this.putQueryParameter("Mechanism", mechanism);

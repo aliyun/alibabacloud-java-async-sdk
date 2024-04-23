@@ -101,6 +101,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<ReleaseInstanceResponse> releaseInstance(ReleaseInstanceRequest request);
 
+    /**
+      * You can call this operation only if your instance is in the Stopped state.
+      *
+     */
     CompletableFuture<ReopenInstanceResponse> reopenInstance(ReopenInstanceRequest request);
 
     /**
@@ -109,6 +113,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<StartInstanceResponse> startInstance(StartInstanceRequest request);
 
+    /**
+      * You cannot stop a subscription ApsaraMQ for Kafka instance. If you want to stop a subscription ApsaraMQ for Kafka instance, submit a ticket.
+      *
+     */
     CompletableFuture<StopInstanceResponse> stopInstance(StopInstanceRequest request);
 
     CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);

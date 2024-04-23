@@ -138,7 +138,7 @@ public class GetConsumerListResponseBody extends TeaModel {
         }
 
         /**
-         * CurrentPage.
+         * The number of the page to return. Pages start from page 1.
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -154,7 +154,7 @@ public class GetConsumerListResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -178,7 +178,7 @@ public class GetConsumerListResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * The total number of entries returned.
          */
         public Builder total(Long total) {
             this.total = total;
@@ -380,7 +380,7 @@ public class GetConsumerListResponseBody extends TeaModel {
             private Tags tags; 
 
             /**
-             * The consumer group that is automatically created by the system.
+             * Indicates that the consumer group was automatically created by the system.
              */
             public Builder automaticallyCreatedGroup(Boolean automaticallyCreatedGroup) {
                 this.automaticallyCreatedGroup = automaticallyCreatedGroup;
@@ -388,7 +388,7 @@ public class GetConsumerListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the consumer group.
+             * The consumer group ID.
              */
             public Builder consumerId(String consumerId) {
                 this.consumerId = consumerId;
@@ -404,7 +404,7 @@ public class GetConsumerListResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * The ID of the region where the instance resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -412,7 +412,7 @@ public class GetConsumerListResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the consumer group.
+             * The instance description.
              */
             public Builder remark(String remark) {
                 this.remark = remark;

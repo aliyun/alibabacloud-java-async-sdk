@@ -121,7 +121,7 @@ public class GetConsumerListRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The page number.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -139,7 +139,7 @@ public class GetConsumerListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to be returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

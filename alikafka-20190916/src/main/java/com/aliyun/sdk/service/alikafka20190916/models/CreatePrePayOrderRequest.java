@@ -439,57 +439,75 @@ public class CreatePrePayOrderRequest extends Request {
 
     public static class ConfluentConfig extends TeaModel {
         @NameInMap("ConnectCU")
+        @Validation(maximum = 20, minimum = 4)
         private Integer connectCU;
 
         @NameInMap("ConnectReplica")
+        @Validation(maximum = 20, minimum = 1)
         private Integer connectReplica;
 
         @NameInMap("ControlCenterCU")
+        @Validation(maximum = 20, minimum = 4)
         private Integer controlCenterCU;
 
         @NameInMap("ControlCenterReplica")
+        @Validation(maximum = 1, minimum = 1)
         private Integer controlCenterReplica;
 
         @NameInMap("ControlCenterStorage")
+        @Validation(maximum = 30000, minimum = 300)
         private Integer controlCenterStorage;
 
         @NameInMap("KafkaCU")
+        @Validation(maximum = 20, minimum = 4)
         private Integer kafkaCU;
 
         @NameInMap("KafkaReplica")
+        @Validation(maximum = 20, minimum = 3)
         private Integer kafkaReplica;
 
         @NameInMap("KafkaRestProxyCU")
+        @Validation(maximum = 20, minimum = 4)
         private Integer kafkaRestProxyCU;
 
         @NameInMap("KafkaRestProxyReplica")
+        @Validation(maximum = 20, minimum = 2)
         private Integer kafkaRestProxyReplica;
 
         @NameInMap("KafkaStorage")
+        @Validation(maximum = 30000, minimum = 800)
         private Integer kafkaStorage;
 
         @NameInMap("KsqlCU")
+        @Validation(maximum = 20, minimum = 1)
         private Integer ksqlCU;
 
         @NameInMap("KsqlReplica")
+        @Validation(maximum = 20, minimum = 1)
         private Integer ksqlReplica;
 
         @NameInMap("KsqlStorage")
+        @Validation(maximum = 30000, minimum = 100)
         private Integer ksqlStorage;
 
         @NameInMap("SchemaRegistryCU")
+        @Validation(maximum = 20, minimum = 1)
         private Integer schemaRegistryCU;
 
         @NameInMap("SchemaRegistryReplica")
+        @Validation(maximum = 3, minimum = 2)
         private Integer schemaRegistryReplica;
 
         @NameInMap("ZooKeeperCU")
+        @Validation(maximum = 20, minimum = 2)
         private Integer zooKeeperCU;
 
         @NameInMap("ZooKeeperReplica")
+        @Validation(maximum = 3, minimum = 3)
         private Integer zooKeeperReplica;
 
         @NameInMap("ZooKeeperStorage")
+        @Validation(maximum = 30000, minimum = 100)
         private Integer zooKeeperStorage;
 
         private ConfluentConfig(Builder builder) {

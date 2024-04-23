@@ -505,6 +505,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You can call this operation only if your instance is in the Stopped state.
+      *
+     */
     @Override
     public CompletableFuture<ReopenInstanceResponse> reopenInstance(ReopenInstanceRequest request) {
         try {
@@ -537,6 +541,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You cannot stop a subscription ApsaraMQ for Kafka instance. If you want to stop a subscription ApsaraMQ for Kafka instance, submit a ticket.
+      *
+     */
     @Override
     public CompletableFuture<StopInstanceResponse> stopInstance(StopInstanceRequest request) {
         try {
