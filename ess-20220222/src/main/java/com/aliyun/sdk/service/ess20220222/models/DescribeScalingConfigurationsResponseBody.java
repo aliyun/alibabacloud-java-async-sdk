@@ -1006,6 +1006,9 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         @NameInMap("DataDisks")
         private java.util.List < DataDisks> dataDisks;
 
+        @NameInMap("DedicatedHostClusterId")
+        private String dedicatedHostClusterId;
+
         @NameInMap("DedicatedHostId")
         private String dedicatedHostId;
 
@@ -1196,6 +1199,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             this.creditSpecification = builder.creditSpecification;
             this.customPriorities = builder.customPriorities;
             this.dataDisks = builder.dataDisks;
+            this.dedicatedHostClusterId = builder.dedicatedHostClusterId;
             this.dedicatedHostId = builder.dedicatedHostId;
             this.deletionProtection = builder.deletionProtection;
             this.deploymentSetId = builder.deploymentSetId;
@@ -1307,6 +1311,13 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
          */
         public java.util.List < DataDisks> getDataDisks() {
             return this.dataDisks;
+        }
+
+        /**
+         * @return dedicatedHostClusterId
+         */
+        public String getDedicatedHostClusterId() {
+            return this.dedicatedHostClusterId;
         }
 
         /**
@@ -1743,6 +1754,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             private String creditSpecification; 
             private java.util.List < CustomPriorities> customPriorities; 
             private java.util.List < DataDisks> dataDisks; 
+            private String dedicatedHostClusterId; 
             private String dedicatedHostId; 
             private Boolean deletionProtection; 
             private String deploymentSetId; 
@@ -1863,6 +1875,14 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
              */
             public Builder dataDisks(java.util.List < DataDisks> dataDisks) {
                 this.dataDisks = dataDisks;
+                return this;
+            }
+
+            /**
+             * DedicatedHostClusterId.
+             */
+            public Builder dedicatedHostClusterId(String dedicatedHostClusterId) {
+                this.dedicatedHostClusterId = dedicatedHostClusterId;
                 return this;
             }
 

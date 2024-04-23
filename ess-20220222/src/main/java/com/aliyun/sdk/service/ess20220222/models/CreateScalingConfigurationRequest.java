@@ -49,6 +49,10 @@ public class CreateScalingConfigurationRequest extends Request {
     private java.util.List < DataDisks> dataDisks;
 
     @Query
+    @NameInMap("DedicatedHostClusterId")
+    private String dedicatedHostClusterId;
+
+    @Query
     @NameInMap("DedicatedHostId")
     private String dedicatedHostId;
 
@@ -248,6 +252,7 @@ public class CreateScalingConfigurationRequest extends Request {
         this.creditSpecification = builder.creditSpecification;
         this.customPriorities = builder.customPriorities;
         this.dataDisks = builder.dataDisks;
+        this.dedicatedHostClusterId = builder.dedicatedHostClusterId;
         this.dedicatedHostId = builder.dedicatedHostId;
         this.deletionProtection = builder.deletionProtection;
         this.deploymentSetId = builder.deploymentSetId;
@@ -371,6 +376,13 @@ public class CreateScalingConfigurationRequest extends Request {
      */
     public java.util.List < DataDisks> getDataDisks() {
         return this.dataDisks;
+    }
+
+    /**
+     * @return dedicatedHostClusterId
+     */
+    public String getDedicatedHostClusterId() {
+        return this.dedicatedHostClusterId;
     }
 
     /**
@@ -712,6 +724,7 @@ public class CreateScalingConfigurationRequest extends Request {
         private String creditSpecification; 
         private java.util.List < CustomPriorities> customPriorities; 
         private java.util.List < DataDisks> dataDisks; 
+        private String dedicatedHostClusterId; 
         private String dedicatedHostId; 
         private Boolean deletionProtection; 
         private String deploymentSetId; 
@@ -775,6 +788,7 @@ public class CreateScalingConfigurationRequest extends Request {
             this.creditSpecification = request.creditSpecification;
             this.customPriorities = request.customPriorities;
             this.dataDisks = request.dataDisks;
+            this.dedicatedHostClusterId = request.dedicatedHostClusterId;
             this.dedicatedHostId = request.dedicatedHostId;
             this.deletionProtection = request.deletionProtection;
             this.deploymentSetId = request.deploymentSetId;
@@ -928,6 +942,15 @@ public class CreateScalingConfigurationRequest extends Request {
         public Builder dataDisks(java.util.List < DataDisks> dataDisks) {
             this.putQueryParameter("DataDisks", dataDisks);
             this.dataDisks = dataDisks;
+            return this;
+        }
+
+        /**
+         * DedicatedHostClusterId.
+         */
+        public Builder dedicatedHostClusterId(String dedicatedHostClusterId) {
+            this.putQueryParameter("DedicatedHostClusterId", dedicatedHostClusterId);
+            this.dedicatedHostClusterId = dedicatedHostClusterId;
             return this;
         }
 

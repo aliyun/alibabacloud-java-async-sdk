@@ -45,6 +45,10 @@ public class CreateScalingGroupRequest extends Request {
     private String DBInstanceIds;
 
     @Query
+    @NameInMap("DBInstances")
+    private java.util.List < DBInstances> DBInstances;
+
+    @Query
     @NameInMap("DefaultCooldown")
     private Integer defaultCooldown;
 
@@ -201,6 +205,7 @@ public class CreateScalingGroupRequest extends Request {
         this.containerGroupId = builder.containerGroupId;
         this.customPolicyARN = builder.customPolicyARN;
         this.DBInstanceIds = builder.DBInstanceIds;
+        this.DBInstances = builder.DBInstances;
         this.defaultCooldown = builder.defaultCooldown;
         this.desiredCapacity = builder.desiredCapacity;
         this.groupDeletionProtection = builder.groupDeletionProtection;
@@ -306,6 +311,13 @@ public class CreateScalingGroupRequest extends Request {
      */
     public String getDBInstanceIds() {
         return this.DBInstanceIds;
+    }
+
+    /**
+     * @return DBInstances
+     */
+    public java.util.List < DBInstances> getDBInstances() {
+        return this.DBInstances;
     }
 
     /**
@@ -569,6 +581,7 @@ public class CreateScalingGroupRequest extends Request {
         private String containerGroupId; 
         private String customPolicyARN; 
         private String DBInstanceIds; 
+        private java.util.List < DBInstances> DBInstances; 
         private Integer defaultCooldown; 
         private Integer desiredCapacity; 
         private Boolean groupDeletionProtection; 
@@ -620,6 +633,7 @@ public class CreateScalingGroupRequest extends Request {
             this.containerGroupId = request.containerGroupId;
             this.customPolicyARN = request.customPolicyARN;
             this.DBInstanceIds = request.DBInstanceIds;
+            this.DBInstances = request.DBInstances;
             this.defaultCooldown = request.defaultCooldown;
             this.desiredCapacity = request.desiredCapacity;
             this.groupDeletionProtection = request.groupDeletionProtection;
@@ -748,6 +762,15 @@ public class CreateScalingGroupRequest extends Request {
         public Builder DBInstanceIds(String DBInstanceIds) {
             this.putQueryParameter("DBInstanceIds", DBInstanceIds);
             this.DBInstanceIds = DBInstanceIds;
+            return this;
+        }
+
+        /**
+         * DBInstances.
+         */
+        public Builder DBInstances(java.util.List < DBInstances> DBInstances) {
+            this.putQueryParameter("DBInstances", DBInstances);
+            this.DBInstances = DBInstances;
             return this;
         }
 
@@ -1269,6 +1292,87 @@ public class CreateScalingGroupRequest extends Request {
 
             public AlbServerGroups build() {
                 return new AlbServerGroups(this);
+            } 
+
+        } 
+
+    }
+    public static class DBInstances extends TeaModel {
+        @NameInMap("AttachMode")
+        private String attachMode;
+
+        @NameInMap("DBInstanceId")
+        private String DBInstanceId;
+
+        @NameInMap("Type")
+        private String type;
+
+        private DBInstances(Builder builder) {
+            this.attachMode = builder.attachMode;
+            this.DBInstanceId = builder.DBInstanceId;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DBInstances create() {
+            return builder().build();
+        }
+
+        /**
+         * @return attachMode
+         */
+        public String getAttachMode() {
+            return this.attachMode;
+        }
+
+        /**
+         * @return DBInstanceId
+         */
+        public String getDBInstanceId() {
+            return this.DBInstanceId;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private String attachMode; 
+            private String DBInstanceId; 
+            private String type; 
+
+            /**
+             * AttachMode.
+             */
+            public Builder attachMode(String attachMode) {
+                this.attachMode = attachMode;
+                return this;
+            }
+
+            /**
+             * DBInstanceId.
+             */
+            public Builder DBInstanceId(String DBInstanceId) {
+                this.DBInstanceId = DBInstanceId;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public DBInstances build() {
+                return new DBInstances(this);
             } 
 
         } 

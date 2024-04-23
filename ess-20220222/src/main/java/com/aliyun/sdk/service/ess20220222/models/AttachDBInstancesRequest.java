@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class AttachDBInstancesRequest extends Request {
     @Query
+    @NameInMap("AttachMode")
+    private String attachMode;
+
+    @Query
     @NameInMap("ClientToken")
     private String clientToken;
 
@@ -42,8 +46,13 @@ public class AttachDBInstancesRequest extends Request {
     @Validation(required = true)
     private String scalingGroupId;
 
+    @Query
+    @NameInMap("Type")
+    private String type;
+
     private AttachDBInstancesRequest(Builder builder) {
         super(builder);
+        this.attachMode = builder.attachMode;
         this.clientToken = builder.clientToken;
         this.DBInstances = builder.DBInstances;
         this.forceAttach = builder.forceAttach;
@@ -51,6 +60,7 @@ public class AttachDBInstancesRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.scalingGroupId = builder.scalingGroupId;
+        this.type = builder.type;
     }
 
     public static Builder builder() {
@@ -64,6 +74,13 @@ public class AttachDBInstancesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return attachMode
+     */
+    public String getAttachMode() {
+        return this.attachMode;
     }
 
     /**
@@ -115,7 +132,15 @@ public class AttachDBInstancesRequest extends Request {
         return this.scalingGroupId;
     }
 
+    /**
+     * @return type
+     */
+    public String getType() {
+        return this.type;
+    }
+
     public static final class Builder extends Request.Builder<AttachDBInstancesRequest, Builder> {
+        private String attachMode; 
         private String clientToken; 
         private java.util.List < String > DBInstances; 
         private Boolean forceAttach; 
@@ -123,6 +148,7 @@ public class AttachDBInstancesRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private String scalingGroupId; 
+        private String type; 
 
         private Builder() {
             super();
@@ -130,6 +156,7 @@ public class AttachDBInstancesRequest extends Request {
 
         private Builder(AttachDBInstancesRequest request) {
             super(request);
+            this.attachMode = request.attachMode;
             this.clientToken = request.clientToken;
             this.DBInstances = request.DBInstances;
             this.forceAttach = request.forceAttach;
@@ -137,7 +164,17 @@ public class AttachDBInstancesRequest extends Request {
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.scalingGroupId = request.scalingGroupId;
+            this.type = request.type;
         } 
+
+        /**
+         * AttachMode.
+         */
+        public Builder attachMode(String attachMode) {
+            this.putQueryParameter("AttachMode", attachMode);
+            this.attachMode = attachMode;
+            return this;
+        }
 
         /**
          * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests.
@@ -208,6 +245,15 @@ public class AttachDBInstancesRequest extends Request {
         public Builder scalingGroupId(String scalingGroupId) {
             this.putQueryParameter("ScalingGroupId", scalingGroupId);
             this.scalingGroupId = scalingGroupId;
+            return this;
+        }
+
+        /**
+         * Type.
+         */
+        public Builder type(String type) {
+            this.putQueryParameter("Type", type);
+            this.type = type;
             return this;
         }
 

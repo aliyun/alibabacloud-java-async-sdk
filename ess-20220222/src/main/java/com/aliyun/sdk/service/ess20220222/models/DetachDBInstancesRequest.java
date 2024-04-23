@@ -34,6 +34,10 @@ public class DetachDBInstancesRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("RemoveSecurityGroup")
+    private Boolean removeSecurityGroup;
+
+    @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -49,6 +53,7 @@ public class DetachDBInstancesRequest extends Request {
         this.forceDetach = builder.forceDetach;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
+        this.removeSecurityGroup = builder.removeSecurityGroup;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.scalingGroupId = builder.scalingGroupId;
     }
@@ -102,6 +107,13 @@ public class DetachDBInstancesRequest extends Request {
     }
 
     /**
+     * @return removeSecurityGroup
+     */
+    public Boolean getRemoveSecurityGroup() {
+        return this.removeSecurityGroup;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -121,6 +133,7 @@ public class DetachDBInstancesRequest extends Request {
         private Boolean forceDetach; 
         private Long ownerId; 
         private String regionId; 
+        private Boolean removeSecurityGroup; 
         private String resourceOwnerAccount; 
         private String scalingGroupId; 
 
@@ -135,6 +148,7 @@ public class DetachDBInstancesRequest extends Request {
             this.forceDetach = request.forceDetach;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
+            this.removeSecurityGroup = request.removeSecurityGroup;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.scalingGroupId = request.scalingGroupId;
         } 
@@ -190,6 +204,15 @@ public class DetachDBInstancesRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * RemoveSecurityGroup.
+         */
+        public Builder removeSecurityGroup(Boolean removeSecurityGroup) {
+            this.putQueryParameter("RemoveSecurityGroup", removeSecurityGroup);
+            this.removeSecurityGroup = removeSecurityGroup;
             return this;
         }
 

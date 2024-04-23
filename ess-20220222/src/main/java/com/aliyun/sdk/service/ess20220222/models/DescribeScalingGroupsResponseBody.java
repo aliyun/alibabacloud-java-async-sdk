@@ -212,6 +212,87 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
         } 
 
     }
+    public static class DBInstances extends TeaModel {
+        @NameInMap("DBInstanceId")
+        private String DBInstanceId;
+
+        @NameInMap("SecurityGroupIds")
+        private java.util.List < String > securityGroupIds;
+
+        @NameInMap("Type")
+        private String type;
+
+        private DBInstances(Builder builder) {
+            this.DBInstanceId = builder.DBInstanceId;
+            this.securityGroupIds = builder.securityGroupIds;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DBInstances create() {
+            return builder().build();
+        }
+
+        /**
+         * @return DBInstanceId
+         */
+        public String getDBInstanceId() {
+            return this.DBInstanceId;
+        }
+
+        /**
+         * @return securityGroupIds
+         */
+        public java.util.List < String > getSecurityGroupIds() {
+            return this.securityGroupIds;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private String DBInstanceId; 
+            private java.util.List < String > securityGroupIds; 
+            private String type; 
+
+            /**
+             * DBInstanceId.
+             */
+            public Builder DBInstanceId(String DBInstanceId) {
+                this.DBInstanceId = DBInstanceId;
+                return this;
+            }
+
+            /**
+             * SecurityGroupIds.
+             */
+            public Builder securityGroupIds(java.util.List < String > securityGroupIds) {
+                this.securityGroupIds = securityGroupIds;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public DBInstances build() {
+                return new DBInstances(this);
+            } 
+
+        } 
+
+    }
     public static class LaunchTemplateOverrides extends TeaModel {
         @NameInMap("InstanceType")
         private String instanceType;
@@ -722,6 +803,9 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
         @NameInMap("DBInstanceIds")
         private java.util.List < String > DBInstanceIds;
 
+        @NameInMap("DBInstances")
+        private java.util.List < DBInstances> DBInstances;
+
         @NameInMap("DefaultCooldown")
         private Integer defaultCooldown;
 
@@ -880,6 +964,7 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
             this.currentHostName = builder.currentHostName;
             this.customPolicyARN = builder.customPolicyARN;
             this.DBInstanceIds = builder.DBInstanceIds;
+            this.DBInstances = builder.DBInstances;
             this.defaultCooldown = builder.defaultCooldown;
             this.desiredCapacity = builder.desiredCapacity;
             this.enableDesiredCapacity = builder.enableDesiredCapacity;
@@ -1007,6 +1092,13 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
          */
         public java.util.List < String > getDBInstanceIds() {
             return this.DBInstanceIds;
+        }
+
+        /**
+         * @return DBInstances
+         */
+        public java.util.List < DBInstances> getDBInstances() {
+            return this.DBInstances;
         }
 
         /**
@@ -1363,6 +1455,7 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
             private String currentHostName; 
             private String customPolicyARN; 
             private java.util.List < String > DBInstanceIds; 
+            private java.util.List < DBInstances> DBInstances; 
             private Integer defaultCooldown; 
             private Integer desiredCapacity; 
             private Boolean enableDesiredCapacity; 
@@ -1502,6 +1595,14 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
              */
             public Builder DBInstanceIds(java.util.List < String > DBInstanceIds) {
                 this.DBInstanceIds = DBInstanceIds;
+                return this;
+            }
+
+            /**
+             * DBInstances.
+             */
+            public Builder DBInstances(java.util.List < DBInstances> DBInstances) {
+                this.DBInstances = DBInstances;
                 return this;
             }
 
