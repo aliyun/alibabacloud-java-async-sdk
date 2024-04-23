@@ -62,7 +62,7 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
         private java.util.List < TrafficList> trafficList; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -78,7 +78,7 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
         }
 
         /**
-         * TrafficList.
+         * The traffic statistics.
          */
         public Builder trafficList(java.util.List < TrafficList> trafficList) {
             this.trafficList = trafficList;
@@ -202,7 +202,7 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
             private String trafficType; 
 
             /**
-             * InBytes.
+             * The inbound network throughput, which indicates the total number of bytes that are received. Unit: bytes.
              */
             public Builder inBytes(Long inBytes) {
                 this.inBytes = inBytes;
@@ -210,7 +210,7 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The instance ID of the asset.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -218,7 +218,7 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * The type of the asset. This value takes effect only for the Internet firewall.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -226,7 +226,7 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
             }
 
             /**
-             * OutBytes.
+             * The outbound network throughput, which indicates the total number of bytes that are sent. Unit: bytes.
              */
             public Builder outBytes(Long outBytes) {
                 this.outBytes = outBytes;
@@ -234,7 +234,7 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceId.
+             * The resource ID. The resource ID for the Internet firewall is the public IP address that is protected the Internet firewall, and the resource ID for a NAT firewall is the instance ID of the NAT firewall.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -242,7 +242,7 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TotalBytes.
+             * The total inbound and outbound network throughput, which indicates the total number of bytes that are sent and received. Unit: bytes.
              */
             public Builder totalBytes(Long totalBytes) {
                 this.totalBytes = totalBytes;
@@ -250,7 +250,7 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TrafficDay.
+             * The date on which the statistics are collected.
              */
             public Builder trafficDay(String trafficDay) {
                 this.trafficDay = trafficDay;
@@ -258,7 +258,11 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TrafficType.
+             * The traffic type. Valid values:
+             * <p>
+             * 
+             * *   **EIP_TRAFFIC**: traffic for the Internet firewall
+             * *   **NatGateway_TRAFFIC**: traffic for the NAT firewall
              */
             public Builder trafficType(String trafficType) {
                 this.trafficType = trafficType;

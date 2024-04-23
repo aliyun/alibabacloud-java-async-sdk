@@ -155,7 +155,7 @@ public class DescribePostpayTrafficDetailRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * The page number. Default value: 1.
          */
         public Builder currentPage(Long currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -164,7 +164,7 @@ public class DescribePostpayTrafficDetailRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -173,7 +173,11 @@ public class DescribePostpayTrafficDetailRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Valid values:
+         * <p>
+         * 
+         * *   **zh** (default): Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -182,7 +186,11 @@ public class DescribePostpayTrafficDetailRequest extends Request {
         }
 
         /**
-         * Order.
+         * The field based on which you want to sort the query results. Valid values:
+         * <p>
+         * 
+         * *   **resourceId**
+         * *   **trafficDay**
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -191,7 +199,7 @@ public class DescribePostpayTrafficDetailRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Default value: 10. Maximum value: 50.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -200,7 +208,7 @@ public class DescribePostpayTrafficDetailRequest extends Request {
         }
 
         /**
-         * SearchItem.
+         * The instance ID or the IP address of the asset.
          */
         public Builder searchItem(String searchItem) {
             this.putQueryParameter("SearchItem", searchItem);
@@ -209,7 +217,7 @@ public class DescribePostpayTrafficDetailRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -218,7 +226,11 @@ public class DescribePostpayTrafficDetailRequest extends Request {
         }
 
         /**
-         * TrafficType.
+         * The traffic type. This parameter is required. Valid values:
+         * <p>
+         * 
+         * *   **EIP_TRAFFIC**: traffic for the Internet firewall
+         * *   **NatGateway_TRAFFIC**: traffic for the NAT firewall
          */
         public Builder trafficType(String trafficType) {
             this.putQueryParameter("TrafficType", trafficType);

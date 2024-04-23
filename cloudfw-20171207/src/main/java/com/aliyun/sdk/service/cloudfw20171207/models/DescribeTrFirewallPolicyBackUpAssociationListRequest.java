@@ -96,7 +96,7 @@ public class DescribeTrFirewallPolicyBackUpAssociationListRequest extends Reques
         } 
 
         /**
-         * CandidateList.
+         * An array that consists of the details about the traffic redirection instance.
          */
         public Builder candidateList(java.util.List < CandidateList> candidateList) {
             String candidateListShrink = shrink(candidateList, "CandidateList", "json");
@@ -182,7 +182,7 @@ public class DescribeTrFirewallPolicyBackUpAssociationListRequest extends Reques
             private String candidateType; 
 
             /**
-             * CandidateId.
+             * The ID of the traffic redirection instance.
              */
             public Builder candidateId(String candidateId) {
                 this.candidateId = candidateId;
@@ -190,7 +190,7 @@ public class DescribeTrFirewallPolicyBackUpAssociationListRequest extends Reques
             }
 
             /**
-             * CandidateType.
+             * The type of the traffic redirection instance.
              */
             public Builder candidateType(String candidateType) {
                 this.candidateType = candidateType;

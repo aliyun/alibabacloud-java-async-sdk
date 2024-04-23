@@ -357,7 +357,7 @@ public class CreateTrFirewallV2Request extends Request {
         }
 
         /**
-         * TrAttachmentMasterZone.
+         * The primary zone for the vSwitch.
          */
         public Builder trAttachmentMasterZone(String trAttachmentMasterZone) {
             this.putQueryParameter("TrAttachmentMasterZone", trAttachmentMasterZone);
@@ -375,7 +375,7 @@ public class CreateTrFirewallV2Request extends Request {
         }
 
         /**
-         * TrAttachmentSlaveZone.
+         * The secondary zone for the vSwitch.
          */
         public Builder trAttachmentSlaveZone(String trAttachmentSlaveZone) {
             this.putQueryParameter("TrAttachmentSlaveZone", trAttachmentSlaveZone);

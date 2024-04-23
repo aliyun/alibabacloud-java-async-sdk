@@ -50,7 +50,7 @@ public class DescribeCfwRiskLevelSummaryResponseBody extends TeaModel {
         private java.util.List < RiskList> riskList; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeCfwRiskLevelSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * RiskList.
+         * The list of risks.
          */
         public Builder riskList(java.util.List < RiskList> riskList) {
             this.riskList = riskList;
@@ -122,7 +122,10 @@ public class DescribeCfwRiskLevelSummaryResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Level.
+             * The risk levels. Valid values:
+             * <p>
+             * 
+             * *   **medium**
              */
             public Builder level(String level) {
                 this.level = level;
@@ -130,7 +133,7 @@ public class DescribeCfwRiskLevelSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Num.
+             * The number of at-risk Elastic Compute Service (ECS) instances.
              */
             public Builder num(String num) {
                 this.num = num;
@@ -138,7 +141,7 @@ public class DescribeCfwRiskLevelSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type.
              */
             public Builder type(String type) {
                 this.type = type;

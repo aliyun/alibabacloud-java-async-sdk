@@ -97,7 +97,14 @@ public class DescribeAssetRiskListRequest extends Request {
         } 
 
         /**
-         * IpAddrList.
+         * The IP addresses to query. Separate the IP addresses with commas (,). You can specify up to 20 IP addresses at a time.
+         * <p>
+         * 
+         * > 
+         * 
+         * *   Example of an IPv4 address: 47.97.221.164
+         * 
+         * *   Example of an IPv6 address: 2001:db8:ffff:ffff:ffff:\*\*\*\*:ffff
          */
         public Builder ipAddrList(java.util.List < String > ipAddrList) {
             this.putQueryParameter("IpAddrList", ipAddrList);
@@ -106,7 +113,13 @@ public class DescribeAssetRiskListRequest extends Request {
         }
 
         /**
-         * IpVersion.
+         * The IP version of the asset that is protected by Cloud Firewall.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   **4** (default): IPv4
+         * *   **6**: IPv6
          */
         public Builder ipVersion(Integer ipVersion) {
             this.putQueryParameter("IpVersion", ipVersion);
@@ -115,7 +128,11 @@ public class DescribeAssetRiskListRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the response. Valid values:
+         * <p>
+         * 
+         * *   **zh** (default): Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -124,7 +141,7 @@ public class DescribeAssetRiskListRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * The source IP address of the request.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

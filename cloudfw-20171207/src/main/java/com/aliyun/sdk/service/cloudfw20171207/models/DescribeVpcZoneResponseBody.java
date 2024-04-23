@@ -50,7 +50,7 @@ public class DescribeVpcZoneResponseBody extends TeaModel {
         private java.util.List < ZoneList> zoneList; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeVpcZoneResponseBody extends TeaModel {
         }
 
         /**
-         * ZoneList.
+         * The zones.
          */
         public Builder zoneList(java.util.List < ZoneList> zoneList) {
             this.zoneList = zoneList;
@@ -122,7 +122,7 @@ public class DescribeVpcZoneResponseBody extends TeaModel {
             private String zoneType; 
 
             /**
-             * LocalName.
+             * The name of the zone.
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -130,7 +130,7 @@ public class DescribeVpcZoneResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * The zone ID.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -138,7 +138,7 @@ public class DescribeVpcZoneResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneType.
+             * The zone type. Default value: AvailabilityZone. This value indicates Alibaba Cloud zones.
              */
             public Builder zoneType(String zoneType) {
                 this.zoneType = zoneType;

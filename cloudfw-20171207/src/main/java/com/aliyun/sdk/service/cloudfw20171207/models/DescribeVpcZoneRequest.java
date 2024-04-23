@@ -96,7 +96,11 @@ public class DescribeVpcZoneRequest extends Request {
         } 
 
         /**
-         * Environment.
+         * The environment. Valid values:
+         * <p>
+         * 
+         * *   **VPC**
+         * *   **TransitRouter**
          */
         public Builder environment(String environment) {
             this.putQueryParameter("Environment", environment);
@@ -105,7 +109,11 @@ public class DescribeVpcZoneRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Valid values:
+         * <p>
+         * 
+         * *   **zh** (default): Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -114,7 +122,7 @@ public class DescribeVpcZoneRequest extends Request {
         }
 
         /**
-         * MemberUid.
+         * The UID of the member in Cloud Firewall.
          */
         public Builder memberUid(String memberUid) {
             this.putQueryParameter("MemberUid", memberUid);
@@ -123,7 +131,7 @@ public class DescribeVpcZoneRequest extends Request {
         }
 
         /**
-         * RegionNo.
+         * The region ID.
          */
         public Builder regionNo(String regionNo) {
             this.putQueryParameter("RegionNo", regionNo);

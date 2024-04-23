@@ -68,7 +68,7 @@ public class DescribeInstanceRiskLevelsRequest extends Request {
         } 
 
         /**
-         * Instances.
+         * The information about the instances.
          */
         public Builder instances(java.util.List < Instances> instances) {
             this.putQueryParameter("Instances", instances);
@@ -77,7 +77,11 @@ public class DescribeInstanceRiskLevelsRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the response. Valid values:
+         * <p>
+         * 
+         * *   **zh** (default): Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -155,7 +159,7 @@ public class DescribeInstanceRiskLevelsRequest extends Request {
             private String uuid; 
 
             /**
-             * InstanceId.
+             * The instance ID of your Cloud Firewall.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -163,7 +167,7 @@ public class DescribeInstanceRiskLevelsRequest extends Request {
             }
 
             /**
-             * InternetIp.
+             * The public IP addresses of instances.
              */
             public Builder internetIp(java.util.List < String > internetIp) {
                 this.internetIp = internetIp;
@@ -171,7 +175,7 @@ public class DescribeInstanceRiskLevelsRequest extends Request {
             }
 
             /**
-             * IntranetIp.
+             * The private IP address of the instance.
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -179,7 +183,7 @@ public class DescribeInstanceRiskLevelsRequest extends Request {
             }
 
             /**
-             * Uuid.
+             * The UUID of the instance.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

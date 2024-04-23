@@ -62,7 +62,7 @@ public class DescribeSignatureLibVersionResponseBody extends TeaModel {
         private java.util.List < Version> version; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class DescribeSignatureLibVersionResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -78,7 +78,7 @@ public class DescribeSignatureLibVersionResponseBody extends TeaModel {
         }
 
         /**
-         * Version.
+         * The information about the versions.
          */
         public Builder version(java.util.List < Version> version) {
             this.version = version;
@@ -130,7 +130,36 @@ public class DescribeSignatureLibVersionResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * Type.
+             * The type.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   ips
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     Basic Rules and Virtual Patching
+             * 
+             *     <!-- -->
+             * 
+             *     .
+             * 
+             * *   intelligence
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     Threat Intelligence
+             * 
+             *     <!-- -->
              */
             public Builder type(String type) {
                 this.type = type;
@@ -138,7 +167,7 @@ public class DescribeSignatureLibVersionResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * The version number.
              */
             public Builder version(String version) {
                 this.version = version;

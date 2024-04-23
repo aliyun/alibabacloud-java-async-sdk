@@ -83,7 +83,11 @@ public class DeleteControlPolicyTemplateRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Valid values:
+         * <p>
+         * 
+         * *   **zh** (default): Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -92,7 +96,7 @@ public class DeleteControlPolicyTemplateRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * The source IP address of the request.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -101,7 +105,7 @@ public class DeleteControlPolicyTemplateRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * The ID of the access control policy template.
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);

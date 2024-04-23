@@ -50,7 +50,7 @@ public class DescribeInstanceRiskLevelsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * InstanceRisks.
+         * The information about the instances.
          */
         public Builder instanceRisks(java.util.List < InstanceRisks> instanceRisks) {
             this.instanceRisks = instanceRisks;
@@ -58,7 +58,7 @@ public class DescribeInstanceRiskLevelsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class DescribeInstanceRiskLevelsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Ip.
+             * The IP addresses of servers.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -130,7 +130,10 @@ public class DescribeInstanceRiskLevelsResponseBody extends TeaModel {
             }
 
             /**
-             * Level.
+             * The risk levels. Valid values:
+             * <p>
+             * 
+             * *   **medium**
              */
             public Builder level(String level) {
                 this.level = level;
@@ -138,7 +141,7 @@ public class DescribeInstanceRiskLevelsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -203,7 +206,7 @@ public class DescribeInstanceRiskLevelsResponseBody extends TeaModel {
             private String level; 
 
             /**
-             * Details.
+             * The risk levels of the Elastic Compute Service (ECS) instance.
              */
             public Builder details(java.util.List < Details> details) {
                 this.details = details;
@@ -211,7 +214,7 @@ public class DescribeInstanceRiskLevelsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The instance ID of your Cloud Firewall.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -219,7 +222,10 @@ public class DescribeInstanceRiskLevelsResponseBody extends TeaModel {
             }
 
             /**
-             * Level.
+             * The risk levels. Valid values:
+             * <p>
+             * 
+             * *   **medium**
              */
             public Builder level(String level) {
                 this.level = level;

@@ -83,7 +83,7 @@ public class ResetNatFirewallRuleHitCountRequest extends Request {
         } 
 
         /**
-         * AclUuid.
+         * The UUID of the access control policy.
          */
         public Builder aclUuid(String aclUuid) {
             this.putQueryParameter("AclUuid", aclUuid);
@@ -92,7 +92,11 @@ public class ResetNatFirewallRuleHitCountRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Valid values:
+         * <p>
+         * 
+         * *   **zh** (default): Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -101,7 +105,7 @@ public class ResetNatFirewallRuleHitCountRequest extends Request {
         }
 
         /**
-         * NatGatewayId.
+         * The ID of the NAT gateway.
          */
         public Builder natGatewayId(String natGatewayId) {
             this.putQueryParameter("NatGatewayId", natGatewayId);

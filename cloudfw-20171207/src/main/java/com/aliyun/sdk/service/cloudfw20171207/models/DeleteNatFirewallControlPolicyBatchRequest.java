@@ -97,7 +97,7 @@ public class DeleteNatFirewallControlPolicyBatchRequest extends Request {
         } 
 
         /**
-         * AclUuidList.
+         * The UUIDs of access control policies.
          */
         public Builder aclUuidList(java.util.List < String > aclUuidList) {
             this.putQueryParameter("AclUuidList", aclUuidList);
@@ -106,7 +106,10 @@ public class DeleteNatFirewallControlPolicyBatchRequest extends Request {
         }
 
         /**
-         * Direction.
+         * The direction of the traffic to which the access control policy applies. Valid values:
+         * <p>
+         * 
+         * *   **out**: outbound traffic
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);
@@ -115,7 +118,11 @@ public class DeleteNatFirewallControlPolicyBatchRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Valid values:
+         * <p>
+         * 
+         * *   **zh** (default): Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -124,7 +131,7 @@ public class DeleteNatFirewallControlPolicyBatchRequest extends Request {
         }
 
         /**
-         * NatGatewayId.
+         * The ID of the NAT gateway.
          */
         public Builder natGatewayId(String natGatewayId) {
             this.putQueryParameter("NatGatewayId", natGatewayId);

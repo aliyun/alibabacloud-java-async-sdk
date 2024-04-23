@@ -68,7 +68,11 @@ public class DeleteDownloadTaskRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Valid values:
+         * <p>
+         * 
+         * *   **zh** (default): Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -77,7 +81,7 @@ public class DeleteDownloadTaskRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * The ID of the file download task.
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

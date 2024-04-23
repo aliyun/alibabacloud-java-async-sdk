@@ -7,15 +7,19 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DeleteControlPolicyTemplateResponseBody} extends {@link TeaModel}
+ * {@link CreateSecurityProxyResponseBody} extends {@link TeaModel}
  *
- * <p>DeleteControlPolicyTemplateResponseBody</p>
+ * <p>CreateSecurityProxyResponseBody</p>
  */
-public class DeleteControlPolicyTemplateResponseBody extends TeaModel {
+public class CreateSecurityProxyResponseBody extends TeaModel {
+    @NameInMap("ProxyId")
+    private String proxyId;
+
     @NameInMap("RequestId")
     private String requestId;
 
-    private DeleteControlPolicyTemplateResponseBody(Builder builder) {
+    private CreateSecurityProxyResponseBody(Builder builder) {
+        this.proxyId = builder.proxyId;
         this.requestId = builder.requestId;
     }
 
@@ -23,8 +27,15 @@ public class DeleteControlPolicyTemplateResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static DeleteControlPolicyTemplateResponseBody create() {
+    public static CreateSecurityProxyResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return proxyId
+     */
+    public String getProxyId() {
+        return this.proxyId;
     }
 
     /**
@@ -35,18 +46,27 @@ public class DeleteControlPolicyTemplateResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String proxyId; 
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * ProxyId.
+         */
+        public Builder proxyId(String proxyId) {
+            this.proxyId = proxyId;
+            return this;
+        }
+
+        /**
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public DeleteControlPolicyTemplateResponseBody build() {
-            return new DeleteControlPolicyTemplateResponseBody(this);
+        public CreateSecurityProxyResponseBody build() {
+            return new CreateSecurityProxyResponseBody(this);
         } 
 
     } 

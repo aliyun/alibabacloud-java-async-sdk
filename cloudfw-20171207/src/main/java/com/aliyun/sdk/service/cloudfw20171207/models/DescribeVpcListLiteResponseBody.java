@@ -50,7 +50,7 @@ public class DescribeVpcListLiteResponseBody extends TeaModel {
         private java.util.List < VpcList> vpcList; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeVpcListLiteResponseBody extends TeaModel {
         }
 
         /**
-         * VpcList.
+         * The information about the VPCs.
          */
         public Builder vpcList(java.util.List < VpcList> vpcList) {
             this.vpcList = vpcList;
@@ -122,7 +122,7 @@ public class DescribeVpcListLiteResponseBody extends TeaModel {
             private String vpcName; 
 
             /**
-             * RegionNo.
+             * The region ID of the VPC.
              */
             public Builder regionNo(String regionNo) {
                 this.regionNo = regionNo;
@@ -130,7 +130,7 @@ public class DescribeVpcListLiteResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * The ID of the VPC.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -138,7 +138,7 @@ public class DescribeVpcListLiteResponseBody extends TeaModel {
             }
 
             /**
-             * VpcName.
+             * The name of the VPC.
              */
             public Builder vpcName(String vpcName) {
                 this.vpcName = vpcName;

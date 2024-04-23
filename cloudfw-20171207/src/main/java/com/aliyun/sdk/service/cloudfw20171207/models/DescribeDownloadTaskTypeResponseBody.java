@@ -62,7 +62,7 @@ public class DescribeDownloadTaskTypeResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class DescribeDownloadTaskTypeResponseBody extends TeaModel {
         }
 
         /**
-         * TaskTypeArray.
+         * The task types.
          */
         public Builder taskTypeArray(java.util.List < TaskTypeArray> taskTypeArray) {
             this.taskTypeArray = taskTypeArray;
@@ -78,7 +78,7 @@ public class DescribeDownloadTaskTypeResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,7 +130,7 @@ public class DescribeDownloadTaskTypeResponseBody extends TeaModel {
             private String taskType; 
 
             /**
-             * TaskName.
+             * The name of the task type.
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -138,7 +138,7 @@ public class DescribeDownloadTaskTypeResponseBody extends TeaModel {
             }
 
             /**
-             * TaskType.
+             * The type of the task.
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;

@@ -50,7 +50,7 @@ public class DescribeVpcFirewallIPSWhitelistResponseBody extends TeaModel {
         private java.util.List < Whitelists> whitelists; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeVpcFirewallIPSWhitelistResponseBody extends TeaModel {
         }
 
         /**
-         * Whitelists.
+         * The details of the IPS whitelist of the VPC firewall.
          */
         public Builder whitelists(java.util.List < Whitelists> whitelists) {
             this.whitelists = whitelists;
@@ -146,7 +146,11 @@ public class DescribeVpcFirewallIPSWhitelistResponseBody extends TeaModel {
             private Long whiteType; 
 
             /**
-             * ListType.
+             * The type of the list. Valid values:
+             * <p>
+             * 
+             * *   **1**: user-defined
+             * *   **2**: address book
              */
             public Builder listType(Long listType) {
                 this.listType = listType;
@@ -154,7 +158,7 @@ public class DescribeVpcFirewallIPSWhitelistResponseBody extends TeaModel {
             }
 
             /**
-             * ListValue.
+             * The entries in the list.
              */
             public Builder listValue(String listValue) {
                 this.listValue = listValue;
@@ -162,7 +166,7 @@ public class DescribeVpcFirewallIPSWhitelistResponseBody extends TeaModel {
             }
 
             /**
-             * VpcFirewallId.
+             * The instance ID of the VPC firewall.
              */
             public Builder vpcFirewallId(String vpcFirewallId) {
                 this.vpcFirewallId = vpcFirewallId;
@@ -170,7 +174,7 @@ public class DescribeVpcFirewallIPSWhitelistResponseBody extends TeaModel {
             }
 
             /**
-             * WhiteListValue.
+             * An array of entries in the list.
              */
             public Builder whiteListValue(java.util.List < String > whiteListValue) {
                 this.whiteListValue = whiteListValue;
@@ -178,7 +182,11 @@ public class DescribeVpcFirewallIPSWhitelistResponseBody extends TeaModel {
             }
 
             /**
-             * WhiteType.
+             * The type of the whitelist. Valid values:
+             * <p>
+             * 
+             * *   **1**: destination
+             * *   **2**: source
              */
             public Builder whiteType(Long whiteType) {
                 this.whiteType = whiteType;

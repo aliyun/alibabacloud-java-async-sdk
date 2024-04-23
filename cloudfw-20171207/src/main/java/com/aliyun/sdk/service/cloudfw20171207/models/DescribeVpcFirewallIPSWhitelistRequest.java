@@ -83,7 +83,13 @@ public class DescribeVpcFirewallIPSWhitelistRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * The language of the content within the request and response.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   **zh** (default): Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -92,7 +98,7 @@ public class DescribeVpcFirewallIPSWhitelistRequest extends Request {
         }
 
         /**
-         * MemberUid.
+         * The UID of the member in Cloud Firewall.
          */
         public Builder memberUid(Long memberUid) {
             this.putQueryParameter("MemberUid", memberUid);
@@ -101,7 +107,7 @@ public class DescribeVpcFirewallIPSWhitelistRequest extends Request {
         }
 
         /**
-         * VpcFirewallId.
+         * The instance ID of the VPC firewall.
          */
         public Builder vpcFirewallId(String vpcFirewallId) {
             this.putQueryParameter("VpcFirewallId", vpcFirewallId);

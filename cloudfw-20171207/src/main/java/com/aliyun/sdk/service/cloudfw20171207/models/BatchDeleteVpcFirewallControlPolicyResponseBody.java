@@ -7,15 +7,15 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DeleteControlPolicyTemplateResponseBody} extends {@link TeaModel}
+ * {@link BatchDeleteVpcFirewallControlPolicyResponseBody} extends {@link TeaModel}
  *
- * <p>DeleteControlPolicyTemplateResponseBody</p>
+ * <p>BatchDeleteVpcFirewallControlPolicyResponseBody</p>
  */
-public class DeleteControlPolicyTemplateResponseBody extends TeaModel {
+public class BatchDeleteVpcFirewallControlPolicyResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
-    private DeleteControlPolicyTemplateResponseBody(Builder builder) {
+    private BatchDeleteVpcFirewallControlPolicyResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -23,7 +23,7 @@ public class DeleteControlPolicyTemplateResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static DeleteControlPolicyTemplateResponseBody create() {
+    public static BatchDeleteVpcFirewallControlPolicyResponseBody create() {
         return builder().build();
     }
 
@@ -45,8 +45,8 @@ public class DeleteControlPolicyTemplateResponseBody extends TeaModel {
             return this;
         }
 
-        public DeleteControlPolicyTemplateResponseBody build() {
-            return new DeleteControlPolicyTemplateResponseBody(this);
+        public BatchDeleteVpcFirewallControlPolicyResponseBody build() {
+            return new BatchDeleteVpcFirewallControlPolicyResponseBody(this);
         } 
 
     } 

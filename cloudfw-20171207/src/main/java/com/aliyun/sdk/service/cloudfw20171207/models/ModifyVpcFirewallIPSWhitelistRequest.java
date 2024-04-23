@@ -127,7 +127,11 @@ public class ModifyVpcFirewallIPSWhitelistRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Valid values:
+         * <p>
+         * 
+         * *   **zh** (default): Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -136,7 +140,11 @@ public class ModifyVpcFirewallIPSWhitelistRequest extends Request {
         }
 
         /**
-         * ListType.
+         * The type of the list. Valid values:
+         * <p>
+         * 
+         * *   **1**: user-defined
+         * *   **2**: address book
          */
         public Builder listType(Long listType) {
             this.putQueryParameter("ListType", listType);
@@ -145,7 +153,7 @@ public class ModifyVpcFirewallIPSWhitelistRequest extends Request {
         }
 
         /**
-         * ListValue.
+         * The entry in the list.
          */
         public Builder listValue(String listValue) {
             this.putQueryParameter("ListValue", listValue);
@@ -154,7 +162,7 @@ public class ModifyVpcFirewallIPSWhitelistRequest extends Request {
         }
 
         /**
-         * MemberUid.
+         * The UID of the member that is managed by your Alibaba Cloud account.
          */
         public Builder memberUid(Long memberUid) {
             this.putQueryParameter("MemberUid", memberUid);
@@ -163,7 +171,7 @@ public class ModifyVpcFirewallIPSWhitelistRequest extends Request {
         }
 
         /**
-         * VpcFirewallId.
+         * The instance ID of the VPC firewall.
          */
         public Builder vpcFirewallId(String vpcFirewallId) {
             this.putQueryParameter("VpcFirewallId", vpcFirewallId);
@@ -172,7 +180,11 @@ public class ModifyVpcFirewallIPSWhitelistRequest extends Request {
         }
 
         /**
-         * WhiteType.
+         * The type of the whitelist. Valid values:
+         * <p>
+         * 
+         * *   **1**: destination
+         * *   **2**: source
          */
         public Builder whiteType(Long whiteType) {
             this.putQueryParameter("WhiteType", whiteType);

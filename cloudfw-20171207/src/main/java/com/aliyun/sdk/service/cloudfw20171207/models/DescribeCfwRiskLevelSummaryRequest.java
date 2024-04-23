@@ -82,7 +82,7 @@ public class DescribeCfwRiskLevelSummaryRequest extends Request {
         } 
 
         /**
-         * InstanceType.
+         * The instance type.
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -91,7 +91,13 @@ public class DescribeCfwRiskLevelSummaryRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the response.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   **zh** (default): Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -100,7 +106,10 @@ public class DescribeCfwRiskLevelSummaryRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of your Cloud Firewall.
+         * <p>
+         * 
+         * >  For more information about Cloud Firewall supported regions, see [Supported regions](~~195657~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

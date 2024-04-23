@@ -96,7 +96,7 @@ public class DescribeDownloadTaskRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * The page number.
          */
         public Builder currentPage(String currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -105,7 +105,11 @@ public class DescribeDownloadTaskRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the response. Valid values:
+         * <p>
+         * 
+         * *   **zh** (default): Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -114,7 +118,7 @@ public class DescribeDownloadTaskRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Default value: 10. Maximum value: 50.
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -123,7 +127,7 @@ public class DescribeDownloadTaskRequest extends Request {
         }
 
         /**
-         * TaskType.
+         * The type of the task. For more information about task types, see the descriptions in the "DescribeDownloadTaskType" topic. If you do not specify this parameter, all files are queried by default.
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

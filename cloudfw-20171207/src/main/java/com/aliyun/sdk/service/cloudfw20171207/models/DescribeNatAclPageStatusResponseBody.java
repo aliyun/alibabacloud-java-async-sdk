@@ -50,7 +50,7 @@ public class DescribeNatAclPageStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * NatAclPageEnable.
+         * Indicates whether pagination for access control policies for NAT firewalls is supported.
          */
         public Builder natAclPageEnable(Boolean natAclPageEnable) {
             this.natAclPageEnable = natAclPageEnable;
@@ -58,7 +58,7 @@ public class DescribeNatAclPageStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -86,7 +86,7 @@ public class DescribePostpayTrafficTotalResponseBody extends TeaModel {
         private Long totalTraffic; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -94,7 +94,7 @@ public class DescribePostpayTrafficTotalResponseBody extends TeaModel {
         }
 
         /**
-         * TotalAssets.
+         * The total number of the assets that are protected by the Internet firewall.
          */
         public Builder totalAssets(Long totalAssets) {
             this.totalAssets = totalAssets;
@@ -102,7 +102,7 @@ public class DescribePostpayTrafficTotalResponseBody extends TeaModel {
         }
 
         /**
-         * TotalNatAssets.
+         * The total number of the assets that are protected by the NAT firewall.
          */
         public Builder totalNatAssets(Long totalNatAssets) {
             this.totalNatAssets = totalNatAssets;
@@ -110,7 +110,7 @@ public class DescribePostpayTrafficTotalResponseBody extends TeaModel {
         }
 
         /**
-         * TotalNatTraffic.
+         * The total traffic for the NAT firewall. Unit: bytes.
          */
         public Builder totalNatTraffic(Long totalNatTraffic) {
             this.totalNatTraffic = totalNatTraffic;
@@ -118,7 +118,7 @@ public class DescribePostpayTrafficTotalResponseBody extends TeaModel {
         }
 
         /**
-         * TotalTraffic.
+         * The total traffic for the Internet firewall. Unit: bytes.
          */
         public Builder totalTraffic(Long totalTraffic) {
             this.totalTraffic = totalTraffic;

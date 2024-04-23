@@ -110,7 +110,11 @@ public class DescribeVpcListLiteRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * The language of the content within the request and response. Valid values:
+         * <p>
+         * 
+         * *   **zh** (default): Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -119,7 +123,10 @@ public class DescribeVpcListLiteRequest extends Request {
         }
 
         /**
-         * RegionNo.
+         * The region ID of the VPC.
+         * <p>
+         * 
+         * >  For more information about Cloud Firewall supported regions, see [Supported regions](~~195657~~).
          */
         public Builder regionNo(String regionNo) {
             this.putQueryParameter("RegionNo", regionNo);
@@ -128,7 +135,7 @@ public class DescribeVpcListLiteRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * The source IP address of the request.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -137,7 +144,7 @@ public class DescribeVpcListLiteRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * The ID of the VPC.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -146,7 +153,7 @@ public class DescribeVpcListLiteRequest extends Request {
         }
 
         /**
-         * VpcName.
+         * The name of the VPC.
          */
         public Builder vpcName(String vpcName) {
             this.putQueryParameter("VpcName", vpcName);

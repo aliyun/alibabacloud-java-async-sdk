@@ -62,7 +62,7 @@ public class DescribeAssetRiskListResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * AssetList.
+         * The details of the asset.
          */
         public Builder assetList(java.util.List < AssetList> assetList) {
             this.assetList = assetList;
@@ -70,7 +70,7 @@ public class DescribeAssetRiskListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeAssetRiskListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -154,7 +154,7 @@ public class DescribeAssetRiskListResponseBody extends TeaModel {
             private String riskLevel; 
 
             /**
-             * Ip.
+             * The IP address of the server.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -162,7 +162,13 @@ public class DescribeAssetRiskListResponseBody extends TeaModel {
             }
 
             /**
-             * IpVersion.
+             * The IP version of the asset that is protected by Cloud Firewall.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   **4**: IPv4
+             * *   **6**: IPv6
              */
             public Builder ipVersion(Long ipVersion) {
                 this.ipVersion = ipVersion;
@@ -170,7 +176,7 @@ public class DescribeAssetRiskListResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * The reason for the risk.
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -178,7 +184,12 @@ public class DescribeAssetRiskListResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevel.
+             * The risk level. Valid values:
+             * <p>
+             * 
+             * *   **low**
+             * *   **middle**
+             * *   **high**
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;

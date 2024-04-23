@@ -62,7 +62,7 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Tasks.
+         * The tasks.
          */
         public Builder tasks(java.util.List < Tasks> tasks) {
             this.tasks = tasks;
@@ -78,7 +78,7 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of tasks.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -202,7 +202,7 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
             private String taskType; 
 
             /**
-             * CreateTime.
+             * The time when the task was created. The value is a UNIX timestamp. Unit: seconds.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -210,7 +210,7 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * The time when the task expires. The value is a UNIX timestamp. Unit: seconds.
              */
             public Builder expireTime(Long expireTime) {
                 this.expireTime = expireTime;
@@ -218,7 +218,7 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
             }
 
             /**
-             * FileSize.
+             * The size of the file.
              */
             public Builder fileSize(String fileSize) {
                 this.fileSize = fileSize;
@@ -226,7 +226,7 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
             }
 
             /**
-             * FileURL.
+             * The URL of the OSS file.
              */
             public Builder fileURL(String fileURL) {
                 this.fileURL = fileURL;
@@ -234,7 +234,13 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the task. Valid values:
+             * <p>
+             * 
+             * *   **finish**
+             * *   **start**
+             * *   **error**
+             * *   **expire**: The task file is invalid and cannot be downloaded.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -242,7 +248,7 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * The task ID.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -250,7 +256,7 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskName.
+             * The name of the task.
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -258,7 +264,7 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskType.
+             * The type of the task.
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;
