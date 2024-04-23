@@ -22,7 +22,7 @@ public class DescribeClusterAddonMetadataRequest extends Request {
     @Validation(required = true)
     private String componentId;
 
-    @Path
+    @Query
     @NameInMap("version")
     private String version;
 
@@ -102,10 +102,10 @@ public class DescribeClusterAddonMetadataRequest extends Request {
         }
 
         /**
-         * The component version.
+         * version.
          */
         public Builder version(String version) {
-            this.putPathParameter("version", version);
+            this.putQueryParameter("version", version);
             this.version = version;
             return this;
         }
