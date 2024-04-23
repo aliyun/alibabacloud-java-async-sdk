@@ -45,15 +45,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateDataStreamResponse> createDataStream(CreateDataStreamRequest request);
 
-    /**
-      * @deprecated
-      * Before you call this operation, note that:
-      * *   Currently, the one-click index migration feature only supports the China (Beijing) region.
-      * *   The source and destination Elasticsearch clusters must meet the following requirements: a user-created or Alibaba Cloud Elasticsearch Elasticsearch cluster with a source of version 6.7.0 and a Alibaba Cloud Elasticsearch Elasticsearch cluster with a destination of version 6.3.2 or 6.7.0.
-      *
-     */
-    CompletableFuture<CreateDataTasksResponse> createDataTasks(CreateDataTasksRequest request);
-
     CompletableFuture<CreateILMPolicyResponse> createILMPolicy(CreateILMPolicyRequest request);
 
     CompletableFuture<CreateIndexTemplateResponse> createIndexTemplate(CreateIndexTemplateRequest request);

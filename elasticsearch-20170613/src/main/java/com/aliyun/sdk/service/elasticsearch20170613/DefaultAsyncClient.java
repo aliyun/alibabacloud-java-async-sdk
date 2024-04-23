@@ -221,27 +221,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * @deprecated
-      * Before you call this operation, note that:
-      * *   Currently, the one-click index migration feature only supports the China (Beijing) region.
-      * *   The source and destination Elasticsearch clusters must meet the following requirements: a user-created or Alibaba Cloud Elasticsearch Elasticsearch cluster with a source of version 6.7.0 and a Alibaba Cloud Elasticsearch Elasticsearch cluster with a destination of version 6.3.2 or 6.7.0.
-      *
-     */
-    @Override
-    public CompletableFuture<CreateDataTasksResponse> createDataTasks(CreateDataTasksRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateDataTasks").setMethod(HttpMethod.POST).setPathRegex("/openapi/instances/{InstanceId}/data-task").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateDataTasksResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<CreateDataTasksResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
     @Override
     public CompletableFuture<CreateILMPolicyResponse> createILMPolicy(CreateILMPolicyRequest request) {
         try {
