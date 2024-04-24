@@ -62,6 +62,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<CloneNacosConfigResponse> cloneNacosConfig(CloneNacosConfigRequest request);
 
+    CompletableFuture<CloneSentinelRuleFromAhasResponse> cloneSentinelRuleFromAhas(CloneSentinelRuleFromAhasRequest request);
+
     CompletableFuture<CreateApplicationResponse> createApplication(CreateApplicationRequest request);
 
     CompletableFuture<CreateCircuitBreakerRuleResponse> createCircuitBreakerRule(CreateCircuitBreakerRuleRequest request);
