@@ -29,6 +29,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<AddProjectMemberToRoleResponse> addProjectMemberToRole(AddProjectMemberToRoleRequest request);
 
+    CompletableFuture<AddRecognizeRuleResponse> addRecognizeRule(AddRecognizeRuleRequest request);
+
     CompletableFuture<AddToMetaCategoryResponse> addToMetaCategory(AddToMetaCategoryRequest request);
 
     CompletableFuture<ApprovePermissionApplyOrderResponse> approvePermissionApplyOrder(ApprovePermissionApplyOrderRequest request);
@@ -180,6 +182,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteQualityRuleResponse> deleteQualityRule(DeleteQualityRuleRequest request);
 
+    CompletableFuture<DeleteRecognizeRuleResponse> deleteRecognizeRule(DeleteRecognizeRuleRequest request);
+
     CompletableFuture<DeleteRemindResponse> deleteRemind(DeleteRemindRequest request);
 
     CompletableFuture<DeleteTableResponse> deleteTable(DeleteTableRequest request);
@@ -195,6 +199,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DesensitizeDataResponse> desensitizeData(DesensitizeDataRequest request);
 
     CompletableFuture<DsgQuerySensResultResponse> dsgQuerySensResult(DsgQuerySensResultRequest request);
+
+    CompletableFuture<DsgRunSensIdentifyResponse> dsgRunSensIdentify(DsgRunSensIdentifyRequest request);
+
+    CompletableFuture<DsgStopSensIdentifyResponse> dsgStopSensIdentify(DsgStopSensIdentifyRequest request);
+
+    CompletableFuture<EditRecognizeRuleResponse> editRecognizeRule(EditRecognizeRuleRequest request);
 
     CompletableFuture<EstablishRelationTableToBusinessResponse> establishRelationTableToBusiness(EstablishRelationTableToBusinessRequest request);
 
@@ -602,7 +612,21 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<QueryDISyncTaskConfigProcessResultResponse> queryDISyncTaskConfigProcessResult(QueryDISyncTaskConfigProcessResultRequest request);
 
+    CompletableFuture<QueryDefaultTemplateResponse> queryDefaultTemplate(QueryDefaultTemplateRequest request);
+
     CompletableFuture<QueryPublicModelEngineResponse> queryPublicModelEngine(QueryPublicModelEngineRequest request);
+
+    CompletableFuture<QueryRecognizeDataByRuleTypeResponse> queryRecognizeDataByRuleType(QueryRecognizeDataByRuleTypeRequest request);
+
+    CompletableFuture<QueryRecognizeRuleDetailResponse> queryRecognizeRuleDetail(QueryRecognizeRuleDetailRequest request);
+
+    CompletableFuture<QueryRecognizeRulesTypeResponse> queryRecognizeRulesType(QueryRecognizeRulesTypeRequest request);
+
+    CompletableFuture<QuerySensClassificationResponse> querySensClassification(QuerySensClassificationRequest request);
+
+    CompletableFuture<QuerySensLevelResponse> querySensLevel(QuerySensLevelRequest request);
+
+    CompletableFuture<QuerySensNodeInfoResponse> querySensNodeInfo(QuerySensNodeInfoRequest request);
 
     CompletableFuture<RegisterLineageRelationResponse> registerLineageRelation(RegisterLineageRelationRequest request);
 
