@@ -18,6 +18,10 @@ public class CreateInstanceRequest extends Request {
     private String clusterType;
 
     @Body
+    @NameInMap("DisableReplication")
+    private Boolean disableReplication;
+
+    @Body
     @NameInMap("InstanceDescription")
     private String instanceDescription;
 
@@ -54,6 +58,7 @@ public class CreateInstanceRequest extends Request {
     private CreateInstanceRequest(Builder builder) {
         super(builder);
         this.clusterType = builder.clusterType;
+        this.disableReplication = builder.disableReplication;
         this.instanceDescription = builder.instanceDescription;
         this.instanceName = builder.instanceName;
         this.network = builder.network;
@@ -82,6 +87,13 @@ public class CreateInstanceRequest extends Request {
      */
     public String getClusterType() {
         return this.clusterType;
+    }
+
+    /**
+     * @return disableReplication
+     */
+    public Boolean getDisableReplication() {
+        return this.disableReplication;
     }
 
     /**
@@ -142,6 +154,7 @@ public class CreateInstanceRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateInstanceRequest, Builder> {
         private String clusterType; 
+        private Boolean disableReplication; 
         private String instanceDescription; 
         private String instanceName; 
         private String network; 
@@ -158,6 +171,7 @@ public class CreateInstanceRequest extends Request {
         private Builder(CreateInstanceRequest request) {
             super(request);
             this.clusterType = request.clusterType;
+            this.disableReplication = request.disableReplication;
             this.instanceDescription = request.instanceDescription;
             this.instanceName = request.instanceName;
             this.network = request.network;
@@ -174,6 +188,15 @@ public class CreateInstanceRequest extends Request {
         public Builder clusterType(String clusterType) {
             this.putBodyParameter("ClusterType", clusterType);
             this.clusterType = clusterType;
+            return this;
+        }
+
+        /**
+         * DisableReplication.
+         */
+        public Builder disableReplication(Boolean disableReplication) {
+            this.putBodyParameter("DisableReplication", disableReplication);
+            this.disableReplication = disableReplication;
             return this;
         }
 
