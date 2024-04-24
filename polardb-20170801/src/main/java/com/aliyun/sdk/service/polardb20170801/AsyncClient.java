@@ -482,6 +482,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ResetGlobalDatabaseNetworkResponse> resetGlobalDatabaseNetwork(ResetGlobalDatabaseNetworkRequest request);
 
+    CompletableFuture<RestartDBLinkResponse> restartDBLink(RestartDBLinkRequest request);
+
     CompletableFuture<RestartDBNodeResponse> restartDBNode(RestartDBNodeRequest request);
 
     CompletableFuture<RestoreTableResponse> restoreTable(RestoreTableRequest request);
