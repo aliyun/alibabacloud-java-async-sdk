@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.dytnsapi20200217;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.dytnsapi20200217.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -193,6 +194,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryAvailableAuthCodeResponse> queryAvailableAuthCode(QueryAvailableAuthCodeRequest request);
 
     CompletableFuture<QueryPhoneNumberOnlineTimeResponse> queryPhoneNumberOnlineTime(QueryPhoneNumberOnlineTimeRequest request);
+
+    CompletableFuture<QueryPhoneTwiceTelVerifyResponse> queryPhoneTwiceTelVerify(QueryPhoneTwiceTelVerifyRequest request);
 
     CompletableFuture<QueryTagApplyRuleResponse> queryTagApplyRule(QueryTagApplyRuleRequest request);
 
