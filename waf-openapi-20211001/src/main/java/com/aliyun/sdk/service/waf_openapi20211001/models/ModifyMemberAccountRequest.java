@@ -127,7 +127,7 @@ public class ModifyMemberAccountRequest extends Request {
         } 
 
         /**
-         * Description.
+         * The description of the member. The description must be 1 to 256 characters in length, and can contain letters, digits, periods (.), underscores (\_), hyphens (-), and asterisks (\*).
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -136,7 +136,10 @@ public class ModifyMemberAccountRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the WAF instance.
+         * <p>
+         * 
+         * >  You can call the [DescribeInstance](~~433756~~) operation to query the ID of the WAF instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -145,7 +148,7 @@ public class ModifyMemberAccountRequest extends Request {
         }
 
         /**
-         * MemberAccountId.
+         * The Alibaba Cloud account ID of the managed member.
          */
         public Builder memberAccountId(String memberAccountId) {
             this.putQueryParameter("MemberAccountId", memberAccountId);
@@ -154,7 +157,11 @@ public class ModifyMemberAccountRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region in which the Web Application Firewall (WAF) instance is deployed. Valid values:
+         * <p>
+         * 
+         * *   **cn-hangzhou**: Chinese mainland.
+         * *   **ap-southeast-1**: outside the Chinese mainland.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -163,7 +170,7 @@ public class ModifyMemberAccountRequest extends Request {
         }
 
         /**
-         * ResourceManagerResourceGroupId.
+         * The ID of the Alibaba Cloud resource group.
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
@@ -172,7 +179,7 @@ public class ModifyMemberAccountRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * The source IP address of the request. The system automatically obtains the value of this parameter.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

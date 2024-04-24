@@ -7,16 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeAccountDelegatedStatusRequest} extends {@link RequestModel}
+ * {@link CreatePostpaidInstanceRequest} extends {@link RequestModel}
  *
- * <p>DescribeAccountDelegatedStatusRequest</p>
+ * <p>CreatePostpaidInstanceRequest</p>
  */
-public class DescribeAccountDelegatedStatusRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
-    private String instanceId;
-
+public class CreatePostpaidInstanceRequest extends Request {
     @Query
     @NameInMap("RegionId")
     private String regionId;
@@ -25,9 +20,8 @@ public class DescribeAccountDelegatedStatusRequest extends Request {
     @NameInMap("ResourceManagerResourceGroupId")
     private String resourceManagerResourceGroupId;
 
-    private DescribeAccountDelegatedStatusRequest(Builder builder) {
+    private CreatePostpaidInstanceRequest(Builder builder) {
         super(builder);
-        this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
         this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
     }
@@ -36,20 +30,13 @@ public class DescribeAccountDelegatedStatusRequest extends Request {
         return new Builder();
     }
 
-    public static DescribeAccountDelegatedStatusRequest create() {
+    public static CreatePostpaidInstanceRequest create() {
         return builder().build();
     }
 
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return instanceId
-     */
-    public String getInstanceId() {
-        return this.instanceId;
     }
 
     /**
@@ -66,8 +53,7 @@ public class DescribeAccountDelegatedStatusRequest extends Request {
         return this.resourceManagerResourceGroupId;
     }
 
-    public static final class Builder extends Request.Builder<DescribeAccountDelegatedStatusRequest, Builder> {
-        private String instanceId; 
+    public static final class Builder extends Request.Builder<CreatePostpaidInstanceRequest, Builder> {
         private String regionId; 
         private String resourceManagerResourceGroupId; 
 
@@ -75,24 +61,11 @@ public class DescribeAccountDelegatedStatusRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeAccountDelegatedStatusRequest request) {
+        private Builder(CreatePostpaidInstanceRequest request) {
             super(request);
-            this.instanceId = request.instanceId;
             this.regionId = request.regionId;
             this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
         } 
-
-        /**
-         * The ID of the WAF instance.
-         * <p>
-         * 
-         * >  You can call the [DescribeInstance](~~433756~~) operation to query the ID of the WAF instance.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
 
         /**
          * The region in which the WAF instance is deployed. Valid values:
@@ -117,8 +90,8 @@ public class DescribeAccountDelegatedStatusRequest extends Request {
         }
 
         @Override
-        public DescribeAccountDelegatedStatusRequest build() {
-            return new DescribeAccountDelegatedStatusRequest(this);
+        public CreatePostpaidInstanceRequest build() {
+            return new CreatePostpaidInstanceRequest(this);
         } 
 
     } 

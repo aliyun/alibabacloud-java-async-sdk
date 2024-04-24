@@ -7,20 +7,20 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DeleteMemberAccountRequest} extends {@link RequestModel}
+ * {@link DescribeCertDetailRequest} extends {@link RequestModel}
  *
- * <p>DeleteMemberAccountRequest</p>
+ * <p>DescribeCertDetailRequest</p>
  */
-public class DeleteMemberAccountRequest extends Request {
+public class DescribeCertDetailRequest extends Request {
+    @Query
+    @NameInMap("CertIdentifier")
+    @Validation(required = true)
+    private String certIdentifier;
+
     @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
     private String instanceId;
-
-    @Query
-    @NameInMap("MemberAccountId")
-    @Validation(required = true)
-    private String memberAccountId;
 
     @Query
     @NameInMap("RegionId")
@@ -30,24 +30,19 @@ public class DeleteMemberAccountRequest extends Request {
     @NameInMap("ResourceManagerResourceGroupId")
     private String resourceManagerResourceGroupId;
 
-    @Query
-    @NameInMap("SourceIp")
-    private String sourceIp;
-
-    private DeleteMemberAccountRequest(Builder builder) {
+    private DescribeCertDetailRequest(Builder builder) {
         super(builder);
+        this.certIdentifier = builder.certIdentifier;
         this.instanceId = builder.instanceId;
-        this.memberAccountId = builder.memberAccountId;
         this.regionId = builder.regionId;
         this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
-        this.sourceIp = builder.sourceIp;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DeleteMemberAccountRequest create() {
+    public static DescribeCertDetailRequest create() {
         return builder().build();
     }
 
@@ -57,17 +52,17 @@ public class DeleteMemberAccountRequest extends Request {
     }
 
     /**
+     * @return certIdentifier
+     */
+    public String getCertIdentifier() {
+        return this.certIdentifier;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    /**
-     * @return memberAccountId
-     */
-    public String getMemberAccountId() {
-        return this.memberAccountId;
     }
 
     /**
@@ -84,32 +79,32 @@ public class DeleteMemberAccountRequest extends Request {
         return this.resourceManagerResourceGroupId;
     }
 
-    /**
-     * @return sourceIp
-     */
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
-    public static final class Builder extends Request.Builder<DeleteMemberAccountRequest, Builder> {
+    public static final class Builder extends Request.Builder<DescribeCertDetailRequest, Builder> {
+        private String certIdentifier; 
         private String instanceId; 
-        private String memberAccountId; 
         private String regionId; 
         private String resourceManagerResourceGroupId; 
-        private String sourceIp; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DeleteMemberAccountRequest request) {
+        private Builder(DescribeCertDetailRequest request) {
             super(request);
+            this.certIdentifier = request.certIdentifier;
             this.instanceId = request.instanceId;
-            this.memberAccountId = request.memberAccountId;
             this.regionId = request.regionId;
             this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
-            this.sourceIp = request.sourceIp;
         } 
+
+        /**
+         * The ID of the certificate.
+         */
+        public Builder certIdentifier(String certIdentifier) {
+            this.putQueryParameter("CertIdentifier", certIdentifier);
+            this.certIdentifier = certIdentifier;
+            return this;
+        }
 
         /**
          * The ID of the WAF instance.
@@ -124,16 +119,7 @@ public class DeleteMemberAccountRequest extends Request {
         }
 
         /**
-         * The Alibaba Cloud account ID of the managed member.
-         */
-        public Builder memberAccountId(String memberAccountId) {
-            this.putQueryParameter("MemberAccountId", memberAccountId);
-            this.memberAccountId = memberAccountId;
-            return this;
-        }
-
-        /**
-         * The region in which the WAF instance is deployed. Valid values:
+         * The region in which the Web Application Firewall (WAF) instance is deployed. Valid values:
          * <p>
          * 
          * *   **cn-hangzhou**: Chinese mainland.
@@ -154,18 +140,9 @@ public class DeleteMemberAccountRequest extends Request {
             return this;
         }
 
-        /**
-         * The source IP address of the request. The system automatically obtains the value of this parameter.
-         */
-        public Builder sourceIp(String sourceIp) {
-            this.putQueryParameter("SourceIp", sourceIp);
-            this.sourceIp = sourceIp;
-            return this;
-        }
-
         @Override
-        public DeleteMemberAccountRequest build() {
-            return new DeleteMemberAccountRequest(this);
+        public DescribeCertDetailRequest build() {
+            return new DescribeCertDetailRequest(this);
         } 
 
     } 

@@ -7,23 +7,27 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreateMemberAccountsResponseBody} extends {@link TeaModel}
+ * {@link CopyDefenseTemplateResponseBody} extends {@link TeaModel}
  *
- * <p>CreateMemberAccountsResponseBody</p>
+ * <p>CopyDefenseTemplateResponseBody</p>
  */
-public class CreateMemberAccountsResponseBody extends TeaModel {
+public class CopyDefenseTemplateResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
-    private CreateMemberAccountsResponseBody(Builder builder) {
+    @NameInMap("TemplateId")
+    private Long templateId;
+
+    private CopyDefenseTemplateResponseBody(Builder builder) {
         this.requestId = builder.requestId;
+        this.templateId = builder.templateId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static CreateMemberAccountsResponseBody create() {
+    public static CopyDefenseTemplateResponseBody create() {
         return builder().build();
     }
 
@@ -34,8 +38,16 @@ public class CreateMemberAccountsResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return templateId
+     */
+    public Long getTemplateId() {
+        return this.templateId;
+    }
+
     public static final class Builder {
         private String requestId; 
+        private Long templateId; 
 
         /**
          * The request ID.
@@ -45,8 +57,16 @@ public class CreateMemberAccountsResponseBody extends TeaModel {
             return this;
         }
 
-        public CreateMemberAccountsResponseBody build() {
-            return new CreateMemberAccountsResponseBody(this);
+        /**
+         * The ID of the new protection template.
+         */
+        public Builder templateId(Long templateId) {
+            this.templateId = templateId;
+            return this;
+        }
+
+        public CopyDefenseTemplateResponseBody build() {
+            return new CopyDefenseTemplateResponseBody(this);
         } 
 
     } 

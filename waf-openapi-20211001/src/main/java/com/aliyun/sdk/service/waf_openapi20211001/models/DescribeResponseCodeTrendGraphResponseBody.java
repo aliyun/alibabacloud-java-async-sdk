@@ -78,6 +78,9 @@ public class DescribeResponseCodeTrendGraphResponseBody extends TeaModel {
         @NameInMap("405Pv")
         private Long code405Pv;
 
+        @NameInMap("444Pv")
+        private Long code444Pv;
+
         @NameInMap("499Pv")
         private Long code499Pv;
 
@@ -90,6 +93,7 @@ public class DescribeResponseCodeTrendGraphResponseBody extends TeaModel {
         private ResponseCodes(Builder builder) {
             this.code302Pv = builder.code302Pv;
             this.code405Pv = builder.code405Pv;
+            this.code444Pv = builder.code444Pv;
             this.code499Pv = builder.code499Pv;
             this.code5xxPv = builder.code5xxPv;
             this.index = builder.index;
@@ -118,6 +122,13 @@ public class DescribeResponseCodeTrendGraphResponseBody extends TeaModel {
         }
 
         /**
+         * @return code444Pv
+         */
+        public Long getCode444Pv() {
+            return this.code444Pv;
+        }
+
+        /**
          * @return code499Pv
          */
         public Long getCode499Pv() {
@@ -141,6 +152,7 @@ public class DescribeResponseCodeTrendGraphResponseBody extends TeaModel {
         public static final class Builder {
             private Long code302Pv; 
             private Long code405Pv; 
+            private Long code444Pv; 
             private Long code499Pv; 
             private Long code5xxPv; 
             private Long index; 
@@ -158,6 +170,14 @@ public class DescribeResponseCodeTrendGraphResponseBody extends TeaModel {
              */
             public Builder code405Pv(Long code405Pv) {
                 this.code405Pv = code405Pv;
+                return this;
+            }
+
+            /**
+             * The number of 444 error codes that are returned.
+             */
+            public Builder code444Pv(Long code444Pv) {
+                this.code444Pv = code444Pv;
                 return this;
             }
 

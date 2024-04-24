@@ -21,6 +21,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ClearMajorProtectionBlackIpResponse> clearMajorProtectionBlackIp(ClearMajorProtectionBlackIpRequest request);
 
+    CompletableFuture<CopyDefenseTemplateResponse> copyDefenseTemplate(CopyDefenseTemplateRequest request);
+
     CompletableFuture<CreateDefenseResourceGroupResponse> createDefenseResourceGroup(CreateDefenseResourceGroupRequest request);
 
     CompletableFuture<CreateDefenseRuleResponse> createDefenseRule(CreateDefenseRuleRequest request);
@@ -37,6 +39,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateMemberAccountsResponse> createMemberAccounts(CreateMemberAccountsRequest request);
 
+    CompletableFuture<CreatePostpaidInstanceResponse> createPostpaidInstance(CreatePostpaidInstanceRequest request);
+
     CompletableFuture<DeleteDefenseResourceGroupResponse> deleteDefenseResourceGroup(DeleteDefenseResourceGroupRequest request);
 
     CompletableFuture<DeleteDefenseRuleResponse> deleteDefenseRule(DeleteDefenseRuleRequest request);
@@ -51,11 +55,21 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeAccountDelegatedStatusResponse> describeAccountDelegatedStatus(DescribeAccountDelegatedStatusRequest request);
 
+    CompletableFuture<DescribeCertDetailResponse> describeCertDetail(DescribeCertDetailRequest request);
+
     CompletableFuture<DescribeCertsResponse> describeCerts(DescribeCertsRequest request);
 
     CompletableFuture<DescribeCloudResourcesResponse> describeCloudResources(DescribeCloudResourcesRequest request);
 
+    CompletableFuture<DescribeDefenseResourceResponse> describeDefenseResource(DescribeDefenseResourceRequest request);
+
     CompletableFuture<DescribeDefenseResourceGroupResponse> describeDefenseResourceGroup(DescribeDefenseResourceGroupRequest request);
+
+    CompletableFuture<DescribeDefenseResourceGroupNamesResponse> describeDefenseResourceGroupNames(DescribeDefenseResourceGroupNamesRequest request);
+
+    CompletableFuture<DescribeDefenseResourceGroupsResponse> describeDefenseResourceGroups(DescribeDefenseResourceGroupsRequest request);
+
+    CompletableFuture<DescribeDefenseResourceNamesResponse> describeDefenseResourceNames(DescribeDefenseResourceNamesRequest request);
 
     CompletableFuture<DescribeDefenseResourceTemplatesResponse> describeDefenseResourceTemplates(DescribeDefenseResourceTemplatesRequest request);
 
@@ -66,6 +80,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDefenseRulesResponse> describeDefenseRules(DescribeDefenseRulesRequest request);
 
     CompletableFuture<DescribeDefenseTemplateResponse> describeDefenseTemplate(DescribeDefenseTemplateRequest request);
+
+    CompletableFuture<DescribeDefenseTemplateValidGroupsResponse> describeDefenseTemplateValidGroups(DescribeDefenseTemplateValidGroupsRequest request);
 
     CompletableFuture<DescribeDefenseTemplatesResponse> describeDefenseTemplates(DescribeDefenseTemplatesRequest request);
 
@@ -96,6 +112,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribePeakTrendResponse> describePeakTrend(DescribePeakTrendRequest request);
 
     CompletableFuture<DescribeProductInstancesResponse> describeProductInstances(DescribeProductInstancesRequest request);
+
+    CompletableFuture<DescribePunishedDomainsResponse> describePunishedDomains(DescribePunishedDomainsRequest request);
 
     CompletableFuture<DescribeResourceInstanceCertsResponse> describeResourceInstanceCerts(DescribeResourceInstanceCertsRequest request);
 
@@ -129,6 +147,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeSlsLogStoreStatusResponse> describeSlsLogStoreStatus(DescribeSlsLogStoreStatusRequest request);
 
+    CompletableFuture<DescribeTemplateResourceCountResponse> describeTemplateResourceCount(DescribeTemplateResourceCountRequest request);
+
     CompletableFuture<DescribeTemplateResourcesResponse> describeTemplateResources(DescribeTemplateResourcesRequest request);
 
     CompletableFuture<DescribeUserSlsLogRegionsResponse> describeUserSlsLogRegions(DescribeUserSlsLogRegionsRequest request);
@@ -140,6 +160,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeVisitUasResponse> describeVisitUas(DescribeVisitUasRequest request);
 
     CompletableFuture<DescribeWafSourceIpSegmentResponse> describeWafSourceIpSegment(DescribeWafSourceIpSegmentRequest request);
+
+    CompletableFuture<ListTagKeysResponse> listTagKeys(ListTagKeysRequest request);
+
+    CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
+
+    CompletableFuture<ListTagValuesResponse> listTagValues(ListTagValuesRequest request);
 
     CompletableFuture<ModifyDefenseResourceGroupResponse> modifyDefenseResourceGroup(ModifyDefenseResourceGroupRequest request);
 
@@ -157,6 +183,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ModifyDomainResponse> modifyDomain(ModifyDomainRequest request);
 
+    CompletableFuture<ModifyDomainPunishStatusResponse> modifyDomainPunishStatus(ModifyDomainPunishStatusRequest request);
+
     CompletableFuture<ModifyHybridCloudClusterBypassStatusResponse> modifyHybridCloudClusterBypassStatus(ModifyHybridCloudClusterBypassStatusRequest request);
 
     CompletableFuture<ModifyMajorProtectionBlackIpResponse> modifyMajorProtectionBlackIp(ModifyMajorProtectionBlackIpRequest request);
@@ -172,5 +200,9 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<SyncProductInstanceResponse> syncProductInstance(SyncProductInstanceRequest request);
+
+    CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
+
+    CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);
 
 }

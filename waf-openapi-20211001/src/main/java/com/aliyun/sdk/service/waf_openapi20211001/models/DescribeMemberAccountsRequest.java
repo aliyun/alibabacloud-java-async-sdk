@@ -111,7 +111,12 @@ public class DescribeMemberAccountsRequest extends Request {
         } 
 
         /**
-         * AccountStatus.
+         * The status of the member that you want to query.
+         * <p>
+         * 
+         * *   **enabled**: managed.
+         * *   **disabled**: not managed.
+         * *   **disabling**: being deleted.
          */
         public Builder accountStatus(String accountStatus) {
             this.putQueryParameter("AccountStatus", accountStatus);
@@ -120,7 +125,10 @@ public class DescribeMemberAccountsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the Web Application Firewall (WAF) instance.
+         * <p>
+         * 
+         * >  You can call the [DescribeInstance](~~433756~~) operation to query the ID of the WAF instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -129,7 +137,11 @@ public class DescribeMemberAccountsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region in which the WAF instance is deployed. Valid values:
+         * <p>
+         * 
+         * *   **cn-hangzhou**: Chinese mainland.
+         * *   **ap-southeast-1**: outside the Chinese mainland.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -138,7 +150,7 @@ public class DescribeMemberAccountsRequest extends Request {
         }
 
         /**
-         * ResourceManagerResourceGroupId.
+         * The ID of the Alibaba Cloud resource group.
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
@@ -147,7 +159,7 @@ public class DescribeMemberAccountsRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * The source IP address of the request. The system specifies this parameter.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

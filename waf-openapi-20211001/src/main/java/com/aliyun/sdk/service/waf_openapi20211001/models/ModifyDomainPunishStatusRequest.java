@@ -7,20 +7,20 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DeleteMemberAccountRequest} extends {@link RequestModel}
+ * {@link ModifyDomainPunishStatusRequest} extends {@link RequestModel}
  *
- * <p>DeleteMemberAccountRequest</p>
+ * <p>ModifyDomainPunishStatusRequest</p>
  */
-public class DeleteMemberAccountRequest extends Request {
+public class ModifyDomainPunishStatusRequest extends Request {
+    @Query
+    @NameInMap("Domain")
+    @Validation(required = true)
+    private String domain;
+
     @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
     private String instanceId;
-
-    @Query
-    @NameInMap("MemberAccountId")
-    @Validation(required = true)
-    private String memberAccountId;
 
     @Query
     @NameInMap("RegionId")
@@ -30,24 +30,19 @@ public class DeleteMemberAccountRequest extends Request {
     @NameInMap("ResourceManagerResourceGroupId")
     private String resourceManagerResourceGroupId;
 
-    @Query
-    @NameInMap("SourceIp")
-    private String sourceIp;
-
-    private DeleteMemberAccountRequest(Builder builder) {
+    private ModifyDomainPunishStatusRequest(Builder builder) {
         super(builder);
+        this.domain = builder.domain;
         this.instanceId = builder.instanceId;
-        this.memberAccountId = builder.memberAccountId;
         this.regionId = builder.regionId;
         this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
-        this.sourceIp = builder.sourceIp;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DeleteMemberAccountRequest create() {
+    public static ModifyDomainPunishStatusRequest create() {
         return builder().build();
     }
 
@@ -57,17 +52,17 @@ public class DeleteMemberAccountRequest extends Request {
     }
 
     /**
+     * @return domain
+     */
+    public String getDomain() {
+        return this.domain;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    /**
-     * @return memberAccountId
-     */
-    public String getMemberAccountId() {
-        return this.memberAccountId;
     }
 
     /**
@@ -84,51 +79,42 @@ public class DeleteMemberAccountRequest extends Request {
         return this.resourceManagerResourceGroupId;
     }
 
-    /**
-     * @return sourceIp
-     */
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
-    public static final class Builder extends Request.Builder<DeleteMemberAccountRequest, Builder> {
+    public static final class Builder extends Request.Builder<ModifyDomainPunishStatusRequest, Builder> {
+        private String domain; 
         private String instanceId; 
-        private String memberAccountId; 
         private String regionId; 
         private String resourceManagerResourceGroupId; 
-        private String sourceIp; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DeleteMemberAccountRequest request) {
+        private Builder(ModifyDomainPunishStatusRequest request) {
             super(request);
+            this.domain = request.domain;
             this.instanceId = request.instanceId;
-            this.memberAccountId = request.memberAccountId;
             this.regionId = request.regionId;
             this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
-            this.sourceIp = request.sourceIp;
         } 
+
+        /**
+         * The domain name that is penalized for failing to obtain an ICP filing.
+         */
+        public Builder domain(String domain) {
+            this.putQueryParameter("Domain", domain);
+            this.domain = domain;
+            return this;
+        }
 
         /**
          * The ID of the WAF instance.
          * <p>
          * 
-         * >  You can call the [DescribeInstance](~~433756~~) operation to query the ID of the WAF instance.
+         * > You can call the [DescribeInstance](~~433756~~) operation to query the ID of the WAF instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * The Alibaba Cloud account ID of the managed member.
-         */
-        public Builder memberAccountId(String memberAccountId) {
-            this.putQueryParameter("MemberAccountId", memberAccountId);
-            this.memberAccountId = memberAccountId;
             return this;
         }
 
@@ -154,18 +140,9 @@ public class DeleteMemberAccountRequest extends Request {
             return this;
         }
 
-        /**
-         * The source IP address of the request. The system automatically obtains the value of this parameter.
-         */
-        public Builder sourceIp(String sourceIp) {
-            this.putQueryParameter("SourceIp", sourceIp);
-            this.sourceIp = sourceIp;
-            return this;
-        }
-
         @Override
-        public DeleteMemberAccountRequest build() {
-            return new DeleteMemberAccountRequest(this);
+        public ModifyDomainPunishStatusRequest build() {
+            return new ModifyDomainPunishStatusRequest(this);
         } 
 
     } 

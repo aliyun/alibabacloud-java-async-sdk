@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeResourceInstanceCertsRequest} extends {@link RequestModel}
+ * {@link DescribeDefenseResourceNamesRequest} extends {@link RequestModel}
  *
- * <p>DescribeResourceInstanceCertsRequest</p>
+ * <p>DescribeDefenseResourceNamesRequest</p>
  */
-public class DescribeResourceInstanceCertsRequest extends Request {
+public class DescribeDefenseResourceNamesRequest extends Request {
     @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
@@ -19,32 +19,31 @@ public class DescribeResourceInstanceCertsRequest extends Request {
 
     @Query
     @NameInMap("PageNumber")
-    private Long pageNumber;
+    private Integer pageNumber;
 
     @Query
     @NameInMap("PageSize")
-    @Validation(maximum = 1000)
-    private Long pageSize;
+    private Integer pageSize;
 
     @Query
     @NameInMap("RegionId")
     private String regionId;
 
     @Query
-    @NameInMap("ResourceInstanceId")
-    private String resourceInstanceId;
+    @NameInMap("Resource")
+    private String resource;
 
     @Query
     @NameInMap("ResourceManagerResourceGroupId")
     private String resourceManagerResourceGroupId;
 
-    private DescribeResourceInstanceCertsRequest(Builder builder) {
+    private DescribeDefenseResourceNamesRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
-        this.resourceInstanceId = builder.resourceInstanceId;
+        this.resource = builder.resource;
         this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
     }
 
@@ -52,7 +51,7 @@ public class DescribeResourceInstanceCertsRequest extends Request {
         return new Builder();
     }
 
-    public static DescribeResourceInstanceCertsRequest create() {
+    public static DescribeDefenseResourceNamesRequest create() {
         return builder().build();
     }
 
@@ -71,14 +70,14 @@ public class DescribeResourceInstanceCertsRequest extends Request {
     /**
      * @return pageNumber
      */
-    public Long getPageNumber() {
+    public Integer getPageNumber() {
         return this.pageNumber;
     }
 
     /**
      * @return pageSize
      */
-    public Long getPageSize() {
+    public Integer getPageSize() {
         return this.pageSize;
     }
 
@@ -90,10 +89,10 @@ public class DescribeResourceInstanceCertsRequest extends Request {
     }
 
     /**
-     * @return resourceInstanceId
+     * @return resource
      */
-    public String getResourceInstanceId() {
-        return this.resourceInstanceId;
+    public String getResource() {
+        return this.resource;
     }
 
     /**
@@ -103,30 +102,30 @@ public class DescribeResourceInstanceCertsRequest extends Request {
         return this.resourceManagerResourceGroupId;
     }
 
-    public static final class Builder extends Request.Builder<DescribeResourceInstanceCertsRequest, Builder> {
+    public static final class Builder extends Request.Builder<DescribeDefenseResourceNamesRequest, Builder> {
         private String instanceId; 
-        private Long pageNumber; 
-        private Long pageSize; 
+        private Integer pageNumber; 
+        private Integer pageSize; 
         private String regionId; 
-        private String resourceInstanceId; 
+        private String resource; 
         private String resourceManagerResourceGroupId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeResourceInstanceCertsRequest request) {
+        private Builder(DescribeDefenseResourceNamesRequest request) {
             super(request);
             this.instanceId = request.instanceId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
-            this.resourceInstanceId = request.resourceInstanceId;
+            this.resource = request.resource;
             this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
         } 
 
         /**
-         * The ID of the WAF instance.
+         * The ID of the Web Application Firewall (WAF) instance.
          * <p>
          * 
          * >  You can call the [DescribeInstance](~~433756~~) operation to query the ID of the WAF instance.
@@ -140,16 +139,16 @@ public class DescribeResourceInstanceCertsRequest extends Request {
         /**
          * The page number. Default value: **1**.
          */
-        public Builder pageNumber(Long pageNumber) {
+        public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
             this.pageNumber = pageNumber;
             return this;
         }
 
         /**
-         * The number of entries per page. Default value: **10**.
+         * The number of entries per page. Default value: **20**.
          */
-        public Builder pageSize(Long pageSize) {
+        public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
             return this;
@@ -169,11 +168,11 @@ public class DescribeResourceInstanceCertsRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The name of the protected object that you want to query.
          */
-        public Builder resourceInstanceId(String resourceInstanceId) {
-            this.putQueryParameter("ResourceInstanceId", resourceInstanceId);
-            this.resourceInstanceId = resourceInstanceId;
+        public Builder resource(String resource) {
+            this.putQueryParameter("Resource", resource);
+            this.resource = resource;
             return this;
         }
 
@@ -187,8 +186,8 @@ public class DescribeResourceInstanceCertsRequest extends Request {
         }
 
         @Override
-        public DescribeResourceInstanceCertsRequest build() {
-            return new DescribeResourceInstanceCertsRequest(this);
+        public DescribeDefenseResourceNamesRequest build() {
+            return new DescribeDefenseResourceNamesRequest(this);
         } 
 
     } 

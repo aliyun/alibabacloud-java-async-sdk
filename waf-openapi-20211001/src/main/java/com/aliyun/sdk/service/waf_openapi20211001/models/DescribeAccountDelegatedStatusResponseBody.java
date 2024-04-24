@@ -74,7 +74,7 @@ public class DescribeAccountDelegatedStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AccountId.
+         * The ID of the Alibaba Cloud account.
          */
         public Builder accountId(String accountId) {
             this.accountId = accountId;
@@ -82,7 +82,7 @@ public class DescribeAccountDelegatedStatusResponseBody extends TeaModel {
         }
 
         /**
-         * AccountName.
+         * The name of the Alibaba Cloud account. This parameter is returned only if the account is the delegated administrator account.
          */
         public Builder accountName(String accountName) {
             this.accountName = accountName;
@@ -90,7 +90,11 @@ public class DescribeAccountDelegatedStatusResponseBody extends TeaModel {
         }
 
         /**
-         * DelegatedStatus.
+         * Indicates whether the Alibaba Cloud account is the delegated administrator account of the WAF instance.
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder delegatedStatus(Boolean delegatedStatus) {
             this.delegatedStatus = delegatedStatus;
@@ -98,7 +102,7 @@ public class DescribeAccountDelegatedStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

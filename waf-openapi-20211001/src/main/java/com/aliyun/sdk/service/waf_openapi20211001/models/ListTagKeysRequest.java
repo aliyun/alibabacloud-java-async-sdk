@@ -7,36 +7,42 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeAccountDelegatedStatusRequest} extends {@link RequestModel}
+ * {@link ListTagKeysRequest} extends {@link RequestModel}
  *
- * <p>DescribeAccountDelegatedStatusRequest</p>
+ * <p>ListTagKeysRequest</p>
  */
-public class DescribeAccountDelegatedStatusRequest extends Request {
+public class ListTagKeysRequest extends Request {
     @Query
     @NameInMap("InstanceId")
-    @Validation(required = true)
     private String instanceId;
 
     @Query
+    @NameInMap("NextToken")
+    private String nextToken;
+
+    @Query
     @NameInMap("RegionId")
+    @Validation(required = true)
     private String regionId;
 
     @Query
-    @NameInMap("ResourceManagerResourceGroupId")
-    private String resourceManagerResourceGroupId;
+    @NameInMap("ResourceType")
+    @Validation(required = true)
+    private String resourceType;
 
-    private DescribeAccountDelegatedStatusRequest(Builder builder) {
+    private ListTagKeysRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
+        this.nextToken = builder.nextToken;
         this.regionId = builder.regionId;
-        this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
+        this.resourceType = builder.resourceType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DescribeAccountDelegatedStatusRequest create() {
+    public static ListTagKeysRequest create() {
         return builder().build();
     }
 
@@ -53,6 +59,13 @@ public class DescribeAccountDelegatedStatusRequest extends Request {
     }
 
     /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -60,26 +73,28 @@ public class DescribeAccountDelegatedStatusRequest extends Request {
     }
 
     /**
-     * @return resourceManagerResourceGroupId
+     * @return resourceType
      */
-    public String getResourceManagerResourceGroupId() {
-        return this.resourceManagerResourceGroupId;
+    public String getResourceType() {
+        return this.resourceType;
     }
 
-    public static final class Builder extends Request.Builder<DescribeAccountDelegatedStatusRequest, Builder> {
+    public static final class Builder extends Request.Builder<ListTagKeysRequest, Builder> {
         private String instanceId; 
+        private String nextToken; 
         private String regionId; 
-        private String resourceManagerResourceGroupId; 
+        private String resourceType; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeAccountDelegatedStatusRequest request) {
+        private Builder(ListTagKeysRequest request) {
             super(request);
             this.instanceId = request.instanceId;
+            this.nextToken = request.nextToken;
             this.regionId = request.regionId;
-            this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
+            this.resourceType = request.resourceType;
         } 
 
         /**
@@ -95,7 +110,16 @@ public class DescribeAccountDelegatedStatusRequest extends Request {
         }
 
         /**
-         * The region in which the WAF instance is deployed. Valid values:
+         * The pagination token that is used in the next request to retrieve a new page of results.
+         */
+        public Builder nextToken(String nextToken) {
+            this.putQueryParameter("NextToken", nextToken);
+            this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * The region in which the Web Application Firewall (WAF) instance is deployed. Valid values:
          * <p>
          * 
          * *   **cn-hangzhou**: Chinese mainland.
@@ -108,17 +132,17 @@ public class DescribeAccountDelegatedStatusRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud resource group.
+         * The type of the resource. Set the value to ALIYUN::WAF::DEFENSERESOURCE.
          */
-        public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
-            this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
-            this.resourceManagerResourceGroupId = resourceManagerResourceGroupId;
+        public Builder resourceType(String resourceType) {
+            this.putQueryParameter("ResourceType", resourceType);
+            this.resourceType = resourceType;
             return this;
         }
 
         @Override
-        public DescribeAccountDelegatedStatusRequest build() {
-            return new DescribeAccountDelegatedStatusRequest(this);
+        public ListTagKeysRequest build() {
+            return new ListTagKeysRequest(this);
         } 
 
     } 

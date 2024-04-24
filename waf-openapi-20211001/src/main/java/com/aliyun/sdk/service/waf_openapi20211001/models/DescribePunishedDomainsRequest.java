@@ -7,20 +7,19 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DeleteMemberAccountRequest} extends {@link RequestModel}
+ * {@link DescribePunishedDomainsRequest} extends {@link RequestModel}
  *
- * <p>DeleteMemberAccountRequest</p>
+ * <p>DescribePunishedDomainsRequest</p>
  */
-public class DeleteMemberAccountRequest extends Request {
+public class DescribePunishedDomainsRequest extends Request {
+    @Query
+    @NameInMap("Domains")
+    private java.util.List < String > domains;
+
     @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
     private String instanceId;
-
-    @Query
-    @NameInMap("MemberAccountId")
-    @Validation(required = true)
-    private String memberAccountId;
 
     @Query
     @NameInMap("RegionId")
@@ -30,24 +29,19 @@ public class DeleteMemberAccountRequest extends Request {
     @NameInMap("ResourceManagerResourceGroupId")
     private String resourceManagerResourceGroupId;
 
-    @Query
-    @NameInMap("SourceIp")
-    private String sourceIp;
-
-    private DeleteMemberAccountRequest(Builder builder) {
+    private DescribePunishedDomainsRequest(Builder builder) {
         super(builder);
+        this.domains = builder.domains;
         this.instanceId = builder.instanceId;
-        this.memberAccountId = builder.memberAccountId;
         this.regionId = builder.regionId;
         this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
-        this.sourceIp = builder.sourceIp;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DeleteMemberAccountRequest create() {
+    public static DescribePunishedDomainsRequest create() {
         return builder().build();
     }
 
@@ -57,17 +51,17 @@ public class DeleteMemberAccountRequest extends Request {
     }
 
     /**
+     * @return domains
+     */
+    public java.util.List < String > getDomains() {
+        return this.domains;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    /**
-     * @return memberAccountId
-     */
-    public String getMemberAccountId() {
-        return this.memberAccountId;
     }
 
     /**
@@ -84,32 +78,32 @@ public class DeleteMemberAccountRequest extends Request {
         return this.resourceManagerResourceGroupId;
     }
 
-    /**
-     * @return sourceIp
-     */
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
-    public static final class Builder extends Request.Builder<DeleteMemberAccountRequest, Builder> {
+    public static final class Builder extends Request.Builder<DescribePunishedDomainsRequest, Builder> {
+        private java.util.List < String > domains; 
         private String instanceId; 
-        private String memberAccountId; 
         private String regionId; 
         private String resourceManagerResourceGroupId; 
-        private String sourceIp; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DeleteMemberAccountRequest request) {
+        private Builder(DescribePunishedDomainsRequest request) {
             super(request);
+            this.domains = request.domains;
             this.instanceId = request.instanceId;
-            this.memberAccountId = request.memberAccountId;
             this.regionId = request.regionId;
             this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
-            this.sourceIp = request.sourceIp;
         } 
+
+        /**
+         * The domain names.
+         */
+        public Builder domains(java.util.List < String > domains) {
+            this.putQueryParameter("Domains", domains);
+            this.domains = domains;
+            return this;
+        }
 
         /**
          * The ID of the WAF instance.
@@ -120,15 +114,6 @@ public class DeleteMemberAccountRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * The Alibaba Cloud account ID of the managed member.
-         */
-        public Builder memberAccountId(String memberAccountId) {
-            this.putQueryParameter("MemberAccountId", memberAccountId);
-            this.memberAccountId = memberAccountId;
             return this;
         }
 
@@ -154,18 +139,9 @@ public class DeleteMemberAccountRequest extends Request {
             return this;
         }
 
-        /**
-         * The source IP address of the request. The system automatically obtains the value of this parameter.
-         */
-        public Builder sourceIp(String sourceIp) {
-            this.putQueryParameter("SourceIp", sourceIp);
-            this.sourceIp = sourceIp;
-            return this;
-        }
-
         @Override
-        public DeleteMemberAccountRequest build() {
-            return new DeleteMemberAccountRequest(this);
+        public DescribePunishedDomainsRequest build() {
+            return new DescribePunishedDomainsRequest(this);
         } 
 
     } 

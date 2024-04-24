@@ -7,31 +7,27 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeDefenseResourcesResponseBody} extends {@link TeaModel}
+ * {@link DescribeDefenseResourceResponseBody} extends {@link TeaModel}
  *
- * <p>DescribeDefenseResourcesResponseBody</p>
+ * <p>DescribeDefenseResourceResponseBody</p>
  */
-public class DescribeDefenseResourcesResponseBody extends TeaModel {
+public class DescribeDefenseResourceResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Resources")
-    private java.util.List < Resources> resources;
+    @NameInMap("Resource")
+    private Resource resource;
 
-    @NameInMap("TotalCount")
-    private Long totalCount;
-
-    private DescribeDefenseResourcesResponseBody(Builder builder) {
+    private DescribeDefenseResourceResponseBody(Builder builder) {
         this.requestId = builder.requestId;
-        this.resources = builder.resources;
-        this.totalCount = builder.totalCount;
+        this.resource = builder.resource;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DescribeDefenseResourcesResponseBody create() {
+    public static DescribeDefenseResourceResponseBody create() {
         return builder().build();
     }
 
@@ -43,26 +39,18 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
     }
 
     /**
-     * @return resources
+     * @return resource
      */
-    public java.util.List < Resources> getResources() {
-        return this.resources;
-    }
-
-    /**
-     * @return totalCount
-     */
-    public Long getTotalCount() {
-        return this.totalCount;
+    public Resource getResource() {
+        return this.resource;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Resources> resources; 
-        private Long totalCount; 
+        private Resource resource; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,28 +58,20 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The protected objects.
+         * The information about the protected object.
          */
-        public Builder resources(java.util.List < Resources> resources) {
-            this.resources = resources;
+        public Builder resource(Resource resource) {
+            this.resource = resource;
             return this;
         }
 
-        /**
-         * The total number of entries that are returned.
-         */
-        public Builder totalCount(Long totalCount) {
-            this.totalCount = totalCount;
-            return this;
-        }
-
-        public DescribeDefenseResourcesResponseBody build() {
-            return new DescribeDefenseResourcesResponseBody(this);
+        public DescribeDefenseResourceResponseBody build() {
+            return new DescribeDefenseResourceResponseBody(this);
         } 
 
     } 
 
-    public static class Resources extends TeaModel {
+    public static class Resource extends TeaModel {
         @NameInMap("AcwCookieStatus")
         private Integer acwCookieStatus;
 
@@ -140,7 +120,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
         @NameInMap("XffStatus")
         private Integer xffStatus;
 
-        private Resources(Builder builder) {
+        private Resource(Builder builder) {
             this.acwCookieStatus = builder.acwCookieStatus;
             this.acwSecureStatus = builder.acwSecureStatus;
             this.acwV3SecureStatus = builder.acwV3SecureStatus;
@@ -163,7 +143,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static Resources create() {
+        public static Resource create() {
             return builder().build();
         }
 
@@ -301,8 +281,8 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
              * The status of the tracking cookie.
              * <p>
              * 
-             * *   **0:** disabled.
-             * *   **1:** enabled.
+             * *   **0**: disabled.
+             * *   **1**: enabled.
              */
             public Builder acwCookieStatus(Integer acwCookieStatus) {
                 this.acwCookieStatus = acwCookieStatus;
@@ -310,11 +290,11 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the secure attribute in the tracking cookie.
+             * The status of the secure attribute of the tracking cookie.
              * <p>
              * 
-             * *   **0:** disabled.
-             * *   **1:** enabled.
+             * *   **0**: disabled.
+             * *   **1**: enabled.
              */
             public Builder acwSecureStatus(Integer acwSecureStatus) {
                 this.acwSecureStatus = acwSecureStatus;
@@ -322,11 +302,11 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the secure attribute in the slider CAPTCHA cookie.
+             * The status of the secure attribute of the slider CAPTCHA cookie.
              * <p>
              * 
-             * *   **0:** disabled.
-             * *   **1:** enabled.
+             * *   **0**: disabled.
+             * *   **1**: enabled.
              */
             public Builder acwV3SecureStatus(Integer acwV3SecureStatus) {
                 this.acwV3SecureStatus = acwV3SecureStatus;
@@ -334,7 +314,10 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The custom XFF headers that are used to identify the originating IP addresses of clients. If the value of XffStatus is 1 and CustomHeaders is left empty, the first IP addresses in the XFF headers are used as the originating IP addresses of clients.
+             * The custom header fields.
+             * <p>
+             * 
+             * >  If the value of XffStatus is 1, the first IP address in the specified header field is used as the originating IP address of the client to prevent X-Forwarded-For (XFF) forgery. If you specify multiple header fields, WAF reads the values of the header fields in sequence until the originating IP address is obtained. If the originating IP address cannot be obtained, the first IP address in the XFF header field is used as the originating IP address of the client.
              */
             public Builder customHeaders(java.util.List < String > customHeaders) {
                 this.customHeaders = customHeaders;
@@ -374,7 +357,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account to which the resource belongs.
+             * The user ID (UID) of the Alibaba Cloud account to which the protected object belongs.
              */
             public Builder ownerUserId(String ownerUserId) {
                 this.ownerUserId = ownerUserId;
@@ -382,7 +365,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The pattern in which the protected object is protected.
+             * The pattern used for the protected object.
              */
             public Builder pattern(String pattern) {
                 this.pattern = pattern;
@@ -422,7 +405,11 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The origin of the protected object.
+             * The origin of the protected object. Valid values:
+             * <p>
+             * 
+             * *   **custom**
+             * *   **access**
              */
             public Builder resourceOrigin(String resourceOrigin) {
                 this.resourceOrigin = resourceOrigin;
@@ -430,15 +417,19 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the X-Forwarded-For (XFF) proxy is enabled.
+             * Indicates whether a Layer 7 proxy is deployed in front of WAF, such as Anti-DDoS Proxy and Alibaba Cloud CDN. Valid values:
+             * <p>
+             * 
+             * *   **0**: No Layer 7 proxy is deployed.
+             * *   **1**: A Layer 7 proxy is deployed.
              */
             public Builder xffStatus(Integer xffStatus) {
                 this.xffStatus = xffStatus;
                 return this;
             }
 
-            public Resources build() {
-                return new Resources(this);
+            public Resource build() {
+                return new Resource(this);
             } 
 
         } 

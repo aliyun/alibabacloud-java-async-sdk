@@ -7,20 +7,27 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DeleteMemberAccountRequest} extends {@link RequestModel}
+ * {@link DescribeDefenseResourceGroupNamesRequest} extends {@link RequestModel}
  *
- * <p>DeleteMemberAccountRequest</p>
+ * <p>DescribeDefenseResourceGroupNamesRequest</p>
  */
-public class DeleteMemberAccountRequest extends Request {
+public class DescribeDefenseResourceGroupNamesRequest extends Request {
+    @Query
+    @NameInMap("GroupNameLike")
+    private String groupNameLike;
+
     @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
     private String instanceId;
 
     @Query
-    @NameInMap("MemberAccountId")
-    @Validation(required = true)
-    private String memberAccountId;
+    @NameInMap("PageNumber")
+    private Integer pageNumber;
+
+    @Query
+    @NameInMap("PageSize")
+    private Integer pageSize;
 
     @Query
     @NameInMap("RegionId")
@@ -30,30 +37,34 @@ public class DeleteMemberAccountRequest extends Request {
     @NameInMap("ResourceManagerResourceGroupId")
     private String resourceManagerResourceGroupId;
 
-    @Query
-    @NameInMap("SourceIp")
-    private String sourceIp;
-
-    private DeleteMemberAccountRequest(Builder builder) {
+    private DescribeDefenseResourceGroupNamesRequest(Builder builder) {
         super(builder);
+        this.groupNameLike = builder.groupNameLike;
         this.instanceId = builder.instanceId;
-        this.memberAccountId = builder.memberAccountId;
+        this.pageNumber = builder.pageNumber;
+        this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
         this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
-        this.sourceIp = builder.sourceIp;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DeleteMemberAccountRequest create() {
+    public static DescribeDefenseResourceGroupNamesRequest create() {
         return builder().build();
     }
 
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return groupNameLike
+     */
+    public String getGroupNameLike() {
+        return this.groupNameLike;
     }
 
     /**
@@ -64,10 +75,17 @@ public class DeleteMemberAccountRequest extends Request {
     }
 
     /**
-     * @return memberAccountId
+     * @return pageNumber
      */
-    public String getMemberAccountId() {
-        return this.memberAccountId;
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     /**
@@ -84,35 +102,39 @@ public class DeleteMemberAccountRequest extends Request {
         return this.resourceManagerResourceGroupId;
     }
 
-    /**
-     * @return sourceIp
-     */
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
-    public static final class Builder extends Request.Builder<DeleteMemberAccountRequest, Builder> {
+    public static final class Builder extends Request.Builder<DescribeDefenseResourceGroupNamesRequest, Builder> {
+        private String groupNameLike; 
         private String instanceId; 
-        private String memberAccountId; 
+        private Integer pageNumber; 
+        private Integer pageSize; 
         private String regionId; 
         private String resourceManagerResourceGroupId; 
-        private String sourceIp; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DeleteMemberAccountRequest request) {
+        private Builder(DescribeDefenseResourceGroupNamesRequest request) {
             super(request);
+            this.groupNameLike = request.groupNameLike;
             this.instanceId = request.instanceId;
-            this.memberAccountId = request.memberAccountId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
             this.regionId = request.regionId;
             this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
-            this.sourceIp = request.sourceIp;
         } 
 
         /**
-         * The ID of the WAF instance.
+         * The name of the protected object group. Fuzzy queries are supported.
+         */
+        public Builder groupNameLike(String groupNameLike) {
+            this.putQueryParameter("GroupNameLike", groupNameLike);
+            this.groupNameLike = groupNameLike;
+            return this;
+        }
+
+        /**
+         * The ID of the Web Application Firewall (WAF) instance.
          * <p>
          * 
          * >  You can call the [DescribeInstance](~~433756~~) operation to query the ID of the WAF instance.
@@ -124,11 +146,20 @@ public class DeleteMemberAccountRequest extends Request {
         }
 
         /**
-         * The Alibaba Cloud account ID of the managed member.
+         * The page number. Default value: **1**.
          */
-        public Builder memberAccountId(String memberAccountId) {
-            this.putQueryParameter("MemberAccountId", memberAccountId);
-            this.memberAccountId = memberAccountId;
+        public Builder pageNumber(Integer pageNumber) {
+            this.putQueryParameter("PageNumber", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * The number of entries per page. Default value: **20**.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
             return this;
         }
 
@@ -154,18 +185,9 @@ public class DeleteMemberAccountRequest extends Request {
             return this;
         }
 
-        /**
-         * The source IP address of the request. The system automatically obtains the value of this parameter.
-         */
-        public Builder sourceIp(String sourceIp) {
-            this.putQueryParameter("SourceIp", sourceIp);
-            this.sourceIp = sourceIp;
-            return this;
-        }
-
         @Override
-        public DeleteMemberAccountRequest build() {
-            return new DeleteMemberAccountRequest(this);
+        public DescribeDefenseResourceGroupNamesRequest build() {
+            return new DescribeDefenseResourceGroupNamesRequest(this);
         } 
 
     } 

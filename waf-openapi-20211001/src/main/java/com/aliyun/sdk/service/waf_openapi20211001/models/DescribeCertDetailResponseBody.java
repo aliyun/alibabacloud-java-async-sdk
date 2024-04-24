@@ -7,39 +7,35 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeResourceInstanceCertsResponseBody} extends {@link TeaModel}
+ * {@link DescribeCertDetailResponseBody} extends {@link TeaModel}
  *
- * <p>DescribeResourceInstanceCertsResponseBody</p>
+ * <p>DescribeCertDetailResponseBody</p>
  */
-public class DescribeResourceInstanceCertsResponseBody extends TeaModel {
-    @NameInMap("Certs")
-    private java.util.List < Certs> certs;
+public class DescribeCertDetailResponseBody extends TeaModel {
+    @NameInMap("CertDetail")
+    private CertDetail certDetail;
 
     @NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
-    private Long totalCount;
-
-    private DescribeResourceInstanceCertsResponseBody(Builder builder) {
-        this.certs = builder.certs;
+    private DescribeCertDetailResponseBody(Builder builder) {
+        this.certDetail = builder.certDetail;
         this.requestId = builder.requestId;
-        this.totalCount = builder.totalCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DescribeResourceInstanceCertsResponseBody create() {
+    public static DescribeCertDetailResponseBody create() {
         return builder().build();
     }
 
     /**
-     * @return certs
+     * @return certDetail
      */
-    public java.util.List < Certs> getCerts() {
-        return this.certs;
+    public CertDetail getCertDetail() {
+        return this.certDetail;
     }
 
     /**
@@ -49,49 +45,33 @@ public class DescribeResourceInstanceCertsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    /**
-     * @return totalCount
-     */
-    public Long getTotalCount() {
-        return this.totalCount;
-    }
-
     public static final class Builder {
-        private java.util.List < Certs> certs; 
+        private CertDetail certDetail; 
         private String requestId; 
-        private Long totalCount; 
 
         /**
-         * The certificates.
+         * The details of the certificate.
          */
-        public Builder certs(java.util.List < Certs> certs) {
-            this.certs = certs;
+        public Builder certDetail(CertDetail certDetail) {
+            this.certDetail = certDetail;
             return this;
         }
 
         /**
-         * The request ID.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        /**
-         * The total number of entries returned.
-         */
-        public Builder totalCount(Long totalCount) {
-            this.totalCount = totalCount;
-            return this;
-        }
-
-        public DescribeResourceInstanceCertsResponseBody build() {
-            return new DescribeResourceInstanceCertsResponseBody(this);
+        public DescribeCertDetailResponseBody build() {
+            return new DescribeCertDetailResponseBody(this);
         } 
 
     } 
 
-    public static class Certs extends TeaModel {
+    public static class CertDetail extends TeaModel {
         @NameInMap("AfterDate")
         private Long afterDate;
 
@@ -110,24 +90,24 @@ public class DescribeResourceInstanceCertsResponseBody extends TeaModel {
         @NameInMap("Domain")
         private String domain;
 
-        @NameInMap("IsChainCompleted")
-        private Boolean isChainCompleted;
+        @NameInMap("Sans")
+        private java.util.List < String > sans;
 
-        private Certs(Builder builder) {
+        private CertDetail(Builder builder) {
             this.afterDate = builder.afterDate;
             this.beforeDate = builder.beforeDate;
             this.certIdentifier = builder.certIdentifier;
             this.certName = builder.certName;
             this.commonName = builder.commonName;
             this.domain = builder.domain;
-            this.isChainCompleted = builder.isChainCompleted;
+            this.sans = builder.sans;
         }
 
         public static Builder builder() {
             return new Builder();
         }
 
-        public static Certs create() {
+        public static CertDetail create() {
             return builder().build();
         }
 
@@ -174,10 +154,10 @@ public class DescribeResourceInstanceCertsResponseBody extends TeaModel {
         }
 
         /**
-         * @return isChainCompleted
+         * @return sans
          */
-        public Boolean getIsChainCompleted() {
-            return this.isChainCompleted;
+        public java.util.List < String > getSans() {
+            return this.sans;
         }
 
         public static final class Builder {
@@ -187,10 +167,10 @@ public class DescribeResourceInstanceCertsResponseBody extends TeaModel {
             private String certName; 
             private String commonName; 
             private String domain; 
-            private Boolean isChainCompleted; 
+            private java.util.List < String > sans; 
 
             /**
-             * The time when the certificate expires.
+             * The time when the certificate expires. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder afterDate(Long afterDate) {
                 this.afterDate = afterDate;
@@ -198,7 +178,7 @@ public class DescribeResourceInstanceCertsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the certificate was issued.
+             * The time when the certificate was issued. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder beforeDate(Long beforeDate) {
                 this.beforeDate = beforeDate;
@@ -206,7 +186,7 @@ public class DescribeResourceInstanceCertsResponseBody extends TeaModel {
             }
 
             /**
-             * The globally unique ID of the certificate. The value is in the "Certificate ID-cn-hangzhou" format. For example, if the ID of the certificate is 123, the value of CertIdentifier is 123-cn-hangzhou.
+             * The ID of the certificate.
              */
             public Builder certIdentifier(String certIdentifier) {
                 this.certIdentifier = certIdentifier;
@@ -222,7 +202,7 @@ public class DescribeResourceInstanceCertsResponseBody extends TeaModel {
             }
 
             /**
-             * The common name.
+             * The primary domain name, which is a common name.
              */
             public Builder commonName(String commonName) {
                 this.commonName = commonName;
@@ -230,7 +210,7 @@ public class DescribeResourceInstanceCertsResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name for which the certificate is issued.
+             * The domain name that is associated with the certificate.
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -238,15 +218,15 @@ public class DescribeResourceInstanceCertsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the certificate chain is complete.
+             * The other domain names that are associated with the certificate.
              */
-            public Builder isChainCompleted(Boolean isChainCompleted) {
-                this.isChainCompleted = isChainCompleted;
+            public Builder sans(java.util.List < String > sans) {
+                this.sans = sans;
                 return this;
             }
 
-            public Certs build() {
-                return new Certs(this);
+            public CertDetail build() {
+                return new CertDetail(this);
             } 
 
         } 

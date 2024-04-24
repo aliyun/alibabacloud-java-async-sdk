@@ -7,15 +7,19 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ModifyMemberAccountResponseBody} extends {@link TeaModel}
+ * {@link CreatePostpaidInstanceResponseBody} extends {@link TeaModel}
  *
- * <p>ModifyMemberAccountResponseBody</p>
+ * <p>CreatePostpaidInstanceResponseBody</p>
  */
-public class ModifyMemberAccountResponseBody extends TeaModel {
+public class CreatePostpaidInstanceResponseBody extends TeaModel {
+    @NameInMap("InstanceId")
+    private String instanceId;
+
     @NameInMap("RequestId")
     private String requestId;
 
-    private ModifyMemberAccountResponseBody(Builder builder) {
+    private CreatePostpaidInstanceResponseBody(Builder builder) {
+        this.instanceId = builder.instanceId;
         this.requestId = builder.requestId;
     }
 
@@ -23,8 +27,15 @@ public class ModifyMemberAccountResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static ModifyMemberAccountResponseBody create() {
+    public static CreatePostpaidInstanceResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     /**
@@ -35,7 +46,16 @@ public class ModifyMemberAccountResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String instanceId; 
         private String requestId; 
+
+        /**
+         * The ID of the WAF instance.
+         */
+        public Builder instanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
 
         /**
          * The ID of the request.
@@ -45,8 +65,8 @@ public class ModifyMemberAccountResponseBody extends TeaModel {
             return this;
         }
 
-        public ModifyMemberAccountResponseBody build() {
-            return new ModifyMemberAccountResponseBody(this);
+        public CreatePostpaidInstanceResponseBody build() {
+            return new CreatePostpaidInstanceResponseBody(this);
         } 
 
     } 

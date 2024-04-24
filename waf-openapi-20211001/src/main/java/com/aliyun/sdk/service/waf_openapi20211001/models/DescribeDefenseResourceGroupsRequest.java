@@ -7,11 +7,19 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeResourceInstanceCertsRequest} extends {@link RequestModel}
+ * {@link DescribeDefenseResourceGroupsRequest} extends {@link RequestModel}
  *
- * <p>DescribeResourceInstanceCertsRequest</p>
+ * <p>DescribeDefenseResourceGroupsRequest</p>
  */
-public class DescribeResourceInstanceCertsRequest extends Request {
+public class DescribeDefenseResourceGroupsRequest extends Request {
+    @Query
+    @NameInMap("GroupNameLike")
+    private String groupNameLike;
+
+    @Query
+    @NameInMap("GroupNames")
+    private String groupNames;
+
     @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
@@ -19,32 +27,28 @@ public class DescribeResourceInstanceCertsRequest extends Request {
 
     @Query
     @NameInMap("PageNumber")
-    private Long pageNumber;
+    private Integer pageNumber;
 
     @Query
     @NameInMap("PageSize")
-    @Validation(maximum = 1000)
-    private Long pageSize;
+    private Integer pageSize;
 
     @Query
     @NameInMap("RegionId")
     private String regionId;
 
     @Query
-    @NameInMap("ResourceInstanceId")
-    private String resourceInstanceId;
-
-    @Query
     @NameInMap("ResourceManagerResourceGroupId")
     private String resourceManagerResourceGroupId;
 
-    private DescribeResourceInstanceCertsRequest(Builder builder) {
+    private DescribeDefenseResourceGroupsRequest(Builder builder) {
         super(builder);
+        this.groupNameLike = builder.groupNameLike;
+        this.groupNames = builder.groupNames;
         this.instanceId = builder.instanceId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
-        this.resourceInstanceId = builder.resourceInstanceId;
         this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
     }
 
@@ -52,13 +56,27 @@ public class DescribeResourceInstanceCertsRequest extends Request {
         return new Builder();
     }
 
-    public static DescribeResourceInstanceCertsRequest create() {
+    public static DescribeDefenseResourceGroupsRequest create() {
         return builder().build();
     }
 
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return groupNameLike
+     */
+    public String getGroupNameLike() {
+        return this.groupNameLike;
+    }
+
+    /**
+     * @return groupNames
+     */
+    public String getGroupNames() {
+        return this.groupNames;
     }
 
     /**
@@ -71,14 +89,14 @@ public class DescribeResourceInstanceCertsRequest extends Request {
     /**
      * @return pageNumber
      */
-    public Long getPageNumber() {
+    public Integer getPageNumber() {
         return this.pageNumber;
     }
 
     /**
      * @return pageSize
      */
-    public Long getPageSize() {
+    public Integer getPageSize() {
         return this.pageSize;
     }
 
@@ -90,43 +108,56 @@ public class DescribeResourceInstanceCertsRequest extends Request {
     }
 
     /**
-     * @return resourceInstanceId
-     */
-    public String getResourceInstanceId() {
-        return this.resourceInstanceId;
-    }
-
-    /**
      * @return resourceManagerResourceGroupId
      */
     public String getResourceManagerResourceGroupId() {
         return this.resourceManagerResourceGroupId;
     }
 
-    public static final class Builder extends Request.Builder<DescribeResourceInstanceCertsRequest, Builder> {
+    public static final class Builder extends Request.Builder<DescribeDefenseResourceGroupsRequest, Builder> {
+        private String groupNameLike; 
+        private String groupNames; 
         private String instanceId; 
-        private Long pageNumber; 
-        private Long pageSize; 
+        private Integer pageNumber; 
+        private Integer pageSize; 
         private String regionId; 
-        private String resourceInstanceId; 
         private String resourceManagerResourceGroupId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeResourceInstanceCertsRequest request) {
+        private Builder(DescribeDefenseResourceGroupsRequest request) {
             super(request);
+            this.groupNameLike = request.groupNameLike;
+            this.groupNames = request.groupNames;
             this.instanceId = request.instanceId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
-            this.resourceInstanceId = request.resourceInstanceId;
             this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
         } 
 
         /**
-         * The ID of the WAF instance.
+         * The name of the protected object group that you want to query. Fuzzy queries are supported.
+         */
+        public Builder groupNameLike(String groupNameLike) {
+            this.putQueryParameter("GroupNameLike", groupNameLike);
+            this.groupNameLike = groupNameLike;
+            return this;
+        }
+
+        /**
+         * The names of the protected object groups that you want to query. Separate multiple names with commas (,).
+         */
+        public Builder groupNames(String groupNames) {
+            this.putQueryParameter("GroupNames", groupNames);
+            this.groupNames = groupNames;
+            return this;
+        }
+
+        /**
+         * The ID of the Web Application Firewall (WAF) instance.
          * <p>
          * 
          * >  You can call the [DescribeInstance](~~433756~~) operation to query the ID of the WAF instance.
@@ -140,16 +171,16 @@ public class DescribeResourceInstanceCertsRequest extends Request {
         /**
          * The page number. Default value: **1**.
          */
-        public Builder pageNumber(Long pageNumber) {
+        public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
             this.pageNumber = pageNumber;
             return this;
         }
 
         /**
-         * The number of entries per page. Default value: **10**.
+         * The number of entries per page. Default value: **20**.
          */
-        public Builder pageSize(Long pageSize) {
+        public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
             return this;
@@ -169,15 +200,6 @@ public class DescribeResourceInstanceCertsRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
-         */
-        public Builder resourceInstanceId(String resourceInstanceId) {
-            this.putQueryParameter("ResourceInstanceId", resourceInstanceId);
-            this.resourceInstanceId = resourceInstanceId;
-            return this;
-        }
-
-        /**
          * The ID of the Alibaba Cloud resource group.
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
@@ -187,8 +209,8 @@ public class DescribeResourceInstanceCertsRequest extends Request {
         }
 
         @Override
-        public DescribeResourceInstanceCertsRequest build() {
-            return new DescribeResourceInstanceCertsRequest(this);
+        public DescribeDefenseResourceGroupsRequest build() {
+            return new DescribeDefenseResourceGroupsRequest(this);
         } 
 
     } 

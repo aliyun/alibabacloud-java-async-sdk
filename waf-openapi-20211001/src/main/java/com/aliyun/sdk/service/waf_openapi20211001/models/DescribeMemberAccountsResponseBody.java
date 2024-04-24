@@ -50,7 +50,7 @@ public class DescribeMemberAccountsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AccountInfos.
+         * The information about the member.
          */
         public Builder accountInfos(java.util.List < AccountInfos> accountInfos) {
             this.accountInfos = accountInfos;
@@ -58,7 +58,7 @@ public class DescribeMemberAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +146,7 @@ public class DescribeMemberAccountsResponseBody extends TeaModel {
             private Long gmtCreate; 
 
             /**
-             * AccountId.
+             * The ID of the member.
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -154,7 +154,7 @@ public class DescribeMemberAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * AccountName.
+             * The name of the member.
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -162,7 +162,12 @@ public class DescribeMemberAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * AccountStatus.
+             * The status of the member.
+             * <p>
+             * 
+             * *   **enabled**: managed.
+             * *   **disabled**: not managed.
+             * *   **disabling**: being deleted.
              */
             public Builder accountStatus(String accountStatus) {
                 this.accountStatus = accountStatus;
@@ -170,7 +175,7 @@ public class DescribeMemberAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the member.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -178,7 +183,7 @@ public class DescribeMemberAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The time when the member was added.
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;

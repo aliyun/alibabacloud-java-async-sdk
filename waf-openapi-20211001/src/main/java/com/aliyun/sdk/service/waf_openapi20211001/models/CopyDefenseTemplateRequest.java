@@ -7,20 +7,15 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DeleteMemberAccountRequest} extends {@link RequestModel}
+ * {@link CopyDefenseTemplateRequest} extends {@link RequestModel}
  *
- * <p>DeleteMemberAccountRequest</p>
+ * <p>CopyDefenseTemplateRequest</p>
  */
-public class DeleteMemberAccountRequest extends Request {
+public class CopyDefenseTemplateRequest extends Request {
     @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
     private String instanceId;
-
-    @Query
-    @NameInMap("MemberAccountId")
-    @Validation(required = true)
-    private String memberAccountId;
 
     @Query
     @NameInMap("RegionId")
@@ -31,23 +26,23 @@ public class DeleteMemberAccountRequest extends Request {
     private String resourceManagerResourceGroupId;
 
     @Query
-    @NameInMap("SourceIp")
-    private String sourceIp;
+    @NameInMap("TemplateId")
+    @Validation(required = true)
+    private Long templateId;
 
-    private DeleteMemberAccountRequest(Builder builder) {
+    private CopyDefenseTemplateRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
-        this.memberAccountId = builder.memberAccountId;
         this.regionId = builder.regionId;
         this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
-        this.sourceIp = builder.sourceIp;
+        this.templateId = builder.templateId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DeleteMemberAccountRequest create() {
+    public static CopyDefenseTemplateRequest create() {
         return builder().build();
     }
 
@@ -61,13 +56,6 @@ public class DeleteMemberAccountRequest extends Request {
      */
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    /**
-     * @return memberAccountId
-     */
-    public String getMemberAccountId() {
-        return this.memberAccountId;
     }
 
     /**
@@ -85,34 +73,32 @@ public class DeleteMemberAccountRequest extends Request {
     }
 
     /**
-     * @return sourceIp
+     * @return templateId
      */
-    public String getSourceIp() {
-        return this.sourceIp;
+    public Long getTemplateId() {
+        return this.templateId;
     }
 
-    public static final class Builder extends Request.Builder<DeleteMemberAccountRequest, Builder> {
+    public static final class Builder extends Request.Builder<CopyDefenseTemplateRequest, Builder> {
         private String instanceId; 
-        private String memberAccountId; 
         private String regionId; 
         private String resourceManagerResourceGroupId; 
-        private String sourceIp; 
+        private Long templateId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DeleteMemberAccountRequest request) {
+        private Builder(CopyDefenseTemplateRequest request) {
             super(request);
             this.instanceId = request.instanceId;
-            this.memberAccountId = request.memberAccountId;
             this.regionId = request.regionId;
             this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
-            this.sourceIp = request.sourceIp;
+            this.templateId = request.templateId;
         } 
 
         /**
-         * The ID of the WAF instance.
+         * The ID of the Web Application Firewall (WAF) instance.
          * <p>
          * 
          * >  You can call the [DescribeInstance](~~433756~~) operation to query the ID of the WAF instance.
@@ -120,15 +106,6 @@ public class DeleteMemberAccountRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * The Alibaba Cloud account ID of the managed member.
-         */
-        public Builder memberAccountId(String memberAccountId) {
-            this.putQueryParameter("MemberAccountId", memberAccountId);
-            this.memberAccountId = memberAccountId;
             return this;
         }
 
@@ -155,17 +132,17 @@ public class DeleteMemberAccountRequest extends Request {
         }
 
         /**
-         * The source IP address of the request. The system automatically obtains the value of this parameter.
+         * The ID of the protection template that you want to copy.
          */
-        public Builder sourceIp(String sourceIp) {
-            this.putQueryParameter("SourceIp", sourceIp);
-            this.sourceIp = sourceIp;
+        public Builder templateId(Long templateId) {
+            this.putQueryParameter("TemplateId", templateId);
+            this.templateId = templateId;
             return this;
         }
 
         @Override
-        public DeleteMemberAccountRequest build() {
-            return new DeleteMemberAccountRequest(this);
+        public CopyDefenseTemplateRequest build() {
+            return new CopyDefenseTemplateRequest(this);
         } 
 
     } 
