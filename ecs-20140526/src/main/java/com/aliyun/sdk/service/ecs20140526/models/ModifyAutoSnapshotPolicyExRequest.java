@@ -256,7 +256,7 @@ public class ModifyAutoSnapshotPolicyExRequest extends Request {
         }
 
         /**
-         * CopyEncryptionConfiguration.
+         * The encryption configurations for cross-region snapshot replication.
          */
         public Builder copyEncryptionConfiguration(CopyEncryptionConfiguration copyEncryptionConfiguration) {
             this.putQueryParameter("CopyEncryptionConfiguration", copyEncryptionConfiguration);
@@ -449,7 +449,7 @@ public class ModifyAutoSnapshotPolicyExRequest extends Request {
             private String rolearn; 
 
             /**
-             * AssumeRoleFor.
+             * This parameter is not publicly available.
              */
             public Builder assumeRoleFor(Long assumeRoleFor) {
                 this.assumeRoleFor = assumeRoleFor;
@@ -457,7 +457,7 @@ public class ModifyAutoSnapshotPolicyExRequest extends Request {
             }
 
             /**
-             * RoleType.
+             * This parameter is not publicly available.
              */
             public Builder roleType(String roleType) {
                 this.roleType = roleType;
@@ -465,7 +465,7 @@ public class ModifyAutoSnapshotPolicyExRequest extends Request {
             }
 
             /**
-             * Rolearn.
+             * This parameter is not publicly available.
              */
             public Builder rolearn(String rolearn) {
                 this.rolearn = rolearn;
@@ -530,7 +530,7 @@ public class ModifyAutoSnapshotPolicyExRequest extends Request {
             private String KMSKeyId; 
 
             /**
-             * Arn.
+             * This parameter is not publicly available.
              */
             public Builder arn(java.util.List < Arn> arn) {
                 this.arn = arn;
@@ -538,7 +538,13 @@ public class ModifyAutoSnapshotPolicyExRequest extends Request {
             }
 
             /**
-             * Encrypted.
+             * Specifies whether to enable encryption for cross-region snapshot replication. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
+             * 
+             * Default value: false.
              */
             public Builder encrypted(Boolean encrypted) {
                 this.encrypted = encrypted;
@@ -546,7 +552,7 @@ public class ModifyAutoSnapshotPolicyExRequest extends Request {
             }
 
             /**
-             * KMSKeyId.
+             * The ID of the KMS key used for encryption in cross-region snapshot replication.
              */
             public Builder KMSKeyId(String KMSKeyId) {
                 this.KMSKeyId = KMSKeyId;

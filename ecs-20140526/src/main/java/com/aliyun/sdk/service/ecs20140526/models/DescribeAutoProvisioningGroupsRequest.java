@@ -319,7 +319,7 @@ public class DescribeAutoProvisioningGroupsRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags that are added to the auto provisioning group.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -373,7 +373,10 @@ public class DescribeAutoProvisioningGroupsRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N that is added to the auto provisioning group.
+             * <p>
+             * 
+             * Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -381,7 +384,10 @@ public class DescribeAutoProvisioningGroupsRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of tag N that is added to the auto provisioning group.
+             * <p>
+             * 
+             * Valid values of N: 1 to 20. The tag value can be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://.
              */
             public Builder value(String value) {
                 this.value = value;

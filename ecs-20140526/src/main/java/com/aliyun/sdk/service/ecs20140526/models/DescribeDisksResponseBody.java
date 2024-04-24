@@ -324,7 +324,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             private String instanceId; 
 
             /**
-             * The time when the disk was attached. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+             * The time when the disk was attached. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder attachedTime(String attachedTime) {
                 this.attachedTime = attachedTime;
@@ -422,7 +422,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             private String lockReason; 
 
             /**
-             * The security reason why the disk is locked.
+             * The security reason why the disk was locked.
              */
             public Builder lockReason(String lockReason) {
                 this.lockReason = lockReason;
@@ -516,7 +516,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The tag key.
+             * The tag key of the disk.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -524,7 +524,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * The tag value of the disk.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -1170,7 +1170,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * The time when the disk was last attached. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mmZ format. The time must be in UTC.
+             * The time when the cloud disk was last attached. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mmZ format. The time is displayed in UTC.
              */
             public Builder attachedTime(String attachedTime) {
                 this.attachedTime = attachedTime;
@@ -1178,7 +1178,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * The attachment information about the cloud disk. The value is an array that consists of the `Attachment` values. This value is not returned when you query Shared Block Storage devices.
+             * The attachment information about the cloud disk. The value is an array that contains a list of `Attachment` objects. The value is not returned when you query Shared Block Storage devices.
              */
             public Builder attachments(Attachments attachments) {
                 this.attachments = attachments;
@@ -1186,7 +1186,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the automatic snapshot policy that is applied to the disk.
+             * The ID of the automatic snapshot policy that is applied to the cloud disk.
              */
             public Builder autoSnapshotPolicyId(String autoSnapshotPolicyId) {
                 this.autoSnapshotPolicyId = autoSnapshotPolicyId;
@@ -1244,7 +1244,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the automatic snapshots of the disk are deleted when the disk is released. Valid values:
+             * Indicates whether the automatic snapshots of the cloud disk are deleted when the cloud disk is released. Valid values:
              * <p>
              * 
              * *   true: The automatic snapshots of the cloud disk are deleted when the disk is released.
@@ -1258,7 +1258,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the disk is released when the instance to which the disk is attached is released. Valid values:
+             * Indicates whether the cloud disk is released when the instance to which the disk is attached is released. Valid values:
              * <p>
              * 
              * *   true: The disk is released when the instance to which the disk is attached is released.
@@ -1278,7 +1278,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the disk was last detached.
+             * The time when the cloud disk was last detached.
              */
             public Builder detachedTime(String detachedTime) {
                 this.detachedTime = detachedTime;
@@ -1289,8 +1289,8 @@ public class DescribeDisksResponseBody extends TeaModel {
              * The device name of the disk on the instance to which the disk is attached. Example: /dev/xvdb. Take note of the following items:
              * <p>
              * 
-             * *   This parameter has a value only when the `Status` value is `In_use`.
-             * *   This parameter is empty for disks that have the multi-attach feature enabled. You can query the attachment information of the disk based on the `Attachment` values.
+             * *   This parameter has a value only when the `Status` value is `In_use` or `Detaching`.
+             * *   This parameter is empty for disks that have the multi-attach feature enabled. You can query the attachment information of the disk based on the returned list of `Attachment` objects.
              * 
              * >  This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.
              */
@@ -1328,7 +1328,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the automatic snapshot policy feature is enabled for the disk.
+             * Indicates whether the automatic snapshot policy feature is enabled for the cloud disk.
              */
             public Builder enableAutoSnapshot(Boolean enableAutoSnapshot) {
                 this.enableAutoSnapshot = enableAutoSnapshot;
@@ -1336,7 +1336,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether an automatic snapshot policy is applied to the disk.
+             * Indicates whether an automatic snapshot policy is applied to the cloud disk.
              */
             public Builder enableAutomatedSnapshotPolicy(Boolean enableAutomatedSnapshotPolicy) {
                 this.enableAutomatedSnapshotPolicy = enableAutomatedSnapshotPolicy;
@@ -1360,7 +1360,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of read/write IOPS of the disk.
+             * The maximum number of read and write operations per second.
              */
             public Builder IOPS(Integer IOPS) {
                 this.IOPS = IOPS;
@@ -1376,7 +1376,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of write IOPS of the disk.
+             * The maximum number of write operations per second.
              */
             public Builder IOPSWrite(Integer IOPSWrite) {
                 this.IOPSWrite = IOPSWrite;
@@ -1395,8 +1395,8 @@ public class DescribeDisksResponseBody extends TeaModel {
              * The ID of the instance to which the disk is attached. Take note of the following items:
              * <p>
              * 
-             * *   This parameter has a value only when the `Status` value is `In_use`.
-             * *   This parameter is empty for disks that have the multi-attach feature enabled. You can query the attachment information of the disk based on the `Attachment` values.
+             * *   This parameter has a value only when the `Status` value is `In_use` or `Detaching`.
+             * *   This parameter is empty for disks that have the multi-attach feature enabled. You can query the attachment information of the disk based on the returned list of `Attachment` objects.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -1404,7 +1404,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Key Management Service (KMS) key that is used for the disk.
+             * The ID of the Key Management Service (KMS) key that is used for the cloud disk.
              */
             public Builder KMSKeyId(String KMSKeyId) {
                 this.KMSKeyId = KMSKeyId;
@@ -1428,7 +1428,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the multi-attach feature is enabled for the disk.
+             * Indicates whether the multi-attach feature is enabled for the cloud disk.
              */
             public Builder multiAttach(String multiAttach) {
                 this.multiAttach = multiAttach;
@@ -1436,7 +1436,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * The reasons why the disk is locked.
+             * The reasons why the disk was locked.
              */
             public Builder operationLocks(OperationLocks operationLocks) {
                 this.operationLocks = operationLocks;
@@ -1458,7 +1458,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether the disk is removable.
+             * Indicates whether the disk is removable.
              */
             public Builder portable(Boolean portable) {
                 this.portable = portable;
@@ -1474,7 +1474,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * The provisioned read/write IOPS of the ESSD AutoPL disk. Valid values: 0 to min{50,000, 1,000 × *capacity - Baseline IOPS}. Baseline IOPS = min{1,800 + 50 × *Capacity, 50,000}
+             * The provisioned read/write IOPS of the ESSD AutoPL disk. Valid values: 0 to min{50,000, 1,000 × *Capacity - Baseline IOPS}. Baseline IOPS = min{1,800 + 50 × *Capacity, 50,000}
              * <p>
              * 
              * This parameter is available only if you set `DiskCategory` to `cloud_auto`. For more information, see [ESSD AutoPL disks](~~368372~~).
@@ -1517,10 +1517,10 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the snapshot that was used to create the disk.
+             * The ID of the snapshot that was used to create the cloud disk.
              * <p>
              * 
-             * This parameter is empty unless the disk was created from a snapshot. The value of this parameter remains unchanged throughout the lifecycle of the disk.
+             * This parameter is empty unless the cloud disk was created from a snapshot. The value of this parameter remains unchanged throughout the lifecycle of the disk.
              */
             public Builder sourceSnapshotId(String sourceSnapshotId) {
                 this.sourceSnapshotId = sourceSnapshotId;
@@ -1544,7 +1544,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the dedicated block storage cluster to which the disk belongs. If your disk belongs to the public block storage cluster, an empty value is returned.
+             * The ID of the dedicated block storage cluster to which the cloud disk belongs. If your cloud disk belongs to the public block storage cluster, an empty value is returned.
              */
             public Builder storageClusterId(String storageClusterId) {
                 this.storageClusterId = storageClusterId;
@@ -1576,7 +1576,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of data that is transferred per second. Unit: MB/s.
+             * The amount of data that can be transferred per second. Unit: MB/s.
              */
             public Builder throughput(Integer throughput) {
                 this.throughput = throughput;
@@ -1584,7 +1584,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of data that is read by the system per second. Unit: MB/s.
+             * The amount of data that can be read per second. Unit: MB/s.
              */
             public Builder throughputRead(Integer throughputRead) {
                 this.throughputRead = throughputRead;
@@ -1592,7 +1592,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of data that is written by the system per second. Unit: MB/s.
+             * The amount of data that can be written per second. Unit: MB/s.
              */
             public Builder throughputWrite(Integer throughputWrite) {
                 this.throughputWrite = throughputWrite;

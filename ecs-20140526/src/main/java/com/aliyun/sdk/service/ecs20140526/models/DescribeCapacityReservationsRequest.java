@@ -311,7 +311,7 @@ public class DescribeCapacityReservationsRequest extends Request {
          * The number of entries per page.
          * <p>
          * 
-         * Valid values: 1 to 100
+         * Valid values: 1 to 100.
          * 
          * Default value: 10.
          */

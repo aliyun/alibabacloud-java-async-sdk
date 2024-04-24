@@ -544,7 +544,13 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * > This parameter is no longer used.
+         * The type of the ENI. Valid values:
+         * <p>
+         * 
+         * *   Secondary: secondary ENI.
+         * *   Trunk: trunk ENI. This value is in invitational preview.
+         * 
+         * Default value: Secondary.
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -645,7 +651,7 @@ public class CreateNetworkInterfaceRequest extends Request {
          * *   Standard: uses the TCP communication mode.
          * *   HighPerformance: uses the remote direct memory access (RDMA) communication mode with Elastic RDMA Interface (ERI) enabled.
          * 
-         * >  This parameter can have a value of HighPerformance only when the ENI is attached to a c7re RDMA-enhanced instance. The maximum number of ENIs in RDMA mode that can be attached to a c7re instance is determined based on the instance type. The c7re instance family is in invitational preview in Beijing Zone K. For more information, see [Overview of instance families](~~25378~~).
+         * >  ENIs in RDMA mode can be attached only to instances of the instance types that support ERIs. The number of ENIs in RDMA mode that are attached to an instance cannot exceed the maximum number of ENIs that the instance type supports. For more information, see [Overview of ECS instance families](~~25378~~) and [Configure eRDMA on an enterprise-level instance](~~336853~~).
          * 
          * Default value: Standard.
          */
@@ -757,7 +763,13 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * RxQueueSize.
+         * The receive (Rx) queue depth of the ENI.
+         * <p>
+         * 
+         * Take note of the following items:
+         * 
+         * *   The Rx queue depth of an ENI must be the same as the Tx queue depth of the ENI. Valid values: powers of 2 in the range of 8192 to 16384.
+         * *   A larger Rx queue depth yields higher inbound throughput but consumes more memory.
          */
         public Builder rxQueueSize(Integer rxQueueSize) {
             this.putQueryParameter("RxQueueSize", rxQueueSize);
@@ -766,9 +778,7 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * The number of private IP addresses to be automatically created by ECS.
-         * <p>
-         * Valid values: 1 to 49.
+         * The number of private IP addresses to be assigned by ECS. Valid values: 1 to 49.
          */
         public Builder secondaryPrivateIpAddressCount(Integer secondaryPrivateIpAddressCount) {
             this.putQueryParameter("SecondaryPrivateIpAddressCount", secondaryPrivateIpAddressCount);
@@ -812,7 +822,13 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * TxQueueSize.
+         * The transmit (Tx) queue depth of the ENI.
+         * <p>
+         * 
+         * Take note of the following items:
+         * 
+         * *   The Tx queue depth of an ENI must be the same as the Rx queue depth of the ENI. Valid values: powers of 2 in the range of 8192 to 16384.
+         * *   A larger Tx queue depth yields higher outbound throughput but consumes more memory.
          */
         public Builder txQueueSize(Integer txQueueSize) {
             this.putQueryParameter("TxQueueSize", txQueueSize);

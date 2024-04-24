@@ -799,7 +799,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags to add to the auto provisioning group.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -2589,7 +2589,10 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain `http://` or `https://`. If both the LaunchTemplateId and LaunchConfiguration.* parameters are specified, the LaunchTemplateId parameter takes precedence.
+             * The key of tag N to add to the auto provisioning group.
+             * <p>
+             * 
+             * Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -2597,7 +2600,10 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * The value of the tag. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length. It cannot start with acs: or contain `http://` or `https://`. If both the LaunchTemplateId and LaunchConfiguration.* parameters are specified, the LaunchTemplateId parameter takes precedence.
+             * The value of tag N to add to the auto provisioning group.
+             * <p>
+             * 
+             * Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://.
              */
             public Builder value(String value) {
                 this.value = value;

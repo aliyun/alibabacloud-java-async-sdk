@@ -191,7 +191,7 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
         }
 
         /**
-         * 云助手Agent升级配置。
+         * The configurations for upgrading Cloud Assistant Agent.
          */
         public Builder agentUpgradeConfig(AgentUpgradeConfig agentUpgradeConfig) {
             String agentUpgradeConfigShrink = shrink(agentUpgradeConfig, "AgentUpgradeConfig", "json");
@@ -336,18 +336,14 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
             private String timeZone; 
 
             /**
-             * 允许升级的时间段列表，可精确到分，默认为 UTC 时区。
+             * The time windows during which Cloud Assistant Agent can be upgraded. The time windows can be accurate to minutes. The default time zone is UTC.
              * <p>
              * 
-             * 各时间段的间隔不能小于1小时。
+             * Make sure that the upgrade windows specified by using this parameter are not shorter than 1 hour.
              * 
-             * 格式：开始时间(HH:mm)-结束时间(HH:mm)。
+             * Specify each upgrade window in the following format: \<Start time> (HH:mm)-\<End time> (HH:mm).
              * 
-             * 如[
-             * "02:00-03:00",
-             * "05:00-06:00"
-             * ]
-             * 代表在 UTC 时区的每天2点-3点、5点-6点允许升级。
+             * For example, \[ "02:00-03:00", "05:00-06:00" ] specifies that Cloud Assistant Agent can be upgraded from 2:00:00 to 3:00:00 and from 5:00:00 to 6:00:00 every day in the UTC time zone.
              */
             public Builder allowedUpgradeWindow(java.util.List < String > allowedUpgradeWindow) {
                 this.allowedUpgradeWindow = allowedUpgradeWindow;
@@ -355,10 +351,10 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
             }
 
             /**
-             * 是否开启自定义Agent升级配置。如设置为false，默认保持每30分钟尝试升级一次。
+             * Specifies whether to enable custom upgrade for Cloud Assistant Agent. If you set this parameter to false, an upgrade attempt is performed for Cloud Assistant Agent every 30 minutes.
              * <p>
              * 
-             * 默认值：false。
+             * Default value: false.
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -366,11 +362,11 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
             }
 
             /**
-             * 允许升级时间段的时区。默认为 UTC 时区。
+             * The time zone of the time window. Default value: UTC. The following formats are supported:
              * <p>
-             * 时区支持以下两种形式：
-             * - 时区全称： 如Asia/Shanghai（中国/上海时间）、America/Los_Angeles（美国/洛杉矶时间）等。
-             * - 时区相对于格林威治时间的偏移量： 如GMT+8:00（东八区）、GMT-7:00（西七区）等。小时位不支持添加前导零。
+             * 
+             * *   The time zone name. Examples: Asia/Shanghai and America/Los_Angeles.
+             * *   The time offset from GMT. Examples: GMT+8:00 (UTC+8) and GMT-7:00 (UTC-7). Do not add leading zeros to the hour value.
              */
             public Builder timeZone(String timeZone) {
                 this.timeZone = timeZone;

@@ -50,7 +50,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         private Topologys topologys; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ECS instance.
+             * The instance ID.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;

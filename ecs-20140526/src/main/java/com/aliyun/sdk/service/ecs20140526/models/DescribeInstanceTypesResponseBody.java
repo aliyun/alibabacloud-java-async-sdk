@@ -173,6 +173,47 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         } 
 
     }
+    public static class SupportedBootModes extends TeaModel {
+        @NameInMap("SupportedBootMode")
+        private java.util.List < String > supportedBootMode;
+
+        private SupportedBootModes(Builder builder) {
+            this.supportedBootMode = builder.supportedBootMode;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SupportedBootModes create() {
+            return builder().build();
+        }
+
+        /**
+         * @return supportedBootMode
+         */
+        public java.util.List < String > getSupportedBootMode() {
+            return this.supportedBootMode;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > supportedBootMode; 
+
+            /**
+             * SupportedBootMode.
+             */
+            public Builder supportedBootMode(java.util.List < String > supportedBootMode) {
+                this.supportedBootMode = supportedBootMode;
+                return this;
+            }
+
+            public SupportedBootModes build() {
+                return new SupportedBootModes(this);
+            } 
+
+        } 
+
+    }
     public static class InstanceType extends TeaModel {
         @NameInMap("BaselineCredit")
         private Integer baselineCredit;
@@ -285,6 +326,9 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         @NameInMap("SecondaryEniQueueNumber")
         private Integer secondaryEniQueueNumber;
 
+        @NameInMap("SupportedBootModes")
+        private SupportedBootModes supportedBootModes;
+
         @NameInMap("TotalEniQueueQuantity")
         private Integer totalEniQueueQuantity;
 
@@ -326,6 +370,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             this.primaryEniQueueNumber = builder.primaryEniQueueNumber;
             this.queuePairNumber = builder.queuePairNumber;
             this.secondaryEniQueueNumber = builder.secondaryEniQueueNumber;
+            this.supportedBootModes = builder.supportedBootModes;
             this.totalEniQueueQuantity = builder.totalEniQueueQuantity;
         }
 
@@ -597,6 +642,13 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         }
 
         /**
+         * @return supportedBootModes
+         */
+        public SupportedBootModes getSupportedBootModes() {
+            return this.supportedBootModes;
+        }
+
+        /**
          * @return totalEniQueueQuantity
          */
         public Integer getTotalEniQueueQuantity() {
@@ -641,6 +693,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             private Integer primaryEniQueueNumber; 
             private Integer queuePairNumber; 
             private Integer secondaryEniQueueNumber; 
+            private SupportedBootModes supportedBootModes; 
             private Integer totalEniQueueQuantity; 
 
             /**
@@ -985,6 +1038,14 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
              */
             public Builder secondaryEniQueueNumber(Integer secondaryEniQueueNumber) {
                 this.secondaryEniQueueNumber = secondaryEniQueueNumber;
+                return this;
+            }
+
+            /**
+             * SupportedBootModes.
+             */
+            public Builder supportedBootModes(SupportedBootModes supportedBootModes) {
+                this.supportedBootModes = supportedBootModes;
                 return this;
             }
 

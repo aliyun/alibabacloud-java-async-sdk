@@ -86,7 +86,7 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The details of the auto provisioning groups.
+         * Details about the auto provisioning groups.
          */
         public Builder autoProvisioningGroups(AutoProvisioningGroups autoProvisioningGroups) {
             this.autoProvisioningGroups = autoProvisioningGroups;
@@ -324,9 +324,9 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
              * <p>
              * 
              * *   lowest-price: cost optimization policy. This policy indicates that lowest-cost instance types are used to create instances.
-             * *   prioritized: priority-based policy. This policy indicates that instances are created based on the priority specified by LaunchTemplateConfig.N.Priority.
+             * *   prioritized: priority-based policy. This policy indicates that instances are created based on the priority specified by the LaunchTemplateConfig.N.Priority parameter.
              * 
-             * >  The value of LaunchTemplateConfig.N.Priority is specified when the auto provisioning group is created, and the value cannot be modified.
+             * >  The LaunchTemplateConfig.N.Priority parameter is set when the auto provisioning group is created, and cannot be modified.
              */
             public Builder allocationStrategy(String allocationStrategy) {
                 this.allocationStrategy = allocationStrategy;
@@ -391,10 +391,10 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             private Integer instancePoolsToUseCount; 
 
             /**
-             * The provisioning policy for preemptible instances. Valid values:
+             * The policy for creating preemptible instances. Valid values:
              * <p>
              * 
-             * *   lowest-price: cost optimization policy. This policy indicates that lowest-cost instance types are used to create instances.
+             * *   lowest-price: cost optimization policy. This policy indicates that the lowest-priced instance type is used to create instances.
              * *   diversified: balanced distribution policy. This policy indicates that instances are created evenly across multiple zones specified in the extended configuration.
              */
             public Builder allocationStrategy(String allocationStrategy) {
@@ -471,7 +471,10 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * TagKey.
+             * The key of tag N that is added to the auto provisioning group.
+             * <p>
+             * 
+             * Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -479,7 +482,10 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * The value of tag N that is added to the auto provisioning group.
+             * <p>
+             * 
+             * Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -600,8 +606,8 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
              * The type of supplemental instances. When the sum of the `PayAsYouGoTargetCapacity` and `SpotTargetCapacity` values is less than the `TotalTargetCapacity` value, the auto provisioning group creates instances of the specified billing method to meet the target capacity. Valid values:
              * <p>
              * 
-             * *   PayAsYouGo: pay-as-you-go instances
-             * *   Spot: preemptible instances
+             * *   PayAsYouGo: pay-as-you-go instances.
+             * *   Spot: preemptible instances.
              */
             public Builder defaultTargetCapacityType(String defaultTargetCapacityType) {
                 this.defaultTargetCapacityType = defaultTargetCapacityType;
@@ -609,7 +615,7 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The target capacity of pay-as-you-go instances in the auto provisioning group.
+             * The target capacity of pay-as-you-go instances that the auto provisioning group provisions.
              */
             public Builder payAsYouGoTargetCapacity(Float payAsYouGoTargetCapacity) {
                 this.payAsYouGoTargetCapacity = payAsYouGoTargetCapacity;
@@ -617,7 +623,7 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The target capacity of preemptible instances in the auto provisioning group.
+             * The target capacity of preemptible instances that the auto provisioning group provisions.
              */
             public Builder spotTargetCapacity(Float spotTargetCapacity) {
                 this.spotTargetCapacity = spotTargetCapacity;
@@ -947,7 +953,7 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether to release the scaled-in instances when the real-time capacity exceeds the target capacity and the group scales in. Valid values:
+             * Indicates whether to release the scaled-in instances when the real-time capacity of the auto provisioning group exceeds the target capacity and the group is triggered to scale in. Valid values:
              * <p>
              * 
              * *   termination: releases the scaled-in instances.
@@ -959,7 +965,7 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the extended configurations.
+             * Details about the extended configurations.
              */
             public Builder launchTemplateConfigs(LaunchTemplateConfigs launchTemplateConfigs) {
                 this.launchTemplateConfigs = launchTemplateConfigs;
@@ -983,12 +989,12 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum price for preemptible instances in the auto provisioning group.
+             * The maximum price of preemptible instances in the auto provisioning group.
              * <p>
              * 
-             * >  When both MaxSpotPrice and LaunchTemplateConfig.N.MaxPrice are specified, the smaller one of the two parameter values is used.
+             * >  When both the MaxSpotPrice and LaunchTemplateConfig.N.MaxPrice parameters are specified, the smaller one of the two parameter values is used.
              * 
-             * The value of LaunchTemplateConfig.N.MaxPrice is specified when the auto provisioning group is created, and the value cannot be modified.
+             * The LaunchTemplateConfig.N.Priority parameter is set when the auto provisioning group is created, and cannot be modified.
              */
             public Builder maxSpotPrice(Float maxSpotPrice) {
                 this.maxSpotPrice = maxSpotPrice;
@@ -1028,7 +1034,7 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The overall state of instance scheduling in the auto provisioning group. Valid values:
+             * The overall status of instance scheduling in the auto provisioning group. Valid values:
              * <p>
              * 
              * *   fulfilled: Scheduling was complete and the instances were delivered.
@@ -1042,7 +1048,7 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the auto provisioning group. Valid values:
+             * The status of the auto provisioning group. Valid values:
              * <p>
              * 
              * *   submitted: The auto provisioning group was created but did not execute scheduling tasks.
@@ -1057,7 +1063,7 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tags that are added to the auto provisioning group.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -1073,11 +1079,11 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the instances in the auto provisioning group are released when the auto provisioning group is deleted. Valid values:
+             * Indicates whether to release instances in the auto provisioning group when the auto provisioning group is deleted. Valid values:
              * <p>
              * 
              * *   true: releases the instances.
-             * *   false: retains the instances.
+             * *   false: only removes the instances from the auto provisioning group but does not release the instances.
              */
             public Builder terminateInstances(Boolean terminateInstances) {
                 this.terminateInstances = terminateInstances;

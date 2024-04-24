@@ -220,13 +220,7 @@ public class DescribeBandwidthLimitationRequest extends Request {
         }
 
         /**
-         * The type of the elastic network interface (ENI). Valid values:
-         * <p>
-         * 
-         * *   Secondary: secondary ENI.
-         * *   Trunk: trunk ENI. This value is in invitational preview.
-         * 
-         * Default value: Secondary.
+         * The instance type. For information about the values, see [Overview of ECS instance families](~~25378~~).
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);

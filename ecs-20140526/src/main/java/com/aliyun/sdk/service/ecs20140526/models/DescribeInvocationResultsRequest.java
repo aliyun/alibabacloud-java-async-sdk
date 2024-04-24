@@ -311,7 +311,7 @@ public class DescribeInvocationResultsRequest extends Request {
         }
 
         /**
-         * The encoding method of the `Output` response parameter. Valid values:
+         * The encoding mode of the `CommandContent` and `Output` values in the response. Valid values:
          * <p>
          * 
          * *   PlainText: returns the original command content and command output.
@@ -329,7 +329,7 @@ public class DescribeInvocationResultsRequest extends Request {
          * Specifies whether to return the results of historical scheduled executions. Valid values:
          * <p>
          * 
-         * *   true: returns the results of historical scheduled executions. When this parameter is set to true, the `InvokeId` parameter must be set to the ID of a scheduled command task.
+         * *   true: returns the results of historical scheduled executions. If you set this parameter to true, you must set InvokeId to the ID of a task that is run on a schedule (RepeatMode set to Period) or on each system startup (RepeatMode set to EveryReboot).
          * *   false: does not return the results of historical scheduled executions.
          * 
          * Default value: false.
@@ -359,15 +359,37 @@ public class DescribeInvocationResultsRequest extends Request {
         }
 
         /**
-         * The execution state of the command task. Valid values:
+         * The execution status of the command task. Valid values:
          * <p>
          * 
-         * *   Running
-         * *   Finished
-         * *   Failed
-         * *   Stopped
+         * *   Running:
          * 
-         * > To ensure compatibility, we recommend that you use `InvocationStatus` instead of InvokeRecordStatus.
+         *     *   Scheduled task: Before you stop the scheduled execution of the command, the execution state is always Running.
+         *     *   One-time task: If the command is being run on instances, the execution state is Running.
+         * 
+         * *   Finished:
+         * 
+         *     *   Scheduled task: The execution state can never be Finished.
+         *     *   One-time task: The execution is complete on all instances, or the execution is stopped on some instances and is complete on the other instances.
+         * 
+         * *   Success:
+         * 
+         *     *   One-time task: The execution is complete, and the exit code is 0.
+         *     *   Scheduled task: The last execution is complete, the exit code is 0, and the specified period ends.
+         * 
+         * *   Failed:
+         * 
+         *     *   Scheduled task: The execution state can never be Failed.
+         *     *   One-time task: The execution fails on all instances.
+         * 
+         * *   PartialFailed:
+         * 
+         *     *   Scheduled task: The execution state can never be PartialFailed.
+         *     *   One-time task: The execution fails on some instances.
+         * 
+         * *   Stopped: The task is stopped.
+         * 
+         * *   Stopping: The task is being stopped.
          */
         public Builder invokeRecordStatus(String invokeRecordStatus) {
             this.putQueryParameter("InvokeRecordStatus", invokeRecordStatus);
@@ -376,10 +398,10 @@ public class DescribeInvocationResultsRequest extends Request {
         }
 
         /**
-         * The maximum number of entries per page. 
+         * The maximum number of entries per page.
          * <p>
          * 
-         * Valid values: 1 to 50. 
+         * Valid values: 1 to 50.
          * 
          * Default value: 10.
          */
@@ -390,7 +412,7 @@ public class DescribeInvocationResultsRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);

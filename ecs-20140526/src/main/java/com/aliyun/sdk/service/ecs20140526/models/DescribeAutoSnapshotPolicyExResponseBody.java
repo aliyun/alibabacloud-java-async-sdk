@@ -86,7 +86,7 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Details about the returned automatic snapshot policies.
+         * Details about the automatic snapshot policies.
          */
         public Builder autoSnapshotPolicies(AutoSnapshotPolicies autoSnapshotPolicies) {
             this.autoSnapshotPolicies = autoSnapshotPolicies;
@@ -170,7 +170,13 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
             private String KMSKeyId; 
 
             /**
-             * Encrypted.
+             * Whether to enable encryption for cross-region snapshot replication. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
+             * 
+             * Default value: false.
              */
             public Builder encrypted(Boolean encrypted) {
                 this.encrypted = encrypted;
@@ -178,7 +184,7 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
             }
 
             /**
-             * KMSKeyId.
+             * The ID of the Key Management Service (KMS) key used to encrypt snapshots in cross-region snapshot replication.
              */
             public Builder KMSKeyId(String KMSKeyId) {
                 this.KMSKeyId = KMSKeyId;
@@ -529,7 +535,7 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
             }
 
             /**
-             * > This parameter is in invitational preview and is not publicly available.
+             * >  This parameter is in invitational preview and is not publicly available.
              */
             public Builder copiedSnapshotsRetentionDays(Integer copiedSnapshotsRetentionDays) {
                 this.copiedSnapshotsRetentionDays = copiedSnapshotsRetentionDays;
@@ -537,7 +543,7 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
             }
 
             /**
-             * CopyEncryptionConfiguration.
+             * Encryption configurations for cross-region snapshot replication.
              */
             public Builder copyEncryptionConfiguration(CopyEncryptionConfiguration copyEncryptionConfiguration) {
                 this.copyEncryptionConfiguration = copyEncryptionConfiguration;
@@ -545,7 +551,7 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the automatic snapshot policy was created. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * The time when the automatic snapshot policy was created. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -553,7 +559,7 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
             }
 
             /**
-             * The number of disks that are associated with the automatic snapshot policy.
+             * The number of disks to which the automatic snapshot policy is applied.
              */
             public Builder diskNums(Integer diskNums) {
                 this.diskNums = diskNums;
@@ -561,7 +567,7 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
             }
 
             /**
-             * > This parameter is in invitational preview and is not publicly available.
+             * >  This parameter is in invitational preview and is not publicly available.
              */
             public Builder enableCrossRegionCopy(Boolean enableCrossRegionCopy) {
                 this.enableCrossRegionCopy = enableCrossRegionCopy;
@@ -593,7 +599,7 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
             }
 
             /**
-             * The retention period of automatic snapshots. Unit: days. Valid values:
+             * The retention period of the automatic snapshots. Unit: days. Valid values:
              * <p>
              * 
              * *   \-1: Automatic snapshots are retained until they are deleted.
@@ -605,11 +611,11 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the automatic snapshot policy. Valid values:
+             * The status of the automatic snapshot policy. Valid values:
              * <p>
              * 
              * *   Normal: The automatic snapshot policy is normal.
-             * *   Expire: The automatic snapshot policy cannot be used because your account has an overdue payment.
+             * *   Expire: The automatic snapshot policy cannot be used because your account has overdue payments.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -625,7 +631,7 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
             }
 
             /**
-             * > This parameter is in invitational preview and is not publicly available.
+             * >  This parameter is in invitational preview and is not publicly available.
              */
             public Builder targetCopyRegions(String targetCopyRegions) {
                 this.targetCopyRegions = targetCopyRegions;
@@ -646,11 +652,11 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
             }
 
             /**
-             * 自动快照策略类型。
+             * The type of the automatic snapshot policy. Valid values:
              * <p>
              * 
-             * - Custom：用户定义的快照策略。
-             * - System：系统定义的快照策略。
+             * *   Custom: user-defined snapshot policy.
+             * *   System: system-defined snapshot policy.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -658,7 +664,7 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
             }
 
             /**
-             * The number of extended volumes that are associated with the automatic snapshot policy.
+             * The number of extended volumes to which the automatic snapshot policy is applied.
              */
             public Builder volumeNums(Integer volumeNums) {
                 this.volumeNums = volumeNums;

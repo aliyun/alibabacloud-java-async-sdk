@@ -74,7 +74,7 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
         private SlsDeliveryConfigs slsDeliveryConfigs; 
 
         /**
-         * 云助手Agent升级配置。
+         * The configurations for upgrading Cloud Assistant Agent.
          */
         public Builder agentUpgradeConfig(AgentUpgradeConfig agentUpgradeConfig) {
             this.agentUpgradeConfig = agentUpgradeConfig;
@@ -203,7 +203,7 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
             private String timeZone; 
 
             /**
-             * 允许升级的时间段列表。
+             * The time windows during which Cloud Assistant Agent can be upgraded.
              */
             public Builder allowedUpgradeWindows(AllowedUpgradeWindows allowedUpgradeWindows) {
                 this.allowedUpgradeWindows = allowedUpgradeWindows;
@@ -211,7 +211,7 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * 是否开启自定义Agent升级配置。如查询结果为false或空，默认保持每30分钟尝试升级一次。
+             * Indicates whether custom upgrade is enabled for Cloud Assistant Agent. If the value is false or empty, an upgrade attempt is performed for Cloud Assistant Agent every 30 minutes.
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -219,7 +219,7 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * 允许升级时间段的时区。
+             * The time zone of the time window.
              */
             public Builder timeZone(String timeZone) {
                 this.timeZone = timeZone;
@@ -360,7 +360,7 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * OSS encryption algorithm. Valid values:
+             * The OSS encryption algorithm. Valid values:
              * <p>
              * 
              * *   AES256
@@ -372,7 +372,7 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the customer master key (CMK) when the encryption method is KMS.
+             * The ID of the customer master key (CMK) when EncryptionType is KMS.
              */
             public Builder encryptionKeyId(String encryptionKeyId) {
                 this.encryptionKeyId = encryptionKeyId;
@@ -380,12 +380,12 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * OSS encryption method. Valid values:
+             * The OSS encryption method. Valid values:
              * <p>
              * 
              * *   Inherit: the encryption method used by the specified bucket.
              * *   OssManaged: server-side encryption by using OSS-managed keys (SSE-OSS).
-             * *   KMS: server-side encryption with Key Management Service (SSE-KMS).
+             * *   KMS: server-side encryption by using Key Management Service managed keys (SSE-KMS).
              */
             public Builder encryptionType(String encryptionType) {
                 this.encryptionType = encryptionType;
