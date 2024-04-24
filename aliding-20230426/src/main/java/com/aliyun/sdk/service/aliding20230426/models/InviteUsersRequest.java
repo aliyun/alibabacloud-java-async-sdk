@@ -29,12 +29,17 @@ public class InviteUsersRequest extends Request {
     @Validation(required = true)
     private String conferenceId;
 
+    @Body
+    @NameInMap("phoneInviteeList")
+    private java.util.List < PhoneInviteeList> phoneInviteeList;
+
     private InviteUsersRequest(Builder builder) {
         super(builder);
         this.accountContext = builder.accountContext;
         this.inviteeList = builder.inviteeList;
         this.tenantContext = builder.tenantContext;
         this.conferenceId = builder.conferenceId;
+        this.phoneInviteeList = builder.phoneInviteeList;
     }
 
     public static Builder builder() {
@@ -78,11 +83,19 @@ public class InviteUsersRequest extends Request {
         return this.conferenceId;
     }
 
+    /**
+     * @return phoneInviteeList
+     */
+    public java.util.List < PhoneInviteeList> getPhoneInviteeList() {
+        return this.phoneInviteeList;
+    }
+
     public static final class Builder extends Request.Builder<InviteUsersRequest, Builder> {
         private AccountContext accountContext; 
         private java.util.List < InviteeList> inviteeList; 
         private TenantContext tenantContext; 
         private String conferenceId; 
+        private java.util.List < PhoneInviteeList> phoneInviteeList; 
 
         private Builder() {
             super();
@@ -94,6 +107,7 @@ public class InviteUsersRequest extends Request {
             this.inviteeList = request.inviteeList;
             this.tenantContext = request.tenantContext;
             this.conferenceId = request.conferenceId;
+            this.phoneInviteeList = request.phoneInviteeList;
         } 
 
         /**
@@ -132,6 +146,16 @@ public class InviteUsersRequest extends Request {
         public Builder conferenceId(String conferenceId) {
             this.putBodyParameter("conferenceId", conferenceId);
             this.conferenceId = conferenceId;
+            return this;
+        }
+
+        /**
+         * phoneInviteeList.
+         */
+        public Builder phoneInviteeList(java.util.List < PhoneInviteeList> phoneInviteeList) {
+            String phoneInviteeListShrink = shrink(phoneInviteeList, "phoneInviteeList", "json");
+            this.putBodyParameter("phoneInviteeList", phoneInviteeListShrink);
+            this.phoneInviteeList = phoneInviteeList;
             return this;
         }
 
@@ -282,6 +306,67 @@ public class InviteUsersRequest extends Request {
 
             public TenantContext build() {
                 return new TenantContext(this);
+            } 
+
+        } 
+
+    }
+    public static class PhoneInviteeList extends TeaModel {
+        @NameInMap("Nick")
+        private String nick;
+
+        @NameInMap("PhoneNumber")
+        private String phoneNumber;
+
+        private PhoneInviteeList(Builder builder) {
+            this.nick = builder.nick;
+            this.phoneNumber = builder.phoneNumber;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PhoneInviteeList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return nick
+         */
+        public String getNick() {
+            return this.nick;
+        }
+
+        /**
+         * @return phoneNumber
+         */
+        public String getPhoneNumber() {
+            return this.phoneNumber;
+        }
+
+        public static final class Builder {
+            private String nick; 
+            private String phoneNumber; 
+
+            /**
+             * Nick.
+             */
+            public Builder nick(String nick) {
+                this.nick = nick;
+                return this;
+            }
+
+            /**
+             * PhoneNumber.
+             */
+            public Builder phoneNumber(String phoneNumber) {
+                this.phoneNumber = phoneNumber;
+                return this;
+            }
+
+            public PhoneInviteeList build() {
+                return new PhoneInviteeList(this);
             } 
 
         } 

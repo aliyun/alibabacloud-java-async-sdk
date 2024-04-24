@@ -41,6 +41,10 @@ public class StartInstanceRequest extends Request {
     private String processCode;
 
     @Body
+    @NameInMap("ProcessData")
+    private String processData;
+
+    @Body
     @NameInMap("SystemToken")
     private String systemToken;
 
@@ -53,6 +57,7 @@ public class StartInstanceRequest extends Request {
         this.formUuid = builder.formUuid;
         this.language = builder.language;
         this.processCode = builder.processCode;
+        this.processData = builder.processData;
         this.systemToken = builder.systemToken;
     }
 
@@ -119,6 +124,13 @@ public class StartInstanceRequest extends Request {
     }
 
     /**
+     * @return processData
+     */
+    public String getProcessData() {
+        return this.processData;
+    }
+
+    /**
      * @return systemToken
      */
     public String getSystemToken() {
@@ -133,6 +145,7 @@ public class StartInstanceRequest extends Request {
         private String formUuid; 
         private String language; 
         private String processCode; 
+        private String processData; 
         private String systemToken; 
 
         private Builder() {
@@ -148,6 +161,7 @@ public class StartInstanceRequest extends Request {
             this.formUuid = request.formUuid;
             this.language = request.language;
             this.processCode = request.processCode;
+            this.processData = request.processData;
             this.systemToken = request.systemToken;
         } 
 
@@ -212,6 +226,15 @@ public class StartInstanceRequest extends Request {
         public Builder processCode(String processCode) {
             this.putBodyParameter("ProcessCode", processCode);
             this.processCode = processCode;
+            return this;
+        }
+
+        /**
+         * ProcessData.
+         */
+        public Builder processData(String processData) {
+            this.putBodyParameter("ProcessData", processData);
+            this.processData = processData;
             return this;
         }
 

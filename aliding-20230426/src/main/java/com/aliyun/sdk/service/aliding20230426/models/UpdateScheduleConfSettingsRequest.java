@@ -187,6 +187,9 @@ public class UpdateScheduleConfSettingsRequest extends Request {
         @NameInMap("EnableChat")
         private Integer enableChat;
 
+        @NameInMap("EnableWebAnonymousJoin")
+        private Boolean enableWebAnonymousJoin;
+
         @NameInMap("JoinBeforeHost")
         private Integer joinBeforeHost;
 
@@ -201,6 +204,7 @@ public class UpdateScheduleConfSettingsRequest extends Request {
 
         private MoziConfVirtualExtraSetting(Builder builder) {
             this.enableChat = builder.enableChat;
+            this.enableWebAnonymousJoin = builder.enableWebAnonymousJoin;
             this.joinBeforeHost = builder.joinBeforeHost;
             this.lockMediaStatusMicMute = builder.lockMediaStatusMicMute;
             this.lockNick = builder.lockNick;
@@ -220,6 +224,13 @@ public class UpdateScheduleConfSettingsRequest extends Request {
          */
         public Integer getEnableChat() {
             return this.enableChat;
+        }
+
+        /**
+         * @return enableWebAnonymousJoin
+         */
+        public Boolean getEnableWebAnonymousJoin() {
+            return this.enableWebAnonymousJoin;
         }
 
         /**
@@ -252,6 +263,7 @@ public class UpdateScheduleConfSettingsRequest extends Request {
 
         public static final class Builder {
             private Integer enableChat; 
+            private Boolean enableWebAnonymousJoin; 
             private Integer joinBeforeHost; 
             private Integer lockMediaStatusMicMute; 
             private Integer lockNick; 
@@ -262,6 +274,14 @@ public class UpdateScheduleConfSettingsRequest extends Request {
              */
             public Builder enableChat(Integer enableChat) {
                 this.enableChat = enableChat;
+                return this;
+            }
+
+            /**
+             * EnableWebAnonymousJoin.
+             */
+            public Builder enableWebAnonymousJoin(Boolean enableWebAnonymousJoin) {
+                this.enableWebAnonymousJoin = enableWebAnonymousJoin;
                 return this;
             }
 
