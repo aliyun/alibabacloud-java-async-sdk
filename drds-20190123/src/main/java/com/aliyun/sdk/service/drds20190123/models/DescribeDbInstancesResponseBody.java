@@ -113,6 +113,9 @@ public class DescribeDbInstancesResponseBody extends TeaModel {
 
     }
     public static class DBInstance extends TeaModel {
+        @NameInMap("AllowAllCategory")
+        private Boolean allowAllCategory;
+
         @NameInMap("DBInstanceDescription")
         private String DBInstanceDescription;
 
@@ -144,6 +147,7 @@ public class DescribeDbInstancesResponseBody extends TeaModel {
         private String zoneId;
 
         private DBInstance(Builder builder) {
+            this.allowAllCategory = builder.allowAllCategory;
             this.DBInstanceDescription = builder.DBInstanceDescription;
             this.DBInstanceId = builder.DBInstanceId;
             this.DBInstanceStatus = builder.DBInstanceStatus;
@@ -162,6 +166,13 @@ public class DescribeDbInstancesResponseBody extends TeaModel {
 
         public static DBInstance create() {
             return builder().build();
+        }
+
+        /**
+         * @return allowAllCategory
+         */
+        public Boolean getAllowAllCategory() {
+            return this.allowAllCategory;
         }
 
         /**
@@ -235,6 +246,7 @@ public class DescribeDbInstancesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean allowAllCategory; 
             private String DBInstanceDescription; 
             private String DBInstanceId; 
             private Integer DBInstanceStatus; 
@@ -245,6 +257,14 @@ public class DescribeDbInstancesResponseBody extends TeaModel {
             private ReadOnlyDBInstanceId readOnlyDBInstanceId; 
             private String regionId; 
             private String zoneId; 
+
+            /**
+             * AllowAllCategory.
+             */
+            public Builder allowAllCategory(Boolean allowAllCategory) {
+                this.allowAllCategory = allowAllCategory;
+                return this;
+            }
 
             /**
              * The description of the storage instance.
