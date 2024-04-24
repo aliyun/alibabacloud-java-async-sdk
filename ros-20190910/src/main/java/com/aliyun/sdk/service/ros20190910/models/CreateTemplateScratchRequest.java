@@ -489,6 +489,9 @@ public class CreateTemplateScratchRequest extends Request {
         @NameInMap("RegionId")
         private String regionId;
 
+        @NameInMap("RelatedResourceTypeFilter")
+        private java.util.List < String > relatedResourceTypeFilter;
+
         @NameInMap("ResourceId")
         @Validation(required = true)
         private String resourceId;
@@ -499,6 +502,7 @@ public class CreateTemplateScratchRequest extends Request {
 
         private SourceResources(Builder builder) {
             this.regionId = builder.regionId;
+            this.relatedResourceTypeFilter = builder.relatedResourceTypeFilter;
             this.resourceId = builder.resourceId;
             this.resourceType = builder.resourceType;
         }
@@ -519,6 +523,13 @@ public class CreateTemplateScratchRequest extends Request {
         }
 
         /**
+         * @return relatedResourceTypeFilter
+         */
+        public java.util.List < String > getRelatedResourceTypeFilter() {
+            return this.relatedResourceTypeFilter;
+        }
+
+        /**
          * @return resourceId
          */
         public String getResourceId() {
@@ -534,6 +545,7 @@ public class CreateTemplateScratchRequest extends Request {
 
         public static final class Builder {
             private String regionId; 
+            private java.util.List < String > relatedResourceTypeFilter; 
             private String resourceId; 
             private String resourceType; 
 
@@ -542,6 +554,14 @@ public class CreateTemplateScratchRequest extends Request {
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * RelatedResourceTypeFilter.
+             */
+            public Builder relatedResourceTypeFilter(java.util.List < String > relatedResourceTypeFilter) {
+                this.relatedResourceTypeFilter = relatedResourceTypeFilter;
                 return this;
             }
 

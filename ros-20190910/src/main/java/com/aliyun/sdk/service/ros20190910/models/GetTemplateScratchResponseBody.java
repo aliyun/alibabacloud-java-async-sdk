@@ -194,6 +194,9 @@ public class GetTemplateScratchResponseBody extends TeaModel {
 
     }
     public static class SourceResources extends TeaModel {
+        @NameInMap("RelatedResourceTypeFilter")
+        private java.util.List < String > relatedResourceTypeFilter;
+
         @NameInMap("ResourceId")
         private String resourceId;
 
@@ -201,6 +204,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
         private String resourceType;
 
         private SourceResources(Builder builder) {
+            this.relatedResourceTypeFilter = builder.relatedResourceTypeFilter;
             this.resourceId = builder.resourceId;
             this.resourceType = builder.resourceType;
         }
@@ -211,6 +215,13 @@ public class GetTemplateScratchResponseBody extends TeaModel {
 
         public static SourceResources create() {
             return builder().build();
+        }
+
+        /**
+         * @return relatedResourceTypeFilter
+         */
+        public java.util.List < String > getRelatedResourceTypeFilter() {
+            return this.relatedResourceTypeFilter;
         }
 
         /**
@@ -228,8 +239,17 @@ public class GetTemplateScratchResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List < String > relatedResourceTypeFilter; 
             private String resourceId; 
             private String resourceType; 
+
+            /**
+             * RelatedResourceTypeFilter.
+             */
+            public Builder relatedResourceTypeFilter(java.util.List < String > relatedResourceTypeFilter) {
+                this.relatedResourceTypeFilter = relatedResourceTypeFilter;
+                return this;
+            }
 
             /**
              * The resource ID.

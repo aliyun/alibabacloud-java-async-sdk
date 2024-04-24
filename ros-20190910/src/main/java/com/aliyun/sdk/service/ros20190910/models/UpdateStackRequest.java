@@ -18,6 +18,7 @@ public class UpdateStackRequest extends Request {
 
     @Query
     @NameInMap("DisableRollback")
+    @Deprecated
     private Boolean disableRollback;
 
     @Query

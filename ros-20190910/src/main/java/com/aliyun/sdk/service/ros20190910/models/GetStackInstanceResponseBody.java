@@ -310,7 +310,10 @@ public class GetStackInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Outputs.
+             * The outputs of the stack.
+             * <p>
+             * 
+             * >  This parameter is returned if OutputOption is set to Enabled.
              */
             public Builder outputs(java.util.List < java.util.Map<String, ?>> outputs) {
                 this.outputs = outputs;

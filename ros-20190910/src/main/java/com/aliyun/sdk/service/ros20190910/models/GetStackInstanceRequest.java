@@ -114,7 +114,13 @@ public class GetStackInstanceRequest extends Request {
         } 
 
         /**
-         * OutputOption.
+         * Specifies whether to return the Outputs parameter. The Outputs parameter specifies the outputs of the stack. Valid values:
+         * <p>
+         * 
+         * *   Enabled: returns the Outputs parameter.
+         * *   Disabled (default): does not return the Outputs parameter.
+         * 
+         * >  The Outputs parameter requires a long period of time to calculate. If you do not require the outputs of the stack, we recommend that you set OutputOption to Disabled to improve the response speed of the API operation.
          */
         public Builder outputOption(String outputOption) {
             this.putQueryParameter("OutputOption", outputOption);

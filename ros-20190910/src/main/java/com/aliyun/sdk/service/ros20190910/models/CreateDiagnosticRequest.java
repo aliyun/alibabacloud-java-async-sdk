@@ -97,6 +97,9 @@ public class CreateDiagnosticRequest extends Request {
 
         /**
          * The keyword in the diagnosis.
+         * <p>
+         * 
+         * You can specify the ID of the stack that you want to diagnose.
          */
         public Builder diagnosticKey(String diagnosticKey) {
             this.putQueryParameter("DiagnosticKey", diagnosticKey);
@@ -114,7 +117,13 @@ public class CreateDiagnosticRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the diagnostic report to be generated. Only Chinese and English are supported.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   zh-cn
+         * *   en
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
