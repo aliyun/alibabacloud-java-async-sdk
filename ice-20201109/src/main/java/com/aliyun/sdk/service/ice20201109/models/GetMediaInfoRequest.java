@@ -28,12 +28,17 @@ public class GetMediaInfoRequest extends Request {
     @NameInMap("OutputType")
     private String outputType;
 
+    @Query
+    @NameInMap("ReturnDetailedInfo")
+    private String returnDetailedInfo;
+
     private GetMediaInfoRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.inputURL = builder.inputURL;
         this.mediaId = builder.mediaId;
         this.outputType = builder.outputType;
+        this.returnDetailedInfo = builder.returnDetailedInfo;
     }
 
     public static Builder builder() {
@@ -77,11 +82,19 @@ public class GetMediaInfoRequest extends Request {
         return this.outputType;
     }
 
+    /**
+     * @return returnDetailedInfo
+     */
+    public String getReturnDetailedInfo() {
+        return this.returnDetailedInfo;
+    }
+
     public static final class Builder extends Request.Builder<GetMediaInfoRequest, Builder> {
         private String regionId; 
         private String inputURL; 
         private String mediaId; 
         private String outputType; 
+        private String returnDetailedInfo; 
 
         private Builder() {
             super();
@@ -93,6 +106,7 @@ public class GetMediaInfoRequest extends Request {
             this.inputURL = request.inputURL;
             this.mediaId = request.mediaId;
             this.outputType = request.outputType;
+            this.returnDetailedInfo = request.returnDetailedInfo;
         } 
 
         /**
@@ -128,6 +142,15 @@ public class GetMediaInfoRequest extends Request {
         public Builder outputType(String outputType) {
             this.putQueryParameter("OutputType", outputType);
             this.outputType = outputType;
+            return this;
+        }
+
+        /**
+         * ReturnDetailedInfo.
+         */
+        public Builder returnDetailedInfo(String returnDetailedInfo) {
+            this.putQueryParameter("ReturnDetailedInfo", returnDetailedInfo);
+            this.returnDetailedInfo = returnDetailedInfo;
             return this;
         }
 

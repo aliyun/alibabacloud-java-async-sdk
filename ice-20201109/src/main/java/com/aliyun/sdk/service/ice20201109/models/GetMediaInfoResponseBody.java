@@ -71,6 +71,168 @@ public class GetMediaInfoResponseBody extends TeaModel {
 
     } 
 
+    public static class Results extends TeaModel {
+        @NameInMap("Data")
+        private String data;
+
+        @NameInMap("Type")
+        private String type;
+
+        private Results(Builder builder) {
+            this.data = builder.data;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Results create() {
+            return builder().build();
+        }
+
+        /**
+         * @return data
+         */
+        public String getData() {
+            return this.data;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private String data; 
+            private String type; 
+
+            /**
+             * Data.
+             */
+            public Builder data(String data) {
+                this.data = data;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public Results build() {
+                return new Results(this);
+            } 
+
+        } 
+
+    }
+    public static class StandardSmartTagJob extends TeaModel {
+        @NameInMap("AiJobId")
+        private String aiJobId;
+
+        @NameInMap("ResultUrl")
+        private String resultUrl;
+
+        @NameInMap("Results")
+        private java.util.List < Results> results;
+
+        @NameInMap("Status")
+        private String status;
+
+        private StandardSmartTagJob(Builder builder) {
+            this.aiJobId = builder.aiJobId;
+            this.resultUrl = builder.resultUrl;
+            this.results = builder.results;
+            this.status = builder.status;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static StandardSmartTagJob create() {
+            return builder().build();
+        }
+
+        /**
+         * @return aiJobId
+         */
+        public String getAiJobId() {
+            return this.aiJobId;
+        }
+
+        /**
+         * @return resultUrl
+         */
+        public String getResultUrl() {
+            return this.resultUrl;
+        }
+
+        /**
+         * @return results
+         */
+        public java.util.List < Results> getResults() {
+            return this.results;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        public static final class Builder {
+            private String aiJobId; 
+            private String resultUrl; 
+            private java.util.List < Results> results; 
+            private String status; 
+
+            /**
+             * AiJobId.
+             */
+            public Builder aiJobId(String aiJobId) {
+                this.aiJobId = aiJobId;
+                return this;
+            }
+
+            /**
+             * ResultUrl.
+             */
+            public Builder resultUrl(String resultUrl) {
+                this.resultUrl = resultUrl;
+                return this;
+            }
+
+            /**
+             * Results.
+             */
+            public Builder results(java.util.List < Results> results) {
+                this.results = results;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            public StandardSmartTagJob build() {
+                return new StandardSmartTagJob(this);
+            } 
+
+        } 
+
+    }
     public static class AiRoughData extends TeaModel {
         @NameInMap("AiCategory")
         private String aiCategory;
@@ -84,6 +246,9 @@ public class GetMediaInfoResponseBody extends TeaModel {
         @NameInMap("SaveType")
         private String saveType;
 
+        @NameInMap("StandardSmartTagJob")
+        private StandardSmartTagJob standardSmartTagJob;
+
         @NameInMap("Status")
         private String status;
 
@@ -92,6 +257,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             this.aiJobId = builder.aiJobId;
             this.result = builder.result;
             this.saveType = builder.saveType;
+            this.standardSmartTagJob = builder.standardSmartTagJob;
             this.status = builder.status;
         }
 
@@ -132,6 +298,13 @@ public class GetMediaInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return standardSmartTagJob
+         */
+        public StandardSmartTagJob getStandardSmartTagJob() {
+            return this.standardSmartTagJob;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -143,6 +316,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             private String aiJobId; 
             private String result; 
             private String saveType; 
+            private StandardSmartTagJob standardSmartTagJob; 
             private String status; 
 
             /**
@@ -174,6 +348,14 @@ public class GetMediaInfoResponseBody extends TeaModel {
              */
             public Builder saveType(String saveType) {
                 this.saveType = saveType;
+                return this;
+            }
+
+            /**
+             * StandardSmartTagJob.
+             */
+            public Builder standardSmartTagJob(StandardSmartTagJob standardSmartTagJob) {
+                this.standardSmartTagJob = standardSmartTagJob;
                 return this;
             }
 

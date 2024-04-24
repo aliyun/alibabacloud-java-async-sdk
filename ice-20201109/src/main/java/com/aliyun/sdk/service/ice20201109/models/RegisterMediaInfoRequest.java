@@ -62,6 +62,10 @@ public class RegisterMediaInfoRequest extends Request {
     private String registerConfig;
 
     @Query
+    @NameInMap("SmartTagTemplateId")
+    private String smartTagTemplateId;
+
+    @Query
     @NameInMap("Title")
     private String title;
 
@@ -87,6 +91,7 @@ public class RegisterMediaInfoRequest extends Request {
         this.overwrite = builder.overwrite;
         this.referenceId = builder.referenceId;
         this.registerConfig = builder.registerConfig;
+        this.smartTagTemplateId = builder.smartTagTemplateId;
         this.title = builder.title;
         this.userData = builder.userData;
         this.workflowId = builder.workflowId;
@@ -190,6 +195,13 @@ public class RegisterMediaInfoRequest extends Request {
     }
 
     /**
+     * @return smartTagTemplateId
+     */
+    public String getSmartTagTemplateId() {
+        return this.smartTagTemplateId;
+    }
+
+    /**
      * @return title
      */
     public String getTitle() {
@@ -223,6 +235,7 @@ public class RegisterMediaInfoRequest extends Request {
         private Boolean overwrite; 
         private String referenceId; 
         private String registerConfig; 
+        private String smartTagTemplateId; 
         private String title; 
         private String userData; 
         private String workflowId; 
@@ -245,6 +258,7 @@ public class RegisterMediaInfoRequest extends Request {
             this.overwrite = request.overwrite;
             this.referenceId = request.referenceId;
             this.registerConfig = request.registerConfig;
+            this.smartTagTemplateId = request.smartTagTemplateId;
             this.title = request.title;
             this.userData = request.userData;
             this.workflowId = request.workflowId;
@@ -355,6 +369,15 @@ public class RegisterMediaInfoRequest extends Request {
         public Builder registerConfig(String registerConfig) {
             this.putQueryParameter("RegisterConfig", registerConfig);
             this.registerConfig = registerConfig;
+            return this;
+        }
+
+        /**
+         * SmartTagTemplateId.
+         */
+        public Builder smartTagTemplateId(String smartTagTemplateId) {
+            this.putQueryParameter("SmartTagTemplateId", smartTagTemplateId);
+            this.smartTagTemplateId = smartTagTemplateId;
             return this;
         }
 
