@@ -22,6 +22,10 @@ public class ModifyClusterRequest extends Request {
     private java.util.List < String > accessControlList;
 
     @Body
+    @NameInMap("api_server_custom_cert_sans")
+    private ApiServerCustomCertSans apiServerCustomCertSans;
+
+    @Body
     @NameInMap("api_server_eip")
     private Boolean apiServerEip;
 
@@ -73,6 +77,7 @@ public class ModifyClusterRequest extends Request {
         super(builder);
         this.clusterId = builder.clusterId;
         this.accessControlList = builder.accessControlList;
+        this.apiServerCustomCertSans = builder.apiServerCustomCertSans;
         this.apiServerEip = builder.apiServerEip;
         this.apiServerEipId = builder.apiServerEipId;
         this.clusterName = builder.clusterName;
@@ -112,6 +117,13 @@ public class ModifyClusterRequest extends Request {
      */
     public java.util.List < String > getAccessControlList() {
         return this.accessControlList;
+    }
+
+    /**
+     * @return apiServerCustomCertSans
+     */
+    public ApiServerCustomCertSans getApiServerCustomCertSans() {
+        return this.apiServerCustomCertSans;
     }
 
     /**
@@ -201,6 +213,7 @@ public class ModifyClusterRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyClusterRequest, Builder> {
         private String clusterId; 
         private java.util.List < String > accessControlList; 
+        private ApiServerCustomCertSans apiServerCustomCertSans; 
         private Boolean apiServerEip; 
         private String apiServerEipId; 
         private String clusterName; 
@@ -222,6 +235,7 @@ public class ModifyClusterRequest extends Request {
             super(request);
             this.clusterId = request.clusterId;
             this.accessControlList = request.accessControlList;
+            this.apiServerCustomCertSans = request.apiServerCustomCertSans;
             this.apiServerEip = request.apiServerEip;
             this.apiServerEipId = request.apiServerEipId;
             this.clusterName = request.clusterName;
@@ -251,6 +265,15 @@ public class ModifyClusterRequest extends Request {
         public Builder accessControlList(java.util.List < String > accessControlList) {
             this.putBodyParameter("access_control_list", accessControlList);
             this.accessControlList = accessControlList;
+            return this;
+        }
+
+        /**
+         * api_server_custom_cert_sans.
+         */
+        public Builder apiServerCustomCertSans(ApiServerCustomCertSans apiServerCustomCertSans) {
+            this.putBodyParameter("api_server_custom_cert_sans", apiServerCustomCertSans);
+            this.apiServerCustomCertSans = apiServerCustomCertSans;
             return this;
         }
 
@@ -398,6 +421,67 @@ public class ModifyClusterRequest extends Request {
 
     } 
 
+    public static class ApiServerCustomCertSans extends TeaModel {
+        @NameInMap("action")
+        private String action;
+
+        @NameInMap("subject_alternative_names")
+        private java.util.List < String > subjectAlternativeNames;
+
+        private ApiServerCustomCertSans(Builder builder) {
+            this.action = builder.action;
+            this.subjectAlternativeNames = builder.subjectAlternativeNames;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ApiServerCustomCertSans create() {
+            return builder().build();
+        }
+
+        /**
+         * @return action
+         */
+        public String getAction() {
+            return this.action;
+        }
+
+        /**
+         * @return subjectAlternativeNames
+         */
+        public java.util.List < String > getSubjectAlternativeNames() {
+            return this.subjectAlternativeNames;
+        }
+
+        public static final class Builder {
+            private String action; 
+            private java.util.List < String > subjectAlternativeNames; 
+
+            /**
+             * action.
+             */
+            public Builder action(String action) {
+                this.action = action;
+                return this;
+            }
+
+            /**
+             * subject_alternative_names.
+             */
+            public Builder subjectAlternativeNames(java.util.List < String > subjectAlternativeNames) {
+                this.subjectAlternativeNames = subjectAlternativeNames;
+                return this;
+            }
+
+            public ApiServerCustomCertSans build() {
+                return new ApiServerCustomCertSans(this);
+            } 
+
+        } 
+
+    }
     public static class ClusterAutoUpgrade extends TeaModel {
         @NameInMap("channel")
         private String channel;
