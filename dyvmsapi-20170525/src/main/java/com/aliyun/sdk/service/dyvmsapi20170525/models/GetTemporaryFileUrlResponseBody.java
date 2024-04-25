@@ -7,16 +7,19 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link SmartCallResponseBody} extends {@link TeaModel}
+ * {@link GetTemporaryFileUrlResponseBody} extends {@link TeaModel}
  *
- * <p>SmartCallResponseBody</p>
+ * <p>GetTemporaryFileUrlResponseBody</p>
  */
-public class SmartCallResponseBody extends TeaModel {
-    @NameInMap("CallId")
-    private String callId;
+public class GetTemporaryFileUrlResponseBody extends TeaModel {
+    @NameInMap("AccessDeniedDetail")
+    private String accessDeniedDetail;
 
     @NameInMap("Code")
     private String code;
+
+    @NameInMap("Data")
+    private java.util.Map < String, ? > data;
 
     @NameInMap("Message")
     private String message;
@@ -24,26 +27,31 @@ public class SmartCallResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
-    private SmartCallResponseBody(Builder builder) {
-        this.callId = builder.callId;
+    @NameInMap("Success")
+    private Boolean success;
+
+    private GetTemporaryFileUrlResponseBody(Builder builder) {
+        this.accessDeniedDetail = builder.accessDeniedDetail;
         this.code = builder.code;
+        this.data = builder.data;
         this.message = builder.message;
         this.requestId = builder.requestId;
+        this.success = builder.success;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static SmartCallResponseBody create() {
+    public static GetTemporaryFileUrlResponseBody create() {
         return builder().build();
     }
 
     /**
-     * @return callId
+     * @return accessDeniedDetail
      */
-    public String getCallId() {
-        return this.callId;
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     /**
@@ -51,6 +59,13 @@ public class SmartCallResponseBody extends TeaModel {
      */
     public String getCode() {
         return this.code;
+    }
+
+    /**
+     * @return data
+     */
+    public java.util.Map < String, ? > getData() {
+        return this.data;
     }
 
     /**
@@ -67,17 +82,26 @@ public class SmartCallResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return success
+     */
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public static final class Builder {
-        private String callId; 
+        private String accessDeniedDetail; 
         private String code; 
+        private java.util.Map < String, ? > data; 
         private String message; 
         private String requestId; 
+        private Boolean success; 
 
         /**
-         * CallId.
+         * AccessDeniedDetail.
          */
-        public Builder callId(String callId) {
-            this.callId = callId;
+        public Builder accessDeniedDetail(String accessDeniedDetail) {
+            this.accessDeniedDetail = accessDeniedDetail;
             return this;
         }
 
@@ -86,6 +110,14 @@ public class SmartCallResponseBody extends TeaModel {
          */
         public Builder code(String code) {
             this.code = code;
+            return this;
+        }
+
+        /**
+         * Data.
+         */
+        public Builder data(java.util.Map < String, ? > data) {
+            this.data = data;
             return this;
         }
 
@@ -105,8 +137,16 @@ public class SmartCallResponseBody extends TeaModel {
             return this;
         }
 
-        public SmartCallResponseBody build() {
-            return new SmartCallResponseBody(this);
+        /**
+         * Success.
+         */
+        public Builder success(Boolean success) {
+            this.success = success;
+            return this;
+        }
+
+        public GetTemporaryFileUrlResponseBody build() {
+            return new GetTemporaryFileUrlResponseBody(this);
         } 
 
     } 
