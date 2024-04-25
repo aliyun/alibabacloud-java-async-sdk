@@ -62,7 +62,7 @@ public class DescribeKmsAssociateResourcesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AssociateDBInstances.
+         * The information about the associated ApsaraDB RDS instance.
          */
         public Builder associateDBInstances(java.util.List < AssociateDBInstances> associateDBInstances) {
             this.associateDBInstances = associateDBInstances;
@@ -70,7 +70,11 @@ public class DescribeKmsAssociateResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * AssociateStatus.
+         * Indicates whether an associated RDS instance exists.
+         * <p>
+         * 
+         * - **true**: Yes
+         * - **false**: No
          */
         public Builder associateStatus(Boolean associateStatus) {
             this.associateStatus = associateStatus;
@@ -78,7 +82,7 @@ public class DescribeKmsAssociateResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +158,7 @@ public class DescribeKmsAssociateResourcesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * DBInstanceName.
+             * The instance ID.
              */
             public Builder DBInstanceName(String DBInstanceName) {
                 this.DBInstanceName = DBInstanceName;
@@ -162,7 +166,12 @@ public class DescribeKmsAssociateResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Engine.
+             * The database engine. Valid values:
+             * <p>
+             * 
+             * *   **MySQL**
+             * *   **SQLServer**
+             * *   **PostgreSQL**
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -170,7 +179,11 @@ public class DescribeKmsAssociateResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * KeyUsedBy.
+             * The way in which the key is used. Return values:
+             * <p>
+             * 
+             * *   **DiskEncryption**: cloud disk encryption
+             * *   **TDE**: transparent data encryption
              */
             public Builder keyUsedBy(String keyUsedBy) {
                 this.keyUsedBy = keyUsedBy;
@@ -178,7 +191,17 @@ public class DescribeKmsAssociateResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The state of the instance. Valid values:
+             * <p>
+             * 
+             * *   **CREATING**: The instance is being created.
+             * *   **ACTIVATION**: The instance is running.
+             * *   **DELETING**: The instance is being deleted.
+             * *   **RESTARTING**: The instance is being restarted.
+             * *   **INS_MAINTAINING**: The configuration of the instance is being changed.
+             * *   **INS_MAINTAINING**: The instance is being maintained.
+             * *   **BACKUP_RECOVERING**: The instance is being restored.
+             * *   **NET_MODIFYING**: The network type of the instance is being changed.
              */
             public Builder status(String status) {
                 this.status = status;

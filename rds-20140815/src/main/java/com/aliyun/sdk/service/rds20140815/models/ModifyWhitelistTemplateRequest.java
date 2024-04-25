@@ -18,6 +18,10 @@ public class ModifyWhitelistTemplateRequest extends Request {
     private String ipWhitelist;
 
     @Query
+    @NameInMap("RegionId")
+    private String regionId;
+
+    @Query
     @NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
@@ -40,6 +44,7 @@ public class ModifyWhitelistTemplateRequest extends Request {
     private ModifyWhitelistTemplateRequest(Builder builder) {
         super(builder);
         this.ipWhitelist = builder.ipWhitelist;
+        this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
@@ -65,6 +70,13 @@ public class ModifyWhitelistTemplateRequest extends Request {
      */
     public String getIpWhitelist() {
         return this.ipWhitelist;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -104,6 +116,7 @@ public class ModifyWhitelistTemplateRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyWhitelistTemplateRequest, Builder> {
         private String ipWhitelist; 
+        private String regionId; 
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
@@ -117,6 +130,7 @@ public class ModifyWhitelistTemplateRequest extends Request {
         private Builder(ModifyWhitelistTemplateRequest request) {
             super(request);
             this.ipWhitelist = request.ipWhitelist;
+            this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
@@ -136,6 +150,15 @@ public class ModifyWhitelistTemplateRequest extends Request {
         public Builder ipWhitelist(String ipWhitelist) {
             this.putQueryParameter("IpWhitelist", ipWhitelist);
             this.ipWhitelist = ipWhitelist;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 

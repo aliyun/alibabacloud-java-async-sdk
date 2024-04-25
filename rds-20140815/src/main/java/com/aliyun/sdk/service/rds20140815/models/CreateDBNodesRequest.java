@@ -241,8 +241,8 @@ public class CreateDBNodesRequest extends Request {
         @Validation(required = true)
         private String classCode;
 
-        @NameInMap("vswId")
-        private String vswId;
+        @NameInMap("vswitchId")
+        private String vswitchId;
 
         @NameInMap("zoneId")
         @Validation(required = true)
@@ -250,7 +250,7 @@ public class CreateDBNodesRequest extends Request {
 
         private DBNode(Builder builder) {
             this.classCode = builder.classCode;
-            this.vswId = builder.vswId;
+            this.vswitchId = builder.vswitchId;
             this.zoneId = builder.zoneId;
         }
 
@@ -270,10 +270,10 @@ public class CreateDBNodesRequest extends Request {
         }
 
         /**
-         * @return vswId
+         * @return vswitchId
          */
-        public String getVswId() {
-            return this.vswId;
+        public String getVswitchId() {
+            return this.vswitchId;
         }
 
         /**
@@ -285,7 +285,7 @@ public class CreateDBNodesRequest extends Request {
 
         public static final class Builder {
             private String classCode; 
-            private String vswId; 
+            private String vswitchId; 
             private String zoneId; 
 
             /**
@@ -297,10 +297,10 @@ public class CreateDBNodesRequest extends Request {
             }
 
             /**
-             * vswId.
+             * vswitchId.
              */
-            public Builder vswId(String vswId) {
-                this.vswId = vswId;
+            public Builder vswitchId(String vswitchId) {
+                this.vswitchId = vswitchId;
                 return this;
             }
 

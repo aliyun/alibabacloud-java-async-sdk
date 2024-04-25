@@ -27,6 +27,10 @@ public class DescribeAllWhitelistTemplateRequest extends Request {
     private Integer pageNumbers;
 
     @Query
+    @NameInMap("RegionId")
+    private String regionId;
+
+    @Query
     @NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
@@ -47,6 +51,7 @@ public class DescribeAllWhitelistTemplateRequest extends Request {
         this.fuzzySearch = builder.fuzzySearch;
         this.maxRecordsPerPage = builder.maxRecordsPerPage;
         this.pageNumbers = builder.pageNumbers;
+        this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
@@ -88,6 +93,13 @@ public class DescribeAllWhitelistTemplateRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return resourceGroupId
      */
     public String getResourceGroupId() {
@@ -119,6 +131,7 @@ public class DescribeAllWhitelistTemplateRequest extends Request {
         private Boolean fuzzySearch; 
         private Integer maxRecordsPerPage; 
         private Integer pageNumbers; 
+        private String regionId; 
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
@@ -133,6 +146,7 @@ public class DescribeAllWhitelistTemplateRequest extends Request {
             this.fuzzySearch = request.fuzzySearch;
             this.maxRecordsPerPage = request.maxRecordsPerPage;
             this.pageNumbers = request.pageNumbers;
+            this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
@@ -167,6 +181,15 @@ public class DescribeAllWhitelistTemplateRequest extends Request {
         public Builder pageNumbers(Integer pageNumbers) {
             this.putQueryParameter("PageNumbers", pageNumbers);
             this.pageNumbers = pageNumbers;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 

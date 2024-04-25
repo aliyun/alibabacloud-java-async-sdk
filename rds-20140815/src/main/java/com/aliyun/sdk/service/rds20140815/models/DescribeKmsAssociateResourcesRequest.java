@@ -197,7 +197,10 @@ public class DescribeKmsAssociateResourcesRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.
+         * <p>
+         * 
+         * The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -206,7 +209,7 @@ public class DescribeKmsAssociateResourcesRequest extends Request {
         }
 
         /**
-         * KmsResourceId.
+         * The ID of the KMS resource. Only key IDs are supported.
          */
         public Builder kmsResourceId(String kmsResourceId) {
             this.putQueryParameter("KmsResourceId", kmsResourceId);
@@ -215,7 +218,7 @@ public class DescribeKmsAssociateResourcesRequest extends Request {
         }
 
         /**
-         * KmsResourceRegionId.
+         * The ID of the region to which the KMS resource belongs.
          */
         public Builder kmsResourceRegionId(String kmsResourceRegionId) {
             this.putQueryParameter("KmsResourceRegionId", kmsResourceRegionId);
@@ -224,7 +227,7 @@ public class DescribeKmsAssociateResourcesRequest extends Request {
         }
 
         /**
-         * KmsResourceType.
+         * The type of the KMS resource. Only key is supported.
          */
         public Builder kmsResourceType(String kmsResourceType) {
             this.putQueryParameter("KmsResourceType", kmsResourceType);
@@ -233,7 +236,7 @@ public class DescribeKmsAssociateResourcesRequest extends Request {
         }
 
         /**
-         * KmsResourceUser.
+         * The ID of the Alibaba Cloud account to which the KMS resource belongs.
          */
         public Builder kmsResourceUser(String kmsResourceUser) {
             this.putQueryParameter("KmsResourceUser", kmsResourceUser);
@@ -260,7 +263,7 @@ public class DescribeKmsAssociateResourcesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID. You can call the DescribeRegions operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -269,7 +272,7 @@ public class DescribeKmsAssociateResourcesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The resource group ID.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

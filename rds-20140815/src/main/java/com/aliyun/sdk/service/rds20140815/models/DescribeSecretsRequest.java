@@ -305,7 +305,7 @@ public class DescribeSecretsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group where the instance is located.
+         * The ID of the resource group to which the instance belongs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

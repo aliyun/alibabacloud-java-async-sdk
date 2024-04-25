@@ -809,11 +809,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeAvailableRecoveryTimeResponse> describeAvailableRecoveryTime(DescribeAvailableRecoveryTimeRequest request);
 
     /**
-      * ### Supported database engines
-      * *   MySQL
-      * *   PostgreSQL
-      * *   SQL Server
-      * *   MariaDB
+      * ### [](#)Supported database engines
+      * *   RDS MySQL
+      * *   RDS PostgreSQL
+      * *   RDS SQL Server
+      * *   RDS MariaDB
+      * > You can call this operation to query the available zones for an instance. The query result may be different from the zones available on the buy page of the ApsaraDB RDS console. The values of some parameters on the buy page vary based on the actual sales policy. The actual information on the [buy page](https://rdsbuy.console.aliyun.com/create/rds/PostgreSQL) prevails.
       *
      */
     CompletableFuture<DescribeAvailableZonesResponse> describeAvailableZones(DescribeAvailableZonesRequest request);
@@ -1395,6 +1396,13 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DescribeInstanceLinkedWhitelistTemplateResponse> describeInstanceLinkedWhitelistTemplate(DescribeInstanceLinkedWhitelistTemplateRequest request);
 
+    /**
+      * ### [](#)Supported database engines
+      * *   MySQL
+      * *   PostgreSQL
+      * *   SQL Server
+      *
+     */
     CompletableFuture<DescribeKmsAssociateResourcesResponse> describeKmsAssociateResources(DescribeKmsAssociateResourcesRequest request);
 
     /**
@@ -2281,9 +2289,9 @@ public interface AsyncClient extends SdkAutoCloseable {
       * *   RDS MySQL
       * *   RDS PostgreSQL
       * ### [](#)References
-      * > : Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-      * *   [Enable and configure the dedicated proxy feature](~~197456~~)
-      * *   [Create a database proxy terminal for an ApsaraDB RDS for PostgreSQL instance](~~418273~~)
+      * >  Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.
+      * *   [Configure the connection settings for a database proxy endpoint for an ApsaraDB RDS for MySQL instance](~~2621331~~)
+      * *   [Configure the connection settings for a database proxy endpoint for an ApsaraDB RDS for PostgreSQL instance](~~418273~~)
       *
      */
     CompletableFuture<ModifyDBProxyEndpointResponse> modifyDBProxyEndpoint(ModifyDBProxyEndpointRequest request);

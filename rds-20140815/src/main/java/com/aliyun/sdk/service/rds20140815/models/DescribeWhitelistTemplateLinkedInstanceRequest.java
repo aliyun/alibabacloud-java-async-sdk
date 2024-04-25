@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeWhitelistTemplateLinkedInstanceRequest extends Request {
     @Query
+    @NameInMap("RegionId")
+    private String regionId;
+
+    @Query
     @NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
@@ -31,6 +35,7 @@ public class DescribeWhitelistTemplateLinkedInstanceRequest extends Request {
 
     private DescribeWhitelistTemplateLinkedInstanceRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
@@ -48,6 +53,13 @@ public class DescribeWhitelistTemplateLinkedInstanceRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -79,6 +91,7 @@ public class DescribeWhitelistTemplateLinkedInstanceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeWhitelistTemplateLinkedInstanceRequest, Builder> {
+        private String regionId; 
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
@@ -90,11 +103,21 @@ public class DescribeWhitelistTemplateLinkedInstanceRequest extends Request {
 
         private Builder(DescribeWhitelistTemplateLinkedInstanceRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.templateId = request.templateId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * The resource group ID.

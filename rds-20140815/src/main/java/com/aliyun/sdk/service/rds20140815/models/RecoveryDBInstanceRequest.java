@@ -291,11 +291,8 @@ public class RecoveryDBInstanceRequest extends Request {
          * The ID of the original instance.
          * <p>
          * 
-         * > 
-         * 
-         * *   If you specify BackupId, you do not need to specify this parameter.
-         * 
-         * *   If you specify RestoreTime, you must also specify this parameter.
+         * > *   If you specify BackupId, you do not need to specify this parameter.
+         * > *   If you specify RestoreTime, you must also specify this parameter.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

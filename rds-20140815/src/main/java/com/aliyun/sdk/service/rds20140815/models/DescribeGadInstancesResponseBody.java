@@ -182,7 +182,7 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The node ID.
+             * The ID of the node.
              */
             public Builder DBInstanceID(String DBInstanceID) {
                 this.DBInstanceID = DBInstanceID;
@@ -220,7 +220,7 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region in which the node resides.
+             * The ID of the region where the node resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -228,7 +228,7 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * The resource group ID.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -236,10 +236,10 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The node type. Valid values:
+             * The type of the node. Valid values:
              * <p>
              * 
-             * *   **CENTRAL**: The node is the central node. Each global active database cluster has only one central node. All unit nodes synchronize data from the central node.
+             * *   **CENTRAL**: The node is a central node. Each global active database cluster has only one central node. All unit nodes synchronize data from the central node.
              * *   **UNIT**: The node is a unit node. Each global active database cluster can have up to 10 unit nodes. All unit nodes synchronize data from the central node.
              */
             public Builder role(String role) {
@@ -373,7 +373,7 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The cluster name.
+             * The name of the cluster.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -416,7 +416,7 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The cluster status. Valid values:
+             * The status of the cluster. Valid values:
              * <p>
              * 
              * *   **activation**: The cluster is running.

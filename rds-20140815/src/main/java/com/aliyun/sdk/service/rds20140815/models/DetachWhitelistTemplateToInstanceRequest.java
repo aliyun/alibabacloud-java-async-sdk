@@ -18,6 +18,10 @@ public class DetachWhitelistTemplateToInstanceRequest extends Request {
     private String insName;
 
     @Query
+    @NameInMap("RegionId")
+    private String regionId;
+
+    @Query
     @NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
@@ -37,6 +41,7 @@ public class DetachWhitelistTemplateToInstanceRequest extends Request {
     private DetachWhitelistTemplateToInstanceRequest(Builder builder) {
         super(builder);
         this.insName = builder.insName;
+        this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
@@ -61,6 +66,13 @@ public class DetachWhitelistTemplateToInstanceRequest extends Request {
      */
     public String getInsName() {
         return this.insName;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -93,6 +105,7 @@ public class DetachWhitelistTemplateToInstanceRequest extends Request {
 
     public static final class Builder extends Request.Builder<DetachWhitelistTemplateToInstanceRequest, Builder> {
         private String insName; 
+        private String regionId; 
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
@@ -105,6 +118,7 @@ public class DetachWhitelistTemplateToInstanceRequest extends Request {
         private Builder(DetachWhitelistTemplateToInstanceRequest request) {
             super(request);
             this.insName = request.insName;
+            this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
@@ -117,6 +131,15 @@ public class DetachWhitelistTemplateToInstanceRequest extends Request {
         public Builder insName(String insName) {
             this.putQueryParameter("InsName", insName);
             this.insName = insName;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 
