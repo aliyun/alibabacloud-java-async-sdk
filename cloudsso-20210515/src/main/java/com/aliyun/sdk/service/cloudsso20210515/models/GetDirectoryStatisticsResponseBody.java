@@ -96,6 +96,9 @@ public class GetDirectoryStatisticsResponseBody extends TeaModel {
         @NameInMap("InProgressTaskCount")
         private Integer inProgressTaskCount;
 
+        @NameInMap("InlinePolicyPerAccessConfigurationQuota")
+        private Integer inlinePolicyPerAccessConfigurationQuota;
+
         @NameInMap("Region")
         private String region;
 
@@ -126,6 +129,7 @@ public class GetDirectoryStatisticsResponseBody extends TeaModel {
             this.groupCount = builder.groupCount;
             this.groupQuota = builder.groupQuota;
             this.inProgressTaskCount = builder.inProgressTaskCount;
+            this.inlinePolicyPerAccessConfigurationQuota = builder.inlinePolicyPerAccessConfigurationQuota;
             this.region = builder.region;
             this.SCIMServerCredentialCount = builder.SCIMServerCredentialCount;
             this.SCIMSyncEnabled = builder.SCIMSyncEnabled;
@@ -200,6 +204,13 @@ public class GetDirectoryStatisticsResponseBody extends TeaModel {
         }
 
         /**
+         * @return inlinePolicyPerAccessConfigurationQuota
+         */
+        public Integer getInlinePolicyPerAccessConfigurationQuota() {
+            return this.inlinePolicyPerAccessConfigurationQuota;
+        }
+
+        /**
          * @return region
          */
         public String getRegion() {
@@ -257,6 +268,7 @@ public class GetDirectoryStatisticsResponseBody extends TeaModel {
             private Integer groupCount; 
             private Integer groupQuota; 
             private Integer inProgressTaskCount; 
+            private Integer inlinePolicyPerAccessConfigurationQuota; 
             private String region; 
             private Integer SCIMServerCredentialCount; 
             private Boolean SCIMSyncEnabled; 
@@ -326,6 +338,14 @@ public class GetDirectoryStatisticsResponseBody extends TeaModel {
              */
             public Builder inProgressTaskCount(Integer inProgressTaskCount) {
                 this.inProgressTaskCount = inProgressTaskCount;
+                return this;
+            }
+
+            /**
+             * InlinePolicyPerAccessConfigurationQuota.
+             */
+            public Builder inlinePolicyPerAccessConfigurationQuota(Integer inlinePolicyPerAccessConfigurationQuota) {
+                this.inlinePolicyPerAccessConfigurationQuota = inlinePolicyPerAccessConfigurationQuota;
                 return this;
             }
 
