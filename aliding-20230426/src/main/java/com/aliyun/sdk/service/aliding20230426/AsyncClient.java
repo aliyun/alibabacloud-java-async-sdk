@@ -205,6 +205,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetUserResponse> getUser(GetUserRequest request);
 
+    CompletableFuture<GetUserLatestPlanResponse> getUserLatestPlan(GetUserLatestPlanRequest request);
+
     CompletableFuture<GetWorkspaceResponse> getWorkspace(GetWorkspaceRequest request);
 
     CompletableFuture<GetWorkspacesResponse> getWorkspaces(GetWorkspacesRequest request);
@@ -328,6 +330,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StopCloudRecordResponse> stopCloudRecord(StopCloudRecordRequest request);
 
     CompletableFuture<SubscribeCalendarResponse> subscribeCalendar(SubscribeCalendarRequest request);
+
+    CompletableFuture<SyncDingTypeResponse> syncDingType(SyncDingTypeRequest request);
 
     CompletableFuture<TerminateInstanceResponse> terminateInstance(TerminateInstanceRequest request);
 
