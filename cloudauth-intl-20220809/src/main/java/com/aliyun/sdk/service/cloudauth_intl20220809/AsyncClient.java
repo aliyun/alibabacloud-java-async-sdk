@@ -27,8 +27,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CheckResultResponse> checkResult(CheckResultRequest request);
 
-    CompletableFuture<DeletePictureResponse> deletePicture(DeletePictureRequest request);
-
     CompletableFuture<DeleteVerifyResultResponse> deleteVerifyResult(DeleteVerifyResultRequest request);
 
     CompletableFuture<DescribeAddressLabelsResponse> describeAddressLabels(DescribeAddressLabelsRequest request);
