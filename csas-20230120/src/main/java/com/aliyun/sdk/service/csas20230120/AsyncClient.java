@@ -21,7 +21,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AttachApplication2ConnectorResponse> attachApplication2Connector(AttachApplication2ConnectorRequest request);
 
+    CompletableFuture<CreateClientUserResponse> createClientUser(CreateClientUserRequest request);
+
     CompletableFuture<CreateDynamicRouteResponse> createDynamicRoute(CreateDynamicRouteRequest request);
+
+    CompletableFuture<CreateIdpDepartmentResponse> createIdpDepartment(CreateIdpDepartmentRequest request);
 
     CompletableFuture<CreatePrivateAccessApplicationResponse> createPrivateAccessApplication(CreatePrivateAccessApplicationRequest request);
 
@@ -33,7 +37,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateUserGroupResponse> createUserGroup(CreateUserGroupRequest request);
 
+    CompletableFuture<DeleteClientUserResponse> deleteClientUser(DeleteClientUserRequest request);
+
     CompletableFuture<DeleteDynamicRouteResponse> deleteDynamicRoute(DeleteDynamicRouteRequest request);
+
+    CompletableFuture<DeleteIdpDepartmentResponse> deleteIdpDepartment(DeleteIdpDepartmentRequest request);
 
     CompletableFuture<DeletePrivateAccessApplicationResponse> deletePrivateAccessApplication(DeletePrivateAccessApplicationRequest request);
 
@@ -47,7 +55,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DetachApplication2ConnectorResponse> detachApplication2Connector(DetachApplication2ConnectorRequest request);
 
+    CompletableFuture<GetActiveIdpConfigResponse> getActiveIdpConfig(GetActiveIdpConfigRequest request);
+
+    CompletableFuture<GetClientUserResponse> getClientUser(GetClientUserRequest request);
+
     CompletableFuture<GetDynamicRouteResponse> getDynamicRoute(GetDynamicRouteRequest request);
+
+    CompletableFuture<GetIdpConfigResponse> getIdpConfig(GetIdpConfigRequest request);
 
     CompletableFuture<GetPrivateAccessApplicationResponse> getPrivateAccessApplication(GetPrivateAccessApplicationRequest request);
 
@@ -63,6 +77,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListApplicationsForPrivateAccessTagResponse> listApplicationsForPrivateAccessTag(ListApplicationsForPrivateAccessTagRequest request);
 
+    CompletableFuture<ListClientUsersResponse> listClientUsers(ListClientUsersRequest request);
+
     CompletableFuture<ListConnectorsResponse> listConnectors(ListConnectorsRequest request);
 
     CompletableFuture<ListDynamicRouteRegionsResponse> listDynamicRouteRegions(ListDynamicRouteRegionsRequest request);
@@ -70,6 +86,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListDynamicRoutesResponse> listDynamicRoutes(ListDynamicRoutesRequest request);
 
     CompletableFuture<ListExcessiveDeviceRegistrationApplicationsResponse> listExcessiveDeviceRegistrationApplications(ListExcessiveDeviceRegistrationApplicationsRequest request);
+
+    CompletableFuture<ListIdpConfigsResponse> listIdpConfigs(ListIdpConfigsRequest request);
+
+    CompletableFuture<ListIdpDepartmentsResponse> listIdpDepartments(ListIdpDepartmentsRequest request);
 
     CompletableFuture<ListPolicesForPrivateAccessApplicationResponse> listPolicesForPrivateAccessApplication(ListPolicesForPrivateAccessApplicationRequest request);
 
@@ -109,9 +129,17 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListUsersResponse> listUsers(ListUsersRequest request);
 
+    CompletableFuture<UpdateClientUserResponse> updateClientUser(UpdateClientUserRequest request);
+
+    CompletableFuture<UpdateClientUserPasswordResponse> updateClientUserPassword(UpdateClientUserPasswordRequest request);
+
+    CompletableFuture<UpdateClientUserStatusResponse> updateClientUserStatus(UpdateClientUserStatusRequest request);
+
     CompletableFuture<UpdateDynamicRouteResponse> updateDynamicRoute(UpdateDynamicRouteRequest request);
 
     CompletableFuture<UpdateExcessiveDeviceRegistrationApplicationsStatusResponse> updateExcessiveDeviceRegistrationApplicationsStatus(UpdateExcessiveDeviceRegistrationApplicationsStatusRequest request);
+
+    CompletableFuture<UpdateIdpDepartmentResponse> updateIdpDepartment(UpdateIdpDepartmentRequest request);
 
     CompletableFuture<UpdatePrivateAccessApplicationResponse> updatePrivateAccessApplication(UpdatePrivateAccessApplicationRequest request);
 
