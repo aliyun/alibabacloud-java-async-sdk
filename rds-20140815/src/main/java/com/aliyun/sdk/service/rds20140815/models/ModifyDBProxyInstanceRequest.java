@@ -55,6 +55,10 @@ public class ModifyDBProxyInstanceRequest extends Request {
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
+    @Query
+    @NameInMap("VSwitchIds")
+    private String vSwitchIds;
+
     private ModifyDBProxyInstanceRequest(Builder builder) {
         super(builder);
         this.DBInstanceId = builder.DBInstanceId;
@@ -67,6 +71,7 @@ public class ModifyDBProxyInstanceRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.vSwitchIds = builder.vSwitchIds;
     }
 
     public static Builder builder() {
@@ -152,6 +157,13 @@ public class ModifyDBProxyInstanceRequest extends Request {
         return this.resourceOwnerId;
     }
 
+    /**
+     * @return vSwitchIds
+     */
+    public String getVSwitchIds() {
+        return this.vSwitchIds;
+    }
+
     public static final class Builder extends Request.Builder<ModifyDBProxyInstanceRequest, Builder> {
         private String DBInstanceId; 
         private String DBProxyEngineType; 
@@ -163,6 +175,7 @@ public class ModifyDBProxyInstanceRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String vSwitchIds; 
 
         private Builder() {
             super();
@@ -180,6 +193,7 @@ public class ModifyDBProxyInstanceRequest extends Request {
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.vSwitchIds = request.vSwitchIds;
         } 
 
         /**
@@ -282,6 +296,15 @@ public class ModifyDBProxyInstanceRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * VSwitchIds.
+         */
+        public Builder vSwitchIds(String vSwitchIds) {
+            this.putQueryParameter("VSwitchIds", vSwitchIds);
+            this.vSwitchIds = vSwitchIds;
             return this;
         }
 

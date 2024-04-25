@@ -229,6 +229,10 @@ public class CreateDBInstanceRequest extends Request {
     private String vSwitchId;
 
     @Query
+    @NameInMap("WhitelistTemplateList")
+    private String whitelistTemplateList;
+
+    @Query
     @NameInMap("ZoneId")
     private String zoneId;
 
@@ -294,6 +298,7 @@ public class CreateDBInstanceRequest extends Request {
         this.userBackupId = builder.userBackupId;
         this.VPCId = builder.VPCId;
         this.vSwitchId = builder.vSwitchId;
+        this.whitelistTemplateList = builder.whitelistTemplateList;
         this.zoneId = builder.zoneId;
         this.zoneIdSlave1 = builder.zoneIdSlave1;
         this.zoneIdSlave2 = builder.zoneIdSlave2;
@@ -677,6 +682,13 @@ public class CreateDBInstanceRequest extends Request {
     }
 
     /**
+     * @return whitelistTemplateList
+     */
+    public String getWhitelistTemplateList() {
+        return this.whitelistTemplateList;
+    }
+
+    /**
      * @return zoneId
      */
     public String getZoneId() {
@@ -750,6 +762,7 @@ public class CreateDBInstanceRequest extends Request {
         private String userBackupId; 
         private String VPCId; 
         private String vSwitchId; 
+        private String whitelistTemplateList; 
         private String zoneId; 
         private String zoneIdSlave1; 
         private String zoneIdSlave2; 
@@ -812,6 +825,7 @@ public class CreateDBInstanceRequest extends Request {
             this.userBackupId = request.userBackupId;
             this.VPCId = request.VPCId;
             this.vSwitchId = request.vSwitchId;
+            this.whitelistTemplateList = request.whitelistTemplateList;
             this.zoneId = request.zoneId;
             this.zoneIdSlave1 = request.zoneIdSlave1;
             this.zoneIdSlave2 = request.zoneIdSlave2;
@@ -1546,6 +1560,15 @@ public class CreateDBInstanceRequest extends Request {
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
             this.vSwitchId = vSwitchId;
+            return this;
+        }
+
+        /**
+         * WhitelistTemplateList.
+         */
+        public Builder whitelistTemplateList(String whitelistTemplateList) {
+            this.putQueryParameter("WhitelistTemplateList", whitelistTemplateList);
+            this.whitelistTemplateList = whitelistTemplateList;
             return this;
         }
 
