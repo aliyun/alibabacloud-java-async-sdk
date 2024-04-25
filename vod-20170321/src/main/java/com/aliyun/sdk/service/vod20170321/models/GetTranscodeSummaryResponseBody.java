@@ -294,7 +294,7 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the transcoding job was complete. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The time when the transcoding job was complete. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder completeTime(String completeTime) {
                 this.completeTime = completeTime;
@@ -302,7 +302,7 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the transcoding job was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The time when the transcoding job was created. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -368,9 +368,10 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
             /**
              * The status of the transcoding job. Valid values:
              * <p>
-             * *   **Transcoding**
-             * *   **TranscodeSuccess**
-             * *   **TranscodeFail**
+             * 
+             * *   **Transcoding**: Transcoding is in process.
+             * *   **TranscodeSuccess**: The job was successful.
+             * *   **TranscodeFail**: The job failed.
              */
             public Builder transcodeJobStatus(String transcodeJobStatus) {
                 this.transcodeJobStatus = transcodeJobStatus;
@@ -503,7 +504,7 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
             private String videoId; 
 
             /**
-             * The time when the transcoding task was complete. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The time when the transcoding task was complete. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder completeTime(String completeTime) {
                 this.completeTime = completeTime;
@@ -511,7 +512,7 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the transcoding task was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The time when the transcoding task was created. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -529,7 +530,8 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
             /**
              * The status of the transcoding task. Valid values:
              * <p>
-             * *   **Processing**: In progress.
+             * 
+             * *   **Processing**: Transcoding is in process.
              * *   **Partial**: Some transcoding jobs were complete.
              * *   **CompleteAllSucc**: All transcoding jobs were successful.
              * *   **CompleteAllFail**: All transcoding jobs failed. If an exception occurs in the source file, no transcoding job is initiated and the transcoding task fails.

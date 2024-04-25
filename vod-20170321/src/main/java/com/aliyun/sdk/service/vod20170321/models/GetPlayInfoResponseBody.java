@@ -398,7 +398,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the audio or video stream was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.
+             * The time when the audio or video stream was created. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -406,7 +406,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The quality of the media stream. Valid values:
+             * The quality of the video stream. Valid values:
              * <p>
              * 
              * *   **FD**: low definition
@@ -426,7 +426,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The duration of the media stream. Unit: seconds. 86,400 seconds is equivalent to 24 hours.
+             * The duration of the media stream. Unit: seconds.
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -450,7 +450,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
              * <p>
              * 
              * *   **AliyunVoDEncryption**: Alibaba Cloud proprietary cryptography
-             * *   **HLSEncryption**: HTTP Live Streaming (HLS) encryption
+             * *   **HLSEncryption**: HTTP-Live-Streaming (HLS) encryption
              * 
              * >  If the encryption type is AliyunVoDEncryption, only ApsaraVideo Player SDK can be used to play videos.
              */
@@ -532,7 +532,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the audio or video file was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.
+             * The time when the audio or video file was last updated. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder modificationTime(String modificationTime) {
                 this.modificationTime = modificationTime;
@@ -543,11 +543,11 @@ public class GetPlayInfoResponseBody extends TeaModel {
              * The type of Narrowband HD transcoding. Valid values:
              * <p>
              * 
-             * *   **0**: normal transcoding
-             * *   **1.0**: Narrowband HD 1.0
-             * *   **2.0**: Narrowband HD 2.0
+             * *   **0**: regular transcoding
+             * *   **1.0**: Narrowband HD™ 1.0 transcoding
+             * *   **2.0**: Narrowband HD™ 2.0 transcoding
              * 
-             * This parameter is returned only when a quality that is available in the built-in Narrowband HD 1.0 transcoding template is specified. For more information, see the [Definition parameter in the TranscodeTemplate](~~52839~~) table.
+             * This parameter is returned only when a definition that is available in the built-in Narrowband HD™ 1.0 transcoding template is specified. For more information, see the [Definition parameter in the TranscodeTemplate](~~52839~~) table.
              */
             public Builder narrowBandType(String narrowBandType) {
                 this.narrowBandType = narrowBandType;
@@ -837,7 +837,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The storage class of the audio or video file. Valid values:
+             * The storage class of the audio file. Valid values:
              * <p>
              * 
              * *   **Standard**: All media resources are stored as Standard objects.
@@ -846,8 +846,8 @@ public class GetPlayInfoResponseBody extends TeaModel {
              * *   **ColdArchive**: All media resources are stored as Cold Archive objects.
              * *   **SourceIA**: Only the source files are IA objects.
              * *   **SourceArchive**: Only the source files are Archive objects.
-             * *   **SourceColdArchive**: Only the source files are Cold Archive objects.
-             * *   **Changing**: The storage class of the audio or video file is being changed.
+             * *   **SourceColdArchive**: Only the source file is stored as a Cold Archive object.
+             * *   **Changing**: The storage class of the video file is being changed.
              * *   **SourceChanging**: The storage class of the source file is being changed.
              */
             public Builder storageClass(String storageClass) {

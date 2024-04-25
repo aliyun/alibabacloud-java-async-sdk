@@ -55,7 +55,11 @@ public class GetAppInfosRequest extends Request {
         } 
 
         /**
-         * The ID of the application. You can specify a maximum of 10 application IDs. Separate them with commas (,).
+         * The IDs of applications. You can obtain application IDs from the response to the [CreateAppInfo](~~113266~~) or [ListAppInfo](~~114000~~) operation.
+         * <p>
+         * 
+         * *   You can specify a maximum of 10 application IDs.
+         * *   Separate application IDs with commas (,).
          */
         public Builder appIds(String appIds) {
             this.putQueryParameter("AppIds", appIds);

@@ -7,37 +7,41 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link VerifyVodDomainOwnerRequest} extends {@link RequestModel}
+ * {@link DescribeVodDomainRealTimeReqHitRateDataRequest} extends {@link RequestModel}
  *
- * <p>VerifyVodDomainOwnerRequest</p>
+ * <p>DescribeVodDomainRealTimeReqHitRateDataRequest</p>
  */
-public class VerifyVodDomainOwnerRequest extends Request {
+public class DescribeVodDomainRealTimeReqHitRateDataRequest extends Request {
     @Query
     @NameInMap("DomainName")
     @Validation(required = true)
     private String domainName;
 
     @Query
+    @NameInMap("EndTime")
+    private String endTime;
+
+    @Query
     @NameInMap("OwnerId")
     private Long ownerId;
 
     @Query
-    @NameInMap("VerifyType")
-    @Validation(required = true)
-    private String verifyType;
+    @NameInMap("StartTime")
+    private String startTime;
 
-    private VerifyVodDomainOwnerRequest(Builder builder) {
+    private DescribeVodDomainRealTimeReqHitRateDataRequest(Builder builder) {
         super(builder);
         this.domainName = builder.domainName;
+        this.endTime = builder.endTime;
         this.ownerId = builder.ownerId;
-        this.verifyType = builder.verifyType;
+        this.startTime = builder.startTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static VerifyVodDomainOwnerRequest create() {
+    public static DescribeVodDomainRealTimeReqHitRateDataRequest create() {
         return builder().build();
     }
 
@@ -54,6 +58,13 @@ public class VerifyVodDomainOwnerRequest extends Request {
     }
 
     /**
+     * @return endTime
+     */
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    /**
      * @return ownerId
      */
     public Long getOwnerId() {
@@ -61,34 +72,45 @@ public class VerifyVodDomainOwnerRequest extends Request {
     }
 
     /**
-     * @return verifyType
+     * @return startTime
      */
-    public String getVerifyType() {
-        return this.verifyType;
+    public String getStartTime() {
+        return this.startTime;
     }
 
-    public static final class Builder extends Request.Builder<VerifyVodDomainOwnerRequest, Builder> {
+    public static final class Builder extends Request.Builder<DescribeVodDomainRealTimeReqHitRateDataRequest, Builder> {
         private String domainName; 
+        private String endTime; 
         private Long ownerId; 
-        private String verifyType; 
+        private String startTime; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(VerifyVodDomainOwnerRequest request) {
+        private Builder(DescribeVodDomainRealTimeReqHitRateDataRequest request) {
             super(request);
             this.domainName = request.domainName;
+            this.endTime = request.endTime;
             this.ownerId = request.ownerId;
-            this.verifyType = request.verifyType;
+            this.startTime = request.startTime;
         } 
 
         /**
-         * The domain name of which you want to verify the ownership. You can specify only one domain name in each call.
+         * DomainName.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
             this.domainName = domainName;
+            return this;
+        }
+
+        /**
+         * EndTime.
+         */
+        public Builder endTime(String endTime) {
+            this.putQueryParameter("EndTime", endTime);
+            this.endTime = endTime;
             return this;
         }
 
@@ -102,21 +124,17 @@ public class VerifyVodDomainOwnerRequest extends Request {
         }
 
         /**
-         * The verification method. Valid values:
-         * <p>
-         * 
-         * *   **dnsCheck**: uses a Domain Name System (DNS) record
-         * *   **fileCheck**: uses a verification file
+         * StartTime.
          */
-        public Builder verifyType(String verifyType) {
-            this.putQueryParameter("VerifyType", verifyType);
-            this.verifyType = verifyType;
+        public Builder startTime(String startTime) {
+            this.putQueryParameter("StartTime", startTime);
+            this.startTime = startTime;
             return this;
         }
 
         @Override
-        public VerifyVodDomainOwnerRequest build() {
-            return new VerifyVodDomainOwnerRequest(this);
+        public DescribeVodDomainRealTimeReqHitRateDataRequest build() {
+            return new DescribeVodDomainRealTimeReqHitRateDataRequest(this);
         } 
 
     } 

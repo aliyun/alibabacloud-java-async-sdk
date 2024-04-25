@@ -90,7 +90,7 @@ public class GetAppInfosResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the application that was not found.
+         * The IDs of applications that do not exist.
          */
         public Builder nonExistAppIds(java.util.List < String > nonExistAppIds) {
             this.nonExistAppIds = nonExistAppIds;
@@ -226,7 +226,7 @@ public class GetAppInfosResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the application was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The time when the application was created. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -242,7 +242,7 @@ public class GetAppInfosResponseBody extends TeaModel {
             }
 
             /**
-             * The last time when the application was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The last time when the application was modified. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder modificationTime(String modificationTime) {
                 this.modificationTime = modificationTime;
@@ -252,8 +252,9 @@ public class GetAppInfosResponseBody extends TeaModel {
             /**
              * The status of the application. Valid values:
              * <p>
-             * - **Normal**
-             * - **Disable**
+             * 
+             * *   **Normal**
+             * *   **Disable**
              */
             public Builder status(String status) {
                 this.status = status;
@@ -263,8 +264,9 @@ public class GetAppInfosResponseBody extends TeaModel {
             /**
              * The type of the application. Valid values:
              * <p>
-             * - **System**
-             * - **Custom**
+             * 
+             * *   **System**
+             * *   **Custom**
              */
             public Builder type(String type) {
                 this.type = type;

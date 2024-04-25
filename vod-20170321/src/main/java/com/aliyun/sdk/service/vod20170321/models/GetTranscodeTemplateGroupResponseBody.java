@@ -310,7 +310,7 @@ public class GetTranscodeTemplateGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The video cropping configurations. The value is a JSON string. For example, you can set this parameter to extract 5 seconds of content from a video to generate a new video.
+             * The clipping configurations of the video. The value is a JSON string. For example, this parameter is returned if you extract 5 seconds of content from a video to generate a new video.
              */
             public Builder clip(String clip) {
                 this.clip = clip;
@@ -318,7 +318,7 @@ public class GetTranscodeTemplateGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The format of the container that is used to encapsulate audio and video streams. The value is a JSON string.
+             * The format of the container used to encapsulate audio and video streams. The value is a JSON string.
              */
             public Builder container(String container) {
                 this.container = container;
@@ -326,7 +326,7 @@ public class GetTranscodeTemplateGroupResponseBody extends TeaModel {
             }
 
             /**
-             * CopyrightMark.
+             * The content of the copyright watermark.
              */
             public Builder copyrightMark(String copyrightMark) {
                 this.copyrightMark = copyrightMark;
@@ -357,7 +357,7 @@ public class GetTranscodeTemplateGroupResponseBody extends TeaModel {
              * *   **4K-NBV1**
              * 
              * > *   You cannot change the definition of a transcoding template.
-             * >*   You cannot modify the system parameters of Narrowband HD™ 1.0 transcoding templates such as the video resolution, audio resolution, and bitrate.
+             * >*   You cannot modify the system parameters, such as the video resolution, audio resolution, and bitrate, of Narrowband HD™ 1.0 transcoding templates.
              * >*   You can create only Narrowband HD™ 1.0 transcoding templates that support the FLV, M3U8 (HLS), and MP4 output formats.
              */
             public Builder definition(String definition) {
@@ -374,7 +374,7 @@ public class GetTranscodeTemplateGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The transcoding segment configurations. This parameter is used when you transcode a media stream into an HLS file. The value is a JSON string.
+             * The transcoding segment configurations. This parameter must be returned if HTTP-Live-Streaming (HLS) encryption is used. The value is a JSON string.
              */
             public Builder muxConfig(String muxConfig) {
                 this.muxConfig = muxConfig;
@@ -382,7 +382,7 @@ public class GetTranscodeTemplateGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The packaging configuration. Only HTTP-Live-Streaming (HLS) packaging and DASH packaging are supported. The value is a JSON string.
+             * The packaging configuration. Only HLS packaging and DASH packaging are supported. The value is a JSON string.
              */
             public Builder packageSetting(String packageSetting) {
                 this.packageSetting = packageSetting;
@@ -390,7 +390,7 @@ public class GetTranscodeTemplateGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The video rotation identifier. This parameter is used to control the image rotation angle. For example, if you set this parameter to 180, the video image is turned upside down. Valid values: `[0,360]`.
+             * The video rotation identifier. It is used to control the image rotation angle. For example, if you set this parameter to 180, the video image is turned upside down. Valid values: `[0,360]`.
              */
             public Builder rotate(String rotate) {
                 this.rotate = rotate;
@@ -414,7 +414,7 @@ public class GetTranscodeTemplateGroupResponseBody extends TeaModel {
             }
 
             /**
-             * TraceMark.
+             * The content of the tracing watermark.
              */
             public Builder traceMark(String traceMark) {
                 this.traceMark = traceMark;
@@ -422,7 +422,7 @@ public class GetTranscodeTemplateGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The conditional transcoding configurations. This parameter is used if you want to determine the basic logic based on the bitrate and resolution of the source file before the transcoded video is generated. The value is a JSON string.
+             * The conditional transcoding configurations. This parameter can be used if you want to determine the basic logic based on the bitrate and resolution of the source file before the video is transcoded. The value is a JSON-formatted string.
              */
             public Builder transConfig(String transConfig) {
                 this.transConfig = transConfig;
@@ -438,7 +438,7 @@ public class GetTranscodeTemplateGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the transcoding template.
+             * The transcoding template ID.
              */
             public Builder transcodeTemplateId(String transcodeTemplateId) {
                 this.transcodeTemplateId = transcodeTemplateId;
@@ -449,9 +449,9 @@ public class GetTranscodeTemplateGroupResponseBody extends TeaModel {
              * The type of the transcoding template. Valid values:
              * <p>
              * 
-             * *   **Normal** (default): a common transcoding template. You cannot set the PackageSetting parameter for this type of template.
-             * *   **VideoPackage**: a video stream package template. If this type of template is used, ApsaraVideo VOD transcodes a video into video streams in different bitrates and creates a multi-bitrate video package. You must set the PackageSetting parameter for this type of template.
-             * *   **SubtitlePackage**: a subtitle package template. If this type of template is used, ApsaraVideo VOD adds the subtitle information to the output file that is generated by packaging the multi-bitrate video streams of the corresponding video. You must set the PackageSetting parameter for a subtitle packaging template and associate the subtitle packaging template with a video stream packaging template. You can configure only one subtitle packaging template in a template group.
+             * *   **Normal** (default): a common transcoding template. The PackageSetting parameter cannot be set for this type of template.
+             * *   **VideoPackage**: a video stream package template. If this type of template is used, ApsaraVideo VOD transcodes a video into video streams in different bitrates and packages these video streams with a file. The PackageSetting parameter must be set for this type of template.
+             * *   **SubtitlePackage**: a subtitle package template. If this type of template is used, ApsaraVideo VOD adds the subtitle information to the output file generated by packaging the multi-bitrate video streams of the corresponding video without transcoding. You must set the PackageSetting parameter for a subtitle package template and associate the subtitle package template with a video stream package template. A template group can contain only one subtitle package template.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -467,7 +467,7 @@ public class GetTranscodeTemplateGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of associated watermarks.
+             * The IDs of the associated watermarks.
              */
             public Builder watermarkIds(java.util.List < String > watermarkIds) {
                 this.watermarkIds = watermarkIds;
@@ -620,7 +620,7 @@ public class GetTranscodeTemplateGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the template group is locked. Valid values:
+             * Indicates whether the transcoding template group is locked. Valid values:
              * <p>
              * 
              * *   **Disabled**: The template group is not locked.

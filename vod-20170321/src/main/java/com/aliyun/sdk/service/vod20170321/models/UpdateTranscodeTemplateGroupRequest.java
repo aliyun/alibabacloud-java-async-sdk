@@ -132,7 +132,7 @@ public class UpdateTranscodeTemplateGroupRequest extends Request {
         }
 
         /**
-         * The configurations of the transcoding template. The value must be a JSON string. For more information about the data structure, see [TranscodeTemplate](~~52839~~).
+         * The configurations of the transcoding template. The value must be a JSON string. For more information about the data structure, see [TranscodeTemplate](~~52839#title-9mb-8o2-uu6~~).
          */
         public Builder transcodeTemplateList(String transcodeTemplateList) {
             this.putQueryParameter("TranscodeTemplateList", transcodeTemplateList);

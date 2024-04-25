@@ -164,10 +164,11 @@ public class DescribeVodUserDomainsRequest extends Request {
         /**
          * The search method. Valid values:
          * <p>
-         * *   **fuzzy_match**: fuzzy match. This is the default value.
-         * *   **pre_match**: prefix match.
-         * *   **suf_match**: suffix match.
-         * *   **full_match**: exact match.
+         * 
+         * *   **fuzzy_match** (default): fuzzy match.
+         * *   **pre_match**: prefix match
+         * *   **suf_match**: suffix match
+         * *   **full_match**: exact match
          */
         public Builder domainSearchType(String domainSearchType) {
             this.putQueryParameter("DomainSearchType", domainSearchType);
@@ -176,8 +177,9 @@ public class DescribeVodUserDomainsRequest extends Request {
         }
 
         /**
-         * The status of the domain name. The value of this parameter is used as a condition to filter domain names. Value values:
+         * The status of the domain name. Value values:
          * <p>
+         * 
          * *   **online**: indicates that the domain name is enabled.
          * *   **offline**: indicates that the domain name is disabled.
          * *   **configuring**: indicates that the domain name is being configured.
@@ -201,7 +203,7 @@ public class DescribeVodUserDomainsRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -210,7 +212,7 @@ public class DescribeVodUserDomainsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **20**. Maximum value: **50**. Valid values: integers in the range of **1** to **50**.
+         * The number of entries per page. Default value: **20**. Maximum value: **50**. Valid values: **1** to **50**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -228,7 +230,7 @@ public class DescribeVodUserDomainsRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -285,7 +287,7 @@ public class DescribeVodUserDomainsRequest extends Request {
              * The key of tag N. Valid values of N: **1** to **20**.
              * <p>
              * 
-             * If you do not specify this parameter, all tag keys are queried.
+             * By default, all tag keys are queried.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -296,7 +298,7 @@ public class DescribeVodUserDomainsRequest extends Request {
              * The value of tag N. Valid values of N: **1** to **20**.
              * <p>
              * 
-             * If you do not specify this parameter, all tag values are queried.
+             * By default, all tag values are queried.
              */
             public Builder value(String value) {
                 this.value = value;

@@ -268,7 +268,7 @@ public class CreateUploadVideoRequest extends Request {
         }
 
         /**
-         * The size of the audio or video file. Unit: bytes.
+         * The size of the source file. Unit: bytes.
          */
         public Builder fileSize(Long fileSize) {
             this.putQueryParameter("FileSize", fileSize);

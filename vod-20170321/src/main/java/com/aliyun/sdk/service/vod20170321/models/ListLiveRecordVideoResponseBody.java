@@ -78,7 +78,7 @@ public class ListLiveRecordVideoResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of videos returned.
+         * The total number of videos.
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -323,7 +323,7 @@ public class ListLiveRecordVideoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the video category.
+             * The category of the video.
              */
             public Builder cateName(String cateName) {
                 this.cateName = cateName;
@@ -331,7 +331,7 @@ public class ListLiveRecordVideoResponseBody extends TeaModel {
             }
 
             /**
-             * The thumbnail URL of the video.
+             * The URL of the video thumbnail.
              */
             public Builder coverURL(String coverURL) {
                 this.coverURL = coverURL;
@@ -339,7 +339,7 @@ public class ListLiveRecordVideoResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the video was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The time when the audio or video file was created. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -347,7 +347,7 @@ public class ListLiveRecordVideoResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the video.
+             * The description of the video file.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -355,7 +355,7 @@ public class ListLiveRecordVideoResponseBody extends TeaModel {
             }
 
             /**
-             * The duration of the video. Unit: seconds.
+             * The duration of the video file. Unit: seconds.
              */
             public Builder duration(Float duration) {
                 this.duration = duration;
@@ -363,7 +363,7 @@ public class ListLiveRecordVideoResponseBody extends TeaModel {
             }
 
             /**
-             * The last time when the video was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The time when the video was updated. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -371,7 +371,7 @@ public class ListLiveRecordVideoResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the mezzanine file. Unit: byte.
+             * The size of the source video file. Unit: bytes.
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -389,13 +389,14 @@ public class ListLiveRecordVideoResponseBody extends TeaModel {
             /**
              * The status of the video. Valid values:
              * <p>
-             * *   **Uploading:**: indicates that the video is being uploaded.
-             * *   **UploadFail**: indicates that the video failed to be uploaded.
-             * *   **UploadSucces**: indicates that the video was uploaded.
-             * *   **Transcoding**: indicates that the video is being transcoded.
-             * *   **TranscodeFail**: indicates that the video failed to be transcoded.
-             * *   **Blocked**: indicates that the video is blocked.
-             * *   **Normal**: indicates that the video is in a normal state.
+             * 
+             * *   **Uploading**
+             * *   **UploadFail**
+             * *   **UploadSuccess**
+             * *   **Transcoding**
+             * *   **TranscodeFail**
+             * *   **Blocked**
+             * *   **Normal**: The video is normal.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -403,7 +404,7 @@ public class ListLiveRecordVideoResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the video. Separate multiple tags with commas (,).
+             * The tags of the video. Multiple tags are separated with commas (,).
              */
             public Builder tags(String tags) {
                 this.tags = tags;
@@ -540,7 +541,7 @@ public class ListLiveRecordVideoResponseBody extends TeaModel {
             private Video video; 
 
             /**
-             * The name of the application.
+             * The name of the app.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -564,7 +565,7 @@ public class ListLiveRecordVideoResponseBody extends TeaModel {
             }
 
             /**
-             * The end of the time range in which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The recording end time. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder recordEndTime(String recordEndTime) {
                 this.recordEndTime = recordEndTime;
@@ -572,7 +573,7 @@ public class ListLiveRecordVideoResponseBody extends TeaModel {
             }
 
             /**
-             * The beginning of the time range in which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The recording start time. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder recordStartTime(String recordStartTime) {
                 this.recordStartTime = recordStartTime;
@@ -580,7 +581,7 @@ public class ListLiveRecordVideoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the live stream.
+             * The name of the live-to-VOD file.
              */
             public Builder streamName(String streamName) {
                 this.streamName = streamName;
@@ -588,7 +589,7 @@ public class ListLiveRecordVideoResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the video.
+             * The information about the live-to-VOD file.
              */
             public Builder video(Video video) {
                 this.video = video;

@@ -152,15 +152,15 @@ public class SubmitAIJobRequest extends Request {
         } 
 
         /**
-         * The configurations of the AI job. The value must be a JSON string.
+         * The configurations of the AI job. The value is a JSON string.
          * <p>
          * 
-         * *   If `Types` is set to `AIVideoTag`, you can configure `AnalyseTypes` for `Config` to set the analysis algorithm of a smart tagging job. Valid values:
+         * *   If you set `Types` to `AIVideoTag`, you can specify `AnalyseTypes` for `Config` to set the analysis algorithm of a smart tagging job. Valid values:
          * 
-         *     *   ASR: speech recognition.
-         *     *   OCR: image optical character recognition (OCR).
+         *     *   ASR: automatic speech recognition (ASR)
+         *     *   OCR: image optical character recognition (OCR)
          * 
-         * *   If `Types` is set to `AIMediaDNA`, you can configure `DNADBId` for `Config` to set the ID of the media fingerprint library for video fingerprinting jobs.
+         * *   If you set `Types` to `AIMediaDNA`, you can specify `DNADBId` for `Config` to set the ID of the media fingerprint library for video fingerprinting jobs.
          */
         public Builder config(String config) {
             this.putQueryParameter("Config", config);

@@ -202,7 +202,7 @@ public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The time at which the certificate expires. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The time at which the certificate expires. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder certExpireTime(String certExpireTime) {
                 this.certExpireTime = certExpireTime;
@@ -218,7 +218,7 @@ public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the certificate.
+             * The certificate name.
              */
             public Builder certName(String certName) {
                 this.certName = certName;
@@ -247,7 +247,7 @@ public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The accelerated domain name.
+             * The accelerated domain name whose ICP filing status you want to update.
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -255,7 +255,7 @@ public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the SSL certificate is enabled.
+             * The status of the SSL certificate.
              * <p>
              * 
              * *   **on**
@@ -267,7 +267,7 @@ public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the certificate. Valid values:
+             * The status of the certificate.
              * <p>
              * 
              * *   **success**: The certificate is in effect.
@@ -278,7 +278,7 @@ public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
              * *   **applying**: The certificate application is in progress.
              * *   **failed**: The certificate application failed.
              * 
-             * > A value is returned for this parameter only if `free` is returned for `CertType`. If a value other than free is returned for CertType, an empty string is returned for this parameter.
+             * >  A value is returned for this parameter only when you set `CertType` to `free`. Otherwise, an empty value is returned for this parameter.
              */
             public Builder status(String status) {
                 this.status = status;

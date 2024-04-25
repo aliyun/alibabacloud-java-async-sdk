@@ -94,7 +94,7 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The page number.
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of entries per page.
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -118,7 +118,7 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * The total number of entries.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -221,9 +221,9 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
              * The type of the origin server. Valid values:
              * <p>
              * 
-             * *   **ipaddr**: a server that you can access by using an IP address.
-             * *   **domain**: a server that you can access by using a domain name.
-             * *   **oss**: an Object Storage Service (OSS) bucket.
+             * *   **ipaddr**: an IP address.
+             * *   **domain**: an origin domain name
+             * *   **oss**: the OSS domain of an Object Storage Service (OSS) bucket
              */
             public Builder type(String type) {
                 this.type = type;
@@ -401,7 +401,7 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
             private String sslProtocol; 
 
             /**
-             * The canonical domain name that is assigned to the domain name for CDN.
+             * The CNAME that is assigned to the domain name for CDN.
              */
             public Builder cname(String cname) {
                 this.cname = cname;
@@ -441,7 +441,7 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the domain name for CDN was added. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The time when the domain name for CDN was added. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder gmtCreated(String gmtCreated) {
                 this.gmtCreated = gmtCreated;
@@ -449,7 +449,7 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The last time when the domain name for CDN was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The last time when the domain name for CDN was modified. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -457,7 +457,7 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the domain name for CDN is in a sandbox environment.
+             * Indicates whether the accelerated domain name was in a sandbox.
              */
             public Builder sandbox(String sandbox) {
                 this.sandbox = sandbox;
@@ -476,8 +476,8 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
              * Indicates whether HTTPS is enabled.
              * <p>
              * 
-             * - **on**: indicates that HTTPS is enabled.
-             * - **off**: indicates that HTTPS is disabled.
+             * *   **on**: HTTPS is enabled.
+             * *   **off**: HTTPS is not eabled.
              */
             public Builder sslProtocol(String sslProtocol) {
                 this.sslProtocol = sslProtocol;

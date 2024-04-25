@@ -329,8 +329,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DescribeVodDomainBpsDataResponse> describeVodDomainBpsData(DescribeVodDomainBpsDataRequest request);
 
+    CompletableFuture<DescribeVodDomainBpsDataByLayerResponse> describeVodDomainBpsDataByLayer(DescribeVodDomainBpsDataByLayerRequest request);
+
     /**
-      * > This operation is available only in the **China (Shanghai)** region.
+      * This operation is available only in the **China (Shanghai)** region.
       *
      */
     CompletableFuture<DescribeVodDomainCertificateInfoResponse> describeVodDomainCertificateInfo(DescribeVodDomainCertificateInfoRequest request);
@@ -347,6 +349,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DescribeVodDomainDetailResponse> describeVodDomainDetail(DescribeVodDomainDetailRequest request);
 
+    CompletableFuture<DescribeVodDomainHitRateDataResponse> describeVodDomainHitRateData(DescribeVodDomainHitRateDataRequest request);
+
     /**
       * *   This operation is available only in the **China (Shanghai)** region.
       * *   For more information about the log format and latency, see [Download logs](~~86099~~).
@@ -357,6 +361,20 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<DescribeVodDomainLogResponse> describeVodDomainLog(DescribeVodDomainLogRequest request);
+
+    CompletableFuture<DescribeVodDomainRealTimeBpsDataResponse> describeVodDomainRealTimeBpsData(DescribeVodDomainRealTimeBpsDataRequest request);
+
+    CompletableFuture<DescribeVodDomainRealTimeByteHitRateDataResponse> describeVodDomainRealTimeByteHitRateData(DescribeVodDomainRealTimeByteHitRateDataRequest request);
+
+    CompletableFuture<DescribeVodDomainRealTimeHttpCodeDataResponse> describeVodDomainRealTimeHttpCodeData(DescribeVodDomainRealTimeHttpCodeDataRequest request);
+
+    CompletableFuture<DescribeVodDomainRealTimeQpsDataResponse> describeVodDomainRealTimeQpsData(DescribeVodDomainRealTimeQpsDataRequest request);
+
+    CompletableFuture<DescribeVodDomainRealTimeReqHitRateDataResponse> describeVodDomainRealTimeReqHitRateData(DescribeVodDomainRealTimeReqHitRateDataRequest request);
+
+    CompletableFuture<DescribeVodDomainRealTimeTrafficDataResponse> describeVodDomainRealTimeTrafficData(DescribeVodDomainRealTimeTrafficDataRequest request);
+
+    CompletableFuture<DescribeVodDomainReqHitRateDataResponse> describeVodDomainReqHitRateData(DescribeVodDomainReqHitRateDataRequest request);
 
     /**
       * * This operation is available only in the **China (Shanghai)** region.
@@ -410,6 +428,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeVodMediaPlayDataResponse> describeVodMediaPlayData(DescribeVodMediaPlayDataRequest request);
 
+    CompletableFuture<DescribeVodRangeDataByLocateAndIspServiceResponse> describeVodRangeDataByLocateAndIspService(DescribeVodRangeDataByLocateAndIspServiceRequest request);
+
     /**
       * > *   This operation is available only in the **China (Shanghai)** region.
       * > *   You can call the [RefreshVodObjectCaches](~~69215~~) operation to refresh content and the [PreloadVodObjectCaches](~~69211~~) operation to prefetch content.
@@ -438,6 +458,11 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DescribeVodTranscodeDataResponse> describeVodTranscodeData(DescribeVodTranscodeDataRequest request);
 
+    /**
+      * *   You can filter domain names by name and status. Fuzzy match is supported for domain name-based query.
+      * *   This operation is available only in the China (Shanghai) region.
+      *
+     */
     CompletableFuture<DescribeVodUserDomainsResponse> describeVodUserDomains(DescribeVodUserDomainsRequest request);
 
     CompletableFuture<DescribeVodVerifyContentResponse> describeVodVerifyContent(DescribeVodVerifyContentRequest request);
@@ -486,7 +511,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetAIVideoTagResultResponse> getAIVideoTagResult(GetAIVideoTagResultRequest request);
 
     /**
-      * Supports batch query.
+      * You can specify multiple accelerated domain names in a request.
       *
      */
     CompletableFuture<GetAppInfosResponse> getAppInfos(GetAppInfosRequest request);
@@ -581,10 +606,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetPlayInfoResponse> getPlayInfo(GetPlayInfoRequest request);
 
     /**
-      * *   A media file may be transcoded multiple times. This operation returns only the latest transcoding summary.
-      * *   You can query transcoding summaries for a maximum of 10 media files in one request.
+      * *   An audio or video file may be transcoded multiple times. This operation returns only the latest transcoding summary.
+      * *   You can query transcoding summaries for a maximum of 10 audio and video files in one request.
       * *   You can call the [ListTranscodeTask](~~109120~~) operation to query historical transcoding tasks.
-      * *   **You can call this operation to query information only about transcoding tasks created within the past year.**
+      * *   **You can call this operation to query information only about transcoding tasks created within the past year.
       *
      */
     CompletableFuture<GetTranscodeSummaryResponse> getTranscodeSummary(GetTranscodeSummaryRequest request);
@@ -596,7 +621,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetTranscodeTaskResponse> getTranscodeTask(GetTranscodeTaskRequest request);
 
     /**
-      * >  This operation returns the information about the specified transcoding template group and the configurations of all the transcoding templates in the group.
+      * This operation returns information about the specified transcoding template group and the configurations of all the transcoding templates in the group.
       *
      */
     CompletableFuture<GetTranscodeTemplateGroupResponse> getTranscodeTemplateGroup(GetTranscodeTemplateGroupRequest request);
@@ -694,7 +719,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListDynamicImageResponse> listDynamicImage(ListDynamicImageRequest request);
 
     /**
-      * You can query a maximum of 5,000 videos based on the specified filter condition.
+      * You can query up to 5,000 videos based on the specified filter condition.
       *
      */
     CompletableFuture<ListLiveRecordVideoResponse> listLiveRecordVideo(ListLiveRecordVideoRequest request);
@@ -790,12 +815,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SearchEditingProjectResponse> searchEditingProject(SearchEditingProjectRequest request);
 
     /**
-      * The maximum number of data records that you can query is limited based on the method used to query the data. You can use the following methods to query data:
-      * *   Method 1: You must use the PageNo and PageSize parameters for the first 5,000 data records that meet the specified filter condition. This allows you to traverse data page by page. If the number of data records that meet the specified filter condition exceeds 5,000, use Method 2.
-      * *   Method 2: This method applies only to the data of video and audio files. To traverse all the data records that meet the specified filter condition, you must set the PageNo, PageSize, and ScrollToken parameters to traverse data page by page. The total number of data records from the current page to the target page cannot exceed 1,200. Assume that the PageSize parameter is set to **20**:
-      *     *   When the PageNo parameter is set to **1**, you can scroll forward to traverse data records from page 1 to page **60** at most.
-      *     *   When the PageNo parameter is set to **2**, you can scroll forward to traverse data records from page 2 to page **61** at most.
-      *     *   When the PageNo parameter is set to **61**, you can scroll backward to traverse data records from page 61 to page **2** at most or scroll forward to traverse data records from page 61 to page **120** at most.
+      * The maximum number of data records that you can query varies based on the method used to query the data. You can use the following methods to query data:
+      * *   Method 1: Traverse data by page
+      *     You can use the PageNo and PageSize parameters to traverse up to 5,000 data records that meet the specified filter condition. PageNo specifies the page number and PageSize specifies the number of data records displayed on a page. If the number of data records that meet the specified filter condition exceeds 5,000, change the filter conditions to narrow down the results. You cannot use this method to traverse all data records. If you want to traverse more data records, use Method 2.
+      * *   Method 2: Traverse all data (available only for audio and video files)
+      *     You can use this method to traverse up to 2 million data records related to audio and video files. If the number of data records that meet the specified filter condition exceeds 2 million, change the filter conditions to narrow down the results. To traverse data page by page, you must set the PageNo, PageSize, and ScrollToken parameters. The total number of data records from the current page to the target page cannot exceed 100. For example, you set PageSize to 20. The following content describes the traverse logic:
+      *     *   When the PageNo parameter is set to 1, you can traverse data records from page 1 to page 5.
+      *     *   When the PageNo parameter is set to 2, you can traverse data records from page 2 to page 6.
+      * Make sure that you set the appropriate page number and page size, and use a traverse method based on the number of results that meet your filter condition.
       *
      */
     CompletableFuture<SearchMediaResponse> searchMedia(SearchMediaRequest request);
@@ -837,6 +864,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<SetVodDomainCertificateResponse> setVodDomainCertificate(SetVodDomainCertificateRequest request);
 
+    /**
+      * This operation is available only in the Singapore region.
+      *
+     */
     CompletableFuture<SubmitAIImageAuditJobResponse> submitAIImageAuditJob(SubmitAIImageAuditJobRequest request);
 
     /**
@@ -957,7 +988,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateMediaStorageClassResponse> updateMediaStorageClass(UpdateMediaStorageClassRequest request);
 
     /**
-      * For security purposes, you cannot add, modify, or delete transcoding templates in a transcoding template group that is locked. To check whether a transcoding template group is locked, call the [GetTranscodeTemplateGroup](~~GetTranscodeTemplateGroup~~) operation and check whether Locked is returned in the response. If the transcoding template group is locked, you can all this operation to unlock the transcoding template group before you add, modify, or delete transcoding templates in the transcoding template group.
+      * For security purposes, you cannot add, modify, or delete transcoding templates in a transcoding template group that is locked. You can call the [GetTranscodeTemplateGroup](~~GetTranscodeTemplateGroup~~) operation to query the configurations of a transcoding template group, check whether the transcoding template group is locked by using the response parameter Locked, and unlock the transcoding template group before you perform operations such as add, modify, and delete transcoding templates.
       *
      */
     CompletableFuture<UpdateTranscodeTemplateGroupResponse> updateTranscodeTemplateGroup(UpdateTranscodeTemplateGroupRequest request);
@@ -1008,6 +1039,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<UploadStreamByURLResponse> uploadStreamByURL(UploadStreamByURLRequest request);
 
+    /**
+      * This operation is available only in the **China (Shanghai)** region.
+      *
+     */
     CompletableFuture<VerifyVodDomainOwnerResponse> verifyVodDomainOwner(VerifyVodDomainOwnerRequest request);
 
 }

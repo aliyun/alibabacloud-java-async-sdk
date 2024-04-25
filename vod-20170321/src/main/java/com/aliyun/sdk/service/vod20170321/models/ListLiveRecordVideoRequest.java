@@ -197,10 +197,11 @@ public class ListLiveRecordVideoRequest extends Request {
         }
 
         /**
-         * The sorting rule of results. Valid values:
+         * The sorting rule of the results. Valid values:
          * <p>
-         * *   **CreationTime:Desc**: sorts the results based on the creation time in descending order. This is the default value.
-         * *   **CreationTime:Asc**: sorts the results based on the creation time in ascending order.
+         * 
+         * *   **CreationTime:Desc**: The results are sorted in reverse chronological order based on the creation time.
+         * *   **CreationTime:Asc**: The results are sorted in chronological order based on the creation time.
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
