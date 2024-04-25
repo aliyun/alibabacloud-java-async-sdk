@@ -179,6 +179,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeEventsResponse> describeEvents(DescribeEventsRequest request);
 
+    CompletableFuture<DescribeLensMonitorDisksResponse> describeLensMonitorDisks(DescribeLensMonitorDisksRequest request);
+
     /**
       * ## Usage notes
       * CloudLens for EBS is in invitational preview in the China (Hangzhou), China (Shanghai), China (Zhangjiakou), China (Shenzhen), and China (Hong Kong) regions. To use the feature, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
