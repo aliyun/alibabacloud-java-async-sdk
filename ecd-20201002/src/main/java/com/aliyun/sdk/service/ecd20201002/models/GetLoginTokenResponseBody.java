@@ -45,6 +45,9 @@ public class GetLoginTokenResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("RiskVerifyInfo")
+    private RiskVerifyInfo riskVerifyInfo;
+
     @NameInMap("Secret")
     private String secret;
 
@@ -69,6 +72,7 @@ public class GetLoginTokenResponseBody extends TeaModel {
         this.props = builder.props;
         this.qrCodePng = builder.qrCodePng;
         this.requestId = builder.requestId;
+        this.riskVerifyInfo = builder.riskVerifyInfo;
         this.secret = builder.secret;
         this.sessionId = builder.sessionId;
         this.tenantId = builder.tenantId;
@@ -161,6 +165,13 @@ public class GetLoginTokenResponseBody extends TeaModel {
     }
 
     /**
+     * @return riskVerifyInfo
+     */
+    public RiskVerifyInfo getRiskVerifyInfo() {
+        return this.riskVerifyInfo;
+    }
+
+    /**
      * @return secret
      */
     public String getSecret() {
@@ -200,6 +211,7 @@ public class GetLoginTokenResponseBody extends TeaModel {
         private java.util.Map < String, String > props; 
         private String qrCodePng; 
         private String requestId; 
+        private RiskVerifyInfo riskVerifyInfo; 
         private String secret; 
         private String sessionId; 
         private Long tenantId; 
@@ -304,6 +316,14 @@ public class GetLoginTokenResponseBody extends TeaModel {
         }
 
         /**
+         * RiskVerifyInfo.
+         */
+        public Builder riskVerifyInfo(RiskVerifyInfo riskVerifyInfo) {
+            this.riskVerifyInfo = riskVerifyInfo;
+            return this;
+        }
+
+        /**
          * The key that is generated when you bind the virtual MFA device. This parameter is required when the CurrentStage parameter is set to `MFABind`.
          * <p>
          * 
@@ -347,4 +367,109 @@ public class GetLoginTokenResponseBody extends TeaModel {
 
     } 
 
+    public static class RiskVerifyInfo extends TeaModel {
+        @NameInMap("Email")
+        private String email;
+
+        @NameInMap("LastLockDuration")
+        private Long lastLockDuration;
+
+        @NameInMap("Locked")
+        private String locked;
+
+        @NameInMap("Phone")
+        private String phone;
+
+        private RiskVerifyInfo(Builder builder) {
+            this.email = builder.email;
+            this.lastLockDuration = builder.lastLockDuration;
+            this.locked = builder.locked;
+            this.phone = builder.phone;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RiskVerifyInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return email
+         */
+        public String getEmail() {
+            return this.email;
+        }
+
+        /**
+         * @return lastLockDuration
+         */
+        public Long getLastLockDuration() {
+            return this.lastLockDuration;
+        }
+
+        /**
+         * @return locked
+         */
+        public String getLocked() {
+            return this.locked;
+        }
+
+        /**
+         * @return phone
+         */
+        public String getPhone() {
+            return this.phone;
+        }
+
+        public static final class Builder {
+            private String email; 
+            private Long lastLockDuration; 
+            private String locked; 
+            private String phone; 
+
+            /**
+             * The email address of the user. The system returns the email address in the return value of the LoginToken parameter after the user logs on to the client.
+             * <p>
+             * 
+             * *   For a convenience user, the return value is the email address specified when the administrator creates the convenience user.
+             * *   For an AD user, the return value is in the following format: `Username@Name of the AD domain`.
+             */
+            public Builder email(String email) {
+                this.email = email;
+                return this;
+            }
+
+            /**
+             * LastLockDuration.
+             */
+            public Builder lastLockDuration(Long lastLockDuration) {
+                this.lastLockDuration = lastLockDuration;
+                return this;
+            }
+
+            /**
+             * Locked.
+             */
+            public Builder locked(String locked) {
+                this.locked = locked;
+                return this;
+            }
+
+            /**
+             * Enter the mobile number of the convenience user. For an AD user, null is returned.
+             */
+            public Builder phone(String phone) {
+                this.phone = phone;
+                return this;
+            }
+
+            public RiskVerifyInfo build() {
+                return new RiskVerifyInfo(this);
+            } 
+
+        } 
+
+    }
 }

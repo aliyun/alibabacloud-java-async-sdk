@@ -51,6 +51,10 @@ public class RebootDesktopsRequest extends Request {
     @NameInMap("SessionToken")
     private String sessionToken;
 
+    @Query
+    @NameInMap("Uuid")
+    private String uuid;
+
     private RebootDesktopsRequest(Builder builder) {
         super(builder);
         this.clientId = builder.clientId;
@@ -62,6 +66,7 @@ public class RebootDesktopsRequest extends Request {
         this.regionId = builder.regionId;
         this.sessionId = builder.sessionId;
         this.sessionToken = builder.sessionToken;
+        this.uuid = builder.uuid;
     }
 
     public static Builder builder() {
@@ -140,6 +145,13 @@ public class RebootDesktopsRequest extends Request {
         return this.sessionToken;
     }
 
+    /**
+     * @return uuid
+     */
+    public String getUuid() {
+        return this.uuid;
+    }
+
     public static final class Builder extends Request.Builder<RebootDesktopsRequest, Builder> {
         private String clientId; 
         private String clientOS; 
@@ -150,6 +162,7 @@ public class RebootDesktopsRequest extends Request {
         private String regionId; 
         private String sessionId; 
         private String sessionToken; 
+        private String uuid; 
 
         private Builder() {
             super();
@@ -166,6 +179,7 @@ public class RebootDesktopsRequest extends Request {
             this.regionId = request.regionId;
             this.sessionId = request.sessionId;
             this.sessionToken = request.sessionToken;
+            this.uuid = request.uuid;
         } 
 
         /**
@@ -178,7 +192,7 @@ public class RebootDesktopsRequest extends Request {
         }
 
         /**
-         * The client OS.
+         * The operating system (OS) of the device that runs the Alibaba Cloud Workspace client (hereinafter referred to as WUYING client).
          */
         public Builder clientOS(String clientOS) {
             this.putQueryParameter("ClientOS", clientOS);
@@ -196,7 +210,7 @@ public class RebootDesktopsRequest extends Request {
         }
 
         /**
-         * The client version.
+         * The client version. If you use a WUYING client, you can view the client version in the **About** dialog box on the client logon page.
          */
         public Builder clientVersion(String clientVersion) {
             this.putQueryParameter("ClientVersion", clientVersion);
@@ -205,7 +219,7 @@ public class RebootDesktopsRequest extends Request {
         }
 
         /**
-         * The cloud desktop IDs. You can specify 1 to 20 IDs.
+         * The IDs of the cloud computers. You can specify the IDs of 1 to 20 cloud computers.
          */
         public Builder desktopId(java.util.List < String > desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -223,7 +237,7 @@ public class RebootDesktopsRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the regions supported by WUYING Workspace.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -246,6 +260,15 @@ public class RebootDesktopsRequest extends Request {
         public Builder sessionToken(String sessionToken) {
             this.putQueryParameter("SessionToken", sessionToken);
             this.sessionToken = sessionToken;
+            return this;
+        }
+
+        /**
+         * Uuid.
+         */
+        public Builder uuid(String uuid) {
+            this.putQueryParameter("Uuid", uuid);
+            this.uuid = uuid;
             return this;
         }
 

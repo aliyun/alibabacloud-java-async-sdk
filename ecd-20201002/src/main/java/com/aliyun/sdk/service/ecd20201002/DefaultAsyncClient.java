@@ -376,7 +376,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The ID of the client.
+      * The cloud computers that you want to start must be in the Stopped state. After you call this operation, the cloud computers enter the Running state.
       *
      */
     @Override
@@ -408,7 +408,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The cloud desktops that you want to stop by calling this operation must be in the Running state. If the call is successful, the cloud desktops enter the Stopped state.
+      * The cloud computers that you want to stop must be in the Running state. After you call this operation, the cloud computers enter the Stopped state.
       *
      */
     @Override

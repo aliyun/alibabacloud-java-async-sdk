@@ -48,6 +48,10 @@ public class StartDesktopsRequest extends Request {
     @NameInMap("SessionId")
     private String sessionId;
 
+    @Query
+    @NameInMap("Uuid")
+    private String uuid;
+
     private StartDesktopsRequest(Builder builder) {
         super(builder);
         this.clientId = builder.clientId;
@@ -58,6 +62,7 @@ public class StartDesktopsRequest extends Request {
         this.loginToken = builder.loginToken;
         this.regionId = builder.regionId;
         this.sessionId = builder.sessionId;
+        this.uuid = builder.uuid;
     }
 
     public static Builder builder() {
@@ -129,6 +134,13 @@ public class StartDesktopsRequest extends Request {
         return this.sessionId;
     }
 
+    /**
+     * @return uuid
+     */
+    public String getUuid() {
+        return this.uuid;
+    }
+
     public static final class Builder extends Request.Builder<StartDesktopsRequest, Builder> {
         private String clientId; 
         private String clientOS; 
@@ -138,6 +150,7 @@ public class StartDesktopsRequest extends Request {
         private String loginToken; 
         private String regionId; 
         private String sessionId; 
+        private String uuid; 
 
         private Builder() {
             super();
@@ -153,10 +166,11 @@ public class StartDesktopsRequest extends Request {
             this.loginToken = request.loginToken;
             this.regionId = request.regionId;
             this.sessionId = request.sessionId;
+            this.uuid = request.uuid;
         } 
 
         /**
-         * The ID of the request.
+         * The ID of the Alibaba Cloud Workspace client (hereinafter referred to as WUYING client). The system generates a unique ID for each client.
          */
         public Builder clientId(String clientId) {
             this.putQueryParameter("ClientId", clientId);
@@ -165,7 +179,7 @@ public class StartDesktopsRequest extends Request {
         }
 
         /**
-         * The OS used by the client.
+         * The operating system (OS) of the device that run the client.
          */
         public Builder clientOS(String clientOS) {
             this.putQueryParameter("ClientOS", clientOS);
@@ -174,7 +188,7 @@ public class StartDesktopsRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -183,7 +197,7 @@ public class StartDesktopsRequest extends Request {
         }
 
         /**
-         * StartDesktops
+         * The client version. If you use a WUYING client, you can click **About** on the client logon page to view the version of the client.
          */
         public Builder clientVersion(String clientVersion) {
             this.putQueryParameter("ClientVersion", clientVersion);
@@ -192,7 +206,7 @@ public class StartDesktopsRequest extends Request {
         }
 
         /**
-         * DesktopId.
+         * The IDs of the cloud computers. You can specify the IDs of 1 to 20 cloud computers.
          */
         public Builder desktopId(java.util.List < String > desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -201,7 +215,7 @@ public class StartDesktopsRequest extends Request {
         }
 
         /**
-         * The ID of cloud desktop N. You can specify one or more IDs of cloud desktops. Valid values of N: 1 to 20.
+         * The logon token.
          */
         public Builder loginToken(String loginToken) {
             this.putQueryParameter("LoginToken", loginToken);
@@ -210,7 +224,7 @@ public class StartDesktopsRequest extends Request {
         }
 
         /**
-         * The logon credential.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the regions supported by WUYING Workspace.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -219,11 +233,20 @@ public class StartDesktopsRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to StartDesktops.
+         * The session ID.
          */
         public Builder sessionId(String sessionId) {
             this.putQueryParameter("SessionId", sessionId);
             this.sessionId = sessionId;
+            return this;
+        }
+
+        /**
+         * Uuid.
+         */
+        public Builder uuid(String uuid) {
+            this.putQueryParameter("Uuid", uuid);
+            this.uuid = uuid;
             return this;
         }
 

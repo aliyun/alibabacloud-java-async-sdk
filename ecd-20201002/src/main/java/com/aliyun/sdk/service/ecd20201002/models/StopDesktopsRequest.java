@@ -178,7 +178,7 @@ public class StopDesktopsRequest extends Request {
         }
 
         /**
-         * The client OS.
+         * The operating system (OS) of the device that runs the Alibaba Cloud Workspace client (hereinafter referred to as WUYING client).
          */
         public Builder clientOS(String clientOS) {
             this.putQueryParameter("ClientOS", clientOS);
@@ -196,7 +196,7 @@ public class StopDesktopsRequest extends Request {
         }
 
         /**
-         * The client version.
+         * The client version. If you use a WUYING client, you can view the client version in the **About** dialog box on the client logon page.
          */
         public Builder clientVersion(String clientVersion) {
             this.putQueryParameter("ClientVersion", clientVersion);
@@ -205,7 +205,7 @@ public class StopDesktopsRequest extends Request {
         }
 
         /**
-         * The cloud desktop IDs. You can specify 1 to 20 IDs.
+         * The IDs of the cloud computers. You can specify the IDs of 1 to 20 cloud computers.
          */
         public Builder desktopId(java.util.List < String > desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -223,7 +223,7 @@ public class StopDesktopsRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the regions supported by WUYING Workspace.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
