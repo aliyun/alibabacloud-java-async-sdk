@@ -55,12 +55,15 @@ public class ModifyDtsJobEndpointRequest extends Request {
     private String endpointPort;
 
     @Query
+    @NameInMap("EndpointRegionId")
+    private String endpointRegionId;
+
+    @Query
     @NameInMap("Password")
     private String password;
 
     @Query
     @NameInMap("RegionId")
-    @Validation(required = true)
     private String regionId;
 
     @Query
@@ -99,6 +102,7 @@ public class ModifyDtsJobEndpointRequest extends Request {
         this.endpointInstanceType = builder.endpointInstanceType;
         this.endpointIp = builder.endpointIp;
         this.endpointPort = builder.endpointPort;
+        this.endpointRegionId = builder.endpointRegionId;
         this.password = builder.password;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
@@ -193,6 +197,13 @@ public class ModifyDtsJobEndpointRequest extends Request {
     }
 
     /**
+     * @return endpointRegionId
+     */
+    public String getEndpointRegionId() {
+        return this.endpointRegionId;
+    }
+
+    /**
      * @return password
      */
     public String getPassword() {
@@ -259,6 +270,7 @@ public class ModifyDtsJobEndpointRequest extends Request {
         private String endpointInstanceType; 
         private String endpointIp; 
         private String endpointPort; 
+        private String endpointRegionId; 
         private String password; 
         private String regionId; 
         private String resourceGroupId; 
@@ -284,6 +296,7 @@ public class ModifyDtsJobEndpointRequest extends Request {
             this.endpointInstanceType = request.endpointInstanceType;
             this.endpointIp = request.endpointIp;
             this.endpointPort = request.endpointPort;
+            this.endpointRegionId = request.endpointRegionId;
             this.password = request.password;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
@@ -381,6 +394,15 @@ public class ModifyDtsJobEndpointRequest extends Request {
         public Builder endpointPort(String endpointPort) {
             this.putQueryParameter("EndpointPort", endpointPort);
             this.endpointPort = endpointPort;
+            return this;
+        }
+
+        /**
+         * EndpointRegionId.
+         */
+        public Builder endpointRegionId(String endpointRegionId) {
+            this.putQueryParameter("EndpointRegionId", endpointRegionId);
+            this.endpointRegionId = endpointRegionId;
             return this;
         }
 

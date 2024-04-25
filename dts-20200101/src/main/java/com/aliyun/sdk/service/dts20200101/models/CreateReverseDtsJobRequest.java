@@ -25,11 +25,21 @@ public class CreateReverseDtsJobRequest extends Request {
     @NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
+    @Query
+    @NameInMap("ShardPassword")
+    private String shardPassword;
+
+    @Query
+    @NameInMap("ShardUsername")
+    private String shardUsername;
+
     private CreateReverseDtsJobRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.dtsJobId = builder.dtsJobId;
         this.resourceGroupId = builder.resourceGroupId;
+        this.shardPassword = builder.shardPassword;
+        this.shardUsername = builder.shardUsername;
     }
 
     public static Builder builder() {
@@ -66,10 +76,26 @@ public class CreateReverseDtsJobRequest extends Request {
         return this.resourceGroupId;
     }
 
+    /**
+     * @return shardPassword
+     */
+    public String getShardPassword() {
+        return this.shardPassword;
+    }
+
+    /**
+     * @return shardUsername
+     */
+    public String getShardUsername() {
+        return this.shardUsername;
+    }
+
     public static final class Builder extends Request.Builder<CreateReverseDtsJobRequest, Builder> {
         private String regionId; 
         private String dtsJobId; 
         private String resourceGroupId; 
+        private String shardPassword; 
+        private String shardUsername; 
 
         private Builder() {
             super();
@@ -80,6 +106,8 @@ public class CreateReverseDtsJobRequest extends Request {
             this.regionId = request.regionId;
             this.dtsJobId = request.dtsJobId;
             this.resourceGroupId = request.resourceGroupId;
+            this.shardPassword = request.shardPassword;
+            this.shardUsername = request.shardUsername;
         } 
 
         /**
@@ -106,6 +134,24 @@ public class CreateReverseDtsJobRequest extends Request {
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
             this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * ShardPassword.
+         */
+        public Builder shardPassword(String shardPassword) {
+            this.putQueryParameter("ShardPassword", shardPassword);
+            this.shardPassword = shardPassword;
+            return this;
+        }
+
+        /**
+         * ShardUsername.
+         */
+        public Builder shardUsername(String shardUsername) {
+            this.putQueryParameter("ShardUsername", shardUsername);
+            this.shardUsername = shardUsername;
             return this;
         }
 
