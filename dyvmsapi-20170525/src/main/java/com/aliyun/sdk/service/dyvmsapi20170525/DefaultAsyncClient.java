@@ -845,6 +845,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * *   The SmartCall operation must be used together with the [intelligent outbound HTTP operation](~~112703~~). After the call initiated by the Voice Messaging Service (VMS) platform is connected, the VMS platform sends the text converted from speech back to the business side, and the business side then returns the follow-up action to the VMS platform.
+      * *   The SmartCall operation does not support the following characters: `@ = : "" $ { } ^ * ￥`.
+      * ### QPS limits
+      * You can call this operation up to 1,000 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<SmartCallResponse> smartCall(SmartCallRequest request) {
         try {

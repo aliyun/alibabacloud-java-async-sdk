@@ -465,7 +465,12 @@ public class SmartCallRequest extends Request {
         } 
 
         /**
-         * ActionCodeBreak.
+         * Specifies whether the playback of the recording file can be interrupted. Default value: **true**. The default value indicates that the playback of the recording file can be interrupted.
+         * <p>
+         * 
+         * If you set the value of this parameter to false, the playback of the recording file cannot be interrupted even if the value of action_break is set to true.
+         * 
+         * > The value of action_code_break takes precedence over the value of action_break.
          */
         public Builder actionCodeBreak(Boolean actionCodeBreak) {
             this.putQueryParameter("ActionCodeBreak", actionCodeBreak);
@@ -474,7 +479,10 @@ public class SmartCallRequest extends Request {
         }
 
         /**
-         * ActionCodeTimeBreak.
+         * The duration that the user keeps speaking. The playback of the recording file is interrupted when this duration is reached. Unit: milliseconds.
+         * <p>
+         * 
+         * If the value of ActionCodeBreak is set to **true** for the recording file and the duration that the user keeps speaking reaches the specified duration, the playback of the recording file is interrupted. If you do not specify ActionCodeTimeBreak or set the value of ActionCodeTimeBreak to 0, the setting of ActionCodeBreak does not take effect.
          */
         public Builder actionCodeTimeBreak(Integer actionCodeTimeBreak) {
             this.putQueryParameter("ActionCodeTimeBreak", actionCodeTimeBreak);
@@ -483,7 +491,21 @@ public class SmartCallRequest extends Request {
         }
 
         /**
-         * AsrBaseId.
+         * The ASR base model. Valid values:
+         * <p>
+         * 
+         * *   **customer_service\_8k** (default): Chinese Mandarin.
+         * *   **dialect_customer_service\_8k**: a heavy accent.
+         * 
+         * > You must specify the ASR model when you call the SmartCall operation. We recommend that you specify either of the AsrModelId and AsrBaseId parameters.
+         * 
+         * *   If you specify only the AsrModelId parameter, the specified ASR model is used.
+         * 
+         * *   If you specify only the AsrBaseId parameter, the ASR base model is used.
+         * 
+         * *   If you specify neither of the two parameters, the default ASR base model is used, that is, the default value customer_service\_8k is used for the AsrBaseId parameter.
+         * 
+         * *   If you specify both parameters, make sure that their values do not conflict with each other.
          */
         public Builder asrBaseId(String asrBaseId) {
             this.putQueryParameter("AsrBaseId", asrBaseId);
@@ -492,7 +514,20 @@ public class SmartCallRequest extends Request {
         }
 
         /**
-         * AsrModelId.
+         * The ID of the Automatic Speech Recognition (ASR) model.
+         * <p>
+         * 
+         * You can log on to the [Voice Messaging Service console](https://dyvms.console.aliyun.com/overview/home) and view the ID of the ASR model on the **ASR Model Management** page.
+         * 
+         * > You must specify the ASR model when you call the SmartCall operation. We recommend that you specify either of the AsrModelId and AsrBaseId parameters.
+         * 
+         * *   If you specify only the AsrModelId parameter, the specified ASR model is used.
+         * 
+         * *   If you specify only the AsrBaseId parameter, the specified ASR base model is used.
+         * 
+         * *   If you specify neither of the two parameters, the default value customer_service\_8k is used for the AsrBaseId parameter. This means that the default Mandarin ASR base model is used.
+         * 
+         * *   If you specify both parameters, make sure that their values do not conflict with each other.
          */
         public Builder asrModelId(String asrModelId) {
             this.putQueryParameter("AsrModelId", asrModelId);
@@ -501,7 +536,10 @@ public class SmartCallRequest extends Request {
         }
 
         /**
-         * BackgroundFileCode.
+         * The ID of the background voice file that is played back when the user talks with the robot.
+         * <p>
+         * 
+         * You can log on to the [Voice Messaging Service console](https://dyvms.console.aliyun.com/overview/home), choose **Voice File Management**, click the **Intelligent Speech Interaction Recording File** tab, and then click **Details** in the Actions column to view the voice ID.
          */
         public Builder backgroundFileCode(String backgroundFileCode) {
             this.putQueryParameter("BackgroundFileCode", backgroundFileCode);
@@ -510,7 +548,7 @@ public class SmartCallRequest extends Request {
         }
 
         /**
-         * BackgroundSpeed.
+         * This parameter is unavailable.
          */
         public Builder backgroundSpeed(Integer backgroundSpeed) {
             this.putQueryParameter("BackgroundSpeed", backgroundSpeed);
@@ -519,7 +557,7 @@ public class SmartCallRequest extends Request {
         }
 
         /**
-         * BackgroundVolume.
+         * This parameter is unavailable.
          */
         public Builder backgroundVolume(Integer backgroundVolume) {
             this.putQueryParameter("BackgroundVolume", backgroundVolume);
@@ -528,7 +566,7 @@ public class SmartCallRequest extends Request {
         }
 
         /**
-         * CalledNumber.
+         * The called number. Only phone numbers in the Chinese mainland are supported.
          */
         public Builder calledNumber(String calledNumber) {
             this.putQueryParameter("CalledNumber", calledNumber);
@@ -537,7 +575,10 @@ public class SmartCallRequest extends Request {
         }
 
         /**
-         * CalledShowNumber.
+         * The number displayed to the called party. The value must be the number you purchased.
+         * <p>
+         * 
+         * You can log on to the [Voice Messaging Service console](https://dyvms.console.aliyun.com/overview/home) and choose **Voice Numbers** > **Real Number Management** to view the number you purchased.
          */
         public Builder calledShowNumber(String calledShowNumber) {
             this.putQueryParameter("CalledShowNumber", calledShowNumber);
@@ -546,7 +587,7 @@ public class SmartCallRequest extends Request {
         }
 
         /**
-         * DynamicId.
+         * The dynamic extension ID that is reserved for the caller of the operation. This ID is returned in the callback URL and is used as the development identifier of the customer.
          */
         public Builder dynamicId(String dynamicId) {
             this.putQueryParameter("DynamicId", dynamicId);
@@ -555,7 +596,13 @@ public class SmartCallRequest extends Request {
         }
 
         /**
-         * EarlyMediaAsr.
+         * Specifies whether to enable speech recognition of early media. Valid values:
+         * <p>
+         * 
+         * *   **false** (default): Speech recognition of early media is disabled.
+         * *   **true**: Speech recognition of early media is enabled.
+         * 
+         * > If you set the value of this parameter to **true**, the reason why the call is not answered is recorded.
          */
         public Builder earlyMediaAsr(Boolean earlyMediaAsr) {
             this.putQueryParameter("EarlyMediaAsr", earlyMediaAsr);
@@ -564,7 +611,10 @@ public class SmartCallRequest extends Request {
         }
 
         /**
-         * EnableITN.
+         * Specifies whether to enable Inverse Text Normalization (ITN) during post-processing. Default value: **false**. If you set the value to false, ITN is not enabled during post-processing.
+         * <p>
+         * 
+         * If you set the value to **true**, Chinese numerals are converted into Arabic numerals for output.
          */
         public Builder enableITN(Boolean enableITN) {
             this.putQueryParameter("EnableITN", enableITN);
@@ -573,7 +623,14 @@ public class SmartCallRequest extends Request {
         }
 
         /**
-         * MuteTime.
+         * The silence duration. The system determines the end of the conversation based on the silence duration of the user. Unit: milliseconds. Valid values: 1000 to 20000.****
+         * <p>
+         * 
+         * > 
+         * 
+         * *   If you specify a value out of the valid range, the default value **10000** is used.
+         * 
+         * *   The parameter value can be adjusted during the conversation. The last setting prevails.
          */
         public Builder muteTime(Integer muteTime) {
             this.putQueryParameter("MuteTime", muteTime);
@@ -591,7 +648,10 @@ public class SmartCallRequest extends Request {
         }
 
         /**
-         * OutId.
+         * The ID that is reserved for the caller of the operation. This ID is returned to the caller in a receipt message.
+         * <p>
+         * 
+         * The value is of the STRING type and must be 1 to 15 bytes in length.
          */
         public Builder outId(String outId) {
             this.putQueryParameter("OutId", outId);
@@ -609,7 +669,14 @@ public class SmartCallRequest extends Request {
         }
 
         /**
-         * PauseTime.
+         * The pause duration. The system determines the end of a sentence based on the pause duration of the user in the conversation. Unit: milliseconds. Valid values: 300 to 1200.****
+         * <p>
+         * 
+         * > 
+         * 
+         * *   If you specify a value out of the valid range, the default value **800** is used.
+         * 
+         * *   You cannot change the parameter value after specifying it.
          */
         public Builder pauseTime(Integer pauseTime) {
             this.putQueryParameter("PauseTime", pauseTime);
@@ -618,7 +685,11 @@ public class SmartCallRequest extends Request {
         }
 
         /**
-         * RecordFlag.
+         * Specifies whether to record the conversation. Valid values:
+         * <p>
+         * 
+         * *   **true**: The conversation is recorded.
+         * *   **false**: The conversation is not recorded.
          */
         public Builder recordFlag(Boolean recordFlag) {
             this.putQueryParameter("RecordFlag", recordFlag);
@@ -645,7 +716,10 @@ public class SmartCallRequest extends Request {
         }
 
         /**
-         * SessionTimeout.
+         * The maximum call duration. The call is automatically hung up when the maximum call duration is reached. Unit: seconds.
+         * <p>
+         * 
+         * > The maximum call duration is 3,600 seconds.
          */
         public Builder sessionTimeout(Integer sessionTimeout) {
             this.putQueryParameter("SessionTimeout", sessionTimeout);
@@ -654,7 +728,7 @@ public class SmartCallRequest extends Request {
         }
 
         /**
-         * Speed.
+         * This parameter is unavailable.
          */
         public Builder speed(Integer speed) {
             this.putQueryParameter("Speed", speed);
@@ -663,7 +737,11 @@ public class SmartCallRequest extends Request {
         }
 
         /**
-         * StreamAsr.
+         * Specifies whether to enable streaming ASR, which intelligently judges what the user wants to express based on the first few words spoken by the user. Valid values:
+         * <p>
+         * 
+         * *   **0**: Streaming ASR is disabled.
+         * *   **1**: Streaming ASR is enabled.
          */
         public Builder streamAsr(Integer streamAsr) {
             this.putQueryParameter("StreamAsr", streamAsr);
@@ -672,7 +750,11 @@ public class SmartCallRequest extends Request {
         }
 
         /**
-         * TtsConf.
+         * Specifies whether to set TTS sound parameters. Valid values:
+         * <p>
+         * 
+         * *   **true**: TTS sound parameters must be set. You must set the **TtsStyle**, **TtsColume**, and **TtsSpeed** parameters to specify a sound style.
+         * *   **false**: TTS sound parameters do not need to be set. The values of TTS sound parameters do not take effect even if you set them.
          */
         public Builder ttsConf(Boolean ttsConf) {
             this.putQueryParameter("TtsConf", ttsConf);
@@ -681,7 +763,7 @@ public class SmartCallRequest extends Request {
         }
 
         /**
-         * TtsSpeed.
+         * The speed of TTS variable playback. Valid values: -200 to 200. Default value: 0.
          */
         public Builder ttsSpeed(Integer ttsSpeed) {
             this.putQueryParameter("TtsSpeed", ttsSpeed);
@@ -690,7 +772,7 @@ public class SmartCallRequest extends Request {
         }
 
         /**
-         * TtsStyle.
+         * The sound style for TTS variable playback. Default value: **xiaoyun**. For more information about the sound styles, see the **Sound styles** table below.
          */
         public Builder ttsStyle(String ttsStyle) {
             this.putQueryParameter("TtsStyle", ttsStyle);
@@ -699,7 +781,7 @@ public class SmartCallRequest extends Request {
         }
 
         /**
-         * TtsVolume.
+         * The volume of TTS variable playback. Valid values: 0 to 100. Default value: 0.
          */
         public Builder ttsVolume(Integer ttsVolume) {
             this.putQueryParameter("TtsVolume", ttsVolume);
@@ -708,7 +790,14 @@ public class SmartCallRequest extends Request {
         }
 
         /**
-         * VoiceCode.
+         * The recording file that is played back in the intelligent outbound call.
+         * <p>
+         * 
+         * The file can be an online file, a voice file uploaded from the Voice Messaging Service console, or a text-to-speech (TTS) template that contains variables. You can specify multiple files and a TTS variable together. Separate them with commas (,). The values of the variables in the TTS template are specified by the **VoiceCodeParam** parameter.
+         * 
+         * *   If you use an online file as the recording file, set the value of **VoiceCode** to the URL of the file that can be accessed over the Internet.
+         * *   If you use a voice file uploaded from the Voice Messaging Service console as the recording file, set the value of **VoiceCode** to the voice ID of the file. You can log on to the [Voice Messaging Service console](https://dyvms.console.aliyun.com/overview/home), choose **Voice File Management**, click the **Intelligent Speech Interaction Recording File** tab, and then click **Details** in the Actions column to view the voice ID.
+         * *   If you use a TTS template that contains variables as the recording file, set the value of **VoiceCode** to a variable name such as $name$, and also set a value for the variable in the **VoiceCodeParam** parameter.
          */
         public Builder voiceCode(String voiceCode) {
             this.putQueryParameter("VoiceCode", voiceCode);
@@ -717,7 +806,7 @@ public class SmartCallRequest extends Request {
         }
 
         /**
-         * VoiceCodeParam.
+         * The value of the TTS variable, in the JSON format. This value must match the TTS variable specified by the **VoiceCode** parameter.
          */
         public Builder voiceCodeParam(String voiceCodeParam) {
             this.putQueryParameter("VoiceCodeParam", voiceCodeParam);
@@ -726,7 +815,7 @@ public class SmartCallRequest extends Request {
         }
 
         /**
-         * Volume.
+         * The volume at which the recording file is played. Valid values: -4 to 4. We recommend that you set the value of this parameter to **1**.
          */
         public Builder volume(Integer volume) {
             this.putQueryParameter("Volume", volume);
