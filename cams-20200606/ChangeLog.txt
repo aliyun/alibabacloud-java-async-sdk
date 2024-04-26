@@ -1,3 +1,6 @@
+2024-04-26 Version: 1.0.29
+- Generated java-async 2020-06-06 for cams.
+
 2024-04-10 Version: 1.0.28
 - Generated java-async 2020-06-06 for cams.
 
