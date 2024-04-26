@@ -415,6 +415,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetTableDBTopologyResponse> getTableDBTopology(GetTableDBTopologyRequest request);
 
+    CompletableFuture<GetTableDesignProjectFlowResponse> getTableDesignProjectFlow(GetTableDesignProjectFlowRequest request);
+
+    CompletableFuture<GetTableDesignProjectInfoResponse> getTableDesignProjectInfo(GetTableDesignProjectInfoRequest request);
+
     CompletableFuture<GetTableTopologyResponse> getTableTopology(GetTableTopologyRequest request);
 
     CompletableFuture<GetTaskResponse> getTask(GetTaskRequest request);
