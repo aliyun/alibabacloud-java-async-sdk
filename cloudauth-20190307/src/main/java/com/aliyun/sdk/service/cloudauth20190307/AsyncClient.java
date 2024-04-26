@@ -31,6 +31,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateVerifySettingResponse> createVerifySetting(CreateVerifySettingRequest request);
 
+    CompletableFuture<CredentialVerifyResponse> credentialVerify(CredentialVerifyRequest request);
+
     CompletableFuture<DescribeDeviceInfoResponse> describeDeviceInfo(DescribeDeviceInfoRequest request);
 
     CompletableFuture<DescribeFaceVerifyResponse> describeFaceVerify(DescribeFaceVerifyRequest request);
