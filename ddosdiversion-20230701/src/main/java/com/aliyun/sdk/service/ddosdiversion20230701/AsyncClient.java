@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.ddosdiversion20230701;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.ddosdiversion20230701.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 

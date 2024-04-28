@@ -16,7 +16,7 @@ public class QueryNetListResponseBody extends TeaModel {
     private Long code;
 
     @NameInMap("Data")
-    private java.util.List < Data> data;
+    private Data data;
 
     @NameInMap("Message")
     private String message;
@@ -49,7 +49,7 @@ public class QueryNetListResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public Data getData() {
         return this.data;
     }
 
@@ -69,12 +69,16 @@ public class QueryNetListResponseBody extends TeaModel {
 
     public static final class Builder {
         private Long code; 
-        private java.util.List < Data> data; 
+        private Data data; 
         private String message; 
         private String requestId; 
 
         /**
-         * Code.
+         * The status code.
+         * <p>
+         * 
+         * *   **200**: The request was successful.
+         * *   Other codes: The request failed.
          */
         public Builder code(Long code) {
             this.code = code;
@@ -82,15 +86,15 @@ public class QueryNetListResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The CIDR blocks.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(Data data) {
             this.data = data;
             return this;
         }
 
         /**
-         * Message.
+         * The response parameters.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +102,7 @@ public class QueryNetListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +154,7 @@ public class QueryNetListResponseBody extends TeaModel {
             private Integer pps; 
 
             /**
-             * Mbps。
+             * Mbps.
              */
             public Builder mbps(Integer mbps) {
                 this.mbps = mbps;
@@ -158,7 +162,7 @@ public class QueryNetListResponseBody extends TeaModel {
             }
 
             /**
-             * Pps。
+             * Pps.
              */
             public Builder pps(Integer pps) {
                 this.pps = pps;
@@ -422,10 +426,10 @@ public class QueryNetListResponseBody extends TeaModel {
         private String net;
 
         @NameInMap("NetExtend")
-        private Long netExtend;
+        private String netExtend;
 
         @NameInMap("NetMain")
-        private String netMain;
+        private Long netMain;
 
         @NameInMap("NetType")
         private String netType;
@@ -523,14 +527,14 @@ public class QueryNetListResponseBody extends TeaModel {
         /**
          * @return netExtend
          */
-        public Long getNetExtend() {
+        public String getNetExtend() {
             return this.netExtend;
         }
 
         /**
          * @return netMain
          */
-        public String getNetMain() {
+        public Long getNetMain() {
             return this.netMain;
         }
 
@@ -571,8 +575,8 @@ public class QueryNetListResponseBody extends TeaModel {
             private String gmtModify; 
             private String mode; 
             private String net; 
-            private Long netExtend; 
-            private String netMain; 
+            private String netExtend; 
+            private Long netMain; 
             private String netType; 
             private String saleId; 
             private String upstreamType; 
@@ -645,7 +649,7 @@ public class QueryNetListResponseBody extends TeaModel {
             /**
              * NetExtend.
              */
-            public Builder netExtend(Long netExtend) {
+            public Builder netExtend(String netExtend) {
                 this.netExtend = netExtend;
                 return this;
             }
@@ -653,7 +657,7 @@ public class QueryNetListResponseBody extends TeaModel {
             /**
              * NetMain.
              */
-            public Builder netMain(String netMain) {
+            public Builder netMain(Long netMain) {
                 this.netMain = netMain;
                 return this;
             }

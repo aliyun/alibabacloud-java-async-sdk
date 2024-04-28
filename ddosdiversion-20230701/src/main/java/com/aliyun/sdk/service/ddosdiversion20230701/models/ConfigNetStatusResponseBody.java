@@ -62,7 +62,11 @@ public class ConfigNetStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The status code.
+         * <p>
+         * 
+         * *   **200**: The request was successful.
+         * *   Other codes: The request failed.
          */
         public Builder code(Long code) {
             this.code = code;
@@ -70,7 +74,7 @@ public class ConfigNetStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The response parameters.
          */
         public Builder message(String message) {
             this.message = message;
@@ -78,7 +82,7 @@ public class ConfigNetStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

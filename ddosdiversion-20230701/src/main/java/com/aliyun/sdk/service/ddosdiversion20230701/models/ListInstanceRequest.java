@@ -110,7 +110,7 @@ public class ListInstanceRequest extends Request {
         } 
 
         /**
-         * Name.
+         * The name of the instance.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -119,7 +119,7 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * Num.
+         * The number of entries per page. Default value: 100.
          */
         public Builder num(Long num) {
             this.putQueryParameter("Num", num);
@@ -128,7 +128,7 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * Page.
+         * The page number. Default value: 1
          */
         public Builder page(Long page) {
             this.putQueryParameter("Page", page);
@@ -137,7 +137,7 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * SaleId.
+         * The ID of the anti-DDoS diversion instance.
          */
         public Builder saleId(String saleId) {
             this.putQueryParameter("SaleId", saleId);
@@ -146,7 +146,13 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the instance. Valid values:
+         * <p>
+         * 
+         * *   normal
+         * *   expired
+         * *   deleting
+         * *   stopped
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

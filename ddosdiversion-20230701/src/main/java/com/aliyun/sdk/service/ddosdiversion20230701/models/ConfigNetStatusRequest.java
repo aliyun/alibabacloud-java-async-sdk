@@ -113,7 +113,7 @@ public class ConfigNetStatusRequest extends Request {
         } 
 
         /**
-         * Net.
+         * The CIDR block of the anti-DDoS diversion instance.
          */
         public Builder net(String net) {
             this.putQueryParameter("Net", net);
@@ -122,7 +122,10 @@ public class ConfigNetStatusRequest extends Request {
         }
 
         /**
-         * Regions.
+         * The regions in which the CIDR block needs to be advertised or withdrawn from advertising. If you leave this parameter empty, the CIDR blocks in all regions are configured.
+         * <p>
+         * 
+         * >  You can call the [QueryNetList](~~2639086~~) operation to obtain the regions of the CIDR blocks.
          */
         public Builder regions(java.util.List < String > regions) {
             this.putQueryParameter("Regions", regions);
@@ -131,7 +134,7 @@ public class ConfigNetStatusRequest extends Request {
         }
 
         /**
-         * SaleId.
+         * The ID of the anti-DDoS diversion instance.
          */
         public Builder saleId(String saleId) {
             this.putQueryParameter("SaleId", saleId);
@@ -140,7 +143,11 @@ public class ConfigNetStatusRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the CIDR block. Valid values:
+         * <p>
+         * 
+         * *   enable: advertises the CIDR block.
+         * *   disable: withdraws the advertising of the CIDR block.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -149,7 +156,7 @@ public class ConfigNetStatusRequest extends Request {
         }
 
         /**
-         * SubNets.
+         * The subnet CIDR blocks of the CIDR block.
          */
         public Builder subNets(java.util.List < String > subNets) {
             this.putQueryParameter("SubNets", subNets);

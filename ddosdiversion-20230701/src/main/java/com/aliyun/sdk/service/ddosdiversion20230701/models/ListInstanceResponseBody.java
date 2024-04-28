@@ -16,7 +16,7 @@ public class ListInstanceResponseBody extends TeaModel {
     private Long code;
 
     @NameInMap("Data")
-    private java.util.List < Data> data;
+    private Data data;
 
     @NameInMap("Message")
     private String message;
@@ -49,7 +49,7 @@ public class ListInstanceResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public Data getData() {
         return this.data;
     }
 
@@ -69,12 +69,16 @@ public class ListInstanceResponseBody extends TeaModel {
 
     public static final class Builder {
         private Long code; 
-        private java.util.List < Data> data; 
+        private Data data; 
         private String message; 
         private String requestId; 
 
         /**
-         * Code.
+         * The status code.
+         * <p>
+         * 
+         * *   **200**: The request was successful.
+         * *   Other codes: The request failed.
          */
         public Builder code(Long code) {
             this.code = code;
@@ -82,15 +86,15 @@ public class ListInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The returned result.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(Data data) {
             this.data = data;
             return this;
         }
 
         /**
-         * Message.
+         * The response parameters.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +102,7 @@ public class ListInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -559,7 +563,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * The response parameters.
              */
             public Builder message(String message) {
                 this.message = message;
