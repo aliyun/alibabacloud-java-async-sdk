@@ -219,6 +219,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListAvatarsResponse> listAvatars(ListAvatarsRequest request);
 
+    CompletableFuture<ListBatchMediaProducingJobsResponse> listBatchMediaProducingJobs(ListBatchMediaProducingJobsRequest request);
+
     CompletableFuture<ListCustomTemplatesResponse> listCustomTemplates(ListCustomTemplatesRequest request);
 
     CompletableFuture<ListCustomizedVoiceJobsResponse> listCustomizedVoiceJobs(ListCustomizedVoiceJobsRequest request);
@@ -252,6 +254,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListMediaInfoJobsResponse> listMediaInfoJobs(ListMediaInfoJobsRequest request);
 
     CompletableFuture<ListMediaMarksResponse> listMediaMarks(ListMediaMarksRequest request);
+
+    CompletableFuture<ListMediaProducingJobsResponse> listMediaProducingJobs(ListMediaProducingJobsRequest request);
 
     CompletableFuture<ListPackageJobsResponse> listPackageJobs(ListPackageJobsRequest request);
 

@@ -7,19 +7,27 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetBatchMediaProducingJobResponseBody} extends {@link TeaModel}
+ * {@link ListBatchMediaProducingJobsResponseBody} extends {@link TeaModel}
  *
- * <p>GetBatchMediaProducingJobResponseBody</p>
+ * <p>ListBatchMediaProducingJobsResponseBody</p>
  */
-public class GetBatchMediaProducingJobResponseBody extends TeaModel {
-    @NameInMap("EditingBatchJob")
-    private EditingBatchJob editingBatchJob;
+public class ListBatchMediaProducingJobsResponseBody extends TeaModel {
+    @NameInMap("EditingBatchJobList")
+    private java.util.List < EditingBatchJobList> editingBatchJobList;
+
+    @NameInMap("MaxResults")
+    private Integer maxResults;
+
+    @NameInMap("NextToken")
+    private String nextToken;
 
     @NameInMap("RequestId")
     private String requestId;
 
-    private GetBatchMediaProducingJobResponseBody(Builder builder) {
-        this.editingBatchJob = builder.editingBatchJob;
+    private ListBatchMediaProducingJobsResponseBody(Builder builder) {
+        this.editingBatchJobList = builder.editingBatchJobList;
+        this.maxResults = builder.maxResults;
+        this.nextToken = builder.nextToken;
         this.requestId = builder.requestId;
     }
 
@@ -27,15 +35,29 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static GetBatchMediaProducingJobResponseBody create() {
+    public static ListBatchMediaProducingJobsResponseBody create() {
         return builder().build();
     }
 
     /**
-     * @return editingBatchJob
+     * @return editingBatchJobList
      */
-    public EditingBatchJob getEditingBatchJob() {
-        return this.editingBatchJob;
+    public java.util.List < EditingBatchJobList> getEditingBatchJobList() {
+        return this.editingBatchJobList;
+    }
+
+    /**
+     * @return maxResults
+     */
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     /**
@@ -46,173 +68,50 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private EditingBatchJob editingBatchJob; 
+        private java.util.List < EditingBatchJobList> editingBatchJobList; 
+        private Integer maxResults; 
+        private String nextToken; 
         private String requestId; 
 
         /**
-         * EditingBatchJob.
+         * EditingBatchJobList.
          */
-        public Builder editingBatchJob(EditingBatchJob editingBatchJob) {
-            this.editingBatchJob = editingBatchJob;
+        public Builder editingBatchJobList(java.util.List < EditingBatchJobList> editingBatchJobList) {
+            this.editingBatchJobList = editingBatchJobList;
             return this;
         }
 
         /**
-         * RequestId.
+         * MaxResults.
+         */
+        public Builder maxResults(Integer maxResults) {
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public GetBatchMediaProducingJobResponseBody build() {
-            return new GetBatchMediaProducingJobResponseBody(this);
+        public ListBatchMediaProducingJobsResponseBody build() {
+            return new ListBatchMediaProducingJobsResponseBody(this);
         } 
 
     } 
 
-    public static class SubJobList extends TeaModel {
-        @NameInMap("ErrorCode")
-        private String errorCode;
-
-        @NameInMap("ErrorMessage")
-        private String errorMessage;
-
-        @NameInMap("JobId")
-        private String jobId;
-
-        @NameInMap("MediaId")
-        private String mediaId;
-
-        @NameInMap("MediaURL")
-        private String mediaURL;
-
-        @NameInMap("Status")
-        private String status;
-
-        private SubJobList(Builder builder) {
-            this.errorCode = builder.errorCode;
-            this.errorMessage = builder.errorMessage;
-            this.jobId = builder.jobId;
-            this.mediaId = builder.mediaId;
-            this.mediaURL = builder.mediaURL;
-            this.status = builder.status;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static SubJobList create() {
-            return builder().build();
-        }
-
-        /**
-         * @return errorCode
-         */
-        public String getErrorCode() {
-            return this.errorCode;
-        }
-
-        /**
-         * @return errorMessage
-         */
-        public String getErrorMessage() {
-            return this.errorMessage;
-        }
-
-        /**
-         * @return jobId
-         */
-        public String getJobId() {
-            return this.jobId;
-        }
-
-        /**
-         * @return mediaId
-         */
-        public String getMediaId() {
-            return this.mediaId;
-        }
-
-        /**
-         * @return mediaURL
-         */
-        public String getMediaURL() {
-            return this.mediaURL;
-        }
-
-        /**
-         * @return status
-         */
-        public String getStatus() {
-            return this.status;
-        }
-
-        public static final class Builder {
-            private String errorCode; 
-            private String errorMessage; 
-            private String jobId; 
-            private String mediaId; 
-            private String mediaURL; 
-            private String status; 
-
-            /**
-             * ErrorCode.
-             */
-            public Builder errorCode(String errorCode) {
-                this.errorCode = errorCode;
-                return this;
-            }
-
-            /**
-             * ErrorMessage.
-             */
-            public Builder errorMessage(String errorMessage) {
-                this.errorMessage = errorMessage;
-                return this;
-            }
-
-            /**
-             * JobId.
-             */
-            public Builder jobId(String jobId) {
-                this.jobId = jobId;
-                return this;
-            }
-
-            /**
-             * MediaId.
-             */
-            public Builder mediaId(String mediaId) {
-                this.mediaId = mediaId;
-                return this;
-            }
-
-            /**
-             * MediaURL.
-             */
-            public Builder mediaURL(String mediaURL) {
-                this.mediaURL = mediaURL;
-                return this;
-            }
-
-            /**
-             * Status.
-             */
-            public Builder status(String status) {
-                this.status = status;
-                return this;
-            }
-
-            public SubJobList build() {
-                return new SubJobList(this);
-            } 
-
-        } 
-
-    }
-    public static class EditingBatchJob extends TeaModel {
+    public static class EditingBatchJobList extends TeaModel {
         @NameInMap("CompleteTime")
         private String completeTime;
 
@@ -243,13 +142,10 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
         @NameInMap("Status")
         private String status;
 
-        @NameInMap("SubJobList")
-        private java.util.List < SubJobList> subJobList;
-
         @NameInMap("UserData")
         private String userData;
 
-        private EditingBatchJob(Builder builder) {
+        private EditingBatchJobList(Builder builder) {
             this.completeTime = builder.completeTime;
             this.createTime = builder.createTime;
             this.editingConfig = builder.editingConfig;
@@ -260,7 +156,6 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
             this.modifiedTime = builder.modifiedTime;
             this.outputConfig = builder.outputConfig;
             this.status = builder.status;
-            this.subJobList = builder.subJobList;
             this.userData = builder.userData;
         }
 
@@ -268,7 +163,7 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static EditingBatchJob create() {
+        public static EditingBatchJobList create() {
             return builder().build();
         }
 
@@ -343,13 +238,6 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
         }
 
         /**
-         * @return subJobList
-         */
-        public java.util.List < SubJobList> getSubJobList() {
-            return this.subJobList;
-        }
-
-        /**
          * @return userData
          */
         public String getUserData() {
@@ -367,7 +255,6 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
             private String modifiedTime; 
             private String outputConfig; 
             private String status; 
-            private java.util.List < SubJobList> subJobList; 
             private String userData; 
 
             /**
@@ -451,14 +338,6 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
             }
 
             /**
-             * SubJobList.
-             */
-            public Builder subJobList(java.util.List < SubJobList> subJobList) {
-                this.subJobList = subJobList;
-                return this;
-            }
-
-            /**
              * UserData.
              */
             public Builder userData(String userData) {
@@ -466,8 +345,8 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
                 return this;
             }
 
-            public EditingBatchJob build() {
-                return new EditingBatchJob(this);
+            public EditingBatchJobList build() {
+                return new EditingBatchJobList(this);
             } 
 
         } 
