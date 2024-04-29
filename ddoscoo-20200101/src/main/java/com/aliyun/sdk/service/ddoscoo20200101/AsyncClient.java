@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.ddoscoo20200101;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.ddoscoo20200101.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -226,8 +227,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeDomainQPSListResponse> describeDomainQPSList(DescribeDomainQPSListRequest request);
 
-    CompletableFuture<DescribeDomainQpsWithCacheResponse> describeDomainQpsWithCache(DescribeDomainQpsWithCacheRequest request);
-
     /**
       * You can call the DescribeDomainResource operation to query the configurations of the forwarding rules that you create for a website by page. The configurations include the domain name-related configurations, protocol-related configurations, HTTPS-related configurations, and configurations that are used to mitigate HTTP flood attacks.
       * You can call this operation by using Terraform. For more information about Terraform, see [What is Terraform?](~~95820~~).
@@ -260,6 +259,10 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<DescribeElasticBandwidthSpecResponse> describeElasticBandwidthSpec(DescribeElasticBandwidthSpecRequest request);
+
+    CompletableFuture<DescribeElasticQpsResponse> describeElasticQps(DescribeElasticQpsRequest request);
+
+    CompletableFuture<DescribeElasticQpsRecordResponse> describeElasticQpsRecord(DescribeElasticQpsRecordRequest request);
 
     CompletableFuture<DescribeHeadersResponse> describeHeaders(DescribeHeadersRequest request);
 
@@ -525,6 +528,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<ModifyElasticBizBandWidthResponse> modifyElasticBizBandWidth(ModifyElasticBizBandWidthRequest request);
 
+    CompletableFuture<ModifyElasticBizQpsResponse> modifyElasticBizQps(ModifyElasticBizQpsRequest request);
+
     CompletableFuture<ModifyFullLogTtlResponse> modifyFullLogTtl(ModifyFullLogTtlRequest request);
 
     CompletableFuture<ModifyHeadersResponse> modifyHeaders(ModifyHeadersRequest request);
@@ -554,6 +559,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyPortResponse> modifyPort(ModifyPortRequest request);
 
     CompletableFuture<ModifyPortAutoCcStatusResponse> modifyPortAutoCcStatus(ModifyPortAutoCcStatusRequest request);
+
+    CompletableFuture<ModifyQpsModeResponse> modifyQpsMode(ModifyQpsModeRequest request);
 
     CompletableFuture<ModifySceneDefensePolicyResponse> modifySceneDefensePolicy(ModifySceneDefensePolicyRequest request);
 

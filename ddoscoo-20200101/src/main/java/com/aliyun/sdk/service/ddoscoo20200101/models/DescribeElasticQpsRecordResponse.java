@@ -7,31 +7,28 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeDomainQpsWithCacheResponse} extends {@link TeaModel}
+ * {@link DescribeElasticQpsRecordResponse} extends {@link TeaModel}
  *
- * <p>DescribeDomainQpsWithCacheResponse</p>
+ * <p>DescribeElasticQpsRecordResponse</p>
  */
-public class DescribeDomainQpsWithCacheResponse extends Response {
+public class DescribeElasticQpsRecordResponse extends Response {
     @NameInMap("headers")
-    @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     private Integer statusCode;
 
     @NameInMap("body")
-    @Validation(required = true)
-    private DescribeDomainQpsWithCacheResponseBody body;
+    private DescribeElasticQpsRecordResponseBody body;
 
-    private DescribeDomainQpsWithCacheResponse(BuilderImpl builder) {
+    private DescribeElasticQpsRecordResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DescribeDomainQpsWithCacheResponse create() {
+    public static DescribeElasticQpsRecordResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -57,35 +54,35 @@ public class DescribeDomainQpsWithCacheResponse extends Response {
     /**
      * @return body
      */
-    public DescribeDomainQpsWithCacheResponseBody getBody() {
+    public DescribeElasticQpsRecordResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DescribeDomainQpsWithCacheResponse, Builder> {
+    public interface Builder extends Response.Builder<DescribeElasticQpsRecordResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DescribeDomainQpsWithCacheResponseBody body);
+        Builder body(DescribeElasticQpsRecordResponseBody body);
 
         @Override
-        DescribeDomainQpsWithCacheResponse build();
+        DescribeElasticQpsRecordResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DescribeDomainQpsWithCacheResponse, Builder>
+            extends Response.BuilderImpl<DescribeElasticQpsRecordResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private DescribeDomainQpsWithCacheResponseBody body; 
+        private DescribeElasticQpsRecordResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DescribeDomainQpsWithCacheResponse response) {
+        private BuilderImpl(DescribeElasticQpsRecordResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -114,14 +111,14 @@ public class DescribeDomainQpsWithCacheResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DescribeDomainQpsWithCacheResponseBody body) {
+        public Builder body(DescribeElasticQpsRecordResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DescribeDomainQpsWithCacheResponse build() {
-            return new DescribeDomainQpsWithCacheResponse(this);
+        public DescribeElasticQpsRecordResponse build() {
+            return new DescribeElasticQpsRecordResponse(this);
         } 
 
     } 
