@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateNASFileSystemResponseBody</p>
  */
 public class CreateNASFileSystemResponseBody extends TeaModel {
-    @NameInMap("FileSystemId")
+    @com.aliyun.core.annotation.NameInMap("FileSystemId")
     private String fileSystemId;
 
-    @NameInMap("FileSystemName")
+    @com.aliyun.core.annotation.NameInMap("FileSystemName")
     private String fileSystemName;
 
-    @NameInMap("MountTargetDomain")
+    @com.aliyun.core.annotation.NameInMap("MountTargetDomain")
     private String mountTargetDomain;
 
-    @NameInMap("OfficeSiteId")
+    @com.aliyun.core.annotation.NameInMap("OfficeSiteId")
     private String officeSiteId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateNASFileSystemResponseBody(Builder builder) {

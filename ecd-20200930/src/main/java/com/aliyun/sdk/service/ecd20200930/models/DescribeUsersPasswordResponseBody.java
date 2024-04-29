@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeUsersPasswordResponseBody</p>
  */
 public class DescribeUsersPasswordResponseBody extends TeaModel {
-    @NameInMap("DesktopUsers")
+    @com.aliyun.core.annotation.NameInMap("DesktopUsers")
     private java.util.List < DesktopUsers> desktopUsers;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeUsersPasswordResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DescribeUsersPasswordResponseBody extends TeaModel {
     } 
 
     public static class DesktopUsers extends TeaModel {
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("EndUserId")
+        @com.aliyun.core.annotation.NameInMap("EndUserId")
         private String endUserId;
 
-        @NameInMap("Password")
+        @com.aliyun.core.annotation.NameInMap("Password")
         private String password;
 
         private DesktopUsers(Builder builder) {

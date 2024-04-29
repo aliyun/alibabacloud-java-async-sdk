@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,20 +11,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RemoveUserFromDesktopOversoldUserGroupRequest</p>
  */
 public class RemoveUserFromDesktopOversoldUserGroupRequest extends Request {
-    @Query
-    @NameInMap("EndUserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndUserId")
     private String endUserId;
 
-    @Query
-    @NameInMap("OversoldGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OversoldGroupId")
     private String oversoldGroupId;
 
-    @Query
-    @NameInMap("UserDesktopId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserDesktopId")
     private String userDesktopId;
 
-    @Query
-    @NameInMap("UserGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserGroupId")
     private String userGroupId;
 
     private RemoveUserFromDesktopOversoldUserGroupRequest(Builder builder) {

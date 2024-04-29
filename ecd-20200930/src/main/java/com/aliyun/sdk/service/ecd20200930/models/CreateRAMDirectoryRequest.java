@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateRAMDirectoryRequest</p>
  */
 public class CreateRAMDirectoryRequest extends Request {
-    @Query
-    @NameInMap("DesktopAccessType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopAccessType")
     private String desktopAccessType;
 
-    @Query
-    @NameInMap("DirectoryName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DirectoryName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String directoryName;
 
-    @Query
-    @NameInMap("EnableAdminAccess")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableAdminAccess")
     private Boolean enableAdminAccess;
 
-    @Query
-    @NameInMap("EnableInternetAccess")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableInternetAccess")
     private Boolean enableInternetAccess;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("VSwitchId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > vSwitchId;
 
     private CreateRAMDirectoryRequest(Builder builder) {

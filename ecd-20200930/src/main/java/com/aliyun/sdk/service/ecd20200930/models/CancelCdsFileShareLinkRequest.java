@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,14 +11,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CancelCdsFileShareLinkRequest</p>
  */
 public class CancelCdsFileShareLinkRequest extends Request {
-    @Query
-    @NameInMap("CdsId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CdsId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cdsId;
 
-    @Query
-    @NameInMap("ShareId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShareId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String shareId;
 
     private CancelCdsFileShareLinkRequest(Builder builder) {

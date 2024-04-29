@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,44 +11,44 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CopyCdsFileRequest</p>
  */
 public class CopyCdsFileRequest extends Request {
-    @Query
-    @NameInMap("AutoRename")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoRename")
     private Boolean autoRename;
 
-    @Query
-    @NameInMap("CdsId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CdsId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cdsId;
 
-    @Query
-    @NameInMap("EndUserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndUserId")
     private String endUserId;
 
-    @Query
-    @NameInMap("FileId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fileId;
 
-    @Query
-    @NameInMap("FileReceiverId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileReceiverId")
     private String fileReceiverId;
 
-    @Query
-    @NameInMap("FileReceiverType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileReceiverType")
     private String fileReceiverType;
 
-    @Query
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
 
-    @Query
-    @NameInMap("ParentFolderId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParentFolderId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String parentFolderId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private CopyCdsFileRequest(Builder builder) {

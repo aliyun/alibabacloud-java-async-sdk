@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDesktopsResponseBody</p>
  */
 public class DescribeDesktopsResponseBody extends TeaModel {
-    @NameInMap("Desktops")
+    @com.aliyun.core.annotation.NameInMap("Desktops")
     private java.util.List < Desktops> desktops;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeDesktopsResponseBody(Builder builder) {
@@ -112,16 +111,16 @@ public class DescribeDesktopsResponseBody extends TeaModel {
     } 
 
     public static class Disks extends TeaModel {
-        @NameInMap("DiskId")
+        @com.aliyun.core.annotation.NameInMap("DiskId")
         private String diskId;
 
-        @NameInMap("DiskSize")
+        @com.aliyun.core.annotation.NameInMap("DiskSize")
         private Integer diskSize;
 
-        @NameInMap("DiskType")
+        @com.aliyun.core.annotation.NameInMap("DiskType")
         private String diskType;
 
-        @NameInMap("PerformanceLevel")
+        @com.aliyun.core.annotation.NameInMap("PerformanceLevel")
         private String performanceLevel;
 
         private Disks(Builder builder) {
@@ -240,22 +239,22 @@ public class DescribeDesktopsResponseBody extends TeaModel {
 
     }
     public static class FotaUpdate extends TeaModel {
-        @NameInMap("CurrentAppVersion")
+        @com.aliyun.core.annotation.NameInMap("CurrentAppVersion")
         private String currentAppVersion;
 
-        @NameInMap("NewAppVersion")
+        @com.aliyun.core.annotation.NameInMap("NewAppVersion")
         private String newAppVersion;
 
-        @NameInMap("ReleaseNote")
+        @com.aliyun.core.annotation.NameInMap("ReleaseNote")
         private String releaseNote;
 
-        @NameInMap("ReleaseNoteEn")
+        @com.aliyun.core.annotation.NameInMap("ReleaseNoteEn")
         private String releaseNoteEn;
 
-        @NameInMap("ReleaseNoteJp")
+        @com.aliyun.core.annotation.NameInMap("ReleaseNoteJp")
         private String releaseNoteJp;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Long size;
 
         private FotaUpdate(Builder builder) {
@@ -381,13 +380,13 @@ public class DescribeDesktopsResponseBody extends TeaModel {
 
     }
     public static class Sessions extends TeaModel {
-        @NameInMap("EndUserId")
+        @com.aliyun.core.annotation.NameInMap("EndUserId")
         private String endUserId;
 
-        @NameInMap("EstablishmentTime")
+        @com.aliyun.core.annotation.NameInMap("EstablishmentTime")
         private String establishmentTime;
 
-        @NameInMap("ExternalUserName")
+        @com.aliyun.core.annotation.NameInMap("ExternalUserName")
         private String externalUserName;
 
         private Sessions(Builder builder) {
@@ -462,10 +461,10 @@ public class DescribeDesktopsResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -523,181 +522,181 @@ public class DescribeDesktopsResponseBody extends TeaModel {
 
     }
     public static class Desktops extends TeaModel {
-        @NameInMap("BindAmount")
+        @com.aliyun.core.annotation.NameInMap("BindAmount")
         private Integer bindAmount;
 
-        @NameInMap("BundleId")
+        @com.aliyun.core.annotation.NameInMap("BundleId")
         private String bundleId;
 
-        @NameInMap("BundleName")
+        @com.aliyun.core.annotation.NameInMap("BundleName")
         private String bundleName;
 
-        @NameInMap("ChargeType")
+        @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
 
-        @NameInMap("ConnectionStatus")
+        @com.aliyun.core.annotation.NameInMap("ConnectionStatus")
         private String connectionStatus;
 
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private Integer cpu;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("DataDiskCategory")
+        @com.aliyun.core.annotation.NameInMap("DataDiskCategory")
         private String dataDiskCategory;
 
-        @NameInMap("DataDiskSize")
+        @com.aliyun.core.annotation.NameInMap("DataDiskSize")
         private String dataDiskSize;
 
-        @NameInMap("DesktopGroupId")
+        @com.aliyun.core.annotation.NameInMap("DesktopGroupId")
         private String desktopGroupId;
 
-        @NameInMap("DesktopId")
+        @com.aliyun.core.annotation.NameInMap("DesktopId")
         private String desktopId;
 
-        @NameInMap("DesktopName")
+        @com.aliyun.core.annotation.NameInMap("DesktopName")
         private String desktopName;
 
-        @NameInMap("DesktopStatus")
+        @com.aliyun.core.annotation.NameInMap("DesktopStatus")
         private String desktopStatus;
 
-        @NameInMap("DesktopType")
+        @com.aliyun.core.annotation.NameInMap("DesktopType")
         private String desktopType;
 
-        @NameInMap("DirectoryId")
+        @com.aliyun.core.annotation.NameInMap("DirectoryId")
         private String directoryId;
 
-        @NameInMap("DirectoryType")
+        @com.aliyun.core.annotation.NameInMap("DirectoryType")
         private String directoryType;
 
-        @NameInMap("Disks")
+        @com.aliyun.core.annotation.NameInMap("Disks")
         private java.util.List < Disks> disks;
 
-        @NameInMap("DowngradeQuota")
+        @com.aliyun.core.annotation.NameInMap("DowngradeQuota")
         private Long downgradeQuota;
 
-        @NameInMap("DowngradedTimes")
+        @com.aliyun.core.annotation.NameInMap("DowngradedTimes")
         private Long downgradedTimes;
 
-        @NameInMap("EndUserIds")
+        @com.aliyun.core.annotation.NameInMap("EndUserIds")
         private java.util.List < String > endUserIds;
 
-        @NameInMap("ExpiredTime")
+        @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
 
-        @NameInMap("FotaUpdate")
+        @com.aliyun.core.annotation.NameInMap("FotaUpdate")
         private FotaUpdate fotaUpdate;
 
-        @NameInMap("GpuCategory")
+        @com.aliyun.core.annotation.NameInMap("GpuCategory")
         private Long gpuCategory;
 
-        @NameInMap("GpuCount")
+        @com.aliyun.core.annotation.NameInMap("GpuCount")
         private Float gpuCount;
 
-        @NameInMap("GpuDriverVersion")
+        @com.aliyun.core.annotation.NameInMap("GpuDriverVersion")
         private String gpuDriverVersion;
 
-        @NameInMap("GpuSpec")
+        @com.aliyun.core.annotation.NameInMap("GpuSpec")
         private String gpuSpec;
 
-        @NameInMap("HibernationBeta")
+        @com.aliyun.core.annotation.NameInMap("HibernationBeta")
         private Boolean hibernationBeta;
 
-        @NameInMap("HibernationOptionsConfigured")
+        @com.aliyun.core.annotation.NameInMap("HibernationOptionsConfigured")
         private Boolean hibernationOptionsConfigured;
 
-        @NameInMap("HostName")
+        @com.aliyun.core.annotation.NameInMap("HostName")
         private String hostName;
 
-        @NameInMap("ImageId")
+        @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
 
-        @NameInMap("ManagementFlag")
+        @com.aliyun.core.annotation.NameInMap("ManagementFlag")
         private String managementFlag;
 
-        @NameInMap("ManagementFlags")
+        @com.aliyun.core.annotation.NameInMap("ManagementFlags")
         private java.util.List < String > managementFlags;
 
-        @NameInMap("Memory")
+        @com.aliyun.core.annotation.NameInMap("Memory")
         private Long memory;
 
-        @NameInMap("NetworkInterfaceId")
+        @com.aliyun.core.annotation.NameInMap("NetworkInterfaceId")
         private String networkInterfaceId;
 
-        @NameInMap("NetworkInterfaceIp")
+        @com.aliyun.core.annotation.NameInMap("NetworkInterfaceIp")
         private String networkInterfaceIp;
 
-        @NameInMap("OfficeSiteId")
+        @com.aliyun.core.annotation.NameInMap("OfficeSiteId")
         private String officeSiteId;
 
-        @NameInMap("OfficeSiteName")
+        @com.aliyun.core.annotation.NameInMap("OfficeSiteName")
         private String officeSiteName;
 
-        @NameInMap("OfficeSiteType")
+        @com.aliyun.core.annotation.NameInMap("OfficeSiteType")
         private String officeSiteType;
 
-        @NameInMap("OfficeSiteVpcType")
+        @com.aliyun.core.annotation.NameInMap("OfficeSiteVpcType")
         private String officeSiteVpcType;
 
-        @NameInMap("OsType")
+        @com.aliyun.core.annotation.NameInMap("OsType")
         private String osType;
 
-        @NameInMap("Platform")
+        @com.aliyun.core.annotation.NameInMap("Platform")
         private String platform;
 
-        @NameInMap("PolicyGroupId")
+        @com.aliyun.core.annotation.NameInMap("PolicyGroupId")
         private String policyGroupId;
 
-        @NameInMap("PolicyGroupIdList")
+        @com.aliyun.core.annotation.NameInMap("PolicyGroupIdList")
         private java.util.List < String > policyGroupIdList;
 
-        @NameInMap("PolicyGroupName")
+        @com.aliyun.core.annotation.NameInMap("PolicyGroupName")
         private String policyGroupName;
 
-        @NameInMap("PolicyGroupNameList")
+        @com.aliyun.core.annotation.NameInMap("PolicyGroupNameList")
         private java.util.List < String > policyGroupNameList;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private String progress;
 
-        @NameInMap("ProtocolType")
+        @com.aliyun.core.annotation.NameInMap("ProtocolType")
         private String protocolType;
 
-        @NameInMap("SessionType")
+        @com.aliyun.core.annotation.NameInMap("SessionType")
         private String sessionType;
 
-        @NameInMap("Sessions")
+        @com.aliyun.core.annotation.NameInMap("Sessions")
         private java.util.List < Sessions> sessions;
 
-        @NameInMap("SnapshotPolicyId")
+        @com.aliyun.core.annotation.NameInMap("SnapshotPolicyId")
         private String snapshotPolicyId;
 
-        @NameInMap("SnapshotPolicyName")
+        @com.aliyun.core.annotation.NameInMap("SnapshotPolicyName")
         private String snapshotPolicyName;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("SupportHibernation")
+        @com.aliyun.core.annotation.NameInMap("SupportHibernation")
         private Boolean supportHibernation;
 
-        @NameInMap("SystemDiskCategory")
+        @com.aliyun.core.annotation.NameInMap("SystemDiskCategory")
         private String systemDiskCategory;
 
-        @NameInMap("SystemDiskSize")
+        @com.aliyun.core.annotation.NameInMap("SystemDiskSize")
         private Integer systemDiskSize;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
-        @NameInMap("VolumeEncryptionEnabled")
+        @com.aliyun.core.annotation.NameInMap("VolumeEncryptionEnabled")
         private Boolean volumeEncryptionEnabled;
 
-        @NameInMap("VolumeEncryptionKey")
+        @com.aliyun.core.annotation.NameInMap("VolumeEncryptionKey")
         private String volumeEncryptionKey;
 
-        @NameInMap("ZoneType")
+        @com.aliyun.core.annotation.NameInMap("ZoneType")
         private String zoneType;
 
         private Desktops(Builder builder) {

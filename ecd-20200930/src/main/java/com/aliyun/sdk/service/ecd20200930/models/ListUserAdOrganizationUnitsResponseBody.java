@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListUserAdOrganizationUnitsResponseBody</p>
  */
 public class ListUserAdOrganizationUnitsResponseBody extends TeaModel {
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("OUNames")
+    @com.aliyun.core.annotation.NameInMap("OUNames")
     private java.util.List < OUNames> OUNames;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListUserAdOrganizationUnitsResponseBody(Builder builder) {
@@ -92,13 +91,13 @@ public class ListUserAdOrganizationUnitsResponseBody extends TeaModel {
     } 
 
     public static class OUNames extends TeaModel {
-        @NameInMap("DisplayOUName")
+        @com.aliyun.core.annotation.NameInMap("DisplayOUName")
         private String displayOUName;
 
-        @NameInMap("OUName")
+        @com.aliyun.core.annotation.NameInMap("OUName")
         private String OUName;
 
-        @NameInMap("OfficeSiteId")
+        @com.aliyun.core.annotation.NameInMap("OfficeSiteId")
         private String officeSiteId;
 
         private OUNames(Builder builder) {

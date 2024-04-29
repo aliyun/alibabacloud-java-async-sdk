@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCloudDrivePermissionsResponseBody</p>
  */
 public class DescribeCloudDrivePermissionsResponseBody extends TeaModel {
-    @NameInMap("CloudDrivePermissionModels")
+    @com.aliyun.core.annotation.NameInMap("CloudDrivePermissionModels")
     private java.util.List < CloudDrivePermissionModels> cloudDrivePermissionModels;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeCloudDrivePermissionsResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class DescribeCloudDrivePermissionsResponseBody extends TeaModel {
     } 
 
     public static class CloudDrivePermissionModels extends TeaModel {
-        @NameInMap("EndUsers")
+        @com.aliyun.core.annotation.NameInMap("EndUsers")
         private java.util.List < String > endUsers;
 
-        @NameInMap("Permission")
+        @com.aliyun.core.annotation.NameInMap("Permission")
         private String permission;
 
         private CloudDrivePermissionModels(Builder builder) {

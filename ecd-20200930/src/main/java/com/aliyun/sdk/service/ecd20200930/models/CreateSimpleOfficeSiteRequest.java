@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,61 +11,61 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateSimpleOfficeSiteRequest</p>
  */
 public class CreateSimpleOfficeSiteRequest extends Request {
-    @Query
-    @NameInMap("Bandwidth")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Bandwidth")
     private Integer bandwidth;
 
-    @Query
-    @NameInMap("CenId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CenId")
     private String cenId;
 
-    @Query
-    @NameInMap("CenOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CenOwnerId")
     private Long cenOwnerId;
 
-    @Query
-    @NameInMap("CidrBlock")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CidrBlock")
     private String cidrBlock;
 
-    @Query
-    @NameInMap("CloudBoxOfficeSite")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CloudBoxOfficeSite")
     private Boolean cloudBoxOfficeSite;
 
-    @Query
-    @NameInMap("DesktopAccessType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopAccessType")
     private String desktopAccessType;
 
-    @Query
-    @NameInMap("EnableAdminAccess")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableAdminAccess")
     private Boolean enableAdminAccess;
 
-    @Query
-    @NameInMap("EnableInternetAccess")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableInternetAccess")
     private Boolean enableInternetAccess;
 
-    @Query
-    @NameInMap("NeedVerifyZeroDevice")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NeedVerifyZeroDevice")
     private Boolean needVerifyZeroDevice;
 
-    @Query
-    @NameInMap("OfficeSiteName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OfficeSiteName")
     private String officeSiteName;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
     private java.util.List < String > vSwitchId;
 
-    @Query
-    @NameInMap("VerifyCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VerifyCode")
     private String verifyCode;
 
-    @Query
-    @NameInMap("VpcType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcType")
     private String vpcType;
 
     private CreateSimpleOfficeSiteRequest(Builder builder) {

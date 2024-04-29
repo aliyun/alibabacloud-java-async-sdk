@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,137 +11,137 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePriceRequest</p>
  */
 public class DescribePriceRequest extends Request {
-    @Query
-    @NameInMap("Amount")
-    @Validation(maximum = 1000, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Amount")
+    @com.aliyun.core.annotation.Validation(maximum = 1000, minimum = 1)
     private Integer amount;
 
-    @Query
-    @NameInMap("Bandwidth")
-    @Validation(maximum = 2048, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Bandwidth")
+    @com.aliyun.core.annotation.Validation(maximum = 2048, minimum = 1)
     private Integer bandwidth;
 
-    @Query
-    @NameInMap("BundleModels")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BundleModels")
     private java.util.List < BundleModels> bundleModels;
 
-    @Query
-    @NameInMap("EduCdsEnable")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EduCdsEnable")
     private String eduCdsEnable;
 
-    @Query
-    @NameInMap("EduCdsSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EduCdsSize")
     private Integer eduCdsSize;
 
-    @Query
-    @NameInMap("EduCommittedTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EduCommittedTime")
     private Integer eduCommittedTime;
 
-    @Query
-    @NameInMap("EduDesktopBundleId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EduDesktopBundleId")
     private String eduDesktopBundleId;
 
-    @Query
-    @NameInMap("EduDesktopNum")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EduDesktopNum")
     private Integer eduDesktopNum;
 
-    @Query
-    @NameInMap("EduRoomClassify")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EduRoomClassify")
     private String eduRoomClassify;
 
-    @Query
-    @NameInMap("EduStudentBundleId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EduStudentBundleId")
     private String eduStudentBundleId;
 
-    @Query
-    @NameInMap("EduStudentNum")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EduStudentNum")
     private Integer eduStudentNum;
 
-    @Query
-    @NameInMap("EduTeacherBundleId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EduTeacherBundleId")
     private String eduTeacherBundleId;
 
-    @Query
-    @NameInMap("EduTeacherNum")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EduTeacherNum")
     private Integer eduTeacherNum;
 
-    @Query
-    @NameInMap("GroupDesktopCount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupDesktopCount")
     private Integer groupDesktopCount;
 
-    @Query
-    @NameInMap("HardwareVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HardwareVersion")
     private String hardwareVersion;
 
-    @Query
-    @NameInMap("InstanceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
     private String instanceType;
 
-    @Query
-    @NameInMap("InternetChargeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InternetChargeType")
     private String internetChargeType;
 
-    @Query
-    @NameInMap("NetworkType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkType")
     private String networkType;
 
-    @Query
-    @NameInMap("OsType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OsType")
     private String osType;
 
-    @Query
-    @NameInMap("PackageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PackageSize")
     private Integer packageSize;
 
-    @Query
-    @NameInMap("Period")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Period")
     private Integer period;
 
-    @Query
-    @NameInMap("PeriodUnit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PeriodUnit")
     private String periodUnit;
 
-    @Query
-    @NameInMap("PromotionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PromotionId")
     private String promotionId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
     private String resourceType;
 
-    @Query
-    @NameInMap("RootDiskPerformanceLevel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RootDiskPerformanceLevel")
     private String rootDiskPerformanceLevel;
 
-    @Query
-    @NameInMap("RootDiskSizeGib")
-    @Validation(maximum = 32768)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RootDiskSizeGib")
+    @com.aliyun.core.annotation.Validation(maximum = 32768)
     private Integer rootDiskSizeGib;
 
-    @Query
-    @NameInMap("SpPeriodInfo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpPeriodInfo")
     private String spPeriodInfo;
 
-    @Query
-    @NameInMap("SpPrice")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpPrice")
     private Boolean spPrice;
 
-    @Query
-    @NameInMap("SpType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpType")
     private String spType;
 
-    @Query
-    @NameInMap("UserDiskPerformanceLevel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserDiskPerformanceLevel")
     private String userDiskPerformanceLevel;
 
-    @Query
-    @NameInMap("UserDiskSizeGib")
-    @Validation(maximum = 32768)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserDiskSizeGib")
+    @com.aliyun.core.annotation.Validation(maximum = 32768)
     private Integer userDiskSizeGib;
 
     private DescribePriceRequest(Builder builder) {
@@ -854,14 +853,14 @@ public class DescribePriceRequest extends Request {
     } 
 
     public static class BundleModels extends TeaModel {
-        @NameInMap("Amount")
-        @Validation(maximum = 1000, minimum = 1)
+        @com.aliyun.core.annotation.NameInMap("Amount")
+        @com.aliyun.core.annotation.Validation(maximum = 1000, minimum = 1)
         private Integer amount;
 
-        @NameInMap("BundleId")
+        @com.aliyun.core.annotation.NameInMap("BundleId")
         private String bundleId;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private Integer duration;
 
         private BundleModels(Builder builder) {

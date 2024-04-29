@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeVirtualMFADevicesResponseBody</p>
  */
 public class DescribeVirtualMFADevicesResponseBody extends TeaModel {
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("VirtualMFADevices")
+    @com.aliyun.core.annotation.NameInMap("VirtualMFADevices")
     private java.util.List < VirtualMFADevices> virtualMFADevices;
 
     private DescribeVirtualMFADevicesResponseBody(Builder builder) {
@@ -92,28 +91,28 @@ public class DescribeVirtualMFADevicesResponseBody extends TeaModel {
     } 
 
     public static class VirtualMFADevices extends TeaModel {
-        @NameInMap("ConsecutiveFails")
+        @com.aliyun.core.annotation.NameInMap("ConsecutiveFails")
         private Integer consecutiveFails;
 
-        @NameInMap("DirectoryId")
+        @com.aliyun.core.annotation.NameInMap("DirectoryId")
         private String directoryId;
 
-        @NameInMap("EndUserId")
+        @com.aliyun.core.annotation.NameInMap("EndUserId")
         private String endUserId;
 
-        @NameInMap("GmtEnabled")
+        @com.aliyun.core.annotation.NameInMap("GmtEnabled")
         private String gmtEnabled;
 
-        @NameInMap("GmtUnlock")
+        @com.aliyun.core.annotation.NameInMap("GmtUnlock")
         private String gmtUnlock;
 
-        @NameInMap("OfficeSiteId")
+        @com.aliyun.core.annotation.NameInMap("OfficeSiteId")
         private String officeSiteId;
 
-        @NameInMap("SerialNumber")
+        @com.aliyun.core.annotation.NameInMap("SerialNumber")
         private String serialNumber;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
         private VirtualMFADevices(Builder builder) {

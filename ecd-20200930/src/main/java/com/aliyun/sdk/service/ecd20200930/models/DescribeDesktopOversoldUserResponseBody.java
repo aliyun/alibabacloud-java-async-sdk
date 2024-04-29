@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDesktopOversoldUserResponseBody</p>
  */
 public class DescribeDesktopOversoldUserResponseBody extends TeaModel {
-    @NameInMap("Count")
+    @com.aliyun.core.annotation.NameInMap("Count")
     private Integer count;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDesktopOversoldUserResponseBody(Builder builder) {
@@ -112,16 +111,16 @@ public class DescribeDesktopOversoldUserResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("EndUserId")
+        @com.aliyun.core.annotation.NameInMap("EndUserId")
         private String endUserId;
 
-        @NameInMap("OversoldGroupId")
+        @com.aliyun.core.annotation.NameInMap("OversoldGroupId")
         private String oversoldGroupId;
 
-        @NameInMap("UserDesktopId")
+        @com.aliyun.core.annotation.NameInMap("UserDesktopId")
         private String userDesktopId;
 
-        @NameInMap("UserGroupId")
+        @com.aliyun.core.annotation.NameInMap("UserGroupId")
         private String userGroupId;
 
         private Data(Builder builder) {

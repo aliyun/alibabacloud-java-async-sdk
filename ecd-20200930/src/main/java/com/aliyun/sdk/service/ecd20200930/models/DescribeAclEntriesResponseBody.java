@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAclEntriesResponseBody</p>
  */
 public class DescribeAclEntriesResponseBody extends TeaModel {
-    @NameInMap("AclEntries")
+    @com.aliyun.core.annotation.NameInMap("AclEntries")
     private java.util.List < AclEntries> aclEntries;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeAclEntriesResponseBody(Builder builder) {
@@ -92,13 +91,13 @@ public class DescribeAclEntriesResponseBody extends TeaModel {
     } 
 
     public static class AclEntries extends TeaModel {
-        @NameInMap("Policy")
+        @com.aliyun.core.annotation.NameInMap("Policy")
         private String policy;
 
-        @NameInMap("SourceId")
+        @com.aliyun.core.annotation.NameInMap("SourceId")
         private String sourceId;
 
-        @NameInMap("SourceType")
+        @com.aliyun.core.annotation.NameInMap("SourceType")
         private String sourceType;
 
         private AclEntries(Builder builder) {

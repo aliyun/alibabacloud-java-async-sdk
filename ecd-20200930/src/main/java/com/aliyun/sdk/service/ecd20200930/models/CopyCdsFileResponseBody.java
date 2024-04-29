@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CopyCdsFileResponseBody</p>
  */
 public class CopyCdsFileResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("CopyCdsFileModel")
+    @com.aliyun.core.annotation.NameInMap("CopyCdsFileModel")
     private CopyCdsFileModel copyCdsFileModel;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
     private CopyCdsFileResponseBody(Builder builder) {
@@ -151,10 +150,10 @@ public class CopyCdsFileResponseBody extends TeaModel {
     } 
 
     public static class CopyCdsFileModel extends TeaModel {
-        @NameInMap("AsyncTaskId")
+        @com.aliyun.core.annotation.NameInMap("AsyncTaskId")
         private String asyncTaskId;
 
-        @NameInMap("FileId")
+        @com.aliyun.core.annotation.NameInMap("FileId")
         private String fileId;
 
         private CopyCdsFileModel(Builder builder) {

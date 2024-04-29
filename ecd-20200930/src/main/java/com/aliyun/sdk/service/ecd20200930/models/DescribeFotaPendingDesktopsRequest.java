@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeFotaPendingDesktopsRequest</p>
  */
 public class DescribeFotaPendingDesktopsRequest extends Request {
-    @Query
-    @NameInMap("DesktopId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopId")
     private String desktopId;
 
-    @Query
-    @NameInMap("DesktopName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopName")
     private String desktopName;
 
-    @Query
-    @NameInMap("MaxResults")
-    @Validation(maximum = 500)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Validation(maximum = 500)
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("OfficeSiteId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OfficeSiteId")
     private String officeSiteId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("TaskUid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskUid")
     private String taskUid;
 
     private DescribeFotaPendingDesktopsRequest(Builder builder) {
@@ -140,7 +139,7 @@ public class DescribeFotaPendingDesktopsRequest extends Request {
         } 
 
         /**
-         * The cloud computer ID.
+         * The ID of the cloud computer.
          */
         public Builder desktopId(String desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -149,7 +148,7 @@ public class DescribeFotaPendingDesktopsRequest extends Request {
         }
 
         /**
-         * The cloud computer name.
+         * The name of the cloud computer.
          */
         public Builder desktopName(String desktopName) {
             this.putQueryParameter("DesktopName", desktopName);
@@ -171,7 +170,7 @@ public class DescribeFotaPendingDesktopsRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.
+         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of `NextToken`.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -180,7 +179,7 @@ public class DescribeFotaPendingDesktopsRequest extends Request {
         }
 
         /**
-         * The office network ID. You can call the [DescribeOfficeSites](~~216071~~) operation to obtain the office network ID.
+         * The ID of the office network. You can call the [DescribeOfficeSites](~~216071~~) operation to obtain the value of this parameter.
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -189,7 +188,7 @@ public class DescribeFotaPendingDesktopsRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the regions supported by WUYING Workspace.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -198,7 +197,7 @@ public class DescribeFotaPendingDesktopsRequest extends Request {
         }
 
         /**
-         * The ID of the image update task. You can call the DescribeFotaTasks operation to obtain the task ID.
+         * The ID of the image update task. You can call the [DescribeFotaTasks](~~437001~~) operation to obtain the value of this parameter.
          */
         public Builder taskUid(String taskUid) {
             this.putQueryParameter("TaskUid", taskUid);

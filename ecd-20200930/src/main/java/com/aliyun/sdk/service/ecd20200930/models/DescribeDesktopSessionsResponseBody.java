@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDesktopSessionsResponseBody</p>
  */
 public class DescribeDesktopSessionsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Sessions")
+    @com.aliyun.core.annotation.NameInMap("Sessions")
     private java.util.List < Sessions> sessions;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeDesktopSessionsResponseBody(Builder builder) {
@@ -92,55 +91,55 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
     } 
 
     public static class Sessions extends TeaModel {
-        @NameInMap("ClientIp")
+        @com.aliyun.core.annotation.NameInMap("ClientIp")
         private String clientIp;
 
-        @NameInMap("ClientOS")
+        @com.aliyun.core.annotation.NameInMap("ClientOS")
         private String clientOS;
 
-        @NameInMap("ClientVersion")
+        @com.aliyun.core.annotation.NameInMap("ClientVersion")
         private String clientVersion;
 
-        @NameInMap("DesktopId")
+        @com.aliyun.core.annotation.NameInMap("DesktopId")
         private String desktopId;
 
-        @NameInMap("DesktopName")
+        @com.aliyun.core.annotation.NameInMap("DesktopName")
         private String desktopName;
 
-        @NameInMap("EndUserApplyCoordinateTime")
+        @com.aliyun.core.annotation.NameInMap("EndUserApplyCoordinateTime")
         private Long endUserApplyCoordinateTime;
 
-        @NameInMap("EndUserId")
+        @com.aliyun.core.annotation.NameInMap("EndUserId")
         private String endUserId;
 
-        @NameInMap("LatestConnectionTime")
+        @com.aliyun.core.annotation.NameInMap("LatestConnectionTime")
         private Long latestConnectionTime;
 
-        @NameInMap("OfficeSiteId")
+        @com.aliyun.core.annotation.NameInMap("OfficeSiteId")
         private String officeSiteId;
 
-        @NameInMap("OfficeSiteName")
+        @com.aliyun.core.annotation.NameInMap("OfficeSiteName")
         private String officeSiteName;
 
-        @NameInMap("OsType")
+        @com.aliyun.core.annotation.NameInMap("OsType")
         private String osType;
 
-        @NameInMap("ProtocolType")
+        @com.aliyun.core.annotation.NameInMap("ProtocolType")
         private String protocolType;
 
-        @NameInMap("SessionEndTime")
+        @com.aliyun.core.annotation.NameInMap("SessionEndTime")
         private String sessionEndTime;
 
-        @NameInMap("SessionIdleTime")
+        @com.aliyun.core.annotation.NameInMap("SessionIdleTime")
         private Long sessionIdleTime;
 
-        @NameInMap("SessionStartTime")
+        @com.aliyun.core.annotation.NameInMap("SessionStartTime")
         private String sessionStartTime;
 
-        @NameInMap("SessionStatus")
+        @com.aliyun.core.annotation.NameInMap("SessionStatus")
         private String sessionStatus;
 
-        @NameInMap("TotalConnectionTime")
+        @com.aliyun.core.annotation.NameInMap("TotalConnectionTime")
         private Long totalConnectionTime;
 
         private Sessions(Builder builder) {

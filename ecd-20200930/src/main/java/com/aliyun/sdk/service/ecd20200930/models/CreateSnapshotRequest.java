@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,29 +11,29 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateSnapshotRequest</p>
  */
 public class CreateSnapshotRequest extends Request {
-    @Query
-    @NameInMap("Description")
-    @Validation(maxLength = 128)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
+    @com.aliyun.core.annotation.Validation(maxLength = 128)
     private String description;
 
-    @Query
-    @NameInMap("DesktopId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String desktopId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("SnapshotName")
-    @Validation(required = true, maxLength = 128, minLength = 2)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnapshotName")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 128, minLength = 2)
     private String snapshotName;
 
-    @Query
-    @NameInMap("SourceDiskType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceDiskType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceDiskType;
 
     private CreateSnapshotRequest(Builder builder) {

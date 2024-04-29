@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>VerifyCenResponseBody</p>
  */
 public class VerifyCenResponseBody extends TeaModel {
-    @NameInMap("CidrBlocks")
+    @com.aliyun.core.annotation.NameInMap("CidrBlocks")
     private java.util.List < String > cidrBlocks;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RouteEntries")
+    @com.aliyun.core.annotation.NameInMap("RouteEntries")
     private java.util.List < RouteEntries> routeEntries;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private VerifyCenResponseBody(Builder builder) {
@@ -122,16 +121,16 @@ public class VerifyCenResponseBody extends TeaModel {
     } 
 
     public static class RouteEntries extends TeaModel {
-        @NameInMap("DestinationCidrBlock")
+        @com.aliyun.core.annotation.NameInMap("DestinationCidrBlock")
         private String destinationCidrBlock;
 
-        @NameInMap("NextHopInstanceId")
+        @com.aliyun.core.annotation.NameInMap("NextHopInstanceId")
         private String nextHopInstanceId;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private RouteEntries(Builder builder) {

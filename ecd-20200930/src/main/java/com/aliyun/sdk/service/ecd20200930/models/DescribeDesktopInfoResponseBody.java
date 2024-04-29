@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDesktopInfoResponseBody</p>
  */
 public class DescribeDesktopInfoResponseBody extends TeaModel {
-    @NameInMap("Desktops")
+    @com.aliyun.core.annotation.NameInMap("Desktops")
     private java.util.List < Desktops> desktops;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDesktopInfoResponseBody(Builder builder) {
@@ -72,31 +71,31 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
     } 
 
     public static class Desktops extends TeaModel {
-        @NameInMap("ConnectionStatus")
+        @com.aliyun.core.annotation.NameInMap("ConnectionStatus")
         private String connectionStatus;
 
-        @NameInMap("CurrentAppVersion")
+        @com.aliyun.core.annotation.NameInMap("CurrentAppVersion")
         private String currentAppVersion;
 
-        @NameInMap("DesktopId")
+        @com.aliyun.core.annotation.NameInMap("DesktopId")
         private String desktopId;
 
-        @NameInMap("DesktopStatus")
+        @com.aliyun.core.annotation.NameInMap("DesktopStatus")
         private String desktopStatus;
 
-        @NameInMap("ManagementFlag")
+        @com.aliyun.core.annotation.NameInMap("ManagementFlag")
         private java.util.List < String > managementFlag;
 
-        @NameInMap("NewAppSize")
+        @com.aliyun.core.annotation.NameInMap("NewAppSize")
         private Long newAppSize;
 
-        @NameInMap("NewAppVersion")
+        @com.aliyun.core.annotation.NameInMap("NewAppVersion")
         private String newAppVersion;
 
-        @NameInMap("ReleaseNote")
+        @com.aliyun.core.annotation.NameInMap("ReleaseNote")
         private String releaseNote;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
         private Desktops(Builder builder) {

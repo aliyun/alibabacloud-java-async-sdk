@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,52 +11,52 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UploadImageRequest</p>
  */
 public class UploadImageRequest extends Request {
-    @Query
-    @NameInMap("DataDiskSize")
-    @Validation(maximum = 500, minimum = 5)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataDiskSize")
+    @com.aliyun.core.annotation.Validation(maximum = 500, minimum = 5)
     private Integer dataDiskSize;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("EnableSecurityCheck")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableSecurityCheck")
     private Boolean enableSecurityCheck;
 
-    @Query
-    @NameInMap("GpuCategory")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GpuCategory")
     private Boolean gpuCategory;
 
-    @Query
-    @NameInMap("GpuDriverType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GpuDriverType")
     private String gpuDriverType;
 
-    @Query
-    @NameInMap("ImageName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String imageName;
 
-    @Query
-    @NameInMap("LicenseType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LicenseType")
     private String licenseType;
 
-    @Query
-    @NameInMap("OsType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OsType")
     private String osType;
 
-    @Query
-    @NameInMap("OssObjectPath")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OssObjectPath")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ossObjectPath;
 
-    @Query
-    @NameInMap("ProtocolType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProtocolType")
     private String protocolType;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private UploadImageRequest(Builder builder) {

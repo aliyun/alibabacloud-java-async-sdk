@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,35 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RenewDesktopsRequest</p>
  */
 public class RenewDesktopsRequest extends Request {
-    @Query
-    @NameInMap("AutoPay")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoPay")
     private Boolean autoPay;
 
-    @Query
-    @NameInMap("DesktopId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > desktopId;
 
-    @Query
-    @NameInMap("Period")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Period")
     private Integer period;
 
-    @Query
-    @NameInMap("PeriodUnit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PeriodUnit")
     private String periodUnit;
 
-    @Query
-    @NameInMap("PromotionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PromotionId")
     private String promotionId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
+    private String resourceType;
 
     private RenewDesktopsRequest(Builder builder) {
         super(builder);
@@ -46,6 +49,7 @@ public class RenewDesktopsRequest extends Request {
         this.periodUnit = builder.periodUnit;
         this.promotionId = builder.promotionId;
         this.regionId = builder.regionId;
+        this.resourceType = builder.resourceType;
     }
 
     public static Builder builder() {
@@ -103,6 +107,13 @@ public class RenewDesktopsRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return resourceType
+     */
+    public String getResourceType() {
+        return this.resourceType;
+    }
+
     public static final class Builder extends Request.Builder<RenewDesktopsRequest, Builder> {
         private Boolean autoPay; 
         private java.util.List < String > desktopId; 
@@ -110,6 +121,7 @@ public class RenewDesktopsRequest extends Request {
         private String periodUnit; 
         private String promotionId; 
         private String regionId; 
+        private String resourceType; 
 
         private Builder() {
             super();
@@ -123,6 +135,7 @@ public class RenewDesktopsRequest extends Request {
             this.periodUnit = request.periodUnit;
             this.promotionId = request.promotionId;
             this.regionId = request.regionId;
+            this.resourceType = request.resourceType;
         } 
 
         /**
@@ -224,6 +237,15 @@ public class RenewDesktopsRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceType.
+         */
+        public Builder resourceType(String resourceType) {
+            this.putQueryParameter("ResourceType", resourceType);
+            this.resourceType = resourceType;
             return this;
         }
 

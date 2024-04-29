@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,41 +11,41 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateAndBindNasFileSystemRequest</p>
  */
 public class CreateAndBindNasFileSystemRequest extends Request {
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("DesktopGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String desktopGroupId;
 
-    @Query
-    @NameInMap("EncryptType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EncryptType")
     private Integer encryptType;
 
-    @Query
-    @NameInMap("EndUserIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndUserIds")
     private java.util.List < String > endUserIds;
 
-    @Query
-    @NameInMap("FileSystemName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileSystemName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fileSystemName;
 
-    @Query
-    @NameInMap("OfficeSiteId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OfficeSiteId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String officeSiteId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("StorageType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StorageType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String storageType;
 
     private CreateAndBindNasFileSystemRequest(Builder builder) {

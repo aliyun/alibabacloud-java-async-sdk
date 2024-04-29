@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAutoSnapshotPolicyResponseBody</p>
  */
 public class DescribeAutoSnapshotPolicyResponseBody extends TeaModel {
-    @NameInMap("AutoSnapshotPolicies")
+    @com.aliyun.core.annotation.NameInMap("AutoSnapshotPolicies")
     private java.util.List < AutoSnapshotPolicies> autoSnapshotPolicies;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeAutoSnapshotPolicyResponseBody(Builder builder) {
@@ -92,31 +91,31 @@ public class DescribeAutoSnapshotPolicyResponseBody extends TeaModel {
     } 
 
     public static class AutoSnapshotPolicies extends TeaModel {
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("CronExpression")
+        @com.aliyun.core.annotation.NameInMap("CronExpression")
         private String cronExpression;
 
-        @NameInMap("DesktopNum")
+        @com.aliyun.core.annotation.NameInMap("DesktopNum")
         private Integer desktopNum;
 
-        @NameInMap("PolicyId")
+        @com.aliyun.core.annotation.NameInMap("PolicyId")
         private String policyId;
 
-        @NameInMap("PolicyName")
+        @com.aliyun.core.annotation.NameInMap("PolicyName")
         private String policyName;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RetentionDays")
+        @com.aliyun.core.annotation.NameInMap("RetentionDays")
         private String retentionDays;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TimePoints")
+        @com.aliyun.core.annotation.NameInMap("TimePoints")
         private String timePoints;
 
         private AutoSnapshotPolicies(Builder builder) {

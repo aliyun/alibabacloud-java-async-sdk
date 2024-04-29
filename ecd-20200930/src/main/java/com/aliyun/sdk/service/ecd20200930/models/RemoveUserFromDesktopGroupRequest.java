@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RemoveUserFromDesktopGroupRequest</p>
  */
 public class RemoveUserFromDesktopGroupRequest extends Request {
-    @Query
-    @NameInMap("DesktopGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopGroupId")
     private String desktopGroupId;
 
-    @Query
-    @NameInMap("DesktopGroupIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopGroupIds")
     private java.util.List < String > desktopGroupIds;
 
-    @Query
-    @NameInMap("EndUserIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndUserIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > endUserIds;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private RemoveUserFromDesktopGroupRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSessionStatisticResponseBody</p>
  */
 public class DescribeSessionStatisticResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Statistic")
+    @com.aliyun.core.annotation.NameInMap("Statistic")
     private java.util.List < Statistic> statistic;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
 
     private DescribeSessionStatisticResponseBody(Builder builder) {
@@ -92,10 +91,10 @@ public class DescribeSessionStatisticResponseBody extends TeaModel {
     } 
 
     public static class Statistic extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
 
-        @NameInMap("TimePoint")
+        @com.aliyun.core.annotation.NameInMap("TimePoint")
         private Long timePoint;
 
         private Statistic(Builder builder) {

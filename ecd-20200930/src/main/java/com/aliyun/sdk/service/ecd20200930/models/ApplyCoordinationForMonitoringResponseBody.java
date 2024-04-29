@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ApplyCoordinationForMonitoringResponseBody</p>
  */
 public class ApplyCoordinationForMonitoringResponseBody extends TeaModel {
-    @NameInMap("CoordinateFlowModels")
+    @com.aliyun.core.annotation.NameInMap("CoordinateFlowModels")
     private java.util.List < CoordinateFlowModels> coordinateFlowModels;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ApplyCoordinationForMonitoringResponseBody(Builder builder) {
@@ -72,25 +71,25 @@ public class ApplyCoordinationForMonitoringResponseBody extends TeaModel {
     } 
 
     public static class CoordinateFlowModels extends TeaModel {
-        @NameInMap("CoId")
+        @com.aliyun.core.annotation.NameInMap("CoId")
         private String coId;
 
-        @NameInMap("CoordinateStatus")
+        @com.aliyun.core.annotation.NameInMap("CoordinateStatus")
         private String coordinateStatus;
 
-        @NameInMap("CoordinateTicket")
+        @com.aliyun.core.annotation.NameInMap("CoordinateTicket")
         private String coordinateTicket;
 
-        @NameInMap("InitiatorType")
+        @com.aliyun.core.annotation.NameInMap("InitiatorType")
         private String initiatorType;
 
-        @NameInMap("OwnerUserId")
+        @com.aliyun.core.annotation.NameInMap("OwnerUserId")
         private String ownerUserId;
 
-        @NameInMap("ResourceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
-        @NameInMap("ResourceName")
+        @com.aliyun.core.annotation.NameInMap("ResourceName")
         private String resourceName;
 
         private CoordinateFlowModels(Builder builder) {

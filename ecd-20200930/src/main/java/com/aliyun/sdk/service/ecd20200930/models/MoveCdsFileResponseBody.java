@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>MoveCdsFileResponseBody</p>
  */
 public class MoveCdsFileResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("MoveCdsFileModel")
+    @com.aliyun.core.annotation.NameInMap("MoveCdsFileModel")
     private MoveCdsFileModel moveCdsFileModel;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private MoveCdsFileResponseBody(Builder builder) {
@@ -151,13 +150,13 @@ public class MoveCdsFileResponseBody extends TeaModel {
     } 
 
     public static class MoveCdsFileModel extends TeaModel {
-        @NameInMap("AsyncTaskId")
+        @com.aliyun.core.annotation.NameInMap("AsyncTaskId")
         private String asyncTaskId;
 
-        @NameInMap("Exist")
+        @com.aliyun.core.annotation.NameInMap("Exist")
         private Boolean exist;
 
-        @NameInMap("FileId")
+        @com.aliyun.core.annotation.NameInMap("FileId")
         private String fileId;
 
         private MoveCdsFileModel(Builder builder) {

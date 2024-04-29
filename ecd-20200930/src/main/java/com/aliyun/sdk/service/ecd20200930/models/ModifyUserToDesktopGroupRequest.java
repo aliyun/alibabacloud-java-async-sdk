@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyUserToDesktopGroupRequest</p>
  */
 public class ModifyUserToDesktopGroupRequest extends Request {
-    @Query
-    @NameInMap("DesktopGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String desktopGroupId;
 
-    @Query
-    @NameInMap("NewEndUserIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewEndUserIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > newEndUserIds;
 
-    @Query
-    @NameInMap("OldEndUserIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OldEndUserIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > oldEndUserIds;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private ModifyUserToDesktopGroupRequest(Builder builder) {

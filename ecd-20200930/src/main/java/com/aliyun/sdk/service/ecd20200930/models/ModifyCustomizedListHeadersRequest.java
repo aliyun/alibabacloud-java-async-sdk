@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,17 +11,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyCustomizedListHeadersRequest</p>
  */
 public class ModifyCustomizedListHeadersRequest extends Request {
-    @Query
-    @NameInMap("Headers")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Headers")
     private java.util.List < Headers> headers;
 
-    @Query
-    @NameInMap("ListType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ListType")
     private String listType;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private ModifyCustomizedListHeadersRequest(Builder builder) {
@@ -128,10 +127,10 @@ public class ModifyCustomizedListHeadersRequest extends Request {
     } 
 
     public static class Headers extends TeaModel {
-        @NameInMap("DisplayType")
+        @com.aliyun.core.annotation.NameInMap("DisplayType")
         private String displayType;
 
-        @NameInMap("HeaderKey")
+        @com.aliyun.core.annotation.NameInMap("HeaderKey")
         private String headerKey;
 
         private Headers(Builder builder) {

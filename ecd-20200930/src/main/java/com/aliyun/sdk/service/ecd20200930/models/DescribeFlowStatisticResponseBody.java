@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeFlowStatisticResponseBody</p>
  */
 public class DescribeFlowStatisticResponseBody extends TeaModel {
-    @NameInMap("DesktopCount")
+    @com.aliyun.core.annotation.NameInMap("DesktopCount")
     private Integer desktopCount;
 
-    @NameInMap("DesktopFlowStatistic")
+    @com.aliyun.core.annotation.NameInMap("DesktopFlowStatistic")
     private java.util.List < DesktopFlowStatistic> desktopFlowStatistic;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeFlowStatisticResponseBody(Builder builder) {
@@ -92,16 +91,16 @@ public class DescribeFlowStatisticResponseBody extends TeaModel {
     } 
 
     public static class DesktopFlowStatistic extends TeaModel {
-        @NameInMap("DesktopId")
+        @com.aliyun.core.annotation.NameInMap("DesktopId")
         private String desktopId;
 
-        @NameInMap("DesktopName")
+        @com.aliyun.core.annotation.NameInMap("DesktopName")
         private String desktopName;
 
-        @NameInMap("FlowIn")
+        @com.aliyun.core.annotation.NameInMap("FlowIn")
         private String flowIn;
 
-        @NameInMap("FlowRank")
+        @com.aliyun.core.annotation.NameInMap("FlowRank")
         private Integer flowRank;
 
         private DesktopFlowStatistic(Builder builder) {

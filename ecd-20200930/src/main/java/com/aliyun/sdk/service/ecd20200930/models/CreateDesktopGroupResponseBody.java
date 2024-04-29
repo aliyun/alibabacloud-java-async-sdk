@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateDesktopGroupResponseBody</p>
  */
 public class CreateDesktopGroupResponseBody extends TeaModel {
-    @NameInMap("DesktopGroupId")
+    @com.aliyun.core.annotation.NameInMap("DesktopGroupId")
     private String desktopGroupId;
 
-    @NameInMap("OrderIds")
+    @com.aliyun.core.annotation.NameInMap("OrderIds")
     private java.util.List < String > orderIds;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateDesktopGroupResponseBody(Builder builder) {

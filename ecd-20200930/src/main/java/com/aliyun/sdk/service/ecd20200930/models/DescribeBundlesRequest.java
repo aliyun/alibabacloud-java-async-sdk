@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,86 +11,86 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeBundlesRequest</p>
  */
 public class DescribeBundlesRequest extends Request {
-    @Query
-    @NameInMap("BundleId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BundleId")
     private java.util.List < String > bundleId;
 
-    @Query
-    @NameInMap("BundleType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BundleType")
     private String bundleType;
 
-    @Query
-    @NameInMap("CheckStock")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CheckStock")
     private Boolean checkStock;
 
-    @Query
-    @NameInMap("CpuCount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CpuCount")
     private Integer cpuCount;
 
-    @Query
-    @NameInMap("DesktopTypeFamily")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopTypeFamily")
     private String desktopTypeFamily;
 
-    @Query
-    @NameInMap("FotaChannel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FotaChannel")
     private String fotaChannel;
 
-    @Query
-    @NameInMap("FromDesktopGroup")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FromDesktopGroup")
     private Boolean fromDesktopGroup;
 
-    @Query
-    @NameInMap("GpuCount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GpuCount")
     private Float gpuCount;
 
-    @Query
-    @NameInMap("ImageId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageId")
     private java.util.List < String > imageId;
 
-    @Query
-    @NameInMap("MaxResults")
-    @Validation(maximum = 500)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Validation(maximum = 500)
     private Integer maxResults;
 
-    @Query
-    @NameInMap("MemorySize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MemorySize")
     private Integer memorySize;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("OsType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OsType")
     private String osType;
 
-    @Query
-    @NameInMap("ProtocolType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProtocolType")
     private String protocolType;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("Scope")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Scope")
     private String scope;
 
-    @Query
-    @NameInMap("SelectedBundle")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SelectedBundle")
     private Boolean selectedBundle;
 
-    @Query
-    @NameInMap("SessionType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SessionType")
     private String sessionType;
 
-    @Query
-    @NameInMap("SupportMultiSession")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SupportMultiSession")
     private Boolean supportMultiSession;
 
-    @Query
-    @NameInMap("VolumeEncryptionEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VolumeEncryptionEnabled")
     private Boolean volumeEncryptionEnabled;
 
     private DescribeBundlesRequest(Builder builder) {

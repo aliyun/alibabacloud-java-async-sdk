@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeFotaPendingDesktopsResponseBody</p>
  */
 public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("FotaPendingDesktops")
+    @com.aliyun.core.annotation.NameInMap("FotaPendingDesktops")
     private java.util.List < FotaPendingDesktops> fotaPendingDesktops;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeFotaPendingDesktopsResponseBody(Builder builder) {
@@ -94,7 +93,7 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
         }
 
         /**
-         * The cloud computers whose images can be but are not yet updated to the version that is described in an image update task (TaskUid).
+         * The cloud computers whose images can be and are pending to be updated to the version specified in `TaskUid`.
          */
         public Builder fotaPendingDesktops(java.util.List < FotaPendingDesktops> fotaPendingDesktops) {
             this.fotaPendingDesktops = fotaPendingDesktops;
@@ -132,7 +131,7 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
     } 
 
     public static class Sessions extends TeaModel {
-        @NameInMap("EndUserId")
+        @com.aliyun.core.annotation.NameInMap("EndUserId")
         private String endUserId;
 
         private Sessions(Builder builder) {
@@ -173,25 +172,25 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
 
     }
     public static class FotaPendingDesktops extends TeaModel {
-        @NameInMap("CurrentAppVersion")
+        @com.aliyun.core.annotation.NameInMap("CurrentAppVersion")
         private String currentAppVersion;
 
-        @NameInMap("DesktopId")
+        @com.aliyun.core.annotation.NameInMap("DesktopId")
         private String desktopId;
 
-        @NameInMap("DesktopName")
+        @com.aliyun.core.annotation.NameInMap("DesktopName")
         private String desktopName;
 
-        @NameInMap("FotaProject")
+        @com.aliyun.core.annotation.NameInMap("FotaProject")
         private String fotaProject;
 
-        @NameInMap("OfficeSiteId")
+        @com.aliyun.core.annotation.NameInMap("OfficeSiteId")
         private String officeSiteId;
 
-        @NameInMap("Sessions")
+        @com.aliyun.core.annotation.NameInMap("Sessions")
         private java.util.List < Sessions> sessions;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Long status;
 
         private FotaPendingDesktops(Builder builder) {
@@ -279,7 +278,7 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * The cloud computer ID.
+             * The ID of the cloud computer.
              */
             public Builder desktopId(String desktopId) {
                 this.desktopId = desktopId;
@@ -287,7 +286,7 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * The cloud computer name.
+             * The name of the cloud computer.
              */
             public Builder desktopName(String desktopName) {
                 this.desktopName = desktopName;
@@ -295,7 +294,7 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * The Firmware Over-The-Air (FOTA) update project of the cloud computer.
+             * > This parameter is not publicly available.
              */
             public Builder fotaProject(String fotaProject) {
                 this.fotaProject = fotaProject;
@@ -303,7 +302,7 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * The office network ID.
+             * The ID of the office network.
              */
             public Builder officeSiteId(String officeSiteId) {
                 this.officeSiteId = officeSiteId;
@@ -311,7 +310,7 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the connected sessions.
+             * The connected sessions.
              */
             public Builder sessions(java.util.List < Sessions> sessions) {
                 this.sessions = sessions;
@@ -319,7 +318,19 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * The status.
+             * The status of the cloud computer.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   0: The cloud computer is being created.
+             * *   1: The cloud computer is being started.
+             * *   2: The cloud computer is running.
+             * *   3: The cloud computer is being stopped.
+             * *   5: The cloud computer is stopped.
+             * *   6: The cloud computer expires.
+             * *   7: The cloud computer is deleted.
+             * *   9: Failed to create the cloud computer.
              */
             public Builder status(Long status) {
                 this.status = status;

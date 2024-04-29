@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeUserProfilePathRulesResponseBody</p>
  */
 public class DescribeUserProfilePathRulesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UserProfilePathRule")
+    @com.aliyun.core.annotation.NameInMap("UserProfilePathRule")
     private UserProfilePathRule userProfilePathRule;
 
     private DescribeUserProfilePathRulesResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class DescribeUserProfilePathRulesResponseBody extends TeaModel {
     } 
 
     public static class BlackPath extends TeaModel {
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private BlackPath(Builder builder) {
@@ -152,10 +151,10 @@ public class DescribeUserProfilePathRulesResponseBody extends TeaModel {
 
     }
     public static class WhitePaths extends TeaModel {
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private WhitePaths(Builder builder) {
@@ -232,10 +231,10 @@ public class DescribeUserProfilePathRulesResponseBody extends TeaModel {
 
     }
     public static class Rules extends TeaModel {
-        @NameInMap("BlackPath")
+        @com.aliyun.core.annotation.NameInMap("BlackPath")
         private BlackPath blackPath;
 
-        @NameInMap("WhitePaths")
+        @com.aliyun.core.annotation.NameInMap("WhitePaths")
         private java.util.List < WhitePaths> whitePaths;
 
         private Rules(Builder builder) {
@@ -293,13 +292,13 @@ public class DescribeUserProfilePathRulesResponseBody extends TeaModel {
 
     }
     public static class UserProfilePathRule extends TeaModel {
-        @NameInMap("DesktopGroupId")
+        @com.aliyun.core.annotation.NameInMap("DesktopGroupId")
         private String desktopGroupId;
 
-        @NameInMap("Rules")
+        @com.aliyun.core.annotation.NameInMap("Rules")
         private java.util.List < Rules> rules;
 
-        @NameInMap("UserProfileRuleType")
+        @com.aliyun.core.annotation.NameInMap("UserProfileRuleType")
         private String userProfileRuleType;
 
         private UserProfilePathRule(Builder builder) {

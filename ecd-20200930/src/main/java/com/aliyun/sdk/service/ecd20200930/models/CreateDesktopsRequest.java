@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,115 +11,119 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateDesktopsRequest</p>
  */
 public class CreateDesktopsRequest extends Request {
-    @Query
-    @NameInMap("Amount")
-    @Validation(maximum = 500)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Amount")
+    @com.aliyun.core.annotation.Validation(maximum = 500)
     private Integer amount;
 
-    @Query
-    @NameInMap("AutoPay")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoPay")
     private Boolean autoPay;
 
-    @Query
-    @NameInMap("AutoRenew")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoRenew")
     private Boolean autoRenew;
 
-    @Query
-    @NameInMap("BundleId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BundleId")
     private String bundleId;
 
-    @Query
-    @NameInMap("BundleModels")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BundleModels")
     private java.util.List < BundleModels> bundleModels;
 
-    @Query
-    @NameInMap("ChargeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChargeType")
     private String chargeType;
 
-    @Query
-    @NameInMap("DesktopMemberIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopMemberIp")
     private String desktopMemberIp;
 
-    @Query
-    @NameInMap("DesktopName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopName")
     private String desktopName;
 
-    @Query
-    @NameInMap("DesktopNameSuffix")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopNameSuffix")
     private Boolean desktopNameSuffix;
 
-    @Query
-    @NameInMap("DesktopTimers")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopTimers")
     private java.util.List < DesktopTimers> desktopTimers;
 
-    @Query
-    @NameInMap("DirectoryId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DirectoryId")
     private String directoryId;
 
-    @Query
-    @NameInMap("EndUserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndUserId")
     private java.util.List < String > endUserId;
 
-    @Query
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
 
-    @Query
-    @NameInMap("Hostname")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Hostname")
     private String hostname;
 
-    @Query
-    @NameInMap("OfficeSiteId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MonthDesktopSetting")
+    private MonthDesktopSetting monthDesktopSetting;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OfficeSiteId")
     private String officeSiteId;
 
-    @Query
-    @NameInMap("Period")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Period")
     private Integer period;
 
-    @Query
-    @NameInMap("PeriodUnit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PeriodUnit")
     private String periodUnit;
 
-    @Query
-    @NameInMap("PolicyGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String policyGroupId;
 
-    @Query
-    @NameInMap("PromotionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PromotionId")
     private String promotionId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
-    @Query
-    @NameInMap("UserAssignMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserAssignMode")
     private String userAssignMode;
 
-    @Query
-    @NameInMap("UserCommands")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserCommands")
     private java.util.List < UserCommands> userCommands;
 
-    @Query
-    @NameInMap("UserName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserName")
     private String userName;
 
-    @Query
-    @NameInMap("VolumeEncryptionEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VolumeEncryptionEnabled")
     private Boolean volumeEncryptionEnabled;
 
-    @Query
-    @NameInMap("VolumeEncryptionKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VolumeEncryptionKey")
     private String volumeEncryptionKey;
 
-    @Query
-    @NameInMap("VpcId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
 
     private CreateDesktopsRequest(Builder builder) {
@@ -139,6 +142,7 @@ public class CreateDesktopsRequest extends Request {
         this.endUserId = builder.endUserId;
         this.groupId = builder.groupId;
         this.hostname = builder.hostname;
+        this.monthDesktopSetting = builder.monthDesktopSetting;
         this.officeSiteId = builder.officeSiteId;
         this.period = builder.period;
         this.periodUnit = builder.periodUnit;
@@ -266,6 +270,13 @@ public class CreateDesktopsRequest extends Request {
     }
 
     /**
+     * @return monthDesktopSetting
+     */
+    public MonthDesktopSetting getMonthDesktopSetting() {
+        return this.monthDesktopSetting;
+    }
+
+    /**
      * @return officeSiteId
      */
     public String getOfficeSiteId() {
@@ -371,6 +382,7 @@ public class CreateDesktopsRequest extends Request {
         private java.util.List < String > endUserId; 
         private String groupId; 
         private String hostname; 
+        private MonthDesktopSetting monthDesktopSetting; 
         private String officeSiteId; 
         private Integer period; 
         private String periodUnit; 
@@ -405,6 +417,7 @@ public class CreateDesktopsRequest extends Request {
             this.endUserId = request.endUserId;
             this.groupId = request.groupId;
             this.hostname = request.hostname;
+            this.monthDesktopSetting = request.monthDesktopSetting;
             this.officeSiteId = request.officeSiteId;
             this.period = request.period;
             this.periodUnit = request.periodUnit;
@@ -602,6 +615,15 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
+         * MonthDesktopSetting.
+         */
+        public Builder monthDesktopSetting(MonthDesktopSetting monthDesktopSetting) {
+            this.putQueryParameter("MonthDesktopSetting", monthDesktopSetting);
+            this.monthDesktopSetting = monthDesktopSetting;
+            return this;
+        }
+
+        /**
          * The office network ID.
          */
         public Builder officeSiteId(String officeSiteId) {
@@ -765,26 +787,26 @@ public class CreateDesktopsRequest extends Request {
     } 
 
     public static class BundleModels extends TeaModel {
-        @NameInMap("Amount")
-        @Validation(maximum = 300)
+        @com.aliyun.core.annotation.NameInMap("Amount")
+        @com.aliyun.core.annotation.Validation(maximum = 300)
         private Integer amount;
 
-        @NameInMap("BundleId")
+        @com.aliyun.core.annotation.NameInMap("BundleId")
         private String bundleId;
 
-        @NameInMap("DesktopName")
+        @com.aliyun.core.annotation.NameInMap("DesktopName")
         private String desktopName;
 
-        @NameInMap("EndUserIds")
+        @com.aliyun.core.annotation.NameInMap("EndUserIds")
         private java.util.List < String > endUserIds;
 
-        @NameInMap("Hostname")
+        @com.aliyun.core.annotation.NameInMap("Hostname")
         private String hostname;
 
-        @NameInMap("VolumeEncryptionEnabled")
+        @com.aliyun.core.annotation.NameInMap("VolumeEncryptionEnabled")
         private Boolean volumeEncryptionEnabled;
 
-        @NameInMap("VolumeEncryptionKey")
+        @com.aliyun.core.annotation.NameInMap("VolumeEncryptionKey")
         private String volumeEncryptionKey;
 
         private BundleModels(Builder builder) {
@@ -944,25 +966,25 @@ public class CreateDesktopsRequest extends Request {
 
     }
     public static class DesktopTimers extends TeaModel {
-        @NameInMap("AllowClientSetting")
+        @com.aliyun.core.annotation.NameInMap("AllowClientSetting")
         private Boolean allowClientSetting;
 
-        @NameInMap("CronExpression")
+        @com.aliyun.core.annotation.NameInMap("CronExpression")
         private String cronExpression;
 
-        @NameInMap("Enforce")
+        @com.aliyun.core.annotation.NameInMap("Enforce")
         private Boolean enforce;
 
-        @NameInMap("Interval")
+        @com.aliyun.core.annotation.NameInMap("Interval")
         private Integer interval;
 
-        @NameInMap("OperationType")
+        @com.aliyun.core.annotation.NameInMap("OperationType")
         private String operationType;
 
-        @NameInMap("ResetType")
+        @com.aliyun.core.annotation.NameInMap("ResetType")
         private String resetType;
 
-        @NameInMap("TimerType")
+        @com.aliyun.core.annotation.NameInMap("TimerType")
         private String timerType;
 
         private DesktopTimers(Builder builder) {
@@ -1164,11 +1186,92 @@ public class CreateDesktopsRequest extends Request {
         } 
 
     }
+    public static class MonthDesktopSetting extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BuyerId")
+        private Long buyerId;
+
+        @com.aliyun.core.annotation.NameInMap("DesktopId")
+        private String desktopId;
+
+        @com.aliyun.core.annotation.NameInMap("UseDuration")
+        private Integer useDuration;
+
+        private MonthDesktopSetting(Builder builder) {
+            this.buyerId = builder.buyerId;
+            this.desktopId = builder.desktopId;
+            this.useDuration = builder.useDuration;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static MonthDesktopSetting create() {
+            return builder().build();
+        }
+
+        /**
+         * @return buyerId
+         */
+        public Long getBuyerId() {
+            return this.buyerId;
+        }
+
+        /**
+         * @return desktopId
+         */
+        public String getDesktopId() {
+            return this.desktopId;
+        }
+
+        /**
+         * @return useDuration
+         */
+        public Integer getUseDuration() {
+            return this.useDuration;
+        }
+
+        public static final class Builder {
+            private Long buyerId; 
+            private String desktopId; 
+            private Integer useDuration; 
+
+            /**
+             * BuyerId.
+             */
+            public Builder buyerId(Long buyerId) {
+                this.buyerId = buyerId;
+                return this;
+            }
+
+            /**
+             * DesktopId.
+             */
+            public Builder desktopId(String desktopId) {
+                this.desktopId = desktopId;
+                return this;
+            }
+
+            /**
+             * UseDuration.
+             */
+            public Builder useDuration(Integer useDuration) {
+                this.useDuration = useDuration;
+                return this;
+            }
+
+            public MonthDesktopSetting build() {
+                return new MonthDesktopSetting(this);
+            } 
+
+        } 
+
+    }
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -1226,14 +1329,14 @@ public class CreateDesktopsRequest extends Request {
 
     }
     public static class UserCommands extends TeaModel {
-        @NameInMap("Content")
-        @Validation(maxLength = 15000)
+        @com.aliyun.core.annotation.NameInMap("Content")
+        @com.aliyun.core.annotation.Validation(maxLength = 15000)
         private String content;
 
-        @NameInMap("ContentEncoding")
+        @com.aliyun.core.annotation.NameInMap("ContentEncoding")
         private String contentEncoding;
 
-        @NameInMap("ContentType")
+        @com.aliyun.core.annotation.NameInMap("ContentType")
         private String contentType;
 
         private UserCommands(Builder builder) {

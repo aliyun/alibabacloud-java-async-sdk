@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeNASFileSystemsResponseBody</p>
  */
 public class DescribeNASFileSystemsResponseBody extends TeaModel {
-    @NameInMap("FileSystems")
+    @com.aliyun.core.annotation.NameInMap("FileSystems")
     private java.util.List < FileSystems> fileSystems;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeNASFileSystemsResponseBody(Builder builder) {
@@ -92,10 +91,10 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
     } 
 
     public static class DesktopGroups extends TeaModel {
-        @NameInMap("DesktopGroupId")
+        @com.aliyun.core.annotation.NameInMap("DesktopGroupId")
         private String desktopGroupId;
 
-        @NameInMap("DesktopGroupName")
+        @com.aliyun.core.annotation.NameInMap("DesktopGroupName")
         private String desktopGroupName;
 
         private DesktopGroups(Builder builder) {
@@ -153,61 +152,61 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
 
     }
     public static class FileSystems extends TeaModel {
-        @NameInMap("Capacity")
+        @com.aliyun.core.annotation.NameInMap("Capacity")
         private Long capacity;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DesktopGroups")
+        @com.aliyun.core.annotation.NameInMap("DesktopGroups")
         private java.util.List < DesktopGroups> desktopGroups;
 
-        @NameInMap("EncryptionEnabled")
+        @com.aliyun.core.annotation.NameInMap("EncryptionEnabled")
         private Boolean encryptionEnabled;
 
-        @NameInMap("FileSystemId")
+        @com.aliyun.core.annotation.NameInMap("FileSystemId")
         private String fileSystemId;
 
-        @NameInMap("FileSystemName")
+        @com.aliyun.core.annotation.NameInMap("FileSystemName")
         private String fileSystemName;
 
-        @NameInMap("FileSystemStatus")
+        @com.aliyun.core.annotation.NameInMap("FileSystemStatus")
         private String fileSystemStatus;
 
-        @NameInMap("FileSystemType")
+        @com.aliyun.core.annotation.NameInMap("FileSystemType")
         private String fileSystemType;
 
-        @NameInMap("MeteredSize")
+        @com.aliyun.core.annotation.NameInMap("MeteredSize")
         private Long meteredSize;
 
-        @NameInMap("MountTargetDomain")
+        @com.aliyun.core.annotation.NameInMap("MountTargetDomain")
         private String mountTargetDomain;
 
-        @NameInMap("MountTargetStatus")
+        @com.aliyun.core.annotation.NameInMap("MountTargetStatus")
         private String mountTargetStatus;
 
-        @NameInMap("OfficeSiteId")
+        @com.aliyun.core.annotation.NameInMap("OfficeSiteId")
         private String officeSiteId;
 
-        @NameInMap("OfficeSiteName")
+        @com.aliyun.core.annotation.NameInMap("OfficeSiteName")
         private String officeSiteName;
 
-        @NameInMap("ProfileCompatible")
+        @com.aliyun.core.annotation.NameInMap("ProfileCompatible")
         private Boolean profileCompatible;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("StorageType")
+        @com.aliyun.core.annotation.NameInMap("StorageType")
         private String storageType;
 
-        @NameInMap("SupportAcl")
+        @com.aliyun.core.annotation.NameInMap("SupportAcl")
         private Boolean supportAcl;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private FileSystems(Builder builder) {

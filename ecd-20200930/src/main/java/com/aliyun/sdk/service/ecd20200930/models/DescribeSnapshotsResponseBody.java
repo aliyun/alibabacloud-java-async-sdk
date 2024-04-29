@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSnapshotsResponseBody</p>
  */
 public class DescribeSnapshotsResponseBody extends TeaModel {
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Snapshots")
+    @com.aliyun.core.annotation.NameInMap("Snapshots")
     private java.util.List < Snapshots> snapshots;
 
     private DescribeSnapshotsResponseBody(Builder builder) {
@@ -92,58 +91,58 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
     } 
 
     public static class Snapshots extends TeaModel {
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Creator")
+        @com.aliyun.core.annotation.NameInMap("Creator")
         private String creator;
 
-        @NameInMap("DeletionTime")
+        @com.aliyun.core.annotation.NameInMap("DeletionTime")
         private String deletionTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DesktopId")
+        @com.aliyun.core.annotation.NameInMap("DesktopId")
         private String desktopId;
 
-        @NameInMap("DesktopName")
+        @com.aliyun.core.annotation.NameInMap("DesktopName")
         private String desktopName;
 
-        @NameInMap("DesktopStatus")
+        @com.aliyun.core.annotation.NameInMap("DesktopStatus")
         private String desktopStatus;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private String progress;
 
-        @NameInMap("ProtocolType")
+        @com.aliyun.core.annotation.NameInMap("ProtocolType")
         private String protocolType;
 
-        @NameInMap("RemainTime")
+        @com.aliyun.core.annotation.NameInMap("RemainTime")
         private Integer remainTime;
 
-        @NameInMap("SnapshotId")
+        @com.aliyun.core.annotation.NameInMap("SnapshotId")
         private String snapshotId;
 
-        @NameInMap("SnapshotName")
+        @com.aliyun.core.annotation.NameInMap("SnapshotName")
         private String snapshotName;
 
-        @NameInMap("SnapshotType")
+        @com.aliyun.core.annotation.NameInMap("SnapshotType")
         private String snapshotType;
 
-        @NameInMap("SourceDiskSize")
+        @com.aliyun.core.annotation.NameInMap("SourceDiskSize")
         private String sourceDiskSize;
 
-        @NameInMap("SourceDiskType")
+        @com.aliyun.core.annotation.NameInMap("SourceDiskType")
         private String sourceDiskType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("VolumeEncryptionEnabled")
+        @com.aliyun.core.annotation.NameInMap("VolumeEncryptionEnabled")
         private Boolean volumeEncryptionEnabled;
 
-        @NameInMap("VolumeEncryptionKey")
+        @com.aliyun.core.annotation.NameInMap("VolumeEncryptionKey")
         private String volumeEncryptionKey;
 
         private Snapshots(Builder builder) {

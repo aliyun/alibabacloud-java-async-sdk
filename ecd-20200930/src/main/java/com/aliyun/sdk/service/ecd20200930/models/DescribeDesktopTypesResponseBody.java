@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDesktopTypesResponseBody</p>
  */
 public class DescribeDesktopTypesResponseBody extends TeaModel {
-    @NameInMap("DesktopTypes")
+    @com.aliyun.core.annotation.NameInMap("DesktopTypes")
     private java.util.List < DesktopTypes> desktopTypes;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDesktopTypesResponseBody(Builder builder) {
@@ -72,31 +71,31 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
     } 
 
     public static class DesktopTypes extends TeaModel {
-        @NameInMap("CpuCount")
+        @com.aliyun.core.annotation.NameInMap("CpuCount")
         private String cpuCount;
 
-        @NameInMap("DataDiskSize")
+        @com.aliyun.core.annotation.NameInMap("DataDiskSize")
         private String dataDiskSize;
 
-        @NameInMap("DesktopTypeId")
+        @com.aliyun.core.annotation.NameInMap("DesktopTypeId")
         private String desktopTypeId;
 
-        @NameInMap("DesktopTypeStatus")
+        @com.aliyun.core.annotation.NameInMap("DesktopTypeStatus")
         private String desktopTypeStatus;
 
-        @NameInMap("GpuCount")
+        @com.aliyun.core.annotation.NameInMap("GpuCount")
         private Float gpuCount;
 
-        @NameInMap("GpuSpec")
+        @com.aliyun.core.annotation.NameInMap("GpuSpec")
         private String gpuSpec;
 
-        @NameInMap("InstanceTypeFamily")
+        @com.aliyun.core.annotation.NameInMap("InstanceTypeFamily")
         private String instanceTypeFamily;
 
-        @NameInMap("MemorySize")
+        @com.aliyun.core.annotation.NameInMap("MemorySize")
         private String memorySize;
 
-        @NameInMap("SystemDiskSize")
+        @com.aliyun.core.annotation.NameInMap("SystemDiskSize")
         private String systemDiskSize;
 
         private DesktopTypes(Builder builder) {

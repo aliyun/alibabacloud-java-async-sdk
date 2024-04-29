@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyOfficeSiteAttributeRequest</p>
  */
 public class ModifyOfficeSiteAttributeRequest extends Request {
-    @Query
-    @NameInMap("DesktopAccessType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopAccessType")
     private String desktopAccessType;
 
-    @Query
-    @NameInMap("EnableAdminAccess")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableAdminAccess")
     private Boolean enableAdminAccess;
 
-    @Query
-    @NameInMap("NeedVerifyLoginRisk")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NeedVerifyLoginRisk")
     private Boolean needVerifyLoginRisk;
 
-    @Query
-    @NameInMap("NeedVerifyZeroDevice")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NeedVerifyZeroDevice")
     private Boolean needVerifyZeroDevice;
 
-    @Query
-    @NameInMap("OfficeSiteId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OfficeSiteId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String officeSiteId;
 
-    @Query
-    @NameInMap("OfficeSiteName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OfficeSiteName")
     private String officeSiteName;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private ModifyOfficeSiteAttributeRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCensResponseBody</p>
  */
 public class DescribeCensResponseBody extends TeaModel {
-    @NameInMap("Cens")
+    @com.aliyun.core.annotation.NameInMap("Cens")
     private java.util.List < Cens> cens;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeCensResponseBody(Builder builder) {
@@ -132,7 +131,7 @@ public class DescribeCensResponseBody extends TeaModel {
     } 
 
     public static class PackageIds extends TeaModel {
-        @NameInMap("PackageId")
+        @com.aliyun.core.annotation.NameInMap("PackageId")
         private String packageId;
 
         private PackageIds(Builder builder) {
@@ -173,10 +172,10 @@ public class DescribeCensResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -234,31 +233,31 @@ public class DescribeCensResponseBody extends TeaModel {
 
     }
     public static class Cens extends TeaModel {
-        @NameInMap("CenId")
+        @com.aliyun.core.annotation.NameInMap("CenId")
         private String cenId;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Ipv6Level")
+        @com.aliyun.core.annotation.NameInMap("Ipv6Level")
         private String ipv6Level;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PackageIds")
+        @com.aliyun.core.annotation.NameInMap("PackageIds")
         private java.util.List < PackageIds> packageIds;
 
-        @NameInMap("ProtectionLevel")
+        @com.aliyun.core.annotation.NameInMap("ProtectionLevel")
         private String protectionLevel;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
         private Cens(Builder builder) {

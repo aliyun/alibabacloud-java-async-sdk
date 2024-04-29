@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateCloudDriveServiceResponseBody</p>
  */
 public class CreateCloudDriveServiceResponseBody extends TeaModel {
-    @NameInMap("CdsId")
+    @com.aliyun.core.annotation.NameInMap("CdsId")
     private String cdsId;
 
-    @NameInMap("CdsName")
+    @com.aliyun.core.annotation.NameInMap("CdsName")
     private String cdsName;
 
-    @NameInMap("CenId")
+    @com.aliyun.core.annotation.NameInMap("CenId")
     private String cenId;
 
-    @NameInMap("ConflictCdsAndOrder")
+    @com.aliyun.core.annotation.NameInMap("ConflictCdsAndOrder")
     private ConflictCdsAndOrder conflictCdsAndOrder;
 
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("MaxSize")
+    @com.aliyun.core.annotation.NameInMap("MaxSize")
     private String maxSize;
 
-    @NameInMap("OfficeSiteType")
+    @com.aliyun.core.annotation.NameInMap("OfficeSiteType")
     private String officeSiteType;
 
-    @NameInMap("OrderId")
+    @com.aliyun.core.annotation.NameInMap("OrderId")
     private String orderId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateCloudDriveServiceResponseBody(Builder builder) {
@@ -232,10 +231,10 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
     } 
 
     public static class ConflictCds extends TeaModel {
-        @NameInMap("CdsId")
+        @com.aliyun.core.annotation.NameInMap("CdsId")
         private String cdsId;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
         private ConflictCds(Builder builder) {
@@ -293,13 +292,13 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
 
     }
     public static class ConflictOrder extends TeaModel {
-        @NameInMap("CdsId")
+        @com.aliyun.core.annotation.NameInMap("CdsId")
         private String cdsId;
 
-        @NameInMap("OrderId")
+        @com.aliyun.core.annotation.NameInMap("OrderId")
         private String orderId;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
         private ConflictOrder(Builder builder) {
@@ -374,10 +373,10 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
 
     }
     public static class ConflictCdsAndOrder extends TeaModel {
-        @NameInMap("ConflictCds")
+        @com.aliyun.core.annotation.NameInMap("ConflictCds")
         private java.util.List < ConflictCds> conflictCds;
 
-        @NameInMap("ConflictOrder")
+        @com.aliyun.core.annotation.NameInMap("ConflictOrder")
         private java.util.List < ConflictOrder> conflictOrder;
 
         private ConflictCdsAndOrder(Builder builder) {

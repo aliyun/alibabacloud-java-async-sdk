@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDirectoriesResponseBody</p>
  */
 public class DescribeDirectoriesResponseBody extends TeaModel {
-    @NameInMap("AdHostname")
+    @com.aliyun.core.annotation.NameInMap("AdHostname")
     private String adHostname;
 
-    @NameInMap("Directories")
+    @com.aliyun.core.annotation.NameInMap("Directories")
     private java.util.List < Directories> directories;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDirectoriesResponseBody(Builder builder) {
@@ -112,22 +111,22 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
     } 
 
     public static class ADConnectors extends TeaModel {
-        @NameInMap("ADConnectorAddress")
+        @com.aliyun.core.annotation.NameInMap("ADConnectorAddress")
         private String ADConnectorAddress;
 
-        @NameInMap("ConnectorStatus")
+        @com.aliyun.core.annotation.NameInMap("ConnectorStatus")
         private String connectorStatus;
 
-        @NameInMap("NetworkInterfaceId")
+        @com.aliyun.core.annotation.NameInMap("NetworkInterfaceId")
         private String networkInterfaceId;
 
-        @NameInMap("Specification")
+        @com.aliyun.core.annotation.NameInMap("Specification")
         private String specification;
 
-        @NameInMap("TrustKey")
+        @com.aliyun.core.annotation.NameInMap("TrustKey")
         private String trustKey;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
         private ADConnectors(Builder builder) {
@@ -279,16 +278,16 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
 
     }
     public static class Logs extends TeaModel {
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Step")
+        @com.aliyun.core.annotation.NameInMap("Step")
         private String step;
 
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
         private Logs(Builder builder) {
@@ -407,88 +406,88 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
 
     }
     public static class Directories extends TeaModel {
-        @NameInMap("ADConnectors")
+        @com.aliyun.core.annotation.NameInMap("ADConnectors")
         private java.util.List < ADConnectors> ADConnectors;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("CustomSecurityGroupId")
+        @com.aliyun.core.annotation.NameInMap("CustomSecurityGroupId")
         private String customSecurityGroupId;
 
-        @NameInMap("DesktopAccessType")
+        @com.aliyun.core.annotation.NameInMap("DesktopAccessType")
         private String desktopAccessType;
 
-        @NameInMap("DesktopVpcEndpoint")
+        @com.aliyun.core.annotation.NameInMap("DesktopVpcEndpoint")
         private String desktopVpcEndpoint;
 
-        @NameInMap("DirectoryId")
+        @com.aliyun.core.annotation.NameInMap("DirectoryId")
         private String directoryId;
 
-        @NameInMap("DirectoryType")
+        @com.aliyun.core.annotation.NameInMap("DirectoryType")
         private String directoryType;
 
-        @NameInMap("DnsAddress")
+        @com.aliyun.core.annotation.NameInMap("DnsAddress")
         private java.util.List < String > dnsAddress;
 
-        @NameInMap("DnsUserName")
+        @com.aliyun.core.annotation.NameInMap("DnsUserName")
         private String dnsUserName;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("DomainPassword")
+        @com.aliyun.core.annotation.NameInMap("DomainPassword")
         private String domainPassword;
 
-        @NameInMap("DomainUserName")
+        @com.aliyun.core.annotation.NameInMap("DomainUserName")
         private String domainUserName;
 
-        @NameInMap("EnableAdminAccess")
+        @com.aliyun.core.annotation.NameInMap("EnableAdminAccess")
         private Boolean enableAdminAccess;
 
-        @NameInMap("EnableCrossDesktopAccess")
+        @com.aliyun.core.annotation.NameInMap("EnableCrossDesktopAccess")
         private Boolean enableCrossDesktopAccess;
 
-        @NameInMap("EnableInternetAccess")
+        @com.aliyun.core.annotation.NameInMap("EnableInternetAccess")
         private Boolean enableInternetAccess;
 
-        @NameInMap("FileSystemIds")
+        @com.aliyun.core.annotation.NameInMap("FileSystemIds")
         private java.util.List < String > fileSystemIds;
 
-        @NameInMap("Logs")
+        @com.aliyun.core.annotation.NameInMap("Logs")
         private java.util.List < Logs> logs;
 
-        @NameInMap("MfaEnabled")
+        @com.aliyun.core.annotation.NameInMap("MfaEnabled")
         private Boolean mfaEnabled;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NeedVerifyLoginRisk")
+        @com.aliyun.core.annotation.NameInMap("NeedVerifyLoginRisk")
         private Boolean needVerifyLoginRisk;
 
-        @NameInMap("OuName")
+        @com.aliyun.core.annotation.NameInMap("OuName")
         private String ouName;
 
-        @NameInMap("SsoEnabled")
+        @com.aliyun.core.annotation.NameInMap("SsoEnabled")
         private Boolean ssoEnabled;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("SubDnsAddress")
+        @com.aliyun.core.annotation.NameInMap("SubDnsAddress")
         private java.util.List < String > subDnsAddress;
 
-        @NameInMap("SubDomainName")
+        @com.aliyun.core.annotation.NameInMap("SubDomainName")
         private String subDomainName;
 
-        @NameInMap("TrustPassword")
+        @com.aliyun.core.annotation.NameInMap("TrustPassword")
         private String trustPassword;
 
-        @NameInMap("VSwitchIds")
+        @com.aliyun.core.annotation.NameInMap("VSwitchIds")
         private java.util.List < String > vSwitchIds;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private Directories(Builder builder) {

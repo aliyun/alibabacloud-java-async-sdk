@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,45 +11,45 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDesktopTypesRequest</p>
  */
 public class DescribeDesktopTypesRequest extends Request {
-    @Query
-    @NameInMap("AppliedScope")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppliedScope")
     private String appliedScope;
 
-    @Query
-    @NameInMap("CpuCount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CpuCount")
     private Integer cpuCount;
 
-    @Query
-    @NameInMap("DesktopGroupIdForModify")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopGroupIdForModify")
     private String desktopGroupIdForModify;
 
-    @Query
-    @NameInMap("DesktopIdForModify")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopIdForModify")
     private String desktopIdForModify;
 
-    @Query
-    @NameInMap("DesktopTypeId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopTypeId")
     private String desktopTypeId;
 
-    @Query
-    @NameInMap("GpuCount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GpuCount")
     private Float gpuCount;
 
-    @Query
-    @NameInMap("InstanceTypeFamily")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceTypeFamily")
     private String instanceTypeFamily;
 
-    @Query
-    @NameInMap("MemorySize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MemorySize")
     private Integer memorySize;
 
-    @Query
-    @NameInMap("OrderType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderType")
     private String orderType;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private DescribeDesktopTypesRequest(Builder builder) {

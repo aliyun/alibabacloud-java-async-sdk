@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetCoordinateTicketResponseBody</p>
  */
 public class GetCoordinateTicketResponseBody extends TeaModel {
-    @NameInMap("CoId")
+    @com.aliyun.core.annotation.NameInMap("CoId")
     private String coId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
-    @NameInMap("TaskStatus")
+    @com.aliyun.core.annotation.NameInMap("TaskStatus")
     private String taskStatus;
 
-    @NameInMap("Ticket")
+    @com.aliyun.core.annotation.NameInMap("Ticket")
     private String ticket;
 
     private GetCoordinateTicketResponseBody(Builder builder) {

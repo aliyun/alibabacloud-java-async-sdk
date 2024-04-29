@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeOfficeSitesResponseBody</p>
  */
 public class DescribeOfficeSitesResponseBody extends TeaModel {
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("OfficeSites")
+    @com.aliyun.core.annotation.NameInMap("OfficeSites")
     private java.util.List < OfficeSites> officeSites;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeOfficeSitesResponseBody(Builder builder) {
@@ -92,22 +91,22 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
     } 
 
     public static class ADConnectors extends TeaModel {
-        @NameInMap("ADConnectorAddress")
+        @com.aliyun.core.annotation.NameInMap("ADConnectorAddress")
         private String ADConnectorAddress;
 
-        @NameInMap("ConnectorStatus")
+        @com.aliyun.core.annotation.NameInMap("ConnectorStatus")
         private String connectorStatus;
 
-        @NameInMap("NetworkInterfaceId")
+        @com.aliyun.core.annotation.NameInMap("NetworkInterfaceId")
         private String networkInterfaceId;
 
-        @NameInMap("Specification")
+        @com.aliyun.core.annotation.NameInMap("Specification")
         private String specification;
 
-        @NameInMap("TrustKey")
+        @com.aliyun.core.annotation.NameInMap("TrustKey")
         private String trustKey;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
         private ADConnectors(Builder builder) {
@@ -297,16 +296,16 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
 
     }
     public static class Logs extends TeaModel {
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Step")
+        @com.aliyun.core.annotation.NameInMap("Step")
         private String step;
 
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
         private Logs(Builder builder) {
@@ -425,144 +424,155 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
 
     }
     public static class OfficeSites extends TeaModel {
-        @NameInMap("ADConnectors")
+        @com.aliyun.core.annotation.NameInMap("ADConnectors")
         private java.util.List < ADConnectors> ADConnectors;
 
-        @NameInMap("AdHostname")
+        @com.aliyun.core.annotation.NameInMap("AdHostname")
         private String adHostname;
 
-        @NameInMap("Bandwidth")
+        @com.aliyun.core.annotation.NameInMap("BackupDCHostname")
+        private String backupDCHostname;
+
+        @com.aliyun.core.annotation.NameInMap("BackupDns")
+        private String backupDns;
+
+        @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private Integer bandwidth;
 
-        @NameInMap("CenAttachStatus")
+        @com.aliyun.core.annotation.NameInMap("CenAttachStatus")
         private String cenAttachStatus;
 
-        @NameInMap("CenId")
+        @com.aliyun.core.annotation.NameInMap("CenId")
         private String cenId;
 
-        @NameInMap("CidrBlock")
+        @com.aliyun.core.annotation.NameInMap("CidrBlock")
         private String cidrBlock;
 
-        @NameInMap("CloudBoxOfficeSite")
+        @com.aliyun.core.annotation.NameInMap("CloudBoxOfficeSite")
         private Boolean cloudBoxOfficeSite;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("CustomSecurityGroupId")
+        @com.aliyun.core.annotation.NameInMap("CustomSecurityGroupId")
         private String customSecurityGroupId;
 
-        @NameInMap("DesktopAccessType")
+        @com.aliyun.core.annotation.NameInMap("DesktopAccessType")
         private String desktopAccessType;
 
-        @NameInMap("DesktopCount")
+        @com.aliyun.core.annotation.NameInMap("DesktopCount")
         private Long desktopCount;
 
-        @NameInMap("DesktopVpcEndpoint")
+        @com.aliyun.core.annotation.NameInMap("DesktopVpcEndpoint")
         private String desktopVpcEndpoint;
 
-        @NameInMap("DnsAddress")
+        @com.aliyun.core.annotation.NameInMap("DnsAddress")
         private java.util.List < String > dnsAddress;
 
-        @NameInMap("DnsUserName")
+        @com.aliyun.core.annotation.NameInMap("DnsUserName")
         private String dnsUserName;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("DomainPassword")
+        @com.aliyun.core.annotation.NameInMap("DomainPassword")
         private String domainPassword;
 
-        @NameInMap("DomainUserName")
+        @com.aliyun.core.annotation.NameInMap("DomainUserName")
         private String domainUserName;
 
-        @NameInMap("EnableAdminAccess")
+        @com.aliyun.core.annotation.NameInMap("EnableAdminAccess")
         private Boolean enableAdminAccess;
 
-        @NameInMap("EnableCrossDesktopAccess")
+        @com.aliyun.core.annotation.NameInMap("EnableCrossDesktopAccess")
         private Boolean enableCrossDesktopAccess;
 
-        @NameInMap("EnableInternetAccess")
+        @com.aliyun.core.annotation.NameInMap("EnableInternetAccess")
         private Boolean enableInternetAccess;
 
-        @NameInMap("FileSystemIds")
+        @com.aliyun.core.annotation.NameInMap("EnableServiceRoute")
+        private Boolean enableServiceRoute;
+
+        @com.aliyun.core.annotation.NameInMap("FileSystemIds")
         private java.util.List < String > fileSystemIds;
 
-        @NameInMap("Logs")
+        @com.aliyun.core.annotation.NameInMap("Logs")
         private java.util.List < Logs> logs;
 
-        @NameInMap("MfaEnabled")
+        @com.aliyun.core.annotation.NameInMap("MfaEnabled")
         private Boolean mfaEnabled;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NeedVerifyLoginRisk")
+        @com.aliyun.core.annotation.NameInMap("NeedVerifyLoginRisk")
         private Boolean needVerifyLoginRisk;
 
-        @NameInMap("NeedVerifyZeroDevice")
+        @com.aliyun.core.annotation.NameInMap("NeedVerifyZeroDevice")
         private Boolean needVerifyZeroDevice;
 
-        @NameInMap("NetworkPackageId")
+        @com.aliyun.core.annotation.NameInMap("NetworkPackageId")
         private String networkPackageId;
 
-        @NameInMap("OfficeSiteId")
+        @com.aliyun.core.annotation.NameInMap("OfficeSiteId")
         private String officeSiteId;
 
-        @NameInMap("OfficeSiteType")
+        @com.aliyun.core.annotation.NameInMap("OfficeSiteType")
         private String officeSiteType;
 
-        @NameInMap("OuName")
+        @com.aliyun.core.annotation.NameInMap("OuName")
         private String ouName;
 
-        @NameInMap("ProtocolType")
+        @com.aliyun.core.annotation.NameInMap("ProtocolType")
         private String protocolType;
 
-        @NameInMap("RdsLicenseAddress")
+        @com.aliyun.core.annotation.NameInMap("RdsLicenseAddress")
         private String rdsLicenseAddress;
 
-        @NameInMap("RdsLicenseDomainName")
+        @com.aliyun.core.annotation.NameInMap("RdsLicenseDomainName")
         private String rdsLicenseDomainName;
 
-        @NameInMap("RdsLicenseStatus")
+        @com.aliyun.core.annotation.NameInMap("RdsLicenseStatus")
         private String rdsLicenseStatus;
 
-        @NameInMap("SsoEnabled")
+        @com.aliyun.core.annotation.NameInMap("SsoEnabled")
         private Boolean ssoEnabled;
 
-        @NameInMap("SsoType")
+        @com.aliyun.core.annotation.NameInMap("SsoType")
         private String ssoType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("SubDnsAddress")
+        @com.aliyun.core.annotation.NameInMap("SubDnsAddress")
         private java.util.List < String > subDnsAddress;
 
-        @NameInMap("SubDomainName")
+        @com.aliyun.core.annotation.NameInMap("SubDomainName")
         private String subDomainName;
 
-        @NameInMap("TotalEdsCount")
+        @com.aliyun.core.annotation.NameInMap("TotalEdsCount")
         private Long totalEdsCount;
 
-        @NameInMap("TotalEdsCountForGroup")
+        @com.aliyun.core.annotation.NameInMap("TotalEdsCountForGroup")
         private Long totalEdsCountForGroup;
 
-        @NameInMap("TrustPassword")
+        @com.aliyun.core.annotation.NameInMap("TrustPassword")
         private String trustPassword;
 
-        @NameInMap("VSwitchIds")
+        @com.aliyun.core.annotation.NameInMap("VSwitchIds")
         private java.util.List < String > vSwitchIds;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("VpcType")
+        @com.aliyun.core.annotation.NameInMap("VpcType")
         private String vpcType;
 
         private OfficeSites(Builder builder) {
             this.ADConnectors = builder.ADConnectors;
             this.adHostname = builder.adHostname;
+            this.backupDCHostname = builder.backupDCHostname;
+            this.backupDns = builder.backupDns;
             this.bandwidth = builder.bandwidth;
             this.cenAttachStatus = builder.cenAttachStatus;
             this.cenId = builder.cenId;
@@ -581,6 +591,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             this.enableAdminAccess = builder.enableAdminAccess;
             this.enableCrossDesktopAccess = builder.enableCrossDesktopAccess;
             this.enableInternetAccess = builder.enableInternetAccess;
+            this.enableServiceRoute = builder.enableServiceRoute;
             this.fileSystemIds = builder.fileSystemIds;
             this.logs = builder.logs;
             this.mfaEnabled = builder.mfaEnabled;
@@ -628,6 +639,20 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
          */
         public String getAdHostname() {
             return this.adHostname;
+        }
+
+        /**
+         * @return backupDCHostname
+         */
+        public String getBackupDCHostname() {
+            return this.backupDCHostname;
+        }
+
+        /**
+         * @return backupDns
+         */
+        public String getBackupDns() {
+            return this.backupDns;
         }
 
         /**
@@ -754,6 +779,13 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
          */
         public Boolean getEnableInternetAccess() {
             return this.enableInternetAccess;
+        }
+
+        /**
+         * @return enableServiceRoute
+         */
+        public Boolean getEnableServiceRoute() {
+            return this.enableServiceRoute;
         }
 
         /**
@@ -934,6 +966,8 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List < ADConnectors> ADConnectors; 
             private String adHostname; 
+            private String backupDCHostname; 
+            private String backupDns; 
             private Integer bandwidth; 
             private String cenAttachStatus; 
             private String cenId; 
@@ -952,6 +986,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             private Boolean enableAdminAccess; 
             private Boolean enableCrossDesktopAccess; 
             private Boolean enableInternetAccess; 
+            private Boolean enableServiceRoute; 
             private java.util.List < String > fileSystemIds; 
             private java.util.List < Logs> logs; 
             private Boolean mfaEnabled; 
@@ -991,6 +1026,22 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
              */
             public Builder adHostname(String adHostname) {
                 this.adHostname = adHostname;
+                return this;
+            }
+
+            /**
+             * BackupDCHostname.
+             */
+            public Builder backupDCHostname(String backupDCHostname) {
+                this.backupDCHostname = backupDCHostname;
+                return this;
+            }
+
+            /**
+             * BackupDns.
+             */
+            public Builder backupDns(String backupDns) {
+                this.backupDns = backupDns;
                 return this;
             }
 
@@ -1171,6 +1222,14 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
              */
             public Builder enableInternetAccess(Boolean enableInternetAccess) {
                 this.enableInternetAccess = enableInternetAccess;
+                return this;
+            }
+
+            /**
+             * EnableServiceRoute.
+             */
+            public Builder enableServiceRoute(Boolean enableServiceRoute) {
+                this.enableServiceRoute = enableServiceRoute;
                 return this;
             }
 

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDesktopOversoldGroupResponseBody</p>
  */
 public class DescribeDesktopOversoldGroupResponseBody extends TeaModel {
-    @NameInMap("Count")
+    @com.aliyun.core.annotation.NameInMap("Count")
     private Integer count;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDesktopOversoldGroupResponseBody(Builder builder) {
@@ -112,61 +111,61 @@ public class DescribeDesktopOversoldGroupResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("ConcurrenceCount")
+        @com.aliyun.core.annotation.NameInMap("ConcurrenceCount")
         private Integer concurrenceCount;
 
-        @NameInMap("CurConcurrenceCount")
+        @com.aliyun.core.annotation.NameInMap("CurConcurrenceCount")
         private Integer curConcurrenceCount;
 
-        @NameInMap("DataDiskSize")
+        @com.aliyun.core.annotation.NameInMap("DataDiskSize")
         private Integer dataDiskSize;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DesktopType")
+        @com.aliyun.core.annotation.NameInMap("DesktopType")
         private String desktopType;
 
-        @NameInMap("DirectoryId")
+        @com.aliyun.core.annotation.NameInMap("DirectoryId")
         private String directoryId;
 
-        @NameInMap("ExpireTime")
+        @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private String expireTime;
 
-        @NameInMap("IdleDisconnectDuration")
+        @com.aliyun.core.annotation.NameInMap("IdleDisconnectDuration")
         private String idleDisconnectDuration;
 
-        @NameInMap("ImageId")
+        @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
 
-        @NameInMap("KeepDuration")
+        @com.aliyun.core.annotation.NameInMap("KeepDuration")
         private String keepDuration;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("OversoldGroupId")
+        @com.aliyun.core.annotation.NameInMap("OversoldGroupId")
         private String oversoldGroupId;
 
-        @NameInMap("OversoldUserCount")
+        @com.aliyun.core.annotation.NameInMap("OversoldUserCount")
         private Integer oversoldUserCount;
 
-        @NameInMap("OversoldWarn")
+        @com.aliyun.core.annotation.NameInMap("OversoldWarn")
         private Integer oversoldWarn;
 
-        @NameInMap("PolicyGroupId")
+        @com.aliyun.core.annotation.NameInMap("PolicyGroupId")
         private String policyGroupId;
 
-        @NameInMap("SaleStatus")
+        @com.aliyun.core.annotation.NameInMap("SaleStatus")
         private String saleStatus;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StopDuration")
+        @com.aliyun.core.annotation.NameInMap("StopDuration")
         private Long stopDuration;
 
-        @NameInMap("SystemDiskSize")
+        @com.aliyun.core.annotation.NameInMap("SystemDiskSize")
         private Integer systemDiskSize;
 
         private Data(Builder builder) {

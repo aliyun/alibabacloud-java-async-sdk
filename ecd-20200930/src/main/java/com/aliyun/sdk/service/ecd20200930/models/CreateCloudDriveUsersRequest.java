@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateCloudDriveUsersRequest</p>
  */
 public class CreateCloudDriveUsersRequest extends Request {
-    @Query
-    @NameInMap("CdsId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CdsId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cdsId;
 
-    @Query
-    @NameInMap("EndUserId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndUserId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > endUserId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("UserMaxSize")
-    @Validation(required = true, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserMaxSize")
+    @com.aliyun.core.annotation.Validation(required = true, minimum = 1)
     private Long userMaxSize;
 
     private CreateCloudDriveUsersRequest(Builder builder) {

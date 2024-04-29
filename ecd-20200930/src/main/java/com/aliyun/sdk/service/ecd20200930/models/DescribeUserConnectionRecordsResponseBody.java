@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeUserConnectionRecordsResponseBody</p>
  */
 public class DescribeUserConnectionRecordsResponseBody extends TeaModel {
-    @NameInMap("ConnectionRecords")
+    @com.aliyun.core.annotation.NameInMap("ConnectionRecords")
     private java.util.List < ConnectionRecords> connectionRecords;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeUserConnectionRecordsResponseBody(Builder builder) {
@@ -92,22 +91,22 @@ public class DescribeUserConnectionRecordsResponseBody extends TeaModel {
     } 
 
     public static class ConnectionRecords extends TeaModel {
-        @NameInMap("ConnectDuration")
+        @com.aliyun.core.annotation.NameInMap("ConnectDuration")
         private String connectDuration;
 
-        @NameInMap("ConnectEndTime")
+        @com.aliyun.core.annotation.NameInMap("ConnectEndTime")
         private String connectEndTime;
 
-        @NameInMap("ConnectStartTime")
+        @com.aliyun.core.annotation.NameInMap("ConnectStartTime")
         private String connectStartTime;
 
-        @NameInMap("ConnectionRecordId")
+        @com.aliyun.core.annotation.NameInMap("ConnectionRecordId")
         private String connectionRecordId;
 
-        @NameInMap("DesktopId")
+        @com.aliyun.core.annotation.NameInMap("DesktopId")
         private String desktopId;
 
-        @NameInMap("DesktopName")
+        @com.aliyun.core.annotation.NameInMap("DesktopName")
         private String desktopName;
 
         private ConnectionRecords(Builder builder) {

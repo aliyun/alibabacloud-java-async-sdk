@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeClientEventsResponseBody</p>
  */
 public class DescribeClientEventsResponseBody extends TeaModel {
-    @NameInMap("Events")
+    @com.aliyun.core.annotation.NameInMap("Events")
     private java.util.List < Events> events;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeClientEventsResponseBody(Builder builder) {
@@ -92,70 +91,70 @@ public class DescribeClientEventsResponseBody extends TeaModel {
     } 
 
     public static class Events extends TeaModel {
-        @NameInMap("AliUid")
+        @com.aliyun.core.annotation.NameInMap("AliUid")
         private String aliUid;
 
-        @NameInMap("BytesReceived")
+        @com.aliyun.core.annotation.NameInMap("BytesReceived")
         private String bytesReceived;
 
-        @NameInMap("BytesSend")
+        @com.aliyun.core.annotation.NameInMap("BytesSend")
         private String bytesSend;
 
-        @NameInMap("ClientIp")
+        @com.aliyun.core.annotation.NameInMap("ClientIp")
         private String clientIp;
 
-        @NameInMap("ClientOS")
+        @com.aliyun.core.annotation.NameInMap("ClientOS")
         private String clientOS;
 
-        @NameInMap("ClientVersion")
+        @com.aliyun.core.annotation.NameInMap("ClientVersion")
         private String clientVersion;
 
-        @NameInMap("DesktopGroupId")
+        @com.aliyun.core.annotation.NameInMap("DesktopGroupId")
         private String desktopGroupId;
 
-        @NameInMap("DesktopGroupName")
+        @com.aliyun.core.annotation.NameInMap("DesktopGroupName")
         private String desktopGroupName;
 
-        @NameInMap("DesktopId")
+        @com.aliyun.core.annotation.NameInMap("DesktopId")
         private String desktopId;
 
-        @NameInMap("DesktopIp")
+        @com.aliyun.core.annotation.NameInMap("DesktopIp")
         private String desktopIp;
 
-        @NameInMap("DesktopName")
+        @com.aliyun.core.annotation.NameInMap("DesktopName")
         private String desktopName;
 
-        @NameInMap("DirectoryId")
+        @com.aliyun.core.annotation.NameInMap("DirectoryId")
         private String directoryId;
 
-        @NameInMap("DirectoryType")
+        @com.aliyun.core.annotation.NameInMap("DirectoryType")
         private String directoryType;
 
-        @NameInMap("EndUserId")
+        @com.aliyun.core.annotation.NameInMap("EndUserId")
         private String endUserId;
 
-        @NameInMap("EventId")
+        @com.aliyun.core.annotation.NameInMap("EventId")
         private String eventId;
 
-        @NameInMap("EventTime")
+        @com.aliyun.core.annotation.NameInMap("EventTime")
         private String eventTime;
 
-        @NameInMap("EventType")
+        @com.aliyun.core.annotation.NameInMap("EventType")
         private String eventType;
 
-        @NameInMap("OfficeSiteId")
+        @com.aliyun.core.annotation.NameInMap("OfficeSiteId")
         private String officeSiteId;
 
-        @NameInMap("OfficeSiteName")
+        @com.aliyun.core.annotation.NameInMap("OfficeSiteName")
         private String officeSiteName;
 
-        @NameInMap("OfficeSiteType")
+        @com.aliyun.core.annotation.NameInMap("OfficeSiteType")
         private String officeSiteType;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Events(Builder builder) {

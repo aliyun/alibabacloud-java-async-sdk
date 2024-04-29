@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeRecordingsResponseBody</p>
  */
 public class DescribeRecordingsResponseBody extends TeaModel {
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("Recordings")
+    @com.aliyun.core.annotation.NameInMap("Recordings")
     private java.util.List < Recordings> recordings;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeRecordingsResponseBody(Builder builder) {
@@ -92,34 +91,34 @@ public class DescribeRecordingsResponseBody extends TeaModel {
     } 
 
     public static class Recordings extends TeaModel {
-        @NameInMap("DesktopId")
+        @com.aliyun.core.annotation.NameInMap("DesktopId")
         private String desktopId;
 
-        @NameInMap("DesktopName")
+        @com.aliyun.core.annotation.NameInMap("DesktopName")
         private String desktopName;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("EndUserIds")
+        @com.aliyun.core.annotation.NameInMap("EndUserIds")
         private java.util.List < String > endUserIds;
 
-        @NameInMap("FilePath")
+        @com.aliyun.core.annotation.NameInMap("FilePath")
         private String filePath;
 
-        @NameInMap("PolicyGroupId")
+        @com.aliyun.core.annotation.NameInMap("PolicyGroupId")
         private String policyGroupId;
 
-        @NameInMap("RecordingSize")
+        @com.aliyun.core.annotation.NameInMap("RecordingSize")
         private Integer recordingSize;
 
-        @NameInMap("RecordingType")
+        @com.aliyun.core.annotation.NameInMap("RecordingType")
         private String recordingType;
 
-        @NameInMap("SignedUrl")
+        @com.aliyun.core.annotation.NameInMap("SignedUrl")
         private String signedUrl;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
         private Recordings(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeFotaTasksResponseBody</p>
  */
 public class DescribeFotaTasksResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("FotaTasks")
+    @com.aliyun.core.annotation.NameInMap("FotaTasks")
     private java.util.List < FotaTasks> fotaTasks;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeFotaTasksResponseBody(Builder builder) {
@@ -132,31 +131,31 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
     } 
 
     public static class FotaTasks extends TeaModel {
-        @NameInMap("AppVersion")
+        @com.aliyun.core.annotation.NameInMap("AppVersion")
         private String appVersion;
 
-        @NameInMap("FotaProject")
+        @com.aliyun.core.annotation.NameInMap("FotaProject")
         private String fotaProject;
 
-        @NameInMap("PendingCustomImageCount")
+        @com.aliyun.core.annotation.NameInMap("PendingCustomImageCount")
         private Integer pendingCustomImageCount;
 
-        @NameInMap("PendingDesktopCount")
+        @com.aliyun.core.annotation.NameInMap("PendingDesktopCount")
         private Integer pendingDesktopCount;
 
-        @NameInMap("PublishTime")
+        @com.aliyun.core.annotation.NameInMap("PublishTime")
         private String publishTime;
 
-        @NameInMap("ReleaseNote")
+        @com.aliyun.core.annotation.NameInMap("ReleaseNote")
         private String releaseNote;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Integer size;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TaskUid")
+        @com.aliyun.core.annotation.NameInMap("TaskUid")
         private String taskUid;
 
         private FotaTasks(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,21 +11,21 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SetUserProfilePathRulesRequest</p>
  */
 public class SetUserProfilePathRulesRequest extends Request {
-    @Query
-    @NameInMap("DesktopGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopGroupId")
     private String desktopGroupId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("UserProfilePathRule")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserProfilePathRule")
     private java.util.List < UserProfilePathRule> userProfilePathRule;
 
-    @Query
-    @NameInMap("UserProfileRuleType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserProfileRuleType")
     private String userProfileRuleType;
 
     private SetUserProfilePathRulesRequest(Builder builder) {
@@ -168,11 +167,11 @@ public class SetUserProfilePathRulesRequest extends Request {
     } 
 
     public static class BlackPath extends TeaModel {
-        @NameInMap("Path")
-        @Validation(maxLength = 260)
+        @com.aliyun.core.annotation.NameInMap("Path")
+        @com.aliyun.core.annotation.Validation(maxLength = 260)
         private String path;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private BlackPath(Builder builder) {
@@ -249,11 +248,11 @@ public class SetUserProfilePathRulesRequest extends Request {
 
     }
     public static class WhitePaths extends TeaModel {
-        @NameInMap("Path")
-        @Validation(maxLength = 260)
+        @com.aliyun.core.annotation.NameInMap("Path")
+        @com.aliyun.core.annotation.Validation(maxLength = 260)
         private String path;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private WhitePaths(Builder builder) {
@@ -330,10 +329,10 @@ public class SetUserProfilePathRulesRequest extends Request {
 
     }
     public static class UserProfilePathRule extends TeaModel {
-        @NameInMap("BlackPath")
+        @com.aliyun.core.annotation.NameInMap("BlackPath")
         private BlackPath blackPath;
 
-        @NameInMap("WhitePaths")
+        @com.aliyun.core.annotation.NameInMap("WhitePaths")
         private java.util.List < WhitePaths> whitePaths;
 
         private UserProfilePathRule(Builder builder) {

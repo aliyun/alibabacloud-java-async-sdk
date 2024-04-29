@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,89 +11,89 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateADConnectorOfficeSiteRequest</p>
  */
 public class CreateADConnectorOfficeSiteRequest extends Request {
-    @Query
-    @NameInMap("AdHostname")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AdHostname")
     private String adHostname;
 
-    @Query
-    @NameInMap("Bandwidth")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Bandwidth")
     private Integer bandwidth;
 
-    @Query
-    @NameInMap("CenId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CenId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cenId;
 
-    @Query
-    @NameInMap("CenOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CenOwnerId")
     private Long cenOwnerId;
 
-    @Query
-    @NameInMap("CidrBlock")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CidrBlock")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cidrBlock;
 
-    @Query
-    @NameInMap("DesktopAccessType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopAccessType")
     private String desktopAccessType;
 
-    @Query
-    @NameInMap("DnsAddress")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DnsAddress")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > dnsAddress;
 
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("DomainPassword")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainPassword")
     private String domainPassword;
 
-    @Query
-    @NameInMap("DomainUserName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainUserName")
     private String domainUserName;
 
-    @Query
-    @NameInMap("EnableAdminAccess")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableAdminAccess")
     private Boolean enableAdminAccess;
 
-    @Query
-    @NameInMap("EnableInternetAccess")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableInternetAccess")
     private Boolean enableInternetAccess;
 
-    @Query
-    @NameInMap("MfaEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MfaEnabled")
     private Boolean mfaEnabled;
 
-    @Query
-    @NameInMap("OfficeSiteName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OfficeSiteName")
     private String officeSiteName;
 
-    @Query
-    @NameInMap("ProtocolType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProtocolType")
     private String protocolType;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("Specification")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Specification")
     private Long specification;
 
-    @Query
-    @NameInMap("SubDomainDnsAddress")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubDomainDnsAddress")
     private java.util.List < String > subDomainDnsAddress;
 
-    @Query
-    @NameInMap("SubDomainName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubDomainName")
     private String subDomainName;
 
-    @Query
-    @NameInMap("VerifyCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VerifyCode")
     private String verifyCode;
 
     private CreateADConnectorOfficeSiteRequest(Builder builder) {

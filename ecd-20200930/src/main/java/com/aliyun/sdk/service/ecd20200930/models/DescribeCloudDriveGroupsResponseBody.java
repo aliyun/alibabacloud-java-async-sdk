@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCloudDriveGroupsResponseBody</p>
  */
 public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
-    @NameInMap("CloudDriveGroups")
+    @com.aliyun.core.annotation.NameInMap("CloudDriveGroups")
     private java.util.List < CloudDriveGroups> cloudDriveGroups;
 
-    @NameInMap("Count")
+    @com.aliyun.core.annotation.NameInMap("Count")
     private Long count;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeCloudDriveGroupsResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
     } 
 
     public static class AdminUserInfos extends TeaModel {
-        @NameInMap("EndUserId")
+        @com.aliyun.core.annotation.NameInMap("EndUserId")
         private String endUserId;
 
-        @NameInMap("NickName")
+        @com.aliyun.core.annotation.NameInMap("NickName")
         private String nickName;
 
         private AdminUserInfos(Builder builder) {
@@ -193,37 +192,37 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
 
     }
     public static class CloudDriveGroups extends TeaModel {
-        @NameInMap("AdminUserIds")
+        @com.aliyun.core.annotation.NameInMap("AdminUserIds")
         private String adminUserIds;
 
-        @NameInMap("AdminUserInfos")
+        @com.aliyun.core.annotation.NameInMap("AdminUserInfos")
         private java.util.List < AdminUserInfos> adminUserInfos;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DirectoryId")
+        @com.aliyun.core.annotation.NameInMap("DirectoryId")
         private String directoryId;
 
-        @NameInMap("DriveId")
+        @com.aliyun.core.annotation.NameInMap("DriveId")
         private String driveId;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("OrgId")
+        @com.aliyun.core.annotation.NameInMap("OrgId")
         private String orgId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TotalSize")
+        @com.aliyun.core.annotation.NameInMap("TotalSize")
         private Long totalSize;
 
-        @NameInMap("UsedSize")
+        @com.aliyun.core.annotation.NameInMap("UsedSize")
         private String usedSize;
 
         private CloudDriveGroups(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,81 +11,81 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyCdsFileShareLinkRequest</p>
  */
 public class ModifyCdsFileShareLinkRequest extends Request {
-    @Query
-    @NameInMap("CdsId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CdsId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cdsId;
 
-    @Query
-    @NameInMap("Description")
-    @Validation(maxLength = 1024)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
+    @com.aliyun.core.annotation.Validation(maxLength = 1024)
     private String description;
 
-    @Query
-    @NameInMap("DisableDownload")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DisableDownload")
     private Boolean disableDownload;
 
-    @Query
-    @NameInMap("DisablePreview")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DisablePreview")
     private Boolean disablePreview;
 
-    @Query
-    @NameInMap("DisableSave")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DisableSave")
     private Boolean disableSave;
 
-    @Query
-    @NameInMap("DownloadCount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DownloadCount")
     private Long downloadCount;
 
-    @Query
-    @NameInMap("DownloadLimit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DownloadLimit")
     private Long downloadLimit;
 
-    @Query
-    @NameInMap("Expiration")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Expiration")
     private String expiration;
 
-    @Query
-    @NameInMap("PreviewCount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PreviewCount")
     private Long previewCount;
 
-    @Query
-    @NameInMap("PreviewLimit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PreviewLimit")
     private Long previewLimit;
 
-    @Query
-    @NameInMap("ReportCount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReportCount")
     private Long reportCount;
 
-    @Query
-    @NameInMap("SaveCount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SaveCount")
     private Long saveCount;
 
-    @Query
-    @NameInMap("SaveLimit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SaveLimit")
     private Long saveLimit;
 
-    @Query
-    @NameInMap("ShareId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShareId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String shareId;
 
-    @Query
-    @NameInMap("ShareName")
-    @Validation(maxLength = 128)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShareName")
+    @com.aliyun.core.annotation.Validation(maxLength = 128)
     private String shareName;
 
-    @Query
-    @NameInMap("SharePwd")
-    @Validation(maxLength = 8, minLength = 6)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SharePwd")
+    @com.aliyun.core.annotation.Validation(maxLength = 8, minLength = 6)
     private String sharePwd;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @Query
-    @NameInMap("VideoPreviewCount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VideoPreviewCount")
     private Long videoPreviewCount;
 
     private ModifyCdsFileShareLinkRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,18 +11,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>FilePermissionMember</p>
  */
 public class FilePermissionMember extends TeaModel {
-    @NameInMap("CdsIdentity")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("CdsIdentity")
+    @com.aliyun.core.annotation.Validation(required = true)
     private CdsIdentity cdsIdentity;
 
-    @NameInMap("DisinheritSubGroup")
+    @com.aliyun.core.annotation.NameInMap("DisinheritSubGroup")
     private Boolean disinheritSubGroup;
 
-    @NameInMap("ExpireTime")
+    @com.aliyun.core.annotation.NameInMap("ExpireTime")
     private Long expireTime;
 
-    @NameInMap("RoleId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("RoleId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String roleId;
 
     private FilePermissionMember(Builder builder) {
@@ -114,12 +113,12 @@ public class FilePermissionMember extends TeaModel {
     } 
 
     public static class CdsIdentity extends TeaModel {
-        @NameInMap("Id")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Id")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String id;
 
-        @NameInMap("Type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
         private CdsIdentity(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeUsersInGroupResponseBody</p>
  */
 public class DescribeUsersInGroupResponseBody extends TeaModel {
-    @NameInMap("EndUsers")
+    @com.aliyun.core.annotation.NameInMap("EndUsers")
     private java.util.List < EndUsers> endUsers;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("OnlineUsersCount")
+    @com.aliyun.core.annotation.NameInMap("OnlineUsersCount")
     private Integer onlineUsersCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UsersCount")
+    @com.aliyun.core.annotation.NameInMap("UsersCount")
     private Integer usersCount;
 
     private DescribeUsersInGroupResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
     } 
 
     public static class ExternalInfo extends TeaModel {
-        @NameInMap("ExternalName")
+        @com.aliyun.core.annotation.NameInMap("ExternalName")
         private String externalName;
 
-        @NameInMap("JobNumber")
+        @com.aliyun.core.annotation.NameInMap("JobNumber")
         private String jobNumber;
 
         private ExternalInfo(Builder builder) {
@@ -193,10 +192,10 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
 
     }
     public static class PropertyValues extends TeaModel {
-        @NameInMap("PropertyValue")
+        @com.aliyun.core.annotation.NameInMap("PropertyValue")
         private String propertyValue;
 
-        @NameInMap("PropertyValueId")
+        @com.aliyun.core.annotation.NameInMap("PropertyValueId")
         private Long propertyValueId;
 
         private PropertyValues(Builder builder) {
@@ -254,22 +253,22 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
 
     }
     public static class UserSetPropertiesModels extends TeaModel {
-        @NameInMap("PropertyId")
+        @com.aliyun.core.annotation.NameInMap("PropertyId")
         private Long propertyId;
 
-        @NameInMap("PropertyKey")
+        @com.aliyun.core.annotation.NameInMap("PropertyKey")
         private String propertyKey;
 
-        @NameInMap("PropertyType")
+        @com.aliyun.core.annotation.NameInMap("PropertyType")
         private Integer propertyType;
 
-        @NameInMap("PropertyValues")
+        @com.aliyun.core.annotation.NameInMap("PropertyValues")
         private java.util.List < PropertyValues> propertyValues;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private Long userId;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
         private UserSetPropertiesModels(Builder builder) {
@@ -401,43 +400,43 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
 
     }
     public static class EndUsers extends TeaModel {
-        @NameInMap("ConnectionStatus")
+        @com.aliyun.core.annotation.NameInMap("ConnectionStatus")
         private String connectionStatus;
 
-        @NameInMap("DesktopId")
+        @com.aliyun.core.annotation.NameInMap("DesktopId")
         private String desktopId;
 
-        @NameInMap("DesktopName")
+        @com.aliyun.core.annotation.NameInMap("DesktopName")
         private String desktopName;
 
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("EndUserEmail")
+        @com.aliyun.core.annotation.NameInMap("EndUserEmail")
         private String endUserEmail;
 
-        @NameInMap("EndUserId")
+        @com.aliyun.core.annotation.NameInMap("EndUserId")
         private String endUserId;
 
-        @NameInMap("EndUserName")
+        @com.aliyun.core.annotation.NameInMap("EndUserName")
         private String endUserName;
 
-        @NameInMap("EndUserPhone")
+        @com.aliyun.core.annotation.NameInMap("EndUserPhone")
         private String endUserPhone;
 
-        @NameInMap("EndUserRemark")
+        @com.aliyun.core.annotation.NameInMap("EndUserRemark")
         private String endUserRemark;
 
-        @NameInMap("EndUserType")
+        @com.aliyun.core.annotation.NameInMap("EndUserType")
         private String endUserType;
 
-        @NameInMap("ExternalInfo")
+        @com.aliyun.core.annotation.NameInMap("ExternalInfo")
         private ExternalInfo externalInfo;
 
-        @NameInMap("UserDesktopId")
+        @com.aliyun.core.annotation.NameInMap("UserDesktopId")
         private String userDesktopId;
 
-        @NameInMap("UserSetPropertiesModels")
+        @com.aliyun.core.annotation.NameInMap("UserSetPropertiesModels")
         private java.util.List < UserSetPropertiesModels> userSetPropertiesModels;
 
         private EndUsers(Builder builder) {

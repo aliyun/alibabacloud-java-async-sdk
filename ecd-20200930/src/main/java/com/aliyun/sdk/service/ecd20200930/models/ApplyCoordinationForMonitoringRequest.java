@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,32 +11,32 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ApplyCoordinationForMonitoringRequest</p>
  */
 public class ApplyCoordinationForMonitoringRequest extends Request {
-    @Query
-    @NameInMap("CoordinatePolicyType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CoordinatePolicyType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String coordinatePolicyType;
 
-    @Query
-    @NameInMap("EndUserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndUserId")
     private String endUserId;
 
-    @Query
-    @NameInMap("InitiatorType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InitiatorType")
     private String initiatorType;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceCandidates")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceCandidates")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < ResourceCandidates> resourceCandidates;
 
-    @Query
-    @NameInMap("Uuid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Uuid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String uuid;
 
     private ApplyCoordinationForMonitoringRequest(Builder builder) {
@@ -211,30 +210,30 @@ public class ApplyCoordinationForMonitoringRequest extends Request {
     } 
 
     public static class ResourceCandidates extends TeaModel {
-        @NameInMap("OwnerAliUid")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("OwnerAliUid")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Long ownerAliUid;
 
-        @NameInMap("OwnerEndUserId")
+        @com.aliyun.core.annotation.NameInMap("OwnerEndUserId")
         private String ownerEndUserId;
 
-        @NameInMap("ResourceId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String resourceId;
 
-        @NameInMap("ResourceName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ResourceName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String resourceName;
 
-        @NameInMap("ResourceProperties")
+        @com.aliyun.core.annotation.NameInMap("ResourceProperties")
         private String resourceProperties;
 
-        @NameInMap("ResourceRegionId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ResourceRegionId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String resourceRegionId;
 
-        @NameInMap("ResourceType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String resourceType;
 
         private ResourceCandidates(Builder builder) {

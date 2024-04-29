@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,166 +11,166 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateDesktopGroupRequest</p>
  */
 public class CreateDesktopGroupRequest extends Request {
-    @Query
-    @NameInMap("AllClassifyUsers")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AllClassifyUsers")
     private Boolean allClassifyUsers;
 
-    @Query
-    @NameInMap("AllowAutoSetup")
-    @Validation(maximum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AllowAutoSetup")
+    @com.aliyun.core.annotation.Validation(maximum = 1)
     private Integer allowAutoSetup;
 
-    @Query
-    @NameInMap("AllowBufferCount")
-    @Validation(maximum = 1000)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AllowBufferCount")
+    @com.aliyun.core.annotation.Validation(maximum = 1000)
     private Integer allowBufferCount;
 
-    @Query
-    @NameInMap("AutoPay")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoPay")
     private Boolean autoPay;
 
-    @Query
-    @NameInMap("AutoRenew")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoRenew")
     private Boolean autoRenew;
 
-    @Query
-    @NameInMap("BindAmount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BindAmount")
     private Long bindAmount;
 
-    @Query
-    @NameInMap("BundleId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BundleId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bundleId;
 
-    @Query
-    @NameInMap("BuyDesktopsCount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BuyDesktopsCount")
     private Integer buyDesktopsCount;
 
-    @Query
-    @NameInMap("ChargeType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChargeType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String chargeType;
 
-    @Query
-    @NameInMap("Classify")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Classify")
     private String classify;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("Comments")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Comments")
     private String comments;
 
-    @Query
-    @NameInMap("ConnectDuration")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConnectDuration")
     private Long connectDuration;
 
-    @Query
-    @NameInMap("DefaultInitDesktopCount")
-    @Validation(maximum = 1000)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DefaultInitDesktopCount")
+    @com.aliyun.core.annotation.Validation(maximum = 1000)
     private Integer defaultInitDesktopCount;
 
-    @Query
-    @NameInMap("DesktopGroupName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopGroupName")
     private String desktopGroupName;
 
-    @Query
-    @NameInMap("DirectoryId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DirectoryId")
     private String directoryId;
 
-    @Query
-    @NameInMap("EndUserIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndUserIds")
     private java.util.List < String > endUserIds;
 
-    @Query
-    @NameInMap("FileSystemId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileSystemId")
     private String fileSystemId;
 
-    @Query
-    @NameInMap("GroupVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupVersion")
     private Integer groupVersion;
 
-    @Query
-    @NameInMap("IdleDisconnectDuration")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IdleDisconnectDuration")
     private Long idleDisconnectDuration;
 
-    @Query
-    @NameInMap("KeepDuration")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeepDuration")
     private Long keepDuration;
 
-    @Query
-    @NameInMap("LoadPolicy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LoadPolicy")
     private Long loadPolicy;
 
-    @Query
-    @NameInMap("MaxDesktopsCount")
-    @Validation(maximum = 1000)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxDesktopsCount")
+    @com.aliyun.core.annotation.Validation(maximum = 1000)
     private Integer maxDesktopsCount;
 
-    @Query
-    @NameInMap("MinDesktopsCount")
-    @Validation(maximum = 500)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinDesktopsCount")
+    @com.aliyun.core.annotation.Validation(maximum = 500)
     private Integer minDesktopsCount;
 
-    @Query
-    @NameInMap("OfficeSiteId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OfficeSiteId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String officeSiteId;
 
-    @Query
-    @NameInMap("OwnType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnType")
     private Integer ownType;
 
-    @Query
-    @NameInMap("Period")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Period")
     private Integer period;
 
-    @Query
-    @NameInMap("PeriodUnit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PeriodUnit")
     private String periodUnit;
 
-    @Query
-    @NameInMap("PolicyGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String policyGroupId;
 
-    @Query
-    @NameInMap("ProfileFollowSwitch")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProfileFollowSwitch")
     private Boolean profileFollowSwitch;
 
-    @Query
-    @NameInMap("RatioThreshold")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RatioThreshold")
     private Float ratioThreshold;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResetType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResetType")
     private Long resetType;
 
-    @Query
-    @NameInMap("ScaleStrategyId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScaleStrategyId")
     private String scaleStrategyId;
 
-    @Query
-    @NameInMap("StopDuration")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StopDuration")
     private Long stopDuration;
 
-    @Query
-    @NameInMap("VolumeEncryptionEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VolumeEncryptionEnabled")
     private Boolean volumeEncryptionEnabled;
 
-    @Query
-    @NameInMap("VolumeEncryptionKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VolumeEncryptionKey")
     private String volumeEncryptionKey;
 
-    @Query
-    @NameInMap("VpcId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
 
     private CreateDesktopGroupRequest(Builder builder) {

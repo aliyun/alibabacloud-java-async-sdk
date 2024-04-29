@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,32 +11,32 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RemoveFilePermissionRequest</p>
  */
 public class RemoveFilePermissionRequest extends Request {
-    @Query
-    @NameInMap("CdsId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CdsId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cdsId;
 
-    @Query
-    @NameInMap("EndUserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndUserId")
     private String endUserId;
 
-    @Query
-    @NameInMap("FileId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fileId;
 
-    @Query
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
 
-    @Query
-    @NameInMap("MemberList")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MemberList")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < MemberList> memberList;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private RemoveFilePermissionRequest(Builder builder) {
@@ -190,12 +189,12 @@ public class RemoveFilePermissionRequest extends Request {
     } 
 
     public static class CdsIdentity extends TeaModel {
-        @NameInMap("Id")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Id")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String id;
 
-        @NameInMap("Type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
         private CdsIdentity(Builder builder) {
@@ -280,12 +279,12 @@ public class RemoveFilePermissionRequest extends Request {
 
     }
     public static class MemberList extends TeaModel {
-        @NameInMap("CdsIdentity")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("CdsIdentity")
+        @com.aliyun.core.annotation.Validation(required = true)
         private CdsIdentity cdsIdentity;
 
-        @NameInMap("RoleId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("RoleId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String roleId;
 
         private MemberList(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,63 +11,63 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateADConnectorDirectoryRequest</p>
  */
 public class CreateADConnectorDirectoryRequest extends Request {
-    @Query
-    @NameInMap("DesktopAccessType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopAccessType")
     private String desktopAccessType;
 
-    @Query
-    @NameInMap("DirectoryName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DirectoryName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String directoryName;
 
-    @Query
-    @NameInMap("DnsAddress")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DnsAddress")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > dnsAddress;
 
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("DomainPassword")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainPassword")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainPassword;
 
-    @Query
-    @NameInMap("DomainUserName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainUserName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainUserName;
 
-    @Query
-    @NameInMap("EnableAdminAccess")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableAdminAccess")
     private Boolean enableAdminAccess;
 
-    @Query
-    @NameInMap("MfaEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MfaEnabled")
     private Boolean mfaEnabled;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("Specification")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Specification")
     private Long specification;
 
-    @Query
-    @NameInMap("SubDomainDnsAddress")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubDomainDnsAddress")
     private java.util.List < String > subDomainDnsAddress;
 
-    @Query
-    @NameInMap("SubDomainName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubDomainName")
     private String subDomainName;
 
-    @Query
-    @NameInMap("VSwitchId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > vSwitchId;
 
     private CreateADConnectorDirectoryRequest(Builder builder) {

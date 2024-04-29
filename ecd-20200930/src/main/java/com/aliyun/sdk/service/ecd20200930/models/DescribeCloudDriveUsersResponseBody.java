@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCloudDriveUsersResponseBody</p>
  */
 public class DescribeCloudDriveUsersResponseBody extends TeaModel {
-    @NameInMap("CloudDriveUsers")
+    @com.aliyun.core.annotation.NameInMap("CloudDriveUsers")
     private java.util.List < CloudDriveUsers> cloudDriveUsers;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeCloudDriveUsersResponseBody(Builder builder) {
@@ -92,25 +91,25 @@ public class DescribeCloudDriveUsersResponseBody extends TeaModel {
     } 
 
     public static class CloudDriveUsers extends TeaModel {
-        @NameInMap("DriveId")
+        @com.aliyun.core.annotation.NameInMap("DriveId")
         private String driveId;
 
-        @NameInMap("EndUserId")
+        @com.aliyun.core.annotation.NameInMap("EndUserId")
         private String endUserId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TotalSize")
+        @com.aliyun.core.annotation.NameInMap("TotalSize")
         private Long totalSize;
 
-        @NameInMap("UsedSize")
+        @com.aliyun.core.annotation.NameInMap("UsedSize")
         private Long usedSize;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
         private CloudDriveUsers(Builder builder) {

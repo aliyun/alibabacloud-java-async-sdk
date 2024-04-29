@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeImagesResponseBody</p>
  */
 public class DescribeImagesResponseBody extends TeaModel {
-    @NameInMap("Images")
+    @com.aliyun.core.annotation.NameInMap("Images")
     private java.util.List < Images> images;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeImagesResponseBody(Builder builder) {
@@ -92,67 +91,67 @@ public class DescribeImagesResponseBody extends TeaModel {
     } 
 
     public static class Images extends TeaModel {
-        @NameInMap("AppVersion")
+        @com.aliyun.core.annotation.NameInMap("AppVersion")
         private String appVersion;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("DataDiskSize")
+        @com.aliyun.core.annotation.NameInMap("DataDiskSize")
         private Integer dataDiskSize;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("GpuCategory")
+        @com.aliyun.core.annotation.NameInMap("GpuCategory")
         private Boolean gpuCategory;
 
-        @NameInMap("GpuDriverVersion")
+        @com.aliyun.core.annotation.NameInMap("GpuDriverVersion")
         private String gpuDriverVersion;
 
-        @NameInMap("ImageId")
+        @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
 
-        @NameInMap("ImageType")
+        @com.aliyun.core.annotation.NameInMap("ImageType")
         private String imageType;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("OsType")
+        @com.aliyun.core.annotation.NameInMap("OsType")
         private String osType;
 
-        @NameInMap("Platform")
+        @com.aliyun.core.annotation.NameInMap("Platform")
         private String platform;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private String progress;
 
-        @NameInMap("ProtocolType")
+        @com.aliyun.core.annotation.NameInMap("ProtocolType")
         private String protocolType;
 
-        @NameInMap("SessionType")
+        @com.aliyun.core.annotation.NameInMap("SessionType")
         private String sessionType;
 
-        @NameInMap("SharedCount")
+        @com.aliyun.core.annotation.NameInMap("SharedCount")
         private Integer sharedCount;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Integer size;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("SupportedLanguages")
+        @com.aliyun.core.annotation.NameInMap("SupportedLanguages")
         private java.util.List < String > supportedLanguages;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
-        @NameInMap("VolumeEncryptionEnabled")
+        @com.aliyun.core.annotation.NameInMap("VolumeEncryptionEnabled")
         private Boolean volumeEncryptionEnabled;
 
-        @NameInMap("VolumeEncryptionKey")
+        @com.aliyun.core.annotation.NameInMap("VolumeEncryptionKey")
         private String volumeEncryptionKey;
 
         private Images(Builder builder) {

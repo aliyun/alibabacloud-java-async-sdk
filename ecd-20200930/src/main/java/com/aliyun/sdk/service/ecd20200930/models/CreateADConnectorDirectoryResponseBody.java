@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateADConnectorDirectoryResponseBody</p>
  */
 public class CreateADConnectorDirectoryResponseBody extends TeaModel {
-    @NameInMap("AdConnectors")
+    @com.aliyun.core.annotation.NameInMap("AdConnectors")
     private java.util.List < AdConnectors> adConnectors;
 
-    @NameInMap("DirectoryId")
+    @com.aliyun.core.annotation.NameInMap("DirectoryId")
     private String directoryId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TrustPassword")
+    @com.aliyun.core.annotation.NameInMap("TrustPassword")
     private String trustPassword;
 
     private CreateADConnectorDirectoryResponseBody(Builder builder) {
@@ -112,7 +111,7 @@ public class CreateADConnectorDirectoryResponseBody extends TeaModel {
     } 
 
     public static class AdConnectors extends TeaModel {
-        @NameInMap("Address")
+        @com.aliyun.core.annotation.NameInMap("Address")
         private String address;
 
         private AdConnectors(Builder builder) {

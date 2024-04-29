@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DisconnectDesktopSessionsResponseBody</p>
  */
 public class DisconnectDesktopSessionsResponseBody extends TeaModel {
-    @NameInMap("InvalidSessions")
+    @com.aliyun.core.annotation.NameInMap("InvalidSessions")
     private java.util.List < InvalidSessions> invalidSessions;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DisconnectDesktopSessionsResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class DisconnectDesktopSessionsResponseBody extends TeaModel {
     } 
 
     public static class InvalidSessions extends TeaModel {
-        @NameInMap("DesktopId")
+        @com.aliyun.core.annotation.NameInMap("DesktopId")
         private String desktopId;
 
-        @NameInMap("EndUserId")
+        @com.aliyun.core.annotation.NameInMap("EndUserId")
         private String endUserId;
 
         private InvalidSessions(Builder builder) {

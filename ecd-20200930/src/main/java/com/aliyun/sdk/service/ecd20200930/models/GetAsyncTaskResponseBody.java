@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetAsyncTaskResponseBody</p>
  */
 public class GetAsyncTaskResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
     private GetAsyncTaskResponseBody(Builder builder) {
@@ -112,25 +111,25 @@ public class GetAsyncTaskResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("AsyncTaskId")
+        @com.aliyun.core.annotation.NameInMap("AsyncTaskId")
         private String asyncTaskId;
 
-        @NameInMap("ConsumedProcess")
+        @com.aliyun.core.annotation.NameInMap("ConsumedProcess")
         private String consumedProcess;
 
-        @NameInMap("ErrCode")
+        @com.aliyun.core.annotation.NameInMap("ErrCode")
         private Long errCode;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TotalProcess")
+        @com.aliyun.core.annotation.NameInMap("TotalProcess")
         private Long totalProcess;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private Data(Builder builder) {

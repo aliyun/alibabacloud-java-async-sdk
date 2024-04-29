@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateAutoSnapshotPolicyRequest</p>
  */
 public class CreateAutoSnapshotPolicyRequest extends Request {
-    @Query
-    @NameInMap("CronExpression")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CronExpression")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cronExpression;
 
-    @Query
-    @NameInMap("PolicyName")
-    @Validation(required = true, maxLength = 128, minLength = 2)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyName")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 128, minLength = 2)
     private String policyName;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("RetentionDays")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RetentionDays")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer retentionDays;
 
     private CreateAutoSnapshotPolicyRequest(Builder builder) {

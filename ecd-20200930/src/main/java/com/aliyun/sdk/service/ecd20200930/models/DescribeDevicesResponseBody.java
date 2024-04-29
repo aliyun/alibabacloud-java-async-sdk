@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDevicesResponseBody</p>
  */
 public class DescribeDevicesResponseBody extends TeaModel {
-    @NameInMap("Devices")
+    @com.aliyun.core.annotation.NameInMap("Devices")
     private java.util.List < Devices> devices;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDevicesResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class DescribeDevicesResponseBody extends TeaModel {
     } 
 
     public static class EndUserList extends TeaModel {
-        @NameInMap("AdDomain")
+        @com.aliyun.core.annotation.NameInMap("AdDomain")
         private String adDomain;
 
-        @NameInMap("DirectoryId")
+        @com.aliyun.core.annotation.NameInMap("DirectoryId")
         private String directoryId;
 
-        @NameInMap("EndUserId")
+        @com.aliyun.core.annotation.NameInMap("EndUserId")
         private String endUserId;
 
-        @NameInMap("UserType")
+        @com.aliyun.core.annotation.NameInMap("UserType")
         private String userType;
 
         private EndUserList(Builder builder) {
@@ -173,10 +172,10 @@ public class DescribeDevicesResponseBody extends TeaModel {
 
     }
     public static class Devices extends TeaModel {
-        @NameInMap("DeviceId")
+        @com.aliyun.core.annotation.NameInMap("DeviceId")
         private String deviceId;
 
-        @NameInMap("EndUserList")
+        @com.aliyun.core.annotation.NameInMap("EndUserList")
         private java.util.List < EndUserList> endUserList;
 
         private Devices(Builder builder) {

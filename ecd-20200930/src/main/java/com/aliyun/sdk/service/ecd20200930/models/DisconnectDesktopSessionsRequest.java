@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,18 +11,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DisconnectDesktopSessionsRequest</p>
  */
 public class DisconnectDesktopSessionsRequest extends Request {
-    @Query
-    @NameInMap("PreCheck")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PreCheck")
     private Boolean preCheck;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("Sessions")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Sessions")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < Sessions> sessions;
 
     private DisconnectDesktopSessionsRequest(Builder builder) {
@@ -118,10 +117,10 @@ public class DisconnectDesktopSessionsRequest extends Request {
     } 
 
     public static class Sessions extends TeaModel {
-        @NameInMap("DesktopId")
+        @com.aliyun.core.annotation.NameInMap("DesktopId")
         private String desktopId;
 
-        @NameInMap("EndUserId")
+        @com.aliyun.core.annotation.NameInMap("EndUserId")
         private String endUserId;
 
         private Sessions(Builder builder) {

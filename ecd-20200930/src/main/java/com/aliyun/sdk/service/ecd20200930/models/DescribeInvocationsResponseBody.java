@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInvocationsResponseBody</p>
  */
 public class DescribeInvocationsResponseBody extends TeaModel {
-    @NameInMap("Invocations")
+    @com.aliyun.core.annotation.NameInMap("Invocations")
     private java.util.List < Invocations> invocations;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeInvocationsResponseBody(Builder builder) {
@@ -92,46 +91,46 @@ public class DescribeInvocationsResponseBody extends TeaModel {
     } 
 
     public static class InvokeDesktops extends TeaModel {
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("DesktopId")
+        @com.aliyun.core.annotation.NameInMap("DesktopId")
         private String desktopId;
 
-        @NameInMap("DesktopName")
+        @com.aliyun.core.annotation.NameInMap("DesktopName")
         private String desktopName;
 
-        @NameInMap("Dropped")
+        @com.aliyun.core.annotation.NameInMap("Dropped")
         private Integer dropped;
 
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("ErrorInfo")
+        @com.aliyun.core.annotation.NameInMap("ErrorInfo")
         private String errorInfo;
 
-        @NameInMap("ExitCode")
+        @com.aliyun.core.annotation.NameInMap("ExitCode")
         private Long exitCode;
 
-        @NameInMap("FinishTime")
+        @com.aliyun.core.annotation.NameInMap("FinishTime")
         private String finishTime;
 
-        @NameInMap("InvocationStatus")
+        @com.aliyun.core.annotation.NameInMap("InvocationStatus")
         private String invocationStatus;
 
-        @NameInMap("Output")
+        @com.aliyun.core.annotation.NameInMap("Output")
         private String output;
 
-        @NameInMap("Repeats")
+        @com.aliyun.core.annotation.NameInMap("Repeats")
         private Integer repeats;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("StopTime")
+        @com.aliyun.core.annotation.NameInMap("StopTime")
         private String stopTime;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private InvokeDesktops(Builder builder) {
@@ -429,25 +428,25 @@ public class DescribeInvocationsResponseBody extends TeaModel {
 
     }
     public static class Invocations extends TeaModel {
-        @NameInMap("CommandContent")
+        @com.aliyun.core.annotation.NameInMap("CommandContent")
         private String commandContent;
 
-        @NameInMap("CommandType")
+        @com.aliyun.core.annotation.NameInMap("CommandType")
         private String commandType;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("EndUserId")
+        @com.aliyun.core.annotation.NameInMap("EndUserId")
         private String endUserId;
 
-        @NameInMap("InvocationStatus")
+        @com.aliyun.core.annotation.NameInMap("InvocationStatus")
         private String invocationStatus;
 
-        @NameInMap("InvokeDesktops")
+        @com.aliyun.core.annotation.NameInMap("InvokeDesktops")
         private java.util.List < InvokeDesktops> invokeDesktops;
 
-        @NameInMap("InvokeId")
+        @com.aliyun.core.annotation.NameInMap("InvokeId")
         private String invokeId;
 
         private Invocations(Builder builder) {

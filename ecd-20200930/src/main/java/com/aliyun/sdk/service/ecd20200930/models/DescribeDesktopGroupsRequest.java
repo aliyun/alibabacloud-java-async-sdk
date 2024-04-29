@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,69 +11,69 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDesktopGroupsRequest</p>
  */
 public class DescribeDesktopGroupsRequest extends Request {
-    @Query
-    @NameInMap("BundleId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BundleId")
     private java.util.List < String > bundleId;
 
-    @Query
-    @NameInMap("DesktopGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopGroupId")
     private String desktopGroupId;
 
-    @Query
-    @NameInMap("DesktopGroupName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopGroupName")
     private String desktopGroupName;
 
-    @Query
-    @NameInMap("EndUserIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndUserIds")
     private java.util.List < String > endUserIds;
 
-    @Query
-    @NameInMap("ExcludedEndUserIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExcludedEndUserIds")
     private java.util.List < String > excludedEndUserIds;
 
-    @Query
-    @NameInMap("ImageId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageId")
     private java.util.List < String > imageId;
 
-    @Query
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("OfficeSiteId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OfficeSiteId")
     private String officeSiteId;
 
-    @Query
-    @NameInMap("OwnType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnType")
     private Long ownType;
 
-    @Query
-    @NameInMap("Period")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Period")
     private Integer period;
 
-    @Query
-    @NameInMap("PeriodUnit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PeriodUnit")
     private String periodUnit;
 
-    @Query
-    @NameInMap("PolicyGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyGroupId")
     private String policyGroupId;
 
-    @Query
-    @NameInMap("ProtocolType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProtocolType")
     private String protocolType;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private Integer status;
 
     private DescribeDesktopGroupsRequest(Builder builder) {
@@ -265,7 +264,7 @@ public class DescribeDesktopGroupsRequest extends Request {
         } 
 
         /**
-         * The IDs of the desktop templates.
+         * The IDs of the cloud computer templates.
          */
         public Builder bundleId(java.util.List < String > bundleId) {
             this.putQueryParameter("BundleId", bundleId);
@@ -274,7 +273,7 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * The desktop group ID.
+         * The ID of the cloud computer pool.
          */
         public Builder desktopGroupId(String desktopGroupId) {
             this.putQueryParameter("DesktopGroupId", desktopGroupId);
@@ -283,7 +282,7 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * The name of the desktop group that you want to query. Fuzzy search is supported.
+         * The name of the cloud computer pool to query. Fuzzy search is supported.
          */
         public Builder desktopGroupName(String desktopGroupName) {
             this.putQueryParameter("DesktopGroupName", desktopGroupName);
@@ -292,7 +291,7 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * The authorized users.
+         * The authorized user IDs of cloud computer pools.
          */
         public Builder endUserIds(java.util.List < String > endUserIds) {
             this.putQueryParameter("EndUserIds", endUserIds);
@@ -337,7 +336,7 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * The workspace ID of the desktop group that you want to query.
+         * The ID of the office network to which the cloud computer pool belongs.
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -346,34 +345,15 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * The desktop group type.
+         * The type of the cloud computer pool.
          * <p>
+         * 
+         * >  This parameter is not publicly available.
          * 
          * Valid values:
          * 
-         * *   0
-         * 
-         *     <!-- -->
-         * 
-         *     :
-         * 
-         *     <!-- -->
-         * 
-         *     personal desktop group
-         * 
-         *     <!-- -->
-         * 
-         * *   1
-         * 
-         *     <!-- -->
-         * 
-         *     :
-         * 
-         *     <!-- -->
-         * 
-         *     shared desktop group (multi-session)
-         * 
-         *     <!-- -->
+         * *   0: individual (single session)
+         * *   1: shared (multiple sessions)
          */
         public Builder ownType(Long ownType) {
             this.putQueryParameter("OwnType", ownType);
@@ -382,7 +362,23 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * The validity period of the desktop group. The unit is specified by the PeriodUnit parameter.
+         * The subscription duration of the cloud computer pool. The unit is specified by the `PeriodUnit` parameter.
+         * <p>
+         * 
+         * *   Valid values if the `PeriodUnit` parameter is set to `Month`:
+         * 
+         *     *   1
+         *     *   2
+         *     *   3
+         *     *   6
+         * 
+         * *   Valid values if the `PeriodUnit` parameter is set to `Year`:
+         * 
+         *     *   1
+         *     *   2
+         *     *   3
+         *     *   4
+         *     *   5
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -391,34 +387,7 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * The unit of the duration.
-         * <p>
-         * 
-         * Valid values:
-         * 
-         * *   Month
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   Year
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   Day
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * The unit of the subscription duration.
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -427,7 +396,7 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * The ID of the policy with which the desktop group is associated.
+         * The ID of the policy that you want to associate with the cloud computer pool.
          */
         public Builder policyGroupId(String policyGroupId) {
             this.putQueryParameter("PolicyGroupId", policyGroupId);
@@ -436,11 +405,26 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * The protocol. Valid values:
+         * The protocol type.
          * <p>
          * 
-         * *   ASP
-         * *   HDX
+         * Valid values:
+         * 
+         * *   High-definition Experience (HDX)
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   Adaptive Streaming Protocol (ASP)
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder protocolType(String protocolType) {
             this.putQueryParameter("ProtocolType", protocolType);
@@ -449,7 +433,7 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the regions supported by WUYING Workspace.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -458,46 +442,14 @@ public class DescribeDesktopGroupsRequest extends Request {
         }
 
         /**
-         * The payment status of the desktop group.
+         * The payment status of the cloud computer pool.
          * <p>
          * 
          * Valid values:
          * 
-         * *   0
-         * 
-         *     <!-- -->
-         * 
-         *     :
-         * 
-         *     <!-- -->
-         * 
-         *     unpaid
-         * 
-         *     <!-- -->
-         * 
-         * *   1
-         * 
-         *     <!-- -->
-         * 
-         *     :
-         * 
-         *     <!-- -->
-         * 
-         *     paid
-         * 
-         *     <!-- -->
-         * 
-         * *   2
-         * 
-         *     <!-- -->
-         * 
-         *     :
-         * 
-         *     <!-- -->
-         * 
-         *     overdue or expired
-         * 
-         *     <!-- -->
+         * *   0: unpaid
+         * *   1: paid
+         * *   2: overdue or expired
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);

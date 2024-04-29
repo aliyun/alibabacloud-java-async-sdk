@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,18 +11,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SetDesktopGroupScaleTimerRequest</p>
  */
 public class SetDesktopGroupScaleTimerRequest extends Request {
-    @Query
-    @NameInMap("DesktopGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String desktopGroupId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ScaleTimerInfos")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScaleTimerInfos")
     private java.util.List < ScaleTimerInfos> scaleTimerInfos;
 
     private SetDesktopGroupScaleTimerRequest(Builder builder) {
@@ -118,28 +117,28 @@ public class SetDesktopGroupScaleTimerRequest extends Request {
     } 
 
     public static class ScaleTimerInfos extends TeaModel {
-        @NameInMap("BuyResAmount")
+        @com.aliyun.core.annotation.NameInMap("BuyResAmount")
         private Integer buyResAmount;
 
-        @NameInMap("Cron")
+        @com.aliyun.core.annotation.NameInMap("Cron")
         private String cron;
 
-        @NameInMap("KeepDuration")
+        @com.aliyun.core.annotation.NameInMap("KeepDuration")
         private Long keepDuration;
 
-        @NameInMap("LoadPolicy")
+        @com.aliyun.core.annotation.NameInMap("LoadPolicy")
         private Integer loadPolicy;
 
-        @NameInMap("MaxResAmount")
+        @com.aliyun.core.annotation.NameInMap("MaxResAmount")
         private Integer maxResAmount;
 
-        @NameInMap("MinResAmount")
+        @com.aliyun.core.annotation.NameInMap("MinResAmount")
         private Integer minResAmount;
 
-        @NameInMap("RatioThreshold")
+        @com.aliyun.core.annotation.NameInMap("RatioThreshold")
         private Float ratioThreshold;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private ScaleTimerInfos(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeBundlesResponseBody</p>
  */
 public class DescribeBundlesResponseBody extends TeaModel {
-    @NameInMap("Bundles")
+    @com.aliyun.core.annotation.NameInMap("Bundles")
     private java.util.List < Bundles> bundles;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeBundlesResponseBody(Builder builder) {
@@ -92,16 +91,16 @@ public class DescribeBundlesResponseBody extends TeaModel {
     } 
 
     public static class DesktopTypeAttribute extends TeaModel {
-        @NameInMap("CpuCount")
+        @com.aliyun.core.annotation.NameInMap("CpuCount")
         private Integer cpuCount;
 
-        @NameInMap("GpuCount")
+        @com.aliyun.core.annotation.NameInMap("GpuCount")
         private Float gpuCount;
 
-        @NameInMap("GpuSpec")
+        @com.aliyun.core.annotation.NameInMap("GpuSpec")
         private String gpuSpec;
 
-        @NameInMap("MemorySize")
+        @com.aliyun.core.annotation.NameInMap("MemorySize")
         private Integer memorySize;
 
         private DesktopTypeAttribute(Builder builder) {
@@ -193,13 +192,13 @@ public class DescribeBundlesResponseBody extends TeaModel {
 
     }
     public static class Disks extends TeaModel {
-        @NameInMap("DiskPerformanceLevel")
+        @com.aliyun.core.annotation.NameInMap("DiskPerformanceLevel")
         private String diskPerformanceLevel;
 
-        @NameInMap("DiskSize")
+        @com.aliyun.core.annotation.NameInMap("DiskSize")
         private Integer diskSize;
 
-        @NameInMap("DiskType")
+        @com.aliyun.core.annotation.NameInMap("DiskType")
         private String diskType;
 
         private Disks(Builder builder) {
@@ -328,64 +327,64 @@ public class DescribeBundlesResponseBody extends TeaModel {
 
     }
     public static class Bundles extends TeaModel {
-        @NameInMap("BundleId")
+        @com.aliyun.core.annotation.NameInMap("BundleId")
         private String bundleId;
 
-        @NameInMap("BundleName")
+        @com.aliyun.core.annotation.NameInMap("BundleName")
         private String bundleName;
 
-        @NameInMap("BundleType")
+        @com.aliyun.core.annotation.NameInMap("BundleType")
         private String bundleType;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DesktopType")
+        @com.aliyun.core.annotation.NameInMap("DesktopType")
         private String desktopType;
 
-        @NameInMap("DesktopTypeAttribute")
+        @com.aliyun.core.annotation.NameInMap("DesktopTypeAttribute")
         private DesktopTypeAttribute desktopTypeAttribute;
 
-        @NameInMap("DesktopTypeFamily")
+        @com.aliyun.core.annotation.NameInMap("DesktopTypeFamily")
         private String desktopTypeFamily;
 
-        @NameInMap("Disks")
+        @com.aliyun.core.annotation.NameInMap("Disks")
         private java.util.List < Disks> disks;
 
-        @NameInMap("ImageId")
+        @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
 
-        @NameInMap("ImageName")
+        @com.aliyun.core.annotation.NameInMap("ImageName")
         private String imageName;
 
-        @NameInMap("ImageStatus")
+        @com.aliyun.core.annotation.NameInMap("ImageStatus")
         private String imageStatus;
 
-        @NameInMap("Language")
+        @com.aliyun.core.annotation.NameInMap("Language")
         private String language;
 
-        @NameInMap("OsType")
+        @com.aliyun.core.annotation.NameInMap("OsType")
         private String osType;
 
-        @NameInMap("Platform")
+        @com.aliyun.core.annotation.NameInMap("Platform")
         private String platform;
 
-        @NameInMap("ProtocolType")
+        @com.aliyun.core.annotation.NameInMap("ProtocolType")
         private String protocolType;
 
-        @NameInMap("SessionType")
+        @com.aliyun.core.annotation.NameInMap("SessionType")
         private String sessionType;
 
-        @NameInMap("StockState")
+        @com.aliyun.core.annotation.NameInMap("StockState")
         private String stockState;
 
-        @NameInMap("VolumeEncryptionEnabled")
+        @com.aliyun.core.annotation.NameInMap("VolumeEncryptionEnabled")
         private Boolean volumeEncryptionEnabled;
 
-        @NameInMap("VolumeEncryptionKey")
+        @com.aliyun.core.annotation.NameInMap("VolumeEncryptionKey")
         private String volumeEncryptionKey;
 
         private Bundles(Builder builder) {

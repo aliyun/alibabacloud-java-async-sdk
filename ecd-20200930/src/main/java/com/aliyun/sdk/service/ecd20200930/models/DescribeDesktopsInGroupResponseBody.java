@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDesktopsInGroupResponseBody</p>
  */
 public class DescribeDesktopsInGroupResponseBody extends TeaModel {
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("OnlinePrePaidDesktopsCount")
+    @com.aliyun.core.annotation.NameInMap("OnlinePrePaidDesktopsCount")
     private Integer onlinePrePaidDesktopsCount;
 
-    @NameInMap("PaidDesktops")
+    @com.aliyun.core.annotation.NameInMap("PaidDesktops")
     private java.util.List < PaidDesktops> paidDesktops;
 
-    @NameInMap("PaidDesktopsCount")
+    @com.aliyun.core.annotation.NameInMap("PaidDesktopsCount")
     private Integer paidDesktopsCount;
 
-    @NameInMap("PostPaidDesktops")
+    @com.aliyun.core.annotation.NameInMap("PostPaidDesktops")
     private java.util.List < PostPaidDesktops> postPaidDesktops;
 
-    @NameInMap("PostPaidDesktopsCount")
+    @com.aliyun.core.annotation.NameInMap("PostPaidDesktopsCount")
     private Integer postPaidDesktopsCount;
 
-    @NameInMap("PostPaidDesktopsTotalAmount")
+    @com.aliyun.core.annotation.NameInMap("PostPaidDesktopsTotalAmount")
     private Integer postPaidDesktopsTotalAmount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RunningPrePaidDesktopsCount")
+    @com.aliyun.core.annotation.NameInMap("RunningPrePaidDesktopsCount")
     private Integer runningPrePaidDesktopsCount;
 
-    @NameInMap("StopedPrePaidDesktopsCount")
+    @com.aliyun.core.annotation.NameInMap("StopedPrePaidDesktopsCount")
     private Integer stopedPrePaidDesktopsCount;
 
-    @NameInMap("StoppedPrePaidDesktopsCount")
+    @com.aliyun.core.annotation.NameInMap("StoppedPrePaidDesktopsCount")
     private Integer stoppedPrePaidDesktopsCount;
 
     private DescribeDesktopsInGroupResponseBody(Builder builder) {
@@ -252,67 +251,67 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
     } 
 
     public static class PaidDesktops extends TeaModel {
-        @NameInMap("ConnectionStatus")
+        @com.aliyun.core.annotation.NameInMap("ConnectionStatus")
         private String connectionStatus;
 
-        @NameInMap("DesktopId")
+        @com.aliyun.core.annotation.NameInMap("DesktopId")
         private String desktopId;
 
-        @NameInMap("DesktopName")
+        @com.aliyun.core.annotation.NameInMap("DesktopName")
         private String desktopName;
 
-        @NameInMap("DesktopStatus")
+        @com.aliyun.core.annotation.NameInMap("DesktopStatus")
         private String desktopStatus;
 
-        @NameInMap("DiskType")
+        @com.aliyun.core.annotation.NameInMap("DiskType")
         private String diskType;
 
-        @NameInMap("EndUserId")
+        @com.aliyun.core.annotation.NameInMap("EndUserId")
         private String endUserId;
 
-        @NameInMap("EndUserIds")
+        @com.aliyun.core.annotation.NameInMap("EndUserIds")
         private java.util.List < String > endUserIds;
 
-        @NameInMap("EndUserName")
+        @com.aliyun.core.annotation.NameInMap("EndUserName")
         private String endUserName;
 
-        @NameInMap("EndUserNames")
+        @com.aliyun.core.annotation.NameInMap("EndUserNames")
         private java.util.List < String > endUserNames;
 
-        @NameInMap("FotaVersion")
+        @com.aliyun.core.annotation.NameInMap("FotaVersion")
         private String fotaVersion;
 
-        @NameInMap("GpuDriverVersion")
+        @com.aliyun.core.annotation.NameInMap("GpuDriverVersion")
         private String gpuDriverVersion;
 
-        @NameInMap("ImageId")
+        @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
 
-        @NameInMap("ImageName")
+        @com.aliyun.core.annotation.NameInMap("ImageName")
         private String imageName;
 
-        @NameInMap("ManagementFlag")
+        @com.aliyun.core.annotation.NameInMap("ManagementFlag")
         private String managementFlag;
 
-        @NameInMap("ManagementFlags")
+        @com.aliyun.core.annotation.NameInMap("ManagementFlags")
         private java.util.List < String > managementFlags;
 
-        @NameInMap("MemberEniIp")
+        @com.aliyun.core.annotation.NameInMap("MemberEniIp")
         private String memberEniIp;
 
-        @NameInMap("OsType")
+        @com.aliyun.core.annotation.NameInMap("OsType")
         private String osType;
 
-        @NameInMap("PrimaryEniIp")
+        @com.aliyun.core.annotation.NameInMap("PrimaryEniIp")
         private String primaryEniIp;
 
-        @NameInMap("ProtocolType")
+        @com.aliyun.core.annotation.NameInMap("ProtocolType")
         private String protocolType;
 
-        @NameInMap("ResetTime")
+        @com.aliyun.core.annotation.NameInMap("ResetTime")
         private String resetTime;
 
-        @NameInMap("SystemDiskSize")
+        @com.aliyun.core.annotation.NameInMap("SystemDiskSize")
         private Integer systemDiskSize;
 
         private PaidDesktops(Builder builder) {
@@ -863,76 +862,76 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
 
     }
     public static class PostPaidDesktops extends TeaModel {
-        @NameInMap("ConnectionStatus")
+        @com.aliyun.core.annotation.NameInMap("ConnectionStatus")
         private String connectionStatus;
 
-        @NameInMap("CreateDuration")
+        @com.aliyun.core.annotation.NameInMap("CreateDuration")
         private String createDuration;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DesktopId")
+        @com.aliyun.core.annotation.NameInMap("DesktopId")
         private String desktopId;
 
-        @NameInMap("DesktopName")
+        @com.aliyun.core.annotation.NameInMap("DesktopName")
         private String desktopName;
 
-        @NameInMap("DesktopStatus")
+        @com.aliyun.core.annotation.NameInMap("DesktopStatus")
         private String desktopStatus;
 
-        @NameInMap("DiskType")
+        @com.aliyun.core.annotation.NameInMap("DiskType")
         private String diskType;
 
-        @NameInMap("EndUserId")
+        @com.aliyun.core.annotation.NameInMap("EndUserId")
         private String endUserId;
 
-        @NameInMap("EndUserIds")
+        @com.aliyun.core.annotation.NameInMap("EndUserIds")
         private java.util.List < String > endUserIds;
 
-        @NameInMap("EndUserName")
+        @com.aliyun.core.annotation.NameInMap("EndUserName")
         private String endUserName;
 
-        @NameInMap("EndUserNames")
+        @com.aliyun.core.annotation.NameInMap("EndUserNames")
         private java.util.List < String > endUserNames;
 
-        @NameInMap("FotaVersion")
+        @com.aliyun.core.annotation.NameInMap("FotaVersion")
         private String fotaVersion;
 
-        @NameInMap("GpuDriverVersion")
+        @com.aliyun.core.annotation.NameInMap("GpuDriverVersion")
         private String gpuDriverVersion;
 
-        @NameInMap("ImageId")
+        @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
 
-        @NameInMap("ImageName")
+        @com.aliyun.core.annotation.NameInMap("ImageName")
         private String imageName;
 
-        @NameInMap("ManagementFlag")
+        @com.aliyun.core.annotation.NameInMap("ManagementFlag")
         private String managementFlag;
 
-        @NameInMap("ManagementFlags")
+        @com.aliyun.core.annotation.NameInMap("ManagementFlags")
         private java.util.List < String > managementFlags;
 
-        @NameInMap("MemberEniIp")
+        @com.aliyun.core.annotation.NameInMap("MemberEniIp")
         private String memberEniIp;
 
-        @NameInMap("OsType")
+        @com.aliyun.core.annotation.NameInMap("OsType")
         private String osType;
 
-        @NameInMap("PrimaryEniIp")
+        @com.aliyun.core.annotation.NameInMap("PrimaryEniIp")
         private String primaryEniIp;
 
-        @NameInMap("ProtocolType")
+        @com.aliyun.core.annotation.NameInMap("ProtocolType")
         private String protocolType;
 
-        @NameInMap("ReleaseTime")
+        @com.aliyun.core.annotation.NameInMap("ReleaseTime")
         private String releaseTime;
 
-        @NameInMap("ResetTime")
+        @com.aliyun.core.annotation.NameInMap("ResetTime")
         private String resetTime;
 
-        @NameInMap("SystemDiskSize")
+        @com.aliyun.core.annotation.NameInMap("SystemDiskSize")
         private Integer systemDiskSize;
 
         private PostPaidDesktops(Builder builder) {

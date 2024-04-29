@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyDesktopTimerRequest</p>
  */
 public class ModifyDesktopTimerRequest extends Request {
-    @Query
-    @NameInMap("DesktopId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > desktopId;
 
-    @Query
-    @NameInMap("DesktopTimers")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopTimers")
     private java.util.List < DesktopTimers> desktopTimers;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("UseDesktopTimers")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UseDesktopTimers")
     private Boolean useDesktopTimers;
 
     private ModifyDesktopTimerRequest(Builder builder) {
@@ -141,25 +140,25 @@ public class ModifyDesktopTimerRequest extends Request {
     } 
 
     public static class DesktopTimers extends TeaModel {
-        @NameInMap("AllowClientSetting")
+        @com.aliyun.core.annotation.NameInMap("AllowClientSetting")
         private Boolean allowClientSetting;
 
-        @NameInMap("CronExpression")
+        @com.aliyun.core.annotation.NameInMap("CronExpression")
         private String cronExpression;
 
-        @NameInMap("Enforce")
+        @com.aliyun.core.annotation.NameInMap("Enforce")
         private Boolean enforce;
 
-        @NameInMap("Interval")
+        @com.aliyun.core.annotation.NameInMap("Interval")
         private Integer interval;
 
-        @NameInMap("OperationType")
+        @com.aliyun.core.annotation.NameInMap("OperationType")
         private String operationType;
 
-        @NameInMap("ResetType")
+        @com.aliyun.core.annotation.NameInMap("ResetType")
         private String resetType;
 
-        @NameInMap("TimerType")
+        @com.aliyun.core.annotation.NameInMap("TimerType")
         private String timerType;
 
         private DesktopTimers(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetDesktopGroupDetailResponseBody</p>
  */
 public class GetDesktopGroupDetailResponseBody extends TeaModel {
-    @NameInMap("Desktops")
+    @com.aliyun.core.annotation.NameInMap("Desktops")
     private Desktops desktops;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetDesktopGroupDetailResponseBody(Builder builder) {
@@ -72,28 +71,28 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
     } 
 
     public static class ScaleTimerInfos extends TeaModel {
-        @NameInMap("BuyResAmount")
+        @com.aliyun.core.annotation.NameInMap("BuyResAmount")
         private Integer buyResAmount;
 
-        @NameInMap("Cron")
+        @com.aliyun.core.annotation.NameInMap("Cron")
         private String cron;
 
-        @NameInMap("KeepDuration")
+        @com.aliyun.core.annotation.NameInMap("KeepDuration")
         private Long keepDuration;
 
-        @NameInMap("LoadPolicy")
+        @com.aliyun.core.annotation.NameInMap("LoadPolicy")
         private Integer loadPolicy;
 
-        @NameInMap("MaxResAmount")
+        @com.aliyun.core.annotation.NameInMap("MaxResAmount")
         private Integer maxResAmount;
 
-        @NameInMap("MinResAmount")
+        @com.aliyun.core.annotation.NameInMap("MinResAmount")
         private Integer minResAmount;
 
-        @NameInMap("RatioThreshold")
+        @com.aliyun.core.annotation.NameInMap("RatioThreshold")
         private Float ratioThreshold;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private ScaleTimerInfos(Builder builder) {
@@ -275,16 +274,16 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
 
     }
     public static class TimerInfos extends TeaModel {
-        @NameInMap("CronExpression")
+        @com.aliyun.core.annotation.NameInMap("CronExpression")
         private String cronExpression;
 
-        @NameInMap("Forced")
+        @com.aliyun.core.annotation.NameInMap("Forced")
         private Boolean forced;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("TimerType")
+        @com.aliyun.core.annotation.NameInMap("TimerType")
         private Integer timerType;
 
         private TimerInfos(Builder builder) {
@@ -391,154 +390,154 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
 
     }
     public static class Desktops extends TeaModel {
-        @NameInMap("AllowAutoSetup")
+        @com.aliyun.core.annotation.NameInMap("AllowAutoSetup")
         private Integer allowAutoSetup;
 
-        @NameInMap("AllowBufferCount")
+        @com.aliyun.core.annotation.NameInMap("AllowBufferCount")
         private Integer allowBufferCount;
 
-        @NameInMap("BindAmount")
+        @com.aliyun.core.annotation.NameInMap("BindAmount")
         private Integer bindAmount;
 
-        @NameInMap("BuyDesktopsCount")
+        @com.aliyun.core.annotation.NameInMap("BuyDesktopsCount")
         private Integer buyDesktopsCount;
 
-        @NameInMap("Comments")
+        @com.aliyun.core.annotation.NameInMap("Comments")
         private String comments;
 
-        @NameInMap("ConnectDuration")
+        @com.aliyun.core.annotation.NameInMap("ConnectDuration")
         private Long connectDuration;
 
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private Integer cpu;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Creator")
+        @com.aliyun.core.annotation.NameInMap("Creator")
         private String creator;
 
-        @NameInMap("DataDiskCategory")
+        @com.aliyun.core.annotation.NameInMap("DataDiskCategory")
         private String dataDiskCategory;
 
-        @NameInMap("DataDiskSize")
+        @com.aliyun.core.annotation.NameInMap("DataDiskSize")
         private String dataDiskSize;
 
-        @NameInMap("DesktopGroupId")
+        @com.aliyun.core.annotation.NameInMap("DesktopGroupId")
         private String desktopGroupId;
 
-        @NameInMap("DesktopGroupName")
+        @com.aliyun.core.annotation.NameInMap("DesktopGroupName")
         private String desktopGroupName;
 
-        @NameInMap("DirectoryId")
+        @com.aliyun.core.annotation.NameInMap("DirectoryId")
         private String directoryId;
 
-        @NameInMap("DirectoryType")
+        @com.aliyun.core.annotation.NameInMap("DirectoryType")
         private String directoryType;
 
-        @NameInMap("ExpiredTime")
+        @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
 
-        @NameInMap("GpuCount")
+        @com.aliyun.core.annotation.NameInMap("GpuCount")
         private Float gpuCount;
 
-        @NameInMap("GpuSpec")
+        @com.aliyun.core.annotation.NameInMap("GpuSpec")
         private String gpuSpec;
 
-        @NameInMap("IdleDisconnectDuration")
+        @com.aliyun.core.annotation.NameInMap("IdleDisconnectDuration")
         private Long idleDisconnectDuration;
 
-        @NameInMap("ImageId")
+        @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
 
-        @NameInMap("KeepDuration")
+        @com.aliyun.core.annotation.NameInMap("KeepDuration")
         private Long keepDuration;
 
-        @NameInMap("LoadPolicy")
+        @com.aliyun.core.annotation.NameInMap("LoadPolicy")
         private Integer loadPolicy;
 
-        @NameInMap("MaxDesktopsCount")
+        @com.aliyun.core.annotation.NameInMap("MaxDesktopsCount")
         private Integer maxDesktopsCount;
 
-        @NameInMap("Memory")
+        @com.aliyun.core.annotation.NameInMap("Memory")
         private Long memory;
 
-        @NameInMap("MinDesktopsCount")
+        @com.aliyun.core.annotation.NameInMap("MinDesktopsCount")
         private Integer minDesktopsCount;
 
-        @NameInMap("NasFileSystemID")
+        @com.aliyun.core.annotation.NameInMap("NasFileSystemID")
         private String nasFileSystemID;
 
-        @NameInMap("NasFileSystemName")
+        @com.aliyun.core.annotation.NameInMap("NasFileSystemName")
         private String nasFileSystemName;
 
-        @NameInMap("OfficeSiteId")
+        @com.aliyun.core.annotation.NameInMap("OfficeSiteId")
         private String officeSiteId;
 
-        @NameInMap("OfficeSiteName")
+        @com.aliyun.core.annotation.NameInMap("OfficeSiteName")
         private String officeSiteName;
 
-        @NameInMap("OfficeSiteType")
+        @com.aliyun.core.annotation.NameInMap("OfficeSiteType")
         private String officeSiteType;
 
-        @NameInMap("OwnBundleId")
+        @com.aliyun.core.annotation.NameInMap("OwnBundleId")
         private String ownBundleId;
 
-        @NameInMap("OwnBundleName")
+        @com.aliyun.core.annotation.NameInMap("OwnBundleName")
         private String ownBundleName;
 
-        @NameInMap("OwnType")
+        @com.aliyun.core.annotation.NameInMap("OwnType")
         private Integer ownType;
 
-        @NameInMap("PayType")
+        @com.aliyun.core.annotation.NameInMap("PayType")
         private String payType;
 
-        @NameInMap("PolicyGroupId")
+        @com.aliyun.core.annotation.NameInMap("PolicyGroupId")
         private String policyGroupId;
 
-        @NameInMap("PolicyGroupIds")
+        @com.aliyun.core.annotation.NameInMap("PolicyGroupIds")
         private java.util.List < String > policyGroupIds;
 
-        @NameInMap("PolicyGroupName")
+        @com.aliyun.core.annotation.NameInMap("PolicyGroupName")
         private String policyGroupName;
 
-        @NameInMap("PolicyGroupNames")
+        @com.aliyun.core.annotation.NameInMap("PolicyGroupNames")
         private java.util.List < String > policyGroupNames;
 
-        @NameInMap("ProfileFollowSwitch")
+        @com.aliyun.core.annotation.NameInMap("ProfileFollowSwitch")
         private Boolean profileFollowSwitch;
 
-        @NameInMap("RatioThreshold")
+        @com.aliyun.core.annotation.NameInMap("RatioThreshold")
         private Float ratioThreshold;
 
-        @NameInMap("ResType")
+        @com.aliyun.core.annotation.NameInMap("ResType")
         private Integer resType;
 
-        @NameInMap("ResetType")
+        @com.aliyun.core.annotation.NameInMap("ResetType")
         private Integer resetType;
 
-        @NameInMap("ScaleTimerInfos")
+        @com.aliyun.core.annotation.NameInMap("ScaleTimerInfos")
         private java.util.List < ScaleTimerInfos> scaleTimerInfos;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("StopDuration")
+        @com.aliyun.core.annotation.NameInMap("StopDuration")
         private Long stopDuration;
 
-        @NameInMap("SystemDiskCategory")
+        @com.aliyun.core.annotation.NameInMap("SystemDiskCategory")
         private String systemDiskCategory;
 
-        @NameInMap("SystemDiskSize")
+        @com.aliyun.core.annotation.NameInMap("SystemDiskSize")
         private Integer systemDiskSize;
 
-        @NameInMap("TimerInfos")
+        @com.aliyun.core.annotation.NameInMap("TimerInfos")
         private java.util.List < TimerInfos> timerInfos;
 
-        @NameInMap("TimingStrategyInfo")
+        @com.aliyun.core.annotation.NameInMap("TimingStrategyInfo")
         private String timingStrategyInfo;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private Long version;
 
         private Desktops(Builder builder) {

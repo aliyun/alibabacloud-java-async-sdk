@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,67 +11,67 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateCdsFileShareLinkRequest</p>
  */
 public class CreateCdsFileShareLinkRequest extends Request {
-    @Query
-    @NameInMap("CdsId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CdsId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cdsId;
 
-    @Query
-    @NameInMap("Description")
-    @Validation(maxLength = 1024)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
+    @com.aliyun.core.annotation.Validation(maxLength = 1024)
     private String description;
 
-    @Query
-    @NameInMap("DisableDownload")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DisableDownload")
     private Boolean disableDownload;
 
-    @Query
-    @NameInMap("DisablePreview")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DisablePreview")
     private Boolean disablePreview;
 
-    @Query
-    @NameInMap("DisableSave")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DisableSave")
     private Boolean disableSave;
 
-    @Query
-    @NameInMap("DownloadLimit")
-    @Validation(maximum = 99999)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DownloadLimit")
+    @com.aliyun.core.annotation.Validation(maximum = 99999)
     private Long downloadLimit;
 
-    @Query
-    @NameInMap("EndUserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndUserId")
     private String endUserId;
 
-    @Query
-    @NameInMap("Expiration")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Expiration")
     private String expiration;
 
-    @Query
-    @NameInMap("FileIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileIds")
     private java.util.List < String > fileIds;
 
-    @Query
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
 
-    @Query
-    @NameInMap("PreviewLimit")
-    @Validation(maximum = 99999)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PreviewLimit")
+    @com.aliyun.core.annotation.Validation(maximum = 99999)
     private Long previewLimit;
 
-    @Query
-    @NameInMap("SaveLimit")
-    @Validation(maximum = 99999)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SaveLimit")
+    @com.aliyun.core.annotation.Validation(maximum = 99999)
     private Long saveLimit;
 
-    @Query
-    @NameInMap("ShareName")
-    @Validation(maxLength = 128)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShareName")
+    @com.aliyun.core.annotation.Validation(maxLength = 128)
     private String shareName;
 
-    @Query
-    @NameInMap("SharePwd")
-    @Validation(maxLength = 8)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SharePwd")
+    @com.aliyun.core.annotation.Validation(maxLength = 8)
     private String sharePwd;
 
     private CreateCdsFileShareLinkRequest(Builder builder) {

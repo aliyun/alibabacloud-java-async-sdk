@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListOfficeSiteOverviewResponseBody</p>
  */
 public class ListOfficeSiteOverviewResponseBody extends TeaModel {
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("OfficeSiteOverviewResults")
+    @com.aliyun.core.annotation.NameInMap("OfficeSiteOverviewResults")
     private java.util.List < OfficeSiteOverviewResults> officeSiteOverviewResults;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListOfficeSiteOverviewResponseBody(Builder builder) {
@@ -92,43 +91,43 @@ public class ListOfficeSiteOverviewResponseBody extends TeaModel {
     } 
 
     public static class OfficeSiteOverviewResults extends TeaModel {
-        @NameInMap("HasExpiredEdsCount")
+        @com.aliyun.core.annotation.NameInMap("HasExpiredEdsCount")
         private Integer hasExpiredEdsCount;
 
-        @NameInMap("HasExpiredEdsCountForGroup")
+        @com.aliyun.core.annotation.NameInMap("HasExpiredEdsCountForGroup")
         private Integer hasExpiredEdsCountForGroup;
 
-        @NameInMap("OfficeSiteId")
+        @com.aliyun.core.annotation.NameInMap("OfficeSiteId")
         private String officeSiteId;
 
-        @NameInMap("OfficeSiteName")
+        @com.aliyun.core.annotation.NameInMap("OfficeSiteName")
         private String officeSiteName;
 
-        @NameInMap("OfficeSiteStatus")
+        @com.aliyun.core.annotation.NameInMap("OfficeSiteStatus")
         private String officeSiteStatus;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RunningEdsCount")
+        @com.aliyun.core.annotation.NameInMap("RunningEdsCount")
         private Integer runningEdsCount;
 
-        @NameInMap("RunningEdsCountForGroup")
+        @com.aliyun.core.annotation.NameInMap("RunningEdsCountForGroup")
         private Integer runningEdsCountForGroup;
 
-        @NameInMap("TotalEdsCount")
+        @com.aliyun.core.annotation.NameInMap("TotalEdsCount")
         private Integer totalEdsCount;
 
-        @NameInMap("TotalEdsCountForGroup")
+        @com.aliyun.core.annotation.NameInMap("TotalEdsCountForGroup")
         private Integer totalEdsCountForGroup;
 
-        @NameInMap("VpcType")
+        @com.aliyun.core.annotation.NameInMap("VpcType")
         private String vpcType;
 
-        @NameInMap("WillExpiredEdsCount")
+        @com.aliyun.core.annotation.NameInMap("WillExpiredEdsCount")
         private Integer willExpiredEdsCount;
 
-        @NameInMap("WillExpiredEdsCountForGroup")
+        @com.aliyun.core.annotation.NameInMap("WillExpiredEdsCountForGroup")
         private Integer willExpiredEdsCountForGroup;
 
         private OfficeSiteOverviewResults(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeNetworkPackagesResponseBody</p>
  */
 public class DescribeNetworkPackagesResponseBody extends TeaModel {
-    @NameInMap("NetworkPackages")
+    @com.aliyun.core.annotation.NameInMap("NetworkPackages")
     private java.util.List < NetworkPackages> networkPackages;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeNetworkPackagesResponseBody(Builder builder) {
@@ -92,49 +91,49 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
     } 
 
     public static class NetworkPackages extends TeaModel {
-        @NameInMap("Bandwidth")
+        @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private Integer bandwidth;
 
-        @NameInMap("BusinessStatus")
+        @com.aliyun.core.annotation.NameInMap("BusinessStatus")
         private String businessStatus;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("EipAddresses")
+        @com.aliyun.core.annotation.NameInMap("EipAddresses")
         private java.util.List < String > eipAddresses;
 
-        @NameInMap("ExpiredTime")
+        @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
 
-        @NameInMap("InternetChargeType")
+        @com.aliyun.core.annotation.NameInMap("InternetChargeType")
         private String internetChargeType;
 
-        @NameInMap("NetworkPackageId")
+        @com.aliyun.core.annotation.NameInMap("NetworkPackageId")
         private String networkPackageId;
 
-        @NameInMap("NetworkPackageStatus")
+        @com.aliyun.core.annotation.NameInMap("NetworkPackageStatus")
         private String networkPackageStatus;
 
-        @NameInMap("OfficeSiteId")
+        @com.aliyun.core.annotation.NameInMap("OfficeSiteId")
         private String officeSiteId;
 
-        @NameInMap("OfficeSiteName")
+        @com.aliyun.core.annotation.NameInMap("OfficeSiteName")
         private String officeSiteName;
 
-        @NameInMap("OfficeSiteVpcType")
+        @com.aliyun.core.annotation.NameInMap("OfficeSiteVpcType")
         private String officeSiteVpcType;
 
-        @NameInMap("PayType")
+        @com.aliyun.core.annotation.NameInMap("PayType")
         private String payType;
 
-        @NameInMap("ReservationActiveTime")
+        @com.aliyun.core.annotation.NameInMap("ReservationActiveTime")
         private String reservationActiveTime;
 
-        @NameInMap("ReservationBandwidth")
+        @com.aliyun.core.annotation.NameInMap("ReservationBandwidth")
         private Integer reservationBandwidth;
 
-        @NameInMap("ReservationInternetChargeType")
+        @com.aliyun.core.annotation.NameInMap("ReservationInternetChargeType")
         private String reservationInternetChargeType;
 
         private NetworkPackages(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateCdsFileResponseBody</p>
  */
 public class CreateCdsFileResponseBody extends TeaModel {
-    @NameInMap("FileModel")
+    @com.aliyun.core.annotation.NameInMap("FileModel")
     private FileModel fileModel;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateCdsFileResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class CreateCdsFileResponseBody extends TeaModel {
     } 
 
     public static class FileModel extends TeaModel {
-        @NameInMap("FileId")
+        @com.aliyun.core.annotation.NameInMap("FileId")
         private String fileId;
 
-        @NameInMap("UploadId")
+        @com.aliyun.core.annotation.NameInMap("UploadId")
         private String uploadId;
 
-        @NameInMap("UploadUrl")
+        @com.aliyun.core.annotation.NameInMap("UploadUrl")
         private String uploadUrl;
 
         private FileModel(Builder builder) {

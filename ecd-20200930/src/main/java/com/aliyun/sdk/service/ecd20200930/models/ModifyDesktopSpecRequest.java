@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,41 +11,41 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyDesktopSpecRequest</p>
  */
 public class ModifyDesktopSpecRequest extends Request {
-    @Query
-    @NameInMap("AutoPay")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoPay")
     private Boolean autoPay;
 
-    @Query
-    @NameInMap("DesktopId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String desktopId;
 
-    @Query
-    @NameInMap("DesktopType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String desktopType;
 
-    @Query
-    @NameInMap("PromotionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PromotionId")
     private String promotionId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("RootDiskSizeGib")
-    @Validation(maximum = 32768)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RootDiskSizeGib")
+    @com.aliyun.core.annotation.Validation(maximum = 32768)
     private Integer rootDiskSizeGib;
 
-    @Query
-    @NameInMap("UserDiskPerformanceLevel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserDiskPerformanceLevel")
     private String userDiskPerformanceLevel;
 
-    @Query
-    @NameInMap("UserDiskSizeGib")
-    @Validation(maximum = 32768)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserDiskSizeGib")
+    @com.aliyun.core.annotation.Validation(maximum = 32768)
     private Integer userDiskSizeGib;
 
     private ModifyDesktopSpecRequest(Builder builder) {

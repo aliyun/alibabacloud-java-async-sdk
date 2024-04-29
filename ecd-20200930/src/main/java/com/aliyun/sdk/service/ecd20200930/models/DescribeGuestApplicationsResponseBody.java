@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeGuestApplicationsResponseBody</p>
  */
 public class DescribeGuestApplicationsResponseBody extends TeaModel {
-    @NameInMap("Applications")
+    @com.aliyun.core.annotation.NameInMap("Applications")
     private java.util.List < Applications> applications;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeGuestApplicationsResponseBody(Builder builder) {
@@ -72,28 +71,28 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
     } 
 
     public static class ProcessData extends TeaModel {
-        @NameInMap("ApplicationName")
+        @com.aliyun.core.annotation.NameInMap("ApplicationName")
         private String applicationName;
 
-        @NameInMap("ApplicationVersion")
+        @com.aliyun.core.annotation.NameInMap("ApplicationVersion")
         private String applicationVersion;
 
-        @NameInMap("CpuPercent")
+        @com.aliyun.core.annotation.NameInMap("CpuPercent")
         private Double cpuPercent;
 
-        @NameInMap("GpuPercent")
+        @com.aliyun.core.annotation.NameInMap("GpuPercent")
         private Double gpuPercent;
 
-        @NameInMap("Iospeed")
+        @com.aliyun.core.annotation.NameInMap("Iospeed")
         private Double iospeed;
 
-        @NameInMap("MemPercent")
+        @com.aliyun.core.annotation.NameInMap("MemPercent")
         private Double memPercent;
 
-        @NameInMap("Pid")
+        @com.aliyun.core.annotation.NameInMap("Pid")
         private Integer pid;
 
-        @NameInMap("ProcessPath")
+        @com.aliyun.core.annotation.NameInMap("ProcessPath")
         private String processPath;
 
         private ProcessData(Builder builder) {
@@ -253,37 +252,37 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
 
     }
     public static class Applications extends TeaModel {
-        @NameInMap("ApplicationName")
+        @com.aliyun.core.annotation.NameInMap("ApplicationName")
         private String applicationName;
 
-        @NameInMap("ApplicationVersion")
+        @com.aliyun.core.annotation.NameInMap("ApplicationVersion")
         private String applicationVersion;
 
-        @NameInMap("CpuPercent")
+        @com.aliyun.core.annotation.NameInMap("CpuPercent")
         private Double cpuPercent;
 
-        @NameInMap("GpuPercent")
+        @com.aliyun.core.annotation.NameInMap("GpuPercent")
         private Double gpuPercent;
 
-        @NameInMap("IconUrl")
+        @com.aliyun.core.annotation.NameInMap("IconUrl")
         private String iconUrl;
 
-        @NameInMap("IoSpeed")
+        @com.aliyun.core.annotation.NameInMap("IoSpeed")
         private Double ioSpeed;
 
-        @NameInMap("MemPercent")
+        @com.aliyun.core.annotation.NameInMap("MemPercent")
         private Double memPercent;
 
-        @NameInMap("Pid")
+        @com.aliyun.core.annotation.NameInMap("Pid")
         private Integer pid;
 
-        @NameInMap("ProcessData")
+        @com.aliyun.core.annotation.NameInMap("ProcessData")
         private java.util.List < ProcessData> processData;
 
-        @NameInMap("ProcessPath")
+        @com.aliyun.core.annotation.NameInMap("ProcessPath")
         private String processPath;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Applications(Builder builder) {

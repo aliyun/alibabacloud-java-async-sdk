@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RebuildDesktopsResponseBody</p>
  */
 public class RebuildDesktopsResponseBody extends TeaModel {
-    @NameInMap("RebuildResults")
+    @com.aliyun.core.annotation.NameInMap("RebuildResults")
     private java.util.List < RebuildResults> rebuildResults;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private RebuildDesktopsResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class RebuildDesktopsResponseBody extends TeaModel {
     } 
 
     public static class RebuildResults extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("DesktopId")
+        @com.aliyun.core.annotation.NameInMap("DesktopId")
         private String desktopId;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
         private RebuildResults(Builder builder) {

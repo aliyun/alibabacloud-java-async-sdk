@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UnbindUserDesktopRequest</p>
  */
 public class UnbindUserDesktopRequest extends Request {
-    @Query
-    @NameInMap("DesktopAgentIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopAgentIds")
     private java.util.List < String > desktopAgentIds;
 
-    @Query
-    @NameInMap("DesktopGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopGroupId")
     private String desktopGroupId;
 
-    @Query
-    @NameInMap("DesktopIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopIds")
     private java.util.List < String > desktopIds;
 
-    @Query
-    @NameInMap("Force")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Force")
     private Boolean force;
 
-    @Query
-    @NameInMap("Reason")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Reason")
     private String reason;
 
-    @Query
-    @NameInMap("UserDesktopIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserDesktopIds")
     private java.util.List < String > userDesktopIds;
 
     private UnbindUserDesktopRequest(Builder builder) {

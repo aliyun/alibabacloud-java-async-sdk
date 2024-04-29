@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeKmsKeysResponseBody</p>
  */
 public class DescribeKmsKeysResponseBody extends TeaModel {
-    @NameInMap("AuthorizeStatus")
+    @com.aliyun.core.annotation.NameInMap("AuthorizeStatus")
     private String authorizeStatus;
 
-    @NameInMap("Keys")
+    @com.aliyun.core.annotation.NameInMap("Keys")
     private java.util.List < Keys> keys;
 
-    @NameInMap("KmsServiceStatus")
+    @com.aliyun.core.annotation.NameInMap("KmsServiceStatus")
     private String kmsServiceStatus;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeKmsKeysResponseBody(Builder builder) {
@@ -112,16 +111,16 @@ public class DescribeKmsKeysResponseBody extends TeaModel {
     } 
 
     public static class Keys extends TeaModel {
-        @NameInMap("Alias")
+        @com.aliyun.core.annotation.NameInMap("Alias")
         private String alias;
 
-        @NameInMap("Arn")
+        @com.aliyun.core.annotation.NameInMap("Arn")
         private String arn;
 
-        @NameInMap("KeyId")
+        @com.aliyun.core.annotation.NameInMap("KeyId")
         private String keyId;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Keys(Builder builder) {

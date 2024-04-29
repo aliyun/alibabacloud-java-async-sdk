@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,230 +11,230 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyPolicyGroupRequest</p>
  */
 public class ModifyPolicyGroupRequest extends Request {
-    @Query
-    @NameInMap("AdminAccess")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AdminAccess")
     private String adminAccess;
 
-    @Query
-    @NameInMap("AppContentProtection")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppContentProtection")
     private String appContentProtection;
 
-    @Query
-    @NameInMap("AuthorizeAccessPolicyRule")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthorizeAccessPolicyRule")
     private java.util.List < AuthorizeAccessPolicyRule> authorizeAccessPolicyRule;
 
-    @Query
-    @NameInMap("AuthorizeSecurityPolicyRule")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthorizeSecurityPolicyRule")
     private java.util.List < AuthorizeSecurityPolicyRule> authorizeSecurityPolicyRule;
 
-    @Query
-    @NameInMap("CameraRedirect")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CameraRedirect")
     private String cameraRedirect;
 
-    @Query
-    @NameInMap("ClientType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientType")
     private java.util.List < ClientType> clientType;
 
-    @Query
-    @NameInMap("Clipboard")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Clipboard")
     private String clipboard;
 
-    @Query
-    @NameInMap("DomainList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainList")
     private String domainList;
 
-    @Query
-    @NameInMap("DomainResolveRule")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainResolveRule")
     private java.util.List < DomainResolveRule> domainResolveRule;
 
-    @Query
-    @NameInMap("DomainResolveRuleType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainResolveRuleType")
     private String domainResolveRuleType;
 
-    @Query
-    @NameInMap("EndUserApplyAdminCoordinate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndUserApplyAdminCoordinate")
     private String endUserApplyAdminCoordinate;
 
-    @Query
-    @NameInMap("EndUserGroupCoordinate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndUserGroupCoordinate")
     private String endUserGroupCoordinate;
 
-    @Query
-    @NameInMap("GpuAcceleration")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GpuAcceleration")
     private String gpuAcceleration;
 
-    @Query
-    @NameInMap("Html5Access")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Html5Access")
     private String html5Access;
 
-    @Query
-    @NameInMap("Html5FileTransfer")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Html5FileTransfer")
     private String html5FileTransfer;
 
-    @Query
-    @NameInMap("InternetCommunicationProtocol")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InternetCommunicationProtocol")
     private String internetCommunicationProtocol;
 
-    @Query
-    @NameInMap("LocalDrive")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LocalDrive")
     private String localDrive;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("NetRedirect")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetRedirect")
     private String netRedirect;
 
-    @Query
-    @NameInMap("PolicyGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String policyGroupId;
 
-    @Query
-    @NameInMap("PreemptLogin")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PreemptLogin")
     private String preemptLogin;
 
-    @Query
-    @NameInMap("PreemptLoginUser")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PreemptLoginUser")
     private java.util.List < String > preemptLoginUser;
 
-    @Query
-    @NameInMap("PrinterRedirection")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrinterRedirection")
     private String printerRedirection;
 
-    @Query
-    @NameInMap("RecordContent")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RecordContent")
     private String recordContent;
 
-    @Query
-    @NameInMap("RecordContentExpires")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RecordContentExpires")
     private Long recordContentExpires;
 
-    @Query
-    @NameInMap("Recording")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Recording")
     private String recording;
 
-    @Query
-    @NameInMap("RecordingAudio")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RecordingAudio")
     private String recordingAudio;
 
-    @Query
-    @NameInMap("RecordingDuration")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RecordingDuration")
     private Integer recordingDuration;
 
-    @Query
-    @NameInMap("RecordingEndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RecordingEndTime")
     private String recordingEndTime;
 
-    @Query
-    @NameInMap("RecordingExpires")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RecordingExpires")
     private Long recordingExpires;
 
-    @Query
-    @NameInMap("RecordingFps")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RecordingFps")
     private Long recordingFps;
 
-    @Query
-    @NameInMap("RecordingStartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RecordingStartTime")
     private String recordingStartTime;
 
-    @Query
-    @NameInMap("RecordingUserNotify")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RecordingUserNotify")
     private String recordingUserNotify;
 
-    @Query
-    @NameInMap("RecordingUserNotifyMessage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RecordingUserNotifyMessage")
     private String recordingUserNotifyMessage;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("RemoteCoordinate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RemoteCoordinate")
     private String remoteCoordinate;
 
-    @Query
-    @NameInMap("RevokeAccessPolicyRule")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RevokeAccessPolicyRule")
     private java.util.List < RevokeAccessPolicyRule> revokeAccessPolicyRule;
 
-    @Query
-    @NameInMap("RevokeSecurityPolicyRule")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RevokeSecurityPolicyRule")
     private java.util.List < RevokeSecurityPolicyRule> revokeSecurityPolicyRule;
 
-    @Query
-    @NameInMap("Scope")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Scope")
     private String scope;
 
-    @Query
-    @NameInMap("ScopeValue")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScopeValue")
     private java.util.List < String > scopeValue;
 
-    @Query
-    @NameInMap("UsbRedirect")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UsbRedirect")
     private String usbRedirect;
 
-    @Query
-    @NameInMap("UsbSupplyRedirectRule")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UsbSupplyRedirectRule")
     private java.util.List < UsbSupplyRedirectRule> usbSupplyRedirectRule;
 
-    @Query
-    @NameInMap("VideoRedirect")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VideoRedirect")
     private String videoRedirect;
 
-    @Query
-    @NameInMap("VisualQuality")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VisualQuality")
     private String visualQuality;
 
-    @Query
-    @NameInMap("Watermark")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Watermark")
     private String watermark;
 
-    @Query
-    @NameInMap("WatermarkAntiCam")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WatermarkAntiCam")
     private String watermarkAntiCam;
 
-    @Query
-    @NameInMap("WatermarkColor")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WatermarkColor")
     private Integer watermarkColor;
 
-    @Query
-    @NameInMap("WatermarkDegree")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WatermarkDegree")
     private Double watermarkDegree;
 
-    @Query
-    @NameInMap("WatermarkFontSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WatermarkFontSize")
     private Integer watermarkFontSize;
 
-    @Query
-    @NameInMap("WatermarkFontStyle")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WatermarkFontStyle")
     private String watermarkFontStyle;
 
-    @Query
-    @NameInMap("WatermarkPower")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WatermarkPower")
     private String watermarkPower;
 
-    @Query
-    @NameInMap("WatermarkRowAmount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WatermarkRowAmount")
     private Integer watermarkRowAmount;
 
-    @Query
-    @NameInMap("WatermarkSecurity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WatermarkSecurity")
     private String watermarkSecurity;
 
-    @Query
-    @NameInMap("WatermarkTransparency")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WatermarkTransparency")
     private String watermarkTransparency;
 
-    @Query
-    @NameInMap("WatermarkTransparencyValue")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WatermarkTransparencyValue")
     private Integer watermarkTransparencyValue;
 
-    @Query
-    @NameInMap("WatermarkType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WatermarkType")
     private String watermarkType;
 
     private ModifyPolicyGroupRequest(Builder builder) {
@@ -1468,11 +1467,11 @@ public class ModifyPolicyGroupRequest extends Request {
     } 
 
     public static class AuthorizeAccessPolicyRule extends TeaModel {
-        @NameInMap("CidrIp")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("CidrIp")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String cidrIp;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
         private AuthorizeAccessPolicyRule(Builder builder) {
@@ -1530,25 +1529,25 @@ public class ModifyPolicyGroupRequest extends Request {
 
     }
     public static class AuthorizeSecurityPolicyRule extends TeaModel {
-        @NameInMap("CidrIp")
+        @com.aliyun.core.annotation.NameInMap("CidrIp")
         private String cidrIp;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("IpProtocol")
+        @com.aliyun.core.annotation.NameInMap("IpProtocol")
         private String ipProtocol;
 
-        @NameInMap("Policy")
+        @com.aliyun.core.annotation.NameInMap("Policy")
         private String policy;
 
-        @NameInMap("PortRange")
+        @com.aliyun.core.annotation.NameInMap("PortRange")
         private String portRange;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private String priority;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private AuthorizeSecurityPolicyRule(Builder builder) {
@@ -1719,10 +1718,10 @@ public class ModifyPolicyGroupRequest extends Request {
 
     }
     public static class ClientType extends TeaModel {
-        @NameInMap("ClientType")
+        @com.aliyun.core.annotation.NameInMap("ClientType")
         private String clientType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private ClientType(Builder builder) {
@@ -1796,13 +1795,13 @@ public class ModifyPolicyGroupRequest extends Request {
 
     }
     public static class DomainResolveRule extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("Policy")
+        @com.aliyun.core.annotation.NameInMap("Policy")
         private String policy;
 
         private DomainResolveRule(Builder builder) {
@@ -1896,10 +1895,10 @@ public class ModifyPolicyGroupRequest extends Request {
 
     }
     public static class RevokeAccessPolicyRule extends TeaModel {
-        @NameInMap("CidrIp")
+        @com.aliyun.core.annotation.NameInMap("CidrIp")
         private String cidrIp;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
         private RevokeAccessPolicyRule(Builder builder) {
@@ -1957,25 +1956,25 @@ public class ModifyPolicyGroupRequest extends Request {
 
     }
     public static class RevokeSecurityPolicyRule extends TeaModel {
-        @NameInMap("CidrIp")
+        @com.aliyun.core.annotation.NameInMap("CidrIp")
         private String cidrIp;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("IpProtocol")
+        @com.aliyun.core.annotation.NameInMap("IpProtocol")
         private String ipProtocol;
 
-        @NameInMap("Policy")
+        @com.aliyun.core.annotation.NameInMap("Policy")
         private String policy;
 
-        @NameInMap("PortRange")
+        @com.aliyun.core.annotation.NameInMap("PortRange")
         private String portRange;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private String priority;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private RevokeSecurityPolicyRule(Builder builder) {
@@ -2148,25 +2147,25 @@ public class ModifyPolicyGroupRequest extends Request {
 
     }
     public static class UsbSupplyRedirectRule extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DeviceClass")
+        @com.aliyun.core.annotation.NameInMap("DeviceClass")
         private String deviceClass;
 
-        @NameInMap("DeviceSubclass")
+        @com.aliyun.core.annotation.NameInMap("DeviceSubclass")
         private String deviceSubclass;
 
-        @NameInMap("ProductId")
+        @com.aliyun.core.annotation.NameInMap("ProductId")
         private String productId;
 
-        @NameInMap("UsbRedirectType")
+        @com.aliyun.core.annotation.NameInMap("UsbRedirectType")
         private Long usbRedirectType;
 
-        @NameInMap("UsbRuleType")
+        @com.aliyun.core.annotation.NameInMap("UsbRuleType")
         private Long usbRuleType;
 
-        @NameInMap("VendorId")
+        @com.aliyun.core.annotation.NameInMap("VendorId")
         private String vendorId;
 
         private UsbSupplyRedirectRule(Builder builder) {

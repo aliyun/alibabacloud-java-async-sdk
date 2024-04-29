@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCustomizedListHeadersResponseBody</p>
  */
 public class DescribeCustomizedListHeadersResponseBody extends TeaModel {
-    @NameInMap("Headers")
+    @com.aliyun.core.annotation.NameInMap("Headers")
     private java.util.List < Headers> headers;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeCustomizedListHeadersResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DescribeCustomizedListHeadersResponseBody extends TeaModel {
     } 
 
     public static class Headers extends TeaModel {
-        @NameInMap("DisplayType")
+        @com.aliyun.core.annotation.NameInMap("DisplayType")
         private String displayType;
 
-        @NameInMap("HeaderKey")
+        @com.aliyun.core.annotation.NameInMap("HeaderKey")
         private String headerKey;
 
-        @NameInMap("HeaderName")
+        @com.aliyun.core.annotation.NameInMap("HeaderName")
         private String headerName;
 
         private Headers(Builder builder) {

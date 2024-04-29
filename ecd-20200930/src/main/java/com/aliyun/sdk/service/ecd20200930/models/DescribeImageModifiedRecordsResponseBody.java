@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeImageModifiedRecordsResponseBody</p>
  */
 public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
-    @NameInMap("ImageModifiedRecords")
+    @com.aliyun.core.annotation.NameInMap("ImageModifiedRecords")
     private java.util.List < ImageModifiedRecords> imageModifiedRecords;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeImageModifiedRecordsResponseBody(Builder builder) {
@@ -112,22 +111,22 @@ public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
     } 
 
     public static class ImageModifiedRecords extends TeaModel {
-        @NameInMap("ImageId")
+        @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
 
-        @NameInMap("ImageName")
+        @com.aliyun.core.annotation.NameInMap("ImageName")
         private String imageName;
 
-        @NameInMap("NewImageId")
+        @com.aliyun.core.annotation.NameInMap("NewImageId")
         private String newImageId;
 
-        @NameInMap("NewImageName")
+        @com.aliyun.core.annotation.NameInMap("NewImageName")
         private String newImageName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private ImageModifiedRecords(Builder builder) {

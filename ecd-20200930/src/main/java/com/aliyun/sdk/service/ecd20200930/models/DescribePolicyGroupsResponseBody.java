@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePolicyGroupsResponseBody</p>
  */
 public class DescribePolicyGroupsResponseBody extends TeaModel {
-    @NameInMap("DescribePolicyGroups")
+    @com.aliyun.core.annotation.NameInMap("DescribePolicyGroups")
     private java.util.List < DescribePolicyGroups> describePolicyGroups;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribePolicyGroupsResponseBody(Builder builder) {
@@ -92,10 +91,10 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
     } 
 
     public static class AuthorizeAccessPolicyRules extends TeaModel {
-        @NameInMap("CidrIp")
+        @com.aliyun.core.annotation.NameInMap("CidrIp")
         private String cidrIp;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
         private AuthorizeAccessPolicyRules(Builder builder) {
@@ -153,25 +152,25 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
 
     }
     public static class AuthorizeSecurityPolicyRules extends TeaModel {
-        @NameInMap("CidrIp")
+        @com.aliyun.core.annotation.NameInMap("CidrIp")
         private String cidrIp;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("IpProtocol")
+        @com.aliyun.core.annotation.NameInMap("IpProtocol")
         private String ipProtocol;
 
-        @NameInMap("Policy")
+        @com.aliyun.core.annotation.NameInMap("Policy")
         private String policy;
 
-        @NameInMap("PortRange")
+        @com.aliyun.core.annotation.NameInMap("PortRange")
         private String portRange;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private String priority;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private AuthorizeSecurityPolicyRules(Builder builder) {
@@ -335,10 +334,10 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
 
     }
     public static class ClientTypes extends TeaModel {
-        @NameInMap("ClientType")
+        @com.aliyun.core.annotation.NameInMap("ClientType")
         private String clientType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private ClientTypes(Builder builder) {
@@ -412,13 +411,13 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
 
     }
     public static class DomainResolveRule extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("Policy")
+        @com.aliyun.core.annotation.NameInMap("Policy")
         private String policy;
 
         private DomainResolveRule(Builder builder) {
@@ -497,13 +496,13 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
 
     }
     public static class NetRedirectRule extends TeaModel {
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("Policy")
+        @com.aliyun.core.annotation.NameInMap("Policy")
         private String policy;
 
-        @NameInMap("RuleType")
+        @com.aliyun.core.annotation.NameInMap("RuleType")
         private String ruleType;
 
         private NetRedirectRule(Builder builder) {
@@ -590,25 +589,25 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
 
     }
     public static class UsbSupplyRedirectRule extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DeviceClass")
+        @com.aliyun.core.annotation.NameInMap("DeviceClass")
         private String deviceClass;
 
-        @NameInMap("DeviceSubclass")
+        @com.aliyun.core.annotation.NameInMap("DeviceSubclass")
         private String deviceSubclass;
 
-        @NameInMap("ProductId")
+        @com.aliyun.core.annotation.NameInMap("ProductId")
         private String productId;
 
-        @NameInMap("UsbRedirectType")
+        @com.aliyun.core.annotation.NameInMap("UsbRedirectType")
         private Long usbRedirectType;
 
-        @NameInMap("UsbRuleType")
+        @com.aliyun.core.annotation.NameInMap("UsbRuleType")
         private Long usbRuleType;
 
-        @NameInMap("VendorId")
+        @com.aliyun.core.annotation.NameInMap("VendorId")
         private String vendorId;
 
         private UsbSupplyRedirectRule(Builder builder) {
@@ -763,214 +762,214 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
 
     }
     public static class DescribePolicyGroups extends TeaModel {
-        @NameInMap("AdminAccess")
+        @com.aliyun.core.annotation.NameInMap("AdminAccess")
         private String adminAccess;
 
-        @NameInMap("AppContentProtection")
+        @com.aliyun.core.annotation.NameInMap("AppContentProtection")
         private String appContentProtection;
 
-        @NameInMap("AuthorizeAccessPolicyRules")
+        @com.aliyun.core.annotation.NameInMap("AuthorizeAccessPolicyRules")
         private java.util.List < AuthorizeAccessPolicyRules> authorizeAccessPolicyRules;
 
-        @NameInMap("AuthorizeSecurityPolicyRules")
+        @com.aliyun.core.annotation.NameInMap("AuthorizeSecurityPolicyRules")
         private java.util.List < AuthorizeSecurityPolicyRules> authorizeSecurityPolicyRules;
 
-        @NameInMap("CameraRedirect")
+        @com.aliyun.core.annotation.NameInMap("CameraRedirect")
         private String cameraRedirect;
 
-        @NameInMap("ClientTypes")
+        @com.aliyun.core.annotation.NameInMap("ClientTypes")
         private java.util.List < ClientTypes> clientTypes;
 
-        @NameInMap("Clipboard")
+        @com.aliyun.core.annotation.NameInMap("Clipboard")
         private String clipboard;
 
-        @NameInMap("CpuDownGradeDuration")
+        @com.aliyun.core.annotation.NameInMap("CpuDownGradeDuration")
         private Integer cpuDownGradeDuration;
 
-        @NameInMap("CpuProcessors")
+        @com.aliyun.core.annotation.NameInMap("CpuProcessors")
         private java.util.List < String > cpuProcessors;
 
-        @NameInMap("CpuProtectedMode")
+        @com.aliyun.core.annotation.NameInMap("CpuProtectedMode")
         private String cpuProtectedMode;
 
-        @NameInMap("CpuRateLimit")
+        @com.aliyun.core.annotation.NameInMap("CpuRateLimit")
         private Integer cpuRateLimit;
 
-        @NameInMap("CpuSampleDuration")
+        @com.aliyun.core.annotation.NameInMap("CpuSampleDuration")
         private Integer cpuSampleDuration;
 
-        @NameInMap("CpuSingleRateLimit")
+        @com.aliyun.core.annotation.NameInMap("CpuSingleRateLimit")
         private Integer cpuSingleRateLimit;
 
-        @NameInMap("DomainList")
+        @com.aliyun.core.annotation.NameInMap("DomainList")
         private String domainList;
 
-        @NameInMap("DomainResolveRule")
+        @com.aliyun.core.annotation.NameInMap("DomainResolveRule")
         private java.util.List < DomainResolveRule> domainResolveRule;
 
-        @NameInMap("DomainResolveRuleType")
+        @com.aliyun.core.annotation.NameInMap("DomainResolveRuleType")
         private String domainResolveRuleType;
 
-        @NameInMap("EdsCount")
+        @com.aliyun.core.annotation.NameInMap("EdsCount")
         private Integer edsCount;
 
-        @NameInMap("EndUserApplyAdminCoordinate")
+        @com.aliyun.core.annotation.NameInMap("EndUserApplyAdminCoordinate")
         private String endUserApplyAdminCoordinate;
 
-        @NameInMap("EndUserGroupCoordinate")
+        @com.aliyun.core.annotation.NameInMap("EndUserGroupCoordinate")
         private String endUserGroupCoordinate;
 
-        @NameInMap("GpuAcceleration")
+        @com.aliyun.core.annotation.NameInMap("GpuAcceleration")
         private String gpuAcceleration;
 
-        @NameInMap("Html5Access")
+        @com.aliyun.core.annotation.NameInMap("Html5Access")
         private String html5Access;
 
-        @NameInMap("Html5FileTransfer")
+        @com.aliyun.core.annotation.NameInMap("Html5FileTransfer")
         private String html5FileTransfer;
 
-        @NameInMap("InternetCommunicationProtocol")
+        @com.aliyun.core.annotation.NameInMap("InternetCommunicationProtocol")
         private String internetCommunicationProtocol;
 
-        @NameInMap("LocalDrive")
+        @com.aliyun.core.annotation.NameInMap("LocalDrive")
         private String localDrive;
 
-        @NameInMap("MemoryDownGradeDuration")
+        @com.aliyun.core.annotation.NameInMap("MemoryDownGradeDuration")
         private Integer memoryDownGradeDuration;
 
-        @NameInMap("MemoryProcessors")
+        @com.aliyun.core.annotation.NameInMap("MemoryProcessors")
         private java.util.List < String > memoryProcessors;
 
-        @NameInMap("MemoryProtectedMode")
+        @com.aliyun.core.annotation.NameInMap("MemoryProtectedMode")
         private String memoryProtectedMode;
 
-        @NameInMap("MemoryRateLimit")
+        @com.aliyun.core.annotation.NameInMap("MemoryRateLimit")
         private Integer memoryRateLimit;
 
-        @NameInMap("MemorySampleDuration")
+        @com.aliyun.core.annotation.NameInMap("MemorySampleDuration")
         private Integer memorySampleDuration;
 
-        @NameInMap("MemorySingleRateLimit")
+        @com.aliyun.core.annotation.NameInMap("MemorySingleRateLimit")
         private Integer memorySingleRateLimit;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NetRedirect")
+        @com.aliyun.core.annotation.NameInMap("NetRedirect")
         private String netRedirect;
 
-        @NameInMap("NetRedirectRule")
+        @com.aliyun.core.annotation.NameInMap("NetRedirectRule")
         private java.util.List < NetRedirectRule> netRedirectRule;
 
-        @NameInMap("PolicyGroupId")
+        @com.aliyun.core.annotation.NameInMap("PolicyGroupId")
         private String policyGroupId;
 
-        @NameInMap("PolicyGroupType")
+        @com.aliyun.core.annotation.NameInMap("PolicyGroupType")
         private String policyGroupType;
 
-        @NameInMap("PolicyStatus")
+        @com.aliyun.core.annotation.NameInMap("PolicyStatus")
         private String policyStatus;
 
-        @NameInMap("PreemptLogin")
+        @com.aliyun.core.annotation.NameInMap("PreemptLogin")
         private String preemptLogin;
 
-        @NameInMap("PreemptLoginUsers")
+        @com.aliyun.core.annotation.NameInMap("PreemptLoginUsers")
         private java.util.List < String > preemptLoginUsers;
 
-        @NameInMap("PrinterRedirection")
+        @com.aliyun.core.annotation.NameInMap("PrinterRedirection")
         private String printerRedirection;
 
-        @NameInMap("RecordContent")
+        @com.aliyun.core.annotation.NameInMap("RecordContent")
         private String recordContent;
 
-        @NameInMap("RecordContentExpires")
+        @com.aliyun.core.annotation.NameInMap("RecordContentExpires")
         private Long recordContentExpires;
 
-        @NameInMap("Recording")
+        @com.aliyun.core.annotation.NameInMap("Recording")
         private String recording;
 
-        @NameInMap("RecordingAudio")
+        @com.aliyun.core.annotation.NameInMap("RecordingAudio")
         private String recordingAudio;
 
-        @NameInMap("RecordingDuration")
+        @com.aliyun.core.annotation.NameInMap("RecordingDuration")
         private Integer recordingDuration;
 
-        @NameInMap("RecordingEndTime")
+        @com.aliyun.core.annotation.NameInMap("RecordingEndTime")
         private String recordingEndTime;
 
-        @NameInMap("RecordingExpires")
+        @com.aliyun.core.annotation.NameInMap("RecordingExpires")
         private Long recordingExpires;
 
-        @NameInMap("RecordingFps")
+        @com.aliyun.core.annotation.NameInMap("RecordingFps")
         private Long recordingFps;
 
-        @NameInMap("RecordingStartTime")
+        @com.aliyun.core.annotation.NameInMap("RecordingStartTime")
         private String recordingStartTime;
 
-        @NameInMap("RecordingUserNotify")
+        @com.aliyun.core.annotation.NameInMap("RecordingUserNotify")
         private String recordingUserNotify;
 
-        @NameInMap("RecordingUserNotifyMessage")
+        @com.aliyun.core.annotation.NameInMap("RecordingUserNotifyMessage")
         private String recordingUserNotifyMessage;
 
-        @NameInMap("RemoteCoordinate")
+        @com.aliyun.core.annotation.NameInMap("RemoteCoordinate")
         private String remoteCoordinate;
 
-        @NameInMap("Scope")
+        @com.aliyun.core.annotation.NameInMap("Scope")
         private String scope;
 
-        @NameInMap("ScopeValue")
+        @com.aliyun.core.annotation.NameInMap("ScopeValue")
         private java.util.List < String > scopeValue;
 
-        @NameInMap("UsbRedirect")
+        @com.aliyun.core.annotation.NameInMap("UsbRedirect")
         private String usbRedirect;
 
-        @NameInMap("UsbSupplyRedirectRule")
+        @com.aliyun.core.annotation.NameInMap("UsbSupplyRedirectRule")
         private java.util.List < UsbSupplyRedirectRule> usbSupplyRedirectRule;
 
-        @NameInMap("VideoRedirect")
+        @com.aliyun.core.annotation.NameInMap("VideoRedirect")
         private String videoRedirect;
 
-        @NameInMap("VisualQuality")
+        @com.aliyun.core.annotation.NameInMap("VisualQuality")
         private String visualQuality;
 
-        @NameInMap("Watermark")
+        @com.aliyun.core.annotation.NameInMap("Watermark")
         private String watermark;
 
-        @NameInMap("WatermarkAntiCam")
+        @com.aliyun.core.annotation.NameInMap("WatermarkAntiCam")
         private String watermarkAntiCam;
 
-        @NameInMap("WatermarkColor")
+        @com.aliyun.core.annotation.NameInMap("WatermarkColor")
         private Integer watermarkColor;
 
-        @NameInMap("WatermarkCustomText")
+        @com.aliyun.core.annotation.NameInMap("WatermarkCustomText")
         private String watermarkCustomText;
 
-        @NameInMap("WatermarkDegree")
+        @com.aliyun.core.annotation.NameInMap("WatermarkDegree")
         private Double watermarkDegree;
 
-        @NameInMap("WatermarkFontSize")
+        @com.aliyun.core.annotation.NameInMap("WatermarkFontSize")
         private Integer watermarkFontSize;
 
-        @NameInMap("WatermarkFontStyle")
+        @com.aliyun.core.annotation.NameInMap("WatermarkFontStyle")
         private String watermarkFontStyle;
 
-        @NameInMap("WatermarkPower")
+        @com.aliyun.core.annotation.NameInMap("WatermarkPower")
         private String watermarkPower;
 
-        @NameInMap("WatermarkRowAmount")
+        @com.aliyun.core.annotation.NameInMap("WatermarkRowAmount")
         private Integer watermarkRowAmount;
 
-        @NameInMap("WatermarkSecurity")
+        @com.aliyun.core.annotation.NameInMap("WatermarkSecurity")
         private String watermarkSecurity;
 
-        @NameInMap("WatermarkTransparency")
+        @com.aliyun.core.annotation.NameInMap("WatermarkTransparency")
         private String watermarkTransparency;
 
-        @NameInMap("WatermarkTransparencyValue")
+        @com.aliyun.core.annotation.NameInMap("WatermarkTransparencyValue")
         private Integer watermarkTransparencyValue;
 
-        @NameInMap("WatermarkType")
+        @com.aliyun.core.annotation.NameInMap("WatermarkType")
         private String watermarkType;
 
         private DescribePolicyGroups(Builder builder) {
